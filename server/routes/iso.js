@@ -9,13 +9,33 @@ isoRouter.get('/', function (req, res, next) {
     res.send('iso download');
 });
 
+isoRouter.get('/vendor', function (req, res, next) {
+    let list = [];
+    lesson.forEach(item => {
+        if (list.indexOf(item.vendor) === -1) {
+            list.push(item.vendor);
+        }
+    });
+    res.send(list);
+});
+
+isoRouter.get('/releaseDate', function (req, res, next) {
+    let list = [];
+    lesson.forEach(item => {
+        if (list.indexOf(item.releaseDate) === -1) {
+            list.push(item.releaseDate);
+        }
+    });
+    res.send(list);
+});
+
 isoRouter.post('/list', function (req, res) {
     let vendor = req.body.vendor;
-    let releaseData = req.body.releaseData;
+    let releaseDate = req.body.releaseDate;
     let lst = req.body.LST;
 
     let lists = [];
-    if (vendor === '' && releaseData === '' && lst === '') {
+    if (vendor === '' && releaseDate === '' && lst === '') {
         lists = lesson;
     } else {
         if (lst === '') {
@@ -27,17 +47,27 @@ isoRouter.post('/list', function (req, res) {
         }
 
         let tempLists = lists;
-        if (releaseData !== '' && vendor === '') {
+        if (releaseDate !== '' && vendor === '') {
             lists = tempLists.filter(item => {
-                return item.releaseData.indexOf(releaseData) > -1;
+                return item.releaseDate.indexOf(releaseDate) > -1;
             });
-        } else if (releaseData === '' && vendor !== '') {
+        } else if (releaseDate === '' && vendor !== '') {
+            let vendorArr = vendor.split(',');
             lists = tempLists.filter(item => {
-                return item.vendor.indexOf(vendor) > -1;
+                let checked = false;
+                vendorArr.forEach(vendor => {
+                    checked = checked || item.vendor.indexOf(vendor) > -1;
+                });
+                return checked;
             });
         } else {
+            let vendorArr = vendor.split(',');
             lists = tempLists.filter(item => {
-                return item.releaseData.indexOf(releaseData) > -1 && item.vendor.indexOf(vendor) > -1;
+                let checked = false;
+                vendorArr.forEach(vendor => {
+                    checked = checked || item.vendor.indexOf(vendor) > -1;
+                });
+                return item.releaseDate.indexOf(releaseDate) > -1 && checked;
             });
         }
     }
