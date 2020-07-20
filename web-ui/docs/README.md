@@ -1,0 +1,4 @@
+HOME
+<ClientOnly>
+  <test/>
+</ClientOnly>
