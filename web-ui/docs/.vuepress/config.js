@@ -10,22 +10,22 @@ module.exports = {
 	},
 	locales: {
 		'/': {
-		  lang: 'en-US',
+		  lang: 'en',
 		  title: '',
 		  description: ''
 		},
 		'/zh/': {
-		  lang: 'zh-CN',
+		  lang: 'zh',
 		  title: '',
 		  description: ''
 		}
 	},
     themeConfig: {
 		locales: {
-			'/': {
+			'en': {
 			  lang: require('./lang/en.js')
 			},
-			'/zh/': {
+			'zh': {
 			  lang: require('./lang/zh.js')
 			}
 		  }   

@@ -103,7 +103,7 @@
                         <a
                             :class="{
                                 'menu-link': true,
-                                'menu-active': menuActiveFn(item)
+                                'menu-active': menuActiveFn(item) && !item.children.length
                             }"
                             @click="toggleSub(item)"
                             >{{ item.name
@@ -113,12 +113,21 @@
                                     'arrow-active':
                                         item.class.indexOf('arrow-active') >
                                             -1 ||
-                                        $route.path === item.path ||
-                                        $route.path === item.subPath ||
-                                        $route.path === item.viewAllPath ||
+                                        (($route.path ===
+                                            resolvePath(item.path) +
+                                                '.html' ||
+                                        $route.path ===
+                                            resolvePath(item.subPath) +
+                                                '.html' ||
+                                        $route.path ===
+                                            resolvePath(item.viewAllPath) +
+                                                '.html' ||
                                         item.children.some(
-                                            item => item.path === $route.path
-                                        )
+                                            item =>
+                                                resolvePath(item.path) +
+                                                    '.html' ===
+                                                $route.path
+                                        )) && mobileActiveFlag)
                                 }"
                                 v-if="item.children.length"
                             ></i
@@ -128,19 +137,27 @@
                                 'sub-menu': true,
                                 show:
                                     item.class.indexOf('arrow-active') > -1 ||
-                                    $route.path === item.path ||
-                                    $route.path === item.subPath ||
-                                    $route.path === item.viewAllPath ||
-                                    item.children.some(
-                                        item => item.path === $route.path
-                                    )
+                                    (($route.path ===
+                                            resolvePath(item.path) +
+                                                '.html' ||
+                                        $route.path ===
+                                            resolvePath(item.subPath) +
+                                                '.html' ||
+                                        $route.path ===
+                                            resolvePath(item.viewAllPath) +
+                                                '.html' ||
+                                        item.children.some(
+                                            item =>
+                                                resolvePath(item.path) +
+                                                    '.html' ===
+                                                $route.path
+                                        )) && mobileActiveFlag)
                             }"
                         >
                             <li
                                 v-if="item.subName"
                                 :class="{
-                                    'sub-menu-color-active':
-                                        item.subPath == $route.path
+                                    'sub-menu-color-active': resolvePath(item.subPath) + '.html' == $route.path
                                 }"
                                 @click="go(item.subPath)"
                             >
@@ -150,7 +167,7 @@
                                 @click="go(item.viewAllPath)"
                                 :class="{
                                     'sub-menu-color-active':
-                                        item.viewAllPath == $route.path
+                                        resolvePath(item.viewAllPath) + '.html' == $route.path
                                 }"
                                 v-if="item.viewAllName"
                             >
@@ -160,7 +177,7 @@
                                 v-for="(subItem, subIndex) in item.children"
                                 :class="{
                                     'sub-menu-color-active':
-                                        subItem.path == $route.path
+                                        resolvePath(subItem.path) + '.html' == $route.path
                                 }"
                                 :key="subIndex"
                                 @click="go(subItem.path)"
@@ -184,20 +201,20 @@
                 <ul class="nav-other">
                     <li class="lang" @click="toggleLang">
                         <img src="/lang.png" alt="" />
-                        <span>{{i18n.common.lang}}</span>
+                        <span>{{ i18n.common.lang }}</span>
                     </li>
                     <li class="search">
                         <img src="/search.png" alt="" />
-                        <span>{{i18n.common.search}}</span>
+                        <span>{{ i18n.common.search }}</span>
                     </li>
                     <li>
                         <img src="/Gitee.png" alt="" />
-                        <span>{{i18n.common.gitte}}</span>
+                        <span>{{ i18n.common.gitte }}</span>
                     </li>
                 </ul>
                 <ul class="nav-other-mobile">
                     <li class="lang" @click="toggleLang">
-                        <span>{{i18n.common.lang}}</span>
+                        <span>{{ i18n.common.lang }}</span>
                     </li>
                     <li
                         :class="{ search: true, 'search-active': searchFlag }"
@@ -230,24 +247,24 @@ export default {
             menuMobileFlag: false,
             searchData: "",
             searchFlag: false,
-            i18n: {}  
+            i18n: {
+                common: {
+                    navRouterConfig: []
+                }
+            },
+            mobileActiveFlag : true
         };
-    },
-    mounted() {
-        const locales  = this.$site;
-        const locale = this.$lang === "zh-CN" ? "/zh/" : "/";
-        this.i18n = locales.themeConfig.locales[locale].lang;
     },
     methods: {
         goHome() {
-            const targetLocale = this.$lang === "zh-CN" ? "/zh/" : "/";
-            this.$router.push(targetLocale);
+            this.$router.push(this.resolvePath("/"));
             this.menuMobileFlag = false;
         },
         go(path) {
             if (path) {
-                const targetLocale = this.$lang === "zh-CN" ? "/zh" : "";
-                this.$router.push(targetLocale + path + '.html');
+                this.$router.push({
+                    path: this.resolvePath(path)
+                });
                 this.menuMobileFlag = false;
             }
         },
@@ -258,25 +275,28 @@ export default {
             toggleClass.pop();
         },
         toggleLang() {
-            const locale = this.$lang === "zh-CN" ? "en-US" : "zh-CN";
-            const targetLocale = this.$lang === "zh-CN" ? "/" : "/zh/";
-            window.localStorage.setItem("locale", locale);
+            window.localStorage.setItem("locale", this.$lang);
             let currentLink = this.$page.path;
-            if(currentLink.substring(0,4) === '/zh/') {
-                currentLink =  currentLink.substring(3);
-            } else{
-                currentLink = '/zh' + currentLink;
+            if (currentLink.substring(0, 4) === "/zh/") {
+                window.localStorage.setItem("locale", "en");
+                currentLink = currentLink.substring(3);
+            } else {
+                window.localStorage.setItem("locale", "cn");
+                currentLink = "/zh" + currentLink;
             }
-            this.$router.push(currentLink);
-            this.i18n = this.$site.themeConfig.locales[targetLocale].lang;
+            window.location.href = currentLink;
         },
         menuActiveFn(item) {
-            let $route = this.$route;
+            const $route = this.$route;
+            const tempStr = ".html";
             return (
-                $route.path === item.path ||
-                $route.path === item.subPath ||
-                $route.path === item.viewAllPath ||
-                item.children.some(item => item.path === $route.path)
+                $route.path === this.resolvePath(item.path) + tempStr ||
+                $route.path === this.resolvePath(item.subPath) + tempStr ||
+                $route.path === this.resolvePath(item.viewAllPath) + tempStr ||
+                item.children.some(
+                    item =>
+                        this.resolvePath(item.path) + tempStr === $route.path
+                )
             );
         },
         toggleMenuMobile() {
@@ -285,8 +305,13 @@ export default {
         },
         toggleSub(item) {
             if (item.path) {
-                this.$router.push(item.path);
+                this.$router.push(this.resolvePath(item.path));
                 this.menuMobileFlag = false;
+                return;
+            }
+            if(this.mobileActiveFlag && this.menuActiveFn(item)){
+                this.mobileActiveFlag = false;
+                console.log(this.mobileActiveFlag);
                 return;
             }
             if (item.class.length) {
@@ -294,15 +319,19 @@ export default {
             } else {
                 item.class.push("arrow-active");
             }
+            this.mobileActiveFlag = false;
         },
         subMenuMobileFn(item) {
             let $route = this.$route;
             return (
                 item.class.indexOf("arrow-active") > 0 ||
-                $route.path === item.path ||
-                $route.path === item.subPath ||
-                $route.path === item.viewAllPath ||
-                item.children.some(item => item.path === $route.path)
+                $route.path === this.resolvePath(item.path) + tempStr ||
+                $route.path === this.resolvePath(item.subPath) + tempStr ||
+                $route.path === this.resolvePath(item.viewAllPath) + tempStr ||
+                item.children.some(
+                    item =>
+                        this.resolvePath(item.path) + tempStr === $route.path
+                )
             );
         },
         toggleSearchMobile() {
@@ -345,7 +374,10 @@ export default {
     }
 }
 .menu-active {
-    border-bottom: 5px solid #002FA7;
+    border-bottom: 5px solid #002fa7;
+    @media (max-width: 1000px) {
+        color: #0041bd;
+    }
 }
 .menu-mobile-active {
     display: block !important;
@@ -508,7 +540,7 @@ export default {
                     height: 242px;
                     width: 364px;
                     display: none;
-                    border: 1px solid #002FA7;
+                    border: 1px solid #002fa7;
                     box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
                     border-radius: 5px;
                     .sub-menu-wrapper {
@@ -524,7 +556,7 @@ export default {
                             height: 100%;
                             &:hover {
                                 cursor: pointer;
-                                color: #0041BD;
+                                color: #0041bd;
                             }
                             .sub-menu-img {
                                 width: 100%;
@@ -548,7 +580,7 @@ export default {
                                 line-height: 20px;
                                 &:hover {
                                     cursor: pointer;
-                                    color: #0041BD;
+                                    color: #0041bd;
                                 }
                             }
                         }
@@ -569,7 +601,7 @@ export default {
                                 margin-left: 10px;
                                 &:hover {
                                     cursor: pointer;
-                                    color: #002FA7;
+                                    color: #002fa7;
                                 }
                             }
                         }
@@ -585,7 +617,7 @@ export default {
                                 margin-bottom: 15px;
                                 &:hover {
                                     cursor: pointer;
-                                    color: #002FA7;
+                                    color: #002fa7;
                                 }
                             }
                         }
@@ -604,7 +636,7 @@ export default {
                         height: 100%;
                         cursor: pointer;
                         &:hover {
-                            border-bottom: 5px solid #002FA7;
+                            border-bottom: 5px solid #002fa7;
                         }
                     }
                 }

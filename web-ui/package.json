@@ -11,6 +11,7 @@
   "author": "",
   "license": "",
   "dependencies": {
+    "element-ui": "^2.13.2",
     "less-loader": "^6.2.0"
   }
 }
