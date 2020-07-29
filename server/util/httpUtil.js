@@ -5,19 +5,20 @@ var mailError = {
     "msg": "Background call mail server exception"
 }
 
-function getUrl (url) {
+function getUrl (url, token) {
     let options = {
         url: url,
         method: "GET",
         json: true,
         timeout: 30000,
         headers: {
-            "Content-type": "application/json"
+            "Content-type": "application/json",
+            "Authorization": "Basic " + token
         }
     };
     return new Promise((resolve, reject) => {
         request(options, function (error, response, body) {
-            if (!error && (response.statusCode === 200 || response.statusCode === 304)) {
+            if (response.statusCode === 200) {
                 resolve(body)
             } else {
                 reject(error);
@@ -26,7 +27,7 @@ function getUrl (url) {
     });
 };
 
-function postUrl (url, token, reqBody) {
+function postUrl(url, token, reqBody) {
     let options = {
         url: url,
         method: "POST",
@@ -40,7 +41,7 @@ function postUrl (url, token, reqBody) {
     };
     return new Promise((resolve, reject) => {
         request(options, function (error, response, body) {
-            if (!error && (response.statusCode === 200 || response.statusCode === 304)) {
+            if (error == null) {
                 resolve(body)
             } else {
                 reject(error);
