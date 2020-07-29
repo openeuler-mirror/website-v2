@@ -30,7 +30,7 @@ export default {
 .content {
     min-height: calc(100vh - 110px - 176px);
     @media (max-width: 1000px) {
-        min-height: calc(100vh - 70px - 280px);
+        min-height: calc(100vh - 70px - 328px);
     }
 }
 </style>

@@ -13,7 +13,22 @@ export default ({
 }) => {
     
     Vue.mixin({
-        created() {
+        data () {
+            return {
+                i18n: {}
+            }
+        },
+        created () {
+            let pagesArr = [];
+            this.SITE_PAGES.forEach(item => {
+                if(this.$lang === 'zh' && item.path.includes('/zh/')) {
+                    pagesArr.push(item);
+                } else if(this.$lang === 'en' && !item.path.includes('/zh/')) {
+                    pagesArr.push(item);
+                }
+            })
+            this.SITE_PAGES = pagesArr;
+
             const locales = this.$site;
             this.i18n = locales.themeConfig.locales[this.$lang].lang;
             const originalPush = this.$router.push;
@@ -26,6 +41,8 @@ export default ({
                 if(path){
                     const targetLocale = this.$lang === "zh" ? "/zh" : "";
                     return targetLocale + path;    
+                } else {
+                    console.error('please enter argument of path');
                 }
                 
             }

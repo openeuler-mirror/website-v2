@@ -5,11 +5,15 @@
                 <img src="/footer-logo.png" class="footer-logo">
                 <div class="footer-mail">{{ i18n.common.footer.mail }}</div>
             </div>
-            <div class="footer-right">
+            <div class="footer-center">
                 <ul class="right-list">
                     <li v-for="(item, index) in i18n.common.footer.rightList" :key="index" ><a href="/">{{ item }}</a></li>
                 </ul>
                 <p class="footer-copyright">{{ i18n.common.footer.copyright }}</p>
+            </div>
+            <div class="footer-right">
+                <img src="/footer-logo.png" class="footer-qrcode">
+                <div class="qrcode-desc">{{ i18n.common.footer.mail }}</div>
             </div>
         </div>
     </div>
@@ -18,13 +22,7 @@
 <script>
 export default {
     data() {
-        return {
-            i18n: {
-                common: {
-                    footer : {}
-                }
-            }
-        };
+        return {};
     },
     components: {}
 };
@@ -35,7 +33,7 @@ export default {
     height: 176px;
     background-color: #111;
     @media (max-width: 1000px) {
-        height: 280px;
+        height: 328px;
     }
     .footer-content {
         font-family: FZLTXIHJW;
@@ -48,11 +46,12 @@ export default {
             flex-direction: column;
             align-items: center;
             width: 100%;
-
+            justify-content: space-evenly;
         }
         .footer-left {
             @media (max-width: 1000px) {
-                height: 50%;
+                height: unset;
+                font-size: 14px;
             }
             height: 100%;
             display: flex;
@@ -62,13 +61,16 @@ export default {
             .footer-mail {
                 color: #fff;
                 margin-top: 17px;
+                @media (max-width: 1000px) {
+                    margin-top: 10px;
+                }
             }
         }
-        .footer-right {
+        .footer-center {
             @media (max-width: 1000px) {
-                height: 50%;
                 align-items: unset;
-                padding-bottom: 67px;
+                height: unset;
+                order: 1;
             }
             height: 100%;
             display: flex;
@@ -79,6 +81,9 @@ export default {
                 color: #fff;
                 margin-top: 21px;
                 font-size: 12px;
+                @media (max-width: 1000px) {
+                    margin-top: 16px;
+                }
             }
             .right-list {
                 display: flex;
@@ -96,10 +101,27 @@ export default {
                     border-left: 1px solid #fff;
                     border-right: 1px solid #fff;
                 }
-                li:nth-child(3){
-                    padding-right: 0;
-                }
                
+            }
+        }
+        .footer-right {
+            @media (max-width: 1000px) {
+                height: unset;
+            }
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            .footer-qrcode {
+                width: 78px;
+                height: 78px;
+            }
+            .qrcode-desc {
+                color: #fff;
+                margin-top: 17px;
+                text-align: center;
             }
         }
     }
