@@ -67,8 +67,8 @@ app.use(function (req, res, next) {
 // error handler
 app.use(function (err, req, res, next) {
     var now = new Date();
-    var time = now.getFullYear() + '-' + now.getMonth() + '-' + now.getDate() + ' ' +
-        now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+    var time = now.getFullYear() + '-' + now.getMonth() + '-' + now.getDate() + ' '
+        + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
     var meta = '[' + time + '] ' + req.method + ' ' + req.url;
     errorLogfile.write(meta + err.stack);
     next();
