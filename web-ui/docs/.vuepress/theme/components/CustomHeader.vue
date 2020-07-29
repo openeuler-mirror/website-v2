@@ -247,11 +247,6 @@ export default {
             menuMobileFlag: false,
             searchData: "",
             searchFlag: false,
-            i18n: {
-                common: {
-                    navRouterConfig: []
-                }
-            },
             mobileActiveFlag : true
         };
     },

@@ -4,6 +4,7 @@ module.exports = {
     description: '',
     head: [
         ['link', { rel: 'icon', href: '/public/openeuler.png' }],
+        ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
 	],
 	markdown: {
         lineNumbers: false
@@ -30,5 +31,8 @@ module.exports = {
 			}
 		  }   
         
-    }
+    },
+    plugins: [
+        [require('./sitePlugin.js')]
+      ]
 }

@@ -107,8 +107,7 @@ export default {
                 publishDate: [],
                 lts: false
             },
-            list: [],
-            i18n: {}
+            list: []
         };
     },
     mounted () {

@@ -7,13 +7,7 @@
 <script>
 export default {
     data() {
-        return {
-            i18n: {
-                home: {
-                    test: [{}]
-                }
-            }
-        };
+        return {};
     },
     methods: {
         change() {
