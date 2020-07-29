@@ -7,4 +7,4 @@ module.exports = {
     MAIL_LIST_URL: MAIL_LIST_URL,
     MAIL_ADD_URL: MAIL_ADD_URL,
     MAIL_USER_PASS: MAIL_USER_PASS
-}
+};

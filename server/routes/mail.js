@@ -15,12 +15,12 @@ router.get('/list', function (req, res, next) {
 
 router.post('/add', function (req, res) {
     var body = {
-        "list_id": req.body.list_id,
-        "subscriber": req.body.subscriber,
-        "display_name": req.body.display_name,
-        "pre_verified": "true",
-        "pre_confirmed": "false",
-        "pre_approved": "true"
+        'list_id': req.body.list_id,
+        'subscriber': req.body.subscriber,
+        'display_name': req.body.display_name,
+        'pre_verified': 'true',
+        'pre_confirmed': 'false',
+        'pre_approved': 'true'
     };
     let token = new Buffer.from(CONF.MAIL_USER_PASS).toString('base64');
     HTTP.postUrl(CONF.MAIL_ADD_URL, token, body).then(data => {
