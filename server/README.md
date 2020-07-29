@@ -12,4 +12,5 @@
 
   > npm install file-stream-rotator
   > npm install helmet
+  > npm install request
   
