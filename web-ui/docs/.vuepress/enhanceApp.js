@@ -11,7 +11,6 @@ if (!localStorage.getItem('locale') || localStorage.getItem('locale') === 'en') 
 export default ({
     Vue
 }) => {
-    
     Vue.mixin({
         data () {
             return {
@@ -20,14 +19,15 @@ export default ({
         },
         created () {
             let pagesArr = [];
-            this.SITE_PAGES.forEach(item => {
+            this.$sitePages.forEach(item => {
                 if(this.$lang === 'zh' && item.path.includes('/zh/')) {
                     pagesArr.push(item);
                 } else if(this.$lang === 'en' && !item.path.includes('/zh/')) {
                     pagesArr.push(item);
                 }
             })
-            this.SITE_PAGES = pagesArr;
+            this.$sitePages = pagesArr;
+
 
             const locales = this.$site;
             this.i18n = locales.themeConfig.locales[this.$lang].lang;
@@ -41,8 +41,6 @@ export default ({
                 if(path){
                     const targetLocale = this.$lang === "zh" ? "/zh" : "";
                     return targetLocale + path;    
-                } else {
-                    console.error('please enter argument of path');
                 }
                 
             }
