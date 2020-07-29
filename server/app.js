@@ -1,4 +1,6 @@
-// app.js
+/**
+ * @file app.js
+ */
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -14,6 +16,14 @@ var isoRouter = require('./routes/iso');
 var mailRouter = require('./routes/mail');
 
 var app = express();
+
+app.all('*', (req, res, next) => {
+    res.header('Access-Control-Allow-Credentials', 'true');
+    res.header('Access-Control-Allow-Origin', req.headers.origin);
+    res.header('Access-Control-Allow-Methods', 'POST,GET');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+});
 
 // Processing returns 304 status code
 app.disable('etag');
