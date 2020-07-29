@@ -11,13 +11,7 @@ module.exports = (options = {}, ctx) => {
             pages = JSON.stringify(pages);
             return {
                 name: 'dynamic-code',
-                content: `export default ({ Vue }) => { Vue.mixin({
-                data () {
-                    return {
-                        SITE_PAGES: ${pages}
-                    }
-                }
-            })}`
+                content: `export default ({ Vue }) => { Vue.prototype.$sitePages = ${pages}}`
             }
         }
     }
