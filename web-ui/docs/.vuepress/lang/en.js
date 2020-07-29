@@ -1,0 +1,14 @@
+/**
+ * @file  国际化英文配置主入口
+ * */
+
+module.exports = {
+    common: require('./lang-modules/common').en,
+    home: require('./lang-modules/home').en,
+    download: require('./lang-modules/download').en,
+    documentation: require('./lang-modules/documentation').en,
+    community: require('./lang-modules/community').en,
+    sig: require('./lang-modules/sig').en,
+    authentication: require('./lang-modules/authentication').en,
+    security: require('./lang-modules/security').en
+};
