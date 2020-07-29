@@ -9,8 +9,11 @@ module.exports = {
 	markdown: {
         lineNumbers: false
 	},
+	plugins: [
+		[require('./sitePlugin.js')]
+	],
 	locales: {
-		'/': {
+		'/en/': {
 		  lang: 'en',
 		  title: '',
 		  description: ''
@@ -22,6 +25,7 @@ module.exports = {
 		}
 	},
     themeConfig: {
+		dateFormat: 'YYYY-MM-DD',
 		locales: {
 			'en': {
 			  lang: require('./lang/en.js')
@@ -29,10 +33,8 @@ module.exports = {
 			'zh': {
 			  lang: require('./lang/zh.js')
 			}
-		  }   
-        
-    },
-    plugins: [
-        [require('./sitePlugin.js')]
-      ]
+		},
+		smoothScroll: true
+
+	}
 }
