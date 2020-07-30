@@ -42,9 +42,6 @@ module.exports = {
         smoothScroll: true  
         
     },
-    plugins: [
-        [require('./sitePlugin.js')]
-    ],
     devServer: {
         proxy: {
             '/api': {
