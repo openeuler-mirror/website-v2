@@ -34,5 +34,18 @@ module.exports = {
     },
     plugins: [
         [require('./sitePlugin.js')]
-      ]
+    ],
+    devServer: {
+        proxy: {
+            '/api': {
+                target: 'http://baidu.com',
+                ws: true,
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api': ''
+                }
+            }
+        }
+
+    }
 }

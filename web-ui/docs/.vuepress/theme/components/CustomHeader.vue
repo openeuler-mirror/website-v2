@@ -33,60 +33,19 @@
                         <div
                             @mouseenter="showSub(item.class)"
                             @mouseleave="hideSub(item.class)"
-                            :class="{
-                                'sub-menu': true,
-                                'sig-menu': item.subPath == '/sig/sig-guidance'
-                            }"
+                            class="sub-menu"
                             v-if="item.children.length"
                         >
-                            <div class="sub-menu-wrapper">
-                                <div
-                                    class="sub-menu-left"
-                                    @click="go(item.subPath)"
+                            <ul class="sig-menu-content">
+                                <li
+                                    v-for="(subItem,
+                                    subItemIndex) in item.children"
+                                    :key="subItemIndex"
+                                    @click="go(subItem.path)"
                                 >
-                                    <img
-                                        :src="item.subImg"
-                                        class="sub-menu-img"
-                                    />
-                                    <h3 class="sub-menu-name">
-                                        {{ item.subName }}
-                                    </h3>
-                                </div>
-                                <ul
-                                    v-if="
-                                        item.subPath ==
-                                            '/community/community-guidance'
-                                    "
-                                    class="sub-menu-right community-sub-menu"
-                                >
-                                    <li
-                                        v-for="(subItem,
-                                        subItemIndex) in item.children"
-                                        :key="subItemIndex"
-                                        @click="go(subItem.path)"
-                                    >
-                                        {{ subItem.name }}
-                                    </li>
-                                </ul>
-                                <div v-else class="sub-menu-right sig-sub-menu">
-                                    <div class="sub-menu-head">
-                                        {{ item.name
-                                        }}<a @click="go(item.viewAllPath)">{{
-                                            item.viewAllName
-                                        }}</a>
-                                    </div>
-                                    <ul class="sig-menu-content">
-                                        <li
-                                            v-for="(subItem,
-                                            subItemIndex) in item.children"
-                                            :key="subItemIndex"
-                                            @click="go(subItem.path)"
-                                        >
-                                            {{ subItem.name }}
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                                    {{ subItem.name }}
+                                </li>
+                            </ul>
                         </div>
                     </li>
                 </ul>
@@ -116,12 +75,6 @@
                                         (($route.path ===
                                             resolvePath(item.path) +
                                                 '.html' ||
-                                        $route.path ===
-                                            resolvePath(item.subPath) +
-                                                '.html' ||
-                                        $route.path ===
-                                            resolvePath(item.viewAllPath) +
-                                                '.html' ||
                                         item.children.some(
                                             item =>
                                                 resolvePath(item.path) +
@@ -140,12 +93,6 @@
                                     (($route.path ===
                                             resolvePath(item.path) +
                                                 '.html' ||
-                                        $route.path ===
-                                            resolvePath(item.subPath) +
-                                                '.html' ||
-                                        $route.path ===
-                                            resolvePath(item.viewAllPath) +
-                                                '.html' ||
                                         item.children.some(
                                             item =>
                                                 resolvePath(item.path) +
@@ -154,25 +101,6 @@
                                         )) && mobileActiveFlag)
                             }"
                         >
-                            <li
-                                v-if="item.subName"
-                                :class="{
-                                    'sub-menu-color-active': resolvePath(item.subPath) + '.html' == $route.path
-                                }"
-                                @click="go(item.subPath)"
-                            >
-                                #{{ item.subName }}#
-                            </li>
-                            <li
-                                @click="go(item.viewAllPath)"
-                                :class="{
-                                    'sub-menu-color-active':
-                                        resolvePath(item.viewAllPath) + '.html' == $route.path
-                                }"
-                                v-if="item.viewAllName"
-                            >
-                                #{{ item.viewAllName }}#
-                            </li>
                             <li
                                 v-for="(subItem, subIndex) in item.children"
                                 :class="{
@@ -286,8 +214,6 @@ export default {
             const tempStr = ".html";
             return (
                 $route.path === this.resolvePath(item.path) + tempStr ||
-                $route.path === this.resolvePath(item.subPath) + tempStr ||
-                $route.path === this.resolvePath(item.viewAllPath) + tempStr ||
                 item.children.some(
                     item =>
                         this.resolvePath(item.path) + tempStr === $route.path
@@ -306,7 +232,6 @@ export default {
             }
             if(this.mobileActiveFlag && this.menuActiveFn(item)){
                 this.mobileActiveFlag = false;
-                console.log(this.mobileActiveFlag);
                 return;
             }
             if (item.class.length) {
@@ -531,90 +456,29 @@ export default {
                 .sub-menu {
                     background-color: #fff;
                     position: absolute;
-                    left: -100%;
-                    height: 242px;
-                    width: 364px;
+                    left: 50%;
+                    margin-left: -90px;
                     display: none;
                     border: 1px solid #002fa7;
                     box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
                     border-radius: 5px;
-                    .sub-menu-wrapper {
-                        height: 100%;
-                        display: flex;
-
-                        .sub-menu-left {
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            flex: 3;
-                            background-color: rgba(0, 0, 0, 0.05);
-                            height: 100%;
+                    .sig-menu-content {
+                        cursor: pointer;
+                        padding: 40px 0;
+                        text-align: center;
+                        line-height: 20px;
+                        li {
+                            cursor: pointer;
+                            width: 100px;
+                            line-height: 20px;
+                            display: block;
+                            margin: 0 40px 40px 40px;
                             &:hover {
-                                cursor: pointer;
                                 color: #0041bd;
                             }
-                            .sub-menu-img {
-                                width: 100%;
-                                flex: 3;
-                            }
-                            .sub-menu-name {
-                                text-align: center;
-                                flex: 1;
-                            }
                         }
-                        .sub-menu-right {
-                            display: inline-block;
-                            flex: 2;
-                        }
-                        .community-sub-menu {
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: space-around;
-                            li {
-                                line-height: 20px;
-                                &:hover {
-                                    cursor: pointer;
-                                    color: #0041bd;
-                                }
-                            }
-                        }
-                    }
-                }
-                .sig-menu {
-                    width: 572px;
-                    .sub-menu-left {
-                        flex: 2 !important;
-                    }
-                    .sig-sub-menu {
-                        padding-left: 30px;
-                        flex: 3 !important;
-                        .sub-menu-head {
-                            height: 60px;
-                            line-height: 60px;
-                            a {
-                                margin-left: 10px;
-                                &:hover {
-                                    cursor: pointer;
-                                    color: #002fa7;
-                                }
-                            }
-                        }
-                        .sig-menu-content {
-                            height: 182px;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: flex-start;
-                            justify-content: flex-start;
-                            flex-wrap: wrap;
-                            li {
-                                line-height: 20px;
-                                margin-bottom: 15px;
-                                &:hover {
-                                    cursor: pointer;
-                                    color: #002fa7;
-                                }
-                            }
+                        li:last-child {
+                            margin-bottom: 0;
                         }
                     }
                 }

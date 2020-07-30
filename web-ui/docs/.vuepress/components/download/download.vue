@@ -96,6 +96,7 @@
 </template>
 
 <script>
+import { downloadList } from "../../api/download"
 let that = null;
 
 export default {
@@ -112,6 +113,16 @@ export default {
     },
     mounted () {
         this.list = this.i18n.download.downloadList;
+        downloadList({
+            manufacturer: "1",
+            publishTime: "2"
+        })
+            .then(data => {
+                console.log(data);
+            })
+            .catch(data => {
+                console.log(data);
+            });
     },
     computed: {
         downloadList() {
