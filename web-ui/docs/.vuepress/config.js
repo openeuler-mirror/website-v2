@@ -13,6 +13,11 @@ module.exports = {
 		[require('./sitePlugin.js')]
 	],
 	locales: {
+        '/': {
+            lang: 'en',
+            title: '',
+            description: ''
+        },
 		'/en/': {
 		  lang: 'en',
 		  title: '',

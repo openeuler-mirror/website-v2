@@ -46,6 +46,7 @@
                                     {{ subItem.name }}
                                 </li>
                             </ul>
+                            <span class="submenu-arrow"></span>
                         </div>
                     </li>
                 </ul>
@@ -72,15 +73,7 @@
                                     'arrow-active':
                                         item.class.indexOf('arrow-active') >
                                             -1 ||
-                                        (($route.path ===
-                                            resolvePath(item.path) +
-                                                '.html' ||
-                                        item.children.some(
-                                            item =>
-                                                resolvePath(item.path) +
-                                                    '.html' ===
-                                                $route.path
-                                        )) && mobileActiveFlag)
+                                        (menuActiveFn(item) && mobileActiveFlag)
                                 }"
                                 v-if="item.children.length"
                             ></i
@@ -90,22 +83,14 @@
                                 'sub-menu': true,
                                 show:
                                     item.class.indexOf('arrow-active') > -1 ||
-                                    (($route.path ===
-                                            resolvePath(item.path) +
-                                                '.html' ||
-                                        item.children.some(
-                                            item =>
-                                                resolvePath(item.path) +
-                                                    '.html' ===
-                                                $route.path
-                                        )) && mobileActiveFlag)
+                                    (menuActiveFn(item) && mobileActiveFlag)
                             }"
                         >
                             <li
                                 v-for="(subItem, subIndex) in item.children"
                                 :class="{
                                     'sub-menu-color-active':
-                                        resolvePath(subItem.path) + '.html' == $route.path
+                                        $route.path.includes(resolvePath(subItem.path))
                                 }"
                                 :key="subIndex"
                                 @click="go(subItem.path)"
@@ -113,6 +98,12 @@
                                 {{ subItem.name }}
                             </li>
                         </ul>
+                    </li>
+                    <li>
+                        <a
+                            class="menu-link"
+                            >{{ i18n.common.gitte }}<i class="icon-arrow"></i>
+                        </a>
                     </li>
                 </ul>
                 <div
@@ -136,7 +127,7 @@
                         <span>{{ i18n.common.search }}</span>
                     </li>
                     <li>
-                        <img src="/Gitee.png" alt="" />
+                        <img src="/code-source.svg" alt="" />
                         <span>{{ i18n.common.gitte }}</span>
                     </li>
                 </ul>
@@ -187,7 +178,10 @@ export default {
         go(path) {
             if (path) {
                 this.$router.push({
-                    path: this.resolvePath(path)
+                    path: this.resolvePath(path),
+                    query: {
+                        a:'aa'
+                    }
                 });
                 this.menuMobileFlag = false;
             }
@@ -212,12 +206,11 @@ export default {
         },
         menuActiveFn(item) {
             const $route = this.$route;
-            const tempStr = ".html";
             return (
-                $route.path === this.resolvePath(item.path) + tempStr ||
+                $route.path.includes(this.resolvePath(item.path)) ||
                 item.children.some(
                     item =>
-                        this.resolvePath(item.path) + tempStr === $route.path
+                        $route.path.includes(this.resolvePath(item.path))
                 )
             );
         },
@@ -241,19 +234,6 @@ export default {
                 item.class.push("arrow-active");
             }
             this.mobileActiveFlag = false;
-        },
-        subMenuMobileFn(item) {
-            let $route = this.$route;
-            return (
-                item.class.indexOf("arrow-active") > 0 ||
-                $route.path === this.resolvePath(item.path) + tempStr ||
-                $route.path === this.resolvePath(item.subPath) + tempStr ||
-                $route.path === this.resolvePath(item.viewAllPath) + tempStr ||
-                item.children.some(
-                    item =>
-                        this.resolvePath(item.path) + tempStr === $route.path
-                )
-            );
         },
         toggleSearchMobile() {
             this.menuMobileFlag = false;
@@ -462,7 +442,7 @@ export default {
                     display: none;
                     border: 1px solid #002fa7;
                     box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
-                    border-radius: 5px;
+                    border-radius: 10px;
                     .sig-menu-content {
                         cursor: pointer;
                         padding: 40px 0;
@@ -481,6 +461,15 @@ export default {
                         li:last-child {
                             margin-bottom: 0;
                         }
+                    }
+                    .submenu-arrow {
+                        position: absolute;
+                        width: 22px;
+                        height: 13px;
+                        top: -12px;
+                        left: 50%;
+                        margin-left: -11px;
+                        background: url('/submenu-arrow.svg') center center no-repeat;
                     }
                 }
                 & > li {
@@ -521,6 +510,7 @@ export default {
                     justify-content: center;
                     span {
                         margin-top: 10px;
+                        text-align: center;
                     }
                 }
             }

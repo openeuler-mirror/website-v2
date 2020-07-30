@@ -6,13 +6,13 @@ module.exports = {
     cn: {
         searchPlaceholder: '输入内容',
         navRouterConfig: [{
-                path: '/download/download',
+                path: '/download',
                 name: '下载',
                 children: [],
                 class: []
             },
             {
-                path: '/documentation/documentation',
+                path: '/documentation',
                 name: '文档',
                 children: [],
                 class: []
@@ -107,24 +107,25 @@ module.exports = {
         ],
         lang: 'EN',
         search: '搜索',
-        gitte: '码云',
+        gitte: '源码',
         footer: {
             leftLogo: 'openEuler',
             mail: 'contact@openeuler.org',
             copyright: '版权所有 © 2020 openeuler 保留一切权利',
-            rightList: ['品牌', '法律声明', '隐私政策']
+            rightList: ['品牌', '法律声明', '隐私政策'],
+            qrcode: '扫码关注公众号'
         }
     },
     en: {
         searchPlaceholder: 'Input content',
         navRouterConfig: [{
-            path: '/download/download',
+            path: '/download',
             name: 'Download',
             children: [],
             class: []
         },
         {
-            path: '/documentation/documentation',
+            path: '/documentation',
             name: 'Docs',
             children: [],
             class: []
@@ -219,11 +220,12 @@ module.exports = {
     ],
         lang: '中',
         search: 'search',
-        gitte: 'gitte',
+        gitte: 'Source code',
         footer: {
             mail: 'contact@openeuler.org',
             copyright: 'Copyright © 2020 openEuler. All rights reserved.',
-            rightList: ['TradeMark', 'Legal', 'Privacy']
+            rightList: ['TradeMark', 'Legal', 'Privacy'],
+            qrcode: 'Wechat Subscription'
         }
     }
 };
