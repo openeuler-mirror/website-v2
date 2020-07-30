@@ -6,38 +6,62 @@ module.exports = {
     cn: {
         searchPlaceholder: '输入内容',
         navRouterConfig: [{
-                path: '/download/download',
+                path: '/download',
                 name: '下载',
                 children: [],
                 class: []
             },
             {
-                path: '/documentation/documentation',
+                path: '/documentation',
                 name: '文档',
                 children: [],
                 class: []
             },
             {
                 path: '',
-                name: '社区',
-                subName: '社区玩转指引',
-                subPath: '/community/community-guidance',
-                subImg: '',
-                children: [{
-                        name: '活动',
-                        path: '/community/event-list'
+                name: '互动',
+                children: [
+                    {
+                        name: '新闻',
+                        path: '/interaction/news-list'
                     },
                     {
                         name: '博客',
-                        path: '/community/blog-list'
+                        path: '/interaction/blog-list'
                     },
                     {
-                        name: '新闻',
-                        path: '/community/news-list'
+                        name: '直播',
+                        path: '/interaction/live-list'
                     },
                     {
-                        name: '活动',
+                        name: '沙龙',
+                        path: '/interaction/salon-list'
+                    },
+                    {
+                        name: '峰会',
+                        path: '/interaction/summit-list'
+                    }
+                ],
+                class: []
+            },
+            {
+                path: '',
+                name: '社区',
+                children: [{
+                        name: '贡献攻略',
+                        path: '/community/contribution'
+                    },
+                    {
+                        name: '行为守则',
+                        path: '/community/conduct'
+                    },
+                    {
+                        name: '邮件列表',
                         path: '/community/mailing-list'
+                    },
+                    {
+                        name: '认证服务',
+                        path: '/community/certification-services'
                     }
                 ],
                 class: []
@@ -45,187 +69,163 @@ module.exports = {
             {
                 path: '',
                 name: 'SIG',
-                subName: 'SIG玩转指引',
-                subPath: '/sig/sig-guidance',
-                subImg: '',
-                viewAllName: '查看全部',
-                viewAllPath: '/sig/sig-list',
-                children: [{
-                        name: 'A-Tune',
-                        path: '/sig/sig-detail/1'
+                children: [
+                    {
+                        name: '查看SIG',
+                        path: '/sig/sig-list'
                     },
                     {
-                        name: 'Base-service',
-                        path: '/sig/sig-detail/2'
+                        name: '申请流程',
+                        path: '/sig/sig-guidance'
                     },
                     {
-                        name: 'Computing',
-                        path: '/sig/sig-detail/3'
-                    },
-                    {
-                        name: 'DB',
-                        path: '/sig/sig-detail/4'
-                    },
-                    {
-                        name: 'GNOME',
-                        path: '/sig/sig-detail/5'
-                    },
-                    {
-                        name: 'Application',
-                        path: '/sig/sig-detail/6'
-                    },
-                    {
-                        name: 'Compiler',
-                        path: '/sig/sig-detail/7'
-                    },
-                    {
-                        name: 'Container',
-                        path: '/sig/sig-detail/8'
-                    },
-                    {
-                        name: 'Desktop',
-                        path: '/sig/sig-detail/9'
-                    },
-                    {
-                        name: 'Infrastructure',
-                        path: '/sig/sig-detail/10'
+                        name: '角色说明',
+                        path: '/sig/role-description'
                     }
                 ],
                 class: []
             },
             {
-                path: '/authentication/authentication',
-                name: '认证',
-                children: [],
-                class: []
-            },
-            {
-                path: '/security/security',
+                path: '',
                 name: '安全',
-                children: [],
+                children: [
+                    {
+                        name: '漏洞上报',
+                        path: '/security/vulnerability-reporting'
+                    },
+                    {
+                        name: '安全公告',
+                        path: '/security/safety-bulletin'
+                    },
+                    {
+                        name: 'CVE',
+                        path: '/security/cve'
+                    }
+                ],
                 class: []
             }
         ],
         lang: 'EN',
         search: '搜索',
-        gitte: '码云',
+        gitte: '源码',
         footer: {
             leftLogo: 'openEuler',
             mail: 'contact@openeuler.org',
             copyright: '版权所有 © 2020 openeuler 保留一切权利',
-            rightList: ['品牌', '法律声明', '隐私政策']
+            rightList: ['品牌', '法律声明', '隐私政策'],
+            qrcode: '扫码关注公众号'
         }
     },
     en: {
         searchPlaceholder: 'Input content',
         navRouterConfig: [{
-                path: '/download/download',
-                name: 'Download',
-                children: [],
-                class: []
-            },
-            {
-                path: '/documentation/documentation',
-                name: 'Documentation',
-                children: [],
-                class: []
-            },
-            {
-                path: '',
-                name: 'Community',
-                subName: '社区玩转指引',
-                subPath: '/community/community-guidance',
-                subImg: '',
-                children: [{
-                        name: 'Events',
-                        path: '/community/event-list'
-                    },
-                    {
-                        name: 'Blog',
-                        path: '/community/blog-list'
-                    },
-                    {
-                        name: 'News',
-                        path: '/community/news-list'
-                    },
-                    {
-                        name: 'Mailing',
-                        path: '/community/mailing-list'
-                    }
-                ],
-                class: []
-            },
-            {
-                path: '',
-                name: 'SIG',
-                subName: 'SIG Play guide',
-                subPath: '/sig/sig-guidance',
-                subImg: '',
-                viewAllName: 'View All',
-                viewAllPath: '/sig/sig-list',
-                children: [{
-                        name: 'A-Tune',
-                        path: '/sig/sig-detail/1'
-                    },
-                    {
-                        name: 'Base-service',
-                        path: '/sig/sig-detail/2'
-                    },
-                    {
-                        name: 'Computing',
-                        path: '/sig/sig-detail/3'
-                    },
-                    {
-                        name: 'DB',
-                        path: '/sig/sig-detail/4'
-                    },
-                    {
-                        name: 'GNOME',
-                        path: '/sig/sig-detail/5'
-                    },
-                    {
-                        name: 'Application',
-                        path: '/sig/sig-detail/6'
-                    },
-                    {
-                        name: 'Compiler',
-                        path: '/sig/sig-detail/7'
-                    },
-                    {
-                        name: 'Container',
-                        path: '/sig/sig-detail/8'
-                    },
-                    {
-                        name: 'Desktop',
-                        path: '/sig/sig-detail/9'
-                    },
-                    {
-                        name: 'Infrastructure',
-                        path: '/sig/sig-detail/10'
-                    }
-                ],
-                class: []
-            },
-            {
-                path: '/authentication/authentication',
-                name: 'Authentication',
-                children: [],
-                class: []
-            },
-            {
-                path: '/security/security',
-                name: 'Security',
-                children: [],
-                class: []
-            }
-        ],
+            path: '/download',
+            name: 'Download',
+            children: [],
+            class: []
+        },
+        {
+            path: '/documentation',
+            name: 'Docs',
+            children: [],
+            class: []
+        },
+        {
+            path: '',
+            name: 'Interaction',
+            children: [
+                {
+                    name: 'News',
+                    path: '/interaction/news-list'
+                },
+                {
+                    name: 'Blog',
+                    path: '/interaction/blog-list'
+                },
+                {
+                    name: 'Live',
+                    path: '/interaction/live-list'
+                },
+                {
+                    name: 'Salon',
+                    path: '/interaction/salon-list'
+                },
+                {
+                    name: 'Summit',
+                    path: '/interaction/summit-list'
+                }
+            ],
+            class: []
+        },
+        {
+            path: '',
+            name: 'Community',
+            children: [{
+                    name: 'Contribution',
+                    path: '/community/contribution'
+                },
+                {
+                    name: 'Conduct',
+                    path: '/community/conduct'
+                },
+                {
+                    name: 'Mailing list',
+                    path: '/community/mailing-list'
+                },
+                {
+                    name: 'Certification services',
+                    path: '/community/certification-services'
+                }
+            ],
+            class: []
+        },
+        {
+            path: '',
+            name: 'SIG',
+            children: [
+                {
+                    name: 'View SIG',
+                    path: '/sig/sig-list'
+                },
+                {
+                    name: 'SIG guidance',
+                    path: '/sig/sig-guidance'
+                },
+                {
+                    name: 'Role description',
+                    path: '/sig/role-description'
+                }
+            ],
+            class: []
+        },
+        {
+            path: '',
+            name: 'Security',
+            children: [
+                {
+                    name: 'Vulnerability reporting',
+                    path: '/security/vulnerability-reporting'
+                },
+                {
+                    name: 'Safety bulletin',
+                    path: '/security/safety-bulletin'
+                },
+                {
+                    name: 'CVE',
+                    path: '/security/cve'
+                }
+            ],
+            class: []
+        }
+    ],
         lang: '中',
         search: 'search',
-        gitte: 'gitte',
+        gitte: 'Source code',
         footer: {
             mail: 'contact@openeuler.org',
             copyright: 'Copyright © 2020 openEuler. All rights reserved.',
-            rightList: ['TradeMark', 'Legal', 'Privacy']
+            rightList: ['TradeMark', 'Legal', 'Privacy'],
+            qrcode: 'Wechat Subscription'
         }
     }
 };

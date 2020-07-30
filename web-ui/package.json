@@ -11,7 +11,7 @@
   "author": "",
   "license": "",
   "dependencies": {
-    "@vuepress/theme-blog": "^2.3.0",
+    "axios": "^0.19.2",
     "element-ui": "^2.13.2",
     "less-loader": "^6.2.0",
     "vuepress": "^1.5.2"

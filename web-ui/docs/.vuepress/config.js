@@ -13,6 +13,11 @@ module.exports = {
 		[require('./sitePlugin.js')]
 	],
 	locales: {
+        '/': {
+            lang: 'en',
+            title: '',
+            description: ''
+        },
 		'/en/': {
 		  lang: 'en',
 		  title: '',
@@ -33,8 +38,21 @@ module.exports = {
 			'zh': {
 			  lang: require('./lang/zh.js')
 			}
-		},
-		smoothScroll: true
+        },
+        smoothScroll: true  
+        
+    },
+    devServer: {
+        proxy: {
+            '/api': {
+                target: 'http://baidu.com',
+                ws: true,
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api': ''
+                }
+            }
+        }
 
-	}
+    }
 }

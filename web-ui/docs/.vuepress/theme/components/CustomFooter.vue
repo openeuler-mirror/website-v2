@@ -13,7 +13,7 @@
             </div>
             <div class="footer-right">
                 <img src="/footer-logo.png" class="footer-qrcode">
-                <div class="qrcode-desc">{{ i18n.common.footer.mail }}</div>
+                <div class="qrcode-desc">{{ i18n.common.footer.qrcode }}</div>
             </div>
         </div>
     </div>
