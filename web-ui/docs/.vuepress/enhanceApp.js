@@ -39,7 +39,7 @@ export default ({
         methods : {
             resolvePath(path){
                 if(path){
-                    const targetLocale = this.$lang === "zh" ? "/zh" : "";
+                    const targetLocale = this.$lang === "zh" ? "/zh" : "/en";
                     return targetLocale + path;    
                 }
                 

@@ -180,7 +180,8 @@ export default {
     },
     methods: {
         goHome() {
-            this.$router.push(this.resolvePath("/"));
+            const targetLocale = this.$lang === "zh" ? "/zh/" : "/en/";
+            this.$router.push(targetLocale);
             this.menuMobileFlag = false;
         },
         go(path) {
@@ -202,10 +203,10 @@ export default {
             let currentLink = this.$page.path;
             if (currentLink.substring(0, 4) === "/zh/") {
                 window.localStorage.setItem("locale", "en");
-                currentLink = currentLink.substring(3);
+                currentLink = '/en' + currentLink.substring(3);
             } else {
                 window.localStorage.setItem("locale", "cn");
-                currentLink = "/zh" + currentLink;
+                currentLink = '/zh' + currentLink.substring(3);
             }
             window.location.href = currentLink;
         },
