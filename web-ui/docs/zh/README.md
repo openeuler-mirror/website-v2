@@ -1,4 +1,3 @@
-首页
 <ClientOnly>
-  <test/>
+  <home-home/>
 </ClientOnly>

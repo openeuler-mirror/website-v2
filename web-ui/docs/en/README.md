@@ -1,4 +1,3 @@
-HOME
 <ClientOnly>
-  <test/>
+  <home-home/>
 </ClientOnly>
