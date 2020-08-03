@@ -1,3 +1,6 @@
+/**
+ * @file httpUtil
+ */
 var request = require('request');
 
 var mailError = {

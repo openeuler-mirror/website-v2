@@ -14,6 +14,8 @@ var helmet = require('helmet');
 var indexRouter = require('./routes/index');
 var isoRouter = require('./routes/iso');
 var mailRouter = require('./routes/mail');
+var cveRouter = require('./routes/cve');
+var securityNoticeRouter = require('./routes/SecurityNotice');
 
 var app = express();
 
@@ -68,6 +70,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/iso', isoRouter);
 app.use('/mail', mailRouter);
+app.use('/cve', cveRouter);
+app.use('/securityNotice', securityNoticeRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
