@@ -2,28 +2,28 @@
     <div class="download-content">
         <div class="download-banner"></div>
         <div class="download-banner-mobile">
-            <h3>{{ i18n.download.downloadBtnName }}</h3>
+            <h3>{{ i18n.download.DOWNLOAD_BTN_NAME }}</h3>
             <div></div>
         </div>
         <div class="download-list-wrapper">
             <el-form :inline="true" :model="formData" class="download-filter">
-                <el-form-item :label="i18n.download.manufacturer">
+                <el-form-item :label="i18n.download.MANUFACTURER">
                     <el-select v-model="formData.manufacturer" multiple placeholder="">
                         <el-option
-                            v-for="(item, index) in i18n.download.manufacturerList"
+                            v-for="(item, index) in i18n.download.MANUFACTURER_LIST"
                             :key="index"
-                            :label="item.name"
-                            :value="item.value"
+                            :label="item.NAME"
+                            :value="item.VALUE"
                         ></el-option>
                     </el-select>
                 </el-form-item>
-                <el-form-item :label="i18n.download.publishDate">
+                <el-form-item :label="i18n.download.PUBLISH_DATE">
                     <el-select v-model="formData.publishDate" multiple placeholder="">
                         <el-option
-                            v-for="(item, index) in i18n.download.publishDateList"
+                            v-for="(item, index) in i18n.download.PUBLISH_DATE_LIST"
                             :key="index"
-                            :label="item.name"
-                            :value="item.value"
+                            :label="item.NAME"
+                            :value="item.VALUE"
                         ></el-option>
                     </el-select>
                 </el-form-item>
@@ -37,56 +37,63 @@
                     v-for="(item, index) in downloadList"
                     :key="index"
                 >
-                    <h3 class="title">{{ item.name }}</h3>
+                    <h3 class="title">{{ item.NAME }}</h3>
                     <el-button
                         size="medium"
                         class="download-btn"
                         type="primary"
                         icon="el-icon-download"
-                        @click="download(item.downloadUrl)"
-                        >{{ i18n.download.downloadBtnName }}</el-button
+                        @click="download(item.DOWNLOAD_URL)"
+                        >{{ i18n.download.DOWNLOAD_BTN_NAME }}</el-button
                     >
-                    <p>{{ item.desc }}</p>
-                    <ul class="url-list">
-                        <li>
-                            <img src="/search.png" alt="" />
-                            <a :href="item.releaseDescUrl">{{
-                                i18n.download.releaseDesc
-                            }}</a>
-                        </li>
-                        <li>
-                            <img src="/search.png" alt="" />
-                            <a :href="item.installGuidenceUrl">{{
-                                i18n.download.installGuidence
-                            }}</a>
-                        </li>
-                        <li>
-                            <img src="/search.png" alt="" />
-                            <a :href="item.seekHelpUrl">{{
-                                i18n.download.seekHelp
-                            }}</a>
-                        </li>
-                        <li>
-                            <img src="/search.png" alt="" />
-                            <a :href="item.getIsoUrl">{{
-                                i18n.download.getIso
-                            }}</a>
-                        </li>
-                        <li>
-                            <img src="/search.png" alt="" />
-                            <a :href="item.lifeCycleUrl">{{
-                                i18n.download.lifeCycle
-                            }}</a>
-                        </li>
-                    </ul>
+                    <p>{{ item.DESC }}</p>
+                    <div class="url-list-wrapper">
+                        <ul class="url-list">
+                            <li>
+                                <img src="/img/download/release.svg" alt="" />
+                                <a target="_blank" :href="item.RELEASE_DESC_URL">{{
+                                    i18n.download.RELEASE_DESC
+                                }}</a>
+                            </li>
+                            <li>
+                                <img src="/img/download/guidence.svg" alt="" />
+                                <a target="_blank" :href="item.INSTALL_GUIDENCE_URL">{{
+                                    i18n.download.INSTALL_GUIDENCE
+                                }}</a>
+                            </li>
+                        </ul>
+                        <ul class="url-list">
+                            <li>
+                                <img src="/img/download/help.svg" alt="" />
+                                <a target="_blank" :href="item.SEEK_HELP_URL">{{
+                                    i18n.download.SEEK_HELP
+                                }}</a>
+                            </li>
+                            <li>
+                                <img src="/img/download/get-iso.svg" alt="" />
+                                <a target="_blank" :href="item.GET_ISO_URL">{{
+                                    i18n.download.GET_ISO
+                                }}</a>
+                            </li>
+                        </ul>
+                        <ul class="url-list">
+                            <li>
+                                <img src="/img/download/life-circle.svg" alt="" />
+                                <a target="_blank" :href="item.LIFE_CYCLE_URL">{{
+                                    i18n.download.LIFE_CYCLE
+                                }}</a>
+                            </li>
+                        </ul>    
+                    </div>
+                    
                     <div class="btn-mobile-wrapper">
                         <el-button
                             size="medium"
                             class="download-btn-mobile"
                             type="primary"
                             icon="el-icon-download"
-                            @click="download(item.downloadUrl)"
-                            >{{ i18n.download.downloadBtnName }}</el-button
+                            @click="download(item.DOWNLOAD_URL)"
+                            >{{ i18n.download.DOWNLOAD_BTN_NAME }}</el-button
                         >
                     </div>
                 </li>
@@ -112,7 +119,7 @@ export default {
         };
     },
     mounted () {
-        this.list = this.i18n.download.downloadList;
+        this.list = this.i18n.download.DOWNLOAD_LIST;
         downloadList({
             manufacturer: "1",
             publishTime: "2"
@@ -132,37 +139,37 @@ export default {
             ) {
                 return this.list.filter(item => {
                     return this.formData.lts
-                        ? item.lts === this.formData.lts
+                        ? item.LTS === this.formData.lts
                         : true;
                 });
             } else if (!this.formData.manufacturer.length) {
                 return this.list.filter(item => {
                     return (
-                        this.formData.publishDate.indexOf(item.publishDate) >
+                        this.formData.publishDate.indexOf(item.PUBLISH_DATE) >
                             -1 &&
                         (this.formData.lts
-                            ? item.lts === this.formData.lts
+                            ? item.LTS === this.formData.lts
                             : true)
                     );
                 });
             } else if (!this.formData.publishDate.length) {
                 return this.list.filter(item => {
                     return (
-                        this.formData.manufacturer.indexOf(item.manufacturer) >
+                        this.formData.manufacturer.indexOf(item.MANUFACTURER) >
                             -1 &&
                         (this.formData.lts
-                            ? item.lts === this.formData.lts
+                            ? item.LTS === this.formData.lts
                             : true)
                     );
                 });
             } else {
                 return this.list.filter(item => {
-                    return this.formData.publishDate.indexOf(item.publishDate) >
+                    return this.formData.publishDate.indexOf(item.PUBLISH_DATE) >
                         -1 &&
-                        this.formData.manufacturer.indexOf(item.manufacturer) >
+                        this.formData.manufacturer.indexOf(item.MANUFACTURER) >
                             -1 &&
                         (this.formData.lts
-                        ? item.lts === this.formData.lts
+                        ? item.LTS === this.formData.lts
                         : true);
                 });
             }
@@ -311,36 +318,30 @@ export default {
                     font-family: FZLTXIHJW;
                     margin-bottom: 24px;
                 }
-                ul {
-                    @media (min-width: 1000px) {
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: space-between;
-                    }
-                }
-                ul li {
-                    margin: 0 0 20px 0;
-                    display: inline-block;
-                    line-height: 14px;
-                    @media (max-width: 1000px) {
-                        margin: 0 0 20px 0;
-                    }
-                    img {
-                        width: 20px;
-                        height: 17px;
-                        vertical-align: middle;
-                        @media (max-width: 1000px) {
-                            display: none;
-                        }
-                    }
+                .url-list-wrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 14px;
                     a {
-                        font-size: 14px;
                         text-decoration: none;
-                        margin-left: 5px;
                         color: #002fa7;
                     }
-                    &:last-child {
-                        flex: 0.86;
+                    .url-list {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: space-between;
+                        li {
+                            margin-bottom: 20px;
+                            img {
+                                width: 18px;
+                                height: 20px;
+                                vertical-align: middle;
+                                margin-right: 13px;
+                                @media (max-width: 1000px) {
+                                    display: none;
+                                }
+                            }
+                        }
                     }
                 }
             }
