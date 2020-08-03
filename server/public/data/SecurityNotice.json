@@ -1,7 +1,7 @@
 [{
         "securityNoticeNo": "openEuler-SA-2020-1006",
         "summary": "gnutls security update",
-        "announcementTime": "2020-05-13",
+        "announcementTime": "2019-05-13",
         "introduction": "An update for gnutls is now available for openEuler-20.03-LTS",
         "type": "High",
         "subject": "An update for gnutls is now available for openEuler-20.03-LTS;\n\nopenEuler Security has rated this update as having a security impact of high. A Common Vunlnerability Scoring System(CVSS)base score, which gives a detailed severity rating, is available for each vulnerability from the CVElink(s) in the References section.",

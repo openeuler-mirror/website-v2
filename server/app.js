@@ -11,7 +11,6 @@ var fs = require('fs');
 var FileStreamRotator = require('file-stream-rotator');
 
 var helmet = require('helmet');
-var indexRouter = require('./routes/index');
 var isoRouter = require('./routes/iso');
 var mailRouter = require('./routes/mail');
 var cveRouter = require('./routes/cve');
@@ -67,7 +66,6 @@ app.use(express.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
 app.use('/iso', isoRouter);
 app.use('/mail', mailRouter);
 app.use('/cve', cveRouter);

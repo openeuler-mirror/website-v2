@@ -7,43 +7,43 @@ var fs = require('fs');
 
 const lesson = JSON.parse(fs.readFileSync('./public/data/SecurityNotice.json'));
 
-router.post('/list', function(req, res) {
+router.post('/detail', function (req, res) {
+    let sn = req.body.sn;
+    let lists = lesson.filter(item => {
+        return item.securityNoticeNo.indexOf(sn) > -1;
+    });
+    res.send({
+        list: lists
+    });
+});
+
+router.post('/list', function (req, res) {
     let page = req.body.page;
     let limit = req.body.pageSize;
     let year = req.body.year;
     let type = req.body.type;
     let keyword = req.body.keyword;
 
-    let lists = [];
-    let tempLists = [];
+    let lists = lesson;
     let newArr = [];
-    if (year === '' && type === '' && keyword === '') {
-        lists = lesson;
-    } else {
-        if (type === '') {
-            lists = lesson;
-        } else {
-            lists = lesson.filter((item) => {
-                return item.type === type;
-            });
-        }
-        tempLists = lists;
-        if (year !== '' && keyword === '') {
-            lists = tempLists.filter(item => {
-                return item.announcementTime.indexOf(year) > -1;
-            });
-        } else if (year === '' && keyword !== '') {
-            lists = tempLists.filter(item => {
-                return item.securityNoticeNo.indexOf(keyword) > -1;
-            });
-        } else {
-            lists = tempLists.filter(item => {
-                return item.securityNoticeNo.indexOf(keyword) > -1 && item.announcementTime.indexOf(year) > -1;
-            });
-        }
+    if (year !== '') {
+        lists = lists.filter(item => {
+            return item.announcementTime.indexOf(year) > -1;
+        });
     }
-    let offset = parseInt(page);
-    limit = parseInt(limit);
+    if (type !== '') {
+        lists = lists.filter(item => {
+            return item.type === type;
+        });
+    }
+    if (keyword !== '') {
+        lists = lists.filter(item => {
+            return item.securityNoticeNo.indexOf(keyword) > -1;
+        });
+    }
+
+    let offset = parseInt(page, 10);
+    limit = parseInt(limit, 10);
     if (offset <= 1) {
         offset = 0;
         page = 1;

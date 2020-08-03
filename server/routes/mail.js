@@ -1,4 +1,6 @@
-// mail router
+/**
+ * @file mail router
+ */
 var express = require('express');
 var router = express.Router();
 const HTTP = require('../util/httpUtil');
