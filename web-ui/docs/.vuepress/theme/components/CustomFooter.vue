@@ -3,17 +3,17 @@
         <div class="footer-content">
             <div class="footer-left">
                 <img src="/footer-logo.png" class="footer-logo">
-                <div class="footer-mail">{{ i18n.common.footer.mail }}</div>
+                <div class="footer-mail">{{ i18n.common.FOOTER.MAIL }}</div>
             </div>
             <div class="footer-center">
                 <ul class="right-list">
-                    <li v-for="(item, index) in i18n.common.footer.rightList" :key="index" ><a href="/">{{ item }}</a></li>
+                    <li v-for="(item, index) in i18n.common.FOOTER.RIGHT_LIST" :key="index" ><a href="/">{{ item }}</a></li>
                 </ul>
-                <p class="footer-copyright">{{ i18n.common.footer.copyright }}</p>
+                <p class="footer-copyright">{{ i18n.common.FOOTER.COPY_RIGHT }}</p>
             </div>
             <div class="footer-right">
                 <img src="/footer-logo.png" class="footer-qrcode">
-                <div class="qrcode-desc">{{ i18n.common.footer.qrcode }}</div>
+                <div class="qrcode-desc">{{ i18n.common.FOOTER.QR_CODE }}</div>
             </div>
         </div>
     </div>
