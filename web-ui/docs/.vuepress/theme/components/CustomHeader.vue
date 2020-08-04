@@ -16,103 +16,103 @@
                 />
                 <ul class="nav-menu">
                     <li
-                        v-for="(item, index) in i18n.common.navRouterConfig"
+                        v-for="(item, index) in i18n.common.NAV_ROUTER_CONFIG"
                         :key="index"
-                        @mouseenter="showSub(item.class)"
-                        @mouseleave="hideSub(item.class)"
-                        :class="item.class"
+                        @mouseenter="showSub(item.CLASS)"
+                        @mouseleave="hideSub(item.CLASS)"
+                        :class="item.CLASS"
                     >
                         <a
-                            @click="go(item.path)"
+                            @click="go(item.PATH)"
                             :class="{
                                 'menu-link': true,
                                 'menu-active': menuActiveFn(item)
                             }"
-                            >{{ item.name }}</a
+                            >{{ item.NAME }}</a
                         >
                         <div
-                            @mouseenter="showSub(item.class)"
-                            @mouseleave="hideSub(item.class)"
+                            @mouseenter="showSub(item.CLASS)"
+                            @mouseleave="hideSub(item.CLASS)"
                             class="sub-menu"
-                            v-if="item.children.length"
+                            v-if="item.CHILDREN.length"
                         >
                             <ul class="sig-menu-content">
                                 <li
                                     v-for="(subItem,
-                                    subItemIndex) in item.children"
+                                    subItemIndex) in item.CHILDREN"
                                     :key="subItemIndex"
-                                    @click="go(subItem.path)"
+                                    @click="go(subItem.PATH)"
                                 >
-                                    {{ subItem.name }}
+                                    {{ subItem.NAME }}
                                 </li>
                             </ul>
                             <span class="submenu-arrow"></span>
                         </div>
                     </li>
                 </ul>
-                <ul
-                    :class="{
-                        'nav-menu-mobile': true,
-                        'menu-mobile-active': menuMobileFlag
-                    }"
-                >
-                    <li
-                        v-for="(item, index) in i18n.common.navRouterConfig"
-                        :key="index"
+                <el-collapse-transition>
+                    <ul
+                        class="nav-menu-mobile"
+                        v-show="menuMobileFlag"
                     >
-                        <a
-                            :class="{
-                                'menu-link': true,
-                                'menu-active': menuActiveFn(item) && !item.children.length
-                            }"
-                            @click="toggleSub(item)"
-                            >{{ item.name
-                            }}<i
-                                :class="{
-                                    'icon-arrow': true,
-                                    'arrow-active':
-                                        item.class.indexOf('arrow-active') >
-                                            -1 ||
-                                        (menuActiveFn(item) && mobileActiveFlag)
-                                }"
-                                v-if="item.children.length"
-                            ></i
-                        ></a>
-                        <ul
-                            :class="{
-                                'sub-menu': true,
-                                show:
-                                    item.class.indexOf('arrow-active') > -1 ||
-                                    (menuActiveFn(item) && mobileActiveFlag)
-                            }"
+                        <li
+                            v-for="(item, index) in i18n.common.NAV_ROUTER_CONFIG"
+                            :key="index"
                         >
-                            <li
-                                v-for="(subItem, subIndex) in item.children"
+                            <a
                                 :class="{
-                                    'sub-menu-color-active':
-                                        $route.path.includes(resolvePath(subItem.path))
+                                    'menu-link': true,
+                                    'menu-active': menuActiveFn(item) && !item.CHILDREN.length
                                 }"
-                                :key="subIndex"
-                                @click="go(subItem.path)"
-                            >
-                                {{ subItem.name }}
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a
-                            class="menu-link"
-                            >{{ i18n.common.gitte }}<i class="icon-arrow"></i>
-                        </a>
-                    </li>
-                </ul>
+                                @click="toggleSub(item)"
+                                >{{ item.NAME
+                                }}<i
+                                    :class="{
+                                        'icon-arrow': true,
+                                        'arrow-active':
+                                            item.CLASS.indexOf('arrow-active') >
+                                                -1 ||
+                                            (menuActiveFn(item) && mobileActiveFlag)
+                                    }"
+                                    v-if="item.CHILDREN.length"
+                                ></i
+                            ></a>
+                            <el-collapse-transition>
+                            
+                                <ul
+                                    class="sub-menu"
+                                    v-show="item.CLASS.indexOf('arrow-active') > -1 ||
+                                            (menuActiveFn(item) && mobileActiveFlag)"
+                                >
+                                    <li
+                                        v-for="(subItem, subIndex) in item.CHILDREN"
+                                        :class="{
+                                            'sub-menu-color-active':
+                                                $route.path.includes(resolvePath(subItem.PATH))
+                                        }"
+                                        :key="subIndex"
+                                        @click="go(subItem.PATH)"
+                                    >
+                                        {{ subItem.NAME }}
+                                    </li>
+                                </ul>
+                            </el-collapse-transition>
+                        </li>
+                        <li>
+                            <a
+                                class="menu-link"
+                                >{{ i18n.common.GITTE }}<i class="icon-arrow"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </el-collapse-transition>
                 <div
                     :class="{ mask: menuMobileFlag }"
                     @click="menuMobileFlag = false"
                 ></div>
                 <div :class="{ 'search-mobile': true, show: searchFlag }">
                     <el-input
-                        :placeholder="i18n.common.searchPlaceholder"
+                        :placeholder="i18n.common.SEARCH_PLACE_HOLDER"
                         v-model="searchData"
                         clearable
                     ></el-input>
@@ -120,20 +120,20 @@
                 <ul class="nav-other">
                     <li class="lang" @click="toggleLang">
                         <img src="/lang.png" alt="" />
-                        <span>{{ i18n.common.lang }}</span>
+                        <span>{{ i18n.common.LANG }}</span>
                     </li>
                     <li class="search">
                         <img src="/search.png" alt="" />
-                        <span>{{ i18n.common.search }}</span>
+                        <span>{{ i18n.common.SEARCH }}</span>
                     </li>
                     <li>
                         <img src="/code-source.svg" alt="" />
-                        <span>{{ i18n.common.gitte }}</span>
+                        <span>{{ i18n.common.GITTE }}</span>
                     </li>
                 </ul>
                 <ul class="nav-other-mobile">
                     <li class="lang" @click="toggleLang">
-                        <span>{{ i18n.common.lang }}</span>
+                        <span>{{ i18n.common.LANG }}</span>
                     </li>
                     <li
                         :class="{ search: true, 'search-active': searchFlag }"
@@ -178,10 +178,7 @@ export default {
         go(path) {
             if (path) {
                 this.$router.push({
-                    path: this.resolvePath(path),
-                    query: {
-                        a:'aa'
-                    }
+                    path: this.resolvePath(path)
                 });
                 this.menuMobileFlag = false;
             }
@@ -207,10 +204,10 @@ export default {
         menuActiveFn(item) {
             const $route = this.$route;
             return (
-                $route.path.includes(this.resolvePath(item.path)) ||
-                item.children.some(
+                $route.path.includes(this.resolvePath(item.PATH)) ||
+                item.CHILDREN.some(
                     item =>
-                        $route.path.includes(this.resolvePath(item.path))
+                        $route.path.includes(this.resolvePath(item.PATH))
                 )
             );
         },
@@ -219,8 +216,8 @@ export default {
             this.menuMobileFlag = !this.menuMobileFlag;
         },
         toggleSub(item) {
-            if (item.path) {
-                this.$router.push(this.resolvePath(item.path));
+            if (item.PATH) {
+                this.$router.push(this.resolvePath(item.PATH));
                 this.menuMobileFlag = false;
                 return;
             }
@@ -228,10 +225,13 @@ export default {
                 this.mobileActiveFlag = false;
                 return;
             }
-            if (item.class.length) {
-                item.class.pop();
+            if (item.CLASS.length) {
+                item.CLASS.pop();
             } else {
-                item.class.push("arrow-active");
+                this.i18n.common.NAV_ROUTER_CONFIG.forEach(item => {
+                    item.CLASS = [];
+                });
+                item.CLASS.push("arrow-active");
             }
             this.mobileActiveFlag = false;
         },
@@ -252,7 +252,7 @@ export default {
 @keyframes fade-in {
     0% {
         opacity: 0;
-        top: -110px;
+        top: -90px;
     }
     100% {
         opacity: 1;
@@ -270,7 +270,7 @@ export default {
     }
     100% {
         opacity: 1;
-        top: 110px;
+        top: 90px;
         display: block;
     }
 }
@@ -300,7 +300,7 @@ export default {
     background-color: rgba(0, 0, 0, 0.4);
 }
 .nav-fill {
-    height: 110px;
+    height: 90px;
     @media (max-width: 1000px) {
         height: 70px;
     }
@@ -308,7 +308,7 @@ export default {
         background-color: #fff;
         animation: fade-in;
         animation-duration: 0.5s;
-        height: 110px;
+        height: 90px;
         width: 100%;
         position: fixed;
         z-index: 999;
@@ -364,7 +364,6 @@ export default {
                 }
             }
             .nav-menu-mobile {
-                display: none;
                 max-height: calc(100vh - 70px);
                 overflow-y: scroll;
                 background-color: #fff;
@@ -378,6 +377,10 @@ export default {
                     display: block;
                     border-bottom: 1px solid rgba(0, 0, 0, 0.09);
                     padding: 10px 0;
+                    &:last-child {
+                        border-bottom: none;
+                        margin-bottom: 0;
+                    }
                     a {
                         border: none;
                         font-size: 16px;
@@ -399,7 +402,6 @@ export default {
                     }
                     .sub-menu {
                         margin-left: 15px;
-                        display: none;
                         .sub-menu-color-active {
                             color: #0041bd;
                         }
@@ -411,6 +413,9 @@ export default {
                             font-family: FZLTXIHJW;
                             color: rgba(0, 0, 0, 0.7);
                             margin: 6px 0;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
                         }
                     }
                 }
@@ -430,7 +435,7 @@ export default {
                     .sub-menu {
                         animation: slide-down;
                         animation-duration: 0.5s;
-                        top: 110px;
+                        top: 90px;
                         display: block;
                     }
                 }
@@ -476,7 +481,7 @@ export default {
                     position: relative;
                     padding: 0 25px;
                     height: 100%;
-                    line-height: 110px;
+                    line-height: 90px;
                     @media (max-width: 1000px) {
                         line-height: 70px;
                     }

@@ -4,410 +4,118 @@
 
 module.exports = {
     cn: {
-        releaseDesc: '发行说明',
-        installGuidence: '安装指南',
-        seekHelp: '提问求助',
-        getIso: '获取 ISO',
-        lifeCycle: '生命周期',
-        downloadBtnName: '下载',
-        manufacturer: '厂商',
-        manufacturerList: [
+        RELEASE_DESC: '发行说明',
+        INSTALL_GUIDENCE: '安装指南',
+        SEEK_HELP: '提问求助',
+        GET_ISO: '获取 ISO',
+        LIFE_CYCLE: '生命周期',
+        DOWNLOAD_BTN_NAME: '下载',
+        MANUFACTURER: '厂商',
+        MANUFACTURER_LIST: [
             {
-                name: '全部',
-                value: 0
+                NAME: '厂商一',
+                VALUE: 1
             },
             {
-                name: '厂商一',
-                value: 1
-            },
-            {
-                name: '厂商二',
-                value: 2
-            },
-            {
-                name: '厂商三',
-                value: 3
+                NAME: '厂商二',
+                VALUE: 2
             }
         ],
-        publishDate: '发行时间',
-        publishDateList: [
+        PUBLISH_DATE: '发行时间',
+        PUBLISH_DATE_LIST: [
             {
-                name: '全部',
-                value: 0
+                NAME: '2020/03/26',
+                VALUE: '2020/03/26'
             },
             {
-                name: '时间一',
-                value: 1
-            },
-            {
-                name: '时间二',
-                value: 2
-            },
-            {
-                name: '时间三',
-                value: 3
+                NAME: '2020/02/11',
+                VALUE: '2020/02/11'
             }
         ],
-        downloadList : [
+        DOWNLOAD_LIST : [
             {
-                name: '下载1',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 1,
-                publishDate: 1,
-                lts: false
+                NAME: 'openEuler 20.03 LTS',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.03-LTS/',
+                DESC: 'openEuler 20.03 LTS 版本是满足开放场景的标准发行版，生命周期四年。',
+                RELEASE_DESC_URL: 'sss',
+                INSTALL_GUIDENCE_URL: 'acacs',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS/',
+                LIFE_CYCLE_URL: 'vevreverv',
+                MANUFACTURER: 1,
+                PUBLISH_DATE: '2020/03/26',
+                LTS: true
             },
             {
-                name: '下载2',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 2,
-                publishDate: 2,
-                lts: false
-            },
-            {
-                name: '下载3',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 3,
-                publishDate: 3,
-                lts: true
-            },
-            {
-                name: '下载1',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 1,
-                publishDate: 1,
-                lts: false
-            },
-            {
-                name: '下载2',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 2,
-                publishDate: 2,
-                lts: false
-            },
-            {
-                name: '下载3',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 3,
-                publishDate: 3,
-                lts: true
-            },
-            {
-                name: '下载1',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 1,
-                publishDate: 1,
-                lts: false
-            },
-            {
-                name: '下载2',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 2,
-                publishDate: 2,
-                lts: false
-            },
-            {
-                name: '下载3',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 3,
-                publishDate: 3,
-                lts: true
-            },
-            {
-                name: '下载1',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 1,
-                publishDate: 1,
-                lts: false
-            },
-            {
-                name: '下载2',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 2,
-                publishDate: 2,
-                lts: false
-            },
-            {
-                name: '下载3',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 3,
-                publishDate: 3,
-                lts: true
+                NAME: 'openEuler 1.0 Base',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openeuler1.0/base/iso/',
+                DESC: 'openEuler 20.03 Base 版本是满足开放场景的标准发行版，生命周期四年。',
+                RELEASE_DESC_URL: 'sss',
+                INSTALL_GUIDENCE_URL: 'acacs',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+                GET_ISO_URL: 'https://repo.openeuler.org/openeuler1.0/base/iso/',
+                LIFE_CYCLE_URL: 'vevreverv',
+                MANUFACTURER: 1,
+                PUBLISH_DATE: '2020/02/11',
+                LTS: false
             }
         ]
     },
     en: {
-        releaseDesc: 'releaseDescription',
-        installGuidence: 'installGuidence',
-        seekHelp: 'seekHelp',
-        getIso: 'getIso',
-        lifeCycle: 'lifeCycle',
-        downloadBtnName: 'download',
-        manufacturer: 'manufacturer',
-        manufacturerList: [
+        RELEASE_DESC: 'releaseDescription',
+        INSTALL_GUIDENCE: 'installGuidence',
+        SEEK_HELP: 'seekHelp',
+        GET_ISO: 'getIso',
+        LIFE_CYCLE: 'lifeCycle',
+        DOWNLOAD_BTN_NAME: 'download',
+        MANUFACTURER: 'manufacturer',
+        MANUFACTURER_LIST: [
             {
-                name: 'all',
-                value: 0
+                NAME: 'manufacturer1',
+                VALUE: 1
             },
             {
-                name: 'manufacturer1',
-                value: 1
-            },
-            {
-                name: 'manufacturer2',
-                value: 2
-            },
-            {
-                name: 'manufacturer3',
-                value: 3
+                NAME: 'manufacturer2',
+                VALUE: 2
             }
         ],
-        publishDate: 'publishDate',
-        publishDateList: [
+        PUBLISH_DATE: 'PUBLISH_DATE',
+        PUBLISH_DATE_LIST: [
             {
-                name: 'all',
-                value: 0
+                NAME: '2020/03/26',
+                VALUE: '2020/03/26'
             },
             {
-                name: 'date1',
-                value: 1
-            },
-            {
-                name: 'date2',
-                value: 2
-            },
-            {
-                name: 'date3',
-                value: 3
+                NAME: '2020/02/11',
+                VALUE: '2020/02/11'
             }
         ],
-        downloadList : [
+        DOWNLOAD_LIST : [
             {
-                name: 'download1',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 1,
-                publishDate: 1,
-                lts: false
+                NAME: 'openEuler 20.03 LTS',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.03-LTS/',
+                DESC: 'The openEuler 20.03 LTS version is a standard release version that meets open scenario requirements, which has a lifecycle of four years.',
+                RELEASE_DESC_URL: 'sss',
+                INSTALL_GUIDENCE_URL: 'acacs',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS/',
+                LIFE_CYCLE_URL: 'vevreverv',
+                MANUFACTURER: 1,
+                PUBLISH_DATE: '2020/03/26',
+                LTS: true
             },
             {
-                name: 'download2',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 2,
-                publishDate: 2,
-                lts: false
-            },
-            {
-                name: 'download3',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 3,
-                publishDate: 3,
-                lts: true
-            },
-            {
-                name: 'download1',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 1,
-                publishDate: 1,
-                lts: false
-            },
-            {
-                name: 'download2',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 2,
-                publishDate: 2,
-                lts: false
-            },
-            {
-                name: 'download3',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 3,
-                publishDate: 3,
-                lts: true
-            },
-            {
-                name: 'download1',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 1,
-                publishDate: 1,
-                lts: false
-            },
-            {
-                name: 'download2',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 2,
-                publishDate: 2,
-                lts: false
-            },
-            {
-                name: 'download3',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 3,
-                publishDate: 3,
-                lts: true
-            },
-            {
-                name: 'download1',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 1,
-                publishDate: 1,
-                lts: false
-            },
-            {
-                name: 'download2',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 2,
-                publishDate: 2,
-                lts: false
-            },
-            {
-                name: 'download3',
-                downloadUrl : 'aaa',
-                desc: 'test',
-                releaseDescUrl: 'sss',
-                installGuidenceUrl: 'acacs',
-                seekHelpUrl: 'sssada',
-                getIsoUrl: 'vrerevr',
-                lifeCycleUrl: 'vevreverv',
-                manufacturer: 3,
-                publishDate: 3,
-                lts: true
+                NAME: 'openEuler 1.0 Base',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openeuler1.0/base/iso/',
+                DESC: 'The openEuler 20.03 Base version is a standard release version that meets open scenario requirements, which has a lifecycle of four years.',
+                RELEASE_DESC_URL: 'sss',
+                INSTALL_GUIDENCE_URL: 'acacs',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+                GET_ISO_URL: 'https://repo.openeuler.org/openeuler1.0/base/iso/',
+                LIFE_CYCLE_URL: 'vevreverv',
+                MANUFACTURER: 2,
+                PUBLISH_DATE: '2020/02/11',
+                LTS: false
             }
         ]
     }
