@@ -1,0 +1,105 @@
+[{
+        "securityNoticeNo": "openEuler-SA-2020-1006",
+        "summary": "gnutls security update",
+        "announcementTime": "2019-05-13",
+        "introduction": "An update for gnutls is now available for openEuler-20.03-LTS",
+        "type": "High",
+        "subject": "An update for gnutls is now available for openEuler-20.03-LTS;\n\nopenEuler Security has rated this update as having a security impact of high. A Common Vunlnerability Scoring System(CVSS)base score, which gives a detailed severity rating, is available for each vulnerability from the CVElink(s) in the References section.",
+        "description": "GnuTLS is a secure communications library implementing the SSL, TLS and DTLS protocols and technologies around them. It provides a simple C language application programming interface (API) to access the secure communications protocols as well as APIs to parse and write X.509, PKCS #12, OpenPGP and other required structures.;\n\nSecurity Fix(es):;\n\nGnuTLS 3.6.x before 3.6.13 uses incorrect cryptography for DTLS. The earliest affected version is 3.6.3 (2018-07-16) because of an error in a 2017-10-06 commit. The DTLS client always uses 32 '\\0' bytes instead of a random value, and thus contributes no randomness to a DTLS negotiation. This breaks the security guarantees of the DTLS protocol.;",
+        "affectedComponent": "gnutls",
+        "affectedProduct": "openEuler-20.03-LTS",
+        "cve": [],
+        "packages": [{
+            "packageName": "gnutls-3.6.9-6.oe1.aarch64.rpm",
+            "packageLink": "https://repo.openeuler.org/openEuler-20.03-LTS/update/aarch64/Packages/gnutls-3.6.9-6.oe1.aarch64.rpm"
+        }],
+        "referenceDocuments": "https://nvd.nist.gov/vuln/detail/CVE-2020-11501"
+    },
+    {
+        "securityNoticeNo": "openEuler-SA-2020-1005",
+        "summary": "httpd security update",
+        "announcementTime": "2020-05-13",
+        "introduction": "An update for httpd is now available for openEuler-20.03-LTS",
+        "type": "Medium",
+        "subject": "An update for httpd is now available for openEuler-20.03-LTS;\n\nopenEuler Security has rated this update as having a security impact of medium. A Common Vunlnerability Scoring System(CVSS)base score, which gives a detailed severity rating, is available for each vulnerability from the CVElink(s) in the References section.",
+        "description": "The Apache HTTP Server is a powerful, efficient, and extensible web server.;\n\nSecurity Fix(es):;\nIn Apache HTTP Server 2.4.18-2.4.39, using fuzzed network input, the http/2 session handling could be made to read memory after being freed, during connection shutdown.\n",
+        "affectedComponent": "httpd",
+        "affectedProduct": "openEuler-20.03-LTS",
+        "cve": [],
+        "packages": [],
+        "referenceDocuments": "https://nvd.nist.gov/vuln/detail/CVE-2019-10082"
+    },
+    {
+        "securityNoticeNo": "openEuler-SA-2020-1004",
+        "summary": "kernel security update",
+        "announcementTime": "2020-05-13",
+        "introduction": "An update for  kernel is now available for openEuler-20.03-LTS",
+        "type": "Medium",
+        "subject": "An update for kernel is now available for openEuler-20.03-LTS;\n\nopenEuler Security has rated this update as having a security impact of medium. A Common Vunlnerability Scoring System(CVSS)base score, which gives a detailed severity rating, is available for each vulnerability from the CVElink(s) in the References section.",
+        "description": "The kernel package contains the Linux kernel (vmlinuz), the core of any Linux operating system. The kernel handles the basic functions of the operating system: memory allocation, process allocation, device input and output, etc.;\n\nSecurity Fix(es):;\n\nIn the Linux kernel before 5.4.12, drivers/input/input.c has out-of-bounds writes via a crafted keycode table, as demonstrated by input_set_keycode, aka CID-cb222aed03d7.;",
+        "affectedComponent": "kernel",
+        "affectedProduct": "openEuler-20.03-LTS",
+        "cve": [{
+            "cveId": "CVE-2018-20669"
+        }],
+        "packages": [{
+            "packageName": "kernel-4.19.90-2004.1.0.0037.oe1.aarch64.rpm",
+            "packageLink": "https://repo.openeuler.org/openEuler-20.03-LTS/update/aarch64/Packages/kernel-4.19.90-2004.1.0.0037.oe1.aarch64.rpm"
+        }],
+        "referenceDocuments": "https://nvd.nist.gov/vuln/detail/CVE-2019-20636"
+    },
+    {
+        "securityNoticeNo": "openEuler-SA-2020-1003",
+        "summary": "gnutls security update",
+        "announcementTime": "2020-05-13",
+        "introduction": "An update for gnutls is now available for openEuler-20.03-LTS",
+        "type": "High",
+        "subject": "An update for gnutls is now available for openEuler-20.03-LTS;\n\nopenEuler Security has rated this update as having a security impact of high. A Common Vunlnerability Scoring System(CVSS)base score, which gives a detailed severity rating, is available for each vulnerability from the CVElink(s) in the References section.",
+        "description": "GnuTLS is a secure communications library implementing the SSL, TLS and DTLS protocols and technologies around them. It provides a simple C language application programming interface (API) to access the secure communications protocols as well as APIs to parse and write X.509, PKCS #12, OpenPGP and other required structures.;\n\nSecurity Fix(es):;\n\nGnuTLS 3.6.x before 3.6.13 uses incorrect cryptography for DTLS. The earliest affected version is 3.6.3 (2018-07-16) because of an error in a 2017-10-06 commit. The DTLS client always uses 32 '\\0' bytes instead of a random value, and thus contributes no randomness to a DTLS negotiation. This breaks the security guarantees of the DTLS protocol.;",
+        "affectedComponent": "gnutls",
+        "affectedProduct": "openEuler-20.03-LTS",
+        "cve": [],
+        "packages": [{
+            "packageName": "gnutls-3.6.9-6.oe1.aarch64.rpm",
+            "packageLink": "https://repo.openeuler.org/openEuler-20.03-LTS/update/aarch64/Packages/gnutls-3.6.9-6.oe1.aarch64.rpm"
+        }],
+        "referenceDocuments": "https://nvd.nist.gov/vuln/detail/CVE-2020-11501"
+    },
+    {
+        "securityNoticeNo": "openEuler-SA-2020-1002",
+        "summary": "httpd security update",
+        "announcementTime": "2020-05-13",
+        "introduction": "An update for httpd is now available for openEuler-20.03-LTS",
+        "type": "Medium",
+        "subject": "An update for httpd is now available for openEuler-20.03-LTS;\n\nopenEuler Security has rated this update as having a security impact of medium. A Common Vunlnerability Scoring System(CVSS)base score, which gives a detailed severity rating, is available for each vulnerability from the CVElink(s) in the References section.",
+        "description": "The Apache HTTP Server is a powerful, efficient, and extensible web server.;\n\nSecurity Fix(es):;\nIn Apache HTTP Server 2.4.18-2.4.39, using fuzzed network input, the http/2 session handling could be made to read memory after being freed, during connection shutdown.\n",
+        "affectedComponent": "httpd",
+        "affectedProduct": "openEuler-20.03-LTS",
+        "cve": [{
+                "cveId": "CVE-2018-12264"
+            },
+            {
+                "cveId": "CVE-2019-16905"
+            }
+        ],
+        "packages": [],
+        "referenceDocuments": "https://nvd.nist.gov/vuln/detail/CVE-2019-10082"
+    },
+    {
+        "securityNoticeNo": "openEuler-SA-2020-1001",
+        "summary": "kernel security update",
+        "announcementTime": "2020-05-13",
+        "introduction": "An update for  kernel is now available for openEuler-20.03-LTS",
+        "type": "Medium",
+        "subject": "An update for kernel is now available for openEuler-20.03-LTS;\n\nopenEuler Security has rated this update as having a security impact of medium. A Common Vunlnerability Scoring System(CVSS)base score, which gives a detailed severity rating, is available for each vulnerability from the CVElink(s) in the References section.",
+        "description": "The kernel package contains the Linux kernel (vmlinuz), the core of any Linux operating system. The kernel handles the basic functions of the operating system: memory allocation, process allocation, device input and output, etc.;\n\nSecurity Fix(es):;\n\nIn the Linux kernel before 5.4.12, drivers/input/input.c has out-of-bounds writes via a crafted keycode table, as demonstrated by input_set_keycode, aka CID-cb222aed03d7.;",
+        "affectedComponent": "kernel",
+        "affectedProduct": "openEuler-20.03-LTS",
+        "cve": [],
+        "packages": [{
+            "packageName": "kernel-4.19.90-2004.1.0.0037.oe1.aarch64.rpm",
+            "packageLink": "https://repo.openeuler.org/openEuler-20.03-LTS/update/aarch64/Packages/kernel-4.19.90-2004.1.0.0037.oe1.aarch64.rpm"
+        }],
+        "referenceDocuments": "https://nvd.nist.gov/vuln/detail/CVE-2019-20636"
+    }
+]
