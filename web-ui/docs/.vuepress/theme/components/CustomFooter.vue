@@ -12,7 +12,7 @@
                 <p class="footer-copyright">{{ i18n.common.FOOTER.COPY_RIGHT }}</p>
             </div>
             <div class="footer-right">
-                <img src="/footer-logo.png" class="footer-qrcode">
+                <img src="/qrcode.png" class="footer-qrcode">
                 <div class="qrcode-desc">{{ i18n.common.FOOTER.QR_CODE }}</div>
             </div>
         </div>

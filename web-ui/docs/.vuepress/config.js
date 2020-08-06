@@ -45,7 +45,7 @@ module.exports = {
     devServer: {
         proxy: {
             '/api': {
-                target: 'http://baidu.com',
+                target: 'http://159.138.45.71',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {
