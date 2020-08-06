@@ -192,12 +192,20 @@ export default {
         toggleLang() {
             window.localStorage.setItem("locale", this.$lang);
             let currentLink = this.$page.path;
+            let query = '';
+            for(let key in this.$route.query) {
+                if(query.includes('?=')){
+                    query += key + '=' +this.$route.query[key];
+                } else {
+                    query +='?' + key + '=' +this.$route.query[key];
+                }
+            }
             if (currentLink.substring(0, 4) === "/zh/") {
                 window.localStorage.setItem("locale", "en");
-                currentLink = '/en' + currentLink.substring(3);
+                currentLink = '/en' + currentLink.substring(3) + query;
             } else {
                 window.localStorage.setItem("locale", "cn");
-                currentLink = '/zh' + currentLink.substring(3);
+                currentLink = '/zh' + currentLink.substring(3) + query;
             }
             window.location.href = currentLink;
         },

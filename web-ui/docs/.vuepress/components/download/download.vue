@@ -1,10 +1,11 @@
 <template>
     <div class="download-content">
-        <div class="download-banner"></div>
-        <div class="download-banner-mobile">
-            <h3>{{ i18n.download.DOWNLOAD_BTN_NAME }}</h3>
-            <div></div>
-        </div>
+        <common-banner 
+        :pc-src="'/img/download/download-banner.png'" 
+        :mobile-src="'/img/download/download-banner.png'"
+        :inside-name="'DOWNLOAD'"
+        :outside-name="i18n.download.DOWNLOAD_BTN_NAME"
+        ></common-banner>
         <div class="download-list-wrapper">
             <el-form :inline="true" :model="formData" class="download-filter">
                 <el-form-item :label="i18n.download.MANUFACTURER">
@@ -103,7 +104,8 @@
 </template>
 
 <script>
-import { downloadList } from "../../api/download"
+import { downloadList } from '../../api/download';
+import commonBanner from './../common/banner.vue';
 let that = null;
 
 export default {
@@ -117,6 +119,9 @@ export default {
             },
             list: []
         };
+    },
+    components: {
+        commonBanner
     },
     mounted () {
         this.list = this.i18n.download.DOWNLOAD_LIST;
@@ -184,47 +189,68 @@ export default {
 </script>
 
 <style lang="less">
-.el-select__tags {
-    min-width: 140px !important;
-}
-.el-form-item__label {
-    font-size: 18px;
-    color: #000;
-    font-family: FZLTXIHJW;
+.download-content {
+    .el-input__icon {
+        line-height: 32px;
+    }
+    .el-form-item__label {
+        line-height: 32px;
+    }
+    .el-form-item__content {
+        line-height: 32px;
+        @media (max-width: 1000px) {
+            width: 100%;
+        }
+    }
+    .el-input__inner {
+        height: 32px;
+        line-height: 32px;
+        border: 1px solid rgba(0, 0, 0, .5);
+        color: #000;
+    }
+    .el-select__tags {
+        min-width: 140px !important;
+    }
+    .el-form-item__label {
+        font-size: 18px;
+        color: #000;
+        font-family: FZLTXIHJW;
+    }
+
+    .el-input__inner {
+        font-size: 14px;
+        color: #000;
+        font-family: FZLTXIHJW;
+    }
+
+    .el-select-dropdown__item {
+        color: #000;
+        font-family: FZLTXIHJW;
+    }
+
+    .el-form-item {
+        margin-right: 50px !important;
+    }
+
+    .el-form-item__content {
+        min-width: 140px;
+        min-height: 32px;
+    }
+
+    .el-button--primary {
+        background-color: #002fa7;
+    }
+
+    .el-button--primary:focus,
+    .el-button--primary:hover {
+        background-color: #002fa7;
+    }
+    .el-input {
+        width: unset;
+        margin: unset;
+    }
 }
 
-.el-input__inner {
-    font-size: 14px;
-    color: #000;
-    font-family: FZLTXIHJW;
-}
-
-.el-select-dropdown__item {
-    color: #000;
-    font-family: FZLTXIHJW;
-}
-
-.el-form-item {
-    margin-right: 50px !important;
-}
-
-.el-form-item__content {
-    min-width: 140px;
-    min-height: 32px;
-}
-
-.el-button--primary {
-    background-color: #002fa7;
-}
-
-.el-button--primary:focus,
-.el-button--primary:hover {
-    background-color: #002fa7;
-}
-.el-input {
-    width: unset;
-    margin: unset;
-}
 </style>
 <style lang="less" scoped>
 .download-content {

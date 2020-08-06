@@ -1,0 +1,3 @@
+<ClientOnly>
+  <security-safetyBulletin />
+</ClientOnly>

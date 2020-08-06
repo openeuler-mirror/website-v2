@@ -1,3 +1,3 @@
 <ClientOnly>
-  <security-cveList />
+  <security-cveDetail />
 </ClientOnly>

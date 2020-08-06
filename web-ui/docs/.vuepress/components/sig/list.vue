@@ -1,10 +1,11 @@
 <template>
     <div class="sig-list-content">
-        <div class="sig-list-banner"></div>
-        <div class="sig-list-banner-mobile">
-            <h3>SIG</h3>
-            <div></div>
-        </div>
+        <common-banner 
+        :pc-src="'/img/sig/sig-banner.png'" 
+        :mobile-src="'/img/sig/sig-banner.png'"
+        :inside-name="'SIG'"
+        :outside-name="'SIG'"
+        ></common-banner>
         <ul class="sig-list">
             <li class="sig-item">
                 <h2>A-Tune</h2>
@@ -191,12 +192,16 @@
 </template>
 
 <script>
+import commonBanner from './../common/banner.vue';
 export default {
     data() {
         return {
         };
     },
     methods: {
+    },
+    components: {
+        commonBanner
     }
 };
 </script>
@@ -236,7 +241,6 @@ export default {
         }
     }
     .sig-list {
-        margin-top: 80px;
         column-count: 2;
         column-gap: 60px;
         margin-bottom: 200px;
