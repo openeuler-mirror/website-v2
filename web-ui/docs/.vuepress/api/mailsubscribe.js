@@ -4,14 +4,14 @@
 
 import appAjax from './../libs/ajax-utils';
 export const subscribe = ({
-    list_id
+    listId
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            url: 'http://159.138.45.71/mail/add',
+            url: '/mail/add',
             type: 'post',
             data: {
-                list_id
+                listId
             },
             success(result) {
                 if (result) {

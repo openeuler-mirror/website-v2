@@ -28,14 +28,14 @@
             <h1>{{ i18n.home.HOME_INTRODUCE.INTRO_TITLE }}</h1>
             <h3>{{ i18n.home.HOME_INTRODUCE.INTRO_HEAD }}</h3>
             <p>{{ i18n.home.HOME_INTRODUCE.INTRO_DESCRIPTION }}</p>
-            <div class="isPC mapArea">
+            <div class="is-pc mapArea">
                 <img src="/img/home/step.png"
                      alt=""
                      usemap="#maphover"
                      ref="img-display-1"
                      id="img-display-1"
                      style="width: 100%">
-                <div class="area-box inPC" v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP" :key="index">
+                <div class="area-box in-pc" v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP" :key="index">
                     <a @click="go(item.LINK)">
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p>{{ item.TITLE }}</p>
@@ -43,7 +43,7 @@
                         <img :src="item.IMG" alt="" class="is-hidden">
                     </a>
                 </div>
-                <div class="area-box inPC" @click="clickDownload">
+                <div class="area-box in-pc" @click="clickDownload">
                     <a @click="go(i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.LINK)">
                         <div class="box-icon">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.NAME }}</div>
                         <p>{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.TITLE }}</p>
@@ -67,7 +67,7 @@
                     </div>
                 </div>
             </div>
-            <div class="isH5 mapArea">
+            <div class="is-h5 mapArea">
                 <div
                     class="area-box"
                     v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP"
@@ -131,7 +131,7 @@
         </div>
 
         <div class="home-newsroom">
-            <div class="isPC room-right">
+            <div class="is-pc room-right">
                 <div class="room-title" data-active="1">
                     <a href="javascript:;" data-name="event" data-index="1" @click="toggleRooms">{{ i18n.home.HOME_ROOMS.EVENT_NAME }}</a>
                     <a href="javascript:;" data-name="blog" data-index="2" @click="toggleRooms">{{ i18n.home.HOME_ROOMS.BLOG_NAME }}</a>
@@ -174,7 +174,7 @@
                     </div>
                 </div>
             </div>
-            <div class="isPC room-left">
+            <div class="is-pc room-left">
                 <div id="room-img-1" class="room-img active">
                     <img src="/img/home/eventImg.png" alt="">
                 </div>
@@ -185,7 +185,7 @@
                     <img src="/img/home/newsImg.png" alt="">
                 </div>
             </div>
-            <div class="isH5 newsroom">
+            <div class="is-h5 newsroom">
                 <div class="event-room">
                     <h5>{{ i18n.home.HOME_ROOMS.EVENT_NAME }}</h5>
                     <div class="rooms"
@@ -249,7 +249,7 @@
 
         <div class="home-auth">
             <h3>{{ i18n.home.HOME_AUTH.AUTH_TITLE }}</h3>
-            <img class="isH5 medal-logo" src="/img/home/medal.svg" alt="">
+            <img class="is-h5 medal-logo" src="/img/home/medal.svg" alt="">
             <p>{{ i18n.home.HOME_AUTH.AUTH_DESCRIPTION }}</p>
             <div class="auth-product">
                 <div class="product-box">
@@ -534,10 +534,10 @@
     [v-cloak] {
         display: none !important;
     }
-    .isPC {
+    .is-pc {
         display: block;
     }
-    .isH5 {
+    .is-h5 {
         display: none;
     }
     .home h1,
@@ -624,10 +624,10 @@
         max-width: 1200px;
         margin: 0 auto;
     }
-    .home-introduce .isH5.mapArea {
+    .home-introduce .is-h5.mapArea {
         display: none ;
     }
-    .home-introduce .isPC {
+    .home-introduce .is-pc {
         display: block;
     }
     .home-introduce h1 {
@@ -645,25 +645,25 @@
         margin-top: 97px;
         position: relative;
     }
-    .area-box.inPC:nth-child(2) {
+    .area-box.in-pc:nth-child(2) {
         position: absolute;
         top: 88px;
         left: 0;
     }
-    .area-box.inPC:nth-child(3) {
+    .area-box.in-pc:nth-child(3) {
         display: none;
     }
-    .area-box.inPC:nth-child(4) {
+    .area-box.in-pc:nth-child(4) {
         position: absolute;
         top: 132px;
         left: 56%;
     }
-    .area-box.inPC:nth-child(5) {
+    .area-box.in-pc:nth-child(5) {
         position: absolute;
         top: -40px;
         left: 80%;
     }
-    .area-box.inPC:nth-child(6) {
+    .area-box.in-pc:nth-child(6) {
         position: absolute;
         top: 0;
         left: 25%;
@@ -1097,16 +1097,16 @@
         margin-right: 0;
     }
     @media screen and (max-width: 1000px){
-        .isPC {
+        .is-pc {
             display: none;
         }
-        .isH5 {
+        .is-h5 {
             display: block;
         }
-        .isPC.mapArea {
+        .is-pc.mapArea {
             display: none;
         }
-        .home-introduce .isH5.mapArea {
+        .home-introduce .is-h5.mapArea {
             display: block;
             margin-top: 25px;
         }

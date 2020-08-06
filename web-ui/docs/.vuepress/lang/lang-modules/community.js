@@ -52,6 +52,14 @@ module.exports = {
                 INPUT_ADD: "您的电子邮件地址",
                 INPUT_NAME: "您的名字（选填）",
                 BUTTON: "订阅",
+            },
+            TABLE: {
+                NAME: "列表名称",
+                EMAIL_ADDRESS: "邮件地址",
+                ARCHIVE: "归档路径",
+                DESCRIPTION: "描述",
+                NAME_H5: "名称",
+                ARCHIVE_H5: "归档"
             }
         },
         CONTRIBUTION_H5: {
@@ -128,7 +136,15 @@ module.exports = {
                 REMIND: "You can also subscribe without creating an account. If you wish to do so, please use the form below.",
                 INPUT_ADD: "Your email address",
                 INPUT_NAME: "Your name(optional)",
-                BUTTON: "Subscribe",
+                BUTTON: "Subscribe"
+            },
+            TABLE: {
+                NAME: "列表名称",
+                EMAIL_ADDRESS: "邮件地址",
+                ARCHIVE: "归档路径",
+                DESCRIPTION: "描述",
+                NAME_H5: "名称",
+                ARCHIVE_H5: "归档"
             }
         },
         CONTRIBUTION_H5: {

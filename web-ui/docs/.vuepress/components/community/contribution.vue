@@ -1,6 +1,6 @@
 <template>
     <div class="contribution">
-        <div class="methods isPC">
+        <div class="methods is-pc">
             <div class="mail-guide"
                  v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"
                  :key="index">
@@ -12,8 +12,8 @@
                 </div>
             </div>
         </div>
-        <div class="isH5 mail-list-H5">
-            <h3 class="isH5">{{ i18n.community.CONTRIBUTION_H5.MOBILE_TITLE }}</h3>
+        <div class="is-h5 mail-list-H5">
+            <h3 class="is-h5">{{ i18n.community.CONTRIBUTION_H5.MOBILE_TITLE }}</h3>
             <div class="mail-guide"
                  v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"
                  :key="index">
@@ -35,10 +35,10 @@
 </script>
 
 <style scoped>
-    .isH5 {
+    .is-h5 {
         display: none;
     }
-    .isPC {
+    .is-pc {
         display: block;
     }
     .mail-guide {
@@ -86,10 +86,10 @@
         display: block;
     }
     @media screen and (max-width: 1000px){
-        .isPC {
+        .is-pc {
             display: none;
         }
-        .isH5 {
+        .is-h5 {
             display: block;
         }
         h3 {

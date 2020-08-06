@@ -1,6 +1,6 @@
 <template>
     <div class="sig-guidance">
-        <div class="sig_banner">
+        <div class="sig-banner">
             <h1 class="isPC">{{ i18n.sig.GUIDANCE_LIST.GUIDE.TITLE }}</h1>
         </div>
         <div class="isPC sig-guidance">
