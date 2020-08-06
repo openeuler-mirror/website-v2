@@ -3,6 +3,7 @@
  * */
 
 import axios from 'axios';
+import Vue from 'vue';
 const serviceBaseUrl = '/api'
 
 let addUrlParam = function (url, paramName, paramValue) {
@@ -27,13 +28,23 @@ let postJson = params => {
     let dataStr = params['data'] && ((typeof (params['data']) === 'object')
     ? JSON.stringify(params['data']) : params['data']);
 
+    let ajaxParams = {};
+    // success方法重载
+    ajaxParams['success'] = function (d) {
+        const data = typeof d.data == "string" ? JSON.parse(d.data) : d.data;
+        if(data){
+            params.success(data);
+        } else {
+            new Vue().$message.error('开小差~请稍后重试。');
+        }
+    }
     return api({
         method: params['type'] || 'post',
         url: params['url'],
         data: dataStr,
         params: params['params'],
         responseType: 'json'
-    }).then(params['success']).catch(params['error']);
+    }).then(ajaxParams['success']).catch(params['error']);
 };
 
 let exportsMethods = {

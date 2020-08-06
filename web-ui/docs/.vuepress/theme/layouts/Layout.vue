@@ -1,9 +1,8 @@
 <template>
   <div id="euler-app" :class="{'lang-en': $lang == 'en'}">
     <CustomHeader />
-    <Content v-if="!isPost() && !isPostBlog()" class="content" />
+    <Content v-if="!isPost()" class="content" />
     <Post v-if="isPost()" class="content" />
-    <PostBlog v-if="isPostBlog()" class="content" />
     <CustomFooter />
   </div>
 </template>
@@ -12,7 +11,6 @@
 import CustomHeader from "@theme/components/CustomHeader.vue";
 import CustomFooter from "@theme/components/CustomFooter.vue";
 import Post from "@theme/layouts/Post.vue";
-import PostBlog from "@theme/layouts/PostBlog.vue";
 
 export default {
   name: "Layout",
@@ -20,8 +18,7 @@ export default {
   components: {
     CustomHeader,
     CustomFooter,
-    Post,
-    PostBlog
+    Post
   },
 
   data() {

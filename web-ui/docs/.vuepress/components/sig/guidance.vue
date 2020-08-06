@@ -43,7 +43,7 @@
         <div class="isH5 sig-guidance-H5">
             <h3 class="isH5">{{ i18n.sig.GUIDANCE_LIST.GUIDE.MOBILE_TITLE }}</h3>
             <div class="isH5 mobile-banner">
-                <img src="/img/sig/sig-banner.png" alt="">
+                <img src="/img/sig/sig-banner-mobile.png" alt="">
             </div>
             <div class="mail-guide"
                  v-for="(item, index) in i18n.sig.GUIDANCE_LIST.GUIDE.LINE_CONTENT"
