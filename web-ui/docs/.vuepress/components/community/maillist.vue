@@ -304,11 +304,12 @@
     }
     .maillist {
         width: 1200px;
+        position: relative;
         margin: 80px auto 120px;
     }
     .maillist-divider-mail {
         width: 2px;
-        left: 710px;
+        left: 50%;
         height: 605px;
         background-image: linear-gradient(to top, #002FA7 0%, #002FA7 50%, transparent 50%);
         background-size: 2px 11px;
