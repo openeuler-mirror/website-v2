@@ -1,8 +1,8 @@
 <template>
     <div class="sig-list-content">
         <common-banner 
-        :pc-src="'/img/sig/sig-banner-mobile.png'"
-        :mobile-src="'/img/sig/sig-banner-mobile.png'"
+        :pc-src="'/img/sig/sig-banner.png'"
+        :mobile-src="'/img/sig/sig-banner.png'"
         :inside-name="'SIG'"
         :outside-name="'SIG'"
         ></common-banner>
