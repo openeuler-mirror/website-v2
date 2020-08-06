@@ -2,6 +2,11 @@
 title: "Guidance to Post a Blog"
 
 ---
+<ClientOnly>
+  <blog-postBlog />
+</ClientOnly>
+
+<div id="blog_content">
 
 ## Preparation
 
@@ -20,14 +25,17 @@ You can read <https://gitee.com/openeuler/website/tree/master/docs/blog_design.m
 
 The head includes the following information:
 ```
-+++
-title = "Sample Post"
-date = "2020-03-03"
-tags = ["Sample", "ABC", "cccc"]
-archives = "2020-03"
-author = "openEuler Blog Maintainer"
-summary = "Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more."
-+++
+---
+title: Sample Post
+date: 2020-03-03
+tags: 
+    - Sample
+    - ABC
+    - cccc
+archives: 2020-03
+author: openEuler Blog Maintainer
+summary: Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more.
+---
 
 Here you can edit your blog. 
 ```
@@ -79,7 +87,7 @@ The following are one example.
 2020-01-01-new-years-is-coming-03.pdf
 ```
 
-5. Commit your post
+1. Commit your post
 
 ```
 git add <file-path>
@@ -87,6 +95,77 @@ git commit -m "<message>"
 git push origin <branch-name>:<branch-name>
 ```
 
-6. Refer to <http://git.mydoc.io/?t=153749> to submit your Pull Request
+2. Refer to <http://git.mydoc.io/?t=153749> to submit your Pull Request
 
-7. Wait for reviewing and merging.
+3. Wait for reviewing and merging. 
+
+
+</div>
+
+<style lang="less">
+#blog_content{
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  p{
+    line-height: 42px;
+    a{
+      color: #002FA7;
+      text-decoration: none;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  h1,h2,h3,h4,h5{
+    font-size:20px;
+    font-weight: bold;
+    margin: 40px 0 25px 0;
+    a{
+      display: none;
+    }
+  }
+  ol{
+    list-style-type: decimal;
+    padding-left: 50px;
+    li{
+      line-height: 32px;
+      ol{
+        padding-left: 20px;
+      }
+    }
+  }
+  ol+p{
+    padding-left: 50px;
+  }
+  div[class*="language-"]{
+    background:rgba(225,230,238,0.3);
+    border:1px solid rgba(151,151,151,1);
+    border-radius: 0;
+    code[class*="language-"], pre[class*="language-"]{
+      color:rgba(0,0,0,0.5);
+    }
+  }
+  ul{
+    padding-left: 50px;
+    li{
+      line-height: 32px;
+      a{
+        color: #002FA7;
+        text-decoration: none;
+      }
+    }
+  }
+  ul+div[class*="language-"],ol+div[class*="language-"]{
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 1000px) {
+    #blog_content {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+        margin-bottom: 80px;
+    }
+}
+</style>

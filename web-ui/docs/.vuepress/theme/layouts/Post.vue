@@ -6,31 +6,24 @@
         <img class="middle-img" src="/blog/blog_user.png" alt />
       </p>
       <p>
-        <img class="middle-img" src="/blog/account.png" alt />
+        <img class="mobile-middle-img" src="/blog/account.png" alt />
         <span class="blog-author">{{$frontmatter.author}}</span>
       </p>
       <p>
-        <img class="middle-img" src="/blog/date.png" alt />
+        <img class="mobile-middle-img" src="/blog/date.png" alt />
         <span class="blog-date">{{resolvePostDate($frontmatter.date)}}</span>
       </p>
       <p>
-        <img class="middle-img" src="/blog/visibility.png" alt />
+        <img class="mobile-middle-img" src="/blog/visibility.png" alt />
         <span class="blog-date">
           <span id="busuanzi_container_page_pv">
-            本文总阅读量
-            <span id="busuanzi_value_page_pv"></span>次
-          </span>
-          <span id="busuanzi_container_site_pv">
-            本站总访问量
-            <span id="busuanzi_value_site_pv"></span>次
-          </span>
-          <span id="busuanzi_container_site_uv">
-            本站访客数
-            <span id="busuanzi_value_site_uv"></span>人次
+            <span>{{i18n.community.BLOG.BROWSE}}</span>
+            <span id="busuanzi_value_page_pv"></span>
+            <span>{{i18n.community.BLOG.VIEWED}}</span>
           </span>
         </span>
       </p>
-      <p class="bottom-line"></p>
+      <p class="bottom-line bottom-line-none"></p>
       <p v-if="otherBlog.length" class="other-blog">{{i18n.community.BLOG.OTHER_BLOG}}</p>
       <p class="other-blog-item">
         <span
@@ -42,11 +35,37 @@
     </div>
     <div class="post-right">
       <p class="blog-title">{{$frontmatter.title}}</p>
+      <div class="mobile-auther">
+        <p class="blog-img">
+          <img class="middle-img" src="/blog/blog_user.png" alt />
+        </p>
+        <p>
+          <img class="mobile-middle-img" src="/blog/account.png" alt />
+          <span class="blog-author">{{$frontmatter.author}}</span>
+        </p>
+        <p>
+          <img class="mobile-middle-img" src="/blog/date.png" alt />
+          <span class="blog-date">{{resolvePostDate($frontmatter.date)}}</span>
+        </p>
+        <p>
+          <img class="mobile-middle-img" src="/blog/visibility.png" alt />
+          <span class="blog-date">
+            <span id="busuanzi_container_page_pv">
+              <span>{{i18n.community.BLOG.BROWSE}}</span>
+              <span id="busuanzi_value_page_pv"></span>
+              <span>{{i18n.community.BLOG.VIEWED}}</span>
+            </span>
+          </span>
+        </p>
+      </div>
       <p class="blog-item-tag">
-        #
-        <span v-for="(tag, index) in $frontmatter.tags" :key="index">{{tag}}、</span>
+        <span>{{i18n.community.BLOG.LABEL}}:</span>
+        <span v-for="(tag, index) in $frontmatter.tags" :key="index">
+          <span class="tag-item">{{tag}}</span>
+          <span v-if="index != ($frontmatter.tags.length - 1)">、</span>
+        </span>
       </p>
-      <p class="bottom-line"></p>
+      <p class="bottom-line bottom-line-none"></p>
       <Content id="blog_content" />
     </div>
     <div class="bottom-line"></div>
@@ -56,6 +75,7 @@
 </template>
 
 <script>
+let script;
 import dayjs from "dayjs";
 export default {
   name: "Post",
@@ -70,8 +90,16 @@ export default {
     this.targetLocale = this.$lang === "zh" ? "/zh/" : "/en/";
   },
   mounted() {
+    script = require("busuanzi.pure.js");
     this.allBlogListData = this.blogList();
     this.otherBlog = this.getOtherBlog(this.allBlogListData);
+  },
+  watch: {
+    $route(to, from) {
+      if (to.path != from.path) {
+        script.fetch();
+      }
+    },
   },
 
   methods: {
@@ -123,6 +151,9 @@ export default {
     margin-bottom: 20px;
   }
 }
+.mobile-auther{
+    display: none;
+  }
 .bottom-line {
   height: 1px;
   margin: 30px 0;
@@ -199,6 +230,72 @@ export default {
         text-decoration: none;
       }
     }
+  }
+}
+@media (max-width: 1000px) {
+  #vuepress-theme-blog__post-layout {
+    width: 100%;
+    padding: 0 30px;
+    position: relative;
+  }
+  .blog-link-post {
+    display: none;
+  }
+  .post-left {
+    display: none;
+  }
+  .mobile-middle-img {
+    display: none;
+  }
+  .mobile-auther{
+    display: block;
+    margin: 20px 0 30px 0;
+    width: 100%;
+    p {
+      display: inline-block;
+      margin-bottom: 0px;
+      img{
+        width: 26px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+
+  .bottom-line-none {
+    display: none;
+  }
+  .other-blog-item {
+    span {
+      display: block;
+      cursor: pointer;
+      color: rgba(0, 47, 167, 1);
+    }
+  }
+  .post-right {
+    display: inline-block;
+    margin-left: 0;
+    width: 100%;
+  }
+  .blog-title {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 0px;
+    margin-top: 40px;
+  }
+  .blog-item-tag {
+    display: none;
+  }
+  .disclaimer {
+    font-size: 16px;
+    line-height: 26px;
+    color: #002fa7;
+    margin-bottom: 30px;
+  }
+  .bottom-height {
+    margin-bottom: 80px;
   }
 }
 </style>
