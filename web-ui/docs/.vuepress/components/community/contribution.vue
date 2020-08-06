@@ -41,6 +41,35 @@
     .isPC {
         display: block;
     }
+    .mail-guide {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .step {
+        width: 200px;
+        text-align: right;
+        position: relative;
+    }
+    .mail-guide:nth-child(1) .step {
+        top: 0;
+    }
+    .mail-guide:nth-child(2) .step {
+        top: 180px;
+        left: 20%;
+    }
+    .mail-guide:nth-child(3) .step {
+        top: -340px;
+        left: 40%;
+    }
+    .mail-guide:nth-child(4) .step {
+        top: -160px;
+        left: 60%;
+    }
+    .mail-guide:nth-child(5) .step {
+        top: -720px;
+        left: 80%;
+    }
+
     .step-num {
         display: inline-block;
         padding: 10px 15px;
@@ -55,7 +84,6 @@
     }
     .step img {
         display: block;
-        margin: 30px auto 0;
     }
     @media screen and (max-width: 1000px){
         .isPC {

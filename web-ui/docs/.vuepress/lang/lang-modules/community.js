@@ -43,6 +43,16 @@ module.exports = {
                     }
                 },
             ],
+            SUBSCRIBE: {
+                TITLE: "概要",
+                PART_ONE: "openEuler社区的主要联系方式",
+                PART_TWO: "要联系列表所有者，请试用以下电子邮件地址：community-owner@openeuler.org",
+                PART_THREE: "要查看次列表及以往的邮件，请访问归档。",
+                REMIND: "您不创建也可订阅。如果您愿意，请使用下面的表格。",
+                INPUT_ADD: "您的电子邮件地址",
+                INPUT_NAME: "您的名字（选填）",
+                BUTTON: "订阅",
+            }
         },
         CONTRIBUTION_H5: {
             MOBILE_TITLE: "社区贡献攻略",
@@ -110,6 +120,16 @@ module.exports = {
                     }
                 },
             ],
+            SUBSCRIBE: {
+                TITLE: "Summary",
+                PART_ONE: "The main contact endpoint of openEuler community",
+                PART_TWO: "To contact the list owners, use the following email address: community-owner@openeuler.org",
+                PART_THREE: "To see the prior posting to the list, visit the archives.",
+                REMIND: "You can also subscribe without creating an account. If you wish to do so, please use the form below.",
+                INPUT_ADD: "Your email address",
+                INPUT_NAME: "Your name(optional)",
+                BUTTON: "Subscribe",
+            }
         },
         CONTRIBUTION_H5: {
             MOBILE_TITLE: "社区贡献攻略",

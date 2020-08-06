@@ -55,7 +55,8 @@
                         width="180"
                         v-if="inPC">
                     <template slot-scope="scope">
-                        <a>
+                        <a class="list-name">
+                            <p class="list-id">{{ scope.row.list_id }}</p>
                             <p>{{ scope.row.display_name }}</p>
                         </a>
                     </template>
@@ -105,6 +106,44 @@
                 </el-table-column>
             </el-table>
         </div>
+
+        <div class="mail-subscribe">
+            <h3>{{ i18n.community.MAILING_LIST.SUBSCRIBE.TITLE }}</h3>
+            <div class="description">
+                <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.PART_ONE }}</p>
+                <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.PART_TWO }}</p>
+                <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.PART_THREE }}</p>
+            </div>
+            <form>
+                <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.REMIND }}</p>
+                <div class="user-id">
+                    <img src="" alt="">
+                    <el-input
+                            v-if="!inEn"
+                            v-model="user_input_email"
+                            placeholder="您的电子邮件地址"
+                            ref="emailZh"></el-input>
+                    <el-input
+                            v-if="inEn"
+                            v-model="user_input_email"
+                            placeholder="Your email address"
+                            ref="userEmail"></el-input>
+                </div>
+                <div class="user-name">
+                    <img src="" alt="">
+                    <el-input
+                            v-if="!inEn"
+                            v-model="user_input_name"
+                            placeholder="您的名字（选填）"
+                            ref="userName"></el-input>
+                    <el-input
+                            v-if="inEn"
+                            v-model="user_input_name"
+                            placeholder="Your name(optional)"
+                            ref="userName"></el-input>
+                </div>
+            </form>
+        </div>
     </div>
 </template>
 
@@ -117,27 +156,37 @@
         data() {
             return {
                 inPC: true,
+                inEn: true,
                 list: null,
                 subscribe: null,
                 list_id: "test.openeuler.org",
+                input: "",
+                user_input_email: "",
+                user_input_name: ""
             }
         },
         mounted() {
-                if ((window.innerWidth <= 1024)) {
-                    this.inPC = false;
-                } else {
-                    this.inPC = true
-                }
+            if ((window.innerWidth <= 1024)) {
+                this.inPC = false;
+            } else {
+                this.inPC = true
+            }
+            if (window.location.href.includes('/en/')) {
+                this.inEn = true
+            } else {
+                this.inEn = false
+            }
             mailList()
                 .then(response => {
                     this.list = response.data.entries;
                     this.list.forEach(item => { item.archive = "Archive"});
+                    console.log('list data', response);
                 })
                 .catch(response => {
                     console.log(response);
                 });
             subscribe({
-                list_id: "test.openeuler.org"
+                // list_id: "test.openeuler.org"
             })
                 .then(response => {
                     this.subscribe = response.data;
@@ -146,6 +195,12 @@
                 .catch(response => {
                     console.log(response);
                 });
+            this.readInput()
+        },
+        methods: {
+            readInput() {
+                console.log('input value', this.$refs.emailZh)
+            }
         }
     }
 </script>
@@ -327,6 +382,9 @@
     }
     .mail-table {
         margin-bottom: 200px;
+    }
+    .list-id {
+        display: none;
     }
     @media screen and (max-width: 1024px) and (min-width: 768px) {
         h3 {
