@@ -6,17 +6,17 @@ module.exports = {
     cn: {
         HOME_CAROUSEL_DATA: [{
             TITLE: "OpenEuler Summit 2020",
-            IMG: "/home/Banner2.gif",
+            IMG: "/img/home/Banner2.gif",
             DES: "OpenEuler Virtual Summit 2020 是 openEuler 在发布 20.03 LTS 版本后第一次举行的峰会，本次大会邀请了华为的资深专家、社区 Committer 和多家 openEuler 社区合作厂商的重量嘉宾贡献多场精彩的演讲，不容错过。",
         },
             {
                 TITLE: "iSula",
-                IMG: "/home/Banner3.gif",
+                IMG: "/img/home/Banner3.gif",
                 DES: "iSula是一种云原生轻量级容器解决方案，可通过统一、灵活的架构满足ICT领域端、边、云场景的多种需求。",
             },
             {
                 TITLE: "A-Tune",
-                IMG: "/home/Banner4.gif",
+                IMG: "/img/home/Banner4.gif",
                 DES: "A-Tune是智能性能优化系统软件，即通过机器学习引擎对业务应用建立精准模型, 再根据业务负载智能匹配最佳操作系统配置参数组合，实现系统整体运行效率提升。",
             }
         ],
@@ -29,26 +29,26 @@ module.exports = {
                 {
                     NAME: "下载",
                     TITLE: "openEuler ISO",
-                    IMG: "/home/step1.png",
+                    IMG: "/img/home/step1.png",
                     LINK: "javascript:;"
                 },
                 {
                     NAME: "体验",
                     TITLE: "openEuler系统",
-                    IMG: "/home/step2.png",
+                    IMG: "/img/home/step2.png",
                     LINK: "javascript:;",
                     GIF: ""
                 },
                 {
                     NAME: "查阅",
                     TITLE: "openEuler文档",
-                    IMG: "/home/step3.png",
+                    IMG: "/img/home/step3.png",
                     LINK: "javascript:;"
                 },
                 {
                     NAME: "贡献",
                     TITLE: "openEuler社区",
-                    IMG: "/home/step4.png",
+                    IMG: "/img/home/step4.png",
                     LINK: "javascript:;"
                 },
 
@@ -56,7 +56,7 @@ module.exports = {
             INTRO_MAP_SND: {
                 NAME: "体验",
                 TITLE: "openEuler系统",
-                IMG: "/home/step2.png",
+                IMG: "/img/home/step2.png",
                 LINK: "javascript:;",
                 GIF: ""
             },
@@ -483,17 +483,17 @@ module.exports = {
     en: {
         HOME_CAROUSEL_DATA: [{
             TITLE: "OpenEuler Summit 2020",
-            IMG: "/home/Banner2.gif",
+            IMG: "/img/home/Banner2.gif",
             DES: "OpenEuler Virtual Summit 2020 是 openEuler 在发布 20.03 LTS 版本后第一次举行的峰会，本次大会邀请了华为的资深专家、社区 Committer 和多家 openEuler 社区合作厂商的重量嘉宾贡献多场精彩的演讲，不容错过。",
         },
             {
                 TITLE: "iSula",
-                IMG: "/home/Banner3.gif",
+                IMG: "/img/home/Banner3.gif",
                 DES: "iSula是一种云原生轻量级容器解决方案，可通过统一、灵活的架构满足ICT领域端、边、云场景的多种需求。",
             },
             {
                 TITLE: "A-Tune",
-                IMG: "/home/Banner4.gif",
+                IMG: "/img/home/Banner4.gif",
                 DES: "A-Tune是智能性能优化系统软件，即通过机器学习引擎对业务应用建立精准模型, 再根据业务负载智能匹配最佳操作系统配置参数组合，实现系统整体运行效率提升。",
             }
         ],
@@ -506,26 +506,26 @@ module.exports = {
                 {
                     NAME: "下载",
                     TITLE: "openEuler ISO",
-                    IMG: "/home/step1.png",
+                    IMG: "/img/home/step1.png",
                     LINK: "javascript:;"
                 },
                 {
                     NAME: "体验",
                     TITLE: "openEuler系统",
-                    IMG: "/home/step2.png",
+                    IMG: "/img/home/step2.png",
                     LINK: "javascript:;",
                     GIF: ""
                 },
                 {
                     NAME: "查阅",
                     TITLE: "openEuler文档",
-                    IMG: "/home/step3.png",
+                    IMG: "/img/home/step3.png",
                     LINK: "javascript:;"
                 },
                 {
                     NAME: "贡献",
                     TITLE: "openEuler社区",
-                    IMG: "/home/step4.png",
+                    IMG: "/img/home/step4.png",
                     LINK: "javascript:;"
                 },
 
@@ -533,7 +533,7 @@ module.exports = {
             INTRO_MAP_SND: {
                 NAME: "体验",
                 TITLE: "openEuler系统",
-                IMG: "/home/step2.png",
+                IMG: "/img/home/step2.png",
                 LINK: "javascript:;",
                 GIF: ""
             },
@@ -769,23 +769,6 @@ module.exports = {
                 {
                     TAG: "事件",
                     DATE: "2020-12-10",
-                    CONTENT: "HDC.Cloud | openEuler黑客马拉松"
-                },
-            ],
-            BLOG_LIST: [
-                {
-                    TAG: "openEuler Blog Maintainer",
-                    DATE: "2020-05-08",
-                    CONTENT: "A-Tune让系统更智能"
-                },
-                {
-                    TAG: "zhongjun",
-                    DATE: "2020-05-07",
-                    CONTENT: "浅谈openEuler开源社区经营度量分析系统选型"
-                },
-                {
-                    TAG: "Ivye",
-                    DATE: "2020-05-06",
                     CONTENT: "HDC.Cloud | openEuler黑客马拉松"
                 },
             ],
