@@ -4,12 +4,12 @@
             <el-carousel class="home-banner" trigger="click">
                 <el-carousel-item>
                     <div class="carousel-video">
-                        <img src="/home/BannerVideo.png" alt="">
+                        <img src="/img/home/BannerVideo.png" alt="">
                     </div>
                 </el-carousel-item>
                 <el-carousel-item class="carousel-item" :style="{ backgroundImage:'url(' + banner1 + ')' }">
                     <div class="card-summer">
-                        <img src="/home/BannerSummer.png" alt="">
+                        <img src="/img/home/BannerSummer.png" alt="">
                         <span>{{ i18n.home.HOME_CAROUSEL_DATA[0].DES }}</span>
                     </div>
                 </el-carousel-item>
@@ -28,15 +28,14 @@
             <h1>{{ i18n.home.HOME_INTRODUCE.INTRO_TITLE }}</h1>
             <h3>{{ i18n.home.HOME_INTRODUCE.INTRO_HEAD }}</h3>
             <p>{{ i18n.home.HOME_INTRODUCE.INTRO_DESCRIPTION }}</p>
-            <div class="isPC mapArea">
-                <img src="/home/step.png"
+            <div class="is-pc mapArea">
+                <img src="/img/home/step.png"
                      alt=""
                      usemap="#maphover"
                      ref="img-display-1"
                      id="img-display-1"
-                     class="active"
                      style="width: 100%">
-                <div class="area-box inPC" v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP" :key="index">
+                <div class="area-box in-pc" v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP" :key="index">
                     <a @click="go(item.LINK)">
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p>{{ item.TITLE }}</p>
@@ -44,7 +43,7 @@
                         <img :src="item.IMG" alt="" class="is-hidden">
                     </a>
                 </div>
-                <div class="area-box inPC" @click="clickDownload">
+                <div class="area-box in-pc" @click="clickDownload">
                     <a @click="go(i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.LINK)">
                         <div class="box-icon">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.NAME }}</div>
                         <p>{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.TITLE }}</p>
@@ -68,7 +67,7 @@
                     </div>
                 </div>
             </div>
-            <div class="isH5 mapArea">
+            <div class="is-h5 mapArea">
                 <div
                     class="area-box"
                     v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP"
@@ -132,58 +131,67 @@
         </div>
 
         <div class="home-newsroom">
-            <div class="isPC room-right">
+            <div class="is-pc room-right">
                 <div class="room-title" data-active="1">
                     <a href="javascript:;" data-name="event" data-index="1" @click="toggleRooms">{{ i18n.home.HOME_ROOMS.EVENT_NAME }}</a>
                     <a href="javascript:;" data-name="blog" data-index="2" @click="toggleRooms">{{ i18n.home.HOME_ROOMS.BLOG_NAME }}</a>
                     <a href="javascript:;" data-name="news" data-index="3" @click="toggleRooms">{{ i18n.home.HOME_ROOMS.NEWS_NAME }}</a>
                 </div>
                 <div id="room-contain-1" class="room-contain active">
-                    <div class="room-box"
-                         v-for="(item, index) in i18n.home.HOME_ROOMS.EVENT_LIST"
-                         :key="index">
-                        <span>{{ item.TAG }}</span> <span>|</span> <span>{{ item.DATE }}</span>
-                        <p>{{ item.CONTENT }}</p>
+                    <div class="flex-room">
+                        <div class="room-box"
+                             v-for="(item, index) in i18n.home.HOME_ROOMS.EVENT_LIST"
+                             :key="index">
+                            <span>{{ item.TAG }}</span> <span>|</span> <span>{{ item.DATE }}</span>
+                            <p>{{ item.CONTENT }}</p>
+                        </div>
+                        <span><a href="">{{ i18n.home.MORE }}</a></span>
                     </div>
-                    <span><a href="">{{ i18n.home.MORE }}</a></span>
                 </div>
                 <div id="room-contain-2" class="room-contain">
-                    <div class="room-box"
-                         v-for="(item, index) in i18n.home.HOME_ROOMS.BLOG_LIST"
-                         :key="index">
-                        <span>{{ item.TAG }}</span> <span>|</span> <span>{{ item.DATE }}</span>
-                        <p>{{ item.CONTENT }}</p>
+                    <div class="flex-room">
+                        <div class="room-box"
+                             v-for="(item, index) in blogList"
+                             :key="index">
+                            <span v-for="tag in item.frontmatter.tags">{{ tag }} <span>|</span> </span>
+                            <span>{{ item.frontmatter.date }}</span>
+                            <span>|</span>
+                            <span>{{ item.frontmatter.author }}</span>
+                            <p><a :href="item.path"></a>{{ item.frontmatter.summary }}</p>
+                        </div>
+                        <span><a href="">{{ i18n.home.MORE }}</a></span>
                     </div>
-                    <span><a href="">{{ i18n.home.MORE }}</a></span>
                 </div>
                 <div id="room-contain-3" class="room-contain">
-                    <div class="room-box"
-                         v-for="(item, index) in i18n.home.HOME_ROOMS.NEWS_LIST"
-                         :key="index">
-                        <span>{{ item.TAG }}</span> <span>|</span> <span>{{ item.DATE }}</span>
-                        <p>{{ item.CONTENT }}</p>
+                    <div class="flex-room">
+                        <div class="room-box"
+                             v-for="(item, index) in i18n.home.HOME_ROOMS.NEWS_LIST"
+                             :key="index">
+                            <span>{{ item.TAG }}</span> <span>|</span> <span>{{ item.DATE }}</span>
+                            <p>{{ item.CONTENT }}</p>
+                        </div>
+                        <span><a href="">{{ i18n.home.MORE }}</a></span>
                     </div>
-                    <span><a href="">{{ i18n.home.MORE }}</a></span>
                 </div>
             </div>
-            <div class="isPC room-left">
+            <div class="is-pc room-left">
                 <div id="room-img-1" class="room-img active">
-                    <img src="/home/eventImg.png" alt="">
+                    <img src="/img/home/eventImg.png" alt="">
                 </div>
                 <div id="room-img-2" class="room-img">
-                    <img src="/home/blogImg.png" alt="">
+                    <img src="/img/home/blogImg.png" alt="">
                 </div>
                 <div id="room-img-3" class="room-img">
-                    <img src="/home/newsImg.png" alt="">
+                    <img src="/img/home/newsImg.png" alt="">
                 </div>
             </div>
-            <div class="isH5 newsroom">
+            <div class="is-h5 newsroom">
                 <div class="event-room">
                     <h5>{{ i18n.home.HOME_ROOMS.EVENT_NAME }}</h5>
                     <div class="rooms"
                          v-for="(item, index) in i18n.home.HOME_ROOMS.EVENT_LIST"
                          :key="index">
-                        <span>{{ item.TAG }}</span> <span>|</span> <span>{{ item.DATE }}</span>
+                        <span>tag in item.frontmatter.tags <span>|</span> </span> <span>{{ item.DATE }}</span>
                         <p>{{ item.CONTENT }}</p>
                     </div>
                     <span><a href="">{{ i18n.home.MORE }}</a></span>
@@ -191,10 +199,13 @@
                 <div class="blog-room">
                     <h5>{{ i18n.home.HOME_ROOMS.BLOG_NAME }}</h5>
                     <div class="rooms"
-                         v-for="(item, index) in i18n.home.HOME_ROOMS.BLOG_LIST"
+                         v-for="(item, index) in blogList"
                          :key="index">
-                        <span>{{ item.TAG }}</span> <span>|</span> <span>{{ item.DATE }}</span>
-                        <p>{{ item.CONTENT }}</p>
+                        <span v-for="tag in item.frontmatter.tags">{{ tag }} <span>|</span> </span>
+                        <span>{{ item.frontmatter.date }}</span>
+                        <span>|</span>
+                        <span>{{ item.frontmatter.author }}</span>
+                        <p><a :href="item.path"></a>{{ item.frontmatter.summary }}</p>
                     </div>
                     <span><a href="">{{ i18n.home.MORE }}</a></span>
                 </div>
@@ -216,44 +227,45 @@
                 <div class="dev-dever hidden" v-for="(value, index) in i18n.home.HOME_DEV.DEV_INFO" :key="index">
                     <el-image
                             style="width: 100px; height: 100px; border-radius: 50%"
-                            src="/home/deverImg.png"></el-image>
+                            src="/img/home/deverImg.png"></el-image>
                     <p class="dever-name">{{ value.NAME }}</p>
                     <p class="dever-rank">{{ value.TITLE }}</p>
                     <p class="dever-rank">{{ value.RANK }}</p>
                     <div class="dev-link">
                         <a :href="value.MAIL_LINK">
-                            <img class="email-link" src="/home/email.png" alt="">
+                            <img class="email-link" src="/img/home/email.png" alt="">
                         </a>
                         <a :href="value.GITEE_LINK">
-                            <img src="/home/Gitee.png" alt="">
+                            <img src="/img/home/Gitee.png" alt="">
                         </a>
                     </div>
                 </div>
             </div>
             <div class="show-all" @click="showAll">
                 <p>{{ i18n.home.EXPAND }}</p>
-                <img src="/home/Gitee.png" alt="">
+                <img src="/img/home/arrow.svg" alt="">
             </div>
         </div>
 
         <div class="home-auth">
             <h3>{{ i18n.home.HOME_AUTH.AUTH_TITLE }}</h3>
+            <img class="is-h5 medal-logo" src="/img/home/medal.svg" alt="">
             <p>{{ i18n.home.HOME_AUTH.AUTH_DESCRIPTION }}</p>
             <div class="auth-product">
                 <div class="product-box">
-                    <img src="/home/Card1.png" alt="">
+                    <img src="/img/home/Card1.png" alt="">
                     <p>{{ i18n.home.HOME_AUTH.AUTH_HARDWARE }}</p>
                 </div>
                 <div class="product-box">
-                    <img src="/home/Card2.png" alt="">
+                    <img src="/img/home/Card2.png" alt="">
                     <p>{{ i18n.home.HOME_AUTH.AUTH_OPEN_SOURCE }}</p>
                 </div>
                 <div class="product-box">
-                    <img src="/home/Card3.png" alt="">
+                    <img src="/img/home/Card3.png" alt="">
                     <p>{{ i18n.home.HOME_AUTH.AUTH_FREE }}</p>
                 </div>
                 <div class="product-box">
-                    <img src="/home/Card4.png" alt="">
+                    <img src="/img/home/Card4.png" alt="">
                     <p>{{ i18n.home.HOME_AUTH.AUTH_BUSINESS }}</p>
                 </div>
             </div>
@@ -264,7 +276,7 @@
             <div class="source-contain">
                 <div class="source-apply">
                     <div class="apply-img">
-                        <img src="/home/sourceApply.gif" alt="">
+                        <img src="/img/home/sourceApply.gif" alt="">
                     </div>
                     <div class="apply-des">
                         <p class="source-title">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.TITLE }}</p>
@@ -276,7 +288,7 @@
                 </div>
                 <div class="source-mail">
                     <div class="mail-img">
-                        <img src="/home/sourceMail.gif" alt="">
+                        <img src="/img/home/sourceMail.gif" alt="">
                     </div>
                     <div class="mail-des">
                         <p class="source-title">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.TITLE }}</p>
@@ -289,17 +301,17 @@
             <div class="source-publish-link publish">
                 <h5>{{ i18n.home.HOME_SOURCE.SOURCE_PUBLISH_TITLE }}</h5>
                 <div class="publish-edition">
-                    <a href=""><img src="/home/iscas.png" alt=""></a>
-                    <a href=""><img src="/home/turbo.png" alt=""></a>
-                    <a href=""><img src="/home/cetc.png" alt=""></a>
+                    <a href=""><img src="/img/home/iscas.png" alt=""></a>
+                    <a href=""><img src="/img/home/turbo.png" alt=""></a>
+                    <a href=""><img src="/img/home/cetc.png" alt=""></a>
                 </div>
             </div>
             <div class="source-publish-link">
                 <h5>{{ i18n.home.HOME_SOURCE.SOURCE_LINK_TITLE }}</h5>
                 <div class="publish-edition link">
-                    <a href=""><img src="/home/kunpeng.png" alt=""></a>
-                    <a href=""><img src="/home/mulan.png" alt=""></a>
-                    <a href=""><img src="/home/pengcheng.png" alt=""></a>
+                    <a href=""><img src="/img/home/kunpeng.png" alt=""></a>
+                    <a href=""><img src="/img/home/mulan.png" alt=""></a>
+                    <a href=""><img src="/img/home/pengcheng.png" alt=""></a>
                 </div>
             </div>
         </div>
@@ -314,20 +326,22 @@
                 info: 'aaa',
                 flag: true,
                 height: "680px",
-                bgbimg: "/home/BannerVideo.png",
-                banner1: "/home/Banner1.gif",
-                activeImg: "/home/homeActive.gif",
+                bgbimg: "/img/home/BannerVideo.png",
+                banner1: "/img/home/Banner1.gif",
+                activeImg: "/img/home/homeActive.gif",
                 startIndex: 0,
                 endIndex: 4,
+                blogList: null
             }
         },
         mounted() {
             this.toggleHover();
             this.shrinkCalendar();
             this.marginTop();
-            if(window.innerWidth < '1000px') {
+            if (window.innerWidth < 1000) {
                 this.height = '300px';
             }
+            this.blogData()
         },
         methods: {
             go(path) {
@@ -464,6 +478,15 @@
                 }
                 this.marginTop();
             },
+            blogData() {
+                let datas = this.$sitePages;
+                let blogData = datas.filter(data => data.path.includes("/blog/"));
+                blogData.sort(function (date1, date2) {
+                    return(date1.date - date2.date)
+                })
+                blogData = blogData.slice(0, 3)
+                this.blogList = blogData
+            },
             judgeTop(originTime, timeElement) {
                 let es = this.es(timeElement);
                 for (let i = 0; i < es.length; i++) {
@@ -511,10 +534,10 @@
     [v-cloak] {
         display: none !important;
     }
-    .isPC {
+    .is-pc {
         display: block;
     }
-    .isH5 {
+    .is-h5 {
         display: none;
     }
     .home h1,
@@ -601,10 +624,10 @@
         max-width: 1200px;
         margin: 0 auto;
     }
-    .home-introduce .isH5.mapArea {
+    .home-introduce .is-h5.mapArea {
         display: none ;
     }
-    .home-introduce .isPC {
+    .home-introduce .is-pc {
         display: block;
     }
     .home-introduce h1 {
@@ -622,25 +645,25 @@
         margin-top: 97px;
         position: relative;
     }
-    .area-box.inPC:nth-child(2) {
+    .area-box.in-pc:nth-child(2) {
         position: absolute;
         top: 88px;
         left: 0;
     }
-    .area-box.inPC:nth-child(3) {
+    .area-box.in-pc:nth-child(3) {
         display: none;
     }
-    .area-box.inPC:nth-child(4) {
+    .area-box.in-pc:nth-child(4) {
         position: absolute;
         top: 132px;
         left: 56%;
     }
-    .area-box.inPC:nth-child(5) {
+    .area-box.in-pc:nth-child(5) {
         position: absolute;
         top: -40px;
         left: 80%;
     }
-    .area-box.inPC:nth-child(6) {
+    .area-box.in-pc:nth-child(6) {
         position: absolute;
         top: 0;
         left: 25%;
@@ -847,8 +870,19 @@
         justify-content: space-between;
         align-items: center;
     }
+    .room-left {
+        overflow: hidden;
+        width: 622px;
+    }
     .room-contain {
         display: none;
+    }
+    .flex-room {
+        width: 555px;
+        height: 368px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     .room-contain span {
         font-size: 16px;
@@ -857,10 +891,17 @@
     }
     .room-contain p {
         font-size: 20px;
-        line-height: 20px;
+        line-height: 26px;
         margin: 20px 0 30px;
         text-align: left;
         color: rgba(0, 0, 0, .85);
+        overflow: hidden;
+        display: -webkit-box;
+        word-wrap: break-word;
+        word-break: normal;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
     }
     .room-contain a {
         font-size: 16px;
@@ -887,12 +928,14 @@
     }
     .room-img {
         display: none;
-        margin-top: 70px;
+        width: 520px;
+        margin: 70px auto 40px;
         box-shadow: 0 6px 30px 0px rgba(0, 0, 0, .1);
+        position: relative;
+        z-index: -1;
     }
-    .active {
+    .active{
         display: block;
-        transition: 2s;
     }
     .home-developer {
         max-width: 1200px;
@@ -947,6 +990,12 @@
     .home-auth {
         max-width: 1200px;
         margin: 160px auto 0;
+    }
+    .medal-logo {
+        position: relative;
+        top: -59px;
+        float: right;
+        right: 93px;
     }
     .auth-product {
         max-width: 1200px;
@@ -1048,16 +1097,16 @@
         margin-right: 0;
     }
     @media screen and (max-width: 1000px){
-        .isPC {
+        .is-pc {
             display: none;
         }
-        .isH5 {
+        .is-h5 {
             display: block;
         }
-        .isPC.mapArea {
+        .is-pc.mapArea {
             display: none;
         }
-        .home-introduce .isH5.mapArea {
+        .home-introduce .is-h5.mapArea {
             display: block;
             margin-top: 25px;
         }

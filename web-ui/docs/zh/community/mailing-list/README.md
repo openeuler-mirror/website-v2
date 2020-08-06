@@ -1,0 +1,3 @@
+<ClientOnly>
+  <community-maillist />
+</ClientOnly>
