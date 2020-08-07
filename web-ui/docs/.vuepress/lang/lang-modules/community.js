@@ -20,7 +20,7 @@ module.exports = {
             VIEWED: "次",
         },
         MAILING_LIST: {
-            TITLE_H5: "邮件列表",
+            TITLE: "邮件列表",
             GUIDE_CONTENT: [
                 {
                     LEFT: {
@@ -67,6 +67,7 @@ module.exports = {
             }
         },
         CONTRIBUTION_H5: {
+            TITLE: "贡献攻略",
             MOBILE_TITLE: "社区贡献攻略",
             GUIDE_CONTENT: [
                 {
@@ -90,6 +91,9 @@ module.exports = {
                     IMG: "/img/community/contribution/contribution5.png"
                 },
             ]
+        },
+        CONDUCT: {
+            TITLE: "行为守则"
         }
     },
     en: {
@@ -108,7 +112,7 @@ module.exports = {
             VIEWED: " viewed",
         },
         MAILING_LIST: {
-            TITLE_H5: "邮件列表",
+            TITLE: "邮件列表",
             GUIDE_CONTENT: [
                 {
                     LEFT: {
@@ -155,6 +159,7 @@ module.exports = {
             }
         },
         CONTRIBUTION_H5: {
+            TITLE: "贡献攻略",
             MOBILE_TITLE: "社区贡献攻略",
             GUIDE_CONTENT: [
                 {
@@ -178,6 +183,9 @@ module.exports = {
                     IMG: "/img/community/contribution/contribution5.png"
                 },
             ]
+        },
+        CONDUCT: {
+            TITLE: "行为守则"
         }
     }
 };

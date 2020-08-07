@@ -30,7 +30,7 @@ module.exports = {
                         },
                         RIGHT: {
                             RIGHT_INFO: "技术委员会批准成立，对应的 Pull Request 合入代码仓库，基础设施会自动建立对应的仓库",
-                            RIGHT_INFO: "获批",
+                            RIGHT_CIRCLE: "获批",
                             LEFT_IMG: "/img/sig/sig4.png"
                         }
                     },
@@ -42,7 +42,7 @@ module.exports = {
                         },
                         RIGHT: {
                             RIGHT_INFO: "技术委员会周期 Review SIG 的运作情况，给出指导意见",
-                            RIGHT_INFO: "改进",
+                            RIGHT_CIRCLE: "改进",
                             LEFT_IMG: "/img/sig/sig6.png"
                         }
                     },

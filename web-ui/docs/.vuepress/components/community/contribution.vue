@@ -1,5 +1,10 @@
 <template>
     <div class="contribution">
+        <common-banner
+                :inside-name="'COMMUNITY'"
+                :outside-name="i18n.community.CONTRIBUTION_H5.TITLE"
+                class="is-pc"
+        ></common-banner>
         <div class="methods is-pc">
             <div class="mail-guide"
                  v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"
@@ -33,7 +38,11 @@
         name: "contribution"
     }
 </script>
-
+<style lang="less">
+    .contribution .common-banner .banner img {
+        width: 0!important;
+    }
+</style>
 <style scoped>
     .is-h5 {
         display: none;

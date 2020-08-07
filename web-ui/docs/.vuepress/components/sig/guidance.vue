@@ -1,9 +1,15 @@
 <template>
     <div class="sig-guidance">
         <div class="sig-banner">
-            <h1 class="isPC">{{ i18n.sig.GUIDANCE_LIST.GUIDE.TITLE }}</h1>
+            <common-banner
+                    :pc-src="'/img/sig/sig-guide-banner.png'"
+                    :mobile-src="'/img/sig/sig-guide-banner.png'"
+                    :inside-name="'SIG'"
+                    :outside-name="i18n.sig.GUIDANCE_LIST.GUIDE.TITLE"
+                    class="is-pc"
+            ></common-banner>
         </div>
-        <div class="isPC sig-guidance">
+        <div class="is-pc sig-guidance">
             <div class="maillist-divider-mail">
                 <div class="maillist-icon-comm"></div>
             </div>
@@ -40,9 +46,9 @@
                 </div>
             </div>
         </div>
-        <div class="isH5 sig-guidance-H5">
-            <h3 class="isH5">{{ i18n.sig.GUIDANCE_LIST.GUIDE.MOBILE_TITLE }}</h3>
-            <div class="isH5 mobile-banner">
+        <div class="is-h5 sig-guidance-H5">
+            <h3 class="is-h5">{{ i18n.sig.GUIDANCE_LIST.GUIDE.MOBILE_TITLE }}</h3>
+            <div class="is-h5 mobile-banner">
                 <img src="/img/sig/sig-banner-mobile.png" alt="">
             </div>
             <div class="mail-guide"
@@ -74,10 +80,10 @@
 </script>
 
 <style scoped>
-    .isH5 {
+    .is-h5 {
         display: none;
     }
-    .isPC {
+    .is-pc {
         display: block;
     }
     h3 {
@@ -171,16 +177,15 @@
         justify-content: space-between;
         align-items: center;
     }
-    .inner-box img {
-        width: 141px;
-        height: 138px;
+    .inner-box img{
+        margin-left: 30px;
     }
 
     @media screen and (max-width: 1000px){
-        .isPC {
+        .is-pc {
             display: none;
         }
-        .isH5 {
+        .is-h5 {
             display: block;
         }
         .sig-guidance {

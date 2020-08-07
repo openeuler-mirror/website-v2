@@ -1,8 +1,11 @@
 <template>
     <div class="mail-list">
-        <div class="mail-banner">
-            <h3 class="is-h5">{{ i18n.community.MAILING_LIST.TITLE_H5 }}</h3>
-        </div>
+        <common-banner
+                :pc-src="'/img/community/maillist/mail-banner.png'"
+                :mobile-src="'/img/community/maillist/mail-banner.png'"
+                :inside-name="'COMMUNITY'"
+                :outside-name="i18n.community.MAILING_LIST.TITLE"
+        ></common-banner>
         <div class="maillist is-pc">
             <div class="maillist-divider-mail is-pc">
                 <div class="maillist-icon-comm"></div>
@@ -140,7 +143,7 @@
                 </el-table-column>
             </el-table>
         </div>
-        <div class="mail-subscribe">
+        <div class="mail-subscribe is-pc">
             <h3>{{ i18n.community.MAILING_LIST.SUBSCRIBE.TITLE }}</h3>
             <div class="description">
                 <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.PART_ONE }}</p>
@@ -183,13 +186,13 @@
                 listId: "test.openeuler.org",
                 input: "",
                 userInputEmail: "",
-                userInputName: ""
+                userInputName: "",
             }
         },
         mounted() {
             mailList()
                 .then(response => {
-                    this.list = response.data.entries;
+                    this.list = response.entries;
                     this.list.forEach(item => { item.archive = "Archive"});
                 })
                 .catch(response => {
@@ -204,11 +207,9 @@
                 .catch(response => {
                     console.log(response);
                 });
-            this.readInput()
         },
         methods: {
-            readInput() {
-            }
+
         }
     }
 </script>
