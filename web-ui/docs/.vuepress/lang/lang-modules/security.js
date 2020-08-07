@@ -52,7 +52,9 @@ module.exports = {
         METRICS: 'CVSS v3 指标',
         SCORE: '评分',
         PRODUCT: '产品',
-        STATUS: '状态'
+        STATUS: '状态',
+        LEGAL: "法律声明",
+        PRIVACY: "隐私政策"
     },
     en: {
         SECURITY_ADVISORIES: 'Security Advisories',
@@ -103,6 +105,8 @@ module.exports = {
         METRICS: 'CVSS v3 Metrics',
         SCORE: 'Score',
         PRODUCT: 'Product',
-        STATUS: 'Status'
+        STATUS: 'Status',
+        LEGAL: "法律声明",
+        PRIVACY: "隐私政策"
     }
 };
