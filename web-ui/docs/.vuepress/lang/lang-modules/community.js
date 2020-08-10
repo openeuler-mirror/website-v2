@@ -147,7 +147,7 @@ module.exports = {
                 REMIND: "You can also subscribe without creating an account. If you wish to do so, please use the form below.",
                 INPUT_ADD: "Your email address",
                 INPUT_NAME: "Your name(optional)",
-                BUTTON: "Subscribe"
+                BUTTON: "Subscribe",
             },
             TABLE: {
                 NAME: "列表名称",

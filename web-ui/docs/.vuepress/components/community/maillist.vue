@@ -85,7 +85,7 @@
                         :label="i18n.community.MAILING_LIST.TABLE.NAME"
                         width="180">
                     <template slot-scope="scope">
-                        <a class="list-name">
+                    <a class="list-name" @click="getUserInfo" ref="listName">
                             <p class="list-id">{{ scope.row.list_id }}</p>
                             <p>{{ scope.row.display_name }}</p>
                         </a>
@@ -143,30 +143,38 @@
                 </el-table-column>
             </el-table>
         </div>
+
         <div class="mail-subscribe is-pc">
-            <h3>{{ i18n.community.MAILING_LIST.SUBSCRIBE.TITLE }}</h3>
-            <div class="description">
-                <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.PART_ONE }}</p>
-                <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.PART_TWO }}</p>
-                <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.PART_THREE }}</p>
-            </div>
-            <form>
-                <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.REMIND }}</p>
-                <div class="user-id">
-                    <img src="" alt="">
-                    <el-input
-                        v-model="userInputEmail"
-                        :placeholder="i18n.community.MAILING_LIST.SUBSCRIBE.INPUT_ADD"
-                        ref="emailZh"></el-input>
+            <el-dialog :title="i18n.community.MAILING_LIST.SUBSCRIBE.TITLE " :visible.sync="dialogFormVisible">
+                <div class="description">
+                    <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.PART_ONE }}</p>
+                    <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.PART_TWO }}</p>
+                    <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.PART_THREE }}</p>
                 </div>
-                <div class="user-name">
-                    <img src="" alt="">
-                    <el-input
-                        v-model="userInputName"
-                        :placeholder="i18n.community.MAILING_LIST.SUBSCRIBE.INPUT_NAME"
-                        ref="userName"></el-input>
+                <el-form :model="form">
+                    <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.REMIND }}</p>
+                    <el-form-item :label-width="formLabelWidth">
+                        <img src="/img/home/arrow.svg" alt="">
+                        <el-input
+                                v-model="form.name"
+                                autocomplete="off"
+                                :placeholder="i18n.community.MAILING_LIST.SUBSCRIBE.INPUT_ADD"></el-input>
+                    </el-form-item>
+                    <el-form-item :label-width="formLabelWidth">
+                        <img src="/img/home/arrow.svg" alt="">
+                        <el-input
+                                v-model="form.email"
+                                autocomplete="off"
+                                :placeholder="i18n.community.MAILING_LIST.SUBSCRIBE.INPUT_NAME"></el-input>
+                    </el-form-item>
+                </el-form>
+                <div slot="footer" class="dialog-footer">
+                    <el-button
+                            type="primary"
+                            @click="dialogFormVisible = false"
+                            icon="el-icon-document-checked">{{ i18n.community.MAILING_LIST.SUBSCRIBE.BUTTON }}</el-button>
                 </div>
-            </form>
+            </el-dialog>
         </div>
     </div>
 </template>
@@ -184,9 +192,18 @@
                 list: null,
                 subscribe: null,
                 listId: "test.openeuler.org",
-                input: "",
-                userInputEmail: "",
-                userInputName: "",
+                dialogFormVisible: false,
+                form: {
+                    name: '',
+                    email: '',
+                    date1: '',
+                    date2: '',
+                    delivery: false,
+                    type: [],
+                    resource: '',
+                    desc: ''
+                },
+                formLabelWidth: '0'
             }
         },
         mounted() {
@@ -202,15 +219,19 @@
                 listId: "test.openeuler.org"
             })
                 .then(response => {
-                    this.subscribe = response.data;
+                    console.log(response);
                 })
                 .catch(response => {
                     console.log(response);
                 });
         },
         methods: {
-
+            getUserInfo() {
+                this.dialogFormVisible = true
+                this.subscribe = this.$refs.listName.childNodes[0].innerHTML
+            }
         }
+
     }
 </script>
 
@@ -256,6 +277,32 @@
     }
     .mail-table .el-table--enable-row-hover .el-table__body tr:nth-child(odd):hover>td {
         background: #fff;
+    }
+    .mail-subscribe .el-dialog {
+        width: 1200px;
+    }
+    .mail-subscribe .el-dialog__title {
+        text-align: center;
+        font-size: 24px;
+        display: block;
+        margin: 40px auto 10px;
+    }
+    .mail-subscribe .el-form-item__content {
+        text-align: center;
+    }
+    .mail-subscribe .el-input {
+        width: 374px;
+    }
+    .mail-subscribe .el-input__inner {
+        width: 374px;
+    }
+    .mail-subscribe .el-dialog__footer {
+        text-align: center;
+        padding: 10px 20px 60px;
+    }
+    .mail-subscribe .el-button--primary {
+        background: #002FA7;
+        border-color: #002FA7;
     }
     @media screen and (max-width: 768px) {
         .mail-table table {
@@ -401,6 +448,20 @@
     }
     .list-id {
         display: none;
+    }
+    .list-name {
+        cursor: pointer;
+    }
+    .description p {
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        line-height: 32px;
+    }
+    .el-form p {
+        text-align: center;
+        color: rgba(0, 0, 0, 0.5);
+        margin: 60px auto 20px;
     }
     @media screen and (max-width: 1000px) {
         .is-h5 {

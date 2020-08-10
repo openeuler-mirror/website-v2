@@ -29,17 +29,17 @@
             <h3>{{ i18n.home.HOME_INTRODUCE.INTRO_HEAD }}</h3>
             <p>{{ i18n.home.HOME_INTRODUCE.INTRO_DESCRIPTION }}</p>
             <div class="is-pc mapArea">
-                <img src="/img/home/step.png"
+                <!--<img src="/img/home/step.png"
                      alt=""
                      usemap="#maphover"
                      ref="img-display-1"
                      id="img-display-1"
-                     style="width: 100%">
+                     style="width: 100%">-->
                 <div class="area-box in-pc" v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP" :key="index">
                     <a @click="go(item.LINK)">
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p>{{ item.TITLE }}</p>
-                        <img src="item.IMG" alt="">
+                        <img :src="item.IMG" alt="">
                         <img :src="item.IMG" alt="" class="is-hidden">
                     </a>
                 </div>
@@ -47,8 +47,8 @@
                     <a @click="go(i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.LINK)">
                         <div class="box-icon">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.NAME }}</div>
                         <p>{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.TITLE }}</p>
-                        <img src="/home/step2.png" alt="">
-                        <img src="" alt="" class="is-hidden">
+                        <img src="/img/home/step2.png" alt="">
+                        <img src="/img/home/step2.png" alt="" class="is-hidden">
                     </a>
                     <div class="snd-guidance">
                         <div class="d3"></div>
@@ -133,11 +133,9 @@
         <div class="home-newsroom">
             <div class="is-pc room-right">
                 <div class="room-title" data-active="1">
-                    <a href="javascript:;" data-name="event" data-index="1" @click="toggleRooms">{{ i18n.home.HOME_ROOMS.EVENT_NAME }}</a>
-                    <a href="javascript:;" data-name="blog" data-index="2" @click="toggleRooms">{{ i18n.home.HOME_ROOMS.BLOG_NAME }}</a>
-                    <a href="javascript:;" data-name="news" data-index="3" @click="toggleRooms">{{ i18n.home.HOME_ROOMS.NEWS_NAME }}</a>
+                    <a href="javascript:;" v-for="(item, index) in roomName" :key="index" @click="vueToggle(index)">{{ item }} </a>
                 </div>
-                <div id="room-contain-1" class="room-contain active">
+                <div class="room-contain" :class="{'active':currentRoom === 0}">
                     <div class="flex-room">
                         <div class="room-box"
                              v-for="(item, index) in i18n.home.HOME_ROOMS.EVENT_LIST"
@@ -148,7 +146,7 @@
                         <span><a href="">{{ i18n.home.MORE }}</a></span>
                     </div>
                 </div>
-                <div id="room-contain-2" class="room-contain">
+                <div class="room-contain" :class="{'active':currentRoom === 1}">
                     <div class="flex-room">
                         <div class="room-box"
                              v-for="(item, index) in blogList"
@@ -162,7 +160,7 @@
                         <span><a href="">{{ i18n.home.MORE }}</a></span>
                     </div>
                 </div>
-                <div id="room-contain-3" class="room-contain">
+                <div class="room-contain" :class="{'active':currentRoom === 2}">
                     <div class="flex-room">
                         <div class="room-box"
                              v-for="(item, index) in i18n.home.HOME_ROOMS.NEWS_LIST"
@@ -175,15 +173,26 @@
                 </div>
             </div>
             <div class="is-pc room-left">
-                <div id="room-img-1" class="room-img active">
-                    <img src="/img/home/eventImg.png" alt="">
-                </div>
-                <div id="room-img-2" class="room-img">
-                    <img src="/img/home/blogImg.png" alt="">
-                </div>
-                <div id="room-img-3" class="room-img">
-                    <img src="/img/home/newsImg.png" alt="">
-                </div>
+                <template>
+                    <el-carousel indicator-position="none" :autoplay="false" arrow="never" ref="newsroomCard" class="room-card">
+                        <el-carousel-item>
+                            <div class="room-img active">
+                                <img src="/img/home/eventImg.png" alt="">
+                            </div>
+                        </el-carousel-item>
+                        <el-carousel-item>
+                            <div class="room-img active">
+                                <img src="/img/home/blogImg.png" alt="">
+                            </div>
+                        </el-carousel-item>
+                        <el-carousel-item>
+                            <div class="room-img active">
+                                <img src="/img/home/newsImg.png" alt="">
+                            </div>
+                        </el-carousel-item>
+                    </el-carousel>
+                </template>
+
             </div>
             <div class="is-h5 newsroom">
                 <div class="event-room">
@@ -331,10 +340,15 @@
                 activeImg: "/img/home/homeActive.gif",
                 startIndex: 0,
                 endIndex: 4,
-                blogList: null
+                blogList: null,
+                currentRoom: 0,
+                roomName: [],
             }
         },
         mounted() {
+            this.roomName.push(this.i18n.home.HOME_ROOMS.EVENT_NAME);
+            this.roomName.push(this.i18n.home.HOME_ROOMS.BLOG_NAME);
+            this.roomName.push(this.i18n.home.HOME_ROOMS.NEWS_NAME);
             this.toggleHover();
             this.shrinkCalendar();
             this.marginTop();
@@ -368,14 +382,6 @@
                     return es
                 }
             },
-            removeClassAll(className) {
-                let selector = '.' + className;
-                let elements = this.es(selector);
-                for (let i = 0; i < elements.length; i++) {
-                    let e = elements[i];
-                    e.classList.remove(className);
-                }
-            },
             addClassAll(className) {
                 let selector = '.' + className;
                 let elements = document.querySelectorAll(selector);
@@ -398,24 +404,6 @@
                     p.innerHTML = this.i18n.home.EXPAND;
                     this.flag = !this.flag;
                 }
-            },
-            showRoom(slide, index) {
-                let nextIndex = index;
-                slide.dataset.active = String(nextIndex);
-                let className = 'active';
-                this.removeClassAll(className);
-                let nextRoom = '#room-contain-' + String(nextIndex);
-                let nextImg = '#room-img-' + String(nextIndex);
-                let room = this.e(nextRoom);
-                let img = this.e(nextImg);
-                room.classList.add(className);
-                img.classList.add(className);
-            },
-            toggleRooms(event) {
-                let target = event.target;
-                let slide = event.target.closest('.room-title');
-                let index = target.dataset.index;
-                this.showRoom(slide, index);
             },
             toggleHover() {
                 let hovers = this.es('.area-box');
@@ -507,7 +495,11 @@
                     let top = this.judgeTop(boxTime, '.time-num');
                     box.setAttribute('style', 'top: '+ top +'px');
                 }
-            }
+            },
+            vueToggle(index) {
+                this.currentRoom = index
+                this.$refs.newsroomCard.setActiveItem(index)
+            },
         }
     }
 </script>
@@ -523,9 +515,16 @@
         height: 680px;
     }
 
+    .room-card .el-carousel__container {
+        height: 480px;
+    }
+
     @media screen and (max-width: 1000px) {
         .el-carousel__container {
             height: 300px;
+        }
+        .room-card {
+            display: none;
         }
     }
 </style>
@@ -642,32 +641,32 @@
     .home-introduce .mapArea {
         display: inline-block;
         width: 100%;
+        height: 280px;
         margin-top: 97px;
         position: relative;
     }
-    .area-box.in-pc:nth-child(2) {
+    .area-box.in-pc:nth-child(1) {
         position: absolute;
         top: 88px;
         left: 0;
     }
-    .area-box.in-pc:nth-child(3) {
+    .area-box.in-pc:nth-child(2) {
         display: none;
     }
-    .area-box.in-pc:nth-child(4) {
+    .area-box.in-pc:nth-child(3) {
         position: absolute;
         top: 132px;
         left: 56%;
     }
-    .area-box.in-pc:nth-child(5) {
+    .area-box.in-pc:nth-child(4) {
         position: absolute;
         top: -40px;
         left: 80%;
     }
-    .area-box.in-pc:nth-child(6) {
+    .area-box.in-pc:nth-child(5) {
         position: absolute;
         top: 0;
         left: 25%;
-        width: 460px;
     }
     .area-box {
         display: inline-block;
@@ -694,8 +693,7 @@
     }
     .area-box img {
         display: block;
-        margin-top: 10px;
-        margin-bottom: 26px;
+        margin: 10px 0 26px 70px;
     }
     .area-box .is-hidden {
         display: none;
@@ -927,7 +925,6 @@
         border-radius: 2px;
     }
     .room-img {
-        display: none;
         width: 520px;
         margin: 70px auto 40px;
         box-shadow: 0 6px 30px 0px rgba(0, 0, 0, .1);
