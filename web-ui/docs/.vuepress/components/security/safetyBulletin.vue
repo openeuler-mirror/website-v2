@@ -299,7 +299,7 @@ export default {
     cursor: pointer;
 }
 .safety-bulletin-content {
-    width: 1200px;
+    width: 1120px;
     margin: 0 auto;
     @media (max-width: 1000px) {
         width: 100%;

@@ -207,7 +207,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .sig-list-content {
-    width: 1200px;
+    width: 1120px;
     margin: 0 auto;
     @media (max-width: 1000px) {
         width: 100%;
@@ -242,7 +242,7 @@ export default {
     }
     .sig-list {
         column-count: 2;
-        column-gap: 60px;
+        column-gap: 50px;
         margin-bottom: 200px;
         @media (max-width: 1000px) {
             margin-top: 40px;
@@ -252,7 +252,7 @@ export default {
             padding: 0 15px;
         }
         .sig-item {
-            width: 570px;
+            width: 530px;
             box-shadow: 0 6px 30px 0 rgba(0, 0, 0, .1);
             border-radius: 8px;
             margin-bottom: 60px;

@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="22px" height="13px" viewBox="0 0 22 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>形状</title>
+<svg width="72px" height="65px" viewBox="0 0 72 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组</title>
     <defs>
-        <path d="M1372,169.87595 L1380.46356,159.719681 C1381.17069,158.871128 1382.43182,158.756479 1383.28037,159.463608 C1383.37329,159.541046 1383.459,159.626755 1383.53644,159.719681 L1392,169.87595" id="path-1"></path>
-        <filter x="-243.5%" y="-390.8%" width="587.0%" height="993.8%" filterUnits="objectBoundingBox" id="filter-2">
+        <path d="M0,4 L0,4 L2.58578644,1.41421356 C3.36683502,0.633164979 4.63316498,0.633164979 5.41421356,1.41421356 L8,4 L8,4 L8,4 L8,4" id="path-1"></path>
+        <filter x="-615.1%" y="-1041.8%" width="1330.2%" height="2504.3%" filterUnits="objectBoundingBox" id="filter-3">
             <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
             <feOffset dx="0" dy="6" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
-            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
-            <feOffset dx="0" dy="6" in="shadowInner" result="shadowInner"></feOffset>
-            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
             <feGaussianBlur stdDeviation="15" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
             <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
         </filter>
     </defs>
-    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="安全导航样式" transform="translate(-1371.000000, -158.000000)">
-            <rect fill="#FFFFFF" x="0" y="0" width="1920" height="413"></rect>
-            <g id="形状">
-                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
-                <use stroke="#002FA7" stroke-width="1" xlink:href="#path-1"></use>
+    <g id="控件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="导航下拉_zh" transform="translate(-1658.000000, -82.000000)">
+            <g id="编组" transform="translate(1690.000000, 106.000000)">
+                <polygon id="路径-2" fill="#FFFFFF" points="0.362105636 4.34755517 0.362105636 3.53485749 7.65801042 3.53485749 7.65801042 4.34755517"></polygon>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Base备份-10">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                    <use stroke="#002FA7" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
             </g>
         </g>
     </g>

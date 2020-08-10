@@ -171,7 +171,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .cve-detail-content {
-    width: 1200px;
+    width: 1120px;
     margin: 0 auto;
     margin-bottom: 200px;
     @media (max-width: 1000px) {
