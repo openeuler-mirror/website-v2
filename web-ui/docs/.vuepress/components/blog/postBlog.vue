@@ -26,7 +26,7 @@ export default {
 
 <style lang="less">
 #post_blog {
-  width: 1200px;
+  width: 1120px;
   margin: 0 auto;
 }
 .blog-link {
@@ -38,7 +38,7 @@ export default {
 }
 .blog-title{
   font-size:36px;
-  font-weight: bold;
+  font-weight: normal;
   color: #000;
   margin-bottom: 36px;
 }
@@ -46,7 +46,7 @@ export default {
     #post_blog {
         width: 100%;
         margin: 0 auto;
-        padding: 0 15px;
+        padding: 0 30px;
     }
 }
 </style>
