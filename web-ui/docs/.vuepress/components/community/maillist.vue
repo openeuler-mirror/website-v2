@@ -85,8 +85,7 @@
                         :label="i18n.community.MAILING_LIST.TABLE.NAME"
                         width="180">
                     <template slot-scope="scope">
-                    <a class="list-name" @click="getUserInfo" ref="listName">
-                            <p class="list-id">{{ scope.row.list_id }}</p>
+                    <a class="list-name" @click="userSubscribe(scope.row.list_id)" ref="listName">
                             <p>{{ scope.row.display_name }}</p>
                         </a>
                     </template>
@@ -122,7 +121,6 @@
                         width="80">
                     <template slot-scope="scope">
                         <a class="list-name">
-                            <p class="list-id">{{ scope.row.list_id }}</p>
                             <p>{{ scope.row.display_name }}</p>
                         </a>
                     </template>
@@ -171,7 +169,7 @@
                 <div slot="footer" class="dialog-footer">
                     <el-button
                             type="primary"
-                            @click="dialogFormVisible = false"
+                            @click="getUserInfo"
                             icon="el-icon-document-checked">{{ i18n.community.MAILING_LIST.SUBSCRIBE.BUTTON }}</el-button>
                 </div>
             </el-dialog>
@@ -196,12 +194,7 @@
                 form: {
                     name: '',
                     email: '',
-                    date1: '',
-                    date2: '',
                     delivery: false,
-                    type: [],
-                    resource: '',
-                    desc: ''
                 },
                 formLabelWidth: '0'
             }
@@ -213,22 +206,26 @@
                     this.list.forEach(item => { item.archive = "Archive"});
                 })
                 .catch(response => {
-                    console.log(response);
+                    this.$message.error("邮件列表发生错误");
                 });
             subscribe({
                 listId: "test.openeuler.org"
             })
-                .then(response => {
-                    console.log(response);
-                })
+                .then(response => {})
                 .catch(response => {
-                    console.log(response);
+                    this.$message.error("邮件列表发生错误");
                 });
         },
         methods: {
+            userSubscribe(userID) {
+                this.dialogFormVisible = true;
+                this.subscribe = userID;
+            },
             getUserInfo() {
-                this.dialogFormVisible = true
-                this.subscribe = this.$refs.listName.childNodes[0].innerHTML
+                this.dialogFormVisible = false;
+                let name = this.form.name;
+                let email = this.form.email;
+                let subInfo = this.subscribe;
             }
         }
 
@@ -445,9 +442,6 @@
     }
     .mail-table {
         margin-bottom: 200px;
-    }
-    .list-id {
-        display: none;
     }
     .list-name {
         cursor: pointer;

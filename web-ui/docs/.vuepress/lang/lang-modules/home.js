@@ -275,9 +275,7 @@ module.exports = {
             ]
         },
         HOME_ROOMS: {
-            EVENT_NAME: "最新活动",
-            BLOG_NAME: "博客",
-            NEWS_NAME: "新闻",
+            ROOM_NAME: ["最新活动", "博客", "新闻"],
             EVENT_LIST: [
                 {
                     TAG: "事件",
@@ -752,9 +750,7 @@ module.exports = {
             ]
         },
         HOME_ROOMS: {
-            EVENT_NAME: "最新活动",
-            BLOG_NAME: "博客",
-            NEWS_NAME: "新闻",
+            ROOM_NAME: ["最新活动", "博客", "新闻"],
             EVENT_LIST: [
                 {
                     TAG: "事件",

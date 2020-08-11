@@ -346,9 +346,7 @@
             }
         },
         mounted() {
-            this.roomName.push(this.i18n.home.HOME_ROOMS.EVENT_NAME);
-            this.roomName.push(this.i18n.home.HOME_ROOMS.BLOG_NAME);
-            this.roomName.push(this.i18n.home.HOME_ROOMS.NEWS_NAME);
+            this.roomName = this.i18n.home.HOME_ROOMS.ROOM_NAME
             this.toggleHover();
             this.shrinkCalendar();
             this.marginTop();
