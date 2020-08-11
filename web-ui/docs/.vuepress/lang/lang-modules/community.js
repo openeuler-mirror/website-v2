@@ -4,7 +4,10 @@
 
 module.exports = {
     cn: {
-        test: '测试',
+        NEWS: {
+            NEWS: '新闻',
+            MONTHS: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],           
+        },
         BLOG: {
             BLOG: '博客',
             LABEL: '标签',
@@ -97,11 +100,15 @@ module.exports = {
         }
     },
     en: {
-        test: 'test',
+        NEWS: {
+            NEWS: 'News',
+            MONTHS: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+        },
         BLOG: {
             BLOG: 'Blog',
             LABEL: 'Label',
             FILE: 'File',
+            BLOGGING: 'Blogging', 
             READ_MORE: 'Read more >>',
             DISCLAIMER_ZH: '【免责声明】本文仅代表作者本人观点，与本网站无关。本网站对文中陈述、观点判断保持中立，不对所包含内容的准确性、可靠性或完整性提供任何明示或暗示的保证。本文仅供读者参考，由此产生的所有法律责任均由读者本人承担。',
             DISCLAIMER_EN: "[Disclaimer] This article only represents the author's opinions, and is irrelevant to this website. This website is neutral in terms of the statements and opinions in this article, and does not provide any express or implied warranty of accuracy, reliability, or completeness of the contents contained therein. This article is for readers' reference only, and all legal responsibilities arising therefrom are borne by the reader himself.",

@@ -104,7 +104,7 @@ git push origin <branch-name>:<branch-name>
 
 <style lang="less">
 #blog_content{
-  width: 1200px;
+  width: 1120px;
   margin: 0 auto;
   margin-bottom: 200px;
   p{

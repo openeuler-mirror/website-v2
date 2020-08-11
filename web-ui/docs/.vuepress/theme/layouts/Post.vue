@@ -133,7 +133,7 @@ export default {
 
 <style lang="less">
 #vuepress-theme-blog__post-layout {
-  width: 1200px;
+  width: 1120px;
   margin: 0 auto;
 }
 .blog-link-post {

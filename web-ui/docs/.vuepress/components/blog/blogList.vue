@@ -126,7 +126,7 @@ export default {
     handleCurrentChange(val) {
       this.currentBlogListData = this.screenBlogListData.slice(
         (val - 1) * this.PAGESIZE,
-        (val - 1) * this.PAGESIZE + 5
+        val * this.PAGESIZE
       );
       scrollTo(0, 0);
     },
@@ -271,16 +271,17 @@ export default {
 .blog-header {
   height: 560px;
   .blog-title {
-    width: 1200px;
+    width: 1120px;
     height: 560px;
     margin: 0 auto;
-    font-size: 72px;
+    font-size: 48px;
     line-height: 560px;
+    font-weight: normal;
     position: relative;
   }
 }
 .blog-connect {
-  font-size: 80px;
+  font-size: 60px;
   color: rgba(0, 0, 0, 0.05);
   position: absolute;
   top: -50px;
@@ -298,7 +299,7 @@ export default {
   margin-bottom: 8px;
 }
 .blog-content {
-  width: 1200px;
+  width: 1120px;
   margin: 0 auto;
 }
 .el-select__tags {
@@ -312,6 +313,7 @@ export default {
 
 .el-input__inner {
   font-size: 14px;
+  height: 32px;
   color: #000;
   font-family: FZLTXIHJW;
 }
@@ -394,7 +396,7 @@ export default {
 }
 @media screen and (max-width: 1000px) {
   .moblie-content {
-    padding: 40px 15px 80px 15px;
+    padding: 40px 30px 80px 30px;
   }
   .blog-header {
     height: auto;

@@ -1,0 +1,3 @@
+<ClientOnly>
+  <news-newsList />
+</ClientOnly>
