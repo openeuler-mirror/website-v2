@@ -106,8 +106,16 @@ module.exports = {
             }
         ],
         LANG: 'EN',
-        SEARCH: '搜索',
-        GITTE: '源码',
+        GITTE_RESOURCE_LIST: [
+            {
+                NAME: '代码仓',
+                URL: 'https://gitee.com/openeuler'
+            },
+            {
+                NAME: '软件包仓',
+                URL: 'https://gitee.com/src-openeuler'
+            }
+        ],
         FOOTER: {
             MAIL: 'contact@openeuler.org',
             COPY_RIGHT: '版权所有 © 2020 openeuler 保留一切权利',
@@ -125,13 +133,13 @@ module.exports = {
         },
         {
             PATH: '/documentation/',
-            NAME: 'Docs',
+            NAME: 'Documentation',
             CHILDREN: [],
             CLASS: []
         },
         {
             PATH: '',
-            NAME: 'Interaction',
+            NAME: 'Connect',
             CHILDREN: [
                 {
                     NAME: 'News',
@@ -146,7 +154,7 @@ module.exports = {
                     PATH: '/interaction/live-list/'
                 },
                 {
-                    NAME: 'Salon',
+                    NAME: 'Meetups',
                     PATH: '/interaction/salon-list/'
                 },
                 {
@@ -164,15 +172,15 @@ module.exports = {
                     PATH: '/community/contribution/'
                 },
                 {
-                    NAME: 'Conduct',
+                    NAME: 'Convention',
                     PATH: '/community/conduct/'
                 },
                 {
-                    NAME: 'Mailing list',
+                    NAME: 'Mail lists',
                     PATH: '/community/mailing-list/'
                 },
                 {
-                    NAME: 'Certification services',
+                    NAME: 'Certification',
                     PATH: '/community/certification-services/'
                 }
             ],
@@ -183,15 +191,15 @@ module.exports = {
             NAME: 'SIG',
             CHILDREN: [
                 {
-                    NAME: 'View SIG',
+                    NAME: 'SIG lists',
                     PATH: '/sig/sig-list/'
                 },
                 {
-                    NAME: 'SIG guidance',
+                    NAME: 'Application',
                     PATH: '/sig/sig-guidance/'
                 },
                 {
-                    NAME: 'Role description',
+                    NAME: 'Characters',
                     PATH: '/sig/role-description/'
                 }
             ],
@@ -202,11 +210,11 @@ module.exports = {
             NAME: 'Security',
             CHILDREN: [
                 {
-                    NAME: 'Vulnerability reporting',
+                    NAME: 'Vulnerability management',
                     PATH: '/security/vulnerability-reporting/'
                 },
                 {
-                    NAME: 'Safety bulletin',
+                    NAME: 'Security advisories',
                     PATH: '/security/safety-bulletin/'
                 },
                 {
@@ -215,11 +223,18 @@ module.exports = {
                 }
             ],
             CLASS: []
-        }
-    ],
+        }],
         LANG: '中',
-        SEARCH: 'search',
-        GITTE: 'Source code',
+        GITTE_RESOURCE_LIST: [
+            {
+                NAME: 'Code sources',
+                URL: 'https://gitee.com/openeuler'
+            },
+            {
+                NAME: 'Package sources',
+                URL: 'https://gitee.com/src-openeuler'
+            }
+        ],
         FOOTER: {
             MAIL: 'contact@openeuler.org',
             COPY_RIGHT: 'Copyright © 2020 openEuler. All rights reserved.',

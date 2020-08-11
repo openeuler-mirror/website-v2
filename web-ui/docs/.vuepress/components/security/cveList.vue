@@ -29,7 +29,6 @@
             </el-form>
             <el-table
             v-loading.fullscreen="tableLoading"
-            tooltip-effect="light"
             class="cve-list-list"
             :data="tableData"
             stripe
@@ -43,7 +42,6 @@
                 </el-table-column>
                 <el-table-column
                 width="450"
-                show-overflow-tooltip
                 prop="summary"
                 :label="i18n.security.SYNOPSIS">
                 </el-table-column>
@@ -167,6 +165,10 @@ export default {
 </script>
 <style lang="less">
 .cve-list-content {
+    .el-table .cell {
+        word-break: unset;
+        text-align: justify;
+    }
     .el-pagination {
         color: #282b33;
         font-family: FZLTHJW;
@@ -282,7 +284,7 @@ export default {
     cursor: pointer;
 }
 .cve-list-content {
-    width: 1200px;
+    width: 1120px;
     margin: 0 auto;
     @media (max-width: 1000px) {
         width: 100%;

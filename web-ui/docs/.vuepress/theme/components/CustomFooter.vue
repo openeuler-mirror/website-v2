@@ -39,7 +39,7 @@ export default {
         font-family: FZLTXIHJW;
         margin: 0 auto;
         height: 100%;
-        width: 1200px;
+        width: 1120px;
         display: flex;
         justify-content: space-between;
         @media (max-width: 1000px) {

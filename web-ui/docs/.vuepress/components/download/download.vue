@@ -254,7 +254,7 @@ export default {
 </style>
 <style lang="less" scoped>
 .download-content {
-    width: 1200px;
+    width: 1120px;
     margin: 0 auto;
     @media (max-width: 1000px) {
         width: 100%;
@@ -304,12 +304,12 @@ export default {
                 margin-bottom: 60px;
             }
             .download-item {
-                width: 380px;
-                margin: 0 30px 30px 0;
+                width: 350px;
+                margin: 0 25px 30px 0;
                 box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
                 display: inline-block;
-                padding: 36px 30px 16px 30px;
+                padding: 20px 20px 16px 20px;
                 @media (max-width: 1000px) {
                     display: block;
                     margin: 40px auto !important;
@@ -317,13 +317,13 @@ export default {
                 }
                 .title {
                     font-size: 24px;
-                    margin-bottom: 24px;
+                    margin-bottom: 16px;
                     @media (max-width: 1000px) {
                         text-align: center;
                     }
                 }
                 .download-btn {
-                    margin-bottom: 24px;
+                    margin-bottom: 20px;
                     @media (max-width: 1000px) {
                         display: none;
                     }
@@ -357,12 +357,12 @@ export default {
                         flex-direction: column;
                         align-items: space-between;
                         li {
-                            margin-bottom: 20px;
+                            margin-bottom: 18px;
                             img {
                                 width: 18px;
                                 height: 20px;
                                 vertical-align: middle;
-                                margin-right: 13px;
+                                margin-right: 10px;
                                 @media (max-width: 1000px) {
                                     display: none;
                                 }

@@ -4,7 +4,7 @@ import './public/style/base.css';
 import locale from 'element-ui/lib/locale/lang/en'
 import'./public/style/markdown.less';
 
-if (!localStorage.getItem('locale') || localStorage.getItem('locale') === 'en') {
+if (window.location.href.includes('/en/')) {
     import('./public/style/font-en.css');
 } else {
     import('./public/style/font-cn.css');
@@ -54,7 +54,7 @@ export default ({
             }
         }
     })
-    if (!localStorage.getItem('locale') || localStorage.getItem('locale') === 'en') {
+    if (window.location.href.includes('/en/')) {
         Vue.use(ElementUI, {locale});
     } else {
         Vue.use(ElementUI);

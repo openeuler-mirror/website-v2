@@ -23,9 +23,9 @@ export default {
 
 <style lang="less" scoped>
 .common-banner {
-    width: 1200px;
+    width: 1120px;
     margin: 0 auto;
-    height: 560px;
+    height: 380px;
     @media (max-width: 1000px) {
         width: 100%;
         padding: 0 55px;
@@ -39,27 +39,27 @@ export default {
             display: none;
         }
         img {
-            height: 420px;
-            width: 554px;
+            height: 360px;
+            width: 500px;
             position: absolute;
             right: 0;
-            top: 70px;
+            top: 10px;
         }
         .inside {
             position: absolute;
             left: 0;
-            top: 170px;
-            font-size: 80px;
-            line-height: 80px;
+            top: 120px;
+            font-size: 60px;
+            line-height: 60px;
             font-family: HuaweiSans-Medium;
             color: rgba(0, 0, 0, .05);
         }
         .outside {
             position: absolute;
             left: 0;
-            top: 220px;
-            font-size: 72px;
-            line-height: 72px;
+            top: 156px;
+            font-size: 48px;
+            line-height: 48px;
             font-family: FZLTXIHJW, HuaweiSans-Medium;
             color: #000;
             font-weight: normal;
