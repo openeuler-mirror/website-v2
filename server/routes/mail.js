@@ -4,7 +4,7 @@
 var express = require('express');
 var router = express.Router();
 const HTTP = require('../util/httpUtil');
-const CONF = require('../config/conf');
+const CONF = require('../config/apiConfig');
 
 router.get('/list', function (req, res, next) {
     let token = new Buffer.from(CONF.MAIL_USER_PASS).toString('base64');
