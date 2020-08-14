@@ -1,17 +1,22 @@
 <template>
     <div class="download-content">
-        <common-banner 
-        :pc-src="'/img/download/download-banner.png'" 
-        :mobile-src="'/img/download/download-banner.png'"
-        :inside-name="'DOWNLOAD'"
-        :outside-name="i18n.download.DOWNLOAD_BTN_NAME"
+        <common-banner
+            :pc-src="'/img/download/download-banner.png'"
+            :mobile-src="'/img/download/download-banner.png'"
+            :inside-name="'DOWNLOAD'"
+            :outside-name="i18n.download.DOWNLOAD_BTN_NAME"
         ></common-banner>
         <div class="download-list-wrapper">
             <el-form :inline="true" :model="formData" class="download-filter">
                 <el-form-item :label="i18n.download.MANUFACTURER">
-                    <el-select v-model="formData.manufacturer" multiple placeholder="">
+                    <el-select
+                        v-model="formData.manufacturer"
+                        multiple
+                        placeholder=""
+                    >
                         <el-option
-                            v-for="(item, index) in i18n.download.MANUFACTURER_LIST"
+                            v-for="(item, index) in i18n.download
+                                .MANUFACTURER_LIST"
                             :key="index"
                             :label="item.NAME"
                             :value="item.VALUE"
@@ -19,9 +24,14 @@
                     </el-select>
                 </el-form-item>
                 <el-form-item :label="i18n.download.PUBLISH_DATE">
-                    <el-select v-model="formData.publishDate" multiple placeholder="">
+                    <el-select
+                        v-model="formData.publishDate"
+                        multiple
+                        placeholder=""
+                    >
                         <el-option
-                            v-for="(item, index) in i18n.download.PUBLISH_DATE_LIST"
+                            v-for="(item, index) in i18n.download
+                                .PUBLISH_DATE_LIST"
                             :key="index"
                             :label="item.NAME"
                             :value="item.VALUE"
@@ -32,6 +42,18 @@
                     <el-checkbox v-model="formData.lts"></el-checkbox>
                 </el-form-item>
             </el-form>
+            <ul class="filter-tags">
+                <li
+                    v-for="(item, index) in filterTags"
+                    v-show="
+                        (formData.lts && item === 'LTS') ||
+                            formData.publishDate.indexOf(item.VALUE) > -1 ||
+                            formData.manufacturer.indexOf(item.VALUE) > -1
+                    "
+                >
+                    {{ item.NAME || item }}<span @click="delTag(item)">×</span>
+                </li>
+            </ul>
             <ul class="download-list">
                 <li
                     class="download-item"
@@ -52,15 +74,19 @@
                         <ul class="url-list">
                             <li>
                                 <img src="/img/download/release.svg" alt="" />
-                                <a target="_blank" :href="item.RELEASE_DESC_URL">{{
-                                    i18n.download.RELEASE_DESC
-                                }}</a>
+                                <a
+                                    target="_blank"
+                                    :href="item.RELEASE_DESC_URL"
+                                    >{{ i18n.download.RELEASE_DESC }}</a
+                                >
                             </li>
                             <li>
                                 <img src="/img/download/guidence.svg" alt="" />
-                                <a target="_blank" :href="item.INSTALL_GUIDENCE_URL">{{
-                                    i18n.download.INSTALL_GUIDENCE
-                                }}</a>
+                                <a
+                                    target="_blank"
+                                    :href="item.INSTALL_GUIDENCE_URL"
+                                    >{{ i18n.download.INSTALL_GUIDENCE }}</a
+                                >
                             </li>
                         </ul>
                         <ul class="url-list">
@@ -79,14 +105,19 @@
                         </ul>
                         <ul class="url-list">
                             <li>
-                                <img src="/img/download/life-circle.svg" alt="" />
-                                <a target="_blank" :href="item.LIFE_CYCLE_URL">{{
-                                    i18n.download.LIFE_CYCLE
-                                }}</a>
+                                <img
+                                    src="/img/download/life-circle.svg"
+                                    alt=""
+                                />
+                                <a
+                                    target="_blank"
+                                    :href="item.LIFE_CYCLE_URL"
+                                    >{{ i18n.download.LIFE_CYCLE }}</a
+                                >
                             </li>
-                        </ul>    
+                        </ul>
                     </div>
-                    
+
                     <div class="btn-mobile-wrapper">
                         <el-button
                             size="medium"
@@ -104,8 +135,8 @@
 </template>
 
 <script>
-import { downloadList } from '../../api/download';
-import commonBanner from './../common/banner.vue';
+import { downloadList } from "../../api/download";
+import commonBanner from "./../common/banner.vue";
 let that = null;
 
 export default {
@@ -123,20 +154,17 @@ export default {
     components: {
         commonBanner
     },
-    mounted () {
+    mounted() {
         this.list = this.i18n.download.DOWNLOAD_LIST;
-        downloadList({
-            manufacturer: "1",
-            publishTime: "2"
-        })
-            .then(data => {
-                console.log(data);
-            })
-            .catch(data => {
-                console.log(data);
-            });
     },
     computed: {
+        filterTags() {
+            let allTags = this.i18n.download.MANUFACTURER_LIST.concat(
+                this.i18n.download.PUBLISH_DATE_LIST,
+                ["LTS"]
+            );
+            return allTags;
+        },
         downloadList() {
             if (
                 !this.formData.manufacturer.length &&
@@ -169,13 +197,15 @@ export default {
                 });
             } else {
                 return this.list.filter(item => {
-                    return this.formData.publishDate.indexOf(item.PUBLISH_DATE) >
-                        -1 &&
+                    return (
+                        this.formData.publishDate.indexOf(item.PUBLISH_DATE) >
+                            -1 &&
                         this.formData.manufacturer.indexOf(item.MANUFACTURER) >
                             -1 &&
                         (this.formData.lts
-                        ? item.LTS === this.formData.lts
-                        : true);
+                            ? item.LTS === this.formData.lts
+                            : true)
+                    );
                 });
             }
         }
@@ -183,6 +213,15 @@ export default {
     methods: {
         download(url) {
             window.open(url);
+        },
+        delTag (tag) {
+            if(tag === 'LTS'){
+                this.formData.lts = false;
+            } else {
+                const publishDateIndex = this.formData.publishDate.indexOf(tag.VALUE);
+                const manufacturerIndex = this.formData.manufacturer.indexOf(tag.VALUE);
+                ( publishDateIndex > -1) ? (this.formData.publishDate.splice(publishDateIndex, 1)) : (this.formData.manufacturer.splice(manufacturerIndex, 1));
+            }
         }
     }
 };
@@ -190,6 +229,9 @@ export default {
 
 <style lang="less">
 .download-content {
+    .el-select__tags {
+        display: none;
+    }
     .el-input__icon {
         line-height: 32px;
     }
@@ -205,7 +247,7 @@ export default {
     .el-input__inner {
         height: 32px;
         line-height: 32px;
-        border: 1px solid rgba(0, 0, 0, .5);
+        border: 1px solid rgba(0, 0, 0, 0.5);
         color: #000;
     }
     .el-select__tags {
@@ -250,7 +292,6 @@ export default {
         margin: unset;
     }
 }
-
 </style>
 <style lang="less" scoped>
 .download-content {
@@ -262,7 +303,7 @@ export default {
     }
     .download-banner {
         height: 600px;
-        background-color: #002FA7;
+        background-color: #002fa7;
         @media (max-width: 1000px) {
             display: none;
         }
@@ -281,7 +322,7 @@ export default {
         div {
             width: 100%;
             height: 200px;
-            background-color: #002FA7;
+            background-color: #002fa7;
         }
         @media (max-width: 1000px) {
             display: block;
@@ -290,13 +331,34 @@ export default {
     .download-list-wrapper {
         .download-filter {
             margin-top: 22px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
             @media (max-width: 1000px) {
                 display: none;
             }
         }
+        .filter-tags {
+            @media (max-width: 1000px) {
+                display: none;
+            }
+            margin-top: 19px;
+            li {
+                display: inline-block;
+                font-size: 14px;
+                line-height: 14px;
+                font-family: FZLTXIHJW;
+                padding: 9px 16px;
+                border: 1px solid #002fa7;
+                border-radius: 32px 32px 32px 32px;
+                margin-right: 20px;
+                span {
+                    margin-left: 10px;
+                    color: #002fa7;
+                    cursor: pointer;
+                }
+            }
+        }
         .download-list {
-            padding-top: 50px;
-            border-top: 1px solid rgba(0, 0, 0, 0.5);
+            padding-top: 30px;
             margin-bottom: 150px;
             @media (max-width: 1000px) {
                 padding-top: 0;

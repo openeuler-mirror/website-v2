@@ -102,9 +102,34 @@
                         </li>
                         <li>
                             <a
-                                class="menu-link"
-                                >{{ i18n.common.GITTE }}<i class="icon-arrow"></i>
+                                :class="{
+                                    'menu-link': true,
+                                    'menu-active': gitteResourceFlag
+                                }"
+                                @click="toggleSubGitee"
+                                >{{ i18n.common.GITTE }}<i
+                                    :class="{
+                                        'icon-arrow': true,
+                                        'arrow-active': gitteResourceFlag
+                                    }"
+                                ></i
+                            ></i>
                             </a>
+                            <el-collapse-transition>
+                            
+                                <ul
+                                    class="sub-menu"
+                                    v-show="gitteResourceFlag"
+                                >
+                                    <li
+                                        v-for="(item, index) in i18n.common.GITTE_RESOURCE_LIST"
+                                        :key="index"
+                                        @click="open(item.URL)"
+                                    >
+                                        {{ item.NAME }}
+                                    </li>
+                                </ul>
+                            </el-collapse-transition>
                         </li>
                     </ul>
                 </el-collapse-transition>
@@ -194,7 +219,8 @@ export default {
             searchData: "",
             searchFlag: false,
             mobileActiveFlag : true,
-            pcSearchFlag: false
+            pcSearchFlag: false,
+            gitteResourceFlag: false
         };
     },
     methods: {
@@ -272,12 +298,24 @@ export default {
             if (item.CLASS.length) {
                 item.CLASS.pop();
             } else {
+                this.gitteResourceFlag = false;
                 this.i18n.common.NAV_ROUTER_CONFIG.forEach(item => {
                     item.CLASS = [];
                 });
                 item.CLASS.push("arrow-active");
             }
             this.mobileActiveFlag = false;
+        },
+        toggleSubGitee () {
+            this.mobileActiveFlag = false;
+            if(this.gitteResourceFlag) {
+                this.gitteResourceFlag = false;
+            } else {
+                this.i18n.common.NAV_ROUTER_CONFIG.forEach(item => {
+                    item.CLASS = [];
+                });
+                this.gitteResourceFlag = true;
+            }
         },
         toggleSearchMobile() {
             this.menuMobileFlag = false;
@@ -297,7 +335,7 @@ export default {
     
     .el-input__icon {
         display: inline-block;
-        margin-top: 1px;
+        margin-top: 3px;
         cursor: pointer;
     }
 }
@@ -370,7 +408,6 @@ export default {
         width: 100%;
         position: fixed;
         z-index: 999;
-        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
         @media (max-width: 1000px) {
             height: 70px;
         }
@@ -390,7 +427,6 @@ export default {
             }
             .nav-logo {
                 flex-shrink: 0;
-                width: 162px;
                 margin-right: 28px;
                 cursor: pointer;
             }
@@ -502,8 +538,8 @@ export default {
                     transform:scale(0,0);
                     position: relative;
                     width: 100%;
-                    height: 2px;
-                    border-radius: 1px;
+                    height: 4px;
+                    border-radius: 4px;
                     background-color: #002FA7;
                     top: -8px;
                     transition: all .3s;
@@ -533,6 +569,7 @@ export default {
                         text-align: center;
                         line-height: 14px;
                         li {
+                            color: unset;
                             cursor: pointer;
                             display: block;
                             margin-bottom: 16px;
@@ -560,6 +597,11 @@ export default {
                     padding: 0 20px;
                     height: 100%;
                     line-height: 60px;
+                    &:hover {
+                        & > a {
+                            color: #002fa7;
+                        }
+                    }
                     @media (max-width: 1000px) {
                         line-height: 70px;
                     }
