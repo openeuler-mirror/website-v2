@@ -6,8 +6,8 @@
         :inside-name="'SIG'"
         :outside-name="'SIG'"
         ></common-banner>
-        <ul class="sig-list">
-            <li class="sig-item">
+        <ul class="sig-list" v-fade>
+            <li class="sig-item fade-in">
                 <h2>A-Tune</h2>
                 <ul class="info-list">
                     <li class="mibile-hidden">
@@ -70,7 +70,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="sig-item">
+            <li class="sig-item fade-in">
                 <h2>A-Tune</h2>
                 <ul class="info-list">
                     <li class="mibile-hidden">
@@ -109,7 +109,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="sig-item">
+            <li class="sig-item fade-in">
                 <h2>A-Tune</h2>
                 <ul class="info-list">
                     <li class="mibile-hidden">
@@ -148,7 +148,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="sig-item">
+            <li class="sig-item fade-in">
                 <h2>A-Tune</h2>
                 <ul class="info-list">
                     <li class="mibile-hidden">

@@ -57,7 +57,9 @@ export default {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: baseline;
             font-size: 16px;
+            font-family: HuaweiSans-Light;
             .footer-mail {
                 color: #fff;
                 margin-top: 17px;

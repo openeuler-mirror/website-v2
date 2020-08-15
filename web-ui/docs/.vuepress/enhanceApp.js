@@ -1,8 +1,9 @@
 import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import './public/style/theme/index.css';
 import './public/style/base.css';
 import locale from 'element-ui/lib/locale/lang/en'
 import'./public/style/markdown.less';
+import directive from './libs/directive';
 
 if (window.location.href.includes('/en/')) {
     import('./public/style/font-en.css');
@@ -13,6 +14,7 @@ if (window.location.href.includes('/en/')) {
 export default ({
     Vue
 }) => {
+    Vue.directive('fade', directive.fade);
     let checkLoop = false;
     Vue.mixin({
         data () {

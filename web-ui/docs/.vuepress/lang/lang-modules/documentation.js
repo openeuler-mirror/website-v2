@@ -4,9 +4,13 @@
 
 module.exports = {
     cn: {
-        test: '测试'
+        DOCS_LABEL: '文档',
+        VERSION: '版本',
+        SELECT_VERSION_LABLE: '选择版本',
     },
     en: {
-        test: 'test'
+        DOCS_LABEL: 'Docs',
+        VERSION: 'Version',
+        SELECT_VERSION_LABLE: 'Select Version',
     }
 };
