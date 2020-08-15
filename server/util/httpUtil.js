@@ -14,7 +14,7 @@ function getUrl(url, token) {
         url: url,
         method: 'GET',
         json: true,
-        timeout: 5000,
+        timeout: 3000,
         headers: {
             'Content-type': 'application/json',
             'Authorization': 'Basic ' + token
@@ -22,7 +22,7 @@ function getUrl(url, token) {
     };
     return new Promise((resolve, reject) => {
         request(options, function (error, response, body) {
-            if (response.statusCode === 200) {
+            if (error == null) {
                 resolve(body);
             } else {
                 reject(error);
@@ -36,7 +36,7 @@ function postUrl(url, token, reqBody) {
         url: url,
         method: 'POST',
         json: true,
-        timeout: 5000,
+        timeout: 3000,
         headers: {
             'Content-type': 'application/json',
             'Authorization': 'Basic ' + token

@@ -19,19 +19,24 @@ const ES_TYPE = 'article';
 const ES_EN_TYPE = 'article_en';
 
 router.get('/index', function (req, res, next) {
+    let obj = url.parse(encodeURI(req.url), true);
+    let lang = obj.query.lang;
+
     let meta = '[' + logUtil.getTime() + '] create elasticsearch index.';
-    httpUtil.indexES(ES.ES_URL + ES_INDEX, 'zh').then(data => {
-        logUtil.errorLogfile.write(meta + os.EOL + JSON.stringify(data) + os.EOL);
-    }).catch(ex => {
-        logUtil.errorLogfile.write('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
-    });
-
-    httpUtil.indexES(ES.ES_URL + ES_EN_INDEX, 'en').then(data => {
-        logUtil.errorLogfile.write(meta + os.EOL + JSON.stringify(data) + os.EOL);
-    }).catch(ex => {
-        logUtil.errorLogfile.write('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
-    });
-
+    if (lang === 'zh') {
+        httpUtil.indexES(ES.ES_URL + ES_INDEX, 'zh').then(data => {
+            logUtil.errorLogfile.write(meta + os.EOL + JSON.stringify(data) + os.EOL);
+        }).catch(ex => {
+            logUtil.errorLogfile.write('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
+        });
+    }
+    if (lang === 'en') {
+        httpUtil.indexES(ES.ES_URL + ES_EN_INDEX, 'en').then(data => {
+            logUtil.errorLogfile.write(meta + os.EOL + JSON.stringify(data) + os.EOL);
+        }).catch(ex => {
+            logUtil.errorLogfile.write('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
+        });
+    }
     res.json({
         code: 200,
         date: 'success'
