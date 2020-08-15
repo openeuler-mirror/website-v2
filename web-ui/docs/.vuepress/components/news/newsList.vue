@@ -7,47 +7,52 @@
       :outside-name="i18n.community.NEWS.NEWS"
     ></common-banner>
     <div class="news-content">
-      <div class="news-items" v-for="(items, key) in showNewsList">
-        <div class="news-month">{{i18n.community.NEWS.MONTHS[items[0].month]}}</div>
-        <div class="news-item" v-for="item in items">
-          <div @click="go(item.path)" class="new-img">
-            <img :src="'/' + item.frontmatter.banner" alt />
+      <div class="news-year-content" v-for="(months, key) in showNewsList">
+        <span class="news-year">{{key.slice(4)}}</span>
+        <div class="news-items" v-for="items in months">
+          <div class="news-month">
+            <span>{{i18n.community.NEWS.MONTHS[items[0].month]}}</span>
           </div>
-          <div class="news-info">
-            <div class="news-time">
-              <p>
-                <img class="mobile-middle-img" src="/blog/date.png" alt />
-                <span class="news-date">{{item.frontmatter.date}}</span>
-              </p>
-              <p>
-                <img class="mobile-middle-img" src="/blog/visibility.png" alt />
-                <span class="news-date">
-                  <span id="busuanzi_container_page_pv">
-                    <span>{{i18n.community.BLOG.BROWSE}}</span>
-                    <span id="busuanzi_value_page_pv"></span>
-                    <span>{{i18n.community.BLOG.VIEWED}}</span>
-                  </span>
-                </span>
-              </p>
+          <div class="news-item" v-for="item in items">
+            <div @click="go(item.path)" class="new-img">
+              <img :src="'/' + item.frontmatter.banner" alt />
             </div>
-            <div @click="go(item.path)" class="news-title">{{item.frontmatter.title}}</div>
-            <div class="news-time-mobile">
-              <p>
-                <img class="mobile-middle-img" src="/blog/date.png" alt />
-                <span class="news-date">{{item.frontmatter.date}}</span>
-              </p>
-              <p>
-                <img class="mobile-middle-img" src="/blog/visibility.png" alt />
-                <span class="news-date">
-                  <span id="busuanzi_container_page_pv">
-                    <span>{{i18n.community.BLOG.BROWSE}}</span>
-                    <span id="busuanzi_value_page_pv"></span>
-                    <span>{{i18n.community.BLOG.VIEWED}}</span>
+            <div class="news-info">
+              <div class="news-time">
+                <p>
+                  <img class="mobile-middle-img" src="/blog/date.png" alt />
+                  <span class="news-date">{{item.frontmatter.date}}</span>
+                </p>
+                <p>
+                  <img class="mobile-middle-img" src="/blog/visibility.png" alt />
+                  <span class="news-date">
+                    <span id="busuanzi_container_page_pv">
+                      <span>{{i18n.community.BLOG.BROWSE}}</span>
+                      <span id="busuanzi_value_page_pv"></span>
+                      <span>{{i18n.community.BLOG.VIEWED}}</span>
+                    </span>
                   </span>
-                </span>
-              </p>
+                </p>
+              </div>
+              <div @click="go(item.path)" class="news-title">{{item.frontmatter.title}}</div>
+              <div class="news-time-mobile">
+                <p>
+                  <img class="mobile-middle-img" src="/blog/date.png" alt />
+                  <span class="news-date">{{item.frontmatter.date}}</span>
+                </p>
+                <p>
+                  <img class="mobile-middle-img" src="/blog/visibility.png" alt />
+                  <span class="news-date">
+                    <span id="busuanzi_container_page_pv">
+                      <span>{{i18n.community.BLOG.BROWSE}}</span>
+                      <span id="busuanzi_value_page_pv"></span>
+                      <span>{{i18n.community.BLOG.VIEWED}}</span>
+                    </span>
+                  </span>
+                </p>
+              </div>
+              <div class="news-summary">{{item.frontmatter.summary}}</div>
             </div>
-            <div class="news-summary">{{item.frontmatter.summary}}</div>
           </div>
         </div>
       </div>
@@ -99,10 +104,13 @@ export default {
 
       let listObj = {};
       this.currentNewsList.forEach((item) => {
-        if (!listObj[item.yearAndmonth]) {
-          listObj[item.yearAndmonth] = [];
+        if (!listObj[item.fullYearTag]) {
+          listObj[item.fullYearTag] = {};
         }
-        listObj[item.yearAndmonth].push(item);
+        if (!listObj[item.fullYearTag][item.monthTag]) {
+          listObj[item.fullYearTag][item.monthTag] = [];
+        }
+        listObj[item.fullYearTag][item.monthTag].push(item);
       });
 
       this.showNewsList = listObj;
@@ -112,9 +120,10 @@ export default {
     sortNewsList(array) {
       let temp = array;
       temp.forEach((item) => {
+        item.fullYear = new Date(item.frontmatter.date).getFullYear();
         item.month = new Date(item.frontmatter.date).getMonth();
-        item.yearAndmonth =
-          new Date(item.frontmatter.date).getFullYear() + "-" + item.month;
+        item.fullYearTag = "year" + item.fullYear;
+        item.monthTag = "mounth" + item.month;
       });
       temp.sort(function (a, b) {
         return a.frontmatter.date < b.frontmatter.date ? 1 : -1;
@@ -145,6 +154,18 @@ export default {
 .news-content {
   width: 1120px;
   margin: 0 auto;
+}
+.news-year-content {
+  position: relative;
+}
+.news-year {
+  position: absolute;
+  font-size: 60px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.05);
+  height: 60px;
+  line-height: 60px;
+  top: -35px;
 }
 .paginationClass {
   margin: 20px 0 200px 0;
@@ -202,6 +223,9 @@ export default {
   .news-content {
     width: 100%;
   }
+  .news-year {
+    display: none;
+  }
   .paginationClass {
     margin: 40px 0 0 0;
   }
@@ -210,10 +234,10 @@ export default {
   }
   .news-item {
     margin-top: 40px;
-    width:100%;
-    background:rgba(255,255,255,1);
-    box-shadow:0px 3px 10px 0px rgba(0,0,0,0.2);
-    border-radius:8px;
+    width: 100%;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
   }
   .new-img {
     cursor: pointer;
