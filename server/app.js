@@ -6,16 +6,18 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-var fs = require('fs');
-var FileStreamRotator = require('file-stream-rotator');
+var os = require('os');
 
 var helmet = require('helmet');
+var logUtil = require('./util/logUtil');
 var isoRouter = require('./routes/iso');
 var mailRouter = require('./routes/mail');
 var cveRouter = require('./routes/cve');
 var securityNoticeRouter = require('./routes/SecurityNotice');
-
+var newsRouter = require('./routes/news');
+var blogRouter = require('./routes/blog');
+var searchRouter = require('./routes/search');
+var sigRouter = require('./routes/sig');
 var app = express();
 
 app.all('*', (req, res, next) => {
@@ -37,26 +39,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 app.use(logger('dev'));
-
-// Verify the logs folder
-var logDirectory = path.join(__dirname, 'logs');
-fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory);
-
-// create a write stream
-var accessLogStream = FileStreamRotator.getStream({
-    filename: path.join(logDirectory, 'access-%DATE%.log'),
-    frequency: 'daily',
-    verbose: false
-});
-
-var errorLogfile = FileStreamRotator.getStream({
-    filename: path.join(logDirectory, 'error-%DATE%.log'),
-    frequency: 'daily',
-    verbose: false
-});
-
+logUtil.createLogsDdir();
 app.use(logger('combined', {
-    stream: accessLogStream
+    stream: logUtil.accessLogStream
 }));
 
 app.use(express.json());
@@ -70,7 +55,10 @@ app.use('/iso', isoRouter);
 app.use('/mail', mailRouter);
 app.use('/cve', cveRouter);
 app.use('/securityNotice', securityNoticeRouter);
-
+app.use('/news', newsRouter);
+app.use('/blog', blogRouter);
+app.use('/search', searchRouter);
+app.use('/sig', sigRouter);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
     next(createError(404));
@@ -78,11 +66,8 @@ app.use(function (req, res, next) {
 
 // error handler
 app.use(function (err, req, res, next) {
-    var now = new Date();
-    var time = now.getFullYear() + '-' + now.getMonth() + '-' + now.getDate() + ' '
-        + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
-    var meta = '[' + time + '] ' + req.method + ' ' + req.url;
-    errorLogfile.write(meta + err.stack);
+    var meta = '[' + logUtil.getTime() + '] ' + req.method + ' ' + req.url;
+    logUtil.errorLogfile.write(meta + err.stack + os.EOL);
     next();
     // set locals, only providing error in development
     res.locals.message = err.message;
