@@ -106,6 +106,7 @@ module.exports = {
             }
         ],
         LANG: 'EN',
+        GITTE: '源码',
         GITTE_RESOURCE_LIST: [
             {
                 NAME: '代码仓',
@@ -225,6 +226,7 @@ module.exports = {
             CLASS: []
         }],
         LANG: '中',
+        GITTE: 'Source code',
         GITTE_RESOURCE_LIST: [
             {
                 NAME: 'Code sources',

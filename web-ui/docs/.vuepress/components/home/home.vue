@@ -232,8 +232,8 @@
         <div class="home-developer">
             <h3>{{ i18n.home.HOME_DEV.DEV_TITLE }}</h3>
             <p>{{ i18n.home.HOME_DEV.DEV_DESCRIPTION }}</p>
-            <div class="dev-leader">
-                <div class="dev-dever hidden" v-for="(value, index) in i18n.home.HOME_DEV.DEV_INFO" :key="index">
+            <div class="dev-leader" v-fade>
+                <div class="dev-dever hidden fade-in" v-for="(value, index) in i18n.home.HOME_DEV.DEV_INFO" :key="index">
                     <el-image
                             style="width: 100px; height: 100px; border-radius: 50%"
                             src="/img/home/deverImg.png"></el-image>
