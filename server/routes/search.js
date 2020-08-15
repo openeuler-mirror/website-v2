@@ -14,9 +14,8 @@ const logUtil = require('../util/logUtil');
 
 const ES_INDEX = 'openeuler_articles';
 const ES_EN_INDEX = 'openeuler_articles_en';
-// The same value of mappings configuration in json in the search directory
-const ES_TYPE = 'article';
-const ES_EN_TYPE = 'article_en';
+const ES_TYPE = '_doc';
+const ES_EN_TYPE = '_doc';
 
 router.get('/index', function (req, res, next) {
     let obj = url.parse(encodeURI(req.url), true);

@@ -31,7 +31,9 @@ function readFileByPath(dirPath, index, esType, model, version) {
                 'type': model,
                 'version': version
             };
-            HTTP.updateES(ES.ES_URL + index + '/' + esType, json).then(data => {}).catch(ex => {
+            HTTP.updateES(ES.ES_URL + index + '/' + esType, json).then(data => {
+                logUtil.errorLogfile.write(JSON.stringify(data) + os.EOL);
+            }).catch(ex => {
                 logUtil.errorLogfile.write(ex.stack + os.EOL);
             });
         }

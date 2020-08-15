@@ -1,27 +1,25 @@
 {
     "mappings": {
-        "article_en": {
-            "properties": {
-                "articleName": {
-                    "type": "keyword"
-                },
-                "path": {
-                    "type": "keyword"
-                },
-                "textContent": {
-                    "type": "text",
-                    "analyzer": "ik_max_word"
-                },
-                "title": {
-                    "type": "text",
-                    "analyzer": "ik_max_word"
-                },
-                "type": {
-                    "type": "keyword"
-                },
-                "id": {
-                    "type": "keyword"
-                }
+        "properties": {
+            "articleName": {
+                "type": "keyword"
+            },
+            "path": {
+                "type": "keyword"
+            },
+            "textContent": {
+                "type": "text",
+                "analyzer": "ik_max_word"
+            },
+            "title": {
+                "type": "text",
+                "analyzer": "ik_max_word"
+            },
+            "type": {
+                "type": "keyword"
+            },
+            "id": {
+                "type": "keyword"
             }
         }
     }
