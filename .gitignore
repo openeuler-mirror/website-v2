@@ -5,3 +5,6 @@
 !.vscode/extensions.json
 /web-ui/node_modules
 /web-ui/package-lock.json
+/server/node_modules
+/server/package-lock.json
+
