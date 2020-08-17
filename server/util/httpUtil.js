@@ -9,6 +9,11 @@ var mailError = {
     'msg': 'Background call mail server exception'
 };
 
+var sigError = {
+    'code': 1,
+    'msg': 'Background call SIG server exception'
+};
+
 function getUrl(url, token) {
     let options = {
         url: url,
@@ -98,10 +103,33 @@ function updateES(url, reqBody) {
     });
 }
 
+function getSig(url) {
+    let options = {
+        url: url,
+        method: 'GET',
+        json: true,
+        timeout: 3000,
+        headers: {
+            'Content-type': 'application/json'
+        }
+    };
+    return new Promise((resolve, reject) => {
+        request(options, function (error, response, body) {
+            if (error == null) {
+                resolve(body);
+            } else {
+                reject(error);
+            }
+        });
+    });
+}
+
 module.exports = {
     getUrl: getUrl,
     postUrl: postUrl,
     indexES: indexES,
     updateES: updateES,
-    mailError: mailError
+    getSig: getSig,
+    mailError: mailError,
+    sigError: sigError
 };
