@@ -22,20 +22,23 @@ router.get('/index', function (req, res, next) {
     let lang = obj.query.lang;
 
     let meta = '[' + logUtil.getTime() + '] create elasticsearch index.';
+
     if (lang === 'zh') {
-        httpUtil.indexES(ES.ES_URL + ES_INDEX, 'zh').then(data => {
+        httpUtil.indexES(ES.ES_URL + ES_INDEX).then(data => {
             logUtil.errorLogfile.write(meta + os.EOL + JSON.stringify(data) + os.EOL);
         }).catch(ex => {
             logUtil.errorLogfile.write('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
         });
     }
+
     if (lang === 'en') {
-        httpUtil.indexES(ES.ES_URL + ES_EN_INDEX, 'en').then(data => {
+        httpUtil.indexES(ES.ES_URL + ES_EN_INDEX).then(data => {
             logUtil.errorLogfile.write(meta + os.EOL + JSON.stringify(data) + os.EOL);
         }).catch(ex => {
             logUtil.errorLogfile.write('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
         });
     }
+
     res.json({
         code: 200,
         date: 'success'

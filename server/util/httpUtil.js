@@ -55,12 +55,7 @@ function postUrl(url, token, reqBody) {
 }
 
 function indexES(url, lang) {
-    let json;
-    if (lang === 'en') {
-        json = fs.readFileSync('./search/esEnIndex.json', 'utf-8');
-    } else {
-        json = fs.readFileSync('./search/esIndex.json', 'utf-8');
-    }
+    let json = fs.readFileSync('./search/esIndex.json', 'utf-8');
     let options = {
         url: url,
         method: 'PUT',
