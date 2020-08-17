@@ -1,6 +1,6 @@
-#!/bin/sh
+FROM node:alpine
 
-FROM node:12
+MAINTAINER zhangxiaopan<zhangxiaopan2@huawei.com>
 
 RUN mkdir -p /home/openeuler/web
 WORKDIR /home/openeuler/web
