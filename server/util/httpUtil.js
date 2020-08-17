@@ -9,12 +9,17 @@ var mailError = {
     'msg': 'Background call mail server exception'
 };
 
+var sigError = {
+    'code': 1,
+    'msg': 'Background call SIG server exception'
+};
+
 function getUrl(url, token) {
     let options = {
         url: url,
         method: 'GET',
         json: true,
-        timeout: 5000,
+        timeout: 3000,
         headers: {
             'Content-type': 'application/json',
             'Authorization': 'Basic ' + token
@@ -22,7 +27,7 @@ function getUrl(url, token) {
     };
     return new Promise((resolve, reject) => {
         request(options, function (error, response, body) {
-            if (response.statusCode === 200) {
+            if (error == null) {
                 resolve(body);
             } else {
                 reject(error);
@@ -36,7 +41,7 @@ function postUrl(url, token, reqBody) {
         url: url,
         method: 'POST',
         json: true,
-        timeout: 5000,
+        timeout: 3000,
         headers: {
             'Content-type': 'application/json',
             'Authorization': 'Basic ' + token
@@ -55,12 +60,7 @@ function postUrl(url, token, reqBody) {
 }
 
 function indexES(url, lang) {
-    let json;
-    if (lang === 'en') {
-        json = fs.readFileSync('./search/esEnIndex.json', 'utf-8');
-    } else {
-        json = fs.readFileSync('./search/esIndex.json', 'utf-8');
-    }
+    let json = fs.readFileSync('./search/esIndex.json', 'utf-8');
     let options = {
         url: url,
         method: 'PUT',
@@ -103,10 +103,33 @@ function updateES(url, reqBody) {
     });
 }
 
+function getSig(url) {
+    let options = {
+        url: url,
+        method: 'GET',
+        json: true,
+        timeout: 3000,
+        headers: {
+            'Content-type': 'application/json'
+        }
+    };
+    return new Promise((resolve, reject) => {
+        request(options, function (error, response, body) {
+            if (error == null) {
+                resolve(body);
+            } else {
+                reject(error);
+            }
+        });
+    });
+}
+
 module.exports = {
     getUrl: getUrl,
     postUrl: postUrl,
     indexES: indexES,
     updateES: updateES,
-    mailError: mailError
+    getSig: getSig,
+    mailError: mailError,
+    sigError: sigError
 };

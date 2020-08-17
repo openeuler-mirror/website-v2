@@ -14,23 +14,30 @@ const logUtil = require('../util/logUtil');
 
 const ES_INDEX = 'openeuler_articles';
 const ES_EN_INDEX = 'openeuler_articles_en';
-// The same value of mappings configuration in json in the search directory
-const ES_TYPE = 'article';
-const ES_EN_TYPE = 'article_en';
+const ES_TYPE = '_doc';
+const ES_EN_TYPE = '_doc';
 
 router.get('/index', function (req, res, next) {
-    let meta = '[' + logUtil.getTime() + '] create elasticsearch index.';
-    httpUtil.indexES(ES.ES_URL + ES_INDEX, 'zh').then(data => {
-        logUtil.errorLogfile.write(meta + os.EOL + JSON.stringify(data) + os.EOL);
-    }).catch(ex => {
-        logUtil.errorLogfile.write('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
-    });
+    let obj = url.parse(encodeURI(req.url), true);
+    let lang = obj.query.lang;
 
-    httpUtil.indexES(ES.ES_URL + ES_EN_INDEX, 'en').then(data => {
-        logUtil.errorLogfile.write(meta + os.EOL + JSON.stringify(data) + os.EOL);
-    }).catch(ex => {
-        logUtil.errorLogfile.write('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
-    });
+    let meta = '[' + logUtil.getTime() + '] create elasticsearch index.';
+
+    if (lang === 'zh') {
+        httpUtil.indexES(ES.ES_URL + ES_INDEX).then(data => {
+            logUtil.errorLogfile.write(meta + os.EOL + JSON.stringify(data) + os.EOL);
+        }).catch(ex => {
+            logUtil.errorLogfile.write('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
+        });
+    }
+
+    if (lang === 'en') {
+        httpUtil.indexES(ES.ES_URL + ES_EN_INDEX).then(data => {
+            logUtil.errorLogfile.write(meta + os.EOL + JSON.stringify(data) + os.EOL);
+        }).catch(ex => {
+            logUtil.errorLogfile.write('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
+        });
+    }
 
     res.json({
         code: 200,
