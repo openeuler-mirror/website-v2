@@ -29,12 +29,6 @@
             <h3>{{ i18n.home.HOME_INTRODUCE.INTRO_HEAD }}</h3>
             <p>{{ i18n.home.HOME_INTRODUCE.INTRO_DESCRIPTION }}</p>
             <div class="is-pc mapArea">
-                <!--<img src="/img/home/step.png"
-                     alt=""
-                     usemap="#maphover"
-                     ref="img-display-1"
-                     id="img-display-1"
-                     style="width: 100%">-->
                 <div class="area-box in-pc" v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP" :key="index">
                     <a @click="go(item.LINK)">
                         <div class="box-icon">{{ item.NAME }}</div>
@@ -44,7 +38,8 @@
                     </a>
                 </div>
                 <div class="area-box in-pc" @click="clickDownload">
-                    <a @click="go(i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.LINK)">
+<!--                    <a @click="go(i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.LINK)">-->
+                    <a>
                         <div class="box-icon">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.NAME }}</div>
                         <p>{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.TITLE }}</p>
                         <img src="/img/home/step2.png" alt="">
@@ -87,48 +82,8 @@
                 <p>{{ i18n.home.HOME_ACTIVE.ACTIVE_DESCRIPTION }}</p>
             </a>
         </div>
-
-        <div class="home-calendar">
-            <div class="time-active">
-                <div class="time-tab">
-                    <div class="topBtn"></div>
-                    <div class="calendar-time">
-                        <p class="time-num">8:00-9:00</p>
-                        <p class="time-num">9:00-10:00</p>
-                        <p class="time-num">11:00-12:00</p>
-                        <p class="time-num">12:00-13:00</p>
-                        <p class="time-num">13:00-14:00</p>
-                        <p class="time-num">14:00-15:00</p>
-                        <p class="time-num">15:00-16:00</p>
-                        <p class="time-num">16:00-17:00</p>
-                        <p class="time-num">17:00-18:00</p>
-                    </div>
-                    <div class="bottomBtn"></div>
-                </div>
-                <div class="calendar-active">
-                    <div class="rightBtn" @click="clickLeftBtn"></div>
-                    <div
-                        class="date-box"
-                        v-for="(item, index) in i18n.home.HOME_CALENDAR.DATALIST.slice(startIndex, endIndex)"
-                        :key="index"
-                        :class="{'active': item.IS_CURRENT}">
-                        <p> {{ item.DATE }}</p>
-                        <div class="active-box"
-                             v-for="(active, index) in item.EVENTS"
-                             :key="index"
-                             :data-index="active.TIME">
-                            <p> {{ active.EVENT_NAME }}</p>
-                            <div class="active-info">
-                                <img :src="active.IMG" alt="">
-                                <span>{{ active.MEMBER }}</span><br>
-                                <span>{{ active.INFO }}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="leftBtn" @click="clickRightBtn"></div>
-                </div>
-            </div>
-        </div>
+        
+        <calender />
 
         <div class="home-newsroom">
             <div class="is-pc room-right">
@@ -328,6 +283,7 @@
 </template>
 
 <script>
+    import calender from "./calender"
     export default {
         name: "home",
         data() {
@@ -349,11 +305,13 @@
             this.roomName = this.i18n.home.HOME_ROOMS.ROOM_NAME
             this.toggleHover();
             this.shrinkCalendar();
-            this.marginTop();
             if (window.innerWidth < 1000) {
                 this.height = '300px';
             }
             this.blogData()
+        },
+        components: {
+            calender
         },
         methods: {
             go(path) {
@@ -436,34 +394,6 @@
                     this.flag = !this.flag;
                 }
             },
-            clickLeftBtn() {
-                if (this.startIndex <= 0) {
-                    this.startIndex = 0;
-                } else {
-                    this.startIndex --;
-                    this.endIndex --;
-                }
-                this.marginTop();
-            },
-            clickRightBtn() {
-                if (document.body.clientWidth <= 1000) {
-                    if (this.endIndex >= this.calendar.length) {
-                        this.startIndex = this.calendar.length - 1;
-                        this.endIndex = this.calendar.length;
-                    } else {
-                        this.startIndex ++;
-                        this.endIndex ++;
-                    }
-                } else {
-                    if (this.startIndex >= 4) {
-                        this.startIndex = 4;
-                    } else {
-                        this.startIndex ++;
-                        this.endIndex ++;
-                    }
-                }
-                this.marginTop();
-            },
             blogData() {
                 let datas = this.$sitePages;
                 let blogData = datas.filter(data => data.path.includes("/blog/"));
@@ -472,27 +402,6 @@
                 })
                 blogData = blogData.slice(0, 3)
                 this.blogList = blogData
-            },
-            judgeTop(originTime, timeElement) {
-                let es = this.es(timeElement);
-                for (let i = 0; i < es.length; i++) {
-                    let e = es[i];
-                    let marchTime = e.innerHTML;
-                    if (originTime === marchTime) {
-                        var top = 76 * i;
-                        top += 60;
-                    }
-                }
-                return top
-            },
-            marginTop() {
-                let boxs = this.es('.active-box');
-                for (let i = 0; i < boxs.length; i++) {
-                    let box = boxs[i];
-                    let boxTime = box.dataset.index;
-                    let top = this.judgeTop(boxTime, '.time-num');
-                    box.setAttribute('style', 'top: '+ top +'px');
-                }
             },
             vueToggle(index) {
                 this.currentRoom = index
