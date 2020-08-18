@@ -82,48 +82,7 @@
                 <p>{{ i18n.home.HOME_ACTIVE.ACTIVE_DESCRIPTION }}</p>
             </a>
         </div>
-
-        <!--<div class="home-calendar">
-            <div class="time-active">
-                <div class="time-tab">
-                    <div class="topBtn"></div>
-                    <div class="calendar-time">
-                        <p class="time-num">8:00-9:00</p>
-                        <p class="time-num">9:00-10:00</p>
-                        <p class="time-num">11:00-12:00</p>
-                        <p class="time-num">12:00-13:00</p>
-                        <p class="time-num">13:00-14:00</p>
-                        <p class="time-num">14:00-15:00</p>
-                        <p class="time-num">15:00-16:00</p>
-                        <p class="time-num">16:00-17:00</p>
-                        <p class="time-num">17:00-18:00</p>
-                    </div>
-                    <div class="bottomBtn"></div>
-                </div>
-                <div class="calendar-active">
-                    <div class="rightBtn" @click="clickLeftBtn"></div>
-                    <div
-                        class="date-box"
-                        v-for="(item, index) in i18n.home.HOME_CALENDAR.DATALIST.slice(startIndex, endIndex)"
-                        :key="index"
-                        :class="{'active': item.IS_CURRENT}">
-                        <p> {{ item.DATE }}</p>
-                        <div class="active-box"
-                             v-for="(active, index) in item.EVENTS"
-                             :key="index"
-                             :data-index="active.TIME">
-                            <p> {{ active.EVENT_NAME }}</p>
-                            <div class="active-info">
-                                <img :src="active.IMG" alt="">
-                                <span>{{ active.MEMBER }}</span><br>
-                                <span>{{ active.INFO }}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="leftBtn" @click="clickRightBtn"></div>
-                </div>
-            </div>
-        </div>-->
+        
         <calender />
 
         <div class="home-newsroom">
