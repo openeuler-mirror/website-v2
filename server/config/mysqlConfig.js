@@ -3,11 +3,11 @@
  */
 
 const mysqlConfig = {
-    host: '127.0.0.1',
+    host: process.env.MYSQL_URL,
     port: '3306',
     user: 'root',
-    password: 'openeuler!1@2',
-    database: 'openeuler'
+    password: process.env.MYSQL_PWD,
+    database: process.env.MYSQL_DATABASE
 };
 
 module.exports = mysqlConfig;

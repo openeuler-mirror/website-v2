@@ -8,6 +8,11 @@ const CONF = require('../config/apiConfig');
 const logUtil = require('../util/logUtil');
 
 router.get('/group', function (req, res, next) {
+    if (req.headers.authorization !== CONF.API_AUTH) {
+        res.send(HTTP.authError);
+        return;
+    }
+
     HTTP.getSig(CONF.SIG_API).then(data => {
         res.send(data);
     }).catch(ex => {

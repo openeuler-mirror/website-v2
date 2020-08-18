@@ -7,9 +7,16 @@ var router = express.Router();
 var dbUtil = require('../mysql/dbUtil');
 var SqlUtil = require('../mysql/sqlUtil');
 var logUtil = require('../util/logUtil');
+const CONF = require('../config/apiConfig');
+const HTTP = require('../util/httpUtil');
 const sql = new SqlUtil('blog_visits', ['title', 'date', 'lang']);
 
 router.get('/list', function (req, res) {
+    if (req.headers.authorization !== CONF.API_AUTH) {
+        res.send(HTTP.authError);
+        return;
+    }
+
     dbUtil.query(sql.blogList, function (err, result) {
         if (result) {
             res.json({
@@ -27,6 +34,11 @@ router.get('/list', function (req, res) {
 });
 
 router.post('/visit', function (req, res) {
+    if (req.headers.authorization !== CONF.API_AUTH) {
+        res.send(HTTP.authError);
+        return;
+    }
+
     let args = [];
     args.push(req.body.title);
     args.push(req.body.date);
@@ -54,6 +66,10 @@ function updateNewsVisits(id) {
 }
 
 router.post('/one', function (req, res) {
+    if (req.headers.authorization !== CONF.API_AUTH) {
+        res.send(HTTP.authError);
+        return;
+    }
     let args = [];
     args.push(req.body.title);
     args.push(req.body.date);

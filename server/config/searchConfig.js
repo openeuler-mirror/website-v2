@@ -2,7 +2,9 @@
  * @file searchConfig
  */
 
-const ELASTICSEARCH_URL = 'http://192.168.1.185:9200/';
+const ES_URL = process.env.ES_URL;
+const ES_USER_PASS = process.env.ES_USER_PASS;
 module.exports = {
-    ES_URL: ELASTICSEARCH_URL
+    ES_URL: ES_URL,
+    ES_USER_PASS: ES_USER_PASS
 };
