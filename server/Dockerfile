@@ -2,10 +2,10 @@ FROM node:alpine
 
 MAINTAINER zhangxiaopan<zhangxiaopan2@huawei.com>
 
-RUN mkdir -p /home/openeuler
-WORKDIR /home/openeuler
+RUN mkdir -p /home/openeuler/website-v2/server
+WORKDIR /home/openeuler/website-v2/server
 
-COPY . /home/openeuler
+COPY . /home/openeuler/website-v2/server
 
 WORKDIR /home/openeuler/website-v2/server
 

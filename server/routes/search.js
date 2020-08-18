@@ -102,7 +102,6 @@ router.post('/keyword', function (req, res, next) {
         res.send(httpUtil.authError);
         return;
     }
-    
     let keyword = req.body.keyword;
     keyword = keyword.replace(/#/g, '');
     let model = req.body.model;

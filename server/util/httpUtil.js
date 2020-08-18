@@ -74,6 +74,7 @@ function indexES(url, token) {
             'Content-type': 'application/json',
             'Authorization': 'Basic ' + token
         },
+        rejectUnauthorized: false,
         body: json
     };
     return new Promise((resolve, reject) => {
@@ -97,6 +98,7 @@ function updateES(url, token, reqBody) {
             'Content-type': 'application/json',
             'Authorization': 'Basic ' + token
         },
+        rejectUnauthorized: false,
         body: reqBody
     };
     return new Promise((resolve, reject) => {

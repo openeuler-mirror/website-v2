@@ -28,7 +28,6 @@ router.post('/list', function (req, res) {
         res.send(HTTP.authError);
         return;
     }
-    
     let page = req.body.page;
     let limit = req.body.pageSize;
     let keyword = req.body.keyword;
