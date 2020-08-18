@@ -1,11 +1,11 @@
 <template>
   <div class="theme-container">
-    <div class="theme-default-content">
+    <div class="theme-default-content" v-if="$route.path !== '/'">
       <h1>404</h1>
 
       <blockquote>{{ getMsg() }}</blockquote>
 
-      <RouterLink to="/">
+      <RouterLink to="/zh/">
         Take me home.
       </RouterLink>
     </div>
@@ -25,6 +25,16 @@ export default {
     getMsg () {
       return msgs[Math.floor(Math.random() * msgs.length)]
     }
+  },
+  watch: {
+      '$route.path': {
+          immediate: true,
+          handler (val) {
+              if(val === '/') {
+                  window.location.href = '/zh/';
+              }
+          }
+      }
   }
 }
 </script>

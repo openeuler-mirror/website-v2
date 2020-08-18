@@ -220,7 +220,10 @@ export default {
             searchFlag: false,
             mobileActiveFlag : true,
             pcSearchFlag: false,
-            gitteResourceFlag: false
+            gitteResourceFlag: false,
+            i18n: {
+                common : {}
+            }
         };
     },
     methods: {
@@ -429,6 +432,7 @@ export default {
                 flex-shrink: 0;
                 margin-right: 28px;
                 cursor: pointer;
+                height: 60px;
             }
             .nav-logo-mobile {
                 display: none;
