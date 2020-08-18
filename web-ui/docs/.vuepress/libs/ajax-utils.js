@@ -5,7 +5,7 @@
 import axios from 'axios';
 import Vue from 'vue';
 const serviceBaseUrl = '/api';
-const authConfig = 'Basic ' + btoa('openeulerserver:openeulerserver@1234');
+let authConfig = 'Basic b3BlbmV1bGVyc2VydmVyOm9wZW5ldWxlcnNlcnZlckAxMjM0';
 
 let addUrlParam = function (url, paramName, paramValue) {
     if (!url) {
