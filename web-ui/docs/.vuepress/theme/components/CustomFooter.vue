@@ -22,7 +22,13 @@
 <script>
 export default {
     data() {
-        return {};
+        return {
+            i18n: {
+                common : {
+                    FOOTER: {}
+                }
+            }
+        };
     },
     components: {}
 };

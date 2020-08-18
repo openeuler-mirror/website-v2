@@ -84,6 +84,11 @@ export default {
       targetLocale: "",
       allBlogListData: [],
       otherBlog: [],
+      i18n: {
+          community: {
+              BLOG: {}
+          }
+      }
     };
   },
   created() {

@@ -30,7 +30,7 @@ const privacyMethods = {
             curElement = fadeInElements[i];
             if (privacyMethods.isElemVisible(curElement)) {
                 curElement.style.opacity = '1';
-                curElement.style.transform = 'scale(1)';
+                curElement.style.transform = 'translate3d(0, 0, 0) scale(1)';
             }
             if(privacyMethods.isElemUnvisible(curElement)){
                 curElement.style.opacity = '0';

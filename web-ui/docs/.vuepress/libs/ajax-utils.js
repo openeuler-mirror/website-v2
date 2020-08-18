@@ -4,7 +4,8 @@
 
 import axios from 'axios';
 import Vue from 'vue';
-const serviceBaseUrl = '/api'
+const serviceBaseUrl = '/api';
+const authConfig = 'Basic ' + btoa('openeulerserver:openeulerserver@1234');
 
 let addUrlParam = function (url, paramName, paramValue) {
     if (!url) {
@@ -39,6 +40,9 @@ let postJson = params => {
         }
     }
     return api({
+        headers: {
+            'Authorization': authConfig
+        },
         method: params['type'] || 'post',
         url: params['url'],
         data: dataStr,

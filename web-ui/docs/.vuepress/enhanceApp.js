@@ -4,22 +4,32 @@ import './public/style/base.css';
 import locale from 'element-ui/lib/locale/lang/en'
 import'./public/style/markdown.less';
 import directive from './libs/directive';
-
-if (window.location.href.includes('/en/')) {
-    import('./public/style/font-en.css');
-} else {
-    import('./public/style/font-cn.css');
-}
+import './public/style/font-en.css';
+import './public/style/font-cn.css';
 
 export default ({
     Vue
 }) => {
     Vue.directive('fade', directive.fade);
     let checkLoop = false;
+    let checkImport = false;
     Vue.mixin({
         data () {
             return {
                 i18n: {}
+            }
+        },
+        mounted () {
+            if(!checkImport){
+                if (window.location.href.includes('/en/')) {
+                    checkImport = true;
+                    Vue.use(ElementUI, {locale});
+                    Vue.prototype.$isCn = false;
+                } else {
+                    checkImport = true;
+                    Vue.use(ElementUI);
+                    Vue.prototype.$isCn = true;
+                }
             }
         },
         created () {
@@ -56,10 +66,6 @@ export default ({
             }
         }
     })
-    if (window.location.href.includes('/en/')) {
-        Vue.use(ElementUI, {locale});
-    } else {
-        Vue.use(ElementUI);
-    }
+    
     
 }

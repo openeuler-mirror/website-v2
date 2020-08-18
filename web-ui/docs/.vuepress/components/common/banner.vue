@@ -3,7 +3,7 @@
         <div class="banner">
             <img :src="pcSrc">
             <span class="inside">{{insideName}}</span>
-            <span class="outside">{{outsideName}}</span>
+            <span :class="['outside', $isCn ? 'font-xihjw' : 'font-hwmedium']">{{outsideName}}</span>
         </div>
         <div class="banner-mobile">
             <h3>{{ outsideName }}</h3>
@@ -60,7 +60,6 @@ export default {
             top: 156px;
             font-size: 48px;
             line-height: 48px;
-            font-family: FZLTXIHJW, HuaweiSans-Medium;
             color: #000;
             font-weight: normal;
         }
