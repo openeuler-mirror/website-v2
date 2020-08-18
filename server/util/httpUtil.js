@@ -14,6 +14,11 @@ var sigError = {
     'msg': 'Background call SIG server exception'
 };
 
+var authError = {
+    'code': 401,
+    'msg': 'Unauthorized:Access is denied due to invalid credentials.'
+};
+
 function getUrl(url, token) {
     let options = {
         url: url,
@@ -59,15 +64,17 @@ function postUrl(url, token, reqBody) {
     });
 }
 
-function indexES(url, lang) {
+function indexES(url, token) {
     let json = fs.readFileSync('./search/esIndex.json', 'utf-8');
     let options = {
         url: url,
         method: 'PUT',
         timeout: 3000,
         headers: {
-            'Content-type': 'application/json'
+            'Content-type': 'application/json',
+            'Authorization': 'Basic ' + token
         },
+        rejectUnauthorized: false,
         body: json
     };
     return new Promise((resolve, reject) => {
@@ -81,15 +88,17 @@ function indexES(url, lang) {
     });
 }
 
-function updateES(url, reqBody) {
+function updateES(url, token, reqBody) {
     let options = {
         url: url,
         method: 'POST',
         json: true,
         timeout: 3000,
         headers: {
-            'Content-type': 'application/json'
+            'Content-type': 'application/json',
+            'Authorization': 'Basic ' + token
         },
+        rejectUnauthorized: false,
         body: reqBody
     };
     return new Promise((resolve, reject) => {
@@ -131,5 +140,6 @@ module.exports = {
     updateES: updateES,
     getSig: getSig,
     mailError: mailError,
-    sigError: sigError
+    sigError: sigError,
+    authError: authError
 };

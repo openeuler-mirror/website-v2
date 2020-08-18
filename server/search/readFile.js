@@ -10,6 +10,7 @@ const ES = require('../config/searchConfig');
 const logUtil = require('../util/logUtil');
 
 function readFileByPath(dirPath, index, esType, model, version) {
+    let token = new Buffer.from(ES.ES_USER_PASS).toString('base64');
     const files = fs.readdirSync(dirPath);
     files.forEach(function (item) {
         let innerPath = path.join(dirPath, item);
@@ -31,7 +32,7 @@ function readFileByPath(dirPath, index, esType, model, version) {
                 'type': model,
                 'version': version
             };
-            HTTP.updateES(ES.ES_URL + index + '/' + esType, json).then(data => {
+            HTTP.updateES(ES.ES_URL + index + '/' + esType, token, json).then(data => {
                 logUtil.errorLogfile.write(JSON.stringify(data) + os.EOL);
             }).catch(ex => {
                 logUtil.errorLogfile.write(ex.stack + os.EOL);
@@ -56,7 +57,8 @@ function insertES(index, esType, dirPath, model, version) {
             }
         }
     };
-    HTTP.updateES(ES.ES_URL + index + '/' + esType + '/_delete_by_query', json).then(data => {
+    let token = new Buffer.from(ES.ES_USER_PASS).toString('base64');
+    HTTP.updateES(ES.ES_URL + index + '/' + esType + '/_delete_by_query', token, json).then(data => {
         let meta = '[' + logUtil.getTime() + '] delete elasticsearch index.';
         logUtil.errorLogfile.write(meta + os.EOL + JSON.stringify(data) + os.EOL);
         logUtil.errorLogfile.write('[' + logUtil.getTime() + '] update elasticsearch index start.' + os.EOL);

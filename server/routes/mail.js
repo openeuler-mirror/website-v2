@@ -8,6 +8,11 @@ const CONF = require('../config/apiConfig');
 const logUtil = require('../util/logUtil');
 
 router.get('/list', function (req, res, next) {
+    if (req.headers.authorization !== CONF.API_AUTH) {
+        res.send(HTTP.authError);
+        return;
+    }
+
     let token = new Buffer.from(CONF.MAIL_USER_PASS).toString('base64');
     HTTP.getUrl(CONF.MAIL_LIST_URL, token).then(data => {
         res.send(data);
@@ -18,6 +23,11 @@ router.get('/list', function (req, res, next) {
 });
 
 router.post('/add', function (req, res) {
+    if (req.headers.authorization !== CONF.API_AUTH) {
+        res.send(HTTP.authError);
+        return;
+    }
+
     var body = {
         'list_id': req.body.list_id,
         'subscriber': req.body.subscriber,
