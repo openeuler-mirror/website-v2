@@ -7,10 +7,18 @@ module.exports = {
         DOCS_LABEL: '文档',
         VERSION: '版本',
         SELECT_VERSION_LABLE: '选择版本',
+        PREVIOUS: '上一篇',
+        NEXT: '下一篇',
+        FEEDBACK: '意见反馈',
+        MENU: '菜单',
     },
     en: {
         DOCS_LABEL: 'Docs',
         VERSION: 'Version',
         SELECT_VERSION_LABLE: 'Select Version',
+        PREVIOUS: 'Previous',
+        NEXT: 'Next',
+        FEEDBACK: 'Feedback',
+        MENU: 'Menu',
     }
 };
