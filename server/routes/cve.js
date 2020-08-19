@@ -4,16 +4,9 @@
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
-const CONF = require('../config/apiConfig');
-const HTTP = require('../util/httpUtil');
 const lesson = JSON.parse(fs.readFileSync('./public/data/cve.json'));
 
 router.post('/detail', function (req, res) {
-    if (req.headers.authorization !== CONF.API_AUTH) {
-        res.send(HTTP.authError);
-        return;
-    }
-
     let cveId = req.body.cveId;
     let lists = lesson.filter(item => {
         return item.cveId.indexOf(cveId) > -1;
@@ -24,10 +17,6 @@ router.post('/detail', function (req, res) {
 });
 
 router.post('/list', function (req, res) {
-    if (req.headers.authorization !== CONF.API_AUTH) {
-        res.send(HTTP.authError);
-        return;
-    }
     let page = req.body.page;
     let limit = req.body.pageSize;
     let keyword = req.body.keyword;
