@@ -12,7 +12,7 @@ RUN npm install -g vuepress && \
 
 FROM nginx:1.19.2
 
-COPY --from=Builder /home/openeuler/web/docs/.vuepress/dist/* /usr/share/nginx/html/
+COPY --from=Builder /home/openeuler/web/docs/.vuepress/dist/ /usr/share/nginx/html/
 RUN chmod -R 755 /usr/share/nginx/html
 COPY ./deploy/nginx/default.conf /etc/nginx/conf.d/
 
