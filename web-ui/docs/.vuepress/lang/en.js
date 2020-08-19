@@ -10,5 +10,6 @@ module.exports = {
     community: require('./lang-modules/community').en,
     sig: require('./lang-modules/sig').en,
     authentication: require('./lang-modules/authentication').en,
-    security: require('./lang-modules/security').en
+    security: require('./lang-modules/security').en,
+    brand: require('./lang-modules/brand').en
 };
