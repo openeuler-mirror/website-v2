@@ -30,20 +30,25 @@
             <p>{{ i18n.home.HOME_INTRODUCE.INTRO_DESCRIPTION }}</p>
             <div class="is-pc mapArea">
                 <div class="area-box in-pc" v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP" :key="index">
-                    <a @click="go(item.LINK)">
+                    <a v-if="(index !== 3)" @click="go(item.LINK)">
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p>{{ item.TITLE }}</p>
                         <img :src="item.IMG" alt="">
                         <img :src="item.IMG" alt="" class="is-hidden">
                     </a>
+                    <a class="down" v-if="(index === 3)" @click="go(item.LINK)">
+                        <img :src="item.IMG" alt="">
+                        <img :src="item.IMG" alt="" class="is-hidden">
+                        <div class="box-icon">{{ item.NAME }}</div>
+                        <p>{{ item.TITLE }}</p>
+                    </a>
                 </div>
-                <div class="area-box in-pc" @click="clickDownload">
-<!--                    <a @click="go(i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.LINK)">-->
-                    <a>
-                        <div class="box-icon">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.NAME }}</div>
-                        <p>{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.TITLE }}</p>
+                <div class="area-box bottom in-pc" @click="clickDownload">
+                    <a class="down">
                         <img src="/img/home/step2.png" alt="">
                         <img src="/img/home/step2.png" alt="" class="is-hidden">
+                        <div class="box-icon">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.NAME }}</div>
+                        <p>{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.TITLE }}</p>
                     </a>
                     <div class="snd-guidance">
                         <div class="d3"></div>
@@ -82,7 +87,7 @@
                 <p>{{ i18n.home.HOME_ACTIVE.ACTIVE_DESCRIPTION }}</p>
             </a>
         </div>
-        
+
         <calender />
 
         <div class="home-newsroom">
@@ -110,7 +115,7 @@
                             <span>{{ item.frontmatter.date }}</span>
                             <span>|</span>
                             <span>{{ item.frontmatter.author }}</span>
-                            <p><a :href="item.path"></a>{{ item.frontmatter.summary }}</p>
+                            <p><a :href="item.path">{{ item.frontmatter.summary }}</a></p>
                         </div>
                         <span><a href="">{{ i18n.home.MORE }}</a></span>
                     </div>
@@ -118,10 +123,13 @@
                 <div class="room-contain" :class="{'active':currentRoom === 2}">
                     <div class="flex-room">
                         <div class="room-box"
-                             v-for="(item, index) in i18n.home.HOME_ROOMS.NEWS_LIST"
+                             v-for="(item, index) in newsList"
                              :key="index">
-                            <span>{{ item.TAG }}</span> <span>|</span> <span>{{ item.DATE }}</span>
-                            <p>{{ item.CONTENT }}</p>
+                            <span v-for="tag in item.frontmatter.tags">{{ tag }} <span>|</span> </span>
+                            <span>{{ item.frontmatter.date }}</span>
+                            <span>|</span>
+                            <span>{{ item.frontmatter.author }}</span>
+                            <p><a :href="item.path">{{ item.frontmatter.title }}</a></p>
                         </div>
                         <span><a href="">{{ i18n.home.MORE }}</a></span>
                     </div>
@@ -155,7 +163,7 @@
                     <div class="rooms"
                          v-for="(item, index) in i18n.home.HOME_ROOMS.EVENT_LIST"
                          :key="index">
-                        <span>tag in item.frontmatter.tags <span>|</span> </span> <span>{{ item.DATE }}</span>
+                        <span>{{ item.TAG }}  <span>|</span> </span> <span>{{ item.DATE }}</span>
                         <p>{{ item.CONTENT }}</p>
                     </div>
                     <span><a href="">{{ i18n.home.MORE }}</a></span>
@@ -291,12 +299,12 @@
                 info: 'aaa',
                 flag: true,
                 height: "680px",
-                bgbimg: "/img/home/BannerVideo.png",
                 banner1: "/img/home/Banner1.gif",
                 activeImg: "/img/home/homeActive.gif",
                 startIndex: 0,
                 endIndex: 4,
                 blogList: null,
+                newsList: null,
                 currentRoom: 0,
                 roomName: [],
             }
@@ -308,7 +316,7 @@
             if (window.innerWidth < 1000) {
                 this.height = '300px';
             }
-            this.blogData()
+            this.getRoomsData();
         },
         components: {
             calender
@@ -325,17 +333,17 @@
             e(selector) {
                 let e = document.querySelector(selector)
                 if (e === null) {
-                    return null
+                    return null;
                 } else {
-                    return e
+                    return e;
                 }
             },
             es(selector) {
                 let es = document.querySelectorAll(selector)
                 if (es.length === 0) {
-                    return null
+                    return null;
                 } else {
-                    return es
+                    return es;
                 }
             },
             addClassAll(className) {
@@ -375,10 +383,6 @@
                     })
                 }
             },
-            shrinkHeight() {
-                var height = window.innerWidth * 680 / 1920;
-                this.height = height + 'px';
-            },
             shrinkCalendar() {
                 if (document.body.clientWidth <= 1000) {
                     this.endIndex = 1;
@@ -394,18 +398,24 @@
                     this.flag = !this.flag;
                 }
             },
-            blogData() {
+            getRoomsData() {
                 let datas = this.$sitePages;
-                let blogData = datas.filter(data => data.path.includes("/blog/"));
-                blogData.sort(function (date1, date2) {
-                    return(date1.date - date2.date)
+                let blogData = this.filterSiteData(datas, "/blog/");
+                let newsData = this.filterSiteData(datas, "/news/");
+                this.blogList = blogData;
+                this.newsList = newsData;
+            },
+            filterSiteData(datas, string) {
+                let newData = datas.filter(data => data.path.includes(string));
+                newData.sort(function (date1, date2) {
+                    return(date1.date - date2.date);
                 })
-                blogData = blogData.slice(0, 3)
-                this.blogList = blogData
+                newData = newData.slice(0, 3);
+                return newData;
             },
             vueToggle(index) {
-                this.currentRoom = index
-                this.$refs.newsroomCard.setActiveItem(index)
+                this.currentRoom = index;
+                this.$refs.newsroomCard.setActiveItem(index);
             },
         }
     }
@@ -577,10 +587,11 @@
     }
     .area-box {
         display: inline-block;
-        max-width: 300px;
+        width: 300px;
     }
     .area-box a {
         text-align: center;
+        text-decoration: none;
     }
     .area-box .box-icon {
         display: inline-block;
@@ -609,6 +620,9 @@
         display: block;
         position: absolute;
         top: 50px;
+    }
+    .area-box .down .is-hovered {
+        top: 0px;
     }
     .snd-guidance {
         display: none;
@@ -1013,6 +1027,7 @@
         .home-introduce .is-h5.mapArea {
             display: block;
             margin-top: 25px;
+            height: 100%;
         }
         .home h3 {
             font-size: 20px;
@@ -1093,7 +1108,7 @@
             width: 110px;
         }
         .home-newsroom {
-            margin: 40px 15px 0;
+            margin: 80px 15px 0;
         }
         .newsroom h5 {
             font-size: 18px;

@@ -1,5 +1,5 @@
 <template>
-    <div class="calender">
+    <div class="calender is-pc">
         <div class="calendar-top">
             <button class="left" @click="handleBtn('left')" :style="{ background: 'url(' + prev + ') no-repeat center' }"></button>
             <button class="right" @click="handleBtn('right')" :style="{ background: 'url(' + prev + ') no-repeat center' }"></button>
@@ -807,12 +807,14 @@
         },
     }
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     div::after{
         content: '';
         display: block;
         clear: both;
+    }
+    .is-pc {
+        display: block;
     }
     .calender{
         width: 1170px;
@@ -1058,5 +1060,10 @@
         margin-left: -40px;
         font-size: 12px;
         color: #999;
+    }
+    @media screen and (max-width: 1000px){
+        .is-pc {
+            display: none;
+        }
     }
 </style>
