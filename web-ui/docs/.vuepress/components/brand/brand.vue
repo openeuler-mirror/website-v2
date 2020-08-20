@@ -12,89 +12,59 @@
     </div>
     <!-- 六个带有下载功能的卡片 -->
     <div class="brand-six-cards">
-      <p class="title-vertical">Vertical</p>
+      <p class="title-vertical">{{i18n.brand.VERTICAL}}</p>
       <p class="mobile-title">{{i18n.brand.MOBILETITLE}}</p>
       <ul class="card-vertical">
         <li class="vertical-left">
-          <h3>Standard</h3>
-          <img src="/img/other/brand/vertical-left.png" alt />
+          <h3>{{i18n.brand.PICTURE_TITLE[0]}}</h3>
+          <img :src="i18n.brand.VERTICAL_LEFT_IMAGE[0].URL" alt />
           <!-- 三个下载按钮 -->
-          <a href="/img/other/brand/vertical-left.png" target="_blank" download>
-            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PNG</el-button>
-          </a>
-          <a href="/img/other/brand/vertical-left.svg" target="_blank" download>
-            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">SVG</el-button>
-          </a>
-          <a href="/img/other/brand/vertical-left.pdf" target="_blank" download>
-            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PDF</el-button>
+          <a :href="item.URL" target="_blank" download
+          v-for="(item, index) in i18n.brand.VERTICAL_LEFT_IMAGE" :key="index">
+            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">{{item.STYLE}}</el-button>
           </a>
         </li>
         <li class="vertical-center">
-          <h3>Monochrome</h3>
-          <img src="/img/other/brand/vertical-center.png" alt />
-          <a href="/img/other/brand/vertical-center.png" target="_blank" download>
-            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PNG</el-button>
-          </a>
-          <a href="/img/other/brand/vertical-center.svg" target="_blank" download>
-            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">SVG</el-button>
-          </a>
-          <a href="/img/other/brand/vertical-center.pdf" target="_blank" download>
-            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PDF</el-button>
+          <h3>{{i18n.brand.PICTURE_TITLE[1]}}</h3>
+          <img :src="i18n.brand.VERTICAL_CENTER_IMAGE[0].URL" alt />
+          <a :href="item.URL" target="_blank" download
+          v-for="(item, index) in i18n.brand.VERTICAL_CENTER_IMAGE" :key="index">
+            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">{{item.STYLE}}</el-button>
           </a>
         </li>
         <li class="vertical-right">
-          <h3>Black</h3>
-          <img src="/img/other/brand/vertical-right.png" alt />
-          <a href="/img/other/brand/vertical-right.png" target="_blank" download>
-            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PNG</el-button>
-          </a>
-          <a href="/img/other/brand/vertical-right.svg" target="_blank" download>
-            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">SVG</el-button>
-          </a>
-          <a href="/img/other/brand/vertical-right.pdf" target="_blank" download>
-            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PDF</el-button>
+          <h3>{{i18n.brand.PICTURE_TITLE[2]}}</h3>
+          <img :src="i18n.brand.VERTICAL_RIGHT_IMAGE[0].URL" alt />
+          <a :href="item.URL" target="_blank" download
+          v-for="(item, index) in i18n.brand.VERTICAL_RIGHT_IMAGE" :key="index">
+            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">{{item.STYLE}}</el-button>
           </a>
         </li>
       </ul>
-      <p class="title-horizontal">Horizontal</p>
+      <p class="title-horizontal">{{i18n.brand.HORIZONTAL}}</p>
       <ul class="card-horizontal">
         <li class="horizontal-left">
-          <h3>Standard</h3>
-          <img src="/img/other/brand/horizontal-left.png" alt />
-          <a href="/img/other/brand/horizontal-left.png" target="_blank" download>
-            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PNG</el-button>
-          </a>
-          <a href="/img/other/brand/horizontal-left.svg" target="_blank" download>
-            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">SVG</el-button>
-          </a>
-          <a href="/img/other/brand/horizontal-left.pdf" target="_blank" download>
-            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PDF</el-button>
+          <h3>{{i18n.brand.PICTURE_TITLE[3]}}</h3>
+          <img :src="i18n.brand.HORIZONTAL_LEFT_IMAGE[0].URL" alt />
+          <a :href="item.URL" target="_blank" download
+          v-for="(item, index) in i18n.brand.HORIZONTAL_LEFT_IMAGE" :key="index">
+            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">{{item.STYLE}}</el-button>
           </a>
         </li>
         <li class="horizontal-center">
-          <h3>White</h3>
-          <img src="/img/other/brand/horizontal-center.png" alt />
-          <a href="/img/other/brand/horizontal-center.png" target="_blank" download>
-            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PNG</el-button>
-          </a>
-          <a href="/img/other/brand/horizontal-center.svg" target="_blank" download>
-            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">SVG</el-button>
-          </a>
-          <a href="/img/other/brand/horizontal-center.pdf" target="_blank" download>
-            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PDF</el-button>
+          <h3>{{i18n.brand.PICTURE_TITLE[4]}}</h3>
+          <img :src="i18n.brand.HORIZONTAL_CENTER_IMAGE[0].URL" alt />
+          <a :href="item.URL" target="_blank" download
+          v-for="(item, index) in i18n.brand.HORIZONTAL_CENTER_IMAGE" :key="index">
+            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">{{item.STYLE}}</el-button>
           </a>
         </li>
         <li class="horizontal-right">
-          <h3>Black</h3>
-          <img src="/img/other/brand/horizontal-right.png" alt />
-          <a href="/img/other/brand/horizontal-right.png" target="_blank" download>
-            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PNG</el-button>
-          </a>
-          <a href="/img/other/brand/horizontal-right.svg" target="_blank" download>
-            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">SVG</el-button>
-          </a>
-          <a href="/img/other/brand/horizontal-right.pdf" target="_blank" download>
-            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PDF</el-button>
+          <h3>{{i18n.brand.PICTURE_TITLE[5]}}</h3>
+          <img :src="i18n.brand.HORIZONTAL_RIGHT_IMAGE[0].URL" alt />
+          <a :href="item.URL" target="_blank" download
+          v-for="(item, index) in i18n.brand.HORIZONTAL_RIGHT_IMAGE" :key="index">
+            <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">{{item.STYLE}}</el-button>
           </a>
         </li>
       </ul>
