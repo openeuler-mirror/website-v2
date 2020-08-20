@@ -1,12 +1,11 @@
 <template>
   <div class="moblie-content">
-    <div class="blog-header">
-      <p class="blog-title">
-        {{i18n.community.BLOG.BLOG}}
-        <span class="blog-connect">CONNECT</span>
-        <img class="blog-banner-img" src="/blog/blog_banner.png" alt />
-      </p>
-    </div>
+    <common-banner
+      :pc-src="'/img/blog/blog_banner.png'"
+      :mobile-src="'/img/blog/blog_banner.png'"
+      :inside-name="'CONNECT'"
+      :outside-name="i18n.community.BLOG.BLOG"
+    ></common-banner>
     <div class="blog-content">
       <el-form :inline="true" :model="formData" class="blog-filter">
         <el-form-item :label="i18n.community.BLOG.LABEL">
@@ -30,7 +29,7 @@
           </el-select>
         </el-form-item>
         <el-form-item class="mobile-blog-write">
-          <img class="middle-img mobile-middle-img" src="/blog/edit.png" alt />
+          <img class="middle-img mobile-middle-img" src="/img/blog/edit.png" alt />
           <span @click="goPostBlog" class="blog-write">{{i18n.community.BLOG.BLOGGING}}</span>
         </el-form-item>
       </el-form>
@@ -38,18 +37,19 @@
         <div class="blog-item" v-for="(item, index) in currentBlogListData" :key="index">
           <div class="blog-item-left">
             <p class="blog-img">
-              <img class="middle-img" src="/blog/blog_user.png" alt />
+              <img class="middle-img" src="/img/blog/blog_user.png" alt />
             </p>
             <p>
-              <img class="middle-img mobile-middle-img" src="/blog/account.png" alt />
+              <img class="middle-img mobile-middle-img" src="/img/blog/account.svg" alt />
               <span class="blog-author">{{item.frontmatter.author}}</span>
             </p>
             <p>
-              <img class="middle-img mobile-middle-img" src="/blog/date.png" alt />
+              <img class="middle-img mobile-middle-img" src="/img/blog/date.svg" alt />
               <span class="blog-date">{{resolvePostDate(item.frontmatter.date)}}</span>
             </p>
             <p>
-              <img class="middle-img mobile-middle-img" src="/blog/visibility.png" alt />
+              <img class="middle-img mobile-middle-img" src="/img/blog/visibility.svg" alt />
+              <!-- todo 通过接口获取浏览次数 -->
               <span class="blog-date">浏览100次</span>
             </p>
           </div>
@@ -58,10 +58,10 @@
             <p class="blog-item-content">{{item.frontmatter.summary}}</p>
             <p @click="go(item.path)" class="blog-item-all">{{i18n.community.BLOG.READ_MORE}}</p>
             <p class="blog-item-tag">
-              <span>{{i18n.community.BLOG.LABEL}}: </span>
+              <span>{{i18n.community.BLOG.LABEL}}:</span>
               <span v-for="(tag, index) in item.frontmatter.tags" :key="index">
                 <span @click="clickTagItem(tag)" class="tag-item">{{tag}}</span>
-                <span v-if="index != (item.frontmatter.tags.length - 1)">、</span>  
+                <span v-if="index != (item.frontmatter.tags.length - 1)">、</span>
               </span>
             </p>
           </div>
@@ -83,6 +83,7 @@
 <script>
 import Vue from "vue";
 import dayjs from "dayjs";
+import commonBanner from "./../common/banner.vue";
 export default {
   data() {
     return {
@@ -102,11 +103,13 @@ export default {
       },
       //常量每页显示数量
       PAGESIZE: 5,
-      CELECT_LABEL: '',
-      CELECT_FILE: '',
+      CELECT_LABEL: "",
+      CELECT_FILE: "",
     };
   },
-
+  components: {
+    commonBanner,
+  },
   computed: {},
 
   created() {
@@ -301,35 +304,35 @@ export default {
 .blog-content {
   width: 1120px;
   margin: 0 auto;
-}
-.el-select__tags {
-  min-width: 140px !important;
-}
-.el-form-item__label {
-  font-size: 18px;
-  color: #000;
-  font-family: FZLTXIHJW;
-}
+  .el-select__tags {
+    min-width: 140px !important;
+  }
+  .el-form-item__label {
+    font-size: 18px;
+    color: #000;
+    font-family: FZLTXIHJW;
+  }
 
-.el-input__inner {
-  font-size: 14px;
-  height: 32px;
-  color: #000;
-  font-family: FZLTXIHJW;
-}
+  .el-input__inner {
+    font-size: 16px;
+    height: 32px;
+    color: #000;
+    font-family: FZLTXIHJW;
+  }
 
-.el-select-dropdown__item {
-  color: #000;
-  font-family: FZLTXIHJW;
-}
+  .el-select-dropdown__item {
+    color: #000;
+    font-family: FZLTXIHJW;
+  }
 
-.el-form-item {
-  margin-right: 50px !important;
-}
+  .el-form-item {
+    margin-right: 50px !important;
+  }
 
-.el-form-item__content {
-  min-width: 140px;
-  min-height: 32px;
+  .el-form-item__content {
+    min-width: 140px;
+    min-height: 32px;
+  }
 }
 .blog-write {
   font-size: 18px;
@@ -353,15 +356,17 @@ export default {
 }
 .blog-item-right {
   display: inline-block;
-  width: calc(100% - 195px);
+  width: calc(100% - 210px);
   vertical-align: top;
 }
-.tag-item{
+.tag-item {
   cursor: pointer;
 }
 .blog-img {
-  width: 120px;
-  height: 120px;
+  img {
+    width: 100px;
+    height: 100px;
+  }
 }
 .blog-author {
   font-size: 16px;
@@ -434,59 +439,59 @@ export default {
   }
   .blog-content {
     width: 100%;
-  }
-  .el-select__tags {
-    min-width: 140px !important;
-  }
-  .el-form-item__label {
-    display: none !important;
-  }
+    .el-select__tags {
+      min-width: 140px !important;
+    }
+    .el-form-item__label {
+      display: none !important;
+    }
 
-  .el-input__inner {
-    font-size: 14px;
-    color: #000;
-    font-family: FZLTXIHJW;
-  }
+    .el-input__inner {
+      font-size: 14px;
+      color: #000;
+      font-family: FZLTXIHJW;
+    }
 
-  .el-select-dropdown__item {
-    color: #000;
-    font-family: FZLTXIHJW;
-  }
+    .el-select-dropdown__item {
+      color: #000;
+      font-family: FZLTXIHJW;
+    }
 
-  .el-form-item {
-    margin-right: 0px !important;
-    width: 100%;
-  }
+    .el-form-item {
+      margin-right: 0px !important;
+      width: 100%;
+    }
 
-  .el-select{
-    width: 100%;
-  }
-  .el-form-item__content {
-    min-width: 140px;
-    min-height: 32px;
-    line-height: 32px;
-    width: 100%;
-    text-align: center;
-  }
-  .el-input__inner{
-    height: 32px;
-    line-height: 32px;
-  }
-  .el-input__icon{
-    line-height: 32px;
+    .el-select {
+      width: 100%;
+    }
+    .el-form-item__content {
+      min-width: 140px;
+      min-height: 32px;
+      line-height: 32px;
+      width: 100%;
+      text-align: center;
+    }
+    .el-input__inner {
+      height: 32px;
+      line-height: 32px;
+    }
+    .el-input__icon {
+      line-height: 32px;
+    }
   }
   .blog-write {
     display: inline-block;
-    width:82px;
-    height:28px;
+    width: 82px;
+    height: 28px;
     line-height: 28px;
     color: #fff;
     font-size: 14px;
-    background:rgba(0,47,167,1);
-    box-shadow:0px 2px 6px 0px rgba(0,0,0,0.1);
-    border-radius:4px;
+    background: rgba(0, 47, 167, 1);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
   }
-  .mobile-blog-write{
+  .mobile-blog-write {
     position: absolute;
     top: 0;
     left: 0;
@@ -519,8 +524,9 @@ export default {
   .blog-img {
     width: 26px;
     height: 26px;
-    img{
+    img {
       width: 100%;
+      height: 100%;
     }
   }
   .blog-author {

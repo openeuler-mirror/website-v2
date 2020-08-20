@@ -3,18 +3,18 @@
     <div class="blog-link-post" @click="goBlog">{{i18n.community.BLOG.BLOG}}\</div>
     <div class="post-left">
       <p class="blog-img">
-        <img class="middle-img" src="/blog/blog_user.png" alt />
+        <img class="middle-img" src="/img/blog/blog_user.png" alt />
       </p>
       <p>
-        <img class="mobile-middle-img" src="/blog/account.png" alt />
+        <img class="mobile-middle-img" src="/img/blog/account.svg" alt />
         <span class="blog-author">{{$frontmatter.author}}</span>
       </p>
       <p>
-        <img class="mobile-middle-img" src="/blog/date.png" alt />
+        <img class="mobile-middle-img" src="/img/blog/date.svg" alt />
         <span class="blog-date">{{resolvePostDate($frontmatter.date)}}</span>
       </p>
       <p>
-        <img class="mobile-middle-img" src="/blog/visibility.png" alt />
+        <img class="mobile-middle-img" src="/img/blog/visibility.svg" alt />
         <span class="blog-date">
           <span id="busuanzi_container_page_pv">
             <span>{{i18n.community.BLOG.BROWSE}}</span>
@@ -37,18 +37,18 @@
       <p class="blog-title">{{$frontmatter.title}}</p>
       <div class="mobile-auther">
         <p class="blog-img">
-          <img class="middle-img" src="/blog/blog_user.png" alt />
+          <img class="middle-img" src="/img/blog/blog_user.png" alt />
         </p>
         <p>
-          <img class="mobile-middle-img" src="/blog/account.png" alt />
+          <img class="mobile-middle-img" src="/img/blog/account.svg" alt />
           <span class="blog-author">{{$frontmatter.author}}</span>
         </p>
         <p>
-          <img class="mobile-middle-img" src="/blog/date.png" alt />
+          <img class="mobile-middle-img" src="/img/blog/date.svg" alt />
           <span class="blog-date">{{resolvePostDate($frontmatter.date)}}</span>
         </p>
         <p>
-          <img class="mobile-middle-img" src="/blog/visibility.png" alt />
+          <img class="mobile-middle-img" src="/img/blog/visibility.svg" alt />
           <span class="blog-date">
             <span id="busuanzi_container_page_pv">
               <span>{{i18n.community.BLOG.BROWSE}}</span>
@@ -179,7 +179,7 @@ export default {
 .post-right {
   display: inline-block;
   margin-left: 30px;
-  width: calc(100% - 235px);
+  width: calc(100% - 250px);
 }
 .blog-title {
   font-size: 36px;

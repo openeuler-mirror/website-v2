@@ -24,28 +24,28 @@
           <div class="maillist-icon-comm"></div>
         </div>
         <div class="mail-guide" v-for="(items, index) in currentDocs" :key="index">
-          <div class="step-left">
+          <div v-if="index % 2 === 0" class="step-left">
             <div class="mail-box">
               <div class="step-left-box">
-                <div class="inner-box" v-for="(item, index) in items.left.doc" :key="index">
+                <div @click="go(item)" class="inner-box" v-for="(item, index) in items.doc" :key="index">
                   <img :src="item.img" alt />
                   <p>{{ item.name }}</p>
                 </div>
               </div>
               <div class="step-left-num">
-                <span>{{ items.left.title }}</span>
+                <span>{{ items.title }}</span>
               </div>
               <div class="step-line"></div>
             </div>
           </div>
-          <div v-if="items.right.title" class="step-right">
+          <div v-if="index % 2 !== 0" class="step-right">
             <div class="mail-box">
               <div class="step-line"></div>
               <div class="step-right-num">
-                <span>{{ items.right.title }}</span>
+                <span>{{ items.title }}</span>
               </div>
               <div class="step-right-box">
-                <div class="inner-box" v-for="(item, index) in items.right.doc" :key="index">
+                <div  @click="go(item)" class="inner-box" v-for="(item, index) in items.doc" :key="index">
                   <img :src="item.img" alt />
                   <p>{{ item.name }}</p>
                 </div>
@@ -56,17 +56,11 @@
       </div>
       <div class="is-h5">
         <div class="mail-guide" v-for="(items, index) in currentDocs" :key="index">
-          <div v-if="items.left.doc.length" class="step-H5 step-left-H5">
+          <div v-if="items.doc.length" class="step-H5" :class="[items.doc.length === 1 && 'step-left-H5']">
             <div class="step-num">
-              <span>{{ items.left.title }}</span>
+              <span>{{ items.title }}</span>
             </div>
-            <p v-for="(item, index) in items.left.doc" :key="index">{{ item.name }}</p>
-          </div>
-          <div v-if="items.right.doc && items.right.doc.length" class="step-H5">
-            <div class="step-num">
-              <span>{{ items.right.title }}</span>
-            </div>
-            <p v-for="(item, index) in items.right.doc" :key="index">{{ item.name }}</p>
+            <p  @click="go(item)" v-for="(item, index) in items.doc" :key="index">{{ item.name }}</p>
           </div>
         </div>
       </div>
@@ -81,143 +75,7 @@ export default {
     return {
       version: "",
       currentDocs: [],
-      versions: [
-        {
-          value: "1.0 BASE",
-          name: "1.0 BASE",
-          docs: [
-            {
-              left: {
-                title: "了解",
-                doc: [
-                  {
-                    img: "/img/sig/sig1.png",
-                    name: "发行说明",
-                  },
-                ],
-              },
-              right: {
-                title: "安装",
-                doc: [
-                  {
-                    img: "/img/sig/sig1.png",
-                    name: "快捷入门",
-                  },
-                  {
-                    img: "/img/sig/sig1.png",
-                    name: "安装指南",
-                  },
-                ],
-              },
-            },
-            {
-              left: {
-                title: "管理",
-                doc: [
-                  {
-                    img: "/img/sig/sig1.png",
-                    name: "管理员指南",
-                  },
-                ],
-              },
-              right: {
-                title: "使用",
-                doc: [
-                  {
-                    img: "/img/sig/sig1.png",
-                    name: "虚拟化用户指南",
-                  },
-                  {
-                    img: "/img/sig/sig1.png",
-                    name: "容器用户指南",
-                  },
-                  {
-                    img: "/img/sig/sig1.png",
-                    name: "安全加固",
-                  },
-                ],
-              },
-            },
-            {
-              left: {
-                title: "开发",
-                doc: [],
-              },
-              right: {},
-            },
-          ],
-        },
-        {
-          value: "20.03 LTS",
-          name: "20.03 LTS",
-          docs: [
-            {
-              left: {
-                title: "了解",
-                doc: [
-                  {
-                    img: "/img/sig/sig1.png",
-                    name: "发行说明",
-                  },
-                ],
-              },
-              right: {
-                title: "安装",
-                doc: [
-                  {
-                    img: "/img/sig/sig1.png",
-                    name: "快捷入门",
-                  },
-                  {
-                    img: "/img/sig/sig1.png",
-                    name: "安装指南",
-                  },
-                ],
-              },
-            },
-            {
-              left: {
-                title: "管理",
-                doc: [
-                  {
-                    img: "/img/sig/sig1.png",
-                    name: "管理员指南",
-                  },
-                ],
-              },
-              right: {
-                title: "使用",
-                doc: [
-                  {
-                    img: "/img/sig/sig1.png",
-                    name: "虚拟化用户指南",
-                  },
-                  {
-                    img: "/img/sig/sig1.png",
-                    name: "容器用户指南",
-                  },
-                  {
-                    img: "/img/sig/sig1.png",
-                    name: "A-Tune用户指南",
-                  },
-                ],
-              },
-            },
-            {
-              left: {
-                title: "开发",
-                doc: [
-                  {
-                    img: "/img/sig/sig1.png",
-                    name: "应用开发指南",
-                  },
-                ],
-              },
-              right: {},
-            },
-          ],
-        },
-      ],
+      versions: []
     };
   },
   components: {
@@ -229,55 +87,63 @@ export default {
     this.targetLocale = this.$lang === "zh" ? "/zh/" : "/en/";
   },
   mounted() {
+    this.versions = require("../../../" + this.$lang + "/docs/1.0_Base/path/path.json");
     this.currentDocs = this.versions[0].docs;
   },
   methods: {
     selectChange(val) {
       this.versions.forEach((item) => {
-          if (item.name === val) {
+          if (item.value === val) {
             this.currentDocs = item.docs;
           }
         });
+    },
+    go(item) {
+      if (item.path) {
+        let version = this.version === "" ? "1.0_Base" : this.version;
+        this.$router.push(this.targetLocale + "docs/" + version + item.path);
+      }
     },
   },
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 .docs-content {
   width: 1120px;
   margin: 0 auto;
   margin-bottom: 200px;
-}
-.el-select__tags {
-  min-width: 140px !important;
-}
-.el-form-item__label {
-  font-size: 18px;
-  color: #000;
-  font-family: FZLTXIHJW;
-}
+  .el-select__tags {
+    min-width: 140px !important;
+  }
+  .el-form-item__label {
+    font-size: 18px;
+    color: #000;
+    font-family: FZLTXIHJW;
+  }
 
-.el-input__inner {
-  font-size: 14px;
-  color: #000;
-  font-family: FZLTXIHJW;
-}
+  .el-input__inner {
+    font-size: 16px;
+    height: 32px;
+    color: #000;
+    font-family: FZLTXIHJW;
+  }
 
-.el-select-dropdown__item {
-  color: #000;
-  font-family: FZLTXIHJW;
-}
+  .el-select-dropdown__item {
+    color: #000;
+    font-family: FZLTXIHJW;
+  }
 
-.el-form-item {
-  margin-right: 50px !important;
-  margin-bottom: 15px !important;
-  margin-top: 15px !important;
-}
+  .el-form-item {
+    margin-right: 50px !important;
+    margin-bottom: 15px !important;
+    margin-top: 15px !important;
+  }
 
-.el-form-item__content {
-  min-width: 140px;
-  min-height: 32px;
+  .el-form-item__content {
+    min-width: 140px;
+    min-height: 32px;
+  }
 }
 .is-h5 {
   display: none;
@@ -289,7 +155,7 @@ export default {
 .maillist-divider-mail {
   width: 2px;
   left: 406px;
-  height: calc(100% - 30px);
+  height: calc(100% - 35px);
   background-image: linear-gradient(
     to top,
     #002fa7 0%,
@@ -320,6 +186,7 @@ export default {
 .step-left-box {
   width: 200px;
   margin-right: 36px;
+  min-height: 74px;
 }
 .step-right-box {
   width: 540px;
