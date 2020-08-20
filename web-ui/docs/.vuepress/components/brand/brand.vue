@@ -12,88 +12,88 @@
     </div>
     <!-- 六个带有下载功能的卡片 -->
     <div class="brand-six-cards">
-      <p class="title-Vertical">Vertical</p>
+      <p class="title-vertical">Vertical</p>
       <p class="mobile-title">{{i18n.brand.MOBILETITLE}}</p>
-      <ul class="card-Vertical">
-        <li class="Vertical-left">
+      <ul class="card-vertical">
+        <li class="vertical-left">
           <h3>Standard</h3>
           <img src="/img/other/brand/vertical-left.png" alt />
           <!-- 三个下载按钮 -->
           <a href="/img/other/brand/vertical-left.png" target="_blank" download>
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PNG</el-button>
           </a>
-          <a href="/img/other/brand/vertical-left.png" target="_blank" download>
+          <a href="/img/other/brand/vertical-left.svg" target="_blank" download>
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">SVG</el-button>
           </a>
-          <a href="/img/other/brand/vertical-left.png" target="_blank" download>
+          <a href="/img/other/brand/vertical-left.pdf" target="_blank" download>
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PDF</el-button>
           </a>
         </li>
-        <li class="Vertical-center">
+        <li class="vertical-center">
           <h3>Monochrome</h3>
           <img src="/img/other/brand/vertical-center.png" alt />
           <a href="/img/other/brand/vertical-center.png" target="_blank" download>
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PNG</el-button>
           </a>
-          <a href="/img/other/brand/vertical-center.png" target="_blank" download>
+          <a href="/img/other/brand/vertical-center.svg" target="_blank" download>
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">SVG</el-button>
           </a>
-          <a href="/img/other/brand/vertical-center.png" target="_blank" download>
+          <a href="/img/other/brand/vertical-center.pdf" target="_blank" download>
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PDF</el-button>
           </a>
         </li>
-        <li class="Vertical-right">
+        <li class="vertical-right">
           <h3>Black</h3>
           <img src="/img/other/brand/vertical-right.png" alt />
           <a href="/img/other/brand/vertical-right.png" target="_blank" download>
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PNG</el-button>
           </a>
-          <a href="/img/other/brand/vertical-right.png" target="_blank" download>
+          <a href="/img/other/brand/vertical-right.svg" target="_blank" download>
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">SVG</el-button>
           </a>
-          <a href="/img/other/brand/vertical-right.png" target="_blank" download>
+          <a href="/img/other/brand/vertical-right.pdf" target="_blank" download>
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PDF</el-button>
           </a>
         </li>
       </ul>
-      <p class="title-Horizontal">Horizontal</p>
-      <ul class="card-Horizontal">
-        <li class="Horizontal-left">
+      <p class="title-horizontal">Horizontal</p>
+      <ul class="card-horizontal">
+        <li class="horizontal-left">
           <h3>Standard</h3>
           <img src="/img/other/brand/horizontal-left.png" alt />
           <a href="/img/other/brand/horizontal-left.png" target="_blank" download>
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PNG</el-button>
           </a>
-          <a href="/img/other/brand/horizontal-left.png" target="_blank" download>
+          <a href="/img/other/brand/horizontal-left.svg" target="_blank" download>
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">SVG</el-button>
           </a>
-          <a href="/img/other/brand/horizontal-left.png" target="_blank" download>
+          <a href="/img/other/brand/horizontal-left.pdf" target="_blank" download>
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PDF</el-button>
           </a>
         </li>
-        <li class="Horizontal-center">
+        <li class="horizontal-center">
           <h3>White</h3>
           <img src="/img/other/brand/horizontal-center.png" alt />
           <a href="/img/other/brand/horizontal-center.png" target="_blank" download>
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PNG</el-button>
           </a>
-          <a href="/img/other/brand/horizontal-center.png" target="_blank" download>
+          <a href="/img/other/brand/horizontal-center.svg" target="_blank" download>
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">SVG</el-button>
           </a>
-          <a href="/img/other/brand/horizontal-center.png" target="_blank" download>
+          <a href="/img/other/brand/horizontal-center.pdf" target="_blank" download>
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PDF</el-button>
           </a>
         </li>
-        <li class="Horizontal-right">
+        <li class="horizontal-right">
           <h3>Black</h3>
           <img src="/img/other/brand/horizontal-right.png" alt />
           <a href="/img/other/brand/horizontal-right.png" target="_blank" download>
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PNG</el-button>
           </a>
-          <a href="/img/other/brand/horizontal-right.png" target="_blank" download>
+          <a href="/img/other/brand/horizontal-right.svg" target="_blank" download>
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">SVG</el-button>
           </a>
-          <a href="/img/other/brand/horizontal-right.png" target="_blank" download>
+          <a href="/img/other/brand/horizontal-right.pdf" target="_blank" download>
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">PDF</el-button>
           </a>
         </li>
@@ -115,7 +115,9 @@ export default {
   width: 1120px;
   margin: 0 auto;
   padding-top: 60px;
-
+  @media (max-width: 1000px) {
+     width: 300px;
+    }
   .brand-title {
     width: 48px;
     height: 24px;
@@ -124,9 +126,6 @@ export default {
     font-weight: normal;
     color: rgba(0, 0, 0, 1);
     line-height: 24px;
-    @media (max-width: 1000px) {
-      margin-left: 50px;
-    }
   }
   .brand-word {
     width: 1120px;
@@ -143,7 +142,6 @@ export default {
       font-weight: normal;
       color: rgba(0, 0, 0, 0.5);
       line-height: 24px;
-      margin-left: 50px;
     }
   }
 }
@@ -151,21 +149,25 @@ export default {
   width: 1120px;
   margin: 0 auto;
   margin-top: 80px;
-  .card-Vertical,
-  .card-Horizontal {
+   @media (max-width: 1000px) {
+     width: 300px;
+    }
+  .card-vertical,
+  .card-horizontal {
     display: flex;
     @media (max-width: 1000px) {
       flex-direction: column;
+      width: 300px;
     }
   }
-  .card-Horizontal {
+  .card-horizontal {
     margin-bottom: 200px;
     @media (max-width: 1000px) {
       margin-bottom: 80px;
     }
   }
-  .title-Vertical,
-  .title-Horizontal {
+  .title-vertical,
+  .title-horizontal {
     width: 93px;
     height: 24px;
     font-size: 24px;
@@ -179,15 +181,13 @@ export default {
       display: none;
     }
   }
-  .title-Horizontal {
+  .title-horizontal {
     width: 124px;
   }
   .mobile-title {
     display: none;
     @media (max-width: 1000px) {
       display: block;
-      margin-left: 50px;
-      // padding-top: 60px;
       width: 315px;
       height: 26px;
       font-size: 16px;
@@ -197,12 +197,12 @@ export default {
       line-height: 26px;
     }
   }
-  .Vertical-left,
-  .Vertical-center,
-  .Vertical-right,
-  .Horizontal-left,
-  .Horizontal-center,
-  .Horizontal-right {
+  .vertical-left,
+  .vertical-center,
+  .vertical-right,
+  .horizontal-left,
+  .horizontal-center,
+  .horizontal-right {
     width: 350px;
     height: 300px;
     background: rgba(255, 255, 255, 1);
@@ -211,8 +211,12 @@ export default {
     flex: 1;
     padding-top: 32px;
     margin: 20px 25px 20px 0;
-    @media (max-width: 1000px) {
-      margin-left: 30px;
+     @media (max-width: 1000px) {
+     width:315px;
+    height:282px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 3px 10px 0px rgba(0,0,0,0.2);
+    border-radius:8px;
     }
   }
   ul h3 {
@@ -229,14 +233,14 @@ export default {
     margin: 0 auto;
     padding-top: 39px;
   }
-  .Horizontal-left img {
+  .horizontal-left img {
     padding-top: 45px;
     padding-bottom: 50px;
   }
-  .Horizontal-center img {
+  .horizontal-center img {
     padding-bottom: 27px;
   }
-  .Horizontal-right img {
+  .horizontal-right img {
     padding-top: 45px;
     padding-bottom: 50px;
   }
@@ -251,9 +255,5 @@ export default {
       margin-bottom: 30px;
     }
   }
-  /* @media (max-width: 1000px) {
-      margin:20px 0px 120px 20px;
-
-    } */
 }
 </style>
