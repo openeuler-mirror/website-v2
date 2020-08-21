@@ -8,7 +8,6 @@ var url = require('url');
 var router = express.Router();
 var readFile = require('../search/readFile');
 const CONF = require('../config/filePathConfig');
-const API = require('../config/apiConfig');
 const httpUtil = require('../util/httpUtil');
 const ES = require('../config/searchConfig');
 const logUtil = require('../util/logUtil');
@@ -19,10 +18,6 @@ const ES_TYPE = '_doc';
 const ES_EN_TYPE = '_doc';
 
 router.get('/index', function (req, res, next) {
-    if (req.headers.authorization !== API.API_AUTH) {
-        res.send(httpUtil.authError);
-        return;
-    }
     let obj = url.parse(encodeURI(req.url), true);
     let lang = obj.query.lang;
     let token = new Buffer.from(ES.ES_USER_PASS).toString('base64');
@@ -30,17 +25,17 @@ router.get('/index', function (req, res, next) {
 
     if (lang === 'zh') {
         httpUtil.indexES(ES.ES_URL + ES_INDEX, token).then(data => {
-            logUtil.errorLogfile.write(meta + os.EOL + JSON.stringify(data) + os.EOL);
+            console.log(meta + os.EOL + JSON.stringify(data) + os.EOL);
         }).catch(ex => {
-            logUtil.errorLogfile.write('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
+            console.log('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
         });
     }
 
     if (lang === 'en') {
         httpUtil.indexES(ES.ES_URL + ES_EN_INDEX, token).then(data => {
-            logUtil.errorLogfile.write(meta + os.EOL + JSON.stringify(data) + os.EOL);
+            console.log(meta + os.EOL + JSON.stringify(data) + os.EOL);
         }).catch(ex => {
-            logUtil.errorLogfile.write('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
+            console.log('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
         });
     }
 
@@ -52,11 +47,6 @@ router.get('/index', function (req, res, next) {
 
 // model: ['docs', 'news', 'blog', 'live']
 router.get('/insert', function (req, res, next) {
-    if (req.headers.authorization !== API.API_AUTH) {
-        res.send(httpUtil.authError);
-        return;
-    }
-
     let obj = url.parse(encodeURI(req.url), true);
     let version = obj.query.version;
     let lang = obj.query.lang;
@@ -98,10 +88,6 @@ router.get('/insert', function (req, res, next) {
 });
 
 router.post('/keyword', function (req, res, next) {
-    if (req.headers.authorization !== API.API_AUTH) {
-        res.send(httpUtil.authError);
-        return;
-    }
     let keyword = req.body.keyword;
     keyword = keyword.replace(/#/g, '');
     let model = req.body.model;
@@ -111,10 +97,11 @@ router.post('/keyword', function (req, res, next) {
     let url = ES.ES_URL + indexEs + '/_search';
     let json = getSearchReqJson(page, model, keyword, version);
     httpUtil.updateES(url, json).then(data => {
+        console.log('[' + logUtil.getTime() + ']' + JSON.stringify(data) + os.EOL);
         let responseData = getSearchResJson(data, keyword, page);
         res.send(responseData);
     }).catch(ex => {
-        logUtil.errorLogfile.write('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
+        console.log('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
         res.json({
             code: 500,
             date: ex.stack

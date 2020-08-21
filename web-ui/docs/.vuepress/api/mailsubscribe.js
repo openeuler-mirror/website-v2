@@ -4,14 +4,18 @@
 
 import appAjax from './../libs/ajax-utils';
 export const subscribe = ({
-    listId
+    listId,
+    subscriber,
+    displayName
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
             url: '/mail/add',
             type: 'post',
             data: {
-                listId
+                listId,
+                subscriber,
+                displayName
             },
             success(result) {
                 if (result) {

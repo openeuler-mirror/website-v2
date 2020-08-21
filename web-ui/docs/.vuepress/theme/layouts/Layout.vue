@@ -1,8 +1,9 @@
 <template>
   <div id="euler-app" :class="{'lang-en': $lang == 'en'}">
     <CustomHeader />
-    <Content v-if="!isPost()" class="content" />
+    <Content v-if="!isPost() && !isDocDetails()" class="content" />
     <Post v-if="isPost()" class="content" />
+    <DocDetails v-if="isDocDetails()" class="content" />
     <CustomFooter />
   </div>
 </template>
@@ -11,6 +12,7 @@
 import CustomHeader from "@theme/components/CustomHeader.vue";
 import CustomFooter from "@theme/components/CustomFooter.vue";
 import Post from "@theme/layouts/Post.vue";
+import DocDetails from "@theme/layouts/DocDetails.vue";
 
 export default {
   name: "Layout",
@@ -18,7 +20,8 @@ export default {
   components: {
     CustomHeader,
     CustomFooter,
-    Post
+    Post,
+    DocDetails
   },
 
   data() {
@@ -36,9 +39,9 @@ export default {
         ? true
         : false;
     },
-    isPostBlog() {
+    isDocDetails() {
       let currentPath = this.$route.path;
-      return currentPath.indexOf(this.targetLocale + "interaction/post-blog/") > -1
+      return currentPath.indexOf(this.targetLocale + "docs/") > -1
         ? true
         : false;
     },

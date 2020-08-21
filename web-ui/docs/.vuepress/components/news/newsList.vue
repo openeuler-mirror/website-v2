@@ -20,11 +20,11 @@
             <div class="news-info">
               <div class="news-time">
                 <p>
-                  <img class="mobile-middle-img" src="/blog/date.png" alt />
+                  <img class="mobile-middle-img" src="/img/blog/date.svg" alt />
                   <span class="news-date">{{item.frontmatter.date}}</span>
                 </p>
                 <p>
-                  <img class="mobile-middle-img" src="/blog/visibility.png" alt />
+                  <img class="mobile-middle-img" src="/img/blog/visibility.svg" alt />
                   <span class="news-date">
                     <span id="busuanzi_container_page_pv">
                       <span>{{i18n.community.BLOG.BROWSE}}</span>
@@ -37,11 +37,11 @@
               <div @click="go(item.path)" class="news-title">{{item.frontmatter.title}}</div>
               <div class="news-time-mobile">
                 <p>
-                  <img class="mobile-middle-img" src="/blog/date.png" alt />
+                  <img class="mobile-middle-img" src="/img/blog/date.svg" alt />
                   <span class="news-date">{{item.frontmatter.date}}</span>
                 </p>
                 <p>
-                  <img class="mobile-middle-img" src="/blog/visibility.png" alt />
+                  <img class="mobile-middle-img" src="/img/blog/visibility.svg" alt />
                   <span class="news-date">
                     <span id="busuanzi_container_page_pv">
                       <span>{{i18n.community.BLOG.BROWSE}}</span>
@@ -190,7 +190,7 @@ export default {
 .news-info {
   display: inline-block;
   margin-left: 60px;
-  width: calc(100% - 465px);
+  width: calc(100% - 480px);
   vertical-align: top;
 }
 .news-time {

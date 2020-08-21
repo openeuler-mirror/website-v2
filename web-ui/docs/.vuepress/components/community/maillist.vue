@@ -152,14 +152,14 @@
                 <el-form :model="form">
                     <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.REMIND }}</p>
                     <el-form-item :label-width="formLabelWidth">
-                        <img src="/img/home/arrow.svg" alt="">
+                        <img class="user-icon" src="/img/home/userName.svg" alt="">
                         <el-input
                                 v-model="form.name"
                                 autocomplete="off"
                                 :placeholder="i18n.community.MAILING_LIST.SUBSCRIBE.INPUT_ADD"></el-input>
                     </el-form-item>
                     <el-form-item :label-width="formLabelWidth">
-                        <img src="/img/home/arrow.svg" alt="">
+                        <img class="user-icon" src="/img/home/userEmail.svg" alt="">
                         <el-input
                                 v-model="form.email"
                                 autocomplete="off"
@@ -192,11 +192,11 @@
                 listId: "test.openeuler.org",
                 dialogFormVisible: false,
                 form: {
-                    name: '',
-                    email: '',
-                    delivery: false,
+                    listId: '',
+                    subscriber: '',
+                    displayName: ''
                 },
-                formLabelWidth: '0'
+                formLabelWidth: '0',
             }
         },
         mounted() {
@@ -206,14 +206,7 @@
                     this.list.forEach(item => { item.archive = "Archive"});
                 })
                 .catch(response => {
-                    this.$message.error("邮件列表发生错误");
-                });
-            subscribe({
-                listId: "test.openeuler.org"
-            })
-                .then(response => {})
-                .catch(response => {
-                    this.$message.error("邮件列表发生错误");
+                    this.$message.error(this.i18n.community.MAILING_LIST.MAIL_ERROR);
                 });
         },
         methods: {
@@ -223,9 +216,13 @@
             },
             getUserInfo() {
                 this.dialogFormVisible = false;
-                let name = this.form.name;
-                let email = this.form.email;
-                let subInfo = this.subscribe;
+                subscribe(this.form)
+                    .then(response => {
+                        this.$message(this.i18n.community.MAILING_LIST.SUBSCRIBE_SUCCESS)
+                    })
+                    .catch(response => {
+                        this.$message.error(this.i18n.community.MAILING_LIST.SUBSCRIBE_ERROR);
+                    });
             }
         }
 
@@ -456,6 +453,10 @@
         text-align: center;
         color: rgba(0, 0, 0, 0.5);
         margin: 60px auto 20px;
+    }
+    .user-icon {
+        vertical-align: middle;
+        margin-right: 10px;
     }
     @media screen and (max-width: 1000px) {
         .is-h5 {

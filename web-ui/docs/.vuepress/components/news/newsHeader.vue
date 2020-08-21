@@ -4,11 +4,11 @@
     <div class="news-title">{{$frontmatter.title}}</div>
     <div class="news-time">
       <p>
-        <img class="mobile-middle-img" src="/blog/date.png" alt />
+        <img class="mobile-middle-img" src="/img/blog/date.svg" alt />
         <span class="news-date">{{$frontmatter.date}}</span>
       </p>
       <p>
-        <img class="mobile-middle-img" src="/blog/visibility.png" alt />
+        <img class="mobile-middle-img" src="/img/blog/visibility.svg" alt />
         <span class="news-date">
           <span id="busuanzi_container_page_pv">
             <span>{{i18n.community.BLOG.BROWSE}}</span>

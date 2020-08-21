@@ -6,7 +6,7 @@ title: "Guidance to Post a Blog"
   <blog-postBlog />
 </ClientOnly>
 
-<div id="blog_content">
+<div id="post-blog-content">
 
 ## Preparation
 
@@ -103,7 +103,7 @@ git push origin <branch-name>:<branch-name>
 </div>
 
 <style lang="less">
-#blog_content{
+#post-blog-content{
   width: 1120px;
   margin: 0 auto;
   margin-bottom: 200px;
@@ -161,7 +161,7 @@ git push origin <branch-name>:<branch-name>
   }
 }
 @media screen and (max-width: 1000px) {
-    #blog_content {
+    #post-blog-content {
         width: 100%;
         margin: 0 auto;
         padding: 0 15px;

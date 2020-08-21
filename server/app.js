@@ -9,6 +9,8 @@ var logger = require('morgan');
 var os = require('os');
 
 var helmet = require('helmet');
+const HTTP = require('./util/httpUtil');
+const CONF = require('./config/apiConfig');
 var logUtil = require('./util/logUtil');
 var indexRouter = require('./routes/index');
 var mailRouter = require('./routes/mail');
@@ -51,6 +53,15 @@ app.use(express.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+let filter = (req, res, next) => {
+    if (req.headers.authorization !== CONF.API_AUTH) {
+        res.send(HTTP.authError);
+        return;
+    }
+    next();
+};
+app.use(filter);
+
 app.use('/', indexRouter);
 app.use('/mail', mailRouter);
 app.use('/cve', cveRouter);
@@ -67,7 +78,7 @@ app.use(function (req, res, next) {
 // error handler
 app.use(function (err, req, res, next) {
     var meta = '[' + logUtil.getTime() + '] ' + req.method + ' ' + req.url;
-    logUtil.errorLogfile.write(meta + err.stack + os.EOL);
+    console.log(meta + err.stack + os.EOL);
     next();
     // set locals, only providing error in development
     res.locals.message = err.message;
