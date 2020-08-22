@@ -120,7 +120,18 @@ module.exports = {
         FOOTER: {
             MAIL: 'contact@openeuler.org',
             COPY_RIGHT: '版权所有 © 2020 openeuler 保留一切权利',
-            RIGHT_LIST: ['品牌', '法律声明', '隐私政策'],
+            RIGHT_LIST: [{
+            NAME:'品牌',
+            URL:'/other/brand/'
+            }, 
+            {
+            NAME:'法律声明',
+            URL:'/other/legal/'
+            },
+             {
+            NAME:'隐私政策',
+            URL:'/other/privacy/'
+            }],
             QR_CODE: '扫码关注公众号'
         }
     },
@@ -240,7 +251,18 @@ module.exports = {
         FOOTER: {
             MAIL: 'contact@openeuler.org',
             COPY_RIGHT: 'Copyright © 2020 openEuler. All rights reserved.',
-            RIGHT_LIST: ['TradeMark', 'Legal', 'Privacy'],
+            RIGHT_LIST: [{
+                NAME:'TradeMark',
+                URL:'/other/brand/'
+                }, 
+                {
+                NAME:'Legal',
+                URL:'/other/legal/'
+                },
+                 {
+                NAME: 'Privacy',
+                URL:'/other/privacy/'
+                }],
             QR_CODE: 'Wechat Subscription'
         }
     }
