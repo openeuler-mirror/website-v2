@@ -7,7 +7,7 @@
             </div>
             <div class="footer-center">
                 <ul class="right-list">
-                    <li v-for="(item, index) in i18n.common.FOOTER.RIGHT_LIST" :key="index" ><a href="/">{{ item }}</a></li>
+                    <li v-for="(item, index) in i18n.common.FOOTER.RIGHT_LIST" :key="index" ><a @click="goFooterUrl(item.URL)">{{ item.NAME }}</a></li> 
                 </ul>
                 <p class="footer-copyright">{{ i18n.common.FOOTER.COPY_RIGHT }}</p>
             </div>
@@ -29,6 +29,13 @@ export default {
                 }
             }
         };
+    },
+    methods: {
+        goFooterUrl(url){
+             this.$router.push({
+                path: this.resolvePath(url),
+            });
+        }
     },
     components: {}
 };
@@ -102,6 +109,7 @@ export default {
                     a {
                         color: #fff;
                         text-decoration: none;
+                        cursor: pointer;
                     } 
                 }
                 li:nth-child(2){
