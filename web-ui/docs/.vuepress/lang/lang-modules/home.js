@@ -359,22 +359,22 @@ module.exports = {
                 GUIDE_WAY: [
                     {
                         TITLE: "树莓派",
-                        IMG: "",
+                        IMG: "/img/home/areaPai.png",
                         LINK:""
                     },
                     {
                         TITLE: "硬件",
-                        IMG: "",
+                        IMG: "/img/home/areaHardware.png",
                         LINK:"",
                     },
                     {
                         TITLE: "虚拟机",
-                        IMG: "",
+                        IMG: "/img/home/areaVirtual.png",
                         LINK:"",
                     },
                     {
                         TITLE: "ECS",
-                        IMG: "",
+                        IMG: "/img/home/areaECS.png",
                         LINK:"",
                     }
                 ]
