@@ -17,6 +17,7 @@
         <h2
           :class="isSummitHome?'review-home':'review-list'"
           v-if="isSummitHome"
+          @click="toReviewList()"
         >{{isSummitHome?i18n.interaction.SUMMIT.HOMETITLE:i18n.interaction.SUMMIT.LISTTITLE}}</h2>
         <p class="list-time" v-if="!isSummitHome">{{i18n.interaction.SUMMIT.LISTTIME}}</p>
       </div>
@@ -28,7 +29,7 @@
       <div class="theme-speech">
         <h3>主题演讲</h3>
         <ul class="speech-list">
-          <li v-for="(item,key) in speechList" :key="key" @tab="toVideo()">
+          <li v-for="(item,key) in speechList" :key="key">
             <div class="list-head">
               <p class="list-time">
                 <!-- 待小图标可以直接用类使用时再对齐文字和小图标 -->
@@ -38,7 +39,7 @@
               <p class="teacher-name">
                 <!-- 待小图标可以直接用类使用时再对齐文字和小图标 -->
                 <span>{{item.SPEECHER}}</span>
-                <i class="icon-player"></i>
+                <i class="icon-player" @click="toVideo(item.SPEECHLINK)"></i>
               </p>
               <p class="list-title">{{item.SPEECHTHEME}}</p>
             </div>
@@ -148,12 +149,11 @@ export default {
   },
   methods: {
     toReviewList () {
-      this.isSummitHome = !this.isSummitHome;
+      this.isSummitHome = false;
       //如果要实现点击时间不跳转回首页，那就在这里把isSummitHome写死
     },
-    toVideo () {
-      //跳转到视频链接，思路：用第一次点击isToVideo+1，等于2时跳转，并且重新设定为0
-
+    toVideo (link) {
+      window.open(link, '_blank');
     }
   }
 }
@@ -221,14 +221,14 @@ export default {
     padding: 40px 15px 80px 15px;
   }
   .review {
-    cursor: pointer;
     .review-home {
+      cursor: pointer;
       display: inline-block;
       .word-common-css(30px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,47,167,1),30px);
       .mr(top,262px);
       @media (max-width: 1000px) {
         .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,47,167,1),26px);
-        .mr-All(20px 0 0 88px);
+        .mr-All(20px 0 0 103px);
       }
     }
     .review-list {
@@ -242,7 +242,7 @@ export default {
     }
     .list-time {
       @media (max-width: 1000px) {
-        .mr-All(10px 0 0 50px);
+        .mr-All(10px 0 0 68px);
         .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,1),26px);
       }
     }
@@ -309,6 +309,7 @@ export default {
             }
             .teacher-name {
               .icon-player {
+                cursor: pointer;
                 background-image: url("/img/summit/white-player.svg");
               }
             }
@@ -351,6 +352,11 @@ export default {
           .list-explain {
             .mr-All(26px 96px 46px 0);
             .wid-and-hei(600px,96px);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
             .word-common-css(14px,FZLTXIHJW--GB1-0,FZLTXIHJW--GB1,normal,rgba(0,0,0,0.5),32px);
           }
           .teacher-info {
