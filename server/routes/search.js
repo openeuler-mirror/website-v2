@@ -130,8 +130,9 @@ function getSearchResJson(data, keyword, page) {
         } else {
             content = content.substring(0, content.length);
         }
-        content = content.replace(keyword, '<em>' + keyword + '</em>');
         element._source.textContent = content;
+        let title = element._source.title.replace(keyword, '<em>' + keyword + '</em>');
+        element._source.title = title;
         arr.push(element._source);
     });
 
