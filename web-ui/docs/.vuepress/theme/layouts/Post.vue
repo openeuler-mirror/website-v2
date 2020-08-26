@@ -18,7 +18,7 @@
         <span class="blog-date">
           <span id="busuanzi_container_page_pv">
             <span>{{i18n.community.BLOG.BROWSE}}</span>
-            <span id="busuanzi_value_page_pv"></span>
+            <span>{{this.blogVisit}}</span>
             <span>{{i18n.community.BLOG.VIEWED}}</span>
           </span>
         </span>
@@ -52,7 +52,7 @@
           <span class="blog-date">
             <span id="busuanzi_container_page_pv">
               <span>{{i18n.community.BLOG.BROWSE}}</span>
-              <span id="busuanzi_value_page_pv"></span>
+             <span>{{this.blogVisit}}</span>
               <span>{{i18n.community.BLOG.VIEWED}}</span>
             </span>
           </span>
@@ -77,6 +77,7 @@
 <script>
 let script;
 import dayjs from "dayjs";
+import {blogVisitList,blogVisitDetail,addVisit} from "../../api/blogCount"
 export default {
   name: "Post",
   data() {
@@ -88,16 +89,27 @@ export default {
           community: {
               BLOG: {}
           }
-      }
+      },
+      // 访问量
+      blogVisit:'',
+       visitCount: {
+        blogTitle:'',
+        blogDate:'',
+        pageLang:''
+      },
     };
   },
   created() {
     this.targetLocale = this.$lang === "zh" ? "/zh/" : "/en/";
+    this.getBlogCount();
   },
   mounted() {
     script = require("busuanzi.pure.js");
     this.allBlogListData = this.blogList();
     this.otherBlog = this.getOtherBlog(this.allBlogListData);
+    this.visitCount.blogTitle=this.$frontmatter.title;
+    this.visitCount.blogDate=this.$frontmatter.date;
+    this.visitCount.pageLang=this.$lang;
   },
   watch: {
     $route(to, from) {
@@ -132,6 +144,12 @@ export default {
         );
       });
     },
+     getBlogCount() {
+      blogVisitDetail(this.visitCount)
+      .then(response => {
+          this.blogVisit = response.data[0] || 1;
+        })
+    }
   },
 };
 </script>
@@ -291,8 +309,8 @@ export default {
     margin-top: 40px;
   }
   .blog-item-tag {
-    display: none;
-  }
+      display: none;
+    }
   .disclaimer {
     font-size: 16px;
     line-height: 26px;
