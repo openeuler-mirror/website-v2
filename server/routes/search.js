@@ -135,7 +135,10 @@ function getSearchResJson(data, keyword, page) {
         element._source.title = title;
         arr.push(element._source);
     });
-
+    data.aggregations.data.buckets.push({
+        key: 'all',
+        doc_count: num
+    });
     let json = {
         'status': 200,
         'msg': '',
