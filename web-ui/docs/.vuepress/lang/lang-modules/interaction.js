@@ -152,6 +152,7 @@ module.exports = {
             SPEECHTITLE: '主题演讲',
             DESIGNTITLE: '设计峰会（项目组专题研讨）',
             VIDEODOWNLOAD: '附件下载',
+            FRIENDSHIPLINK: '友情链接',
             SPEECHLIST: [{
                     SPEECHTIME: '4 月 17 日    09:30 - 09:40',
                     SPEECHTHEME: 'openEuler 加速多核异构计算产业发展',

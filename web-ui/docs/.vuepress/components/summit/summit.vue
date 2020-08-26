@@ -116,7 +116,7 @@
         </div>
       </div>
       <div class="friendship-link">
-        <div class="link-title">友情链接</div>
+        <div class="link-title">{{i18n.interaction.SUMMIT.FRIENDSHIPLINK}}</div>
         <div class="link-list">
           <div></div>
           <div></div>
@@ -137,7 +137,6 @@ export default {
       designList: [],
       designTimeList: [],
       designVideoList: [],
-      isToVideo: 0, //默认进来的时候是0
       trackList: []
     }
   },
@@ -148,8 +147,8 @@ export default {
   },
   methods: {
     toReviewList () {
+      //点击往期回顾跳转到列表页无法返回
       this.isSummitHome = false;
-      //如果要实现点击时间不跳转回首页，那就在这里把isSummitHome写死
     },
     toVideo (link) {
       window.open(link, '_blank');
