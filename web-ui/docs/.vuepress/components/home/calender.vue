@@ -894,7 +894,7 @@
         text-align: center;
         display:  block;
         float: left;
-        font-family:FZLTCHJW, FZLTCHJW;
+        font-family: FZLTCHJW;
     }
     .calenderMain{
         position: relative;
@@ -921,7 +921,7 @@
         display: block;
         font-size: 14px;
         text-align: center;
-        font-family:FZLTHJW, FZLTHJW;
+        font-family: FZLTHJW;
     }
     .calenderLeftTime span.active{
         color: blue;

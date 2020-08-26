@@ -406,7 +406,7 @@
     .step-right-num span {
         color: #fff;
         font-size: 20px;
-        font-family:FZLTCHJW;
+        font-family: FZLTCHJW;
     }
     .step-line {
         width: 107px;
