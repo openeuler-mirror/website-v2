@@ -27,7 +27,7 @@
     </div>
     <div class="summit-list" v-if="!isSummitHome">
       <div class="theme-speech">
-        <h3>主题演讲</h3>
+        <h3>{{i18n.interaction.SUMMIT.SPEECHTITLE}}</h3>
         <ul class="speech-list">
           <li v-for="(item,key) in speechList" :key="key">
             <div class="list-head">
@@ -59,11 +59,9 @@
         </ul>
       </div>
       <div class="design-summit">
-        <h3>设计峰会（项目组专题研讨）</h3>
+        <h3>{{i18n.interaction.SUMMIT.DESIGNTITLE}}</h3>
         <div class="h4">
-          <span>Track 1</span>
-          <span>Track 2</span>
-          <span>Track 3</span>
+          <span v-for="(item,key) in trackList" :key="key">{{item}}</span>
         </div>
         <div class="summit-video" v-for="(item,key) in designList" :key="key">
           <div class="video-time" v-for="time in item.DESIGNTIME">
@@ -72,8 +70,8 @@
           </div>
           <div :class="item.TRACK1?'video-one':'null-track'">
             <div class="video-download" v-if="item.TRACK1?true:false">
-              <div>精彩回顾</div>
-              <div>附件下载</div>
+              <div>{{i18n.interaction.SUMMIT.LISTTITLE}}</div>
+              <div>{{i18n.interaction.SUMMIT.VIDEODOWNLOAD}}</div>
             </div>
             <div v-for="track1 in item.TRACK1">
               <p>{{track1.TRACK1TITLE}}</p>
@@ -87,8 +85,8 @@
           </div>
           <div :class="item.TRACK2?'video-two':'null-track'">
             <div class="video-download" v-if="item.TRACK2?true:false">
-              <div>精彩回顾</div>
-              <div>附件下载</div>
+              <div>{{i18n.interaction.SUMMIT.LISTTITLE}}</div>
+              <div>{{i18n.interaction.SUMMIT.VIDEODOWNLOAD}}</div>
             </div>
             <div v-for="track2 in item.TRACK2">
               <p>{{track2.TRACK2TITLE}}</p>
@@ -102,8 +100,8 @@
           </div>
           <div :class="item.TRACK3?'video-three':'null-track'">
             <div class="video-download" v-if="item.TRACK3?true:false">
-              <div>精彩回顾</div>
-              <div>附件下载</div>
+              <div>{{i18n.interaction.SUMMIT.LISTTITLE}}</div>
+              <div>{{i18n.interaction.SUMMIT.VIDEODOWNLOAD}}</div>
             </div>
             <div v-for="track3 in item.TRACK3">
               <p>{{track3.TRACK3TITLE}}</p>
@@ -139,13 +137,14 @@ export default {
       designList: [],
       designTimeList: [],
       designVideoList: [],
-      isToVideo: 0 //默认进来的时候是0
+      isToVideo: 0, //默认进来的时候是0
+      trackList: []
     }
   },
   mounted () {
     this.speechList = this.i18n.interaction.SUMMIT.SPEECHLIST;
     this.designList = this.i18n.interaction.SUMMIT.DESIGNLIST;
-
+    this.trackList = this.i18n.interaction.SUMMIT.TRACKLIST;
   },
   methods: {
     toReviewList () {

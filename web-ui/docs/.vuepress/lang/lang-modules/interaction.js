@@ -149,6 +149,9 @@ module.exports = {
             HOMETITLE: '往期回顾',
             LISTTITLE: '精彩回顾',
             LISTTIME: '2020年4月17-18日',
+            SPEECHTITLE: '主题演讲',
+            DESIGNTITLE: '设计峰会（项目组专题研讨）',
+            VIDEODOWNLOAD: '附件下载',
             SPEECHLIST: [{
                     SPEECHTIME: '4 月 17 日    09:30 - 09:40',
                     SPEECHTHEME: 'openEuler 加速多核异构计算产业发展',
@@ -231,6 +234,7 @@ module.exports = {
                     SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
             ],
+            TRACKLIST: ['Track 1', 'Track 2', 'Track 3'],
             DESIGNLIST: [{
                     DESIGNTIME: [{
                         DAY: '4 月 17 日',
@@ -527,79 +531,92 @@ module.exports = {
             HOMETITLE: '往期回顾',
             LISTTITLE: '精彩回顾',
             LISTTIME: '2020年4月17-18日',
+            SPEECHTITLE: '主题演讲',
+            DESIGNTITLE: '设计峰会（项目组专题研讨）',
+            VIDEODOWNLOAD: '附件下载',
             SPEECHLIST: [{
                     SPEECHTIME: '4 月 17 日    09:30 - 09:40',
                     SPEECHTHEME: 'openEuler 加速多核异构计算产业发展',
                     SPEECHER: '江大勇',
-                    SPEECHCONTENT: '基础操作系统领域从业20余年，见证了国产Linux操作系统发展历史。先后服务于中科红旗、中标软件等，2016年加入普华，任普华公司基础软件事业部营销副总。自国家电子政务内外网“12库3金”项目起至今，先后参与了大部分国产操作系统具有里程碑意义的重大项目。',
-                    SPEECHERIMG: '/img/summit/wyj.png',
-                    SPEECHERINFO: '中科院软件所副总工程师智能软件研究中心主任'
+                    SPEECHCONTENT: '',
+                    SPEECHERIMG: '/img/summit/jiangdayong.jpg',
+                    SPEECHERINFO: '',
+                    SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
                 {
                     SPEECHTIME: ' 4 月 17 日 09:40 - 09:50',
                     SPEECHTHEME: 'openEuler，助推器，超级工坊',
                     SPEECHER: '王准',
-                    SPEECHCONTENT: '基础操作系统领域从业20余年，见证了国产Linux操作系统发展历史。先后服务于中科红旗、中标软件等，2016年加入普华，任普华公司基础软件事业部营销副总。自国家电子政务内外网“12库3金”项目起至今，先后参与了大部分国产操作系统具有里程碑意义的重大项目。',
-                    SPEECHERIMG: '/img/summit/wyj.png',
-                    SPEECHERINFO: '中科院软件所副总工程师智能软件研究中心主任'
+                    SPEECHCONTENT: '关注于传统行业IT转型和工业互联网建设，多次主持全国级信息化项目的架构规划，为各大部委和央企提供咨询。作为企业架构师协会会员，致力于推动企业架构在中国的推广和落地。',
+                    SPEECHERIMG: '/img/summit/wangzhun.jpg',
+                    SPEECHERINFO: '清华同方计算机资深架构师',
+                    SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
                 {
                     SPEECHTIME: ' 4 月 17 日 09:50 - 10:30',
                     SPEECHTHEME: 'Innovation Drives the Future of openEuler',
                     SPEECHER: '熊伟',
-                    SPEECHCONTENT: '基础操作系统领域从业20余年，见证了国产Linux操作系统发展历史。先后服务于中科红旗、中标软件等，2016年加入普华，任普华公司基础软件事业部营销副总。自国家电子政务内外网“12库3金”项目起至今，先后参与了大部分国产操作系统具有里程碑意义的重大项目。',
-                    SPEECHERIMG: '/img/summit/wyj.png',
-                    SPEECHERINFO: '中科院软件所副总工程师智能软件研究中心主任'
+                    SPEECHCONTENT: '熊伟，2014年加入华为，现为2012实验室中央软件院服务器操作系统首席架构师，openEuler技术委员会委员；南开大学工学博士，曾在TurboLinux、WindRiver等公司担任研发负责人，具有长期的OS、底层软件工作经验和技术积累；对处理器、体系架构、OS、容器等具有广阔的技术视野，初步建立起鲲鹏基础软件栈服务器OS、容器引擎等基础设施的自研平台体系。',
+                    SPEECHERIMG: '/img/summit/xiongwei.jpg',
+                    SPEECHERINFO: 'openEuler技术委员会委员',
+                    SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
                 {
                     SPEECHTIME: ' 4 月 17 日 10:30 - 10:40',
                     SPEECHTHEME: '从“共建”到“共赢” 推动 openEuler 成为全球领先社区',
                     SPEECHER: '宇亮',
                     SPEECHCONTENT: '基础操作系统领域从业20余年，见证了国产Linux操作系统发展历史。先后服务于中科红旗、中标软件等，2016年加入普华，任普华公司基础软件事业部营销副总。自国家电子政务内外网“12库3金”项目起至今，先后参与了大部分国产操作系统具有里程碑意义的重大项目。',
-                    SPEECHERIMG: '/img/summit/wyj.png',
-                    SPEECHERINFO: '中科院软件所副总工程师智能软件研究中心主任'
+                    SPEECHERIMG: '/img/summit/yuliang.jpg',
+                    SPEECHERINFO: '普华基础软件股份有限公司 基础软件事业部副总经理',
+                    SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
                 {
                     SPEECHTIME: ' 4 月 17 日 10:40 - 10:50 ',
                     SPEECHTHEME: '麒麟遨天，助力鲲鹏展翅',
                     SPEECHER: '李震宁',
-                    SPEECHCONTENT: '基础操作系统领域从业20余年，见证了国产Linux操作系统发展历史。先后服务于中科红旗、中标软件等，2016年加入普华，任普华公司基础软件事业部营销副总。自国家电子政务内外网“12库3金”项目起至今，先后参与了大部分国产操作系统具有里程碑意义的重大项目。',
-                    SPEECHERIMG: '/img/summit/wyj.png',
-                    SPEECHERINFO: '中科院软件所副总工程师智能软件研究中心主任'
+                    SPEECHCONTENT: '华为云及腾讯云最具价值专家；上海市基础软件工程技术研究中心主任、太原理工大学硕士生导师。李震宁先生在开源和操作系统领域服务了20年，服务客户包括全国多个政府机关、国防及航天、银行、证券、大学等，有着丰富的开源操作系统软件技术、市场营销和公关传播领域复合经验。目前在国家多个部委和省市担任操作系统和基础软件产业等相关领域专家。对行业宏观发展，技术趋势，标准政策等均有一定研究。目前兼任中日韩东北亚开源委员会中方委员、开源及基础软件通用技术创新战略联盟（优盟）秘书长；中国高端芯片联盟副秘书长、中国开源软件推进联盟副秘书长，中国开源云联盟副秘书长，中国大数据应用协同创新联盟副秘书长，TIAA车载联盟软件组组长；CCF 系统软件专委会委员；中国大数据与智能计算产业联盟开源软件工作委员会副主任等职务。',
+                    SPEECHERIMG: '/img/summit/lizhenning.jpg',
+                    SPEECHERINFO: '麒麟软件副总裁',
+                    SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
                 {
                     SPEECHTIME: ' 4 月 17 日 10:50 - 11:00',
                     SPEECHTHEME: '点亮开源软件供应链，助力社区高质量发展',
                     SPEECHER: '武延军',
-                    SPEECHCONTENT: '基础操作系统领域从业20余年，见证了国产Linux操作系统发展历史。先后服务于中科红旗、中标软件等，2016年加入普华，任普华公司基础软件事业部营销副总。自国家电子政务内外网“12库3金”项目起至今，先后参与了大部分国产操作系统具有里程碑意义的重大项目。',
-                    SPEECHERIMG: '/img/summit/wyj.png',
-                    SPEECHERINFO: '中科院软件所副总工程师智能软件研究中心主任'
+                    SPEECHCONTENT: '研究员、博士生导师，中科院软件所副总工程师，智能软件研究中心主任。毕业于清华大学计算机系，随后加入中科院软件所学习工作，长期从事操作系统相关研发工作。在相关学术顶级会议、核心期刊先后发表论文50余篇，申请专利与软著30余项。曾获北京市科技新星、中科院青促会优秀会员等荣誉。',
+                    SPEECHERIMG: '/img/summit/wuyanjun.png',
+                    SPEECHERINFO: '中科院软件所副总工程师，智能软件研究中心主任',
+                    SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
                 {
                     SPEECHTIME: ' 4 月 17 日 11:00 - 11:10 ',
                     SPEECHTHEME: 'ARM服务器最佳MySQL平台',
                     SPEECHER: '丁文龙',
-                    SPEECHCONTENT: '基础操作系统领域从业20余年，见证了国产Linux操作系统发展历史。先后服务于中科红旗、中标软件等，2016年加入普华，任普华公司基础软件事业部营销副总。自国家电子政务内外网“12库3金”项目起至今，先后参与了大部分国产操作系统具有里程碑意义的重大项目。',
-                    SPEECHERIMG: '/img/summit/wyj.png',
-                    SPEECHERINFO: '中科院软件所副总工程师智能软件研究中心主任'
+                    SPEECHCONTENT: '',
+                    SPEECHERIMG: '/img/summit/dingwenlong.jpg',
+                    SPEECHERINFO: '高级研发工程师',
+                    SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
                 {
                     SPEECHTIME: ' 4 月 17 日  11:10 - 11:25  ',
                     SPEECHTHEME: 'How to Enjoy openEuler',
                     SPEECHER: '马俊杰',
-                    SPEECHCONTENT: '基础操作系统领域从业20余年，见证了国产Linux操作系统发展历史。先后服务于中科红旗、中标软件等，2016年加入普华，任普华公司基础软件事业部营销副总。自国家电子政务内外网“12库3金”项目起至今，先后参与了大部分国产操作系统具有里程碑意义的重大项目。',
-                    SPEECHERIMG: '/img/summit/wyj.png',
-                    SPEECHERINFO: '中科院软件所副总工程师智能软件研究中心主任'
+                    SPEECHCONTENT: 'openEuler 社区 Infrastructure Committer、openEuler 社区 oVirt SIG组maintainer、oVirt 社区 Member、Istio 社区 Member',
+                    SPEECHERIMG: '/img/summit/majunjie.png',
+                    SPEECHERINFO: 'openEuler Infrastructure SIG Committer',
+                    SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
                 {
                     SPEECHTIME: ' 4 月 17 日 11：25 - 11：45   ',
                     SPEECHTHEME: 'openEuler Community Governance',
                     SPEECHER: '胡欣蔚',
-                    SPEECHCONTENT: '基础操作系统领域从业20余年，见证了国产Linux操作系统发展历史。先后服务于中科红旗、中标软件等，2016年加入普华，任普华公司基础软件事业部营销副总。自国家电子政务内外网“12库3金”项目起至今，先后参与了大部分国产操作系统具有里程碑意义的重大项目。',
-                    SPEECHERIMG: '/img/summit/wyj.png',
-                    SPEECHERINFO: '中科院软件所副总工程师智能软件研究中心主任'
+                    SPEECHCONTENT: '',
+                    SPEECHERIMG: '/img/summit/huxinwei.jpg',
+                    SPEECHERINFO: 'openEuler 技术委员会主席',
+                    SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
             ],
+            TRACKLIST: ['Track 1', 'Track 2', 'Track 3'],
             DESIGNLIST: [{
                     DESIGNTIME: [{
                         DAY: '4 月 17 日',
