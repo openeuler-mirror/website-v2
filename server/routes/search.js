@@ -96,8 +96,8 @@ router.post('/keyword', function (req, res, next) {
     let version = req.body.version;
     let url = ES.ES_URL + indexEs + '/_search';
     let json = getSearchReqJson(page, model, keyword, version);
-    httpUtil.updateES(url, json).then(data => {
-        console.log('[' + logUtil.getTime() + ']' + JSON.stringify(data) + os.EOL);
+    let token = new Buffer.from(ES.ES_USER_PASS).toString('base64');
+    httpUtil.updateES(url, token, json).then(data => {
         let responseData = getSearchResJson(data, keyword, page);
         res.send(responseData);
     }).catch(ex => {
