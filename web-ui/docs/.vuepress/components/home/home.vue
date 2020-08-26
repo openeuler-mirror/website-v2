@@ -7,7 +7,8 @@
                         <img src="/img/home/BannerVideo.png" alt="">
                     </div>
                 </el-carousel-item>
-                <el-carousel-item class="carousel-item" :style="{ backgroundImage:'url(' + banner1 + ')' }">
+                <el-carousel-item class="carousel-item"
+                                  :style="{ backgroundImage:'url(' + banner1 + ')', 'background-size': '100%', 'background-repeat': 'no-repeat'}">
                     <div class="card-summer">
                         <img src="/img/home/BannerSummer.png" alt="">
                         <span>{{ i18n.home.HOME_CAROUSEL_DATA[0].DES }}</span>
@@ -17,7 +18,8 @@
                         class="carousel-item"
                         v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
                         :key="index"
-                        :style="{ backgroundImage:'url(' + item.IMG + ')' }">
+                        :style="{ backgroundImage:'url(' + item.IMG + ')', 'background-size': '100%', 'background-repeat': 'no-repeat'}">
+
                     <h3>{{ item.TITLE }}</h3>
                     <span>{{ item.DES }}</span>
                 </el-carousel-item>
@@ -95,14 +97,14 @@
         <div class="home-newsroom">
             <div class="is-pc room-right">
                 <div class="room-title">
-                    <a href="javascript:;" v-for="(item, index) in roomName" :key="index" :class="{'active': 'rooms' + index}" @click="vueToggle(index)">{{ item }} </a>
+                    <a v-for="(item, index) in roomName" :key="index" :class="{'active': currentRoom === index}" @click="vueToggle(index)">{{ item }} </a>
                 </div>
                 <div class="room-contain" :class="{'active':currentRoom === 0}">
                     <div class="flex-room">
                         <div class="room-box"
                              v-for="(item, index) in i18n.home.HOME_ROOMS.EVENT_LIST"
                              :key="index">
-                            <span>{{ item.TAG }}</span> <span>|</span> <span>{{ item.DATE }}</span>
+                            <span>|</span> <span>{{ item.DATE }}</span>
                             <p>{{ item.CONTENT }}</p>
                         </div>
                         <span><a href="">{{ i18n.home.MORE }}</a></span>
@@ -113,7 +115,6 @@
                         <div class="room-box"
                              v-for="(item, index) in blogList"
                              :key="index">
-                            <span v-for="tag in item.frontmatter.tags">{{ tag }} <span>|</span> </span>
                             <span>{{ item.frontmatter.date }}</span>
                             <span>|</span>
                             <span>{{ item.frontmatter.author }}</span>
@@ -127,7 +128,6 @@
                         <div class="room-box"
                              v-for="(item, index) in newsList"
                              :key="index">
-                            <span v-for="tag in item.frontmatter.tags">{{ tag }} <span>|</span> </span>
                             <span>{{ item.frontmatter.date }}</span>
                             <span>|</span>
                             <span>{{ item.frontmatter.author }}</span>
@@ -439,9 +439,7 @@
         border-radius: 50%;
     }
     .el-carousel__container {
-        /*width: 1200px;*/
         height: 380px;
-        /*margin: 0 auto;*/
     }
 
     .room-card .el-carousel__container {
@@ -494,12 +492,14 @@
         color: #000;
         text-align: left;
         line-height: 48px;
+        font-family: FZLTCHJW;
+        margin-top: 30px;
     }
     .home-carousel .el-carousel__item span {
         display: inline-block;
-        width: 65%;
+        width: 620px;
         font-size: 1.5vw;
-        line-height: 48px;
+        line-height: 40px;
         margin-top: 60px;
     }
     .carousel-item {
@@ -507,10 +507,10 @@
         height: 100%;
         background-size: contain;
         background-repeat: no-repeat;
-        padding: 10% 10%;
+        padding-left: 300px;
     }
     .carousel-item .card-summer {
-        width: 65%;
+        width: 620px;
         text-align: center;
     }
     .carousel-item .card-summer span {
@@ -522,7 +522,7 @@
         z-index: -1;
     }
     .carousel-img {
-        width: 1200px;
+        width: 1080px;
         height: 480px;
         z-index: -1;
     }
@@ -548,7 +548,7 @@
     .home-introduce {
         padding-top: 100px;
         text-align: center;
-        width: 1200px;
+        width: 1080px;
         margin: 0 auto;
     }
     .home-introduce .is-h5.mapArea {
@@ -600,7 +600,7 @@
     }
     .area-box {
         display: inline-block;
-        width: 300px;
+        width: 191px;
     }
     .area-box a {
         text-align: center;
@@ -624,7 +624,7 @@
     }
     .area-box img {
         display: block;
-        margin: 10px 0 26px 70px;
+        margin: 10px 0 26px 30px;
     }
     .area-box .is-hidden {
         display: none;
@@ -641,10 +641,13 @@
         display: none;
         box-sizing: border-box;
         border: 1px solid rgba(0, 47, 167, .5);
-        padding: 30px 23px 23px;
+        padding: 10px 23px 23px;
         background: #fff;
         border-radius: 8px;
         box-shadow: 0 6px 20px 0 rgba(0, 0, 0, .1);
+        text-align: left;
+        margin-top: 15px;
+        margin-left: 60px;
     }
     .snd-guidance.is-show {
         display: block;
@@ -654,19 +657,21 @@
         justify-content: space-between;
     }
     .d3{
-        margin-left: 10px;
-        width: 25px;
-        height: 25px;
+        margin-left: 30px;
+        width: 15px;
+        height: 15px;
         transform: rotate(45deg);
         border-left: 1px solid rgba(0, 47, 167, .5);
         border-top: 1px solid rgba(0, 47, 167, .5);
         box-sizing: border-box;
         position: relative;
-        top: -43px;
+        top: -18px;
         background: #fff;
     }
     .guide-way {
         margin-right: 20px;
+        text-align: center;
+        font-family: FZLTXIHJW,FZLTXIHJW;
     }
     .guide-way:last-child {
         margin: 0;
@@ -676,8 +681,11 @@
         color: #002f33;
         font-size: 12px;
     }
+    .guide-way img {
+        margin: 10px 0 0;
+    }
     .snd-guidance p {
-        font-size: 18px;
+        font-size: 14px;
         line-height: 18px;
         text-align: left;
         margin: 0;
@@ -712,7 +720,7 @@
         color: rgba(255, 255, 255, .8);
     }
     .home-calendar {
-        width: 1200px;
+        width: 1080px;
         margin: 90px auto 0;
     }
     .time-tab {
@@ -796,7 +804,7 @@
         font-size: 14px;
     }
     .home-newsroom {
-        width: 1200px;
+        width: 1080px;
         margin: 123px auto 0;
         display: flex;
         justify-content: space-between;
@@ -853,12 +861,8 @@
         margin-right: 50px;
         color: rgba(0, 0, 0, .25);
         text-decoration: none;
+        cursor: pointer;
     }
-/*    .room-title a:focus {
-        color: #333;
-        border-bottom: 2px solid #002fa7;
-        border-radius: 2px;
-    }*/
     .room-title .active {
         color: #333;
         border-bottom: 2px solid #002fa7;
@@ -871,11 +875,14 @@
         position: relative;
         z-index: -1;
     }
+    .room-box a {
+        color: #000;
+    }
     .active{
         display: block;
     }
     .home-developer {
-        width: 1200px;
+        width: 1080px;
         margin: 60px auto 0;
     }
     .home-developer .dev-leader {
@@ -915,6 +922,11 @@
     }
     .dev-link {
         margin-top: 20px;
+        height: 28px;
+        line-height: 28px;
+    }
+    .dev-link a {
+        vertical-align: middle;
     }
     .dev-link img {
         width: 24px;
@@ -926,7 +938,7 @@
         margin-right: 16px;
     }
     .home-auth {
-        width: 1200px;
+        width: 1080px;
         margin: 68px auto 0;
     }
     .medal-logo {
@@ -934,7 +946,7 @@
         top: -5px;
     }
     .auth-product {
-        width: 1200px;
+        width: 1080px;
         margin: 30px auto 0;
         display: flex;
         justify-content: space-between;
@@ -958,7 +970,7 @@
         line-height: 20px;
     }
     .home-source {
-        width: 1200px;
+        width: 1080px;
         margin: 60px auto 200px;
     }
     .source-contain {
@@ -1068,8 +1080,12 @@
             font-size: 16px;
             margin: 0 30px;
         }
+        .carousel-item {
+            padding-left: 20px;
+        }
         .carousel-item .card-summer {
             width: 100%;
+            text-align: left;
         }
         .card-summer img {
             width: 50%;

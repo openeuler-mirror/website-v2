@@ -65,22 +65,22 @@ module.exports = {
                 GUIDE_WAY: [
                     {
                         TITLE: "树莓派",
-                        IMG: "",
+                        IMG: "/img/home/areaPai.png",
                         LINK:""
                     },
                     {
                         TITLE: "硬件",
-                        IMG: "",
+                        IMG: "/img/home/areaHardware.svg",
                         LINK:"",
                     },
                     {
                         TITLE: "虚拟机",
-                        IMG: "",
+                        IMG: "/img/home/areaVirtual.svg",
                         LINK:"",
                     },
                     {
                         TITLE: "ECS",
-                        IMG: "",
+                        IMG: "/img/home/areaECS.svg",
                         LINK:"",
                     }
                 ]
@@ -229,9 +229,9 @@ module.exports = {
                     GITEE_LINK: "javascript:void(0)"
                 },
                 {
-                    NAME: "Steve Green",
-                    TITLE: "CCO",
-                    RANK: "Community Lead",
+                    NAME: "Anna Green",
+                    TITLE: "Founder & CTO",
+                    RANK: "Senior Developer",
                     MAIL_LINK: "javascript:void(0)",
                     GITEE_LINK: "javascript:void(0)"
                 },
@@ -364,17 +364,17 @@ module.exports = {
                     },
                     {
                         TITLE: "硬件",
-                        IMG: "/img/home/areaHardware.png",
+                        IMG: "/img/home/areaHardware.svg",
                         LINK:"",
                     },
                     {
                         TITLE: "虚拟机",
-                        IMG: "/img/home/areaVirtual.png",
+                        IMG: "/img/home/areaVirtual.svg",
                         LINK:"",
                     },
                     {
                         TITLE: "ECS",
-                        IMG: "/img/home/areaECS.png",
+                        IMG: "/img/home/areaECS.svg",
                         LINK:"",
                     }
                 ]
