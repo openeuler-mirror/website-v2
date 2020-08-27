@@ -120,7 +120,7 @@ export default {
 
 </script>
 
-<style lang='less'>
+<style lang='less' scoped>
 @urlhead: "/img/live/";
 .background-css(@url,@repeat,@position,@size) {
   background-image: url(@url);

@@ -3,7 +3,7 @@
         <div class="nav-wrapper">
             <div class="nav-bar">
                 <img
-                    src="/openeuler.png"
+                    src="/logo-mobile.png"
                     alt=""
                     class="nav-logo"
                     @click="goHome()"
@@ -437,6 +437,7 @@ export default {
             .nav-logo-mobile {
                 display: none;
                 width: 142px;
+                height: auto;
             }
             .nav-other-mobile {
                 display: none;
@@ -701,6 +702,10 @@ export default {
             .search-input {
                 flex-shrink: 0;
                 width: 240px;
+                .el-input__icon{
+                    line-height: 29px;
+                    cursor: pointer;
+                }
             }
             .search-mobile {
                 display: none;

@@ -114,6 +114,7 @@ const locationMethods = {
     that.formData.page = flag;
     cveList(that.formData)
       .then(data => {
+        console.log(data);
         that.tableLoading = false;
         if (data.totalRecords) {
           that.total = data.totalRecords;
@@ -354,6 +355,9 @@ export default {
         @media (max-width: 1000px) {
           display: none;
         }
+        .icon-search {
+          line-height: 1.5px;
+        }
       }
       .mobile-search {
         display: none;
@@ -402,7 +406,6 @@ export default {
           }
           .content {
             flex: 1;
-            text-align: justify;
           }
           .table-link {
             align-self: flex-end;

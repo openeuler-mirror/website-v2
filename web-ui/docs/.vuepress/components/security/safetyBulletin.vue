@@ -26,6 +26,7 @@
               v-for="(item, index) in i18n.security.SEVERITY_LIST"
               :key="index"
               :label="item.LABEL"
+              class="radio-group"
             >{{ item.NAME }}</el-radio-button>
           </el-radio-group>
         </el-form-item>

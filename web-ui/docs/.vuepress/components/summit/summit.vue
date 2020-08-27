@@ -39,7 +39,7 @@
               <p class="teacher-name">
                 <!-- 待小图标可以直接用类使用时再对齐文字和小图标 -->
                 <span>{{item.SPEECHER}}</span>
-                <i class="icon-player" @click="toVideo(item.SPEECHLINK)"></i>
+                <i class="icon-player" @click="toWhere(item.SPEECHLINK)"></i>
               </p>
               <p class="list-title">{{item.SPEECHTHEME}}</p>
             </div>
@@ -69,11 +69,13 @@
             <p>{{time.HOUR}}</p>
           </div>
           <div :class="item.TRACK1?'video-one':'null-track'">
-            <div class="video-download" v-if="item.TRACK1?true:false">
-              <div>{{i18n.interaction.SUMMIT.LISTTITLE}}</div>
-              <div>{{i18n.interaction.SUMMIT.VIDEODOWNLOAD}}</div>
-            </div>
             <div v-for="track1 in item.TRACK1">
+              <div class="video-download" v-if="item.TRACK1?true:false">
+                <div @click="toWhere(track1.TRACK1LINK)">{{i18n.interaction.SUMMIT.LISTTITLE}}</div>
+                <div
+                  @click="toWhere(track1.TRACK1DOWNLOAD)"
+                >{{i18n.interaction.SUMMIT.VIDEODOWNLOAD}}</div>
+              </div>
               <p>{{track1.TRACK1TITLE}}</p>
               <div class="mobile-time" v-for="time in item.DESIGNTIME">
                 <p>{{time.DAY}}</p>
@@ -84,11 +86,13 @@
             </div>
           </div>
           <div :class="item.TRACK2?'video-two':'null-track'">
-            <div class="video-download" v-if="item.TRACK2?true:false">
-              <div>{{i18n.interaction.SUMMIT.LISTTITLE}}</div>
-              <div>{{i18n.interaction.SUMMIT.VIDEODOWNLOAD}}</div>
-            </div>
             <div v-for="track2 in item.TRACK2">
+              <div class="video-download" v-if="item.TRACK2?true:false">
+                <div @click="toWhere(track2.TRACK2LINK)">{{i18n.interaction.SUMMIT.LISTTITLE}}</div>
+                <div
+                  @click="toWhere(track2.TRACK2DOWNLOAD)"
+                >{{i18n.interaction.SUMMIT.VIDEODOWNLOAD}}</div>
+              </div>
               <p>{{track2.TRACK2TITLE}}</p>
               <div class="mobile-time" v-for="time in item.DESIGNTIME">
                 <p>{{time.DAY}}</p>
@@ -99,11 +103,13 @@
             </div>
           </div>
           <div :class="item.TRACK3?'video-three':'null-track'">
-            <div class="video-download" v-if="item.TRACK3?true:false">
-              <div>{{i18n.interaction.SUMMIT.LISTTITLE}}</div>
-              <div>{{i18n.interaction.SUMMIT.VIDEODOWNLOAD}}</div>
-            </div>
             <div v-for="track3 in item.TRACK3">
+              <div class="video-download" v-if="item.TRACK3?true:false">
+                <div @click="toWhere(track3.TRACK3LINK)">{{i18n.interaction.SUMMIT.LISTTITLE}}</div>
+                <div
+                  @click="toWhere(track3.TRACK3DOWNLOAD)"
+                >{{i18n.interaction.SUMMIT.VIDEODOWNLOAD}}</div>
+              </div>
               <p>{{track3.TRACK3TITLE}}</p>
               <div class="mobile-time" v-for="time in item.DESIGNTIME">
                 <p>{{time.DAY}}</p>
@@ -118,9 +124,12 @@
       <div class="friendship-link">
         <div class="link-title">{{i18n.interaction.SUMMIT.FRIENDSHIPLINK}}</div>
         <div class="link-list">
-          <div></div>
-          <div></div>
-          <div></div>
+          <div
+            v-for="(item,key) in linkList"
+            :key="key"
+            :style="{backgroundImage:item.URL}"
+            @click="toWhere(item.LINK)"
+          ></div>
         </div>
       </div>
     </div>
@@ -135,22 +144,22 @@ export default {
       isSummitHome: true,   //控制首页切换到回顾页的开关
       speechList: [],
       designList: [],
-      designTimeList: [],
-      designVideoList: [],
-      trackList: []
+      trackList: [],
+      linkList: []
     }
   },
   mounted () {
     this.speechList = this.i18n.interaction.SUMMIT.SPEECHLIST;
     this.designList = this.i18n.interaction.SUMMIT.DESIGNLIST;
     this.trackList = this.i18n.interaction.SUMMIT.TRACKLIST;
+    this.linkList = this.i18n.interaction.SUMMIT.OTHERLINK;
   },
   methods: {
     toReviewList () {
       //点击往期回顾跳转到列表页无法返回
       this.isSummitHome = false;
     },
-    toVideo (link) {
+    toWhere (link) {
       window.open(link, '_blank');
     }
   }
@@ -158,7 +167,7 @@ export default {
 
 </script>
 
-<style lang='less'>
+<style lang='less' scoped>
 @mr-left: left;
 @mr-right: right;
 @mr-bottom: bottom;
@@ -226,7 +235,7 @@ export default {
       .mr(top,262px);
       @media (max-width: 1000px) {
         .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,47,167,1),26px);
-        .mr-All(20px 0 0 103px);
+        .mr-All(20px 0 0 85px);
       }
     }
     .review-list {
@@ -240,7 +249,7 @@ export default {
     }
     .list-time {
       @media (max-width: 1000px) {
-        .mr-All(10px 0 0 68px);
+        .mr-All(10px 0 0 45px);
         .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,1),26px);
       }
     }
@@ -304,6 +313,7 @@ export default {
               .icon-time {
                 background-image: url("/img/summit/white-clock.svg");
               }
+              
             }
             .teacher-name {
               .icon-player {
@@ -326,9 +336,14 @@ export default {
           .list-time {
             font-size: 20px;
             line-height: 20px;
+            position: relative;
             .icon-time {
               .icon-css(21px,21px,"/img/summit/gray-clock.svg",contain);
-              .mr(right,13px);
+              position: absolute;
+            }
+            span{
+                display: inline-block;
+                .mr(left,33px);
             }
           }
           .teacher-name {
@@ -336,7 +351,12 @@ export default {
             right: 38px;
             .icon-player {
               .icon-css(28px,28px,"/img/summit/blue-player.svg",contain);
-              .mr-All(0 0 0 42px);
+              position: absolute;
+              right:0;
+            }
+            span{
+                display: inline-block;
+                .mr(right,60px);
             }
           }
           .list-title {
@@ -510,6 +530,7 @@ export default {
       .wid-and-hei(248px, 156px);
       .back-shadow-radius(rgba(255,255,255,1),0px 6px 20px 0px rgba(0,0,0,0.1),8px);
       position: relative;
+
       .video-download {
         display: none;
         position: absolute;
@@ -533,7 +554,11 @@ export default {
       }
       p {
         .word-common-css(18px, FZLTHJW--GB1-0,FZLTHJW--GB1, normal, rgba(0,0,0,0.85), 18px);
-
+        &:first-of-type{
+            max-width: 174px;
+            max-height: 48px;
+            line-height: 22px;
+        }
         &:nth-of-type(2) {
           font-size: 16px;
           font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
@@ -596,10 +621,10 @@ export default {
           .mr(left,33px);
         }
         &:nth-of-type(2) {
-          .mr(left,64px);
+          .mr(left,50px);
         }
         &:last-of-type {
-          .mr(left,71px);
+          .mr(left,63px);
         }
       }
     }
@@ -689,15 +714,8 @@ export default {
     div {
       cursor: pointer;
       .wid-and-hei(100px, 100px);
-      &:first-of-type {
-        background-image: url("/img/summit/kunpeng.svg");
-      }
-      &:nth-of-type(2) {
-        background-image: url("/img/summit/mulan.svg");
-      }
       &:last-of-type {
-        background-image: url("/img/summit/pengcheng.png");
-        .background-size(contain);
+        background-size: cover;
       }
     }
   }
