@@ -39,7 +39,7 @@ function readFileByPath(dirPath, index, esType, model, version) {
             };
             let index = {
                 'index': {
-                    '_id': i,
+                    '_id': model + version + i,
                     '_type': '_doc'
                 }
             };
@@ -68,9 +68,8 @@ function insertES(index, esType, dirPath, model, version) {
     };
     let token = new Buffer.from(ES.ES_USER_PASS).toString('base64');
     let now = logUtil.getTime();
-    console.log(ES.ES_URL + index + '/_delete_by_query');
-    HTTP.postES(ES.ES_URL + index + '/_delete_by_query', token, json).then(data => {
-        let meta = '[' + now + '] delete elasticsearch index.';
+    HTTP.postES(ES.ES_URL + index + '/_doc/_delete_by_query', token, json).then(data => {
+        let meta = '[' + now + ']' + index + ' ' + model + ' delete elasticsearch index.';
         console.log(meta + os.EOL + JSON.stringify(data) + os.EOL);
         jsonList = '';
         readFileByPath(dirPath, index, esType, model, version);
