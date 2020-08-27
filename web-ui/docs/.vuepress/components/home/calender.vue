@@ -808,6 +808,13 @@
     }
 </script>
 <style scoped>
+    h1,
+    p,
+    span,
+    li,
+    a {
+        font-family: FZLTHJW;
+    }
     div::after{
         content: '';
         display: block;
@@ -887,6 +894,7 @@
         text-align: center;
         display:  block;
         float: left;
+        font-family: FZLTCHJW;
     }
     .calenderMain{
         position: relative;
@@ -911,9 +919,9 @@
         height: 56px;
         line-height: 56px;
         display: block;
-        font-size: 16px;
+        font-size: 14px;
         text-align: center;
-
+        font-family: FZLTHJW;
     }
     .calenderLeftTime span.active{
         color: blue;

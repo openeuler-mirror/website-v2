@@ -70,7 +70,8 @@ module.exports = {
             },
             MAIL_ERROR: "邮件列表发生错误",
             SUBSCRIBE_ERROR: "邮件订阅发生错误",
-            SUBSCRIBE_SUCCESS: "您已订阅成功"
+            SUBSCRIBE_SUCCESS: "您已订阅成功",
+            MAIL_ERROR: "邮箱填写错误"
         },
         CONTRIBUTION_H5: {
             TITLE: "贡献攻略",
@@ -169,7 +170,8 @@ module.exports = {
             },
             MAIL_ERROR: "邮件列表发生错误",
             SUBSCRIBE_ERROR: "邮件订阅发生错误",
-            SUBSCRIBE_SUCCESS: "您已订阅成功"
+            SUBSCRIBE_SUCCESS: "您已订阅成功",
+            MAIL_ERROR: "邮箱填写错误"
         },
         CONTRIBUTION_H5: {
             TITLE: "贡献攻略",
