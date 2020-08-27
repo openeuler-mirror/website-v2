@@ -1,189 +1,36 @@
 <template>
-    <div class="sig-list-content">
+    <div class="sig-list-content" v-loading.fullscreen="loading">
         <common-banner 
         :pc-src="'/img/sig/sig-banner.png'"
         :mobile-src="'/img/sig/sig-banner.png'"
         :inside-name="'SIG'"
         :outside-name="'SIG'"
         ></common-banner>
-        <ul class="sig-list" v-fade>
-            <li class="sig-item fade-in">
-                <h2>A-Tune</h2>
+        <ul class="sig-list">
+            <li class="sig-item" v-for="(item ,index) in list">
+                <h2>{{item.group_name}}</h2>
                 <ul class="info-list">
                     <li class="mibile-hidden">
                         <img src="/img/download/help.svg" alt="">
-                        <span><a href="#">前往首页</a></span>
+                        <span><a target="_blank" :href="item.home_page">{{i18n.sig.SIG_LIST.HOME_PAGE}}</a></span>
                     </li>
                     <li>
                         <img src="/img/download/help.svg" alt="">
-                        <span>邮件：<a href="#">a-tune@openeuler.org</a></span>
+                        <span>{{i18n.sig.SIG_LIST.MAIL}}：<a :href="'mailto:'+item.maillist">{{item.maillist}}</a></span>
                     </li>
                     <li>
                         <img src="/img/download/help.svg" alt="">
-                        <span>IRC频道：#openeuler-dev</span>
+                        <span>{{i18n.sig.SIG_LIST.IRC}}：{{item.irc}}</span>
                     </li>
                     <li>
                         <img src="/img/download/help.svg" alt="">
-                        <span>管理员：</span>
+                        <span>{{i18n.sig.SIG_LIST.MANAGER}}</span>
                     </li>
                 </ul>
                 <ul class="administrators">
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">ddqw</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dsasd</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dsadv</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dref</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dsadregfref</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dsadregfref</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dsadregf</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dsadf</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dsadf</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dsadf</span>
-                    </li>
-                </ul>
-            </li>
-            <li class="sig-item fade-in">
-                <h2>A-Tune</h2>
-                <ul class="info-list">
-                    <li class="mibile-hidden">
-                        <img src="/img/download/help.svg" alt="">
-                        <span><a href="#">前往首页</a></span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="">
-                        <span>邮件：<a href="#">a-tune@openeuler.org</a></span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="">
-                        <span>IRC频道：#openeuler-dev</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="">
-                        <span>管理员：</span>
-                    </li>
-                </ul>
-                <ul class="administrators">
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dqwqwdqw</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dsasd</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dsadasdasv</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dsadfref</span>
-                    </li>
-                </ul>
-            </li>
-            <li class="sig-item fade-in">
-                <h2>A-Tune</h2>
-                <ul class="info-list">
-                    <li class="mibile-hidden">
-                        <img src="/img/download/help.svg" alt="">
-                        <span><a href="#">前往首页</a></span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="">
-                        <span>邮件：<a href="#">a-tune@openeuler.org</a></span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="">
-                        <span>IRC频道：#openeuler-dev</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="">
-                        <span>管理员：</span>
-                    </li>
-                </ul>
-                <ul class="administrators">
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dqwqwdqw</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dsaasd</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dsadaasv</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dsadgfref</span>
-                    </li>
-                </ul>
-            </li>
-            <li class="sig-item fade-in">
-                <h2>A-Tune</h2>
-                <ul class="info-list">
-                    <li class="mibile-hidden">
-                        <img src="/img/download/help.svg" alt="">
-                        <span><a href="#">前往首页</a></span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="">
-                        <span>邮件：<a href="#">a-tune@openeuler.org</a></span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="">
-                        <span>IRC频道：#openeuler-dev</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="">
-                        <span>管理员：</span>
-                    </li>
-                </ul>
-                <ul class="administrators">
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dqwqwdqw</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dsaddasd</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dsaddasv</span>
-                    </li>
-                    <li>
-                        <img src="/img/download/help.svg" alt="" class="avatar">
-                        <span class="name">dsaref</span>
+                    <li v-for="(avatarItem, avatarIndex) in item.groupuser_set">
+                        <img :src="avatarItem.avatar" class="avatar">
+                        <span class="name">{{avatarItem.gitee_name}}</span>
                     </li>
                 </ul>
             </li>
@@ -192,11 +39,33 @@
 </template>
 
 <script>
+import { sigList } from "../../api/sig";
 import commonBanner from './../common/banner.vue';
+let that = null;
+let remoteMethods = {
+    getSigList() {
+        that.loading = true;
+        sigList()
+        .then(data => {
+            that.list = data;
+            that.loading = false;
+        })
+        .catch(data => {
+            that.$message.error(data);
+            that.loading = false;
+        });
+    }
+}
 export default {
     data() {
+        that = this;
         return {
+            list: [],
+            loading: false
         };
+    },
+    created() {
+        remoteMethods.getSigList();
     },
     methods: {
     },
@@ -252,6 +121,9 @@ export default {
             padding: 0 15px;
         }
         .sig-item {
+            > h2 {
+                cursor: pointer;
+            }
             width: 530px;
             box-shadow: 0 6px 30px 0 rgba(0, 0, 0, .1);
             border-radius: 8px;
@@ -314,6 +186,7 @@ export default {
                         height: 70px;
                         display: block;
                         margin: 0 auto;
+                        border-radius: 50%;
                         @media (max-width: 1000px) {
                             width: 36px;
                             height: 36px;
