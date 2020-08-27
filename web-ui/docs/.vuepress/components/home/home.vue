@@ -1,27 +1,28 @@
 <template>
     <div class="home">
         <div class="home-carousel">
-            <el-carousel class="home-banner" trigger="click">
+            <el-carousel class="home-banner" trigger="click" :interval="5000">
                 <el-carousel-item>
                     <div class="carousel-video">
                         <img src="/img/home/BannerVideo.png" alt="">
                     </div>
                 </el-carousel-item>
-                <el-carousel-item class="carousel-item"
-                                  :style="{ backgroundImage:'url(' + banner1 + ')', 'background-size': '100%', 'background-repeat': 'no-repeat'}">
+                <el-carousel-item class="carousel-item">
+<!--                                  :style="{ backgroundImage:'url(' + banner1 + ')', 'background-size': '100%', 'background-repeat': 'no-repeat'}"-->
                     <div class="card-summer">
                         <img src="/img/home/BannerSummer.png" alt="">
                         <span>{{ i18n.home.HOME_CAROUSEL_DATA[0].DES }}</span>
+                        <video src="/img/home-video/bannerS.mp4" type="video/mp4" autoplay loop muted height="380px"></video>
                     </div>
                 </el-carousel-item>
                 <el-carousel-item
                         class="carousel-item"
                         v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
-                        :key="index"
-                        :style="{ backgroundImage:'url(' + item.IMG + ')', 'background-size': '100%', 'background-repeat': 'no-repeat'}">
-
+                        :key="index">
+<!--                        :style="{ backgroundImage:'url(' + item.IMG + ')', 'background-size': '100%', 'background-repeat': 'no-repeat'}"-->
                     <h3>{{ item.TITLE }}</h3>
                     <span>{{ item.DES }}</span>
+                    <video :src="'/img/home-video/banner' + index + '.mp4'" type="video/mp4" autoplay loop muted height="380px"></video>
                 </el-carousel-item>
             </el-carousel>
         </div>
@@ -317,7 +318,7 @@
                 roomName: [],
                 rooms1: true,
                 rooms2: false,
-                rooms3: false
+                rooms3: false,
             }
         },
         mounted() {
@@ -443,7 +444,7 @@
     }
 
     .room-card .el-carousel__container {
-        height: 480px;
+        height: 260px;
     }
 
     @media screen and (max-width: 1000px) {
@@ -493,21 +494,21 @@
         text-align: left;
         line-height: 48px;
         font-family: FZLTCHJW;
-        margin-top: 30px;
+        margin-top: 5%;
     }
     .home-carousel .el-carousel__item span {
         display: inline-block;
         width: 620px;
-        font-size: 1.5vw;
+        font-size: 1vw;
         line-height: 40px;
-        margin-top: 60px;
+        margin-top: 30px;
     }
     .carousel-item {
         width: 100%;
         height: 100%;
         background-size: contain;
         background-repeat: no-repeat;
-        padding-left: 300px;
+        padding-left: 15%;
     }
     .carousel-item .card-summer {
         width: 620px;
@@ -520,6 +521,11 @@
     }
     .carousel-item img {
         z-index: -1;
+        margin-top: 5%;
+    }
+    .carousel-item video {
+        position: absolute;
+        top: 0;
     }
     .carousel-img {
         width: 1080px;
@@ -819,10 +825,11 @@
     }
     .flex-room {
         width: 555px;
-        height: 368px;
+        height: 280px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding-right: 40px;
     }
     .room-contain span {
         font-size: 12px;
@@ -832,14 +839,14 @@
     .room-contain p {
         font-size: 16px;
         line-height: 22px;
-        margin: 20px 0 30px;
+        margin: 20px 0 25px;
         text-align: left;
         color: rgba(0, 0, 0, .85);
         overflow: hidden;
         display: -webkit-box;
         word-wrap: break-word;
         word-break: normal;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
     }
