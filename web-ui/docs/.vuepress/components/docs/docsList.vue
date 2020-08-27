@@ -108,7 +108,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .docs-content {
   width: 1120px;
   margin: 0 auto;
