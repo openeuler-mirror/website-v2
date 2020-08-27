@@ -1,6 +1,6 @@
 <!-- 直播 -->
 <template>
-  <div class="moblie-content">
+  <div class="liveList">
     <common-banner
       :pc-src="'/img/live/live-banner.png'"
       :mobile-src="'/img/live/live-banner.png'"
@@ -11,7 +11,12 @@
       <div class="now-start">
         <div class="now-start-title">{{i18n.interaction.LIVE.WILLPLAYER}}</div>
         <div class="now-start-content">
-          <div class="content-box" v-for="(item,key) in nowArr" :key="key">
+          <div
+            class="content-box"
+            v-for="(item,key) in nowShowArr"
+            :key="key"
+            @click="toBLink(item.NOWLINK)"
+          >
             <div class="left-content">
               <p class="live-title">{{item.LIVETITLE}}</p>
               <p class="live-teacher">{{item.LIVETEACHER}}</p>
@@ -22,11 +27,25 @@
             </div>
           </div>
         </div>
+        <div class="paginationClass">
+          <el-pagination
+            @current-change="handleCurrentChange1"
+            :current-page="currentPage"
+            :page-size="6"
+            layout="total, prev, jumper, next"
+            :total="nowTotalSize"
+          ></el-pagination>
+        </div>
       </div>
       <div class="replayer">
         <div class="replayer-tile">{{i18n.interaction.LIVE.REPLAYER}}</div>
-        <div class="replayer-content">
-          <div class="content-box" v-for="(item,key) in formerlyArr" :key="key">
+        <div class="replayer-content" ref="replayerScroll">
+          <div
+            class="content-box"
+            v-for="(item,key) in formerlyShowArr"
+            :key="key"
+            @click="toBLink(item.FORMERLYLINK)"
+          >
             <div class="left-content">
               <p class="live-title">{{item.LIVETITLE}}</p>
               <p class="live-teacher">{{item.LIVETEACHER}}</p>
@@ -36,6 +55,15 @@
               <img :src="item.PHOTOPATH" alt />
             </div>
           </div>
+        </div>
+        <div class="paginationClass">
+          <el-pagination
+            @current-change="handleCurrentChange2"
+            :current-page="currentPage"
+            :page-size="6"
+            layout="total, prev, jumper, next"
+            :total="formerlyTotalSize"
+          ></el-pagination>
         </div>
       </div>
       <!-- 此div用于增加高度来到达背景图能够完全显示的效果 -->
@@ -50,12 +78,40 @@ export default {
   data () {
     return {
       nowArr: [],
-      formerlyArr: []
+      formerlyArr: [],
+      nowTotalSize: 0,
+      formerlyTotalSize: 0,
+      currentPage: 1,
+      nowShowArr: [],
+      formerlyShowArr: [],
+      scrollY: 0
     }
   },
   mounted () {
     this.nowArr = this.i18n.interaction.LIVE.LIVENOW;
     this.formerlyArr = this.i18n.interaction.LIVE.LIVEFORMERLY;
+    this.nowShowArr = this.nowArr.slice(0, 6);
+    this.nowTotalSize = this.i18n.interaction.LIVE.LIVENOW.length;
+    this.formerlyTotalSize = this.i18n.interaction.LIVE.LIVEFORMERLY.length;
+    this.formerlyShowArr = this.formerlyArr.slice(0, 6);
+  },
+  methods: {
+    toBLink (link) {
+      if (link == '') {
+        alert('视频未上传，敬请期待');
+      } else {
+        // window.location.href = link;
+        window.open(link, '_blank');
+      }
+
+    },
+    handleCurrentChange1 (val) {
+      this.nowShowArr = this.nowArr.slice(6 * (val - 1), 6 * val);
+      scrollTo(0, 300);
+    },
+    handleCurrentChange2 (val) {
+      this.formerlyShowArr = this.formerlyArr.slice(6 * (val - 1), 6 * val);
+    }
   },
   components: {
     commonBanner
@@ -146,7 +202,6 @@ export default {
 .right-content-css {
   float: left;
   .wid-and-hei(145px,200px);
-  .background-css("@{urlhead}Fill.svg",no-repeat,0 0,contain);
   img {
     .wid-and-hei(109px,109px);
     .mr-All(62px 12px 29px 24px);
@@ -154,7 +209,6 @@ export default {
   @media (max-width: 1000px) {
     float: left;
     .wid-and-hei(130px,166px);
-    .background-css("@{urlhead}Fill.svg",no-repeat,3px -8px,contain);
     img {
       .wid-and-hei(90px,90px);
       .mr-All(50px 18px 39px 22px);
@@ -182,7 +236,7 @@ export default {
 }
 // 具体样式从这里开始
 .live-ist {
-  .background-css("@{urlhead}ball-background.png",no-repeat,center center,contain);
+  .background-css("@{urlhead}ball-background.png",repeat,center center,contain);
   margin-top: 68px;
   @media (max-width: 1000px) {
     background: none;
@@ -196,7 +250,9 @@ export default {
   }
 }
 .live-ist .now-start {
-  .mr(left,200px);
+  //   .mr(left,200px);
+  width: 1120px;
+  .mr-All(0 auto);
   @media (max-width: 1000px) {
     .mr(left,30px);
   }
@@ -206,6 +262,7 @@ export default {
   .now-start-content {
     .the-content-css;
     flex-direction: row;
+    flex-wrap: wrap;
     @media (max-width: 1000px) {
       flex-direction: column;
     }
@@ -222,7 +279,13 @@ export default {
         .live-title {
           max-width: 180px;
           max-height: 60px;
-          .word-common-css(20px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0, 0, 0, 1),30px);
+          //显示两行文字多余的用省略号代替但IE和火狐不支持
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          .word-common-css(18px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0, 0, 0, 1),30px);
           @media (max-width: 1000px) {
             .word-common-css(14px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,1),26px);
             max-width: 129px;
@@ -236,6 +299,7 @@ export default {
           }
         }
         .live-time {
+          white-space: nowrap;
           .word-common-css(14px,PingFangSC-Regular,PingFang SC,400,rgba(0, 0, 0, 1),14px);
           @media (max-width: 1000px) {
             .word-common-css(14px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,0.5),24px);
@@ -244,8 +308,15 @@ export default {
       }
       .right-content {
         .right-content-css;
+        .background-css("@{urlhead}Fill2.svg",no-repeat,0 0,contain);
+        @media (max-width: 1000px) {
+          .background-css("@{urlhead}Fill2.svg",no-repeat,3px -8px,contain);
+        }
       }
     }
+  }
+  .paginationClass {
+    .mr(top,30px);
   }
 }
 
@@ -273,7 +344,12 @@ export default {
         .live-title {
           max-width: 180px;
           max-height: 60px;
-          .word-common-css(20px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0, 0, 0, 1),30px);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          .word-common-css(18px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0, 0, 0, 1),30px);
           @media (max-width: 1000px) {
             .word-common-css(14px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,1),26px);
             max-width: 129px;
@@ -295,8 +371,15 @@ export default {
       }
       .right-content {
         .right-content-css;
+        .background-css("@{urlhead}Fill.svg",no-repeat,0 0,contain);
+        @media (max-width: 1000px) {
+          .background-css("@{urlhead}Fill.svg",no-repeat,3px -8px,contain);
+        }
       }
     }
+  }
+  .paginationClass {
+    .mr(top,30px);
   }
 }
 </style>

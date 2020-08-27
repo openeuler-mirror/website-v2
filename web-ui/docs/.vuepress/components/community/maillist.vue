@@ -1,5 +1,5 @@
 <template>
-    <div class="mail-list">
+    <div class="mail-list" v-loading.fullscreen="tableLoading">
         <common-banner
                 :pc-src="'/img/community/maillist/mail-banner.png'"
                 :mobile-src="'/img/community/maillist/mail-banner.png'"
@@ -154,16 +154,16 @@
                     <el-form-item :label-width="formLabelWidth">
                         <img class="user-icon" src="/img/home/userName.svg" alt="">
                         <el-input
-                                v-model="form.name"
+                                v-model="form.display_name"
                                 autocomplete="off"
-                                :placeholder="i18n.community.MAILING_LIST.SUBSCRIBE.INPUT_ADD"></el-input>
+                                :placeholder="i18n.community.MAILING_LIST.SUBSCRIBE.INPUT_NAME"></el-input>
                     </el-form-item>
                     <el-form-item :label-width="formLabelWidth">
                         <img class="user-icon" src="/img/home/userEmail.svg" alt="">
                         <el-input
-                                v-model="form.email"
+                                v-model="form.subscriber"
                                 autocomplete="off"
-                                :placeholder="i18n.community.MAILING_LIST.SUBSCRIBE.INPUT_NAME"></el-input>
+                                :placeholder="i18n.community.MAILING_LIST.SUBSCRIBE.INPUT_ADD"></el-input>
                     </el-form-item>
                 </el-form>
                 <div slot="footer" class="dialog-footer">
@@ -189,14 +189,14 @@
                 inEn: true,
                 list: null,
                 subscribe: null,
-                listId: "test.openeuler.org",
                 dialogFormVisible: false,
                 form: {
-                    listId: '',
+                    list_id: '',
                     subscriber: '',
-                    displayName: ''
+                    display_name: ''
                 },
                 formLabelWidth: '0',
+                tableLoading: false
             }
         },
         mounted() {
@@ -212,20 +212,32 @@
         methods: {
             userSubscribe(userID) {
                 this.dialogFormVisible = true;
-                this.subscribe = userID;
+                this.form.list_id = userID;
             },
             getUserInfo() {
                 this.dialogFormVisible = false;
+                this.tableLoading = true;
+
                 subscribe(this.form)
                     .then(response => {
-                        this.$message(this.i18n.community.MAILING_LIST.SUBSCRIBE_SUCCESS)
+                        let re = /^\w+@[a-z0-9]+\.[a-z]{2,4}$/;
+                        if(re.test(this.form.subscriber)) {
+                            if (response.token) {
+                                this.tableLoading = false;
+                                this.$message(this.i18n.community.MAILING_LIST.SUBSCRIBE_SUCCESS);
+                            }
+                        } else {
+                            this.tableLoading = false;
+                            this.$message.error(this.i18n.community.MAILING_LIST.MAIL_ERROR);
+                        }
+
                     })
                     .catch(response => {
+                        this.tableLoading = false;
                         this.$message.error(this.i18n.community.MAILING_LIST.SUBSCRIBE_ERROR);
                     });
-            }
+            },
         }
-
     }
 </script>
 
@@ -406,6 +418,7 @@
     .step-right-num span {
         color: #fff;
         font-size: 20px;
+        font-family: FZLTCHJW;
     }
     .step-line {
         width: 107px;
@@ -496,9 +509,10 @@
             width: 48px;
             height: 48px;
             line-height: 48px;
+            margin-bottom: 20px;
         }
-        .step-num span {
-            color: #fff;
+        .step-left-num span,
+        .step-right-num span {
             font-size: 18px;
         }
         .step-right-box,
