@@ -54,6 +54,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 let filter = (req, res, next) => {
+    if (req.url.indexOf('/createMenu') > -1) {
+        next();
+        return;
+    }
     if (req.headers.authorization !== CONF.API_AUTH) {
         res.send(HTTP.authError);
         return;
