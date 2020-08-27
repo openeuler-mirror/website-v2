@@ -562,11 +562,11 @@
         font-size: 40px;
         color: #002fa7;
         margin-bottom: 40px;
-        font-family:Roboto-BoldCondensed,Roboto;
+        font-family: Roboto-BoldCondensed;
     }
     .home-introduce p {
         max-width: 576px;
-        font-family:FZLTXIHJW, FZLTXIHJW;
+        font-family: FZLTXIHJW;
     }
     .home-introduce .mapArea {
         display: inline-block;
@@ -671,7 +671,7 @@
     .guide-way {
         margin-right: 20px;
         text-align: center;
-        font-family: FZLTXIHJW,FZLTXIHJW;
+        font-family: FZLTXIHJW;
     }
     .guide-way:last-child {
         margin: 0;
@@ -848,7 +848,7 @@
         line-height: 16px;
         color: #002fa7;
         text-decoration: none;
-        font-family: PingFangSC-Regular,PingFang SC;
+        font-family: PingFangSC-Regular;
     }
     .room-title {
         margin-bottom: 40px;
