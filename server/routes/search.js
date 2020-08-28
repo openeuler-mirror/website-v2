@@ -135,7 +135,7 @@ function getSearchResJson(data, keyword, page) {
         element._source.title = title;
         arr.push(element._source);
     });
-    data.aggregations.data.buckets.push({
+    data.aggregations.data.buckets.unshift({
         key: 'all',
         doc_count: num
     });
