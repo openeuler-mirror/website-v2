@@ -121,7 +121,7 @@
                             <span>{{ item.frontmatter.author }}</span>
                             <p><a :href="item.path">{{ item.frontmatter.summary }}</a></p>
                         </div>
-                        <span><a href="">{{ i18n.home.MORE }}</a></span>
+                        <span><a :href="'/interaction/blog-list/'">{{ i18n.home.MORE }}</a></span>
                     </div>
                 </div>
                 <div class="room-contain" :class="{'active':currentRoom === 2}">
@@ -134,7 +134,7 @@
                             <span>{{ item.frontmatter.author }}</span>
                             <p><a :href="item.path">{{ item.frontmatter.title }}</a></p>
                         </div>
-                        <span><a href="">{{ i18n.home.MORE }}</a></span>
+                        <span><a href="/interaction/news-list/">{{ i18n.home.MORE }}</a></span>
                     </div>
                 </div>
             </div>
@@ -444,7 +444,7 @@
     }
 
     .room-card .el-carousel__container {
-        height: 260px;
+        height: 360px;
     }
 
     @media screen and (max-width: 1000px) {
@@ -513,6 +513,9 @@
     .carousel-item .card-summer {
         width: 620px;
         text-align: center;
+    }
+    .card-summer img {
+        width: 256px;
     }
     .carousel-item .card-summer span {
         margin-left: 0;
@@ -653,10 +656,11 @@
         box-shadow: 0 6px 20px 0 rgba(0, 0, 0, .1);
         text-align: left;
         margin-top: 15px;
-        margin-left: 60px;
+        margin-left: 25px;
     }
     .snd-guidance.is-show {
         display: block;
+        width: 280px;
     }
     .d3-guide {
         display: flex;
@@ -876,11 +880,14 @@
         border-radius: 2px;
     }
     .room-img {
-        width: 520px;
-        margin: 70px auto 40px;
+        width: 420px;
+        margin: 13px auto 40px;
         box-shadow: 0 6px 30px 0px rgba(0, 0, 0, .1);
         position: relative;
         z-index: -1;
+    }
+    .room-img img {
+        width: 420px;
     }
     .room-box a {
         color: #000;
@@ -1109,7 +1116,7 @@
         }
         .el-carousel__container {
             width: 100%;
-            height: 300px;
+            height: 380px;
             font-size: 1vw;
         }
         .home-introduce {
@@ -1137,9 +1144,8 @@
             margin-left: 16px;
         }
         .area-box img {
-            display: inline-block;
-            margin-top: 10px;
-            margin-bottom: 26px;
+            display: block;
+            margin: 10px auto 26px;
         }
         .home-calendar {
             width: 100%;
@@ -1154,6 +1160,11 @@
         }
         .home-active p {
             margin-bottom:  45px;
+        }
+        .area-box {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
         }
         .calendar-time p {
             font-size: 14px;
