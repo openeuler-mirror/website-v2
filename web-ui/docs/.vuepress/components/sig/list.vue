@@ -6,8 +6,8 @@
         :inside-name="'SIG'"
         :outside-name="'SIG'"
         ></common-banner>
-        <ul class="sig-list">
-            <li class="sig-item" v-for="(item ,index) in list">
+        <ul class="sig-list" v-fade v-if="list.length">
+            <li class="sig-item fade-in" v-for="(item ,index) in list">
                 <h2>{{item.group_name}}</h2>
                 <ul class="info-list">
                     <li class="mibile-hidden">
