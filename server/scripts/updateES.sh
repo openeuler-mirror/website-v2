@@ -23,5 +23,5 @@ curl -k -u ${username}:${password} ${WEB_DOMAIN_URL}/search/insert?version=${VER
 curl -k -u ${username}:${password} ${WEB_DOMAIN_URL}/search/insert?version=${VERSION}\&lang=zh\&model=blog
 curl -k -u ${username}:${password} ${WEB_DOMAIN_URL}/search/insert?version=${VERSION}\&lang=en\&model=blog
 
-curl -k -u ${username}:${password} ${WEB_DOMAIN_URL}/search/insert?version=${VERSION}\&lang=zh\&model=live
-curl -k -u ${username}:${password} ${WEB_DOMAIN_URL}/search/insert?version=${VERSION}\&lang=en\&model=live
+# curl -k -u ${username}:${password} ${WEB_DOMAIN_URL}/search/insert?version=${VERSION}\&lang=zh\&model=live
+# curl -k -u ${username}:${password} ${WEB_DOMAIN_URL}/search/insert?version=${VERSION}\&lang=en\&model=live
