@@ -15,7 +15,7 @@
                 <div v-if="status">
                     <el-tabs v-model="activeName">
                         <template class="tag-title">
-                            <el-tab-pane :label="'全部 ( ' + getCount('all') + ' )'" name="first">
+                            <el-tab-pane :label="i18n.search.TAG_NAME.ALL + ' ( ' + getCount('all') + ' )'" name="first">
                                 <div class="search-detail">
                                     <div class="tags-info" v-for="(item, index) in allDatas" :key="index">
                                         <h3 v-html="item.title"><a :href="item.path"></a></h3>
@@ -34,7 +34,7 @@
                                     </el-pagination>
                                 </template>
                             </el-tab-pane>
-                            <el-tab-pane :label="'文档 ( '+ getCount('docs') + ' )'" name="second">
+                            <el-tab-pane :label="i18n.search.TAG_NAME.DOCS + ' ( ' + getCount('docs') + ' )'" name="second">
                                 <div class="search-detail">
                                     <div class="tags-info" v-for="(item, index) in filterDatas('文档')" :key="index">
                                         <h3 v-html="item.title"><a :href="item.path"></a></h3>
@@ -53,7 +53,7 @@
                                     </el-pagination>
                                 </template>
                             </el-tab-pane>
-                            <el-tab-pane :label="'新闻 ( '+ getCount('news') + ' )'" name="third">
+                            <el-tab-pane :label="i18n.search.TAG_NAME.NEWS + ' ( ' + getCount('news') + ' )'" name="third">
                                 <div class="search-detail">
                                     <div class="tags-info" v-for="(item, index) in filterDatas('新闻')" :key="index">
                                         <h3 v-html="item.title"><a :href="item.path"></a></h3>
@@ -72,7 +72,7 @@
                                     </el-pagination>
                                 </template>
                             </el-tab-pane>
-                            <el-tab-pane :label="'博客 ( '+ getCount('blog') + ' )'" name="fourth">
+                            <el-tab-pane :label="i18n.search.TAG_NAME.BLOG + ' ( ' + getCount('blog') + ' )'" name="fourth">
                                 <div class="search-detail">
                                     <div class="tags-info" v-for="(item, index) in filterDatas('博客')" :key="index">
                                         <h3 v-html="item.title"><a :href="item.path"></a></h3>
@@ -93,6 +93,7 @@
                             </el-tab-pane>
                         </template>
                         <template>
+                        <!--    todo : 暂时写死数据-->
                             <div class="tag-left">
                                 <h4>相关软件包</h4>
                                 <el-scrollbar>
@@ -192,33 +193,13 @@
 
 <script>
     import { search } from "../../api/search";
-    let that = null;
-    const locationMethods = {
-
-        getSearchPage (flag) {
-            that.formData.page = flag;
-            search(that.formData)
-                .then(response => {
-                    console.log('data', response)
-                    this.formData.indexEs = this.$lang
-                    this.tagTitle = response.data.total;
-                    console.log('this.tagTitle', this.tagTitle)
-                    this.total = response.data.totalNum;
-                    this.allDatas = response.data.records;
-                    this.status = true
-                })
-                .catch(response => {
-                    this.$message.error(response);
-                });
-        }
-    }
     export default {
         name: "search",
         data() {
-            that = this;
             return {
                 searchInput: "",
                 formData: {
+                    // todo: 传参暂时写死
                     keyword: "华为",
                     model: "",
                     indexEs: "",
@@ -238,27 +219,14 @@
             }
         },
         mounted() {
-            search(this.formData)
-                .then(response => {
-                    console.log('data', response)
-                    this.formData.indexEs = this.$lang
-                    this.tagTitle = response.data.total;
-                    this.total = response.data.totalNum;
-                    this.allDatas = response.data.records;
-                    this.status = true
-                })
-                .catch(response => {
-                    this.$message.error(response);
-                });
+            this.getSearchPage(1)
         },
         methods: {
             getCount(title) {
                 let tags = this.tagTitle
-                console.log('all tag', this.tagTitle)
                 let tag = []
                 let CURRENT = 0
                 tag = tags.filter(item => item.key === title)
-                console.log('tag', tag)
                 return  tag[CURRENT].doc_count
             },
             filterDatas(title) {
@@ -273,12 +241,25 @@
                 return data
             },
             initData(flag) {
-                locationMethods.getSearchPage(flag);
+                this.getSearchPage(flag)
             },
             handleCurrentChange(val) {
-                console.log('val', val)
                 this.currentPage=val
             },
+            getSearchPage (flag) {
+                this.formData.page = flag;
+                search(this.formData)
+                    .then(response => {
+                        this.formData.indexEs = this.$lang
+                        this.tagTitle = response.data.total;
+                        this.total = response.data.totalNum;
+                        this.allDatas = response.data.records;
+                        this.status = true
+                    })
+                    .catch(response => {
+                        this.$message.error(response);
+                    });
+            }
         }
     }
 </script>
@@ -296,10 +277,10 @@
     .search-input .el-input__inner:hover {
         border: 2px solid #002FA7;
     }
-    .el-scrollbar{
+    .tag-left .el-scrollbar {
         height: 1135px;
     }
-    .el-scrollbar__wrap {
+    .tag-left .el-scrollbar__wrap {
         width: calc(~"100% + 17px");
         height: calc(~"100% + 17px");
     }
