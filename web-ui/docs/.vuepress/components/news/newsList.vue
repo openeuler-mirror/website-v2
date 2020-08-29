@@ -28,7 +28,7 @@
                   <span class="news-date">
                     <span id="busuanzi_container_page_pv">
                       <span>{{i18n.community.BLOG.BROWSE}}</span>
-                      <span id="busuanzi_value_page_pv"></span>
+                     <span>{{item.count}}</span>
                       <span>{{i18n.community.BLOG.VIEWED}}</span>
                     </span>
                   </span>
@@ -45,7 +45,7 @@
                   <span class="news-date">
                     <span id="busuanzi_container_page_pv">
                       <span>{{i18n.community.BLOG.BROWSE}}</span>
-                      <span id="busuanzi_value_page_pv"></span>
+                    <span>{{item.count}}</span>
                       <span>{{i18n.community.BLOG.VIEWED}}</span>
                     </span>
                   </span>
@@ -72,6 +72,7 @@
 <script>
 import dayjs from "dayjs";
 import commonBanner from "./../common/banner.vue";
+import {newsVisitList,newsVisitDetail,addVisit} from "../../api/newsCount"
 export default {
   data() {
     return {
@@ -80,7 +81,12 @@ export default {
       PAGESIZE: 6,
       allNewsList: [],
       currentNewsList: [],
-      showNewsList: {}
+      showNewsList: {},
+      visitCount: {
+        newsTitle:'',
+        newsDate:'',
+        pageLang:''
+      },
     };
   },
   components: {
@@ -90,12 +96,26 @@ export default {
 
   created() {},
   mounted() {
-    this.allNewsList = this.newsList();
-    this.totalSize = this.allNewsList.length;
-    this.allNewsList = this.sortNewsList(this.allNewsList);
-    this.handleCurrentChange(1);
+     newsVisitList()
+      .then(response => {
+          this.countList=response.data;
+          this.allNewsList = this.newsList();
+          this.totalSize = this.allNewsList.length;
+          this.allNewsList = this.sortNewsList(this.allNewsList);
+          this.handleCurrentChange(1);
+        })
+    for(let i = 0;  i<this.allNewsList.length;i++){
+        this.visitCount.newsTitle=this.allNewsList[i].frontmatter.title;
+        this.visitCount.newsDate=this.allNewsList[i].frontmatter.date;
+    }
+    this.visitCount.pageLang=this.$lang;
   },
   methods: {
+    // 增加新闻访问量的方法
+      addNewsList(){
+           addVisit(this.visitCount)
+           .then(response => {})
+         },
     handleCurrentChange(val) {
       this.currentNewsList = this.allNewsList.slice(
         (val - 1) * this.PAGESIZE,
@@ -132,12 +152,21 @@ export default {
     },
     newsList() {
       return this.$sitePages.filter((item) => {
-        return item.path.indexOf("/" + this.$lang + "/news/") === 0;
+       if(item.path.indexOf("/" + this.$lang + "/news/") === 0){
+         item.count=0;
+         this.countList.forEach(itemCount=>{
+           if(itemCount.title==item.title){
+             item.count=itemCount.count;
+           }
+         })
+         return true;
+       }
       });
     },
     go(path) {
       if (path) {
         this.$router.push(path);
+        this.addNewsList();
       }
     },
 
