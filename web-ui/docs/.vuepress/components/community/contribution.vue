@@ -14,6 +14,7 @@
                         <span>{{ item.BUTTON }}</span>
                     </div>
                     <img :src="item.IMG" alt="">
+                    <img :src="item.VIDEO" class="is-hidden">
                 </div>
             </div>
         </div>
@@ -35,7 +36,39 @@
 
 <script>
     export default {
-        name: "contribution"
+        name: "contribution",
+        data () {
+            return {
+
+            }
+        },
+        mounted() {
+            this.toggleHover();
+        },
+        methods: {
+            es(selector) {
+                let es = document.querySelectorAll(selector)
+                if (es.length === 0) {
+                    return null;
+                } else {
+                    return es;
+                }
+            },
+            toggleHover() {
+                let hovers = this.es('.step');
+                for (let i = 0; i < hovers.length; i++) {
+                    let hover = hovers[i];
+                    hover.addEventListener('mouseenter', function () {
+                        let video = hover.querySelectorAll('img')[1];
+                        video.classList.add('is-hovered');
+                    })
+                    hover.addEventListener('mouseleave', function () {
+                        let video = hover.querySelectorAll('img')[1];
+                        video.classList.remove('is-hovered');
+                    })
+                }
+            },
+        }
     }
 </script>
 <style lang="less">
@@ -86,6 +119,14 @@
         border-radius: 4px;
         background-color: #002FA7;
         margin: 0 auto;
+    }
+    .step .is-hidden {
+        display: none;
+    }
+    .step .is-hovered {
+        display: block;
+        position: absolute;
+        top: 60px;
     }
     .step-num span {
         color: #fff;

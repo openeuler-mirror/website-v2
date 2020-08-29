@@ -30,26 +30,29 @@ module.exports = {
                     NAME: "下载",
                     TITLE: "openEuler ISO",
                     IMG: "/img/home/step1.png",
-                    LINK: "javascript:;"
+                    LINK: "javascript:;",
+                    GIF: "/img/home/step-move-1.gif"
                 },
                 {
                     NAME: "体验",
                     TITLE: "openEuler系统",
                     IMG: "/img/home/step2.png",
                     LINK: "javascript:;",
-                    GIF: ""
+                    GIF: "/img/home/step-move-2.gif"
                 },
                 {
                     NAME: "查阅",
                     TITLE: "openEuler文档",
                     IMG: "/img/home/step3.png",
-                    LINK: "javascript:;"
+                    LINK: "javascript:;",
+                    GIF: "/img/home/step-move-3.gif"
                 },
                 {
                     NAME: "贡献",
                     TITLE: "openEuler社区",
                     IMG: "/img/home/step4.png",
-                    LINK: "javascript:;"
+                    LINK: "javascript:;",
+                    GIF: "/img/home/step-move-4.gif"
                 },
 
             ],
@@ -324,26 +327,29 @@ module.exports = {
                     NAME: "下载",
                     TITLE: "openEuler ISO",
                     IMG: "/img/home/step1.png",
-                    LINK: "javascript:;"
+                    LINK: "javascript:;",
+                    GIF: "/img/home/step-move-1.gif"
                 },
                 {
                     NAME: "体验",
                     TITLE: "openEuler系统",
                     IMG: "/img/home/step2.png",
                     LINK: "javascript:;",
-                    GIF: ""
+                    GIF: "/img/home/step-move-2.gif"
                 },
                 {
                     NAME: "查阅",
                     TITLE: "openEuler文档",
                     IMG: "/img/home/step3.png",
-                    LINK: "javascript:;"
+                    LINK: "javascript:;",
+                    GIF: "/img/home/step-move-3.gif"
                 },
                 {
                     NAME: "贡献",
                     TITLE: "openEuler社区",
                     IMG: "/img/home/step4.png",
-                    LINK: "javascript:;"
+                    LINK: "javascript:;",
+                    GIF: "/img/home/step-move-4.gif"
                 },
 
             ],

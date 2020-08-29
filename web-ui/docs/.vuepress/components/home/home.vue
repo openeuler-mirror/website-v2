@@ -37,11 +37,11 @@
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p>{{ item.TITLE }}</p>
                         <img :src="item.IMG" alt="">
-                        <img :src="item.IMG" alt="" class="is-hidden">
+                        <img :src="item.GIF" alt="" class="is-hidden">
                     </a>
                     <a class="down" v-if="(index === 3)" @click="go(item.LINK)">
                         <img :src="item.IMG" alt="">
-                        <img :src="item.IMG" alt="" class="is-hidden">
+                        <img :src="item.GIF" alt="" class="is-hidden">
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p>{{ item.TITLE }}</p>
                     </a>
@@ -49,7 +49,7 @@
                 <div class="area-box bottom in-pc" @click="clickDownload">
                     <a class="down">
                         <img src="/img/home/step2.png" alt="">
-                        <img src="/img/home/step2.png" alt="" class="is-hidden">
+                        <img src="/img/home/step-move-2.gif" alt="" class="is-hidden">
                         <div class="box-icon">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.NAME }}</div>
                         <p>{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.TITLE }}</p>
                     </a>
@@ -121,7 +121,7 @@
                             <span>{{ item.frontmatter.author }}</span>
                             <p><a :href="item.path">{{ item.frontmatter.summary }}</a></p>
                         </div>
-                        <span><a :href="'/interaction/blog-list/'">{{ i18n.home.MORE }}</a></span>
+                        <span><a @click="go('/interaction/blog-list/')">{{ i18n.home.MORE }}</a></span>
                     </div>
                 </div>
                 <div class="room-contain" :class="{'active':currentRoom === 2}">
@@ -134,7 +134,8 @@
                             <span>{{ item.frontmatter.author }}</span>
                             <p><a :href="item.path">{{ item.frontmatter.title }}</a></p>
                         </div>
-                        <span><a href="/interaction/news-list/">{{ i18n.home.MORE }}</a></span>
+<!--                        href="/interaction/news-list/"-->
+                        <span><a @click="go('/interaction/news-list/')">{{ i18n.home.MORE }}</a></span>
                     </div>
                 </div>
             </div>
@@ -632,11 +633,15 @@
         margin-left: 10px;
     }
     .area-box img {
+        width: 180px;
+        height: 130px;
         display: block;
         margin: 10px 0 26px 30px;
     }
     .area-box .is-hidden {
         display: none;
+        width: 180px;
+        height: 130px;
     }
     .area-box .is-hovered {
         display: block;
@@ -860,6 +865,7 @@
         color: #002fa7;
         text-decoration: none;
         font-family: PingFangSC-Regular;
+        cursor: pointer;
     }
     .room-title {
         margin-bottom: 40px;
