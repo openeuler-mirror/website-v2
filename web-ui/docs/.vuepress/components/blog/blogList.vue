@@ -49,8 +49,9 @@
             </p>
             <p>
               <img class="middle-img mobile-middle-img" src="/img/blog/visibility.svg" alt />
-              <!-- todo 通过接口获取浏览次数 -->
-              <span class="blog-date">浏览100次</span>
+              <span>{{i18n.community.BLOG.BROWSE}}</span>
+              <span>{{item.count}}</span>
+              <span>{{i18n.community.BLOG.VIEWED}}</span>
             </p>
           </div>
           <div class="blog-item-right">
@@ -84,6 +85,8 @@
 import Vue from "vue";
 import dayjs from "dayjs";
 import commonBanner from "./../common/banner.vue";
+import {blogVisitList,blogVisitDetail,addVisit} from "../../api/blogCount"
+
 export default {
   data() {
     return {
@@ -105,6 +108,11 @@ export default {
       PAGESIZE: 5,
       CELECT_LABEL: "",
       CELECT_FILE: "",
+      visitCount: {
+        blogTitle:'',
+        blogDate:'',
+        pageLang:''
+      },
     };
   },
   components: {
@@ -117,15 +125,31 @@ export default {
     this.dataList = this.$sitePages;
   },
   mounted() {
-    this.allBlogListData = this.blogList();
-    this.screenBlogListData = this.allBlogListData;
-    this.screenChange();
-    this.formData.tags = this.getTags();
-    this.formData.times = this.getTimes();
-    this.CELECT_LABEL = this.i18n.community.BLOG.CELECT_LABEL;
-    this.CELECT_FILE = this.i18n.community.BLOG.CELECT_FILE;
+      blogVisitList()
+      .then(response => {
+        if(response){
+          this.countList = response.data;
+          this.allBlogListData = this.blogList();
+          this.screenBlogListData = this.allBlogListData;
+          this.screenChange();
+          this.formData.tags = this.getTags();
+          this.formData.times = this.getTimes();
+          this.CELECT_LABEL = this.i18n.community.BLOG.CELECT_LABEL;
+          this.CELECT_FILE = this.i18n.community.BLOG.CELECT_FILE;
+        }
+        })     
+    for(let i = 0;  i<this.currentBlogListData.length;i++){
+        this.visitCount.blogTitle=this.currentBlogListData[i].frontmatter.title;
+        this.visitCount.blogDate=this.currentBlogListData[i].frontmatter.date;
+    }
+    this.visitCount.pageLang=this.$lang;
   },
   methods: {
+    // 增加博客访问量的方法
+      addBlogList(){
+           addVisit(this.visitCount)
+           .then(response => {})
+         },
     handleCurrentChange(val) {
       this.currentBlogListData = this.screenBlogListData.slice(
         (val - 1) * this.PAGESIZE,
@@ -235,12 +259,21 @@ export default {
     },
     blogList() {
       return this.$sitePages.filter((item) => {
-        return item.path.indexOf("/" + this.$lang + "/blog/") === 0;
+        if(item.path.indexOf("/" + this.$lang + "/blog/") === 0){
+          item.count=0;
+          this.countList.forEach(itemCount=>{
+            if(itemCount.title==item.title){
+              item.count=itemCount.count;
+            }
+          })
+          return true;
+        }
       });
     },
     go(path) {
       if (path) {
         this.$router.push(path);
+         this.addBlogList();
       }
     },
     getBlogDataByLang(data) {
