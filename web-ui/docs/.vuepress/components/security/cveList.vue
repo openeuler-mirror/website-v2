@@ -114,7 +114,6 @@ const locationMethods = {
     that.formData.page = flag;
     cveList(that.formData)
       .then(data => {
-        console.log(data);
         that.tableLoading = false;
         if (data.totalRecords) {
           that.total = data.totalRecords;
@@ -352,6 +351,9 @@ export default {
         }
       }
       .pc-search {
+          .icon-search{
+              cursor: pointer;
+          }
         @media (max-width: 1000px) {
           display: none;
         }

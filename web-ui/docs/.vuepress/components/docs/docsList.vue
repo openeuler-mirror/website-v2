@@ -27,7 +27,7 @@
           <div v-if="index % 2 === 0" class="step-left">
             <div class="mail-box">
               <div class="step-left-box">
-                <div @click="go(item)" class="inner-box" v-for="(item, index) in items.doc" :key="index">
+                <div @click="go(item)" :class="['inner-box',item.path?'':'unClick']" v-for="(item, index) in items.doc" :key="index">
                   <img :src="item.img" alt />
                   <p>{{ item.name }}</p>
                 </div>
@@ -45,7 +45,7 @@
                 <span>{{ items.title }}</span>
               </div>
               <div class="step-right-box">
-                <div  @click="go(item)" class="inner-box" v-for="(item, index) in items.doc" :key="index">
+                <div  @click="go(item)" :class="['inner-box',item.path?'':'unClick']" v-for="(item, index) in items.doc" :key="index">
                   <img :src="item.img" alt />
                   <p>{{ item.name }}</p>
                 </div>
@@ -60,7 +60,7 @@
             <div class="step-num">
               <span>{{ items.title }}</span>
             </div>
-            <p  @click="go(item)" v-for="(item, index) in items.doc" :key="index">{{ item.name }}</p>
+            <p  :class="item.path?'':'unClick'" @click="go(item)" v-for="(item, index) in items.doc" :key="index">{{ item.name }}</p>
           </div>
         </div>
       </div>
@@ -75,7 +75,8 @@ export default {
     return {
       version: "",
       currentDocs: [],
-      versions: []
+      versions: [],
+      default:true
     };
   },
   components: {
@@ -89,14 +90,21 @@ export default {
   mounted() {
     this.versions = require("../../../" + this.$lang + "/docs/1.0_Base/path/path.json");
     this.currentDocs = this.versions[0].docs;
+    this.selectChange(this.versions[0].value);
   },
   methods: {
     selectChange(val) {
-      this.versions.forEach((item) => {
+      if(this.default){
+        this.version=val;
+        this.default = false;
+      }else{
+        this.versions.forEach((item) => {
           if (item.value === val) {
             this.currentDocs = item.docs;
           }
         });
+      }
+  
     },
     go(item) {
       if (item.path) {
@@ -260,10 +268,19 @@ export default {
   text-align: left;
 }
 .inner-box img {
-  margin: 0 16px;
-  width: 26px;
+  margin: 0 10px 0 16px;
+  width: 22px;
+  height: 26px;
   vertical-align: sub;
 }
+.unClick {
+  pointer-events: none;
+  cursor: default;
+  p{
+    color: rgba(0, 0, 0, 0.25);
+  }
+}
+
 
 @media screen and (max-width: 1000px) {
   .moblieContent {
@@ -285,7 +302,10 @@ export default {
     display: block;
   }
   .step-H5 {
-    margin: 40px auto;
+    margin: 30px auto;
+    .unClick{
+        color: rgba(0, 0, 0, 0.25);
+    }
   }
   .step-left-H5{
     text-align: center;
@@ -307,14 +327,17 @@ export default {
     font-size: 16px;
     width:140px;
     height:40px;
+    line-height: 40px;
+    color: #002FA7;
     background:rgba(255,255,255,1);
     box-shadow:0px 3px 10px 0px rgba(0,0,0,0.1);
     border-radius:8px;
     text-align: center;
     margin-top: 20px;
-    margin-right: 15px;
-    margin-left: 15px;
     display: inline-block;
+    &:nth-of-type(2n+2){
+        margin-left: 35px;
+    }
   }
 }
 </style>

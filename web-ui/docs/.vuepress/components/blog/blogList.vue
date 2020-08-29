@@ -369,7 +369,7 @@ export default {
   }
 }
 .blog-author {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
 }
 .blog-date {

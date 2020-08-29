@@ -274,7 +274,7 @@ export default {
             }
             window.location.href = currentLink;
         },
-        menuActiveFn(item) {
+        menuActiveFn(item) {    
             const $route = this.$route;
             return (
                 $route.path.includes(this.resolvePath(item.PATH)) ||
@@ -538,6 +538,9 @@ export default {
                 @media (max-width: 1000px) {
                     display: none;
                 }
+                @media (max-width: 1280px) {
+                    flex:2;
+                }
                 .menu-link span {
                     display: block;
                     transform:scale(0,0);
@@ -632,6 +635,9 @@ export default {
                 justify-content: flex-end;
                 @media (max-width: 1000px) {
                     display: none;
+                }
+                @media (max-width: 1280px) {
+                    justify-content: flex-start;
                 }
                 & > li {
                     position: relative;

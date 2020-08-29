@@ -78,6 +78,7 @@ export default {
       .footer-mail {
         color: #fff;
         margin-top: 17px;
+        margin-left: 9px;
         @media (max-width: 1000px) {
           margin-top: 10px;
         }

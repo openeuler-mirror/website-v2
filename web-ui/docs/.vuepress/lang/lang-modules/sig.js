@@ -4,7 +4,6 @@
 
 module.exports = {
     cn: {
-        test: '测试',
         GUIDANCE_LIST: {
             GUIDE: {
                 MOBILE_TITLE: "SIG申请流程",
@@ -50,7 +49,6 @@ module.exports = {
         },
     },
     en: {
-        test: 'test',
         GUIDANCE_LIST: {
             GUIDE: {
                 MOBILE_TITLE: "SIG申请流程",
