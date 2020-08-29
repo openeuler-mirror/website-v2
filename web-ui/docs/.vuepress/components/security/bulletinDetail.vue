@@ -20,11 +20,11 @@
             <p>{{detailData.affectedProduct}}</p>
             <h2>CVE</h2>
             <div class="link-group">
-                <a v-for="(item, index) in detailData.cve" :key="index" @click="go(item.cveId)">{{item.cveId}}</a>    
+                <a v-for="(item, index) in detailData.cveId.split(';')" :key="index" @click="go(item)">{{item}}</a>    
             </div>
             <h2>{{i18n.security.PACKAGE}}</h2>
             <div class="link-group">
-                <a v-for="(item, index) in detailData.packages" @click="open(item.packageLink)">{{item.packageName}}</a>    
+                <a v-for="(item, index) in detailData.packageName.split(';')" @click="open(item)">{{item}}</a>    
             </div>
             <h2>{{i18n.security.REFERENCE_DOCUMENTS}}</h2>
             <a :href="detailData.referenceDocuments" target="_blank">{{detailData.referenceDocuments}}</a>
@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import { securityDetail } from "../../api/security"
+import { securityDetail, getDownloadUrl } from "../../api/security"
 let that = null;
 
 const locationMethods = {
@@ -44,14 +44,25 @@ const locationMethods = {
         })
         .then(data => {
             that.loading = false;
-            if(data && data.list && data.list.length){
-                that.detailData = data.list[0];
+            if(data){
+                that.detailData = data;
             }
 
         })
         .catch(data => {
             that.$message.error(data);
             that.loading = false;
+        });
+    },
+    getDownloadUrl (id) {
+        getDownloadUrl({
+            id
+        })
+        .then(data => {
+            window.open(data.packageLink);
+        })
+        .catch(data => {
+            that.$message.error(data);
         });
     }
 }
@@ -60,7 +71,10 @@ export default {
         that = this;
         return {
             loading: false,
-            detailData: {}
+            detailData: {
+                cveId: '',
+                packageName: ''
+            }
         };
     },
     created () {
@@ -78,8 +92,8 @@ export default {
                 query: {id}
             })
         },
-        open(url) {
-            window.open(url);
+        open(id) {
+            locationMethods.getDownloadUrl(id);
         }
     }
 };
@@ -163,6 +177,9 @@ export default {
             margin-bottom: 40px;
             @media (max-width: 1000px) {
                 margin-bottom: 30px;
+            }
+            a {
+                display: block;
             }
         }
     }

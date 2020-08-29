@@ -49,6 +49,12 @@ module.exports = {
                 ]
             }
         },
+        SIG_LIST: {
+            HOME_PAGE: '前往gitee首页',
+            MAIL: '邮件',
+            IRC: 'IRC频道',
+            MANAGER: '管理员'
+        }
     },
     en: {
         test: 'test',
@@ -96,5 +102,11 @@ module.exports = {
                 ]
             }
         },
+        SIG_LIST: {
+            HOME_PAGE: 'Go to gitee home page',
+            MAIL: 'mail',
+            IRC: 'IRC channel',
+            MANAGER: 'administrators'
+        }
     }
 };
