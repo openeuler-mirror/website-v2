@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
     <div class="moblie-content">
         <common-banner
         :pc-src="'/img/blog/blog_banner.png'"
@@ -38,20 +37,21 @@
                 <div class="blog-item" v-for="(item, index) in currentBlogListData" :key="index">
                     <div class="blog-item-left">
                         <p class="blog-img">
-                        <img class="middle-img" src="/img/blog/blog_user.png" alt />
+                            <img class="middle-img" src="/img/blog/blog_user.png" alt />
                         </p>
                         <p>
-                        <img class="middle-img mobile-middle-img" src="/img/blog/account.svg" alt />
-                        <span class="blog-author">{{item.frontmatter.author}}</span>
+                            <img class="middle-img mobile-middle-img" src="/img/blog/account.svg" alt />
+                            <span class="blog-author">{{item.frontmatter.author}}</span>
                         </p>
                         <p>
-                        <img class="middle-img mobile-middle-img" src="/img/blog/date.svg" alt />
-                        <span class="blog-date">{{resolvePostDate(item.frontmatter.date)}}</span>
+                            <img class="middle-img mobile-middle-img" src="/img/blog/date.svg" alt />
+                            <span class="blog-date">{{resolvePostDate(item.frontmatter.date)}}</span>
                         </p>
                         <p>
-                        <img class="middle-img mobile-middle-img" src="/img/blog/visibility.svg" alt />
-                        <!-- todo 通过接口获取浏览次数 -->
-                        <span class="blog-date">浏览100次</span>
+                            <img class="middle-img mobile-middle-img" src="/img/blog/visibility.svg" alt />
+                            <span>{{i18n.community.BLOG.BROWSE}}</span>
+                            <span>{{item.count}}</span>
+                            <span>{{i18n.community.BLOG.VIEWED}}</span>
                         </p>
                     </div>
                     <div class="blog-item-right">
@@ -77,75 +77,6 @@
                 :total="totalSize"
                 ></el-pagination>
             </div>
-=======
-  <div class="moblie-content">
-    <common-banner
-      :pc-src="'/img/blog/blog_banner.png'"
-      :mobile-src="'/img/blog/blog_banner.png'"
-      :inside-name="'CONNECT'"
-      :outside-name="i18n.community.BLOG.BLOG"
-    ></common-banner>
-    <div class="blog-content">
-      <el-form :inline="true" :model="formData" class="blog-filter">
-        <el-form-item :label="i18n.community.BLOG.LABEL">
-          <el-select v-model="formData.tag" @change="selectChange" :placeholder="CELECT_LABEL">
-            <el-option
-              v-for="(item, index) in formData.tags"
-              :key="index"
-              :label="item.name"
-              :value="item.value"
-            ></el-option>
-          </el-select>
-        </el-form-item>
-        <el-form-item :label="i18n.community.BLOG.FILE">
-          <el-select v-model="formData.time" @change="selectChange" :placeholder="CELECT_FILE">
-            <el-option
-              v-for="(item, index) in formData.times"
-              :key="index"
-              :label="item.name"
-              :value="item.value"
-            ></el-option>
-          </el-select>
-        </el-form-item>
-        <el-form-item class="mobile-blog-write">
-          <img class="middle-img mobile-middle-img" src="/img/blog/edit.png" alt />
-          <span @click="goPostBlog" class="blog-write">{{i18n.community.BLOG.BLOGGING}}</span>
-        </el-form-item>
-      </el-form>
-      <div>
-        <div class="blog-item" v-for="(item, index) in currentBlogListData" :key="index">
-          <div class="blog-item-left">
-            <p class="blog-img">
-              <img class="middle-img" src="/img/blog/blog_user.png" alt />
-            </p>
-            <p>
-              <img class="middle-img mobile-middle-img" src="/img/blog/account.svg" alt />
-              <span class="blog-author">{{item.frontmatter.author}}</span>
-            </p>
-            <p>
-              <img class="middle-img mobile-middle-img" src="/img/blog/date.svg" alt />
-              <span class="blog-date">{{resolvePostDate(item.frontmatter.date)}}</span>
-            </p>
-            <p>
-              <img class="middle-img mobile-middle-img" src="/img/blog/visibility.svg" alt />
-              <span>{{i18n.community.BLOG.BROWSE}}</span>
-              <span>{{item.count}}</span>
-              <span>{{i18n.community.BLOG.VIEWED}}</span>
-            </p>
-          </div>
-          <div class="blog-item-right">
-            <p @click="go(item.path)" class="blog-item-title">{{item.frontmatter.title}}</p>
-            <p class="blog-item-content">{{item.frontmatter.summary}}</p>
-            <p @click="go(item.path)" class="blog-item-all">{{i18n.community.BLOG.READ_MORE}}</p>
-            <p class="blog-item-tag">
-              <span>{{i18n.community.BLOG.LABEL}}:</span>
-              <span v-for="(tag, index) in item.frontmatter.tags" :key="index">
-                <span @click="clickTagItem(tag)" class="tag-item">{{tag}}</span>
-                <span v-if="index != (item.frontmatter.tags.length - 1)">、</span>
-              </span>
-            </p>
-          </div>
->>>>>>> 377ad6f4cd48a7f9256a0c7bb62b796396ac6157
         </div>
     </div>
 </template>
@@ -157,165 +88,33 @@ import commonBanner from "./../common/banner.vue";
 import {blogVisitList,blogVisitDetail,addVisit} from "../../api/blogCount"
 
 export default {
-<<<<<<< HEAD
     data() {
         return {
-            // 页面显示数据
-            currentBlogListData: [],
-            // 筛选结果数据
-            screenBlogListData: [],
-            // 所以博客数据
-            allBlogListData: [],
-            totalSize: 0,
-            currentPage: 1,
-            formData: {
-                tag: null,
-                time: null,
-                tags: [],
-                times: [],
-            },
-            //常量每页显示数量
-            PAGESIZE: 5,
-            CELECT_LABEL: "",
-            CELECT_FILE: "",
-=======
-  data() {
-    return {
-      // 页面显示数据
-      currentBlogListData: [],
-      // 筛选结果数据
-      screenBlogListData: [],
-      // 所以博客数据
-      allBlogListData: [],
-      totalSize: 0,
-      currentPage: 1,
-      formData: {
-        tag: null,
-        time: null,
-        tags: [],
-        times: [],
-      },
-      //常量每页显示数量
-      PAGESIZE: 5,
-      CELECT_LABEL: "",
-      CELECT_FILE: "",
-      visitCount: {
-        blogTitle:'',
-        blogDate:'',
-        pageLang:''
-      },
-    };
-  },
-  components: {
-    commonBanner,
-  },
-  computed: {},
-
-  created() {
-    this.targetLocale = this.$lang === "zh" ? "/zh/" : "/en/";
-    this.dataList = this.$sitePages;
-  },
-  mounted() {
-      blogVisitList()
-      .then(response => {
-        if(response){
-          this.countList = response.data;
-          this.allBlogListData = this.blogList();
-          this.screenBlogListData = this.allBlogListData;
-          this.screenChange();
-          this.formData.tags = this.getTags();
-          this.formData.times = this.getTimes();
-          this.CELECT_LABEL = this.i18n.community.BLOG.CELECT_LABEL;
-          this.CELECT_FILE = this.i18n.community.BLOG.CELECT_FILE;
-        }
-        })     
-    for(let i = 0;  i<this.currentBlogListData.length;i++){
-        this.visitCount.blogTitle=this.currentBlogListData[i].frontmatter.title;
-        this.visitCount.blogDate=this.currentBlogListData[i].frontmatter.date;
-    }
-    this.visitCount.pageLang=this.$lang;
-  },
-  methods: {
-    // 增加博客访问量的方法
-      addBlogList(){
-           addVisit(this.visitCount)
-           .then(response => {})
-         },
-    handleCurrentChange(val) {
-      this.currentBlogListData = this.screenBlogListData.slice(
-        (val - 1) * this.PAGESIZE,
-        val * this.PAGESIZE
-      );
-      scrollTo(0, 0);
-    },
-    screenChange() {
-      if (this.screenBlogListData.length > this.PAGESIZE) {
-        this.currentBlogListData = this.screenBlogListData.slice(
-          0,
-          this.PAGESIZE
-        );
-      } else {
-        this.currentBlogListData = this.screenBlogListData;
-      }
-      this.totalSize = this.screenBlogListData.length;
-      this.currentPage = 1;
-    },
-    selectChange() {
-      let screenTagArr = [];
-      let screenTimeArr = [];
-      if (this.formData.tag === null) {
-        screenTagArr = this.allBlogListData;
-      } else {
-        this.allBlogListData.forEach((item) => {
-          if (!item.frontmatter.tags) {
-            return;
-          }
-          if (item.frontmatter.tags.indexOf(this.formData.tag) > -1) {
-            screenTagArr.push(item);
-          }
-        });
-      }
-
-      if (this.formData.time === null) {
-        screenTimeArr = screenTagArr;
-      } else {
-        screenTagArr.forEach((item) => {
-          if (!item.frontmatter.date) {
-            return;
-          }
-          if (item.frontmatter.date.indexOf(this.formData.time) > -1) {
-            screenTimeArr.push(item);
-          }
-        });
-      }
-      this.screenBlogListData = screenTimeArr;
-      this.screenChange();
-    },
-    clickTagItem(tag) {
-      this.formData.tag = tag;
-      this.selectChange();
-    },
-    getTags() {
-      let tagsArr = [];
-      let tagsArrUniq = [];
-      this.$sitePages.forEach((item) => {
-        if (item.path.indexOf("/" + this.$lang + "/blog/") !== 0) {
-          return;
-        }
-        if (!item.frontmatter.tags) {
-          return;
-        }
-        tagsArr.push.apply(tagsArr, item.frontmatter.tags);
-      });
-      tagsArr = this.uniq(tagsArr);
-      tagsArr.forEach((item) => {
-        let obj = {
-          value: item,
-          label: item,
->>>>>>> 377ad6f4cd48a7f9256a0c7bb62b796396ac6157
+        // 页面显示数据
+        currentBlogListData: [],
+        // 筛选结果数据
+        screenBlogListData: [],
+        // 所以博客数据
+        allBlogListData: [],
+        totalSize: 0,
+        currentPage: 1,
+        formData: {
+            tag: null,
+            time: null,
+            tags: [],
+            times: [],
+        },
+        //常量每页显示数量
+        PAGESIZE: 5,
+        CELECT_LABEL: "",
+        CELECT_FILE: "",
+        visitCount: {
+            blogTitle:'',
+            blogDate:'',
+            pageLang:''
+        },
         };
     },
-<<<<<<< HEAD
     components: {
         commonBanner,
     },
@@ -324,82 +123,37 @@ export default {
     created() {
         this.targetLocale = this.$lang === "zh" ? "/zh/" : "/en/";
         this.dataList = this.$sitePages;
-=======
-    uniq(array) {
-      var temp = [];
-      for (var i = 0; i < array.length; i++) {
-        if (temp.indexOf(array[i]) == -1) {
-          temp.push(array[i]);
-        }
-      }
-      return temp;
-    },
-    getTimes() {
-      let timesArr = [];
-      let timesArrUniq = [];
-      this.$sitePages.forEach((item) => {
-        if (item.path.indexOf("/" + this.$lang + "/blog/") !== 0) {
-          return;
-        }
-        if (!item.frontmatter.date) {
-          return;
-        }
-        timesArr.push(item.frontmatter.date.slice(0, 7));
-      });
-      timesArr = this.uniq(timesArr);
-      timesArr.forEach((item) => {
-        let obj = {
-          value: item,
-          label: item,
-        };
-        timesArrUniq.push(obj);
-      });
-      return timesArrUniq;
-    },
-    blogList() {
-      return this.$sitePages.filter((item) => {
-        if(item.path.indexOf("/" + this.$lang + "/blog/") === 0){
-          item.count=0;
-          this.countList.forEach(itemCount=>{
-            if(itemCount.title==item.title){
-              item.count=itemCount.count;
-            }
-          })
-          return true;
-        }
-      });
-    },
-    go(path) {
-      if (path) {
-        this.$router.push(path);
-         this.addBlogList();
-      }
-    },
-    getBlogDataByLang(data) {
-      let blogData = [];
-      let langID = this.$lang === "zh" ? "zh" : "en";
-      for (let i = 0; i < data.length; i++) {
-        if (data[i].id === langID) {
-          blogData.push(data[i]);
-        }
-      }
-      return blogData;
->>>>>>> 377ad6f4cd48a7f9256a0c7bb62b796396ac6157
     },
     mounted() {
-        this.allBlogListData = this.blogList();
-        this.screenBlogListData = this.allBlogListData;
-        this.screenChange();
-        this.formData.tags = this.getTags();
-        this.formData.times = this.getTimes();
-        this.CELECT_LABEL = this.i18n.community.BLOG.CELECT_LABEL;
-        this.CELECT_FILE = this.i18n.community.BLOG.CELECT_FILE;
+        blogVisitList()
+        .then(response => {
+        if(response){
+            this.countList = response.data;
+            this.allBlogListData = this.blogList();
+            this.screenBlogListData = this.allBlogListData;
+            this.screenChange();
+            this.formData.tags = this.getTags();
+            this.formData.times = this.getTimes();
+            this.CELECT_LABEL = this.i18n.community.BLOG.CELECT_LABEL;
+            this.CELECT_FILE = this.i18n.community.BLOG.CELECT_FILE;
+        }
+        })
+        for(let i = 0;  i<this.currentBlogListData.length;i++){
+            this.visitCount.blogTitle=this.currentBlogListData[i].frontmatter.title;
+            this.visitCount.blogDate=this.currentBlogListData[i].frontmatter.date;
+        }
+        this.visitCount.pageLang=this.$lang;
     },
     methods: {
+        // 增加博客访问量的方法
+        addBlogList(){
+            addVisit(this.visitCount)
+            .then(response => {})
+        },
         handleCurrentChange(val) {
             this.currentBlogListData = this.screenBlogListData.slice(
-                (val - 1) * this.PAGESIZE,
-                val * this.PAGESIZE
+            (val - 1) * this.PAGESIZE,
+            val * this.PAGESIZE
             );
             scrollTo(0, 0);
         },
@@ -504,12 +258,21 @@ export default {
         },
         blogList() {
             return this.$sitePages.filter((item) => {
-                return item.path.indexOf("/" + this.$lang + "/blog/") === 0;
+                if(item.path.indexOf("/" + this.$lang + "/blog/") === 0){
+                item.count=0;
+                this.countList.forEach(itemCount=>{
+                    if(itemCount.title==item.title){
+                        item.count=itemCount.count;
+                    }
+                })
+                return true;
+                }
             });
         },
         go(path) {
             if (path) {
                 this.$router.push(path);
+                this.addBlogList();
             }
         },
         getBlogDataByLang(data) {
