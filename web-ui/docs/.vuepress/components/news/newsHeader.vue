@@ -12,7 +12,7 @@
         <span class="news-date">
           <span id="busuanzi_container_page_pv">
             <span>{{i18n.community.BLOG.BROWSE}}</span>
-            <span id="busuanzi_value_page_pv"></span>
+          <span>{{this.newsVisit}}</span>
             <span>{{i18n.community.BLOG.VIEWED}}</span>
           </span>
         </span>
@@ -23,20 +23,41 @@
 </template>
 
 <script>
+import {newsVisitList,newsVisitDetail,addVisit} from "../../api/newsCount"
+
 export default {
   name: "postnews",
   data() {
     return {
       targetLocale: "",
+      // 访问量
+      newsVisit:'',
+       visitCount: {
+        newsTitle:'',
+        newsDate:'',
+        pageLang:''
+      },
     };
   },
   created() {
     this.targetLocale = this.$lang === "zh" ? "/zh/" : "/en/";
+    this.getNewsCount();
+  },
+  mounted() {
+    this.visitCount.newsTitle=this.$frontmatter.title;
+    this.visitCount.newsDate=this.$frontmatter.date;
+    this.visitCount.pageLang=this.$lang;
   },
   methods: {
     goNews() {
       this.$router.push(this.targetLocale + "interaction/news-list/");
-    },
+    }, 
+    getNewsCount() {
+      newsVisitDetail(this.visitCount)
+      .then(response => {
+          this.newsVisit = response.data[0] || 1;
+        })
+    }
   },
 };
 </script>

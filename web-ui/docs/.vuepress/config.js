@@ -54,6 +54,22 @@ module.exports = {
     },
     devServer: {
         proxy: {
+            '/api/sig': {
+                target: 'http://119.8.32.82',
+                ws: true,
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api/sig': ''
+                }
+            },
+            '/api/old-api': {
+                target: 'https://cve.openeuler.org',
+                ws: true,
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api/old-api': ''
+                }
+            },
             '/api': {
                 target: 'http://159.138.45.71',
                 ws: true,

@@ -1,21 +1,25 @@
 /**
- * @file  邮件列表页订阅接口配置文件
+ * @file  搜索页接口配置文件
  * */
 
 import appAjax from './../libs/ajax-utils';
-export const subscribe = ({
-  list_id,
-  subscriber,
-  display_name
+export const search = ({
+   keyword,
+   model,
+   indexEs,
+   openeulerArticles,
+   page,
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            url: '/mail/add',
+            url: '/search/keyword',
             type: 'post',
             data: {
-                list_id,
-                subscriber,
-                display_name
+                keyword,
+                model,
+                indexEs,
+                openeuler_articles: openeulerArticles,
+                page,
             },
             success(result) {
                 if (result) {

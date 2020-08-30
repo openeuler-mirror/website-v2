@@ -38,7 +38,7 @@
           </template>
         </el-table-column>
         <el-table-column width="440" prop="summary" :label="i18n.security.SYNOPSIS"></el-table-column>
-        <el-table-column width="132" prop="cvssScoreOE" :label="i18n.security.CVSS_SCORE"></el-table-column>
+        <el-table-column width="132" prop="cvsssCoreOE" :label="i18n.security.CVSS_SCORE"></el-table-column>
         <el-table-column width="138" prop="announcementTime" :label="i18n.security.RELEASE_DATE"></el-table-column>
         <el-table-column prop="updateTime" :label="i18n.security.MODIFIED_TIME"></el-table-column>
         <el-table-column :label="i18n.security.OPERATION">
@@ -65,7 +65,7 @@
             </li>
             <li>
               <span>{{i18n.security.CVSS_SCORE}}:</span>
-              {{item.cvssScoreOE}}
+              {{item.cvsssCoreOE}}
             </li>
             <li>
               <span>{{i18n.security.RELEASE_DATE}}:</span>
