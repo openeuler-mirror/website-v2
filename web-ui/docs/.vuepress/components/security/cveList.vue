@@ -351,8 +351,14 @@ export default {
         }
       }
       .pc-search {
+          .icon-search{
+              cursor: pointer;
+          }
         @media (max-width: 1000px) {
           display: none;
+        }
+        .icon-search {
+          line-height: 1.5px;
         }
       }
       .mobile-search {
@@ -402,7 +408,6 @@ export default {
           }
           .content {
             flex: 1;
-            text-align: justify;
           }
           .table-link {
             align-self: flex-end;

@@ -7,20 +7,7 @@ module.exports = {
             LIVE: '直播',
             WILLPLAYER: '即将开始',
             REPLAYER: '精彩回顾',
-            LIVENOW: [{
-                    LIVETITLE: '深入理解容器镜像构建工具',
-                    LIVETEACHER: '讲师: 刘泽坤',
-                    LIVETIME: '时间: 8月25日 20:00（周二）',
-                    PHOTOPATH: '/img/live/liuzekun.png',
-                    NOWLINK: 'http://live.bilibili.com/22290444'
-                },
-                {
-                    LIVETITLE: 'isula-build之安全特性',
-                    LIVETEACHER: '讲师: 李翔',
-                    LIVETIME: '时间: 8月27日 20:00（周四）',
-                    PHOTOPATH: '/img/live/lixiang.png',
-                    FORMERLYLINK: 'http://live.bilibili.com/22290444'
-                },
+            LIVENOW: [
                 {
                     LIVETITLE: '轻量级容器引擎iSulad之功能介绍及架构解析',
                     LIVETEACHER: '讲师: 李峰',
@@ -64,7 +51,22 @@ module.exports = {
                     NOWLINK: 'http://live.bilibili.com/22290444'
                 },
             ],
-            LIVEFORMERLY: [{
+            LIVEFORMERLY: [
+                {
+                    LIVETITLE: '深入理解容器镜像构建工具',
+                    LIVETEACHER: '讲师: 刘泽坤',
+                    LIVETIME: '时间: 8月25日 20:00（周二）',
+                    PHOTOPATH: '/img/live/liuzekun.png',
+                    NOWLINK: 'http://live.bilibili.com/22290444'
+                },
+                {
+                    LIVETITLE: 'isula-build之安全特性',
+                    LIVETEACHER: '讲师: 李翔',
+                    LIVETIME: '时间: 8月27日 20:00（周四）',
+                    PHOTOPATH: '/img/live/lixiang.png',
+                    FORMERLYLINK: 'http://live.bilibili.com/22290444'
+                },
+                {
                     LIVETITLE: '虚拟化技术介绍',
                     LIVETEACHER: '讲师: 张海亮',
                     LIVETIME: '时间: 7月30日 20:00',
@@ -139,13 +141,13 @@ module.exports = {
                     LIVETEACHER: '讲师: 卜瑞峰',
                     LIVETIME: '时间: 7月30日 20:00',
                     PHOTOPATH: '/img/live/boruifeng.png',
-                    FORMERLYLINK: ''
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1Ty4y1y7eK'
                 },
             ]
         },
         SUMMIT: {
             SUMMIT: '峰会',
-            SUMMITCONTENT: 'OpenEuler Virtual Summit 2020 是 openEuler 在发布 20.03 LTS 版本后第一次举行的峰会，本次大会邀请了华为的资深专家、社区 Committer 和多家 openEuler 社区合作厂商的重量嘉宾贡献多场精彩的演讲，不容错过。开发者和合作伙伴可以通过本次峰会全面了解 openEuler 多元化的生态、丰富的特性和广泛的社区，帮助开发者顺利融入社区，合作伙伴参与到 openEuler 生态体系。',
+            SUMMITCONTENT: 'OpenEuler Virtual Summit 2020 是 openEuler 在发布 20.03 LTS 版本后第一次举行的峰会，本次大会邀请了华为的资深专家、社区Committer和多家openEuler社区合作厂商的重量嘉宾贡献多场精彩的演讲，不容错过。开发者和合作伙伴可以通过本次峰会全面了解 openEuler 多元化的生态、丰富的特性和广泛的社区，帮助开发者顺利融入社区，合作伙伴参与到openEuler生态体系。',
             HOMETITLE: '往期回顾',
             LISTTITLE: '精彩回顾',
             LISTTIME: '2020年4月17-18日',
@@ -244,17 +246,23 @@ module.exports = {
                     TRACK1: [{
                         TRACK1TITLE: 'openEuler内核',
                         TRACK1TEACHER: '郭寒军',
-                        TRACK1MAINTAINER: 'openEuler Kernel Maintainer'
+                        TRACK1MAINTAINER: 'openEuler Kernel Maintainer',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1E64y1T76a',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-community-kernel'
                     }],
                     TRACK2: [{
                         TRACK2TITLE: 'RaspberryPi',
                         TRACK2TEACHER: '方亚芬',
-                        TRACK2MAINTAINER: 'RaspberryPi Maintainer'
+                        TRACK2MAINTAINER: 'RaspberryPi Maintainer',
+                        TRACK2LINK:'https://www.bilibili.com/video/BV1Ve411s74C',
+                        TRACK2DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-raspberrypi'
                     }],
                     TRACK3: [{
                         TRACK3TITLE: 'UKUI',
                         TRACK3TEACHER: '窦龑',
-                        TRACK3MAINTAINER: 'UKUI核心开发成员；麒麟软件开源小组成员'
+                        TRACK3MAINTAINER: 'UKUI核心开发成员；麒麟软件开源小组成员',
+                        TRACK3LINK:'https://www.bilibili.com/video/BV1ei4y187SD',
+                        TRACK3DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-ukui'
                     }]
                 },
                 {
@@ -267,17 +275,23 @@ module.exports = {
                     TRACK1: [{
                         TRACK1TITLE: 'Container & iSula',
                         TRACK1TEACHER: '蔡灏',
-                        TRACK1MAINTAINER: 'Container & iSula SIG Maintainer'
+                        TRACK1MAINTAINER: 'Container & iSula SIG Maintainer',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1A54y1R7iX',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-container'
                     }],
                     TRACK2: [{
                         TRACK2TITLE: 'Documentation',
                         TRACK2TEACHER: '谭志鹏',
-                        TRACK2MAINTAINER: 'Documentation Maintainer'
+                        TRACK2MAINTAINER: 'Documentation Maintainer',
+                        TRACK2LINK:'https://www.bilibili.com/video/BV1yT4y1G78u',
+                        TRACK2DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-documentation'
                     }],
                     TRACK3: [{
                         TRACK3TITLE: 'High Availability',
                         TRACK3TEACHER: '侯健 ',
-                        TRACK3MAINTAINER: ''
+                        TRACK3MAINTAINER: '',
+                        TRACK3LINK:'https://www.bilibili.com/video/BV1Wt4y1272N',
+                        TRACK3DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-ha'
                     }]
 
                 },
@@ -289,12 +303,16 @@ module.exports = {
                     TRACK1: [{
                         TRACK1TITLE: 'Packaging & Base Service',
                         TRACK1TEACHER: '何晓文',
-                        TRACK1MAINTAINER: 'Packaging Maintainer'
+                        TRACK1MAINTAINER: 'Packaging Maintainer',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1we411s7rQ',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-packaging'
                     }],
                     TRACK3: [{
                         TRACK3TITLE: 'oVirt',
                         TRACK3TEACHER: '付惠惠 ',
-                        TRACK3MAINTAINER: 'oVirt Maintainer；麒麟软件oVirt负责人'
+                        TRACK3MAINTAINER: 'oVirt Maintainer；麒麟软件oVirt负责人',
+                        TRACK3LINK:'https://www.bilibili.com/video/BV1LK4y1k7Hv',
+                        TRACK3DOWNLOAD:'hhttps://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-ovirt'
                     }]
 
                 },
@@ -306,17 +324,23 @@ module.exports = {
                     TRACK1: [{
                         TRACK1TITLE: 'Kubernetes',
                         TRACK1TEACHER: '周鹏飞',
-                        TRACK1MAINTAINER: 'SIG-Kubernetes Maintainer'
+                        TRACK1MAINTAINER: 'SIG-Kubernetes Maintainer',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1ak4y1R7Sq',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-kubernetes'
                     }],
                     TRACK2: [{
                         TRACK2TITLE: 'Networking',
                         TRACK2TEACHER: '陆志浩',
-                        TRACK2MAINTAINER: 'Networking Maintainer'
+                        TRACK2MAINTAINER: 'Networking Maintainer',
+                        TRACK2LINK:'https://www.bilibili.com/video/BV1KV411Z7nR',
+                        TRACK2DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-networking'
                     }],
                     TRACK3: [{
                         TRACK3TITLE: 'Virualization',
                         TRACK3TEACHER: '张海亮 ',
-                        TRACK3MAINTAINER: 'Vir Maintainer'
+                        TRACK3MAINTAINER: 'Vir Maintainer',
+                        TRACK3LINK:'https://www.bilibili.com/video/BV1q54y197CX',
+                        TRACK3DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-virtualization'
                     }]
                 },
                 {
@@ -327,12 +351,16 @@ module.exports = {
                     TRACK1: [{
                         TRACK1TITLE: '社区治理',
                         TRACK1TEACHER: '李永乐',
-                        TRACK1MAINTAINER: 'openEuler社区秘书处负责人'
+                        TRACK1MAINTAINER: 'openEuler社区秘书处负责人',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1sA411b74z',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-community-governance'
                     }],
                     TRACK2: [{
                         TRACK2TITLE: 'Compiler',
                         TRACK2TEACHER: '郭歌',
-                        TRACK2MAINTAINER: 'Compiler Maintainer'
+                        TRACK2MAINTAINER: 'Compiler Maintainer',
+                        TRACK2LINK:'https://www.bilibili.com/video/BV16Q4y1K7gV',
+                        TRACK2DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-compiler'
                     }],
                 },
                 {
@@ -343,17 +371,23 @@ module.exports = {
                     TRACK1: [{
                         TRACK1TITLE: 'Release Management',
                         TRACK1TEACHER: '马亮',
-                        TRACK1MAINTAINER: 'openEuler 20.09 发布经理'
+                        TRACK1MAINTAINER: 'openEuler 20.09 发布经理',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1JA411b7tX',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-release'
                     }],
                     TRACK2: [{
                         TRACK2TITLE: 'Compatibility',
                         TRACK2TEACHER: '杜开田',
-                        TRACK2MAINTAINER: 'Compatibility Maintainer'
+                        TRACK2MAINTAINER: 'Compatibility Maintainer',
+                        TRACK2LINK:'https://www.bilibili.com/video/BV1F5411b7pJ',
+                        TRACK2DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-compatibility'
                     }],
                     TRACK3: [{
                         TRACK3TITLE: 'Dev-utils',
                         TRACK3TEACHER: '熊伟',
-                        TRACK3MAINTAINER: 'openEuler TC member; Dev-utils Maintainer'
+                        TRACK3MAINTAINER: 'openEuler TC member; Dev-utils Maintainer',
+                        TRACK3LINK:'https://www.bilibili.com/video/BV1Ei4y1t7a8',
+                        TRACK3DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-dev-utils'
                     }]
 
                 },
@@ -365,24 +399,45 @@ module.exports = {
                     TRACK1: [{
                         TRACK1TITLE: 'Technical Committee',
                         TRACK1TEACHER: '胡欣蔚',
-                        TRACK1MAINTAINER: 'openEuler 技术委员会主席'
+                        TRACK1MAINTAINER: 'openEuler 技术委员会主席',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1rQ4y1K7L6',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-tc'
                     }],
                     TRACK2: [{
                         TRACK2TITLE: 'Infrastructure',
                         TRACK2TEACHER: '李中华',
-                        TRACK2MAINTAINER: 'openEuler Infrastructure Maintainer'
+                        TRACK2MAINTAINER: 'openEuler Infrastructure Maintainer',
+                        TRACK2LINK:'https://www.bilibili.com/video/BV1UT4y1G7fp',
+                        TRACK2DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-infrastructure'
                     }],
                     TRACK3: [{
                         TRACK3TITLE: '安全委员会',
                         TRACK3TEACHER: '朱健伟',
-                        TRACK3MAINTAINER: '操作系统安全领域专家'
+                        TRACK3MAINTAINER: '操作系统安全领域专家',
+                        TRACK3LINK:'https://www.bilibili.com/video/BV17Q4y1T7FN',
+                        TRACK3DOWNLOAD:'https://etherpad.opendev.org/p/openeuler-virtual-summit-2020-security-committee'
                     }]
                 }
-            ]
+            ],
+            OTHERLINK:[
+                {
+                    URL:'url("/img/summit/kunpeng.svg")',
+                    LINK:'https://www.huaweicloud.com/kunpeng/'
+                },
+                {
+                    URL:    'url("/img/summit/mulan.svg")',
+                    LINK:'http://www.mulanos.cn/'
+                },
+                {
+                    URL:'url("/img/summit/pengcheng.png")',
+                    LINK:'https://dw.pcl.ac.cn/dwmain/main/'
+                }
+                ]
         },
         MEETUPS: {
             MEETUPS: '沙龙',
-            MESSAGE: '敬请期待...'
+            MESSAGE: '敬请期待...',
+            INSIDENAME:'CONNECT',
         }
     },
     en: {
@@ -390,151 +445,154 @@ module.exports = {
             LIVE: 'Live',
             WILLPLAYER: 'About to begin',
             REPLAYER: 'Wonderful review',
-            LIVENOW: [{
-                    LIVETITLE: '深入理解容器镜像构建工具',
-                    LIVETEACHER: '讲师: 刘泽坤',
-                    LIVETIME: '时间: 8月25日 20:00（周二）',
-                    PHOTOPATH: '/img/live/lzk.png',
-                    NOWLINK: 'http://live.bilibili.com/22290444'
-                },
-                {
-                    LIVETITLE: 'isula-build之安全特性',
-                    LIVETEACHER: '讲师: 李翔',
-                    LIVETIME: '时间: 8月27日 20:00（周四）',
-                    PHOTOPATH: '/img/live/lx.png',
-                    FORMERLYLINK: 'http://live.bilibili.com/22290444'
-                },
+            LIVENOW: [
                 {
                     LIVETITLE: '轻量级容器引擎iSulad之功能介绍及架构解析',
                     LIVETEACHER: '讲师: 李峰',
                     LIVETIME: '时间: 9月1日 20:00（周二）',
-                    PHOTOPATH: '/img/live/lf.png',
+                    PHOTOPATH: '/img/live/lifeng.png',
                     NOWLINK: 'http://live.bilibili.com/22290444'
                 },
                 {
                     LIVETITLE: 'iSulad之性能测试、分析与比较',
                     LIVETEACHER: '讲师: 刘昊',
                     LIVETIME: '时间: 9月3日 20:00（周四）',
-                    PHOTOPATH: '/img/live/lh.png',
+                    PHOTOPATH: '/img/live/liuhao.png',
                     NOWLINK: 'http://live.bilibili.com/22290444'
                 },
                 {
                     LIVETITLE: 'iSulad之安全特性实现解析',
                     LIVETEACHER: '讲师: 吴景',
                     LIVETIME: '时间: 9月8日 20:00（周二）',
-                    PHOTOPATH: '/img/live/wj.png',
+                    PHOTOPATH: '/img/live/wujing.png',
                     NOWLINK: 'http://live.bilibili.com/22290444'
                 },
                 {
                     LIVETITLE: 'iSula容器之系统容器',
                     LIVETEACHER: '讲师: 章松',
                     LIVETIME: '时间: 9月10日 20:00（周四）',
-                    PHOTOPATH: '/img/live/zs.png',
+                    PHOTOPATH: '/img/live/zhangsong.png',
                     NOWLINK: 'http://live.bilibili.com/22290444'
                 },
                 {
                     LIVETITLE: 'iSula容器之安全容器',
                     LIVETEACHER: '讲师: 姜鹏飞',
                     LIVETIME: '时间: 9月15日 20:00（周二）',
-                    PHOTOPATH: '/img/live/jpf.png',
+                    PHOTOPATH: '/img/live/jiangpengfei.png',
                     NOWLINK: 'http://live.bilibili.com/22290444'
                 },
                 {
                     LIVETITLE: '手把手带你完成openEuler环境部署 K8S',
                     LIVETEACHER: '讲师: 夏丹妮',
                     LIVETIME: '时间: 9月17日 20:00（周四）',
-                    PHOTOPATH: '/img/live/xdn.png',
+                    PHOTOPATH: '/img/live/xiadanni.png',
                     NOWLINK: 'http://live.bilibili.com/22290444'
                 },
             ],
-            LIVEFORMERLY: [{
+            LIVEFORMERLY: [
+                {
+                    LIVETITLE: '深入理解容器镜像构建工具',
+                    LIVETEACHER: '讲师: 刘泽坤',
+                    LIVETIME: '时间: 8月25日 20:00（周二）',
+                    PHOTOPATH: '/img/live/liuzekun.png',
+                    NOWLINK: 'http://live.bilibili.com/22290444'
+                },
+                {
+                    LIVETITLE: 'isula-build之安全特性',
+                    LIVETEACHER: '讲师: 李翔',
+                    LIVETIME: '时间: 8月27日 20:00（周四）',
+                    PHOTOPATH: '/img/live/lixiang.png',
+                    FORMERLYLINK: 'http://live.bilibili.com/22290444'
+                },
+                {
                     LIVETITLE: '虚拟化技术介绍',
                     LIVETEACHER: '讲师: 张海亮',
                     LIVETIME: '时间: 7月30日 20:00',
-                    PHOTOPATH: '/img/live/zhl.png',
+                    PHOTOPATH: '/img/live/zhanghailiang.png',
                     FORMERLYLINK: 'https://www.bilibili.com/video/BV1of4y1X7p1'
                 },
                 {
                     LIVETITLE: '安装虚拟化&管理虚拟机',
                     LIVETEACHER: '讲师: 陈振东',
                     LIVETIME: '时间: 7月30日 20:00',
-                    PHOTOPATH: '/img/live/czd.png',
+                    PHOTOPATH: '/img/live/chenzhendong.png',
                     FORMERLYLINK: ''
                 },
                 {
                     LIVETITLE: '初始openEuler',
                     LIVETEACHER: '讲师: 朱延朋',
                     LIVETIME: '时间: 7月28日 20:00',
-                    PHOTOPATH: '/img/live/zyp.png',
+                    PHOTOPATH: '/img/live/zhuyanpeng.png',
                     FORMERLYLINK: 'https://www.bilibili.com/video/BV1it4y197KQ'
                 },
                 {
                     LIVETITLE: '安装openEuler',
                     LIVETEACHER: '讲师: 冯涛',
                     LIVETIME: '时间: 7月28日 20:00',
-                    PHOTOPATH: '/img/live/ft.png',
+                    PHOTOPATH: '/img/live/fengtao.png',
                     FORMERLYLINK: 'https://www.bilibili.com/video/BV1vK4y1s7QG'
                 },
                 {
                     LIVETITLE: '使用openEuler',
                     LIVETEACHER: '讲师: 沈洋洋',
                     LIVETIME: '时间: 7月28日 20:00',
-                    PHOTOPATH: '/img/live/syy.png',
+                    PHOTOPATH: '/img/live/shenyangyang.png',
                     FORMERLYLINK: 'https://www.bilibili.com/video/BV1z4y1D7mq'
                 },
                 {
                     LIVETITLE: 'openEuler构建之OBS使用指导',
                     LIVETEACHER: '讲师: 朱春意',
                     LIVETIME: '时间: 7月28日 20:00',
-                    PHOTOPATH: '/img/live/zcy.png',
+                    PHOTOPATH: '/img/live/zhuchunyi.png',
                     FORMERLYLINK: 'https://www.bilibili.com/video/BV1YK411H7E2'
                 },
                 {
                     LIVETITLE: 'openEuler软件包的构建、开发与维护',
                     LIVETEACHER: '讲师: 何晓文',
                     LIVETIME: '时间: 7月28日 20:00',
-                    PHOTOPATH: '/img/live/hxw.png',
+                    PHOTOPATH: '/img/live/hexiaowen.png',
                     FORMERLYLINK: 'https://www.bilibili.com/video/BV1pK411J7R9'
                 },
                 {
                     LIVETITLE: '如何参与openEuler内核开发',
                     LIVETEACHER: '讲师: 谢秀奇',
                     LIVETIME: '时间: 7月30日 20:00',
-                    PHOTOPATH: '/img/live/xxq.png',
+                    PHOTOPATH: '/img/live/xiexiuqi.png',
                     FORMERLYLINK: 'https://www.bilibili.com/video/BV11i4y1u7r9'
                 },
                 {
                     LIVETITLE: 'openEuler网络配置',
                     LIVETEACHER: '讲师: 马郡',
                     LIVETIME: '时间: 7月30日 20:00',
-                    PHOTOPATH: '/img/live/mj.png',
+                    PHOTOPATH: '/img/live/majun.png',
                     FORMERLYLINK: 'https://www.bilibili.com/video/BV17C4y187sM'
                 },
                 {
                     LIVETITLE: '可信计算之内核完整性度量',
                     LIVETEACHER: '讲师: 张天行',
                     LIVETIME: '时间: 7月30日 20:00',
-                    PHOTOPATH: '/img/live/ztx.png',
+                    PHOTOPATH: '/img/live/zhangtianxing.png',
                     FORMERLYLINK: 'https://www.bilibili.com/video/BV1dk4y1171e'
                 },
                 {
                     LIVETITLE: '安装虚拟化&管理虚拟机',
                     LIVETEACHER: '讲师: 卜瑞峰',
                     LIVETIME: '时间: 7月30日 20:00',
-                    PHOTOPATH: '/img/live/brf.png',
-                    FORMERLYLINK: ''
+                    PHOTOPATH: '/img/live/boruifeng.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1Ty4y1y7eK'
                 },
             ]
         },
         SUMMIT: {
             SUMMIT: '峰会',
-            SUMMITCONTENT: 'OpenEuler Virtual Summit 2020 是 openEuler 在发布 20.03 LTS 版本后第一次举行的峰会，本次大会邀请了华为的资深专家、社区 Committer 和多家 openEuler 社区合作厂商的重量嘉宾贡献多场精彩的演讲，不容错过。开发者和合作伙伴可以通过本次峰会全面了解 openEuler 多元化的生态、丰富的特性和广泛的社区，帮助开发者顺利融入社区，合作伙伴参与到 openEuler 生态体系。',
+            SUMMITCONTENT: 'OpenEuler Virtual Summit 2020 是 openEuler 在发布 20.03 LTS 版本后第一次举行的峰会，本次大会邀请了华为的资深专家、社区Committer和多家openEuler社区合作厂商的重量嘉宾贡献多场精彩的演讲，不容错过。开发者和合作伙伴可以通过本次峰会全面了解 openEuler 多元化的生态、丰富的特性和广泛的社区，帮助开发者顺利融入社区，合作伙伴参与到openEuler生态体系。',
             HOMETITLE: '往期回顾',
             LISTTITLE: '精彩回顾',
             LISTTIME: '2020年4月17-18日',
             SPEECHTITLE: '主题演讲',
             DESIGNTITLE: '设计峰会（项目组专题研讨）',
             VIDEODOWNLOAD: '附件下载',
+            FRIENDSHIPLINK: '友情链接',
             SPEECHLIST: [{
                     SPEECHTIME: '4 月 17 日    09:30 - 09:40',
                     SPEECHTHEME: 'openEuler 加速多核异构计算产业发展',
@@ -626,17 +684,23 @@ module.exports = {
                     TRACK1: [{
                         TRACK1TITLE: 'openEuler内核',
                         TRACK1TEACHER: '郭寒军',
-                        TRACK1MAINTAINER: 'openEuler Kernel Maintainer'
+                        TRACK1MAINTAINER: 'openEuler Kernel Maintainer',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1E64y1T76a',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-community-kernel'
                     }],
                     TRACK2: [{
                         TRACK2TITLE: 'RaspberryPi',
                         TRACK2TEACHER: '方亚芬',
-                        TRACK2MAINTAINER: 'RaspberryPi Maintainer'
+                        TRACK2MAINTAINER: 'RaspberryPi Maintainer',
+                        TRACK2LINK:'https://www.bilibili.com/video/BV1Ve411s74C',
+                        TRACK2DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-raspberrypi'
                     }],
                     TRACK3: [{
                         TRACK3TITLE: 'UKUI',
                         TRACK3TEACHER: '窦龑',
-                        TRACK3MAINTAINER: 'UKUI核心开发成员；麒麟软件开源小组成员'
+                        TRACK3MAINTAINER: 'UKUI核心开发成员；麒麟软件开源小组成员',
+                        TRACK3LINK:'https://www.bilibili.com/video/BV1ei4y187SD',
+                        TRACK3DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-ukui'
                     }]
                 },
                 {
@@ -649,17 +713,23 @@ module.exports = {
                     TRACK1: [{
                         TRACK1TITLE: 'Container & iSula',
                         TRACK1TEACHER: '蔡灏',
-                        TRACK1MAINTAINER: 'Container & iSula SIG Maintainer'
+                        TRACK1MAINTAINER: 'Container & iSula SIG Maintainer',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1A54y1R7iX',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-container'
                     }],
                     TRACK2: [{
                         TRACK2TITLE: 'Documentation',
                         TRACK2TEACHER: '谭志鹏',
-                        TRACK2MAINTAINER: 'Documentation Maintainer'
+                        TRACK2MAINTAINER: 'Documentation Maintainer',
+                        TRACK2LINK:'https://www.bilibili.com/video/BV1yT4y1G78u',
+                        TRACK2DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-documentation'
                     }],
                     TRACK3: [{
                         TRACK3TITLE: 'High Availability',
                         TRACK3TEACHER: '侯健 ',
-                        TRACK3MAINTAINER: ''
+                        TRACK3MAINTAINER: '',
+                        TRACK3LINK:'https://www.bilibili.com/video/BV1Wt4y1272N',
+                        TRACK3DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-ha'
                     }]
 
                 },
@@ -671,12 +741,16 @@ module.exports = {
                     TRACK1: [{
                         TRACK1TITLE: 'Packaging & Base Service',
                         TRACK1TEACHER: '何晓文',
-                        TRACK1MAINTAINER: 'Packaging Maintainer'
+                        TRACK1MAINTAINER: 'Packaging Maintainer',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1we411s7rQ',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-packaging'
                     }],
                     TRACK3: [{
                         TRACK3TITLE: 'oVirt',
                         TRACK3TEACHER: '付惠惠 ',
-                        TRACK3MAINTAINER: 'oVirt Maintainer；麒麟软件oVirt负责人'
+                        TRACK3MAINTAINER: 'oVirt Maintainer；麒麟软件oVirt负责人',
+                        TRACK3LINK:'https://www.bilibili.com/video/BV1LK4y1k7Hv',
+                        TRACK3DOWNLOAD:'hhttps://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-ovirt'
                     }]
 
                 },
@@ -688,17 +762,23 @@ module.exports = {
                     TRACK1: [{
                         TRACK1TITLE: 'Kubernetes',
                         TRACK1TEACHER: '周鹏飞',
-                        TRACK1MAINTAINER: 'SIG-Kubernetes Maintainer'
+                        TRACK1MAINTAINER: 'SIG-Kubernetes Maintainer',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1ak4y1R7Sq',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-kubernetes'
                     }],
                     TRACK2: [{
                         TRACK2TITLE: 'Networking',
                         TRACK2TEACHER: '陆志浩',
-                        TRACK2MAINTAINER: 'Networking Maintainer'
+                        TRACK2MAINTAINER: 'Networking Maintainer',
+                        TRACK2LINK:'https://www.bilibili.com/video/BV1KV411Z7nR',
+                        TRACK2DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-networking'
                     }],
                     TRACK3: [{
                         TRACK3TITLE: 'Virualization',
                         TRACK3TEACHER: '张海亮 ',
-                        TRACK3MAINTAINER: 'Vir Maintainer'
+                        TRACK3MAINTAINER: 'Vir Maintainer',
+                        TRACK3LINK:'https://www.bilibili.com/video/BV1q54y197CX',
+                        TRACK3DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-virtualization'
                     }]
                 },
                 {
@@ -709,12 +789,16 @@ module.exports = {
                     TRACK1: [{
                         TRACK1TITLE: '社区治理',
                         TRACK1TEACHER: '李永乐',
-                        TRACK1MAINTAINER: 'openEuler社区秘书处负责人'
+                        TRACK1MAINTAINER: 'openEuler社区秘书处负责人',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1sA411b74z',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-community-governance'
                     }],
                     TRACK2: [{
                         TRACK2TITLE: 'Compiler',
                         TRACK2TEACHER: '郭歌',
-                        TRACK2MAINTAINER: 'Compiler Maintainer'
+                        TRACK2MAINTAINER: 'Compiler Maintainer',
+                        TRACK2LINK:'https://www.bilibili.com/video/BV16Q4y1K7gV',
+                        TRACK2DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-compiler'
                     }],
                 },
                 {
@@ -725,17 +809,23 @@ module.exports = {
                     TRACK1: [{
                         TRACK1TITLE: 'Release Management',
                         TRACK1TEACHER: '马亮',
-                        TRACK1MAINTAINER: 'openEuler 20.09 发布经理'
+                        TRACK1MAINTAINER: 'openEuler 20.09 发布经理',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1JA411b7tX',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-release'
                     }],
                     TRACK2: [{
                         TRACK2TITLE: 'Compatibility',
                         TRACK2TEACHER: '杜开田',
-                        TRACK2MAINTAINER: 'Compatibility Maintainer'
+                        TRACK2MAINTAINER: 'Compatibility Maintainer',
+                        TRACK2LINK:'https://www.bilibili.com/video/BV1F5411b7pJ',
+                        TRACK2DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-compatibility'
                     }],
                     TRACK3: [{
                         TRACK3TITLE: 'Dev-utils',
                         TRACK3TEACHER: '熊伟',
-                        TRACK3MAINTAINER: 'openEuler TC member; Dev-utils Maintainer'
+                        TRACK3MAINTAINER: 'openEuler TC member; Dev-utils Maintainer',
+                        TRACK3LINK:'https://www.bilibili.com/video/BV1Ei4y1t7a8',
+                        TRACK3DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-dev-utils'
                     }]
 
                 },
@@ -747,24 +837,45 @@ module.exports = {
                     TRACK1: [{
                         TRACK1TITLE: 'Technical Committee',
                         TRACK1TEACHER: '胡欣蔚',
-                        TRACK1MAINTAINER: 'openEuler 技术委员会主席'
+                        TRACK1MAINTAINER: 'openEuler 技术委员会主席',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1rQ4y1K7L6',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-tc'
                     }],
                     TRACK2: [{
                         TRACK2TITLE: 'Infrastructure',
                         TRACK2TEACHER: '李中华',
-                        TRACK2MAINTAINER: 'openEuler Infrastructure Maintainer'
+                        TRACK2MAINTAINER: 'openEuler Infrastructure Maintainer',
+                        TRACK2LINK:'https://www.bilibili.com/video/BV1UT4y1G7fp',
+                        TRACK2DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-infrastructure'
                     }],
                     TRACK3: [{
                         TRACK3TITLE: '安全委员会',
                         TRACK3TEACHER: '朱健伟',
-                        TRACK3MAINTAINER: '操作系统安全领域专家'
+                        TRACK3MAINTAINER: '操作系统安全领域专家',
+                        TRACK3LINK:'https://www.bilibili.com/video/BV17Q4y1T7FN',
+                        TRACK3DOWNLOAD:'https://etherpad.opendev.org/p/openeuler-virtual-summit-2020-security-committee'
                     }]
                 }
-            ]
+            ],
+            OTHERLINK:[
+                {
+                    URL:'url("/img/summit/kunpeng.svg")',
+                    LINK:'https://www.huaweicloud.com/kunpeng/'
+                },
+                {
+                    URL:    'url("/img/summit/mulan.svg")',
+                    LINK:'http://www.mulanos.cn/'
+                },
+                {
+                    URL:'url("/img/summit/pengcheng.png")',
+                    LINK:'https://dw.pcl.ac.cn/dwmain/main/'
+                }
+                ]
         },
         MEETUPS: {
             MEETUPS: '沙龙',
-            MESSAGE: '敬请期待...'
+            MESSAGE: '敬请期待...',
+            INSIDENAME:'CONNECT',
         }
     }
 };

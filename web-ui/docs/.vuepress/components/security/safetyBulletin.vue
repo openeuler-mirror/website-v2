@@ -10,7 +10,7 @@
       <el-form :inline="true" class="form">
         <el-form-item :label="i18n.security.SEARCH">
           <el-input v-model="formData.keyword" class="pc-search">
-            <i slot="suffix" class="el-icon-search" @click="initData(1)"></i>
+            <i slot="suffix" class="icon-search el-icon-search" @click="initData(1)"></i>
           </el-input>
           <el-input
             v-model="formData.keyword"
@@ -345,6 +345,11 @@ export default {
         flex-direction: column;
         margin: 40px 0 20px 0;
       }
+      .label-font{
+          span{
+              font-size: 15px;
+          }
+      }
       .el-form-item {
         margin-right: 0;
         margin-bottom: 0;
@@ -363,6 +368,9 @@ export default {
         height: 32px;
         @media (max-width: 1000px) {
           display: none;
+        }
+        .icon-search{
+            cursor: pointer;
         }
       }
       .mobile-select,
