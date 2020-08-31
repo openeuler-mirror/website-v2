@@ -142,6 +142,7 @@ git push origin <branch-name>:<branch-name>
     background:rgba(225,230,238,0.3);
     border:1px solid rgba(151,151,151,1);
     border-radius: 0;
+    margin:20px auto;
     code[class*="language-"], pre[class*="language-"]{
       color:rgba(0,0,0,0.5);
     }
