@@ -39,7 +39,7 @@
                                     <div class="tags-info" v-for="(item, index) in filterDatas('文档')" :key="index">
                                         <h3 v-html="item.title"><a :href="item.path"></a></h3>
                                         <p>{{ item.textContent }}</p>
-                                        <p class="articla-from"><span>来源： </span><span class="artical-tag">{{ item.type }}</span></p>
+                                        <p class="articla-from"><span>{{ i18n.search.TAG_NAME.FROM }}： </span><span class="artical-tag">{{ item.type }}</span></p>
                                     </div>
                                 </div>
                                 <template>

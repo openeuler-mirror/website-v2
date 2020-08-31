@@ -79,28 +79,28 @@ module.exports = {
             GUIDE_CONTENT: [
                 {
                     BUTTON: "签署CLA",
-                    IMG: "/img/community/contribution/contribution1.png",
-                    VIDEO: "img/community/contribution/cla.gif"
+                    IMG: "/img/community/contribution/cla.png",
+                    VIDEO: "/img/community/contribution/cla.gif"
                 },
                 {
                     BUTTON: "提出Issue",
-                    IMG: "/img/community/contribution/contribution2.png",
-                    VIDEO: "img/community/contribution/issue.gif"
+                    IMG: "/img/community/contribution/issue.png",
+                    VIDEO: "/img/community/contribution/issue.gif"
                 },
                 {
                     BUTTON: "贡献代码",
-                    IMG: "/img/community/contribution/contribution3.png",
-                    VIDEO: "img/community/contribution/contribution.gif"
+                    IMG: "/img/community/contribution/contribution.png",
+                    VIDEO: "/img/community/contribution/contribution.gif"
                 },
                 {
                     BUTTON: "加入SIG",
-                    IMG: "/img/community/contribution/contribution4.png",
-                    VIDEO: "img/community/contribution/sig.gif"
+                    IMG: "/img/community/contribution/sig.png",
+                    VIDEO: "/img/community/contribution/sig.gif"
                 },
                 {
                     BUTTON: "参选技术委员会",
-                    IMG: "/img/community/contribution/contribution5.png",
-                    VIDEO: "img/community/contribution/commit.gif"
+                    IMG: "/img/community/contribution/commit.png",
+                    VIDEO: "/img/community/contribution/commit.gif"
                 },
             ]
         },
@@ -184,28 +184,28 @@ module.exports = {
             GUIDE_CONTENT: [
                 {
                     BUTTON: "签署CLA",
-                    IMG: "/img/community/contribution/contribution1.png",
-                    VIDEO: "img/community/contribution/cla.gif"
+                    IMG: "/img/community/contribution/cla.png",
+                    VIDEO: "/img/community/contribution/cla.gif"
                 },
                 {
                     BUTTON: "提出Issue",
-                    IMG: "/img/community/contribution/contribution2.png",
-                    VIDEO: "img/community/contribution/issue.gif"
+                    IMG: "/img/community/contribution/issue.png",
+                    VIDEO: "/img/community/contribution/issue.gif"
                 },
                 {
                     BUTTON: "贡献代码",
-                    IMG: "/img/community/contribution/contribution3.png",
-                    VIDEO: "img/community/contribution/contribution.gif"
+                    IMG: "/img/community/contribution/contribution.png",
+                    VIDEO: "/img/community/contribution/contribution.gif"
                 },
                 {
                     BUTTON: "加入SIG",
-                    IMG: "/img/community/contribution/contribution4.png",
-                    VIDEO: "img/community/contribution/sig.gif"
+                    IMG: "/img/community/contribution/sig.png",
+                    VIDEO: "/img/community/contribution/sig.gif"
                 },
                 {
                     BUTTON: "参选技术委员会",
-                    IMG: "/img/community/contribution/contribution5.png",
-                    VIDEO: "img/community/contribution/commit.gif"
+                    IMG: "/img/community/contribution/commit.png",
+                    VIDEO: "/img/community/contribution/commit.gif"
                 },
             ]
         },

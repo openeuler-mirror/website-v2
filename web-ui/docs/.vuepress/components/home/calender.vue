@@ -565,7 +565,7 @@
                                         duration: 16,
                                         name: '二次开发',
                                         detail: '开会开会',
-                                        url: '/img/home/2.jpg'
+                                        url: '/img/home/2.png'
                                     }
                                 ]
                             },
@@ -846,7 +846,6 @@
         outline: none;
         cursor: pointer;
         position: absolute;
-        /*background: url('/web-ui/docs/.vuepress/public/img/home/prev.svg') no-repeat center;*/
         transition: transform 0.5s ease-in-out;
     }
     .calenderSliderTopMainswiper{
@@ -968,7 +967,6 @@
         width: 240px;
         height: 740px;
         transition: transform 0.5s ease-in-out;
-        background: pink;
     }
     .calenderListSinge{
         width: 240px;

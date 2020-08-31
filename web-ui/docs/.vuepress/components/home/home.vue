@@ -8,7 +8,6 @@
                     </div>
                 </el-carousel-item>
                 <el-carousel-item class="carousel-item">
-<!--                                  :style="{ backgroundImage:'url(' + banner1 + ')', 'background-size': '100%', 'background-repeat': 'no-repeat'}"-->
                     <div class="card-summer">
                         <img src="/img/home/BannerSummer.png" alt="">
                         <span>{{ i18n.home.HOME_CAROUSEL_DATA[0].DES }}</span>
@@ -19,7 +18,6 @@
                         class="carousel-item"
                         v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
                         :key="index">
-<!--                        :style="{ backgroundImage:'url(' + item.IMG + ')', 'background-size': '100%', 'background-repeat': 'no-repeat'}"-->
                     <h3>{{ item.TITLE }}</h3>
                     <span>{{ item.DES }}</span>
                     <video :src="'/img/home-video/banner' + index + '.mp4'" type="video/mp4" autoplay loop muted height="380px"></video>
@@ -69,6 +67,14 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="map-rode">
+                <img class="is-pc rode-left" src="/img/home/rodeLeft.svg" alt="">
+                <img class="is-pc plane-left" src="/img/home/planeLeft.svg" alt="">
+                <img class="is-pc rode-middle" src="/img/home/rodeMiddle.svg" alt="">
+                <img class="is-pc plane-middle" src="/img/home/planeMiddle.svg" alt="">
+                <img class="is-pc rode-right" src="/img/home/rodeRight.svg" alt="">
+                <img class="is-pc plane-right" src="/img/home/planeRight.svg" alt="">
             </div>
             <div class="is-h5 mapArea">
                 <div
@@ -134,7 +140,6 @@
                             <span>{{ item.frontmatter.author }}</span>
                             <p><a :href="item.path">{{ item.frontmatter.title }}</a></p>
                         </div>
-<!--                        href="/interaction/news-list/"-->
                         <span><a @click="go('/interaction/news-list/')">{{ i18n.home.MORE }}</a></span>
                     </div>
                 </div>
@@ -561,6 +566,45 @@
         width: 1080px;
         margin: 0 auto;
     }
+    .map-rode {
+        width: 1080px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .rode-left {
+        position: absolute;
+        left: 95px;
+        z-index: -10;
+    }
+    .rode-middle {
+        position: absolute;
+        left: 420px;
+        top: -310px;
+        z-index: -10;
+    }
+    .rode-right {
+        position: absolute;
+        left: 760px;
+        top: -70px;
+        z-index: -10;
+    }
+    .plane-left {
+        position: absolute;
+        left: 215px;
+        z-index: -10;
+    }
+    .plane-middle {
+        position: absolute;
+        left: 595px;
+        top: -325px;
+        z-index: -10;
+    }
+    .plane-right {
+        position: absolute;
+        left: 920px;
+        top: -25px;
+        z-index: -10;
+    }
     .home-introduce .is-h5.mapArea {
         display: none ;
     }
@@ -595,7 +639,7 @@
     }
     .area-box.in-pc:nth-child(3) {
         position: absolute;
-        top: 132px;
+        top: 90px;
         left: 56%;
     }
     .area-box.in-pc:nth-child(4) {
@@ -633,15 +677,15 @@
         margin-left: 10px;
     }
     .area-box img {
-        width: 180px;
-        height: 130px;
+        width: 150px;
+        height: 150px;
         display: block;
         margin: 10px 0 26px 30px;
     }
     .area-box .is-hidden {
         display: none;
-        width: 180px;
-        height: 130px;
+        width: 150px;
+        height: 150px;
     }
     .area-box .is-hovered {
         display: block;
@@ -1081,6 +1125,9 @@
             display: block;
         }
         .is-pc.mapArea {
+            display: none;
+        }
+        .home-introduce .is-pc {
             display: none;
         }
         .home {
