@@ -94,11 +94,11 @@
         display: block;
     }
     .methods {
-        width: 1200px;
+        width: 1120px;
         margin: 0 auto;
     }
     .mail-guide {
-        max-width: 1200px;
+        max-width: 1120px;
         margin: 0 auto;
     }
     .step {
