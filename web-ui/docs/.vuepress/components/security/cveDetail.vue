@@ -4,7 +4,7 @@
     <div class="cveInner">
       <h1>{{i18n.security.CVE_DETAIL}}</h1>
       <h2>{{detailData.cveId}}</h2>
-      <p>{{i18n.security.RELEASE_DATE}}: {{detailData.announcementTime}}<br />{{i18n.security.MODIFIED_TIME}}: {{detailData.announcementTime}}
+      <p>{{i18n.security.RELEASE_DATE}}: {{detailData.announcementTime}}<br />{{i18n.security.MODIFIED_TIME}}: {{detailData.updateTime}}
       </p>
       <h2>{{i18n.security.SYNOPSIS}}</h2>
       <p>{{detailData.summary}}</p>
@@ -20,8 +20,8 @@
         <li class="item">
           <ul>
             <li>CVSS{{i18n.security.SCORE}}</li>
-            <li>{{detailData.cvssScoreNVD}}</li>
-            <li>{{detailData.cvssScoreOE}}</li>
+            <li>{{detailData.cvsssCoreNVD}}</li>
+            <li>{{detailData.cvsssCoreOE}}</li>
           </ul>
         </li>
         <li class="item">
@@ -91,7 +91,7 @@
             <li>{{i18n.security.OPERATION}}</li>
           </ul>
         </li>
-        <li class="item" v-for="(item, index) in detailData.noticeList" :key="index">
+        <li class="item" v-for="(item, index) in packageList" :key="index">
           <ul>
             <li>
               <span>{{i18n.security.SECURITY_ADVISORIES_NAME}}:</span>
@@ -121,7 +121,7 @@
             <li>{{i18n.security.STATUS}}</li>
           </ul>
         </li>
-        <li class="item" v-for="(item, index) in detailData.packageList">
+        <li class="item" v-for="(item, index) in noticeList">
           <ul>
             <li>
               <span>{{i18n.security.PRODUCT}}:</span>
@@ -143,7 +143,7 @@
 </template>
 
 <script>
-import { cveDetail } from "../../api/security"
+import { cveDetail, getAffectedProduct, getPackage } from "../../api/security"
 let that = null;
 
 const locationMethods = {
@@ -154,14 +154,42 @@ const locationMethods = {
     })
       .then(data => {
         that.loading = false;
-        if (data && data.list && data.list.length) {
-          that.detailData = data.list[0];
+        if (data) {
+          that.detailData = data;
         }
 
       })
       .catch(data => {
         that.$message.error(data);
         that.loading = false;
+      });
+  },
+  getAffectedProduct () {
+    getAffectedProduct({
+      cveId: that.$route.query.id
+    })
+      .then(data => {
+        if (data) {
+          that.packageList = data;
+        }
+
+      })
+      .catch(data => {
+        that.$message.error(data);
+      });
+  },
+  getPackage () {
+    getPackage({
+      cveId: that.$route.query.id
+    })
+      .then(data => {
+        if (data) {
+          that.noticeList = data;
+        }
+
+      })
+      .catch(data => {
+        that.$message.error(data);
       });
   }
 }
@@ -170,11 +198,15 @@ export default {
     that = this;
     return {
       loading: false,
-      detailData: {}
+      detailData: {},
+      packageList: [],
+      noticeList: []
     };
   },
   created () {
     locationMethods.getCveDetail();
+    locationMethods.getAffectedProduct();
+    locationMethods.getPackage();
   },
   methods: {
     to () {

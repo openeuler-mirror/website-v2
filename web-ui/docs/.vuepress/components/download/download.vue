@@ -11,8 +11,7 @@
         <el-form-item :label="i18n.download.MANUFACTURER">
           <el-select v-model="formData.manufacturer" multiple placeholder>
             <el-option
-              v-for="(item, index) in i18n.download
-                                .MANUFACTURER_LIST"
+              v-for="(item, index) in i18n.download.MANUFACTURER_LIST"
               :key="index"
               :label="item.NAME"
               :value="item.VALUE"
@@ -218,6 +217,7 @@ export default {
   }
   .el-form-item__content {
     line-height: 32px;
+    width: 140px;
     @media (max-width: 1000px) {
       width: 100%;
     }

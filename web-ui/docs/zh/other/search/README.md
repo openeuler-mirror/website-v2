@@ -1,0 +1,3 @@
+<ClientOnly>
+  <other-search />
+</ClientOnly>
