@@ -171,14 +171,6 @@ export default {
         this.initData(1);
     },
     mounted () {
-        window.addEventListener('resize',function(){
-            that.screenWidth = document.body.offsetWidth;
-            if(that.screenWidth<=1000){
-                that.pagerLayout = that.hidePager;
-            }else{
-                that.pagerLayout = that.showPager;
-            }
-        });
         if(this.screenWidth<=1000){
             this.pagerLayout = this.hidePager;
         }else{
@@ -186,11 +178,6 @@ export default {
         }
     },
     methods: {
-        isShowPager(){
-            if(document.body.clientWidth<=1000){
-                this.pagerLayout = this.hidePager;
-            }
-        },
         initData (flag) {
             locationMethods.getSecurityList(flag);
         },
