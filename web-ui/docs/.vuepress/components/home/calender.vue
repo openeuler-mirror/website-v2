@@ -28,8 +28,8 @@
                                 <div :class="'calenderslideItemInsideItem' + (item1.duration >= 16 ? ' all' : '')" :key="index1" :style="returnHeight(item1)">
                                     <template v-for="(item2, index2) in item1.dealDate">
                                         <div :key="index2" class="calenderListSinge" :style="returnInsideH(item2)" v-if="item1.duration < 16">
-                                            <button class="left btnMy"  v-if="item2.data.length > 1" @click="handleBtnMysef('left', key, index1, index2, dealData)" :style="{ background: 'url(' + prev + ') no-repeat center' }"></button>
-                                            <button class="right btnMy"  v-if="item2.data.length > 1" @click="handleBtnMysef('right', key, index1, index2, dealData)" :style="{ background: 'url(' + prev + ') no-repeat center' }"></button>
+                                            <button class="left btnMy"  v-if="item2.data.length > 1" @click="handleBtnMysef('left', key, index1, index2, dealData)" :style="{ background: 'url(' + prevDetail + ') no-repeat center' }"></button>
+                                            <button class="right btnMy"  v-if="item2.data.length > 1" @click="handleBtnMysef('right', key, index1, index2, dealData)" :style="{ background: 'url(' + prevDetail + ') no-repeat center' }"></button>
                                             <span v-if="item2.data.length > 1" class="calenderCurrentIndex">{{ item2.index }} / {{ item2.data.length }}</span>
                                             <div class="calenderInsideAll" :style="'transform: translateX(' + (-240 * (item2.index - 1)) + 'px)'">
                                                 <div v-for="(item3, index3) in item2.data" :key="index3"
@@ -593,7 +593,8 @@
                 ],
                 saveItem: {},
                 isShowDetail: false,
-                prev:  "/img/home/prev.svg"
+                prev:  "/img/home/prev.svg",
+                prevDetail:  "/img/home/prev-detail.svg"
             }
         },
         components: {

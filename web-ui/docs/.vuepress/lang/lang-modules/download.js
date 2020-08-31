@@ -67,7 +67,7 @@ module.exports = {
         SEEK_HELP: 'seekHelp',
         GET_ISO: 'getIso',
         LIFE_CYCLE: 'lifeCycle',
-        DOWNLOAD_BTN_NAME: 'download',
+        DOWNLOAD_BTN_NAME: 'Download',
         MANUFACTURER: 'manufacturer',
         MANUFACTURER_LIST: [
             {

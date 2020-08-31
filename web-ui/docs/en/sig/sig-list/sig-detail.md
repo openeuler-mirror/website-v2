@@ -1,0 +1,3 @@
+<ClientOnly>
+  <sig-detail />
+</ClientOnly>
