@@ -1,5 +1,5 @@
 <template>
-  <div class="download-content">
+  <div class="moblie-content">
     <common-banner
       :pc-src="'/img/other/brand/brand-banner.png'"
       :mobile-src="'/img/other/brand/brand-banner.png'"
@@ -81,12 +81,17 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+@media screen and (max-width: 1000px) {
+     .moblie-content {
+       padding: 40px 30px 80px 30px;
+     }
+    }
 .brand-all-word {
   width: 1120px;
   margin: 0 auto;
   padding-top: 60px;
   @media (max-width: 1000px) {
-     width: 300px;
+     width: 315px;
     }
   .brand-title {
     width: 48px;
@@ -120,14 +125,14 @@ export default {
   margin: 0 auto;
   margin-top: 80px;
    @media (max-width: 1000px) {
-     width: 300px;
+     width: 315px;
     }
   .card-vertical,
   .card-horizontal {
     display: flex;
     @media (max-width: 1000px) {
       flex-direction: column;
-      width: 300px;
+      width: 315px;
     }
   }
   .card-horizontal {
@@ -190,8 +195,8 @@ export default {
     }
   }
   ul h3 {
-    width: 99px;
     height: 24px;
+    text-align: center;
     font-size: 24px;
     font-family: HuaweiSans;
     color: rgba(0, 0, 0, 1);
@@ -215,7 +220,7 @@ export default {
     padding-bottom: 50px;
   }
   .card-btn {
-    margin-left: 20px;
+    margin-left: 29px;
     margin-top: 20px;
     margin-bottom: 120px;
     width: 78px;
@@ -223,6 +228,7 @@ export default {
     padding: 2px;
     @media (max-width: 1000px) {
       margin-bottom: 30px;
+      width: 65px;
     }
   }
 }
