@@ -318,7 +318,8 @@ export default {
 }
 
 .live-ist .replayer {
-    .mr-All(50px 0 0 200px);
+    width: 1120px;
+    .mr-All(50px auto 0 auto);
     @media (max-width: 1000px) {
         .mr-All(40px 0 0 30px);
     }

@@ -279,7 +279,6 @@ export default {
         .mr-All(40px auto 0 auto);
     }
     .theme-speech {
-        padding: 0 15px 0 15px;
         h3 {
             .theme-css(144px,46px);
         }
@@ -293,6 +292,7 @@ export default {
         .speech-list {
             .mr-All(60px 0 90px 0);
         li {
+            box-sizing: border-box;
             .mr(top,20px);
             &:first-of-type {
                 .mr(top,0);

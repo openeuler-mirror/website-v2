@@ -225,6 +225,9 @@ export default {
     position: absolute;
     right: 0;
   }
+  .el-tree-node__content > .el-tree-node__label {
+    margin-left: 12px;
+  }
   .el-icon-caret-right:before {
     content: "\e6e0";
   }
