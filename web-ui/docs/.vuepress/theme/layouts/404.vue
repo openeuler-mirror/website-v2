@@ -1,30 +1,32 @@
 <template>
-  <div class="theme-container">
-    <div class="theme-default-content" v-if="$route.path !== '/'">
-      <h1>404</h1>
-
-      <blockquote>{{ getMsg() }}</blockquote>
-
-      <RouterLink to="/zh/">
-        Take me home.
-      </RouterLink>
+    <div class="theme-container">
+        <CustomHeader></CustomHeader>
+            <div class="common-banner">
+                <div class="banner">
+                    <img src="/img/404/404-banner.png" />
+                    <span :class="['outside', $isCn ? 'font-xihjw' : 'font-hwmedium']">{{i18n.common.NOTFOUND.NOTFOUND}}</span>
+                    <p class="pc-message">{{i18n.common.NOTFOUND.MESSAGE}}</p>
+                </div>
+                <div class="banner-mobile">
+                    <h3>{{i18n.common.NOTFOUND.NOTFOUND}}</h3>
+                    <p class="mobile-message">{{i18n.common.NOTFOUND.MESSAGE}}</p>
+                    <img src="/img/404/404-banner.png" />
+                </div>
+            </div>
+        <CustomFooter></CustomFooter>
     </div>
-  </div>
 </template>
 
 <script>
-const msgs = [
-  `There's nothing here.`,
-  `How did we get here?`,
-  `That's a Four-Oh-Four.`,
-  `Looks like we've got some broken links.`
-]
+import CustomHeader from "./../components/CustomHeader";
+import CustomFooter from "./../components/CustomFooter";
 
 export default {
+    components: {
+        CustomHeader,
+        CustomFooter
+    },
   methods: {
-    getMsg () {
-      return msgs[Math.floor(Math.random() * msgs.length)]
-    }
   },
   watch: {
       '$route.path': {
@@ -38,3 +40,73 @@ export default {
   }
 }
 </script>
+
+<style lang="less" scoped>
+.common-banner {
+    width: 1120px;
+    margin: 0 auto 200px auto;
+    height: 903px;
+    @media (max-width: 1000px) {
+        width: 100%;
+        padding: 0 55px;
+        height: unset;
+        margin: 0 auto 80px auto;
+    }
+    .banner {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        @media (max-width: 1000px) {
+            display: none;
+        }
+        .pc-message{
+            width: 130px;
+            height: 30px;
+            font-size: 24px;
+            font-family: FZLTHJW, FZLTHJW;
+            font-weight: normal;
+            color: #000000;
+            line-height: 30px;
+            position: absolute;
+            top: 260px;
+        }
+        img {
+            height: 715px;
+            width: 733px;
+            position: absolute;
+            right: 0;
+            top: 180px;
+        }
+        .outside {
+            position: absolute;
+            left: 0;
+            top: 156px;
+            font-size: 48px;
+            line-height: 48px;
+            color: #000;
+            font-weight: normal;
+        }
+    }
+  .banner-mobile {
+        display: none;
+    @media (max-width: 1000px) {
+        display: block;
+    }
+    width: 100%;
+    h3 {
+        font-size: 24px;
+        line-height: 34px;
+        text-align: center;
+        font-family: FZLTHJW;
+        margin-top: 40px;
+    }
+    img {
+        margin-top: 10px;
+        width: 100%;
+    }
+    .mobile-message{
+        margin-left:120px;
+    }
+  }
+}
+</style>
