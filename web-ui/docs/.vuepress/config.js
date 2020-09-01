@@ -10,11 +10,7 @@ module.exports = {
         ['meta', {
             name: 'viewport',
             content: 'width=device-width,initial-scale=1,user-scalable=no'
-        }],
-        ['script', {
-            async: 'async',
-            src: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
-        }],
+        }]
     ],
     markdown: {
         lineNumbers: false

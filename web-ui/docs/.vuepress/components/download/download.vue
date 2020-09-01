@@ -65,23 +65,6 @@
               </li>
               <li>
                 <img src="/img/download/release.svg" alt />
-                <a
-                  target="_blank"
-                  :href="item.INSTALL_GUIDENCE_URL"
-                >{{ i18n.download.INSTALL_GUIDENCE }}</a>
-              </li>
-            </ul>
-            <ul class="url-list">
-              <li>
-                <img src="/img/download/release.svg" alt />
-                <a target="_blank" :href="item.SEEK_HELP_URL">
-                  {{
-                  i18n.download.SEEK_HELP
-                  }}
-                </a>
-              </li>
-              <li>
-                <img src="/img/download/release.svg" alt />
                 <a target="_blank" :href="item.GET_ISO_URL">
                   {{
                   i18n.download.GET_ISO
@@ -92,7 +75,25 @@
             <ul class="url-list">
               <li>
                 <img src="/img/download/release.svg" alt />
+                <a
+                  target="_blank"
+                  :href="item.INSTALL_GUIDENCE_URL"
+                >{{ i18n.download.INSTALL_GUIDENCE }}</a>
+                
+              </li>
+              <li>
+                <img src="/img/download/release.svg" alt />
                 <a target="_blank" :href="item.LIFE_CYCLE_URL">{{ i18n.download.LIFE_CYCLE }}</a>
+              </li>
+            </ul>
+            <ul class="url-list">
+              <li>
+                <img src="/img/download/release.svg" alt />
+                <a target="_blank" :href="item.SEEK_HELP_URL">
+                  {{
+                  i18n.download.SEEK_HELP
+                  }}
+                </a>
               </li>
             </ul>
           </div>
