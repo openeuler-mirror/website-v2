@@ -201,7 +201,7 @@ export default {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .details-left {
-  width: 200px;
+  width: 192px;
   display: inline-block;
   vertical-align: top;
   > div > div > div.el-tree-node__content {
@@ -224,6 +224,9 @@ export default {
   .el-tree-node__content > .el-tree-node__expand-icon {
     position: absolute;
     right: 0;
+  }
+  .el-tree-node__content > .el-tree-node__label {
+    margin-left: 12px;
   }
   .el-icon-caret-right:before {
     content: "\e6e0";
