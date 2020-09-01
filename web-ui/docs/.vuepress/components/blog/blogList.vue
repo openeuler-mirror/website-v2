@@ -367,12 +367,12 @@ export default {
     }
 }
 .blog-write {
-  font-size: 18px;
-  font-weight: 400;
-  color: #002fa7;
-  margin-left: 13px;
-  cursor: pointer;
-  font-family: PingFangSC-Regular, PingFang SC;
+    font-size: 18px;
+    font-weight: 400;
+    color: #002fa7;
+    margin-left: 13px;
+    cursor: pointer;
+    font-family: PingFangSC-Regular, PingFang SC;
 }
 .blog-item {
     height: 335px;
@@ -402,9 +402,9 @@ export default {
     }
 }
 .blog-author {
-  font-size: 16px;
-  font-weight: bold;
-  font-family:HuaweiSans-Bold,HuaweiSans;
+    font-size: 16px;
+    font-weight: bold;
+    font-family:HuaweiSans-Bold,HuaweiSans;
 }
 .blog-date {
     font-size: 12px;
@@ -427,11 +427,11 @@ export default {
     cursor: pointer;
 }
 .blog-item-tag {
-  font-size: 14px;
-  color: #002fa7;
-  .first-tag{
-    color: #00000080;
-  }
+    font-size: 14px;
+    color: #002fa7;
+    .first-tag{
+      color: #00000080;
+    }
 }
 .paginationClass {
     margin: 20px 0 200px 0;
