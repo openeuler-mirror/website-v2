@@ -144,7 +144,9 @@
                     >
                     <i
                         class="icon-search el-input__icon"
-                        slot="suffix">
+                        slot="suffix"
+                        @click="toSearch"
+                        >
                     </i>
                     </el-input>
                 </div>
@@ -178,7 +180,9 @@
                     >
                     <i
                         class="icon-search el-input__icon"
-                        slot="suffix">
+                        slot="suffix"
+                        @click="toSearch"
+                        >
                     </i>
                     </el-input>
                 </div>
@@ -227,6 +231,14 @@ export default {
         };
     },
     methods: {
+        toSearch () {
+            this.$router.push({
+                path: this.resolvePath('/other/search/'),
+                query: { 
+                    keyword: encodeURI(this.searchData)
+                }
+            })
+        },
         open (url) {
             window.open(url);
         },
@@ -276,9 +288,13 @@ export default {
         },
         menuActiveFn(item) {    
             const $route = this.$route;
+            let children = item.CHILDREN;
+            if(item.OTHER_CHILDREN) {
+                children = children.concat(item.OTHER_CHILDREN);
+            }
             return (
                 $route.path.includes(this.resolvePath(item.PATH)) ||
-                item.CHILDREN.some(
+                children.some(
                     item =>
                         $route.path.includes(this.resolvePath(item.PATH))
                 )

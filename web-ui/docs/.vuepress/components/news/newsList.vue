@@ -72,7 +72,7 @@
 <script>
 import dayjs from "dayjs";
 import commonBanner from "./../common/banner.vue";
-import {newsVisitList,newsVisitDetail,addVisit} from "../../api/newsCount"
+import {newsVisitList} from "../../api/newsCount"
 export default {
   data() {
     return {
@@ -111,11 +111,6 @@ export default {
     this.visitCount.pageLang=this.$lang;
   },
   methods: {
-    // 增加新闻访问量的方法
-      addNewsList(){
-           addVisit(this.visitCount)
-           .then(response => {})
-         },
     handleCurrentChange(val) {
       this.currentNewsList = this.allNewsList.slice(
         (val - 1) * this.PAGESIZE,
@@ -155,7 +150,7 @@ export default {
        if(item.path.indexOf("/" + this.$lang + "/news/") === 0){
          item.count=0;
          this.countList.forEach(itemCount=>{
-           if(itemCount.title==item.title){
+           if(itemCount.title==item.frontmatter.title){
              item.count=itemCount.count;
            }
          })
@@ -166,7 +161,6 @@ export default {
     go(path) {
       if (path) {
         this.$router.push(path);
-        this.addNewsList();
       }
     },
 

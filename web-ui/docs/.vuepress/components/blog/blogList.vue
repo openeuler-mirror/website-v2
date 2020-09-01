@@ -85,7 +85,7 @@
 import Vue from "vue";
 import dayjs from "dayjs";
 import commonBanner from "./../common/banner.vue";
-import {blogVisitList,blogVisitDetail,addVisit} from "../../api/blogCount"
+import {blogVisitList} from "../../api/blogCount"
 
 export default {
     data() {
@@ -107,12 +107,7 @@ export default {
         //常量每页显示数量
         PAGESIZE: 5,
         CELECT_LABEL: "",
-        CELECT_FILE: "",
-        visitCount: {
-            blogTitle:'',
-            blogDate:'',
-            pageLang:''
-        },
+        CELECT_FILE: ""
         };
     },
     components: {
@@ -138,18 +133,8 @@ export default {
             this.CELECT_FILE = this.i18n.community.BLOG.CELECT_FILE;
         }
         })
-        for(let i = 0;  i<this.currentBlogListData.length;i++){
-            this.visitCount.blogTitle=this.currentBlogListData[i].frontmatter.title;
-            this.visitCount.blogDate=this.currentBlogListData[i].frontmatter.date;
-        }
-        this.visitCount.pageLang=this.$lang;
     },
     methods: {
-        // 增加博客访问量的方法
-        addBlogList(){
-            addVisit(this.visitCount)
-            .then(response => {})
-        },
         handleCurrentChange(val) {
             this.currentBlogListData = this.screenBlogListData.slice(
             (val - 1) * this.PAGESIZE,
@@ -261,7 +246,7 @@ export default {
                 if(item.path.indexOf("/" + this.$lang + "/blog/") === 0){
                 item.count=0;
                 this.countList.forEach(itemCount=>{
-                    if(itemCount.title==item.title){
+                    if(itemCount.title==item.frontmatter.title){
                         item.count=itemCount.count;
                     }
                 })
@@ -272,7 +257,6 @@ export default {
         go(path) {
             if (path) {
                 this.$router.push(path);
-                this.addBlogList();
             }
         },
         getBlogDataByLang(data) {

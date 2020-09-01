@@ -25,18 +25,18 @@ export const blogVisitList = () => {
 };
 //2 博客访问量详情
 export const blogVisitDetail = ({
-    blogTitle,
-    blogDate,
-    pageLang
+    title,
+    date,
+    lang
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
             url: '/blog/one',
             type: 'post',
             data: {
-                blogTitle,
-                blogDate,
-                pageLang
+                title,
+                date,
+                lang
             },
             success(result) {
                 if (result) {
@@ -55,18 +55,18 @@ export const blogVisitDetail = ({
 };
 // 3增加博客访问量
 export const addVisit = ({
-    blogTitle,
-    blogDate,
-    pageLang
+    title,
+    date,
+    lang
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
             url: '/blog/visit',
             type: 'post',
             data: {
-                blogTitle,
-                blogDate,
-                pageLang
+                title,
+                date,
+                lang
             },
             success(result) {
                 if (result) {
