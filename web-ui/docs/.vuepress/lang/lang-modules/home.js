@@ -30,26 +30,29 @@ module.exports = {
                     NAME: "下载",
                     TITLE: "openEuler ISO",
                     IMG: "/img/home/step1.png",
-                    LINK: "javascript:;"
+                    LINK: "javascript:;",
+                    GIF: "/img/home/step-move-1.gif"
                 },
                 {
                     NAME: "体验",
                     TITLE: "openEuler系统",
                     IMG: "/img/home/step2.png",
                     LINK: "javascript:;",
-                    GIF: ""
+                    GIF: "/img/home/step-move-2.gif"
                 },
                 {
                     NAME: "查阅",
                     TITLE: "openEuler文档",
                     IMG: "/img/home/step3.png",
-                    LINK: "javascript:;"
+                    LINK: "javascript:;",
+                    GIF: "/img/home/step-move-3.gif"
                 },
                 {
                     NAME: "贡献",
                     TITLE: "openEuler社区",
                     IMG: "/img/home/step4.png",
-                    LINK: "javascript:;"
+                    LINK: "javascript:;",
+                    GIF: "/img/home/step-move-4.gif"
                 },
 
             ],
@@ -65,22 +68,22 @@ module.exports = {
                 GUIDE_WAY: [
                     {
                         TITLE: "树莓派",
-                        IMG: "",
+                        IMG: "/img/home/areaPai.png",
                         LINK:""
                     },
                     {
                         TITLE: "硬件",
-                        IMG: "",
+                        IMG: "/img/home/areaHardware.svg",
                         LINK:"",
                     },
                     {
                         TITLE: "虚拟机",
-                        IMG: "",
+                        IMG: "/img/home/areaVirtual.svg",
                         LINK:"",
                     },
                     {
                         TITLE: "ECS",
-                        IMG: "",
+                        IMG: "/img/home/areaECS.svg",
                         LINK:"",
                     }
                 ]
@@ -229,9 +232,9 @@ module.exports = {
                     GITEE_LINK: "javascript:void(0)"
                 },
                 {
-                    NAME: "Steve Green",
-                    TITLE: "CCO",
-                    RANK: "Community Lead",
+                    NAME: "Anna Green",
+                    TITLE: "Founder & CTO",
+                    RANK: "Senior Developer",
                     MAIL_LINK: "javascript:void(0)",
                     GITEE_LINK: "javascript:void(0)"
                 },
@@ -324,26 +327,29 @@ module.exports = {
                     NAME: "下载",
                     TITLE: "openEuler ISO",
                     IMG: "/img/home/step1.png",
-                    LINK: "javascript:;"
+                    LINK: "javascript:;",
+                    GIF: "/img/home/step-move-1.gif"
                 },
                 {
                     NAME: "体验",
                     TITLE: "openEuler系统",
                     IMG: "/img/home/step2.png",
                     LINK: "javascript:;",
-                    GIF: ""
+                    GIF: "/img/home/step-move-2.gif"
                 },
                 {
                     NAME: "查阅",
                     TITLE: "openEuler文档",
                     IMG: "/img/home/step3.png",
-                    LINK: "javascript:;"
+                    LINK: "javascript:;",
+                    GIF: "/img/home/step-move-3.gif"
                 },
                 {
                     NAME: "贡献",
                     TITLE: "openEuler社区",
                     IMG: "/img/home/step4.png",
-                    LINK: "javascript:;"
+                    LINK: "javascript:;",
+                    GIF: "/img/home/step-move-4.gif"
                 },
 
             ],
@@ -359,22 +365,22 @@ module.exports = {
                 GUIDE_WAY: [
                     {
                         TITLE: "树莓派",
-                        IMG: "",
+                        IMG: "/img/home/areaPai.png",
                         LINK:""
                     },
                     {
                         TITLE: "硬件",
-                        IMG: "",
+                        IMG: "/img/home/areaHardware.svg",
                         LINK:"",
                     },
                     {
                         TITLE: "虚拟机",
-                        IMG: "",
+                        IMG: "/img/home/areaVirtual.svg",
                         LINK:"",
                     },
                     {
                         TITLE: "ECS",
-                        IMG: "",
+                        IMG: "/img/home/areaECS.svg",
                         LINK:"",
                     }
                 ]

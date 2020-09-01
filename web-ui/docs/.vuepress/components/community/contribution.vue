@@ -14,7 +14,18 @@
                         <span>{{ item.BUTTON }}</span>
                     </div>
                     <img :src="item.IMG" alt="">
+                    <img :src="item.VIDEO" class="is-hidden">
                 </div>
+            </div>
+            <div class="map-rode">
+                <img class="is-pc rode-1" src="/img/community/contribution/rode1.svg" alt="">
+                <img class="is-pc plane-1" src="/img/community/contribution/plane1.svg" alt="">
+                <img class="is-pc rode-2" src="/img/community/contribution/rode2.svg" alt="">
+                <img class="is-pc plane-2" src="/img/community/contribution/plane2.svg" alt="">
+                <img class="is-pc rode-3" src="/img/community/contribution/rode3.svg" alt="">
+                <img class="is-pc plane-3" src="/img/community/contribution/plane3.svg" alt="">
+                <img class="is-pc rode-4" src="/img/community/contribution/rode4.svg" alt="">
+                <img class="is-pc plane-4" src="/img/community/contribution/plane4.svg" alt="">
             </div>
         </div>
         <div class="is-h5 mail-list-H5">
@@ -35,7 +46,39 @@
 
 <script>
     export default {
-        name: "contribution"
+        name: "contribution",
+        data () {
+            return {
+
+            }
+        },
+        mounted() {
+            this.toggleHover();
+        },
+        methods: {
+            es(selector) {
+                let es = document.querySelectorAll(selector)
+                if (es.length === 0) {
+                    return null;
+                } else {
+                    return es;
+                }
+            },
+            toggleHover() {
+                let hovers = this.es('.step');
+                for (let i = 0; i < hovers.length; i++) {
+                    let hover = hovers[i];
+                    hover.addEventListener('mouseenter', function () {
+                        let video = hover.querySelectorAll('img')[1];
+                        video.classList.add('is-hovered');
+                    })
+                    hover.addEventListener('mouseleave', function () {
+                        let video = hover.querySelectorAll('img')[1];
+                        video.classList.remove('is-hovered');
+                    })
+                }
+            },
+        }
     }
 </script>
 <style lang="less">
@@ -50,8 +93,12 @@
     .is-pc {
         display: block;
     }
+    .methods {
+        width: 1120px;
+        margin: 0 auto;
+    }
     .mail-guide {
-        max-width: 1200px;
+        max-width: 1120px;
         margin: 0 auto;
     }
     .step {
@@ -87,12 +134,74 @@
         background-color: #002FA7;
         margin: 0 auto;
     }
+    .step .is-hidden {
+        display: none;
+    }
+    .step .is-hovered {
+        display: block;
+        position: absolute;
+        top: 41px;
+    }
     .step-num span {
         color: #fff;
         font-size: 16px;
     }
     .step img {
         display: block;
+        height: 150px;
+        width: 150px;
+    }
+    .map-rode {
+        position: relative;
+        top: -800px;
+    }
+    .rode-1 {
+        position: absolute;
+        left: 70px;
+        top: 70px;
+        z-index: -10;
+    }
+    .plane-1 {
+        position: absolute;
+        left: 30px;
+        top: 170px;
+        z-index: -10;
+     }
+    .rode-2 {
+        position: absolute;
+        left: 360px;
+        top: 30px;
+        z-index: -10;
+    }
+    .plane-2 {
+        position: absolute;
+        left: 320px;
+        top: 85px;
+        z-index: -10;
+    }
+    .rode-3 {
+        position: absolute;
+        left: 630px;
+        top: 110px;
+        z-index: -10;
+    }
+    .plane-3 {
+        position: absolute;
+        left: 570px;
+        top: 200px;
+        z-index: -10;
+    }
+    .rode-4 {
+        position: absolute;
+        left: 875px;
+        top: 85px;
+        z-index: -10;
+    }
+    .plane-4 {
+        position: absolute;
+        left: 960px;
+        top: 195px;
+        z-index: -10;
     }
     @media screen and (max-width: 1000px){
         .is-pc {
@@ -116,6 +225,8 @@
         }
         .step-H5 img {
             display: block;
+            width: 240px;
+            height: 240px;
             margin: 30px auto 0;
         }
         .step-H5 p {

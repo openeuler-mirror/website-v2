@@ -20,8 +20,7 @@ module.exports = {
             {
                 PATH: '',
                 NAME: '互动',
-                CHILDREN: [
-                    {
+                CHILDREN: [{
                         NAME: '新闻',
                         PATH: '/interaction/news-list/'
                     },
@@ -69,8 +68,7 @@ module.exports = {
             {
                 PATH: '',
                 NAME: 'SIG',
-                CHILDREN: [
-                    {
+                CHILDREN: [{
                         NAME: '查看SIG',
                         PATH: '/sig/sig-list/'
                     },
@@ -88,8 +86,7 @@ module.exports = {
             {
                 PATH: '',
                 NAME: '安全',
-                CHILDREN: [
-                    {
+                CHILDREN: [{
                         NAME: '漏洞上报',
                         PATH: '/security/vulnerability-reporting/'
                     },
@@ -107,8 +104,7 @@ module.exports = {
         ],
         LANG: 'EN',
         GITTE: '源码',
-        GITTE_RESOURCE_LIST: [
-            {
+        GITTE_RESOURCE_LIST: [{
                 NAME: '代码仓',
                 URL: 'https://gitee.com/openeuler'
             },
@@ -119,127 +115,125 @@ module.exports = {
         ],
         FOOTER: {
             MAIL: 'contact@openeuler.org',
-            COPY_RIGHT: '版权所有 © 2020 openeuler 保留一切权利',
+            COPY_RIGHT: '版权所有 © 2020 openEuler 保留一切权利',
             RIGHT_LIST: [{
-            NAME:'品牌',
-            URL:'/other/brand/'
-            }, 
-            {
-            NAME:'法律声明',
-            URL:'/other/legal/'
-            },
-             {
-            NAME:'隐私政策',
-            URL:'/other/privacy/'
-            }],
+                    NAME: '品牌',
+                    URL: '/other/brand/'
+                },
+                {
+                    NAME: '隐私政策',
+                    URL: '/other/privacy/'
+                },
+                {
+                    NAME: '法律声明',
+                    URL: '/other/legal/'
+                }
+            ],
             QR_CODE: '扫码关注公众号'
         }
     },
     en: {
         SEARCH_PLACE_HOLDER: 'Input content',
         NAV_ROUTER_CONFIG: [{
-            PATH: '/download/',
-            NAME: 'Download',
-            CHILDREN: [],
-            CLASS: []
-        },
-        {
-            PATH: '/documentation/',
-            NAME: 'Documentation',
-            CHILDREN: [],
-            CLASS: []
-        },
-        {
-            PATH: '',
-            NAME: 'Connect',
-            CHILDREN: [
-                {
-                    NAME: 'News',
-                    PATH: '/interaction/news-list/'
-                },
-                {
-                    NAME: 'Blog',
-                    PATH: '/interaction/blog-list/'
-                },
-                {
-                    NAME: 'Live',
-                    PATH: '/interaction/live-list/'
-                },
-                {
-                    NAME: 'Meetups',
-                    PATH: '/interaction/salon-list/'
-                },
-                {
-                    NAME: 'Summit',
-                    PATH: '/interaction/summit-list/'
-                }
-            ],
-            CLASS: []
-        },
-        {
-            PATH: '',
-            NAME: 'Community',
-            CHILDREN: [{
-                    NAME: 'Contribution',
-                    PATH: '/community/contribution/'
-                },
-                {
-                    NAME: 'Convention',
-                    PATH: '/community/conduct/'
-                },
-                {
-                    NAME: 'Mail lists',
-                    PATH: '/community/mailing-list/'
-                },
-                {
-                    NAME: 'Certification',
-                    PATH: '/community/certification-services/'
-                }
-            ],
-            CLASS: []
-        },
-        {
-            PATH: '',
-            NAME: 'SIG',
-            CHILDREN: [
-                {
-                    NAME: 'SIG lists',
-                    PATH: '/sig/sig-list/'
-                },
-                {
-                    NAME: 'Application',
-                    PATH: '/sig/sig-guidance/'
-                },
-                {
-                    NAME: 'Characters',
-                    PATH: '/sig/role-description/'
-                }
-            ],
-            CLASS: []
-        },
-        {
-            PATH: '',
-            NAME: 'Security',
-            CHILDREN: [
-                {
-                    NAME: 'Vulnerability management',
-                    PATH: '/security/vulnerability-reporting/'
-                },
-                {
-                    NAME: 'Security advisories',
-                    PATH: '/security/safety-bulletin/'
-                },
-                {
-                    NAME: 'CVE',
-                    PATH: '/security/cve/'
-                }
-            ],
-            CLASS: []
-        }],
+                PATH: '/download/',
+                NAME: 'Download',
+                CHILDREN: [],
+                CLASS: []
+            },
+            {
+                PATH: '/documentation/',
+                NAME: 'Documentation',
+                CHILDREN: [],
+                CLASS: []
+            },
+            {
+                PATH: '',
+                NAME: 'Connect',
+                CHILDREN: [{
+                        NAME: 'News',
+                        PATH: '/interaction/news-list/'
+                    },
+                    {
+                        NAME: 'Blog',
+                        PATH: '/interaction/blog-list/'
+                    },
+                    {
+                        NAME: 'Live',
+                        PATH: '/interaction/live-list/'
+                    },
+                    {
+                        NAME: 'Meetups',
+                        PATH: '/interaction/salon-list/'
+                    },
+                    {
+                        NAME: 'Summit',
+                        PATH: '/interaction/summit-list/'
+                    }
+                ],
+                CLASS: []
+            },
+            {
+                PATH: '',
+                NAME: 'Community',
+                CHILDREN: [{
+                        NAME: 'Contribution',
+                        PATH: '/community/contribution/'
+                    },
+                    {
+                        NAME: 'Convention',
+                        PATH: '/community/conduct/'
+                    },
+                    {
+                        NAME: 'Mail lists',
+                        PATH: '/community/mailing-list/'
+                    },
+                    {
+                        NAME: 'Certification',
+                        PATH: '/community/certification-services/'
+                    }
+                ],
+                CLASS: []
+            },
+            {
+                PATH: '',
+                NAME: 'SIG',
+                CHILDREN: [{
+                        NAME: 'SIG lists',
+                        PATH: '/sig/sig-list/'
+                    },
+                    {
+                        NAME: 'Application',
+                        PATH: '/sig/sig-guidance/'
+                    },
+                    {
+                        NAME: 'Characters',
+                        PATH: '/sig/role-description/'
+                    }
+                ],
+                CLASS: []
+            },
+            {
+                PATH: '',
+                NAME: 'Security',
+                CHILDREN: [{
+                        NAME: 'Vulnerability management',
+                        PATH: '/security/vulnerability-reporting/'
+                    },
+                    {
+                        NAME: 'Security advisories',
+                        PATH: '/security/safety-bulletin/'
+                    },
+                    {
+                        NAME: 'CVE',
+                        PATH: '/security/cve/'
+                    }
+                ],
+                CLASS: []
+            }
+        ],
         LANG: '中',
         GITTE: 'Source code',
-        GITTE_RESOURCE_LIST: [
-            {
+        GITTE_RESOURCE_LIST: [{
                 NAME: 'Code sources',
                 URL: 'https://gitee.com/openeuler'
             },
@@ -252,17 +246,18 @@ module.exports = {
             MAIL: 'contact@openeuler.org',
             COPY_RIGHT: 'Copyright © 2020 openEuler. All rights reserved.',
             RIGHT_LIST: [{
-                NAME:'TradeMark',
-                URL:'/other/brand/'
-                }, 
-                {
-                NAME:'Legal',
-                URL:'/other/legal/'
+                    NAME: 'TradeMark',
+                    URL: '/other/brand/'
                 },
-                 {
-                NAME: 'Privacy',
-                URL:'/other/privacy/'
-                }],
+                {
+                    NAME: 'Legal',
+                    URL: '/other/legal/'
+                },
+                {
+                    NAME: 'Privacy',
+                    URL: '/other/privacy/'
+                }
+            ],
             QR_CODE: 'Wechat Subscription'
         }
     }
