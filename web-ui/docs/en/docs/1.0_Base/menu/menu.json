@@ -1,0 +1,46 @@
+[
+    {
+        "label": "发行说明",
+        "path": "docs/Releasenotes/release_notes",
+        "children": [
+            {
+                "label": "法律声明",
+                "path": "docs/Releasenotes/法律声明"
+            },
+            {
+                "label": "技术特性",
+                "path": "docs/Releasenotes/技术特性",
+                "children": [
+                    {
+                        "label": "系统安装",
+                        "path": "docs/Releasenotes/系统安装"
+                    },
+                    {
+                        "label": "内核",
+                        "path": "docs/Releasenotes/内核",
+                        "children": [
+                            {
+                                "label": "调测DFx特性增强",
+                                "path": "docs/Releasenotes/调测DFx特性增强"
+                            },
+                            {
+                                "label": "系统性能优化",
+                                "path": "docs/Releasenotes/系统性能优化"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "label": "安装指南",
+        "path": "docs/Installation/installation",
+        "children": [
+            {
+                "label": "法律声明",
+                "path": "docs/Installation/法律声明"
+            }
+        ]
+    }
+]

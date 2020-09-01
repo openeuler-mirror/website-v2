@@ -1,9 +1,9 @@
 /**
  * @file httpUtil
  */
+const timeOut = 60000;
 var request = require('request');
 var fs = require('fs');
-
 var mailError = {
     'code': 1,
     'msg': 'Background call mail server exception'
@@ -24,7 +24,7 @@ function getUrl(url, token) {
         url: url,
         method: 'GET',
         json: true,
-        timeout: 3000,
+        timeout: timeOut,
         headers: {
             'Content-type': 'application/json',
             'Authorization': 'Basic ' + token
@@ -46,7 +46,7 @@ function postUrl(url, token, reqBody) {
         url: url,
         method: 'POST',
         json: true,
-        timeout: 3000,
+        timeout: timeOut,
         headers: {
             'Content-type': 'application/json',
             'Authorization': 'Basic ' + token
@@ -69,7 +69,7 @@ function indexES(url, token) {
     let options = {
         url: url,
         method: 'PUT',
-        timeout: 3000,
+        timeout: timeOut,
         headers: {
             'Content-type': 'application/json',
             'Authorization': 'Basic ' + token
@@ -88,12 +88,36 @@ function indexES(url, token) {
     });
 }
 
-function updateES(url, token, reqBody) {
+function postES(url, token, reqBody) {
     let options = {
         url: url,
         method: 'POST',
         json: true,
-        timeout: 3000,
+        timeout: timeOut,
+        headers: {
+            'Content-type': 'application/json',
+            'Authorization': 'Basic ' + token
+        },
+        rejectUnauthorized: false,
+        body: reqBody
+    };
+    return new Promise((resolve, reject) => {
+        request(options, function (error, response, body) {
+            if (error == null) {
+                resolve(body);
+            } else {
+                reject(error);
+            }
+        });
+    });
+}
+
+function updateES(url, token, reqBody) {
+    let options = {
+        url: url,
+        method: 'POST',
+        json: false,
+        timeout: timeOut,
         headers: {
             'Content-type': 'application/json',
             'Authorization': 'Basic ' + token
@@ -117,7 +141,7 @@ function getSig(url) {
         url: url,
         method: 'GET',
         json: true,
-        timeout: 3000,
+        timeout: timeOut,
         headers: {
             'Content-type': 'application/json'
         }
@@ -137,6 +161,7 @@ module.exports = {
     getUrl: getUrl,
     postUrl: postUrl,
     indexES: indexES,
+    postES: postES,
     updateES: updateES,
     getSig: getSig,
     mailError: mailError,

@@ -1,0 +1,3 @@
+<ClientOnly>
+  <summit-summit />
+</ClientOnly>

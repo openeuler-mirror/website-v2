@@ -70,7 +70,8 @@ module.exports = {
             },
             MAIL_ERROR: "邮件列表发生错误",
             SUBSCRIBE_ERROR: "邮件订阅发生错误",
-            SUBSCRIBE_SUCCESS: "您已订阅成功"
+            SUBSCRIBE_SUCCESS: "您已订阅成功",
+            MAIL_ERROR: "邮箱填写错误"
         },
         CONTRIBUTION_H5: {
             TITLE: "贡献攻略",
@@ -78,23 +79,28 @@ module.exports = {
             GUIDE_CONTENT: [
                 {
                     BUTTON: "签署CLA",
-                    IMG: "/img/community/contribution/contribution1.png"
+                    IMG: "/img/community/contribution/cla.png",
+                    VIDEO: "/img/community/contribution/cla.gif"
                 },
                 {
                     BUTTON: "提出Issue",
-                    IMG: "/img/community/contribution/contribution2.png"
+                    IMG: "/img/community/contribution/issue.png",
+                    VIDEO: "/img/community/contribution/issue.gif"
                 },
                 {
                     BUTTON: "贡献代码",
-                    IMG: "/img/community/contribution/contribution3.png"
+                    IMG: "/img/community/contribution/contribution.png",
+                    VIDEO: "/img/community/contribution/contribution.gif"
                 },
                 {
                     BUTTON: "加入SIG",
-                    IMG: "/img/community/contribution/contribution4.png"
+                    IMG: "/img/community/contribution/sig.png",
+                    VIDEO: "/img/community/contribution/sig.gif"
                 },
                 {
                     BUTTON: "参选技术委员会",
-                    IMG: "/img/community/contribution/contribution5.png"
+                    IMG: "/img/community/contribution/commit.png",
+                    VIDEO: "/img/community/contribution/commit.gif"
                 },
             ]
         },
@@ -169,7 +175,8 @@ module.exports = {
             },
             MAIL_ERROR: "邮件列表发生错误",
             SUBSCRIBE_ERROR: "邮件订阅发生错误",
-            SUBSCRIBE_SUCCESS: "您已订阅成功"
+            SUBSCRIBE_SUCCESS: "您已订阅成功",
+            MAIL_ERROR: "邮箱填写错误"
         },
         CONTRIBUTION_H5: {
             TITLE: "贡献攻略",
@@ -177,23 +184,28 @@ module.exports = {
             GUIDE_CONTENT: [
                 {
                     BUTTON: "签署CLA",
-                    IMG: "/img/community/contribution/contribution1.png"
+                    IMG: "/img/community/contribution/cla.png",
+                    VIDEO: "/img/community/contribution/cla.gif"
                 },
                 {
                     BUTTON: "提出Issue",
-                    IMG: "/img/community/contribution/contribution2.png"
+                    IMG: "/img/community/contribution/issue.png",
+                    VIDEO: "/img/community/contribution/issue.gif"
                 },
                 {
                     BUTTON: "贡献代码",
-                    IMG: "/img/community/contribution/contribution3.png"
+                    IMG: "/img/community/contribution/contribution.png",
+                    VIDEO: "/img/community/contribution/contribution.gif"
                 },
                 {
                     BUTTON: "加入SIG",
-                    IMG: "/img/community/contribution/contribution4.png"
+                    IMG: "/img/community/contribution/sig.png",
+                    VIDEO: "/img/community/contribution/sig.gif"
                 },
                 {
                     BUTTON: "参选技术委员会",
-                    IMG: "/img/community/contribution/contribution5.png"
+                    IMG: "/img/community/contribution/commit.png",
+                    VIDEO: "/img/community/contribution/commit.gif"
                 },
             ]
         },

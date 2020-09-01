@@ -1,366 +1,388 @@
 <template>
-  <div class="moblieContent">
-    <common-banner
-      :pc-src="'/img/docs/docs-banner.png'"
-      :mobile-src="'/img/docs/docs-banner.png'"
-      :inside-name="'DOCS'"
-      :outside-name="i18n.documentation.DOCS_LABEL"
-    ></common-banner>
-    <div class="docs-content">
-      <el-form :inline="true" class="docs-filter">
-        <el-form-item :label="i18n.documentation.VERSION">
-          <el-select v-model="version" @change="selectChange" :placeholder="i18n.documentation.SELECT_VERSION_LABLE">
-            <el-option
-              v-for="(item, index) in versions"
-              :key="index"
-              :label="item.name"
-              :value="item.value"
-            ></el-option>
-          </el-select>
-        </el-form-item>
-      </el-form>
-      <div class="is-pc">
-        <div class="maillist-divider-mail">
-          <div class="maillist-icon-comm"></div>
-        </div>
-        <div class="mail-guide" v-for="(items, index) in currentDocs" :key="index">
-          <div v-if="index % 2 === 0" class="step-left">
-            <div class="mail-box">
-              <div class="step-left-box">
-                <div @click="go(item)" class="inner-box" v-for="(item, index) in items.doc" :key="index">
-                  <img :src="item.img" alt />
-                  <p>{{ item.name }}</p>
+    <div class="moblieContent">
+        <common-banner
+        :pc-src="'/img/docs/docs-banner.png'"
+        :mobile-src="'/img/docs/docs-banner.png'"
+        :inside-name="'DOCS'"
+        :outside-name="i18n.documentation.DOCS_LABEL"
+        ></common-banner>
+        <div class="docs-content">
+            <el-form :inline="true" class="docs-filter">
+                <el-form-item :label="i18n.documentation.VERSION">
+                    <el-select v-model="version" @change="selectChange" :placeholder="i18n.documentation.SELECT_VERSION_LABLE">
+                        <el-option
+                        v-for="(item, index) in versions"
+                        :key="index"
+                        :label="item.name"
+                        :value="item.value"
+                        ></el-option>
+                    </el-select>
+                </el-form-item>
+            </el-form>
+            <div class="is-pc">
+                <div class="maillist-divider-mail">
+                    <div class="maillist-icon-comm"></div>
                 </div>
-              </div>
-              <div class="step-left-num">
-                <span>{{ items.title }}</span>
-              </div>
-              <div class="step-line"></div>
-            </div>
-          </div>
-          <div v-if="index % 2 !== 0" class="step-right">
-            <div class="mail-box">
-              <div class="step-line"></div>
-              <div class="step-right-num">
-                <span>{{ items.title }}</span>
-              </div>
-              <div class="step-right-box">
-                <div  @click="go(item)" class="inner-box" v-for="(item, index) in items.doc" :key="index">
-                  <img :src="item.img" alt />
-                  <p>{{ item.name }}</p>
+                <div class="mail-guide" v-for="(items, index) in currentDocs" :key="index">
+                    <div v-if="index % 2 === 0" class="step-left">
+                        <div class="mail-box">
+                            <div class="step-left-box">
+                                <div @click="go(item)" :class="['inner-box',item.path?'':'unClick']" v-for="(item, index) in items.doc" :key="index">
+                                    <img :src="item.img" alt />
+                                    <p>{{ item.name }}</p>
+                                </div>
+                            </div>
+                            <div class="step-left-num">
+                                <span>{{ items.title }}</span>
+                            </div>
+                            <div class="step-line"></div>
+                        </div>
+                    </div>
+                    <div v-if="index % 2 !== 0" class="step-right">
+                        <div class="mail-box">
+                            <div class="step-line"></div>
+                            <div class="step-right-num">
+                                <span>{{ items.title }}</span>
+                            </div>
+                            <div class="step-right-box">
+                                <div  @click="go(item)" :class="['inner-box',item.path?'':'unClick']" v-for="(item, index) in items.doc" :key="index">
+                                    <img :src="item.img" alt />
+                                    <p>{{ item.name }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="is-h5">
-        <div class="mail-guide" v-for="(items, index) in currentDocs" :key="index">
-          <div v-if="items.doc.length" class="step-H5" :class="[items.doc.length === 1 && 'step-left-H5']">
-            <div class="step-num">
-              <span>{{ items.title }}</span>
+            <div class="is-h5">
+                <div class="mail-guide" v-for="(items, index) in currentDocs" :key="index">
+                    <div v-if="items.doc.length" class="step-H5" :class="[items.doc.length === 1 && 'step-left-H5']">
+                        <div class="step-num">
+                            <span>{{ items.title }}</span>
+                        </div>
+                        <p  :class="item.path?'':'unClick'" @click="go(item)" v-for="(item, index) in items.doc" :key="index">{{ item.name }}</p>
+                    </div>
+                </div>
             </div>
-            <p  @click="go(item)" v-for="(item, index) in items.doc" :key="index">{{ item.name }}</p>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </template>
 
 <script>
 import commonBanner from "./../common/banner.vue";
 export default {
-  data() {
-    return {
-      version: "",
-      currentDocs: [],
-      versions: []
-    };
-  },
-  components: {
-    commonBanner,
-  },
-  computed: {},
+    data() {
+        return {
+            version: "",
+            currentDocs: [],
+            versions: [],
+            default:true
+        };
+    },
+    components: {
+        commonBanner,
+    },
+    computed: {},
 
-  created() {
-    this.targetLocale = this.$lang === "zh" ? "/zh/" : "/en/";
-  },
-  mounted() {
-    this.versions = require("../../../" + this.$lang + "/docs/1.0_Base/path/path.json");
-    this.currentDocs = this.versions[0].docs;
-  },
-  methods: {
-    selectChange(val) {
-      this.versions.forEach((item) => {
-          if (item.value === val) {
-            this.currentDocs = item.docs;
-          }
-        });
+    created() {
+        this.targetLocale = this.$lang === "zh" ? "/zh/" : "/en/";
     },
-    go(item) {
-      if (item.path) {
-        let version = this.version === "" ? "1.0_Base" : this.version;
-        this.$router.push(this.targetLocale + "docs/" + version + item.path);
-      }
+    mounted() {
+        this.versions = require("../../../" + this.$lang + "/docs/1.0_Base/path/path.json");
+        this.currentDocs = this.versions[0].docs;
+        this.selectChange(this.versions[0].value);
     },
-  },
+    methods: {
+        selectChange(val) {
+            if(this.default){
+                this.version=val;
+                this.default = false;
+            }else{
+                this.versions.forEach((item) => {
+                    if (item.value === val) {
+                        this.currentDocs = item.docs;
+                    }
+                });
+            }
+        },
+        go(item) {
+            if (item.path) {
+                let version = this.version === "" ? "1.0_Base" : this.version;
+                this.$router.push(this.targetLocale + "docs/" + version + item.path);
+            }
+        },
+    },
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .docs-content {
-  width: 1120px;
-  margin: 0 auto;
-  margin-bottom: 200px;
-  .el-select__tags {
-    min-width: 140px !important;
-  }
-  .el-form-item__label {
-    font-size: 18px;
-    color: #000;
-    font-family: FZLTXIHJW;
-  }
+    width: 1120px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    .el-select__tags {
+        min-width: 140px !important;
+    }
+    .el-form-item__label {
+        font-size: 18px;
+        color: #000;
+        font-family: FZLTXIHJW;
+    }
 
-  .el-input__inner {
-    font-size: 16px;
-    height: 32px;
-    color: #000;
-    font-family: FZLTXIHJW;
-  }
+    .el-input__inner {
+        font-size: 16px;
+        height: 32px;
+        color: #000;
+        font-family: FZLTXIHJW;
+    }
 
-  .el-select-dropdown__item {
-    color: #000;
-    font-family: FZLTXIHJW;
-  }
+    .el-select-dropdown__item {
+        color: #000;
+        font-family: FZLTXIHJW;
+    }
 
-  .el-form-item {
-    margin-right: 50px !important;
-    margin-bottom: 15px !important;
-    margin-top: 15px !important;
-  }
+    .el-form-item {
+        margin-right: 50px !important;
+        margin-bottom: 15px !important;
+        margin-top: 15px !important;
+    }
 
-  .el-form-item__content {
-    min-width: 140px;
-    min-height: 32px;
-  }
+    .el-form-item__content {
+        min-width: 140px;
+        min-height: 32px;
+    }
 }
 .is-h5 {
-  display: none;
+    display: none;
 }
 .is-pc {
-  display: block;
-  position: relative;
+    display: block;
+    position: relative;
 }
 .maillist-divider-mail {
-  width: 2px;
-  left: 406px;
-  height: calc(100% - 35px);
-  background-image: linear-gradient(
-    to top,
-    #002fa7 0%,
-    #002fa7 50%,
-    transparent 50%
-  );
-  background-size: 2px 11px;
-  background-repeat: repeat-y;
-  position: absolute;
+    width: 2px;
+    left: 406px;
+    height: calc(100% - 35px);
+    background-image: linear-gradient(
+        to top,
+        #002fa7 0%,
+        #002fa7 50%,
+        transparent 50%
+    );
+    background-size: 2px 11px;
+    background-repeat: repeat-y;
+    position: absolute;
 }
 .maillist-icon-comm {
-  width: 0;
-  height: 0;
-  border-width: 15px;
-  border-style: solid;
-  border-color: #002fa7 transparent transparent transparent;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
+    width: 0;
+    height: 0;
+    border-width: 15px;
+    border-style: solid;
+    border-color: #002fa7 transparent transparent transparent;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
 }
 .step-right-box,
 .step-left-box {
-  display: inline-block;
-  vertical-align: middle;
-  text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
 }
 .step-left-box {
-  width: 200px;
-  margin-right: 36px;
-  min-height: 74px;
+    width: 200px;
+    margin-right: 36px;
+    min-height: 74px;
 }
 .step-right-box {
-  width: 540px;
-  vertical-align: top;
-  .inner-box {
-    width: 240px;
-    margin-right: 0px;
-    margin-left: 30px;
-  }
+    width: 540px;
+    vertical-align: top;
+    .inner-box {
+        width: 240px;
+        margin-right: 0px;
+        margin-left: 30px;
+    }
 }
 .step-left {
-  z-index: 20;
+    z-index: 20;
 }
 .step-right {
-  margin: -30px 0;
-  margin-left: 406px;
+    margin: -30px 0;
+    margin-left: 406px;
 }
 .step-left-num,
 .step-right-num {
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
-  border-radius: 50%;
-  background-color: #002fa7;
-  display: inline-block;
-}
-.step-left-num span,
-.step-right-num span {
-  color: #fff;
-  font-size: 20px;
-}
-.step-line {
-  width: 100px;
-  height: 2px;
-  display: inline-block;
-  vertical-align: middle;
-  border-spacing: 24px;
-  background-image: linear-gradient(
-    to right,
-    #002fa7 0%,
-    #002fa7 50%,
-    transparent 50%
-  );
-  background-size: 8px 2px;
-  background-repeat: repeat-x;
-}
-.mail-box {
-  padding: 0;
-  padding-top: 60px;
-}
-.mail-box p {
-  font-size: 20px;
-  font-weight: normal;
-  color: rgba(0, 47, 167, 1);
-  line-height: 60px;
-  display: inline-block;
-  width: calc(100% - 63px);
-}
-.inner-box {
-  height: 60px;
-  width: 200px;
-  margin-right: 36px;
-  margin-bottom: 14px;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: 0 6px 30px 0 rgba(36, 32, 32, 0.1);
-  border-radius: 8px;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: left;
-}
-.inner-box img {
-  margin: 0 16px;
-  width: 26px;
-  vertical-align: sub;
-}
-
-@media screen and (max-width: 1000px) {
-  .moblieContent {
-    padding: 40px 30px 80px 30px;
-  }
-  .docs-filter {
-    margin: 40px auto;
-    padding-top: 75px;
-    position: relative;
-  }
-  .docs-content {
-    width: 100%;
-    margin-bottom: 80px;
-  }
-  .is-pc {
-    display: none;
-  }
-  .is-h5 {
-    display: block;
-  }
-  .step-H5 {
-    margin: 40px auto;
-  }
-  .step-left-H5{
-    text-align: center;
-  }
-  .step-num {
     width: 60px;
     height: 60px;
     line-height: 60px;
     text-align: center;
     border-radius: 50%;
     background-color: #002fa7;
-    margin: 0 auto;
-  }
-  .step-num span {
-    color: #fff;
-    font-size: 18px;
-  }
-  .step-H5 p {
-    font-size: 16px;
-    width:140px;
-    height:40px;
-    background:rgba(255,255,255,1);
-    box-shadow:0px 3px 10px 0px rgba(0,0,0,0.1);
-    border-radius:8px;
-    text-align: center;
-    margin-top: 20px;
-    margin-right: 15px;
-    margin-left: 15px;
     display: inline-block;
-  }
+}
+.step-left-num span,
+.step-right-num span {
+    color: #fff;
+    font-size: 20px;
+}
+.step-line {
+    width: 100px;
+    height: 2px;
+    display: inline-block;
+    vertical-align: middle;
+    border-spacing: 24px;
+    background-image: linear-gradient(
+        to right,
+        #002fa7 0%,
+        #002fa7 50%,
+        transparent 50%
+    );
+    background-size: 8px 2px;
+    background-repeat: repeat-x;
+}
+.mail-box {
+    padding: 0;
+    padding-top: 60px;
+}
+.mail-box p {
+    font-size: 20px;
+    font-weight: normal;
+    color: rgba(0, 47, 167, 1);
+    line-height: 60px;
+    display: inline-block;
+    width: calc(100% - 63px);
+}
+.inner-box {
+    height: 60px;
+    width: 200px;
+    margin-right: 36px;
+    margin-bottom: 14px;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 6px 30px 0 rgba(36, 32, 32, 0.1);
+    border-radius: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+}
+.inner-box img {
+    margin: 0 10px 0 16px;
+    width: 22px;
+    height: 26px;
+    vertical-align: sub;
+}
+.unClick {
+    pointer-events: none;
+    cursor: default;
+    p{
+        color: rgba(0, 0, 0, 0.25);
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .moblieContent {
+        padding: 40px 30px 80px 30px;
+    }
+    .docs-filter {
+        margin: 40px auto;
+        padding-top: 75px;
+        position: relative;
+    }
+    .docs-content {
+        width: 100%;
+        margin-bottom: 80px;
+    }
+    .is-pc {
+        display: none;
+    }
+    .is-h5 {
+        display: block;
+    }
+    .step-H5 {
+        margin: 30px auto;
+        .unClick{
+            color: rgba(0, 0, 0, 0.25);
+        }
+    }
+    .step-left-H5{
+        text-align: center;
+    }
+    .step-num {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #002fa7;
+        margin: 0 auto;
+    }
+    .step-num span {
+        color: #fff;
+        font-size: 18px;
+    }
+    .step-H5 p {
+        font-size: 16px;
+        width:140px;
+        height:40px;
+        line-height: 40px;
+        color: #002FA7;
+        background:rgba(255,255,255,1);
+        box-shadow:0px 3px 10px 0px rgba(0,0,0,0.1);
+        border-radius:8px;
+        text-align: center;
+        margin-top: 20px;
+        display: inline-block;
+        &:nth-of-type(2n+2){
+            margin-left: 35px;
+        }
+    }
 }
 </style>
 <style lang="less">
 @media screen and (max-width: 1000px) {
-  .docs-content {
-    .el-select__tags {
-      min-width: 140px !important;
-    }
-    .el-form-item__label {
-      display: none !important;
-    }
+    .docs-content {
+        .el-select__tags {
+            min-width: 140px !important;
+        }
+        .el-form-item__label {
+            display: none !important;
+        }
 
-    .el-input__inner {
-      font-size: 14px;
-      color: #000;
-      font-family: FZLTXIHJW;
-    }
+        .el-input__inner {
+            font-size: 14px;
+            color: #000;
+            font-family: FZLTXIHJW;
+        }
 
-    .el-select-dropdown__item {
-      color: #000;
-      font-family: FZLTXIHJW;
-    }
+        .el-select-dropdown__item {
+            color: #000;
+            font-family: FZLTXIHJW;
+        }
 
-    .el-form-item {
-      margin-right: 0px !important;
-      width: 100%;
-    }
+        .el-form-item {
+            margin-right: 0px !important;
+            width: 100%;
+        }
 
-    .el-select {
-      width: 100%;
+        .el-select {
+            width: 100%;
+        }
+        .el-form-item__content {
+            min-width: 140px;
+            min-height: 32px;
+            line-height: 32px;
+            width: 100%;
+            text-align: center;
+        }
+        .el-input__inner {
+            height: 32px;
+            line-height: 32px;
+        }
+        .el-input__icon {
+            line-height: 32px;
+        }
     }
-    .el-form-item__content {
-      min-width: 140px;
-      min-height: 32px;
-      line-height: 32px;
-      width: 100%;
-      text-align: center;
-    }
-    .el-input__inner {
-      height: 32px;
-      line-height: 32px;
-    }
-    .el-input__icon {
-      line-height: 32px;
-    }
-  }
 }
 </style>

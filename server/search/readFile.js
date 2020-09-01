@@ -9,9 +9,12 @@ const HTTP = require('../util/httpUtil');
 const ES = require('../config/searchConfig');
 const logUtil = require('../util/logUtil');
 
+let jsonList = '';
+
 function readFileByPath(dirPath, index, esType, model, version) {
     let token = new Buffer.from(ES.ES_USER_PASS).toString('base64');
     const files = fs.readdirSync(dirPath);
+    let i = 0;
     files.forEach(function (item) {
         let innerPath = path.join(dirPath, item);
         if (fs.lstatSync(innerPath).isDirectory()) {
@@ -20,11 +23,13 @@ function readFileByPath(dirPath, index, esType, model, version) {
             if (!item.endsWith('.md')) {
                 return;
             }
+
             let html = fs.readFileSync(innerPath, 'utf-8');
             let content = cheerio.load(html).text();
             content = content.replace(/[\r\n]/g, '');
+
             let json = {
-                'id': '1',
+                'id': i,
                 'title': item.substring(0, item.length - 3),
                 'textContent': content,
                 'articleName': item,
@@ -32,11 +37,15 @@ function readFileByPath(dirPath, index, esType, model, version) {
                 'type': model,
                 'version': version
             };
-            HTTP.updateES(ES.ES_URL + index + '/' + esType, token, json).then(data => {
-                console.log(JSON.stringify(data) + os.EOL);
-            }).catch(ex => {
-                console.log(ex.stack + os.EOL);
-            });
+            let index = {
+                'index': {
+                    '_id': model + version + i,
+                    '_type': '_doc'
+                }
+            };
+            jsonList += JSON.stringify(index) + os.EOL;
+            jsonList += JSON.stringify(json) + os.EOL;
+            i++;
         }
     });
 }
@@ -58,12 +67,17 @@ function insertES(index, esType, dirPath, model, version) {
         }
     };
     let token = new Buffer.from(ES.ES_USER_PASS).toString('base64');
-    HTTP.updateES(ES.ES_URL + index + '/' + esType + '/_delete_by_query', token, json).then(data => {
-        let meta = '[' + logUtil.getTime() + '] delete elasticsearch index.';
+    let now = logUtil.getTime();
+    HTTP.postES(ES.ES_URL + index + '/_doc/_delete_by_query', token, json).then(data => {
+        let meta = '[' + now + ']' + index + ' ' + model + ' delete elasticsearch index.';
         console.log(meta + os.EOL + JSON.stringify(data) + os.EOL);
+        jsonList = '';
         readFileByPath(dirPath, index, esType, model, version);
+        HTTP.updateES(ES.ES_URL + index + '/_bulk', token, jsonList).then(data => {}).catch(ex => {
+            console.log('[' + now + ']' + ex.stack + os.EOL);
+        });
     }).catch(ex => {
-        console.log(ex.stack + os.EOL);
+        console.log('[' + now + ']' + ex.stack + os.EOL);
     });
 }
 

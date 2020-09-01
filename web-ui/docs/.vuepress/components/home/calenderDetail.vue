@@ -82,15 +82,15 @@ export default {
   }
   .meetDetail .meetingTime{
     position: absolute;
-    top: 45px;
+    top: 50px;
     left: 20px;
-    ine-height: 14px;
+    line-height: 14px;
     font-size: 12px;
-    color: #dfdfdf;
+    color: #000;
   }
   h1{
     margin: 0;
-    ont-size: 16px;
+    font-size: 16px;
   }
   
   .meetDetailDe h2{
@@ -109,7 +109,7 @@ export default {
     padding: 15px 20px;
   }
   .cadenderSinge.active .calenderH1{
-      padding-bottom: 20px;
+      padding-bottom: 34px;
   }
   h2{
     margin: 0;

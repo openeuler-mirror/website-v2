@@ -1,121 +1,119 @@
 <template>
     <div class="safety-bulletin-content">
-        <common-banner 
-        :pc-src="'/img/security/notice-banner.png'" 
+        <common-banner
+        :pc-src="'/img/security/notice-banner.png'"
         :mobile-src="'/img/security/notice-banner.png'"
         :inside-name="'SECURITY'"
         :outside-name="i18n.security.SECURITY_ADVISORIES"
         ></common-banner>
         <div class="bulltin-list-wrapper">
-            <el-form
-                :inline="true"
-                class="form"
-            >
+            <el-form :inline="true" class="form">
                 <el-form-item :label="i18n.security.SEARCH">
-                    <el-input
-                        v-model="formData.keyword"
-                        class="pc-search"
-                    >
-                        <i slot="append" class="icon-search" @click="initData(1)"></i>
+                    <el-input v-model="formData.keyword" class="pc-search">
+                        <i slot="suffix" class="icon-search el-icon-search" @click="initData(1)"></i>
                     </el-input>
                     <el-input
                         v-model="formData.keyword"
                         class="mobile-search"
                         :placeholder="i18n.security.SEARCH"
                     >
-                        <i slot="append" class="icon-search" @click="initData(1)"></i>
+                        <i slot="suffix" class="el-icon-close" @click="initData(1)"></i>
                     </el-input>
                 </el-form-item>
                 <el-form-item>
                     <el-radio-group v-model="formData.type" @change="initData(1)">
-                        <el-radio-button v-for="(item, index) in i18n.security.SEVERITY_LIST" :key="index" :label="item.LABEL">{{ item.NAME }}</el-radio-button>
+                        <el-radio-button
+                        v-for="(item, index) in i18n.security.SEVERITY_LIST"
+                        :key="index"
+                        :label="item.LABEL"
+                        >{{ item.NAME }}</el-radio-button>
                     </el-radio-group>
                 </el-form-item>
                 <el-form-item :label="i18n.security.YEAR">
                     <el-select class="pc-select" v-model="formData.year" @change="initData(1)">
-                        <el-option
-                        :label="i18n.security.ALL"
-                        value="0">
-                        </el-option>
-                        <el-option
-                        label="2019"
-                        :value="2019">
-                        </el-option>
-                        <el-option
-                        label="2020"
-                        :value="2020">
-                        </el-option>
+                        <el-option :label="i18n.security.ALL" value="0"></el-option>
+                        <el-option label="2019" :value="2019"></el-option>
+                        <el-option label="2020" :value="2020"></el-option>
                     </el-select>
-                    <el-select class="mobile-select" :placeholder="i18n.security.YEAR" v-model="formData.year" @change="initData(1)">
-                        <el-option
-                        :label="i18n.security.ALL"
-                        value="0">
-                        </el-option>
-                        <el-option
-                        label="2019"
-                        :value="2019">
-                        </el-option>
-                        <el-option
-                        label="2020"
-                        :value="2020">
-                        </el-option>
+                    <el-select
+                        class="mobile-select"
+                        :placeholder="i18n.security.YEAR"
+                        v-model="formData.year"
+                        @change="initData(1)"
+                    >
+                        <el-option :label="i18n.security.ALL" value="0"></el-option>
+                        <el-option label="2019" :value="2019"></el-option>
+                        <el-option label="2020" :value="2020"></el-option>
                     </el-select>
                 </el-form-item>
             </el-form>
             <el-table
-            v-loading.fullscreen="tableLoading"
-            class="safety-bulletin-list"
-            :data="tableData"
-            stripe
-            style="width: 100%">
-                <el-table-column
-                prop="securityNoticeNo"
-                :label="i18n.security.ADVISORY">
+                v-loading.fullscreen="tableLoading"
+                class="safety-bulletin-list"
+                :data="tableData"
+                stripe
+                style="width: 100%"
+            >
+                <el-table-column prop="securityNoticeNo" :label="i18n.security.ADVISORY" width="303">
                 <template slot-scope="scope">
-                    <a class="table-link" @click="go(scope.row.securityNoticeNo)">{{ scope.row.securityNoticeNo }}</a>
+                    <a
+                    class="table-link"
+                    @click="go(scope.row.securityNoticeNo)"
+                    >{{ scope.row.securityNoticeNo }}</a>
                 </template>
                 </el-table-column>
-                <el-table-column
-                prop="summary"
-                :label="i18n.security.SYNOPSIS">
-                </el-table-column>
-                <el-table-column
-                prop="type"
-                :label="i18n.security.SEVERITY">
-                </el-table-column>
+                <el-table-column prop="summary" :label="i18n.security.SYNOPSIS" width="232"></el-table-column>
+                <el-table-column prop="type" :label="i18n.security.SEVERITY" width="114"></el-table-column>
                 <el-table-column
                 prop="affectedProduct"
-                :label="i18n.security.AFFECTED_PRODUCTS">
-                </el-table-column>
+                :label="i18n.security.AFFECTED_PRODUCTS"
+                width="209"
+                ></el-table-column>
                 <el-table-column
                 prop="affectedComponent"
-                :label="i18n.security.AFFECTED_COMPONENTS">
-                </el-table-column>
-                <el-table-column
-                prop="announcementTime"
-                :label="i18n.security.RELEASE_DATE">
-                </el-table-column>
+                :label="i18n.security.AFFECTED_COMPONENTS"
+                width="120"
+                ></el-table-column>
+                <el-table-column prop="announcementTime" :label="i18n.security.RELEASE_DATE" width="142"></el-table-column>
             </el-table>
             <ul class="mobile-list" v-loading.fullscreen="tableLoading">
                 <li class="item" v-for="(item, index) in tableData" :key="index">
                     <ul>
-                        <li><span>{{i18n.security.ADVISORY}}:</span><a class="table-link" @click="go(item.securityNoticeNo)">{{item.securityNoticeNo}}</a></li>
-                        <li><span>{{i18n.security.SYNOPSIS}}:</span>{{item.summary}}</li>
-                        <li><span>{{i18n.security.SEVERITY}}:</span>{{item.type}}</li>
-                        <li><span>{{i18n.security.AFFECTED_PRODUCTS}}:</span>{{item.affectedProduct}}</li>
-                        <li><span>{{i18n.security.AFFECTED_COMPONENTS}}:</span>{{item.affectedComponent}}</li>
-                        <li><span>{{i18n.security.RELEASE_DATE}}:</span>{{item.announcementTime}}</li>
+                        <li>
+                            <span>{{i18n.security.ADVISORY}}:</span>
+                            <a class="table-link" @click="go(item.securityNoticeNo)">{{item.securityNoticeNo}}</a>
+                        </li>
+                        <li>
+                            <span>{{i18n.security.SYNOPSIS}}:</span>
+                            {{item.summary}}
+                        </li>
+                        <li>
+                            <span>{{i18n.security.SEVERITY}}:</span>
+                            {{item.type}}
+                        </li>
+                        <li>
+                            <span>{{i18n.security.AFFECTED_PRODUCTS}}:</span>
+                            {{item.affectedProduct}}
+                        </li>
+                        <li>
+                            <span>{{i18n.security.AFFECTED_COMPONENTS}}:</span>
+                            {{item.affectedComponent}}
+                        </li>
+                        <li>
+                            <span>{{i18n.security.RELEASE_DATE}}:</span>
+                            {{item.announcementTime}}
+                        </li>
                     </ul>
                 </li>
             </ul>
             <el-pagination
-            class="safety-bulletin-pagination"
-            :current-page.sync="formData.page"
-            :page-size="formData.pageSize"
-            layout="total, prev, pager, next, jumper"
-            @current-change="initData"
-            :total="total">
-            </el-pagination>
+                class="safety-bulletin-pagination"
+                :current-page.sync="formData.page"
+                :page-size="formData.pageSize"
+                :layout="pagerLayout.join()"
+                @current-change="initData"
+                :total="total"
+            ></el-pagination>
         </div>
     </div>
 </template>
@@ -132,12 +130,12 @@ const locationMethods = {
         securityList(that.formData)
         .then(data => {
             that.tableLoading = false;
-            if(data.totalRecords){
+            if (data.totalRecords) {
                 that.total = data.totalRecords;
                 that.tableData = data.list;
             } else {
-                that.total = 0;
-                that.tableData = [];
+            that.total = 0;
+            that.tableData = [];
             }
         })
         .catch(data => {
@@ -147,7 +145,7 @@ const locationMethods = {
     }
 }
 export default {
-    data() {
+    data () {
         that = this;
         return {
             formData: {
@@ -157,9 +155,13 @@ export default {
                 page: 1,
                 pageSize: 10
             },
-            tableData : [],
+            tableData: [],
             total: 0,
-            tableLoading: false
+            tableLoading: false,
+            showPager:['total, prev, pager, next, jumper'],
+            hidePager:['total, prev, next, jumper'],
+            pagerLayout:[],
+            screenWidth:document.body.clientWidth
         };
     },
     components: {
@@ -168,14 +170,21 @@ export default {
     created () {
         this.initData(1);
     },
+    mounted () {
+        if(this.screenWidth<=1000){
+            this.pagerLayout = this.hidePager;
+        }else{
+            this.pagerLayout = this.showPager;
+        }
+    },
     methods: {
         initData (flag) {
             locationMethods.getSecurityList(flag);
         },
-        go (id){
+        go (id) {
             this.$router.push({
                 path: this.resolvePath('/security/safety-bulletin/detail.html'),
-                query: {id}
+                query: { id }
             })
         }
     }
@@ -196,7 +205,7 @@ export default {
         font-family: FZLTHJW;
     }
     .el-pagination__jump {
-        color: #282b33;;
+        color: #282b33;
     }
     .el-pager li.active {
         color: #002fa7;
@@ -207,25 +216,26 @@ export default {
         font-family: FZLTXIHJW;
     }
     .el-radio-button__orig-radio:checked + .el-radio-button__inner {
-        color: #FFF;
+        color: #fff;
         background-color: #002fa7;
-        border-color: rgba(0, 0, 0, .5);
+        border-color: rgba(0, 0, 0, 0.5);
     }
     .el-radio-button__inner {
-        color: rgba(0, 0, 0, .5);
-        border-color: rgba(0, 0, 0, .5);
+        color: rgba(0, 0, 0, 0.5);
+        border-color: rgba(0, 0, 0, 0.5);
         font-size: 18px;
         font-family: FZLTXIHJW;
         padding: 6px 20px;
         @media (max-width: 1000px) {
-            padding: 6px 15px;
+            padding: 6px 13px;
+            font-size: 14px;
         }
     }
     .el-radio-button__inner:hover {
-        color: rgba(0, 0, 0, .5);
+        color: rgba(0, 0, 0, 0.5);
     }
     .el-radio-button:first-child .el-radio-button__inner {
-        border-left: 1px solid rgba(0, 0, 0, .5);
+        border-left: 1px solid rgba(0, 0, 0, 0.5);
     }
     .el-form-item__label {
         line-height: 32px;
@@ -244,7 +254,7 @@ export default {
     .el-input__inner {
         height: 32px;
         line-height: 32px;
-        border: 1px solid rgba(0, 0, 0, .5);
+        border: 1px solid rgba(0, 0, 0, 0.5);
         color: #000;
     }
     .el-select-dropdown__item.selected {
@@ -254,7 +264,7 @@ export default {
         color: #000;
     }
     .el-input-group__append {
-        border: 1px solid rgba(0, 0, 0, .5);
+        border: 1px solid rgba(0, 0, 0, 0.5);
         border-left: 0;
         background-color: unset;
         padding: 0;
@@ -269,28 +279,28 @@ export default {
         }
     }
     .el-table {
-        color: rgba(0, 0, 0, .85);
+        color: rgba(0, 0, 0, 0.85);
     }
     .el-table thead {
         color: #000;
-            font-size: 16px;    
+        font-size: 16px;
     }
     .el-table th {
-        background-color: rgba(0, 0, 0, .05);
+        background-color: rgba(0, 0, 0, 0.05);
     }
     .el-table--striped .el-table__body tr.el-table__row--striped td {
-        background-color: rgba(0, 0, 0, .05);
+        background-color: rgba(0, 0, 0, 0.05);
     }
-    .el-table td, .el-table th {
+    .el-table td,
+    .el-table th {
         padding: 31px 0;
     }
     .el-pagination__total {
         color: #282b33;
         font-size: 14px;
         font-family: FZLTXIHJW;
-    }    
+    }
 }
-    
 </style>
 <style lang="less" scoped>
 .table-link {
@@ -307,8 +317,9 @@ export default {
     }
     .safety-bulletin-pagination {
         margin-bottom: 200px;
+        font-size: 14px;
         @media (max-width: 1000px) {
-            margin-bottom: 80px;
+        margin-bottom: 80px;
         }
     }
     .safety-bulletin-banner {
@@ -347,6 +358,11 @@ export default {
                 flex-direction: column;
                 margin: 40px 0 20px 0;
             }
+            .label-font{
+                span{
+                    font-size: 15px;
+                }
+            }
             .el-form-item {
                 margin-right: 0;
                 margin-bottom: 0;
@@ -359,15 +375,22 @@ export default {
                     }
                 }
             }
-            .pc-select, .pc-search {
+            .pc-select,
+            .pc-search {
+                width: 140px;
+                height: 32px;
                 @media (max-width: 1000px) {
                     display: none;
                 }
+                .icon-search{
+                    cursor: pointer;
+                }
             }
-            .mobile-select, .mobile-search {
+            .mobile-select,
+            .mobile-search {
                 display: none;
                 @media (max-width: 1000px) {
-                    display: inline-table;;
+                    display: inline-table;
                 }
             }
         }
@@ -389,17 +412,16 @@ export default {
             }
             .item {
                 padding: 20px;
-                &:nth-child(odd){
-                    background-color: rgba(0, 0, 0, .05);
+                &:nth-child(odd) {
+                    background-color: rgba(0, 0, 0, 0.05);
                 }
                 li {
                     margin-bottom: 12px;
-                    color: rgba(0, 0, 0, .5);
+                    color: rgba(0, 0, 0, 0.5);
                     span {
                         color: #000;
                         margin-right: 4px;
                     }
-
                 }
                 li:last-child {
                     margin-bottom: 0;

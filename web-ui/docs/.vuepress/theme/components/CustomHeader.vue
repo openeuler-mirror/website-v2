@@ -3,7 +3,7 @@
         <div class="nav-wrapper">
             <div class="nav-bar">
                 <img
-                    src="/openeuler.png"
+                    src="/logo-mobile.png"
                     alt=""
                     class="nav-logo"
                     @click="goHome()"
@@ -274,7 +274,7 @@ export default {
             }
             window.location.href = currentLink;
         },
-        menuActiveFn(item) {
+        menuActiveFn(item) {    
             const $route = this.$route;
             return (
                 $route.path.includes(this.resolvePath(item.PATH)) ||
@@ -437,6 +437,7 @@ export default {
             .nav-logo-mobile {
                 display: none;
                 width: 142px;
+                height: auto;
             }
             .nav-other-mobile {
                 display: none;
@@ -537,6 +538,9 @@ export default {
                 @media (max-width: 1000px) {
                     display: none;
                 }
+                @media (max-width: 1280px) {
+                    flex:2;
+                }
                 .menu-link span {
                     display: block;
                     transform:scale(0,0);
@@ -632,6 +636,9 @@ export default {
                 @media (max-width: 1000px) {
                     display: none;
                 }
+                @media (max-width: 1280px) {
+                    justify-content: flex-start;
+                }
                 & > li {
                     position: relative;
                     width: 22px;
@@ -701,6 +708,10 @@ export default {
             .search-input {
                 flex-shrink: 0;
                 width: 240px;
+                .el-input__icon{
+                    line-height: 29px;
+                    cursor: pointer;
+                }
             }
             .search-mobile {
                 display: none;

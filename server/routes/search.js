@@ -96,8 +96,8 @@ router.post('/keyword', function (req, res, next) {
     let version = req.body.version;
     let url = ES.ES_URL + indexEs + '/_search';
     let json = getSearchReqJson(page, model, keyword, version);
-    httpUtil.updateES(url, json).then(data => {
-        console.log('[' + logUtil.getTime() + ']' + JSON.stringify(data) + os.EOL);
+    let token = new Buffer.from(ES.ES_USER_PASS).toString('base64');
+    httpUtil.postES(url, token, json).then(data => {
         let responseData = getSearchResJson(data, keyword, page);
         res.send(responseData);
     }).catch(ex => {
@@ -130,11 +130,15 @@ function getSearchResJson(data, keyword, page) {
         } else {
             content = content.substring(0, content.length);
         }
-        content = content.replace(keyword, '<em>' + keyword + '</em>');
         element._source.textContent = content;
+        let title = element._source.title.replace(keyword, '<em>' + keyword + '</em>');
+        element._source.title = title;
         arr.push(element._source);
     });
-
+    data.aggregations.data.buckets.unshift({
+        key: 'all',
+        doc_count: num
+    });
     let json = {
         'status': 200,
         'msg': '',

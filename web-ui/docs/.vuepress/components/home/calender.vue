@@ -28,8 +28,8 @@
                                 <div :class="'calenderslideItemInsideItem' + (item1.duration >= 16 ? ' all' : '')" :key="index1" :style="returnHeight(item1)">
                                     <template v-for="(item2, index2) in item1.dealDate">
                                         <div :key="index2" class="calenderListSinge" :style="returnInsideH(item2)" v-if="item1.duration < 16">
-                                            <button class="left btnMy"  v-if="item2.data.length > 1" @click="handleBtnMysef('left', key, index1, index2, dealData)" :style="{ background: 'url(' + prev + ') no-repeat center' }"></button>
-                                            <button class="right btnMy"  v-if="item2.data.length > 1" @click="handleBtnMysef('right', key, index1, index2, dealData)" :style="{ background: 'url(' + prev + ') no-repeat center' }"></button>
+                                            <button class="left btnMy"  v-if="item2.data.length > 1" @click="handleBtnMysef('left', key, index1, index2, dealData)" :style="{ background: 'url(' + prevDetail + ') no-repeat center' }"></button>
+                                            <button class="right btnMy"  v-if="item2.data.length > 1" @click="handleBtnMysef('right', key, index1, index2, dealData)" :style="{ background: 'url(' + prevDetail + ') no-repeat center' }"></button>
                                             <span v-if="item2.data.length > 1" class="calenderCurrentIndex">{{ item2.index }} / {{ item2.data.length }}</span>
                                             <div class="calenderInsideAll" :style="'transform: translateX(' + (-240 * (item2.index - 1)) + 'px)'">
                                                 <div v-for="(item3, index3) in item2.data" :key="index3"
@@ -565,7 +565,7 @@
                                         duration: 16,
                                         name: '二次开发',
                                         detail: '开会开会',
-                                        url: '/img/home/2.jpg'
+                                        url: '/img/home/2.png'
                                     }
                                 ]
                             },
@@ -593,7 +593,8 @@
                 ],
                 saveItem: {},
                 isShowDetail: false,
-                prev:  "/img/home/prev.svg"
+                prev:  "/img/home/prev.svg",
+                prevDetail:  "/img/home/prev-detail.svg"
             }
         },
         components: {
@@ -808,6 +809,13 @@
     }
 </script>
 <style scoped>
+    h1,
+    p,
+    span,
+    li,
+    a {
+        font-family: FZLTHJW;
+    }
     div::after{
         content: '';
         display: block;
@@ -839,7 +847,6 @@
         outline: none;
         cursor: pointer;
         position: absolute;
-        /*background: url('/web-ui/docs/.vuepress/public/img/home/prev.svg') no-repeat center;*/
         transition: transform 0.5s ease-in-out;
     }
     .calenderSliderTopMainswiper{
@@ -887,6 +894,7 @@
         text-align: center;
         display:  block;
         float: left;
+        font-family: FZLTCHJW;
     }
     .calenderMain{
         position: relative;
@@ -911,9 +919,9 @@
         height: 56px;
         line-height: 56px;
         display: block;
-        font-size: 16px;
+        font-size: 14px;
         text-align: center;
-
+        font-family: FZLTHJW;
     }
     .calenderLeftTime span.active{
         color: blue;
@@ -960,7 +968,6 @@
         width: 240px;
         height: 740px;
         transition: transform 0.5s ease-in-out;
-        background: pink;
     }
     .calenderListSinge{
         width: 240px;

@@ -12,5 +12,6 @@ module.exports = {
     authentication: require('./lang-modules/authentication').en,
     security: require('./lang-modules/security').en,
     interaction: require('./lang-modules/interaction').en,
-    brand: require('./lang-modules/brand').en
+    brand: require('./lang-modules/brand').en,
+    search: require('./lang-modules/search').en,
 };
