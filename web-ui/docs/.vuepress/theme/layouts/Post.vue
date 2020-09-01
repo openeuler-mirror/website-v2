@@ -310,6 +310,9 @@ export default {
   }
   .blog-item-tag {
       display: none;
+      .first-tag{
+        color:#00000080
+      }
     }
   .disclaimer {
     font-size: 16px;
