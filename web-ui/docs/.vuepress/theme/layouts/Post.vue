@@ -59,8 +59,8 @@
         </p>
       </div>
       <p class="blog-item-tag">
-        <span style="color:#00000080">{{i18n.community.BLOG.LABEL}}:</span>
-        <span v-for="(tag, index) in $frontmatter.tags" :key="index" style="color:#002fa7">
+        <span>{{i18n.community.BLOG.LABEL}}:</span>
+        <span v-for="(tag, index) in $frontmatter.tags" :key="index">
           <span class="tag-item">{{tag}}</span>
           <span v-if="index != ($frontmatter.tags.length - 1)">、</span>
         </span>
@@ -310,6 +310,9 @@ export default {
   }
   .blog-item-tag {
       display: none;
+      .first-tag{
+        color:#00000080
+      }
     }
   .disclaimer {
     font-size: 16px;
