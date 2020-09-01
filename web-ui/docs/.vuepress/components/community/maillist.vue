@@ -446,8 +446,8 @@
         align-items: center;
     }
     .inner-box img {
-        width: 90px;
-        height: 80px;
+        width: 110px;
+        height: 110px;
         margin-left: 20px;
     }
     .mail-table {

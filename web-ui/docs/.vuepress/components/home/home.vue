@@ -1,27 +1,26 @@
 <template>
     <div class="home">
         <div class="home-carousel">
-            <el-carousel class="home-banner" trigger="click">
+            <el-carousel class="home-banner" trigger="click" :interval="5000">
                 <el-carousel-item>
                     <div class="carousel-video">
                         <img src="/img/home/BannerVideo.png" alt="">
                     </div>
                 </el-carousel-item>
-                <el-carousel-item class="carousel-item"
-                                  :style="{ backgroundImage:'url(' + banner1 + ')', 'background-size': '100%', 'background-repeat': 'no-repeat'}">
+                <el-carousel-item class="carousel-item">
                     <div class="card-summer">
                         <img src="/img/home/BannerSummer.png" alt="">
                         <span>{{ i18n.home.HOME_CAROUSEL_DATA[0].DES }}</span>
+                        <video src="/img/home-video/bannerS.mp4" type="video/mp4" autoplay loop muted height="380px"></video>
                     </div>
                 </el-carousel-item>
                 <el-carousel-item
                         class="carousel-item"
                         v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
-                        :key="index"
-                        :style="{ backgroundImage:'url(' + item.IMG + ')', 'background-size': '100%', 'background-repeat': 'no-repeat'}">
-
+                        :key="index">
                     <h3>{{ item.TITLE }}</h3>
                     <span>{{ item.DES }}</span>
+                    <video :src="'/img/home-video/banner' + index + '.mp4'" type="video/mp4" autoplay loop muted height="380px"></video>
                 </el-carousel-item>
             </el-carousel>
         </div>
@@ -36,11 +35,11 @@
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p>{{ item.TITLE }}</p>
                         <img :src="item.IMG" alt="">
-                        <img :src="item.IMG" alt="" class="is-hidden">
+                        <img :src="item.GIF" alt="" class="is-hidden">
                     </a>
                     <a class="down" v-if="(index === 3)" @click="go(item.LINK)">
                         <img :src="item.IMG" alt="">
-                        <img :src="item.IMG" alt="" class="is-hidden">
+                        <img :src="item.GIF" alt="" class="is-hidden">
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p>{{ item.TITLE }}</p>
                     </a>
@@ -48,7 +47,7 @@
                 <div class="area-box bottom in-pc" @click="clickDownload">
                     <a class="down">
                         <img src="/img/home/step2.png" alt="">
-                        <img src="/img/home/step2.png" alt="" class="is-hidden">
+                        <img src="/img/home/step-move-2.gif" alt="" class="is-hidden">
                         <div class="box-icon">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.NAME }}</div>
                         <p>{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.TITLE }}</p>
                     </a>
@@ -68,6 +67,14 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="map-rode">
+                <img class="is-pc rode-left" src="/img/home/rodeLeft.svg" alt="">
+                <img class="is-pc plane-left" src="/img/home/planeLeft.svg" alt="">
+                <img class="is-pc rode-middle" src="/img/home/rodeMiddle.svg" alt="">
+                <img class="is-pc plane-middle" src="/img/home/planeMiddle.svg" alt="">
+                <img class="is-pc rode-right" src="/img/home/rodeRight.svg" alt="">
+                <img class="is-pc plane-right" src="/img/home/planeRight.svg" alt="">
             </div>
             <div class="is-h5 mapArea">
                 <div
@@ -120,7 +127,7 @@
                             <span>{{ item.frontmatter.author }}</span>
                             <p><a :href="item.path">{{ item.frontmatter.summary }}</a></p>
                         </div>
-                        <span><a href="">{{ i18n.home.MORE }}</a></span>
+                        <span><a @click="go('/interaction/blog-list/')">{{ i18n.home.MORE }}</a></span>
                     </div>
                 </div>
                 <div class="room-contain" :class="{'active':currentRoom === 2}">
@@ -133,7 +140,7 @@
                             <span>{{ item.frontmatter.author }}</span>
                             <p><a :href="item.path">{{ item.frontmatter.title }}</a></p>
                         </div>
-                        <span><a href="">{{ i18n.home.MORE }}</a></span>
+                        <span><a @click="go('/interaction/news-list/')">{{ i18n.home.MORE }}</a></span>
                     </div>
                 </div>
             </div>
@@ -317,7 +324,7 @@
                 roomName: [],
                 rooms1: true,
                 rooms2: false,
-                rooms3: false
+                rooms3: false,
             }
         },
         mounted() {
@@ -443,7 +450,7 @@
     }
 
     .room-card .el-carousel__container {
-        height: 480px;
+        height: 360px;
     }
 
     @media screen and (max-width: 1000px) {
@@ -493,25 +500,28 @@
         text-align: left;
         line-height: 48px;
         font-family: FZLTCHJW;
-        margin-top: 30px;
+        margin-top: 5%;
     }
     .home-carousel .el-carousel__item span {
         display: inline-block;
         width: 620px;
-        font-size: 1.5vw;
+        font-size: 1vw;
         line-height: 40px;
-        margin-top: 60px;
+        margin-top: 30px;
     }
     .carousel-item {
         width: 100%;
         height: 100%;
         background-size: contain;
         background-repeat: no-repeat;
-        padding-left: 300px;
+        padding-left: 15%;
     }
     .carousel-item .card-summer {
         width: 620px;
         text-align: center;
+    }
+    .card-summer img {
+        width: 256px;
     }
     .carousel-item .card-summer span {
         margin-left: 0;
@@ -520,6 +530,11 @@
     }
     .carousel-item img {
         z-index: -1;
+        margin-top: 5%;
+    }
+    .carousel-item video {
+        position: absolute;
+        top: 0;
     }
     .carousel-img {
         width: 1080px;
@@ -550,6 +565,45 @@
         text-align: center;
         width: 1080px;
         margin: 0 auto;
+    }
+    .map-rode {
+        width: 1080px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .rode-left {
+        position: absolute;
+        left: 95px;
+        z-index: -10;
+    }
+    .rode-middle {
+        position: absolute;
+        left: 420px;
+        top: -310px;
+        z-index: -10;
+    }
+    .rode-right {
+        position: absolute;
+        left: 760px;
+        top: -70px;
+        z-index: -10;
+    }
+    .plane-left {
+        position: absolute;
+        left: 215px;
+        z-index: -10;
+    }
+    .plane-middle {
+        position: absolute;
+        left: 595px;
+        top: -325px;
+        z-index: -10;
+    }
+    .plane-right {
+        position: absolute;
+        left: 920px;
+        top: -25px;
+        z-index: -10;
     }
     .home-introduce .is-h5.mapArea {
         display: none ;
@@ -585,7 +639,7 @@
     }
     .area-box.in-pc:nth-child(3) {
         position: absolute;
-        top: 132px;
+        top: 90px;
         left: 56%;
     }
     .area-box.in-pc:nth-child(4) {
@@ -623,11 +677,15 @@
         margin-left: 10px;
     }
     .area-box img {
+        width: 150px;
+        height: 150px;
         display: block;
         margin: 10px 0 26px 30px;
     }
     .area-box .is-hidden {
         display: none;
+        width: 150px;
+        height: 150px;
     }
     .area-box .is-hovered {
         display: block;
@@ -647,10 +705,11 @@
         box-shadow: 0 6px 20px 0 rgba(0, 0, 0, .1);
         text-align: left;
         margin-top: 15px;
-        margin-left: 60px;
+        margin-left: 25px;
     }
     .snd-guidance.is-show {
         display: block;
+        width: 280px;
     }
     .d3-guide {
         display: flex;
@@ -819,10 +878,11 @@
     }
     .flex-room {
         width: 555px;
-        height: 368px;
+        height: 280px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding-right: 40px;
     }
     .room-contain span {
         font-size: 12px;
@@ -832,14 +892,14 @@
     .room-contain p {
         font-size: 16px;
         line-height: 22px;
-        margin: 20px 0 30px;
+        margin: 20px 0 25px;
         text-align: left;
         color: rgba(0, 0, 0, .85);
         overflow: hidden;
         display: -webkit-box;
         word-wrap: break-word;
         word-break: normal;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
     }
@@ -849,6 +909,7 @@
         color: #002fa7;
         text-decoration: none;
         font-family: PingFangSC-Regular;
+        cursor: pointer;
     }
     .room-title {
         margin-bottom: 40px;
@@ -869,11 +930,14 @@
         border-radius: 2px;
     }
     .room-img {
-        width: 520px;
-        margin: 70px auto 40px;
+        width: 420px;
+        margin: 13px auto 40px;
         box-shadow: 0 6px 30px 0px rgba(0, 0, 0, .1);
         position: relative;
         z-index: -1;
+    }
+    .room-img img {
+        width: 420px;
     }
     .room-box a {
         color: #000;
@@ -1063,6 +1127,9 @@
         .is-pc.mapArea {
             display: none;
         }
+        .home-introduce .is-pc {
+            display: none;
+        }
         .home {
             margin: 0 15px;
         }
@@ -1102,7 +1169,7 @@
         }
         .el-carousel__container {
             width: 100%;
-            height: 300px;
+            height: 380px;
             font-size: 1vw;
         }
         .home-introduce {
@@ -1130,9 +1197,8 @@
             margin-left: 16px;
         }
         .area-box img {
-            display: inline-block;
-            margin-top: 10px;
-            margin-bottom: 26px;
+            display: block;
+            margin: 10px auto 26px;
         }
         .home-calendar {
             width: 100%;
@@ -1147,6 +1213,11 @@
         }
         .home-active p {
             margin-bottom:  45px;
+        }
+        .area-box {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
         }
         .calendar-time p {
             font-size: 14px;

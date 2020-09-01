@@ -8,15 +8,17 @@ module.exports = {
             ALL: '全部',
             BLOG: '博客',
             NEWS: '新闻',
-            DOCS: '文档'
-        }
+            DOCS: '文档',
+            FROM: '来源'
+        },
     },
     en: {
         TAG_NAME: {
             ALL: 'All',
             BLOG: 'Blog',
             NEWS: 'News',
-            DOCS: 'Docs'
+            DOCS: 'Docs',
+            FROM: 'from'
         }
     }
 };
