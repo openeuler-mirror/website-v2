@@ -15,6 +15,11 @@ module.exports = {
                 PATH: '/documentation/',
                 NAME: '文档',
                 CHILDREN: [],
+                OTHER_CHILDREN: [
+                    {
+                        PATH: '/docs/'
+                    }
+                ],
                 CLASS: []
             },
             {
@@ -39,6 +44,14 @@ module.exports = {
                     {
                         NAME: '峰会',
                         PATH: '/interaction/summit-list/'
+                    }
+                ],
+                OTHER_CHILDREN: [
+                    {
+                        PATH: '/news/'
+                    },
+                    {
+                        PATH: '/blog/'
                     }
                 ],
                 CLASS: []
@@ -130,6 +143,10 @@ module.exports = {
                 }
             ],
             QR_CODE: '扫码关注公众号'
+        },
+        NOTFOUND:{
+            NOTFOUND:404,
+            MESSAGE:'开小差啦...'
         }
     },
     en: {
@@ -144,6 +161,11 @@ module.exports = {
                 PATH: '/documentation/',
                 NAME: 'Documentation',
                 CHILDREN: [],
+                OTHER_CHILDREN: [
+                    {
+                        PATH: '/docs/'
+                    }
+                ],
                 CLASS: []
             },
             {
@@ -168,6 +190,14 @@ module.exports = {
                     {
                         NAME: 'Summit',
                         PATH: '/interaction/summit-list/'
+                    }
+                ],
+                OTHER_CHILDREN: [
+                    {
+                        PATH: '/news/'
+                    },
+                    {
+                        PATH: '/blog/'
                     }
                 ],
                 CLASS: []
@@ -259,6 +289,10 @@ module.exports = {
                 }
             ],
             QR_CODE: 'Wechat Subscription'
+        },
+        NOTFOUND:{
+            NOTFOUND:404,
+            MESSAGE:'开小差啦...'
         }
     }
 };

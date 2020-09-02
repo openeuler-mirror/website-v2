@@ -1,14 +1,14 @@
 <template>
    <div class="sig-detail">
-       <div class="breadcrumbs">
+       <div class="breadcrumbs" @click="back">
            SIG \
        </div>
-       <h1>A-Tune</h1>
-       <h2>组织会议</h2>
+       <h1>{{$route.query.name}}</h1>
+       <h2>{{i18n.sig.SIG_DETAIL.ORGANIZING_MEETINGS}}</h2>
         <div class="calender-wrapper">
             <calender />
         </div>
-        <h2>组织会议</h2>
+        <h2>{{i18n.sig.SIG_DETAIL.MEMBERS}}</h2>
         <div class="developer-wrapper">
             <div class="dev-leader">
                 <div class="dev-dever" v-for="(value, index) in i18n.home.HOME_DEV.DEV_INFO" :key="index">
@@ -29,23 +29,46 @@
                 </div>
             </div>
         </div>
-        <h2>联系方式</h2>
+        <h2>{{i18n.sig.SIG_DETAIL.CONTACT}}</h2>
         <div class="contact">
-            <span>邮件列表：</span><a href="mailto:dev@openeuler.org">dev@openeuler.org</a>
+            <span>{{i18n.sig.SIG_DETAIL.MAIL_LIST}}：</span><a :href="'mailto:' + $route.query.mail">{{$route.query.mail}}</a>
         </div>
    </div>
 </template>
 
 <script>
-import calender from "./../home/calender"
+import { sigDetail } from "../../api/sig";
+import calender from "./../home/calender";
+let that = null;
+let remoteMethods = {
+    getSigDetail() {
+        sigDetail(that.$route.query.id)
+        .then(data => {
+        })
+        .catch(data => {
+            that.$message.error(data);
+        });
+    }
+}
 export default {
     data () {
+        that = this;
         return {
 
         }
     },
     components: {
         calender
+    },
+    mounted () {
+        remoteMethods.getSigDetail();
+    },
+    methods: {
+        back () {
+            this.$router.push({
+                path: this.resolvePath('/sig/sig-list/sig-list')
+            })
+        }
     }
 }
 </script>

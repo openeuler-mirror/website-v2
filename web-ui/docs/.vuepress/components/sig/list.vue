@@ -8,7 +8,7 @@
         ></common-banner>
         <ul class="sig-list" v-fade v-if="list.length">
             <li class="sig-item fade-in" v-for="(item ,index) in list">
-                <h2 @click="toDetail(item.id)">{{item.group_name}}</h2>
+                <h2 @click="toDetail(item)">{{item.group_name}}</h2>
                 <ul class="info-list">
                     <li class="mibile-hidden">
                         <img src="/img/sig/home.svg" alt="">
@@ -85,10 +85,14 @@ export default {
         remoteMethods.getSigList();
     },
     methods: {
-        toDetail(id) {
+        toDetail(item) {
             this.$router.push({
                 path: this.resolvePath('/sig/sig-list/sig-detail.html'),
-                query: { id }
+                query: { 
+                    id: item.id,
+                    name: item.group_name,
+                    mail: item.maillist
+                }
             })
         }
     },

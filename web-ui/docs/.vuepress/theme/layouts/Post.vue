@@ -77,7 +77,7 @@
 <script>
 let script;
 import dayjs from "dayjs";
-import {blogVisitList,blogVisitDetail,addVisit} from "../../api/blogCount"
+import {blogVisitDetail,addVisit} from "../../api/blogCount"
 export default {
   name: "Post",
   data() {
@@ -93,23 +93,25 @@ export default {
       // 访问量
       blogVisit:'',
        visitCount: {
-        blogTitle:'',
-        blogDate:'',
-        pageLang:''
+        title:'',
+        date:'',
+        lang:''
       },
     };
   },
   created() {
     this.targetLocale = this.$lang === "zh" ? "/zh/" : "/en/";
-    this.getBlogCount();
+    
   },
   mounted() {
     script = require("busuanzi.pure.js");
     this.allBlogListData = this.blogList();
     this.otherBlog = this.getOtherBlog(this.allBlogListData);
-    this.visitCount.blogTitle=this.$frontmatter.title;
-    this.visitCount.blogDate=this.$frontmatter.date;
-    this.visitCount.pageLang=this.$lang;
+    this.visitCount.title=this.$frontmatter.title;
+    this.visitCount.date=this.$frontmatter.date;
+    this.visitCount.lang=this.$lang;
+    this.getBlogCount();
+    this.addBlogsCount();
   },
   watch: {
     $route(to, from) {
@@ -147,8 +149,11 @@ export default {
      getBlogCount() {
       blogVisitDetail(this.visitCount)
       .then(response => {
-          this.blogVisit = response.data[0] || 1;
+          this.blogVisit = response.data[0].count || 1;
         })
+    },
+    addBlogsCount() {
+        addVisit(this.visitCount).then(response => {});
     }
   },
 };

@@ -24,3 +24,24 @@ export const sigList = () => {
 
     });
 };
+
+export const sigDetail = (id) => {
+    return new Promise((resolve, reject) => {
+        appAjax.postJson({
+            url: sigApi + `/sigmeetingsdata/${id}/`,
+            type: 'get',
+            success(result) {
+                if (result) {
+                    resolve(result);
+                    return;
+                }
+                reject(result);
+            },
+            error(msg) {
+                reject(msg);
+            }
+
+        });
+
+    });
+};

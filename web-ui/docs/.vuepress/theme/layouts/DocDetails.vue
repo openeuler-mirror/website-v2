@@ -31,21 +31,27 @@
           <span @click="showMenu" class="toggle-doc">{{i18n.documentation.MENU}}</span>
         </p>
       </div>
+      <!-- 内容都渲染在docs-content -->
       <Content id="docs-content" />
     </div>
     <div class="details-right">
-      <p class="previous-doc">
-        <i class="el-icon-arrow-left"></i>
-        <span @click="previous" class="toggle-doc">{{i18n.documentation.PREVIOUS}}</span>
-      </p>
-      <p class="next-doc">
-        <span @click="next" class="toggle-doc">{{i18n.documentation.NEXT}}</span>
-        <i class="el-icon-arrow-right"></i>
-      </p>
-      <p class="feedback-doc">
-        <i class="el-icon-edit"></i>
-        <a :href="feedbackPath" target="_blank">{{i18n.documentation.FEEDBACK}}</a>
-      </p>
+        <div class="btn-box">
+            <p class="previous-doc">
+                <i class="el-icon-arrow-left"></i>
+                <span @click="previous" class="toggle-doc">{{i18n.documentation.PREVIOUS}}</span>
+            </p>
+            <p class="next-doc">
+                <span @click="next" class="toggle-doc">{{i18n.documentation.NEXT}}</span>
+                <i class="el-icon-arrow-right"></i>
+            </p>
+            <p class="feedback-doc">
+                <i class="el-icon-edit"></i>
+                <a :href="feedbackPath" target="_blank">{{i18n.documentation.FEEDBACK}}</a>
+            </p>
+        </div>
+        <ul class="second-title-list">
+            <li>1</li>
+        </ul>
     </div>
   </div>
 </template>
@@ -55,6 +61,7 @@ export default {
   name: "DocDetails",
   data() {
     return {
+        //获取中英文字符
       targetLocale: "",
       //菜单数据
       menuData: [],
@@ -64,7 +71,7 @@ export default {
       version: "",
       //意见反馈路径
       feedbackPath: "",
-      //当然页面路径
+      //当前页面路径
       currentDocPath: "",
       //前一篇路径
       previousPath: "",
@@ -77,7 +84,7 @@ export default {
     };
   },
   created() {
-    this.targetLocale = this.$lang === "zh" ? "/zh/" : "/en/";
+    this.targetLocale = this.$lang === "zh" ? "zh" : "/en/";
   },
   mounted() {
     let currentPath = this.$route.path;
@@ -87,6 +94,7 @@ export default {
       "/docs/" +
       this.version +
       "/menu/menu.json");
+      console.log(this.menuData);
     this.currentDocPath = this.getCurrentDocPath(currentPath);
     this.renderFeedbackPath();
     this.allPathArr = this.getAllPathArr(this.menuData);
@@ -116,6 +124,7 @@ export default {
       return pathStr;
     },
     renderFeedbackPath() {
+        //点击意见反馈后跳转的地址
       this.feedbackPath =
         "https://gitee.com/openeuler/docs/blob/stable-" +
         this.version +
@@ -162,15 +171,18 @@ export default {
       this.allPathArr.forEach((item, index) => {
         if (item === this.currentDocPath) {
           if (index === 0) {
+              //当前是第一篇文章点击下一篇
             this.nextPath = this.allPathArr[index + 1];
             this.previousPath = "";
             return false;
           }
           if (index === this.allPathArr.length - 1) {
+              //当前是最后一篇点击下一篇
             this.nextPath = "";
             this.previousPath = this.allPathArr[index - 1];
             return false;
           }
+          //当前是第二篇（及以上）文章开始点击下一章
           this.nextPath = this.allPathArr[index + 1];
           this.previousPath = this.allPathArr[index - 1];
         }
@@ -258,10 +270,15 @@ export default {
   display: none;
 }
 .details-right {
-  width: 200px;
-  vertical-align: top;
-  display: inline-block;
-  overflow: hidden;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    width: 200px;
+    vertical-align: top;
+    display: inline-block;
+    overflow: hidden;
+    .btn-box{
+        height: 200px;
+    }
 }
 .previous-doc {
   float: left;
