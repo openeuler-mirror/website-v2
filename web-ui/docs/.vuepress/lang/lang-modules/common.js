@@ -130,6 +130,10 @@ module.exports = {
                 }
             ],
             QR_CODE: '扫码关注公众号'
+        },
+        NOTFOUND:{
+            NOTFOUND:404,
+            MESSAGE:'开小差啦...'
         }
     },
     en: {
@@ -259,6 +263,10 @@ module.exports = {
                 }
             ],
             QR_CODE: 'Wechat Subscription'
+        },
+        NOTFOUND:{
+            NOTFOUND:404,
+            MESSAGE:'开小差啦...'
         }
     }
 };

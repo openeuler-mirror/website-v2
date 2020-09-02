@@ -176,13 +176,8 @@ export default {
     &:first-of-type {
         .mr(left,0);
     }
-    @media (min-width: 1000px) and (max-width: 1680px) {
+    @media (min-width: 1000px) {
         &:nth-of-type(4n + 0) {
-        .mr(left,0);
-        }
-    }
-    @media (min-width: 1680px) {
-        &:nth-of-type(5n + 0) {
         .mr(left,0);
         }
     }
@@ -261,7 +256,7 @@ export default {
         flex-direction: row;
         flex-wrap: wrap;
         @media (max-width: 1000px) {
-        flex-direction: column;
+            flex-direction: column;
         }
         .content-box {
         .content-box-css;
@@ -330,8 +325,12 @@ export default {
         .title-css;
     }
     .replayer-content {
+        @media (max-width: 1000px) {
+            flex-direction: column;
+        }
         .the-content-css;
         flex-wrap: wrap;
+        
         .content-box {
         .content-box-css;
         .left-content {
