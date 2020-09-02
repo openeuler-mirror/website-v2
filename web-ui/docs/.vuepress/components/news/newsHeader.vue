@@ -18,7 +18,7 @@
                 <span class="news-date">
                     <span id="busuanzi_container_page_pv">
                         <span>{{ i18n.community.BLOG.BROWSE }}</span>
-                        <span>{{ this.newsVisit }}</span>
+                        <span>{{ newsVisit }}</span>
                         <span>{{ i18n.community.BLOG.VIEWED }}</span>
                     </span>
                 </span>
@@ -61,7 +61,7 @@ export default {
         },
         getNewsCount() {
             newsVisitDetail(this.visitCount).then(response => {
-                this.newsVisit = response.data[0].count || 1;
+                this.newsVisit = response.data[0] && response.data[0].count || 1;
             });
         },
         addNewsCount() {
