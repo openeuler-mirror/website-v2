@@ -4,7 +4,7 @@
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay">
                 <el-carousel-item>
                     <div class="carousel-video">
-                        <video poster="/img/home/BannerVideo.png" controls width="100%" height="380px">
+                        <video poster="/img/home/BannerVideo.png" controls loop width="100%" height="380px">
                             <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler%E7%90%86%E5%BF%B5%E8%A7%86%E9%A2%91_0829_V1.0.mp4"  type="video/mp4">
                         </video>
                     </div>
@@ -606,6 +606,9 @@
     }
     .carousel-video img {
         width: 100%;
+    }
+    .carousel-video video {
+        outline: none;
     }
     .el-carousel__container {
         height: 680px;
