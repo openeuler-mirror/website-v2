@@ -82,7 +82,7 @@
                                     v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_GUIDE.GUIDE_WAY"
                                     :key="index">
                                 <a :href="item.LINK" target="_blank">
-                                    <img :src="item.IMG" alt="" style="width: 36px; height: 36px">
+                                    <img :src="item.IMG" alt="">
                                     <span>{{ item.TITLE }}</span>
                                 </a>
                             </div>
@@ -228,8 +228,7 @@
             <p>{{ i18n.home.HOME_DEV.DEV_DESCRIPTION }}</p>
             <div class="dev-leader" v-fade>
                 <div class="dev-dever hidden fade-in" v-for="(value, index) in i18n.home.HOME_DEV.DEV_INFO" :key="index">
-                    <img style="width: 120px; height: 120px; border-radius: 50%"
-                        :src="value.IMG">
+                    <img class="dev-img" :src="value.IMG">
                     <p class="dever-name">{{ value.NAME }}</p>
                     <p class="dever-rank">{{ value.TITLE }}</p>
                     <p class="dever-rank">{{ value.RANK }}</p>
@@ -777,6 +776,8 @@
         font-size: 12px;
     }
     .guide-way img {
+        width: 36px;
+        height: 36px;
         margin: 10px 0 0;
     }
     .snd-guidance p {
@@ -1007,6 +1008,11 @@
         min-width: 25%;
         max-width: 25%;
         margin-top: 30px;
+    }
+    .dev-dever img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
     }
     .dev-dever .dever-name {
         color: #005CC7;
