@@ -66,22 +66,22 @@ module.exports = {
                     {
                         TITLE: "树莓派",
                         IMG: "/img/home/areaPai.png",
-                        LINK:""
+                        LINK:"javascript:void(0)"
                     },
                     {
                         TITLE: "硬件",
                         IMG: "/img/home/areaHardware.svg",
-                        LINK:"",
+                        LINK:"javascript:void(0)"
                     },
                     {
                         TITLE: "虚拟机",
                         IMG: "/img/home/areaVirtual.svg",
-                        LINK:"",
+                        LINK:"javascript:void(0)"
                     },
                     {
                         TITLE: "ECS",
                         IMG: "/img/home/areaECS.svg",
-                        LINK:"",
+                        LINK:"javascript:void(0)"
                     }
                 ]
             }
@@ -295,9 +295,7 @@ module.exports = {
                 TITLE: "测试资源申请",
                 DES: "如果缺乏测试设备，可以尝试",
                 APPLY: "在此申请。",
-                APPLY_LINK: "applyLink",
                 SPONSOR: "感谢鹏城实验室赞助",
-                LINK: "sponsorLink"
             },
             SOURCE_MAIL: {
                 TITLE: "邮件订阅",
@@ -376,22 +374,22 @@ module.exports = {
                     {
                         TITLE: "树莓派",
                         IMG: "/img/home/areaPai.png",
-                        LINK:""
+                        LINK:"javascript:void(0)"
                     },
                     {
                         TITLE: "硬件",
                         IMG: "/img/home/areaHardware.svg",
-                        LINK:"",
+                        LINK:"javascript:void(0)"
                     },
                     {
                         TITLE: "虚拟机",
                         IMG: "/img/home/areaVirtual.svg",
-                        LINK:"",
+                        LINK:"javascript:void(0)"
                     },
                     {
                         TITLE: "ECS",
                         IMG: "/img/home/areaECS.svg",
-                        LINK:"",
+                        LINK:"javascript:void(0)"
                     }
                 ]
             }
@@ -588,9 +586,7 @@ module.exports = {
                 TITLE: "测试资源申请",
                 DES: "如果缺乏测试设备，可以尝试",
                 APPLY: "在此申请。",
-                APPLY_LINK: "applyLink",
                 SPONSOR: "感谢鹏城实验室赞助",
-                LINK: "sponsorLink"
             },
             SOURCE_MAIL: {
                 TITLE: "邮件订阅",
