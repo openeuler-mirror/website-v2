@@ -178,7 +178,8 @@
                     >
                     <i
                         class="icon-search el-input__icon"
-                        slot="suffix">
+                        slot="suffix"
+                    @click="go(searchData)">
                     </i>
                     </el-input>
                 </div>
@@ -240,13 +241,11 @@ export default {
             this.$router.push(targetLocale);
             this.menuMobileFlag = false;
         },
-        go(path) {
-            if (path) {
-                this.$router.push({
-                    path: this.resolvePath(path)
-                });
-                this.menuMobileFlag = false;
-            }
+        go (id) {
+            this.$router.push({
+                path: this.resolvePath('/other/search/'),
+                query: {id}
+            })
         },
         showSub(toggleClass) {
             toggleClass.push("show-sub-menu");

@@ -6,17 +6,14 @@ module.exports = {
     cn: {
         HOME_CAROUSEL_DATA: [{
             TITLE: "OpenEuler Summit 2020",
-            IMG: "/img/home/Banner2.gif",
             DES: "OpenEuler Virtual Summit 2020 是 openEuler 在发布 20.03 LTS 版本后第一次举行的峰会，本次大会邀请了华为的资深专家、社区 Committer 和多家 openEuler 社区合作厂商的重量嘉宾贡献多场精彩的演讲，不容错过。",
         },
             {
                 TITLE: "iSula",
-                IMG: "/img/home/Banner3.gif",
                 DES: "iSula是一种云原生轻量级容器解决方案，可通过统一、灵活的架构满足ICT领域端、边、云场景的多种需求。",
             },
             {
                 TITLE: "A-Tune",
-                IMG: "/img/home/Banner4.gif",
                 DES: "A-Tune是智能性能优化系统软件，即通过机器学习引擎对业务应用建立精准模型, 再根据业务负载智能匹配最佳操作系统配置参数组合，实现系统整体运行效率提升。",
             }
         ],
@@ -30,29 +27,29 @@ module.exports = {
                     NAME: "下载",
                     TITLE: "openEuler ISO",
                     IMG: "/img/home/step1.png",
-                    LINK: "javascript:;",
-                    GIF: "/img/home/step-move-1.gif"
+                    GIF: "/img/home/step-move-1.gif",
+                    LINK: "/download/",
                 },
                 {
                     NAME: "体验",
                     TITLE: "openEuler系统",
                     IMG: "/img/home/step2.png",
+                    GIF: "/img/home/step-move-2.gif",
                     LINK: "javascript:;",
-                    GIF: "/img/home/step-move-2.gif"
                 },
                 {
                     NAME: "查阅",
                     TITLE: "openEuler文档",
                     IMG: "/img/home/step3.png",
-                    LINK: "javascript:;",
-                    GIF: "/img/home/step-move-3.gif"
+                    GIF: "/img/home/step-move-3.gif",
+                    LINK: "/documentation",
                 },
                 {
                     NAME: "贡献",
                     TITLE: "openEuler社区",
                     IMG: "/img/home/step4.png",
-                    LINK: "javascript:;",
-                    GIF: "/img/home/step-move-4.gif"
+                    GIF: "/img/home/step-move-4.gif",
+                    LINK: "/community/contribution/",
                 },
 
             ],
@@ -61,7 +58,7 @@ module.exports = {
                 TITLE: "openEuler系统",
                 IMG: "/img/home/step2.png",
                 LINK: "javascript:;",
-                GIF: ""
+                GIF: "/img/home/step-move-2.gif"
             },
             INTRO_GUIDE: {
                 INFO: "选择您喜欢的体验方式",
@@ -155,116 +152,132 @@ module.exports = {
             DEV_DESCRIPTION: "这里汇聚了无数精英大咖，快找找您感兴趣的Developer吧！",
             DEV_INFO: [
                 {
-                    NAME: "ANNA GREEN",
-                    TITLE: "Founder & CTO",
-                    RANK: "Senior Developer",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "胡峰",
+                    TITLE: "Application、System-tool、",
+                    RANK: "Packaging SIG maintainer",
+                    MAIL_LINK: "solar.hu@huawei.com",
+                    GITEE_LINK: "https://gitee.com/solarhu",
+                    IMG: "/img/home/developer/hufen.png"
                 },
                 {
-                    NAME: "Alan Peterson",
-                    TITLE: "Co-Founder & CFO",
-                    RANK: "Senior Market Analyst",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "杜开田",
+                    TITLE: "Application、CICD SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "dukaitian@huawei.com",
+                    GITEE_LINK: "https://gitee.com/jimmy_hero",
+                    IMG: "/img/home/developer/dukaitian.png"
                 },
                 {
-                    NAME: "Emma Red",
-                    TITLE: "Co-Founder & COO",
-                    RANK: "Project Manager",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "何晓文",
+                    TITLE: "Packaging SIG、Base-",
+                    RANK: "service SIG maintainer",
+                    MAIL_LINK: "hexiaowen@huawei.com",
+                    GITEE_LINK: "https://gitee.com/jimmy_hero",
+                    IMG: "/img/home/developer/hexiaowen.png"
                 },
                 {
-                    NAME: "Steve Green",
-                    TITLE: "CCO",
-                    RANK: "Community Lead",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "朱春意",
+                    TITLE: "Packaging SIG、Base-",
+                    RANK: "service SIG maintainer",
+                    MAIL_LINK: "zhuchunyi@huawei.com",
+                    GITEE_LINK: "https://gitee.com/zhuchunyi",
+                    IMG: "/img/home/developer/zhuchunyi.png"
                 },
                 {
-                    NAME: "Adam Green",
-                    TITLE: "Founder & CTO",
-                    RANK: "Senior Developer",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "谢秀奇",
+                    TITLE: "Kenel SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "xiexiuqi@huawei.com",
+                    GITEE_LINK: "https://gitee.com/xiexiuqi",
+                    IMG: "/img/home/developer/xiexiuqi.png"
                 },
                 {
-                    NAME: "Anna Peterson",
-                    TITLE: "Co-Founder & CFO",
-                    RANK: "Senior Market Analyst",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "董剑",
+                    TITLE: "Packaging SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "dongjian13@huawei.com",
+                    GITEE_LINK: "https://gitee.com/dogsheng",
+                    IMG: "/img/home/developer/dongjian.png"
                 },
                 {
-                    NAME: "Brenda Red",
-                    TITLE: "Co-Founder & COO",
-                    RANK: " Project Manager",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "蔡灏旻",
+                    TITLE: "iSulad SIG",
+                    RANK: " maintainer",
+                    MAIL_LINK: "caihaomin@huawei.com",
+                    GITEE_LINK: "https://gitee.com/caihaomin",
+                    IMG: "/img/home/developer/caihaomin.png"
                 },
                 {
-                    NAME: "Kim Green",
-                    TITLE: "CCO",
-                    RANK: "Community Lead",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "李峰",
+                    TITLE: "Container SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "lifeng68@huawei.com",
+                    GITEE_LINK: "https://gitee.com/lifeng2221dd1",
+                    IMG: "/img/home/developer/lifeng.png"
                 },
                 {
-                    NAME: "Andy White",
-                    TITLE: "Ethical Hacker",
-                    RANK: "Ethical Hacker",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "张海亮",
+                    TITLE: "Virt SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "zhang.zhanghailiang@huawei.com",
+                    GITEE_LINK: "https://gitee.com/zhanghailiang_lucky",
+                    IMG: "/img/home/developer/zhanghailiang.png"
                 },
                 {
-                    NAME: "Emma Red",
-                    TITLE: "Co-Founder & COO",
-                    RANK: "Project Manager",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "郑弦",
+                    TITLE: "sig-ai-bigdata SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "sinever@126.com",
+                    GITEE_LINK: "gitee.com/sinever",
+                    IMG: "/img/home/developer/zhengxian.png"
                 },
                 {
-                    NAME: "Alan Peterson",
-                    TITLE: "Co-Founder & CFO",
-                    RANK: "Senior Market Analyst",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "朱健伟",
+                    TITLE: "Base-Service SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "zhujianwei7@huawei.com",
+                    GITEE_LINK: "https://gitee.com/zhujianwei001",
+                    IMG: "/img/home/developer/zhujianwei.png"
                 },
                 {
-                    NAME: "Anna Green",
-                    TITLE: "Founder & CTO",
-                    RANK: "Senior Developer",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "谢志鹏",
+                    TITLE: "A-Tune SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "xiezhipeng1@huawei.com",
+                    GITEE_LINK: "https://gitee.com/xiezhipeng1",
+                    IMG: "/img/home/developer/xiezhipeng.png"
                 },
                 {
-                    NAME: "Kim Green",
-                    TITLE: "CCO",
-                    RANK: "Community Lead",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "熊伟",
+                    TITLE: "sig-perl-modules/ sig-perl-",
+                    RANK: "modules SIG maintainer",
+                    MAIL_LINK: "xiongwei888@huawei.com",
+                    GITEE_LINK: "https://gitee.com/myeuler",
+                    IMG: "/img/home/developer/xiongwei.png"
                 },
                 {
-                    NAME: "Anna Green",
-                    TITLE: "Founder & CTO ",
-                    RANK: "Senior Developer",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "朱延朋",
+                    TITLE: "sig-release-management",
+                    RANK: "SIG maintainer",
+                    MAIL_LINK: "zhuyanpeng@huawei.com",
+                    GITEE_LINK: "https://gitee.com/zyp-rock",
+                    IMG: "/img/home/developer/zhuyanpeng.png"
                 },
                 {
-                    NAME: "Adam Green",
-                    TITLE: "Founder & CTO",
-                    RANK: "Senior Developer",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "刘志强",
+                    TITLE: "Storage SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "lzhq28@mail.ustc.edu.cn",
+                    GITEE_LINK: "https://gitee.com/liuzhiqiang26",
+                    IMG: "/img/home/developer/liuzhiqiang.png"
                 },
                 {
-                    NAME: "Anna Peterson",
-                    TITLE: "Co-Founder & CFO",
-                    RANK: "Senior Market Analyst",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "吴波",
+                    TITLE: "Storage SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "wubo009@163.com",
+                    GITEE_LINK: "https://gitee.com/wubo009",
+                    IMG: "/img/home/developer/wubo.png"
                 },
             ]
         },
@@ -303,17 +316,14 @@ module.exports = {
     en: {
         HOME_CAROUSEL_DATA: [{
             TITLE: "OpenEuler Summit 2020",
-            IMG: "/img/home/Banner2.gif",
             DES: "OpenEuler Virtual Summit 2020 是 openEuler 在发布 20.03 LTS 版本后第一次举行的峰会，本次大会邀请了华为的资深专家、社区 Committer 和多家 openEuler 社区合作厂商的重量嘉宾贡献多场精彩的演讲，不容错过。",
         },
             {
                 TITLE: "iSula",
-                IMG: "/img/home/Banner3.gif",
                 DES: "iSula是一种云原生轻量级容器解决方案，可通过统一、灵活的架构满足ICT领域端、边、云场景的多种需求。",
             },
             {
                 TITLE: "A-Tune",
-                IMG: "/img/home/Banner4.gif",
                 DES: "A-Tune是智能性能优化系统软件，即通过机器学习引擎对业务应用建立精准模型, 再根据业务负载智能匹配最佳操作系统配置参数组合，实现系统整体运行效率提升。",
             }
         ],
@@ -327,29 +337,29 @@ module.exports = {
                     NAME: "下载",
                     TITLE: "openEuler ISO",
                     IMG: "/img/home/step1.png",
-                    LINK: "javascript:;",
-                    GIF: "/img/home/step-move-1.gif"
+                    GIF: "/img/home/step-move-1.gif",
+                    LINK: "/download/",
                 },
                 {
                     NAME: "体验",
                     TITLE: "openEuler系统",
                     IMG: "/img/home/step2.png",
+                    GIF: "/img/home/step-move-2.gif",
                     LINK: "javascript:;",
-                    GIF: "/img/home/step-move-2.gif"
                 },
                 {
                     NAME: "查阅",
                     TITLE: "openEuler文档",
                     IMG: "/img/home/step3.png",
-                    LINK: "javascript:;",
-                    GIF: "/img/home/step-move-3.gif"
+                    GIF: "/img/home/step-move-3.gif",
+                    LINK: "/documentation",
                 },
                 {
                     NAME: "贡献",
                     TITLE: "openEuler社区",
                     IMG: "/img/home/step4.png",
-                    LINK: "javascript:;",
-                    GIF: "/img/home/step-move-4.gif"
+                    GIF: "/img/home/step-move-4.gif",
+                    LINK: "/community/contribution/",
                 },
 
             ],
@@ -358,7 +368,7 @@ module.exports = {
                 TITLE: "openEuler系统",
                 IMG: "/img/home/step2.png",
                 LINK: "javascript:;",
-                GIF: ""
+                GIF: "/img/home/step-move-2.gif"
             },
             INTRO_GUIDE: {
                 INFO: "选择您喜欢的体验方式",
@@ -435,116 +445,132 @@ module.exports = {
             DEV_DESCRIPTION: "这里汇聚了无数精英大咖，快找找您感兴趣的Developer吧！",
             DEV_INFO: [
                 {
-                    NAME: "ANNA GREEN",
-                    TITLE: "Founder & CTO",
-                    RANK: "Senior Developer",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "胡峰",
+                    TITLE: "Application、System-tool、",
+                    RANK: "Packaging SIG maintainer",
+                    MAIL_LINK: "solar.hu@huawei.com",
+                    GITEE_LINK: "https://gitee.com/solarhu",
+                    IMG: "/img/home/developer/hufen.png"
                 },
                 {
-                    NAME: "Alan Peterson",
-                    TITLE: "Co-Founder & CFO",
-                    RANK: "Senior Market Analyst",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "杜开田",
+                    TITLE: "Application、CICD SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "dukaitian@huawei.com",
+                    GITEE_LINK: "https://gitee.com/jimmy_hero",
+                    IMG: "/img/home/developer/dukaitian.png"
                 },
                 {
-                    NAME: "Emma Red",
-                    TITLE: "Co-Founder & COO",
-                    RANK: "Project Manager",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "何晓文",
+                    TITLE: "Packaging SIG、Base-",
+                    RANK: "service SIG maintainer",
+                    MAIL_LINK: "hexiaowen@huawei.com",
+                    GITEE_LINK: "https://gitee.com/jimmy_hero",
+                    IMG: "/img/home/developer/hexiaowen.png"
                 },
                 {
-                    NAME: "Steve Green",
-                    TITLE: "CCO",
-                    RANK: "Community Lead",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "朱春意",
+                    TITLE: "Packaging SIG、Base-",
+                    RANK: "service SIG maintainer",
+                    MAIL_LINK: "zhuchunyi@huawei.com",
+                    GITEE_LINK: "https://gitee.com/zhuchunyi",
+                    IMG: "/img/home/developer/zhuchunyi.png"
                 },
                 {
-                    NAME: "Adam Green",
-                    TITLE: "Founder & CTO",
-                    RANK: "Senior Developer",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "谢秀奇",
+                    TITLE: "Kenel SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "xiexiuqi@huawei.com",
+                    GITEE_LINK: "https://gitee.com/xiexiuqi",
+                    IMG: "/img/home/developer/xiexiuqi.png"
                 },
                 {
-                    NAME: "Anna Peterson",
-                    TITLE: "Co-Founder & CFO",
-                    RANK: "Senior Market Analyst",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "董剑",
+                    TITLE: "Packaging SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "dongjian13@huawei.com",
+                    GITEE_LINK: "https://gitee.com/dogsheng",
+                    IMG: "/img/home/developer/dongjian.png"
                 },
                 {
-                    NAME: "Brenda Red",
-                    TITLE: "Co-Founder & COO",
-                    RANK: " Project Manager",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "蔡灏旻",
+                    TITLE: "iSulad SIG",
+                    RANK: " maintainer",
+                    MAIL_LINK: "caihaomin@huawei.com",
+                    GITEE_LINK: "https://gitee.com/caihaomin",
+                    IMG: "/img/home/developer/caihaomin.png"
                 },
                 {
-                    NAME: "Kim Green",
-                    TITLE: "CCO",
-                    RANK: "Community Lead",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "李峰",
+                    TITLE: "Container SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "lifeng68@huawei.com",
+                    GITEE_LINK: "https://gitee.com/lifeng2221dd1",
+                    IMG: "/img/home/developer/lifeng.png"
                 },
                 {
-                    NAME: "Andy White",
-                    TITLE: "Ethical Hacker",
-                    RANK: "Ethical Hacker",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "张海亮",
+                    TITLE: "Virt SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "zhang.zhanghailiang@huawei.com",
+                    GITEE_LINK: "https://gitee.com/zhanghailiang_lucky",
+                    IMG: "/img/home/developer/zhanghailiang.png"
                 },
                 {
-                    NAME: "Emma Red",
-                    TITLE: "Co-Founder & COO",
-                    RANK: "Project Manager",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "郑弦",
+                    TITLE: "sig-ai-bigdata SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "sinever@126.com",
+                    GITEE_LINK: "gitee.com/sinever",
+                    IMG: "/img/home/developer/zhengxian.png"
                 },
                 {
-                    NAME: "Alan Peterson",
-                    TITLE: "Co-Founder & CFO",
-                    RANK: "Senior Market Analyst",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "朱健伟",
+                    TITLE: "Base-Service SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "zhujianwei7@huawei.com",
+                    GITEE_LINK: "https://gitee.com/zhujianwei001",
+                    IMG: "/img/home/developer/zhujianwei.png"
                 },
                 {
-                    NAME: "Steve Green",
-                    TITLE: "CCO",
-                    RANK: "Community Lead",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "谢志鹏",
+                    TITLE: "A-Tune SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "xiezhipeng1@huawei.com",
+                    GITEE_LINK: "https://gitee.com/xiezhipeng1",
+                    IMG: "/img/home/developer/xiezhipeng.png"
                 },
                 {
-                    NAME: "Kim Green",
-                    TITLE: "CCO",
-                    RANK: "Community Lead",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "熊伟",
+                    TITLE: "sig-perl-modules/ sig-perl-",
+                    RANK: "modules SIG maintainer",
+                    MAIL_LINK: "xiongwei888@huawei.com",
+                    GITEE_LINK: "https://gitee.com/myeuler",
+                    IMG: "/img/home/developer/xiongwei.png"
                 },
                 {
-                    NAME: "Anna Green",
-                    TITLE: "Founder & CTO ",
-                    RANK: "Senior Developer",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "朱延朋",
+                    TITLE: "sig-release-management",
+                    RANK: "SIG maintainer",
+                    MAIL_LINK: "zhuyanpeng@huawei.com",
+                    GITEE_LINK: "https://gitee.com/zyp-rock",
+                    IMG: "/img/home/developer/zhuyanpeng.png"
                 },
                 {
-                    NAME: "Adam Green",
-                    TITLE: "Founder & CTO",
-                    RANK: "Senior Developer",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "刘志强",
+                    TITLE: "Storage SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "lzhq28@mail.ustc.edu.cn",
+                    GITEE_LINK: "https://gitee.com/liuzhiqiang26",
+                    IMG: "/img/home/developer/liuzhiqiang.png"
                 },
                 {
-                    NAME: "Anna Peterson",
-                    TITLE: "Co-Founder & CFO",
-                    RANK: "Senior Market Analyst",
-                    MAIL_LINK: "javascript:void(0)",
-                    GITEE_LINK: "javascript:void(0)"
+                    NAME: "吴波",
+                    TITLE: "Storage SIG",
+                    RANK: "maintainer",
+                    MAIL_LINK: "wubo009@163.com",
+                    GITEE_LINK: "https://gitee.com/wubo009",
+                    IMG: "/img/home/developer/wubo.png"
                 },
             ]
         },
