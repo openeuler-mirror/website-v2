@@ -3,7 +3,7 @@
         <div class="nav-wrapper">
             <div class="nav-bar">
                 <img
-                    src="/logo-mobile.png"
+                    src="/openeuler.png"
                     alt=""
                     class="nav-logo"
                     @click="goHome()"

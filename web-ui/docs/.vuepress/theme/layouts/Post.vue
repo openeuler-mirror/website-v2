@@ -66,7 +66,7 @@
         </span>
       </p>
       <p class="bottom-line bottom-line-none"></p>
-      <Content id="blog_content" />
+      <Content id="blog_content" class="markdown" />
     </div>
     <div class="bottom-line"></div>
     <div class="disclaimer">{{i18n.community.BLOG.DISCLAIMER_ZH}}</div>
@@ -149,7 +149,7 @@ export default {
      getBlogCount() {
       blogVisitDetail(this.visitCount)
       .then(response => {
-          this.blogVisit = response.data[0].count || 1;
+          this.blogVisit = response.data[0] && response.data[0].count || 1;
         })
     },
     addBlogsCount() {
@@ -220,6 +220,8 @@ export default {
   margin-bottom: 200px;
 }
 #blog_content {
+    width: 100%;
+    margin-bottom: 0;
   p {
     line-height: 42px;
     a {
