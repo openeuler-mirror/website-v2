@@ -2,7 +2,7 @@
     <div class="search">
         <div class="search-banner">
             <img src="/img/other/search/search.png" alt="">
-            <div class="search-input">
+            <div class="search-area">
                 <el-input
                         :placeholder="i18n.common.SEARCH_PLACE_HOLDER"
                         v-model="formData.keyword">
@@ -11,261 +11,201 @@
             </div>
         </div>
         <div class="search-tag">
-            <div class="tag-content" v-loading.fullscreen="contentLoading">
-                <div v-if="status">
-                    <el-tabs v-model="activeName">
-                        <template class="tag-title">
-                            <el-tab-pane :label="i18n.search.TAG_NAME.ALL + ' ( ' + getCount('all') + ' )'" name="first">
-                                <div class="search-detail">
-                                    <div class="tags-info" v-for="(item, index) in allDatas" :key="index">
-                                        <h3 v-html="item.title"><a :href="item.path"></a></h3>
-                                        <p>{{ item.textContent }}</p>
-                                        <p class="articla-from"><span>来源： </span><span class="artical-tag">{{ item.type }}</span></p>
-                                    </div>
-                                </div>
-                                <template>
-                                    <el-pagination
-                                            class="search-pagination"
-                                            :current-page.sync="formData.page"
-                                            :page-size="5"
-                                            layout="total, prev, pager, next, jumper"
-                                            @current-change="handleCurrentChange"
-                                            :total="getCount('all')">
-                                    </el-pagination>
-                                </template>
-                            </el-tab-pane>
-                            <el-tab-pane :label="i18n.search.TAG_NAME.DOCS + ' ( ' + getCount('docs') + ' )'" name="second">
-                                <div class="search-detail">
-                                    <div class="tags-info" v-for="(item, index) in filterDatas('文档')" :key="index">
-                                        <h3 v-html="item.title"><a :href="item.path"></a></h3>
-                                        <p>{{ item.textContent }}</p>
-                                        <p class="articla-from"><span>{{ i18n.search.TAG_NAME.FROM }}： </span><span class="artical-tag">{{ item.type }}</span></p>
-                                    </div>
-                                </div>
-                                <template>
-                                    <el-pagination
-                                            class="search-pagination"
-                                            :current-page.sync="formData.page"
-                                            :page-size="5"
-                                            layout="total, prev, pager, next, jumper"
-                                            @current-change="handleCurrentChange"
-                                            :total="getCount('docs')">
-                                    </el-pagination>
-                                </template>
-                            </el-tab-pane>
-                            <el-tab-pane :label="i18n.search.TAG_NAME.NEWS + ' ( ' + getCount('news') + ' )'" name="third">
-                                <div class="search-detail">
-                                    <div class="tags-info" v-for="(item, index) in filterDatas('新闻')" :key="index">
-                                        <h3 v-html="item.title"><a :href="item.path"></a></h3>
-                                        <p>{{ item.textContent }}</p>
-                                        <p class="articla-from"><span>来源： </span><span class="artical-tag">{{ item.type }}</span></p>
-                                    </div>
-                                </div>
-                                <template>
-                                    <el-pagination
-                                            class="search-pagination"
-                                            :current-page.sync="formData.page"
-                                            :page-size="5"
-                                            layout="total, prev, pager, next, jumper"
-                                            @current-change="handleCurrentChange"
-                                            :total="getCount('news')">
-                                    </el-pagination>
-                                </template>
-                            </el-tab-pane>
-                            <el-tab-pane :label="i18n.search.TAG_NAME.BLOG + ' ( ' + getCount('blog') + ' )'" name="fourth">
-                                <div class="search-detail">
-                                    <div class="tags-info" v-for="(item, index) in filterDatas('博客')" :key="index">
-                                        <h3 v-html="item.title"><a :href="item.path"></a></h3>
-                                        <p>{{ item.textContent }}</p>
-                                        <p class="articla-from"><span>来源： </span><span class="artical-tag">{{ item.type }}</span></p>
-                                    </div>
-                                </div>
-                                <template>
-                                    <el-pagination
-                                            class="search-pagination"
-                                            :current-page.sync="formData.page"
-                                            :page-size="5"
-                                            layout="total, prev, pager, next, jumper"
-                                            @current-change="handleCurrentChange"
-                                            :total="getCount('blog')">
-                                    </el-pagination>
-                                </template>
-                            </el-tab-pane>
-                        </template>
-                        <template>
-                        <!--    todo : 暂时写死数据-->
-                            <div class="tag-left">
-                                <h4>相关软件包</h4>
-                                <el-scrollbar>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                    <div class="package">
-                                        <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                                        <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                                    </div>
-                                </el-scrollbar>
-                            </div>
-                        </template>
-                    </el-tabs>
+            <div class="tag-title">
+                <ul>
+                    <li class="active"><span>全部（218）</span></li>
+                    <li><span>文档（180）</span></li>
+                    <li><span>新闻（5）</span></li>
+                    <li><span>博客（23）</span></li>
+                </ul>
+            </div>
+            <div class="tag-content">
+                <div class="tag-left">
+                    <div class="tags-info">
+                        <h3><a href="">浅谈<em>openEuler</em>开源社区运营度量分析系统造型</a></h3>
+                        <p>openEuler开源社区建立后，我们采取了一系列的运营措施，可是如何知道这些运营措施是有效的，如何才能知道哪些措施更优呢，如何判断一次运营活动真正带来了多少用户呢？为了解决这一系列问题…</p>
+                        <p class="articla-from"><span>{{ i18n.search.TAG_NAME.FROM }}：</span><span class="artical-tag">博客</span></p>
+                    </div>
+                    <div class="tags-info">
+                        <h3><a href="">浅谈<em>openEuler</em>开源社区运营度量分析系统造型</a></h3>
+                        <p>openEuler开源社区建立后，我们采取了一系列的运营措施，可是如何知道这些运营措施是有效的，如何才能知道哪些措施更优呢，如何判断一次运营活动真正带来了多少用户呢？为了解决这一系列问题…</p>
+                        <p class="articla-from"><span>{{ i18n.search.TAG_NAME.FROM }}：</span><span class="artical-tag">博客</span></p>
+                    </div>
+                    <div class="tags-info">
+                        <h3><a href="">浅谈<em>openEuler</em>开源社区运营度量分析系统造型</a></h3>
+                        <p>openEuler开源社区建立后，我们采取了一系列的运营措施，可是如何知道这些运营措施是有效的，如何才能知道哪些措施更优呢，如何判断一次运营活动真正带来了多少用户呢？为了解决这一系列问题…</p>
+                        <p class="articla-from"><span>{{ i18n.search.TAG_NAME.FROM }}：</span><span class="artical-tag">博客</span></p>
+                    </div>
                 </div>
+                <div class="tag-right">
+                    <h4>相关软件包</h4>
+                    <el-scrollbar>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                        <div class="package">
+                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
+                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                        </div>
+                    </el-scrollbar>
+                </div>
+            </div>
+
+            <div class="tag-page">
+                <el-pagination
+                        class="search-pagination"
+                        :current-page.sync="formData.page"
+                        :page-size="5"
+                        layout="total, prev, pager, next, jumper"
+                        @current-change="handleCurrentChange"
+                        :total="100">
+                </el-pagination>
+                <el-pagination
+                        class="search-pagination-mobile"
+                        :current-page.sync="formData.page"
+                        :page-size="5"
+                        layout="total, prev, pager, next, jumper"
+                        @current-change="handleCurrentChange"
+                        :total="100">
+                </el-pagination>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+
     import { search } from "../../api/search";
+    let that = null;
+
+    const locationMethods = {
+        getSearchPage (flag) {
+            that.formData.page = flag;
+            search(this.formData)
+                .then(response => {
+                    that.tagTitle = response.data.total;
+                    that.total = response.data.totalNum;
+                    that.allDatas = response.data.records;
+                })
+                .catch(response => {
+                    that.$message.error(response);
+                });
+        }
+    }
     export default {
         name: "search",
         data() {
+            that = this;
             return {
                 searchInput: "",
                 formData: {
-                    // todo: 传参暂时写死
-                    keyword: "华为",
+                    keyword: "",
                     model: "",
                     indexEs: "",
-                    openeuler_articles: "",
+                    openeulerArticles: "",
                     page: 1,
                 },
                 total: 0,
                 tagTitle: [],
                 allDatas: [],
-                docsDatas: [],
-                newsDatas: [],
-                blogDatas: [],
-                status: false,
-                contentLoading: false,
-                currentTag: 0,
-                activeName: 'first',
             }
         },
         mounted() {
-            this.getSearchPage(1)
+            this.formData.keyword = this.$route.query.id
+            this.formData.indexEs = this.$lang
+            this.formData.model = 'all'
+            locationMethods.getSearchPage(1);
         },
         methods: {
-            getCount(title) {
-                let tags = this.tagTitle
-                let tag = []
-                let CURRENT = 0
-                tag = tags.filter(item => item.key === title)
-                return  tag[CURRENT].doc_count
-            },
-            filterDatas(title) {
-                let datas = this.allDatas
-                let data = []
-                function getDatas(item) {
-                    if (item.type === title) {
-                        return true
-                    }
-                 }
-                data = datas.filter(getDatas)
-                return data
-            },
             initData(flag) {
-                this.getSearchPage(flag)
+                locationMethods.getSearchPage(flag)
             },
             handleCurrentChange(val) {
                 this.currentPage=val
             },
-            getSearchPage (flag) {
-                this.formData.page = flag;
-                search(this.formData)
-                    .then(response => {
-                        this.formData.indexEs = this.$lang
-                        this.tagTitle = response.data.total;
-                        this.total = response.data.totalNum;
-                        this.allDatas = response.data.records;
-                        this.status = true
-                    })
-                    .catch(response => {
-                        this.$message.error(response);
-                    });
-            }
         }
     }
 </script>
 
 <style lang="less">
-    .search-input .el-input__inner {
+    .search-area .el-input__inner {
         height: 62px;
         line-height: 62px;
         font-size: 20px;
@@ -274,10 +214,10 @@
         border: 2px solid #000;
         box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
     }
-    .search-input .el-input__inner:hover {
+    .search-area .el-input__inner:hover {
         border: 2px solid #002FA7;
     }
-    .tag-left .el-scrollbar {
+    .tag-right .el-scrollbar {
         height: 1135px;
     }
     .tag-left .el-scrollbar__wrap {
@@ -308,61 +248,81 @@
         height: 200px;
         margin: 30px 0 40px;
     }
-    .search-input {
+    .search-area {
         width: 400px;
         height: 60px;
         margin: 0 auto 80px;
     }
-    .search-input img {
+    .search-area img {
         width: 27px;
         height: 27px;
         vertical-align: middle;
         margin: 18px 25px;
     }
     .search-tag {
-        width: 1080px;
-        margin: 0 auto;
+        width: 1120px;
+        margin: 0 auto 180px;
     }
     .tag-content {
-        margin-bottom: 180px;
+        width: 1120px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
     }
     .tag-title {
+        height: 40px;
         padding-bottom: 20px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    }
+    .tag-title::after {
+        content: "";
+        clear: both;
     }
     .tag-title span {
         font-size: 16px;
         font-family: FZLTXIHJW;
-        margin-right: 30px;
         cursor: pointer;
     }
-    .tag-title span:first-child {
-        margin-left: 20px;
+    .tag-title li {
+        float: left;
+        width: 130px;
+        text-align: center;
+        padding-bottom: 15px;
     }
     .tag-left {
-        width: 350px;
-        margin-top: 40px;
-        padding-left: 30px;
-        position: absolute;
-        top: 0;
-        right: 0;
+        border-right: 1px solid #D8D8D8;
+        padding-right: 30px;
+        margin-right: 30px;
     }
-    h3 {
+    .tag-left a {
         font-size: 20px;
         font-family: FZLTHJW;
-        margin: 40px 0 15px;
+        text-decoration: none;
+        color: #000;
     }
-    p {
+    .tag-left em {
+        color: #002FA7;
+    }
+    .tag-left p {
         font-size: 14px;
         font-family: FZLTXIHJW;
         color: rgba(0, 0, 0, 0.5);
         line-height: 24px;
+    }
+    .tags-info {
+        margin-top: 40px;
+    }
+    .tags-info:first-child {
+        margin-top: 20px;
     }
     .articla-from {
         font-size: 12px;
     }
     .artical-tag {
         color: #000;
+    }
+    .tag-right {
+        margin-top: 20px;
     }
     h4 {
         font-size: 20px;

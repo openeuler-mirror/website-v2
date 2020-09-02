@@ -80,27 +80,32 @@ module.exports = {
                 {
                     BUTTON: "签署CLA",
                     IMG: "/img/community/contribution/cla.png",
-                    VIDEO: "/img/community/contribution/cla.gif"
+                    VIDEO: "/img/community/contribution/cla.gif",
+                    LINK: "/other/cla/"
                 },
                 {
                     BUTTON: "提出Issue",
                     IMG: "/img/community/contribution/issue.png",
-                    VIDEO: "/img/community/contribution/issue.gif"
+                    VIDEO: "/img/community/contribution/issue.gif",
+                    LINK: "javascript:void(0)"
                 },
                 {
                     BUTTON: "贡献代码",
                     IMG: "/img/community/contribution/contribution.png",
-                    VIDEO: "/img/community/contribution/contribution.gif"
+                    VIDEO: "/img/community/contribution/contribution.gif",
+                    LINK: "javascript:void(0)"
                 },
                 {
                     BUTTON: "加入SIG",
                     IMG: "/img/community/contribution/sig.png",
-                    VIDEO: "/img/community/contribution/sig.gif"
+                    VIDEO: "/img/community/contribution/sig.gif",
+                    LINK: "javascript:void(0)"
                 },
                 {
                     BUTTON: "参选技术委员会",
                     IMG: "/img/community/contribution/commit.png",
-                    VIDEO: "/img/community/contribution/commit.gif"
+                    VIDEO: "/img/community/contribution/commit.gif",
+                    LINK: "javascript:void(0)"
                 },
             ]
         },
@@ -185,27 +190,32 @@ module.exports = {
                 {
                     BUTTON: "签署CLA",
                     IMG: "/img/community/contribution/cla.png",
-                    VIDEO: "/img/community/contribution/cla.gif"
+                    VIDEO: "/img/community/contribution/cla.gif",
+                    LINK: "/other/cla/"
                 },
                 {
                     BUTTON: "提出Issue",
                     IMG: "/img/community/contribution/issue.png",
-                    VIDEO: "/img/community/contribution/issue.gif"
+                    VIDEO: "/img/community/contribution/issue.gif",
+                    LINK: "javascript:void(0)"
                 },
                 {
                     BUTTON: "贡献代码",
                     IMG: "/img/community/contribution/contribution.png",
-                    VIDEO: "/img/community/contribution/contribution.gif"
+                    VIDEO: "/img/community/contribution/contribution.gif",
+                    LINK: "javascript:void(0)"
                 },
                 {
                     BUTTON: "加入SIG",
                     IMG: "/img/community/contribution/sig.png",
-                    VIDEO: "/img/community/contribution/sig.gif"
+                    VIDEO: "/img/community/contribution/sig.gif",
+                    LINK: "javascript:void(0)"
                 },
                 {
                     BUTTON: "参选技术委员会",
                     IMG: "/img/community/contribution/commit.png",
-                    VIDEO: "/img/community/contribution/commit.gif"
+                    VIDEO: "/img/community/contribution/commit.gif",
+                    LINK: "javascript:void(0)"
                 },
             ]
         },

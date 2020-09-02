@@ -1,17 +1,19 @@
 <template>
     <div class="home">
-        <div class="home-carousel">
+        <div class="is-pc home-carousel">
             <el-carousel class="home-banner" trigger="click" :interval="5000">
                 <el-carousel-item>
                     <div class="carousel-video">
-                        <img src="/img/home/BannerVideo.png" alt="">
+                        <video poster="/img/home/BannerVideo.png" controls width="100%" height="380px">
+                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler%E7%90%86%E5%BF%B5%E8%A7%86%E9%A2%91_0829_V1.0.mp4"  type="video/mp4">
+                        </video>
                     </div>
                 </el-carousel-item>
                 <el-carousel-item class="carousel-item">
                     <div class="card-summer">
                         <img src="/img/home/BannerSummer.png" alt="">
                         <span>{{ i18n.home.HOME_CAROUSEL_DATA[0].DES }}</span>
-                        <video src="/img/home-video/bannerS.mp4" type="video/mp4" autoplay loop muted height="380px"></video>
+                        <img class="banner-gif" src="/img/home/BannerS.gif">
                     </div>
                 </el-carousel-item>
                 <el-carousel-item
@@ -20,24 +22,44 @@
                         :key="index">
                     <h3>{{ item.TITLE }}</h3>
                     <span>{{ item.DES }}</span>
-                    <video :src="'/img/home-video/banner' + index + '.mp4'" type="video/mp4" autoplay loop muted height="380px"></video>
+                    <img class="banner-gif" :src="'/img/home/Banner' + index + '.gif'">
                 </el-carousel-item>
             </el-carousel>
         </div>
-
+        <div class="is-h5 home-carousel">
+            <el-carousel class="home-banner" trigger="click" :interval="5000">
+                <el-carousel-item>
+                    <div class="carousel-video">
+                        <img src="/img/home/webBannerVideo.png" alt="">
+                    </div>
+                </el-carousel-item>
+                <el-carousel-item class="carousel-item">
+                    <div class="card-summer">
+                        <img src="/img/home/webBannerSummer.png" alt="">
+                    </div>
+                </el-carousel-item>
+                <el-carousel-item
+                        class="carousel-item-index"
+                        v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
+                        :key="index">
+                    <h3>{{ item.TITLE }}</h3>
+                    <img :src="'/img/home/webBanner' + index + '.png'">
+                </el-carousel-item>
+            </el-carousel>
+        </div>
         <div class="home-introduce">
             <h1>{{ i18n.home.HOME_INTRODUCE.INTRO_TITLE }}</h1>
             <h3>{{ i18n.home.HOME_INTRODUCE.INTRO_HEAD }}</h3>
             <p>{{ i18n.home.HOME_INTRODUCE.INTRO_DESCRIPTION }}</p>
             <div class="is-pc mapArea">
                 <div class="area-box in-pc" v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP" :key="index">
-                    <a v-if="(index !== 3)" @click="go(item.LINK)">
+                    <a v-if="(index !== 3)" @click="go(item.LINK)" target="_blank">
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p>{{ item.TITLE }}</p>
                         <img :src="item.IMG" alt="">
                         <img :src="item.GIF" alt="" class="is-hidden">
                     </a>
-                    <a class="down" v-if="(index === 3)" @click="go(item.LINK)">
+                    <a class="down" v-if="(index === 3)" @click="go(item.LINK)" target="_blank">
                         <img :src="item.IMG" alt="">
                         <img :src="item.GIF" alt="" class="is-hidden">
                         <div class="box-icon">{{ item.NAME }}</div>
@@ -59,8 +81,8 @@
                                     class="guide-way"
                                     v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_GUIDE.GUIDE_WAY"
                                     :key="index">
-                                <a :href="item.LINK">
-                                    <img :src="item.IMG" alt="" style="width: 36px; height: 36px">
+                                <a :href="item.LINK" target="_blank">
+                                    <img :src="item.IMG" alt="">
                                     <span>{{ item.TITLE }}</span>
                                 </a>
                             </div>
@@ -111,7 +133,7 @@
                         <div class="room-box"
                              v-for="(item, index) in i18n.home.HOME_ROOMS.EVENT_LIST"
                              :key="index">
-                            <span>|</span> <span>{{ item.DATE }}</span>
+                            <span><img src="/img/home/eventData.svg" alt=""></span> <span>{{ item.DATE }}</span>
                             <p>{{ item.CONTENT }}</p>
                         </div>
                         <span><a href="">{{ i18n.home.MORE }}</a></span>
@@ -206,17 +228,15 @@
             <p>{{ i18n.home.HOME_DEV.DEV_DESCRIPTION }}</p>
             <div class="dev-leader" v-fade>
                 <div class="dev-dever hidden fade-in" v-for="(value, index) in i18n.home.HOME_DEV.DEV_INFO" :key="index">
-                    <el-image
-                            style="width: 120px; height: 120px; border-radius: 50%"
-                            src="/img/home/deverImg.png"></el-image>
+                    <img class="dev-img" :src="value.IMG">
                     <p class="dever-name">{{ value.NAME }}</p>
                     <p class="dever-rank">{{ value.TITLE }}</p>
                     <p class="dever-rank">{{ value.RANK }}</p>
                     <div class="dev-link">
-                        <a :href="value.MAIL_LINK">
+                        <a :href="'mailto:' + value.MAIL_LINK" target="_blank">
                             <img class="email-link" src="/img/home/email.png" alt="">
                         </a>
-                        <a :href="value.GITEE_LINK">
+                        <a :href="value.GITEE_LINK" target="_blank">
                             <img src="/img/home/Gitee.png" alt="">
                         </a>
                     </div>
@@ -438,8 +458,16 @@
             },
             getRoomsData() {
                 let datas = this.$sitePages;
-                let blogData = this.filterSiteData(datas, "/blog/");
-                let newsData = this.filterSiteData(datas, "/news/");
+                let lang = this.$lang
+                let blogData = []
+                let newsData = []
+                if (lang === "zh") {
+                    blogData = this.filterSiteData(datas, "/zh/blog/");
+                    newsData = this.filterSiteData(datas, "/zh/news/");
+                } else {
+                    blogData = this.filterSiteData(datas, "/en/blog/");
+                    newsData = this.filterSiteData(datas, "/en/news/");
+                }
                 this.blogList = blogData;
                 this.newsList = newsData;
             },
@@ -541,8 +569,14 @@
         width: 620px;
         text-align: center;
     }
-    .card-summer img {
+    .card-summer img:first-child {
         width: 256px;
+    }
+    .carousel-item .banner-gif {
+        position: absolute;
+        top: 0;
+        margin-top: 2%;
+        margin-left: 80px;
     }
     .carousel-item .card-summer span {
         margin-left: 0;
@@ -551,7 +585,7 @@
     }
     .carousel-item img {
         z-index: -1;
-        margin-top: 5%;
+        margin-top: 8%;
     }
     .carousel-item video {
         position: absolute;
@@ -680,6 +714,7 @@
     .area-box a {
         text-align: center;
         text-decoration: none;
+        cursor: pointer;
     }
     .area-box .box-icon {
         display: inline-block;
@@ -762,6 +797,8 @@
         font-size: 12px;
     }
     .guide-way img {
+        width: 36px;
+        height: 36px;
         margin: 10px 0 0;
     }
     .snd-guidance p {
@@ -993,6 +1030,11 @@
         max-width: 25%;
         margin-top: 30px;
     }
+    .dev-dever img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+    }
     .dev-dever .dever-name {
         color: #005CC7;
         font-size: 16px;
@@ -1173,13 +1215,29 @@
         }
         .carousel-item .card-summer {
             width: 100%;
-            text-align: left;
-        }
-        .card-summer img {
-            width: 50%;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
         }
         .carousel-img {
             width: 100%;
+        }
+        .card-summer img {
+            vertical-align: middle;
+        }
+        .home-carousel .el-carousel__item h3 {
+            font-size: 18px;
+            font-family: FZLTCHJW;
+            text-align: center;
+            margin-top: 35px;
+            margin-bottom: 0;
+        }
+        .carousel-item-index img {
+            width: 200px;
+            height: 200px;
+            margin: 0;
+            display: block;
+            margin: 0 auto;
         }
         .home-carousel .el-carousel__item span {
             display: inline-block;

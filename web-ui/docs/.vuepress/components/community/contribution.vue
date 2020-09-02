@@ -9,10 +9,10 @@
             <div class="mail-guide"
                  v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"
                  :key="index">
-                <div class="step">
-                    <div class="step-num">
+                <div class="step" >
+                    <a class="step-num" @click="go(item.LINK)">
                         <span>{{ item.BUTTON }}</span>
-                    </div>
+                    </a>
                     <img :src="item.IMG" alt="">
                     <img :src="item.VIDEO" class="is-hidden">
                 </div>
@@ -78,6 +78,13 @@
                     })
                 }
             },
+            go(path) {
+                if (path) {
+                    this.$router.push({
+                        path: this.resolvePath(path)
+                    });
+                }
+            },
         }
     }
 </script>
@@ -133,6 +140,8 @@
         border-radius: 4px;
         background-color: #002FA7;
         margin: 0 auto;
+        text-decoration: none;
+        cursor: pointer;
     }
     .step .is-hidden {
         display: none;
