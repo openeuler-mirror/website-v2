@@ -1,3 +1,6 @@
+---
+title: "Privacy"
+---
 <ClientOnly>
   <common-banner
       :pc-src="'/img/security/privacy-banner.png'"

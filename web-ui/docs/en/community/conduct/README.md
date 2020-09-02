@@ -1,3 +1,7 @@
+---
+title: "Convention"
+
+---
 <ClientOnly>
   <community-conduct />
 </ClientOnly>

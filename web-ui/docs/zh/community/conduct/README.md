@@ -1,3 +1,6 @@
+---
+title: "行为守则"
+---
 <ClientOnly>
   <community-conduct />
 </ClientOnly>
