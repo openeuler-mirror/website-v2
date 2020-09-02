@@ -100,7 +100,10 @@
                         :label="i18n.community.MAILING_LIST.TABLE.ARCHIVE"
                         width="120">
                     <template slot-scope="scope">
-                        <a>
+                        <a
+                            class="arch-link"
+                            :href="'https://mailweb.openeuler.org/hyperkitty/list/' + scope.row.display_name.toLowerCase() +'@openeuler.org/'"
+                            target="_blank">
                             <p>{{ scope.row.archive }}</p>
                         </a>
                     </template>
@@ -130,7 +133,10 @@
                         :label="i18n.community.MAILING_LIST.TABLE.ARCHIVE_H5"
                         width="80">
                     <template slot-scope="scope">
-                        <a>
+                        <a
+                            :href="'https://mailweb.openeuler.org/hyperkitty/list/' + scope.row.display_name.toLowerCase() +'@openeuler.org/'"
+                            target="_blank"
+                            class="arch-link">
                             <p>{{ scope.row.archive }}</p>
                         </a>
                     </template>
@@ -455,6 +461,9 @@
     }
     .list-name {
         cursor: pointer;
+    }
+    .arch-link {
+        text-decoration: none;
     }
     .description p {
         font-size: 16px;

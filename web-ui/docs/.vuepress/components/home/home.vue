@@ -1,7 +1,7 @@
 <template>
     <div class="home">
         <div class="is-pc home-carousel">
-            <el-carousel class="home-banner" trigger="click" :interval="5000">
+            <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay">
                 <el-carousel-item>
                     <div class="carousel-video">
                         <video poster="/img/home/BannerVideo.png" controls width="100%" height="380px">
@@ -81,7 +81,7 @@
                                     class="guide-way"
                                     v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_GUIDE.GUIDE_WAY"
                                     :key="index">
-                                <a :href="item.LINK" target="_blank">
+                                <a :href="item.LINK">
                                     <img :src="item.IMG" alt="">
                                     <span>{{ item.TITLE }}</span>
                                 </a>
@@ -131,12 +131,12 @@
                 <div class="room-contain" :class="{'active':currentRoom === 0}">
                     <div class="flex-room">
                         <div class="room-box"
-                             v-for="(item, index) in i18n.home.HOME_ROOMS.EVENT_LIST"
+                             v-for="(item, index) in newsList"
                              :key="index">
-                            <span><img src="/img/home/eventData.svg" alt=""></span> <span>{{ item.DATE }}</span>
-                            <p>{{ item.CONTENT }}</p>
+                            <span><img src="/img/home/eventDate.svg" alt=""></span> <span>{{ item.frontmatter.date }}</span>
+                            <p><a :href="item.path">{{ item.frontmatter.title }}</a></p>
                         </div>
-                        <span><a href="">{{ i18n.home.MORE }}</a></span>
+                        <span></span>
                     </div>
                 </div>
                 <div class="room-contain" :class="{'active':currentRoom === 1}">
@@ -170,19 +170,19 @@
                 <template>
                     <el-carousel indicator-position="none" :autoplay="false" arrow="never" ref="newsroomCard" class="room-card">
                         <el-carousel-item>
-                            <div class="room-img active">
-                                <img src="/img/home/eventImg.png" alt="">
-                            </div>
+                            <a class="room-img active">
+                                <img src="/img/home/eventImg.png" @click="go('/news/20200607.html')" alt="">
+                            </a>
                         </el-carousel-item>
                         <el-carousel-item>
-                            <div class="room-img active">
-                                <img src="/img/home/blogImg.png" alt="">
-                            </div>
+                            <a class="room-img active"  @click="go('/interaction/blog-list/')" target="_blank">
+                                <img src="/img/home/blogImg.png" alt="" >
+                            </a>
                         </el-carousel-item>
                         <el-carousel-item>
-                            <div class="room-img active">
+                            <a class="room-img active" @click="go('/interaction/news-list/')" target="_blank">
                                 <img src="/img/home/newsImg.png" alt="">
-                            </div>
+                            </a>
                         </el-carousel-item>
                     </el-carousel>
                 </template>
@@ -286,8 +286,8 @@
                         <p>
                             {{ i18n.home.HOME_SOURCE.SOURCE_APPLY.DES }}
                         </p>
-                        <p><a :href="i18n.home.HOME_SOURCE.SOURCE_APPLY.APPLY_LINK">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.APPLY }}</a></p>
-                        <p><a class="source-sponsor" :href="i18n.home.HOME_SOURCE.SOURCE_APPLY.LINK">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.SPONSOR }}</a></p>
+                        <p><a @click="go('/blog/fred_li/2020-03-25-apply-for-vm-from-pcl.html')">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.APPLY }}</a></p>
+                        <p><span class="source-sponsor">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.SPONSOR }}</span></p>
                     </div>
                 </div>
                 <div class="source-mail">
@@ -296,9 +296,9 @@
                     </div>
                     <div class="mail-des">
                         <p class="source-title">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.TITLE }}</p>
-                        <p><a href="">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.MAIL }}</a></p>
+                        <p><a href="mailto:community@openeuler.org">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.MAIL }}</a></p>
                         <p>{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.DES }}</p>
-                        <p>{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.SUBSCRIBE }}<a href="">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.LINK }}</a></p>
+                        <p>{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.SUBSCRIBE }}<a @click="go('/community/mailing-list/')">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.LINK }}</a></p>
                     </div>
                 </div>
             </div>
@@ -364,7 +364,8 @@
                 rooms1: true,
                 rooms2: false,
                 rooms3: false,
-                calenderData: []
+                calenderData: [],
+                autoPlay: false
             }
         },
         mounted() {
@@ -516,6 +517,12 @@
     [v-cloak] {
         display: none !important;
     }
+    .home-calendar {
+        display: none;
+    }
+    .home-auth {
+        display: none;
+    }
     .is-pc {
         display: block;
     }
@@ -544,17 +551,17 @@
         color: rgba(0, 0, 0, .5);
     }
     .home-carousel .el-carousel__item h3 {
-        font-size: 3vw;
+        font-size: 24px;
         color: #000;
         text-align: left;
         line-height: 48px;
         font-family: FZLTCHJW;
-        margin-top: 5%;
+        margin-top: 80px;
     }
     .home-carousel .el-carousel__item span {
         display: inline-block;
         width: 620px;
-        font-size: 1vw;
+        font-size: 18px;
         line-height: 40px;
         margin-top: 30px;
     }
@@ -563,7 +570,7 @@
         height: 100%;
         background-size: contain;
         background-repeat: no-repeat;
-        padding-left: 15%;
+        padding-left: 400px;
     }
     .carousel-item .card-summer {
         width: 620px;
@@ -575,8 +582,9 @@
     .carousel-item .banner-gif {
         position: absolute;
         top: 0;
-        margin-top: 2%;
-        margin-left: 80px;
+        margin-top: 90px;
+        margin-left: 300px;
+        width: 200px;
     }
     .carousel-item .card-summer span {
         margin-left: 0;
@@ -585,7 +593,7 @@
     }
     .carousel-item img {
         z-index: -1;
-        margin-top: 8%;
+        margin-top: 80px;
     }
     .carousel-item video {
         position: absolute;
@@ -944,7 +952,7 @@
     }
     .room-contain span {
         font-size: 12px;
-        line-height: 12px;
+        line-height: 18px;
         color: rgba(0, 0, 0, .5);
     }
     .room-contain p {
@@ -993,12 +1001,18 @@
         box-shadow: 0 6px 30px 0px rgba(0, 0, 0, .1);
         position: relative;
         z-index: -1;
+        cursor: pointer;
     }
     .room-img img {
         width: 420px;
     }
     .room-box a {
         color: #000;
+    }
+    .room-box img {
+        vertical-align: middle;
+        width: 18px;
+        margin-right: 10px;
     }
     .active{
         display: block;
@@ -1030,7 +1044,7 @@
         max-width: 25%;
         margin-top: 30px;
     }
-    .dev-dever img {
+    .dev-dever .dev-img {
         width: 120px;
         height: 120px;
         border-radius: 50%;
@@ -1124,7 +1138,7 @@
     }
     .home-source .source-sponsor {
         font-size: 18px;
-        font-weight: 600;
+        color: #0041BD;
     }
     .source-apply,
     .source-mail {
@@ -1148,6 +1162,10 @@
         text-align: left;
         font-size: 18px;
         margin-top: 20px;
+    }
+    .mail-des a ,
+    .apply-des a {
+        cursor: pointer;
     }
     .source-publish-link {
         margin-top: 50px;
@@ -1179,6 +1197,14 @@
     }
     .publish-edition a:last-child img {
         margin-right: 0;
+    }
+    @media screen and (max-width: 1440px){
+        .carousel-item {
+            padding-left: 240px;
+        }
+        .carousel-item .banner-gif {
+            margin-left: 160px
+        }
     }
     @media screen and (max-width: 1000px){
         .is-pc {
