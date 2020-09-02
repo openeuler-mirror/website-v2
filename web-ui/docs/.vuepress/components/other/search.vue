@@ -1,125 +1,32 @@
 <template>
-    <div class="search">
+    <div class="search" v-loading.fullscreen="loading">
         <div class="search-banner">
             <img src="/img/other/search/search.png" alt="">
             <div class="search-area">
                 <el-input
                         :placeholder="i18n.common.SEARCH_PLACE_HOLDER"
                         v-model="formData.keyword">
-                    <i slot="suffix" @click="initData(1)"><img src="/img/other/search/search-icon.svg" alt=""></i>
+                    <i slot="suffix" @click="search"><img src="/img/other/search/search-icon.svg" alt=""></i>
                 </el-input>
             </div>
         </div>
-        <div class="search-tag">
+        <div class="search-tag" v-show="allDatas.length">
             <div class="tag-title">
                 <ul>
-                    <li class="active"><span>全部（218）</span></li>
-                    <li><span>文档（180）</span></li>
-                    <li><span>新闻（5）</span></li>
-                    <li><span>博客（23）</span></li>
+                    <li v-for="item in tagTitle" :class="{'active': curKey==item.key}" :key="item.key" @click="curKey = item.key"><span>{{i18n.search.TAG_NAME[item.key.toUpperCase()]}}（{{item.doc_count}}）</span></li>
                 </ul>
             </div>
             <div class="tag-content">
                 <div class="tag-left">
-                    <div class="tags-info">
-                        <h3><a href="">浅谈<em>openEuler</em>开源社区运营度量分析系统造型</a></h3>
-                        <p>openEuler开源社区建立后，我们采取了一系列的运营措施，可是如何知道这些运营措施是有效的，如何才能知道哪些措施更优呢，如何判断一次运营活动真正带来了多少用户呢？为了解决这一系列问题…</p>
-                        <p class="articla-from"><span>{{ i18n.search.TAG_NAME.FROM }}：</span><span class="artical-tag">博客</span></p>
-                    </div>
-                    <div class="tags-info">
-                        <h3><a href="">浅谈<em>openEuler</em>开源社区运营度量分析系统造型</a></h3>
-                        <p>openEuler开源社区建立后，我们采取了一系列的运营措施，可是如何知道这些运营措施是有效的，如何才能知道哪些措施更优呢，如何判断一次运营活动真正带来了多少用户呢？为了解决这一系列问题…</p>
-                        <p class="articla-from"><span>{{ i18n.search.TAG_NAME.FROM }}：</span><span class="artical-tag">博客</span></p>
-                    </div>
-                    <div class="tags-info">
-                        <h3><a href="">浅谈<em>openEuler</em>开源社区运营度量分析系统造型</a></h3>
-                        <p>openEuler开源社区建立后，我们采取了一系列的运营措施，可是如何知道这些运营措施是有效的，如何才能知道哪些措施更优呢，如何判断一次运营活动真正带来了多少用户呢？为了解决这一系列问题…</p>
-                        <p class="articla-from"><span>{{ i18n.search.TAG_NAME.FROM }}：</span><span class="artical-tag">博客</span></p>
+                    <div class="tags-info" v-for="item in allDatas">
+                        <h3 v-html="item.title" @click="goDetail(item)"></h3>
+                        <p v-html="item.textContent"></p>
+                        <p class="articla-from"><span>{{ i18n.search.TAG_NAME.FROM }}：</span><span class="artical-tag">{{i18n.search.TAG_NAME[item.type.toUpperCase()]}}</span></p>
                     </div>
                 </div>
                 <div class="tag-right">
                     <h4>相关软件包</h4>
                     <el-scrollbar>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
-                        </div>
                         <div class="package">
                             <p class="pkg-title">openEuler 20.03 LTS-iso</p>
                             <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
@@ -132,18 +39,18 @@
                 <el-pagination
                         class="search-pagination"
                         :current-page.sync="formData.page"
-                        :page-size="5"
+                        :page-size="10"
                         layout="total, prev, pager, next, jumper"
                         @current-change="handleCurrentChange"
-                        :total="100">
+                        :total="total">
                 </el-pagination>
                 <el-pagination
                         class="search-pagination-mobile"
                         :current-page.sync="formData.page"
-                        :page-size="5"
+                        :page-size="10"
                         layout="total, prev, pager, next, jumper"
                         @current-change="handleCurrentChange"
-                        :total="100">
+                        :total="total">
                 </el-pagination>
             </div>
         </div>
@@ -154,19 +61,27 @@
 
     import { search } from "../../api/search";
     let that = null;
-
     const locationMethods = {
+        
         getSearchPage (flag) {
             that.formData.page = flag;
-            search(this.formData)
-                .then(response => {
-                    that.tagTitle = response.data.total;
-                    that.total = response.data.totalNum;
-                    that.allDatas = response.data.records;
-                })
-                .catch(response => {
-                    that.$message.error(response);
-                });
+            if(that.formData.keyword){
+                that.loading = true;
+                search(that.formData)
+                    .then(response => {
+                        that.loading = false;
+                        that.total = response.data.totalNum;
+                        if(!that.tagTitle.length){
+                            that.tagTitle = response.data.total;
+                        }
+                        that.allDatas = response.data.records;
+                    })
+                    .catch(response => {
+                        that.$message.error(response);
+                        that.loading = false;
+                    });
+            }
+            
         }
     }
     export default {
@@ -174,12 +89,14 @@
         data() {
             that = this;
             return {
+                loading: false,
+                curKey: 'all',
                 searchInput: "",
                 formData: {
                     keyword: "",
                     model: "",
                     indexEs: "",
-                    openeulerArticles: "",
+                    version: "",
                     page: 1,
                 },
                 total: 0,
@@ -188,9 +105,9 @@
             }
         },
         mounted() {
-            this.formData.keyword = this.$route.query.id
-            this.formData.indexEs = this.$lang
-            this.formData.model = 'all'
+            this.formData.keyword = decodeURI(this.$route.query.keyword|| '') || '';
+            this.formData.indexEs = this.$lang == 'en' ? 'openeuler_articles_en' : 'openeuler_articles';
+            this.formData.model = '';
             locationMethods.getSearchPage(1);
         },
         methods: {
@@ -198,13 +115,44 @@
                 locationMethods.getSearchPage(flag)
             },
             handleCurrentChange(val) {
-                this.currentPage=val
+                this.initData(val);
             },
+            search (){
+                this.tagTitle = [];
+                this.curKey = 'all';
+                this.initData(1);
+            },
+            goDetail ({path, articleName}){
+                let dealPath = null;
+                path = path.split('/');
+                path = path[path.length - 1] + '/' + articleName.split('.')[0];
+                this.$sitePages.forEach(item => {
+                    if(item.path.includes(encodeURI(path))){
+                        dealPath = item.path;
+                    }
+                })
+                if(dealPath){
+                    this.$router.push({
+                        path: dealPath
+                    });
+                }else {
+                    this.$message.error('找不到此路径');
+                }
+            }
+        },
+        watch: {
+            curKey: function (val) {
+                this.formData.model = this.curKey;
+                this.initData(1);
+            }
         }
     }
 </script>
 
 <style lang="less">
+    em {
+        color: #002FA7;
+    }
     .search-area .el-input__inner {
         height: 62px;
         line-height: 62px;
@@ -216,9 +164,6 @@
     }
     .search-area .el-input__inner:hover {
         border: 2px solid #002FA7;
-    }
-    .tag-right .el-scrollbar {
-        height: 1135px;
     }
     .tag-left .el-scrollbar__wrap {
         width: calc(~"100% + 17px");
@@ -274,6 +219,9 @@
         padding-bottom: 20px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     }
+    .tag-title .active {
+        border-bottom: 4px solid #022fa7;
+    }
     .tag-title::after {
         content: "";
         clear: both;
@@ -311,6 +259,9 @@
     }
     .tags-info {
         margin-top: 40px;
+    }
+    .tags-info h3{
+        cursor: pointer;
     }
     .tags-info:first-child {
         margin-top: 20px;

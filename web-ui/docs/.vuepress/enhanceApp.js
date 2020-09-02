@@ -21,7 +21,7 @@ export default ({
             }
         },
         mounted () {
-            if(this.$frontmatter) {
+            if(this.$router && this.$frontmatter) {
                 document.title = this.$frontmatter.title || 'openeuler';
             }
             if(!checkImport){
