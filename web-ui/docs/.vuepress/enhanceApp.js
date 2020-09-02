@@ -16,10 +16,14 @@ export default ({
     Vue.mixin({
         data () {
             return {
-                i18n: {}
+                i18n: {},
+
             }
         },
         mounted () {
+            if(this.$frontmatter) {
+                document.title = this.$frontmatter.title || 'openeuler';
+            }
             if(!checkImport){
                 if (window.location.href.includes('/en/')) {
                     checkImport = true;

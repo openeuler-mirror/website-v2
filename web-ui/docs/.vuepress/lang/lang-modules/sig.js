@@ -52,6 +52,12 @@ module.exports = {
             MAIL: '邮件',
             IRC: 'IRC频道',
             MANAGER: '管理员'
+        },
+        SIG_DETAIL: {
+            ORGANIZING_MEETINGS: '组织会议',
+            MEMBERS: '项目成员',
+            CONTACT: '联系方式',
+            MAIL_LIST: '邮件列表'
         }
     },
     en: {
@@ -103,6 +109,12 @@ module.exports = {
             MAIL: 'mail',
             IRC: 'IRC channel',
             MANAGER: 'administrators'
+        },
+        SIG_DETAIL: {
+            ORGANIZING_MEETINGS: 'organizing meetings',
+            MEMBERS: 'project members',
+            CONTACT: 'contact',
+            MAIL_LIST: 'maillist'
         }
     }
 };

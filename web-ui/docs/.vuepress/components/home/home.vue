@@ -306,10 +306,29 @@
 </template>
 
 <script>
-    import calender from "./calender"
+    import { meetingList } from "../../api/home";
+    import calender from "./calender";
+    let that = null;
+    let remoteMethods = {
+        meetingList () {
+            meetingList()
+            .then(data => {
+                localMethods.sortData(data);
+            })
+            .catch(data => {
+                that.$message.error(data);
+            });
+        }
+    }
+    let localMethods = {
+        sortData (data) {
+            
+        }
+    }
     export default {
         name: "home",
         data() {
+            that = this;
             return {
                 info: 'aaa',
                 flag: true,
@@ -325,9 +344,11 @@
                 rooms1: true,
                 rooms2: false,
                 rooms3: false,
+                calenderData: []
             }
         },
         mounted() {
+            remoteMethods.meetingList();
             this.roomName = this.i18n.home.HOME_ROOMS.ROOM_NAME
             this.toggleHover();
             this.getRoomsData();

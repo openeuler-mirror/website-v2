@@ -15,6 +15,11 @@ module.exports = {
                 PATH: '/documentation/',
                 NAME: '文档',
                 CHILDREN: [],
+                OTHER_CHILDREN: [
+                    {
+                        PATH: '/docs/'
+                    }
+                ],
                 CLASS: []
             },
             {
@@ -39,6 +44,14 @@ module.exports = {
                     {
                         NAME: '峰会',
                         PATH: '/interaction/summit-list/'
+                    }
+                ],
+                OTHER_CHILDREN: [
+                    {
+                        PATH: '/news/'
+                    },
+                    {
+                        PATH: '/blog/'
                     }
                 ],
                 CLASS: []
@@ -148,6 +161,11 @@ module.exports = {
                 PATH: '/documentation/',
                 NAME: 'Documentation',
                 CHILDREN: [],
+                OTHER_CHILDREN: [
+                    {
+                        PATH: '/docs/'
+                    }
+                ],
                 CLASS: []
             },
             {
@@ -172,6 +190,14 @@ module.exports = {
                     {
                         NAME: 'Summit',
                         PATH: '/interaction/summit-list/'
+                    }
+                ],
+                OTHER_CHILDREN: [
+                    {
+                        PATH: '/news/'
+                    },
+                    {
+                        PATH: '/blog/'
                     }
                 ],
                 CLASS: []
