@@ -607,7 +607,7 @@ export default {
     mounted() {
         let cla = localMethods.readCookie('cla-info');
         if (!cla || cla === '') {
-            localMethods.oauthLogin();
+            // localMethods.oauthLogin();
         }
     },
     methods: {
