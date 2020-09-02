@@ -7,7 +7,7 @@ export const search = ({
    keyword,
    model,
    indexEs,
-   openeulerArticles,
+   version,
    page,
 }) => {
     return new Promise((resolve, reject) => {
@@ -16,9 +16,9 @@ export const search = ({
             type: 'post',
             data: {
                 keyword,
-                model,
+                model: model == 'all' ? '' : model,
                 indexEs,
-                openeuler_articles: openeulerArticles,
+                version,
                 page,
             },
             success(result) {
