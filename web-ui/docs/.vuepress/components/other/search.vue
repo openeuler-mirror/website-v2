@@ -127,7 +127,7 @@
                 path = path.split('/');
                 path = path[path.length - 1] + '/' + articleName.split('.')[0];
                 this.$sitePages.forEach(item => {
-                    if(item.path.includes(path)){
+                    if(item.path.includes(encodeURI(path))){
                         dealPath = item.path;
                     }
                 })
