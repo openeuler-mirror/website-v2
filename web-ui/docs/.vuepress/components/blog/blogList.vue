@@ -55,7 +55,7 @@
                         </p>
                     </div>
                     <div class="blog-item-right">
-                        <div @click="getTitleDate(item.frontmatter.title,resolvePostDate(item.frontmatter.date))"><p @click="go(item.path)" class="blog-item-title">{{item.frontmatter.title}}</p></div>
+                        <p @click="go(item.path)" class="blog-item-title">{{item.frontmatter.title}}</p>
                         <p class="blog-item-content">{{item.frontmatter.summary}}</p>
                         <p @click="go(item.path)" class="blog-item-all">{{i18n.community.BLOG.READ_MORE}}</p>
                         <p class="blog-item-tag">
@@ -109,9 +109,9 @@ export default {
         CELECT_LABEL: "",
         CELECT_FILE: "",
         visitCount: {
-            title:'',
-            date:'',
-            lang:''
+            blogTitle:'',
+            blogDate:'',
+            pageLang:''
         },
         };
     },
@@ -138,13 +138,13 @@ export default {
             this.CELECT_FILE = this.i18n.community.BLOG.CELECT_FILE;
         }
         })
+        for(let i = 0;  i<this.currentBlogListData.length;i++){
+            this.visitCount.blogTitle=this.currentBlogListData[i].frontmatter.title;
+            this.visitCount.blogDate=this.currentBlogListData[i].frontmatter.date;
+        }
+        this.visitCount.pageLang=this.$lang;
     },
     methods: {
-      getTitleDate(title,date){
-        this.visitCount.title=title;
-        this.visitCount.date=date;
-        this.visitCount.lang=this.$lang;
-      },
         // 增加博客访问量的方法
         addBlogList(){
             addVisit(this.visitCount)

@@ -25,18 +25,18 @@ export const newsVisitList = () => {
 };
 //2 新闻访问量详情
 export const newsVisitDetail = ({
-    title,
-    date,
-    lang
+    newsTitle,
+    newsDate,
+    pageLang
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
             url: '/news/one',
             type: 'post',
             data: {
-                title,
-                date,
-                lang
+                newsTitle,
+                newsDate,
+                pageLang
             },
             success(result) {
                 if (result) {
@@ -55,18 +55,18 @@ export const newsVisitDetail = ({
 };
 // 3增加新闻访问量
 export const addVisit = ({
-    title,
-    date,
-    lang
+    newsTitle,
+    newsDate,
+    pageLang
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
             url: '/news/visit',
             type: 'post',
             data: {
-                title,
-                date,
-                lang
+                newsTitle,
+                newsDate,
+                pageLang
             },
             success(result) {
                 if (result) {

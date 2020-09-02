@@ -34,9 +34,7 @@
                   </span>
                 </p>
               </div>
-              <div  @click="getTitleDate(item.frontmatter.title,item.frontmatter.date)">
-                  <div @click="go(item.path)" class="news-title">{{item.frontmatter.title}}</div>
-              </div>
+              <div @click="go(item.path)" class="news-title">{{item.frontmatter.title}}</div>
               <div class="news-time-mobile">
                 <p>
                   <img class="mobile-middle-img" src="/img/blog/date.svg" alt />
@@ -85,9 +83,9 @@ export default {
       currentNewsList: [],
       showNewsList: {},
       visitCount: {
-        title:'',
-        date:'',
-        lang:''
+        newsTitle:'',
+        newsDate:'',
+        pageLang:''
       },
     };
   },
@@ -106,13 +104,13 @@ export default {
           this.allNewsList = this.sortNewsList(this.allNewsList);
           this.handleCurrentChange(1);
         })
+    for(let i = 0;  i<this.allNewsList.length;i++){
+        this.visitCount.newsTitle=this.allNewsList[i].frontmatter.title;
+        this.visitCount.newsDate=this.allNewsList[i].frontmatter.date;
+    }
+    this.visitCount.pageLang=this.$lang;
   },
   methods: {
-    getTitleDate(title,date){
-      this.visitCount.title=title;
-      this.visitCount.date=date;
-      this.visitCount.lang=this.$lang;
-    },
     // 增加新闻访问量的方法
       addNewsList(){
            addVisit(this.visitCount)
