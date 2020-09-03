@@ -376,6 +376,23 @@ export default {
     }
     .mail-table .el-table {
         width: 100%;
+        color: rgba(0, 0, 0, 0.85);
+        font-size: 14px;
+        font-family: FZLTHJW;
+    }
+    .mail-table .el-table td {
+        border: none;
+    }
+    .mail-table .el-table th > .cell {
+        padding-left: 30px;
+    }
+    .mail-table .el-table .cell {
+        padding-left: 30px;
+    }
+    .mail-table .el-table thead {
+        font-size: 16px;
+        color: #000;
+        font-family: FZLTHJW;
     }
     .mail-table .el-table__row td p,
     .mail-table .el-table__row td p {
@@ -684,6 +701,9 @@ p {
     .mail-table {
         padding: 0 30px;
         margin-bottom: 200px;
+    .mail-table.is-pc {
+        width: 1200px;
+        margin: 0 auto 200px;
     }
     .list-name {
         cursor: pointer;
@@ -706,8 +726,84 @@ p {
         vertical-align: middle;
         margin-right: 10px;
     }
-    .mail-table {
-        margin-bottom: 80px;
+    @media screen and (max-width: 1000px) {
+        .is-h5 {
+            display: block;
+        }
+        .is-pc {
+            display: none;
+        }
+        h3 {
+            font-size: 24px;
+            line-height: 34px;
+            text-align: center;
+            margin: 40px 0 10px;
+        }
+        .maillist {
+            width: 100%;
+        }
+        .maillist-divider-mail {
+            display: none;
+        }
+        .step-line {
+            display: none;
+        }
+        .maillist {
+            margin-bottom: 80px;
+            margin-top: 0;
+        }
+        .step-left,
+        .step-right {
+            margin: 40px 30px;
+        }
+        .step-right {
+            text-align: center;
+        }
+        .step-left-num,
+        .step-right-num {
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+            margin-bottom: 20px;
+        }
+        .step-left-num span,
+        .step-right-num span {
+            font-size: 18px;
+        }
+        .step-right-box,
+        .step-left-box {
+            width: 100%;
+            height: 100%;
+            box-shadow: none;
+            border: none;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .step-right-box {
+            margin-left: 0;
+        }
+        .mail-box {
+            height: 100%;
+        }
+        .mail-box p {
+            text-align: justify;
+            font-size: 14px;
+            line-height: 24px;
+        }
+        .inner-box,
+        .inner-box {
+            width: 315px;
+            height: 160px;
+            margin: 0 auto;
+            box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+        }
+        .mail-table {
+            padding: 0 30px;
+        }
+        .mail-table {
+            margin-bottom: 80px;
+        }
     }
 }
 </style>

@@ -4,25 +4,50 @@
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay">
                 <el-carousel-item>
                     <div class="carousel-video">
-                        <video poster="/img/home/BannerVideo.png" controls loop width="100%" height="380px">
-                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler%E7%90%86%E5%BF%B5%E8%A7%86%E9%A2%91_0829_V1.0.mp4"  type="video/mp4">
+                        <video poster="/img/home/BannerVideo.png"
+                               loop
+                               muted
+                               width="100%"
+                               height="500px"
+                               ref="video"
+                               @click="playVideo">
+                            <source src="/home/video/video.mp4"  type="video/mp4">
                         </video>
                     </div>
                 </el-carousel-item>
                 <el-carousel-item class="carousel-item">
-                    <div class="card-summer">
-                        <img src="/img/home/BannerSummer.png" alt="">
-                        <span>{{ i18n.home.HOME_CAROUSEL_DATA[0].DES }}</span>
-                        <img class="banner-gif" src="/img/home/BannerS.gif">
-                    </div>
+                    <a class="banner-link"  @click="go('/news/20200607.html')">
+                        <div class="banner-item">
+                            <div class="card-summer">
+                                    <img src="/img/home/BannerSummer.png" alt="">
+                                    <span>{{ i18n.home.HOME_CAROUSEL_DATA[0].DES }}</span>
+                            </div>
+                            <img class="banner-gif" src="/img/home/BannerS.gif">
+                        </div>
+                    </a>
                 </el-carousel-item>
                 <el-carousel-item
                         class="carousel-item"
                         v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
                         :key="index">
-                    <h3>{{ item.TITLE }}</h3>
-                    <span>{{ item.DES }}</span>
-                    <img class="banner-gif" :src="'/img/home/Banner' + index + '.gif'">
+                    <a class="banner-link" v-if="index === 0" @click="go(item.LINK)">
+                        <div class="banner-item">
+                            <div class="item-info">
+                                <h3>{{ item.TITLE }}</h3>
+                                <span>{{ item.DES }}</span>
+                            </div>
+                            <img class="banner-gif" :src="'/img/home/Banner' + index + '.gif'">
+                        </div>
+                    </a>
+                    <a class="banner-link" v-if="index !== 0" :href="item.LINK" target="_blank">
+                        <div class="banner-item">
+                            <div class="item-info">
+                                <h3>{{ item.TITLE }}</h3>
+                                <span>{{ item.DES }}</span>
+                            </div>
+                            <img class="banner-gif" :src="'/img/home/Banner' + index + '.gif'">
+                        </div>
+                    </a>
                 </el-carousel-item>
             </el-carousel>
         </div>
@@ -34,16 +59,24 @@
                     </div>
                 </el-carousel-item>
                 <el-carousel-item class="carousel-item">
-                    <div class="card-summer">
-                        <img src="/img/home/webBannerSummer.png" alt="">
-                    </div>
+                    <a @click="go('/news/20200607.html')">
+                        <div class="card-summer">
+                            <img src="/img/home/webBannerSummer.png" alt="">
+                        </div>
+                    </a>
                 </el-carousel-item>
                 <el-carousel-item
                         class="carousel-item-index"
                         v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
                         :key="index">
-                    <h3>{{ item.TITLE }}</h3>
-                    <img :src="'/img/home/webBanner' + index + '.png'">
+                    <a v-if="index !== 0" :href="item.LINK" target="_blank">
+                        <h3>{{ item.TITLE }}</h3>
+                        <img :src="'/img/home/webBanner' + index + '.png'">
+                    </a>
+                    <a v-if="index === 0" @click="go(item.LINK)">
+                        <h3>{{ item.TITLE }}</h3>
+                        <img :src="'/img/home/webBanner' + index + '.png'">
+                    </a>
                 </el-carousel-item>
             </el-carousel>
         </div>
@@ -309,8 +342,12 @@
                     <a href="http://download.turbolinux.com.cn:8011/" target="_blank"><img src="/img/home/turbo.png" alt=""></a>
                 </div>
                 <div class="publish-edition">
-                    <a href="http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso"><img src="/img/home/cetc.png" alt=""></a>
-                    <a href="http://download.hopeedge.com/ISO/HopeEdge-1.0-aarch64-dvd.iso"><img src="/img/home/hopeEdge.png" alt=""></a>
+                    <a href="http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso" target="_blank"><img src="/img/home/cetc.png" alt=""></a>
+                    <a href="http://download.hopeedge.com/ISO/HopeEdge-1.0-aarch64-dvd.iso" target="_blank"><img src="/img/home/hopeEdge.png" alt=""></a>
+                </div>
+                <div class="publish-edition">
+                    <a href="http://www.kylinos.cn/" target="_blank"><img src="/img/home/qiling.png" alt=""></a>
+                    <a href="https://www.uniontech.com" target="_blank"><img src="/img/home/tongxin.png" alt=""></a>
                 </div>
             </div>
             <div class="source-publish-link">
@@ -383,7 +420,6 @@
                     this.$router.push({
                         path: this.resolvePath(path)
                     });
-                    this.menuMobileFlag = false;
                 }
             },
             e(selector) {
@@ -401,6 +437,9 @@
                 } else {
                     return es;
                 }
+            },
+            playVideo() {
+                this.$refs.video.play()
             },
             addClassAll(className) {
                 let selector = '.' + className;
@@ -496,7 +535,7 @@
         border-radius: 50%;
     }
     .el-carousel__container {
-        height: 380px;
+        height: 500px;
     }
 
     .room-card .el-carousel__container {
@@ -556,7 +595,7 @@
         text-align: left;
         line-height: 48px;
         font-family: FZLTCHJW;
-        margin-top: 80px;
+        margin-top: 100px;
     }
     .home-carousel .el-carousel__item span {
         display: inline-block;
@@ -570,21 +609,29 @@
         height: 100%;
         background-size: contain;
         background-repeat: no-repeat;
-        padding-left: 400px;
     }
     .carousel-item .card-summer {
         width: 620px;
+        margin-top: 100px;
         text-align: center;
     }
     .card-summer img:first-child {
         width: 256px;
+        margin-top: 0;
     }
-    .carousel-item .banner-gif {
-        position: absolute;
-        top: 0;
-        margin-top: 90px;
-        margin-left: 300px;
-        width: 200px;
+    .banner-gif {
+        margin-top: 80px;
+    }
+    .banner-link {
+        cursor: pointer;
+        text-decoration: none;
+        color: #000;
+    }
+    .banner-item {
+        width: 1080px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
     }
     .carousel-item .card-summer span {
         margin-left: 0;
@@ -593,7 +640,6 @@
     }
     .carousel-item img {
         z-index: -1;
-        margin-top: 80px;
     }
     .carousel-item video {
         position: absolute;
@@ -609,6 +655,7 @@
     }
     .carousel-video video {
         outline: none;
+        object-fit: cover;
     }
     .el-carousel__container {
         height: 680px;
@@ -1201,14 +1248,6 @@
     .publish-edition a:last-child img {
         margin-right: 0;
     }
-    @media screen and (max-width: 1440px){
-        .carousel-item {
-            padding-left: 240px;
-        }
-        .carousel-item .banner-gif {
-            margin-left: 160px
-        }
-    }
     @media screen and (max-width: 1000px){
         .is-pc {
             display: none;
@@ -1247,12 +1286,16 @@
             height: 300px;
             line-height: 300px;
             text-align: center;
+            margin-top: 0;
         }
         .carousel-img {
             width: 100%;
         }
         .card-summer img {
             vertical-align: middle;
+        }
+        .home-carousel {
+            margin: 0 -15px;
         }
         .home-carousel .el-carousel__item h3 {
             font-size: 18px;
