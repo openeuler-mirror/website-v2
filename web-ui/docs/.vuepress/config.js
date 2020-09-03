@@ -51,7 +51,7 @@ module.exports = {
     devServer: {
         proxy: {
             '/api/sig': {
-                target: 'http://119.8.32.82',
+                target: 'https://api.openeuler.org/meetings',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {
