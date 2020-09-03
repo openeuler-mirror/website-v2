@@ -251,10 +251,7 @@
     .mail-table table {
         color: rgba(0, 0, 0, 0.85);
         font-size: 14px;
-        font-family: 方正兰亭细黑简体;
-    }
-    .mail-table .el-table {
-        width: 80%;
+        font-family: FZLTHJW;
     }
     .mail-table .el-table td {
         border: none;
@@ -268,7 +265,7 @@
     .mail-table .el-table thead {
         font-size: 16px;
         color: #000;
-        font-family: 方正兰亭黑简体;
+        font-family: FZLTHJW;
     }
     .mail-table .el-table__row td p,
     .mail-table .el-table__row td p {
@@ -456,8 +453,9 @@
         height: 110px;
         margin-left: 20px;
     }
-    .mail-table {
-        margin-bottom: 200px;
+    .mail-table.is-pc {
+        width: 1200px;
+        margin: 0 auto 200px;
     }
     .list-name {
         cursor: pointer;
@@ -541,7 +539,7 @@
             height: 100%;
         }
         .mail-box p {
-            text-align: left;
+            text-align: justify;
             font-size: 14px;
             line-height: 24px;
         }
