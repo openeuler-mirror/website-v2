@@ -22,113 +22,113 @@
         </div>
         </common-banner>
         <div class="summit-explain" v-if="isSummitHome">
-        <p>{{i18n.interaction.SUMMIT.SUMMITCONTENT}}</p>
+            <p>{{i18n.interaction.SUMMIT.SUMMITCONTENT}}</p>
         </div>
         <div class="summit-list" v-if="!isSummitHome">
-        <div class="theme-speech">
-            <h3>{{i18n.interaction.SUMMIT.SPEECHTITLE}}</h3>
-            <ul class="speech-list">
-            <li v-for="(item,key) in speechList" :key="key">
-                <div class="list-head">
-                <p class="list-time">
-                    <i class="icon-time"></i>
-                    <span>{{item.SPEECHTIME}}</span>
-                </p>
-                <p class="teacher-name">
-                    <span>{{item.SPEECHER}}</span>
-                    <i class="icon-player" @click="toWhere(item.SPEECHLINK)"></i>
-                </p>
-                <p class="list-title">{{item.SPEECHTHEME}}</p>
+            <div class="theme-speech">
+                <h3>{{i18n.interaction.SUMMIT.SPEECHTITLE}}</h3>
+                <ul class="speech-list">
+                    <li v-for="(item,key) in speechList" :key="key">
+                        <div class="list-head">
+                            <p class="list-time">
+                                <i class="icon-time"></i>
+                                <span>{{item.SPEECHTIME}}</span>
+                            </p>
+                            <p class="teacher-name">
+                                <span>{{item.SPEECHER}}</span>
+                                <i class="icon-player" @click="toWhere(item.SPEECHLINK)"></i>
+                            </p>
+                            <p :class="['list-title',language == '/zh/'?'':'is-en']">{{item.SPEECHTHEME}}</p>
+                        </div>
+                        <div class="list-body clearfix">
+                            <div class="list-explain fl">{{item.SPEECHCONTENT}}</div>
+                            <div class="teacher-info fl">
+                                <div class="teacher-img">
+                                    <img :src="item.SPEECHERIMG" alt />
+                                </div>
+                                <div class="base-info">
+                                    <p>{{item.SPEECHER}}</p>
+                                    <p :class="language == '/zh/'?'':'p-en'">{{item.SPEECHERINFO}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="design-summit">
+                <h3>{{i18n.interaction.SUMMIT.DESIGNTITLE}}</h3>
+                <div class="h4">
+                    <span v-for="(item,key) in trackList" :key="key">{{item}}</span>
                 </div>
-                <div class="list-body clearfix">
-                <div class="list-explain fl">{{item.SPEECHCONTENT}}</div>
-                <div class="teacher-info fl">
-                    <div class="teacher-img">
-                    <img :src="item.SPEECHERIMG" alt />
+                <div class="summit-video" v-for="(item,key) in designList" :key="key">
+                    <div class="video-time" v-for="time in item.DESIGNTIME">
+                        <p>{{time.DAY}}</p>
+                        <p>{{time.HOUR}}</p>
                     </div>
-                    <div class="base-info">
-                    <p>{{item.SPEECHER}}</p>
-                    <p>{{item.SPEECHERINFO}}</p>
+                    <div :class="item.TRACK1?'video-one':'null-track'">
+                        <div v-for="track1 in item.TRACK1">
+                        <div class="video-download" v-if="item.TRACK1?true:false">
+                            <div @click="toWhere(track1.TRACK1LINK)">{{i18n.interaction.SUMMIT.LISTTITLE}}</div>
+                            <div
+                            @click="toWhere(track1.TRACK1DOWNLOAD)"
+                            >{{i18n.interaction.SUMMIT.VIDEODOWNLOAD}}</div>
+                        </div>
+                        <p>{{track1.TRACK1TITLE}}</p>
+                        <div class="mobile-time" v-for="time in item.DESIGNTIME">
+                            <p>{{time.DAY}}</p>
+                            <p>{{time.HOUR}}</p>
+                        </div>
+                        <p>{{track1.TRACK1TEACHER}}</p>
+                        <p>{{track1.TRACK1MAINTAINER}}</p>
+                        </div>
+                    </div>
+                    <div :class="item.TRACK2?'video-two':'null-track'">
+                        <div v-for="track2 in item.TRACK2">
+                        <div class="video-download" v-if="item.TRACK2?true:false">
+                            <div @click="toWhere(track2.TRACK2LINK)">{{i18n.interaction.SUMMIT.LISTTITLE}}</div>
+                            <div
+                            @click="toWhere(track2.TRACK2DOWNLOAD)"
+                            >{{i18n.interaction.SUMMIT.VIDEODOWNLOAD}}</div>
+                        </div>
+                        <p>{{track2.TRACK2TITLE}}</p>
+                        <div class="mobile-time" v-for="time in item.DESIGNTIME">
+                            <p>{{time.DAY}}</p>
+                            <p>{{time.HOUR}}</p>
+                        </div>
+                        <p>{{track2.TRACK2TEACHER}}</p>
+                        <p>{{track2.TRACK2MAINTAINER}}</p>
+                        </div>
+                    </div>
+                    <div :class="item.TRACK3?'video-three':'null-track'">
+                        <div v-for="track3 in item.TRACK3">
+                        <div class="video-download" v-if="item.TRACK3?true:false">
+                            <div @click="toWhere(track3.TRACK3LINK)">{{i18n.interaction.SUMMIT.LISTTITLE}}</div>
+                            <div
+                            @click="toWhere(track3.TRACK3DOWNLOAD)"
+                            >{{i18n.interaction.SUMMIT.VIDEODOWNLOAD}}</div>
+                        </div>
+                        <p>{{track3.TRACK3TITLE}}</p>
+                        <div class="mobile-time" v-for="time in item.DESIGNTIME">
+                            <p>{{time.DAY}}</p>
+                            <p>{{time.HOUR}}</p>
+                        </div>
+                        <p>{{track3.TRACK3TEACHER}}</p>
+                        <p>{{track3.TRACK3MAINTAINER}}</p>
+                        </div>
                     </div>
                 </div>
-                </div>
-            </li>
-            </ul>
-        </div>
-        <div class="design-summit">
-            <h3>{{i18n.interaction.SUMMIT.DESIGNTITLE}}</h3>
-            <div class="h4">
-            <span v-for="(item,key) in trackList" :key="key">{{item}}</span>
             </div>
-            <div class="summit-video" v-for="(item,key) in designList" :key="key">
-            <div class="video-time" v-for="time in item.DESIGNTIME">
-                <p>{{time.DAY}}</p>
-                <p>{{time.HOUR}}</p>
-            </div>
-            <div :class="item.TRACK1?'video-one':'null-track'">
-                <div v-for="track1 in item.TRACK1">
-                <div class="video-download" v-if="item.TRACK1?true:false">
-                    <div @click="toWhere(track1.TRACK1LINK)">{{i18n.interaction.SUMMIT.LISTTITLE}}</div>
+            <div class="friendship-link">
+                <div class="link-title">{{i18n.interaction.SUMMIT.FRIENDSHIPLINK}}</div>
+                <div class="link-list">
                     <div
-                    @click="toWhere(track1.TRACK1DOWNLOAD)"
-                    >{{i18n.interaction.SUMMIT.VIDEODOWNLOAD}}</div>
-                </div>
-                <p>{{track1.TRACK1TITLE}}</p>
-                <div class="mobile-time" v-for="time in item.DESIGNTIME">
-                    <p>{{time.DAY}}</p>
-                    <p>{{time.HOUR}}</p>
-                </div>
-                <p>{{track1.TRACK1TEACHER}}</p>
-                <p>{{track1.TRACK1MAINTAINER}}</p>
+                    v-for="(item,key) in linkList"
+                    :key="key"
+                    :style="{backgroundImage:item.URL}"
+                    @click="toWhere(item.LINK)"
+                    ></div>
                 </div>
             </div>
-            <div :class="item.TRACK2?'video-two':'null-track'">
-                <div v-for="track2 in item.TRACK2">
-                <div class="video-download" v-if="item.TRACK2?true:false">
-                    <div @click="toWhere(track2.TRACK2LINK)">{{i18n.interaction.SUMMIT.LISTTITLE}}</div>
-                    <div
-                    @click="toWhere(track2.TRACK2DOWNLOAD)"
-                    >{{i18n.interaction.SUMMIT.VIDEODOWNLOAD}}</div>
-                </div>
-                <p>{{track2.TRACK2TITLE}}</p>
-                <div class="mobile-time" v-for="time in item.DESIGNTIME">
-                    <p>{{time.DAY}}</p>
-                    <p>{{time.HOUR}}</p>
-                </div>
-                <p>{{track2.TRACK2TEACHER}}</p>
-                <p>{{track2.TRACK2MAINTAINER}}</p>
-                </div>
-            </div>
-            <div :class="item.TRACK3?'video-three':'null-track'">
-                <div v-for="track3 in item.TRACK3">
-                <div class="video-download" v-if="item.TRACK3?true:false">
-                    <div @click="toWhere(track3.TRACK3LINK)">{{i18n.interaction.SUMMIT.LISTTITLE}}</div>
-                    <div
-                    @click="toWhere(track3.TRACK3DOWNLOAD)"
-                    >{{i18n.interaction.SUMMIT.VIDEODOWNLOAD}}</div>
-                </div>
-                <p>{{track3.TRACK3TITLE}}</p>
-                <div class="mobile-time" v-for="time in item.DESIGNTIME">
-                    <p>{{time.DAY}}</p>
-                    <p>{{time.HOUR}}</p>
-                </div>
-                <p>{{track3.TRACK3TEACHER}}</p>
-                <p>{{track3.TRACK3MAINTAINER}}</p>
-                </div>
-            </div>
-            </div>
-        </div>
-        <div class="friendship-link">
-            <div class="link-title">{{i18n.interaction.SUMMIT.FRIENDSHIPLINK}}</div>
-            <div class="link-list">
-            <div
-                v-for="(item,key) in linkList"
-                :key="key"
-                :style="{backgroundImage:item.URL}"
-                @click="toWhere(item.LINK)"
-            ></div>
-            </div>
-        </div>
         </div>
     </div>
 </template>
@@ -142,14 +142,19 @@ export default {
             speechList: [],
             designList: [],
             trackList: [],
-            linkList: []
+            linkList: [],
+            language:''
         }
+    },
+    created () {
+        
     },
     mounted () {
         this.speechList = this.i18n.interaction.SUMMIT.SPEECHLIST;
         this.designList = this.i18n.interaction.SUMMIT.DESIGNLIST;
         this.trackList = this.i18n.interaction.SUMMIT.TRACKLIST;
         this.linkList = this.i18n.interaction.SUMMIT.OTHERLINK;
+        this.language = this.$lang === "zh" ? "/zh/" : "/en/";
     },
     methods: {
         toReviewList () {
@@ -230,27 +235,33 @@ export default {
     .review {
         .mr-All(20px 0 36px 0);
         .review-home {
-        cursor: pointer;
-        display: inline-block;
-        .word-common-css(26px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,47,167,1),30px);
-        .mr(top,262px);
-        @media (max-width: 1000px) {
-            .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,47,167,1),26px);
-            .mr-All(0 0 0 85px);
-        }
+            cursor: pointer;
+            display: inline-block;
+            .word-common-css(26px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,47,167,1),30px);
+            .mr(top,262px);
+            @media (max-width: 1000px) {
+                .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,47,167,1),26px);
+                width: 100%;
+                .mr(top,0);
+                text-align: center;
+            }
         }
         .review-list {
-        display: inline-block;
-        .word-common-css(25px,PingFangSC-Regular,PingFang SC,400,rgba(0,0,0,1),30px);
-        .mr(top,262px);
-        @media (max-width: 1000px) {
-            .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal, #000000,26px);
-            .mr-All(0 0 0 88px);
-        }
+            display: inline-block;
+            .word-common-css(25px,PingFangSC-Regular,PingFang SC,400,rgba(0,0,0,1),30px);
+            .mr(top,262px);
+            @media (max-width: 1000px) {
+                .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal, #000000,26px);
+                width: 100%;
+                .mr(top,0);
+                text-align: center;
+            }
         }
         .list-time {
         @media (max-width: 1000px) {
-            .mr-All(10px 0 0 50px);
+            .mr-All(10px 0 0 0);
+            width: 100%;
+            text-align: center;
             .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,1),26px);
         }
         }
@@ -280,7 +291,8 @@ export default {
     }
     .theme-speech {
         h3 {
-            .theme-css(144px,46px);
+            .theme-css(1120px,46px);
+            text-align: center;
         }
         @media (max-width: 1000px) {
             h3 {
@@ -288,6 +300,7 @@ export default {
                 .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(11,22,43,1),26px);
                 .mr-All(0);
             }
+            padding: 0 15px;
         }
         .speech-list {
             .mr-All(60px 0 90px 0);
@@ -322,7 +335,7 @@ export default {
                 .list-body {
                     display: block;
                 }
-                }
+            }
                 .list-head {
                     position: relative;
                     .wid-and-hei(100%,144px);
@@ -359,6 +372,19 @@ export default {
                     .list-title {
                         .mr(top,26px);
                         .max-wid-hei(624px,24px);
+                    }
+                    .is-en{
+                        font-size: 20px;
+                        white-space:nowrap;
+                        @media (max-width: 1000px) {
+                            white-space:normal;
+                            font-size: inherit;
+                            text-overflow:ellipsis;
+                            -webkit-line-clamp: 2;
+                            overflow: hidden;
+                            -webkit-box-orient: vertical;
+                            display: -webkit-box;
+                        }
                     }
                 }
                 .list-body {
@@ -401,6 +427,12 @@ export default {
                                     line-height: 32px;
                                 }
                             }
+                            .p-en{
+                                line-height: 27px !important;
+                                @media (max-width: 1000px) {
+                                    line-height: 18px !important;
+                                }
+                            }
                         }
                     }
                 }
@@ -420,6 +452,7 @@ export default {
                     .list-head {
                         height: 162px;
                         padding: 20px 31px 20px 20px;
+                        font-size: 16px;
                         p {
                             .word-common-css(16px,FZLTXIHJW--GB1-0,FZLTXIHJW--GB1,normal,rgba(0,0,0,1),26px);
                         }
@@ -482,7 +515,8 @@ export default {
 .summit .design-summit {
     .mr(bottom,100px);
     h3 {
-        .theme-css(468px,46px);
+        .theme-css(1120px,46px);
+        text-align: center;
     }
     .h4 {
         .mr-All(60px 0 40px 0);
@@ -552,6 +586,13 @@ export default {
                 .word-common-css(18px, FZLTHJW--GB1-0,FZLTHJW--GB1, normal, rgba(0,0,0,0.85), 18px);
                 &:first-of-type{
                     .max-wid-hei(204px,48px);
+                    @media (max-width: 1000px) {
+                        text-overflow:ellipsis;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                        -webkit-box-orient: vertical;
+                        display: -webkit-box;
+                    }
                 }
                 &:nth-of-type(2) {
                 font-size: 16px;
@@ -596,10 +637,10 @@ export default {
             }
         }
     }
-    @media (max-width: 1000px) {
+    @media (max-width: 1000px) {    
         .mr(bottom,0);
         h3 {
-            .wid-and-hei(208px, 26px);
+            .wid-and-hei(100%, 26px);
             .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(11,22,43,0.85),26px);
             .mr-All(0);
         }
@@ -616,10 +657,10 @@ export default {
                 .mr(left,33px);
                 }
                 &:nth-of-type(2) {
-                .mr(left,50px);
+                .mr(left,68px);
                 }
                 &:last-of-type {
-                .mr(left,63px);
+                .mr(left,75px);
                 }
             }
         }
@@ -655,6 +696,9 @@ export default {
                         .word-common-css(12px, FZLTXIHJW--GB1-0,FZLTXIHJW--GB1, normal, rgba(255,255,255,1), 28px);
                     }
                 }
+                .mobile-time{
+                    margin-top: 5px;
+                }
                 &:hover {
                     border-radius: 8px;
                     border: 1px solid rgba(0, 47, 151, 1);
@@ -678,6 +722,11 @@ export default {
                         line-height: 16px;
                         .mr(top,6px);
                         .max-wid-hei(99px,48px);
+                        text-overflow:ellipsis;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                        -webkit-box-orient: vertical;
+                        display: -webkit-box;
                     }
                     &:nth-of-type(2) {
                         font-size: 10px;
@@ -700,7 +749,8 @@ export default {
 }
 .summit .friendship-link {
     .link-title {
-        .theme-css(144px,46px);
+        .theme-css(1120px,46px);
+        text-align: center;
         .mr(bottom,60px);
     }
     .link-list {

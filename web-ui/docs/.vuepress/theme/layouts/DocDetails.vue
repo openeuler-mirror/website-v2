@@ -6,7 +6,7 @@
     >
       <div class="version-div">
         <span>{{version}}</span>
-        <i class="el-icon-document"></i>
+        <i class="icon-document"></i>
       </div>
       <el-tree
         ref="tree"
@@ -31,11 +31,11 @@
           <span @click="showMenu" class="toggle-doc">{{i18n.documentation.MENU}}</span>
         </p>
       </div>
-      <!-- 内容都渲染在docs-content -->
       <Content id="docs-content" />
     </div>
     <div class="details-right">
-        <div class="btn-box">
+        <div class="null-box"></div>
+        <div class="clearfix">
             <p class="previous-doc">
                 <i class="el-icon-arrow-left"></i>
                 <span @click="previous" class="toggle-doc">{{i18n.documentation.PREVIOUS}}</span>
@@ -50,7 +50,7 @@
             </p>
         </div>
         <ul class="second-title-list">
-            <li>1</li>
+            <li v-for="(item,index) in secondTitleList" :key="index" :class="isIndex == index?'active':''"><a :href="'#'+item" @click="isActive(index)">{{item}}</a></li>
         </ul>
     </div>
   </div>
@@ -61,7 +61,6 @@ export default {
   name: "DocDetails",
   data() {
     return {
-        //获取中英文字符
       targetLocale: "",
       //菜单数据
       menuData: [],
@@ -71,7 +70,7 @@ export default {
       version: "",
       //意见反馈路径
       feedbackPath: "",
-      //当前页面路径
+      //当然页面路径
       currentDocPath: "",
       //前一篇路径
       previousPath: "",
@@ -81,10 +80,15 @@ export default {
       i18n: {
         documentation: {},
       },
+      secondTitleList:[],
+      //二级标题是否显示蓝色
+      active:false,
+      //是否等于下标
+      isIndex:0 
     };
   },
   created() {
-    this.targetLocale = this.$lang === "zh" ? "zh" : "/en/";
+    this.targetLocale = this.$lang === "zh" ? "/zh/" : "/en/";
   },
   mounted() {
     let currentPath = this.$route.path;
@@ -94,9 +98,8 @@ export default {
       "/docs/" +
       this.version +
       "/menu/menu.json");
-      console.log(this.menuData);
     this.currentDocPath = this.getCurrentDocPath(currentPath);
-    this.renderFeedbackPath();
+    this.renderFeedbackPath();//初次进入页面时设置点击意见反馈的链接
     this.allPathArr = this.getAllPathArr(this.menuData);
     this.getNextPathAndPreviousPath();
   },
@@ -106,6 +109,7 @@ export default {
 
   methods: {
     handleNodeClick(data) {
+        //点击树形目录触发事件
       this.currentDocPath = data.path;
       this.getNextPathAndPreviousPath();
       this.renderFeedbackPath();
@@ -113,8 +117,12 @@ export default {
       this.$router.push(
         this.targetLocale + "docs/" + this.version + "/" + data.path + ".html"
       );
+      this.secondTitleList=[];
+      this.isIndex = 0;
+      this.getSecondTitle();
     },
     getCurrentDocPath(path) {
+        //获取当前URL版本后面的路径
       let pathArr = path.split("/");
       let pathStr = "";
       for (let i = 4; i < pathArr.length; i++) {
@@ -124,7 +132,7 @@ export default {
       return pathStr;
     },
     renderFeedbackPath() {
-        //点击意见反馈后跳转的地址
+        //设置点击意见反馈的链接
       this.feedbackPath =
         "https://gitee.com/openeuler/docs/blob/stable-" +
         this.version +
@@ -137,6 +145,7 @@ export default {
       this.$refs.tree.setCurrentKey(this.currentDocPath);
     },
     getAllPathArr(menuData) {
+        //获取文档所有的path
       menuData.forEach((item) => {
         this.allPathArr.push(item.path);
         if (item.children && item.children.length) {
@@ -171,7 +180,7 @@ export default {
       this.allPathArr.forEach((item, index) => {
         if (item === this.currentDocPath) {
           if (index === 0) {
-              //当前是第一篇文章点击下一篇
+              //当前是第一篇点击下一篇
             this.nextPath = this.allPathArr[index + 1];
             this.previousPath = "";
             return false;
@@ -191,6 +200,17 @@ export default {
     showMenu() {
       this.showMobileMenu = true;
     },
+    getSecondTitle(){   
+        let getSecondTile = document.getElementsByTagName("h2");
+        setTimeout(() => {
+            getSecondTile.forEach((item,index) => {
+                this.secondTitleList.push(item.innerText);
+            });
+        },200);
+    },
+    isActive(index){
+        this.isIndex = index;
+    }
   },
 };
 </script>
@@ -225,6 +245,8 @@ export default {
   }
   .el-tree--highlight-current
     .el-tree-node.is-current
+    > .el-tree-node__content,.el-tree--highlight-current
+    .el-tree-node.is-expanded
     > .el-tree-node__content {
     color: #002fa7;
     background: #ffffff;
@@ -246,6 +268,10 @@ export default {
   .el-tree-node > .el-tree-node__children {
     padding: 15px 0;
   }
+  .el-tree-node .el-tree-node__children .el-tree-node .el-tree-node__content{
+      box-shadow: none;
+      margin-bottom: 10px;
+  }
 }
 .version-div {
   padding-bottom: 20px;
@@ -255,10 +281,12 @@ export default {
     color: rgba(0, 0, 0, 1);
     line-height: 24px;
   }
-  i {
-    color: #002fa7;
-    font-size: 24px;
-    margin-left: 45px;
+  .icon-document {
+      display: inline-block;
+      width: 22px;
+      height: 28px;
+      background-image: url('/img/docs/icon-document.svg');
+      margin-left: 60px;
   }
 }
 .details-center {
@@ -270,14 +298,34 @@ export default {
   display: none;
 }
 .details-right {
+    width: 200px;
     box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
-    width: 200px;
     vertical-align: top;
     display: inline-block;
     overflow: hidden;
-    .btn-box{
-        height: 200px;
+    .null-box{
+        height: 20px;
+    }
+    .second-title-list{
+        margin-left: 20px;
+        .active{
+            a{
+                color: #002FA7;
+            }
+        }
+        li{
+            a{
+                text-decoration: none;
+                font-size: 16px;
+                font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
+                font-weight: normal;
+                color: rgba(0, 0, 0, 0.7);
+                line-height: 20px;
+                display: block;
+            }
+            margin-bottom: 20px;
+        }
     }
 }
 .previous-doc {
