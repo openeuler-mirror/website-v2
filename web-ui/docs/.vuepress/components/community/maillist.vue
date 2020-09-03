@@ -144,7 +144,7 @@
                             </span>
                         </li>
                         <li class="color-blue">
-                            <span>
+                            <span @click="go(item.display_name)">
                                 {{item.archive}}
                             </span>
                         </li>
@@ -253,6 +253,9 @@ export default {
             });
     },
     methods: {
+        go (name) {
+            window.open('https://mailweb.openeuler.org/hyperkitty/list/' + name.toLowerCase() + '@openeuler.org/');
+        },
         userSubscribe(userID) {
             this.dialogFormVisible = true;
             this.form.list_id = userID;
