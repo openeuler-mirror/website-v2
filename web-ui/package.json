@@ -12,10 +12,8 @@
   "license": "",
   "dependencies": {
     "axios": "^0.19.2",
-    "busuanzi.pure.js": "^1.0.3",
     "dayjs": "^1.8.31",
     "element-ui": "^2.13.2",
-    "jso": "^4.1.1",
     "less-loader": "^6.2.0",
     "vuepress": "^1.5.2"
   }
