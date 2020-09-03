@@ -120,6 +120,7 @@ function getSearchResJson(data) {
         element._source.path.virtual = OPENEULER_URL + element._source.path.virtual;
         arr.push(element._source);
     });
+
     let json = {
         'status': 200,
         'msg': '',
