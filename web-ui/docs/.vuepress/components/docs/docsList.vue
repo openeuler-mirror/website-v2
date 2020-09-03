@@ -76,7 +76,7 @@ export default {
             version: "",
             currentDocs: [],
             versions: [],
-            default:true
+            default:true //判断是否默认选中
         };
     },
     components: {

@@ -2,7 +2,7 @@
   <div class="footer-wrapper">
     <div class="footer-content">
       <div class="footer-left">
-        <img src="/footer-logo.png" class="footer-logo" />
+        <img src="/footer-logo.svg" class="footer-logo" />
         <div class="footer-mail">{{ i18n.common.FOOTER.MAIL }}</div>
       </div>
       <div class="footer-center">
@@ -78,7 +78,6 @@ export default {
       .footer-mail {
         color: #fff;
         margin-top: 17px;
-        margin-left: 9px;
         @media (max-width: 1000px) {
           margin-top: 10px;
         }

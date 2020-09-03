@@ -59,7 +59,7 @@
                         <p class="blog-item-content">{{item.frontmatter.summary}}</p>
                         <p @click="go(item.path)" class="blog-item-all">{{i18n.community.BLOG.READ_MORE}}</p>
                         <p class="blog-item-tag">
-                            <span>{{i18n.community.BLOG.LABEL}}:</span>
+                            <span class="first-tag">{{i18n.community.BLOG.LABEL}}:</span>
                             <span v-for="(tag, index) in item.frontmatter.tags" :key="index">
                                 <span @click="clickTagItem(tag)" class="tag-item">{{tag}}</span>
                                 <span v-if="index != (item.frontmatter.tags.length - 1)">、</span>
@@ -85,7 +85,7 @@
 import Vue from "vue";
 import dayjs from "dayjs";
 import commonBanner from "./../common/banner.vue";
-import {blogVisitList,blogVisitDetail,addVisit} from "../../api/blogCount"
+import {blogVisitList} from "../../api/blogCount"
 
 export default {
     data() {
@@ -107,12 +107,7 @@ export default {
         //常量每页显示数量
         PAGESIZE: 5,
         CELECT_LABEL: "",
-        CELECT_FILE: "",
-        visitCount: {
-            blogTitle:'',
-            blogDate:'',
-            pageLang:''
-        },
+        CELECT_FILE: ""
         };
     },
     components: {
@@ -138,18 +133,8 @@ export default {
             this.CELECT_FILE = this.i18n.community.BLOG.CELECT_FILE;
         }
         })
-        for(let i = 0;  i<this.currentBlogListData.length;i++){
-            this.visitCount.blogTitle=this.currentBlogListData[i].frontmatter.title;
-            this.visitCount.blogDate=this.currentBlogListData[i].frontmatter.date;
-        }
-        this.visitCount.pageLang=this.$lang;
     },
     methods: {
-        // 增加博客访问量的方法
-        addBlogList(){
-            addVisit(this.visitCount)
-            .then(response => {})
-        },
         handleCurrentChange(val) {
             this.currentBlogListData = this.screenBlogListData.slice(
             (val - 1) * this.PAGESIZE,
@@ -261,7 +246,7 @@ export default {
                 if(item.path.indexOf("/" + this.$lang + "/blog/") === 0){
                 item.count=0;
                 this.countList.forEach(itemCount=>{
-                    if(itemCount.title==item.title){
+                    if(itemCount.title==item.frontmatter.title){
                         item.count=itemCount.count;
                     }
                 })
@@ -272,7 +257,6 @@ export default {
         go(path) {
             if (path) {
                 this.$router.push(path);
-                this.addBlogList();
             }
         },
         getBlogDataByLang(data) {
@@ -372,6 +356,7 @@ export default {
     color: #002fa7;
     margin-left: 13px;
     cursor: pointer;
+    font-family: PingFangSC-Regular, PingFang SC;
 }
 .blog-item {
     height: 335px;
@@ -401,8 +386,9 @@ export default {
     }
 }
 .blog-author {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
+    font-family:HuaweiSans-Bold,HuaweiSans;
 }
 .blog-date {
     font-size: 12px;
@@ -427,6 +413,9 @@ export default {
 .blog-item-tag {
     font-size: 14px;
     color: #002fa7;
+    .first-tag{
+      color: #00000080;
+    }
 }
 .paginationClass {
     margin: 20px 0 200px 0;

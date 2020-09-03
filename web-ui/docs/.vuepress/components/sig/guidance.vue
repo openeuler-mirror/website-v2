@@ -49,10 +49,6 @@
             </div>
         </div>
         <div class="is-h5 sig-guidance-H5">
-            <h3 class="is-h5">{{ i18n.sig.GUIDANCE_LIST.GUIDE.MOBILE_TITLE }}</h3>
-            <div class="is-h5 mobile-banner">
-                <img src="/img/sig/sig-banner-mobile.png" alt />
-            </div>
             <div
                 class="mail-guide"
                 v-for="(item, index) in i18n.sig.GUIDANCE_LIST.GUIDE.LINE_CONTENT"
@@ -196,7 +192,7 @@ h3 {
 }
 
 @media screen and (max-width: 1000px) {
-    .is-pc {
+    .sig-guidance.is-pc {
         display: none;
     }
     .is-h5 {
@@ -204,10 +200,6 @@ h3 {
     }
     .sig-guidance {
         margin: 40px auto 80px;
-    }
-    .mobile-banner {
-        text-align: center;
-        margin-top: 10px;
     }
     .sig-guidance-H5 {
         margin-bottom: 80px;

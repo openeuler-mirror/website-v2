@@ -46,7 +46,7 @@
           <span @click="delTag(item)">×</span>
         </li>
       </ul>
-      <ul class="download-list">
+      <ul :class="lang=='zh' ? 'download-list' : 'download-list-en'">
         <li class="download-item" v-for="(item, index) in downloadList" :key="index">
           <h3 class="title">{{ item.NAME }}</h3>
           <el-button
@@ -65,23 +65,6 @@
               </li>
               <li>
                 <img src="/img/download/release.svg" alt />
-                <a
-                  target="_blank"
-                  :href="item.INSTALL_GUIDENCE_URL"
-                >{{ i18n.download.INSTALL_GUIDENCE }}</a>
-              </li>
-            </ul>
-            <ul class="url-list">
-              <li>
-                <img src="/img/download/release.svg" alt />
-                <a target="_blank" :href="item.SEEK_HELP_URL">
-                  {{
-                  i18n.download.SEEK_HELP
-                  }}
-                </a>
-              </li>
-              <li>
-                <img src="/img/download/release.svg" alt />
                 <a target="_blank" :href="item.GET_ISO_URL">
                   {{
                   i18n.download.GET_ISO
@@ -92,7 +75,25 @@
             <ul class="url-list">
               <li>
                 <img src="/img/download/release.svg" alt />
+                <a
+                  target="_blank"
+                  :href="item.INSTALL_GUIDENCE_URL"
+                >{{ i18n.download.INSTALL_GUIDENCE }}</a>
+                
+              </li>
+              <li>
+                <img src="/img/download/release.svg" alt />
                 <a target="_blank" :href="item.LIFE_CYCLE_URL">{{ i18n.download.LIFE_CYCLE }}</a>
+              </li>
+            </ul>
+            <ul class="url-list">
+              <li>
+                <img src="/img/download/release.svg" alt />
+                <a target="_blank" :href="item.SEEK_HELP_URL">
+                  {{
+                  i18n.download.SEEK_HELP
+                  }}
+                </a>
               </li>
             </ul>
           </div>
@@ -125,7 +126,8 @@ export default {
         publishDate: [],
         lts: false
       },
-      list: []
+      list: [],
+      lang:''
     };
   },
   components: {
@@ -133,6 +135,7 @@ export default {
   },
   mounted () {
     this.list = this.i18n.download.DOWNLOAD_LIST;
+    this.lang=this.$lang
   },
   computed: {
     filterTags () {
@@ -338,7 +341,128 @@ export default {
         }
       }
     }
-    .download-list {
+    .download-list-en {
+      padding-top: 30px;
+      margin-bottom: 150px;
+      @media (max-width: 1000px) {
+        padding-top: 0;
+        border-top: unset;
+        margin-bottom: 60px;
+      }
+      .download-item {
+        width: 420px;
+        margin: 0 25px 30px 0;
+        height: 264px;
+        box-sizing: border-box;
+        box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        display: inline-block;
+        padding: 15px 10px 26px 20px;
+        @media (max-width: 1000px) {
+          display: block;
+          margin: 40px auto !important;
+          width: 315px;
+          height: 282px;
+          padding: 30px 22px 30px 23px;
+        }
+        .title {
+          font-size: 20px;
+          margin-bottom: 16px;
+          font-family: HuaweiSansMedium;
+          @media (max-width: 1000px) {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+          }
+        }
+        .download-btn {
+          margin-bottom: 20px;
+          width: 108px;
+          height: 24px;
+          font-size: 12px;
+          font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
+          font-weight: normal;
+          color: rgba(255, 255, 255, 1);
+          line-height: 24px;
+          padding: 0;
+          @media (max-width: 1000px) {
+            display: none;
+          }
+        }
+        .btn-mobile-wrapper {
+          text-align: center;
+          .el-button{
+            width: 108px;
+          }
+        }
+        .download-btn-mobile {
+          width: 68px;
+          height: 28px;
+          display: none;
+          @media (max-width: 1000px) {
+            display: inline-block;
+            line-height: 8px;
+          }
+        }
+        p {
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.5);
+          font-family: FZLTXIHJW;
+          margin-bottom: 22px;
+          line-height: 24px;
+          @media (max-width: 1000px) {
+            line-height: 20px;
+            margin-bottom: 30px;
+            text-overflow: -o-ellipsis-lastline;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+          }
+        }
+        .url-list-wrapper {
+          display: flex;
+          justify-content: space-between;
+          font-size: 14px;
+           @media (max-width: 1000px) {
+             font-size: 11px;
+           }
+          a {
+            text-decoration: none;
+            color: #002fa7;
+          }
+          .url-list {
+            display: flex;
+            flex-direction: column;
+            align-items: space-between;
+            li {
+              margin-bottom: 16px;
+              @media (max-width: 1000px) {
+                margin-bottom: 20px;
+                &:last-of-type {
+                  margin-bottom: 30px;
+                }
+              }
+              img {
+                width: 14px;
+                height: 16px;
+                vertical-align: middle;
+                margin-right: 10px;
+                @media (max-width: 1000px) {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+      .download-item:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+   .download-list {
       padding-top: 30px;
       margin-bottom: 150px;
       @media (max-width: 1000px) {

@@ -35,6 +35,7 @@ export default {
   cursor: pointer;
   margin: 34px 0 16px 0;
   padding: 0;
+  
 }
 .blog-title{
   font-size:36px;

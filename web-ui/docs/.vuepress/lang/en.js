@@ -13,5 +13,6 @@ module.exports = {
     security: require('./lang-modules/security').en,
     interaction: require('./lang-modules/interaction').en,
     brand: require('./lang-modules/brand').en,
+    cla: require('./lang-modules/cla').en,
     search: require('./lang-modules/search').en,
 };

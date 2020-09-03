@@ -1,46 +1,67 @@
 <template>
     <div class="home">
-        <div class="home-carousel">
-            <el-carousel class="home-banner" trigger="click">
+        <div class="is-pc home-carousel">
+            <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay">
                 <el-carousel-item>
                     <div class="carousel-video">
-                        <img src="/img/home/BannerVideo.png" alt="">
+                        <video poster="/img/home/BannerVideo.png" controls loop width="100%" height="380px">
+                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler%E7%90%86%E5%BF%B5%E8%A7%86%E9%A2%91_0829_V1.0.mp4"  type="video/mp4">
+                        </video>
                     </div>
                 </el-carousel-item>
-                <el-carousel-item class="carousel-item"
-                                  :style="{ backgroundImage:'url(' + banner1 + ')', 'background-size': '100%', 'background-repeat': 'no-repeat'}">
+                <el-carousel-item class="carousel-item">
                     <div class="card-summer">
                         <img src="/img/home/BannerSummer.png" alt="">
                         <span>{{ i18n.home.HOME_CAROUSEL_DATA[0].DES }}</span>
+                        <img class="banner-gif" src="/img/home/BannerS.gif">
                     </div>
                 </el-carousel-item>
                 <el-carousel-item
                         class="carousel-item"
                         v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
-                        :key="index"
-                        :style="{ backgroundImage:'url(' + item.IMG + ')', 'background-size': '100%', 'background-repeat': 'no-repeat'}">
-
+                        :key="index">
                     <h3>{{ item.TITLE }}</h3>
                     <span>{{ item.DES }}</span>
+                    <img class="banner-gif" :src="'/img/home/Banner' + index + '.gif'">
                 </el-carousel-item>
             </el-carousel>
         </div>
-
+        <div class="is-h5 home-carousel">
+            <el-carousel class="home-banner" trigger="click" :interval="5000">
+                <el-carousel-item>
+                    <div class="carousel-video">
+                        <img src="/img/home/webBannerVideo.png" alt="">
+                    </div>
+                </el-carousel-item>
+                <el-carousel-item class="carousel-item">
+                    <div class="card-summer">
+                        <img src="/img/home/webBannerSummer.png" alt="">
+                    </div>
+                </el-carousel-item>
+                <el-carousel-item
+                        class="carousel-item-index"
+                        v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
+                        :key="index">
+                    <h3>{{ item.TITLE }}</h3>
+                    <img :src="'/img/home/webBanner' + index + '.png'">
+                </el-carousel-item>
+            </el-carousel>
+        </div>
         <div class="home-introduce">
             <h1>{{ i18n.home.HOME_INTRODUCE.INTRO_TITLE }}</h1>
             <h3>{{ i18n.home.HOME_INTRODUCE.INTRO_HEAD }}</h3>
             <p>{{ i18n.home.HOME_INTRODUCE.INTRO_DESCRIPTION }}</p>
             <div class="is-pc mapArea">
                 <div class="area-box in-pc" v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP" :key="index">
-                    <a v-if="(index !== 3)" @click="go(item.LINK)">
+                    <a v-if="(index !== 3)" @click="go(item.LINK)" target="_blank">
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p>{{ item.TITLE }}</p>
                         <img :src="item.IMG" alt="">
-                        <img :src="item.IMG" alt="" class="is-hidden">
+                        <img :src="item.GIF" alt="" class="is-hidden">
                     </a>
-                    <a class="down" v-if="(index === 3)" @click="go(item.LINK)">
+                    <a class="down" v-if="(index === 3)" @click="go(item.LINK)" target="_blank">
                         <img :src="item.IMG" alt="">
-                        <img :src="item.IMG" alt="" class="is-hidden">
+                        <img :src="item.GIF" alt="" class="is-hidden">
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p>{{ item.TITLE }}</p>
                     </a>
@@ -48,7 +69,7 @@
                 <div class="area-box bottom in-pc" @click="clickDownload">
                     <a class="down">
                         <img src="/img/home/step2.png" alt="">
-                        <img src="/img/home/step2.png" alt="" class="is-hidden">
+                        <img src="/img/home/step-move-2.gif" alt="" class="is-hidden">
                         <div class="box-icon">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.NAME }}</div>
                         <p>{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.TITLE }}</p>
                     </a>
@@ -61,13 +82,21 @@
                                     v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_GUIDE.GUIDE_WAY"
                                     :key="index">
                                 <a :href="item.LINK">
-                                    <img :src="item.IMG" alt="" style="width: 36px; height: 36px">
+                                    <img :src="item.IMG" alt="">
                                     <span>{{ item.TITLE }}</span>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="map-rode">
+                <img class="is-pc rode-left" src="/img/home/rodeLeft.svg" alt="">
+                <img class="is-pc plane-left" src="/img/home/planeLeft.svg" alt="">
+                <img class="is-pc rode-middle" src="/img/home/rodeMiddle.svg" alt="">
+                <img class="is-pc plane-middle" src="/img/home/planeMiddle.svg" alt="">
+                <img class="is-pc rode-right" src="/img/home/rodeRight.svg" alt="">
+                <img class="is-pc plane-right" src="/img/home/planeRight.svg" alt="">
             </div>
             <div class="is-h5 mapArea">
                 <div
@@ -102,12 +131,12 @@
                 <div class="room-contain" :class="{'active':currentRoom === 0}">
                     <div class="flex-room">
                         <div class="room-box"
-                             v-for="(item, index) in i18n.home.HOME_ROOMS.EVENT_LIST"
+                             v-for="(item, index) in newsList"
                              :key="index">
-                            <span>|</span> <span>{{ item.DATE }}</span>
-                            <p>{{ item.CONTENT }}</p>
+                            <span><img src="/img/home/eventDate.svg" alt=""></span> <span>{{ item.frontmatter.date }}</span>
+                            <p><a :href="item.path">{{ item.frontmatter.title }}</a></p>
                         </div>
-                        <span><a href="">{{ i18n.home.MORE }}</a></span>
+                        <span></span>
                     </div>
                 </div>
                 <div class="room-contain" :class="{'active':currentRoom === 1}">
@@ -120,7 +149,7 @@
                             <span>{{ item.frontmatter.author }}</span>
                             <p><a :href="item.path">{{ item.frontmatter.summary }}</a></p>
                         </div>
-                        <span><a href="">{{ i18n.home.MORE }}</a></span>
+                        <span><a @click="go('/interaction/blog-list/')">{{ i18n.home.MORE }}</a></span>
                     </div>
                 </div>
                 <div class="room-contain" :class="{'active':currentRoom === 2}">
@@ -133,7 +162,7 @@
                             <span>{{ item.frontmatter.author }}</span>
                             <p><a :href="item.path">{{ item.frontmatter.title }}</a></p>
                         </div>
-                        <span><a href="">{{ i18n.home.MORE }}</a></span>
+                        <span><a @click="go('/interaction/news-list/')">{{ i18n.home.MORE }}</a></span>
                     </div>
                 </div>
             </div>
@@ -141,19 +170,19 @@
                 <template>
                     <el-carousel indicator-position="none" :autoplay="false" arrow="never" ref="newsroomCard" class="room-card">
                         <el-carousel-item>
-                            <div class="room-img active">
-                                <img src="/img/home/eventImg.png" alt="">
-                            </div>
+                            <a class="room-img active">
+                                <img src="/img/home/eventImg.png" @click="go('/news/20200607.html')" alt="">
+                            </a>
                         </el-carousel-item>
                         <el-carousel-item>
-                            <div class="room-img active">
-                                <img src="/img/home/blogImg.png" alt="">
-                            </div>
+                            <a class="room-img active"  @click="go('/interaction/blog-list/')" target="_blank">
+                                <img src="/img/home/blogImg.png" alt="" >
+                            </a>
                         </el-carousel-item>
                         <el-carousel-item>
-                            <div class="room-img active">
+                            <a class="room-img active" @click="go('/interaction/news-list/')" target="_blank">
                                 <img src="/img/home/newsImg.png" alt="">
-                            </div>
+                            </a>
                         </el-carousel-item>
                     </el-carousel>
                 </template>
@@ -199,17 +228,15 @@
             <p>{{ i18n.home.HOME_DEV.DEV_DESCRIPTION }}</p>
             <div class="dev-leader" v-fade>
                 <div class="dev-dever hidden fade-in" v-for="(value, index) in i18n.home.HOME_DEV.DEV_INFO" :key="index">
-                    <el-image
-                            style="width: 120px; height: 120px; border-radius: 50%"
-                            src="/img/home/deverImg.png"></el-image>
+                    <img class="dev-img" :src="value.IMG">
                     <p class="dever-name">{{ value.NAME }}</p>
                     <p class="dever-rank">{{ value.TITLE }}</p>
                     <p class="dever-rank">{{ value.RANK }}</p>
                     <div class="dev-link">
-                        <a :href="value.MAIL_LINK">
+                        <a :href="'mailto:' + value.MAIL_LINK" target="_blank">
                             <img class="email-link" src="/img/home/email.png" alt="">
                         </a>
-                        <a :href="value.GITEE_LINK">
+                        <a :href="value.GITEE_LINK" target="_blank">
                             <img src="/img/home/Gitee.png" alt="">
                         </a>
                     </div>
@@ -259,8 +286,8 @@
                         <p>
                             {{ i18n.home.HOME_SOURCE.SOURCE_APPLY.DES }}
                         </p>
-                        <p><a :href="i18n.home.HOME_SOURCE.SOURCE_APPLY.APPLY_LINK">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.APPLY }}</a></p>
-                        <p><a class="source-sponsor" :href="i18n.home.HOME_SOURCE.SOURCE_APPLY.LINK">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.SPONSOR }}</a></p>
+                        <p><a @click="go('/blog/fred_li/2020-03-25-apply-for-vm-from-pcl.html')">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.APPLY }}</a></p>
+                        <p><span class="source-sponsor">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.SPONSOR }}</span></p>
                     </div>
                 </div>
                 <div class="source-mail">
@@ -269,9 +296,9 @@
                     </div>
                     <div class="mail-des">
                         <p class="source-title">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.TITLE }}</p>
-                        <p><a href="">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.MAIL }}</a></p>
+                        <p><a href="mailto:community@openeuler.org">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.MAIL }}</a></p>
                         <p>{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.DES }}</p>
-                        <p>{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.SUBSCRIBE }}<a href="">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.LINK }}</a></p>
+                        <p>{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.SUBSCRIBE }}<a @click="go('/community/mailing-list/')">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.LINK }}</a></p>
                     </div>
                 </div>
             </div>
@@ -299,10 +326,29 @@
 </template>
 
 <script>
-    import calender from "./calender"
+    import { meetingList } from "../../api/home";
+    import calender from "./calender";
+    let that = null;
+    let remoteMethods = {
+        meetingList () {
+            meetingList()
+            .then(data => {
+                localMethods.sortData(data);
+            })
+            .catch(data => {
+                that.$message.error(data);
+            });
+        }
+    }
+    let localMethods = {
+        sortData (data) {
+            
+        }
+    }
     export default {
         name: "home",
         data() {
+            that = this;
             return {
                 info: 'aaa',
                 flag: true,
@@ -317,10 +363,13 @@
                 roomName: [],
                 rooms1: true,
                 rooms2: false,
-                rooms3: false
+                rooms3: false,
+                calenderData: [],
+                autoPlay: false
             }
         },
         mounted() {
+            remoteMethods.meetingList();
             this.roomName = this.i18n.home.HOME_ROOMS.ROOM_NAME
             this.toggleHover();
             this.getRoomsData();
@@ -410,8 +459,16 @@
             },
             getRoomsData() {
                 let datas = this.$sitePages;
-                let blogData = this.filterSiteData(datas, "/blog/");
-                let newsData = this.filterSiteData(datas, "/news/");
+                let lang = this.$lang
+                let blogData = []
+                let newsData = []
+                if (lang === "zh") {
+                    blogData = this.filterSiteData(datas, "/zh/blog/");
+                    newsData = this.filterSiteData(datas, "/zh/news/");
+                } else {
+                    blogData = this.filterSiteData(datas, "/en/blog/");
+                    newsData = this.filterSiteData(datas, "/en/news/");
+                }
                 this.blogList = blogData;
                 this.newsList = newsData;
             },
@@ -443,7 +500,7 @@
     }
 
     .room-card .el-carousel__container {
-        height: 480px;
+        height: 360px;
     }
 
     @media screen and (max-width: 1000px) {
@@ -459,6 +516,12 @@
 <style lang="less" scoped>
     [v-cloak] {
         display: none !important;
+    }
+    .home-calendar {
+        display: none;
+    }
+    .home-auth {
+        display: none;
     }
     .is-pc {
         display: block;
@@ -488,30 +551,40 @@
         color: rgba(0, 0, 0, .5);
     }
     .home-carousel .el-carousel__item h3 {
-        font-size: 3vw;
+        font-size: 24px;
         color: #000;
         text-align: left;
         line-height: 48px;
         font-family: FZLTCHJW;
-        margin-top: 30px;
+        margin-top: 80px;
     }
     .home-carousel .el-carousel__item span {
         display: inline-block;
         width: 620px;
-        font-size: 1.5vw;
+        font-size: 18px;
         line-height: 40px;
-        margin-top: 60px;
+        margin-top: 30px;
     }
     .carousel-item {
         width: 100%;
         height: 100%;
         background-size: contain;
         background-repeat: no-repeat;
-        padding-left: 300px;
+        padding-left: 400px;
     }
     .carousel-item .card-summer {
         width: 620px;
         text-align: center;
+    }
+    .card-summer img:first-child {
+        width: 256px;
+    }
+    .carousel-item .banner-gif {
+        position: absolute;
+        top: 0;
+        margin-top: 90px;
+        margin-left: 300px;
+        width: 200px;
     }
     .carousel-item .card-summer span {
         margin-left: 0;
@@ -520,6 +593,11 @@
     }
     .carousel-item img {
         z-index: -1;
+        margin-top: 80px;
+    }
+    .carousel-item video {
+        position: absolute;
+        top: 0;
     }
     .carousel-img {
         width: 1080px;
@@ -528,6 +606,9 @@
     }
     .carousel-video img {
         width: 100%;
+    }
+    .carousel-video video {
+        outline: none;
     }
     .el-carousel__container {
         height: 680px;
@@ -550,6 +631,45 @@
         text-align: center;
         width: 1080px;
         margin: 0 auto;
+    }
+    .map-rode {
+        width: 1080px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .rode-left {
+        position: absolute;
+        left: 95px;
+        z-index: -10;
+    }
+    .rode-middle {
+        position: absolute;
+        left: 420px;
+        top: -310px;
+        z-index: -10;
+    }
+    .rode-right {
+        position: absolute;
+        left: 760px;
+        top: -70px;
+        z-index: -10;
+    }
+    .plane-left {
+        position: absolute;
+        left: 215px;
+        z-index: -10;
+    }
+    .plane-middle {
+        position: absolute;
+        left: 595px;
+        top: -325px;
+        z-index: -10;
+    }
+    .plane-right {
+        position: absolute;
+        left: 920px;
+        top: -25px;
+        z-index: -10;
     }
     .home-introduce .is-h5.mapArea {
         display: none ;
@@ -585,7 +705,7 @@
     }
     .area-box.in-pc:nth-child(3) {
         position: absolute;
-        top: 132px;
+        top: 90px;
         left: 56%;
     }
     .area-box.in-pc:nth-child(4) {
@@ -605,6 +725,7 @@
     .area-box a {
         text-align: center;
         text-decoration: none;
+        cursor: pointer;
     }
     .area-box .box-icon {
         display: inline-block;
@@ -623,11 +744,15 @@
         margin-left: 10px;
     }
     .area-box img {
+        width: 150px;
+        height: 150px;
         display: block;
         margin: 10px 0 26px 30px;
     }
     .area-box .is-hidden {
         display: none;
+        width: 150px;
+        height: 150px;
     }
     .area-box .is-hovered {
         display: block;
@@ -647,10 +772,11 @@
         box-shadow: 0 6px 20px 0 rgba(0, 0, 0, .1);
         text-align: left;
         margin-top: 15px;
-        margin-left: 60px;
+        margin-left: 25px;
     }
     .snd-guidance.is-show {
         display: block;
+        width: 280px;
     }
     .d3-guide {
         display: flex;
@@ -682,6 +808,8 @@
         font-size: 12px;
     }
     .guide-way img {
+        width: 36px;
+        height: 36px;
         margin: 10px 0 0;
     }
     .snd-guidance p {
@@ -819,27 +947,28 @@
     }
     .flex-room {
         width: 555px;
-        height: 368px;
+        height: 280px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding-right: 40px;
     }
     .room-contain span {
         font-size: 12px;
-        line-height: 12px;
+        line-height: 18px;
         color: rgba(0, 0, 0, .5);
     }
     .room-contain p {
         font-size: 16px;
         line-height: 22px;
-        margin: 20px 0 30px;
+        margin: 20px 0 25px;
         text-align: left;
         color: rgba(0, 0, 0, .85);
         overflow: hidden;
         display: -webkit-box;
         word-wrap: break-word;
         word-break: normal;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
     }
@@ -849,6 +978,7 @@
         color: #002fa7;
         text-decoration: none;
         font-family: PingFangSC-Regular;
+        cursor: pointer;
     }
     .room-title {
         margin-bottom: 40px;
@@ -869,14 +999,23 @@
         border-radius: 2px;
     }
     .room-img {
-        width: 520px;
-        margin: 70px auto 40px;
+        width: 420px;
+        margin: 13px auto 40px;
         box-shadow: 0 6px 30px 0px rgba(0, 0, 0, .1);
         position: relative;
         z-index: -1;
+        cursor: pointer;
+    }
+    .room-img img {
+        width: 420px;
     }
     .room-box a {
         color: #000;
+    }
+    .room-box img {
+        vertical-align: middle;
+        width: 18px;
+        margin-right: 10px;
     }
     .active{
         display: block;
@@ -907,6 +1046,11 @@
         min-width: 25%;
         max-width: 25%;
         margin-top: 30px;
+    }
+    .dev-dever .dev-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
     }
     .dev-dever .dever-name {
         color: #005CC7;
@@ -997,7 +1141,7 @@
     }
     .home-source .source-sponsor {
         font-size: 18px;
-        font-weight: 600;
+        color: #0041BD;
     }
     .source-apply,
     .source-mail {
@@ -1021,6 +1165,10 @@
         text-align: left;
         font-size: 18px;
         margin-top: 20px;
+    }
+    .mail-des a ,
+    .apply-des a {
+        cursor: pointer;
     }
     .source-publish-link {
         margin-top: 50px;
@@ -1053,6 +1201,14 @@
     .publish-edition a:last-child img {
         margin-right: 0;
     }
+    @media screen and (max-width: 1440px){
+        .carousel-item {
+            padding-left: 240px;
+        }
+        .carousel-item .banner-gif {
+            margin-left: 160px
+        }
+    }
     @media screen and (max-width: 1000px){
         .is-pc {
             display: none;
@@ -1061,6 +1217,9 @@
             display: block;
         }
         .is-pc.mapArea {
+            display: none;
+        }
+        .home-introduce .is-pc {
             display: none;
         }
         .home {
@@ -1085,13 +1244,29 @@
         }
         .carousel-item .card-summer {
             width: 100%;
-            text-align: left;
-        }
-        .card-summer img {
-            width: 50%;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
         }
         .carousel-img {
             width: 100%;
+        }
+        .card-summer img {
+            vertical-align: middle;
+        }
+        .home-carousel .el-carousel__item h3 {
+            font-size: 18px;
+            font-family: FZLTCHJW;
+            text-align: center;
+            margin-top: 35px;
+            margin-bottom: 0;
+        }
+        .carousel-item-index img {
+            width: 200px;
+            height: 200px;
+            margin: 0;
+            display: block;
+            margin: 0 auto;
         }
         .home-carousel .el-carousel__item span {
             display: inline-block;
@@ -1102,7 +1277,7 @@
         }
         .el-carousel__container {
             width: 100%;
-            height: 300px;
+            height: 380px;
             font-size: 1vw;
         }
         .home-introduce {
@@ -1130,9 +1305,8 @@
             margin-left: 16px;
         }
         .area-box img {
-            display: inline-block;
-            margin-top: 10px;
-            margin-bottom: 26px;
+            display: block;
+            margin: 10px auto 26px;
         }
         .home-calendar {
             width: 100%;
@@ -1147,6 +1321,11 @@
         }
         .home-active p {
             margin-bottom:  45px;
+        }
+        .area-box {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
         }
         .calendar-time p {
             font-size: 14px;

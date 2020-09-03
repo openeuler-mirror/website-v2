@@ -6,7 +6,7 @@
     >
       <div class="version-div">
         <span>{{version}}</span>
-        <i class="el-icon-document"></i>
+        <i class="icon-document"></i>
       </div>
       <el-tree
         ref="tree"
@@ -34,18 +34,24 @@
       <Content id="docs-content" />
     </div>
     <div class="details-right">
-      <p class="previous-doc">
-        <i class="el-icon-arrow-left"></i>
-        <span @click="previous" class="toggle-doc">{{i18n.documentation.PREVIOUS}}</span>
-      </p>
-      <p class="next-doc">
-        <span @click="next" class="toggle-doc">{{i18n.documentation.NEXT}}</span>
-        <i class="el-icon-arrow-right"></i>
-      </p>
-      <p class="feedback-doc">
-        <i class="el-icon-edit"></i>
-        <a :href="feedbackPath" target="_blank">{{i18n.documentation.FEEDBACK}}</a>
-      </p>
+        <div class="null-box"></div>
+        <div class="clearfix">
+            <p class="previous-doc">
+                <i class="el-icon-arrow-left"></i>
+                <span @click="previous" class="toggle-doc">{{i18n.documentation.PREVIOUS}}</span>
+            </p>
+            <p class="next-doc">
+                <span @click="next" class="toggle-doc">{{i18n.documentation.NEXT}}</span>
+                <i class="el-icon-arrow-right"></i>
+            </p>
+            <p class="feedback-doc">
+                <i class="el-icon-edit"></i>
+                <a :href="feedbackPath" target="_blank">{{i18n.documentation.FEEDBACK}}</a>
+            </p>
+        </div>
+        <ul class="second-title-list">
+            <li v-for="(item,index) in secondTitleList" :key="index" :class="isIndex == index?'active':''"><a :href="'#'+item" @click="isActive(index)">{{item}}</a></li>
+        </ul>
     </div>
   </div>
 </template>
@@ -74,6 +80,11 @@ export default {
       i18n: {
         documentation: {},
       },
+      secondTitleList:[],
+      //二级标题是否显示蓝色
+      active:false,
+      //是否等于下标
+      isIndex:0 
     };
   },
   created() {
@@ -88,7 +99,7 @@ export default {
       this.version +
       "/menu/menu.json");
     this.currentDocPath = this.getCurrentDocPath(currentPath);
-    this.renderFeedbackPath();
+    this.renderFeedbackPath();//初次进入页面时设置点击意见反馈的链接
     this.allPathArr = this.getAllPathArr(this.menuData);
     this.getNextPathAndPreviousPath();
   },
@@ -98,6 +109,7 @@ export default {
 
   methods: {
     handleNodeClick(data) {
+        //点击树形目录触发事件
       this.currentDocPath = data.path;
       this.getNextPathAndPreviousPath();
       this.renderFeedbackPath();
@@ -105,8 +117,12 @@ export default {
       this.$router.push(
         this.targetLocale + "docs/" + this.version + "/" + data.path + ".html"
       );
+      this.secondTitleList=[];
+      this.isIndex = 0;
+      this.getSecondTitle();
     },
     getCurrentDocPath(path) {
+        //获取当前URL版本后面的路径
       let pathArr = path.split("/");
       let pathStr = "";
       for (let i = 4; i < pathArr.length; i++) {
@@ -116,6 +132,7 @@ export default {
       return pathStr;
     },
     renderFeedbackPath() {
+        //设置点击意见反馈的链接
       this.feedbackPath =
         "https://gitee.com/openeuler/docs/blob/stable-" +
         this.version +
@@ -128,6 +145,7 @@ export default {
       this.$refs.tree.setCurrentKey(this.currentDocPath);
     },
     getAllPathArr(menuData) {
+        //获取文档所有的path
       menuData.forEach((item) => {
         this.allPathArr.push(item.path);
         if (item.children && item.children.length) {
@@ -162,15 +180,18 @@ export default {
       this.allPathArr.forEach((item, index) => {
         if (item === this.currentDocPath) {
           if (index === 0) {
+              //当前是第一篇点击下一篇
             this.nextPath = this.allPathArr[index + 1];
             this.previousPath = "";
             return false;
           }
           if (index === this.allPathArr.length - 1) {
+              //当前是最后一篇点击下一篇
             this.nextPath = "";
             this.previousPath = this.allPathArr[index - 1];
             return false;
           }
+          //当前是第二篇（及以上）文章开始点击下一章
           this.nextPath = this.allPathArr[index + 1];
           this.previousPath = this.allPathArr[index - 1];
         }
@@ -179,6 +200,17 @@ export default {
     showMenu() {
       this.showMobileMenu = true;
     },
+    getSecondTitle(){   
+        let getSecondTile = document.getElementsByTagName("h2");
+        setTimeout(() => {
+            getSecondTile.forEach((item,index) => {
+                this.secondTitleList.push(item.innerText);
+            });
+        },200);
+    },
+    isActive(index){
+        this.isIndex = index;
+    }
   },
 };
 </script>
@@ -201,7 +233,7 @@ export default {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .details-left {
-  width: 200px;
+  width: 192px;
   display: inline-block;
   vertical-align: top;
   > div > div > div.el-tree-node__content {
@@ -213,6 +245,8 @@ export default {
   }
   .el-tree--highlight-current
     .el-tree-node.is-current
+    > .el-tree-node__content,.el-tree--highlight-current
+    .el-tree-node.is-expanded
     > .el-tree-node__content {
     color: #002fa7;
     background: #ffffff;
@@ -225,11 +259,18 @@ export default {
     position: absolute;
     right: 0;
   }
+  .el-tree-node__content > .el-tree-node__label {
+    margin-left: 12px;
+  }
   .el-icon-caret-right:before {
     content: "\e6e0";
   }
   .el-tree-node > .el-tree-node__children {
     padding: 15px 0;
+  }
+  .el-tree-node .el-tree-node__children .el-tree-node .el-tree-node__content{
+      box-shadow: none;
+      margin-bottom: 10px;
   }
 }
 .version-div {
@@ -240,10 +281,12 @@ export default {
     color: rgba(0, 0, 0, 1);
     line-height: 24px;
   }
-  i {
-    color: #002fa7;
-    font-size: 24px;
-    margin-left: 45px;
+  .icon-document {
+      display: inline-block;
+      width: 22px;
+      height: 28px;
+      background-image: url('/img/docs/icon-document.svg');
+      margin-left: 60px;
   }
 }
 .details-center {
@@ -255,10 +298,35 @@ export default {
   display: none;
 }
 .details-right {
-  width: 200px;
-  vertical-align: top;
-  display: inline-block;
-  overflow: hidden;
+    width: 200px;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    vertical-align: top;
+    display: inline-block;
+    overflow: hidden;
+    .null-box{
+        height: 20px;
+    }
+    .second-title-list{
+        margin-left: 20px;
+        .active{
+            a{
+                color: #002FA7;
+            }
+        }
+        li{
+            a{
+                text-decoration: none;
+                font-size: 16px;
+                font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
+                font-weight: normal;
+                color: rgba(0, 0, 0, 0.7);
+                line-height: 20px;
+                display: block;
+            }
+            margin-bottom: 20px;
+        }
+    }
 }
 .previous-doc {
   float: left;

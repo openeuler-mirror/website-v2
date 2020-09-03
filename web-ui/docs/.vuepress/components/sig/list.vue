@@ -8,27 +8,27 @@
         ></common-banner>
         <ul class="sig-list" v-fade v-if="list.length">
             <li class="sig-item fade-in" v-for="(item ,index) in list">
-                <h2>{{item.group_name}}</h2>
+                <h2 @click="toDetail(item)">{{item.group_name}}</h2>
                 <ul class="info-list">
                     <li class="mibile-hidden">
-                        <img src="/img/download/help.svg" alt="">
+                        <img src="/img/sig/home.svg" alt="">
                         <span><a target="_blank" :href="item.home_page">{{i18n.sig.SIG_LIST.HOME_PAGE}}</a></span>
                     </li>
                     <li>
-                        <img src="/img/download/help.svg" alt="">
+                        <img src="/img/sig/mail.svg" alt="">
                         <span>{{i18n.sig.SIG_LIST.MAIL}}：<a :href="'mailto:'+item.maillist">{{item.maillist}}</a></span>
                     </li>
                     <li>
-                        <img src="/img/download/help.svg" alt="">
+                        <img src="/img/sig/chanel.svg" alt="">
                         <span>{{i18n.sig.SIG_LIST.IRC}}：{{item.irc}}</span>
                     </li>
                     <li>
-                        <img src="/img/download/help.svg" alt="">
+                        <img src="/img/sig/members.svg" alt="">
                         <span>{{i18n.sig.SIG_LIST.MANAGER}}</span>
                     </li>
                 </ul>
                 <ul class="administrators">
-                    <li v-for="(avatarItem, avatarIndex) in item.groupuser_set">
+                    <li v-for="(avatarItem, avatarIndex) in item.maintainers">
                         <img :src="avatarItem.avatar" class="avatar">
                         <span class="name">{{avatarItem.gitee_name}}</span>
                     </li>
@@ -47,6 +47,7 @@ let remoteMethods = {
         that.loading = true;
         sigList()
         .then(data => {
+            data = localMethods.shuffle(data);
             that.list = data;
             that.loading = false;
         })
@@ -54,6 +55,22 @@ let remoteMethods = {
             that.$message.error(data);
             that.loading = false;
         });
+    }
+}
+let localMethods = {
+    shuffle (array) {
+
+        var currentIndex = array.length, temporaryValue, randomIndex;
+        while (0 !== currentIndex) {
+
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+
+        return array;
     }
 }
 export default {
@@ -68,6 +85,16 @@ export default {
         remoteMethods.getSigList();
     },
     methods: {
+        toDetail(item) {
+            this.$router.push({
+                path: this.resolvePath('/sig/sig-list/sig-detail.html'),
+                query: { 
+                    id: item.id,
+                    name: item.group_name,
+                    mail: item.maillist
+                }
+            })
+        }
     },
     components: {
         commonBanner
