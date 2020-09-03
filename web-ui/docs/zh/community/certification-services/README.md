@@ -1,3 +1,3 @@
----
-title: "认证服务"
----
+<ClientOnly>
+  <community-service />
+</ClientOnly>

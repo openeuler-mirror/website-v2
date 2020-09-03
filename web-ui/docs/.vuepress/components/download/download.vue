@@ -59,42 +59,40 @@
           <p>{{ item.DESC }}</p>
           <div class="url-list-wrapper">
             <ul class="url-list">
-              <li>
-                <img src="/img/download/release.svg" alt />
-                <a target="_blank" :href="item.RELEASE_DESC_URL">{{ i18n.download.RELEASE_DESC }}</a>
-              </li>
-              <li>
-                <img src="/img/download/release.svg" alt />
-                <a target="_blank" :href="item.GET_ISO_URL">
-                  {{
-                  i18n.download.GET_ISO
-                  }}
-                </a>
-              </li>
-            </ul>
-            <ul class="url-list">
-              <li>
-                <img src="/img/download/release.svg" alt />
-                <a
-                  target="_blank"
-                  :href="item.INSTALL_GUIDENCE_URL"
-                >{{ i18n.download.INSTALL_GUIDENCE }}</a>
-                
-              </li>
-              <li>
-                <img src="/img/download/release.svg" alt />
-                <a target="_blank" :href="item.LIFE_CYCLE_URL">{{ i18n.download.LIFE_CYCLE }}</a>
-              </li>
-            </ul>
-            <ul class="url-list">
-              <li>
-                <img src="/img/download/release.svg" alt />
-                <a target="_blank" :href="item.SEEK_HELP_URL">
-                  {{
-                  i18n.download.SEEK_HELP
-                  }}
-                </a>
-              </li>
+                <li v-if="item.RELEASE_DESC_URL?true:false">
+                    <img src="/img/download/release.svg" alt />
+                    <a target="_blank" :href="item.RELEASE_DESC_URL">{{ i18n.download.RELEASE_DESC }}</a>
+                </li>
+                <li v-if="item.INSTALL_GUIDENCE_URL?true:false">
+                    <img src="/img/download/release.svg" alt />
+                    <a
+                    target="_blank"
+                    :href="item.INSTALL_GUIDENCE_URL"
+                    >{{ i18n.download.INSTALL_GUIDENCE }}</a>
+                </li>
+                <li v-if="item.SEEK_HELP_URL?true:false">
+                    <img src="/img/download/release.svg" alt />
+                    <a target="_blank" :href="item.SEEK_HELP_URL">
+                    {{
+                    i18n.download.SEEK_HELP
+                    }}
+                    </a>
+                </li>
+                <li v-if="item.GET_ISO_URL?true:false">
+                    <img src="/img/download/release.svg" alt />
+                    <a target="_blank" :href="item.GET_ISO_URL">
+                    {{
+                    i18n.download.GET_ISO
+                    }}
+                    </a>
+                </li>
+                <li v-if="item.LIFE_CYCLE_URL?true:false">
+                    <img src="/img/download/release.svg" alt />
+                    <a target="_blank" :href="item.LIFE_CYCLE_URL">{{ i18n.download.LIFE_CYCLE }}</a>
+                </li>
+                <li>
+                   
+                </li>
             </ul>
           </div>
 
@@ -435,21 +433,25 @@ export default {
           }
           .url-list {
             display: flex;
-            flex-direction: column;
-            align-items: space-between;
+            flex-wrap: wrap;
             li {
-              margin-bottom: 16px;
+              margin-bottom: 14px;
+              margin-left: 20px;
+              &:first-of-type{
+                  margin-left: 0;
+              }
+              &:nth-of-type(4n){
+                  margin-left: 0;
+              }
               @media (max-width: 1000px) {
                 margin-bottom: 20px;
-                &:last-of-type {
-                  margin-bottom: 30px;
-                }
+                margin-left: 11px;
               }
               img {
                 width: 14px;
                 height: 16px;
                 vertical-align: middle;
-                margin-right: 10px;
+                margin-right: 2px;
                 @media (max-width: 1000px) {
                   display: none;
                 }
@@ -520,6 +522,7 @@ export default {
           @media (max-width: 1000px) {
             display: inline-block;
             line-height: 8px;
+            margin-left: -10px;
           }
         }
         p {
@@ -534,20 +537,22 @@ export default {
           }
         }
         .url-list-wrapper {
-          display: flex;
-          justify-content: space-between;
           font-size: 14px;
           a {
             text-decoration: none;
             color: #002fa7;
           }
           .url-list {
-            display: flex;
-            flex-direction: column;
-            align-items: space-between;
+              display: flex;
+              flex-wrap: wrap;
+              @media (max-width: 1000px) {
+                  justify-content: space-between;
+              }
             li {
+                width: 106px;
               margin-bottom: 16px;
               @media (max-width: 1000px) {
+                  width: 68px;
                 margin-bottom: 20px;
                 &:last-of-type {
                   margin-bottom: 30px;

@@ -1,4 +1,3 @@
----
-title: "Certification"
-
----
+<ClientOnly>
+  <community-service />
+</ClientOnly>
