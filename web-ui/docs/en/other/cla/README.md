@@ -1,3 +1,7 @@
+---
+title: "CLA"
+
+---
 
 <div class="markdown cla">
 

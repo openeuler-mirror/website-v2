@@ -111,7 +111,10 @@
                     width="120"
                 >
                     <template slot-scope="scope">
-                        <a>
+                        <a
+                            class="arch-link"
+                            :href="'https://mailweb.openeuler.org/hyperkitty/list/' + scope.row.display_name.toLowerCase() +'@openeuler.org/'"
+                            target="_blank">
                             <p>{{ scope.row.archive }}</p>
                         </a>
                     </template>
@@ -680,6 +683,28 @@ p {
     }
     .mail-table {
         padding: 0 30px;
+        margin-bottom: 200px;
+    }
+    .list-name {
+        cursor: pointer;
+    }
+    .arch-link {
+        text-decoration: none;
+    }
+    .description p {
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        line-height: 32px;
+    }
+    .el-form p {
+        text-align: center;
+        color: rgba(0, 0, 0, 0.5);
+        margin: 60px auto 20px;
+    }
+    .user-icon {
+        vertical-align: middle;
+        margin-right: 10px;
     }
     .mail-table {
         margin-bottom: 80px;

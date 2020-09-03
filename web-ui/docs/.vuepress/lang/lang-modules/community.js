@@ -87,25 +87,25 @@ module.exports = {
                     BUTTON: "提出Issue",
                     IMG: "/img/community/contribution/issue.png",
                     VIDEO: "/img/community/contribution/issue.gif",
-                    LINK: "javascript:void(0)"
+                    LINK: ""
                 },
                 {
                     BUTTON: "贡献代码",
                     IMG: "/img/community/contribution/contribution.png",
                     VIDEO: "/img/community/contribution/contribution.gif",
-                    LINK: "javascript:void(0)"
+                    LINK: ""
                 },
                 {
                     BUTTON: "加入SIG",
                     IMG: "/img/community/contribution/sig.png",
                     VIDEO: "/img/community/contribution/sig.gif",
-                    LINK: "javascript:void(0)"
+                    LINK: ""
                 },
                 {
                     BUTTON: "参选技术委员会",
                     IMG: "/img/community/contribution/commit.png",
                     VIDEO: "/img/community/contribution/commit.gif",
-                    LINK: "javascript:void(0)"
+                    LINK: ""
                 },
             ]
         },
@@ -197,25 +197,25 @@ module.exports = {
                     BUTTON: "提出Issue",
                     IMG: "/img/community/contribution/issue.png",
                     VIDEO: "/img/community/contribution/issue.gif",
-                    LINK: "javascript:void(0)"
+                    LINK: ""
                 },
                 {
                     BUTTON: "贡献代码",
                     IMG: "/img/community/contribution/contribution.png",
                     VIDEO: "/img/community/contribution/contribution.gif",
-                    LINK: "javascript:void(0)"
+                    LINK: ""
                 },
                 {
                     BUTTON: "加入SIG",
                     IMG: "/img/community/contribution/sig.png",
                     VIDEO: "/img/community/contribution/sig.gif",
-                    LINK: "javascript:void(0)"
+                    LINK: ""
                 },
                 {
                     BUTTON: "参选技术委员会",
                     IMG: "/img/community/contribution/commit.png",
                     VIDEO: "/img/community/contribution/commit.gif",
-                    LINK: "javascript:void(0)"
+                    LINK: ""
                 },
             ]
         },
