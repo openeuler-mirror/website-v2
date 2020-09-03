@@ -5,29 +5,32 @@
                 :outside-name="i18n.community.CONTRIBUTION_H5.TITLE"
                 class="is-pc"
         ></common-banner>
-        <div class="methods is-pc">
-            <div class="mail-guide"
-                 v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"
-                 :key="index">
-                <div class="step" >
-                    <a class="step-num" @click="go(item.LINK)">
-                        <span>{{ item.BUTTON }}</span>
-                    </a>
-                    <img :src="item.IMG" alt="">
-                    <img :src="item.VIDEO" class="is-hidden">
+        <div class="bgc is-pc">
+            <div class="methods is-pc" :style="{'background': 'url(' + bkgImg + ')', 'background-size': '100%', 'background-repeat': 'repeat-y'}">
+                <div class="mail-guide"
+                     v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"
+                     :key="index">
+                    <div class="step" >
+                        <a class="step-num" @click="go(item.LINK)">
+                            <span>{{ item.BUTTON }}</span>
+                        </a>
+                        <img :src="item.IMG" alt="">
+                        <img :src="item.VIDEO" class="is-hidden">
+                    </div>
+                </div>
+                <div class="map-rode">
+                    <img class="is-pc rode-1" src="/img/community/contribution/rode1.svg" alt="">
+                    <img class="is-pc plane-1" src="/img/community/contribution/plane1.svg" alt="">
+                    <img class="is-pc rode-2" src="/img/community/contribution/rode2.svg" alt="">
+                    <img class="is-pc plane-2" src="/img/community/contribution/plane2.svg" alt="">
+                    <img class="is-pc rode-3" src="/img/community/contribution/rode3.svg" alt="">
+                    <img class="is-pc plane-3" src="/img/community/contribution/plane3.svg" alt="">
+                    <img class="is-pc rode-4" src="/img/community/contribution/rode4.svg" alt="">
+                    <img class="is-pc plane-4" src="/img/community/contribution/plane4.svg" alt="">
                 </div>
             </div>
-            <div class="map-rode">
-                <img class="is-pc rode-1" src="/img/community/contribution/rode1.svg" alt="">
-                <img class="is-pc plane-1" src="/img/community/contribution/plane1.svg" alt="">
-                <img class="is-pc rode-2" src="/img/community/contribution/rode2.svg" alt="">
-                <img class="is-pc plane-2" src="/img/community/contribution/plane2.svg" alt="">
-                <img class="is-pc rode-3" src="/img/community/contribution/rode3.svg" alt="">
-                <img class="is-pc plane-3" src="/img/community/contribution/plane3.svg" alt="">
-                <img class="is-pc rode-4" src="/img/community/contribution/rode4.svg" alt="">
-                <img class="is-pc plane-4" src="/img/community/contribution/plane4.svg" alt="">
-            </div>
         </div>
+
         <div class="is-h5 mail-list-H5">
             <h3 class="is-h5">{{ i18n.community.CONTRIBUTION_H5.MOBILE_TITLE }}</h3>
             <div class="mail-guide"
@@ -103,6 +106,11 @@
     .methods {
         width: 1120px;
         margin: 0 auto;
+    }
+    .bgc.is-pc {
+        background: url("/web-ui/docs/.vuepress/public/img/community/contribution/bkg-community.png");
+        background-repeat: repeat-y;
+        background-size: 100%;
     }
     .mail-guide {
         max-width: 1120px;
