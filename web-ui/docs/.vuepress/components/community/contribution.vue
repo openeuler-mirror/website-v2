@@ -52,7 +52,7 @@
         name: "contribution",
         data () {
             return {
-
+                bkgImg: "/img/community/contribution/bkg-community.png"
             }
         },
         mounted() {
@@ -122,7 +122,7 @@
         position: relative;
     }
     .mail-guide:nth-child(1) .step {
-        top: 0;
+        top: 30px;
     }
     .mail-guide:nth-child(2) .step {
         top: 180px;
@@ -130,11 +130,11 @@
     }
     .mail-guide:nth-child(3) .step {
         top: -340px;
-        left: 40%;
+        left: 45%;
     }
     .mail-guide:nth-child(4) .step {
         top: -160px;
-        left: 60%;
+        left: 54%;
     }
     .mail-guide:nth-child(5) .step {
         top: -720px;
@@ -198,25 +198,25 @@
     }
     .rode-3 {
         position: absolute;
-        left: 630px;
+        left: 598px;
         top: 110px;
         z-index: -10;
     }
     .plane-3 {
         position: absolute;
-        left: 570px;
-        top: 200px;
-        z-index: -10;
+        left: 541px;
+        top: 184px;
+        z-index: -12;
     }
     .rode-4 {
         position: absolute;
-        left: 875px;
+        left: 792px;
         top: 85px;
         z-index: -10;
     }
     .plane-4 {
         position: absolute;
-        left: 960px;
+        left: 876px;
         top: 195px;
         z-index: -10;
     }
