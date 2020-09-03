@@ -1,3 +1,6 @@
+---
+title: "Legal"
+---
 <ClientOnly>
   <common-banner
       :pc-src="'/img/security/legal-banner.png'"

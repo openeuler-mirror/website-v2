@@ -1,3 +1,6 @@
+---
+title: "法律声明"
+---
 <ClientOnly>
   <common-banner
       :pc-src="'/img/security/legal-banner.png'"

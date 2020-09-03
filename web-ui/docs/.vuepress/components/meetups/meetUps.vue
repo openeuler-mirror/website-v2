@@ -45,7 +45,7 @@ export default {
 .meetups {
     width: 1120px;
     margin: 0 auto;
-    height: 1113px;
+    height: 780px;
     padding-bottom:200px ;
     @media (max-width: 1000px) {
         width: 100%;
@@ -65,8 +65,8 @@ export default {
             top: 260px;
         }
         img {
-            height: 715px;
-            width: 733px;
+            height: 400px;
+            width: 400px;
             position: absolute;
             right: 0;
             top: 180px;

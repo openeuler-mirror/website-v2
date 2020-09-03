@@ -1,3 +1,6 @@
+---
+title: "隐私政策"
+---
 <ClientOnly>
   <common-banner
       :pc-src="'/img/security/privacy-banner.png'"

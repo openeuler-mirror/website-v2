@@ -5,10 +5,7 @@
       "children": [
         {
           "label": "法律声明",
-          "path": "docs/Releasenotes/法律声明",
-          "children": [
-            
-          ]
+          "path": "docs/Releasenotes/法律声明"
         },
         {
           "label": "版本发行说明",

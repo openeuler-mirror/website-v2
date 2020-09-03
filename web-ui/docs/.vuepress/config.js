@@ -5,7 +5,7 @@ module.exports = {
     head: [
         ['link', {
             rel: 'icon',
-            href: '/public/openeuler.png'
+            href: './public/favicon.ico'
         }],
         ['meta', {
             name: 'viewport',
