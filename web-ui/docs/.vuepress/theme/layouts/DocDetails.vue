@@ -100,7 +100,6 @@ export default {
       "/docs/" +
       this.version +
       "/menu/menu.json");
-      console.log(this.menuData);
     this.currentDocPath = this.getCurrentDocPath(currentPath);
     this.renderFeedbackPath();//初次进入页面时设置点击意见反馈的链接
     this.allPathArr = this.getAllPathArr(this.menuData);
