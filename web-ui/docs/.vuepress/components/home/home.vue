@@ -11,7 +11,7 @@
                                height="500px"
                                ref="video"
                                @click="playVideo">
-                            <source src="/home/video/video.mp4"  type="video/mp4">
+                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E6%AC%A7%E6%8B%89MG%E5%8A%A8%E7%94%BB_0903_1920x500.mp4"  type="video/mp4">
                         </video>
                     </div>
                 </el-carousel-item>
