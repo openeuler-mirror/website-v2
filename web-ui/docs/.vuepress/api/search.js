@@ -36,3 +36,29 @@ export const search = ({
 
     });
 };
+
+export const repoSearch = ({
+    keyword
+ }) => {
+     return new Promise((resolve, reject) => {
+         appAjax.postJson({
+             url: '/repo/search',
+             type: 'get',
+             params: {
+                 keyword
+             },
+             success(result) {
+                 if (result) {
+                     resolve(result);
+                     return;
+                 }
+                 reject(result);
+             },
+             error(msg) {
+                 reject(msg);
+             }
+ 
+         });
+ 
+     });
+ };
