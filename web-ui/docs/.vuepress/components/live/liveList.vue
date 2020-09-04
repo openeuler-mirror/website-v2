@@ -234,6 +234,7 @@ export default {
     @media (max-width: 1000px) {
         background: none;
         .mr-All(40px 0 80px 0);
+        width: 100%;
     }
     .block {
         height: 200px;
@@ -246,7 +247,8 @@ export default {
     width: 1120px;
     .mr-All(0 auto);
     @media (max-width: 1000px) {
-        .mr(left,30px);
+        .mr-All(0 auto);
+        width: 315px;
     }
     .now-start-title {
         .title-css;
@@ -316,7 +318,8 @@ export default {
     width: 1120px;
     .mr-All(50px auto 0 auto);
     @media (max-width: 1000px) {
-        .mr-All(40px 0 0 30px);
+        .mr-All(40px auto 0 auto);
+        width: 315px;
     }
     .replaypagination{
         .mr(top,30px);

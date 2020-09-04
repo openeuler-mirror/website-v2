@@ -2,7 +2,9 @@
 title: "Characters"
 
 ---
-
+<ClientOnly>
+  <sig-role-description />
+</ClientOnly>
 <div class="markdown">
 
 ## Community Member
