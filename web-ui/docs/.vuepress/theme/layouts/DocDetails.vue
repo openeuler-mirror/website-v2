@@ -31,7 +31,9 @@
           <span @click="showMenu" class="toggle-doc">{{i18n.documentation.MENU}}</span>
         </p>
       </div>
-      <Content id="docs-content" />
+      <div class="markdown">
+          <Content id="docs-content" />
+      </div>
     </div>
     <div class="details-right">
         <div class="null-box"></div>
@@ -102,6 +104,7 @@ export default {
     this.renderFeedbackPath();//初次进入页面时设置点击意见反馈的链接
     this.allPathArr = this.getAllPathArr(this.menuData);
     this.getNextPathAndPreviousPath();
+    this.getSecondTitle();
   },
   updated() {
     this.setCheckedNode();
@@ -276,23 +279,27 @@ export default {
 .version-div {
   padding-bottom: 20px;
   border-bottom: 4px solid #002fa7;
+  position: relative;
   span {
     font-size: 24px;
     color: rgba(0, 0, 0, 1);
     line-height: 24px;
   }
   .icon-document {
-      display: inline-block;
+      position: absolute;
       width: 22px;
       height: 28px;
       background-image: url('/img/docs/icon-document.svg');
-      margin-left: 60px;
+      right:13px;
   }
 }
 .details-center {
   width: 670px;
   margin: 0 18px;
   display: inline-block;
+  .markdown{
+      width: 670px;
+  }
 }
 .mobile-previous-and-next {
   display: none;
@@ -330,9 +337,11 @@ export default {
 }
 .previous-doc {
   float: left;
+  margin-left: 18px;
 }
 .next-doc {
   float: right;
+  margin-right: 18px;
 }
 .toggle-doc {
   font-size: 14px;
@@ -342,6 +351,7 @@ export default {
 .feedback-doc {
   float: left;
   margin-top: 20px;
+  margin-left: 18px;
   a {
     font-size: 14px;
     color: #002fa7;

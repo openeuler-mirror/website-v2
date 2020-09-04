@@ -143,7 +143,7 @@ export default {
             designList: [],
             trackList: [],
             linkList: [],
-            language:''
+            language:'' //储存当前语言
         }
     },
     created () {

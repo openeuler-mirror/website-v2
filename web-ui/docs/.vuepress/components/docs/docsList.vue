@@ -27,7 +27,7 @@
                     <div v-if="index % 2 === 0" class="step-left">
                         <div class="mail-box">
                             <div class="step-left-box">
-                                <div @click="go(item)" :class="['inner-box',item.path?'':'unClick']" v-for="(item, index) in items.doc" :key="index">
+                                <div @click="go(item)" :class="['inner-box',item.path?'':'unClick',targetLocale == '/en/'?'en-box':'']" v-for="(item, index) in items.doc" :key="index">
                                     <img :src="item.img" alt />
                                     <p>{{ item.name }}</p>
                                 </div>
@@ -45,7 +45,7 @@
                                 <span>{{ items.title }}</span>
                             </div>
                             <div class="step-right-box">
-                                <div  @click="go(item)" :class="['inner-box',item.path?'':'unClick']" v-for="(item, index) in items.doc" :key="index">
+                                <div  @click="go(item)" :class="['inner-box',item.path?'':'unClick',targetLocale == '/en/'?'en-box':'']" v-for="(item, index) in items.doc" :key="index">
                                     <img :src="item.img" alt />
                                     <p>{{ item.name }}</p>
                                 </div>
@@ -88,9 +88,10 @@ export default {
         this.targetLocale = this.$lang === "zh" ? "/zh/" : "/en/";
     },
     mounted() {
-        this.versions = require("../../../" + this.$lang + "/docs/1.0_Base/path/path.json");
-        this.currentDocs = this.versions[0].docs;
-        this.selectChange(this.versions[0].value);
+        this.versions = require("../../../" + this.$lang + "/docs/path/path.json");
+        let versionLen = this.versions.length;
+        this.currentDocs = this.versions[versionLen-1].docs;
+        this.selectChange(this.versions[versionLen-1].value);
     },
     methods: {
         selectChange(val) {
@@ -194,6 +195,10 @@ export default {
     width: 200px;
     margin-right: 36px;
     min-height: 74px;
+    .en-box{
+        width: 380px;
+        margin-left: -146px;
+    }
 }
 .step-right-box {
     width: 540px;
@@ -202,6 +207,9 @@ export default {
         width: 240px;
         margin-right: 0px;
         margin-left: 30px;
+    }
+    .en-box{
+        width: 380px;
     }
 }
 .step-left {

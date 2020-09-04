@@ -273,8 +273,8 @@ module.exports = {
             MESSAGE:'开小差啦...'
         },
         BUILDING:{
-            BUILDING:'建设中',
-            BUILDINGMES:'敬请期待...'
+            BUILDING:'Building',
+            BUILDINGMES:'Coming Soon...'
         }
     }
 };
