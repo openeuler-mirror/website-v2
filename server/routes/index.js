@@ -94,6 +94,7 @@ function getLineArr(line) {
 router.get('/repo/search', function (req, res, next) {
     let obj = url.parse(encodeURI(req.url), true);
     let json = {
+        size: 1000,
         query: {
             wildcard: {
                 'file.filename': {
@@ -117,8 +118,14 @@ function getSearchResJson(data) {
     let arr = [];
     let num = data.hits.total.value;
     data.hits.hits.forEach(element => {
-        element._source.path.virtual = OPENEULER_URL + element._source.path.virtual;
-        arr.push(element._source);
+        let url = element._source.path.virtual;
+        let json = {
+            filename: element._source.file.filename,
+            path: OPENEULER_URL + url.substring(0,
+                url.lastIndexOf('/')),
+            version: url.substring(1, url.indexOf('/', 1))
+        };
+        arr.push(json);
     });
 
     let json = {
