@@ -232,7 +232,7 @@ export default {
                 text-decoration: none;
             }
             h2 {
-                font-size: 32px;
+                font-size: 30px;
                 line-height: 32px;
                 font-family: HuaweiSans-Medium;
                 @media (max-width: 1000px) {

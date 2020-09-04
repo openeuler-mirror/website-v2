@@ -5,29 +5,32 @@
                 :outside-name="i18n.community.CONTRIBUTION_H5.TITLE"
                 class="is-pc"
         ></common-banner>
-        <div class="methods is-pc">
-            <div class="mail-guide"
-                 v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"
-                 :key="index">
-                <div class="step" >
-                    <a class="step-num" @click="go(item.LINK)">
-                        <span>{{ item.BUTTON }}</span>
-                    </a>
-                    <img :src="item.IMG" alt="">
-                    <img :src="item.VIDEO" class="is-hidden">
+        <div class="bgc is-pc">
+            <div class="methods is-pc" :style="{'background': 'url(' + bkgImg + ')', 'background-size': '100%', 'background-repeat': 'repeat-y'}">
+                <div class="mail-guide"
+                     v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"
+                     :key="index">
+                    <div class="step" >
+                        <a class="step-num" @click="go(item.LINK)">
+                            <span>{{ item.BUTTON }}</span>
+                        </a>
+                        <img :src="item.IMG" alt="">
+                        <img :src="item.VIDEO" class="is-hidden">
+                    </div>
+                </div>
+                <div class="map-rode">
+                    <img class="is-pc rode-1" src="/img/community/contribution/rode1.svg" alt="">
+                    <img class="is-pc plane-1" src="/img/community/contribution/plane1.svg" alt="">
+                    <img class="is-pc rode-2" src="/img/community/contribution/rode2.svg" alt="">
+                    <img class="is-pc plane-2" src="/img/community/contribution/plane2.svg" alt="">
+                    <img class="is-pc rode-3" src="/img/community/contribution/rode3.svg" alt="">
+                    <img class="is-pc plane-3" src="/img/community/contribution/plane3.svg" alt="">
+                    <img class="is-pc rode-4" src="/img/community/contribution/rode4.svg" alt="">
+                    <img class="is-pc plane-4" src="/img/community/contribution/plane4.svg" alt="">
                 </div>
             </div>
-            <div class="map-rode">
-                <img class="is-pc rode-1" src="/img/community/contribution/rode1.svg" alt="">
-                <img class="is-pc plane-1" src="/img/community/contribution/plane1.svg" alt="">
-                <img class="is-pc rode-2" src="/img/community/contribution/rode2.svg" alt="">
-                <img class="is-pc plane-2" src="/img/community/contribution/plane2.svg" alt="">
-                <img class="is-pc rode-3" src="/img/community/contribution/rode3.svg" alt="">
-                <img class="is-pc plane-3" src="/img/community/contribution/plane3.svg" alt="">
-                <img class="is-pc rode-4" src="/img/community/contribution/rode4.svg" alt="">
-                <img class="is-pc plane-4" src="/img/community/contribution/plane4.svg" alt="">
-            </div>
         </div>
+
         <div class="is-h5 mail-list-H5">
             <h3 class="is-h5">{{ i18n.community.CONTRIBUTION_H5.MOBILE_TITLE }}</h3>
             <div class="mail-guide"
@@ -49,7 +52,7 @@
         name: "contribution",
         data () {
             return {
-
+                bkgImg: "/img/community/contribution/bkg-community.png"
             }
         },
         mounted() {
@@ -104,6 +107,11 @@
         width: 1120px;
         margin: 0 auto;
     }
+    .bgc.is-pc {
+        background: url("/web-ui/docs/.vuepress/public/img/community/contribution/bkg-community.png");
+        background-repeat: repeat-y;
+        background-size: 100%;
+    }
     .mail-guide {
         max-width: 1120px;
         margin: 0 auto;
@@ -114,7 +122,7 @@
         position: relative;
     }
     .mail-guide:nth-child(1) .step {
-        top: 0;
+        top: 30px;
     }
     .mail-guide:nth-child(2) .step {
         top: 180px;
@@ -122,11 +130,11 @@
     }
     .mail-guide:nth-child(3) .step {
         top: -340px;
-        left: 40%;
+        left: 45%;
     }
     .mail-guide:nth-child(4) .step {
         top: -160px;
-        left: 60%;
+        left: 54%;
     }
     .mail-guide:nth-child(5) .step {
         top: -720px;
@@ -190,25 +198,25 @@
     }
     .rode-3 {
         position: absolute;
-        left: 630px;
+        left: 598px;
         top: 110px;
         z-index: -10;
     }
     .plane-3 {
         position: absolute;
-        left: 570px;
-        top: 200px;
-        z-index: -10;
+        left: 541px;
+        top: 184px;
+        z-index: -12;
     }
     .rode-4 {
         position: absolute;
-        left: 875px;
+        left: 792px;
         top: 85px;
         z-index: -10;
     }
     .plane-4 {
         position: absolute;
-        left: 960px;
+        left: 876px;
         top: 195px;
         z-index: -10;
     }

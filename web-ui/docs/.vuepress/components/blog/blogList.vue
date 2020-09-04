@@ -29,8 +29,10 @@
                     </el-select>
                 </el-form-item>
                 <el-form-item class="mobile-blog-write">
-                    <img class="middle-img mobile-middle-img" src="/img/blog/edit.png" alt />
-                    <span @click="goPostBlog" class="blog-write">{{i18n.community.BLOG.BLOGGING}}</span>
+                    <div class="write-blog-btn">
+                        <img class="middle-img mobile-middle-img" src="/img/blog/edit.svg" alt />
+                        <span @click="goPostBlog" class="blog-write">{{i18n.community.BLOG.BLOGGING}}</span>    
+                    </div>
                 </el-form-item>
             </el-form>
             <div>
@@ -47,7 +49,7 @@
                             <img class="middle-img mobile-middle-img" src="/img/blog/date.svg" alt />
                             <span class="blog-date">{{resolvePostDate(item.frontmatter.date)}}</span>
                         </p>
-                        <p>
+                        <p class="fz12">
                             <img class="middle-img mobile-middle-img" src="/img/blog/visibility.svg" alt />
                             <span>{{i18n.community.BLOG.BROWSE}}</span>
                             <span>{{item.count}}</span>
@@ -56,7 +58,7 @@
                     </div>
                     <div class="blog-item-right">
                         <p @click="go(item.path)" class="blog-item-title">{{item.frontmatter.title}}</p>
-                        <p class="blog-item-content">{{item.frontmatter.summary}}</p>
+                        <p class="blog-item-content"><span class="summary">{{item.frontmatter.summary}}</span></p>
                         <p @click="go(item.path)" class="blog-item-all">{{i18n.community.BLOG.READ_MORE}}</p>
                         <p class="blog-item-tag">
                             <span class="first-tag">{{i18n.community.BLOG.LABEL}}:</span>
@@ -67,8 +69,34 @@
                         </p>
                     </div>
                 </div>
+                <div class="blog-item-mobile" v-for="(item, index) in currentBlogListData" :key="index">
+                    <div class="item-wraper">
+                        <p class="title" @click="go(item.path)">{{item.frontmatter.title}}</p>
+                        <div class="user-info">
+                            <div class="left">
+                                <img src="/img/blog/blog_user.png" alt />
+                            </div>
+                            <div class="right">
+                                <p class="name">{{item.frontmatter.author}}</p>
+                                <p class="date-count">
+                                    <span class="date">{{resolvePostDate(item.frontmatter.date)}}</span>
+                                    <span class="count">{{i18n.community.BLOG.BROWSE}}{{item.count}}{{i18n.community.BLOG.VIEWED}}</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="summary">{{item.frontmatter.summary}}</div>
+                        <div class="more" @click="go(item.path)">{{i18n.community.BLOG.READ_MORE}}</div>
+                        <div class="tag">
+                            <span>{{i18n.community.BLOG.LABEL}}:</span>
+                            <span v-for="(tag, index) in item.frontmatter.tags" :key="index" class="tag-name">
+                                <span @click="clickTagItem(tag)" class="tag-item">{{tag}}</span>
+                                <span v-if="index != (item.frontmatter.tags.length - 1)">、</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="paginationClass">
+            <div class="paginationClass" v-show="screenBlogListData.length>1">
                 <el-pagination
                 @current-change="handleCurrentChange"
                 :current-page="currentPage"
@@ -363,6 +391,9 @@ export default {
     border-top: 1px solid;
     border-color: rgba(0, 0, 0, 0.25);
     padding: 40px 0 40px 0;
+    @media (max-width: 1000px) {
+        display: none;
+    }
 }
 .blog-item-left {
     display: inline-block;
@@ -393,6 +424,9 @@ export default {
 .blog-date {
     font-size: 12px;
 }
+.fz12 {
+    font-size: 12px;
+}
 .blog-item-title {
     font-size: 24px;
     margin-bottom: 36px;
@@ -402,6 +436,13 @@ export default {
     height: 100px;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.5);
+}
+.summary {
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
 }
 .blog-item-all {
     margin: 12px 0 24px 0;
@@ -417,8 +458,102 @@ export default {
       color: #00000080;
     }
 }
+.blog-item-mobile {
+    display: none;
+    @media (max-width: 1000px){
+        margin-top: 40px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #e6e6e6;
+        display: block;
+        .item-wraper {
+            .title {
+                font-size: 16px;
+                line-height: 26px;
+                font-family: FZLTHJW;
+            }
+            .user-info {
+                height: 65px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                img {
+                    width: 26px;
+                    height: 26px;
+                    border-radius: 100%;
+                    margin-right: 11px;
+                }
+                .right {
+                    .name {
+                        color: rgba(0, 0, 0, 0.5);
+                        font-size: 14px;
+                        line-height: 24px;
+                        font-family: HuaweiSans-Bold;
+                    }
+                    .date-count {
+                        color: rgba(0, 0, 0, 0.5);
+                        font-size: 12px;
+                        line-height: 16px;
+                        font-family: FZLTXIHJW;
+                        .date {
+                            margin-right: 16px;
+                        }
+                    }
+                }
+            }
+            .summary {
+                color: rgba(0, 0, 0, 0.5);
+                font-size: 14px;
+                line-height: 24px;
+                font-family: FZLTXIHJW;
+                text-align: justify;
+                margin-bottom: 10px;
+            }
+            .more {
+                text-align: right;
+                font-size: 14px;
+                line-height: 24px;
+                color: #002fa7;
+                margin-bottom: 10px;
+            }
+            .tag {
+                font-size: 14px;
+                line-height: 24px;
+                font-family: FZLTXIHJW;
+                color: rgba(0, 0, 0, 0.5);
+                .tag-name {
+                    color: #002fa7;
+                }
+            }
+        }
+    }
+}
 .paginationClass {
     margin: 20px 0 200px 0;
+}
+.blog-content .write-blog-btn {
+    background-color: #002fa7;
+    height: 32px;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    @media (min-width: 1000px) {
+        margin-top: 4px;
+        display: flex;
+    }
+    
+    .blog-write {
+        color: #fff;
+        line-height: 25px;
+        vertical-align: middle;
+        @media (min-width: 1000px) {
+            margin-top: -2px;
+        }
+    }
+    .middle-img {
+        width: 20px;
+        height: 20px;
+    }
 }
 @media screen and (max-width: 1000px) {
     .moblie-content {
@@ -455,7 +590,7 @@ export default {
     }
     .blog-filter {
         margin: 40px auto;
-        padding: 75px 15px 0;
+        padding: 75px 0 0;
         position: relative;
     }
     .blog-content {
@@ -507,6 +642,7 @@ export default {
         background: rgba(0, 47, 167, 1);
         box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
         border-radius: 4px;
+        margin-left: 0;
     }
     .mobile-blog-write {
         position: absolute;

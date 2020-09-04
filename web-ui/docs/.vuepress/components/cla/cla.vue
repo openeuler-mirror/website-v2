@@ -468,50 +468,7 @@
 </template>
 
 <script>
-import { JSO, Fetcher } from "jso";
 let that = null;
-let localMethods = {
-    oauthLogin() {
-        let config = {
-            providerID: "openeuler_bot",
-            client_id: "d00e9b289d8cf8f98e2fc68a9c240304f6413007d82d30701cd1da7e937db75c",
-            redirect_uri: window.location.origin + "/cla",
-            response_type: "code",
-            authorization: "https://gitee.com/oauth/authorize",
-            scopes: {
-                request: ["user_info", "emails"]
-            }
-        };
-
-        let client = new JSO(config);
-        client.callback();
-
-        let f = new Fetcher(client);
-        let url = "https://gitee.com/v5/user";
-        f.fetch(url, {})
-            .then(data => {
-                return data.json();
-            })
-            .then(data => {
-                that.$message.error(data);
-            })
-            .catch(err => {
-                that.$message.error(err);
-            });
-    },
-    readCookie(name) {
-        var namePrefix = name + '=';
-        var cookies = document.cookie.split(';');
-        for (var i = 0; i < cookies.length; i++) {
-            var c = cookies[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(namePrefix) == 0) {
-                return c.substring(namePrefix.length, c.length);
-            }
-        }
-        return null;
-    }
-};
 export default {
     data() {
         that = this;
@@ -605,10 +562,6 @@ export default {
         };
     },
     mounted() {
-        let cla = localMethods.readCookie('cla-info');
-        if (!cla || cla === '') {
-            // localMethods.oauthLogin();
-        }
     },
     methods: {
         submitForm(formName) {

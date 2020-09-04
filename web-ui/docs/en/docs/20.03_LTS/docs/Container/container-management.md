@@ -1241,7 +1241,7 @@ The following table lists the parameters supported by the  **inspect**  command.
 
 ### Constraints
 
--   Lightweight containers do not support the output in \{\{.State\}\} format but support the output in the \{\{json .State\}\} format. The  **-f**  parameter is not supported when the object is an image.
+-   Lightweight containers do not support the output in \{ \{.State\} \} format but support the output in the \{ \{json .State\} \} format. The  **-f**  parameter is not supported when the object is an image.
 
 ### Example
 
