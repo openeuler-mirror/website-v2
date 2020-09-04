@@ -340,11 +340,7 @@ export default {
         box-shadow:0px 3px 10px 0px rgba(0,0,0,0.1);
         border-radius:8px;
         text-align: center;
-        margin-top: 20px;
-        display: inline-block;
-        &:nth-of-type(2n+2){
-            margin-left: 35px;
-        }
+        margin: 20px auto 0 auto;
     }
 }
 </style>

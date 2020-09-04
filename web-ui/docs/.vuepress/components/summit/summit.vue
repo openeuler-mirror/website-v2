@@ -27,8 +27,8 @@
         <div class="summit-list" v-if="!isSummitHome">
             <div class="theme-speech">
                 <h3>{{i18n.interaction.SUMMIT.SPEECHTITLE}}</h3>
-                <ul class="speech-list">
-                    <li v-for="(item,key) in speechList" :key="key">
+                <ul class="speech-list" v-fade>
+                    <li v-for="(item,key) in speechList" :key="key" class="fade-in">
                         <div class="list-head">
                             <p class="list-time">
                                 <i class="icon-time"></i>
@@ -143,7 +143,7 @@ export default {
             designList: [],
             trackList: [],
             linkList: [],
-            language:'' //储存当前语言
+            language:''
         }
     },
     created () {
@@ -233,7 +233,7 @@ export default {
         padding: 40px 15px 80px 15px;
     }
     .review {
-        .mr-All(20px 0 36px 0);
+        .mr-All(20px 0 26px 0);
         .review-home {
             cursor: pointer;
             display: inline-block;
@@ -258,12 +258,12 @@ export default {
             }
         }
         .list-time {
-        @media (max-width: 1000px) {
-            .mr-All(10px 0 0 0);
-            width: 100%;
-            text-align: center;
-            .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,1),26px);
-        }
+            @media (max-width: 1000px) {
+                .mr-All(10px 0 0 0);
+                width: 100%;
+                text-align: center;
+                .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,1),26px);
+            }
         }
         .icon-camera {
         .icon-css(28px,20px,"/img/summit/camera.svg",auto);
@@ -300,7 +300,8 @@ export default {
                 .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(11,22,43,1),26px);
                 .mr-All(0);
             }
-            padding: 0 15px;
+            width: 315px;
+            .mr-All(0 auto);
         }
         .speech-list {
             .mr-All(60px 0 90px 0);
@@ -314,7 +315,6 @@ export default {
             .back-shadow-radius(rgba(255,255,255,1),0px 6px 30px 0px rgba(0,0,0,0.1),8px);
             &:hover {
                 height: 361px;
-                border: 2px solid rgba(0, 47, 167, 1);
                 .list-head {
                     .back-shadow-radius(rgba(0,47,167,1),0px 6px 30px 0px rgba(0,0,0,0.1),8px 8px 0 0);
                     p {
@@ -333,6 +333,8 @@ export default {
                     }
                 }
                 .list-body {
+                    border: 2px solid #002FA7;
+                    border-top: 0;
                     display: block;
                 }
             }
@@ -341,14 +343,15 @@ export default {
                     .wid-and-hei(100%,144px);
                     padding: 38px 0 0 52px;
                     p {
-                        .word-common-css(24px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,1),24px);
+                        .word-common-css(22px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,1),24px);
                     }
                     .list-time {
                         font-size: 20px;
-                        line-height: 20px;
+                        line-height: 18px;
                         position: relative;
+                        color: rgba(0, 0, 0, 0.5);
                         .icon-time {
-                            .icon-css(21px,21px,"/img/summit/gray-clock.svg",contain);
+                            .icon-css(18px,18px,"/img/summit/gray-clock.svg",contain);
                             position: absolute;
                         }
                         span{
@@ -442,6 +445,7 @@ export default {
                 li {
                     &:hover {
                         .wid-and-hei(315px,336px);
+
                     }
                     .wid-and-hei(315px,162px);
                     .mr(top,30px);
@@ -478,7 +482,6 @@ export default {
                         }
                     }
                     .list-body {
-                        padding: 20px;
                         .list-explain {
                         display: none;
                         }

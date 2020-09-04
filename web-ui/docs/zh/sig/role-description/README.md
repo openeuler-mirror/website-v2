@@ -1,9 +1,8 @@
 ---
 title: "角色说明"
 ---
-
 <ClientOnly>
-  <sig-role />
+  <sig-role-description />
 </ClientOnly>
 <div class="markdown">
 

@@ -55,7 +55,15 @@
             <el-carousel class="home-banner" trigger="click" :interval="5000">
                 <el-carousel-item>
                     <div class="carousel-video">
-                        <img src="/img/home/webBannerVideo.png" alt="">
+                        <video poster="/img/home/BannerVideo.png"
+                               loop
+                               muted
+                               width="100%"
+                               height="300px"
+                               ref="video"
+                               @click="playVideo">
+                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E6%AC%A7%E6%8B%89MG%E5%8A%A8%E7%94%BB_0903_1920x500.mp4"  type="video/mp4">
+                        </video>
                     </div>
                 </el-carousel-item>
                 <el-carousel-item class="carousel-item">

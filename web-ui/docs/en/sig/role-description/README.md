@@ -2,9 +2,8 @@
 title: "Characters"
 
 ---
-
 <ClientOnly>
-  <sig-role />
+  <sig-role-description />
 </ClientOnly>
 <div class="markdown">
 
