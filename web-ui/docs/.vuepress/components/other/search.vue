@@ -1,7 +1,15 @@
 <template>
     <div class="search" v-loading.fullscreen="loading">
         <div class="search-banner">
+            <h2>{{i18n.search.SEARCH}}</h2>
             <img src="/img/other/search/search.png" alt="">
+            <div class="search-area-mobile">
+                <el-input
+                        :placeholder="i18n.common.SEARCH_PLACE_HOLDER"
+                    v-model="formData.keyword">
+                <i slot="suffix" @click="search"><img src="/img/other/search/search-icon.svg" alt=""></i>
+                </el-input>
+            </div>
             <div class="search-area">
                 <el-input
                         :placeholder="i18n.common.SEARCH_PLACE_HOLDER"
@@ -10,10 +18,10 @@
                 </el-input>
             </div>
         </div>
-        <div class="search-tag" v-show="allDatas.length">
+        <div class="search-tag">
             <div class="tag-title">
                 <ul>
-                    <li v-for="item in tagTitle" :class="{'active': curKey==item.key}" :key="item.key" @click="curKey = item.key"><span>{{i18n.search.TAG_NAME[item.key.toUpperCase()]}}（{{item.doc_count}}）</span></li>
+                    <li v-for="item in tagTitle" :class="{'active': curKey==item.key}" :key="item.key" @click="curKey = item.key">{{i18n.search.TAG_NAME[item.key.toUpperCase()]}}<span>（{{item.doc_count}}）</span></li>
                 </ul>
             </div>
             <div class="tag-content">
@@ -25,27 +33,19 @@
                     </div>
                 </div>
                 <div class="tag-right">
-                    <h4>相关软件包</h4>
-                    <el-scrollbar>
-                        <div class="package">
-                            <p class="pkg-title">openEuler 20.03 LTS-iso</p>
-                            <p>软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息软件包信息…</p>
+                    <h4>{{i18n.search.REPO}}</h4>
+                    <el-scrollbar class="scrollbar">
+                        <div class="package" v-for="item in repoList">
+                            <p class="pkg-title" @click="download(item.path)">{{item.filename}}</p>
+                            <p>{{item.version}}</p>
                         </div>
                     </el-scrollbar>
                 </div>
             </div>
 
-            <div class="tag-page">
+            <div class="tag-page" v-show="allDatas.length">
                 <el-pagination
                         class="search-pagination"
-                        :current-page.sync="formData.page"
-                        :page-size="10"
-                        layout="total, prev, pager, next, jumper"
-                        @current-change="handleCurrentChange"
-                        :total="total">
-                </el-pagination>
-                <el-pagination
-                        class="search-pagination-mobile"
                         :current-page.sync="formData.page"
                         :page-size="10"
                         layout="total, prev, pager, next, jumper"
@@ -59,7 +59,7 @@
 
 <script>
 
-    import { search } from "../../api/search";
+    import { search, repoSearch } from "../../api/search";
     let that = null;
     const locationMethods = {
         
@@ -79,6 +79,18 @@
                     .catch(response => {
                         that.$message.error(response);
                         that.loading = false;
+                    });
+            }
+            
+        },
+        repoSearch (flag) {
+            if(that.formData.keyword){
+                repoSearch(that.formData)
+                    .then(response => {
+                        that.repoList = response.data.records;
+                    })
+                    .catch(response => {
+                        that.$message.error(response);
                     });
             }
             
@@ -102,25 +114,33 @@
                 total: 0,
                 tagTitle: [],
                 allDatas: [],
+                repoList: []
             }
         },
         mounted() {
             this.formData.keyword = decodeURI(this.$route.query.keyword|| '') || '';
             this.formData.indexEs = this.$lang == 'en' ? 'openeuler_articles_en' : 'openeuler_articles';
             this.formData.model = '';
-            locationMethods.getSearchPage(1);
+            this.search();
         },
         methods: {
+            download (url) {
+                window.open(url);
+            },
             initData(flag) {
-                locationMethods.getSearchPage(flag)
+                locationMethods.getSearchPage(flag);
             },
             handleCurrentChange(val) {
                 this.initData(val);
+                scrollTo(0,0);
             },
             search (){
-                this.tagTitle = [];
-                this.curKey = 'all';
-                this.initData(1);
+                if(this.formData.keyword) {
+                    this.tagTitle = [];
+                    this.curKey = 'all';
+                    this.initData(1);  
+                    locationMethods.repoSearch();  
+                }
             },
             goDetail ({path, articleName}){
                 let dealPath = null;
@@ -175,28 +195,77 @@
         padding-right: 30px;
         border-right: 1px solid #D8D8D8;
     }
+    .tag-right .el-scrollbar__wrap {
+        max-height: 100vh;
+    }
+    .search-area-mobile img {
+        margin: 4px 0 0 0 !important;
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .search-pagination {
+        @media (max-width: 1000px) {
+            .el-pager li {
+                display: none;
+            }
+            .el-pager .active {
+                display: inline-block;
+            }
+        }
+    }
 </style>
-<style scoped>
+<style lang="less" scoped>
+    .search {
+        @media (max-width: 1000px) {
+            padding: 0 30px;
+        }
+    }
     .search-pagination {
         display: block;
-    }
-    .search-pagination-mobile {
-        display: none;
     }
     .search-banner {
         width: 1080px;
         text-align: center;
         margin: 0 auto;
+        h2 {
+            display: none;
+        }
+        @media (max-width: 1000px) {
+            width: 100%;
+            h2 {
+                display: block;
+                text-align: center;
+                font-size: 24px;
+                color: #000;
+                font-family: FZLTHJW;
+                line-height: 34px;
+                margin-top: 40px;
+            }
+        }
+        .search-area-mobile {
+            display: none;
+            @media (max-width: 1000px) {
+                display: block;
+                width: 100%;
+                margin-bottom: 40px;
+            }
+        }
     }
     .search-banner img {
         width: 175px;
         height: 200px;
         margin: 30px 0 40px;
+        @media (max-width: 1000px) {
+            margin: 10px 0 40px;
+        }
     }
     .search-area {
         width: 400px;
         height: 60px;
         margin: 0 auto 80px;
+        @media (max-width: 1000px) {
+            display: none;
+        }
     }
     .search-area img {
         width: 27px;
@@ -207,12 +276,36 @@
     .search-tag {
         width: 1120px;
         margin: 0 auto 180px;
+        @media (max-width: 1000px) {
+            width: 100%;
+            margin-bottom: 80px;
+            .tag-title ul li {
+                width: 72px;
+                font-family: FZLTXIHJW;
+                padding-bottom: 18px;
+                cursor: pointer;
+                span {
+                    display: none;
+                }
+            }
+        }
     }
     .tag-content {
         width: 1120px;
         margin-top: 20px;
         display: flex;
         justify-content: space-between;
+        @media (max-width: 1000px) {
+            width: 100%;
+            .tag-left {
+                border: none;
+                padding-right: 0;
+                margin-right: 0;
+            }
+            .tag-right {
+                display: none;
+            }
+        }
     }
     .tag-title {
         height: 40px;
@@ -238,6 +331,7 @@
         padding-bottom: 15px;
     }
     .tag-left {
+        flex: 4;
         border-right: 1px solid #D8D8D8;
         padding-right: 30px;
         margin-right: 30px;
@@ -273,6 +367,7 @@
         color: #000;
     }
     .tag-right {
+        flex: 1;
         margin-top: 20px;
     }
     h4 {
@@ -288,9 +383,11 @@
         margin: 10px 0 20px;
     }
     .pkg-title {
+        cursor: pointer;
         font-size: 14px;
         font-family: FZLTXIHJW;
         font-weight: normal;
         color: #002FA7;
+        margin: 0;
     }
 </style>

@@ -58,6 +58,9 @@ module.exports = {
             MEMBERS: '项目成员',
             CONTACT: '联系方式',
             MAIL_LIST: '邮件列表'
+        },
+        ROLE_DESC: {
+            TITLE: '角色说明'
         }
     },
     en: {
@@ -115,6 +118,9 @@ module.exports = {
             MEMBERS: 'project members',
             CONTACT: 'contact',
             MAIL_LIST: 'maillist'
+        },
+        ROLE_DESC: {
+            TITLE: 'Role Description'
         }
     }
 };

@@ -28,7 +28,7 @@
                     </li>
                 </ul>
                 <ul class="administrators">
-                    <li v-for="(avatarItem, avatarIndex) in item.maintainers">
+                    <li v-for="(avatarItem, avatarIndex) in item.groupuser_set">
                         <img :src="avatarItem.avatar" class="avatar">
                         <span class="name">{{avatarItem.gitee_name}}</span>
                     </li>

@@ -11,6 +11,8 @@ module.exports = {
             DOCS: '文档',
             FROM: '来源'
         },
+        REPO: '相关软件包',
+        SEARCH: '搜索'
     },
     en: {
         TAG_NAME: {
@@ -19,6 +21,8 @@ module.exports = {
             NEWS: 'News',
             DOCS: 'Docs',
             FROM: 'from'
-        }
+        },
+        REPO: 'Related software package',
+        SEARCH: 'Search'
     }
 };

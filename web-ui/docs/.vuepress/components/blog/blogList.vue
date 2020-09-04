@@ -36,7 +36,7 @@
                 </el-form-item>
             </el-form>
             <div>
-                <div class="blog-item" v-for="(item, index) in currentBlogListData" :key="index">
+                <div class="blog-item" v-for="(item, index) in currentBlogListData" :key="'info'+index">
                     <div class="blog-item-left">
                         <p class="blog-img">
                             <img class="middle-img" src="/img/blog/blog_user.png" alt />
@@ -62,9 +62,9 @@
                         <p @click="go(item.path)" class="blog-item-all">{{i18n.community.BLOG.READ_MORE}}</p>
                         <p class="blog-item-tag">
                             <span class="first-tag">{{i18n.community.BLOG.LABEL}}:</span>
-                            <span v-for="(tag, index) in item.frontmatter.tags" :key="index">
+                            <span v-for="(tag, indexTag) in item.frontmatter.tags" :key="indexTag">
                                 <span @click="clickTagItem(tag)" class="tag-item">{{tag}}</span>
-                                <span v-if="index != (item.frontmatter.tags.length - 1)">、</span>
+                                <span v-if="indexTag != (item.frontmatter.tags.length - 1)">、</span>
                             </span>
                         </p>
                     </div>
@@ -88,9 +88,9 @@
                         <div class="more" @click="go(item.path)">{{i18n.community.BLOG.READ_MORE}}</div>
                         <div class="tag">
                             <span>{{i18n.community.BLOG.LABEL}}:</span>
-                            <span v-for="(tag, index) in item.frontmatter.tags" :key="index" class="tag-name">
+                            <span v-for="(tag, indexTag) in item.frontmatter.tags" :key="indexTag" class="tag-name">
                                 <span @click="clickTagItem(tag)" class="tag-item">{{tag}}</span>
-                                <span v-if="index != (item.frontmatter.tags.length - 1)">、</span>
+                                <span v-if="indexTag != (item.frontmatter.tags.length - 1)">、</span>
                             </span>
                         </div>
                     </div>

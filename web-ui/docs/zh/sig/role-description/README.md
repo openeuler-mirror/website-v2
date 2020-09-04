@@ -2,6 +2,9 @@
 title: "角色说明"
 ---
 
+<ClientOnly>
+  <sig-role />
+</ClientOnly>
 <div class="markdown">
 
 ## 社区成员
