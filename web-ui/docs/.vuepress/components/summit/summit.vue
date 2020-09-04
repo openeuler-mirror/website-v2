@@ -27,8 +27,8 @@
         <div class="summit-list" v-if="!isSummitHome">
             <div class="theme-speech">
                 <h3>{{i18n.interaction.SUMMIT.SPEECHTITLE}}</h3>
-                <ul class="speech-list">
-                    <li v-for="(item,key) in speechList" :key="key">
+                <ul class="speech-list" v-fade>
+                    <li v-for="(item,key) in speechList" :key="key" class="fade-in">
                         <div class="list-head">
                             <p class="list-time">
                                 <i class="icon-time"></i>
@@ -143,7 +143,7 @@ export default {
             designList: [],
             trackList: [],
             linkList: [],
-            language:'' //储存当前语言
+            language:''
         }
     },
     created () {
@@ -258,12 +258,12 @@ export default {
             }
         }
         .list-time {
-        @media (max-width: 1000px) {
-            .mr-All(10px 0 0 0);
-            width: 100%;
-            text-align: center;
-            .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,1),26px);
-        }
+            @media (max-width: 1000px) {
+                .mr-All(10px 0 0 0);
+                width: 100%;
+                text-align: center;
+                .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,1),26px);
+            }
         }
         .icon-camera {
         .icon-css(28px,20px,"/img/summit/camera.svg",auto);
@@ -341,14 +341,15 @@ export default {
                     .wid-and-hei(100%,144px);
                     padding: 38px 0 0 52px;
                     p {
-                        .word-common-css(24px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,1),24px);
+                        .word-common-css(22px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,1),24px);
                     }
                     .list-time {
-                        font-size: 20px;
+                        font-size: 18px;
                         line-height: 20px;
-                        position: relative;
+                        position: relative;                     
+                        color: rgba(0, 0, 0, 0.5);
                         .icon-time {
-                            .icon-css(21px,21px,"/img/summit/gray-clock.svg",contain);
+                            .icon-css(18px,18px,"/img/summit/gray-clock.svg",contain);
                             position: absolute;
                         }
                         span{
