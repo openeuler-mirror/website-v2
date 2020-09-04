@@ -229,7 +229,7 @@ h3 {
         font-size: 14px;
         color: rgba(0, 0, 0, 0.5);
         line-height: 24px;
-        margin: 10px 30px;
+        margin: 10px 20px;
         text-align: justify;
         font-family: FZLTXIHJW;
     }
