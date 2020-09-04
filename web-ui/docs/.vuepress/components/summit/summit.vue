@@ -336,6 +336,8 @@ export default {
                     border: 2px solid #002FA7;
                     border-top: 0;
                     display: block;
+                    border-bottom-right-radius:8px;
+                    border-bottom-left-radius:8px;
                 }
             }
                 .list-head {
@@ -445,7 +447,6 @@ export default {
                 li {
                     &:hover {
                         .wid-and-hei(315px,336px);
-
                     }
                     .wid-and-hei(315px,162px);
                     .mr(top,30px);
@@ -482,6 +483,7 @@ export default {
                         }
                     }
                     .list-body {
+                        padding: 20px;
                         .list-explain {
                         display: none;
                         }
@@ -643,9 +645,10 @@ export default {
     @media (max-width: 1000px) {    
         .mr(bottom,0);
         h3 {
-            .wid-and-hei(100%, 26px);
+            .wid-and-hei(315px, 26px);
             .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(11,22,43,0.85),26px);
-            .mr-All(0);
+            .mr-All(0 auto);
+            text-align: left;
         }
         .h4 {
             .mr-All(30px 0 20px 0);
