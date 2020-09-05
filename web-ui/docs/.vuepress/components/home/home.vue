@@ -4,9 +4,14 @@
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay">
                 <el-carousel-item>
                     <div class="carousel-video">
-                        <video poster="/img/home/BannerVideo.png" controls loop width="100%" height="380px">
+                        <video poster="/img/home/BannerVideo.png" loop width="100%" height="380px" id="home-video">
                             <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler%E7%90%86%E5%BF%B5%E8%A7%86%E9%A2%91_0829_V1.0.mp4"  type="video/mp4">
                         </video>
+                        <div class="playControll">
+                            <div :class="['play-pause', isPlay?'pause-icon':'play-icon']" @click="isPlay=!isPlay"></div>
+                            <el-progress :percentage="barPercentage" class="timebar" :show-text="false" :color="'#909399'"></el-progress>
+                            <div :class="['voice-mute', isMuted?'mute-icon':'voice-icon']" @click="isMuted=!isMuted"></div>
+	                    </div>
                     </div>
                 </el-carousel-item>
                 <el-carousel-item class="carousel-item">
@@ -365,10 +370,36 @@
                 rooms2: false,
                 rooms3: false,
                 calenderData: [],
-                autoPlay: false
+                autoPlay: false,
+                videoElement:'',
+                isPlay:false,
+                isMuted:false,
+                realTimeUpdate:null, //定时器变量
+                barPercentage:0,    //进度条长度为250
+            }
+        },
+        watch: {
+            isPlay:function(){
+                if(this.isPlay==true){
+                    this.videoElement.play();
+                    this.realTimeUpdate = setInterval(()=>{
+                        this.progressBar();
+                    }, 100) ;
+                }else{
+                    this.videoElement.pause();
+                    clearInterval(this.realTimeUpdate);
+                }
+            },
+            isMuted:function(){
+                if(this.isMuted==false){
+                    this.videoElement.muted=false;
+                }else{
+                    this.videoElement.muted=true;
+                }
             }
         },
         mounted() {
+            this.videoElement = document.getElementById('home-video');
             remoteMethods.meetingList();
             this.roomName = this.i18n.home.HOME_ROOMS.ROOM_NAME
             this.toggleHover();
@@ -484,6 +515,22 @@
                 this.currentRoom = index;
                 this.$refs.newsroomCard.setActiveItem(index);
             },
+            progressBar(){
+                console.log(1);
+                let duration = this.videoElement.duration;  //  获取视频总长度
+                let currentTime = this.videoElement.currentTime; //  获取当前播放时间
+                let ratio = parseFloat(currentTime/duration);
+                if(this.videoElement.readyState <= 0) {  //  判断视频是否能够正常读取
+                    this.barPercentage = 0;
+                    return;
+                }
+                if(currentTime >= duration){
+                    ratio = 1;
+                    clearInterval(this.realTimeUpdate);
+                    this.isPlay = true;
+                }
+                this.barPercentage = ratio*100;
+            }
         }
     }
 </script>
@@ -604,8 +651,64 @@
         height: 480px;
         z-index: -1;
     }
+    .carousel-video{
+        &:hover{
+            .playControll{
+                display: block;
+            }
+        }
+        .playControll{
+            display: none;
+            width: 390px;
+            height: 40px;
+            background: gray;
+            position: absolute;
+            bottom: 35px;
+            left: 545px;
+            z-index: 999999999;
+            border-radius: 25px;
+            .play-pause{
+                 width: 30px;
+                height: 30px;
+                position: absolute;
+                top: 5px;
+                left: 10px;
+                cursor: pointer;
+                background-size: cover;
+            }
+            .play-icon{
+                background-image: url('/img/home/icon-play.svg');
+            }
+            .pause-icon{
+                background-image: url('/img/home/icon-pause.svg');
+            }
+            .timebar{
+                width: 300px;
+                position: absolute;
+                top: 16px;
+                left: 45px;
+            }
+            .voice-mute{
+                width: 26px;
+                height: 25px;
+                display: inline-block;
+                position: absolute;
+                right: 10px;
+                top: 5px;
+                cursor: pointer;
+                background-size: cover;
+            }
+            .voice-icon{
+                background-image: url('/img/home/icon-voice.svg');
+            }
+            .mute-icon{
+                background-image: url('/img/home/icon-mute.svg');
+            }
+        }
+    }
     .carousel-video img {
         width: 100%;
+        
     }
     .carousel-video video {
         outline: none;
