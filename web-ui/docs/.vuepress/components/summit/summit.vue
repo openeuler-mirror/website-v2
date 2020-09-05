@@ -348,9 +348,9 @@ export default {
                         .word-common-css(22px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,1),24px);
                     }
                     .list-time {
-                        font-size: 20px;
-                        line-height: 18px;
-                        position: relative;
+                        font-size: 18px;
+                        line-height: 20px;
+                        position: relative;                     
                         color: rgba(0, 0, 0, 0.5);
                         .icon-time {
                             .icon-css(18px,18px,"/img/summit/gray-clock.svg",contain);

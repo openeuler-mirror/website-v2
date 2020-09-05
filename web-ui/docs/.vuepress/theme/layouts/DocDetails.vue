@@ -299,6 +299,9 @@ export default {
   display: inline-block;
   .markdown{
       width: 670px;
+      a[href^='#'] {
+        display: inline;
+    }
   }
 }
 .mobile-previous-and-next {
