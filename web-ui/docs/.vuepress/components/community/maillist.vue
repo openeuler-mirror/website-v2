@@ -1,23 +1,26 @@
 <template>
     <div class="mail-list" v-loading.fullscreen="tableLoading">
         <common-banner
-                :pc-src="'/img/community/maillist/mail-banner.png'"
-                :mobile-src="'/img/community/maillist/mail-banner.png'"
-                :inside-name="'COMMUNITY'"
-                :outside-name="i18n.community.MAILING_LIST.TITLE"
+            :pc-src="'/img/community/maillist/mail-banner.png'"
+            :mobile-src="'/img/community/maillist/mail-banner.png'"
+            :inside-name="'COMMUNITY'"
+            :outside-name="i18n.community.MAILING_LIST.TITLE"
         ></common-banner>
         <div class="maillist is-pc">
             <div class="maillist-divider-mail is-pc">
                 <div class="maillist-icon-comm"></div>
             </div>
-            <div class="mail-guide"
-                 v-for="(item, index) in i18n.community.MAILING_LIST.GUIDE_CONTENT"
-                 :key="index">
+            <div
+                class="mail-guide"
+                v-for="(item, index) in i18n.community.MAILING_LIST
+                    .GUIDE_CONTENT"
+                :key="index"
+            >
                 <div class="step-left">
                     <div class="mail-box">
                         <div class="step-left-box">
                             <div class="inner-box">
-                                <img :src="item.LEFT.LEFT_IMG" alt="">
+                                <img :src="item.LEFT.LEFT_IMG" alt="" />
                                 <p>{{ item.LEFT.LEFT_INFO }}</p>
                             </div>
                         </div>
@@ -35,7 +38,7 @@
                         </div>
                         <div class="step-right-box">
                             <div class="inner-box">
-                                <img :src="item.RIGHT.LEFT_IMG" alt="">
+                                <img :src="item.RIGHT.LEFT_IMG" alt="" />
                                 <p>{{ item.RIGHT.RIGHT_INFO }}</p>
                             </div>
                         </div>
@@ -44,9 +47,12 @@
             </div>
         </div>
         <div class="maillist is-h5">
-            <div class="mail-guide"
-                 v-for="(item, index) in i18n.community.MAILING_LIST.GUIDE_CONTENT"
-                 :key="index">
+            <div
+                class="mail-guide"
+                v-for="(item, index) in i18n.community.MAILING_LIST
+                    .GUIDE_CONTENT"
+                :key="index"
+            >
                 <div class="step-left">
                     <div class="mail-box">
                         <div class="step-left-box">
@@ -54,7 +60,7 @@
                                 <span>{{ item.LEFT.LEFT_CIRCLE }}</span>
                             </div>
                             <div class="inner-box">
-                                <img :src="item.LEFT.LEFT_IMG" alt="">
+                                <img :src="item.LEFT.LEFT_IMG" alt="" />
                                 <p>{{ item.LEFT.LEFT_INFO }}</p>
                             </div>
                         </div>
@@ -67,7 +73,7 @@
                         </div>
                         <div class="step-right-box">
                             <div class="inner-box">
-                                <img :src="item.RIGHT.LEFT_IMG" alt="">
+                                <img :src="item.RIGHT.LEFT_IMG" alt="" />
                                 <p>{{ item.RIGHT.RIGHT_INFO }}</p>
                             </div>
                         </div>
@@ -77,28 +83,33 @@
         </div>
 
         <div class="mail-table is-pc">
-            <el-table
-                    :data="list"
-                    stripe>
+            <el-table :data="list" stripe>
                 <el-table-column
-                        prop="display_name"
-                        :label="i18n.community.MAILING_LIST.TABLE.NAME"
-                        width="180">
+                    prop="display_name"
+                    :label="i18n.community.MAILING_LIST.TABLE.NAME"
+                    width="180"
+                >
                     <template slot-scope="scope">
-                    <a class="list-name" @click="userSubscribe(scope.row.list_id)" ref="listName">
+                        <a
+                            class="list-name"
+                            @click="userSubscribe(scope.row.list_id)"
+                            ref="listName"
+                        >
                             <p>{{ scope.row.display_name }}</p>
                         </a>
                     </template>
                 </el-table-column>
                 <el-table-column
-                        prop="fqdn_listname"
-                        :label="i18n.community.MAILING_LIST.TABLE.EMAIL_ADDRESS"
-                        width="260">
+                    prop="fqdn_listname"
+                    :label="i18n.community.MAILING_LIST.TABLE.EMAIL_ADDRESS"
+                    width="260"
+                >
                 </el-table-column>
                 <el-table-column
-                        prop="archive"
-                        :label="i18n.community.MAILING_LIST.TABLE.ARCHIVE"
-                        width="120">
+                    prop="archive"
+                    :label="i18n.community.MAILING_LIST.TABLE.ARCHIVE"
+                    width="120"
+                >
                     <template slot-scope="scope">
                         <a
                             class="arch-link"
@@ -109,74 +120,99 @@
                     </template>
                 </el-table-column>
                 <el-table-column
-                        prop="description"
-                        :label="i18n.community.MAILING_LIST.TABLE.DESCRIPTION">
+                    prop="description"
+                    :label="i18n.community.MAILING_LIST.TABLE.DESCRIPTION"
+                >
                 </el-table-column>
             </el-table>
         </div>
         <div class="mail-table is-h5">
-            <el-table
-                    :data="list"
-                    stripe>
-                <el-table-column
-                        prop="display_name"
-                        :label="i18n.community.MAILING_LIST.TABLE.NAME_H5"
-                        width="80">
-                    <template slot-scope="scope">
-                        <a class="list-name">
-                            <p>{{ scope.row.display_name }}</p>
-                        </a>
-                    </template>
-                </el-table-column>
-                <el-table-column
-                        prop="archive"
-                        :label="i18n.community.MAILING_LIST.TABLE.ARCHIVE_H5"
-                        width="80">
-                    <template slot-scope="scope">
-                        <a
-                            :href="'https://mailweb.openeuler.org/hyperkitty/list/' + scope.row.display_name.toLowerCase() +'@openeuler.org/'"
-                            target="_blank"
-                            class="arch-link">
-                            <p>{{ scope.row.archive }}</p>
-                        </a>
-                    </template>
-                </el-table-column>
-                <el-table-column
-                        prop="description"
-                        :label="i18n.community.MAILING_LIST.TABLE.DESCRIPTION">
-                </el-table-column>
-            </el-table>
+            <ul class="mail-list-h5">
+                <li class="heaed">
+                    <ul>
+                        <li>{{ i18n.community.MAILING_LIST.TABLE.NAME_H5 }}</li>
+                        <li>{{ i18n.community.MAILING_LIST.TABLE.ARCHIVE_H5 }}</li>
+                        <li>{{ i18n.community.MAILING_LIST.TABLE.DESCRIPTION }}</li>
+                    </ul>
+                </li>
+                <li
+                    class="item"
+                    v-for="(item, index) in list"
+                    :key="index"
+                >
+                    <ul>
+                        <li class="color-blue">
+                            <span>
+                                {{item.display_name}}
+                            </span>
+                        </li>
+                        <li class="color-blue">
+                            <span @click="go(item.display_name)">
+                                {{item.archive}}
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                {{item.description}}
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
 
         <div class="mail-subscribe is-pc">
-            <el-dialog :title="i18n.community.MAILING_LIST.SUBSCRIBE.TITLE " :visible.sync="dialogFormVisible">
+            <el-dialog
+                :title="i18n.community.MAILING_LIST.SUBSCRIBE.TITLE"
+                :visible.sync="dialogFormVisible"
+            >
                 <div class="description">
                     <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.PART_ONE }}</p>
                     <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.PART_TWO }}</p>
-                    <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.PART_THREE }}</p>
+                    <p>
+                        {{ i18n.community.MAILING_LIST.SUBSCRIBE.PART_THREE }}
+                    </p>
                 </div>
                 <el-form :model="form">
                     <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.REMIND }}</p>
                     <el-form-item :label-width="formLabelWidth">
-                        <img class="user-icon" src="/img/home/userName.svg" alt="">
+                        <img
+                            class="user-icon"
+                            src="/img/home/userName.svg"
+                            alt=""
+                        />
                         <el-input
-                                v-model="form.display_name"
-                                autocomplete="off"
-                                :placeholder="i18n.community.MAILING_LIST.SUBSCRIBE.INPUT_NAME"></el-input>
+                            v-model="form.display_name"
+                            autocomplete="off"
+                            :placeholder="
+                                i18n.community.MAILING_LIST.SUBSCRIBE.INPUT_NAME
+                            "
+                        ></el-input>
                     </el-form-item>
                     <el-form-item :label-width="formLabelWidth">
-                        <img class="user-icon" src="/img/home/userEmail.svg" alt="">
+                        <img
+                            class="user-icon"
+                            src="/img/home/userEmail.svg"
+                            alt=""
+                        />
                         <el-input
-                                v-model="form.subscriber"
-                                autocomplete="off"
-                                :placeholder="i18n.community.MAILING_LIST.SUBSCRIBE.INPUT_ADD"></el-input>
+                            v-model="form.subscriber"
+                            autocomplete="off"
+                            :placeholder="
+                                i18n.community.MAILING_LIST.SUBSCRIBE.INPUT_ADD
+                            "
+                        ></el-input>
                     </el-form-item>
                 </el-form>
                 <div slot="footer" class="dialog-footer">
                     <el-button
-                            type="primary"
-                            @click="getUserInfo"
-                            icon="el-icon-document-checked">{{ i18n.community.MAILING_LIST.SUBSCRIBE.BUTTON }}</el-button>
+                        type="primary"
+                        @click="getUserInfo"
+                        icon="el-icon-document-checked"
+                        >{{
+                            i18n.community.MAILING_LIST.SUBSCRIBE.BUTTON
+                        }}</el-button
+                    >
                 </div>
             </el-dialog>
         </div>
@@ -184,77 +220,162 @@
 </template>
 
 <script>
-    import { mailList } from "../../api/maillist"
-    import { subscribe } from "../../api/mailsubscribe"
+import { mailList } from "../../api/maillist";
+import { subscribe } from "../../api/mailsubscribe";
 
-    export default {
-        name: "maillist",
-        data() {
-            return {
-                inPC: true,
-                inEn: true,
-                list: null,
-                subscribe: null,
-                dialogFormVisible: false,
-                form: {
-                    list_id: '',
-                    subscriber: '',
-                    display_name: ''
-                },
-                formLabelWidth: '0',
-                tableLoading: false
-            }
+export default {
+    name: "maillist",
+    data() {
+        return {
+            inPC: true,
+            inEn: true,
+            list: null,
+            subscribe: null,
+            dialogFormVisible: false,
+            form: {
+                list_id: "",
+                subscriber: "",
+                display_name: ""
+            },
+            formLabelWidth: "0",
+            tableLoading: false
+        };
+    },
+    mounted() {
+        mailList()
+            .then(response => {
+                this.list = response.entries;
+                this.list.forEach(item => {
+                    item.archive = "Archive";
+                });
+            })
+            .catch(response => {
+                this.$message.error(
+                    this.i18n.community.MAILING_LIST.MAIL_ERROR
+                );
+            });
+    },
+    methods: {
+        go (name) {
+            window.open('https://mailweb.openeuler.org/hyperkitty/list/' + name.toLowerCase() + '@openeuler.org/');
         },
-        mounted() {
-            mailList()
+        userSubscribe(userID) {
+            this.dialogFormVisible = true;
+            this.form.list_id = userID;
+        },
+        getUserInfo() {
+            this.dialogFormVisible = false;
+            this.tableLoading = true;
+
+            subscribe(this.form)
                 .then(response => {
-                    this.list = response.entries;
-                    this.list.forEach(item => { item.archive = "Archive"});
+                    let re = /^\w+@[a-z0-9]+\.[a-z]{2,4}$/;
+                    if (re.test(this.form.subscriber)) {
+                        if (response.token) {
+                            this.tableLoading = false;
+                            this.$message(
+                                this.i18n.community.MAILING_LIST
+                                    .SUBSCRIBE_SUCCESS
+                            );
+                        }
+                    } else {
+                        this.tableLoading = false;
+                        this.$message.error(
+                            this.i18n.community.MAILING_LIST.MAIL_ERROR
+                        );
+                    }
                 })
                 .catch(response => {
-                    this.$message.error(this.i18n.community.MAILING_LIST.MAIL_ERROR);
+                    this.tableLoading = false;
+                    this.$message.error(
+                        this.i18n.community.MAILING_LIST.SUBSCRIBE_ERROR
+                    );
                 });
-        },
-        methods: {
-            userSubscribe(userID) {
-                this.dialogFormVisible = true;
-                this.form.list_id = userID;
-            },
-            getUserInfo() {
-                this.dialogFormVisible = false;
-                this.tableLoading = true;
-
-                subscribe(this.form)
-                    .then(response => {
-                        let re = /^\w+@[a-z0-9]+\.[a-z]{2,4}$/;
-                        if(re.test(this.form.subscriber)) {
-                            if (response.token) {
-                                this.tableLoading = false;
-                                this.$message(this.i18n.community.MAILING_LIST.SUBSCRIBE_SUCCESS);
-                            }
-                        } else {
-                            this.tableLoading = false;
-                            this.$message.error(this.i18n.community.MAILING_LIST.MAIL_ERROR);
-                        }
-
-                    })
-                    .catch(response => {
-                        this.tableLoading = false;
-                        this.$message.error(this.i18n.community.MAILING_LIST.SUBSCRIBE_ERROR);
-                    });
-            },
         }
     }
+};
 </script>
 
 <style lang="less">
+.mail-table table {
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    font-family: FZLTXIHJW;
+}
+.mail-table .el-table td {
+    border: none;
+}
+.mail-table .el-table th > .cell {
+    padding-left: 30px;
+}
+.mail-table .el-table .cell {
+    padding-left: 30px;
+}
+.mail-table .el-table thead {
+    font-size: 16px;
+    color: #000;
+    font-family: FZLTHJW;
+}
+.mail-table .el-table__row td p,
+.mail-table .el-table__row td p {
+    color: #002fa7;
+    font-size: 14px;
+}
+.mail-table .el-table td,
+.el-table th.is-leaf {
+    border: none;
+}
+.mail-table .el-table th.is-leaf {
+    background: rgba(0, 0, 0, 0.05);
+}
+.mail-table .el-table--striped .el-table__body tr.el-table__row--striped td {
+    background: rgba(0, 0, 0, 0.03);
+}
+.mail-table .el-table--fit {
+    margin: 0 auto;
+}
+.mail-table
+    .el-table--enable-row-hover
+    .el-table__body
+    tr:nth-child(odd):hover
+    > td {
+    background: #fff;
+}
+.mail-subscribe .el-dialog {
+    width: 1200px;
+}
+.mail-subscribe .el-dialog__title {
+    text-align: center;
+    font-size: 24px;
+    display: block;
+    margin: 40px auto 10px;
+}
+.mail-subscribe .el-form-item__content {
+    text-align: center;
+}
+.mail-subscribe .el-input {
+    width: 374px;
+}
+.mail-subscribe .el-input__inner {
+    width: 374px;
+}
+.mail-subscribe .el-dialog__footer {
+    text-align: center;
+    padding: 10px 20px 60px;
+}
+.mail-subscribe .el-button--primary {
+    background: #002fa7;
+    border-color: #002fa7;
+}
+@media screen and (max-width: 768px) {
     .mail-table table {
-        color: rgba(0, 0, 0, 0.85);
-        font-size: 14px;
-        font-family: 方正兰亭细黑简体;
+        font-size: 12px;
     }
     .mail-table .el-table {
-        width: 80%;
+        width: 100%;
+        color: rgba(0, 0, 0, 0.85);
+        font-size: 14px;
+        font-family: FZLTHJW;
     }
     .mail-table .el-table td {
         border: none;
@@ -268,196 +389,322 @@
     .mail-table .el-table thead {
         font-size: 16px;
         color: #000;
-        font-family: 方正兰亭黑简体;
+        font-family: FZLTHJW;
     }
     .mail-table .el-table__row td p,
     .mail-table .el-table__row td p {
-        color: #002FA7;
-        font-size: 14px;
+        font-size: 12px;
     }
-    .mail-table .el-table td, .el-table th.is-leaf {
-        border: none;
+    .mail-table .el-table .cell:nth-child(1) {
+        padding-left: 10px;
     }
-    .mail-table .el-table th.is-leaf {
-        background: rgba(0, 0, 0, 0.05);
+    .mail-table .el-table th > .cell:nth-child(1) {
+        padding-left: 10px;
     }
-    .mail-table .el-table--striped .el-table__body tr.el-table__row--striped td {
-        background: rgba(0, 0, 0, 0.03);
+    .mail-table .el-table__row td:nth-child(1) .cell p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
-    .mail-table .el-table--fit {
-        margin: 0 auto;
+    .mail-table .el-table__row td:nth-child(3) {
+        overflow: hidden;
+        display: -webkit-box;
+        word-wrap: break-word;
+        word-break: normal;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
     }
-    .mail-table .el-table--enable-row-hover .el-table__body tr:nth-child(odd):hover>td {
-        background: #fff;
-    }
-    .mail-subscribe .el-dialog {
-        width: 1200px;
-    }
-    .mail-subscribe .el-dialog__title {
-        text-align: center;
-        font-size: 24px;
-        display: block;
-        margin: 40px auto 10px;
-    }
-    .mail-subscribe .el-form-item__content {
-        text-align: center;
-    }
-    .mail-subscribe .el-input {
-        width: 374px;
-    }
-    .mail-subscribe .el-input__inner {
-        width: 374px;
-    }
-    .mail-subscribe .el-dialog__footer {
-        text-align: center;
-        padding: 10px 20px 60px;
-    }
-    .mail-subscribe .el-button--primary {
-        background: #002FA7;
-        border-color: #002FA7;
-    }
-    @media screen and (max-width: 768px) {
-        .mail-table table {
-            font-size: 12px;
-        }
-        .mail-table .el-table {
-            width: 100%;
-        }
-        .mail-table .el-table__row td p,
-        .mail-table .el-table__row td p {
-            font-size: 12px;
-        }
-        .mail-table .el-table .cell:nth-child(1) {
-            padding-left: 10px;
-        }
-        .mail-table .el-table th > .cell:nth-child(1) {
-            padding-left: 10px;
-        }
-        .mail-table .el-table__row td:nth-child(1) .cell p {
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
-        .mail-table .el-table__row td:nth-child(3) {
-            overflow: hidden;
-            display: -webkit-box;
-            word-wrap: break-word;
-            word-break: normal;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            text-overflow: ellipsis;
-        }
-    }
+}
 </style>
 
-<style scoped>
+<style lang="less" scoped>
+.is-h5 {
+    display: none;
+}
+.is-pc {
+    display: block;
+}
+p {
+    font-size: 16px;
+    color: #000;
+    font-family: FZLTXIHJW;
+}
+.maillist {
+    width: 1200px;
+    position: relative;
+    margin: 80px auto 120px;
+}
+.maillist-divider-mail {
+    width: 2px;
+    left: 50%;
+    height: 605px;
+    background-image: linear-gradient(
+        to top,
+        #002fa7 0%,
+        #002fa7 50%,
+        transparent 50%
+    );
+    background-size: 2px 11px;
+    background-repeat: repeat-y;
+    position: absolute;
+}
+.maillist-icon-comm {
+    width: 0;
+    height: 0;
+    border-width: 15px;
+    border-style: solid;
+    border-color: #002fa7 transparent transparent transparent;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.step-right-box,
+.step-left-box {
+    width: 380px;
+    height: 200px;
+    box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+}
+.step-left-box {
+    margin-right: 40px;
+}
+.step-right-box {
+    margin-left: 40px;
+}
+.step-left {
+    z-index: 20;
+}
+.step-right {
+    text-align: right;
+    margin: -30px 0;
+}
+.step-left-num,
+.step-right-num {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #002fa7;
+    display: inline-block;
+}
+.step-left-num span,
+.step-right-num span {
+    color: #fff;
+    font-size: 20px;
+    font-family: FZLTCHJW;
+}
+.step-line {
+    width: 107px;
+    height: 2px;
+    display: inline-block;
+    vertical-align: middle;
+    border-spacing: 24px;
+    background-image: linear-gradient(
+        to right,
+        #002fa7 0%,
+        #002fa7 50%,
+        transparent 50%
+    );
+    background-size: 8px 2px;
+    background-repeat: repeat-x;
+}
+.mail-box {
+    padding: 0;
+    height: 200px;
+}
+.mail-box p {
+    margin: 0 20px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.inner-box {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inner-box img {
+    width: 110px;
+    height: 110px;
+    margin-left: 20px;
+}
+.mail-table.is-pc {
+    width: 1200px;
+    margin: 0 auto 200px;
+}
+.list-name {
+    cursor: pointer;
+}
+.description p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 32px;
+}
+.el-form p {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 60px auto 20px;
+}
+.user-icon {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.arch-link {
+    text-decoration: none;
+}
+@media screen and (max-width: 1000px) {
     .is-h5 {
-        display: none;
-    }
-    .is-pc {
         display: block;
     }
-    p {
-        font-size: 16px;
-        color: #000;
-        font-family: FZLTXIHJW;
+    .is-pc {
+        display: none;
+    }
+    h3 {
+        font-size: 24px;
+        line-height: 34px;
+        text-align: center;
+        margin: 40px 0 10px;
     }
     .maillist {
-        width: 1200px;
-        position: relative;
-        margin: 80px auto 120px;
+        width: 100%;
+    }
+    .mail-list {
+        .mail-list-h5 {
+            > li {
+                min-height: 52px;
+                display: flex;
+                align-items: center;
+                ul {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    li {
+                        padding-left: 10px;
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                    }
+                    .color-blue {
+                        color: #002fa7;
+                        font-size: 12px;
+                        font-family: FZLTXIHJW;
+                    }
+                    li:nth-child(1) {
+                        flex-shrink: 1;
+                        width: 80px;
+                        span {
+                            display: block;
+                            width: 70px;
+                            overflow: hidden; 
+                            text-overflow: ellipsis; 
+                            -o-text-overflow: ellipsis;
+                            white-space:nowrap;
+                        }
+                    }
+                    li:nth-child(2) {
+                        flex-shrink: 1;
+                        width: 80px;
+                        span {
+                            display: block;
+                            width: 70px;
+                            overflow: hidden; 
+                            text-overflow: ellipsis; 
+                            -o-text-overflow: ellipsis;
+                            white-space:nowrap;
+                        }
+                    }
+                    li:nth-child(3) {
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        color: #939393;
+                        font-size: 12px;
+                    }
+                }
+            }
+            .heaed {
+                ul li {
+                    font-size: 14px !important;
+                    color: #000 !important;
+                }
+            }
+            > li:nth-child(odd) {
+                background-color: #f2f2f2;
+            }
+        }
     }
     .maillist-divider-mail {
-        width: 2px;
-        left: 50%;
-        height: 605px;
-        background-image: linear-gradient(to top, #002FA7 0%, #002FA7 50%, transparent 50%);
-        background-size: 2px 11px;
-        background-repeat: repeat-y;
-        position: absolute;
+        display: none;
     }
-    .maillist-icon-comm {
-        width: 0;
-        height: 0;
-        border-width: 15px;
-        border-style: solid;
-        border-color: #002FA7 transparent transparent transparent;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 2;
+    .step-line {
+        display: none;
     }
-    .step-right-box,
-    .step-left-box {
-        width: 380px;
-        height: 200px;
-        box-shadow: 0 6px 30px 0 rgba(0, 0, 0, .1);
-        border-radius: 8px;
-        display: inline-block;
-        vertical-align: middle;
-        text-align: left;
+    .maillist {
+        margin-bottom: 80px;
+        margin-top: 0;
     }
-    .step-left-box {
-        margin-right: 40px;
-    }
-    .step-right-box {
-        margin-left: 40px;
-    }
-    .step-left {
-        z-index: 20;
+    .step-left,
+    .step-right {
+        margin: 40px 30px;
     }
     .step-right {
-        text-align: right;
-        margin: -30px 0;
+        text-align: center;
     }
     .step-left-num,
     .step-right-num {
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        text-align: center;
-        border-radius: 50%;
-        background-color: #002FA7;
-        display: inline-block;
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        margin-bottom: 20px;
     }
     .step-left-num span,
     .step-right-num span {
-        color: #fff;
-        font-size: 20px;
-        font-family: FZLTCHJW;
+        font-size: 18px;
     }
-    .step-line {
-        width: 107px;
-        height: 2px;
+    .step-right-box,
+    .step-left-box {
+        width: 100%;
+        height: 100%;
+        box-shadow: none;
+        border: none;
         display: inline-block;
         vertical-align: middle;
-        border-spacing: 24px;
-        background-image: linear-gradient(to right, #002FA7 0%, #002FA7 50%, transparent 50%);
-        background-size: 8px 2px;
-        background-repeat: repeat-x;
+        text-align: center;
+    }
+    .step-right-box {
+        margin-left: 0;
     }
     .mail-box {
-        padding: 0;
-        height: 200px;
+        height: 100%;
     }
     .mail-box p {
-        margin: 0 20px;
-        line-height: 26px;
-        color: rgba(0, 0, 0, 0.5);
+        text-align: justify;
+        font-size: 14px;
+        line-height: 24px;
     }
+    .inner-box,
     .inner-box {
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .inner-box img {
-        width: 110px;
-        height: 110px;
-        margin-left: 20px;
+        width: 315px;
+        height: 160px;
+        margin: 0 auto;
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
     }
     .mail-table {
+        padding: 0 30px;
         margin-bottom: 200px;
+    .mail-table.is-pc {
+        width: 1200px;
+        margin: 0 auto 200px;
     }
     .list-name {
         cursor: pointer;
@@ -541,7 +788,7 @@
             height: 100%;
         }
         .mail-box p {
-            text-align: left;
+            text-align: justify;
             font-size: 14px;
             line-height: 24px;
         }
@@ -559,4 +806,6 @@
             margin-bottom: 80px;
         }
     }
+    }
+}
 </style>

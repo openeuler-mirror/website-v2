@@ -58,15 +58,19 @@
                     <div class="step-num">
                         <span>{{ item.LEFT.LEFT_CIRCLE }}</span>
                     </div>
-                    <p>{{ item.LEFT.LEFT_INFO }}</p>
-                    <img :src="item.LEFT.LEFT_IMG" alt />
+                    <div class="inner-box">
+                        <img :src="item.LEFT.LEFT_IMG" alt />
+                        <p>{{ item.LEFT.LEFT_INFO }}</p>
+                    </div>
                 </div>
                 <div class="step-H5">
                     <div class="step-num">
                         <span>{{ item.RIGHT.RIGHT_CIRCLE }}</span>
                     </div>
-                    <p>{{ item.RIGHT.RIGHT_INFO }}</p>
-                    <img :src="item.RIGHT.LEFT_IMG" alt />
+                    <div class="inner-box">
+                        <img :src="item.RIGHT.LEFT_IMG" alt />
+                        <p>{{ item.RIGHT.RIGHT_INFO }}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -225,9 +229,15 @@ h3 {
         font-size: 14px;
         color: rgba(0, 0, 0, 0.5);
         line-height: 24px;
-        margin: 10px 30px;
-        text-align: left;
-        font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
+        margin: 10px 20px;
+        text-align: justify;
+        font-family: FZLTXIHJW;
+    }
+    .inner-box {
+        width: 315px;
+        padding: 10px 0;
+        margin: 20px auto 0;
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
     }
 }
 </style>

@@ -233,7 +233,7 @@ export default {
         padding: 40px 15px 80px 15px;
     }
     .review {
-        .mr-All(20px 0 36px 0);
+        .mr-All(20px 0 26px 0);
         .review-home {
             cursor: pointer;
             display: inline-block;
@@ -300,7 +300,8 @@ export default {
                 .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(11,22,43,1),26px);
                 .mr-All(0);
             }
-            padding: 0 15px;
+            width: 315px;
+            .mr-All(0 auto);
         }
         .speech-list {
             .mr-All(60px 0 90px 0);
@@ -314,7 +315,6 @@ export default {
             .back-shadow-radius(rgba(255,255,255,1),0px 6px 30px 0px rgba(0,0,0,0.1),8px);
             &:hover {
                 height: 361px;
-                border: 2px solid rgba(0, 47, 167, 1);
                 .list-head {
                     .back-shadow-radius(rgba(0,47,167,1),0px 6px 30px 0px rgba(0,0,0,0.1),8px 8px 0 0);
                     p {
@@ -333,7 +333,11 @@ export default {
                     }
                 }
                 .list-body {
+                    border: 2px solid #002FA7;
+                    border-top: 0;
                     display: block;
+                    border-bottom-right-radius:8px;
+                    border-bottom-left-radius:8px;
                 }
             }
                 .list-head {
@@ -641,9 +645,10 @@ export default {
     @media (max-width: 1000px) {    
         .mr(bottom,0);
         h3 {
-            .wid-and-hei(100%, 26px);
+            .wid-and-hei(315px, 26px);
             .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(11,22,43,0.85),26px);
-            .mr-All(0);
+            .mr-All(0 auto);
+            text-align: left;
         }
         .h4 {
             .mr-All(30px 0 20px 0);
