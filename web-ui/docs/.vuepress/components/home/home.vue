@@ -4,7 +4,7 @@
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay">
                 <el-carousel-item>
                     <div class="carousel-video">
-                        <video poster="/img/home/BannerVideo.png" loop width="100%" height="380px" id="home-video">
+                        <video poster="/img/home/BannerVideo.png" loop width="100%" height="500px" id="home-video">
                             <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler%E7%90%86%E5%BF%B5%E8%A7%86%E9%A2%91_0829_V1.0.mp4"  type="video/mp4">
                         </video>
                         <div class="playControll">
