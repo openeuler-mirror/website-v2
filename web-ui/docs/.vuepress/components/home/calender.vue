@@ -31,7 +31,7 @@
                                             <button class="left btnMy"  v-if="item2.data.length > 1" @click="handleBtnMysef('left', key, index1, index2, dealData)" :style="{ background: 'url(' + prevDetail + ') no-repeat center' }"></button>
                                             <button class="right btnMy"  v-if="item2.data.length > 1" @click="handleBtnMysef('right', key, index1, index2, dealData)" :style="{ background: 'url(' + prevDetail + ') no-repeat center' }"></button>
                                             <span v-if="item2.data.length > 1" class="calenderCurrentIndex">{{ item2.index }} / {{ item2.data.length }}</span>
-                                            <div class="calenderInsideAll" :style="'transform: translateX(' + (-240 * (item2.index - 1)) + 'px)'">
+                                            <div class="calenderInsideAll" :style="'transform: translateX(' + (-230 * (item2.index - 1)) + 'px)'">
                                                 <div v-for="(item3, index3) in item2.data" :key="index3"
                                                      :class="'cadenderSinge' + (item1.duration > 1 && item3.duration == item1.duration ? ' active': '')"
                                                      @click="handleShowDetail(item1, item3)">
@@ -72,507 +72,6 @@
                 currentDate: '',
                 currentTime: '',
                 dealData: [],
-                tableData: [
-                    {
-                        date: '8月10日',
-                        timeDate: [
-                            {
-                                startTime: '6: 00',
-                                endTime: '8:00',
-                                duration: 2,
-                                meetingData: [
-                                    {
-                                        startTime: '6:00',
-                                        endTime: '8:00',
-                                        duration: 2,
-                                        name: '二次开发',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '6:00',
-                                        endTime: '8:00',
-                                        duration: 2,
-                                        name: '二次开发',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    }
-                                ]
-                            },
-                            {
-                                startTime: '8:00',
-                                endTime: '9:00',
-                                duration: 1,
-                                meetingData: [
-                                    {
-                                        startTime: '8:00',
-                                        endTime: '9:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '8:00',
-                                        endTime: '9:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '8:00',
-                                        endTime: '9:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                ]
-                            },
-                            {
-                                startTime: '10:00',
-                                endTime: '14:00',
-                                duration: 4,
-                                meetingData: [
-                                    {
-                                        startTime: '10:00',
-                                        endTime: '11:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '10:00',
-                                        endTime: '11:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '10:00',
-                                        endTime: '14:00',
-                                        duration: 4,
-                                        name: 'open',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '11:00',
-                                        endTime: '12:00',
-                                        duration: 1,
-                                        name: 'open',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '11:00',
-                                        endTime: '12:00',
-                                        duration: 1,
-                                        name: 'open',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '12:00',
-                                        endTime: '13:00',
-                                        duration: 1,
-                                        name: 'open',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                ]
-                            },
-                        ]
-                    },
-                    {
-                        date: '8月11日',
-                        timeDate: [
-                            {
-                                startTime: '6:00',
-                                endTime: '8:00',
-                                duration: 2,
-                                meetingData: [
-                                    {
-                                        startTime: '6:00',
-                                        endTime: '8:00',
-                                        duration: 2,
-                                        name: '二次开发',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '6:00',
-                                        endTime: '8:00',
-                                        duration: 2,
-                                        name: '二次开发',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    }
-                                ]
-                            },
-                            {
-                                startTime: '8:00',
-                                endTime: '9:00',
-                                duration: 1,
-                                meetingData: [
-                                    {
-                                        startTime: '8:00',
-                                        endTime: '9:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '8:00',
-                                        endTime: '9:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '8:00',
-                                        endTime: '9:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                ]
-                            },
-                            {
-                                startTime: '10:00',
-                                endTime: '14:00',
-                                duration: 4,
-                                meetingData: [
-                                    {
-                                        startTime: '10:00',
-                                        endTime: '11:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '10:00',
-                                        endTime: '11:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '10:00',
-                                        endTime: '14:00',
-                                        duration: 1,
-                                        name: 'open',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '11:00',
-                                        endTime: '12:00',
-                                        duration: 1,
-                                        name: 'open',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '11:00',
-                                        endTime: '12:00',
-                                        duration: 1,
-                                        name: 'open',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '12:00',
-                                        endTime: '13:00',
-                                        duration: 1,
-                                        name: 'open',
-                                        creator: '张三',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                ]
-                            },
-                        ]
-                    },
-                    {
-                        date: '8月12日',
-                        timeDate: [
-                            {
-                                startTime: '6:00',
-                                endTime: '8:00',
-                                duration: 2,
-                                meetingData: [
-                                    {
-                                        startTime: '6:00',
-                                        endTime: '8:00',
-                                        duration: 2,
-                                        name: '二次开发',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '6:00',
-                                        endTime: '8:00',
-                                        duration: 2,
-                                        name: '二次开发',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    }
-                                ]
-                            },
-                            {
-                                startTime: '8:00',
-                                endTime: '9:00',
-                                duration: 1,
-                                meetingData: [
-                                    {
-                                        startTime: '8:00',
-                                        endTime: '9:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '8:00',
-                                        endTime: '9:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '8:00',
-                                        endTime: '9:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                ]
-                            },
-                            {
-                                startTime: '10:00',
-                                endTime: '14:00',
-                                duration: 4,
-                                meetingData: [
-                                    {
-                                        startTime: '10:00',
-                                        endTime: '11:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '10:00',
-                                        endTime: '11:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '10:00',
-                                        endTime: '14:00',
-                                        duration: 1,
-                                        name: 'open',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '11:00',
-                                        endTime: '12:00',
-                                        duration: 1,
-                                        name: 'open',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '11:00',
-                                        endTime: '12:00',
-                                        duration: 1,
-                                        name: 'open',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '12:00',
-                                        endTime: '13:00',
-                                        duration: 1,
-                                        name: 'open',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                ]
-                            },
-                        ]
-                    },
-                    {
-                        date: '8月13日',
-                        timeDate: [
-                            {
-                                startTime: '6:00',
-                                endTime: '8:00',
-                                duration: 2,
-                                meetingData: [
-                                    {
-                                        startTime: '6:00',
-                                        endTime: '8:00',
-                                        duration: 2,
-                                        name: '二次开发',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '6:00',
-                                        endTime: '8:00',
-                                        duration: 2,
-                                        name: '二次开发',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    }
-                                ]
-                            },
-                            {
-                                startTime: '8:00',
-                                endTime: '9:00',
-                                duration: 1,
-                                meetingData: [
-                                    {
-                                        startTime: '8:00',
-                                        endTime: '9:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '8:00',
-                                        endTime: '9:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '8:00',
-                                        endTime: '9:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                ]
-                            },
-                            {
-                                startTime: '10:00',
-                                endTime: '14:00',
-                                duration: 4,
-                                meetingData: [
-                                    {
-                                        startTime: '10:00',
-                                        endTime: '11:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '10:00',
-                                        endTime: '11:00',
-                                        duration: 1,
-                                        name: '二次开发',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '10:00',
-                                        endTime: '14:00',
-                                        duration: 1,
-                                        name: 'open',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '11:00',
-                                        endTime: '12:00',
-                                        duration: 1,
-                                        name: 'open',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '11:00',
-                                        endTime: '12:00',
-                                        duration: 1,
-                                        name: 'open',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                    {
-                                        startTime: '12:00',
-                                        endTime: '13:00',
-                                        duration: 1,
-                                        name: 'open',
-                                        detail: '开会开会',
-                                        url: '/img/home/1.jpg'
-                                    },
-                                ]
-                            },
-                        ]
-                    },
-                    {
-                        date: '8月14日',
-                        timeDate: [
-                            {
-                                startTime: '6:00',
-                                endTime: '22:00',
-                                duration: 16,
-                                meetingData: [
-                                    {
-                                        startTime: '6:00',
-                                        endTime: '22:00',
-                                        duration: 16,
-                                        name: '二次开发',
-                                        detail: '开会开会',
-                                        url: '/img/home/2.png'
-                                    }
-                                ]
-                            },
-
-                        ]
-                    },
-                ],
                 timeData: [
                     '6:00-7:00',
                     '7:00-8:00',
@@ -594,11 +93,21 @@
                 saveItem: {},
                 isShowDetail: false,
                 prev:  "/img/home/prev.svg",
-                prevDetail:  "/img/home/prev-detail.svg"
+                prevDetail:  "/img/home/prev-detail.svg",
+                flag: false
             }
         },
         components: {
             calenderDetail
+        },
+        props: ['tableData'],
+        watch: {
+            tableData: function () {
+                if(!this.flag){
+                   this.getOriginData(this.tableData); 
+                }
+                this.flag = true
+            }
         },
         methods: {
             handleBtn(val){
@@ -693,7 +202,7 @@
                 let h=0;
 
                 let index=0;
-
+                
                 item.data.forEach(items=>{
                     index=items.duration
                 })
@@ -737,65 +246,71 @@
                 data.forEach(item=>{
                     item.timeDate.forEach(item1=>{
                         item1.dealDate={}
-                        for(let i=0;i<item1.duration;i++){
-                            let times = parseInt(item1.startTime)+i+":00";
-                            item1.dealDate[times]=[];
-                        }
-                        item1.meetingData.forEach(item2=>{
-                            if(item2.startTime===item1.startTime){
-                                for(const key in item1.dealDate){
-                                    if(key===item2.startTime){
-                                        item1.dealDate[key].push(item2)
+                        let flags =true;
+                        item1.meetingData.forEach(meetItem=>{
+                            if(meetItem.duration!==item1.duration&&meetItem.startTime!==item1.startTime){
+                                flags=false;
+                            }
+                        });
+                        if(!flags){
+                            for(let i=0;i<item1.duration;i++){
+                                let times = parseInt(item1.startTime)+i+":00";
+                                item1.dealDate[times]=[];
+
+                            };
+                            item1.meetingData.forEach(item2=>{
+                                if(item2.startTime===item1.startTime){
+                                    for(const key in item1.dealDate){
+                                        if(key===item2.startTime){
+                                            item1.dealDate[key].push(item2)
+                                        }
                                     }
                                 }
-                            }
-                            if(item2.duration===item1.duration){
-                                for(const key in item1.dealDate){
-                                    item1.dealDate[key].push(item2);
-
-                                }
-                            }else if(item2.duration!==item1.duration){
-                                for(let i=0;i<item2.duration;i++){
-                                    let times = parseInt(item2.startTime)+i+":00";
+                                for(let i =parseInt(item2.startTime);i<parseInt(item2.endTime);i++){
+                                    let times = i+":00";
                                     for(const key in item1.dealDate){
                                         if(key===times){
                                             item1.dealDate[key].push(item2);
                                         }
                                     }
                                 }
-                            }
-                        })
-                        //去重
-                        for(const key in item1.dealDate){
-                            let datas =this.unique(item1.dealDate[key]);
-                            item1.dealDate[key]=datas
-                        };
-                        let flag=true;
-                        item1.meetingData.forEach(items=>{
-                            if(items.duration!==item1.duration){
-                                flag=false;
-                            }
-                        });
-                        if(flag){
+                            })
+                            //去重
                             for(const key in item1.dealDate){
-                                if(key!==item1.startTime){
-                                    delete item1.dealDate[key]
+                                let datas =this.unique(item1.dealDate[key]);
+                                item1.dealDate[key]=datas
+                            };
+                            
+                        }else{
+                            let times = parseInt(item1.startTime)+":00";
+                            item1.dealDate[times]=item1.meetingData;
+                        }
+                        let flag=true;
+                            item1.meetingData.forEach(items=>{
+                                if(items.duration!==item1.duration){
+                                    flag=false;
+                                }
+                            });
+                            if(flag){
+                                for(const key in item1.dealDate){
+                                    if(key!==item1.startTime&&!flags){
+                                        delete item1.dealDate[key]
+                                    }
+                                }
+                            }else{
+                                for(const key in item1.dealDate){
+                                    item1.dealDate[key].forEach(items=>{
+                                        items.duration=1;
+                                    });
                                 }
                             }
-                        }else{
                             for(const key in item1.dealDate){
-                                item1.dealDate[key].forEach(items=>{
-                                    items.duration=1;
-                                });
+                                let datas = item1.dealDate[key];
+                                item1.dealDate[key]={};
+                                item1.dealDate[key].index=1;
+                                item1.dealDate[key].data=datas
                             }
-                        }
-                        for(const key in item1.dealDate){
-                            let datas = item1.dealDate[key];
-                            item1.dealDate[key]={};
-                            item1.dealDate[key].index=1;
-                            item1.dealDate[key].data=datas
-                        }
-                        this.dealData =data
+                        this.dealData =data;
                     })
                 })
             },
@@ -804,7 +319,7 @@
             this.t =-76*this.indexY;
             this.currentDate = this.returnDate('dateTime')
             this.currentTime = this.returnDate('currentTime')
-            this.getOriginData(this.tableData);
+            // this.getOriginData(this.tableData);
         },
     }
 </script>
@@ -825,17 +340,20 @@
         display: block;
     }
     .calender{
-        width: 1170px;
+        /* width: 1170px; */
+        width: 1100px;
         margin: 65px auto 0;
         position: relative;
         top: 0;
         left: 0;
     }
     .calendar-top{
-        width: 1030px;
+        /* width: 1030px; */
+        width: 970px;
         position: relative;
         top: 0;
-        left: 150px;
+        /* left: 150px; */
+        left: 100px;
     }
     button{
         width: 20px;
@@ -886,7 +404,8 @@
 
     }
     .calenderSliderTopMain span{
-        width: 240px;
+        /* width: 240px; */
+        width: 230px;
         margin-right: 20px;
         height: 40px;
         line-height: 40px;
@@ -909,12 +428,14 @@
         left: 0;
     }
     .calenderLeftTime{
-        width: 130px;
+        /* width: 130px; */
+        width: 90px;
         height: 740px;
         overflow: hidden;
     }
     .calenderLeftTime span{
-        width: 130px;
+        /* width: 130px; */
+        width: 90px;
         margin-bottom: 20px;
         height: 56px;
         line-height: 56px;
@@ -931,12 +452,14 @@
     }
     .calendarSlide{
         padding: 10px 0 0 10px;
-        width: 1030px;
+        /* width: 1030px; */
+        width: 985px;
         height: 740px;
         overflow: hidden;
         position: absolute;
         top: -10px;
-        left: 140px;
+        /* left: 140px; */
+        left: 100px;
     }
     .calenderslideItemInside{
         float: left;
@@ -944,7 +467,8 @@
         top: 0;
         left: 0;
         height: 100%;
-        width: 260px;
+        /* width: 260px; */
+        width: 245px;
         transition: transform 0.5s ease-in-out;
     }
     .calendarSlideItem{
@@ -955,22 +479,28 @@
         transition: transform 0.5s ease-in-out;
     }
     .calenderslideItemInsideItem{
-        width: 240px;
+        /* width: 240px;
+        margin-right: 20px; */
+        width: 230px;
         margin-right: 20px;
         position: absolute;
         top: 0;
         left: 0;
         text-align: left;
+        /* padding-bottom: 20px; */
         padding-bottom: 20px;
 
     }
     .calenderslideItemInsideItem.all{
-        width: 240px;
+        /* width: 240px; */
+        width: 230px;
         height: 740px;
         transition: transform 0.5s ease-in-out;
+        background:blue;
     }
     .calenderListSinge{
-        width: 240px;
+        /* width: 240px; */
+        width: 230px;
         box-shadow: 0px 4px 10px #ececec;
         margin-bottom: 20px;
         overflow: hidden;
@@ -983,7 +513,8 @@
         transition: transform 0.5s ease-in-out;
     }
     .cadenderSinge{
-        width: 240px;
+        /* width: 240px; */
+        width: 230px;
         min-height: 56px;
         border-radius: 4px;
         padding: 12px 20px 15px;
