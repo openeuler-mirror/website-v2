@@ -203,7 +203,7 @@
                         }"
                         @click="toggleMenuMobile"
                     >
-                        <i class="icon-menu"></i>
+                        <span class="icon-menu"></span>
                     </li>
                 </ul>
             </div>
@@ -464,7 +464,9 @@ export default {
                 li {
                     height: 100%;
                     line-height: 70px;
-                    vertical-align: middle;
+                    span {
+                        vertical-align: middle;
+                    }
                     margin-left: 20px;
                     cursor: pointer;
                 }
@@ -472,10 +474,10 @@ export default {
                     font-size: 16px;
                 }
                 .search {
-                    font-size: 25px;
+                    font-size: 22px;
                 }
                 .menu {
-                    font-size: 22px;
+                    font-size: 20px;
                 }
             }
             .nav-menu-mobile {

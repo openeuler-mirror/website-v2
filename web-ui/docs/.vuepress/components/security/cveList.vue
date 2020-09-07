@@ -56,7 +56,13 @@
             </li>
             <li>
               <span class="title">{{i18n.security.SYNOPSIS}}:</span>
-              <span :class="{'content': true, 'overflow': !item.overflow}">{{item.summary}}</span>
+              <span :class="{'content': true, 'overflow': !item.overflow}">{{item.summary}}
+                  <a
+                    v-show="item.overflow"
+                    class="table-link"
+                    @click="item.overflow = !item.overflow"
+                ><<</a>
+              </span>
               <a
                 v-show="!item.overflow"
                 class="table-link"
