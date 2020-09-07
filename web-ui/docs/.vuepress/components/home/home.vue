@@ -377,8 +377,6 @@
         meetingList () {
             meetingList()
             .then(data => {
-                console.log(data.tableData);
-                console.log(localMethods.sortData(data.tableData));
                 that.calenderData = localMethods.sortData(data.tableData);
             })
             .catch(data => {
@@ -393,6 +391,7 @@
                 dateItem.timeData.forEach(timeItem => {
                     let timeStart = this.formatTime(timeItem.duration_time)[0];
                     let timeEnd = this.formatTime(timeItem.duration_time)[1];
+                    let indexTemp = null;
                     if(!arr.length) {
                         arr.push({
                             startTime: timeItem.startTime,
@@ -404,12 +403,13 @@
                             ]
                         })
                     } else {
+                        
                         let findItem = arr.every(meetingItem => {
                             let meetingStart = this.formatTime(meetingItem.duration_time)[0];
                             let meetingEnd = this.formatTime(meetingItem.duration_time)[1];
                             return (
-                                (timeEnd < meetingStart) || 
-                                (timeStart > meetingEnd)
+                                (timeEnd <= meetingStart) || 
+                                (timeStart >= meetingEnd)
                             );
                         })
                         if(findItem){
@@ -424,8 +424,12 @@
                             })
                             return;
                         }
-
-                        arr.forEach(meetingItem => {
+                        let eachFlag = false;
+                        arr.forEach((meetingItem, index) => {
+                            if(eachFlag){
+                                return;
+                            }
+                            indexTemp = index;
                             let meetingStart = this.formatTime(meetingItem.duration_time)[0];
                             let meetingEnd = this.formatTime(meetingItem.duration_time)[1];
                             if(
@@ -438,15 +442,17 @@
                                 (timeEnd 
                                 <= meetingEnd)
                             ){
+                                eachFlag = true;
                                 meetingItem.meetingData.push(timeItem);
                             }
 
                             
                             if(
                                 (timeStart < meetingStart) && 
-                                ((meetingStart <= timeEnd) && 
+                                ((meetingStart < timeEnd) && 
                                 (timeEnd <= meetingEnd))
                             ){
+                                eachFlag = true;
                                 meetingItem.startTime = timeItem.startTime;
                                 meetingItem.duration = meetingEnd - timeStart;
                                 meetingItem.duration_time = timeStart + ':00-' + meetingEnd + ':00';
@@ -456,8 +462,9 @@
                             if(
                                 (timeEnd > meetingEnd) && 
                                 ((meetingStart <= timeStart) && 
-                                (timeStart <= meetingEnd))
+                                (timeStart < meetingEnd))
                             ){
+                                eachFlag = true;
                                 meetingItem.endTime = timeItem.endTime;
                                 meetingItem.duration = timeEnd - meetingStart;
                                 meetingItem.duration_time = meetingStart + ':00-' + timeEnd + ':00';
@@ -468,6 +475,7 @@
                                 (timeStart < meetingStart) && 
                                 (timeEnd > meetingEnd)
                             ){
+                                eachFlag = true;
                                 meetingItem.startTime = timeItem.startTime;
                                 meetingItem.endTime = timeItem.endTime;
                                 meetingItem.duration = timeEnd - timeStart;
@@ -476,6 +484,68 @@
                             }
 
                         })
+                    }
+                    let arrTemp = [];
+                    let notCheckArr = [];
+                    if(indexTemp !== null){
+                        let curItemStartTime = arr[indexTemp].startTime;
+                        let curItemEndTime = arr[indexTemp].endTime;
+                        let curItemStart = this.formatTime(arr[indexTemp].duration_time)[0];
+                        let curItemEnd = this.formatTime(arr[indexTemp].duration_time)[1];
+                        arr.forEach((item, index) => {
+                            let itemStart = this.formatTime(item.duration_time)[0];
+                            let itemEnd = this.formatTime(item.duration_time)[1];
+                            if(index != indexTemp){
+                                if(
+                                    (itemStart < curItemStart) && 
+                                    ((curItemStart < itemEnd) && 
+                                    (itemEnd <= curItemEnd))
+                                ){
+                                    curItemStart = itemStart;
+                                    curItemStartTime = item.startTime;
+                                    arrTemp.push(item);
+                                    return;
+                                }
+
+                                if(
+                                    (itemEnd > curItemEnd) && 
+                                    ((curItemStart <= itemStart) && 
+                                    (itemStart < curItemEnd))
+                                ){
+                                    curItemEnd = itemEnd;
+                                    curItemEndTime = item.endTime;
+                                    arrTemp.push(item);
+                                    return;
+                                }
+
+                                if(
+                                    (itemStart < curItemStart) && 
+                                    (itemEnd > curItemEnd)
+                                ){
+                                    curItemStart = itemStart;
+                                    curItemEnd = itemEnd;
+                                    curItemStartTime = item.startTime;
+                                    curItemEndTime = item.endTime;
+                                    arrTemp.push(item);
+                                    return;
+                                }
+                                notCheckArr.push(item);
+                            }
+                        })
+                        let selItem = [];
+                        if(arrTemp.length){
+                            arr[indexTemp].startTime = curItemStartTime;
+                            arr[indexTemp].duration = curItemEnd - curItemStart;
+                            arr[indexTemp].endTime = curItemEndTime;
+                            arr[indexTemp].duration_time = curItemStart + ':00-' + curItemEnd + ':00';
+                            selItem.push(arr[indexTemp]);
+                            
+                            arrTemp.forEach((item, index) => {
+                                selItem[0].meetingData = selItem[0].meetingData.concat(item.meetingData);
+                            })
+                            selItem = selItem.concat(notCheckArr);
+                            arr = selItem;
+                        }
                     }
                 })
                 dateItem.timeDate = arr;
