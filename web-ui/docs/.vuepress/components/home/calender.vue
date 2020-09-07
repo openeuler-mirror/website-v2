@@ -1,5 +1,5 @@
 <template>
-    <div class="calender is-pc">
+    <div class="calender is-pc" v-if="tableData&&tableData.length">
         <div class="calendar-top">
             <button class="left" @click="handleBtn('left')" :style="{ background: 'url(' + prev + ') no-repeat center' }"></button>
             <button class="right" @click="handleBtn('right')" :style="{ background: 'url(' + prev + ') no-repeat center' }"></button>
@@ -104,6 +104,7 @@
         watch: {
             tableData: function () {
                 if(!this.flag){
+                    console.log('this.tableData',this.tableData)
                    this.getOriginData(this.tableData); 
                 }
                 this.flag = true
@@ -126,7 +127,8 @@
                             this.indexX++;
                         }
                     }
-                    this.l =-260*this.indexX
+                    // this.l =-260*this.indexX
+                    this.l =-245*this.indexX
                 }
                 if(val==='top'||val==='bottom'){
                     let len =this.timeData.length;
@@ -182,7 +184,8 @@
                     let currentIndex=0;
                     this.timeData.forEach((items,i)=>{
                         let times = items.split('-')[0];
-                        if(times===item.startTime){
+                        let itemTime =parseInt(item.duration_time.split('-')[0])+":00";
+                        if(times===itemTime){
                             currentIndex=i;
                         }
                     })
@@ -192,7 +195,6 @@
                     }else{
                         t=0
                     }
-
                     str =`height: ${h}px;top: ${t}px;`
                 }
                 return str;
@@ -386,17 +388,20 @@
         top: -20px;
         height: 20px;
 
-        left: 55px;
+        left: 50%;
+        margin-left:-10px;
         transform: rotateZ(90deg);
     }
     .bottom{
         bottom: -20px;
         height: 20px;
-        left: 55px;
+        left: 50%;
+        margin-left:-10px;
         transform: rotateZ(-90deg);
     }
     .calenderSliderTopMain{
-        width: 1030px;
+        /* width: 1030px; */
+        width: 985px;
         position: relative;
         top: 0;
         left: 0;
@@ -406,7 +411,8 @@
     .calenderSliderTopMain span{
         /* width: 240px; */
         width: 230px;
-        margin-right: 20px;
+        /* margin-right: 20px; */
+        margin-right: 15px;
         height: 40px;
         line-height: 40px;
         font-size: 16px;
@@ -454,7 +460,7 @@
         padding: 10px 0 0 10px;
         /* width: 1030px; */
         width: 985px;
-        height: 740px;
+        height: 760px;
         overflow: hidden;
         position: absolute;
         top: -10px;
