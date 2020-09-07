@@ -1,28 +1,45 @@
 <template>
     <div class="theme-container">
-        <CustomHeader></CustomHeader>
             <mesbanner class="not-found-top"
-            :outsideName="i18n.common.NOTFOUND.NOTFOUND"
+            :outsideName="currentLang.title"
             :pcSrc="'/img/404/404-banner.png'"
             :mobileSrc="'/img/404/404-banner.png'"
             :isOther="true"
-            :pcMessage="i18n.common.NOTFOUND.MESSAGE"
-            :mobileMessage="i18n.common.NOTFOUND.MESSAGE"
+            :pcMessage="currentLang.message"
+            :mobileMessage="currentLang.message"
             >
             </mesbanner>
-        <CustomFooter></CustomFooter>
     </div>
 </template>
 
 <script>
-import CustomHeader from "./../components/CustomHeader";
-import CustomFooter from "./../components/CustomFooter";
 import mesbanner from './../../components/common/mesbanner';
 export default {
+    data () {
+        return {
+            language:{
+                en:{
+                    title:404,
+                    message:'NOT FOUND...'
+                },
+                cn:{
+                    title:404,
+                    message:'开小差啦...'
+                }
+            },
+            currentLang:{}
+        }
+    },
     components: {
-        CustomHeader,
-        CustomFooter,
         mesbanner
+    },
+    created () {
+        if(window.location.href.includes('/en/')){
+            this.currentLang = this.language.en;
+        }else{
+            this.currentLang = this.language.cn;
+        }
+        console.log(this.currentLang);
     },
   methods: {
   },

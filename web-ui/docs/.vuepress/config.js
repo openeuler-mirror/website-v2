@@ -20,7 +20,7 @@ module.exports = {
     ],
     locales: {
         '/': {
-            lang: 'en',
+            lang: 'zh',
             title: '',
             description: ''
         },

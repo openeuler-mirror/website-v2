@@ -365,7 +365,7 @@ export default {
                         position: absolute;
                         right: 38px;
                         .icon-player {
-                        .icon-css(28px,28px,"/img/summit/blue-player.svg",contain);
+                        .icon-css(25px,25px,"/img/summit/blue-player.svg",contain);
                         position: absolute;
                         right:0;
                         }

@@ -144,10 +144,6 @@ module.exports = {
             ],
             QR_CODE: '扫码关注公众号'
         },
-        NOTFOUND:{
-            NOTFOUND:404,
-            MESSAGE:'开小差啦...'
-        },
         BUILDING:{
             BUILDING:'建设中',
             BUILDINGMES:'敬请期待...'
@@ -293,10 +289,6 @@ module.exports = {
                 }
             ],
             QR_CODE: 'Wechat Subscription'
-        },
-        NOTFOUND:{
-            NOTFOUND:404,
-            MESSAGE:'开小差啦...'
         },
         BUILDING:{
             BUILDING:'Building',
