@@ -159,7 +159,7 @@
             </a>
         </div>
 
-        <div class="home-calendar">
+        <div class="home-calendar" v-if="calenderData">
             <calender :table-data="calenderData" />
         </div>
 
