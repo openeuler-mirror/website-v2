@@ -111,6 +111,9 @@ module.exports = {
         },
         CONDUCT: {
             TITLE: "行为守则"
+        },
+        SERVICE: {
+            SERVICE:''
         }
     },
     en: {
