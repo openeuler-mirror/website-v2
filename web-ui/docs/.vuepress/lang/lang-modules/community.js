@@ -87,7 +87,10 @@ module.exports = {
                     BUTTON: "提出Issue",
                     IMG: "/img/community/contribution/issue.png",
                     VIDEO: "/img/community/contribution/issue.gif",
-                    LINK: ""
+                    LINK: "",
+                    LINKADRESSLIST:[
+                        '请选择跳转的链接：','链接1','链接2','链接3'
+                    ]
                 },
                 {
                     BUTTON: "贡献代码",
@@ -200,7 +203,11 @@ module.exports = {
                     BUTTON: "提出Issue",
                     IMG: "/img/community/contribution/issue.png",
                     VIDEO: "/img/community/contribution/issue.gif",
-                    LINK: ""
+                    LINK: "",
+                    LINK: "",
+                    LINKADRESSLIST:[
+                        '请选择跳转的链接：','链接1','链接2','链接3'
+                    ]
                 },
                 {
                     BUTTON: "贡献代码",

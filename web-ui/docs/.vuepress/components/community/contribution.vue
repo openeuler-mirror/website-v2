@@ -11,6 +11,7 @@
                      v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"
                      :key="index">
                     <div class="step" >
+                        <!-- 提出Issue链接点击的区域有点问题待解决 -->
                         <a class="step-num" @click="go(item.LINK)">
                             <span>{{ item.BUTTON }}</span>
                         </a>
@@ -19,11 +20,11 @@
                     </div>
                     <div :class="['guidance',ishide?'is-hide':'']" v-if="item.LINK?false:true">
                         <div class="angle"></div>
-                        <p>请选择跳转的链接：</p>
+                        <p>{{item.LINKADRESSLIST[0]}}</p>
                         <p>
-                            <span>链接1</span>
-                            <span>链接3</span>
-                            <span>链接3</span>
+                            <span>{{item.LINKADRESSLIST[1]}}</span>
+                            <span>{{item.LINKADRESSLIST[2]}}</span>
+                            <span>{{item.LINKADRESSLIST[3]}}</span>
                         </p>
                     </div>
                 </div>
