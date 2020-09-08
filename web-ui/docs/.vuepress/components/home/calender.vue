@@ -1,5 +1,5 @@
 <template>
-    <div class="calender is-pc">
+    <div class="calender is-pc" v-loading="!tableData">
         <div class="calendar-top">
             <button
                 class="left"
@@ -126,6 +126,7 @@
 </template>
 <script>
 import calenderDetail from "./calenderDetail.vue";
+import commonUtils from "./../../libs/common-methods";
 export default {
     name: "HelloWorld",
     data() {
@@ -170,6 +171,7 @@ export default {
     watch: {
         tableData: function() {
             if (!this.flag) {
+                commonUtils.calenderSortData(this.tableData);
                 this.getOriginData(this.tableData);
             }
             this.flag = true;
@@ -426,7 +428,6 @@ div::after {
     display: block;
 }
 .calender {
-    /* width: 1170px; */
     width: 1100px;
     margin: 65px auto 0;
     position: relative;
@@ -434,11 +435,9 @@ div::after {
     left: 0;
 }
 .calendar-top {
-    /* width: 1030px; */
     width: 970px;
     position: relative;
     top: 0;
-    /* left: 150px; */
     left: 100px;
 }
 button {
@@ -484,7 +483,6 @@ button {
     transform: rotateZ(-90deg);
 }
 .calenderSliderTopMain {
-    /* width: 1030px; */
     width: 985px;
     position: relative;
     top: 0;
@@ -492,9 +490,7 @@ button {
     overflow: hidden;
 }
 .calenderSliderTopMain span {
-    /* width: 240px; */
     width: 230px;
-    /* margin-right: 20px; */
     margin-right: 15px;
     height: 40px;
     line-height: 40px;
@@ -517,13 +513,11 @@ button {
     left: 0;
 }
 .calenderLeftTime {
-    /* width: 130px; */
     width: 90px;
     height: 740px;
     overflow: hidden;
 }
 .calenderLeftTime span {
-    /* width: 130px; */
     width: 90px;
     margin-bottom: 20px;
     height: 56px;
@@ -541,13 +535,11 @@ button {
 }
 .calendarSlide {
     padding: 10px 0 0 10px;
-    /* width: 1030px; */
     width: 985px;
     height: 760px;
     overflow: hidden;
     position: absolute;
     top: -10px;
-    /* left: 140px; */
     left: 100px;
 }
 .calenderslideItemInside {
@@ -556,7 +548,6 @@ button {
     top: 0;
     left: 0;
     height: 100%;
-    /* width: 260px; */
     width: 245px;
     transition: transform 0.5s ease-in-out;
 }
@@ -569,26 +560,21 @@ button {
     transition: transform 0.5s ease-in-out;
 }
 .calenderslideItemInsideItem {
-    /* width: 240px;
-        margin-right: 20px; */
     width: 230px;
     margin-right: 20px;
     position: absolute;
     top: 0;
     left: 0;
     text-align: left;
-    /* padding-bottom: 20px; */
     padding-bottom: 20px;
 }
 .calenderslideItemInsideItem.all {
-    /* width: 240px; */
     width: 230px;
     height: 740px;
     transition: transform 0.5s ease-in-out;
     background: blue;
 }
 .calenderListSinge {
-    /* width: 240px; */
     width: 230px;
     box-shadow: 0px 4px 10px #ececec;
     margin-bottom: 20px;
@@ -602,7 +588,6 @@ button {
     transition: transform 0.5s ease-in-out;
 }
 .cadenderSinge {
-    /* width: 240px; */
     width: 230px;
     min-height: 56px;
     border-radius: 4px;

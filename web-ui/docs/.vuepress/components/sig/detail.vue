@@ -5,7 +5,7 @@
        </div>
        <h1>{{$route.query.name}}</h1>
        <h2>{{i18n.sig.SIG_DETAIL.ORGANIZING_MEETINGS}}</h2>
-        <div class="calender-wrapper" v-if="calenderData">
+        <div class="calender-wrapper">
             <calender :table-data="calenderData" />
         </div>
         <h2>{{i18n.sig.SIG_DETAIL.MEMBERS}}</h2>
@@ -44,7 +44,7 @@ let remoteMethods = {
     getSigDetail() {
         sigDetail(that.$route.query.id)
         .then(data => {
-            that.calenderData = localMethods.sortData(data.tableData);
+            that.calenderData = data.tableData;
         })
         .catch(data => {
             that.$message.error(data);
