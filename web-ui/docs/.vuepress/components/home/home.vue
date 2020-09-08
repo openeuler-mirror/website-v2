@@ -1,17 +1,19 @@
 <template>
     <div class="home">
         <div class="is-pc home-carousel">
-            <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay">
+            <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" interval="5000" @change="eventChange()">
                 <el-carousel-item>
                     <div class="carousel-video">
-                        <video poster="/img/home/BannerVideo.png" loop width="100%" height="380px" id="home-video">
-                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler%E7%90%86%E5%BF%B5%E8%A7%86%E9%A2%91_0829_V1.0.mp4"  type="video/mp4">
+                        <video poster="/img/home/BannerVideo.png" loop width="100%" height="500px" id="home-video">
+                            <source src="/img/home-video/home-video.mp4"  type="video/mp4">
                         </video>
                         <div class="playControll">
                             <div :class="['play-pause', isPlay?'pause-icon':'play-icon']" @click="isPlay=!isPlay"></div>
-                            <el-progress :percentage="barPercentage" class="timebar" :show-text="false" :color="'#909399'"></el-progress>
+                            <el-progress :percentage="barPercentage" id="timebar" :show-text="false" :color="'#ffffff'" @click="clickBar()"></el-progress>
                             <div :class="['voice-mute', isMuted?'mute-icon':'voice-icon']" @click="isMuted=!isMuted"></div>
 	                    </div>
+                        <div class="play-btn" v-if="!isPlay" @click="isPlay=!isPlay">
+                        </div>
                     </div>
                 </el-carousel-item>
                 <el-carousel-item class="carousel-item">
@@ -237,7 +239,6 @@
                         <span>{{ item.TAG }}  <span>|</span> </span> <span>{{ item.DATE }}</span>
                         <p>{{ item.CONTENT }}</p>
                     </div>
-                    <span><a href="">{{ i18n.home.MORE }}</a></span>
                 </div>
                 <div class="blog-room">
                     <h5>{{ i18n.home.HOME_ROOMS.BLOG_NAME }}</h5>
@@ -284,7 +285,8 @@
             </div>
             <div class="show-all" @click="showAll">
                 <p>{{ i18n.home.EXPAND }}</p>
-                <img src="/img/home/arrow.svg" alt="">
+                <img v-if="flag" src="/img/home/arrow.svg" alt="">
+                <img v-if="!flag" src="/img/home/arrowUp.svg" alt="">
             </div>
         </div>
 
@@ -326,7 +328,7 @@
                         <p>
                             {{ i18n.home.HOME_SOURCE.SOURCE_APPLY.DES }}
                         </p>
-                        <p><a @click="go('/blog/fred_li/2020-03-25-apply-for-vm-from-pcl.html')">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.APPLY }}</a></p>
+                        <p class="click-here"><a @click="go('/blog/fred_li/2020-03-25-apply-for-vm-from-pcl.html')">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.APPLY }}</a></p>
                         <p><span class="source-sponsor">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.SPONSOR }}</span></p>
                     </div>
                 </div>
@@ -404,12 +406,12 @@
                 rooms2: false,
                 rooms3: false,
                 calenderData: [],
-                autoPlay: false,
+                autoPlay: true,
                 videoElement:'',
                 isPlay:false,
                 isMuted:false,
                 realTimeUpdate:null, //定时器变量
-                barPercentage:0,    //进度条长度为250
+                barPercentage:0,    //进度条进度
             }
         },
         watch: {
@@ -552,7 +554,6 @@
                 this.$refs.newsroomCard.setActiveItem(index);
             },
             progressBar(){
-                console.log(1);
                 let duration = this.videoElement.duration;  //  获取视频总长度
                 let currentTime = this.videoElement.currentTime; //  获取当前播放时间
                 let ratio = parseFloat(currentTime/duration);
@@ -565,7 +566,11 @@
                     clearInterval(this.realTimeUpdate);
                     this.isPlay = true;
                 }
-                this.barPercentage = ratio*100;
+                this.barPercentage = Math.floor(ratio*100);
+            },
+            eventChange(){
+                this.videoElement.pause();
+                this.isPlay = false;
             }
         }
     }
@@ -701,12 +706,14 @@
             display: none;
             width: 390px;
             height: 40px;
-            background: gray;
+            background: #AAAAAA;
             position: absolute;
             bottom: 35px;
-            left: 545px;
+            left: 50%;
+            margin-left: -195px;
             z-index: 999999999;
             border-radius: 25px;
+            opacity: 0.5;
             .play-pause{
                  width: 30px;
                 height: 30px;
@@ -722,11 +729,16 @@
             .pause-icon{
                 background-image: url('/img/home/icon-pause.svg');
             }
-            .timebar{
+            #timebar{
                 width: 300px;
                 position: absolute;
                 top: 16px;
                 left: 45px;
+                /deep/.el-progress-bar{
+                    .el-progress-bar__outer{
+                        background-color: #222222 !important;
+                    }
+                }
             }
             .voice-mute{
                 width: 26px;
@@ -744,6 +756,18 @@
             .mute-icon{
                 background-image: url('/img/home/icon-mute.svg');
             }
+        }
+        .play-btn{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            border-radius: 50px;
+            bottom: 200px;
+            left: 700px;
+            background-image: url('/img/home/play-btn.gif');
+            cursor: pointer;
+            background-size: contain;
+            opacity: 0.6;
         }
     }
     .carousel-video img {
@@ -1125,7 +1149,7 @@
         cursor: pointer;
     }
     .room-title {
-        margin-bottom: 40px;
+        margin-bottom: 35px;
     }
     .room-title a {
         display: inline-block;
@@ -1314,6 +1338,9 @@
     .apply-des a {
         cursor: pointer;
     }
+    .apply-des .click-here {
+        margin-top: 10px;
+    }
     .source-publish-link {
         margin-top: 50px;
     }
@@ -1331,6 +1358,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 10px;
     }
     .publish .publish-edition img {
         width: 280px;
@@ -1400,6 +1428,9 @@
             text-align: center;
             margin-top: 35px;
             margin-bottom: 0;
+        }
+        .carousel-item-index a {
+            text-decoration: none;
         }
         .carousel-item-index img {
             width: 200px;
@@ -1482,6 +1513,9 @@
         .home-newsroom {
             width: 100%;
             margin-top: 80px;
+        }
+        .blog-room {
+            margin-top: 40px;
         }
         .newsroom h5 {
             font-size: 18px;

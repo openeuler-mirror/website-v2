@@ -26,5 +26,17 @@ export default {
 </script>
 
 <style lang='less'>
-
+.markdown{
+    table{
+        thead{
+            tr{
+                th{
+                    &:nth-of-type(2){
+                        white-space:nowrap;
+                    }
+                }
+            }
+        }
+    }
+}
 </style>

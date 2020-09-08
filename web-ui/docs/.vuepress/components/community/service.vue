@@ -13,7 +13,7 @@ export default {
         }
     },
     created () {
-        if(!this.i18n.community.SERVICE.SERVICE){
+        if(this.i18n.community.SERVICE.SERVICE == ''){
             this.$router.push(this.resolvePath("/building/"));
         }
         

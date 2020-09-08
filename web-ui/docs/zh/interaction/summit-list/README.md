@@ -2,5 +2,5 @@
 title: "峰会"
 ---
 <ClientOnly>
-  <summit-summit />
+  <summit-summit-home />
 </ClientOnly>
