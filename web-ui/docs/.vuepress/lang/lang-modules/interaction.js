@@ -421,15 +421,15 @@ module.exports = {
             ],
             OTHERLINK:[
                 {
-                    URL:'url("/img/summit/kunpeng.svg")',
-                    LINK:'https://www.huaweicloud.com/kunpeng/'
-                },
-                {
-                    URL:    'url("/img/summit/mulan.svg")',
+                    URL:'url("/img/home/mulan.png")',
                     LINK:'http://www.mulanos.cn/'
                 },
                 {
-                    URL:'url("/img/summit/pengcheng.png")',
+                    URL:'url("/img/home/kunpeng.png")',
+                    LINK:'https://www.huaweicloud.com/kunpeng/'
+                },
+                {
+                    URL:'url("/img/home/pengcheng.png")',
                     LINK:'https://dw.pcl.ac.cn/dwmain/main/'
                 }
                 ]
@@ -859,15 +859,15 @@ module.exports = {
             ],
             OTHERLINK:[
                 {
-                    URL:'url("/img/summit/kunpeng.svg")',
-                    LINK:'https://www.huaweicloud.com/kunpeng/'
-                },
-                {
-                    URL:'url("/img/summit/mulan.svg")',
+                    URL:'url("/img/home/mulan.png")',
                     LINK:'http://www.mulanos.cn/'
                 },
                 {
-                    URL:'url("/img/summit/pengcheng.png")',
+                    URL:'url("/img/home/kunpeng.png")',
+                    LINK:'https://www.huaweicloud.com/kunpeng/'
+                },
+                {
+                    URL:'url("/img/home/pengcheng.png")',
                     LINK:'https://dw.pcl.ac.cn/dwmain/main/'
                 }
                 ]

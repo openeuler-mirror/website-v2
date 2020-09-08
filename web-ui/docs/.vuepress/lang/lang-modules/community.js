@@ -87,25 +87,28 @@ module.exports = {
                     BUTTON: "提出Issue",
                     IMG: "/img/community/contribution/issue.png",
                     VIDEO: "/img/community/contribution/issue.gif",
-                    LINK: ""
+                    LINK: "",
+                    LINKADRESSLIST:[
+                        '请选择跳转的链接：','链接1','链接2','链接3'
+                    ]
                 },
                 {
                     BUTTON: "贡献代码",
                     IMG: "/img/community/contribution/contribution.png",
                     VIDEO: "/img/community/contribution/contribution.gif",
-                    LINK: ""
+                    LINK: "https://gitee.com/openeuler"
                 },
                 {
                     BUTTON: "加入SIG",
                     IMG: "/img/community/contribution/sig.png",
                     VIDEO: "/img/community/contribution/sig.gif",
-                    LINK: ""
+                    LINK: "/sig/sig-list/"
                 },
                 {
                     BUTTON: "参选技术委员会",
                     IMG: "/img/community/contribution/commit.png",
                     VIDEO: "/img/community/contribution/commit.gif",
-                    LINK: ""
+                    LINK: "https://openeuler.org/zh/sig.html"    //暂用此链接代替
                 },
             ]
         },
@@ -200,7 +203,11 @@ module.exports = {
                     BUTTON: "提出Issue",
                     IMG: "/img/community/contribution/issue.png",
                     VIDEO: "/img/community/contribution/issue.gif",
-                    LINK: ""
+                    LINK: "",
+                    LINK: "",
+                    LINKADRESSLIST:[
+                        '请选择跳转的链接：','链接1','链接2','链接3'
+                    ]
                 },
                 {
                     BUTTON: "贡献代码",

@@ -11,11 +11,21 @@
                      v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"
                      :key="index">
                     <div class="step" >
+                        <!-- 提出Issue链接点击的区域有点问题待解决 -->
                         <a class="step-num" @click="go(item.LINK)">
                             <span>{{ item.BUTTON }}</span>
                         </a>
                         <img :src="item.IMG" alt="">
                         <img :src="item.VIDEO" class="is-hidden">
+                    </div>
+                    <div :class="['guidance',ishide?'is-hide':'']" v-if="item.LINK?false:true">
+                        <div class="angle"></div>
+                        <p>{{item.LINKADRESSLIST[0]}}</p>
+                        <p>
+                            <span>{{item.LINKADRESSLIST[1]}}</span>
+                            <span>{{item.LINKADRESSLIST[2]}}</span>
+                            <span>{{item.LINKADRESSLIST[3]}}</span>
+                        </p>
                     </div>
                 </div>
                 <div class="map-rode">
@@ -52,7 +62,8 @@
         name: "contribution",
         data () {
             return {
-                bkgImg: "/img/community/contribution/bkg-community.png"
+                bkgImg: "/img/community/contribution/bkg-community.png",
+                ishide:true
             }
         },
         mounted() {
@@ -82,12 +93,20 @@
                 }
             },
             go(path) {
-                if (path) {
-                    this.$router.push({
-                        path: this.resolvePath(path)
-                    });
+                if(path == ''){
+                    this.ishide = !this.ishide;
+                    return;
                 }
-            },
+                if(path.includes('https')){
+                    window.open(path);
+                }else{
+                    if(path){
+                        this.$router.push({
+                            path: this.resolvePath(path)
+                        });
+                    }
+                }
+            }
         }
     }
 </script>
@@ -115,6 +134,35 @@
     .mail-guide {
         max-width: 1120px;
         margin: 0 auto;
+        position: relative;
+    }
+    .mail-guide .guidance{
+        box-sizing: border-box;
+        border: 1px solid rgba(0, 47, 167, .5);
+        padding: 10px 23px 23px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, .1);
+        text-align: left;
+        width: 200px;
+        position: absolute;
+        left: 381px;
+        bottom: -138px;
+    }
+    .mail-guide .guidance .angle{
+        margin-left: 30px;
+        width: 15px;
+        height: 15px;
+        transform: rotate(45deg);
+        border-left: 1px solid rgba(0, 47, 167, .5);
+        border-top: 1px solid rgba(0, 47, 167, .5);
+        box-sizing: border-box;
+        position: relative;
+        top: -18px;
+        background: #fff;
+    }
+    .mail-guide .is-hide{
+        opacity: 0;
     }
     .step {
         width: 200px;

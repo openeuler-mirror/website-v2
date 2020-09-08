@@ -278,7 +278,7 @@ export default {
 }
 .version-div {
   padding-bottom: 20px;
-  border-bottom: 4px solid #002fa7;
+  border-bottom: 2px solid #002fa7;
   position: relative;
   span {
     font-size: 24px;
