@@ -17,6 +17,15 @@
                         <img :src="item.IMG" alt="">
                         <img :src="item.VIDEO" class="is-hidden">
                     </div>
+                    <div :class="['guidance',ishide?'is-hide':'']" v-if="item.LINK?false:true">
+                        <div class="angle"></div>
+                        <p>请选择跳转的链接：</p>
+                        <p>
+                            <span>链接1</span>
+                            <span>链接3</span>
+                            <span>链接3</span>
+                        </p>
+                    </div>
                 </div>
                 <div class="map-rode">
                     <img class="is-pc rode-1" src="/img/community/contribution/rode1.svg" alt="">
@@ -52,7 +61,8 @@
         name: "contribution",
         data () {
             return {
-                bkgImg: "/img/community/contribution/bkg-community.png"
+                bkgImg: "/img/community/contribution/bkg-community.png",
+                ishide:true
             }
         },
         mounted() {
@@ -82,12 +92,20 @@
                 }
             },
             go(path) {
-                if (path) {
-                    this.$router.push({
-                        path: this.resolvePath(path)
-                    });
+                if(path == ''){
+                    this.ishide = !this.ishide;
+                    return;
                 }
-            },
+                if(path.includes('https')){
+                    window.open(path);
+                }else{
+                    if(path){
+                        this.$router.push({
+                            path: this.resolvePath(path)
+                        });
+                    }
+                }
+            }
         }
     }
 </script>
@@ -115,6 +133,35 @@
     .mail-guide {
         max-width: 1120px;
         margin: 0 auto;
+        position: relative;
+    }
+    .mail-guide .guidance{
+        box-sizing: border-box;
+        border: 1px solid rgba(0, 47, 167, .5);
+        padding: 10px 23px 23px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, .1);
+        text-align: left;
+        width: 200px;
+        position: absolute;
+        left: 381px;
+        bottom: -138px;
+    }
+    .mail-guide .guidance .angle{
+        margin-left: 30px;
+        width: 15px;
+        height: 15px;
+        transform: rotate(45deg);
+        border-left: 1px solid rgba(0, 47, 167, .5);
+        border-top: 1px solid rgba(0, 47, 167, .5);
+        box-sizing: border-box;
+        position: relative;
+        top: -18px;
+        background: #fff;
+    }
+    .mail-guide .is-hide{
+        opacity: 0;
     }
     .step {
         width: 200px;

@@ -3,5 +3,5 @@ title: "Summit"
 
 ---
 <ClientOnly>
-  <summit-summit-home />
+  <summit-summit-list />
 </ClientOnly>

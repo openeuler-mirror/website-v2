@@ -717,7 +717,8 @@
             background: #AAAAAA;
             position: absolute;
             bottom: 35px;
-            left: 545px;
+            left: 50%;
+            margin-left: -195px;
             z-index: 999999999;
             border-radius: 25px;
             opacity: 0.5;
