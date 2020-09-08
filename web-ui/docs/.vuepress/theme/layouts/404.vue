@@ -34,12 +34,7 @@ export default {
         mesbanner
     },
     created () {
-        if(window.location.href.includes('/en/')){
-            this.currentLang = this.language.en;
-        }else{
-            this.currentLang = this.language.cn;
-        }
-        console.log(this.currentLang);
+        this.currentLang = this.language.cn;
     },
   methods: {
   },
