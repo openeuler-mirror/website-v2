@@ -377,116 +377,11 @@
         meetingList () {
             meetingList()
             .then(data => {
-                console.log(data.tableData);
-                console.log(localMethods.sortData(data.tableData));
-                that.calenderData = localMethods.sortData(data.tableData);
+                that.calenderData = data.tableData;
             })
             .catch(data => {
                 that.$message.error(data);
             });
-        }
-    }
-    let localMethods = {
-        sortData (data) {
-            data.forEach(dateItem => {
-                let arr = [];
-                dateItem.timeData.forEach(timeItem => {
-                    let timeStart = this.formatTime(timeItem.duration_time)[0];
-                    let timeEnd = this.formatTime(timeItem.duration_time)[1];
-                    if(!arr.length) {
-                        arr.push({
-                            startTime: timeItem.startTime,
-                            endTime: timeItem.endTime,
-                            duration: timeItem.duration,
-                            duration_time: timeItem.duration_time,
-                            meetingData: [
-                                timeItem
-                            ]
-                        })
-                    } else {
-                        let findItem = arr.every(meetingItem => {
-                            let meetingStart = this.formatTime(meetingItem.duration_time)[0];
-                            let meetingEnd = this.formatTime(meetingItem.duration_time)[1];
-                            return (
-                                (timeEnd < meetingStart) || 
-                                (timeStart > meetingEnd)
-                            );
-                        })
-                        if(findItem){
-                            arr.push({
-                                startTime: timeItem.startTime,
-                                endTime: timeItem.endTime,
-                                duration: timeItem.duration,
-                                duration_time: timeItem.duration_time,
-                                meetingData: [
-                                    timeItem
-                                ]
-                            })
-                            return;
-                        }
-
-                        arr.forEach(meetingItem => {
-                            let meetingStart = this.formatTime(meetingItem.duration_time)[0];
-                            let meetingEnd = this.formatTime(meetingItem.duration_time)[1];
-                            if(
-                                (meetingStart
-                                <= timeStart) && 
-                                (timeStart
-                                <= meetingEnd) && 
-                                (meetingStart
-                                <= timeEnd) && 
-                                (timeEnd 
-                                <= meetingEnd)
-                            ){
-                                meetingItem.meetingData.push(timeItem);
-                            }
-
-                            
-                            if(
-                                (timeStart < meetingStart) && 
-                                ((meetingStart <= timeEnd) && 
-                                (timeEnd <= meetingEnd))
-                            ){
-                                meetingItem.startTime = timeItem.startTime;
-                                meetingItem.duration = meetingEnd - timeStart;
-                                meetingItem.duration_time = timeStart + ':00-' + meetingEnd + ':00';
-                                meetingItem.meetingData.push(timeItem);
-                            }
-
-                            if(
-                                (timeEnd > meetingEnd) && 
-                                ((meetingStart <= timeStart) && 
-                                (timeStart <= meetingEnd))
-                            ){
-                                meetingItem.endTime = timeItem.endTime;
-                                meetingItem.duration = timeEnd - meetingStart;
-                                meetingItem.duration_time = meetingStart + ':00-' + timeEnd + ':00';
-                                meetingItem.meetingData.push(timeItem);
-                            }
-
-                            if(
-                                (timeStart < meetingStart) && 
-                                (timeEnd > meetingEnd)
-                            ){
-                                meetingItem.startTime = timeItem.startTime;
-                                meetingItem.endTime = timeItem.endTime;
-                                meetingItem.duration = timeEnd - timeStart;
-                                meetingItem.duration_time = timeStart + ':00-' + timeEnd + ':00';
-                                meetingItem.meetingData.push(timeItem);
-                            }
-
-                        })
-                    }
-                })
-                dateItem.timeDate = arr;
-            })
-            return data;
-        },
-        formatTime (time) {
-            let arr = time.split('-');
-            arr[0] = parseInt(arr[0].split(':')[0]);
-            arr[1] = parseInt(arr[1].split(':')[0]);
-            return arr;
         }
     }
     export default {
@@ -704,9 +599,6 @@
 <style lang="less" scoped>
     [v-cloak] {
         display: none !important;
-    }
-    .home-calendar {
-        // display: none;
     }
     .home-auth {
         display: none;

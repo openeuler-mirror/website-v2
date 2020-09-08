@@ -41,7 +41,7 @@ module.exports = {
         MODIFIED_TIME: '修改时间',
         OPERATION: '操作',
         DETAIL: '详情',
-        REPORTING: '漏洞上报',
+        REPORTING: '漏洞管理',
         INPUT_CVE_ID: '请输入CVE ID',
         BRIEF_INTRODUCTION: '简介',
         THEME: '主题',

@@ -16,8 +16,9 @@
                         v-model="formData.keyword"
                         class="mobile-search"
                         :placeholder="i18n.security.SEARCH"
+                        @input="initData(1)"
                     >
-                        <i slot="suffix" class="el-icon-close" @click="initData(1)"></i>
+                        <i slot="suffix" class="el-icon-close" @click="formData.keyword = '';initData(1)"></i>
                     </el-input>
                 </el-form-item>
                 <el-form-item>
@@ -192,6 +193,11 @@ export default {
 </script>
 <style lang="less">
 .safety-bulletin-content {
+    .mobile-search {
+        .el-input__suffix {
+            right: 10px;
+        }
+    }
     .el-select {
         @media (max-width: 1000px) {
             width: 100%;
@@ -391,6 +397,9 @@ export default {
                 display: none;
                 @media (max-width: 1000px) {
                     display: inline-table;
+                    .icon-search {
+                        right: 6px;
+                    }
                 }
             }
         }

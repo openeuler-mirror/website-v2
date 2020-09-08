@@ -100,7 +100,7 @@ module.exports = {
                 PATH: '',
                 NAME: '安全',
                 CHILDREN: [{
-                        NAME: '漏洞上报',
+                        NAME: '漏洞管理',
                         PATH: '/security/vulnerability-reporting/'
                     },
                     {
