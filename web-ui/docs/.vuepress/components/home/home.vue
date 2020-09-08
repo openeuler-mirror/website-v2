@@ -12,7 +12,7 @@
                             <el-progress :percentage="barPercentage" id="timebar" :show-text="false" :color="'#ffffff'" @click="clickBar()"></el-progress>
                             <div :class="['voice-mute', isMuted?'mute-icon':'voice-icon']" @click="isMuted=!isMuted"></div>
 	                    </div>
-                        <div class="play-btn"v-if="!isPlay" @click="isPlay=!isPlay">
+                        <div class="play-btn" v-if="!isPlay" @click="isPlay=!isPlay">
                         </div>
                     </div>
                 </el-carousel-item>
