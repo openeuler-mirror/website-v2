@@ -230,7 +230,7 @@ export default {
             let h = times.getHours();
             let m = times.getMinutes();
             let s = times.getSeconds();
-            let currentDate = M + "月" + d + "日";
+            let currentDate = M + "-" + d + "-";
             let currentTime = h + ":00" + "-" + (h + 1) + ":00";
             let nowTime =
                 y +
