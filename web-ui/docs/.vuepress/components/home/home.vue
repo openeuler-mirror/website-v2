@@ -162,7 +162,7 @@
         </div>
 
         <div class="home-calendar">
-            <calender />
+            <calender :table-data="calenderData" />
         </div>
 
         <div class="home-newsroom">
@@ -239,7 +239,6 @@
                         <span>{{ item.TAG }}  <span>|</span> </span> <span>{{ item.DATE }}</span>
                         <p>{{ item.CONTENT }}</p>
                     </div>
-                    <span><a href="">{{ i18n.home.MORE }}</a></span>
                 </div>
                 <div class="blog-room">
                     <h5>{{ i18n.home.HOME_ROOMS.BLOG_NAME }}</h5>
@@ -286,7 +285,8 @@
             </div>
             <div class="show-all" @click="showAll">
                 <p>{{ i18n.home.EXPAND }}</p>
-                <img src="/img/home/arrow.svg" alt="">
+                <img v-if="flag" src="/img/home/arrow.svg" alt="">
+                <img v-if="!flag" src="/img/home/arrowUp.svg" alt="">
             </div>
         </div>
 
@@ -328,7 +328,7 @@
                         <p>
                             {{ i18n.home.HOME_SOURCE.SOURCE_APPLY.DES }}
                         </p>
-                        <p><a @click="go('/blog/fred_li/2020-03-25-apply-for-vm-from-pcl.html')">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.APPLY }}</a></p>
+                        <p class="click-here"><a @click="go('/blog/fred_li/2020-03-25-apply-for-vm-from-pcl.html')">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.APPLY }}</a></p>
                         <p><span class="source-sponsor">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.SPONSOR }}</span></p>
                     </div>
                 </div>
@@ -379,7 +379,9 @@
         meetingList () {
             meetingList()
             .then(data => {
-                localMethods.sortData(data);
+                console.log(data.tableData);
+                console.log(localMethods.sortData(data.tableData));
+                that.calenderData = localMethods.sortData(data.tableData);
             })
             .catch(data => {
                 that.$message.error(data);
@@ -388,7 +390,105 @@
     }
     let localMethods = {
         sortData (data) {
-            
+            data.forEach(dateItem => {
+                let arr = [];
+                dateItem.timeData.forEach(timeItem => {
+                    let timeStart = this.formatTime(timeItem.duration_time)[0];
+                    let timeEnd = this.formatTime(timeItem.duration_time)[1];
+                    if(!arr.length) {
+                        arr.push({
+                            startTime: timeItem.startTime,
+                            endTime: timeItem.endTime,
+                            duration: timeItem.duration,
+                            duration_time: timeItem.duration_time,
+                            meetingData: [
+                                timeItem
+                            ]
+                        })
+                    } else {
+                        let findItem = arr.every(meetingItem => {
+                            let meetingStart = this.formatTime(meetingItem.duration_time)[0];
+                            let meetingEnd = this.formatTime(meetingItem.duration_time)[1];
+                            return (
+                                (timeEnd < meetingStart) || 
+                                (timeStart > meetingEnd)
+                            );
+                        })
+                        if(findItem){
+                            arr.push({
+                                startTime: timeItem.startTime,
+                                endTime: timeItem.endTime,
+                                duration: timeItem.duration,
+                                duration_time: timeItem.duration_time,
+                                meetingData: [
+                                    timeItem
+                                ]
+                            })
+                            return;
+                        }
+
+                        arr.forEach(meetingItem => {
+                            let meetingStart = this.formatTime(meetingItem.duration_time)[0];
+                            let meetingEnd = this.formatTime(meetingItem.duration_time)[1];
+                            if(
+                                (meetingStart
+                                <= timeStart) && 
+                                (timeStart
+                                <= meetingEnd) && 
+                                (meetingStart
+                                <= timeEnd) && 
+                                (timeEnd 
+                                <= meetingEnd)
+                            ){
+                                meetingItem.meetingData.push(timeItem);
+                            }
+
+                            
+                            if(
+                                (timeStart < meetingStart) && 
+                                ((meetingStart <= timeEnd) && 
+                                (timeEnd <= meetingEnd))
+                            ){
+                                meetingItem.startTime = timeItem.startTime;
+                                meetingItem.duration = meetingEnd - timeStart;
+                                meetingItem.duration_time = timeStart + ':00-' + meetingEnd + ':00';
+                                meetingItem.meetingData.push(timeItem);
+                            }
+
+                            if(
+                                (timeEnd > meetingEnd) && 
+                                ((meetingStart <= timeStart) && 
+                                (timeStart <= meetingEnd))
+                            ){
+                                meetingItem.endTime = timeItem.endTime;
+                                meetingItem.duration = timeEnd - meetingStart;
+                                meetingItem.duration_time = meetingStart + ':00-' + timeEnd + ':00';
+                                meetingItem.meetingData.push(timeItem);
+                            }
+
+                            if(
+                                (timeStart < meetingStart) && 
+                                (timeEnd > meetingEnd)
+                            ){
+                                meetingItem.startTime = timeItem.startTime;
+                                meetingItem.endTime = timeItem.endTime;
+                                meetingItem.duration = timeEnd - timeStart;
+                                meetingItem.duration_time = timeStart + ':00-' + timeEnd + ':00';
+                                meetingItem.meetingData.push(timeItem);
+                            }
+
+                        })
+                    }
+                })
+                dateItem.timeDate = arr;
+            })
+            return data;
+        },
+        formatTime (time) {
+            let arr = time.split('-');
+            arr[0] = parseInt(arr[0].split(':')[0]);
+            arr[1] = parseInt(arr[1].split(':')[0]);
+            return arr;
         }
     }
     export default {
@@ -611,7 +711,7 @@
         display: none !important;
     }
     .home-calendar {
-        display: none;
+        // display: none;
     }
     .home-auth {
         display: none;
@@ -1157,7 +1257,7 @@
         cursor: pointer;
     }
     .room-title {
-        margin-bottom: 40px;
+        margin-bottom: 35px;
     }
     .room-title a {
         display: inline-block;
@@ -1346,6 +1446,9 @@
     .apply-des a {
         cursor: pointer;
     }
+    .apply-des .click-here {
+        margin-top: 10px;
+    }
     .source-publish-link {
         margin-top: 50px;
     }
@@ -1363,6 +1466,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 10px;
     }
     .publish .publish-edition img {
         width: 280px;
@@ -1432,6 +1536,9 @@
             text-align: center;
             margin-top: 35px;
             margin-bottom: 0;
+        }
+        .carousel-item-index a {
+            text-decoration: none;
         }
         .carousel-item-index img {
             width: 200px;
@@ -1514,6 +1621,9 @@
         .home-newsroom {
             width: 100%;
             margin-top: 80px;
+        }
+        .blog-room {
+            margin-top: 40px;
         }
         .newsroom h5 {
             font-size: 18px;
