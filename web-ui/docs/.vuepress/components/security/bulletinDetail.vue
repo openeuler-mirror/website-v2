@@ -20,14 +20,17 @@
             <p>{{detailData.affectedProduct}}</p>
             <h2>CVE</h2>
             <div class="link-group">
-                <a v-for="(item, index) in detailData.cveId.split(';')" :key="index" @click="go(item)">{{item}}</a>    
+                <a v-for="(item, index) in detailData.cveId.split(';\n')" :key="index" @click="go(item)">{{item}}</a>    
             </div>
             <h2>{{i18n.security.PACKAGE}}</h2>
             <div class="link-group">
-                <a v-for="(item, index) in detailData.packageName.split(';')" @click="open(item)">{{item}}</a>    
+                <a v-for="(item, index) in detailData.packageName.split(';\n')" @click="open(item)">{{item}}</a>    
             </div>
             <h2>{{i18n.security.REFERENCE_DOCUMENTS}}</h2>
-            <a :href="detailData.referenceDocuments" target="_blank">{{detailData.referenceDocuments}}</a>
+            <div class="link-group">
+                <a :href="item" target="_blank" v-for="(item, index) in detailData.referenceDocuments.split('\n')" @click="open(item)">{{item}}</a>    
+            </div>
+            
         </div>
     </div>
 </template>

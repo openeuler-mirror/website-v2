@@ -179,10 +179,11 @@
         font-size: 20px;
         font-family: FZLTHJW;
         color: #000;
-        border: 2px solid #000;
+        border: 1px solid #7f7f7f;
         box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
     }
-    .search-area .el-input__inner:hover {
+    .search-area .el-input__inner:hover,
+    .search-area .el-input__inner:focus {
         border: 2px solid #002FA7;
     }
     .tag-left .el-scrollbar__wrap {
