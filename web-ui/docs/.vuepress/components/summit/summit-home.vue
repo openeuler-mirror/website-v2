@@ -36,7 +36,7 @@ export default {
     methods: {
         toReviewList () {
             let routeUrl = this.$router.resolve(this.resolvePath('/interaction/summit-list/list/'));
-            window.open(routeUrl.href, '_blank');
+            window.open(routeUrl.href);
         }
     },
     components: {

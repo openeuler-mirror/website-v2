@@ -77,8 +77,6 @@ export default {
             currentDocs: [],
             versions: [],
             default:true, //判断是否默认选中
-            versionArr:[],
-            timer:null
         };
     },
     components: {
@@ -94,7 +92,6 @@ export default {
         let versionLen = this.versions.length;
         this.currentDocs = this.versions[versionLen-1].docs;
         this.selectChange(this.versions[versionLen-1].value);
-        this.getVersionArr();
     },
     methods: {
         selectChange(val) {
@@ -112,20 +109,9 @@ export default {
         go(item) {
             if (item.path) {
                 let version = this.version === "" ? "1.0_Base" : this.version;
-                this.$router.push({
-                    path:this.targetLocale + "docs/" + version + item.path,
-                    query:{allVersions:this.versionArr}
-                });
+                this.$router.push(this.targetLocale + "docs/" + version + item.path);
             }
         },
-        getVersionArr(){
-            this.timer=setTimeout(() =>{
-                for(let i of this.versions){
-                    this.versionArr.push(i.value);
-                }
-            },200);
-            this.timer = null;
-        }
     },
 };
 </script>

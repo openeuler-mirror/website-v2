@@ -1,7 +1,7 @@
 <template>
     <div class="home">
         <div class="is-pc home-carousel">
-            <el-carousel class="home-banner" trigger="click" :autoplay="autoplay" interval="5000" @change="eventChange()">
+            <el-carousel class="home-banner" trigger="click" :autoplay="autoplay" :interval="5000" @change="eventChange()">
                 <el-carousel-item>
                     <div class="carousel-video">
                         <video poster="/img/home/BannerVideo.png" loop width="100%" height="500px" id="home-video">

@@ -6,13 +6,15 @@
     >
       <div class="version-div">
         <span>{{version}}</span>
-        <i class="icon-document" @click.stop="showSelection = !showSelection"></i>
-        <div class="version-select" v-show="showSelection">
-            <p v-for="(item,key) in versionArr"
-            :key="key"
-            :class="item == version?'selected':''"
-            @click.stop="changeVersion(item)"
-             >{{item}}</p>
+        <div v-clickoutside="clickOutside">
+            <i class="icon-document" @click="showSelection = !showSelection"></i>
+            <div class="version-select" v-show="showSelection">
+                <p v-for="(item,key) in versionArr"
+                :key="key"
+                :class="item == version?'selected':''"
+                @click="changeVersion(item)"
+                >{{item}}</p>
+            </div>
         </div>
       </div>
       <el-tree
@@ -66,8 +68,10 @@
 </template>
 
 <script>
+import clickoutside from "element-ui/src/utils/clickoutside";
 export default {
   name: "DocDetails",
+  directives: { clickoutside },
   data() {
     return {
       targetLocale: "",
@@ -114,10 +118,7 @@ export default {
     this.allPathArr = this.getAllPathArr(this.menuData);
     this.getNextPathAndPreviousPath();
     this.getSecondTitle();
-    this.versionArr = this.$route.query.allVersions;
-    document.body.onclick = () => {
-        this.showSelection = false;
-    }
+    this.getVersionArr();
   },
   updated() {
     this.setCheckedNode();
@@ -258,6 +259,20 @@ export default {
             },200);
         }
     },
+    clickOutside(){
+        if(this.showSelection){
+            this.showSelection = false;
+        }
+    },
+    getVersionArr(){
+        let timer = setTimeout(() => {
+            let allVersions = require("../../../" + this.$lang + "/docs/path/path.json");
+            for(let i of allVersions){
+                this.versionArr.push(i.value);
+            }
+            console.log(this.versionArr);
+        },500);
+    }
   },
 };
 </script>
@@ -335,6 +350,7 @@ export default {
         height: 28px;
         background-image: url('/img/docs/icon-document.svg');
         right:13px;
+        top: -1px;
         cursor: pointer;
     }
     .version-select{
