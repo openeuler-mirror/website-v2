@@ -270,7 +270,6 @@ export default {
             for(let i of allVersions){
                 this.versionArr.push(i.value);
             }
-            console.log(this.versionArr);
         },500);
     }
   },
