@@ -16,9 +16,8 @@
                         v-model="formData.keyword"
                         class="mobile-search"
                         :placeholder="i18n.security.SEARCH"
-                        @input="initData(1)"
                     >
-                        <i slot="suffix" class="el-icon-close" @click="formData.keyword = '';initData(1)"></i>
+                        <i slot="suffix" class="el-icon-search" @click="initData(1)"></i>
                     </el-input>
                 </el-form-item>
                 <el-form-item>
