@@ -45,7 +45,7 @@
                 ]
             },
             {
-                "title": "Manage",
+                "title": "Mgmt",
                 "doc": [
                     {
                         "img": "/img/docs/docs-administration.svg",
@@ -75,7 +75,7 @@
                 ]
             },
             {
-                "title": "Develop",
+                "title": "Dev",
                 "doc": [
                     {
                         "img": "/img/docs/docs-application.svg",

@@ -16,8 +16,7 @@
         <div class="review" slot="mobile-slot">
             <h2
             class="review-home"
-            @click="toReviewList()"
-            >{{i18n.interaction.SUMMIT.HOMETITLE}}</h2>
+            @click="toReviewList()">{{i18n.interaction.SUMMIT.HOMETITLE}}</h2>
         </div>
         </common-banner>
         <div class="summit-explain">
@@ -36,7 +35,8 @@ export default {
     },
     methods: {
         toReviewList () {
-            this.$router.push(this.resolvePath('/interaction/summit-list/list/'));
+            let routeUrl = this.$router.resolve(this.resolvePath('/interaction/summit-list/list/'));
+            window.open(routeUrl.href);
         }
     },
     components: {
