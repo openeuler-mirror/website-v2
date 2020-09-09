@@ -19,7 +19,7 @@
                     </el-select>
                 </el-form-item>
             </el-form>
-            <div class="is-pc">
+            <div :class="['is-pc',targetLocale == '/en/'?'pc-en':'']">
                 <div class="maillist-divider-mail">
                     <div class="maillist-icon-comm"></div>
                 </div>
@@ -44,7 +44,7 @@
                             <div :class="['step-right-num',targetLocale == '/en/'?'right-en':'']">
                                 <span>{{ items.title }}</span>
                             </div>
-                            <div class="step-right-box">
+                            <div class="step-right-box right-box-en">
                                 <div  @click="go(item)" :class="['inner-box',item.path?'':'unClick',targetLocale == '/en/'?'en-box':'']" v-for="(item, index) in items.doc" :key="index">
                                     <img :src="item.img" alt />
                                     <p>{{ item.name }}</p>
@@ -160,6 +160,9 @@ export default {
     display: block;
     position: relative;
 }
+.pc-en{
+    margin-left: 160px;
+}
 .maillist-divider-mail {
     width: 2px;
     left: 406px;
@@ -261,6 +264,9 @@ export default {
 .mail-box {
     padding: 0;
     padding-top: 60px;
+    .right-box-en{
+        margin: -60px 0 0 160px;
+    }
 }
 .mail-box p {
     font-size: 20px;
