@@ -6,7 +6,7 @@
                 class="is-pc"
         ></common-banner>
         <div class="bgc is-pc">
-            <div class="methods is-pc" :style="{'background': 'url(' + bkgImg + ')', 'background-size': '100%', 'background-repeat': 'repeat-y'}">
+            <div class="methods is-pc">
                 <div class="mail-guide"
                      v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"
                      :key="index">
@@ -127,9 +127,11 @@
         margin: 0 auto;
     }
     .bgc.is-pc {
-        background: url("/web-ui/docs/.vuepress/public/img/community/contribution/bkg-community.png");
-        background-repeat: repeat-y;
+        background: url("/img/community/contribution/bkg-community.png");
         background-size: 100%;
+        height: 687px;
+        width: 100%;
+        background-repeat: no-repeat;
     }
     .mail-guide {
         max-width: 1120px;

@@ -1,11 +1,11 @@
 <template>
     <div class="home">
         <div class="is-pc home-carousel">
-            <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" interval="5000" @change="eventChange()">
+            <el-carousel class="home-banner" trigger="click" :autoplay="autoplay" interval="5000" @change="eventChange()">
                 <el-carousel-item>
                     <div class="carousel-video">
                         <video poster="/img/home/BannerVideo.png" loop width="100%" height="500px" id="home-video">
-                            <source src="/img/home-video/home-video.mp4"  type="video/mp4">
+                            <source src="/img/home-video/pc-home-video.mp4"  type="video/mp4">
                         </video>
                         <div class="playControll">
                             <div :class="['play-pause', isPlay?'pause-icon':'play-icon']" @click="isPlay=!isPlay"></div>
@@ -63,7 +63,7 @@
                                height="300px"
                                ref="video"
                                @click="playVideo">
-                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E6%AC%A7%E6%8B%89MG%E5%8A%A8%E7%94%BB_0903_1920x500.mp4"  type="video/mp4">
+                            <source src="/img/home-video/mobile-home-video.mp4"  type="video/mp4">
                         </video>
                     </div>
                 </el-carousel-item>
@@ -870,8 +870,9 @@
             height: 100px;
             position: absolute;
             border-radius: 50px;
-            bottom: 200px;
-            left: 700px;
+            bottom: 50%;
+            left: 50%;
+            margin: 0 0 -50px -50px;
             background-image: url('/img/home/play-btn.gif');
             cursor: pointer;
             background-size: contain;

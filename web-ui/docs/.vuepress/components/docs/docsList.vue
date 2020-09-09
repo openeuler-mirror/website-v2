@@ -32,7 +32,7 @@
                                     <p>{{ item.name }}</p>
                                 </div>
                             </div>
-                            <div class="step-left-num">
+                            <div :class="['step-left-num',targetLocale == '/en/'?'left-en':'']">
                                 <span>{{ items.title }}</span>
                             </div>
                             <div class="step-line"></div>
@@ -41,7 +41,7 @@
                     <div v-if="index % 2 !== 0" class="step-right">
                         <div class="mail-box">
                             <div class="step-line"></div>
-                            <div class="step-right-num">
+                            <div :class="['step-right-num',targetLocale == '/en/'?'right-en':'']">
                                 <span>{{ items.title }}</span>
                             </div>
                             <div class="step-right-box">
@@ -57,10 +57,10 @@
             <div class="is-h5">
                 <div class="mail-guide" v-for="(items, index) in currentDocs" :key="index">
                     <div v-if="items.doc.length" class="step-H5" :class="[items.doc.length === 1 && 'step-left-H5']">
-                        <div class="step-num">
+                        <div :class="['step-num',targetLocale == '/en/'?'step-en':'']">
                             <span>{{ items.title }}</span>
                         </div>
-                        <p  :class="item.path?'':'unClick'" @click="go(item)" v-for="(item, index) in items.doc" :key="index">{{ item.name }}</p>
+                        <p  :class="[item.path?'':'unClick',targetLocale == '/en/'?'en-p-box':'']" @click="go(item)" v-for="(item, index) in items.doc" :key="index">{{ item.name }}</p>
                     </div>
                 </div>
             </div>
@@ -76,7 +76,9 @@ export default {
             version: "",
             currentDocs: [],
             versions: [],
-            default:true //判断是否默认选中
+            default:true, //判断是否默认选中
+            versionArr:[],
+            timer:null
         };
     },
     components: {
@@ -92,6 +94,7 @@ export default {
         let versionLen = this.versions.length;
         this.currentDocs = this.versions[versionLen-1].docs;
         this.selectChange(this.versions[versionLen-1].value);
+        this.getVersionArr();
     },
     methods: {
         selectChange(val) {
@@ -109,9 +112,20 @@ export default {
         go(item) {
             if (item.path) {
                 let version = this.version === "" ? "1.0_Base" : this.version;
-                this.$router.push(this.targetLocale + "docs/" + version + item.path);
+                this.$router.push({
+                    path:this.targetLocale + "docs/" + version + item.path,
+                    query:{allVersions:this.versionArr}
+                });
             }
         },
+        getVersionArr(){
+            this.timer=setTimeout(() =>{
+                for(let i of this.versions){
+                    this.versionArr.push(i.value);
+                }
+            },200);
+            this.timer = null;
+        }
     },
 };
 </script>
@@ -196,8 +210,11 @@ export default {
     margin-right: 36px;
     min-height: 74px;
     .en-box{
-        width: 380px;
-        margin-left: -146px;
+        width: 370px;
+        margin-left: -160px;
+        p{
+            font-family: Roboto-Regular, Roboto;
+        }
     }
 }
 .step-right-box {
@@ -209,7 +226,10 @@ export default {
         margin-left: 30px;
     }
     .en-box{
-        width: 380px;
+        width: 370px;
+        p{
+            font-family: Roboto-Regular, Roboto;
+        }
     }
 }
 .step-left {
@@ -233,6 +253,9 @@ export default {
 .step-right-num span {
     color: #fff;
     font-size: 20px;
+}
+.mail-box .left-en,.mail-box .right-en{
+    font-family: Roboto-BoldCondensed, Roboto;
 }
 .step-line {
     width: 100px;
@@ -326,9 +349,16 @@ export default {
         background-color: #002fa7;
         margin: 0 auto;
     }
+    .step-H5 .step-en{
+        font-family: Roboto-BoldCondensed, Roboto;
+    }
     .step-num span {
         color: #fff;
         font-size: 18px;
+    }
+    .step-H5 .en-p-box{
+        width: 256px;
+        font-family: Roboto-Regular, Roboto;
     }
     .step-H5 p {
         font-size: 16px;

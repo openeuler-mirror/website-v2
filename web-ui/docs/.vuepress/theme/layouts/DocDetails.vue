@@ -6,7 +6,14 @@
     >
       <div class="version-div">
         <span>{{version}}</span>
-        <i class="icon-document"></i>
+        <i class="icon-document" @click.stop="showSelection = !showSelection"></i>
+        <div class="version-select" v-show="showSelection">
+            <p v-for="(item,key) in versionArr"
+            :key="key"
+            :class="item == version?'selected':''"
+            @click.stop="changeVersion(item)"
+             >{{item}}</p>
+        </div>
       </div>
       <el-tree
         ref="tree"
@@ -86,7 +93,9 @@ export default {
       //二级标题是否显示蓝色
       active:false,
       //是否等于下标
-      isIndex:0 
+      isIndex:0,
+      versionArr:[],
+      showSelection:false
     };
   },
   created() {
@@ -105,6 +114,10 @@ export default {
     this.allPathArr = this.getAllPathArr(this.menuData);
     this.getNextPathAndPreviousPath();
     this.getSecondTitle();
+    this.versionArr = this.$route.query.allVersions;
+    document.body.onclick = () => {
+        this.showSelection = false;
+    }
   },
   updated() {
     this.setCheckedNode();
@@ -174,10 +187,14 @@ export default {
       );
     },
     previous() {
-      this.changePage(this.previousPath);
+        this.secondTitleList = [];
+        this.getSecondTitle();
+        this.changePage(this.previousPath);
     },
     next() {
-      this.changePage(this.nextPath);
+        this.secondTitleList = [];
+        this.getSecondTitle();
+        this.changePage(this.nextPath);
     },
     getNextPathAndPreviousPath() {
       this.allPathArr.forEach((item, index) => {
@@ -213,7 +230,34 @@ export default {
     },
     isActive(index){
         this.isIndex = index;
-    }
+    },
+    changeVersion(item){
+        if(item == this.version){
+            return
+        }else{
+            this.secondTitleList = [];
+            this.showSelection = !this.showSelection;
+            this.$router.push({
+                path:this.targetLocale + "docs/" + item + "/docs/Releasenotes/release_notes.html",
+                query:{allVersions:this.versionArr}
+            });
+            setTimeout(() => {
+                let currentPath = this.$route.path;
+                this.version = currentPath.split("/")[3];
+                this.menuData = require("../../../" +
+                this.$lang +
+                "/docs/" +
+                this.version +
+                "/menu/menu.json");
+                this.currentDocPath = this.getCurrentDocPath(currentPath);
+                console.log(this.currentDocPath,this.menuData);
+                this.renderFeedbackPath();//初次进入页面时设置点击意见反馈的链接
+                this.allPathArr = this.getAllPathArr(this.menuData);
+                this.getNextPathAndPreviousPath();
+                this.getSecondTitle();
+            },200);
+        }
+    },
   },
 };
 </script>
@@ -280,18 +324,50 @@ export default {
   padding-bottom: 20px;
   border-bottom: 2px solid #002fa7;
   position: relative;
-  span {
-    font-size: 24px;
-    color: rgba(0, 0, 0, 1);
-    line-height: 24px;
-  }
-  .icon-document {
-      position: absolute;
-      width: 22px;
-      height: 28px;
-      background-image: url('/img/docs/icon-document.svg');
-      right:13px;
-  }
+    span {
+        font-size: 24px;
+        color: rgba(0, 0, 0, 1);
+        line-height: 24px;
+    }
+    .icon-document {
+        position: absolute;
+        width: 22px;
+        height: 28px;
+        background-image: url('/img/docs/icon-document.svg');
+        right:13px;
+        cursor: pointer;
+    }
+    .version-select{
+        position: absolute;
+        right: -130px;
+        z-index: 200000;
+        width: 140px;
+        height: 78px;
+        background: #FFFFFF;
+        border-radius: 4px;
+        border: 1px solid #002FA7;
+        font-size: 14px;
+        font-family: FZLTXIHJW, FZLTXIHJW;
+        font-weight: normal;
+        color: #000000;
+        line-height: 24px;
+        p{
+            width: 138px;
+            height: 26px;
+            padding-left: 13px;
+            &:first-of-type{
+                margin-top: 11px;
+            }
+            cursor: pointer;
+        }
+        .selected{
+            color: #0041BD;
+            background: rgba(0, 65, 189, 0.1);
+        }
+        @media (max-width: 1000px) {
+            display: none;
+        }
+    }
 }
 .details-center {
   width: 670px;
