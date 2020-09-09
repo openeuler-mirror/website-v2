@@ -232,6 +232,8 @@ export default {
     },
     methods: {
         toSearch () {
+            this.searchFlag = false;
+            this.pcSearchFlag = false;
             this.$router.push({
                 path: this.resolvePath('/other/search/'),
                 query: { 

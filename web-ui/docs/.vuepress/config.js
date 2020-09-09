@@ -5,7 +5,7 @@ module.exports = {
     head: [
         ['link', {
             rel: 'icon',
-            href: './public/favicon.ico'
+            href: '/favicon.ico'
         }],
         ['meta', {
             name: 'viewport',

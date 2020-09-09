@@ -67,6 +67,7 @@ export default {
       @media (max-width: 1000px) {
         height: unset;
         font-size: 14px;
+        align-items: center;
       }
       height: 100%;
       display: flex;

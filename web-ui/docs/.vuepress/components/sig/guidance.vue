@@ -96,7 +96,7 @@ h3 {
 }
 .sig-guidance {
     max-width: 1200px;
-    margin: 80px auto 200px;
+    margin: 0 auto 200px;
 }
 .maillist-divider-mail {
     width: 2px;

@@ -17,7 +17,7 @@
             <div @click="go(item.path)" class="new-img">
               <img :src="'/' + item.frontmatter.banner" alt />
             </div>
-            <div class="news-info">
+            <div class="news-info news-info-item">
               <div class="news-time">
                 <p>
                   <img class="mobile-middle-img" src="/img/blog/date.svg" alt />
@@ -173,7 +173,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .news-content {
   width: 1120px;
   margin: 0 auto;
@@ -236,11 +236,14 @@ export default {
   color: rgba(0, 0, 0, 0.4);
   font-size: 12px;
 }
-.news-title {
-  cursor: pointer;
-  font-size: 24px;
-  margin: 21px 0 16px 0;
+.news-info-item {
+    .news-title {
+        cursor: pointer;
+        font-size: 24px;
+        margin: 21px 0 16px 0;
+    }   
 }
+
 .news-summary {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.5);

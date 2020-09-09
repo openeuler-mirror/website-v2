@@ -609,7 +609,7 @@ button {
 }
 .meetDetail .meetingTime {
     position: absolute;
-    top: 45px;
+    top: 52px;
     left: 20px;
     line-height: 14px;
     font-size: 12px;
@@ -636,7 +636,7 @@ h1 {
     cursor: auto;
 }
 .cadenderSinge.active .calenderH1 {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 h2 {
     margin: 0;
@@ -646,6 +646,7 @@ h2 {
     top: 50%;
     margin-top: -20px;
     opacity: 0.5;
+    background-size: 12px 12px !important;
 }
 .left.btnMy {
     left: 0;
