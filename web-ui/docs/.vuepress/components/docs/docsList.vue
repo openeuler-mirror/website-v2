@@ -283,7 +283,7 @@ export default {
     margin-bottom: 14px;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 6px 30px 0 rgba(36, 32, 32, 0.1);
+    box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     display: inline-block;
     vertical-align: middle;
