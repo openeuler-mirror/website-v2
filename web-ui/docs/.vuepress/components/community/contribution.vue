@@ -11,7 +11,6 @@
                      v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"
                      :key="index">
                     <div class="step" >
-                        <!-- 提出Issue链接点击的区域有点问题待解决 -->
                         <a class="step-num" @click="go(item.LINK)">
                             <span>{{ item.BUTTON }}</span>
                         </a>
@@ -46,7 +45,7 @@
             <div class="mail-guide"
                  v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"
                  :key="index">
-                <div class="step-H5">
+                <div class="step-H5" @touchstart="go(item.LINK)">
                     <div class="step-num">
                         <span>{{ item.BUTTON}}</span>
                     </div>
@@ -129,8 +128,9 @@
     .bgc.is-pc {
         background: url("/img/community/contribution/bkg-community.png");
         background-size: 100%;
-        height: 687px;
+        height: 780px;
         width: 100%;
+        overflow: hidden;
         background-repeat: no-repeat;
     }
     .mail-guide {
@@ -177,6 +177,7 @@
     .mail-guide:nth-child(2) .step {
         top: 180px;
         left: 20%;
+        z-index: 200;
     }
     .mail-guide:nth-child(3) .step {
         top: -340px;
@@ -207,7 +208,7 @@
     .step .is-hovered {
         display: block;
         position: absolute;
-        top: 41px;
+        top: 44px;
     }
     .step-num span {
         color: #fff;
@@ -299,7 +300,7 @@
         .step-H5 p {
             font-size: 14px;
             color: rgba(0, 0, 0, 0.5);
-            lin-height: 24px;
+            line-height: 24px;
             margin: 10px 30px;
             text-align: left;
         }

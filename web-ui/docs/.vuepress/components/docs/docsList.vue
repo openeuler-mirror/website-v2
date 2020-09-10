@@ -141,13 +141,6 @@ export default {
         color: #000;
         font-family: FZLTXIHJW;
     }
-
-    .el-form-item {
-        margin-right: 50px !important;
-        margin-bottom: 15px !important;
-        margin-top: 15px !important;
-    }
-
     .el-form-item__content {
         min-width: 140px;
         min-height: 32px;

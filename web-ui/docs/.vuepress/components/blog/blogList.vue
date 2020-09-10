@@ -566,7 +566,7 @@ export default {
             height: auto;
             margin: 0 auto;
             text-align: center;
-            font-size: 24px;
+            font-size: 18px;
             line-height: 34px;
             position: relative;
         }

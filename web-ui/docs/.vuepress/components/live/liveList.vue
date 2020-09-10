@@ -267,7 +267,7 @@ export default {
             p {
             .mr-All(24px 0 0 20px);
             &:last-of-type {
-                .mr(top,12px);
+                .mr(top,0);
             }
             }
             .live-title {
@@ -341,7 +341,7 @@ export default {
             p {
             .mr-All(24px 0 0 20px);
             &:last-of-type {
-                .mr(top,12px);
+                .mr(top,0);
             }
             }
             .live-title {
