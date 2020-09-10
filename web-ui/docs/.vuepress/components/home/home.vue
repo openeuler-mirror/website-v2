@@ -1,7 +1,7 @@
 <template>
     <div class="home">
         <div class="is-pc home-carousel">
-            <el-carousel class="home-banner" trigger="click" :autoplay="autoplay" :interval="5000" @change="eventChange()">
+            <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" @change="eventChange()">
                 <el-carousel-item>
                     <div class="carousel-video">
                         <video poster="/img/home/BannerVideo.png" loop width="100%" height="500px" id="home-video">
@@ -148,7 +148,7 @@
                     <a :href="item.LINK">
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p>{{ item.TITLE }}</p>
-                        <img :src="item.IMG" alt="">
+                        <img :src="item.IMG" alt=""/>
                     </a>
                 </div>
             </div>
@@ -175,7 +175,7 @@
                         <div class="room-box"
                              v-for="(item, index) in newsList"
                              :key="index">
-                            <span><img src="/img/home/eventDate.svg" alt=""></span> <span>{{ item.frontmatter.date }}</span>
+                            <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
                             <p><a :href="item.path">{{ item.frontmatter.title }}</a></p>
                         </div>
                         <span></span>
@@ -186,7 +186,7 @@
                         <div class="room-box"
                              v-for="(item, index) in blogList"
                              :key="index">
-                            <span>{{ item.frontmatter.date }}</span>
+                            <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
                             <span>|</span>
                             <span>{{ item.frontmatter.author }}</span>
                             <p><a :href="item.path">{{ item.frontmatter.summary }}</a></p>
@@ -199,7 +199,7 @@
                         <div class="room-box"
                              v-for="(item, index) in newsList"
                              :key="index">
-                            <span>{{ item.frontmatter.date }}</span>
+                            <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
                             <span>|</span>
                             <span>{{ item.frontmatter.author }}</span>
                             <p><a :href="item.path">{{ item.frontmatter.title }}</a></p>
@@ -246,7 +246,7 @@
                          v-for="(item, index) in blogList"
                          :key="index">
                         <span v-for="tag in item.frontmatter.tags">{{ tag }} <span>|</span> </span>
-                        <span>{{ item.frontmatter.date }}</span>
+                        <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
                         <span>|</span>
                         <span>{{ item.frontmatter.author }}</span>
                         <p><a :href="item.path"></a>{{ item.frontmatter.summary }}</p>
@@ -373,6 +373,7 @@
 
 <script>
     import { meetingList } from "../../api/home";
+    import dayjs from "dayjs";
     import calender from "./calender";
     let that = null;
     let remoteMethods = {
@@ -421,8 +422,10 @@
                     this.realTimeUpdate = setInterval(()=>{
                         this.progressBar();
                     }, 100) ;
+                    this.autoPlay = false;
                 }else{
                     this.videoElement.pause();
+                    this.autoPlay = true;
                     clearInterval(this.realTimeUpdate);
                 }
             },
@@ -540,6 +543,11 @@
                 }
                 this.blogList = blogData;
                 this.newsList = newsData;
+            },
+            resolvePostDate(date) {
+                return dayjs(date).format(
+                    this.$themeConfig.dateFormat || "ddd MMM DD YYYY"
+                );
             },
             filterSiteData(datas, string) {
                 let newData = datas.filter(data => data.path.includes(string));
@@ -1343,16 +1351,16 @@
         margin-top: 10px;
     }
     .source-publish-link {
-        margin-top: 50px;
+        margin-top: 100px;
+        font-size: 30px;
     }
     .source-publish-link.publish {
-        margin-top: 50px;
+        margin-top: 100px;
     }
     .source-publish-link h5 {
-        font-size: 24px;
         text-align: center;
         line-height: 30px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         color: rgba(0, 0, 0, .87);
     }
     .publish-edition {
