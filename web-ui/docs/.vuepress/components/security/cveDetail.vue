@@ -249,7 +249,6 @@ export default {
     h1 {
       font-size: 36px;
       margin-bottom: 104px;
-      font-family: FZLTCHJW;
       @media (max-width: 1000px) {
         font-size: 16px;
         line-height: 26px;
