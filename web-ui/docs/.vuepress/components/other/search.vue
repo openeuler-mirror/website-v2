@@ -13,7 +13,8 @@
             <div class="search-area">
                 <el-input
                         :placeholder="i18n.common.SEARCH_PLACE_HOLDER"
-                        v-model="formData.keyword">
+                        v-model="formData.keyword"
+                        @keyup.enter.native="search">
                     <i slot="suffix" @click="search"><img src="/img/other/search/search-icon.svg" alt=""></i>
                 </el-input>
             </div>
@@ -180,6 +181,7 @@
         font-family: FZLTHJW;
         color: #000;
         border: 1px solid #7f7f7f;
+        border-radius: 8px;
     }
     .search-area .el-input__inner:hover,
     .search-area .el-input__inner:focus {
@@ -261,7 +263,7 @@
         }
     }
     .search-area {
-        width: 400px;
+        width: 600px;
         height: 60px;
         margin: 0 auto 80px;
         @media (max-width: 1000px) {

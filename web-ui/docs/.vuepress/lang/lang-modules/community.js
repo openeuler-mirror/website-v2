@@ -108,7 +108,7 @@ module.exports = {
                     BUTTON: "参选技术委员会",
                     IMG: "/img/community/contribution/commit.png",
                     VIDEO: "/img/community/contribution/commit.gif",
-                    LINK: "https://openeuler.org/zh/sig.html"    //暂用此链接代替
+                    LINK: "/sig/sig-list/sig-detail.html?id=21&name=TC&mail=tc%40openeuler.org"
                 },
             ]
         },
