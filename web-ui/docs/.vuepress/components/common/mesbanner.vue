@@ -64,7 +64,7 @@ export default {
     .other {
         height: 400px;
         width: 400px;
-        top: 230px;
+        top: 180px;
     }
     .inside {
       position: absolute;

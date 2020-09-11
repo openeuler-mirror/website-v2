@@ -4,18 +4,28 @@
       class="details-left"
       :class="[showMobileMenu && 'show-mobile-menu', !showMobileMenu && 'hide-mobile-menu']"
     >
-      <div class="version-div">
-        <span>{{version}}</span>
-        <div v-clickoutside="clickOutside">
-            <i class="icon-document" @click="showSelection = !showSelection"></i>
-            <div class="version-select" v-show="showSelection">
-                <p v-for="(item,key) in versionArr"
-                :key="key"
-                :class="item == version?'selected':''"
-                @click="changeVersion(item)"
-                >{{item}}</p>
-            </div>
-        </div>
+      <div class="version-div" v-if="!showMobileMenu">
+          <span>{{version}}</span>
+          <div v-clickoutside="clickOutside">
+              <i class="icon-document" @click="showSelection = !showSelection"></i>
+              <div class="version-select" v-show="showSelection">
+                  <p v-for="(item,key) in versionArr"
+                  :key="key"
+                  :class="item == version?'selected':''"
+                  @click="changeVersion(item)"
+                  >{{item}}</p>
+              </div>
+          </div>
+      </div>
+      <div class="mobile-selection" v-if="showMobileMenu">
+          <el-select v-model="version" @change="changeVersion">
+              <el-option
+              v-for="(item, index) in versionArr"
+              :key="index"
+              :label="item"
+              :value="item"
+              ></el-option>
+          </el-select>
       </div>
       <el-tree
         ref="tree"
@@ -47,11 +57,11 @@
     <div class="details-right">
         <div class="null-box"></div>
         <div class="clearfix">
-            <p class="previous-doc">
+            <p class="previous-doc fl">
                 <i class="el-icon-arrow-left"></i>
                 <span @click="previous" class="toggle-doc">{{i18n.documentation.PREVIOUS}}</span>
             </p>
-            <p class="next-doc">
+            <p class="next-doc fr">
                 <span @click="next" class="toggle-doc">{{i18n.documentation.NEXT}}</span>
                 <i class="el-icon-arrow-right"></i>
             </p>
@@ -233,31 +243,23 @@ export default {
         this.isIndex = index;
     },
     changeVersion(item){
-        if(item == this.version){
-            return
-        }else{
-            this.secondTitleList = [];
-            this.showSelection = !this.showSelection;
-            this.$router.push({
-                path:this.targetLocale + "docs/" + item + "/docs/Releasenotes/release_notes.html",
-                query:{allVersions:this.versionArr}
-            });
-            setTimeout(() => {
-                let currentPath = this.$route.path;
-                this.version = currentPath.split("/")[3];
-                this.menuData = require("../../../" +
-                this.$lang +
-                "/docs/" +
-                this.version +
-                "/menu/menu.json");
-                this.currentDocPath = this.getCurrentDocPath(currentPath);
-                console.log(this.currentDocPath,this.menuData);
-                this.renderFeedbackPath();//初次进入页面时设置点击意见反馈的链接
-                this.allPathArr = this.getAllPathArr(this.menuData);
-                this.getNextPathAndPreviousPath();
-                this.getSecondTitle();
-            },200);
-        }
+        this.secondTitleList = [];
+        this.showSelection = !this.showSelection;
+        this.$router.push(this.targetLocale + "docs/" + item + "/docs/Releasenotes/release_notes.html");
+        setTimeout(() => {
+            let currentPath = this.$route.path;
+            this.version = currentPath.split("/")[3];
+            this.menuData = require("../../../" +
+            this.$lang +
+            "/docs/" +
+            this.version +
+            "/menu/menu.json");
+            this.currentDocPath = this.getCurrentDocPath(currentPath);
+            this.renderFeedbackPath();//初次进入页面时设置点击意见反馈的链接
+            this.allPathArr = this.getAllPathArr(this.menuData);
+            this.getNextPathAndPreviousPath();
+            this.getSecondTitle();
+        },200); 
     },
     clickOutside(){
         if(this.showSelection){
@@ -393,6 +395,9 @@ export default {
       a[href^='#'] {
         display: inline;
     }
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
   }
 }
 .mobile-previous-and-next {
@@ -472,18 +477,33 @@ export default {
     padding-bottom: 20px;
     border-bottom: 1px solid;
     border-color: rgba(0, 0, 0, 0.5);
+    @media (max-width: 1000px) {
+      font-size: 18px;
+    }
   }
   h2 {
     font-size: 24px;
+    @media (max-width: 1000px) {
+        font-size: 17px;
+    }
   }
   h3 {
     font-size: 20px;
+    @media (max-width: 1000px) {
+        font-size: 16px;
+    }
   }
   h4 {
     font-size: 18px;
+    @media (max-width: 1000px) {
+        font-size: 15px;
+    }
   }
   h5 {
     font-size: 16px;
+    @media (max-width: 1000px) {
+        font-size: 14px;
+    }
   }
   ol {
     li {
@@ -506,7 +526,6 @@ export default {
 @media (max-width: 1000px) {
   .doc-details-content {
     width: 100%;
-    padding: 0 30px;
     position: relative;
     margin-top: 0px;
     margin-bottom: 80px;
@@ -522,6 +541,12 @@ export default {
         font-size: 16px;
       }
     }
+    .el-input--suffix .el-input__inner{
+      padding-right: 0;
+    }
+    .mobile-selection{
+      margin-left: 22px;
+    }
     .el-tree--highlight-current
       .el-tree-node.is-current
       > .el-tree-node__content {
@@ -530,7 +555,7 @@ export default {
       box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.1);
     }
     .el-tree-node__content {
-      padding-left: 0 !important;
+      padding-left: 10px !important;
     }
     .el-tree-node__content > .el-tree-node__expand-icon {
       position: absolute;
@@ -566,7 +591,7 @@ export default {
       display: block;
 	}
 	.menu-box{
-		height: 40px;
+		height: 50px;
 		background: rgba(251, 251, 251, 1);
 		box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
 		margin-bottom: 40px;

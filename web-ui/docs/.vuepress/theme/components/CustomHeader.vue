@@ -443,6 +443,7 @@ export default {
             @media (max-width: 1000px) {
                 width: 100%;
                 padding: 0 15px;
+                box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
             }
             ul li {
                 display: inline-block;
