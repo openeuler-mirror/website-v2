@@ -3,7 +3,7 @@
     <common-banner
       :pc-src="'/img/news/news-banner.png'"
       :mobile-src="'/img/news/news-banner.png'"
-      :inside-name="'NEWS'"
+      :inside-name="'CONNECT'"
       :outside-name="i18n.community.NEWS.NEWS"
     ></common-banner>
     <div class="news-content">
@@ -211,6 +211,11 @@ export default {
     width: 400px;
     height:200px;
     box-shadow:0 6px 20px 0 rgba(0,0,0,0.1);
+    @media screen and (max-width: 1000px) {
+      width: 270px;
+      height: 150px;
+      box-shadow: none;
+    }
   }
 }
 .news-month {
@@ -241,6 +246,10 @@ export default {
         cursor: pointer;
         font-size: 24px;
         margin: 21px 0 16px 0;
+        @media screen and (max-width: 1000px) {
+          font-size: 16px;
+          margin: 0;
+        }
     }   
 }
 

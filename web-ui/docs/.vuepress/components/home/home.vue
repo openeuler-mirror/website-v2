@@ -65,12 +65,13 @@
                                @click="playVideo">
                             <source src="/img/home-video/mobile-home-video.mp4"  type="video/mp4">
                         </video>
+                        <div class="mobile-btn" @click="playVideo"></div>
                     </div>
                 </el-carousel-item>
                 <el-carousel-item class="carousel-item">
                     <a @click="go('/news/20200607.html')">
                         <div class="card-summer">
-                            <img src="/img/home/webBannerSummer.png" alt="">
+                            <img src="/img/home/BannerS.gif" alt="">
                         </div>
                     </a>
                 </el-carousel-item>
@@ -80,11 +81,11 @@
                         :key="index">
                     <a v-if="index !== 0" :href="item.LINK" target="_blank">
                         <h3>{{ item.TITLE }}</h3>
-                        <img :src="'/img/home/webBanner' + index + '.png'">
+                        <img :src="'/img/home/Banner' + index + '.gif'">
                     </a>
                     <a v-if="index === 0" @click="go(item.LINK)">
                         <h3>{{ item.TITLE }}</h3>
-                        <img :src="'/img/home/webBanner' + index + '.png'">
+                        <img :src="'/img/home/Banner' + index + '.gif'">
                     </a>
                 </el-carousel-item>
             </el-carousel>
@@ -723,7 +724,7 @@
             border-radius: 25px;
             opacity: 0.5;
             .play-pause{
-                 width: 30px;
+                width: 30px;
                 height: 30px;
                 position: absolute;
                 top: 5px;
@@ -1388,6 +1389,21 @@
         }
         .is-h5 {
             display: block;
+            .carousel-video{
+                .mobile-btn{
+                    width: 100px;
+                    height: 100px;
+                    position: absolute;
+                    border-radius: 50px;
+                    bottom: 50%;
+                    left: 50%;
+                    margin: 0 0 -50px -50px;
+                    background-image: url('/img/home/play-btn.gif');
+                    cursor: pointer;
+                    background-size: contain;
+                    opacity: 0.6;
+                }
+            }
         }
         .is-pc.mapArea {
             display: none;
@@ -1412,6 +1428,7 @@
             font-size: 16px;
             margin: 0 30px;
         }
+        
         .carousel-item {
             padding-left: 20px;
         }

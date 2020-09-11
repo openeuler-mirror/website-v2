@@ -463,15 +463,24 @@ export default {
         color: rgba(0, 0, 0, 1);
         line-height: 24px;
         display: inline-block;
-        &:first-of-type {
-            .mr(left,315px);
-        }
-        &:nth-of-type(2) {
-            .mr(left,238px);
-        }
-        &:last-of-type {
-            .mr(left,254px);
-        }
+            &:first-of-type {
+                .mr(left,315px);
+                @media (max-width: 1000px) {
+                    .mr(left,0);
+                }
+            }
+            &:nth-of-type(2) {
+                .mr(left,238px);
+                @media (max-width: 1000px) {
+                    .mr(left,0);
+                }
+            }
+            &:last-of-type {
+                .mr(left,254px);
+                @media (max-width: 1000px) {
+                    .mr(left,0);
+                }
+            }
         }
     }
     .summit-video {
@@ -582,6 +591,8 @@ export default {
         }
         .h4 {
             .mr-All(30px 0 20px 0);
+            display: flex;
+            justify-content: space-around;
             span {
                 width: 60px;
                 height: 26px;
@@ -589,15 +600,7 @@ export default {
                 font-family: FZLTHJW--GB1-0, FZLTHJW--GB1;
                 font-weight: normal;
                 line-height: 26px;
-                &:first-of-type {
-                .mr(left,33px);
-                }
-                &:nth-of-type(2) {
-                .mr(left,68px);
-                }
-                &:last-of-type {
-                .mr(left,75px);
-                }
+                display: block;
             }
         }
         .summit-video {

@@ -193,6 +193,8 @@ h3 {
 }
 .inner-box img {
     margin-left: 30px;
+    width: 110px;
+    height: 110px;
 }
 
 @media screen and (max-width: 1000px) {

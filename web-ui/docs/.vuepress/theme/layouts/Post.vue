@@ -163,7 +163,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 #vuepress-theme-blog__post-layout {
     width: 1120px;
     margin: 0 auto;
@@ -250,7 +250,7 @@ export default {
     h3,
     h4,
     h5 {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: bold;
         margin: 40px 0 25px 0;
         a {

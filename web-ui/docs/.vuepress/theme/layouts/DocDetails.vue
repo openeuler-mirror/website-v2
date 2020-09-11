@@ -27,17 +27,17 @@
     </div>
     <div class="mobile-previous-and-next" :class="{ mask: showMobileMenu }" @click="showMobileMenu = false"></div>
     <div class="details-center">
-      <div class="mobile-previous-and-next">
-        <p class="previous-doc">
+      <div class="mobile-previous-and-next menu-box">
+        <p class="prev-page">
           <i class="el-icon-arrow-left"></i>
           <span @click="previous" class="toggle-doc">{{i18n.documentation.PREVIOUS}}</span>
         </p>
-        <p class="next-doc">
+				<p class="menu-doc">
+          <span @click="showMenu" class="toggle-doc">{{i18n.documentation.MENU}}</span>
+        </p>
+        <p class="next-page">
           <span @click="next" class="toggle-doc">{{i18n.documentation.NEXT}}</span>
           <i class="el-icon-arrow-right"></i>
-        </p>
-        <p class="menu-doc">
-          <span @click="showMenu" class="toggle-doc">{{i18n.documentation.MENU}}</span>
         </p>
       </div>
       <div class="markdown">
@@ -429,14 +429,6 @@ export default {
         }
     }
 }
-.previous-doc {
-  float: left;
-  margin-left: 18px;
-}
-.next-doc {
-  float: right;
-  margin-right: 18px;
-}
 .toggle-doc {
   font-size: 14px;
   color: #002fa7;
@@ -571,19 +563,32 @@ export default {
     }
   }
   .mobile-previous-and-next {
-    display: block;
-  }
+      display: block;
+	}
+	.menu-box{
+		height: 40px;
+		background: rgba(251, 251, 251, 1);
+		box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+		margin-bottom: 40px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		.menu-doc {
+				text-align: center;
+				flex: 2;
+		}
+		.prev-page{
+				flex:1;
+				text-align: right;
+		}
+		.next-page{
+				flex:1;
+		}
+	}
   .details-center {
     width: 100%;
     margin: 0;
     display: inline-block;
-  }
-  .menu-doc {
-    text-align: center;
-    height: 40px;
-    background: rgba(251, 251, 251, 1);
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
   }
   .details-right {
     display: none;
