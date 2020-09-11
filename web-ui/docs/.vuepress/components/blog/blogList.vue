@@ -185,7 +185,7 @@ export default {
         selectChange() {
             let screenTagArr = [];
             let screenTimeArr = [];
-            if (this.formData.tag === null) {
+            if (this.formData.tag === null || this.formData.tag === '全部') {
                 screenTagArr = this.allBlogListData;
             } else {
                 this.allBlogListData.forEach((item) => {
@@ -197,7 +197,7 @@ export default {
                 }
                 });
             }
-            if (this.formData.time === null) {
+            if (this.formData.time === null || this.formData.time === '全部') {
                 screenTimeArr = screenTagArr;
             } else {
                 screenTagArr.forEach((item) => {
@@ -219,6 +219,7 @@ export default {
         getTags() {
             let tagsArr = [];
             let tagsArrUniq = [];
+            tagsArrUniq.push({value:'全部',label:'all'});
             this.$sitePages.forEach((item) => {
                 if (item.path.indexOf("/" + this.$lang + "/blog/") !== 0) {
                     return;
@@ -250,6 +251,7 @@ export default {
         getTimes() {
             let timesArr = [];
             let timesArrUniq = [];
+            timesArrUniq.push({value:'全部',label:'all'});
             this.$sitePages.forEach((item) => {
                 if (item.path.indexOf("/" + this.$lang + "/blog/") !== 0) {
                     return;

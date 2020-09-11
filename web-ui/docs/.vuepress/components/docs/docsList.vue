@@ -9,7 +9,7 @@
         <div class="docs-content">
             <el-form :inline="true" class="docs-filter">
                 <el-form-item :label="i18n.documentation.VERSION">
-                    <el-select v-model="version" @change="selectChange" :placeholder="i18n.documentation.SELECT_VERSION_LABLE">
+                    <el-select v-model="version" @change="selectChange">
                         <el-option
                         v-for="(item, index) in versions"
                         :key="index"
