@@ -20,11 +20,11 @@
             <p>{{detailData.affectedProduct}}</p>
             <h2>CVE</h2>
             <div class="link-group">
-                <a v-for="(item, index) in detailData.cveId.split(';\n')" :key="index" @click="go(item)">{{item}}</a>    
+                <a v-for="(item, index) in detailData.cveId.split(';')" :key="index" @click="go(item)">{{item}}</a>    
             </div>
             <h2>{{i18n.security.PACKAGE}}</h2>
             <div class="link-group">
-                <a v-for="(item, index) in detailData.packageName.split(';\n')" @click="open(item)">{{item}}</a>    
+                <a v-for="(item, index) in detailData.packageName.split(';')" @click="open(item)">{{item}}</a>    
             </div>
             <h2>{{i18n.security.REFERENCE_DOCUMENTS}}</h2>
             <div class="link-group">
@@ -48,6 +48,8 @@ const locationMethods = {
         .then(data => {
             that.loading = false;
             if(data){
+                data.cveId = data.cveId.replace(/\n/g, '');
+                data.packageName = data.packageName.replace(/\n/g, '');
                 that.detailData = data;
             }
 
@@ -76,7 +78,8 @@ export default {
             loading: false,
             detailData: {
                 cveId: '',
-                packageName: ''
+                packageName: '',
+                referenceDocuments: ''
             }
         };
     },

@@ -332,6 +332,7 @@
         width: 130px;
         text-align: center;
         padding-bottom: 15px;
+        cursor: pointer;
     }
     .tag-left {
         flex: 4;
