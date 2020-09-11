@@ -373,21 +373,6 @@ export default {
         top: 0;
     }
 }
-@keyframes slide-down {
-    0% {
-        display: block;
-        opacity: 0;
-        top: -352px;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-        top: 60px;
-        display: block;
-    }
-}
 .menu-active {
     @media (min-width: 1000px) {
         & > span {
@@ -575,9 +560,7 @@ export default {
                 }
                 .show-sub-menu {
                     .sub-menu {
-                        // animation: slide-down;
                         transform: translate(-50%) scaleY(1);
-                        animation-duration: 0.5s;
                         top: 60px;
                     }
                 }
@@ -676,9 +659,7 @@ export default {
                     }
                     &:hover {
                         ul {
-                            // animation: slide-down;
                             transform: translate(-50%) scaleY(1);
-                            animation-duration: 0.5s;
                             top: 60px;  
                         }
                     }
@@ -722,9 +703,7 @@ export default {
                             background-position: 50% 43%;
                         }
                         &:hover {
-                            // animation: slide-down;
                             transform: translate(-50%) scaleY(1);
-                            animation-duration: 0.5s;
                             top: 60px;
                         }
                     }
