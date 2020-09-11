@@ -10,7 +10,7 @@ module.exports = {
         PREVIOUS: '上一篇',
         NEXT: '下一篇',
         FEEDBACK: '意见反馈',
-        MENU: '菜单',
+        MENU: '目录',
     },
     en: {
         DOCS_LABEL: 'Docs',

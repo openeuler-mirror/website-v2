@@ -177,6 +177,7 @@
                         size="small"
                         :placeholder="i18n.common.SEARCH_PLACE_HOLDER"
                         v-model="searchData"
+                        @keyup.enter.native="toSearch"
                     >
                     <i
                         class="icon-search el-input__icon"

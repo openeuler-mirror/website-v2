@@ -1,7 +1,7 @@
 <template>
     <div class="home">
         <div class="is-pc home-carousel">
-            <el-carousel class="home-banner" trigger="click" :autoplay="autoplay" :interval="5000" @change="eventChange()">
+            <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" @change="eventChange()">
                 <el-carousel-item>
                     <div class="carousel-video">
                         <video poster="/img/home/BannerVideo.png" loop width="100%" height="500px" id="home-video">
@@ -65,12 +65,13 @@
                                @click="playVideo">
                             <source src="/img/home-video/mobile-home-video.mp4"  type="video/mp4">
                         </video>
+                        <div class="mobile-btn" @click="playVideo"></div>
                     </div>
                 </el-carousel-item>
                 <el-carousel-item class="carousel-item">
                     <a @click="go('/news/20200607.html')">
                         <div class="card-summer">
-                            <img src="/img/home/webBannerSummer.png" alt="">
+                            <img src="/img/home/BannerS.gif" alt="">
                         </div>
                     </a>
                 </el-carousel-item>
@@ -80,11 +81,11 @@
                         :key="index">
                     <a v-if="index !== 0" :href="item.LINK" target="_blank">
                         <h3>{{ item.TITLE }}</h3>
-                        <img :src="'/img/home/webBanner' + index + '.png'">
+                        <img :src="'/img/home/Banner' + index + '.gif'">
                     </a>
                     <a v-if="index === 0" @click="go(item.LINK)">
                         <h3>{{ item.TITLE }}</h3>
-                        <img :src="'/img/home/webBanner' + index + '.png'">
+                        <img :src="'/img/home/Banner' + index + '.gif'">
                     </a>
                 </el-carousel-item>
             </el-carousel>
@@ -148,7 +149,7 @@
                     <a :href="item.LINK">
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p>{{ item.TITLE }}</p>
-                        <img :src="item.IMG" alt="">
+                        <img :src="item.IMG" alt=""/>
                     </a>
                 </div>
             </div>
@@ -175,7 +176,7 @@
                         <div class="room-box"
                              v-for="(item, index) in newsList"
                              :key="index">
-                            <span><img src="/img/home/eventDate.svg" alt=""></span> <span>{{ item.frontmatter.date }}</span>
+                            <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
                             <p><a :href="item.path">{{ item.frontmatter.title }}</a></p>
                         </div>
                         <span></span>
@@ -186,7 +187,7 @@
                         <div class="room-box"
                              v-for="(item, index) in blogList"
                              :key="index">
-                            <span>{{ item.frontmatter.date }}</span>
+                            <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
                             <span>|</span>
                             <span>{{ item.frontmatter.author }}</span>
                             <p><a :href="item.path">{{ item.frontmatter.summary }}</a></p>
@@ -199,7 +200,7 @@
                         <div class="room-box"
                              v-for="(item, index) in newsList"
                              :key="index">
-                            <span>{{ item.frontmatter.date }}</span>
+                            <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
                             <span>|</span>
                             <span>{{ item.frontmatter.author }}</span>
                             <p><a :href="item.path">{{ item.frontmatter.title }}</a></p>
@@ -246,7 +247,7 @@
                          v-for="(item, index) in blogList"
                          :key="index">
                         <span v-for="tag in item.frontmatter.tags">{{ tag }} <span>|</span> </span>
-                        <span>{{ item.frontmatter.date }}</span>
+                        <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
                         <span>|</span>
                         <span>{{ item.frontmatter.author }}</span>
                         <p><a :href="item.path"></a>{{ item.frontmatter.summary }}</p>
@@ -373,6 +374,7 @@
 
 <script>
     import { meetingList } from "../../api/home";
+    import dayjs from "dayjs";
     import calender from "./calender";
     let that = null;
     let remoteMethods = {
@@ -421,8 +423,10 @@
                     this.realTimeUpdate = setInterval(()=>{
                         this.progressBar();
                     }, 100) ;
+                    this.autoPlay = false;
                 }else{
                     this.videoElement.pause();
+                    this.autoPlay = true;
                     clearInterval(this.realTimeUpdate);
                 }
             },
@@ -540,6 +544,11 @@
                 }
                 this.blogList = blogData;
                 this.newsList = newsData;
+            },
+            resolvePostDate(date) {
+                return dayjs(date).format(
+                    this.$themeConfig.dateFormat || "ddd MMM DD YYYY"
+                );
             },
             filterSiteData(datas, string) {
                 let newData = datas.filter(data => data.path.includes(string));
@@ -715,7 +724,7 @@
             border-radius: 25px;
             opacity: 0.5;
             .play-pause{
-                 width: 30px;
+                width: 30px;
                 height: 30px;
                 position: absolute;
                 top: 5px;
@@ -1343,16 +1352,16 @@
         margin-top: 10px;
     }
     .source-publish-link {
-        margin-top: 50px;
+        margin-top: 100px;
+        font-size: 30px;
     }
     .source-publish-link.publish {
-        margin-top: 50px;
+        margin-top: 100px;
     }
     .source-publish-link h5 {
-        font-size: 24px;
         text-align: center;
         line-height: 30px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         color: rgba(0, 0, 0, .87);
     }
     .publish-edition {
@@ -1380,6 +1389,21 @@
         }
         .is-h5 {
             display: block;
+            .carousel-video{
+                .mobile-btn{
+                    width: 100px;
+                    height: 100px;
+                    position: absolute;
+                    border-radius: 50px;
+                    bottom: 50%;
+                    left: 50%;
+                    margin: 0 0 -50px -50px;
+                    background-image: url('/img/home/play-btn.gif');
+                    cursor: pointer;
+                    background-size: contain;
+                    opacity: 0.6;
+                }
+            }
         }
         .is-pc.mapArea {
             display: none;
@@ -1404,6 +1428,7 @@
             font-size: 16px;
             margin: 0 30px;
         }
+        
         .carousel-item {
             padding-left: 20px;
         }

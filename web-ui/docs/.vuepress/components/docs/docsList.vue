@@ -19,7 +19,7 @@
                     </el-select>
                 </el-form-item>
             </el-form>
-            <div class="is-pc">
+            <div :class="['is-pc',targetLocale == '/en/'?'pc-en':'']">
                 <div class="maillist-divider-mail">
                     <div class="maillist-icon-comm"></div>
                 </div>
@@ -44,7 +44,7 @@
                             <div :class="['step-right-num',targetLocale == '/en/'?'right-en':'']">
                                 <span>{{ items.title }}</span>
                             </div>
-                            <div class="step-right-box">
+                            <div class="step-right-box right-box-en">
                                 <div  @click="go(item)" :class="['inner-box',item.path?'':'unClick',targetLocale == '/en/'?'en-box':'']" v-for="(item, index) in items.doc" :key="index">
                                     <img :src="item.img" alt />
                                     <p>{{ item.name }}</p>
@@ -141,13 +141,6 @@ export default {
         color: #000;
         font-family: FZLTXIHJW;
     }
-
-    .el-form-item {
-        margin-right: 50px !important;
-        margin-bottom: 15px !important;
-        margin-top: 15px !important;
-    }
-
     .el-form-item__content {
         min-width: 140px;
         min-height: 32px;
@@ -159,6 +152,9 @@ export default {
 .is-pc {
     display: block;
     position: relative;
+}
+.pc-en{
+    margin-left: 160px;
 }
 .maillist-divider-mail {
     width: 2px;
@@ -261,6 +257,9 @@ export default {
 .mail-box {
     padding: 0;
     padding-top: 60px;
+    .right-box-en{
+        margin: -60px 0 0 160px;
+    }
 }
 .mail-box p {
     font-size: 20px;
@@ -277,7 +276,7 @@ export default {
     margin-bottom: 14px;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 6px 30px 0 rgba(36, 32, 32, 0.1);
+    box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     display: inline-block;
     vertical-align: middle;
