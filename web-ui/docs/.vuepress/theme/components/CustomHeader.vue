@@ -570,7 +570,7 @@ export default {
                     left: 50%;
                     white-space: nowrap;
                     display: table;
-                    transition: all .5s;
+                    transition: all .3s;
                     transform-origin: top;
                     transform: translate(-50%) scaleY(0);
                     border: 1px solid #002fa7;
@@ -670,7 +670,7 @@ export default {
                         left: 50%;
                         white-space: nowrap;
                         display: table;
-                        transition: all .5s;
+                        transition: all .3s;
                         transform-origin: top;
                         transform: translate(-50%) scaleY(0);
                         border: 1px solid #002fa7;
