@@ -574,19 +574,21 @@ export default {
                 }
                 .show-sub-menu {
                     .sub-menu {
-                        animation: slide-down;
+                        // animation: slide-down;
+                        transform: translate(-50%) scaleY(1);
                         animation-duration: 0.5s;
                         top: 60px;
-                        display: table;
-                        white-space: nowrap;
                     }
                 }
                 .sub-menu {
                     background-color: #fff;
                     position: absolute;
                     left: 50%;
-                    transform: translate(-50%);
-                    display: none;
+                    white-space: nowrap;
+                    display: table;
+                    transition: all .5s;
+                    transform-origin: top;
+                    transform: translate(-50%) scaleY(0);
                     border: 1px solid #002fa7;
                     box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
                     border-radius: 5px;
@@ -673,19 +675,22 @@ export default {
                     }
                     &:hover {
                         ul {
-                            animation: slide-down;
+                            // animation: slide-down;
+                            transform: translate(-50%) scaleY(1);
                             animation-duration: 0.5s;
-                            top: 60px;
-                            display: table;
-                            white-space: nowrap;    
+                            top: 60px;  
                         }
                     }
                     ul {
+                        top: 60px;
                         background-color: #fff;
                         position: absolute;
                         left: 50%;
-                        transform: translate(-50%);
-                        display: none;
+                        white-space: nowrap;
+                        display: table;
+                        transition: all .5s;
+                        transform-origin: top;
+                        transform: translate(-50%) scaleY(0);
                         border: 1px solid #002fa7;
                         box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
                         border-radius: 5px;
@@ -716,11 +721,10 @@ export default {
                             background-position: 50% 43%;
                         }
                         &:hover {
-                            animation: slide-down;
+                            // animation: slide-down;
+                            transform: translate(-50%) scaleY(1);
                             animation-duration: 0.5s;
                             top: 60px;
-                            display: table;
-                            white-space: nowrap;
                         }
                     }
                 }
