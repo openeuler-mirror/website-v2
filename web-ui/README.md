@@ -5,21 +5,21 @@
 Website is openEuler community contents management system base on [Vuepress](https://www.vuepress.cn/) framework, [default Theme for Vuepress](https://www.vuepress.cn/theme/default-theme-config.html) theme, which publish on https://openeuler.org. Now we are under developing. you are welcome to join us.
 
 ### directory structure
-docs
+docs  
     ├── .vuepress                   
-    │   ├── api                     // api
-    │   ├── component               // vue component
-    │   ├── data                    // data maintained
-    │   ├── lang                    // language module
-    │   ├── libs                    // common utils
-    │   ├── public                  // static resources
-    │   ├── style                   // common style
-    │   ├── theme                   // theme default options
-    │   ├── config.js               // global config
-    │   ├── enhanceApp.js           // app level enhancements
-    │   ├── sitePlugin.js           // plugin
-    ├── en                          // english content
-    ├── zh                          // chinese content
+    │   ├── api                     // api  
+    │   ├── component               // vue component  
+    │   ├── data                    // data maintained  
+    │   ├── lang                    // language module  
+    │   ├── libs                    // common utils  
+    │   ├── public                  // static resources  
+    │   ├── style                   // common style  
+    │   ├── theme                   // theme default options  
+    │   ├── config.js               // global config  
+    │   ├── enhanceApp.js           // app level enhancements  
+    │   ├── sitePlugin.js           // plugin  
+    ├── en                          // english content  
+    ├── zh                          // chinese content  
 
 ### Debug
 
