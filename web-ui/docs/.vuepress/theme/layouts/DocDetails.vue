@@ -413,6 +413,12 @@ export default {
     .null-box{
         height: 20px;
     }
+    .previous-doc{
+        margin-left: 18px;
+    }
+    .next-doc{
+        margin-right: 18px;
+    }
     .second-title-list{
         margin-left: 20px;
         .active{

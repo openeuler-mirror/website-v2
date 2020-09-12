@@ -7,15 +7,6 @@ title: "Characters"
 </ClientOnly>
 <div class="markdown">
 
-## Community Member
-
-
-This article briefly describes the responsibilities and privilege of the contributor in the openEuler community. The responsibilities of most contributor are limited to SIG (Special Interest groups) :
-|Role| Responsibilities |Requirement|Defined Document|
-|:-----------|:-------------------- |:----------------------------------------------------- |:----------------------------------------------------------- |
-|Contributor|Contributors of the project|| Registered members on Gitee|
-|Committer| Review and approve the contributions submitted| Frequently contributing to SIG, experienced,and willing to undertake review work | *developer* entry in the OWNERS file owned by openEuler SIG|
-| Maintainer| Owner of the project| Experienced, responsible, outstanding technologies and management skills| *developer* entry in the OWNERS file owned by openEuler SIG |
 
 *Description*：The permissions of Maintainer and Committer are the same on Gitee, and the difference lies in the scope of SIG governance. The detailed informationes are described below.
  
