@@ -6,7 +6,7 @@ Website is openEuler community contents management system base on [Vuepress](htt
 
 ### directory structure
 docs  
-    ├── .vuepress                   
+    ├─ .vuepress                   
     │   ├── api                     // api  
     │   ├── component               // vue component  
     │   ├── data                    // data maintained  
@@ -18,8 +18,8 @@ docs
     │   ├── config.js               // global config  
     │   ├── enhanceApp.js           // app level enhancements  
     │   ├── sitePlugin.js           // plugin  
-    ├── en                          // english content  
-    ├── zh                          // chinese content  
+    ├─ en                          // english content  
+    ├─ zh                          // chinese content  
 
 ### Debug
 
