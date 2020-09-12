@@ -177,7 +177,7 @@
                              v-for="(item, index) in newsList"
                              :key="index">
                             <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
-                            <p><a :href="item.path">{{ item.frontmatter.title }}</a></p>
+                            <p><router-link :to="item.path">{{ item.frontmatter.title }}</router-link></p>
                         </div>
                         <span></span>
                     </div>
@@ -190,7 +190,7 @@
                             <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
                             <span>|</span>
                             <span>{{ item.frontmatter.author }}</span>
-                            <p><a :href="item.path">{{ item.frontmatter.summary }}</a></p>
+                            <p><router-link :to="item.path">{{ item.frontmatter.summary }}</router-link></p>
                         </div>
                         <span><a @click="go('/interaction/blog-list/')">{{ i18n.home.MORE }}</a></span>
                     </div>
@@ -203,7 +203,7 @@
                             <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
                             <span>|</span>
                             <span>{{ item.frontmatter.author }}</span>
-                            <p><a :href="item.path">{{ item.frontmatter.title }}</a></p>
+                            <p><router-link :to="item.path">{{ item.frontmatter.title }}</router-link></p>
                         </div>
                         <span><a @click="go('/interaction/news-list/')">{{ i18n.home.MORE }}</a></span>
                     </div>
