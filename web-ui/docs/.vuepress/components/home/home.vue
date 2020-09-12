@@ -7,12 +7,8 @@
                         <video poster="/img/home/BannerVideo.png" loop width="100%" height="500px" id="home-video">
                             <source src="/img/home-video/pc-home-video.mp4"  type="video/mp4">
                         </video>
-                        <div class="playControll">
-                            <div :class="['play-pause', isPlay?'pause-icon':'play-icon']" @click="isPlay=!isPlay"></div>
-                            <el-progress :percentage="barPercentage" id="timebar" :show-text="false" :color="'#ffffff'" @click="clickBar()"></el-progress>
-                            <div :class="['voice-mute', isMuted?'mute-icon':'voice-icon']" @click="isMuted=!isMuted"></div>
-	                    </div>
-                        <div class="play-btn" v-if="!isPlay" @click="isPlay=!isPlay">
+                        <playcontroll :ctrl-obj="videoCtrlParams" ref="playctrlEle" @playStatus="checkStatus"></playcontroll>
+                        <div class="play-btn" v-if="!isNowPlay" @click="playHomeVideo()">
                         </div>
                     </div>
                 </el-carousel-item>
@@ -376,6 +372,7 @@
     import { meetingList } from "../../api/home";
     import dayjs from "dayjs";
     import calender from "./calender";
+    import playcontroll from './../controll/videoctrl'
     let that = null;
     let remoteMethods = {
         meetingList () {
@@ -409,44 +406,23 @@
                 rooms3: false,
                 calenderData: [],
                 autoPlay: true,
-                videoElement:'',
-                isPlay:false,
-                isMuted:false,
-                realTimeUpdate:null, //定时器变量
-                barPercentage:0,    //进度条进度
-            }
-        },
-        watch: {
-            isPlay:function(){
-                if(this.isPlay==true){
-                    this.videoElement.play();
-                    this.realTimeUpdate = setInterval(()=>{
-                        this.progressBar();
-                    }, 100) ;
-                    this.autoPlay = false;
-                }else{
-                    this.videoElement.pause();
-                    this.autoPlay = true;
-                    clearInterval(this.realTimeUpdate);
-                }
-            },
-            isMuted:function(){
-                if(this.isMuted==false){
-                    this.videoElement.muted=false;
-                }else{
-                    this.videoElement.muted=true;
-                }
+                videoCtrlParams:{
+                    element:'',
+                    isShow:false,  //默认不显示控制器
+                },
+                isNowPlay:false,
             }
         },
         mounted() {
-            this.videoElement = document.getElementById('home-video');
+            this.videoCtrlParams.element = document.getElementById('home-video');
             remoteMethods.meetingList();
             this.roomName = this.i18n.home.HOME_ROOMS.ROOM_NAME
             this.toggleHover();
             this.getRoomsData();
         },
         components: {
-            calender
+            calender,
+            playcontroll
         },
         methods: {
             go(path) {
@@ -562,24 +538,22 @@
                 this.currentRoom = index;
                 this.$refs.newsroomCard.setActiveItem(index);
             },
-            progressBar(){
-                let duration = this.videoElement.duration;  //  获取视频总长度
-                let currentTime = this.videoElement.currentTime; //  获取当前播放时间
-                let ratio = parseFloat(currentTime/duration);
-                if(this.videoElement.readyState <= 0) {  //  判断视频是否能够正常读取
-                    this.barPercentage = 0;
-                    return;
-                }
-                if(currentTime >= duration){
-                    ratio = 1;
-                    clearInterval(this.realTimeUpdate);
-                    this.isPlay = true;
-                }
-                this.barPercentage = Math.floor(ratio*100);
-            },
             eventChange(){
-                this.videoElement.pause();
-                this.isPlay = false;
+                this.$refs.playctrlEle.isPlay = false;
+                this.isNowPlay = false;
+            },
+            playHomeVideo(){
+                this.$refs.playctrlEle.isPlay = true;
+                this.isNowPlay = true;
+            },
+            checkStatus(status){
+                if(status == true){
+                    this.isNowPlay = true;
+                    this.autoPlay = false;
+                }else{
+                    this.isNowPlay = false;
+                    this.autoPlay = true;
+                }
             }
         }
     }
@@ -709,61 +683,6 @@
         &:hover{
             .playControll{
                 display: block;
-            }
-        }
-        .playControll{
-            display: none;
-            width: 390px;
-            height: 40px;
-            background: #AAAAAA;
-            position: absolute;
-            bottom: 35px;
-            left: 50%;
-            margin-left: -195px;
-            z-index: 999999999;
-            border-radius: 25px;
-            opacity: 0.5;
-            .play-pause{
-                width: 30px;
-                height: 30px;
-                position: absolute;
-                top: 5px;
-                left: 10px;
-                cursor: pointer;
-                background-size: cover;
-            }
-            .play-icon{
-                background-image: url('/img/home/icon-play.svg');
-            }
-            .pause-icon{
-                background-image: url('/img/home/icon-pause.svg');
-            }
-            #timebar{
-                width: 300px;
-                position: absolute;
-                top: 16px;
-                left: 45px;
-                /deep/.el-progress-bar{
-                    .el-progress-bar__outer{
-                        background-color: #222222 !important;
-                    }
-                }
-            }
-            .voice-mute{
-                width: 26px;
-                height: 25px;
-                display: inline-block;
-                position: absolute;
-                right: 10px;
-                top: 5px;
-                cursor: pointer;
-                background-size: cover;
-            }
-            .voice-icon{
-                background-image: url('/img/home/icon-voice.svg');
-            }
-            .mute-icon{
-                background-image: url('/img/home/icon-mute.svg');
             }
         }
         .play-btn{

@@ -60,7 +60,30 @@ module.exports = {
             MAIL_LIST: '邮件列表'
         },
         ROLE_DESCRIPTION:{
-            ROLE_DESCRIPTION:'角色说明'
+            ROLE_DESCRIPTION:'角色说明',
+            TABLE_TITLE:'社区成员',
+            TABLE_DESCRIPTION:'本文简要描述了openEuler社区中贡献者角色的各种职责。大部分角色的职责限于这些SIG(Special Interest Group)内：',
+            TABLE_THEAD:["角色","职责范围（简要描述）","要求","定义的文件"],
+            TABLE_TBODY:[
+                {
+                    ROLE:'Contributor',
+                    RESPONSIBILITIES:'项目的贡献者',
+                    REQUIREMENT:'',
+                    DEFINED_DOCUMENT:'Gitee注册成员'
+                },
+                {
+                    ROLE:'Committer',
+                    RESPONSIBILITIES:'审核其他成员的贡献',
+                    REQUIREMENT:'SIG的积极贡献者，经验丰富，愿意投入精力参与到审核工作',
+                    DEFINED_DOCUMENT:'openEuler SIG拥有的存储库中OWNERS文件中的Committer条目。'
+                },
+                {
+                    ROLE:'Maintainer',
+                    RESPONSIBILITIES:'项目Owner',
+                    REQUIREMENT:'经验丰富，富有责任心、出色的技术能力和管理能力',
+                    DEFINED_DOCUMENT:'openEuler SIG拥有的存储库中OWNERS文件中的Maintainer条目。'
+                }
+            ]
         }
     },
     en: {
@@ -120,7 +143,30 @@ module.exports = {
             MAIL_LIST: 'maillist'
         },
         ROLE_DESCRIPTION:{
-            ROLE_DESCRIPTION:'role-description'
+            ROLE_DESCRIPTION:'role-description',
+            TABLE_TITLE:'Community Member',
+            TABLE_DESCRIPTION:'This article briefly describes the responsibilities and privilege of the contributor in the openEuler community. The responsibilities of most contributor are limited to SIG (Special Interest groups) :',
+            TABLE_THEAD:["Role","Responsibilities","Requirement","Defined Document"],
+            TABLE_TBODY:[
+                {
+                    ROLE:'Contributor',
+                    RESPONSIBILITIES:'Contributors of the project',
+                    REQUIREMENT:'',
+                    DEFINED_DOCUMENT:'Registered members on Gitee'
+                },
+                {
+                    ROLE:'Committer',
+                    RESPONSIBILITIES:'Review and approve the contributions submitted',
+                    REQUIREMENT:'Frequently contributing to SIG, experienced,and willing to undertake review work',
+                    DEFINED_DOCUMENT:'developer entry in the OWNERS file owned by openEuler SIG'
+                },
+                {
+                    ROLE:'Maintainer',
+                    RESPONSIBILITIES:'Owner of the project',
+                    REQUIREMENT:'Experienced, responsible, outstanding technologies and management skills',
+                    DEFINED_DOCUMENT:'developer entry in the OWNERS file owned by openEuler SIG'
+                }
+            ]
         }
     }
 };
