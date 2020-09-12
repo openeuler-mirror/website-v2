@@ -1,7 +1,7 @@
 <!-- 视频控制组件 -->
 <template>
-    <!-- 父组件上请用.playControll的display实现hover，show-Frist支持的是一直显示的情景 -->
-    <div :class="['playControll',ctrlObj.isShow?'show-Frist':'']">
+    <!-- 父组件上请用.playControll的display实现hover，show-controll支持的是一直显示的情景 -->
+    <div :class="['playControll',ctrlObj.isShow?'show-controll':'']">
         <div :class="['play-pause', isPlay?'pause-icon':'play-icon']" @click="isPlay=!isPlay"></div>
         <div class="timebar" @click="controllBar()" ref="progress"><span :style="{width:barPercentage + '%'}"></span></div>
         <div :class="['voice-mute', isMuted?'mute-icon':'voice-icon']" @click="isMuted=!isMuted"></div>
@@ -25,7 +25,7 @@ export default {
                 this.ctrlObj.element.play();
                 this.realTimeUpdate = setInterval(()=>{
                     this.progressBar();
-                }, 100) ;
+                }, 200) ;
                 this.$emit('playStatus',true)
             }else{
                 this.ctrlObj.element.pause();
@@ -65,6 +65,9 @@ export default {
             this.barPercentage = Math.floor(parseFloat(nowProgress/300)*100);
             this.ctrlObj.element.currentTime = parseFloat(parseFloat(nowProgress/300) * nowDuration);
         }
+    },
+    destroyed () {
+        clearInterval(this.realTimeUpdate);
     }
 }
 
