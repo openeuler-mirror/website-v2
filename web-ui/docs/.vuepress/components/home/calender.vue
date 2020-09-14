@@ -327,7 +327,18 @@ export default {
             this.dealData = datas;
         },
         getOriginData(data) {
-            data.forEach(item => {
+            let timestamp = Date.now();
+            let min;
+            let index = 0;
+            data.forEach((item, dateIndex) => {
+                let itemStamp = new Date(item.date).getTime();
+                let interVal = Math.abs(timestamp - itemStamp);
+                if (min === void 0) { min = interVal } else {
+                    if (min > interVal) {
+                        min = interVal;
+                        index = dateIndex;
+                    }
+                }
                 item.timeDate.forEach(item1 => {
                     item1.dealDate = {};
                     let flags = true;
@@ -402,6 +413,8 @@ export default {
                     this.dealData = data;
                 });
             });
+            this.indexX = (index - 3);
+            this.l = -245 * (index - 3);
         }
     },
     created() {
