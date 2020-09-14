@@ -18,8 +18,8 @@ docs
     │   ├── config.js               // global config  
     │   ├── enhanceApp.js           // app level enhancements  
     │   ├── sitePlugin.js           // plugin  
-    ├─ en                          // english content  
-    ├─ zh                          // chinese content  
+    ├─ en                          // English content  
+    ├─ zh                          // Chinese content  
 
 ### Debug
 

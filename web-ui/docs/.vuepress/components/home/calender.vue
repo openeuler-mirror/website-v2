@@ -333,7 +333,7 @@ export default {
             data.forEach((item, dateIndex) => {
                 let itemStamp = new Date(item.date).getTime();
                 let interVal = Math.abs(timestamp - itemStamp);
-                if (min == void 0) { min = interVal } else {
+                if (min === void 0) { min = interVal } else {
                     if (min > interVal) {
                         min = interVal;
                         index = dateIndex;
