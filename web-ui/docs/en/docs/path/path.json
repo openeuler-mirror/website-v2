@@ -4,11 +4,11 @@
         "name": "1.0 BASE",
         "docs": [
             {
-                "title": "About",
+                "title": "Install",
                 "doc": [
                     {
-                        "img": "/img/docs/docs-releasenotes.svg",
-                        "path": "/docs/Releasenotes/release_notes.html",
+                        "img": "/img/docs/docs-installation.svg",
+                        "path": "/docs/Installation/Installation.html",
                         "name": "Installation Guide"
                     }
                 ]

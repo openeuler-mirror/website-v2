@@ -6,7 +6,7 @@ tags:
   - StatusUpdate
 archives: 2020-03
 author: Shinwell Hu, Technical Committee
-summary: A summary of TC status update.
+summary: A summary of TC status update。
 ---
 
 # 技术委员会运作二月总结

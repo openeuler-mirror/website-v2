@@ -6,7 +6,7 @@
             :inside-name="'COMMUNITY'"
             :outside-name="i18n.community.MAILING_LIST.TITLE"
         ></common-banner>
-        <div class="maillist is-pc">
+        <div class="maillist is-pc" v-fade>
             <div class="maillist-divider-mail is-pc">
                 <div class="maillist-icon-comm"></div>
             </div>
@@ -18,7 +18,7 @@
             >
                 <div class="step-left">
                     <div class="mail-box">
-                        <div class="step-left-box">
+                        <div class="step-left-box fade-in">
                             <div class="inner-box">
                                 <img :src="item.LEFT.LEFT_IMG" alt="" />
                                 <p>{{ item.LEFT.LEFT_INFO }}</p>
@@ -36,7 +36,7 @@
                         <div class="step-right-num">
                             <span>{{ item.RIGHT.RIGHT_CIRCLE }}</span>
                         </div>
-                        <div class="step-right-box">
+                        <div class="step-right-box fade-in">
                             <div class="inner-box">
                                 <img :src="item.RIGHT.LEFT_IMG" alt="" />
                                 <p>{{ item.RIGHT.RIGHT_INFO }}</p>

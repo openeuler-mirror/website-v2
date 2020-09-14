@@ -5,7 +5,7 @@ tags:
   - OBS
 archives: 2020-03
 author: Changjie Fu
-summary: OBS系统如何借助Source Services自动获取git仓库中的代码.
+summary: OBS系统如何借助Source Services自动获取git仓库中的代码。
 ---
 
 ## 概要

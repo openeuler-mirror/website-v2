@@ -1,9 +1,9 @@
 <template>
     <div class="contribution">
         <common-banner
-                :inside-name="'COMMUNITY'"
-                :outside-name="i18n.community.CONTRIBUTION_H5.TITLE"
-                class="is-pc"
+        :inside-name="'COMMUNITY'"
+        :outside-name="i18n.community.CONTRIBUTION_H5.TITLE"
+        class="is-pc"
         ></common-banner>
         <div class="bgc is-pc">
             <div class="methods is-pc">
@@ -49,7 +49,7 @@
                     <div class="step-num">
                         <span>{{ item.BUTTON}}</span>
                     </div>
-                    <img :src="item.IMG" alt="">
+                    <img :src="item.MOBILEIMG" alt="">
                 </div>
             </div>
         </div>
@@ -294,7 +294,7 @@
         .step-H5 img {
             display: block;
             width: 240px;
-            height: 240px;
+            height: 180px;
             margin: 30px auto 0;
         }
         .step-H5 p {

@@ -38,7 +38,7 @@ module.exports = {
                     TITLE: "openEuler系统",
                     IMG: "/img/home/step2.png",
                     GIF: "/img/home/step-move-2.gif",
-                    LINK: "javascript:;",
+                    LINK: "",
                 },
                 {
                     NAME: "查阅",

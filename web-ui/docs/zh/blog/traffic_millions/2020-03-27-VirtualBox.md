@@ -5,7 +5,7 @@ tags:
     - 安装openEuler
 archives: 2020-03
 author: traffic_millions
-summary: windows下使用VirtualBox安装openEuler虚拟机.
+summary: windows下使用VirtualBox安装openEuler虚拟机。
 
 ---
 

@@ -7,7 +7,7 @@ tags:
     - Ceph
 archives: 2020-06
 author: genedna
-summary: openEuler 社区正式成立Ceph SIG
+summary: openEuler 社区正式成立Ceph SIG。
 ---
 
 ## openEuler 社区成立 Ceph SIG
