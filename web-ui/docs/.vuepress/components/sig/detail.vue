@@ -4,7 +4,7 @@
            SIG \
        </div>
        <h1>{{$route.query.name}}</h1>
-       <h2>{{i18n.sig.SIG_DETAIL.ORGANIZING_MEETINGS}}</h2>
+       <h2 class="meetings">{{i18n.sig.SIG_DETAIL.ORGANIZING_MEETINGS}}</h2>
         <div class="calender-wrapper">
             <calender :table-data="calenderData" />
         </div>
@@ -74,10 +74,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .sig-detail {
     width: 1120px;
     margin: 0 auto;
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        padding: 0 30px;
+    }
 }
 .sig-detail .breadcrumbs {
     margin-top: 28px;
@@ -85,6 +89,11 @@ export default {
     font-size: 20px;
     font-family: FZLTHJW;
     cursor: pointer;
+}
+.sig-detail .meetings {
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }
 }
 .sig-detail .calender-wrapper {
     margin-top: -25px;
@@ -106,6 +115,9 @@ export default {
 .sig-detail .contact {
     margin-top: 20px;
     margin-bottom: 200px;
+    @media screen and (max-width: 1000px) {
+        margin-bottom: 80px;
+    }
     color: #002fa7;
     font-size: 16px;
     line-height: 32px;
@@ -122,6 +134,10 @@ export default {
 }
 .sig-detail .developer-wrapper .dev-leader .dev-dever {
     flex: 0 0 25%;
+    @media screen and (max-width: 1000px) {
+        flex: 0 0 50%;
+        justify-content: space-between;
+    }
     flex-direction: column;
     display: flex;
     align-items: center;
