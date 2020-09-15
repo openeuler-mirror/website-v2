@@ -34,7 +34,7 @@
                   </span>
                 </p>
               </div>
-              <div @click="go(item.path)" class="news-title">{{item.frontmatter.title}}</div>
+              <div @click="go(item.path)" class="news-title word-hover">{{item.frontmatter.title}}</div>
               <div class="news-time-mobile">
                 <p>
                   <span class="news-date">{{item.frontmatter.date}}</span>
@@ -196,6 +196,11 @@ export default {
 }
 .news-item {
   margin-top: 30px;
+}
+.word-hover{
+    &:hover{
+        color: #002FA7;
+    }
 }
 .new-img {
   cursor: pointer;

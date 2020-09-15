@@ -80,12 +80,14 @@ module.exports = {
                 {
                     BUTTON: "签署CLA",
                     IMG: "/img/community/contribution/cla.png",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/cla.png',
                     VIDEO: "/img/community/contribution/cla.gif",
                     LINK: "/other/cla/"
                 },
                 {
                     BUTTON: "提出Issue",
                     IMG: "/img/community/contribution/issue.png",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/issue.png',
                     VIDEO: "/img/community/contribution/issue.gif",
                     LINK: "",
                     LINKADRESSLIST:[
@@ -95,18 +97,21 @@ module.exports = {
                 {
                     BUTTON: "贡献代码",
                     IMG: "/img/community/contribution/contribution.png",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/contribution.png',
                     VIDEO: "/img/community/contribution/contribution.gif",
                     LINK: "https://gitee.com/openeuler"
                 },
                 {
                     BUTTON: "加入SIG",
                     IMG: "/img/community/contribution/sig.png",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/sig.png',
                     VIDEO: "/img/community/contribution/sig.gif",
                     LINK: "/sig/sig-list/"
                 },
                 {
                     BUTTON: "参选技术委员会",
                     IMG: "/img/community/contribution/commit.png",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/commit.png',
                     VIDEO: "/img/community/contribution/commit.gif",
                     LINK: "/sig/sig-list/sig-detail.html?id=21&name=TC&mail=tc%40openeuler.org"
                 },

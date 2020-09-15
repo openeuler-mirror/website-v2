@@ -385,3 +385,12 @@ export default {
     }
 }
 </style>
+<style lang="less">
+#blog_content {
+    @media (max-width: 1000px) {
+        img{
+            width: 100%;
+        }
+    }
+}
+</style>

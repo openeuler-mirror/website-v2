@@ -6,7 +6,7 @@ tags:
     - 暑期 2020献
 archives: 2020-06
 author: genedna
-summary: openEuler 社区参与暑期 2020 的 102 个任务具体分析
+summary: openEuler 社区参与暑期 2020 的 102 个任务具体分析。
 ---
 
 

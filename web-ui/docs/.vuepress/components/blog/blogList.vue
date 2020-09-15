@@ -57,7 +57,7 @@
                         </p>
                     </div>
                     <div class="blog-item-right">
-                        <p @click="go(item.path)" class="blog-item-title">{{item.frontmatter.title}}</p>
+                        <p @click="go(item.path)" class="blog-item-title word-hover">{{item.frontmatter.title}}</p>
                         <p class="blog-item-content"><span class="summary">{{item.frontmatter.summary}}</span></p>
                         <p @click="go(item.path)" class="blog-item-all">{{i18n.community.BLOG.READ_MORE}}</p>
                         <p class="blog-item-tag">
@@ -122,7 +122,7 @@ export default {
         currentBlogListData: [],
         // 筛选结果数据
         screenBlogListData: [],
-        // 所以博客数据
+        // 所有博客数据
         allBlogListData: [],
         totalSize: 0,
         currentPage: 1,
@@ -335,6 +335,11 @@ export default {
     position: absolute;
     top: -50px;
     left: 0px;
+}
+.word-hover{
+    &:hover{
+        color: #002FA7;
+    }
 }
 .blog-banner-img {
     position: absolute;

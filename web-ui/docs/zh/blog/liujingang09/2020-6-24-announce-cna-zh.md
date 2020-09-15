@@ -7,7 +7,7 @@ tags:
     - Security
 archives: 2020-06-24
 author: liujingang09, openEuler Security Committee
-summary: openEuler正式成为CNA，获得CVE颁发资质
+summary: openEuler正式成为CNA，获得CVE颁发资质。
 ---
 
 ### openEuler正式成为CNA，获得CVE颁发资质

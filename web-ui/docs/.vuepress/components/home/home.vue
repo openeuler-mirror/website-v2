@@ -141,12 +141,27 @@
                 <div
                     class="area-box"
                     v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP"
-                    :key="index">
-                    <a :href="item.LINK">
+                    :key="index"
+                    @touchstart="go(item.LINK)"
+                    >
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p>{{ item.TITLE }}</p>
                         <img :src="item.IMG" alt=""/>
-                    </a>
+                </div>
+                <div :class="['snd-guidance','location',isShowCard?'is-show':'']">
+                    <div class="d3"></div>
+                    <p>{{ i18n.home.HOME_INTRODUCE.INTRO_GUIDE.INFO }}</p>
+                    <div class="d3-guide">
+                        <div
+                            class="guide-way"
+                            v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_GUIDE.GUIDE_WAY"
+                            :key="index">
+                                <a :href="item.LINK">
+                                    <img :src="item.IMG" alt="">
+                                    <span>{{ item.TITLE }}</span>
+                                </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -173,7 +188,7 @@
                              v-for="(item, index) in newsList"
                              :key="index">
                             <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
-                            <p><router-link :to="item.path">{{ item.frontmatter.title }}</router-link></p>
+                            <p><router-link class="word-hover" :to="item.path">{{ item.frontmatter.title }}</router-link></p>
                         </div>
                         <span></span>
                     </div>
@@ -186,7 +201,7 @@
                             <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
                             <span>|</span>
                             <span>{{ item.frontmatter.author }}</span>
-                            <p><router-link :to="item.path">{{ item.frontmatter.summary }}</router-link></p>
+                            <p><router-link class="word-hover" :to="item.path">{{ item.frontmatter.summary }}</router-link></p>
                         </div>
                         <span><a @click="go('/interaction/blog-list/')">{{ i18n.home.MORE }}</a></span>
                     </div>
@@ -199,7 +214,7 @@
                             <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
                             <span>|</span>
                             <span>{{ item.frontmatter.author }}</span>
-                            <p><router-link :to="item.path">{{ item.frontmatter.title }}</router-link></p>
+                            <p><router-link class="word-hover" :to="item.path">{{ item.frontmatter.title }}</router-link></p>
                         </div>
                         <span><a @click="go('/interaction/news-list/')">{{ i18n.home.MORE }}</a></span>
                     </div>
@@ -341,27 +356,54 @@
                     </div>
                 </div>
             </div>
-            <div class="source-publish-link publish">
+            <div class="source-publish-link publish diff-pc-mobile">
                 <h5>{{ i18n.home.HOME_SOURCE.SOURCE_PUBLISH_TITLE }}</h5>
                 <div class="publish-edition">
-                    <a href="https://eulixos.com/#/download" target="_blank"><img src="/img/home/iscas.png" alt=""></a>
-                    <a href="http://download.turbolinux.com.cn:8011/" target="_blank"><img src="/img/home/turbo.png" alt=""></a>
+                    <a href="https://eulixos.com/#/download" target="_blank">
+                        <img class="pc-img" src="/img/home/link/iscas.png" alt="">
+                        <img class="mobile-img" src="/img/home/link/mobile-iscas.png" alt="">
+                    </a>
+                    <a href="http://download.turbolinux.com.cn:8011/" target="_blank">
+                        <img  class="pc-img" src="/img/home/link/turbo.png" alt="">
+                        <img class="mobile-img" src="/img/home/link/mobile-turbo.png" alt="">
+                    </a>
                 </div>
                 <div class="publish-edition">
-                    <a href="http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso" target="_blank"><img src="/img/home/cetc.png" alt=""></a>
-                    <a href="http://download.hopeedge.com/ISO/HopeEdge-1.0-aarch64-dvd.iso" target="_blank"><img src="/img/home/hopeEdge.png" alt=""></a>
+                    <a href="http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso" target="_blank">
+                        <img class="pc-img" src="/img/home/link/cetc.png" alt="">
+                        <img class="mobile-img" src="/img/home/link/mobile-cetc.png" alt="">
+                    </a>
+                    <a href="http://download.hopeedge.com/ISO/HopeEdge-1.0-aarch64-dvd.iso" target="_blank">
+                        <img class="pc-img" src="/img/home/link/hopeEdge.png" alt="">
+                        <img class="mobile-img" src="/img/home/link/mobile-hopeEdge.png" alt="">
+                    </a>
                 </div>
                 <div class="publish-edition">
-                    <a href="http://www.kylinos.cn/" target="_blank"><img src="/img/home/qiling.png" alt=""></a>
-                    <a href="https://www.uniontech.com" target="_blank"><img src="/img/home/tongxin.png" alt=""></a>
+                    <a href="http://www.kylinos.cn/" target="_blank">
+                        <img class="pc-img" src="/img/home/link/qiling.png" alt="">
+                        <img class="mobile-img" src="/img/home/link/mobile-qiling.png" alt="">
+                    </a>
+                    <a href="https://www.uniontech.com" target="_blank">
+                        <img class="pc-img" src="/img/home/link/tongxin.png" alt="">
+                        <img class="mobile-img" src="/img/home/link/mobile-tongxin.png" alt="">
+                    </a>
                 </div>
             </div>
-            <div class="source-publish-link">
+            <div class="source-publish-link diff-pc-mobile">
                 <h5>{{ i18n.home.HOME_SOURCE.SOURCE_LINK_TITLE }}</h5>
                 <div class="publish-edition link">
-                    <a href="http://www.mulanos.cn/" target="_blank"><img src="/img/home/mulan.png" alt=""></a>
-                    <a href="https://www.huaweicloud.com/kunpeng/" target="_blank"><img src="/img/home/kunpeng.png" alt=""></a>
-                    <a href="https://dw.pcl.ac.cn/dwmain/main/" target="_blank"><img src="/img/home/pengcheng.png" alt=""></a>
+                    <a href="http://www.mulanos.cn/" target="_blank">
+                        <img class="pc-img" src="/img/home/link/mulan.png" alt="">
+                        <img class="mobile-img" src="/img/home/link/mobile-mulan.png" alt="">
+                    </a>
+                    <a href="https://www.huaweicloud.com/kunpeng/" target="_blank">
+                        <img class="pc-img" src="/img/home/link/kunpeng.png" alt="">
+                        <img class="mobile-img" src="/img/home/link/mobile-kunpeng.png" alt="">
+                    </a>
+                    <a href="https://dw.pcl.ac.cn/dwmain/main/" target="_blank">
+                        <img class="pc-img" src="/img/home/link/pengcheng.png" alt="">
+                        <img class="mobile-img" src="/img/home/link/mobile-pengcheng.png" alt="">
+                    </a>
                 </div>
             </div>
         </div>
@@ -411,6 +453,7 @@
                     isShow:false,  //默认不显示控制器
                 },
                 isNowPlay:false,
+                isShowCard:false  //是否显示移动端点击体验的卡片
             }
         },
         mounted() {
@@ -430,6 +473,8 @@
                     this.$router.push({
                         path: this.resolvePath(path)
                     });
+                }else{
+                    this.isShowCard = !this.isShowCard;
                 }
             },
             e(selector) {
@@ -610,6 +655,11 @@
         color: #0b162b;
         text-align: center;
         margin-bottom: 20px;
+    }
+    .word-hover{
+        &:hover{
+            color: #002FA7;
+        }
     }
     .home p {
         font-size:14px;
@@ -1277,6 +1327,11 @@
     .source-publish-link.publish {
         margin-top: 100px;
     }
+    .diff-pc-mobile{
+        .mobile-img{
+            display: none;
+        }
+    }
     .source-publish-link h5 {
         text-align: center;
         line-height: 30px;
@@ -1337,6 +1392,12 @@
             display: block;
             margin-top: 25px;
             height: 100%;
+            position: relative;
+            .location{
+                position: absolute;
+                top: 31%;
+                left: 4%;
+            }
         }
         .home h3 {
             font-size: 20px;
@@ -1441,7 +1502,7 @@
         .area-box {
             display: block;
             margin: 0 auto;
-            width: 100%;
+            width: 67%;
         }
         .calendar-time p {
             font-size: 14px;
@@ -1564,16 +1625,16 @@
         }
         .publish-edition.link {
             display: block;
-            margin: 30px 20px 0 20px;
+            margin: 20px 20px 0 20px;
         }
         .publish .publish-edition img {
             width: 280px;
-            height: 80px;
-            margin: 20px auto;
+            height: 60px;
+            margin: 5px auto;
         }
         .publish-edition img {
             width: 280px;
-            height: 80px;
+            height: 60px;
             margin: 0 auto;
             display: block;
         }
@@ -1593,7 +1654,7 @@
             font-size: 16px;
         }
         .source-publish-link {
-            margin-top: 50px;
+            margin-top: 30px;
         }
         .source-contain {
             width: 100%;
@@ -1608,6 +1669,14 @@
         }
         .source-publish-link.publish {
             margin-top: 50px;
+        }
+        .diff-pc-mobile{
+            .mobile-img{
+                display: block;
+            }
+            .pc-img{
+                display: none;
+            }
         }
         .source-publish-link h5 {
             font-size: 18px;

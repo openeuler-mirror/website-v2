@@ -7,10 +7,10 @@
         :inside-name="'SIG'"
         :outside-name="i18n.sig.ROLE_DESCRIPTION.ROLE_DESCRIPTION"
         ></common-banner>
-        <div :class="language == '/en/'?'en-table':''">
+        <div :class="['role-table',language == '/en/'?'en-table':'']">
             <h2 :id="h2Id">{{i18n.sig.ROLE_DESCRIPTION.TABLE_TITLE}}</h2>
             <p class="table-description">{{i18n.sig.ROLE_DESCRIPTION.TABLE_DESCRIPTION}}</p>
-            <table>
+            <table class="table-box">
                 <thead>
                     <tr>
                         <th v-for="(item,index) in theadList" :key="key">{{item}}</th>
@@ -25,6 +25,14 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="table-card">
+               <div class="card-box" v-for="(item,index) in tbodyList" :key="key">
+                   <p><span>{{theadList?theadList[0] + ':':''}}</span><span>{{item.ROLE}}</span></p>
+                   <p><span>{{theadList?theadList[1] + ':':''}}</span><span>{{item.RESPONSIBILITIES}}</span></p>
+                   <p><span>{{theadList?theadList[2] + ':':''}}</span><span>{{item.REQUIREMENT}}</span></p>
+                   <p><span>{{theadList?theadList[3] + ':':''}}</span><span>{{item.DEFINED_DOCUMENT}}</span></p>
+               </div>
+            </div>
         </div>
     </div>
 </template>
@@ -60,64 +68,69 @@ export default {
     width: 1120px;
     margin: 0 auto;
     margin-top: 60px;
-    h2{
-        line-height: 24px;
-        font-size: 24px;
-        margin: 40px 0 20px;
-        font-family: FZLTHJW;
-        font-weight: normal;
-    }
-    .table-description{
-        font-size: 14px;
-        color: rgba(0,0,0,0.5);
-        line-height: 24px;
-        font-family: FZLTXIHJW;
-        letter-spacing: 0.8px;
-    }
-    table{
-        width: 1120px;
-        thead{
-            background: rgba(0, 0, 0, 0.05);
-            tr{
-                height: 60px;
-                font-size: 16px;
-                font-family: FZLTHJW, FZLTHJW;
-                font-weight: normal;
-                color: #000000;
-                line-height: 16px;
-                width: 1120px;
-                display: flex;
-                th{
-                    padding: 22px 0 22px 30px;
-                    &:first-of-type,&:nth-of-type(2){
-                        flex: 1;
-                    }
-                    &:nth-of-type(3),&:last-of-type{
-                        flex: 2;
+    .role-table{
+        .table-card{
+            display: none;
+        }
+        h2{
+            line-height: 24px;
+            font-size: 24px;
+            margin: 40px 0 20px;
+            font-family: FZLTHJW;
+            font-weight: normal;
+        }
+        .table-description{
+            font-size: 14px;
+            color: rgba(0,0,0,0.5);
+            line-height: 24px;
+            font-family: FZLTXIHJW;
+            letter-spacing: 0.8px;
+        }
+        .table-box{
+            width: 1120px;
+            thead{
+                background: rgba(0, 0, 0, 0.05);
+                tr{
+                    height: 60px;
+                    font-size: 16px;
+                    font-family: FZLTHJW;
+                    font-weight: normal;
+                    color: #000000;
+                    line-height: 16px;
+                    width: 1120px;
+                    display: flex;
+                    th{
+                        padding: 22px 0 22px 30px;
+                        &:first-of-type,&:nth-of-type(2){
+                            flex: 1;
+                        }
+                        &:nth-of-type(3),&:last-of-type{
+                            flex: 2;
+                        }
                     }
                 }
             }
-        }
-        tbody{
-            tr{
-                width: 1120px;
-                display: flex;
-                height: 56px;
-                font-size: 14px;
-                font-family: FZLTXIHJW, FZLTXIHJW;
-                font-weight: normal;
-                color: rgba(0, 0, 0, 0.5);
-                line-height: 16px;
-                &:nth-of-type(2){
-                    background: rgba(0, 0, 0, 0.03);
-                }
-                td{
-                    padding: 20px 0 20px 30px;
-                    &:first-of-type,&:nth-of-type(2){
-                        flex: 1;
+            tbody{
+                tr{
+                    width: 1120px;
+                    display: flex;
+                    height: 56px;
+                    font-size: 14px;
+                    font-family: FZLTXIHJW;
+                    font-weight: normal;
+                    color: rgba(0, 0, 0, 0.5);
+                    line-height: 16px;
+                    &:nth-of-type(2){
+                        background: rgba(0, 0, 0, 0.03);
                     }
-                    &:nth-of-type(3),&:last-of-type{
-                        flex: 2;
+                    td{
+                        padding: 20px 0 20px 30px;
+                        &:first-of-type,&:nth-of-type(2){
+                            flex: 1;
+                        }
+                        &:nth-of-type(3),&:last-of-type{
+                            flex: 2;
+                        }
                     }
                 }
             }
@@ -129,7 +142,7 @@ export default {
             font-family: Roboto-Regular;
             font-weight: normal;
         }
-        table{
+        .table-box{
             thead{
                 tr{
                     th{
@@ -155,8 +168,47 @@ export default {
     .role-description{
         width: 100%;
         position: relative;
+        padding: 0 30px;
         margin-top: 0px;
         margin-bottom: 80px;
+        .role-table{
+            margin-top: 40px;
+            h2{
+                display: none;
+            }
+            .table-description{
+                font-size: 14px;
+                font-family: FZLTXIHJW;
+                font-weight: normal;
+                color: rgba(0, 0, 0, 0.5);
+                line-height: 24px;
+                margin-bottom: 40px;
+            }
+            .table-box{
+                display: none;
+            }
+            .table-card{
+                display: block;
+                .card-box{
+                    width: 100%;
+                    padding: 20px;
+                    font-size: 12px;
+                    font-family: FZLTXIHJW;
+                    font-weight: normal;
+                    color: #000000;
+                    line-height: 16px;
+                    &:first-of-type,&:last-of-type{
+                        background: rgba(0, 0, 0, 0.05);
+                    }
+                    p{
+                        margin-top: 12px;
+                        &:first-of-type{
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 </style>

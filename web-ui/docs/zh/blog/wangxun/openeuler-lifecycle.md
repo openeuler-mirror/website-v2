@@ -6,7 +6,7 @@ tags:
     - lifecycle
 archives: 2020-03
 author: WangXun, Technical Committee
-summary: openEuler lifecycle.
+summary: openEuler lifecycle。
 ---
 
 # openEuler社区版本命名，发布时间与生命周期管理

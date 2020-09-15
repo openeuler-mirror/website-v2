@@ -7,7 +7,7 @@ tags:
     - 智能
 archives: 2020-05
 author: openEuler Blog Maintainer
-summary: A-Tune让系统调优更智能
+summary: A-Tune让系统调优更智能。
 ---
 
 # A-Tune让系统调优更智能

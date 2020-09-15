@@ -265,10 +265,13 @@ export default {
         .left-content {
             .left-content-css;
             p {
-            .mr-All(24px 0 0 20px);
-            &:last-of-type {
-                .mr(top,0);
-            }
+                .mr-All(24px 0 0 20px);
+                &:last-of-type {
+                    .mr(top,12px);
+                    @media (max-width: 1000px) {
+                        .mr(top,0);
+                    }
+                }
             }
             .live-title {
             max-width: 180px;
@@ -295,9 +298,9 @@ export default {
             .live-time {
             white-space: nowrap;
             .word-common-css(14px,PingFangSC-Regular,PingFang SC,400,rgba(0, 0, 0, 1),14px);
-            @media (max-width: 1000px) {
-                .word-common-css(14px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,0.5),24px);
-            }
+                @media (max-width: 1000px) {
+                    .word-common-css(14px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,0.5),24px);
+                }
             }
         }
         .right-content {
@@ -339,10 +342,13 @@ export default {
         .left-content {
             .left-content-css;
             p {
-            .mr-All(24px 0 0 20px);
-            &:last-of-type {
-                .mr(top,0);
-            }
+                .mr-All(24px 0 0 20px);
+                &:last-of-type {
+                    .mr(top,12px);
+                    @media (max-width: 1000px) {
+                        .mr(top,0);
+                    }
+                }
             }
             .live-title {
             max-width: 180px;
@@ -367,10 +373,10 @@ export default {
             }
             .live-time {
                 white-space: nowrap;
-            .word-common-css(14px,PingFangSC-Regular,PingFang SC,400,rgba(0, 0, 0, 1),14px);
-            @media (max-width: 1000px) {
-                .word-common-css(14px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,0.5),24px);
-            }
+                .word-common-css(14px,PingFangSC-Regular,PingFang SC,400,rgba(0, 0, 0, 1),14px);
+                @media (max-width: 1000px) {
+                    .word-common-css(14px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,0.5),24px);
+                }
             }
         }
         .right-content {

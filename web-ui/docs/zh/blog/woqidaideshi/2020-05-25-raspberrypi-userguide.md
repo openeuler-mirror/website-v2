@@ -7,7 +7,7 @@ tags:
     - 操作系统移植
 archives: 2020-05
 author: woqidaideshi
-summary: openEuler Raspberry Pi 版本镜像的构建、使用
+summary: openEuler Raspberry Pi 版本镜像的构建、使用。
 ---
 
 # 概要
