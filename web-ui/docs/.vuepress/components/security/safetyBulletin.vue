@@ -17,7 +17,7 @@
                         class="mobile-search"
                         :placeholder="i18n.security.SEARCH"
                     >
-                        <i slot="suffix" class="el-icon-search" @click="initData(1)"></i>
+                        <i slot="suffix" class="icon-search" @click="initData(1)"></i>
                     </el-input>
                 </el-form-item>
                 <el-form-item>

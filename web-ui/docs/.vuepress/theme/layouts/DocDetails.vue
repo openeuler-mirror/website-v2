@@ -285,6 +285,10 @@ export default {
   margin-top: 60px;
   margin-bottom: 400px;
 }
+.el-tree{
+    max-height: 540px;
+    overflow-y: scroll;
+}
 .mask {
   position: fixed;
   top: 72px;
@@ -299,6 +303,7 @@ export default {
   width: 192px;
   display: inline-block;
   vertical-align: top;
+  position: fixed;
   > div > div > div.el-tree-node__content {
     height: 60px;
     line-height: 60px;
@@ -388,7 +393,7 @@ export default {
 }
 .details-center {
   width: 670px;
-  margin: 0 18px;
+  margin: 0 18px 0 240px;
   display: inline-block;
   .markdown{
       width: 670px;
@@ -410,6 +415,7 @@ export default {
     vertical-align: top;
     display: inline-block;
     overflow: hidden;
+    position: fixed;
     .null-box{
         height: 20px;
     }

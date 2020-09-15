@@ -13,8 +13,8 @@
         </message-banner>
         <div class="theme-speech">
             <h3>{{i18n.interaction.SUMMIT.SPEECHTITLE}}</h3>
-            <ul class="speech-list" v-fade v-if="speechList.length">
-                <li v-for="(item,key) in speechList" :key="key" class="fade-in">
+            <ul class="speech-list">
+                <li v-for="(item,key) in speechList" :key="key">
                     <div class="list-head">
                         <p class="list-time">
                             <i class="icon-time"></i>

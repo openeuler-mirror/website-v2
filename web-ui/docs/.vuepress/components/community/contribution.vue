@@ -19,12 +19,13 @@
                     </div>
                     <div :class="['guidance',ishide?'is-hide':'']" v-if="item.LINK?false:true">
                         <div class="angle"></div>
-                        <p>{{item.LINKADRESSLIST[0]}}</p>
-                        <p>
-                            <span>{{item.LINKADRESSLIST[1]}}</span>
-                            <span>{{item.LINKADRESSLIST[2]}}</span>
-                            <span>{{item.LINKADRESSLIST[3]}}</span>
-                        </p>
+                        <p class="link-title">{{item.LINKADRESSLIST.TITLE}}</p>
+                        <div class="linkbox">
+                            <div class="linkList" v-for="(item,index) in item.LINKADRESSLIST.LINKMESSAGE" @click="go(item.LINKADRESS)">
+                                <i :style="{backgroundImage:item.ICONIMAGE}"></i>
+                                <span>{{item.TEXT}}</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="map-rode">
@@ -50,6 +51,16 @@
                         <span>{{ item.BUTTON}}</span>
                     </div>
                     <img :src="item.MOBILEIMG" alt="">
+                </div>
+                <div :class="['guidance',ishide?'is-hide':'']" v-if="item.LINK?false:true">
+                        <div class="angle"></div>
+                        <p class="link-title">{{item.LINKADRESSLIST.TITLE}}</p>
+                        <div class="linkbox">
+                            <div class="linkList" v-for="(item,index) in item.LINKADRESSLIST.LINKMESSAGE" @click="go(item.LINKADRESS)">
+                                <i :style="{backgroundImage:item.ICONIMAGE}"></i>
+                                <span>{{item.TEXT}}</span>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -98,6 +109,9 @@
                 }
                 if(path.includes('https')){
                     window.open(path);
+                }else if(path.includes('cla')){
+                    let routeUrl = this.$router.resolve(this.resolvePath(path));
+                        window.open(routeUrl.href);
                 }else{
                     if(path){
                         this.$router.push({
@@ -148,8 +162,8 @@
         text-align: left;
         width: 200px;
         position: absolute;
-        left: 381px;
-        bottom: -138px;
+        left: 36%;
+        bottom: -87%;
     }
     .mail-guide .guidance .angle{
         margin-left: 30px;
@@ -164,7 +178,40 @@
         background: #fff;
     }
     .mail-guide .is-hide{
-        opacity: 0;
+        display: none;
+    }
+    .mail-guide .guidance .link-title{
+        font-size: 14px;
+        font-family: FZLTHJW;
+        font-weight: normal;
+        color: #000000;
+        line-height: 18px;
+    }
+    .mail-guide .guidance .linkbox{
+        width: 140px;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .mail-guide .guidance .linkbox .linkList{
+        cursor: pointer;
+         z-index: 10;
+    }
+    .mail-guide .guidance .linkbox .linkList i,.mail-guide .guidance .linkbox .linkList span{
+        display: block;
+    }
+    .mail-guide .guidance .linkbox .linkList i{
+       width:40px;
+       height:40px;
+       background-size: cover;
+    }
+    .mail-guide .guidance .linkbox .linkList span{
+        font-size: 12px;
+        font-family: FZLTXIHJW;
+        font-weight: normal;
+        color: #000000;
+        line-height: 12px;
+        text-align: center;
     }
     .step {
         width: 200px;
@@ -293,9 +340,9 @@
         }
         .step-H5 img {
             display: block;
-            width: 240px;
-            height: 180px;
-            margin: 30px auto 0;
+            width: 200px;
+            height: 140px;
+            margin: 10px auto 0;
         }
         .step-H5 p {
             font-size: 14px;
@@ -303,6 +350,10 @@
             line-height: 24px;
             margin: 10px 30px;
             text-align: left;
+        }
+        .mail-guide .guidance{
+            left:26%;
+            bottom: 4%;
         }
     }
 </style>
