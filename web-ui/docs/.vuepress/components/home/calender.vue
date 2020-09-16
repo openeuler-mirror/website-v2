@@ -541,10 +541,10 @@ button {
     font-family: FZLTHJW;
 }
 .calenderLeftTime span.active {
-    color: blue;
+    color: #002FA7;
 }
 .calenderSliderTopMain span.active {
-    color: blue;
+    color: #002FA7;
 }
 .calendarSlide {
     padding: 10px 0 0 10px;

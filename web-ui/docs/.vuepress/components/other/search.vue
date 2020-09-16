@@ -7,7 +7,7 @@
                 <el-input
                         :placeholder="i18n.common.SEARCH_PLACE_HOLDER"
                     v-model="formData.keyword">
-                <i slot="suffix" @click="search"><img src="/img/other/search/search-icon.svg" alt=""></i>
+                <i slot="suffix" class="icon-search" @click="search"></i>
                 </el-input>
             </div>
             <div class="search-area">
@@ -222,6 +222,11 @@
         @media (max-width: 1000px) {
             padding: 0 30px;
         }
+    }
+    .icon-search{
+        color: #002fa7;
+        font-size: 16px;
+        line-height: 32px;
     }
     .search-pagination {
         display: block;

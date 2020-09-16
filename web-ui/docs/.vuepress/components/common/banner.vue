@@ -31,7 +31,7 @@ export default {
   height: 380px;
   @media (max-width: 1000px) {
     width: 100%;
-    padding: 0 55px;
+    padding: 0 30px;
     height: unset;
   }
   .banner {
@@ -81,8 +81,10 @@ export default {
       margin-top: 40px;
     }
     img {
-      margin-top: 10px;
-      width: 100%;
+      margin: 10px auto 0 auto;
+      width: 260px;
+      height: 200px;
+      display: block;
     }
   }
 }

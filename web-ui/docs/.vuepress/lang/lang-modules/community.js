@@ -90,9 +90,26 @@ module.exports = {
                     MOBILEIMG:'/img/community/contribution/mobile-img/issue.png',
                     VIDEO: "/img/community/contribution/issue.gif",
                     LINK: "",
-                    LINKADRESSLIST:[
-                        '请选择跳转的链接：','链接1','链接2','链接3'
-                    ]
+                    LINKADRESSLIST:{
+                        TITLE:'请选择跳转的链接：',
+                        LINKMESSAGE:[
+                            {
+                                ICONIMAGE:"url('/img/community/contribution/icon/wechat.png')",
+                                TEXT:'微信',
+                                LINKADRESS:'/building/'
+                            },
+                            {
+                                ICONIMAGE:"url('/img/community/contribution/icon/email.png')",
+                                TEXT:'邮件',
+                                LINKADRESS:'/building/'
+                            },
+                            {
+                                ICONIMAGE:"url('/img/community/contribution/icon/gitee.png')",
+                                TEXT:'Gitee',
+                                LINKADRESS:'/building/'
+                            }
+                        ]
+                    }
                 },
                 {
                     BUTTON: "贡献代码",
@@ -209,9 +226,26 @@ module.exports = {
                     IMG: "/img/community/contribution/issue.png",
                     VIDEO: "/img/community/contribution/issue.gif",
                     LINK: "",
-                    LINKADRESSLIST:[
-                        '请选择跳转的链接：','链接1','链接2','链接3'
-                    ]
+                    LINKADRESSLIST:{
+                        TITLE:'Choose your link：',
+                        LINKMESSAGE:[
+                            {
+                                ICONIMAGE:"url('/img/community/contribution/icon/wechat.png')",
+                                TEXT:'Wechat',
+                                LINKADRESS:'/building/'
+                            },
+                            {
+                                ICONIMAGE:"url('/img/community/contribution/icon/email.png')",
+                                TEXT:'Email',
+                                LINKADRESS:'/building/'
+                            },
+                            {
+                                ICONIMAGE:"url('/img/community/contribution/icon/gitee.png')",
+                                TEXT:'Gitee',
+                                LINKADRESS:'/building/'
+                            }
+                        ]
+                    }
                 },
                 {
                     BUTTON: "贡献代码",

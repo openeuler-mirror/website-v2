@@ -391,6 +391,11 @@ export default {
         img{
             width: 100%;
         }
+        code{
+            width: 100%;
+            word-wrap: break-word;
+            word-break: normal;
+        }
     }
 }
 </style>
