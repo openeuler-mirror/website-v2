@@ -150,6 +150,9 @@ export default {
         .sig-item {
             > h2 {
                 cursor: pointer;
+                &:hover{
+                    color: #002FA7;
+                }
             }
             width: 530px;
             box-shadow: 0 6px 30px 0 rgba(0, 0, 0, .1);
