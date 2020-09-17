@@ -272,7 +272,7 @@ export default {
             return timesArrUniq;
         },
         blogList() {
-            return this.$sitePages.filter((item) => {
+            let list = this.$sitePages.filter((item) => {
                 if(item.path.indexOf("/" + this.$lang + "/blog/") === 0){
                 item.count=0;
                 this.countList.forEach(itemCount=>{
@@ -283,6 +283,8 @@ export default {
                 return true;
                 }
             });
+            return list.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+            
         },
         go(path) {
             if (path) {

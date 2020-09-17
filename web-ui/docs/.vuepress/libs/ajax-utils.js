@@ -18,7 +18,7 @@ let addUrlParam = function (url, paramName, paramValue) {
 
 let postJson = params => {
     let api = axios.create({
-        baseURL: serviceBaseUrl || ''
+        baseURL: (serviceBaseUrl + (params.otherBaseUrl || '')) || ''
     });
     api.defaults.headers.post['Content-Type'] = 'application/json';
 

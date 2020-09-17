@@ -3,7 +3,7 @@
  * */
 
 import appAjax from './../libs/ajax-utils';
-const oldApi = '/old-api';
+const oldApi = '-old';
 export const securityList = ({
     keyword,
     page,
@@ -13,7 +13,8 @@ export const securityList = ({
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            url: oldApi + '/cve-security-notice-server/securitynotice/findAll',
+            otherBaseUrl: oldApi,
+            url: '/cve-security-notice-server/securitynotice/findAll',
             type: 'post',
             data: {
                 keyword,
@@ -52,7 +53,8 @@ export const cveList = ({
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            url: oldApi + '/cve-security-notice-server/cvedatabase/findAll',
+            otherBaseUrl: oldApi,
+            url: '/cve-security-notice-server/cvedatabase/findAll',
             type: 'post',
             data: {
                 keyword,
@@ -86,7 +88,8 @@ export const securityDetail = ({
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            url: oldApi + '/cve-security-notice-server/securitynotice/getBySecurityNoticeNo',
+            otherBaseUrl: oldApi,
+            url: '/cve-security-notice-server/securitynotice/getBySecurityNoticeNo',
             type: 'get',
             params: {
                 securityNoticeNo: sn
@@ -112,7 +115,8 @@ export const cveDetail = ({
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            url: oldApi + '/cve-security-notice-server/cvedatabase/getByCveId',
+            otherBaseUrl: oldApi,
+            url: '/cve-security-notice-server/cvedatabase/getByCveId',
             type: 'get',
             params: {
                 cveId
@@ -138,7 +142,8 @@ export const getAffectedProduct = ({
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            url: oldApi + '/cve-security-notice-server/securitynotice/getByCveId',
+            otherBaseUrl: oldApi,
+            url: '/cve-security-notice-server/securitynotice/getByCveId',
             type: 'get',
             params: {
                 cveId
@@ -164,7 +169,8 @@ export const getPackage = ({
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            url: oldApi + '/cve-security-notice-server/cvedatabase/getPackageByCveId',
+            otherBaseUrl: oldApi,
+            url: '/cve-security-notice-server/cvedatabase/getPackageByCveId',
             type: 'get',
             params: {
                 cveId
@@ -190,7 +196,8 @@ export const getDownloadUrl = ({
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            url: oldApi + '/cve-security-notice-server/securitynotice/getPackageLink',
+            otherBaseUrl: oldApi,
+            url: '/cve-security-notice-server/securitynotice/getPackageLink',
             type: 'post',
             data: {
                 packageName: id
