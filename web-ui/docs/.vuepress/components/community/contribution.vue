@@ -260,7 +260,7 @@
     .step .is-hidden {
         display: none;
     }
-    .step .over-flow.is-hovered {
+    .lang-en .over-flow.is-hovered {
         top: 61px;
     }
     .step .is-hovered {
