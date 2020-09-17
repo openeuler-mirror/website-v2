@@ -10,12 +10,12 @@
                 <div class="mail-guide"
                      v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"
                      :key="index">
-                    <div class="step" >
+                    <div class="step" :class="{'over-flow': index === 4}">
                         <a class="step-num" @click="go(item.LINK)">
-                            <span>{{ item.BUTTON }}</span>
+                            <span :class="{'over-flow': index === 4}">{{ item.BUTTON }}</span>
                         </a>
                         <img :src="item.IMG" alt="">
-                        <img :src="item.VIDEO" class="is-hidden">
+                        <img :src="item.VIDEO" class="is-hidden" :class="{'over-flow': index === 4}">
                     </div>
                     <div :class="['guidance',ishide?'is-hide':'']" v-if="item.LINK?false:true">
                         <div class="angle"></div>
@@ -249,13 +249,24 @@
         text-decoration: none;
         cursor: pointer;
     }
+    .step.over-flow {
+        width: 210px;
+    }
+    .step-num .over-flow {
+        display: inline-block;
+        max-width: 180px;
+        text-align: left;
+    }
     .step .is-hidden {
         display: none;
+    }
+    .step .over-flow.is-hovered {
+        top: 61px;
     }
     .step .is-hovered {
         display: block;
         position: absolute;
-        top: 44px;
+        top: 41px;
     }
     .step-num span {
         color: #fff;
