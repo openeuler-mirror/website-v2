@@ -3,11 +3,12 @@
  * */
 
 import appAjax from './../libs/ajax-utils';
-const sigApi = '/sig';
+const sigApi = '-sig';
 export const meetingList = () => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            url: sigApi + '/meetingsdata/',
+            otherBaseUrl: sigApi,
+            url: '/meetingsdata/',
             type: 'get',
             success(result) {
                 if (result) {
