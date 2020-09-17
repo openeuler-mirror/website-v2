@@ -1013,10 +1013,10 @@
         color: #fff;
     }
     .en-h3-home .en-h3-home{
-        font-family: Roboto-Regular, Roboto;
-        font-weight: 400;
-        color: #FFFFFF;
-        line-height: 34px;
+        font-family: Roboto-Regular, Roboto !important;
+        font-weight: 400 !important;
+        color: #FFFFFF !important;
+        line-height: 34px !important;
     }
     .home-active h3 {
         font-size: 30px;
