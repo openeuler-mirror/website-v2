@@ -586,7 +586,7 @@ module.exports = {
         },
         SUMMIT: {
             SUMMIT: 'Virtual Summit',
-            SUMMITCONTENT: 'OpenEuler Virtual Summit 2020 是 openEuler 在发布 20.03 LTS 版本后第一次举行的峰会，本次大会邀请了华为的资深专家、社区Committer和多家openEuler社区合作厂商的重量嘉宾贡献多场精彩的演讲，不容错过。开发者和合作伙伴可以通过本次峰会全面了解 openEuler 多元化的生态、丰富的特性和广泛的社区，帮助开发者顺利融入社区，合作伙伴参与到openEuler生态体系。',
+            SUMMITCONTENT: 'openEuler Virtual Summit 2020 was the first summit after openEuler released the 20.03 LTS version. Senior experts of Huawei, community Committers, and several heavyweight guests from openEuler community partners were invited to deliver inspiring speeches at this summit. By attending this summit, developers and partners can fully understand the diversified ecosystem, rich features, and inclusive community of openEuler. This will motivate them to play an active role in the openEuler ecosystem and community.',
             HOMETITLE: 'Replay',
             LISTTITLE: 'Overview',
             LISTNEWTITLE:'openEuler Virtual Summit 2020',
@@ -875,8 +875,8 @@ module.exports = {
                 ]
         },
         MEETUPS: {
-            MEETUPS: '沙龙',
-            MESSAGE: '敬请期待...',
+            MEETUPS: 'Meetsup',
+            MESSAGE: 'Coming soon…',
             INSIDENAME:'CONNECT',
         }
     }

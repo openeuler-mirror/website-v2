@@ -88,21 +88,21 @@
         </div>
         <div class="home-introduce">
             <h1>{{ i18n.home.HOME_INTRODUCE.INTRO_TITLE }}</h1>
-            <h3>{{ i18n.home.HOME_INTRODUCE.INTRO_HEAD }}</h3>
-            <p>{{ i18n.home.HOME_INTRODUCE.INTRO_DESCRIPTION }}</p>
+            <h3 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_INTRODUCE.INTRO_HEAD }}</h3>
+            <p :class="$lang == 'en'?'en-p':''">{{ i18n.home.HOME_INTRODUCE.INTRO_DESCRIPTION }}</p>
             <div class="is-pc mapArea">
-                <div class="area-box in-pc" v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP" :key="index">
+                <div :class="['area-box','in-pc',$lang == 'en' && index == 3?'en-areabox-down':'']" v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP" :key="index">
                     <a v-if="(index !== 3)" @click="go(item.LINK)" target="_blank">
                         <div class="box-icon">{{ item.NAME }}</div>
-                        <p>{{ item.TITLE }}</p>
+                        <p :class="$lang == 'en'?'en-areabox-p':''">{{ item.TITLE }}</p>
                         <img :src="item.IMG" alt="">
-                        <img :src="item.GIF" alt="" class="is-hidden">
+                        <img :src="item.GIF" alt="" :class="['is-hidden',$lang == 'en'?'en-areabox-gif':'']">
                     </a>
                     <a class="down" v-if="(index === 3)" @click="go(item.LINK)" target="_blank">
                         <img :src="item.IMG" alt="">
                         <img :src="item.GIF" alt="" class="is-hidden">
                         <div class="box-icon">{{ item.NAME }}</div>
-                        <p>{{ item.TITLE }}</p>
+                        <p :class="$lang == 'en'?'en-areabox-p':''">{{ item.TITLE }}</p>
                     </a>
                 </div>
                 <div class="area-box bottom in-pc" @click="clickDownload">
@@ -110,7 +110,7 @@
                         <img src="/img/home/step2.png" alt="">
                         <img src="/img/home/step-move-2.gif" alt="" class="is-hidden">
                         <div class="box-icon">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.NAME }}</div>
-                        <p>{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.TITLE }}</p>
+                        <p :class="$lang == 'en'?'en-areabox-p':''">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.TITLE }}</p>
                     </a>
                     <div class="snd-guidance">
                         <div class="d3"></div>
@@ -167,10 +167,8 @@
         </div>
 
         <div class="home-active" :style="{ backgroundImage:'url('+activeImg+')' }">
-            <a href="#">
-                <h3>{{ i18n.home.HOME_ACTIVE.ACTIVE_TITLE }}</h3>
-                <p>{{ i18n.home.HOME_ACTIVE.ACTIVE_DESCRIPTION }}</p>
-            </a>
+            <h3 :class="$lang == 'en'?'en-h3-home':''">{{ i18n.home.HOME_ACTIVE.ACTIVE_TITLE }}</h3>
+            <p :class="$lang == 'en'?'en-weight-family':''">{{ i18n.home.HOME_ACTIVE.ACTIVE_DESCRIPTION }}</p>
         </div>
 
         <div class="home-calendar">
@@ -180,7 +178,7 @@
         <div class="home-newsroom">
             <div class="is-pc room-right">
                 <div class="room-title">
-                    <a v-for="(item, index) in roomName" :key="index" :class="{'active': currentRoom === index}" @click="vueToggle(index)">{{ item }} </a>
+                    <a v-for="(item, index) in roomName" :key="index" :class="{'active': currentRoom === index,'en-weight-family':$lang == 'en'}" @click="vueToggle(index)">{{ item }} </a>
                 </div>
                 <div class="room-contain" :class="{'active':currentRoom === 0}">
                     <div class="flex-room">
@@ -277,14 +275,14 @@
         </div>
 
         <div class="home-developer">
-            <h3>{{ i18n.home.HOME_DEV.DEV_TITLE }}</h3>
-            <p>{{ i18n.home.HOME_DEV.DEV_DESCRIPTION }}</p>
+            <h3 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_DEV.DEV_TITLE }}</h3>
+            <p :class="$lang == 'en'?'en-developer-p':''">{{ i18n.home.HOME_DEV.DEV_DESCRIPTION }}</p>
             <div class="dev-leader" v-fade>
                 <div class="dev-dever hidden fade-in" v-for="(value, index) in i18n.home.HOME_DEV.DEV_INFO" :key="index">
                     <img class="dev-img" :src="value.IMG">
                     <p class="dever-name">{{ value.NAME }}</p>
-                    <p class="dever-rank">{{ value.TITLE }}</p>
-                    <p class="dever-rank">{{ value.RANK }}</p>
+                    <p :class="['dever-rank',$lang == 'en'?'en-rank':'']">{{ value.TITLE }}</p>
+                    <p :class="['dever-rank',$lang == 'en'?'en-rank':'']">{{ value.RANK }}</p>
                     <div class="dev-link">
                         <a :href="'mailto:' + value.MAIL_LINK" target="_blank">
                             <img class="email-link" src="/img/home/email.png" alt="">
@@ -329,18 +327,18 @@
         </div>
 
         <div class="home-source">
-            <h3>{{ i18n.home.HOME_SOURCE.SOURCE_TITLE }}</h3>
+            <h3 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_SOURCE.SOURCE_TITLE }}</h3>
             <div class="source-contain">
                 <div class="source-apply">
                     <div class="apply-img">
                         <img src="/img/home/sourceApply.gif" alt="">
                     </div>
                     <div class="apply-des">
-                        <p class="source-title">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.TITLE }}</p>
-                        <p>
+                        <p :class="['source-title',$lang == 'en'?'en-source-title':'']">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.TITLE }}</p>
+                        <p :class="$lang == 'en'?'en-p':''">
                             {{ i18n.home.HOME_SOURCE.SOURCE_APPLY.DES }}
                         </p>
-                        <p class="click-here"><a @click="go('/blog/fred_li/2020-03-25-apply-for-vm-from-pcl.html')">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.APPLY }}</a></p>
+                        <p class="click-here"><a :class="$lang == 'en'?'en-p':''" @click="go('/blog/fred_li/2020-03-25-apply-for-vm-from-pcl.html')">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.APPLY }}</a></p>
                         <p><span class="source-sponsor">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.SPONSOR }}</span></p>
                     </div>
                 </div>
@@ -349,15 +347,15 @@
                         <img src="/img/home/sourceMail.gif" alt="">
                     </div>
                     <div class="mail-des">
-                        <p class="source-title">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.TITLE }}</p>
-                        <p><a href="mailto:community@openeuler.org">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.MAIL }}</a></p>
-                        <p>{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.DES }}</p>
-                        <p>{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.SUBSCRIBE }}<a @click="go('/community/mailing-list/')">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.LINK }}</a></p>
+                        <p :class="['source-title',$lang == 'en'?'en-source-title':'']">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.TITLE }}</p>
+                        <p><a :class="$lang == 'en'?'en-p':''" href="mailto:community@openeuler.org">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.MAIL }}</a></p>
+                        <p :class="$lang == 'en'?'en-p':''">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.DES }}</p>
+                        <p :class="$lang == 'en'?'en-p':''">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.SUBSCRIBE }}<a :class="$lang == 'en'?'en-p':''" @click="go('/community/mailing-list/')">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.LINK }}</a></p>
                     </div>
                 </div>
             </div>
             <div class="source-publish-link publish diff-pc-mobile">
-                <h5>{{ i18n.home.HOME_SOURCE.SOURCE_PUBLISH_TITLE }}</h5>
+                <h5 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_SOURCE.SOURCE_PUBLISH_TITLE }}</h5>
                 <div class="publish-edition">
                     <a href="https://eulixos.com/#/download" target="_blank">
                         <img class="pc-img" src="/img/home/link/iscas.png" alt="">
@@ -390,7 +388,7 @@
                 </div>
             </div>
             <div class="source-publish-link diff-pc-mobile">
-                <h5>{{ i18n.home.HOME_SOURCE.SOURCE_LINK_TITLE }}</h5>
+                <h5 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_SOURCE.SOURCE_LINK_TITLE }}</h5>
                 <div class="publish-edition link">
                     <a href="http://www.mulanos.cn/" target="_blank">
                         <img class="pc-img" src="/img/home/link/mulan.png" alt="">
@@ -630,6 +628,21 @@
 </style>
 
 <style lang="less" scoped>
+    .en-weight-family{ 
+        font-family: Roboto-Regular, Roboto !important;
+        font-weight: 400 !important;
+    }
+    .en-h3{
+        line-height: 34px !important;
+        font-family: Roboto-Regular, Roboto !important;
+        font-weight: 400 !important;
+        color: #000000 !important;
+    }
+    .en-p{
+        font-family: Roboto-Regular, Roboto !important;
+        font-weight: 400 !important;
+        line-height: 32px !important;
+    }
     [v-cloak] {
         display: none !important;
     }
@@ -831,6 +844,14 @@
         margin-bottom: 40px;
         font-family: Roboto-BoldCondensed;
     }
+    .home-introduce .en-p{
+        font-family: Roboto-Regular, Roboto;
+        font-weight: 400;
+    }
+    .home-introduce .en-areabox-down{
+        top:-82px !important;
+        left: 84% !important;
+    }
     .home-introduce p {
         max-width: 576px;
         font-family: FZLTXIHJW;
@@ -884,6 +905,12 @@
         background-color: #002fa7;
         border-radius: 50%;
     }
+    .area-box .en-areabox-p{
+        font-family: Roboto-Condensed, Roboto;
+        color: #002FA7;
+        line-height: 26px;
+        max-width: 138px;
+    }
     .area-box p {
         display: inline-block;
         font-size: 16px;
@@ -895,6 +922,9 @@
         height: 150px;
         display: block;
         margin: 10px 0 26px 30px;
+    }
+    .area-box .en-areabox-gif{
+        top: 105px !important;
     }
     .area-box .is-hidden {
         display: none;
@@ -981,6 +1011,12 @@
         height: 220px;
         text-decoration: none;
         color: #fff;
+    }
+    .en-h3-home .en-h3-home{
+        font-family: Roboto-Regular, Roboto;
+        font-weight: 400;
+        color: #FFFFFF;
+        line-height: 34px;
     }
     .home-active h3 {
         font-size: 30px;
@@ -1171,6 +1207,11 @@
         width: 1080px;
         margin: 60px auto 0;
     }
+    .home-developer .en-developer-p{ 
+        font-family: Roboto-Regular, Roboto !important;
+        font-weight: 400 !important;
+        line-height: 20px !important;
+    }
     .home-developer .dev-leader {
         width: 1033px;
         margin: 50px auto 0;
@@ -1210,6 +1251,11 @@
         font-size: 16px;
         color: #000;
         line-height: 22px;
+    }
+    .dev-dever .en-rank {
+        font-size: 14px;
+        font-family: HuaweiSans;
+        line-height: 20px;
     }
     .dev-link {
         margin-top: 20px;
@@ -1270,6 +1316,12 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 auto;
+    }
+    .source-contain .en-source-title{
+        font-family: Roboto-Regular, Roboto;
+        font-weight: 400;
+        color: #000000;
+        line-height: 32px;
     }
     .home-source .source-title {
         font-size: 24px;
