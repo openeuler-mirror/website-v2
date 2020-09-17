@@ -292,7 +292,7 @@ module.exports = {
         },
         BUILDING:{
             BUILDING:'Building',
-            BUILDINGMES:'Coming Soon...'
+            BUILDINGMES:'Coming soon…'
         }
     }
 };

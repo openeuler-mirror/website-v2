@@ -19,7 +19,7 @@
             @click="toReviewList()">{{i18n.interaction.SUMMIT.HOMETITLE}}</h2>
         </div>
         </common-banner>
-        <div class="summit-explain">
+        <div :class="['summit-explain',$lang == 'en'?'en-explain':'']">
             <p>{{i18n.interaction.SUMMIT.SUMMITCONTENT}}</p>
         </div>
         
@@ -115,10 +115,10 @@ export default {
         .review-home {
             cursor: pointer;
             display: inline-block;
-            .word-common-css(26px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,47,167,1),30px);
+            .word-common-css(26px,FZLTHJW,FZLTHJW,normal,rgba(0,47,167,1),30px);
             .mr(top,262px);
             @media (max-width: 1000px) {
-                .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,47,167,1),26px);
+                .word-common-css(16px,FZLTHJW,FZLTHJW,normal,rgba(0,47,167,1),26px);
                 width: 100%;
                 .mr(top,0);
                 text-align: center;
@@ -157,8 +157,25 @@ export default {
     @media (max-width: 1000px) {
         .wid-and-hei(315px,260px);
         .mr-All(40px auto 0 auto);
-        .word-common-css(16px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0, 0, 0, 1),26px);
+        .word-common-css(16px,FZLTHJW,FZLTHJW,normal,rgba(0, 0, 0, 1),26px);
     }
 }
-
+.summit .en-explain{
+    .word-common-css(20px,Roboto-Regular, Roboto,400,#000000,40px);
+    @media (max-width: 1000px) {
+        .wid-and-hei(315px,260px);
+        .mr-All(40px auto 0 auto);
+        .word-common-css(16px,Roboto-Regular, Roboto,normal,#000000,26px);
+    }
+}
+.summit .en-review-home{
+    font-family: Roboto-Regular, Roboto;
+    font-weight: 400;
+    color: #002FA7;
+    line-height: 30px;
+    @media (max-width: 1000px) {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
 </style>

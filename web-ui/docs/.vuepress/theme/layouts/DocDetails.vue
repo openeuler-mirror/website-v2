@@ -286,7 +286,7 @@ export default {
   margin-bottom: 400px;
 }
 .el-tree{
-    height: 400px;
+    max-height: calc(100vh - 400px);
     overflow-y: hidden;
     &::-webkit-scrollbar-track {
         -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
