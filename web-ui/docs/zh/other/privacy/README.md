@@ -9,7 +9,7 @@ title: "隐私政策"
       :outside-name="i18n.security.PRIVACY"
   ></common-banner>
 </ClientOnly>
-<div class="markdown">
+<div class="other markdown">
 
 openEuler深知您的隐私对您的重要性，并充分尊重您的隐私。如果您对于我们处理您的个人数据的方式有任何疑问，欢迎与我们联系。
 
