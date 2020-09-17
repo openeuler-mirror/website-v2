@@ -28,9 +28,9 @@
                     </li>
                 </ul>
                 <ul class="administrators">
-                    <li v-for="(avatarItem, avatarIndex) in item.groupuser_set">
-                        <img :src="avatarItem.avatar" class="avatar">
-                        <span class="name">{{avatarItem.gitee_name}}</span>
+                    <li v-for="(avatarItem, avatarIndex) in item.owners" v-if="avatarIndex < 4">
+                        <img :src="avatarItem.avatar_url" class="avatar">
+                        <span class="name" :title="avatarItem.gitee_id">{{avatarItem.gitee_id}}</span>
                     </li>
                 </ul>
             </li>
@@ -48,6 +48,9 @@ let remoteMethods = {
         sigList()
         .then(data => {
             data = localMethods.shuffle(data);
+            data.forEach(item => {
+                item.owners = localMethods.shuffle(JSON.parse(item.owners));
+            })
             that.list = data;
             that.loading = false;
         })
@@ -221,6 +224,14 @@ export default {
                     }
                     span {
                         margin-top: 12px;
+                        @media (min-width: 1000px) {
+                            flex-shrink: 0;
+                            width: 95px;
+                            display: inline-block;
+                            white-space: nowrap; 
+                            overflow: hidden;
+                            text-overflow:ellipsis;
+                        }
                         @media (max-width: 1000px) {
                             margin-top: 5px;
                         }
