@@ -160,7 +160,7 @@ module.exports = {
                     RANK: "Packaging SIG maintainer",
                     MAIL_LINK: "solar.hu@huawei.com",
                     GITEE_LINK: "https://gitee.com/solarhu",
-                    IMG: "/img/home/developer/hufen.jpg"
+                    IMG: "/img/home/developer/hufen.png"
                 },
                 {
                     NAME: "杜开田",
@@ -168,7 +168,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "dukaitian@huawei.com",
                     GITEE_LINK: "https://gitee.com/jimmy_hero",
-                    IMG: "/img/home/developer/dukaitian.jpg"
+                    IMG: "/img/home/developer/dukaitian.png"
                 },
                 {
                     NAME: "何晓文",
@@ -176,7 +176,7 @@ module.exports = {
                     RANK: "service SIG maintainer",
                     MAIL_LINK: "hexiaowen@huawei.com",
                     GITEE_LINK: "https://gitee.com/jimmy_hero",
-                    IMG: "/img/home/developer/hexiaowen.jpg"
+                    IMG: "/img/home/developer/hexiaowen.png"
                 },
                 {
                     NAME: "朱春意",
@@ -184,7 +184,7 @@ module.exports = {
                     RANK: "service SIG maintainer",
                     MAIL_LINK: "zhuchunyi@huawei.com",
                     GITEE_LINK: "https://gitee.com/zhuchunyi",
-                    IMG: "/img/home/developer/zhuchunyi.jpg"
+                    IMG: "/img/home/developer/zhuchunyi.png"
                 },
                 {
                     NAME: "谢秀奇",
@@ -192,7 +192,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "xiexiuqi@huawei.com",
                     GITEE_LINK: "https://gitee.com/xiexiuqi",
-                    IMG: "/img/home/developer/xiexiuqi.jpg"
+                    IMG: "/img/home/developer/xiexiuqi.png"
                 },
                 {
                     NAME: "董剑",
@@ -200,7 +200,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "dongjian13@huawei.com",
                     GITEE_LINK: "https://gitee.com/dogsheng",
-                    IMG: "/img/home/developer/dongjian.jpg"
+                    IMG: "/img/home/developer/dongjian.png"
                 },
                 {
                     NAME: "蔡灏旻",
@@ -208,7 +208,7 @@ module.exports = {
                     RANK: " maintainer",
                     MAIL_LINK: "caihaomin@huawei.com",
                     GITEE_LINK: "https://gitee.com/caihaomin",
-                    IMG: "/img/home/developer/caihaomin.jpg"
+                    IMG: "/img/home/developer/caihaomin.png"
                 },
                 {
                     NAME: "李峰",
@@ -216,7 +216,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "lifeng68@huawei.com",
                     GITEE_LINK: "https://gitee.com/lifeng2221dd1",
-                    IMG: "/img/home/developer/lifeng.jpg"
+                    IMG: "/img/home/developer/lifeng.png"
                 },
                 {
                     NAME: "张海亮",
@@ -224,7 +224,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "zhang.zhanghailiang@huawei.com",
                     GITEE_LINK: "https://gitee.com/zhanghailiang_lucky",
-                    IMG: "/img/home/developer/zhanghailiang.jpg"
+                    IMG: "/img/home/developer/zhanghailiang.png"
                 },
                 {
                     NAME: "郑弦",
@@ -232,7 +232,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "sinever@126.com",
                     GITEE_LINK: "gitee.com/sinever",
-                    IMG: "/img/home/developer/zhengxian.jpg"
+                    IMG: "/img/home/developer/zhengxian.png"
                 },
                 {
                     NAME: "朱健伟",
@@ -240,7 +240,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "zhujianwei7@huawei.com",
                     GITEE_LINK: "https://gitee.com/zhujianwei001",
-                    IMG: "/img/home/developer/zhujianwei.jpg"
+                    IMG: "/img/home/developer/zhujianwei.png"
                 },
                 {
                     NAME: "谢志鹏",
@@ -248,7 +248,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "xiezhipeng1@huawei.com",
                     GITEE_LINK: "https://gitee.com/xiezhipeng1",
-                    IMG: "/img/home/developer/xiezhipeng.jpg"
+                    IMG: "/img/home/developer/xiezhipeng.png"
                 },
                 {
                     NAME: "熊伟",
@@ -256,7 +256,7 @@ module.exports = {
                     RANK: "modules SIG maintainer",
                     MAIL_LINK: "xiongwei888@huawei.com",
                     GITEE_LINK: "https://gitee.com/myeuler",
-                    IMG: "/img/home/developer/xiongwei.jpg"
+                    IMG: "/img/home/developer/xiongwei.png"
                 },
                 {
                     NAME: "朱延朋",
@@ -264,7 +264,7 @@ module.exports = {
                     RANK: "SIG maintainer",
                     MAIL_LINK: "zhuyanpeng@huawei.com",
                     GITEE_LINK: "https://gitee.com/zyp-rock",
-                    IMG: "/img/home/developer/zhuyanpeng.jpg"
+                    IMG: "/img/home/developer/zhuyanpeng.png"
                 },
                 {
                     NAME: "刘志强",
@@ -272,7 +272,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "lzhq28@mail.ustc.edu.cn",
                     GITEE_LINK: "https://gitee.com/liuzhiqiang26",
-                    IMG: "/img/home/developer/liuzhiqiang.jpg"
+                    IMG: "/img/home/developer/liuzhiqiang.png"
                 },
                 {
                     NAME: "吴波",
@@ -280,7 +280,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "wubo009@163.com",
                     GITEE_LINK: "https://gitee.com/wubo009",
-                    IMG: "/img/home/developer/wubo.jpg"
+                    IMG: "/img/home/developer/wubo.png"
                 },
             ]
         },
@@ -454,7 +454,7 @@ module.exports = {
                     RANK: "Packaging SIG maintainer",
                     MAIL_LINK: "solar.hu@huawei.com",
                     GITEE_LINK: "https://gitee.com/solarhu",
-                    IMG: "/img/home/developer/hufen.jpg"
+                    IMG: "/img/home/developer/hufen.png"
                 },
                 {
                     NAME: "杜开田",
@@ -462,7 +462,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "dukaitian@huawei.com",
                     GITEE_LINK: "https://gitee.com/jimmy_hero",
-                    IMG: "/img/home/developer/dukaitian.jpg"
+                    IMG: "/img/home/developer/dukaitian.png"
                 },
                 {
                     NAME: "何晓文",
@@ -470,7 +470,7 @@ module.exports = {
                     RANK: "service SIG maintainer",
                     MAIL_LINK: "hexiaowen@huawei.com",
                     GITEE_LINK: "https://gitee.com/jimmy_hero",
-                    IMG: "/img/home/developer/hexiaowen.jpg"
+                    IMG: "/img/home/developer/hexiaowen.png"
                 },
                 {
                     NAME: "朱春意",
@@ -478,7 +478,7 @@ module.exports = {
                     RANK: "service SIG maintainer",
                     MAIL_LINK: "zhuchunyi@huawei.com",
                     GITEE_LINK: "https://gitee.com/zhuchunyi",
-                    IMG: "/img/home/developer/zhuchunyi.jpg"
+                    IMG: "/img/home/developer/zhuchunyi.png"
                 },
                 {
                     NAME: "谢秀奇",
@@ -486,7 +486,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "xiexiuqi@huawei.com",
                     GITEE_LINK: "https://gitee.com/xiexiuqi",
-                    IMG: "/img/home/developer/xiexiuqi.jpg"
+                    IMG: "/img/home/developer/xiexiuqi.png"
                 },
                 {
                     NAME: "董剑",
@@ -494,7 +494,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "dongjian13@huawei.com",
                     GITEE_LINK: "https://gitee.com/dogsheng",
-                    IMG: "/img/home/developer/dongjian.jpg"
+                    IMG: "/img/home/developer/dongjian.png"
                 },
                 {
                     NAME: "蔡灏旻",
@@ -502,7 +502,7 @@ module.exports = {
                     RANK: " maintainer",
                     MAIL_LINK: "caihaomin@huawei.com",
                     GITEE_LINK: "https://gitee.com/caihaomin",
-                    IMG: "/img/home/developer/caihaomin.jpg"
+                    IMG: "/img/home/developer/caihaomin.png"
                 },
                 {
                     NAME: "李峰",
@@ -510,7 +510,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "lifeng68@huawei.com",
                     GITEE_LINK: "https://gitee.com/lifeng2221dd1",
-                    IMG: "/img/home/developer/lifeng.jpg"
+                    IMG: "/img/home/developer/lifeng.png"
                 },
                 {
                     NAME: "张海亮",
@@ -518,7 +518,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "zhang.zhanghailiang@huawei.com",
                     GITEE_LINK: "https://gitee.com/zhanghailiang_lucky",
-                    IMG: "/img/home/developer/zhanghailiang.jpg"
+                    IMG: "/img/home/developer/zhanghailiang.png"
                 },
                 {
                     NAME: "郑弦",
@@ -526,7 +526,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "sinever@126.com",
                     GITEE_LINK: "gitee.com/sinever",
-                    IMG: "/img/home/developer/zhengxian.jpg"
+                    IMG: "/img/home/developer/zhengxian.png"
                 },
                 {
                     NAME: "朱健伟",
@@ -534,7 +534,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "zhujianwei7@huawei.com",
                     GITEE_LINK: "https://gitee.com/zhujianwei001",
-                    IMG: "/img/home/developer/zhujianwei.jpg"
+                    IMG: "/img/home/developer/zhujianwei.png"
                 },
                 {
                     NAME: "谢志鹏",
@@ -542,7 +542,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "xiezhipeng1@huawei.com",
                     GITEE_LINK: "https://gitee.com/xiezhipeng1",
-                    IMG: "/img/home/developer/xiezhipeng.jpg"
+                    IMG: "/img/home/developer/xiezhipeng.png"
                 },
                 {
                     NAME: "熊伟",
@@ -550,7 +550,7 @@ module.exports = {
                     RANK: "modules SIG maintainer",
                     MAIL_LINK: "xiongwei888@huawei.com",
                     GITEE_LINK: "https://gitee.com/myeuler",
-                    IMG: "/img/home/developer/xiongwei.jpg"
+                    IMG: "/img/home/developer/xiongwei.png"
                 },
                 {
                     NAME: "朱延朋",
@@ -558,7 +558,7 @@ module.exports = {
                     RANK: "SIG maintainer",
                     MAIL_LINK: "zhuyanpeng@huawei.com",
                     GITEE_LINK: "https://gitee.com/zyp-rock",
-                    IMG: "/img/home/developer/zhuyanpeng.jpg"
+                    IMG: "/img/home/developer/zhuyanpeng.png"
                 },
                 {
                     NAME: "刘志强",
@@ -566,7 +566,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "lzhq28@mail.ustc.edu.cn",
                     GITEE_LINK: "https://gitee.com/liuzhiqiang26",
-                    IMG: "/img/home/developer/liuzhiqiang.jpg"
+                    IMG: "/img/home/developer/liuzhiqiang.png"
                 },
                 {
                     NAME: "吴波",
@@ -574,7 +574,7 @@ module.exports = {
                     RANK: "maintainer",
                     MAIL_LINK: "wubo009@163.com",
                     GITEE_LINK: "https://gitee.com/wubo009",
-                    IMG: "/img/home/developer/wubo.jpg"
+                    IMG: "/img/home/developer/wubo.png"
                 },
             ]
         },
