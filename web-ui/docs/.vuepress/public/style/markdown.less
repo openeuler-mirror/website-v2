@@ -7,6 +7,27 @@
             font-family: Roboto-Regular;
         }
     }
+    .other.markdown {
+        h2, h3, h4, h5{
+            font-family: Roboto-Regular;
+        }
+        p {
+            font-weight: 400;
+        }
+    }
+}
+.other.markdown {
+    p {
+        line-height: 32px;
+        font-weight: normal;
+        margin-top: 20px;
+    }
+    li {
+        margin-top: 20px;
+    }
+    li p {
+        font-size: 16px;
+    }
 }
 .markdown {
     width: 1120px;
@@ -100,6 +121,12 @@
     a[href^='#'] {
         display: none;
     }
+    a,li,p{
+        @media (max-width: 1000px) {
+            word-break:break-all;
+            word-wrap:break-word; 
+        }
+    }
     table {
         width: 100%;
         font-size: 14px;
@@ -129,5 +156,8 @@
     ul, ol {
         list-style: initial;
         padding-left: 30px;
+    }
+    strong {
+        font-weight: bold;
     }
 }

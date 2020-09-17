@@ -5,63 +5,63 @@ title: "Privacy"
   <common-banner
       :pc-src="'/img/security/privacy-banner.png'"
       :mobile-src="'/img/security/privacy-banner.png'"
-      :inside-name="'LEGAL NOTICE'"
+      :inside-name="'PRIVACY POLICY'"
       :outside-name="i18n.security.PRIVACY"
   ></common-banner>
 </ClientOnly>
-<div class="markdown">
+<div class="other markdown">
 
-openEuler community understands the importance of your privacy to you and fully respects your privacy. If you have any questions about how we process your personal data, please feel free to contact us.
+openEuler understands the importance of your privacy and fully respects it. If you have any questions about how we process your personal data, please feel free to contact us. 
 
 ## 1. We will collect the following personal data from you
 
-When you sign our Contributor Agreement (CLA), we will collect the following personal data:
+When you sign our Contribution License Agreement (CLA), we will collect your following personal data: 
 
-+ Your name or account
++ name or account
 
-+ Your address
++ address
 
-+ Your email address
++ e-mail address
 
-+ Your phone number
++ phone number
 
-+ Your fax number
++ fax number
 
-+ Your ID in Gitee
++ Gitee ID
 
-When you use our mail subscription service, we will collect your personal data:
+When you use our e-mail subscription service, we will collect your following personal data:
 
-+ your email address
++ email address
 
-To keep track of the running status of the openEuler community so as to provide better service for you, we will collect your personal data:
+To understand the operating status of the openEuler community and provide better services, we will collect your following personal data
 
-+ Your IP address
++ IP address
 
-## 2. How will we process your personal data
+## 2. How to process your personal data
 
-We will not use your personal data for any other purpose except under the following circumstances:
+Except in the following cases, we will not use your personal data for other purposes. 
 
-+ Match your ID in Gitee to confirm that you signed the CLA before submitting codes.
++ Please match your personal data with your Gitee ID to confirm that you have signed the CLA before submitting the code. 
 
-+ Provide you with a mail subscription service so you can participate in discussions in the community.
++ The e-mail subscription service is provided for you to participate in discussions in the community.
 
-+ Conduct statistics to understand the operating status of the Gitee community.
++ We collect statistics to understand the operating status of the Gitee community.
 
-## 3. How will we protect your personal data
+## 3. How to protect your personal data
 
-We attach importance to personal data security. We take appropriate physical, administrative and technical safeguards to protect your personal data from unauthorized access, disclosure, use, modification, damage or loss.
+We value the security of your personal data. We use appropriate physical, management, and technical measures to protect your personal data from unauthorized access, disclosure, use, modification, damage, or loss.
 
-## 4. How your personal data is transferred across borders
+## 4. How to transfer your personal data across borders
 
-Different countries may have different data protection laws. In such cases, we will take measures to handle personal data collected according to applicable laws and regulations.
+Data protection laws may vary with countries or regions. In this case, we will take measures to process the personal data we have collected in accordance with applicable laws. 
 
 ## 5. How to access or control your personal data
 
-In accordance with applicable laws and regulations, you may have the right to: (1) access any personal data we hold about you; (2) request us to update or correct your personal data; (3) request us to delete your personal data; (4) refuse or restrict our use of your personal data; and (5) obtain a copy of your personal data. If you need our assistance in exercising these rights, please contact us via the contact details at the end.
+In accordance with applicable laws and regulations, you may have the rights to: (1) access any of your personal data held by us; (2) require that we update or correct your personal data; (3) require that we delete your personal data; (4) reject or restrict the use of your personal data; (5) obtain a copy of your personal data. If you need our assistance in exercising the preceding rights, please feel free to contact us.
 
-## 6. How to update this Privacy Policy
+## 6. How to update this statement
 
-We may update or modify this privacy policy from time to time as our services or data processing changes. If we update this privacy policy, we will publish the latest version of the privacy policy on this website, which will come into effect immediately after being published. We recommend you to check this privacy policy regularly for any changes being made. If we make any material changes to this privacy policy (changes in the scope of personal data collected and the purpose of use), we will notify you through appropriate channels and obtain your consent.
+We may update or modify this statement in response to changes in our services or data processing. If we update this statement, we will release the latest privacy statement on this website. The updated statement takes effect immediately after it is released. It is recommended that you review this statement periodically to learn about any changes. If we make any major changes to this statement (changes to the scope and purpose of personal data collection), we will notify you through proper channels and obtain your consent.
 
 ## 7. How to contact us
 

@@ -150,6 +150,7 @@ module.exports = {
             SUMMITCONTENT: 'OpenEuler Virtual Summit 2020 是 openEuler 在发布 20.03 LTS 版本后第一次举行的峰会，本次大会邀请了华为的资深专家、社区Committer和多家openEuler社区合作厂商的重量嘉宾贡献多场精彩的演讲，不容错过。开发者和合作伙伴可以通过本次峰会全面了解 openEuler 多元化的生态、丰富的特性和广泛的社区，帮助开发者顺利融入社区，合作伙伴参与到openEuler生态体系。',
             HOMETITLE: '往期回顾',
             LISTTITLE: '精彩回顾',
+            LISTNEWTITLE:'openEuler 峰会 2020',
             LISTTIME: '2020年4月17-18日',
             SPEECHTITLE: '主题演讲',
             DESIGNTITLE: '设计峰会（项目组专题研讨）',
@@ -160,7 +161,7 @@ module.exports = {
                     SPEECHTHEME: 'openEuler 加速多核异构计算产业发展',
                     SPEECHER: '江大勇',
                     SPEECHCONTENT: '',
-                    SPEECHERIMG: '/img/summit/jiangdayong.jpg',
+                    SPEECHERIMG: '/img/summit/jiangdayong.png',
                     SPEECHERINFO: '',
                     SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
@@ -178,7 +179,7 @@ module.exports = {
                     SPEECHTHEME: 'Innovation Drives the Future of openEuler',
                     SPEECHER: '熊伟',
                     SPEECHCONTENT: '熊伟，2014年加入华为，现为2012实验室中央软件院服务器操作系统首席架构师，openEuler技术委员会委员；南开大学工学博士，曾在TurboLinux、WindRiver等公司担任研发负责人，具有长期的OS、底层软件工作经验和技术积累；对处理器、体系架构、OS、容器等具有广阔的技术视野，初步建立起鲲鹏基础软件栈服务器OS、容器引擎等基础设施的自研平台体系。',
-                    SPEECHERIMG: '/img/summit/xiongwei.jpg',
+                    SPEECHERIMG: '/img/summit/xiongwei.png',
                     SPEECHERINFO: 'openEuler技术委员会委员',
                     SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
@@ -187,7 +188,7 @@ module.exports = {
                     SPEECHTHEME: '从“共建”到“共赢” 推动 openEuler 成为全球领先社区',
                     SPEECHER: '宇亮',
                     SPEECHCONTENT: '基础操作系统领域从业20余年，见证了国产Linux操作系统发展历史。先后服务于中科红旗、中标软件等，2016年加入普华，任普华公司基础软件事业部营销副总。自国家电子政务内外网“12库3金”项目起至今，先后参与了大部分国产操作系统具有里程碑意义的重大项目。',
-                    SPEECHERIMG: '/img/summit/yuliang.jpg',
+                    SPEECHERIMG: '/img/summit/yuliang.png',
                     SPEECHERINFO: '普华基础软件股份有限公司 基础软件事业部副总经理',
                     SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
@@ -214,7 +215,7 @@ module.exports = {
                     SPEECHTHEME: 'ARM服务器最佳MySQL平台',
                     SPEECHER: '丁文龙',
                     SPEECHCONTENT: '',
-                    SPEECHERIMG: '/img/summit/dingwenlong.jpg',
+                    SPEECHERIMG: '/img/summit/dingwenlong.png',
                     SPEECHERINFO: '高级研发工程师',
                     SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
@@ -232,7 +233,7 @@ module.exports = {
                     SPEECHTHEME: 'openEuler Community Governance',
                     SPEECHER: '胡欣蔚',
                     SPEECHCONTENT: '',
-                    SPEECHERIMG: '/img/summit/huxinwei.jpg',
+                    SPEECHERIMG: '/img/summit/huxinwei.png',
                     SPEECHERINFO: 'openEuler 技术委员会主席',
                     SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
@@ -588,6 +589,7 @@ module.exports = {
             SUMMITCONTENT: 'OpenEuler Virtual Summit 2020 是 openEuler 在发布 20.03 LTS 版本后第一次举行的峰会，本次大会邀请了华为的资深专家、社区Committer和多家openEuler社区合作厂商的重量嘉宾贡献多场精彩的演讲，不容错过。开发者和合作伙伴可以通过本次峰会全面了解 openEuler 多元化的生态、丰富的特性和广泛的社区，帮助开发者顺利融入社区，合作伙伴参与到openEuler生态体系。',
             HOMETITLE: 'Replay',
             LISTTITLE: 'Overview',
+            LISTNEWTITLE:'openEuler Virtual Summit 2020',
             LISTTIME: 'Apr 17-18,2020',
             SPEECHTITLE: 'Keynotes',
             DESIGNTITLE: 'Design Summit (SIG Workshop)',
@@ -598,7 +600,7 @@ module.exports = {
                     SPEECHTHEME: 'openEuler Drives a Robust Multi-Core, Heterogeneous Computing Industry',
                     SPEECHER: 'Jiang Dayong',
                     SPEECHCONTENT: '',
-                    SPEECHERIMG: '/img/summit/jiangdayong.jpg',
+                    SPEECHERIMG: '/img/summit/jiangdayong.png',
                     SPEECHERINFO: '',
                     SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
@@ -616,7 +618,7 @@ module.exports = {
                     SPEECHTHEME: 'Innovation Drives the Future of openEuler',
                     SPEECHER: 'Dr. Xiong Wei',
                     SPEECHCONTENT: 'Xiong Wei, joined Huawei in 2014, is now the 2012 laboratory Central Software Institute server operating system chief architect, openEuler technical committee member; Nankai University, doctor of engineering, in TurboLinux, WindRiver and other companies as R & D person in charge, has a long time OS, underlying software experience and technology accumulation; on the processor, architecture, OS, containers, etc. has a broad technical vision, initially established the Kunpeng basic software stack server OS, container engine and other infrastructure of the platform system of self- research.',
-                    SPEECHERIMG: '/img/summit/xiongwei.jpg',
+                    SPEECHERIMG: '/img/summit/xiongwei.png',
                     SPEECHERINFO: 'Member of openEuler Technical Committee',
                     SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
@@ -625,7 +627,7 @@ module.exports = {
                     SPEECHTHEME: 'openEuler Leads the Way to a Co-Built, Win-Win Global Community',
                     SPEECHER: 'Yu Liang',
                     SPEECHCONTENT: 'More than 20 years in the field of basic operating system, witnessed the development history of domestic Linux operating system. In 2016, he joined Puhua as Vice President of Marketing in the Basic Software Division of Puhua Corporation. Since the national e-government intranet "12 banks and 3 gold" project, it has participated in most of the landmark projects of the domestic operating system.',
-                    SPEECHERIMG: '/img/summit/yuliang.jpg',
+                    SPEECHERIMG: '/img/summit/yuliang.png',
                     SPEECHERINFO: 'Deputy GM, Basic Software Business Group, iSoft',
                     SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
@@ -652,7 +654,7 @@ module.exports = {
                     SPEECHTHEME: 'openEuler: The Best MySQL Platform on Arm-based Servers',
                     SPEECHER: 'Ding Wenlong',
                     SPEECHCONTENT: '',
-                    SPEECHERIMG: '/img/summit/dingwenlong.jpg',
+                    SPEECHERIMG: '/img/summit/dingwenlong.png',
                     SPEECHERINFO: 'Senior Engineer, Turbolinux',
                     SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
@@ -670,7 +672,7 @@ module.exports = {
                     SPEECHTHEME: 'openEuler Community Governance',
                     SPEECHER: 'Hu Xinwei',
                     SPEECHCONTENT: '',
-                    SPEECHERIMG: '/img/summit/huxinwei.jpg',
+                    SPEECHERIMG: '/img/summit/huxinwei.png',
                     SPEECHERINFO: 'Chairman of openEuler Technical Committee',
                     SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },

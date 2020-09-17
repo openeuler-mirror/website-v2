@@ -400,7 +400,7 @@ export default {
           font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
           font-weight: normal;
           color: rgba(255, 255, 255, 1);
-          line-height: 24px;
+          line-height: 22px;
           padding: 0;
           @media (max-width: 1000px) {
             display: none;
@@ -525,7 +525,7 @@ export default {
           font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
           font-weight: normal;
           color: rgba(255, 255, 255, 1);
-          line-height: 24px;
+          line-height: 23px;
           padding: 0;
           @media (max-width: 1000px) {
             display: none;

@@ -305,6 +305,7 @@ export default {
     &:hover{
         overflow-y: scroll;
     }
+    overflow-x: hidden;
 }
 .mask {
   position: fixed;
