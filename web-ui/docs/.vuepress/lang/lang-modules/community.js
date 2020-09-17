@@ -268,7 +268,7 @@ module.exports = {
             ]
         },
         CONDUCT: {
-            TITLE: "行为守则"
+            TITLE: "Convention"
         }
     }
 };
