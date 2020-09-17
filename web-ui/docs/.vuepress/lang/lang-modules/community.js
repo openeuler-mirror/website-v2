@@ -216,13 +216,13 @@ module.exports = {
             MOBILE_TITLE: "社区贡献攻略",
             GUIDE_CONTENT: [
                 {
-                    BUTTON: "签署CLA",
+                    BUTTON: "Sign CLA",
                     IMG: "/img/community/contribution/cla.png",
                     VIDEO: "/img/community/contribution/cla.gif",
                     LINK: "/other/cla/"
                 },
                 {
-                    BUTTON: "提出Issue",
+                    BUTTON: "Submit an Issue",
                     IMG: "/img/community/contribution/issue.png",
                     VIDEO: "/img/community/contribution/issue.gif",
                     LINK: "",
@@ -248,19 +248,19 @@ module.exports = {
                     }
                 },
                 {
-                    BUTTON: "贡献代码",
+                    BUTTON: "Contribute Code",
                     IMG: "/img/community/contribution/contribution.png",
                     VIDEO: "/img/community/contribution/contribution.gif",
                     LINK: "https://gitee.com/openeuler"
                 },
                 {
-                    BUTTON: "加入SIG",
+                    BUTTON: "Join SIG",
                     IMG: "/img/community/contribution/sig.png",
                     VIDEO: "/img/community/contribution/sig.gif",
                     LINK: "/sig/sig-list/"
                 },
                 {
-                    BUTTON: "参选技术委员会",
+                    BUTTON: "Participate in Technical Committee Election",
                     IMG: "/img/community/contribution/commit.png",
                     VIDEO: "/img/community/contribution/commit.gif",
                     LINK: "/sig/sig-list/sig-detail.html?id=21&name=TC&mail=tc%40openeuler.org"
