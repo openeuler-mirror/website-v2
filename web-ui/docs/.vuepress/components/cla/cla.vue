@@ -3,10 +3,10 @@
         <div class="cla-content">
             <div class="radio">
                 <el-radio-group v-model="reverse">
-                    <el-radio :label="0" @change="isShowPerson">{{
+                    <el-radio :label="true" @change="isShowPerson">{{
                         i18n.cla.PERSONAL
                     }}</el-radio>
-                    <el-radio :label="1" @change="isShowPerson">{{
+                    <el-radio :label="false" @change="isShowPerson">{{
                         i18n.cla.LAW
                     }}</el-radio>
                 </el-radio-group>
@@ -114,7 +114,7 @@
                         <el-col :span="21">
                             <el-input
                                 v-model="ruleForm.date"
-                                :disabled="true"
+                                placeholder="2020-07-28"
                             ></el-input>
                         </el-col>
                         <el-col :span="2" class="star"
@@ -291,7 +291,7 @@
                         <el-col :span="21">
                             <el-input
                                 v-model="ruleForm.date"
-                                :disabled="true"
+                                placeholder="2020-07-28"
                             ></el-input>
                         </el-col>
                         <el-col :span="2" class="star"
@@ -374,7 +374,7 @@
                         <el-col :span="24">
                             <el-input
                                 v-model="ruleForm.date"
-                                :disabled="true"
+                                placeholder="2020-07-28*"
                             ></el-input>
                         </el-col>
                     </el-form-item>
@@ -457,7 +457,7 @@
                         <el-col :span="24">
                             <el-input
                                 v-model="ruleForm.date"
-                                :disabled="true"
+                                placeholder="2020-07-28*"
                             ></el-input>
                         </el-col>
                     </el-form-item>
@@ -469,58 +469,6 @@
 
 <script>
 let that = null;
-let clienId = 'd00e9b289d8cf8f98e2fc68a9c240304f6413007d82d30701cd1da7e937db75c';
-
-let localMethods = {
-    initClaPage () {
-        let cla = localMethods.readCookie("cla-info");
-        if (!cla || cla == "") {
-            localMethods.oauthLogin();
-            // reutrn;
-        }
-        localMethods.renderInfo();
-    },
-    readCookie (name) {
-        let namePrefix = name + "=";
-        let cookies = document.cookie.split(';');
-        for(let i=0; i < cookies.length; i++) {
-            let c = cookies[i];
-            while (c.charAt(0)==' ') c = c.substring(1, c.length);
-            if (c.indexOf(namePrefix) == 0) return c.substring(namePrefix.length, c.length);
-        }
-        return null;
-    },
-    oauthLogin () {
-        let redirectUri = window.location.origin + '/cla';
-        // window.location.href = `https://gitee.com/oauth/authorize?client_id=${clienId}&redirect_uri=${encodeURI(redirectUri)}&response_type=code&scope=user_info%20emails`;
-    },
-    renderInfo () {
-        that.reverse = this.readCookie('type') || 0;
-        that.ruleForm.name = this.readCookie('name');
-        that.ruleForm.email = this.readCookie('email');
-        that.ruleForm.phone = this.readCookie('telephone');
-        that.ruleForm.printer = this.readCookie('fax');
-        that.ruleForm.location = this.readCookie('address');
-        that.ruleForm.date = this.readCookie('date');
-        if(that.reverse){
-            that.ruleForm.office = this.readCookie('corporation');
-            that.ruleForm.position = this.readCookie('title');
-        }
-    },
-    getCurDate () {
-        let now = new Date();
-        let year = now.getFullYear();
-        let month = now.getMonth();
-        let date = now.getDate();
-        month = month + 1;
-
-        if (month < 10) month = "0" + month;
-        if (date < 10) date = "0" + date;
-        return year + "-" + month + "-" + date;
-        
-    }
-}
-
 export default {
     data() {
         that = this;
@@ -532,10 +480,11 @@ export default {
                 phone: "",
                 printer: "",
                 location: "",
-                date: localMethods.getCurDate(),
+                date: "",
                 contribute: "",
                 office: "",
-                position: ""
+                position: "",
+                type: []
             },
             rules: {
                 name: [
@@ -595,7 +544,7 @@ export default {
                     { required: true, message: "请输入日期", trigger: "blur" }
                 ]
             },
-            reverse: 0,
+            reverse: true,
             activities: [
                 {
                     content: "活动按期开始",
@@ -613,7 +562,6 @@ export default {
         };
     },
     mounted() {
-        localMethods.initClaPage();
     },
     methods: {
         submitForm(formName) {
@@ -621,7 +569,8 @@ export default {
                 if (valid) {
                     this.$message("恭喜你签署成功！");
                 } else {
-                    
+                    this.$message("重置成功！");
+                    return false;
                 }
             });
         },
