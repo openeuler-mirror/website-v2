@@ -125,5 +125,8 @@ export default {
     .news-time-bottom-line {
         margin: 30px 0 30px 0;
     }
+    .mobile-middle-img{
+        display: none;
+    }
 }
 </style>

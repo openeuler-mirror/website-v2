@@ -3,7 +3,7 @@
     <div class="summit-list">
         <message-banner
         :insideName="'CONNECT'"
-        :outsideName="i18n.interaction.SUMMIT.LISTTITLE"
+        :outsideName="i18n.interaction.SUMMIT.LISTNEWTITLE"
         :pcSrc="'/img/summit/summit-banner.png'"
         :mobileSrc="'/img/summit/summit-banner.png'"
         :isOther="false"
@@ -214,6 +214,9 @@ export default {
     @media (max-width: 1000px) {
         width: 100%;
         .mr-All(0 auto 80px auto);
+    }
+    /deep/ .message-banner .banner-pc .outside{
+        font-size: 43px;
     }
 }
 .theme-speech {
