@@ -1033,6 +1033,9 @@
     .home-calendar {
         width: 1080px;
         margin: 90px auto 0;
+        @media screen and (max-width: 1000px) {
+            margin-top: 30px;
+        }
     }
     .time-tab {
         margin-top: 40px;

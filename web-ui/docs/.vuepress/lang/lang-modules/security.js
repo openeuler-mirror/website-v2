@@ -59,7 +59,7 @@ module.exports = {
     en: {
         SECURITY_ADVISORIES: 'Security Advisories',
         SECURITY_ADVISORIES_NAME: 'Title',
-        SEARCH: 'search',
+        SEARCH: 'Search',
         SEVERITY_LIST : [
             {
                 NAME: 'All',
@@ -82,7 +82,7 @@ module.exports = {
                 LABEL: 'Critical'
             }
         ],
-        YEAR: 'year',
+        YEAR: 'Year',
         ALL: 'ALL',
         ADVISORY: 'Advisory',
         SYNOPSIS: 'Synopsis',
@@ -95,7 +95,7 @@ module.exports = {
         OPERATION: 'operation',
         DETAIL: 'Details',
         REPORTING: 'Vulnerability Report',
-        INPUT_CVE_ID: 'please input CVE ID',
+        INPUT_CVE_ID: 'Please input CVE ID',
         BRIEF_INTRODUCTION: 'BriefIntroduction',
         THEME: 'theme',
         DESCRIPTION: 'description',
