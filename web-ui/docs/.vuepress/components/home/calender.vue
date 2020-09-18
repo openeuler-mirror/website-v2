@@ -1,6 +1,6 @@
 <template>
-    <div class="calender is-pc" v-loading="!tableData">
-        <div class="calendar-top">
+    <div class="calender" ref="calender" v-loading="!tableData">
+        <div class="calendar-top" :style="{'width': ((w == 245)? 970 : w) + 'px'}">
             <button
                 class="left"
                 @click="handleBtn('left')"
@@ -11,12 +11,13 @@
                 @click="handleBtn('right')"
                 :style="{ background: 'url(' + prev + ') no-repeat center' }"
             ></button>
-            <div class="calenderSliderTopMain">
+            <div class="calenderSliderTopMain" :style="{'width': ((w == 245)? 985 : w) + 'px'}">
                 <div
                     class="calenderSliderTopMainswiper"
-                    :style="'width:' + (tableData.length * 260) + 'px;transform:translateX(' + l + 'px)'"
+                    :style="'width:' + (tableData.length * w) + 'px;transform:translateX(' + l + 'px)'"
                 >
                     <span
+                        :style="{'width': w + 'px'}"
                         v-for="(item,key) in dealData"
                         :key="key"
                         :class="{ active: item.date == currentDate }"
@@ -39,7 +40,7 @@
                 <div class="calenderLeftTime">
                     <div
                         class="calendarLeftTimeSwiper"
-                        :style="'width: ' + (tableData.length * 260) + 'px;transform: translateY(' + t + 'px)'"
+                        :style="'width: ' + (tableData.length * w) + 'px;transform: translateY(' + t + 'px)'"
                     >
                         <span
                             v-for="(item, key) in timeData"
@@ -49,14 +50,14 @@
                     </div>
                 </div>
             </div>
-            <div class="calendarSlide">
+            <div class="calendarSlide" :style="{'width': ((w == 245)? 985 : w) + 'px'}">
                 <calenderDetail :item3="saveItem" @close-detail="close" v-if="isShowDetail" />
                 <div class="calendarSlideItem" :style="'transform: translateX(' + l + 'px)'">
                     <template v-for="(item, key) in dealData">
                         <div
                             class="calenderslideItemInside"
                             :key="key"
-                            :style="'transform: translateY(' + (item.timeDate.length == 1 && item.timeDate[0].duration >= 16 ? 0: t) + 'px)'"
+                            :style="{'transform': 'translateY(' + (item.timeDate.length == 1 && item.timeDate[0].duration >= 16 ? 0: t) + 'px)','width': w + 'px'}"
                         >
                             <template v-for="(item1, index1) in item.timeDate">
                                 <div
@@ -131,6 +132,7 @@ export default {
     name: "HelloWorld",
     data() {
         return {
+            w: 245,
             t: 0,
             l: 0,
             Ml: 0,
@@ -177,8 +179,19 @@ export default {
             this.flag = true;
         }
     },
+    mounted () {
+        if(document.body.getBoundingClientRect().width < 1000){
+            this.w = (this.$refs.calender.getBoundingClientRect().width - 120);
+        }
+    },
     methods: {
         handleBtn(val) {
+            let mobileIndex = null;
+            if(this.w == 245){
+                mobileIndex = 4;
+            } else {
+                mobileIndex = 1;
+            }
             if (val === "left" || val === "right") {
                 let len = this.tableData.length;
                 if (val === "left") {
@@ -188,14 +201,13 @@ export default {
                         this.indexX--;
                     }
                 } else {
-                    if (this.indexX >= len - 4) {
-                        this.indexX = len - 4;
+                    if (this.indexX >= len - mobileIndex) {
+                        this.indexX = len - mobileIndex;
                     } else {
                         this.indexX++;
                     }
                 }
-                // this.l =-260*this.indexX
-                this.l = -245 * this.indexX;
+                this.l = -this.w * this.indexX;
             }
             if (val === "top" || val === "bottom") {
                 let len = this.timeData.length;
@@ -413,8 +425,8 @@ export default {
                     this.dealData = data;
                 });
             });
-            this.indexX = (index - 3);
-            this.l = -245 * (index - 3);
+            this.indexX = ((this.w == 245) ? (index - 3) : index);
+            this.l = -this.w * this.indexX;
         }
     },
     created() {
@@ -424,7 +436,7 @@ export default {
     }
 };
 </script>
-<style scoped>
+<style scoped lang="less">
 h1,
 p,
 span,
@@ -442,13 +454,14 @@ div::after {
 }
 .calender {
     width: 1100px;
-    margin: 65px auto 0;
     position: relative;
     top: 0;
     left: 0;
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+    }
 }
 .calendar-top {
-    width: 970px;
     position: relative;
     top: 0;
     left: 100px;
@@ -496,15 +509,12 @@ button {
     transform: rotateZ(-90deg);
 }
 .calenderSliderTopMain {
-    width: 985px;
     position: relative;
     top: 0;
     left: 0;
     overflow: hidden;
 }
 .calenderSliderTopMain span {
-    width: 230px;
-    margin-right: 15px;
     height: 40px;
     line-height: 40px;
     font-size: 16px;
@@ -548,7 +558,6 @@ button {
 }
 .calendarSlide {
     padding: 10px 0 0 10px;
-    width: 985px;
     height: 760px;
     overflow: hidden;
     position: absolute;
@@ -561,7 +570,6 @@ button {
     top: 0;
     left: 0;
     height: 100%;
-    width: 245px;
     transition: transform 0.5s ease-in-out;
 }
 .calendarSlideItem {
@@ -573,7 +581,7 @@ button {
     transition: transform 0.5s ease-in-out;
 }
 .calenderslideItemInsideItem {
-    width: 230px;
+    width: calc(100% - 15px);
     margin-right: 20px;
     position: absolute;
     top: 0;
@@ -582,13 +590,13 @@ button {
     padding-bottom: 20px;
 }
 .calenderslideItemInsideItem.all {
-    width: 230px;
+    width: calc(100% - 15px);
     height: 740px;
     transition: transform 0.5s ease-in-out;
     background: blue;
 }
 .calenderListSinge {
-    width: 230px;
+    width: 100%;
     box-shadow: 0px 4px 10px #ececec;
     margin-bottom: 20px;
     overflow: hidden;
@@ -601,7 +609,7 @@ button {
     transition: transform 0.5s ease-in-out;
 }
 .cadenderSinge {
-    width: 230px;
+    width: 100%;
     min-height: 56px;
     border-radius: 4px;
     padding: 12px 20px 15px;

@@ -11,18 +11,19 @@
         <h2>{{i18n.sig.SIG_DETAIL.MEMBERS}}</h2>
         <div class="developer-wrapper">
             <div class="dev-leader">
-                <div class="dev-dever" v-for="(value, index) in i18n.home.HOME_DEV.DEV_INFO" :key="index">
+                <div class="dev-dever" v-for="(value, index) in memberList" :key="index">
                     <el-image
                             style="width: 120px; height: 120px; border-radius: 50%"
-                            src="/img/home/deverImg.png"></el-image>
-                    <p class="dever-name">{{ value.NAME }}</p>
-                    <p :class="['dever-rank',$lang == 'en'?'en-dever-rank':'']">{{ value.TITLE }}</p>
-                    <p :class="['dever-rank',$lang == 'en'?'en-dever-rank':'']">{{ value.RANK }}</p>
+                            :src="value.avatar_url"></el-image>
+                    <p class="dever-name">{{ value.gitee_id }}</p>
+                    <p class="dever-rank" :title="value.sigs.join('、')+'SIG Maintainer'" :class="['dever-rank',$lang == 'en'?'en-dever-rank':'']">
+                        <span v-for="(item, itemIndex) in value.sigs" :key="itemIndex">{{item}}{{itemIndex!=(value.sigs.length-1)?'、':''}}</span> <span>SIG Maintainer</span>
+                    </p>
                     <div class="dev-link">
-                        <a :href="value.MAIL_LINK">
+                        <a :href="'mailto:'+value.email" v-if="value.email">
                             <img class="email-link" src="/img/home/email.png" alt="">
                         </a>
-                        <a :href="value.GITEE_LINK">
+                        <a target="_blank" :href="value.home_page">
                             <img src="/img/home/Gitee.png" alt="">
                         </a>
                     </div>
@@ -37,7 +38,7 @@
 </template>
 
 <script>
-import { sigDetail } from "../../api/sig";
+import { sigDetail, sigMember } from "../../api/sig";
 import calender from "./../home/calender";
 let that = null;
 let remoteMethods = {
@@ -49,13 +50,23 @@ let remoteMethods = {
         .catch(data => {
             that.$message.error(data);
         });
+    },
+    getSigMember() {
+        sigMember(that.$route.query.id)
+        .then(data => {
+            that.memberList = JSON.parse(data.owners);
+        })
+        .catch(data => {
+            that.$message.error(data);
+        });
     }
 }
 export default {
     data () {
         that = this;
         return {
-            calenderData: []
+            calenderData: [],
+            memberList: []
         }
     },
     components: {
@@ -63,11 +74,12 @@ export default {
     },
     mounted () {
         remoteMethods.getSigDetail();
+        remoteMethods.getSigMember();
     },
     methods: {
         back () {
             this.$router.push({
-                path: this.resolvePath('/sig/sig-list/sig-list')
+                path: this.resolvePath('/sig/sig-list')
             })
         }
     }
@@ -91,9 +103,8 @@ export default {
     cursor: pointer;
 }
 .sig-detail .meetings {
-    @media screen and (max-width: 1000px) {
-        display: none;
-    }
+    padding-top: 40px;
+    margin-bottom: 30px;
 }
 .en-dever-rank{
     font-size: 14px !important;
@@ -134,18 +145,16 @@ export default {
 .sig-detail .developer-wrapper .dev-leader {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 .sig-detail .developer-wrapper .dev-leader .dev-dever {
     flex: 0 0 25%;
+    justify-content: space-between;
     @media screen and (max-width: 1000px) {
         flex: 0 0 50%;
-        justify-content: space-between;
     }
     flex-direction: column;
     display: flex;
     align-items: center;
-    justify-content: center;
     margin-top: 30px;
 }
 .sig-detail .developer-wrapper .dev-leader .dev-dever .dever-name {
@@ -156,6 +165,15 @@ export default {
     font-family: HuaweiSans-Medium;
 }
 .sig-detail .developer-wrapper .dev-leader .dev-dever .dever-rank {
+    text-align: center;
+    @media screen and (min-width: 1000px) {
+        width: 200px;
+        overflow : hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
     margin-top: 10px;
     font-size: 14px;
     font-family: HuaweiSans;

@@ -11,9 +11,9 @@
         <el-form-item :label="i18n.download.MANUFACTURER">
           <el-select v-model="formData.manufacturer" multiple placeholder>
             <el-option
-              v-for="(item, index) in i18n.download.MANUFACTURER_LIST"
+              v-for="(item, index) in manufacturerList"
               :key="index"
-              :label="item.NAME"
+              :label="item.VALUE"
               :value="item.VALUE"
             ></el-option>
           </el-select>
@@ -21,10 +21,9 @@
         <el-form-item :label="i18n.download.PUBLISH_DATE">
           <el-select v-model="formData.publishDate" multiple placeholder>
             <el-option
-              v-for="(item, index) in i18n.download
-                                .PUBLISH_DATE_LIST"
+              v-for="(item, index) in downloadDateList"
               :key="index"
-              :label="item.NAME"
+              :label="item.VALUE"
               :value="item.VALUE"
             ></el-option>
           </el-select>
@@ -42,7 +41,7 @@
                             formData.manufacturer.indexOf(item.VALUE) > -1
                     "
         >
-          {{ item.NAME || item }}
+          {{ item.VALUE || item }}
           <span @click="delTag(item)">×</span>
         </li>
       </ul>
@@ -125,11 +124,31 @@ export default {
         lts: false
       },
       list: [],
-      lang:''
+      lang:'',
+      manufacturerList: [],
+      downloadDateList: []
     };
   },
   components: {
     commonBanner
+  },
+  created () {
+      let filterFn = (arr, key, item) => {
+            return arr.every((arrItem => {
+                if(arrItem.VALUE !== item[key]){
+                    return true;
+                }
+            }))
+        }
+      this.i18n.download.DOWNLOAD_LIST.forEach(item => {
+
+          if(filterFn(this.manufacturerList, 'MANUFACTURER', item)){
+              this.manufacturerList.push({VALUE: item.MANUFACTURER});
+          }
+          if(filterFn(this.downloadDateList, 'PUBLISH_DATE', item)){
+              this.downloadDateList.push({VALUE: item.PUBLISH_DATE});
+          }
+      })
   },
   mounted () {
     this.list = this.i18n.download.DOWNLOAD_LIST;
@@ -137,8 +156,8 @@ export default {
   },
   computed: {
     filterTags () {
-      let allTags = this.i18n.download.MANUFACTURER_LIST.concat(
-        this.i18n.download.PUBLISH_DATE_LIST,
+      let allTags = this.manufacturerList.concat(
+        this.downloadDateList,
         ["LTS"]
       );
       return allTags;
@@ -461,7 +480,7 @@ export default {
         }
       }
       .download-item:nth-child(3n) {
-        margin-right: 0;
+        margin-right: 25px;
       }
     }
    .download-list {

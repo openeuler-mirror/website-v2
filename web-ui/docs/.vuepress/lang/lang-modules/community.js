@@ -161,29 +161,29 @@ module.exports = {
             VIEWED: " viewed",
         },
         MAILING_LIST: {
-            TITLE: "邮件列表",
+            TITLE: "Mailing List",
             GUIDE_CONTENT: [
                 {
                     LEFT: {
-                        LEFT_INFO: "在邮件列表页面选择要订阅的邮件列表",
-                        LEFT_CIRCLE: "选择",
+                        LEFT_INFO: "Select the mailing list to be subscribed to on the mailing list page.",
+                        LEFT_CIRCLE: "Select",
                         LEFT_IMG: "/img/community/maillist/mail1.png"
                     },
                     RIGHT: {
-                        RIGHT_INFO: "填入邮件地址和名字，名字可选，点击订阅",
-                        RIGHT_CIRCLE: "订阅",
+                        RIGHT_INFO: "Enter the e-mail address and name (optional), and click Subscribe. ",
+                        RIGHT_CIRCLE: "Subscribe ",
                         LEFT_IMG: "/img/community/maillist/mail2.png"
                     }
                 },
                 {
                     LEFT: {
-                        LEFT_INFO: "您的邮箱将收到一封来自邮件列表的电子邮件，要求您确认订阅了邮件列表，回复该电子邮件确认订阅",
-                        LEFT_CIRCLE: "确认",
+                        LEFT_INFO: "Your mailbox will receive an email from the mailing list, asking you to confirm that you have subscribed to the mailing list. Reply to the e-mail to confirm the subscription.",
+                        LEFT_CIRCLE: "Confirm ",
                         LEFT_IMG: "/img/community/maillist/mail3.png"
                     },
                     RIGHT: {
-                        RIGHT_INFO: "您的邮箱收到来自一封来自邮件列表的欢迎邮件，即成功订阅该邮件列表",
-                        RIGHT_CIRCLE: "成功",
+                        RIGHT_INFO: "Confirm Your mailbox receives a welcome e-mail from the mailing list, indicating that you have subscribed to the mailing list successfully. Complete Mailing List Name E-mail Address Archive Path Description",
+                        RIGHT_CIRCLE: "Success",
                         LEFT_IMG: "/img/community/maillist/mail4.png"
                     }
                 },
@@ -199,31 +199,33 @@ module.exports = {
                 BUTTON: "Subscribe"
             },
             TABLE: {
-                NAME: "列表名称",
-                EMAIL_ADDRESS: "邮件地址",
-                ARCHIVE: "归档路径",
-                DESCRIPTION: "描述",
-                NAME_H5: "名称",
-                ARCHIVE_H5: "归档"
+                NAME: "Name",
+                EMAIL_ADDRESS: "Mailing List",
+                ARCHIVE: "Archive",
+                DESCRIPTION: "Description",
+                NAME_H5: "Name",
+                ARCHIVE_H5: "Archive"
             },
-            MAIL_ERROR: "邮件列表发生错误",
-            SUBSCRIBE_ERROR: "邮件订阅发生错误",
-            SUBSCRIBE_SUCCESS: "您已订阅成功",
-            MAIL_ERROR: "邮箱填写错误"
+            MAIL_ERROR: "Error in mailing list",
+            SUBSCRIBE_ERROR: "Mail subscription error",
+            SUBSCRIBE_SUCCESS: "Success!",
+            MAIL_ERROR: "Email error"
         },
         CONTRIBUTION_H5: {
-            TITLE: "贡献攻略",
-            MOBILE_TITLE: "社区贡献攻略",
+            TITLE: "How to Contribute",
+            MOBILE_TITLE: "How to Contribute",
             GUIDE_CONTENT: [
                 {
                     BUTTON: "Sign CLA",
                     IMG: "/img/community/contribution/cla.png",
                     VIDEO: "/img/community/contribution/cla.gif",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/cla.png',
                     LINK: "/other/cla/"
                 },
                 {
                     BUTTON: "Submit an Issue",
                     IMG: "/img/community/contribution/issue.png",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/issue.png',
                     VIDEO: "/img/community/contribution/issue.gif",
                     LINK: "",
                     LINKADRESSLIST:{
@@ -250,18 +252,21 @@ module.exports = {
                 {
                     BUTTON: "Contribute Code",
                     IMG: "/img/community/contribution/contribution.png",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/contribution.png',
                     VIDEO: "/img/community/contribution/contribution.gif",
                     LINK: "https://gitee.com/openeuler"
                 },
                 {
                     BUTTON: "Join SIG",
                     IMG: "/img/community/contribution/sig.png",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/sig.png',
                     VIDEO: "/img/community/contribution/sig.gif",
                     LINK: "/sig/sig-list/"
                 },
                 {
                     BUTTON: "Participate in Technical Committee Election",
                     IMG: "/img/community/contribution/commit.png",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/commit.png',
                     VIDEO: "/img/community/contribution/commit.gif",
                     LINK: "/sig/sig-list/sig-detail.html?id=21&name=TC&mail=tc%40openeuler.org"
                 },
