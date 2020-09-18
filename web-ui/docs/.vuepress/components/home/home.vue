@@ -134,7 +134,7 @@
                                     :class="$lang == 'en'?'en-guide-way':''"
                                     v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_GUIDE.GUIDE_WAY"
                                     :key="index">
-                                <a :href="item.LINK">
+                                <a :href="item.LINK" target="_blank">
                                     <img :src="item.IMG" alt="">
                                     <span>{{ item.TITLE }}</span>
                                 </a>
