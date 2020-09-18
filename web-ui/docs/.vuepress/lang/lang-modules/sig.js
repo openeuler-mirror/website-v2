@@ -143,7 +143,7 @@ module.exports = {
             MAIL_LIST: 'maillist'
         },
         ROLE_DESCRIPTION:{
-            ROLE_DESCRIPTION:'role-description',
+            ROLE_DESCRIPTION:'Role-description',
             TABLE_TITLE:'Community Member',
             TABLE_DESCRIPTION:'This article briefly describes the responsibilities and privilege of the contributor in the openEuler community. The responsibilities of most contributor are limited to SIG (Special Interest groups) :',
             TABLE_THEAD:["Role","Responsibilities","Requirement","Defined Document"],
