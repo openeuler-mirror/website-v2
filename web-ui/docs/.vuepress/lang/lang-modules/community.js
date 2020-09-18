@@ -206,10 +206,10 @@ module.exports = {
                 NAME_H5: "Name",
                 ARCHIVE_H5: "Archive"
             },
-            MAIL_ERROR: "邮件列表发生错误",
-            SUBSCRIBE_ERROR: "邮件订阅发生错误",
-            SUBSCRIBE_SUCCESS: "您已订阅成功",
-            MAIL_ERROR: "邮箱填写错误"
+            MAIL_ERROR: "Error in mailing list",
+            SUBSCRIBE_ERROR: "Mail subscription error",
+            SUBSCRIBE_SUCCESS: "Success!",
+            MAIL_ERROR: "Email error"
         },
         CONTRIBUTION_H5: {
             TITLE: "How to Contribute",
@@ -219,11 +219,13 @@ module.exports = {
                     BUTTON: "Sign CLA",
                     IMG: "/img/community/contribution/cla.png",
                     VIDEO: "/img/community/contribution/cla.gif",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/cla.png',
                     LINK: "/other/cla/"
                 },
                 {
                     BUTTON: "Submit an Issue",
                     IMG: "/img/community/contribution/issue.png",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/issue.png',
                     VIDEO: "/img/community/contribution/issue.gif",
                     LINK: "",
                     LINKADRESSLIST:{
@@ -250,18 +252,21 @@ module.exports = {
                 {
                     BUTTON: "Contribute Code",
                     IMG: "/img/community/contribution/contribution.png",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/contribution.png',
                     VIDEO: "/img/community/contribution/contribution.gif",
                     LINK: "https://gitee.com/openeuler"
                 },
                 {
                     BUTTON: "Join SIG",
                     IMG: "/img/community/contribution/sig.png",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/sig.png',
                     VIDEO: "/img/community/contribution/sig.gif",
                     LINK: "/sig/sig-list/"
                 },
                 {
                     BUTTON: "Participate in Technical Committee Election",
                     IMG: "/img/community/contribution/commit.png",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/commit.png',
                     VIDEO: "/img/community/contribution/commit.gif",
                     LINK: "/sig/sig-list/sig-detail.html?id=21&name=TC&mail=tc%40openeuler.org"
                 },
