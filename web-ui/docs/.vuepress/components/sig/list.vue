@@ -166,7 +166,7 @@ export default {
             padding: 36px 54px;
             @media (max-width: 1000px) {
                 width: 100%;
-                padding: 30px;
+                padding: 30px 30px 0 30px;
                 margin-bottom: 40px;
             }
             .info-list {
@@ -205,6 +205,9 @@ export default {
                 display: flex;
                 justify-content: start;
                 flex-wrap: wrap;
+                @media (max-width: 1000px) {
+                    padding: 0;
+                }
                 li {
                     flex: 0 0 25%;
                     text-align: center;
@@ -212,6 +215,7 @@ export default {
                     @media (max-width: 1000px) {
                         flex: 0 0 33.3333333333333%;
                         margin-bottom: 20px;
+                        margin-top: 8px;
                         font-size: 12px;
                     }
                     img {
@@ -227,16 +231,17 @@ export default {
                     }
                     span {
                         margin-top: 12px;
+                        flex-shrink: 0;
+                        display: inline-block;
+                        white-space: nowrap; 
+                        overflow: hidden;
+                        text-overflow:ellipsis;
                         @media (min-width: 1000px) {
-                            flex-shrink: 0;
                             width: 95px;
-                            display: inline-block;
-                            white-space: nowrap; 
-                            overflow: hidden;
-                            text-overflow:ellipsis;
                         }
                         @media (max-width: 1000px) {
                             margin-top: 5px;
+                            width: 85px;
                         }
                     }
                 }

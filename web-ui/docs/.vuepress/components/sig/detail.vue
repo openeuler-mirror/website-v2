@@ -103,9 +103,8 @@ export default {
     cursor: pointer;
 }
 .sig-detail .meetings {
-    @media screen and (max-width: 1000px) {
-        display: none;
-    }
+    padding-top: 40px;
+    margin-bottom: 30px;
 }
 .sig-detail .calender-wrapper {
     margin-top: -25px;

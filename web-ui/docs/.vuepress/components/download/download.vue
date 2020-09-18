@@ -480,7 +480,7 @@ export default {
         }
       }
       .download-item:nth-child(3n) {
-        margin-right: 0;
+        margin-right: 25px;
       }
     }
    .download-list {
