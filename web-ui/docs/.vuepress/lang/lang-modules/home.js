@@ -88,12 +88,12 @@ module.exports = {
                     {
                         TITLE: "硬件",
                         IMG: "/img/home/areaHardware.svg",
-                        LINK:"https://openeuler.org/zh/docs/20.03_LTS/docs/Installation/installation.html"
+                        LINK:"/zh/docs/20.03_LTS/docs/Installation/installation.html"
                     },
                     {
                         TITLE: "虚拟机",
                         IMG: "/img/home/areaVirtual.svg",
-                        LINK:"https://openeuler.org/zh/docs/20.03_LTS/docs/Virtualization/virtualization.html"
+                        LINK:"/zh/docs/20.03_LTS/docs/Virtualization/virtualization.html"
                     },
                     {
                         TITLE: "ECS",
@@ -412,12 +412,12 @@ module.exports = {
                     {
                         TITLE: "Hardware",
                         IMG: "/img/home/areaHardware.svg",
-                        LINK:"https://openeuler.org/zh/docs/20.03_LTS/docs/Installation/installation.html"
+                        LINK:"/en/docs/20.03_LTS/docs/Installation/installation.html"
                     },
                     {
                         TITLE: "VM",
                         IMG: "/img/home/areaVirtual.svg",
-                        LINK:"https://openeuler.org/zh/docs/20.03_LTS/docs/Virtualization/virtualization.html"
+                        LINK:"/en/docs/20.03_LTS/docs/Virtualization/virtualization.html"
                     },
                     {
                         TITLE: "ECS",
