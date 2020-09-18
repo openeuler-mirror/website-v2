@@ -72,7 +72,7 @@
                 <el-table-column
                 prop="affectedComponent"
                 :label="i18n.security.AFFECTED_COMPONENTS"
-                width="140"
+                width="120"
                 ></el-table-column>
                 <el-table-column prop="announcementTime" :label="i18n.security.RELEASE_DATE" width="142"></el-table-column>
             </el-table>
@@ -306,9 +306,9 @@ export default {
         font-family: FZLTXIHJW;
     }
 }
-// .has-gutter .el-table_1_column_5 .cell{
-//     white-space: pre-line;
-// }
+.has-gutter .el-table_1_column_5 .cell{
+    white-space: pre-line;
+}
 </style>
 <style lang="less" scoped>
 .table-link {
