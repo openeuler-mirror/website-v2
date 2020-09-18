@@ -444,8 +444,8 @@ module.exports = {
     en: {
         LIVE: {
             LIVE: 'Live',
-            WILLPLAYER: 'About to begin',
-            REPLAYER: 'Wonderful review',
+            WILLPLAYER: 'About to Begin',
+            REPLAYER: 'Wonderful Review',
             LIVENOW: [
                 {
                     LIVETITLE: '轻量级容器引擎iSulad之功能介绍及架构解析',

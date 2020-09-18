@@ -88,7 +88,7 @@ module.exports = {
         SYNOPSIS: 'Synopsis',
         SEVERITY: 'Severity',
         AFFECTED_PRODUCTS: 'Affected Products',
-        AFFECTED_COMPONENTS: 'Affected Components',
+        AFFECTED_COMPONENTS: 'Affected \n Components',
         RELEASE_DATE: 'Release Date',
         CVSS_SCORE: 'CVSS Score',
         MODIFIED_TIME: 'Modified Time',

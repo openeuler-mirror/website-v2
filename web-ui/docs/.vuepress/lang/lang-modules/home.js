@@ -20,6 +20,20 @@ module.exports = {
                 DES: "A-Tune是智能性能优化系统软件，即通过机器学习引擎对业务应用建立精准模型, 再根据业务负载智能匹配最佳操作系统配置参数组合，实现系统整体运行效率提升。",
             }
         ],
+        HOME_OPENEULER_NEW:
+            {
+                SMALL_IMG: '/img/home/HC-Banner.png',
+                CENTER_WORD: {
+                    BIG_WORD: 'NEW VALUE TOGETHER',
+                    SMALL_WORD: '共创行业新价值'
+                },
+                BOTTOM_WORD: {
+                    UP_WORD: '华为全联接2020',
+                    DOWN_WORD: '2020年9月23-26日 | 中国，上海'
+                },
+                BACKGROUND_IMG:"url('/img/home/HC-Banner.gif')"
+            }
+        ,
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovated OS Open Source Community",
             INTRO_HEAD: "开始openEuler之旅吧！",
@@ -299,6 +313,7 @@ module.exports = {
                 DES: "如果缺乏测试设备，可以尝试",
                 APPLY: "在此申请。",
                 SPONSOR: "感谢鹏城实验室赞助",
+                SPONSORLINK:'https://dw.pcl.ac.cn/#/home/index'
             },
             SOURCE_MAIL: {
                 TITLE: "邮件订阅",
@@ -318,19 +333,31 @@ module.exports = {
         HOME_CAROUSEL_DATA: [{
             TITLE: "OpenEuler Summit 2020",
             LINK: "/interaction/summit-list/",
-            DES: "OpenEuler Virtual Summit 2020 是 openEuler 在发布 20.03 LTS 版本后第一次举行的峰会，本次大会邀请了华为的资深专家、社区 Committer 和多家 openEuler 社区合作厂商的重量嘉宾贡献多场精彩的演讲，不容错过。",
+            DES: "openEuler Virtual Summit 2020 is the first summit after the release of the openEuler 20.03 LTS version. Senior experts from Huawei, community committers and weight guests from several open Euler community partners were invited to give a number of wonderful speeches, which should not be missed.",
         },
             {
                 TITLE: "iSula",
                 LINK: "https://live.bilibili.com/22290444",
-                DES: "iSula是一种云原生轻量级容器解决方案，可通过统一、灵活的架构满足ICT领域端、边、云场景的多种需求。",
+                DES: "A cloud-native lightweight container solution that can meet the needs of device, edge, and cloud scenarios in ICT domain with a unified and flexible architecture.",
             },
             {
                 TITLE: "A-Tune",
                 LINK: "https://gitee.com/openeuler/A-Tune",
-                DES: "A-Tune是智能性能优化系统软件，即通过机器学习引擎对业务应用建立精准模型, 再根据业务负载智能匹配最佳操作系统配置参数组合，实现系统整体运行效率提升。",
+                DES: "A system software to auto-optimize the system adaptively to multiple scenarios with embedded AI-engine.",
             }
         ],
+        HOME_OPENEULER_NEW:{
+            SMALL_IMG: '/img/home/HC-Banner.png',
+            CENTER_WORD: {
+                BIG_WORD: 'NEW VALUE TOGETHER',
+                SMALL_WORD: ''
+            },
+            BOTTOM_WORD: {
+                UP_WORD: 'HUAWEI CONNECT 2020',
+                DOWN_WORD: 'September 23-26（Shanghai）'
+            },
+            BACKGROUND_IMG:"url('/img/home/HC-Banner.gif')"
+        },
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovated OS Open Source Community",
             INTRO_HEAD: "Start your journey in openEuler.",
@@ -406,9 +433,9 @@ module.exports = {
         },
         HOME_ROOMS: {
             ROOM_NAME: ["Latest Activity", "Blog", "News"],
-            EVENT_NAME: "最新活动",
-            BLOG_NAME: "博客",
-            NEWS_NAME: "新闻",
+            EVENT_NAME: "Latest Activity",
+            BLOG_NAME: "Blog",
+            NEWS_NAME: "News",
             EVENT_LIST: [
                 {
                     TAG: "事件",
@@ -590,9 +617,10 @@ module.exports = {
             SOURCE_TITLE: "More Resources",
             SOURCE_APPLY: {
                 TITLE: "Test Resource Application",
-                DES: "If there is no test device, you can apply for resources here.",
-                APPLY: "Thanks for the sponsorship of Peng Cheng Laboratory. ",
-                SPONSOR: "",
+                DES: "If there is no test device, you can apply for resources.",
+                APPLY: "here",
+                SPONSOR: "Thanks for the sponsorship of Peng Cheng Laboratory.",
+                SPONSORLINK:'https://dw.pcl.ac.cn/#/home/index'
             },
             SOURCE_MAIL: {
                 TITLE: "E-mail Subscription",
