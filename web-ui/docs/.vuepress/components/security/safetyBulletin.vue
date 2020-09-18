@@ -306,6 +306,9 @@ export default {
         font-family: FZLTXIHJW;
     }
 }
+.has-gutter .el-table_1_column_5 .cell{
+    white-space: pre-line;
+}
 </style>
 <style lang="less" scoped>
 .table-link {

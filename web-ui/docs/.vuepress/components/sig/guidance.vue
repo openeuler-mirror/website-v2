@@ -20,10 +20,14 @@
             >
                 <div class="step-left">
                     <div class="mail-box">
-                        <div class="step-left-box fade-in">
+                        <div class="step-left-box fade-in" :class="$lang == 'en'?'en-step-box':''">
                             <div class="inner-box">
                                 <img :src="item.LEFT.LEFT_IMG" alt />
-                                <p>{{ item.LEFT.LEFT_INFO }}</p>
+                                <p v-if="$lang == 'zh'?true:false">{{ item.LEFT.LEFT_INFO }}</p>
+                                <p v-if="$lang == 'en'?true:false">
+                                    <span class="en-desc">{{item.LEFT.LEFT_DESC}}</span>
+                                    <span>{{ item.LEFT.LEFT_INFO }}</span>
+                                </p>
                             </div>
                         </div>
                         <div class="step-left-num">
@@ -32,16 +36,20 @@
                         <div class="step-line"></div>
                     </div>
                 </div>
-                <div class="step-right">
+                <div class="step-right" :class="$lang == 'en'?'en-step-right':''">
                     <div class="mail-box">
                         <div class="step-line"></div>
                         <div class="step-right-num">
                             <span>{{ item.RIGHT.RIGHT_CIRCLE }}</span>
                         </div>
-                        <div class="step-right-box fade-in">
+                        <div class="step-right-box fade-in" :class="$lang == 'en'?'en-step-box':''">
                             <div class="inner-box">
                                 <img :src="item.RIGHT.LEFT_IMG" alt />
-                                <p>{{ item.RIGHT.RIGHT_INFO }}</p>
+                                <p v-if="$lang == 'zh'?true:false">{{ item.RIGHT.RIGHT_INFO }}</p>
+                                <p v-if="$lang == 'en'?true:false">
+                                    <span class="en-desc">{{item.RIGHT.RIGHT_DESC}}</span>
+                                    <span>{{ item.RIGHT.RIGHT_INFO }}</span>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -84,6 +92,20 @@ export default {
 </script>
 
 <style scoped>
+.en-step-box{
+    width: 380px !important;
+    height: 260px !important;
+}
+.en-step-box p{
+    font-size: 14px !important;
+    font-family: Roboto-Regular, Roboto !important;
+    font-weight: 400 !important;
+    color: rgba(0, 0, 0, 0.5) !important;
+    line-height: 20px !important;
+}
+.en-step-right{
+    margin: -37px 0 !important;
+}
 .is-h5 {
     display: none;
 }
@@ -135,6 +157,15 @@ h3 {
 }
 .step-left-box {
     margin-right: 40px;
+}
+.step-left-box .en-desc,.step-right-box .en-desc{
+    font-size: 16px !important;
+    font-family: Roboto-Condensed, Roboto !important;
+    font-weight: normal !important;
+    color: #002FA7 !important;
+    line-height: 26px !important;
+    display: block;
+    margin-bottom: 10px;
 }
 .step-right-box {
     margin-left: 40px;

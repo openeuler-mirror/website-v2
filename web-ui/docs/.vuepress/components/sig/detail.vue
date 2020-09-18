@@ -16,7 +16,7 @@
                             style="width: 120px; height: 120px; border-radius: 50%"
                             :src="value.avatar_url"></el-image>
                     <p class="dever-name">{{ value.gitee_id }}</p>
-                    <p class="dever-rank" :title="value.sigs.join('、')+'SIG Maintainer'">
+                    <p class="dever-rank" :title="value.sigs.join('、')+'SIG Maintainer'" :class="['dever-rank',$lang == 'en'?'en-dever-rank':'']">
                         <span v-for="(item, itemIndex) in value.sigs" :key="itemIndex">{{item}}{{itemIndex!=(value.sigs.length-1)?'、':''}}</span> <span>SIG Maintainer</span>
                     </p>
                     <div class="dev-link">
@@ -105,6 +105,10 @@ export default {
 .sig-detail .meetings {
     padding-top: 40px;
     margin-bottom: 30px;
+}
+.en-dever-rank{
+    font-size: 14px !important;
+    line-height: 20px !important;
 }
 .sig-detail .calender-wrapper {
     margin-top: -25px;
