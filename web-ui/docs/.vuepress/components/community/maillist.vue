@@ -6,8 +6,9 @@
             :inside-name="'COMMUNITY'"
             :outside-name="i18n.community.MAILING_LIST.TITLE"
         ></common-banner>
-        <div class="maillist is-pc" v-fade>
-            <div class="maillist-divider-mail is-pc">
+
+        <div :class="['maillist', 'is-pc', $lang === 'en' ? 'en' : '']" v-fade>
+            <div :class="['maillist-divider-mail', 'is-pc', $lang === 'en' ? 'en' : '']">
                 <div class="maillist-icon-comm"></div>
             </div>
             <div
@@ -18,14 +19,18 @@
             >
                 <div class="step-left">
                     <div class="mail-box">
-                        <div class="step-left-box fade-in">
+                        <div :class="['step-left-box','fade-in',$lang === 'en'?'en-box' + index : '']">
                             <div class="inner-box">
                                 <img :src="item.LEFT.LEFT_IMG" alt="" />
-                                <p>{{ item.LEFT.LEFT_INFO }}</p>
+                                <p>
+                                    <span  v-if="$lang === 'en'" class="en-title">{{ item.LEFT.LEFT_CIRCLE }}<br></span>
+                                    {{ item.LEFT.LEFT_INFO }}
+                                </p>
                             </div>
                         </div>
                         <div class="step-left-num">
-                            <span>{{ item.LEFT.LEFT_CIRCLE }}</span>
+                            <span v-if="$lang === 'en'">{{ '0'+ (index + 1) }}</span>
+                            <span v-if="$lang !== 'en'">{{ item.LEFT.LEFT_CIRCLE }}</span>
                         </div>
                         <div class="step-line"></div>
                     </div>
@@ -34,18 +39,23 @@
                     <div class="mail-box">
                         <div class="step-line"></div>
                         <div class="step-right-num">
-                            <span>{{ item.RIGHT.RIGHT_CIRCLE }}</span>
+                            <span v-if="$lang === 'en'">{{ '0'+ (index + 3) }}</span>
+                            <span v-if="$lang !== 'en'">{{ item.RIGHT.RIGHT_CIRCLE }}</span>
                         </div>
-                        <div class="step-right-box fade-in">
+                         <div :class="['step-right-box','fade-in',$lang === 'en'?'en-box' + index : '']">
                             <div class="inner-box">
                                 <img :src="item.RIGHT.LEFT_IMG" alt="" />
-                                <p>{{ item.RIGHT.RIGHT_INFO }}</p>
+                                <p>
+                                    <span v-if="$lang === 'en'" class="en-title">{{ item.RIGHT.RIGHT_CIRCLE }}<br></span>
+                                    {{ item.RIGHT.RIGHT_INFO }}
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="maillist is-h5">
             <div
                 class="mail-guide"
@@ -57,11 +67,15 @@
                     <div class="mail-box">
                         <div class="step-left-box">
                             <div class="step-left-num">
-                                <span>{{ item.LEFT.LEFT_CIRCLE }}</span>
+                                <span v-if="$lang === 'en'">{{ '0'+ (index + 1) }}</span>
+                                <span v-if="$lang !== 'en'">{{ item.LEFT.LEFT_CIRCLE }}</span>
                             </div>
-                            <div class="inner-box">
+                            <div :class="['inner-box',$lang === 'en'?'en-box' + index : '']">
                                 <img :src="item.LEFT.LEFT_IMG" alt="" />
-                                <p>{{ item.LEFT.LEFT_INFO }}</p>
+                                <p>
+                                    <span  v-if="$lang === 'en'" class="en-title">{{ item.LEFT.LEFT_CIRCLE }}<br></span>
+                                    {{ item.LEFT.LEFT_INFO }}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -69,12 +83,16 @@
                 <div class="step-right">
                     <div class="mail-box">
                         <div class="step-right-num">
-                            <span>{{ item.RIGHT.RIGHT_CIRCLE }}</span>
+                            <span v-if="$lang === 'en'">{{ '0'+ (index + 3) }}</span>
+                            <span v-if="$lang !== 'en'">{{ item.RIGHT.RIGHT_CIRCLE }}</span>
                         </div>
-                        <div class="step-right-box">
-                            <div class="inner-box">
+                        <div :class="['step-right-box', $lang === 'en'?'en-box' + index : '']">
+                            <div :class="['inner-box',$lang === 'en'?'en-box' + index : '']">
                                 <img :src="item.RIGHT.LEFT_IMG" alt="" />
-                                <p>{{ item.RIGHT.RIGHT_INFO }}</p>
+                                <p>
+                                    <span v-if="$lang === 'en'" class="en-title">{{ item.RIGHT.RIGHT_CIRCLE }}<br></span>
+                                    {{ item.RIGHT.RIGHT_INFO }}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -126,6 +144,7 @@
                 </el-table-column>
             </el-table>
         </div>
+
         <div class="mail-table is-h5">
             <ul class="mail-list-h5">
                 <li class="heaed">
@@ -430,10 +449,20 @@ p {
     color: #000;
     font-family: FZLTXIHJW;
 }
+.lang-en {
+    .mail-guide{
+        p {
+            font-family: Roboto-Regular;
+        }
+    }
+}
 .maillist {
     width: 1200px;
     position: relative;
     margin: 80px auto 120px;
+}
+.maillist.en {
+    margin-bottom: 200px;
 }
 .maillist-divider-mail {
     width: 2px;
@@ -448,6 +477,9 @@ p {
     background-size: 2px 11px;
     background-repeat: repeat-y;
     position: absolute;
+}
+.maillist-divider-mail.en {
+    height: 672px;
 }
 .maillist-icon-comm {
     width: 0;
@@ -475,6 +507,12 @@ p {
 }
 .step-right-box {
     margin-left: 40px;
+}
+.step-right-box.en-box1 {
+    height: 320px;
+}
+.step-left-box.en-box1 {
+    height: 260px;
 }
 .step-left {
     z-index: 20;
@@ -533,6 +571,12 @@ p {
     width: 110px;
     height: 110px;
     margin-left: 20px;
+}
+.en-title {
+    display: block;
+    color: #002FA7;
+    margin-bottom: 10px;
+    font-family: Roboto-Condensed, Roboto;
 }
 .mail-table.is-pc {
     width: 1200px;
@@ -642,6 +686,12 @@ p {
                 background-color: #f2f2f2;
             }
         }
+    }
+    .step-right-box .inner-box.en-box1 {
+        height: 320px;
+    }
+    .step-left-box .inner-box.en-box1 {
+        height: 260px;
     }
     .maillist-divider-mail {
         display: none;
