@@ -16,8 +16,8 @@
                             style="width: 120px; height: 120px; border-radius: 50%"
                             src="/img/home/deverImg.png"></el-image>
                     <p class="dever-name">{{ value.NAME }}</p>
-                    <p class="dever-rank">{{ value.TITLE }}</p>
-                    <p class="dever-rank">{{ value.RANK }}</p>
+                    <p :class="['dever-rank',$lang == 'en'?'en-dever-rank':'']">{{ value.TITLE }}</p>
+                    <p :class="['dever-rank',$lang == 'en'?'en-dever-rank':'']">{{ value.RANK }}</p>
                     <div class="dev-link">
                         <a :href="value.MAIL_LINK">
                             <img class="email-link" src="/img/home/email.png" alt="">
@@ -94,6 +94,10 @@ export default {
     @media screen and (max-width: 1000px) {
         display: none;
     }
+}
+.en-dever-rank{
+    font-size: 14px !important;
+    line-height: 20px !important;
 }
 .sig-detail .calender-wrapper {
     margin-top: -25px;

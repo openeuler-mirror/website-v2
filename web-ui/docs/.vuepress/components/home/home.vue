@@ -46,6 +46,19 @@
                         </div>
                     </a>
                 </el-carousel-item>
+                <el-carousel-item class="carousel-item">
+                    <div class="HC-banner"  @click="go('/news/20200607.html')" :style="{backgroundImage:i18n.home.HOME_OPENEULER_NEW.BACKGROUND_IMG}">
+                        <img class="new-img" :src="i18n.home.HOME_OPENEULER_NEW.SMALL_IMG">
+                        <div class="center-word">
+                            <p>{{i18n.home.HOME_OPENEULER_NEW.CENTER_WORD.BIG_WORD}}</p>
+                            <p v-if="i18n.home.HOME_OPENEULER_NEW.CENTER_WORD.SMALL_WORD == ''?false:true">{{i18n.home.HOME_OPENEULER_NEW.CENTER_WORD.SMALL_WORD}}</p>
+                        </div>
+                        <div class="bottom-word">
+                            <p>{{i18n.home.HOME_OPENEULER_NEW.BOTTOM_WORD.UP_WORD}}</p>
+                            <p>{{i18n.home.HOME_OPENEULER_NEW.BOTTOM_WORD.DOWN_WORD}}</p>
+                        </div>
+                    </div>
+                </el-carousel-item>
             </el-carousel>
         </div>
         <div class="is-h5 home-carousel">
@@ -112,12 +125,13 @@
                         <div class="box-icon">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.NAME }}</div>
                         <p :class="$lang == 'en'?'en-areabox-p':''">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.TITLE }}</p>
                     </a>
-                    <div class="snd-guidance">
+                    <div class="snd-guidance" :class="$lang == 'en'?'en-snd-guidance':''">
                         <div class="d3"></div>
-                        <p>{{ i18n.home.HOME_INTRODUCE.INTRO_GUIDE.INFO }}</p>
+                        <p :class="$lang == 'en'?'en-link-title':''">{{ i18n.home.HOME_INTRODUCE.INTRO_GUIDE.INFO }}</p>
                         <div class="d3-guide">
                             <div
                                     class="guide-way"
+                                    :class="$lang == 'en'?'en-guide-way':''"
                                     v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_GUIDE.GUIDE_WAY"
                                     :key="index">
                                 <a :href="item.LINK">
@@ -148,12 +162,13 @@
                         <p>{{ item.TITLE }}</p>
                         <img :src="item.IMG" alt=""/>
                 </div>
-                <div :class="['snd-guidance','location',isShowCard?'is-show':'']">
+                <div :class="['snd-guidance','location',isShowCard?'is-show':'',$lang == 'en'?'en-snd-guidance':'']">
                     <div class="d3"></div>
-                    <p>{{ i18n.home.HOME_INTRODUCE.INTRO_GUIDE.INFO }}</p>
+                    <p :class="$lang == 'en'?'en-link-title':''">{{ i18n.home.HOME_INTRODUCE.INTRO_GUIDE.INFO }}</p>
                     <div class="d3-guide">
                         <div
                             class="guide-way"
+                            :class="$lang == 'en'?'en-guide-way':''"
                             v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_GUIDE.GUIDE_WAY"
                             :key="index">
                                 <a :href="item.LINK">
@@ -244,10 +259,10 @@
                 <div class="event-room">
                     <h5>{{ i18n.home.HOME_ROOMS.EVENT_NAME }}</h5>
                     <div class="rooms"
-                         v-for="(item, index) in i18n.home.HOME_ROOMS.EVENT_LIST"
-                         :key="index">
-                        <span>{{ item.TAG }}  <span>|</span> </span> <span>{{ item.DATE }}</span>
-                        <p>{{ item.CONTENT }}</p>
+                        v-for="(item, index) in newsList"
+                        :key="index">
+                        <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
+                        <p><router-link class="word-hover" :to="item.path">{{ item.frontmatter.title }}</router-link></p>
                     </div>
                 </div>
                 <div class="blog-room">
@@ -259,17 +274,21 @@
                         <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
                         <span>|</span>
                         <span>{{ item.frontmatter.author }}</span>
-                        <p><a :href="item.path"></a>{{ item.frontmatter.summary }}</p>
+                        <p><router-link class="word-hover" :to="item.path">{{ item.frontmatter.summary }}</router-link></p>
                     </div>
-                    <span><a href="">{{ i18n.home.MORE }}</a></span>
+                    <span><a @click="go('/interaction/blog-list/')">{{ i18n.home.MORE }}</a></span>
                 </div>
                 <div class="news-room">
                     <h5>{{ i18n.home.HOME_ROOMS.NEWS_NAME }}</h5>
-                    <div class="rooms" v-for="(item, index) in i18n.home.HOME_ROOMS.NEWS_LIST" :key="index">
-                        <span>{{ item.TAG }}</span> <span>|</span> <span>{{ item.DATE }}</span>
-                        <p>{{ item.CONTENT }}</p>
+                    <div class="rooms" 
+                            v-for="(item, index) in newsList"
+                            :key="index">
+                        <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
+                        <span>|</span>
+                        <span>{{ item.frontmatter.author }}</span>
+                        <p><router-link class="word-hover" :to="item.path">{{ item.frontmatter.title }}</router-link></p>
                     </div>
-                    <span><a href="">{{ i18n.home.MORE }}</a></span>
+                    <span><a @click="go('/interaction/news-list/')">{{ i18n.home.MORE }}</a></span>
                 </div>
             </div>
         </div>
@@ -339,7 +358,7 @@
                             {{ i18n.home.HOME_SOURCE.SOURCE_APPLY.DES }}
                         </p>
                         <p class="click-here"><a :class="$lang == 'en'?'en-p':''" @click="go('/blog/fred_li/2020-03-25-apply-for-vm-from-pcl.html')">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.APPLY }}</a></p>
-                        <p><span class="source-sponsor">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.SPONSOR }}</span></p>
+                        <p><span :class="['source-sponsor',$lang == 'en'?'en-p':'']" @click="go(i18n.home.HOME_SOURCE.SOURCE_APPLY.SPONSORLINK)">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.SPONSOR }}</span></p>
                     </div>
                 </div>
                 <div class="source-mail">
@@ -445,13 +464,13 @@
                 rooms2: false,
                 rooms3: false,
                 calenderData: [],
-                autoPlay: true,
+                autoPlay: false,
                 videoCtrlParams:{
                     element:'',
                     isShow:false,  //默认不显示控制器
                 },
                 isNowPlay:false,
-                isShowCard:false  //是否显示移动端点击体验的卡片
+                isShowCard:false,  //是否显示移动端点击体验的卡片
             }
         },
         mounted() {
@@ -467,10 +486,12 @@
         },
         methods: {
             go(path) {
-                if (path) {
+                if (path && !path.includes("http")) {
                     this.$router.push({
                         path: this.resolvePath(path)
                     });
+                }else if(path.includes("http")){
+                    window.open(path);
                 }else{
                     this.isShowCard = !this.isShowCard;
                 }
@@ -737,6 +758,56 @@
         position: absolute;
         top: 0;
     }
+    .carousel-item .HC-banner{
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 59px 0 0 359px;
+        img{
+            width: 65px;
+            height: 47px;
+        }
+        .center-word{
+            margin-top: 57px;
+            p{
+                text-align: left;
+                &:first-of-type{
+                    font-size: 52px;
+                    font-family: HuaweiSansMedium;
+                    color: #1E1E1E;
+                    line-height: 61px;
+                }
+                &:last-of-type{
+                    font-size: 32px;
+                    font-family: FZLTCHJW;
+                    font-weight: normal;
+                    color: #1E1E1E;
+                    line-height: 39px;
+                    letter-spacing: 19px;
+                    margin-top: 12px;
+                }
+            }
+        }
+        .bottom-word{
+            margin-top: 57px;
+            p{
+                text-align: left;
+                font-family: FZLTCHJW;
+                font-weight: normal;
+                color: #1E1E1E;
+                &:first-of-type{
+                    line-height: 36px;
+                    letter-spacing: 6px;
+                }
+                &:last-of-type{
+                    line-height: 27px;
+                    letter-spacing: 2px;
+                    margin-top: 14px;
+                }
+            }
+        }
+    }
     .carousel-img {
         width: 1080px;
         height: 480px;
@@ -955,6 +1026,25 @@
         display: block;
         width: 280px;
     }
+    .en-snd-guidance{
+        padding: 10px !important;
+         margin-top: 0 !important;
+         @media screen and (max-width: 1000px) {
+             p{
+                 margin: 0 0 0 8px !important;
+             }
+         }
+    }
+    .snd-guidance .en-link-title{
+        font-size: 12px !important;
+        font-family: Roboto-Regular, Roboto !important;
+        font-weight: 400 !important;
+        color: #000000 !important;
+        line-height: 18px !important;
+        position: absolute;
+        bottom: 75px;
+        width: inherit;
+    }
     .d3-guide {
         display: flex;
         justify-content: space-between;
@@ -983,6 +1073,16 @@
         text-decoration: none;
         color: #002f33;
         font-size: 12px;
+    }
+    .en-guide-way {
+        margin: 0 10px 0 0;
+        span{
+            font-size: 10px !important;
+            font-family: Roboto-Condensed, Roboto !important;
+            font-weight: normal !important;
+            color: #000000 !important;
+            line-height: 12px !important;
+        }
     }
     .guide-way img {
         width: 36px;
@@ -1253,9 +1353,9 @@
         line-height: 22px;
     }
     .dev-dever .en-rank {
-        font-size: 14px;
-        font-family: HuaweiSans;
-        line-height: 20px;
+        font-size: 14px !important;
+        font-family: HuaweiSans !important;
+        line-height: 20px !important;
     }
     .dev-link {
         margin-top: 20px;
@@ -1356,14 +1456,19 @@
     }
     .apply-img img,
     .mail-img img{
-        width: 100%;
-        height: 100%;
+        width: 120px;
+        height: 120px;
     }
     .apply-des p,
     .mail-des p {
         text-align: left;
         font-size: 18px;
         margin-top: 20px;
+    }
+    .apply-des p{
+        &:last-of-type{
+            cursor: pointer;
+        }
     }
     .mail-des a ,
     .apply-des a {
