@@ -8,4 +8,3 @@
 /server/node_modules
 /server/package-lock.json
 .idea/
-/web-ui/docs/.vuepress
