@@ -289,18 +289,15 @@ export default {
     max-height: calc(100vh - 344px);
     overflow-y: hidden;
     &::-webkit-scrollbar-track {
-        -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
         border-radius:10px;
-        background-color:#F5F5F5;
+        background-color:#F1F1F1;
     }
     &::-webkit-scrollbar {
-        width:6px;
-        background-color:#F5F5F5;
+        width:4px;
     }
     &::-webkit-scrollbar-thumb {
         border-radius:10px;
-        -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);
-        background-color:rgba(144,147,153,.3);
+        background-color:#AFBFE8;
     }
     &:hover{
         overflow-y: scroll;

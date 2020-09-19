@@ -23,6 +23,7 @@ module.exports = {
         HOME_OPENEULER_NEW:
             {
                 SMALL_IMG: '/img/home/HC-Banner.png',
+                HC_MOBILE_IMG: "url('/img/home/HC-Mobile.png')",
                 CENTER_WORD: {
                     BIG_WORD: 'NEW VALUE TOGETHER',
                     SMALL_WORD: '共创行业新价值'
@@ -31,7 +32,8 @@ module.exports = {
                     UP_WORD: '华为全联接2020',
                     DOWN_WORD: '2020年9月23-26日 | 中国，上海'
                 },
-                BACKGROUND_IMG:"url('/img/home/HC-Banner.gif')"
+                BACKGROUND_IMG: "url('/img/home/HC-Banner.gif')",
+                HC_ADRESSION: 'https://e.huawei.com/cn/solutions/hic?utm_campaign=04MHQHQ20W6R9P&utm_medium=pm-display&utm_source=openeluer&source=openeluer&utm_content=hic_hc_2020'
             }
         ,
         HOME_INTRODUCE: {
@@ -348,6 +350,7 @@ module.exports = {
         ],
         HOME_OPENEULER_NEW:{
             SMALL_IMG: '/img/home/HC-Banner.png',
+            HC_MOBILE_IMG: "url('/img/home/HC-Mobile.png')",
             CENTER_WORD: {
                 BIG_WORD: 'NEW VALUE TOGETHER',
                 SMALL_WORD: ''
@@ -356,11 +359,12 @@ module.exports = {
                 UP_WORD: 'HUAWEI CONNECT 2020',
                 DOWN_WORD: 'September 23-26（Shanghai）'
             },
-            BACKGROUND_IMG:"url('/img/home/HC-Banner.gif')"
+            BACKGROUND_IMG: "url('/img/home/HC-Banner.gif')",
+            HC_ADRESSION: 'https://e.huawei.com/cn/solutions/hic?utm_campaign=04MHQHQ20W6R9P&utm_medium=pm-display&utm_source=openeluer&source=openeluer&utm_content=hic_hc_2020'
         },
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovated OS Open Source Community",
-            INTRO_HEAD: "Start your journey in openEuler.",
+            INTRO_HEAD: "Start your journey in openEuler",
             INTRO_DESCRIPTION: "openEuler is an innovative platform nurtured by community collaboration. It aims to build a unified and open OS that supports multiple processor architectures, and to advance the hardware/software application ecosystem.",
             INTRO_IMG_URL: "",
             INTRO_MAP: [

@@ -22,7 +22,6 @@
         <div :class="['summit-explain',$lang == 'en'?'en-explain':'']">
             <p>{{i18n.interaction.SUMMIT.SUMMITCONTENT}}</p>
         </div>
-        
     </div>
 </template>
 
@@ -107,11 +106,11 @@ export default {
 
 // 具体样式从这里开始
 .summit {
+    padding-bottom: 180px;
     @media (max-width: 1000px) {
         padding: 40px 15px 80px 15px;
     }
     .review {
-        
         .review-home {
             cursor: pointer;
             display: inline-block;
@@ -151,20 +150,17 @@ export default {
 }
 
 .summit .summit-explain {
-    .wid-and-hei(1120px,160px);
-    .mr-All(60px auto 220px auto);
+    width: 1120px;
+    .mr-All(60px auto 0 auto);
     .word-common-css(20px,PingFangSC-Regular, PingFang SC,400,rgba(0, 0, 0, 1),40px);
     @media (max-width: 1000px) {
-        .wid-and-hei(315px,260px);
-        .mr-All(40px auto 0 auto);
+        width: 315px;
         .word-common-css(16px,FZLTHJW,FZLTHJW,normal,rgba(0, 0, 0, 1),26px);
     }
 }
 .summit .en-explain{
     .word-common-css(20px,Roboto-Regular, Roboto,400,#000000,40px);
     @media (max-width: 1000px) {
-        .wid-and-hei(315px,260px);
-        .mr-All(40px auto 0 auto);
         .word-common-css(16px,Roboto-Regular, Roboto,normal,#000000,26px);
     }
 }
