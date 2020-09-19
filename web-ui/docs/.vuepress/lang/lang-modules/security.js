@@ -106,7 +106,7 @@ module.exports = {
         SCORE: 'Score',
         PRODUCT: 'Product',
         STATUS: 'Status',
-        LEGAL: "法律声明",
-        PRIVACY: "隐私政策"
+        LEGAL: "Legal",
+        PRIVACY: "Privacy"
     }
 };
