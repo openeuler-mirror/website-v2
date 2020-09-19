@@ -47,15 +47,20 @@
                     </a>
                 </el-carousel-item>
                 <el-carousel-item class="carousel-item">
-                    <div class="HC-banner"  @click="go('/news/20200607.html')" :style="{backgroundImage:i18n.home.HOME_OPENEULER_NEW.BACKGROUND_IMG}">
-                        <img class="new-img" :src="i18n.home.HOME_OPENEULER_NEW.SMALL_IMG">
-                        <div class="center-word">
-                            <p>{{i18n.home.HOME_OPENEULER_NEW.CENTER_WORD.BIG_WORD}}</p>
-                            <p v-if="i18n.home.HOME_OPENEULER_NEW.CENTER_WORD.SMALL_WORD == ''?false:true">{{i18n.home.HOME_OPENEULER_NEW.CENTER_WORD.SMALL_WORD}}</p>
-                        </div>
-                        <div class="bottom-word">
-                            <p>{{i18n.home.HOME_OPENEULER_NEW.BOTTOM_WORD.UP_WORD}}</p>
-                            <p>{{i18n.home.HOME_OPENEULER_NEW.BOTTOM_WORD.DOWN_WORD}}</p>
+                    <div class="HC-box">
+                        <video autoplay loop muted width="100%" height="500px" id="HC-video">
+                            <source src="/img/home-video/HC-video.mp4"  type="video/mp4">
+                        </video>
+                        <div class="HC-left-box" @click="go(i18n.home.HOME_OPENEULER_NEW.HC_ADRESSION)">
+                            <img class="new-img" :src="i18n.home.HOME_OPENEULER_NEW.SMALL_IMG">
+                            <div class="center-word">
+                                <p>{{i18n.home.HOME_OPENEULER_NEW.CENTER_WORD.BIG_WORD}}</p>
+                                <p v-if="i18n.home.HOME_OPENEULER_NEW.CENTER_WORD.SMALL_WORD == ''?false:true">{{i18n.home.HOME_OPENEULER_NEW.CENTER_WORD.SMALL_WORD}}</p>
+                            </div>
+                            <div class="bottom-word">
+                                <p>{{i18n.home.HOME_OPENEULER_NEW.BOTTOM_WORD.UP_WORD}}</p>
+                                <p>{{i18n.home.HOME_OPENEULER_NEW.BOTTOM_WORD.DOWN_WORD}}</p>
+                            </div>
                         </div>
                     </div>
                 </el-carousel-item>
@@ -96,6 +101,10 @@
                         <h3>{{ item.TITLE }}</h3>
                         <img :src="'/img/home/Banner' + index + '.gif'">
                     </a>
+                </el-carousel-item>
+                <el-carousel-item class="carousel-item">
+                    <div class="HC-mobile-box" @click="go(i18n.home.HOME_OPENEULER_NEW.HC_ADRESSION)" :style="{backgroundImage:i18n.home.HOME_OPENEULER_NEW.HC_MOBILE_IMG}">
+                    </div>
                 </el-carousel-item>
             </el-carousel>
         </div>
@@ -464,7 +473,7 @@
                 rooms2: false,
                 rooms3: false,
                 calenderData: [],
-                autoPlay: true,
+                autoPlay: false,
                 videoCtrlParams:{
                     element:'',
                     isShow:false,  //默认不显示控制器
@@ -640,7 +649,9 @@
     .el-carousel__container {
         height: 500px;
     }
-
+    .el-carousel__button{
+        opacity: 0.2;
+    }
     .room-card .el-carousel__container {
         height: 360px;
     }
@@ -765,12 +776,16 @@
         position: absolute;
         top: 0;
     }
-    .carousel-item .HC-banner{
+    .carousel-item .HC-box{
+        position: relative;
+        cursor: pointer;
         width: 100%;
         height: 100%;
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        padding: 59px 0 0 359px;
+    }
+    .carousel-item .HC-left-box{
+        position: absolute;
+        top: 15%;
+        left: 18%;
         img{
             width: 65px;
             height: 47px;
@@ -1545,6 +1560,12 @@
                     opacity: 0.6;
                 }
             }
+            .carousel-item .HC-mobile-box{
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
         }
         .is-pc.mapArea {
             display: none;
@@ -1574,10 +1595,6 @@
         .home p {
             font-size: 16px;
             margin: 0 30px;
-        }
-        
-        .carousel-item {
-            padding-left: 20px;
         }
         .carousel-item .card-summer {
             width: 100%;

@@ -1,14 +1,14 @@
 <template>
     <div class="theme-container">
-            <mesbanner class="not-found-top"
-            :outsideName="currentLang.title"
-            :pcSrc="'/img/404/404-banner.png'"
-            :mobileSrc="'/img/404/404-banner.png'"
-            :isOther="true"
-            :pcMessage="currentLang.message"
-            :mobileMessage="currentLang.message"
-            >
-            </mesbanner>
+        <mesbanner class="not-found-top"
+        :outsideName="currentLang.title"
+        :pcSrc="'/img/404/404-banner.png'"
+        :mobileSrc="'/img/404/404-banner.png'"
+        :isOther="true"
+        :pcMessage="currentLang.message"
+        :mobileMessage="currentLang.message"
+        >
+        </mesbanner>
     </div>
 </template>
 
