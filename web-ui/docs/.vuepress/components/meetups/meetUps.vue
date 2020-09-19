@@ -97,7 +97,8 @@ export default {
         }
         .mobile-message{
             .mr-All(20px auto 40px auto);
-            .wid-and-hei(80px,26px);
+            width: 100%;
+            text-align: center;
         }
         width: 100%;
         h3 {

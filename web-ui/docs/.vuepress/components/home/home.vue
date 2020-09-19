@@ -780,7 +780,7 @@
             p{
                 text-align: left;
                 &:first-of-type{
-                    font-size: 52px;
+                    font-size: 45px;
                     font-family: HuaweiSansMedium;
                     color: #1E1E1E;
                     line-height: 61px;
