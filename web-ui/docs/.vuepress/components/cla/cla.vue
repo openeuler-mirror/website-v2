@@ -1,24 +1,25 @@
 <template>
     <div class="cla-mobile-content">
-        <div class="cla-content">
+        <div :class="['cla-content', isMobile?'cla-mobile':'cla-pc']">
             <div class="radio">
-                <el-radio-group v-model="reverse">
-                    <el-radio :label="true" @change="isShowPerson">{{
+                <el-radio-group v-model="type">
+                    <el-radio :label="0">{{
                         i18n.cla.PERSONAL
                     }}</el-radio>
-                    <el-radio :label="false" @change="isShowPerson">{{
+                    <el-radio :label="1">{{
                         i18n.cla.LAW
                     }}</el-radio>
                 </el-radio-group>
             </div>
             <div class="web">
                 <el-form
-                    :model="ruleForm"
-                    :rules="rules"
-                    ref="ruleForm"
+                    :model="individual"
+                    :rules="individualRules"
+                    ref="individual"
                     label-width="100px"
                     class="demo-ruleForm"
-                    v-if="isShow"
+                    v-show="!type"
+                    v-if="!isMobile"
                 >
                     <p class="contribute-words">
                         {{ i18n.cla.PERSONAL_WORDS }}
@@ -31,8 +32,8 @@
                         </el-col>
                         <el-col :span="21">
                             <el-input
-                                v-model="ruleForm.name"
-                                placeholder="您的姓名"
+                                v-model="individual.name"
+                                :placeholder="i18n.cla.NAME"
                             ></el-input>
                         </el-col>
                         <el-col :span="2" class="star"
@@ -47,15 +48,15 @@
                         </el-col>
                         <el-col :span="21">
                             <el-input
-                                v-model="ruleForm.email"
-                                placeholder="您的电子邮箱"
+                                v-model="individual.email"
+                                :placeholder="i18n.cla.EMAIL"
                             ></el-input>
                         </el-col>
                         <el-col :span="2" class="star"
                             >&nbsp&nbsp&nbsp&nbsp*</el-col
                         >
                     </el-form-item>
-                    <el-form-item prop="phone">
+                    <el-form-item prop="telephone">
                         <el-col :span="1">
                             <div class="cla-iocn">
                                 <img src="../../public/img/cla/phone.svg" alt />
@@ -63,13 +64,13 @@
                         </el-col>
                         <el-col :span="21">
                             <el-input
-                                v-model="ruleForm.phone"
-                                placeholder="您的电话"
+                                v-model="individual.telephone"
+                                :placeholder="i18n.cla.PHONE"
                             ></el-input>
                         </el-col>
                         <el-col :span="2"></el-col>
                     </el-form-item>
-                    <el-form-item prop="printer">
+                    <el-form-item prop="fax">
                         <el-col :span="1">
                             <div class="cla-iocn">
                                 <img
@@ -80,13 +81,13 @@
                         </el-col>
                         <el-col :span="21">
                             <el-input
-                                v-model="ruleForm.printer"
-                                placeholder="您的传真"
+                                v-model="individual.fax"
+                                :placeholder="i18n.cla.FAX"
                             ></el-input>
                         </el-col>
                         <el-col :span="2"></el-col>
                     </el-form-item>
-                    <el-form-item prop="location">
+                    <el-form-item prop="address">
                         <el-col :span="1">
                             <div class="cla-iocn">
                                 <img
@@ -97,8 +98,8 @@
                         </el-col>
                         <el-col :span="21">
                             <el-input
-                                v-model="ruleForm.location"
-                                placeholder="您的地址"
+                                v-model="individual.address"
+                                :placeholder="i18n.cla.ADDRESS"
                             ></el-input>
                         </el-col>
                         <el-col :span="2" class="star"
@@ -113,8 +114,8 @@
                         </el-col>
                         <el-col :span="21">
                             <el-input
-                                v-model="ruleForm.date"
-                                placeholder="2020-07-28"
+                                v-model="individual.date"
+                                :disabled="true"
                             ></el-input>
                         </el-col>
                         <el-col :span="2" class="star"
@@ -126,24 +127,25 @@
                         <el-button
                             type="primary"
                             icon="el-icon-edit"
-                            @click="submitForm('ruleForm')"
+                            @click="submitForm"
                             >{{ i18n.cla.EDIT }}</el-button
                         >
                         <el-button
                             type="primary"
                             icon="el-icon-delete"
-                            @click="resetForm('ruleForm')"
+                            @click="resetForm"
                             >{{ i18n.cla.DELEAT }}</el-button
                         >
                     </el-form-item>
                 </el-form>
                 <el-form
-                    :model="ruleForm"
-                    :rules="rules"
-                    ref="ruleForm"
+                    :model="legal"
+                    :rules="legalRules"
+                    ref="legal"
                     label-width="100px"
                     class="demo-ruleForm"
-                    v-if="!isShow"
+                    v-show="type"
+                    v-if="!isMobile"
                 >
                     <p class="contribute-words">{{ i18n.cla.LEGAL_WORD }}</p>
                     <el-form-item prop="name">
@@ -154,8 +156,8 @@
                         </el-col>
                         <el-col :span="21">
                             <el-input
-                                v-model="ruleForm.name"
-                                placeholder="授权代表（姓名）"
+                                v-model="legal.name"
+                                :placeholder="i18n.cla.AUTH_NAME"
                             ></el-input>
                         </el-col>
                         <el-col :span="2" class="star"
@@ -173,15 +175,15 @@
                         </el-col>
                         <el-col :span="21">
                             <el-input
-                                v-model="ruleForm.contribute"
-                                placeholder="授权贡献者（姓名）"
+                                v-model="legal.contribute"
+                                :placeholder="i18n.cla.DONATE_NAME"
                             ></el-input>
                         </el-col>
                         <el-col :span="2" class="star"
                             >&nbsp&nbsp&nbsp&nbsp*</el-col
                         >
                     </el-form-item>
-                    <el-form-item prop="position">
+                    <el-form-item prop="title">
                         <el-col :span="1">
                             <div class="cla-iocn">
                                 <img src="../../public/img/cla/name.svg" alt />
@@ -189,15 +191,15 @@
                         </el-col>
                         <el-col :span="21">
                             <el-input
-                                v-model="ruleForm.position"
-                                placeholder="您的职位"
+                                v-model="legal.title"
+                                :placeholder="i18n.cla.TITLE"
                             ></el-input>
                         </el-col>
                         <el-col :span="2" class="star"
                             >&nbsp&nbsp&nbsp&nbsp*</el-col
                         >
                     </el-form-item>
-                    <el-form-item prop="office">
+                    <el-form-item prop="corporation">
                         <el-col :span="1">
                             <div class="cla-iocn">
                                 <img
@@ -208,15 +210,15 @@
                         </el-col>
                         <el-col :span="21">
                             <el-input
-                                v-model="ruleForm.office"
-                                placeholder="您的公司名称"
+                                v-model="legal.corporation"
+                                :placeholder="i18n.cla.CORPORATION"
                             ></el-input>
                         </el-col>
                         <el-col :span="2" class="star"
                             >&nbsp&nbsp&nbsp&nbsp*</el-col
                         >
                     </el-form-item>
-                    <el-form-item prop="location">
+                    <el-form-item prop="address">
                         <el-col :span="1">
                             <div class="cla-iocn">
                                 <img
@@ -227,8 +229,8 @@
                         </el-col>
                         <el-col :span="21">
                             <el-input
-                                v-model="ruleForm.location"
-                                placeholder="您的地址"
+                                v-model="legal.address"
+                                :placeholder="i18n.cla.ADDRESS"
                             ></el-input>
                         </el-col>
                         <el-col :span="2" class="star"
@@ -243,8 +245,8 @@
                         </el-col>
                         <el-col :span="21">
                             <el-input
-                                v-model="ruleForm.email"
-                                placeholder="您的电子邮件"
+                                v-model="legal.email"
+                                :placeholder="i18n.cla.EMAIL"
                             ></el-input>
                         </el-col>
                         <el-col :span="2" class="star"
@@ -252,7 +254,7 @@
                         >
                         <el-col :span="2"></el-col>
                     </el-form-item>
-                    <el-form-item prop="phone">
+                    <el-form-item prop="telephone">
                         <el-col :span="1">
                             <div class="cla-iocn">
                                 <img src="../../public/img/cla/phone.svg" alt />
@@ -260,12 +262,12 @@
                         </el-col>
                         <el-col :span="21">
                             <el-input
-                                v-model="ruleForm.phone"
-                                placeholder="您的电话"
+                                v-model="legal.telephone"
+                                :placeholder="i18n.cla.PHONE"
                             ></el-input>
                         </el-col>
                     </el-form-item>
-                    <el-form-item prop="printer">
+                    <el-form-item prop="fax">
                         <el-col :span="1">
                             <div class="cla-iocn">
                                 <img
@@ -276,8 +278,8 @@
                         </el-col>
                         <el-col :span="21">
                             <el-input
-                                v-model="ruleForm.printer"
-                                placeholder="您的传真"
+                                v-model="legal.fax"
+                                :placeholder="i18n.cla.FAX"
                             ></el-input>
                         </el-col>
                         <el-col :span="2"></el-col>
@@ -290,8 +292,8 @@
                         </el-col>
                         <el-col :span="21">
                             <el-input
-                                v-model="ruleForm.date"
-                                placeholder="2020-07-28"
+                                v-model="legal.date"
+                                :disabled="true"
                             ></el-input>
                         </el-col>
                         <el-col :span="2" class="star"
@@ -319,11 +321,12 @@
             <!-- 移动端 -->
             <div class="mobile">
                 <el-form
-                    :model="ruleForm"
-                    :rules="rules"
-                    ref="ruleForm"
+                    :model="individual"
+                    :rules="individualRules"
+                    ref="individual"
                     label-width="100px"
-                    v-if="isShow"
+                    v-show="!type"
+                    v-if="isMobile"
                 >
                     <p class="contribute-words">
                         {{ i18n.cla.PERSONAL_WORDS }}
@@ -331,124 +334,141 @@
                     <el-form-item prop="name">
                         <el-col :span="24">
                             <el-input
-                                v-model="ruleForm.name"
-                                placeholder="您的姓名*"
+                                v-model="individual.name"
+                                :placeholder="i18n.cla.NAME+'*'"
                             ></el-input>
                         </el-col>
                     </el-form-item>
                     <el-form-item prop="email">
                         <el-col :span="24">
                             <el-input
-                                v-model="ruleForm.email"
-                                placeholder="您的电子邮箱*"
+                                v-model="individual.email"
+                                :placeholder="i18n.cla.EMAIL+'*'"
                             ></el-input>
                         </el-col>
                     </el-form-item>
-                    <el-form-item prop="phone">
+                    <el-form-item prop="telephone">
                         <el-col :span="24">
                             <el-input
-                                v-model="ruleForm.phone"
-                                placeholder="您的电话"
-                            ></el-input>
-                        </el-col>
-                        <el-col :span="2"></el-col>
-                    </el-form-item>
-                    <el-form-item prop="printer">
-                        <el-col :span="24">
-                            <el-input
-                                v-model="ruleForm.printer"
-                                placeholder="您的传真"
+                                v-model="individual.telephone"
+                                :placeholder="i18n.cla.PHONE"
                             ></el-input>
                         </el-col>
                         <el-col :span="2"></el-col>
                     </el-form-item>
-                    <el-form-item prop="location">
+                    <el-form-item prop="fax">
                         <el-col :span="24">
                             <el-input
-                                v-model="ruleForm.location"
-                                placeholder="您的地址*"
+                                v-model="individual.fax"
+                                :placeholder="i18n.cla.FAX"
+                            ></el-input>
+                        </el-col>
+                        <el-col :span="2"></el-col>
+                    </el-form-item>
+                    <el-form-item prop="address">
+                        <el-col :span="24">
+                            <el-input
+                                v-model="individual.address"
+                                :placeholder="i18n.cla.ADDRESS+'*'"
                             ></el-input>
                         </el-col>
                     </el-form-item>
                     <el-form-item prop="date">
                         <el-col :span="24">
                             <el-input
-                                v-model="ruleForm.date"
-                                placeholder="2020-07-28*"
+                                v-model="individual.date"
+                                :disabled="true"
                             ></el-input>
                         </el-col>
                     </el-form-item>
+                    <div class="mobile-btn">
+                        <el-button
+                            type="primary"
+                            icon="el-icon-edit"
+                            size="medium"
+                            @click="submitForm"
+                            >{{ i18n.cla.EDIT }}</el-button
+                        >
+                        <el-button
+                            type="primary"
+                            icon="el-icon-delete"
+                            size="medium"
+                            @click="resetForm"
+                            >{{ i18n.cla.DELEAT }}</el-button
+                        >
+                    </div>
                 </el-form>
                 <el-form
-                    :model="ruleForm"
-                    :rules="rules"
-                    ref="ruleForm"
+                    :model="legal"
+                    :rules="legalRules"
+                    ref="legal"
                     label-width="100px"
-                    v-if="!isShow"
+                    v-show="type"
+                    v-if="isMobile"
                 >
                     <p class="contribute-words">{{ i18n.cla.LEGAL_WORD }}</p>
                     <el-form-item prop="name">
                         <el-col :span="24">
                             <el-input
-                                v-model="ruleForm.name"
-                                placeholder="授权代表（姓名*"
+                                v-model="legal.name"
+                                :placeholder="i18n.cla.AUTH_NAME+'*'"
                             ></el-input>
                         </el-col>
                     </el-form-item>
                     <el-form-item prop="contribute">
                         <el-col :span="24">
                             <el-input
-                                v-model="ruleForm.contribute"
-                                placeholder="授权贡献者（姓名*"
+                                v-model="legal.contribute"
+                                :placeholder="i18n.cla.DONATE_NAME+'*'"
                             ></el-input>
                         </el-col>
                     </el-form-item>
-                    <el-form-item prop="position">
+                    <el-form-item prop="title">
                         <el-col :span="24">
                             <el-input
-                                v-model="ruleForm.position"
-                                placeholder="您的职位*"
+                                v-model="legal.title"
+                                :placeholder="i18n.cla.TITLE+'*'"
                             ></el-input>
                         </el-col>
                     </el-form-item>
-                    <el-form-item prop="office">
+                    <el-form-item prop="corporation">
                         <el-col :span="24">
                             <el-input
-                                v-model="ruleForm.office"
-                                placeholder="您的公司名称*"
+                                v-model="legal.corporation"
+                                :placeholder="i18n.cla.CORPORATION+'*'"
                             ></el-input>
                         </el-col>
                     </el-form-item>
-                    <el-form-item prop="location">
+                    <el-form-item prop="address">
                         <el-col :span="24">
                             <el-input
-                                v-model="ruleForm.location"
-                                placeholder="您的地址*"
+                                v-model="legal.address"
+                                :placeholder="i18n.cla.ADDRESS+'*'"
                             ></el-input>
                         </el-col>
                     </el-form-item>
                     <el-form-item prop="email">
                         <el-col :span="24">
                             <el-input
-                                v-model="ruleForm.email"
-                                placeholder="您的电子邮件*"
+                                v-model="legal.email"
+                                :placeholder="i18n.cla.EMAIL+'*'"
                             ></el-input>
                         </el-col>
                         <el-col :span="2"></el-col>
                     </el-form-item>
-                    <el-form-item prop="phone">
+                    <el-form-item prop="telephone">
                         <el-col :span="24">
                             <el-input
-                                v-model="ruleForm.phone"
-                                placeholder="您的电话"
+                                v-model="legal.telephone"
+                                :placeholder="i18n.cla.PHONE"
                             ></el-input>
                         </el-col>
                     </el-form-item>
-                    <el-form-item prop="printer">
+                    <el-form-item prop="fax">
                         <el-col :span="24">
                             <el-input
-                                v-model="ruleForm.printer"
-                                placeholder="您的传真"
+                                v-model="legal.fax"
+                                :placeholder="i18n.cla.FAX"
                             ></el-input>
                         </el-col>
                         <el-col :span="2"></el-col>
@@ -456,11 +476,27 @@
                     <el-form-item prop="date">
                         <el-col :span="24">
                             <el-input
-                                v-model="ruleForm.date"
-                                placeholder="2020-07-28*"
+                                v-model="legal.date"
+                                :disabled="true"
                             ></el-input>
                         </el-col>
                     </el-form-item>
+                    <div class="mobile-btn">
+                        <el-button
+                            type="primary"
+                            icon="el-icon-edit"
+                            size="medium"
+                            @click="submitForm"
+                            >{{ i18n.cla.EDIT }}</el-button
+                        >
+                        <el-button
+                            type="primary"
+                            icon="el-icon-delete"
+                            size="medium"
+                            @click="resetForm"
+                            >{{ i18n.cla.DELEAT }}</el-button
+                        >
+                    </div>
                 </el-form>
             </div>
         </div>
@@ -468,118 +504,226 @@
 </template>
 
 <script>
+import { signCla } from './../../api/cla'
 let that = null;
+let clienId = 'd00e9b289d8cf8f98e2fc68a9c240304f6413007d82d30701cd1da7e937db75c';
+
+let remoteMethods = {
+    signCla (postData) {
+        signCla(postData)
+        .then(data => {
+            if (data.isSuccess) {
+                that.$message({
+                    message: that.i18n.cla.SIGN_SUCCESS,
+                    type: 'success'
+                });
+            }else{
+                that.$message.error('error');
+            }
+        })
+        .catch(data => {
+            that.$message.error('error');
+        });
+    }
+}
+
+let localMethods = {
+    initClaPage () {
+        let cla = localMethods.readCookie("cla-info");
+        if (!cla || cla === "") {
+            localMethods.oauthLogin();
+            return;
+        }
+        localMethods.renderInfo();
+    },
+    readCookie (name) {
+        let namePrefix = name + "=";
+        let cookies = document.cookie.split(';');
+        for(let i=0; i < cookies.length; i++) {
+            let c = cookies[i];
+            while (c.charAt(0)===' ') c = c.substring(1, c.length);
+            if (c.indexOf(namePrefix) === 0) return c.substring(namePrefix.length, c.length);
+        }
+        return null;
+    },
+    oauthLogin () {
+        let redirectUri = window.location.origin + '/cla';
+        window.location.href = `https://gitee.com/oauth/authorize?client_id=${clienId}&redirect_uri=${encodeURI(redirectUri)}&response_type=code&scope=user_info%20emails`;
+    },
+    renderInfo () {
+        that.type = this.readCookie('type') || 0;
+        if(!that.type){
+            that.individual.name = this.readCookie('name');
+            that.individual.email = this.readCookie('email');
+            that.individual.telephone = this.readCookie('telephone');
+            that.individual.fax = this.readCookie('fax');
+            that.individual.address = this.readCookie('address');
+            that.individual.date = this.readCookie('date');
+        }
+
+        if(that.type){
+            that.legal.name = this.readCookie('name');
+            that.legal.email = this.readCookie('email');
+            that.legal.telephone = this.readCookie('telephone');
+            that.legal.fax = this.readCookie('fax');
+            that.legal.address = this.readCookie('address');
+            that.legal.date = this.readCookie('date');
+            that.legal.corporation = this.readCookie('corporation');
+            that.legal.title = this.readCookie('title');
+        }
+    },
+    getCurDate () {
+        let now = new Date();
+        let year = now.getFullYear();
+        let month = now.getMonth();
+        let date = now.getDate();
+        month = month + 1;
+
+        if (month < 10) month = "0" + month;
+        if (date < 10) date = "0" + date;
+        return year + "-" + month + "-" + date;
+        
+    }
+}
+
 export default {
     data() {
         that = this;
+        let validator = (rule, value, callback, source) => {
+            let mes = '';
+            for(let i in source){
+                mes = that.i18n.cla.VALIDATE[i.toUpperCase()];
+            }
+            if (!value) {
+                return callback(new Error(mes));
+            }
+            return callback();
+        }
         return {
             isShow: true,
-            ruleForm: {
+            individual: {
                 name: "",
                 email: "",
-                phone: "",
-                printer: "",
-                location: "",
-                date: "",
-                contribute: "",
-                office: "",
-                position: "",
-                type: []
+                telephone: "",
+                fax: "",
+                address: "",
+                date: localMethods.getCurDate()
             },
-            rules: {
+            legal: {
+                name: "",
+                email: "",
+                telephone: "",
+                fax: "",
+                address: "",
+                date: localMethods.getCurDate(),
+                contribute: "",
+                corporation: "",
+                title: ""
+            },
+            individualRules: {
                 name: [
                     {
-                        required: true,
-                        message: "请输入您的姓名",
-                        trigger: "blur"
-                    },
-                    {
-                        min: 3,
-                        max: 5,
-                        message: "长度在 3 到 5 个字符",
+                        validator: validator,
                         trigger: "blur"
                     }
                 ],
                 email: [
                     {
-                        required: true,
-                        message: "请输入您的邮箱",
+                        validator: validator,
                         trigger: "blur"
-                    },
-                    {
-                        type: "email",
-                        message: "请输入正确的邮箱地址",
-                        trigger: ["blur", "change"]
                     }
                 ],
-                location: [
+                address: [
                     {
-                        required: true,
-                        message: "请输入您的地址",
+                        validator: validator,
+                        trigger: "blur"
+                    }
+                ]
+            },
+            legalRules: {
+                name: [
+                    {
+                        validator: validator,
                         trigger: "blur"
                     }
                 ],
                 contribute: [
                     {
-                        required: true,
-                        message: "请输入授权贡献者（姓名）",
+                        validator: validator,
                         trigger: "blur"
                     }
                 ],
-                position: [
+                title: [
                     {
-                        required: true,
-                        message: "请输入您的职位",
+                        validator: validator,
                         trigger: "blur"
                     }
                 ],
-                office: [
+                corporation: [
                     {
-                        required: true,
-                        message: "请输入您的公司名称",
+                        validator: validator,
                         trigger: "blur"
                     }
                 ],
-                date: [
-                    { required: true, message: "请输入日期", trigger: "blur" }
+                email: [
+                    {
+                        validator: validator,
+                        trigger: "blur"
+                    }
+                ],
+                address: [
+                    {
+                        validator: validator,
+                        trigger: "blur"
+                    }
                 ]
             },
-            reverse: true,
-            activities: [
-                {
-                    content: "活动按期开始",
-                    timestamp: "2018-04-15"
-                },
-                {
-                    content: "通过审核",
-                    timestamp: "2018-04-13"
-                },
-                {
-                    content: "创建成功",
-                    timestamp: "2018-04-11"
-                }
-            ]
+            type: 0,
+            isMobile: false
         };
     },
     mounted() {
+        if(document.body.getBoundingClientRect().width < 1000){
+            this.isMobile = true;
+        }
+        localMethods.initClaPage();
     },
     methods: {
-        submitForm(formName) {
-            this.$refs[formName].validate(valid => {
+        submitForm() {
+            let strTemp = '';
+            let postData = null;
+            if(!this.type){
+                strTemp = 'individual';
+                postData = this.individual;
+            }else {
+                strTemp = 'legal';
+                postData = this.legal;
+            }
+            postData.type = this.type;
+            postData.lang = this.$lang;
+            postData.client = clienId;
+            this.$refs[strTemp].validate(valid => {
                 if (valid) {
-                    this.$message("恭喜你签署成功！");
-                } else {
-                    this.$message("重置成功！");
-                    return false;
+                    remoteMethods.signCla(postData);
                 }
             });
         },
-        resetForm(formName) {
-            this.$refs[formName].resetFields();
-        },
-        isShowPerson() {
-            this.isShow = !this.isShow;
-            this.$refs.ruleForm.resetFields();
+        resetForm() {
+            let strTemp = '';
+            let postData = null;
+            if(!this.type){
+                strTemp = 'individual';
+                postData = this.individual;
+            }else {
+                strTemp = 'legal';
+                postData = this.legal;
+            }
+            this.$refs[strTemp].resetFields();
+            for(let i in this[strTemp]){
+                if(i != 'date'){
+                    this[strTemp][i] = '';
+                }
+            }
         }
     }
 };
@@ -596,6 +740,28 @@ export default {
         margin-bottom: 20px;
     }
     margin-bottom: 0;
+}
+.cla-mobile {
+    .el-form .el-form-item__error {
+        left: 16px;
+        padding-top: 0;
+    }
+}
+.cla-pc {
+    .el-form .el-form-item__error {
+        left: 39px;
+        padding-top: 0;
+    }
+}
+.mobile-btn {
+    text-align: center;
+}
+.mobile-btn .el-button {
+    margin-right: 0 !important;
+    margin-bottom: 80px !important;
+}
+.mobile-btn .el-button:first-child {
+    margin-right: 40px !important;
 }
 </style>
 <style lang="less" scoped>
@@ -637,7 +803,7 @@ export default {
                 }
             }
             .radio {
-                width: 315px;
+                width: 100%;
                 height: 40px;
                 padding-top: 0px;
                 text-align: center;
@@ -776,6 +942,7 @@ export default {
     .cla-iocn {
         img {
             width: 100%;
+            vertical-align: middle;
         }
     }
 }
