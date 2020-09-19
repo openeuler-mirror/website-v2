@@ -22,8 +22,7 @@ Almost exactly three years ago in June 2017, Huawei launched its public cloud bu
 
 The top vendors in the space were:
 
-<img src="https://blog.huawei.com/wp-content/uploads/2020/06/1-3.png" />
-           Source: [China Internet Watch](https://www.chinainternetwatch.com/22936/public-cloud-market-share-h1-2017/) / **Public Cloud Market Share in H1 2017 (IaaS)**
+<img src="https://blog.huawei.com/wp-content/uploads/2020/06/1-3.png" />Source: [China Internet Watch](https://www.chinainternetwatch.com/22936/public-cloud-market-share-h1-2017/)  **Public Cloud Market Share in H1 2017 (IaaS)**
 
 Three years later, and Canalys has just released its latest figures for the China public cloud market, as of June 2020:
 
