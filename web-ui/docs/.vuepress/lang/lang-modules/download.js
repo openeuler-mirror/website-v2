@@ -21,8 +21,8 @@ module.exports = {
         GET_ISO: 'getIso',
         LIFE_CYCLE: 'lifeCycle',
         DOWNLOAD_BTN_NAME: 'Download',
-        MANUFACTURER: 'manufacturer',
-        PUBLISH_DATE: 'PUBLISH_DATE',
+        MANUFACTURER: 'Manufacturer',
+        PUBLISH_DATE: 'Publish-date',
         DOWNLOAD_LIST : require('././../../data/download').en.DOWNLOAD_LIST
     }
 };
