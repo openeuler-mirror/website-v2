@@ -83,22 +83,22 @@ module.exports = {
                     {
                         TITLE: "树莓派",
                         IMG: "/img/home/areaPai.png",
-                        LINK:"javascript:void(0)"
+                        LINK:"https://gitee.com/openeuler/raspberrypi"
                     },
                     {
                         TITLE: "硬件",
                         IMG: "/img/home/areaHardware.svg",
-                        LINK:"javascript:void(0)"
+                        LINK:"/zh/docs/20.03_LTS/docs/Installation/installation.html"
                     },
                     {
                         TITLE: "虚拟机",
                         IMG: "/img/home/areaVirtual.svg",
-                        LINK:"javascript:void(0)"
+                        LINK:"/zh/docs/20.03_LTS/docs/Virtualization/virtualization.html"
                     },
                     {
                         TITLE: "ECS",
                         IMG: "/img/home/areaECS.svg",
-                        LINK:"javascript:void(0)"
+                        LINK:"https://huaweicloud.com/product/ecs.html"
                     }
                 ]
             }
@@ -407,22 +407,22 @@ module.exports = {
                     {
                         TITLE: "Raspberry Pi",
                         IMG: "/img/home/areaPai.png",
-                        LINK:"javascript:void(0)"
+                        LINK:"https://gitee.com/openeuler/raspberrypi"
                     },
                     {
                         TITLE: "Hardware",
                         IMG: "/img/home/areaHardware.svg",
-                        LINK:"javascript:void(0)"
+                        LINK:"/en/docs/20.03_LTS/docs/Installation/installation.html"
                     },
                     {
                         TITLE: "VM",
                         IMG: "/img/home/areaVirtual.svg",
-                        LINK:"javascript:void(0)"
+                        LINK:"/en/docs/20.03_LTS/docs/Virtualization/virtualization.html"
                     },
                     {
                         TITLE: "ECS",
                         IMG: "/img/home/areaECS.svg",
-                        LINK:"javascript:void(0)"
+                        LINK:"https://huaweicloud.com/product/ecs.html"
                     }
                 ]
             }
