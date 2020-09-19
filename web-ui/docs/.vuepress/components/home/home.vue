@@ -134,7 +134,7 @@
                                     :class="$lang == 'en'?'en-guide-way':''"
                                     v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_GUIDE.GUIDE_WAY"
                                     :key="index">
-                                <a :href="item.LINK">
+                                <a @click="goInstall(item.LINK)" target="_blank">
                                     <img :src="item.IMG" alt="">
                                     <span>{{ item.TITLE }}</span>
                                 </a>
@@ -494,6 +494,13 @@
                     window.open(path);
                 }else{
                     this.isShowCard = !this.isShowCard;
+                }
+            },
+            goInstall(path) {
+                if (path.includes("http") || path.includes("https")) {
+                    window.open(path);
+                } else {
+                    this.$router.push(path);
                 }
             },
             e(selector) {
