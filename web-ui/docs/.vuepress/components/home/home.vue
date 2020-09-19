@@ -1661,9 +1661,10 @@
         }
         .area-box p {
             display: inline-block;
-            font-size: 18px;
+            font-size: 16px;
             color: #002fa7;
             margin-left: 16px;
+            font-family: Roboto-Bold;
         }
         .area-box img {
             display: block;
