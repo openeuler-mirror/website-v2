@@ -64,7 +64,7 @@
                             <span class="first-tag">{{i18n.community.BLOG.LABEL}}:</span>
                             <span v-for="(tag, indexTag) in item.frontmatter.tags" :key="indexTag">
                                 <span @click="clickTagItem(tag)" class="tag-item">{{tag}}</span>
-                                <span v-if="indexTag != (item.frontmatter.tags.length - 1)">、</span>
+                                <span v-if="indexTag != (item.frontmatter.tags.length - 1)">, </span>
                             </span>
                         </p>
                     </div>
@@ -219,7 +219,7 @@ export default {
         getTags() {
             let tagsArr = [];
             let tagsArrUniq = [];
-            tagsArrUniq.push({value:'全部',label:'all'});
+            tagsArrUniq.push({value:this.i18n.community.BLOG.ALL,label:'all'});
             this.$sitePages.forEach((item) => {
                 if (item.path.indexOf("/" + this.$lang + "/blog/") !== 0) {
                     return;
@@ -251,7 +251,7 @@ export default {
         getTimes() {
             let timesArr = [];
             let timesArrUniq = [];
-            timesArrUniq.push({value:'全部',label:'all'});
+            timesArrUniq.push({value:this.i18n.community.BLOG.ALL,label:'all'});
             this.$sitePages.forEach((item) => {
                 if (item.path.indexOf("/" + this.$lang + "/blog/") !== 0) {
                     return;

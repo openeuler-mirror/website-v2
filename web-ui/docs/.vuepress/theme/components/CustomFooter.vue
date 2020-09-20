@@ -96,6 +96,8 @@ export default {
       justify-content: center;
       align-items: flex-end;
       .footer-copyright {
+        width: 100%;
+        text-align: center;
         color: #fff;
         margin-top: 21px;
         font-size: 12px;

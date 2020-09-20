@@ -2,8 +2,8 @@
 title: openEuler community release rule and life cycle management
 date: 2020-03-25
 tags:
-    - release
-    - lifecycle
+    - Release
+    - Lifecycle
 archives: 2020-03
 author: WangXun, Technical Committee
 summary: openEuler lifecycle.
