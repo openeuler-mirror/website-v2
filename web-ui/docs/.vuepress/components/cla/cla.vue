@@ -530,7 +530,7 @@ let remoteMethods = {
 let localMethods = {
     initClaPage () {
         let cla = localMethods.readCookie("cla-info");
-        if (!cla || cla == "") {
+        if (!cla || cla === "") {
             localMethods.oauthLogin();
             return;
         }
@@ -541,8 +541,8 @@ let localMethods = {
         let cookies = document.cookie.split(';');
         for(let i=0; i < cookies.length; i++) {
             let c = cookies[i];
-            while (c.charAt(0)==' ') c = c.substring(1, c.length);
-            if (c.indexOf(namePrefix) == 0) return c.substring(namePrefix.length, c.length);
+            while (c.charAt(0)===' ') c = c.substring(1, c.length);
+            if (c.indexOf(namePrefix) === 0) return c.substring(namePrefix.length, c.length);
         }
         return null;
     },
