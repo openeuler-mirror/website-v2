@@ -276,19 +276,19 @@ module.exports = {
             MAIL: 'contact@openeuler.org',
             COPY_RIGHT: 'Copyright © 2020 openEuler. All rights reserved.',
             RIGHT_LIST: [{
-                    NAME: 'TradeMark',
+                    NAME: 'Trademark',
                     URL: '/other/brand/'
                 },
                 {
-                    NAME: 'Legal',
+                    NAME: 'Legal Notice',
                     URL: '/other/legal/'
                 },
                 {
-                    NAME: 'Privacy',
+                    NAME: 'Privacy Policy',
                     URL: '/other/privacy/'
                 }
             ],
-            QR_CODE: 'Wechat Subscription'
+            QR_CODE: 'WeChat Subscription'
         },
         BUILDING:{
             BUILDING:'Building',

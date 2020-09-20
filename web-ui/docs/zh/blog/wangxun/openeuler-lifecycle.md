@@ -2,8 +2,8 @@
 title: openEuler社区版本命名，发布时间与生命周期管理
 date: 2020-03-25
 tags:
-    - release
-    - lifecycle
+    - Release
+    - Lifecycle
 archives: 2020-03
 author: WangXun, Technical Committee
 summary: openEuler lifecycle。
