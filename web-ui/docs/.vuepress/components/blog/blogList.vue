@@ -161,7 +161,6 @@ export default {
             this.CELECT_FILE = this.i18n.community.BLOG.CELECT_FILE;
         }
         })
-        console.log('data', this.formData.tag)
     },
     methods: {
         handleCurrentChange(val) {
