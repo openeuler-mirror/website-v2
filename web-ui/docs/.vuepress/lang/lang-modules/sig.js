@@ -139,8 +139,8 @@ module.exports = {
         SIG_LIST: {
             HOME_PAGE: 'Go to gitee home page',
             MAIL: 'mail',
-            IRC: 'IRC channel',
-            MANAGER: 'administrators'
+            IRC: 'IRC Channel',
+            MANAGER: 'Administrators'
         },
         SIG_DETAIL: {
             ORGANIZING_MEETINGS: 'organizing meetings',

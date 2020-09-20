@@ -2,7 +2,7 @@
 title: The Future of Cloud in a COVID-19 Era
 date: 2020-06-24
 tags:
-    - cloud
+    - Cloud
     - COVID-19
     - Open Hardware
 archives: 2020-06

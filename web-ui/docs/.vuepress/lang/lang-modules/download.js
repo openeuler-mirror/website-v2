@@ -15,14 +15,14 @@ module.exports = {
         DOWNLOAD_LIST : require('././../../data/download').cn.DOWNLOAD_LIST
     },
     en: {
-        RELEASE_DESC: 'releaseDescription',
-        INSTALL_GUIDENCE: 'installGuidence',
-        SEEK_HELP: 'seekHelp',
-        GET_ISO: 'getIso',
-        LIFE_CYCLE: 'lifeCycle',
+        RELEASE_DESC: 'Release Description',
+        INSTALL_GUIDENCE: 'Installation Guide',
+        SEEK_HELP: 'Seek Help',
+        GET_ISO: 'Get Iso',
+        LIFE_CYCLE: 'Lifecycle',
         DOWNLOAD_BTN_NAME: 'Download',
         MANUFACTURER: 'Manufacturer',
-        PUBLISH_DATE: 'Publish-date',
+        PUBLISH_DATE: 'Data of Publication',
         DOWNLOAD_LIST : require('././../../data/download').en.DOWNLOAD_LIST
     }
 };

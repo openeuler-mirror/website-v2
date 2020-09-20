@@ -460,7 +460,7 @@ export default {
                   margin-left: 0;
               }
               &:nth-of-type(4n){
-                  margin-left: 0;
+                  margin-left: 20px;
               }
               @media (max-width: 1000px) {
                 margin-bottom: 20px;
