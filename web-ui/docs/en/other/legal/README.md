@@ -11,9 +11,9 @@ title: "Legal"
 </ClientOnly>
 <div class="markdown">
 
-This legal notice contains legal policies for the openEuler community. These policies govern this site and Project releases hosted by openEuler community.
+This legal notice contains legal policies for the openEuler community. These policies govern this site and project releases hosted by openEuler community.
 
-## Terms and Conditions for Accessing the openEuler community Website
+## Terms and Conditions for Accessing the openEuler Community Website
 
 <https://openeuler.org> is operated by openEuler community. The following rules apply to all visitors to this website. openEuler community may, without notice to you and at any time, revise these terms according to laws, regulations, and market changes. The right to access this website is granted by openEuler community according to the terms specified in this Notice. If you do not agree to these terms, please do not use this website. By accessing, browsing, or using this website and the services provided herein, you acknowledge that you agree with all contents of this Notice. In the event of any violation of these terms and conditions, openEuler community reserves the right to seek all remedies available by law and in equity against such violations.
 
@@ -54,15 +54,15 @@ No individual shall use the name, trademark, or logo of openEuler community by a
 ## Links to Third-Party Websites
 
 This website may contain links to third-party websites. 
-Access to any other website linked to on this website is at the user’s own risk and openEuler community is not responsible for the accuracy, 
+Access to any other website linked to on this website is at the user's own risk and openEuler community is not responsible for the accuracy, 
 completeness, adequacy, and reliability of any information, data, opinion, picture, advice, or statement on these websites. 
 openEuler community provides these links merely as a convenience and the inclusion of such links does not imply an endorsement, 
 recommendation, promotion, or advertisement.
 
 ## Applicable Law and Dispute Resolution
 
-Access and all related activities on or through this Website shall be governed by, construed, 
-and interpreted in accordance with the laws of the People’s Republic of China. 
-You agree that any dispute between the parties arising out of or in connection with this legal notice or your access and all related activities on or through this Website shall be governed by a court with jurisdiction in Shenzhen, Guangdong Province of the People’s Republic of China.
+Access and all related activities on or through this website shall be governed by, construed, 
+and interpreted in accordance with the laws of the People's Republic of China. 
+You agree that any dispute between the parties arising out of or in connection with this legal notice or your access and all related activities on or through this website shall be governed by a court with jurisdiction in Shenzhen, Guangdong Province of the People's Republic of China.
 
 </div>
