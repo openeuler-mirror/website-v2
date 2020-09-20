@@ -55,7 +55,7 @@
             icon="el-icon-download"
             @click="download(item.DOWNLOAD_URL)"
           >{{ i18n.download.DOWNLOAD_BTN_NAME }}</el-button>
-          <p>{{ item.DESC }}</p>
+          <p class="item-desc" :title="item.DESC">{{ item.DESC }}</p>
           <div class="url-list-wrapper">
             <ul class="url-list">
                 <li v-if="item.RELEASE_DESC_URL?true:false">
@@ -420,6 +420,14 @@ export default {
             display: inline-block;
             line-height: 8px;
           }
+        }
+        .item-desc {
+            height: 48px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
         }
         p {
           font-size: 14px;
