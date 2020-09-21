@@ -551,7 +551,7 @@ let localMethods = {
         window.location.href = `https://gitee.com/oauth/authorize?client_id=${clienId}&redirect_uri=${encodeURI(redirectUri)}&response_type=code&scope=user_info%20emails`;
     },
     renderInfo () {
-        that.type = this.readCookie('type') || 0;
+        that.type = parseInt(this.readCookie('type') || 0);
         if(!that.type){
             that.individual.name = this.readCookie('name');
             that.individual.email = this.readCookie('email');
