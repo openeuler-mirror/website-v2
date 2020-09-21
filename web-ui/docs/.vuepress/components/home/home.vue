@@ -13,15 +13,10 @@
                     </div>
                 </el-carousel-item>
                 <el-carousel-item class="carousel-item">
-                    <a class="banner-link"  @click="go('/news/20200607.html')">
-                        <div class="banner-item">
-                            <div class="card-summer">
-                                    <img src="/img/home/BannerSummer.png" alt="">
-                                    <span>{{ i18n.home.HOME_CAROUSEL_DATA[0].DES }}</span>
-                            </div>
-                            <img class="banner-gif" src="/img/home/BannerS.gif">
-                        </div>
-                    </a>
+                    <div class="train-banner-box">
+                        <img :src="i18n.home.HOME_OPENEULER_NEW.TRAIN_PC_IMG" alt=""/>
+                        <img :src="i18n.home.HOME_OPENEULER_NEW.TRAIN_PC_GIF" alt=""/>
+                    </div>
                 </el-carousel-item>
                 <el-carousel-item
                         class="carousel-item"
@@ -64,6 +59,10 @@
                         </div>
                     </div>
                 </el-carousel-item>
+                <el-carousel-item class="carousel-item">
+                    <div class="base-software-box" @click="go(i18n.home.HOME_OPENEULER_NEW.BASE_SOFTWARE_LINK)" :style="{backgroundImage:i18n.home.HOME_OPENEULER_NEW.BASE_SOFTWARE_PCIMG}">
+                    </div>
+                </el-carousel-item>
             </el-carousel>
         </div>
         <div class="is-h5 home-carousel">
@@ -83,11 +82,8 @@
                     </div>
                 </el-carousel-item>
                 <el-carousel-item class="carousel-item">
-                    <a @click="go('/news/20200607.html')">
-                        <div class="card-summer">
-                            <img src="/img/home/BannerS.gif" alt="">
-                        </div>
-                    </a>
+                    <div class="train-img" @click="go(i18n.home.HOME_OPENEULER_NEW.TRAIN_LINK)" :style="{backgroundImage:i18n.home.HOME_OPENEULER_NEW.TRAIN_MOBILE_IMG}">
+                    </div>
                 </el-carousel-item>
                 <el-carousel-item
                         class="carousel-item-index"
@@ -104,6 +100,10 @@
                 </el-carousel-item>
                 <el-carousel-item class="carousel-item">
                     <div class="HC-mobile-box" @click="go(i18n.home.HOME_OPENEULER_NEW.HC_ADRESSION)" :style="{backgroundImage:i18n.home.HOME_OPENEULER_NEW.HC_MOBILE_IMG}">
+                    </div>
+                </el-carousel-item>
+                <el-carousel-item class="carousel-item">
+                    <div class="base-software-box" @click="go(i18n.home.HOME_OPENEULER_NEW.BASE_SOFTWARE_LINK)" :style="{backgroundImage:i18n.home.HOME_OPENEULER_NEW.BASE_SOFTWARE_MOBILEIMG}">
                     </div>
                 </el-carousel-item>
             </el-carousel>
@@ -473,7 +473,7 @@
                 rooms2: false,
                 rooms3: false,
                 calenderData: [],
-                autoPlay: false,
+                autoPlay: true,
                 videoCtrlParams:{
                     element:'',
                     isShow:false,  //默认不显示控制器
@@ -741,6 +741,20 @@
         background-size: contain;
         background-repeat: no-repeat;
     }
+    .carousel-item .train-banner-box{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        img{
+            display: inline-block;
+            &:last-of-type{
+                margin-left: 211px;
+            }
+        }
+    }
     .carousel-item .card-summer {
         width: 620px;
         margin-top: 100px;
@@ -768,6 +782,16 @@
         margin-left: 0;
         text-align: left;
         width: 100%;
+    }
+    .carousel-item .base-software-box{
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+        @media screen and (max-width: 1000px) {
+            background-size: 100% 100%;
+        }
     }
     .carousel-item img {
         z-index: -1;
@@ -1565,6 +1589,12 @@
                 height: 100%;
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
+            }
+            .carousel-item .train-img{
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: contain;
             }
         }
         .is-pc.mapArea {
