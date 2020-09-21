@@ -506,7 +506,7 @@
 <script>
 import { signCla } from './../../api/cla'
 let that = null;
-let clienId = 'd00e9b289d8cf8f98e2fc68a9c240304f6413007d82d30701cd1da7e937db75c';
+let clienId = '98aab4ba781cebcc31f081f5a2687be63668b89dbebb156312b8b9d4a57885d7';
 
 let remoteMethods = {
     signCla (postData) {
