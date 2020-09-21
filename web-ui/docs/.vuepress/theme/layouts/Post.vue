@@ -387,7 +387,7 @@ export default {
 </style>
 <style lang="less">
 #blog_content {
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
         img{
             width: 100%;
         }
@@ -396,6 +396,16 @@ export default {
             word-wrap: break-word;
             word-break: normal;
         }
+        table{
+            word-break:break-all;
+            tr{
+                td{
+                    &:first-of-type,&:nth-of-type(2){
+                        word-break:normal;
+                    }
+                }
+            }
+    }
     }
 }
 </style>

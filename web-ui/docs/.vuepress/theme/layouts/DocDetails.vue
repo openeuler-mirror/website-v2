@@ -2,7 +2,7 @@
   <div class="doc-details-content">
     <div
       class="details-left"
-      :class="[showMobileMenu && 'show-mobile-menu', !showMobileMenu && 'hide-mobile-menu']"
+      :class="[showMobileMenu && 'show-mobile-menu', !showMobileMenu && 'hide-mobile-menu',$lang == 'en'?'en-mobile-width':'']"
     >
       <div class="version-div" v-if="!showMobileMenu">
           <span>{{version}}</span>
@@ -33,6 +33,7 @@
         node-key="path"
         :highlight-current="true"
         @node-click="handleNodeClick"
+        :class="$lang == 'en'?'dialog-tree':''"
       ></el-tree>
     </div>
     <div class="mobile-previous-and-next" :class="{ mask: showMobileMenu }" @click="showMobileMenu = false"></div>
@@ -109,7 +110,8 @@ export default {
       //是否等于下标
       isIndex:0,
       versionArr:[],
-      showSelection:false
+      showSelection:false,
+      timer:null
     };
   },
   created() {
@@ -243,10 +245,11 @@ export default {
         this.isIndex = index;
     },
     changeVersion(item){
+        this.menuData = [];
         this.secondTitleList = [];
         this.showSelection = !this.showSelection;
         this.$router.push(this.targetLocale + "docs/" + item + "/docs/Releasenotes/release_notes.html");
-        setTimeout(() => {
+        this.timer = setInterval(()=>{
             let currentPath = this.$route.path;
             this.version = currentPath.split("/")[3];
             this.menuData = require("../../../" +
@@ -259,7 +262,10 @@ export default {
             this.allPathArr = this.getAllPathArr(this.menuData);
             this.getNextPathAndPreviousPath();
             this.getSecondTitle();
-        },200); 
+        },300)
+        if(this.menuData.length != 0){
+            clearInterval(this.timer);
+        }
     },
     clickOutside(){
         if(this.showSelection){
@@ -275,19 +281,28 @@ export default {
         },500);
     }
   },
+  destroyed () {
+        clearInterval(this.timer);
+    }
 };
 </script>
 
 <style lang="less">
 .doc-details-content {
   width: 1120px;
-  margin: 0 auto;
-  margin-top: 60px;
-  margin-bottom: 400px;
+  margin: 60px auto 400px auto;
+}
+.dialog-tree .el-tree-node .el-tree-node__content span{
+    position: absolute;
+    white-space: normal;
+    line-height: 20px;
 }
 .el-tree{
     max-height: calc(100vh - 344px);
-    overflow-y: hidden;
+    @media screen and (max-width: 1000px) {
+        max-height: calc(100vh - 450px);
+    }
+    overflow-y: scroll;
     &::-webkit-scrollbar-track {
         border-radius:10px;
         background-color:#F1F1F1;
@@ -298,9 +313,6 @@ export default {
     &::-webkit-scrollbar-thumb {
         border-radius:10px;
         background-color:#AFBFE8;
-    }
-    &:hover{
-        overflow-y: scroll;
     }
     overflow-x: hidden;
 }
@@ -315,7 +327,7 @@ export default {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .details-left {
-  width: 192px;
+  width: 206px;
   display: inline-block;
   vertical-align: top;
   position: fixed;
@@ -417,6 +429,7 @@ export default {
     }
     @media (max-width: 1000px) {
       width: 100%;
+      padding: 30px 30px 0 30px;
     }
   }
 }
@@ -431,6 +444,7 @@ export default {
     display: inline-block;
     overflow: hidden;
     position: fixed;
+    max-height: calc(100vh - 296px);
     .null-box{
         height: 20px;
     }
@@ -484,7 +498,14 @@ export default {
       text-decoration: none;
     }
     img {
-      width: 100%;
+        max-width: 100%;
+      @media screen and (max-width: 1000px) {
+          width: 100%;
+      }
+    }
+    img[src*=data]{
+        width: 25px;
+        height: 25px;
     }
   }
   h1,
@@ -557,13 +578,15 @@ export default {
     margin-top: 0px;
     margin-bottom: 80px;
   }
+  .en-mobile-width{
+    width: calc(100% + 30px) !important;
+  }
   .details-left {
     width: 282px;
     padding-top: 20px;
     vertical-align: top;
     > div > div > div.el-tree-node__content {
       height: 46px;
-      line-height: 646px;
       span {
         font-size: 16px;
       }
@@ -596,7 +619,7 @@ export default {
     }
   }
   .show-mobile-menu {
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     padding-left: 30px;
     margin-left: -30px;
@@ -618,7 +641,9 @@ export default {
       display: block;
 	}
 	.menu-box{
-		height: 50px;
+        width: 100%;
+        height: 50px;
+        position: fixed;
 		background: rgba(251, 251, 251, 1);
 		box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
 		margin-bottom: 40px;

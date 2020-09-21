@@ -473,7 +473,7 @@
                 rooms2: false,
                 rooms3: false,
                 calenderData: [],
-                autoPlay: true,
+                autoPlay: false,
                 videoCtrlParams:{
                     element:'',
                     isShow:false,  //默认不显示控制器
@@ -749,6 +749,10 @@
         align-items: center;
         cursor: pointer;
         img{
+            &:first-of-type{
+                width: 620px;
+                height: 400px;
+            }
             display: inline-block;
             &:last-of-type{
                 margin-left: 211px;
@@ -791,6 +795,7 @@
         cursor: pointer;
         @media screen and (max-width: 1000px) {
             background-size: 100% 100%;
+            background-position: center;
         }
     }
     .carousel-item img {
@@ -803,13 +808,14 @@
     .carousel-item .HC-box{
         position: relative;
         cursor: pointer;
-        width: 100%;
-        height: 100%;
+        width: 1080px;
+        height: 500px;
+        margin: 0 auto;
     }
     .carousel-item .HC-left-box{
         position: absolute;
         top: 15%;
-        left: 18%;
+        left: 5%;
         img{
             width: 65px;
             height: 47px;
