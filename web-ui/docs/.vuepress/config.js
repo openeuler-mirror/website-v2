@@ -18,6 +18,9 @@ module.exports = {
     plugins: [
         [require('./sitePlugin.js')]
     ],
+    shouldPrefetch: () => {
+        return false;
+    },
     locales: {
         '/': {
             lang: 'zh',

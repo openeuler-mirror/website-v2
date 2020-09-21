@@ -62,7 +62,7 @@ router.get('/insert', function (req, res, next) {
 
     let dirPath = '';
     if (model === 'docs') {
-        dirPath = path.join(CONF.DOCS_PATH, version, 'docs', 'content', lang, 'docs');
+        dirPath = path.join(CONF.DOCS_PATH, version, lang, 'docs');
     } else {
         dirPath = path.join(CONF.NEWS_BLOG_PATH, lang, model);
         version = 'master';
