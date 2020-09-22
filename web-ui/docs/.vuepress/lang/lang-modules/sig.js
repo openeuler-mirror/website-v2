@@ -144,7 +144,7 @@ module.exports = {
             MANAGER: 'Administrators'
         },
         SIG_DETAIL: {
-            NO_MEETINGS: 'There is no meeting for the time being',
+            NO_MEETINGS: 'Not available now',
             ORGANIZING_MEETINGS: 'organizing meetings',
             MEMBERS: 'project members',
             CONTACT: 'contact',
