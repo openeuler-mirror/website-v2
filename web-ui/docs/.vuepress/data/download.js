@@ -14,7 +14,7 @@ module.exports = {
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS/ISO/',
                 LIFE_CYCLE_URL: '/zh/other/lifecycle/',
-                MANUFACTURER: '华为',
+                MANUFACTURER: 'openEuler社区',
                 PUBLISH_DATE: '2020/03',
                 LTS: true
             },
@@ -27,7 +27,7 @@ module.exports = {
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openeuler1.0/base/iso/',
                 LIFE_CYCLE_URL: '/zh/other/lifecycle/',
-                MANUFACTURER: '华为',
+                MANUFACTURER: 'openEuler社区',
                 PUBLISH_DATE: '2020/02',
                 LTS: false
             }
@@ -44,7 +44,7 @@ module.exports = {
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS/',
                 LIFE_CYCLE_URL: '/en/other/lifecycle/',
-                MANUFACTURER: 'Huawei',
+                MANUFACTURER: 'openEuler community',
                 PUBLISH_DATE: '2020/03',
                 LTS: true
             },
@@ -56,7 +56,7 @@ module.exports = {
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openeuler1.0/base/iso/',
                 LIFE_CYCLE_URL: '/en/other/lifecycle/',
-                MANUFACTURER: 'Huawei',
+                MANUFACTURER: 'openEuler community',
                 PUBLISH_DATE: '2020/02',
                 LTS: false
             }

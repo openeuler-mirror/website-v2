@@ -8,7 +8,7 @@ export const signCla = (postData) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
             otherBaseUrl: sigApi,
-            url: '/cla/',
+            url: '/cla',
             type: 'post',
             data: postData,
             success(result) {
