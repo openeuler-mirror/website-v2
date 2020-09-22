@@ -8,7 +8,7 @@
         :outside-name="i18n.interaction.LIVE.LIVE"
         ></common-banner>
         <div class="live-ist">
-        <div class="now-start">
+        <div class="now-start" v-if="i18n.interaction.LIVE.LIVENOW.length == 0?false:true">
             <div class="now-start-title">{{i18n.interaction.LIVE.WILLPLAYER}}</div>
             <div class="now-start-content">
             <div

@@ -147,4 +147,9 @@ export default {
     }
   }
 }
+@media screen and (min-width: 1000px) and (max-width: 1120px){
+    .footer-content {
+        width: 100% !important;
+    }
+}
 </style>

@@ -226,6 +226,7 @@ h3 {
     margin-left: 30px;
     width: 110px;
     height: 110px;
+    flex-shrink: 0;
 }
 
 @media screen and (max-width: 1000px) {
@@ -271,6 +272,14 @@ h3 {
         padding: 10px 0;
         margin: 20px auto 0;
         box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+}
+@media screen and (min-width: 1000px) and (max-width:1120px){
+    .step-line{
+        width: 22px;
+    }
+    .sig-guidance {
+        max-width: 100%;
     }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <div class="is-pc home-carousel">
+        <div class="is-pc home-carousel" v-if="!isShowH5">
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" @change="eventChange()">
                 <el-carousel-item>
                     <div class="carousel-video">
@@ -65,7 +65,7 @@
                 </el-carousel-item>
             </el-carousel>
         </div>
-        <div class="is-h5 home-carousel">
+        <div class="is-h5 home-carousel" v-if="isShowH5">
             <el-carousel class="home-banner" trigger="click" :interval="5000">
                 <el-carousel-item>
                     <div class="carousel-video">
@@ -112,7 +112,7 @@
             <h1>{{ i18n.home.HOME_INTRODUCE.INTRO_TITLE }}</h1>
             <h3 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_INTRODUCE.INTRO_HEAD }}</h3>
             <p :class="$lang == 'en'?'en-p':''">{{ i18n.home.HOME_INTRODUCE.INTRO_DESCRIPTION }}</p>
-            <div class="is-pc mapArea">
+            <div class="is-pc mapArea" v-if="!isShowH5">
                 <div :class="['area-box','in-pc',$lang == 'en' && index == 3?'en-areabox-down':'']" v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP" :key="index">
                     <a v-if="(index !== 3)" @click="go(item.LINK)" target="_blank">
                         <div class="box-icon">{{ item.NAME }}</div>
@@ -160,7 +160,7 @@
                 <img class="is-pc rode-right" src="/img/home/rodeRight.svg" alt="">
                 <img class="is-pc plane-right" src="/img/home/planeRight.svg" alt="">
             </div>
-            <div class="is-h5 mapArea">
+            <div class="is-h5 mapArea" v-if="isShowH5">
                 <div
                     class="area-box"
                     v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP"
@@ -200,7 +200,7 @@
         </div>
 
         <div class="home-newsroom">
-            <div class="is-pc room-right">
+            <div class="is-pc room-right" v-if="!isShowH5">
                 <div class="room-title">
                     <a v-for="(item, index) in roomName" :key="index" :class="{'active': currentRoom === index,'en-weight-family':$lang == 'en'}" @click="vueToggle(index)">{{ item }} </a>
                 </div>
@@ -242,7 +242,7 @@
                     </div>
                 </div>
             </div>
-            <div class="is-pc room-left">
+            <div class="is-pc room-left" v-if="!isShowH5">
                 <template>
                     <el-carousel indicator-position="none" :autoplay="false" arrow="never" ref="newsroomCard" class="room-card">
                         <el-carousel-item>
@@ -264,7 +264,7 @@
                 </template>
 
             </div>
-            <div class="is-h5 newsroom">
+            <div class="is-h5 newsroom" v-if="isShowH5">
                 <div class="event-room">
                     <h5>{{ i18n.home.HOME_ROOMS.EVENT_NAME }}</h5>
                     <div class="rooms"
@@ -473,13 +473,15 @@
                 rooms2: false,
                 rooms3: false,
                 calenderData: [],
-                autoPlay: false,
+                autoPlay: true,
                 videoCtrlParams:{
-                    element:'',
-                    isShow:false,  //默认不显示控制器
+                    element: '',
+                    isShow: false,  //默认不显示控制器
                 },
-                isNowPlay:false,
-                isShowCard:false,  //是否显示移动端点击体验的卡片
+                isNowPlay: false,
+                isShowCard: false,  //是否显示移动端点击体验的卡片
+                screenWidth: '',   //获取屏幕宽度
+                isShowH5: false
             }
         },
         mounted() {
@@ -488,6 +490,10 @@
             this.roomName = this.i18n.home.HOME_ROOMS.ROOM_NAME
             this.toggleHover();
             this.getRoomsData();
+            this.screenWidth = document.body.clientWidth;
+            if(this.screenWidth <= 1000){
+                this.isShowH5 = true;
+            }
         },
         components: {
             calender,
@@ -792,10 +798,10 @@
         height: 100%;
         background-repeat: no-repeat;
         background-size: contain;
+        background-position: center;
         cursor: pointer;
         @media screen and (max-width: 1000px) {
             background-size: 100% 100%;
-            background-position: center;
         }
     }
     .carousel-item img {

@@ -501,7 +501,7 @@ export default {
           width: 100%;
       }
     }
-    img[src*=data]{
+    img[src*=gif]{
         width: 25px;
         height: 25px;
     }
@@ -644,10 +644,10 @@ export default {
         position: fixed;
 		background: rgba(251, 251, 251, 1);
 		box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
-		margin-bottom: 40px;
 		display: flex;
 		justify-content: space-around;
-		align-items: center;
+        align-items: center;
+        z-index: 88888;
 		.menu-doc {
 				text-align: center;
 				flex: 2;
@@ -668,5 +668,20 @@ export default {
   .details-right {
     display: none;
   }
+}
+@media screen and (min-width: 1000px) and (max-width:1120px){
+    .doc-details-content{
+        width: 100% !important;
+    }
+    .details-center{
+        margin: 0 0 0 260px;
+        width: calc(100% - 260px);
+    }
+    .details-left{
+        width: 250px;
+    }
+    .details-right{
+        display: none;
+    }
 }
 </style>
