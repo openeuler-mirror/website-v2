@@ -16,11 +16,11 @@
                     </li>
                     <li>
                         <img src="/img/sig/mail.svg" alt="">
-                        <span>{{i18n.sig.SIG_LIST.MAIL}}：<a :href="'mailto:'+item.maillist">{{item.maillist}}</a></span>
+                        <span>{{i18n.sig.SIG_LIST.MAIL}}{{$isCn?'：':': '}}<a :href="'mailto:'+item.maillist">{{item.maillist}}</a></span>
                     </li>
                     <li>
                         <img src="/img/sig/chanel.svg" alt="">
-                        <span>{{i18n.sig.SIG_LIST.IRC}}：{{item.irc}}</span>
+                        <span>{{i18n.sig.SIG_LIST.IRC}}{{$isCn?'：':': '}}{{item.irc}}</span>
                     </li>
                     <li>
                         <img src="/img/sig/members.svg" alt="">

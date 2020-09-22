@@ -17,21 +17,21 @@ openEuler understands the importance of your privacy and fully respects it. If y
 
 When you sign our Contribution License Agreement (CLA), we will collect your following personal data: 
 
-+ name or account
++ Name or account
 
-+ address
++ Address
 
-+ e-mail address
++ E-mail address
 
-+ phone number
++ Phone number
 
-+ fax number
++ Fax number
 
 + Gitee ID
 
 When you use our e-mail subscription service, we will collect your following personal data:
 
-+ email address
++ Email address
 
 To understand the operating status of the openEuler community and provide better services, we will collect your following personal data
 
@@ -65,7 +65,7 @@ We may update or modify this statement in response to changes in our services or
 
 ## 7. How to contact us
 
-If you want to contact us, please contact us by:
+If you want to contact us, please contact us at:
 
 Contact: <contact@openeuler.org>
 

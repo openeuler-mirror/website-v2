@@ -521,8 +521,8 @@ let remoteMethods = {
                 that.$message.error(data.description);
             }
         })
-        .catch(data => {
-            that.$message.error(data.description || 'error');
+        .catch(error => {
+            that.$message.error(error.response.data.description || 'error');
         });
     }
 }

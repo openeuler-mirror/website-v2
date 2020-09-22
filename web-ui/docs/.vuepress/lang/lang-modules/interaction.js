@@ -598,7 +598,7 @@ module.exports = {
             VIDEODOWNLOAD: 'Slides',
             FRIENDSHIPLINK: 'Links',
             SPEECHLIST: [{
-                    SPEECHTIME: '09:30 - 09:40，17th April',
+                    SPEECHTIME: '09:30 - 09:40, 17th April',
                     SPEECHTHEME: 'openEuler Drives a Robust Multi-Core, Heterogeneous Computing Industry',
                     SPEECHER: 'Jiang Dayong',
                     SPEECHCONTENT: '',
@@ -607,7 +607,7 @@ module.exports = {
                     SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
                 {
-                    SPEECHTIME: '09:40 - 09:50，17th April',
+                    SPEECHTIME: '09:40 - 09:50, 17th April',
                     SPEECHTHEME: 'openEuler: The Industry Propeller and Super Workshop',
                     SPEECHER: 'WangZhun',
                     SPEECHCONTENT: 'Focusing on IT transformation and industrial Internet construction in traditional industries, he has chaired the architecture planning of national-level information technology projects and provided consulting services to major ministries and central enterprises. As a member of the Association of Enterprise Architect, he is committed to promoting the rollout and implementation of enterprise architecture in China.',
@@ -616,7 +616,7 @@ module.exports = {
                     SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
                 {
-                    SPEECHTIME: '09:50 - 10:30，17th April',
+                    SPEECHTIME: '09:50 - 10:30, 17th April',
                     SPEECHTHEME: 'Innovation Drives the Future of openEuler',
                     SPEECHER: 'Dr. Xiong Wei',
                     SPEECHCONTENT: 'Xiong Wei, joined Huawei in 2014, is now the 2012 laboratory Central Software Institute server operating system chief architect, openEuler technical committee member; Nankai University, doctor of engineering, in TurboLinux, WindRiver and other companies as R & D person in charge, has a long time OS, underlying software experience and technology accumulation; on the processor, architecture, OS, containers, etc. has a broad technical vision, initially established the Kunpeng basic software stack server OS, container engine and other infrastructure of the platform system of self- research.',
@@ -625,7 +625,7 @@ module.exports = {
                     SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
                 {
-                    SPEECHTIME: '10:30 - 10:40，17th April',
+                    SPEECHTIME: '10:30 - 10:40, 17th April',
                     SPEECHTHEME: 'openEuler Leads the Way to a Co-Built, Win-Win Global Community',
                     SPEECHER: 'Yu Liang',
                     SPEECHCONTENT: 'More than 20 years in the field of basic operating system, witnessed the development history of domestic Linux operating system. In 2016, he joined Puhua as Vice President of Marketing in the Basic Software Division of Puhua Corporation. Since the national e-government intranet "12 banks and 3 gold" project, it has participated in most of the landmark projects of the domestic operating system.',
@@ -634,7 +634,7 @@ module.exports = {
                     SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
                 {
-                    SPEECHTIME: '10:40 - 10:50，17th April',
+                    SPEECHTIME: '10:40 - 10:50, 17th April',
                     SPEECHTHEME: 'Kylin: Scale New Heights on the Wings of Kunpeng',
                     SPEECHER: 'Li Zhenning',
                     SPEECHCONTENT: 'The most valuable expert of HUAWEI CLOUD and Tencent Cloud; Director of Shanghai Basic Software Engineering Technology Research Center and mentor of master students at Taiyuan University of Technology. Li Zhenning has served in the open source and operating system field for 20 years, and his clients include many government agencies, national defense and aerospace, banks, securities, universities, etc. He has rich experience in open source operating system software technology, marketing and PR communication. He is currently an expert in the operating system and basic software industry in several ministries, provinces and cities. Research on industry macro development, technology trends, standards policy, etc. Currently, he is also a member of the China-Japan-Korea Northeast Asia Open Source Committee, Secretary General of the Open Source and Basic Software General Technology Innovation Strategic Alliance (UU); Deputy Secretary General of the China High-end Chip Alliance, Deputy Secretary General of the China Open Source Software Promotion Alliance, Deputy Secretary General of the China Open Source Cloud Alliance, Deputy Secretary General of the China Big Data Application Collaboration and Innovation Alliance, Head of the TIAA Automotive Alliance Software Group; Member of the CCF System Software Committee; Deputy Director of the China Big Data and Intelligent Computing Industry Alliance Open Source Software Working Committee, etc.',
@@ -643,7 +643,7 @@ module.exports = {
                     SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
                 {
-                    SPEECHTIME: '10:50 - 11:00，17th April',
+                    SPEECHTIME: '10:50 - 11:00, 17th April',
                     SPEECHTHEME: ' Open Source Software Supply Lightening Program Boosts a Robust Community',
                     SPEECHER: 'Wu Yanjun',
                     SPEECHCONTENT: 'Researcher, Ph.D. supervisor, Deputy Chief Engineer, Institute of Software, Chinese Academy of Sciences, Director of Intelligent Software Research Center. After graduating from Tsinghua University, he joined the Software Institute of Chinese Academy of Sciences and has been working on operating system related research and development for a long time. He has published more than 50 papers in top academic conferences and core journals, and applied for more than 30 patents and softwares. He has been honored by the Beijing Science and Technology Rising Star and the Chinese Academy of Sciences Youth Promotion Association.',
@@ -652,7 +652,7 @@ module.exports = {
                     SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
                 {
-                    SPEECHTIME: '11:00 - 11:10，17th April',
+                    SPEECHTIME: '11:00 - 11:10, 17th April',
                     SPEECHTHEME: 'openEuler: The Best MySQL Platform on Arm-based Servers',
                     SPEECHER: 'Ding Wenlong',
                     SPEECHCONTENT: '',
@@ -661,7 +661,7 @@ module.exports = {
                     SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
                 {
-                    SPEECHTIME: '11:10 - 11:25，17th,April',
+                    SPEECHTIME: '11:10 - 11:25, 17th,April',
                     SPEECHTHEME: 'How to Enjoy openEuler',
                     SPEECHER: 'Ma Junjie',
                     SPEECHCONTENT: 'openEuler Infrastructure Committer, openEuler oVirt SIG maintainer, oVirt Member, Istio community Member',
@@ -670,7 +670,7 @@ module.exports = {
                     SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
                 },
                 {
-                    SPEECHTIME: '11：25 - 11：45，17th,April',
+                    SPEECHTIME: '11:25 - 11:45, 17th,April',
                     SPEECHTHEME: 'openEuler Community Governance',
                     SPEECHER: 'Hu Xinwei',
                     SPEECHCONTENT: '',
