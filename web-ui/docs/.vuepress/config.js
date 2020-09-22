@@ -11,15 +11,9 @@ module.exports = {
             name: 'viewport',
             content: 'width=device-width,initial-scale=1,user-scalable=no'
         }],
-        ['script', {}, 
-            `var _hmt = _hmt || [];
-            (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?ab8d86daab9a8e98cf8faa239aefcd3c";
-            var s = document.getElementsByTagName("script")[0]; 
-            s.parentNode.insertBefore(hm, s);
-            })();`
-        ]
+        ['script', {
+            src: '/js/ba.js'
+        }]
     ],
     markdown: {
         lineNumbers: false
