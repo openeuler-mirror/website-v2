@@ -303,7 +303,6 @@ export default {
     }
     .docs-filter {
         margin: 40px auto;
-        padding-top: 75px;
         position: relative;
     }
     .docs-content {

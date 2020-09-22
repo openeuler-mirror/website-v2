@@ -58,17 +58,6 @@
           <p class="item-desc" :title="item.DESC">{{ item.DESC }}</p>
           <div class="url-list-wrapper">
             <ul class="url-list">
-                <li v-if="item.RELEASE_DESC_URL?true:false">
-                    <img src="/img/download/release.svg" alt />
-                    <a target="_blank" :href="item.RELEASE_DESC_URL">{{ i18n.download.RELEASE_DESC }}</a>
-                </li>
-                <li v-if="item.INSTALL_GUIDENCE_URL?true:false">
-                    <img src="/img/download/release.svg" alt />
-                    <a
-                    target="_blank"
-                    :href="item.INSTALL_GUIDENCE_URL"
-                    >{{ i18n.download.INSTALL_GUIDENCE }}</a>
-                </li>
                 <li v-if="item.SEEK_HELP_URL?true:false">
                     <img src="/img/download/release.svg" alt />
                     <a target="_blank" :href="item.SEEK_HELP_URL">
@@ -88,6 +77,17 @@
                 <li v-if="item.LIFE_CYCLE_URL?true:false">
                     <img src="/img/download/release.svg" alt />
                     <a target="_blank" :href="item.LIFE_CYCLE_URL">{{ i18n.download.LIFE_CYCLE }}</a>
+                </li>
+                <li v-if="item.RELEASE_DESC_URL?true:false">
+                    <img src="/img/download/release.svg" alt />
+                    <a target="_blank" :href="item.RELEASE_DESC_URL">{{ i18n.download.RELEASE_DESC }}</a>
+                </li>
+                <li v-if="item.INSTALL_GUIDENCE_URL?true:false">
+                    <img src="/img/download/release.svg" alt />
+                    <a
+                    target="_blank"
+                    :href="item.INSTALL_GUIDENCE_URL"
+                    >{{ i18n.download.INSTALL_GUIDENCE }}</a>
                 </li>
                 <li>
                    
@@ -422,12 +422,8 @@ export default {
           }
         }
         .item-desc {
-            height: 48px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
+            max-height: 80px;
+            margin-bottom: 10px;
         }
         p {
           font-size: 14px;
@@ -438,13 +434,6 @@ export default {
           @media (max-width: 1000px) {
             line-height: 20px;
             margin-bottom: 30px;
-            text-overflow: -o-ellipsis-lastline;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            line-clamp: 2;
-            -webkit-box-orient: vertical;
           }
         }
         .url-list-wrapper {
@@ -461,6 +450,7 @@ export default {
           .url-list {
             display: flex;
             flex-wrap: wrap;
+             justify-content: space-between;
             li {
               margin-bottom: 14px;
               margin-left: 20px;
@@ -468,11 +458,10 @@ export default {
                   margin-left: 0;
               }
               &:nth-of-type(4n){
-                  margin-left: 20px;
+                  margin-left: 0;
               }
               @media (max-width: 1000px) {
                 margin-bottom: 20px;
-                margin-left: 11px;
               }
               img {
                 width: 14px;

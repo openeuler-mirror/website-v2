@@ -8,63 +8,64 @@ module.exports = {
             WILLPLAYER: '即将开始',
             REPLAYER: '精彩回顾',
             LIVENOW: [
+                
+            ],
+            LIVEFORMERLY: [
                 {
-                    LIVETITLE: '轻量级容器引擎iSulad之功能介绍及架构解析',
-                    LIVETEACHER: '讲师: 李峰',
-                    LIVETIME: '时间: 9月1日 20:00（周二）',
-                    PHOTOPATH: '/img/live/lifeng.png',
-                    NOWLINK: 'http://live.bilibili.com/22290444'
-                },
-                {
-                    LIVETITLE: 'iSulad之性能测试、分析与比较',
-                    LIVETEACHER: '讲师: 刘昊',
-                    LIVETIME: '时间: 9月3日 20:00（周四）',
-                    PHOTOPATH: '/img/live/liuhao.png',
-                    NOWLINK: 'http://live.bilibili.com/22290444'
-                },
-                {
-                    LIVETITLE: 'iSulad之安全特性实现解析',
-                    LIVETEACHER: '讲师: 吴景',
-                    LIVETIME: '时间: 9月8日 20:00（周二）',
-                    PHOTOPATH: '/img/live/wujing.png',
-                    NOWLINK: 'http://live.bilibili.com/22290444'
-                },
-                {
-                    LIVETITLE: 'iSula容器之系统容器',
-                    LIVETEACHER: '讲师: 章松',
-                    LIVETIME: '时间: 9月10日 20:00（周四）',
-                    PHOTOPATH: '/img/live/zhangsong.png',
-                    NOWLINK: 'http://live.bilibili.com/22290444'
+                    LIVETITLE: '手把手带你完成openEuler环境部署 K8S',
+                    LIVETEACHER: '讲师: 夏丹妮',
+                    LIVETIME: '时间: 9月17日 20:00（周四）',
+                    PHOTOPATH: '/img/live/xiadanni.png',
+                    FORMERLYLINK: ''
                 },
                 {
                     LIVETITLE: 'iSula容器之安全容器',
                     LIVETEACHER: '讲师: 姜鹏飞',
                     LIVETIME: '时间: 9月15日 20:00（周二）',
                     PHOTOPATH: '/img/live/jiangpengfei.png',
-                    NOWLINK: 'http://live.bilibili.com/22290444'
+                    FORMERLYLINK: ''
                 },
                 {
-                    LIVETITLE: '手把手带你完成openEuler环境部署 K8S',
-                    LIVETEACHER: '讲师: 夏丹妮',
-                    LIVETIME: '时间: 9月17日 20:00（周四）',
-                    PHOTOPATH: '/img/live/xiadanni.png',
-                    NOWLINK: 'http://live.bilibili.com/22290444'
+                    LIVETITLE: 'iSula容器之系统容器',
+                    LIVETEACHER: '讲师: 章松',
+                    LIVETIME: '时间: 9月10日 20:00（周四）',
+                    PHOTOPATH: '/img/live/zhangsong.png',
+                    FORMERLYLINK: ''
                 },
-            ],
-            LIVEFORMERLY: [
+                {
+                    LIVETITLE: 'iSulad之安全特性实现解析',
+                    LIVETEACHER: '讲师: 吴景',
+                    LIVETIME: '时间: 9月8日 20:00（周二）',
+                    PHOTOPATH: '/img/live/wujing.png',
+                    FORMERLYLINK: ''
+                },
+                {
+                    LIVETITLE: 'iSulad之性能测试、分析与比较',
+                    LIVETEACHER: '讲师: 刘昊',
+                    LIVETIME: '时间: 9月3日 20:00（周四）',
+                    PHOTOPATH: '/img/live/liuhao.png',
+                    FORMERLYLINK: ''
+                },
+                {
+                    LIVETITLE: '轻量级容器引擎iSulad之功能介绍及架构解析',
+                    LIVETEACHER: '讲师: 李峰',
+                    LIVETIME: '时间: 9月1日 20:00（周二）',
+                    PHOTOPATH: '/img/live/lifeng.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV12y4y1C7Gr'
+                },
                 {
                     LIVETITLE: '深入理解容器镜像构建工具',
                     LIVETEACHER: '讲师: 刘泽坤',
                     LIVETIME: '时间: 8月25日 20:00（周二）',
                     PHOTOPATH: '/img/live/liuzekun.png',
-                    NOWLINK: 'http://live.bilibili.com/22290444'
+                    FORMERLYLINK: ''
                 },
                 {
                     LIVETITLE: 'isula-build之安全特性',
                     LIVETEACHER: '讲师: 李翔',
                     LIVETIME: '时间: 8月27日 20:00（周四）',
                     PHOTOPATH: '/img/live/lixiang.png',
-                    FORMERLYLINK: 'http://live.bilibili.com/22290444'
+                    FORMERLYLINK: ''
                 },
                 {
                     LIVETITLE: '虚拟化技术介绍',
@@ -99,7 +100,7 @@ module.exports = {
                     LIVETEACHER: '讲师: 沈洋洋',
                     LIVETIME: '时间: 7月28日 20:00',
                     PHOTOPATH: '/img/live/shenyangyang.png',
-                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1z4y1D7mq'
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV13z4y1D7mq'
                 },
                 {
                     LIVETITLE: 'openEuler构建之OBS使用指导',
@@ -447,56 +448,57 @@ module.exports = {
             WILLPLAYER: 'About to Begin',
             REPLAYER: 'Wonderful Review',
             LIVENOW: [
+            
+            ],
+            LIVEFORMERLY: [
                 {
-                    LIVETITLE: '轻量级容器引擎iSulad之功能介绍及架构解析',
-                    LIVETEACHER: '讲师: 李峰',
-                    LIVETIME: '时间: 9月1日 20:00（周二）',
-                    PHOTOPATH: '/img/live/lifeng.png',
-                    NOWLINK: 'http://live.bilibili.com/22290444'
-                },
-                {
-                    LIVETITLE: 'iSulad之性能测试、分析与比较',
-                    LIVETEACHER: '讲师: 刘昊',
-                    LIVETIME: '时间: 9月3日 20:00（周四）',
-                    PHOTOPATH: '/img/live/liuhao.png',
-                    NOWLINK: 'http://live.bilibili.com/22290444'
-                },
-                {
-                    LIVETITLE: 'iSulad之安全特性实现解析',
-                    LIVETEACHER: '讲师: 吴景',
-                    LIVETIME: '时间: 9月8日 20:00（周二）',
-                    PHOTOPATH: '/img/live/wujing.png',
-                    NOWLINK: 'http://live.bilibili.com/22290444'
-                },
-                {
-                    LIVETITLE: 'iSula容器之系统容器',
-                    LIVETEACHER: '讲师: 章松',
-                    LIVETIME: '时间: 9月10日 20:00（周四）',
-                    PHOTOPATH: '/img/live/zhangsong.png',
-                    NOWLINK: 'http://live.bilibili.com/22290444'
+                    LIVETITLE: '手把手带你完成openEuler环境部署 K8S',
+                    LIVETEACHER: '讲师: 夏丹妮',
+                    LIVETIME: '时间: 9月17日 20:00（周四）',
+                    PHOTOPATH: '/img/live/xiadanni.png',
+                    FORMERLYLINK: ''
                 },
                 {
                     LIVETITLE: 'iSula容器之安全容器',
                     LIVETEACHER: '讲师: 姜鹏飞',
                     LIVETIME: '时间: 9月15日 20:00（周二）',
                     PHOTOPATH: '/img/live/jiangpengfei.png',
-                    NOWLINK: 'http://live.bilibili.com/22290444'
+                    FORMERLYLINK: ''
                 },
                 {
-                    LIVETITLE: '手把手带你完成openEuler环境部署 K8S',
-                    LIVETEACHER: '讲师: 夏丹妮',
-                    LIVETIME: '时间: 9月17日 20:00（周四）',
-                    PHOTOPATH: '/img/live/xiadanni.png',
-                    NOWLINK: 'http://live.bilibili.com/22290444'
+                    LIVETITLE: 'iSula容器之系统容器',
+                    LIVETEACHER: '讲师: 章松',
+                    LIVETIME: '时间: 9月10日 20:00（周四）',
+                    PHOTOPATH: '/img/live/zhangsong.png',
+                    FORMERLYLINK: ''
                 },
-            ],
-            LIVEFORMERLY: [
+                {
+                    LIVETITLE: 'iSulad之安全特性实现解析',
+                    LIVETEACHER: '讲师: 吴景',
+                    LIVETIME: '时间: 9月8日 20:00（周二）',
+                    PHOTOPATH: '/img/live/wujing.png',
+                    FORMERLYLINK: ''
+                },
+                {
+                    LIVETITLE: 'iSulad之性能测试、分析与比较',
+                    LIVETEACHER: '讲师: 刘昊',
+                    LIVETIME: '时间: 9月3日 20:00（周四）',
+                    PHOTOPATH: '/img/live/liuhao.png',
+                    FORMERLYLINK: ''
+                },
+                {
+                    LIVETITLE: '轻量级容器引擎iSulad之功能介绍及架构解析',
+                    LIVETEACHER: '讲师: 李峰',
+                    LIVETIME: '时间: 9月1日 20:00（周二）',
+                    PHOTOPATH: '/img/live/lifeng.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV12y4y1C7Gr'
+                },
                 {
                     LIVETITLE: '深入理解容器镜像构建工具',
                     LIVETEACHER: '讲师: 刘泽坤',
                     LIVETIME: '时间: 8月25日 20:00（周二）',
                     PHOTOPATH: '/img/live/liuzekun.png',
-                    NOWLINK: 'http://live.bilibili.com/22290444'
+                    FORMERLYLINK: 'http://live.bilibili.com/22290444'
                 },
                 {
                     LIVETITLE: 'isula-build之安全特性',
@@ -538,7 +540,7 @@ module.exports = {
                     LIVETEACHER: '讲师: 沈洋洋',
                     LIVETIME: '时间: 7月28日 20:00',
                     PHOTOPATH: '/img/live/shenyangyang.png',
-                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1z4y1D7mq'
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV13z4y1D7mq'
                 },
                 {
                     LIVETITLE: 'openEuler构建之OBS使用指导',

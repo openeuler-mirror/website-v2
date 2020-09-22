@@ -115,4 +115,9 @@ export default {
          height: unset;
      }
 }
+@media screen and (min-width: 1000px) and (max-width: 1120px){
+    .message-banner {
+        width: 100% !important;
+    }
+}
 </style>

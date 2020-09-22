@@ -91,9 +91,12 @@ export default {
 }
 .news-time {
     margin-top: 5px;
+    display: flex;
+    flex-direction: row;
     p {
-        display: inline-block;
-        margin-right: 51px;
+        &:last-of-type{
+            margin-left: 51px;
+        }
     }
 }
 .news-date {
@@ -121,6 +124,20 @@ export default {
     }
     .news-time {
         margin-top: 0px;
+        p{
+            &:first-of-type{
+                span{
+                    &:first-of-type{
+                        display: inline-block;
+                        width: 100px;
+                    }    
+                }
+            }
+            #busuanzi_container_page_pv{
+                width: 120px;
+                display: inline-block;
+            }
+        }
     }
     .news-time-bottom-line {
         margin: 30px 0 30px 0;
