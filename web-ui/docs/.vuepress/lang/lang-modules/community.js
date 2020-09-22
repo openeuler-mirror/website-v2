@@ -179,13 +179,13 @@ module.exports = {
                 },
                 {
                     LEFT: {
-                        LEFT_INFO: "Your mailbox will receive an email from the mailing list, asking you to confirm that you have subscribed to the mailing list. Reply to the e-mail to confirm the subscription.",
+                        LEFT_INFO: "Your mailbox will receive an e-mail from the mailing list, asking you to confirm that you have subscribed to the mailing list. Reply to the e-mail to confirm the subscription.",
                         LEFT_CIRCLE: "Confirm ",
                         LEFT_IMG: "/img/community/maillist/mail3.png"
                     },
                     RIGHT: {
-                        RIGHT_INFO: "Confirm Your mailbox receives a welcome e-mail from the mailing list, indicating that you have subscribed to the mailing list successfully. Complete Mailing List Name E-mail Address Archive Path Description",
-                        RIGHT_CIRCLE: "Success",
+                        RIGHT_INFO: "Your mailbox receives a welcome e-mail from the mailing list, indication that you have subscribed to the mailing list successfully.",
+                        RIGHT_CIRCLE: "Succeed",
                         LEFT_IMG: "/img/community/maillist/mail4.png"
                     }
                 },
@@ -275,7 +275,7 @@ module.exports = {
             ]
         },
         CONDUCT: {
-            TITLE: "Convention"
+            TITLE: "Code of Covenant"
         }
     }
 };

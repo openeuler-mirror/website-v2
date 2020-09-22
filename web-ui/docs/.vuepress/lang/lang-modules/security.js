@@ -91,7 +91,7 @@ module.exports = {
         AFFECTED_COMPONENTS: 'Affected \n Components',
         RELEASE_DATE: 'Release Date',
         CVSS_SCORE: 'CVSS Score',
-        MODIFIED_TIME: 'Modified Time',
+        MODIFIED_TIME: 'Time of Modification',
         OPERATION: 'operation',
         DETAIL: 'Details',
         REPORTING: 'Vulnerability Report',
