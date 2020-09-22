@@ -518,11 +518,11 @@ let remoteMethods = {
                     type: 'success'
                 });
             }else{
-                that.$message.error('error');
+                that.$message.error(data.description);
             }
         })
         .catch(data => {
-            that.$message.error('error');
+            that.$message.error(data.description || 'error');
         });
     }
 }
