@@ -177,6 +177,7 @@
                         size="small"
                         :placeholder="i18n.common.SEARCH_PLACE_HOLDER"
                         v-model="searchData"
+                        @blur="hidePcSearchInput"
                         @keyup.enter.native="toSearch"
                     >
                     <i
@@ -230,6 +231,11 @@ export default {
         };
     },
     methods: {
+        hidePcSearchInput (){
+            setTimeout(() => {
+                this.pcSearchFlag = false;
+            },100)
+        },
         toSearch () {
             this.searchFlag = false;
             this.pcSearchFlag = false;
