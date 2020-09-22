@@ -172,7 +172,7 @@
                         </ul>
                     </li>
                 </ul>
-                <div class="search-input" v-show="pcSearchFlag" v-clickoutside="clickOutside">
+                <div class="search-input" v-show="pcSearchFlag">
                     <el-input
                         size="small"
                         :placeholder="i18n.common.SEARCH_PLACE_HOLDER"
@@ -213,9 +213,7 @@
 </template>
 
 <script>
-import clickoutside from "element-ui/src/utils/clickoutside";
 export default {
-    directives: { clickoutside },
     data() {
         return {
             toggleSubMenu: [],
@@ -244,11 +242,6 @@ export default {
         },
         open (url) {
             window.open(url);
-        },
-        clickOutside () {
-            if(this.pcSearchFlag) {
-                this.pcSearchFlag = false;
-            }
         },
         goHome() {
             const targetLocale = this.$lang === "zh" ? "/zh/" : "/en/";
