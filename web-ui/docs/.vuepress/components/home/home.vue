@@ -480,7 +480,7 @@
                 },
                 isNowPlay: false,
                 isShowCard: false,  //是否显示移动端点击体验的卡片
-                screenWidth: document.body.clientWidth,   //获取屏幕宽度
+                screenWidth: '',   //获取屏幕宽度
                 isShowH5: false
             }
         },
@@ -490,6 +490,7 @@
             this.roomName = this.i18n.home.HOME_ROOMS.ROOM_NAME
             this.toggleHover();
             this.getRoomsData();
+            this.screenWidth = document.body.clientWidth;
             if(this.screenWidth <= 1000){
                 this.isShowH5 = true;
             }
