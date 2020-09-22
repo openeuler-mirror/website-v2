@@ -6,7 +6,7 @@
     >
       <div class="version-div" v-if="!showMobileMenu">
           <span>{{version}}</span>
-          <div v-clickoutside="clickOutside">
+          <div>
               <i class="icon-document" @click="showSelection = !showSelection"></i>
               <div class="version-select" v-show="showSelection">
                   <p v-for="(item,key) in versionArr"
@@ -79,10 +79,8 @@
 </template>
 
 <script>
-import clickoutside from "element-ui/src/utils/clickoutside";
 export default {
   name: "DocDetails",
-  directives: { clickoutside },
   data() {
     return {
       targetLocale: "",
