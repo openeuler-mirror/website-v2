@@ -54,6 +54,7 @@ module.exports = {
             MANAGER: '管理员'
         },
         SIG_DETAIL: {
+            NO_MEETINGS: '暂无会议',
             ORGANIZING_MEETINGS: '组织会议',
             MEMBERS: '项目成员',
             CONTACT: '联系方式',
@@ -143,6 +144,7 @@ module.exports = {
             MANAGER: 'Administrators'
         },
         SIG_DETAIL: {
+            NO_MEETINGS: 'There is no meeting for the time being',
             ORGANIZING_MEETINGS: 'organizing meetings',
             MEMBERS: 'project members',
             CONTACT: 'contact',
