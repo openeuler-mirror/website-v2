@@ -177,7 +177,7 @@ module.exports = {
             DEV_INFO: [
                 {
                     NAME: "胡峰",
-                    TITLE: "Application、System-tool、",
+                    TITLE: "Application， System-tool， ",
                     RANK: "Packaging SIG maintainer",
                     MAIL_LINK: "solar.hu@huawei.com",
                     GITEE_LINK: "https://gitee.com/solarhu",
@@ -185,7 +185,7 @@ module.exports = {
                 },
                 {
                     NAME: "杜开田",
-                    TITLE: "Application、CICD SIG",
+                    TITLE: "Application， CICD SIG",
                     RANK: "maintainer",
                     MAIL_LINK: "dukaitian@huawei.com",
                     GITEE_LINK: "https://gitee.com/jimmy_hero",
@@ -193,7 +193,7 @@ module.exports = {
                 },
                 {
                     NAME: "何晓文",
-                    TITLE: "Packaging SIG、Base-",
+                    TITLE: "Packaging SIG， Base-",
                     RANK: "service SIG maintainer",
                     MAIL_LINK: "hexiaowen@huawei.com",
                     GITEE_LINK: "https://gitee.com/jimmy_hero",
@@ -201,7 +201,7 @@ module.exports = {
                 },
                 {
                     NAME: "朱春意",
-                    TITLE: "Packaging SIG、Base-",
+                    TITLE: "Packaging SIG， Base-",
                     RANK: "service SIG maintainer",
                     MAIL_LINK: "zhuchunyi@huawei.com",
                     GITEE_LINK: "https://gitee.com/zhuchunyi",
@@ -403,7 +403,7 @@ module.exports = {
                 },
                 {
                     NAME: "04",
-                    TITLE: "Contribution openEuler Community",
+                    TITLE: "Contribute openEuler Community",
                     IMG: "/img/home/step4.png",
                     GIF: "/img/home/step-move-4.gif",
                     LINK: "/community/contribution/",
@@ -489,11 +489,11 @@ module.exports = {
         },
         HOME_DEV: {
             DEV_TITLE: "Like-Minded Developers",
-            DEV_DESCRIPTION: "Gather Here Find the elite developers you are interested in.",
+            DEV_DESCRIPTION: "The brightest minds of the development community gather here. Find the elite developers you are interested in.",
             DEV_INFO: [
                 {
                     NAME: "Feng Hu",
-                    TITLE: "Application、System-tool、",
+                    TITLE: "Application, System-tool, ",
                     RANK: "Packaging SIG Maintainer",
                     MAIL_LINK: "solar.hu@huawei.com",
                     GITEE_LINK: "https://gitee.com/solarhu",
@@ -501,7 +501,7 @@ module.exports = {
                 },
                 {
                     NAME: "Kaitian Du",
-                    TITLE: "Application、CICD SIG",
+                    TITLE: "Application, CICD SIG",
                     RANK: "Maintainer",
                     MAIL_LINK: "dukaitian@huawei.com",
                     GITEE_LINK: "https://gitee.com/jimmy_hero",
@@ -509,7 +509,7 @@ module.exports = {
                 },
                 {
                     NAME: "Xiaowen He",
-                    TITLE: "Packaging SIG、Base-",
+                    TITLE: "Packaging SIG, Base-",
                     RANK: "service SIG Maintainer",
                     MAIL_LINK: "hexiaowen@huawei.com",
                     GITEE_LINK: "https://gitee.com/jimmy_hero",
@@ -517,7 +517,7 @@ module.exports = {
                 },
                 {
                     NAME: "Chunyi Zhu",
-                    TITLE: "Packaging SIG、Base-",
+                    TITLE: "Packaging SIG, Base-",
                     RANK: "service SIG Maintainer",
                     MAIL_LINK: "zhuchunyi@huawei.com",
                     GITEE_LINK: "https://gitee.com/zhuchunyi",
@@ -633,20 +633,20 @@ module.exports = {
             SOURCE_TITLE: "More Resources",
             SOURCE_APPLY: {
                 TITLE: "Test Resource Application",
-                DES: "If there is no test device, you can apply for resources.",
-                APPLY: "Here",
+                DES: "If test devices are not available, you can",
+                APPLY: "apply for resources here.",
                 SPONSOR: "Thanks for the sponsorship of Peng Cheng Laboratory.",
                 SPONSORLINK:'https://dw.pcl.ac.cn/#/home/index'
             },
             SOURCE_MAIL: {
                 TITLE: "E-mail Subscription",
                 DES: "Discuss any community topic here.",
-                SUBSCRIBE: "For more subscriptions, please click on the ",
+                SUBSCRIBE: "For more subscriptions, please click the ",
                 LINK: "mailing list",
                 MAIL: "community@openeuler.org"
             },
             SOURCE_PUBLISH_TITLE: "openEuler-based OS Release",
-            SOURCE_LINK_TITLE: "Reference Link",
+            SOURCE_LINK_TITLE: "Reference Links",
         },
         MORE: "Read More",
         EXPAND: "展开全部",

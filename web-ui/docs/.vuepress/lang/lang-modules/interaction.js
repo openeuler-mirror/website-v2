@@ -592,7 +592,7 @@ module.exports = {
             HOMETITLE: 'Replay',
             LISTTITLE: 'Overview',
             LISTNEWTITLE:'openEuler Virtual Summit 2020',
-            LISTTIME: 'Apr 17-18,2020',
+            LISTTIME: 'Apr 17–18, 2020',
             SPEECHTITLE: 'Keynotes',
             DESIGNTITLE: 'Design Summit (SIG Workshop)',
             VIDEODOWNLOAD: 'Slides',
@@ -877,7 +877,7 @@ module.exports = {
                 ]
         },
         MEETUPS: {
-            MEETUPS: 'Meetsup',
+            MEETUPS: 'Meetups',
             MESSAGE: 'Coming soon…',
             INSIDENAME:'CONNECT',
         }

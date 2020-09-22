@@ -422,8 +422,13 @@ export default {
           }
         }
         .item-desc {
-            max-height: 80px;
-            margin-bottom: 10px;
+            height: 49px;
+            margin-bottom: 20px;
+            overflow:hidden; 
+            text-overflow:ellipsis;
+            display:-webkit-box; 
+            -webkit-box-orient:vertical;
+            -webkit-line-clamp:2;
         }
         p {
           font-size: 14px;
