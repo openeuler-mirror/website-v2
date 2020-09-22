@@ -14,7 +14,7 @@ var createLogsDdir = function () {
 
 var getTime = function () {
     let now = new Date();
-    let first = now.getFullYear() + '-' + now.getMonth() + '-' + now.getDate() + ' ';
+    let first = now.getFullYear() + '-' + now.getMonth() + 1 + '-' + now.getDate() + ' ';
     let time = first + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
     return time;
 };
