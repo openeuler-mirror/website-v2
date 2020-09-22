@@ -5,9 +5,12 @@
        </div>
        <h1>{{$route.query.name}}</h1>
        <h2 class="meetings">{{i18n.sig.SIG_DETAIL.ORGANIZING_MEETINGS}}</h2>
-        <div class="calender-wrapper">
+        <div class="calender-wrapper" v-if="calenderData.length">
             <calender :table-data="calenderData" />
         </div>
+        <p v-else class="no-meeting">
+            {{i18n.sig.SIG_DETAIL.NO_MEETINGS}}
+        </p>
         <h2>{{i18n.sig.SIG_DETAIL.MEMBERS}}</h2>
         <div class="developer-wrapper">
             <div class="dev-leader">
@@ -94,6 +97,11 @@ export default {
         width: 100%;
         padding: 0 30px;
     }
+}
+.sig-detail .no-meeting {
+    font-size: 16px;
+    color: rgba(0, 0, 0, .5);
+    font-family: FZLTXIHJW;
 }
 .sig-detail .breadcrumbs {
     margin-top: 28px;
