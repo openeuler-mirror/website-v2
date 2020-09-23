@@ -7,6 +7,7 @@ module.exports = {
             LIVE: '直播',
             WILLPLAYER: '即将开始',
             REPLAYER: '精彩回顾',
+            LINKTIPS: '视频未上传，敬请期待！',
             LIVENOW: [
                 
             ],
@@ -447,6 +448,7 @@ module.exports = {
             LIVE: 'Live',
             WILLPLAYER: 'About to Begin',
             REPLAYER: 'Wonderful Review',
+            LINKTIPS: 'The video is not uploaded yet',
             LIVENOW: [
             
             ],
@@ -592,7 +594,7 @@ module.exports = {
             HOMETITLE: 'Replay',
             LISTTITLE: 'Overview',
             LISTNEWTITLE:'openEuler Virtual Summit 2020',
-            LISTTIME: 'Apr 17-18,2020',
+            LISTTIME: 'Apr 17–18, 2020',
             SPEECHTITLE: 'Keynotes',
             DESIGNTITLE: 'Design Summit (SIG Workshop)',
             VIDEODOWNLOAD: 'Slides',
@@ -877,7 +879,7 @@ module.exports = {
                 ]
         },
         MEETUPS: {
-            MEETUPS: 'Meetsup',
+            MEETUPS: 'Meetups',
             MESSAGE: 'Coming soon…',
             INSIDENAME:'CONNECT',
         }

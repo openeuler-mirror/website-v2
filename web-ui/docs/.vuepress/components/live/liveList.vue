@@ -97,7 +97,7 @@ export default {
     methods: {
         toBLink (link) {
             if (link == '') {
-                alert('视频未上传，敬请期待');
+                alert(this.i18n.interaction.LIVE.LINKTIPS);
             } else {
                 window.open(link);
         }
