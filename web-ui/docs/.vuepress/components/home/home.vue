@@ -65,9 +65,9 @@
                 </el-carousel-item>
             </el-carousel>
         </div>
-        <div class="is-h5 home-carousel" v-if="isShowH5">
-            <el-carousel class="home-banner" trigger="click" :interval="5000">
-                <el-carousel-item>
+        <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
+            <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
+                <swiper-slide>
                     <div class="carousel-video">
                         <video poster="/img/home/BannerVideo.png"
                                loop
@@ -78,14 +78,14 @@
                                @click="playVideo">
                             <source src="/img/home-video/mobile-home-video.mp4"  type="video/mp4">
                         </video>
-                        <div class="mobile-btn" @click="playVideo"></div>
+                        <div class="mobile-btn" v-show="mobilePlayBtnDisplay" @click="playVideo"></div>
                     </div>
-                </el-carousel-item>
-                <el-carousel-item class="carousel-item">
+                </swiper-slide>
+                <swiper-slide class="carousel-item">
                     <div class="train-img" @click="go(i18n.home.HOME_OPENEULER_NEW.TRAIN_LINK)" :style="{backgroundImage:i18n.home.HOME_OPENEULER_NEW.TRAIN_MOBILE_IMG}">
                     </div>
-                </el-carousel-item>
-                <el-carousel-item
+                </swiper-slide>
+                <swiper-slide
                         class="carousel-item-index"
                         v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
                         :key="index">
@@ -97,16 +97,19 @@
                         <h3>{{ item.TITLE }}</h3>
                         <img :src="'/img/home/Banner' + index + '.gif'">
                     </a>
-                </el-carousel-item>
-                <el-carousel-item class="carousel-item">
+                </swiper-slide>
+                <swiper-slide class="carousel-item">
                     <div class="HC-mobile-box" @click="go(i18n.home.HOME_OPENEULER_NEW.HC_ADRESSION)" :style="{backgroundImage:i18n.home.HOME_OPENEULER_NEW.HC_MOBILE_IMG}">
                     </div>
-                </el-carousel-item>
-                <el-carousel-item class="carousel-item">
+                </swiper-slide>
+                <swiper-slide class="carousel-item">
                     <div class="base-software-box" @click="go(i18n.home.HOME_OPENEULER_NEW.BASE_SOFTWARE_LINK)" :style="{backgroundImage:i18n.home.HOME_OPENEULER_NEW.BASE_SOFTWARE_MOBILEIMG}">
                     </div>
-                </el-carousel-item>
-            </el-carousel>
+                </swiper-slide>
+            </swiper>
+            <ul class="mobile-pagination">
+                <li v-for="item in 7" :class="{'mobile-pagination-active': mobilePagenationIndex===item}"></li>
+            </ul>
         </div>
         <div class="home-introduce">
             <h1>{{ i18n.home.HOME_INTRODUCE.INTRO_TITLE }}</h1>
@@ -435,6 +438,8 @@
 </template>
 
 <script>
+    import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
+    import 'swiper/swiper-bundle.css';
     import { meetingList } from "../../api/home";
     import dayjs from "dayjs";
     import calender from "./calender";
@@ -479,7 +484,13 @@
                 isNowPlay: false,
                 isShowCard: false,  //是否显示移动端点击体验的卡片
                 screenWidth: '',   //获取屏幕宽度
-                isShowH5: false
+                isShowH5: false,
+                mobilePlayBtnDisplay: true,
+                swiperOption: {
+                    loop: true
+                },
+                mobileSwiperInterval: null,
+                mobilePagenationIndex: 1
             }
         },
         mounted() {
@@ -492,12 +503,30 @@
             if(this.screenWidth <= 1000){
                 this.isShowH5 = true;
             }
+            this.$nextTick(() => {
+                this.mobileSwiperInterval = setInterval(() => {
+                    this.swiper.slideNext();
+                }, 5000);
+            })
+        },
+        beforeDestroy () {
+            this.mobileSwiperInterval && clearInterval(this.mobileSwiperInterval);
+        },
+        computed: {
+            swiper() {
+                return this.$refs.mySwiper.$swiper;
+            }
         },
         components: {
             calender,
-            playcontroll
+            playcontroll,
+            Swiper, 
+            SwiperSlide
         },
         methods: {
+            slideChange () {
+                this.mobilePagenationIndex = this.$refs.mySwiper.$swiper.realIndex + 1;
+            },
             go(path) {
                 if (path && !path.includes("http")) {
                     this.$router.push({
@@ -533,6 +562,8 @@
                 }
             },
             playVideo() {
+                this.mobilePlayBtnDisplay = false;
+                clearInterval(this.mobileSwiperInterval);
                 this.$refs.video.play()
             },
             addClassAll(className) {
@@ -679,6 +710,31 @@
 </style>
 
 <style lang="less" scoped>
+    .mobile-swiper {
+        height: 300px;
+    }
+    .mobile-home-carousel {
+        position: relative;
+        .mobile-pagination {
+            z-index: 99;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            li {
+                margin-right: 10px;
+                display: inline-block;
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                background-color: #000;
+                opacity: .2;
+            }
+            .mobile-pagination-active {
+                opacity: 1;
+            }
+        }
+    }
     .en-weight-family{ 
         font-family: Roboto-Regular, Roboto !important;
         font-weight: 400 !important;
@@ -1613,6 +1669,7 @@
                 height: 100%;
                 background-repeat: no-repeat;
                 background-size: contain;
+                background-position: center;
             }
         }
         .is-pc.mapArea {
@@ -1636,6 +1693,7 @@
             }
         }
         .home h3 {
+            margin-top: 35px;
             font-size: 20px;
             font-weight: 600;
             margin-bottom: 20px;
