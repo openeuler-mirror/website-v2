@@ -8,7 +8,10 @@ var os = require('os');
 const HTTP = require('../util/httpUtil');
 const ES = require('../config/searchConfig');
 const logUtil = require('../util/logUtil');
-
+const CONF = require('../config/filePathConfig');
+const ES_INDEX = 'openeuler_articles';
+const ES_EN_INDEX = 'openeuler_articles_en';
+const ES_TYPE = '_doc';
 let jsonList = '';
 
 function readFileByPath(dirPath, index, esType, model, version) {
@@ -81,6 +84,28 @@ function insertES(index, esType, dirPath, model, version) {
     });
 }
 
+function initESData(version, lang, model) {
+    if ('docs,news,blog,live'.indexOf(model) === -1) {
+        console.log('model parameter error');
+        return;
+    }
+
+    let dirPath = '';
+    if (model === 'docs') {
+        dirPath = path.join(CONF.DOCS_PATH, version, lang, 'docs');
+    } else {
+        dirPath = path.join(CONF.NEWS_BLOG_PATH, lang, model);
+        version = 'master';
+    }
+
+    if (lang === 'zh') {
+        insertES(ES_INDEX, ES_TYPE, dirPath, model, version);
+    } else if (lang === 'en') {
+        insertES(ES_EN_INDEX, ES_TYPE, dirPath, model, version);
+    }
+}
+
 module.exports = {
-    insertES: insertES
+    insertES: insertES,
+    initESData: initESData
 };

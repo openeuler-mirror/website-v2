@@ -281,9 +281,17 @@ export default {
             }
             if (currentLink.substring(0, 4) === "/zh/") {
                 window.localStorage.setItem("locale", "en");
+                if(this.$page.path.includes('/docs/')){
+                    window.location.href = '/en/documentation/';
+                    return;
+                }
                 currentLink = '/en' + currentLink.substring(3) + query;
             } else {
                 window.localStorage.setItem("locale", "cn");
+                if(this.$page.path.includes('/docs/')){
+                    window.location.href = '/zh/documentation/';
+                    return;
+                }
                 currentLink = '/zh' + currentLink.substring(3) + query;
             }
             window.location.href = currentLink;
