@@ -571,6 +571,7 @@ p {
     width: 110px;
     height: 110px;
     margin-left: 20px;
+    flex-shrink: 0;
 }
 .en-title {
     display: block;
