@@ -15,7 +15,6 @@ const logUtil = require('../util/logUtil');
 const ES_INDEX = 'openeuler_articles';
 const ES_EN_INDEX = 'openeuler_articles_en';
 const ES_TYPE = '_doc';
-const ES_EN_TYPE = '_doc';
 
 router.get('/index', function (req, res, next) {
     let obj = url.parse(encodeURI(req.url), true);
@@ -71,7 +70,7 @@ router.get('/insert', function (req, res, next) {
     if (lang === 'zh') {
         readFile.insertES(ES_INDEX, ES_TYPE, dirPath, model, version);
     } else if (lang === 'en') {
-        readFile.insertES(ES_EN_INDEX, ES_EN_TYPE, dirPath, model, version);
+        readFile.insertES(ES_EN_INDEX, ES_TYPE, dirPath, model, version);
     } else {
         res.json({
             code: 210,
