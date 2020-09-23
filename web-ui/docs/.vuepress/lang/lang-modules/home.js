@@ -185,8 +185,8 @@ module.exports = {
                 },
                 {
                     NAME: "杜开田",
-                    TITLE: "Application， CICD SIG",
-                    RANK: "maintainer",
+                    TITLE: "Compatibility， CICD",
+                    RANK: "Application",
                     MAIL_LINK: "dukaitian@huawei.com",
                     GITEE_LINK: "https://gitee.com/jimmy_hero",
                     IMG: "/img/home/developer/dukaitian.png"
