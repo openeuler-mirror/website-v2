@@ -73,6 +73,11 @@
                 "doc": [
                     {
                         "img": "/img/docs/docs-releasenotes.svg",
+                        "path": "/docs/Releasenotes/法律声明.html",
+                        "name": "法律声明"
+                    },
+                    {
+                        "img": "/img/docs/docs-releasenotes.svg",
                         "path": "/docs/Releasenotes/release_notes.html",
                         "name": "发行说明"
                     }
@@ -106,6 +111,11 @@
             {
                 "title": "使用",
                 "doc": [
+                    {
+                        "img": "/img/docs/docs-user.svg",
+                        "path": "/docs/SecHarden/secHarden.html",
+                        "name": "安全加固指南"
+                    },
                     {
                         "img": "/img/docs/docs-user.svg",
                         "path": "/docs/Virtualization/virtualization.html",

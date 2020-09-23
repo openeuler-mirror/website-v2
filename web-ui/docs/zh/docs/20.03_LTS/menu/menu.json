@@ -241,6 +241,80 @@
       ]
     },
     {
+        "label": "安全加固指南",
+        "path": "docs/SecHarden/secHarden",
+        "children": [
+          {
+            "label": "操作系统加固概述",
+            "path": "docs/SecHarden/操作系统加固概述",
+            "children": [
+            ]
+          },
+          {
+            "label": "加固指导",
+            "path": "docs/SecHarden加固指导",
+            "children": [
+                {
+                    "label": "账户口令",
+                    "path": "docs/SecHarden/账户口令.html",
+                    "children": [
+
+                    ]
+                },
+                {
+                    "label": "授权认证",
+                    "path": "docs/SecHarden/授权认证",
+                    "children": [
+
+                    ]
+                },
+                {
+                    "label": "系统服务",
+                    "path": "docs/SecHarden/系统服务",
+                    "children": [
+
+                    ]
+                },
+                {
+                    "label": "文件权限",
+                    "path": "docs/SecHarden/文件权限",
+                    "children": [
+
+                    ]
+                },
+                {
+                    "label": "内核参数",
+                    "path": "docs/SecHarden/内核参数",
+                    "children": [
+
+                    ]
+                },
+                {
+                    "label": "SELinux配置",
+                    "path": "docs/SecHarden/SELinux配置",
+                    "children": [
+
+                    ]
+                }
+            ]
+          },
+          {
+            "label": "安全加固工具",
+            "path": "docs/SecHarden/安全加固工具",
+            "children": [
+              
+            ]
+          },
+          {
+            "label": "附录",
+            "path": "docs/SecHarden/附录",
+            "children": [
+              
+            ]
+          }
+        ]
+    },
+    {
       "label": "虚拟化用户指南",
       "path": "docs/Virtualization/virtualization",
       "children": [
