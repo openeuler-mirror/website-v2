@@ -15,7 +15,6 @@ const ES_TYPE = '_doc';
 let jsonList = '';
 
 function readFileByPath(dirPath, index, esType, model, version) {
-    let token = new Buffer.from(ES.ES_USER_PASS).toString('base64');
     const files = fs.readdirSync(dirPath);
     let i = 0;
     files.forEach(function (item) {
@@ -54,6 +53,7 @@ function readFileByPath(dirPath, index, esType, model, version) {
 }
 
 function insertES(index, esType, dirPath, model, version) {
+    console.log(dirPath);
     let json = {
         query: {
             bool: {
