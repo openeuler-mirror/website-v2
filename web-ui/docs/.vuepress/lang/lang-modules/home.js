@@ -296,12 +296,12 @@ module.exports = {
                     IMG: "/img/home/developer/liuzhiqiang.png"
                 },
                 {
-                    NAME: "吴波",
+                    NAME: "林飞龙",
                     TITLE: "Storage SIG",
                     RANK: "maintainer",
-                    MAIL_LINK: "wubo009@163.com",
-                    GITEE_LINK: "https://gitee.com/wubo009",
-                    IMG: "/img/home/developer/wubo.png"
+                    MAIL_LINK: "404544243@qq.com",
+                    GITEE_LINK: "https://gitee.com/volcanodragon",
+                    IMG: "/img/home/developer/linfeilong.png"
                 },
             ]
         },
@@ -612,12 +612,12 @@ module.exports = {
                     IMG: "/img/home/developer/liuzhiqiang.png"
                 },
                 {
-                    NAME: "Bo Wu",
+                    NAME: "Feilong Lin",
                     TITLE: "Storage SIG",
-                    RANK: "Maintainer",
-                    MAIL_LINK: "wubo009@163.com",
-                    GITEE_LINK: "https://gitee.com/wubo009",
-                    IMG: "/img/home/developer/wubo.png"
+                    RANK: "maintainer",
+                    MAIL_LINK: "404544243@qq.com",
+                    GITEE_LINK: "https://gitee.com/volcanodragon",
+                    IMG: "/img/home/developer/linfeilong.png"
                 },
             ]
         },
