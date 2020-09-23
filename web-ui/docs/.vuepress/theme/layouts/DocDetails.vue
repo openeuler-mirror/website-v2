@@ -72,7 +72,7 @@
             </p>
         </div>
         <ul class="second-title-list">
-            <li v-for="(item,index) in secondTitleList" :key="index" :class="isIndex == index?'active':''"><a :href="'#'+item" @click="isActive(index)">{{item}}</a></li>
+            <li v-for="(item,index) in secondTitleList" :key="index" :class="isIndex == index?'active':''"><a @click="isActive(index,item)">{{item.innerText}}</a></li>
         </ul>
     </div>
   </div>
@@ -232,15 +232,17 @@ export default {
       this.showMobileMenu = true;
     },
     getSecondTitle(){   
-        let getSecondTile = document.getElementsByTagName("h2");
         setTimeout(() => {
+            let getSecondTile = document.getElementsByTagName("h2");
             getSecondTile.forEach((item,index) => {
-                this.secondTitleList.push(item.innerText);
+                this.secondTitleList.push(item);
             });
         },500);
     },
-    isActive(index){
+    isActive(index,item){
         this.isIndex = index;
+        let offsetTop = item.offsetTop;
+        document.documentElement.scrollTop = offsetTop;
     },
     changeVersion(item){
         this.menuData = [];
@@ -260,10 +262,10 @@ export default {
             this.allPathArr = this.getAllPathArr(this.menuData);
             this.getNextPathAndPreviousPath();
             this.getSecondTitle();
+            if(this.menuData.length != 0){
+                clearInterval(this.timer);
+            }
         },300)
-        if(this.menuData.length != 0){
-            clearInterval(this.timer);
-        }
     },
     clickOutside(){
         if(this.showSelection){
@@ -478,6 +480,7 @@ export default {
                 color: rgba(0, 0, 0, 0.7);
                 line-height: 20px;
                 display: block;
+                cursor: pointer;
             }
             margin-bottom: 20px;
         }
