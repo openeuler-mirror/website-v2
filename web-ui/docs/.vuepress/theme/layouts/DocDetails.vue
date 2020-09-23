@@ -4,7 +4,7 @@
       class="details-left"
       :class="[showMobileMenu && 'show-mobile-menu', !showMobileMenu && 'hide-mobile-menu',$lang == 'en'?'en-mobile-width':'']"
     >
-      <div class="version-div" v-if="!showMobileMenu">
+      <div class="version-div" v-if="!showMobileMenu && versionArr.length">
           <span>{{versionValue == versionArr[0].value?versionArr[0].name:versionArr[1].name}}</span>
           <div>
               <i class="icon-document" @click="showSelection = !showSelection"></i>
