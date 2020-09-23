@@ -24,6 +24,11 @@
                 "doc": [
                     {
                         "img": "/img/docs/docs-releasenotes.svg",
+                        "path": "/docs/Releasenotes/terms-of-use.html",
+                        "name": "Terms of Use"
+                    },
+                    {
+                        "img": "/img/docs/docs-releasenotes.svg",
                         "path": "/docs/Releasenotes/release_notes.html",
                         "name": "Release Notes"
                     }
@@ -57,6 +62,11 @@
             {
                 "title": "Use",
                 "doc": [
+                    {
+                        "img": "/img/docs/docs-user.svg",
+                        "path": "/docs/SecHarden/secHarden.html",
+                        "name": "Security Hardening Guide"
+                    },
                     {
                         "img": "/img/docs/docs-user.svg",
                         "path": "/docs/Virtualization/virtualization.html",

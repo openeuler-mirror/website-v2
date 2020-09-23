@@ -241,6 +241,80 @@
       ]
     },
     {
+        "label": "Security Hardening Guide",
+        "path": "docs/SecHarden/secHarden",
+        "children": [
+          {
+            "label": "OS Hardening Overview",
+            "path": "docs/SecHarden/os-hardening-overview",
+            "children": [
+            ]
+          },
+          {
+            "label": "Security Hardening Guide",
+            "path": "docs/SecHarden/security-hardening-guide",
+            "children": [
+                {
+                    "label": "Account Passwords",
+                    "path": "docs/SecHarden/account-passwords",
+                    "children": [
+
+                    ]
+                },
+                {
+                    "label": "Authentication and Authorization",
+                    "path": "docs/SecHarden/authentication-and-authorization",
+                    "children": [
+
+                    ]
+                },
+                {
+                    "label": "System Services",
+                    "path": "docs/SecHarden/system-services",
+                    "children": [
+
+                    ]
+                },
+                {
+                    "label": "File Permissions",
+                    "path": "docs/SecHarden/file-permissions",
+                    "children": [
+
+                    ]
+                },
+                {
+                    "label": "Kernel Parameters",
+                    "path": "docs/SecHarden/kernel-parameters",
+                    "children": [
+
+                    ]
+                },
+                {
+                    "label": "SELinux Configuration",
+                    "path": "docs/SecHarden/selinux-configuration",
+                    "children": [
+
+                    ]
+                }
+            ]
+          },
+          {
+            "label": "Security Hardening Tools",
+            "path": "docs/SecHarden/security-hardening-tools",
+            "children": [
+              
+            ]
+          },
+          {
+            "label": "Appendixes",
+            "path": "docs/SecHarden/appendix",
+            "children": [
+              
+            ]
+          }
+        ]
+    },
+    {
       "label": "Virtualization User Guide",
       "path": "docs/Virtualization/virtualization",
       "children": [

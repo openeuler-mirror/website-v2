@@ -5,7 +5,7 @@
       :class="[showMobileMenu && 'show-mobile-menu', !showMobileMenu && 'hide-mobile-menu',$lang == 'en'?'en-mobile-width':'']"
     >
       <div class="version-div" v-if="!showMobileMenu">
-          <span>{{versionValue == versionArr[0].value?versionArr[0].name:versionArr[1].name}}</span>
+          <span>{{versionValue}}</span>
           <div>
               <i class="icon-document" @click="showSelection = !showSelection"></i>
               <div class="version-select" v-show="showSelection">
@@ -232,12 +232,18 @@ export default {
       this.showMobileMenu = true;
     },
     getSecondTitle(){   
-        setTimeout(() => {
+        this.timer = setInterval(()=>{
             let getSecondTile = document.getElementsByTagName("h2");
-            getSecondTile.forEach((item,index) => {
-                this.secondTitleList.push(item);
-            });
-        },500);
+            if(getSecondTile.length != 0 && this.secondTitleList.length == 0){
+                getSecondTile.forEach((item,index) => {
+                    this.secondTitleList.push(item);
+                    if(getSecondTile.length == this.secondTitleList.length){
+                        clearInterval(this.timer);
+                    }
+                });
+            }
+        },300);
+        
     },
     isActive(index,item){
         this.isIndex = index;
