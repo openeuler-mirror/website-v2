@@ -22,7 +22,7 @@ module.exports = {
         LIFE_CYCLE: 'Lifecycle',
         DOWNLOAD_BTN_NAME: 'Download',
         MANUFACTURER: 'Manufacturer',
-        PUBLISH_DATE: 'Data of Publication',
+        PUBLISH_DATE: 'Date of Release',
         DOWNLOAD_LIST : require('././../../data/download').en.DOWNLOAD_LIST
     }
 };

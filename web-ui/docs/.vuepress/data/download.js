@@ -38,7 +38,7 @@ module.exports = {
             {
                 NAME: 'openEuler 20.03 LTS',
                 DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.03-LTS/',
-                DESC: 'The openEuler 20.03 LTS version is a standard release version that meets open scenario requirements, which has a lifecycle of four years.',
+                DESC: 'The openEuler 20.03 LTS edition, with a four-year lifecycle, is a standard distribution that meets open scenario requirements, which has a lifecycle of four years.',
                 RELEASE_DESC_URL: '/en/docs/20.03_LTS/docs/Releasenotes/release_notes.html',
                 INSTALL_GUIDENCE_URL: '/en/docs/20.03_LTS/docs/Installation/installation.html',
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
@@ -51,7 +51,7 @@ module.exports = {
             {
                 NAME: 'openEuler 1.0 Base',
                 DOWNLOAD_URL : 'https://repo.openeuler.org/openeuler1.0/base/iso/',
-                DESC: 'openEuler 1.0 Base version contains the core components to run the smallest system.',
+                DESC: 'The openEuler 1.0 Base is the basic version that contains the core components to run the minimum system.',
                 INSTALL_GUIDENCE_URL: '/en/docs/1.0_Base/docs/Installation/installation.html',
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openeuler1.0/base/iso/',

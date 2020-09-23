@@ -5,9 +5,9 @@
 module.exports = {
     cn: {
         HOME_CAROUSEL_DATA: [{
-            TITLE: "OpenEuler Summit 2020",
+            TITLE: "openEuler Summit 2020",
             LINK: "/interaction/summit-list/",
-            DES: "OpenEuler Virtual Summit 2020 是 openEuler 在发布 20.03 LTS 版本后第一次举行的峰会，本次大会邀请了华为的资深专家、社区 Committer 和多家 openEuler 社区合作厂商的重量嘉宾贡献多场精彩的演讲，不容错过。",
+            DES: "openEuler Virtual Summit 2020 是 openEuler 在发布 20.03 LTS 版本后第一次举行的峰会，本次大会邀请了华为的资深专家、社区 Committer 和多家 openEuler 社区合作厂商的重量嘉宾贡献多场精彩的演讲，不容错过。",
         },
             {
                 TITLE: "iSula",
@@ -22,7 +22,7 @@ module.exports = {
         ],
         HOME_OPENEULER_NEW:{
             SMALL_IMG: '/img/home/HC-Banner.png',
-            HC_MOBILE_IMG: "url('/img/home/HC-Mobile.png')",
+            HC_MOBILE_IMG: "url('/img/home/HC-Mobile-zh.png')",
             CENTER_WORD: {
                 BIG_WORD: 'NEW VALUE TOGETHER',
                 SMALL_WORD: '共创行业新价值'
@@ -177,7 +177,7 @@ module.exports = {
             DEV_INFO: [
                 {
                     NAME: "胡峰",
-                    TITLE: "Application、System-tool、",
+                    TITLE: "Application， System-tool， ",
                     RANK: "Packaging SIG maintainer",
                     MAIL_LINK: "solar.hu@huawei.com",
                     GITEE_LINK: "https://gitee.com/solarhu",
@@ -185,7 +185,7 @@ module.exports = {
                 },
                 {
                     NAME: "杜开田",
-                    TITLE: "Application、CICD SIG",
+                    TITLE: "Application， CICD SIG",
                     RANK: "maintainer",
                     MAIL_LINK: "dukaitian@huawei.com",
                     GITEE_LINK: "https://gitee.com/jimmy_hero",
@@ -193,7 +193,7 @@ module.exports = {
                 },
                 {
                     NAME: "何晓文",
-                    TITLE: "Packaging SIG、Base-",
+                    TITLE: "Packaging SIG， Base-",
                     RANK: "service SIG maintainer",
                     MAIL_LINK: "hexiaowen@huawei.com",
                     GITEE_LINK: "https://gitee.com/jimmy_hero",
@@ -201,7 +201,7 @@ module.exports = {
                 },
                 {
                     NAME: "朱春意",
-                    TITLE: "Packaging SIG、Base-",
+                    TITLE: "Packaging SIG， Base-",
                     RANK: "service SIG maintainer",
                     MAIL_LINK: "zhuchunyi@huawei.com",
                     GITEE_LINK: "https://gitee.com/zhuchunyi",
@@ -296,12 +296,12 @@ module.exports = {
                     IMG: "/img/home/developer/liuzhiqiang.png"
                 },
                 {
-                    NAME: "吴波",
+                    NAME: "林飞龙",
                     TITLE: "Storage SIG",
                     RANK: "maintainer",
-                    MAIL_LINK: "wubo009@163.com",
-                    GITEE_LINK: "https://gitee.com/wubo009",
-                    IMG: "/img/home/developer/wubo.png"
+                    MAIL_LINK: "404544243@qq.com",
+                    GITEE_LINK: "https://gitee.com/volcanodragon",
+                    IMG: "/img/home/developer/linfeilong.png"
                 },
             ]
         },
@@ -338,7 +338,7 @@ module.exports = {
     },
     en: {
         HOME_CAROUSEL_DATA: [{
-            TITLE: "OpenEuler Summit 2020",
+            TITLE: "openEuler Summit 2020",
             LINK: "/interaction/summit-list/",
             DES: "openEuler Virtual Summit 2020 is the first summit after the release of the openEuler 20.03 LTS version. Senior experts from Huawei, community committers and weight guests from several open Euler community partners were invited to give a number of wonderful speeches, which should not be missed.",
         },
@@ -355,7 +355,7 @@ module.exports = {
         ],
         HOME_OPENEULER_NEW:{
             SMALL_IMG: '/img/home/HC-Banner.png',
-            HC_MOBILE_IMG: "url('/img/home/HC-Mobile.png')",
+            HC_MOBILE_IMG: "url('/img/home/HC-Mobile-en.png')",
             CENTER_WORD: {
                 BIG_WORD: 'NEW VALUE TOGETHER',
                 SMALL_WORD: ''
@@ -403,7 +403,7 @@ module.exports = {
                 },
                 {
                     NAME: "04",
-                    TITLE: "Contribution openEuler Community",
+                    TITLE: "Contribute openEuler Community",
                     IMG: "/img/home/step4.png",
                     GIF: "/img/home/step-move-4.gif",
                     LINK: "/community/contribution/",
@@ -489,11 +489,11 @@ module.exports = {
         },
         HOME_DEV: {
             DEV_TITLE: "Like-Minded Developers",
-            DEV_DESCRIPTION: "Gather Here Find the elite developers you are interested in.",
+            DEV_DESCRIPTION: "The brightest minds of the development community gather here. Find the elite developers you are interested in.",
             DEV_INFO: [
                 {
                     NAME: "Feng Hu",
-                    TITLE: "Application、System-tool、",
+                    TITLE: "Application, System-tool, ",
                     RANK: "Packaging SIG Maintainer",
                     MAIL_LINK: "solar.hu@huawei.com",
                     GITEE_LINK: "https://gitee.com/solarhu",
@@ -501,7 +501,7 @@ module.exports = {
                 },
                 {
                     NAME: "Kaitian Du",
-                    TITLE: "Application、CICD SIG",
+                    TITLE: "Application, CICD SIG",
                     RANK: "Maintainer",
                     MAIL_LINK: "dukaitian@huawei.com",
                     GITEE_LINK: "https://gitee.com/jimmy_hero",
@@ -509,7 +509,7 @@ module.exports = {
                 },
                 {
                     NAME: "Xiaowen He",
-                    TITLE: "Packaging SIG、Base-",
+                    TITLE: "Packaging SIG, Base-",
                     RANK: "service SIG Maintainer",
                     MAIL_LINK: "hexiaowen@huawei.com",
                     GITEE_LINK: "https://gitee.com/jimmy_hero",
@@ -517,7 +517,7 @@ module.exports = {
                 },
                 {
                     NAME: "Chunyi Zhu",
-                    TITLE: "Packaging SIG、Base-",
+                    TITLE: "Packaging SIG, Base-",
                     RANK: "service SIG Maintainer",
                     MAIL_LINK: "zhuchunyi@huawei.com",
                     GITEE_LINK: "https://gitee.com/zhuchunyi",
@@ -612,12 +612,12 @@ module.exports = {
                     IMG: "/img/home/developer/liuzhiqiang.png"
                 },
                 {
-                    NAME: "Bo Wu",
+                    NAME: "Feilong Lin",
                     TITLE: "Storage SIG",
-                    RANK: "Maintainer",
-                    MAIL_LINK: "wubo009@163.com",
-                    GITEE_LINK: "https://gitee.com/wubo009",
-                    IMG: "/img/home/developer/wubo.png"
+                    RANK: "maintainer",
+                    MAIL_LINK: "404544243@qq.com",
+                    GITEE_LINK: "https://gitee.com/volcanodragon",
+                    IMG: "/img/home/developer/linfeilong.png"
                 },
             ]
         },
@@ -633,20 +633,20 @@ module.exports = {
             SOURCE_TITLE: "More Resources",
             SOURCE_APPLY: {
                 TITLE: "Test Resource Application",
-                DES: "If there is no test device, you can apply for resources.",
-                APPLY: "Here",
+                DES: "If test devices are not available, you can",
+                APPLY: "apply for resources here.",
                 SPONSOR: "Thanks for the sponsorship of Peng Cheng Laboratory.",
                 SPONSORLINK:'https://dw.pcl.ac.cn/#/home/index'
             },
             SOURCE_MAIL: {
                 TITLE: "E-mail Subscription",
                 DES: "Discuss any community topic here.",
-                SUBSCRIBE: "For more subscriptions, please click on the ",
+                SUBSCRIBE: "For more subscriptions, please click the ",
                 LINK: "mailing list",
                 MAIL: "community@openeuler.org"
             },
             SOURCE_PUBLISH_TITLE: "openEuler-based OS Release",
-            SOURCE_LINK_TITLE: "Reference Link",
+            SOURCE_LINK_TITLE: "Reference Links",
         },
         MORE: "Read More",
         EXPAND: "展开全部",
