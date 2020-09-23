@@ -448,7 +448,7 @@ module.exports = {
             LIVE: 'Live',
             WILLPLAYER: 'About to Begin',
             REPLAYER: 'Wonderful Review',
-            LINKTIPS: 'Video Not Upload,Thanks!',
+            LINKTIPS: 'The video is not uploaded yet',
             LIVENOW: [
             
             ],
