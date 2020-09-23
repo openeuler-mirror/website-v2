@@ -30,6 +30,32 @@ module.exports = {
                 MANUFACTURER: 'openEuler社区',
                 PUBLISH_DATE: '2020/02',
                 LTS: false
+            },
+            {
+                NAME: '麒麟信安 Kylinsec',
+                DOWNLOAD_URL : 'https://kylinsec.oss-cn-shenzhen.aliyuncs.com/UniKylin-3.3-6A-2005-131421-aarch64.iso',
+                DESC: '暂无描述',
+                RELEASE_DESC_URL: 'http://www.kylinsec.com.cn/Uploads/Download/2020-09-21/5f6846656373a.pdf',
+                INSTALL_GUIDENCE_URL: 'http://www.kylinsec.com.cn/Uploads/Download/2020-09-21/5f6846807a00f.pdf',
+                SEEK_HELP_URL: '',
+                GET_ISO_URL: 'http://www.kylinsec.com.cn/services/14/1.html',
+                LIFE_CYCLE_URL: '',
+                MANUFACTURER: '麒麟信安 Kylinsec',
+                PUBLISH_DATE: '',
+                LTS: false
+            },
+            {
+                NAME: 'HopeEdge OS',
+                DOWNLOAD_URL : 'http://download.hopeedge.com',
+                DESC: '暂无描述',
+                RELEASE_DESC_URL: 'http://download.hopeedge.com/References/HopeEdgeOS_ReleaseNote.pdf',
+                INSTALL_GUIDENCE_URL: 'http://download.hopeedge.com/References/HopeEdgeOS_Installation_Guide.pdf',
+                SEEK_HELP_URL: 'http://www.hopeedge.com/contactus.html',
+                GET_ISO_URL: 'http://download.hopeedge.com/ISO/HopeEdge-1.0-aarch64-dvd.iso',
+                LIFE_CYCLE_URL: '',
+                MANUFACTURER: 'HopeEdge OS',
+                PUBLISH_DATE: '',
+                LTS: false
             }
         ]
     },
@@ -58,6 +84,32 @@ module.exports = {
                 LIFE_CYCLE_URL: '/en/other/lifecycle/',
                 MANUFACTURER: 'openEuler community',
                 PUBLISH_DATE: '2020/02',
+                LTS: false
+            },
+            {
+                NAME: 'Kylinsec',
+                DOWNLOAD_URL : 'https://kylinsec.oss-cn-shenzhen.aliyuncs.com/UniKylin-3.3-6A-2005-131421-aarch64.iso',
+                DESC: 'No description available',
+                RELEASE_DESC_URL: 'http://www.kylinsec.com.cn/Uploads/Download/2020-09-21/5f6846656373a.pdf',
+                INSTALL_GUIDENCE_URL: 'http://www.kylinsec.com.cn/Uploads/Download/2020-09-21/5f6846807a00f.pdf',
+                SEEK_HELP_URL: '',
+                GET_ISO_URL: 'http://www.kylinsec.com.cn/services/14/1.html',
+                LIFE_CYCLE_URL: '',
+                MANUFACTURER: 'Kylinsec',
+                PUBLISH_DATE: '',
+                LTS: false
+            },
+            {
+                NAME: 'HopeEdge OS',
+                DOWNLOAD_URL : 'http://download.hopeedge.com',
+                DESC: 'No description available',
+                RELEASE_DESC_URL: 'http://download.hopeedge.com/References/HopeEdgeOS_ReleaseNote.pdf',
+                INSTALL_GUIDENCE_URL: 'http://download.hopeedge.com/References/HopeEdgeOS_Installation_Guide.pdf',
+                SEEK_HELP_URL: 'http://www.hopeedge.com/contactus.html',
+                GET_ISO_URL: 'http://download.hopeedge.com/ISO/HopeEdge-1.0-aarch64-dvd.iso',
+                LIFE_CYCLE_URL: '',
+                MANUFACTURER: 'HopeEdge OS',
+                PUBLISH_DATE: '',
                 LTS: false
             }
         ]
