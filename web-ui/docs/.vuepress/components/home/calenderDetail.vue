@@ -3,8 +3,8 @@
         <div class="bg" @click="handleClose"></div>
         <div class="cadenderSinge active">
             <h1 class="calenderH1">{{item3.name}}</h1>
-            <div class="meetDetail">
-                <span class="meetingTime">会议时间：{{item3.startTime+"-"+item3.endTime}}</span>
+            <span class="meetingTime">{{i18n.common.MEETINGS_TIME}}{{item3.startTime+"-"+item3.endTime}}</span>
+            <div class="meetDetail clearfix">
                 <img :src="item3.url" :alt="item3.creator"/>
                 <div class="meetDetailDe">
                 <h2>{{item3.creator}}</h2>
@@ -35,7 +35,7 @@ export default {
     
 }
 </script>
-<style scoped>
+<style lang="less" scoped>
 #showDetail{
     position: absolute;;
     top: 0;
@@ -56,6 +56,9 @@ export default {
     z-index: 1;
 }
 .cadenderSinge{
+    @media screen and (max-width: 1000px) {
+        max-width: 180px;
+    }
     width: 260px;
     min-height: 140px;
     border-radius: 4px;
@@ -70,23 +73,26 @@ export default {
     background: #fff;
     
   }
+  .meetDetail {
+    margin-top: 10px;
+    display: flex;
+    justify-content: start;
+  }
   .meetDetail img{
+    flex-shrink: 0;
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    float: left;
   }
   .meetDetailDe{
     width: 140px;
-    padding-left: 60px;
+    padding-left: 10px;
   }
-  .meetDetail .meetingTime{
-    position: absolute;
-    top: 50px;
-    left: 20px;
+  .meetingTime{
     line-height: 14px;
     font-size: 12px;
     color: #000;
+    margin-bottom: 10px;
   }
   h1{
     margin: 0;
@@ -101,15 +107,8 @@ export default {
     font-size: 12px;
     margin: 0;
   }
-  .calenderH1{
-    line-height: 30px;
-    
-  }
   .cadenderSinge.active{
     padding: 15px 20px;
-  }
-  .cadenderSinge.active .calenderH1{
-      padding-bottom: 34px;
   }
   h2{
     margin: 0;

@@ -4,6 +4,7 @@
 
 module.exports = {
     cn: {
+        MEETINGS_TIME: '会议时间：',
         SEARCH_PLACE_HOLDER: '输入内容',
         NAV_ROUTER_CONFIG: [{
                 PATH: '/download/',
@@ -150,6 +151,7 @@ module.exports = {
         }
     },
     en: {
+        MEETINGS_TIME: 'Time: ',
         SEARCH_PLACE_HOLDER: 'Input content',
         NAV_ROUTER_CONFIG: [{
                 PATH: '/download/',
