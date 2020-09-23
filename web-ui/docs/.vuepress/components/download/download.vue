@@ -436,6 +436,7 @@ export default {
           font-family: FZLTXIHJW;
           margin-bottom: 22px;
           line-height: 24px;
+          height: 48px;
           @media (max-width: 1000px) {
             line-height: 20px;
             margin-bottom: 30px;
@@ -455,7 +456,7 @@ export default {
           .url-list {
             display: flex;
             flex-wrap: wrap;
-             justify-content: space-between;
+             justify-content: start;
             li {
               margin-bottom: 14px;
               margin-left: 20px;
@@ -552,6 +553,7 @@ export default {
           font-family: FZLTXIHJW;
           margin-bottom: 22px;
           line-height: 24px;
+          height: 48px;
           @media (max-width: 1000px) {
             line-height: 20px;
             margin-bottom: 30px;
