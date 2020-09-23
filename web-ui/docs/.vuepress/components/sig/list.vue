@@ -14,7 +14,7 @@
                         <img src="/img/sig/home.svg" alt="">
                         <span><a target="_blank" :href="item.home_page">{{i18n.sig.SIG_LIST.HOME_PAGE}}</a></span>
                     </li>
-                    <li>
+                    <li class="sig-mail">
                         <img src="/img/sig/mail.svg" alt="">
                         <span>{{i18n.sig.SIG_LIST.MAIL}}{{$isCn?'：':': '}}<a :href="'mailto:'+item.maillist">{{item.maillist}}</a></span>
                     </li>
@@ -152,10 +152,20 @@ export default {
         }
         .sig-item {
             > h2 {
+                word-break:keep-all;
+                white-space:nowrap;
+                overflow:hidden;
+                text-overflow:ellipsis;
                 cursor: pointer;
                 &:hover{
                     color: #002FA7;
                 }
+            }
+            .sig-mail {
+                word-break:keep-all;
+                white-space:nowrap;
+                overflow:hidden;
+                text-overflow:ellipsis;
             }
             width: 530px;
             box-shadow: 0 6px 30px 0 rgba(0, 0, 0, .1);
