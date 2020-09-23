@@ -20,6 +20,7 @@ var newsRouter = require('./routes/news');
 var blogRouter = require('./routes/blog');
 var searchRouter = require('./routes/search');
 var sigRouter = require('./routes/sig');
+var readFile = require('./search/readFile');
 var app = express();
 
 app.all('*', (req, res, next) => {
@@ -92,6 +93,20 @@ app.use(function (err, req, res, next) {
     res.status(err.status || 500);
     res.render('error');
 });
+
+function initESData() {
+    readFile.initESData('master', 'zh', 'news');
+    readFile.initESData('master', 'en', 'news');
+    readFile.initESData('master', 'zh', 'blog');
+    readFile.initESData('master', 'en', 'blog');
+
+    readFile.initESData('20.03_LTS', 'zh', 'docs');
+    readFile.initESData('1.0_Base', 'zh', 'docs');
+    readFile.initESData('20.03_LTS', 'en', 'docs');
+    readFile.initESData('1.0_Base', 'en', 'docs');
+}
+
+initESData();
 
 app.listen(8090);
 module.exports = app;
