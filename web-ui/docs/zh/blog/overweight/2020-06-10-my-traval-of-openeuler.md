@@ -17,7 +17,7 @@ openEuler是一个开源、免费的Linux发行版平台，将通过开放的社
 
 **安装界面：**
 
-![img](https://openeuler.org/zh/docs/20.03_LTS/docs/Quickstart/figures/%E9%80%89%E6%8B%A9%E8%AF%AD%E8%A8%80.png)
+![img](./openEuler-traval.assets/chooselanguage.png)
 
 
 
@@ -27,15 +27,15 @@ openEuler是一个开源、免费的Linux发行版平台，将通过开放的社
 
 **文档手册：https://openeuler.org/zh/docs/20.03_LTS/docs/Releasenotes/release_notes.html**
 
-![image-20200521203551777](/zh/blog/overweight/openEuler-traval.assets/image-20200521203551777.png)
+![image-20200521203551777](./openEuler-traval.assets/image-20200521203551777.png)
 
 
 
 ## openEuler版本怎么规划?
 
-![image-20200521204342097](/zh/blog/overweight/openEuler-traval.assets/image-20200521204342097.png)
+![image-20200521204342097](./openEuler-traval.assets/image-20200521204342097.png)
 
-![img](/zh/blog/overweight/openEuler-traval.assets/2020-03-25-lifecycle-02.png)
+![img](./openEuler-traval.assets/2020-03-25-lifecycle-02.png)
 
 说明：
 
@@ -60,11 +60,11 @@ openEuler是一个开源、免费的Linux发行版平台，将通过开放的社
 
 **openEuler构建模型：**
 
-![image-20200521210943225](/zh/blog/overweight/openEuler-traval.assets/image-20200521210943225.png)
+![image-20200521210943225](./openEuler-traval.assets/image-20200521210943225.png)
 
 **版本如何构建：**
 
-![image-20200521211038388](/zh/blog/overweight/openEuler-traval.assets/image-20200521211038388.png)
+![image-20200521211038388](./openEuler-traval.assets/image-20200521211038388.png)
 
 **说明：**
 
@@ -116,7 +116,7 @@ openEuler是一个开源、免费的Linux发行版平台，将通过开放的社
 
 当前openEuler 软件的管理是**以sig组来承载**，所有的软件**唯一的归属于某个sig**。通过[sigs.yaml文件](https://gitee.com/openeuler/community/blob/3f8f9a73de9435857ce524e1ce387d2499a51f32/sig/sigs.yaml)，你可以查询到该软件属于哪个sig，并通过[sigs专有归档目](https://gitee.com/openeuler/community/tree/3f8f9a73de9435857ce524e1ce387d2499a51f32/sig)你可以查询对应的maintainer。**只有对应的maintainer才有对应仓库代码合入权限。**
 
-<img src="/zh/blog/overweight/openEuler-traval.assets/image-20200521225454468.png" alt="image-20200521225454468" style="zoom:50%;" />
+<img src="./openEuler-traval.assets/image-20200521225454468.png" alt="image-20200521225454468" style="zoom:50%;" />
 
 openeuler/community仓库下，以下三个文件比较重要：
 
@@ -124,7 +124,7 @@ openeuler/community仓库下，以下三个文件比较重要：
 
 [repository/openeuler.yaml](https://gitee.com/openeuler/community/blob/master/repository/openeuler.yaml) openeuler下维护的软件包仓库信息。
 
-[repository/src-openeuler.yaml]([src-openeuler.yaml](https://gitee.com/openeuler/community/blob/master/repository/src-openeuler.yaml))  src-openeuler下维护的软件包仓库信息。
+[repository/src-openeuler.yaml](./[src-openeuler.yaml](https://gitee.com/openeuler/community/blob/master/repository/src-openeuler.yaml))  src-openeuler下维护的软件包仓库信息。
 
 通过修改这几个文件，来新增、删除软件包仓库，来给相应的软件包划分sig，从而实现sig的owner对软件包的权限管理。
 
@@ -150,15 +150,15 @@ SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来�
 
 ## openEuler社区开发全景？
 
-<img src="/zh/blog/overweight/openEuler-traval.assets/image-20200506152118205.png" alt="image-20200506152118205"  />
+<img src="./openEuler-traval.assets/image-20200506152118205.png" alt="image-20200506152118205"  />
 
 上图是openEuler社区开发指引图。
 
 说明：
 
-1. 软件包管理按照软件包所处的时间点分为：![image-20200506152426591](/zh/blog/overweight/openEuler-traval.assets/image-20200506152426591.png)、![image-20200506152440903](/zh/blog/overweight/openEuler-traval.assets/image-20200506152440903.png)、![image-20200506152503864](/zh/blog/overweight/openEuler-traval.assets/image-20200506152503864.png)。
-2. 每个阶段的输入是圆框绿底，如![image-20200506152347249](/zh/blog/overweight/openEuler-traval.assets/image-20200506152347249.png)。
-3. 所有的开发和维护动作是由issue触发。issue可分为需求、问题、CVE等类型。<img src="/zh/blog/overweight/openEuler-traval.assets/image-20200506152831297.png" alt="image-20200506152831297" style="zoom:50%;" />。
+1. 软件包管理按照软件包所处的时间点分为：![image-20200506152426591](./openEuler-traval.assets/image-20200506152426591.png)、![image-20200506152440903](./openEuler-traval.assets/image-20200506152440903.png)、![image-20200506152503864](./openEuler-traval.assets/image-20200506152503864.png)。
+2. 每个阶段的输入是圆框绿底，如![image-20200506152347249](./openEuler-traval.assets/image-20200506152347249.png)。
+3. 所有的开发和维护动作是由issue触发。issue可分为需求、问题、CVE等类型。<img src="./openEuler-traval.assets/image-20200506152831297.png" alt="image-20200506152831297" style="zoom:50%;" />。
 4. 所有修改和操作通过PR来发起。
 5. 全景图中，每个动作都可能涉及规范或指导。将在后面以表格的方式整理呈现。
 
@@ -167,18 +167,18 @@ SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来�
 | 阶段      | 动作                                                         | 规范或指导                                                   |
 | --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 引入      |                                                              |                                                              |
-|           | ![image-20200506154105394](/zh/blog/overweight/openEuler-traval.assets/image-20200506154105394.png) | 指导：《如何申请SIG》 --待输出--                             |
-|           | ![image-20200506153902264](/zh/blog/overweight/openEuler-traval.assets/image-20200506153902264.png) | 规范：[《软件包引入和退出要求》](https://gitee.com/openeuler/community/blob/master/zh/technical-committee/governance/software-management.md)<br />指导：《openEuler加包指导》 --待输出-- |
-|           | ![image-20200506154028448](/zh/blog/overweight/openEuler-traval.assets/image-20200506154028448.png) | 规范：[《软件包打包规范》](https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md) |
+|           | ![image-20200506154105394](./openEuler-traval.assets/image-20200506154105394.png) | 指导：《如何申请SIG》 --待输出--                             |
+|           | ![image-20200506153902264](./openEuler-traval.assets/image-20200506153902264.png) | 规范：[《软件包引入和退出要求》](https://gitee.com/openeuler/community/blob/master/zh/technical-committee/governance/software-management.md)<br />指导：《openEuler加包指导》 --待输出-- |
+|           | ![image-20200506154028448](./openEuler-traval.assets/image-20200506154028448.png) | 规范：[《软件包打包规范》](https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md) |
 | 开发&维护 |                                                              |                                                              |
-|           | ![image-20200506154538225](/zh/blog/overweight/openEuler-traval.assets/image-20200506154538225.png) | 规范：《软件包升级选型规范》 --待输出--                      |
-|           | ![image-20200506154610817](/zh/blog/overweight/openEuler-traval.assets/image-20200506154610817.png) | 指导：[《软件包打包规范》](https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md) |
-|           | ![image-20200506154459319](/zh/blog/overweight/openEuler-traval.assets/image-20200506154459319.png) | 规范：[《软件包打包规范》](https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md)<br />指导：《如何提交PR、发起检视及合入验证》  --待输出-- |
-|           | ![image-20200506154518672](/zh/blog/overweight/openEuler-traval.assets/image-20200506154518672.png) | 规范：[《openEuler漏洞处理流程》](https://gitee.com/openeuler/security-committee/blob/master/security-process.md)<br />规范：[《openEuler漏洞严重性评估》](https://gitee.com/openeuler/security-committee/blob/master/security-evaluation.md)<br />指导：[《如何申请CVE、漏洞上报》](https://openeuler.org/zh/security.html) |
-|           | ![image-20200506154813993](/zh/blog/overweight/openEuler-traval.assets/image-20200506154813993.png) | 规范：《openEuler软件包随版本发布规范》 --待输出--<br />指导：《如何将软件包加入openEuler发布版本》--待输出-- |
-|           | ![image-20200506154918752](/zh/blog/overweight/openEuler-traval.assets/image-20200506154918752.png) | 规范：[《安全漏洞处理和发布流程》](https://gitee.com/openeuler/security-committee/blob/master/security-process.md) |
+|           | ![image-20200506154538225](./openEuler-traval.assets/image-20200506154538225.png) | 规范：《软件包升级选型规范》 --待输出--                      |
+|           | ![image-20200506154610817](./openEuler-traval.assets/image-20200506154610817.png) | 指导：[《软件包打包规范》](https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md) |
+|           | ![image-20200506154459319](./openEuler-traval.assets/image-20200506154459319.png) | 规范：[《软件包打包规范》](https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md)<br />指导：《如何提交PR、发起检视及合入验证》  --待输出-- |
+|           | ![image-20200506154518672](./openEuler-traval.assets/image-20200506154518672.png) | 规范：[《openEuler漏洞处理流程》](https://gitee.com/openeuler/security-committee/blob/master/security-process.md)<br />规范：[《openEuler漏洞严重性评估》](https://gitee.com/openeuler/security-committee/blob/master/security-evaluation.md)<br />指导：[《如何申请CVE、漏洞上报》](https://openeuler.org/zh/security.html) |
+|           | ![image-20200506154813993](./openEuler-traval.assets/image-20200506154813993.png) | 规范：《openEuler软件包随版本发布规范》 --待输出--<br />指导：《如何将软件包加入openEuler发布版本》--待输出-- |
+|           | ![image-20200506154918752](./openEuler-traval.assets/image-20200506154918752.png) | 规范：[《安全漏洞处理和发布流程》](https://gitee.com/openeuler/security-committee/blob/master/security-process.md) |
 | 退出      |                                                              |                                                              |
-|           | ![image-20200506154436536](/zh/blog/overweight/openEuler-traval.assets/image-20200506154436536.png) | 规范：[《软件包引入和退出要求》](https://gitee.com/openeuler/community/blob/master/zh/technical-committee/governance/software-management.md) |
+|           | ![image-20200506154436536](./openEuler-traval.assets/image-20200506154436536.png) | 规范：[《软件包引入和退出要求》](https://gitee.com/openeuler/community/blob/master/zh/technical-committee/governance/software-management.md) |
 
 ## 如果参与openEuler社区贡献？
 
@@ -196,7 +196,7 @@ SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来�
 
 - **Fork仓库**
 
-  ![img](/zh/blog/overweight/openEuler-traval.assets/Gitee-workflow-fork.JPG)
+  ![img](./openEuler-traval.assets/Gitee-workflow-fork.jpg)
 
 - **克隆到本地**
 
@@ -204,7 +204,7 @@ SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来�
   git clone https://gitee.com/openeuler/kernel
   ```
 
-![Gitee-workflow-CopyLink](/zh/blog/overweight/openEuler-traval.assets/Gitee-workflow-CopyLink.JPG)
+![Gitee-workflow-CopyLink](./openEuler-traval.assets/Gitee-workflow-CopyLink.jpg)
 
 - **拉分支**
 
@@ -229,7 +229,7 @@ SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来�
 
   访问你的个人主页，选择目标分支，点击   **`+ Pull Request`** 来创建一个PR
 
-  ![image-20200610173341921](/zh/blog/overweight/openEuler-traval.assets/image-20200610173341921.png)
+  ![image-20200610173341921](./openEuler-traval.assets/image-20200610173341921.png)
 
   
 
@@ -237,7 +237,7 @@ SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来�
 
   给PR指派检视人员，及时回复reviewers的意见。
 
-  ![image-20200610173629091](/zh/blog/overweight/openEuler-traval.assets/image-20200610173629091.png)
+  ![image-20200610173629091](./openEuler-traval.assets/image-20200610173629091.png)
 
 - **更新PR**
 
@@ -246,7 +246,7 @@ SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来�
 **建议：**
 
 1. 相关的修改，单独拉分支来修改提交，并创建PR。如果可以，一次commit一个分支。
-2. 当PR合入后，可以强制同步最新代码到个人仓库。![image-20200610174315367](/zh/blog/overweight/openEuler-traval.assets/image-20200610174315367.png)
+2. 当PR合入后，可以强制同步最新代码到个人仓库。![image-20200610174315367](./openEuler-traval.assets/image-20200610174315367.png)
 3. 不要在master上提交代码，当PR未merge时，强制同步会失败。
 
 ## 开发者可以在openEuler社区做些什么？
@@ -278,7 +278,7 @@ SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来�
 
 - 首先，要找到修复问题对应的仓库，以[src-openEuler/mock](https://gitee.com/src-openeuler/mock)为例，点击fork按钮，复制仓库代码到个人名下。
 
-  ![image-20200521232246188](/zh/blog/overweight/openEuler-traval.assets/image-20200521232246188.png)
+  ![image-20200521232246188](./openEuler-traval.assets/image-20200521232246188.png)
 
 - 将代码git clone到本地，如果你的修改不涉及二进制源码软件包的变化，将所修改的代码做成一个patch，因为仓库是以rpm源码包的格式组织的。
 
@@ -286,9 +286,9 @@ SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来�
 
 - 通过门禁中的openeuler-rpm-build的链接，你可以逐层找到这次提交构建的临时rpm二进制。后续会将生成的二进制直接回显到评论里。
 
-  ![image-20200522002832030](/zh/blog/overweight/openEuler-traval.assets/image-20200522002832030.png)
+  ![image-20200522002832030](./openEuler-traval.assets/image-20200522002832030.png)
 
-  ![image-20200522003012593](/zh/blog/overweight/openEuler-traval.assets/image-20200522003012593.png)	
+  ![image-20200522003012593](./openEuler-traval.assets/image-20200522003012593.png)	
 
 - 代码reviewers可以针对提交给出自己意见，当他认可你的提交时，会`/lgtm`来给出ok的意见。
 
@@ -313,7 +313,7 @@ openEuler是一个开放的社区，我们希望所有参与社区的人都能�
 - 贡献的架构是否正确
 - 贡献是否完善
 
-注意：如果您的PR请求没有引起足够的关注，可以在SIG的邮件列表或[dev@openeuler.org](mailto:dev@openeuler.org)求助。
+注意：如果您的PR请求没有引起足够的关注，可以在SIG的邮件列表或[dev@openeuler.org](./mailto:dev@openeuler.org)求助。
 
 这里是一个[可供参考的示例](https://gitee.com/open_euler/dashboard/projects/src-openeuler/ct-ng/pulls/2?tab=comments)。
 
@@ -337,7 +337,7 @@ stateDiagram
 
 ```
 
-![image-20200611162154651](/zh/blog/overweight/openEuler-traval.assets/image-20200611162154651.png)
+![image-20200611162154651](./openEuler-traval.assets/image-20200611162154651.png)
 
 ```markdown
 	SIG列表：   gitee.com/openeuler/community/tree/master/sig
@@ -355,9 +355,9 @@ stateDiagram
   - Maintainer的联系方式
 - **方式二**：如果您知道感兴趣的项目名称，可以在openEuler的Repository列表下进行模糊搜索，从而快速定位到对应项目的首页地址。通常情况下，在该项目首页地址的`README.md`文件中，可以找到该项目所属的SIG信息、交流方式、成员和联系方式等。
 
-如果上述两种方式都定位不到您感兴趣的SIG，您可以向[community@openeuler.org](mailto:community@openeuler.org)发求助邮件。建议您在邮件列表内用“【开发过程疑问】”作为标题，在内容中写出你寻找的SIG或项目的特征，我们会为您提供帮助。
+如果上述两种方式都定位不到您感兴趣的SIG，您可以向[community@openeuler.org](./mailto:community@openeuler.org)发求助邮件。建议您在邮件列表内用“【开发过程疑问】”作为标题，在内容中写出你寻找的SIG或项目的特征，我们会为您提供帮助。
 
-确定好你要创建小组后，可以按照[模板](gitee.com/openeuler/community/tree/master/sig/sig-template)创建一个新的sig目录，并提交 PR 到 [community仓库](https://gitee.com/openeuler/community/tree/master/sig)，并在TC例会上申请议题（订阅tc@openeuler.org，并关注议题收集的邮件），经过大家一致同意后，合入PR，就代表sig创立成功。 
+确定好你要创建小组后，可以按照[模板](./gitee.com/openeuler/community/tree/master/sig/sig-template)创建一个新的sig目录，并提交 PR 到 [community仓库](https://gitee.com/openeuler/community/tree/master/sig)，并在TC例会上申请议题（订阅tc@openeuler.org，并关注议题收集的邮件），经过大家一致同意后，合入PR，就代表sig创立成功。 
 
 这里是一个PR提交创立sig-golang的[具体例子](https://gitee.com/openeuler/community/commit/27b68ca952fffe175ff86b5debe286ea356347db)，包括sig的raodmap、职责、管理的仓库（也许是从别的sig中移交过来）、联系方式和maintainer等信息。
 
@@ -375,7 +375,7 @@ stateDiagram
     对应SIG下添加仓库 --> 评审合入
     评审合入 --> [*]
 ```
-![image-20200611162225682](/zh/blog/overweight/openEuler-traval.assets/image-20200611162225682.png)
+![image-20200611162225682](./openEuler-traval.assets/image-20200611162225682.png)
 
 当前发现openEuler社区缺少你需要的软件时，你可以尝试动手为社区贡献软件包。这里不再赘述OS是如何由linux软件包组成的，以及如何制作一个rpm包。这里着重讲解贡献软件包的流程。
 
@@ -385,21 +385,21 @@ stateDiagram
 
 - 然后，你可以通过提交PR的方式，在对应的sig下添加软件仓库。可参考[这个提交](https://gitee.com/openeuler/community/pulls/438)，一旦审核通过，后台会自动为你在对应的src-openeuler group下创建同名仓库，并在[Factory](https://build.openeuler.org/project/show/openEuler:Factory)工程中去创建同名package开始构建，由于默认仓库里只有readme，并不会进行真正的构建，而是exclude状态。
 
-  ![image-20200522001706202](/zh/blog/overweight/openEuler-traval.assets/image-20200522001706202.png)
+  ![image-20200522001706202](./openEuler-traval.assets/image-20200522001706202.png)
 
 - 接着你可以按照2的操作提交一个PR，来上传可以构建的代码。一旦合入，Factory工程便会触发构建。
 
-  ![image-20200522001826061](/zh/blog/overweight/openEuler-traval.assets/image-20200522001826061.png)
+  ![image-20200522001826061](./openEuler-traval.assets/image-20200522001826061.png)
 
 - 软件打包符合打包规范，请参考[如何打包](https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md)。
 
 - 该工程下所有软件包成功的构建结果，归档在：
 
-  ![image-20200522002217686](/zh/blog/overweight/openEuler-traval.assets/image-20200522002217686.png)
+  ![image-20200522002217686](./openEuler-traval.assets/image-20200522002217686.png)
 
   **它是以repo源的方式归档，可以直接使用yum安装。**
 
-  ![image-20200522002316316](/zh/blog/overweight/openEuler-traval.assets/image-20200522002316316.png)
+  ![image-20200522002316316](./openEuler-traval.assets/image-20200522002316316.png)
 
   
 
@@ -412,8 +412,7 @@ stateDiagram
 OBS是Open Build Service 的简写（官方网址：https://openbuildservice.org/），
 
 原本是作为发行版openSUSE专用的rpm打包的平台，后续扩展为面向多发行版、多架构、多格式的打包发布平台。
-
-![img](https://openeuler.org/zh/blog/fuchangjie/2020-03-26-how-to-OBS-%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84.png)
+<img src="./../fuchangjie/2020-03-26-how-to-OBS-系统结构.png"/>
 
 **与koji的不同**
 
@@ -580,18 +579,17 @@ osc chroot [platform] [arch]
 - 网页操作：
 
 在obs主页点击右上角
-
-![img](https://openeuler.org/zh/blog/fuchangjie/2020-03-26-how-to-OBS-%E4%B8%BB%E9%A1%B5%E5%8F%B3%E4%B8%8A%E8%A7%92.png)
+<img src="./../fuchangjie/2020-03-26-how-to-OBS-主页右上角.png"/>
 
 依次进入 Home Project -> Repositories -> Add from a Distribution 。
 
-![img](https://openeuler.org/zh/blog/fuchangjie/2020-03-26-how-to-OBS-AFD%E9%A1%B5.png)
+<img src="./../fuchangjie/2020-03-26-how-to-OBS-AFD页.png"/>
 
 按上图所示填写基础配置，并在Name栏填写喜欢的名字。
 
 在选择后后退至Repositories界面，可以看到如下图所示的环境：
 
-![img](https://openeuler.org/zh/blog/fuchangjie/2020-03-26-how-to-OBS-%E7%8E%AF%E5%A2%83%E6%A0%87%E7%AD%BE.png)
+<img src="./../fuchangjie/2020-03-26-how-to-OBS-环境标签.png"/>
 
 1. 第一个为编辑按钮，可以选择当前发行版编译架构
 2. 第二个为添加按钮，可在发行版标准环境上额外添加单独的包（例如其他私人编译的依赖包）
@@ -602,7 +600,7 @@ osc chroot [platform] [arch]
 
 执行命令： `osc meta prj -e [project名]` ，会看到类似如下文本：
 
-![img](https://openeuler.org/zh/blog/fuchangjie/2020-03-26-how-to-OBS-meta%E9%85%8D%E7%BD%AE.png)
+<img src="./../fuchangjie/2020-03-26-how-to-OBS-meta配置.png"/>
 
 其中， 1. repository标签为仓库标签， 可添加此项添加编译时的基础环境 2. Path标签为可用包路径标签， 需手动添加发行版包路径。如需要额外依赖， 也可以单独添加。 3. Arch标签为编译架构， 可同时添加多个。
 
@@ -627,15 +625,15 @@ osc chroot [platform] [arch]
 
 进入Package目录并将下载源码以【tar包、所有patch、spec文件、其他source文件】格式放置：
 
-! ![img](https://openeuler.org/zh/blog/fuchangjie/2020-03-26-how-to-OBS-%E7%9B%AE%E5%BD%95%E6%A0%BC%E5%BC%8F.png)
+<img src="./../fuchangjie/2020-03-26-how-to-OBS-目录格式.png"/>
 
 向新创建的package中添加以上文件： `osc add *`
 
-![img](https://openeuler.org/zh/blog/fuchangjie/2020-03-26-how-to-OBS-%E5%9B%BE%E7%89%871.png)
+<img src="./../fuchangjie/2020-03-26-how-to-OBS-图片1.png"/>
 
 将更改上传至服务器： `osc commit`
 
-![img](https://openeuler.org/zh/blog/fuchangjie/2020-03-26-how-to-OBS-commit%E4%BB%8B%E7%BB%8D.png)
+<img src="./../fuchangjie/2020-03-26-how-to-OBS-commit介绍.png"/>
 
 在这里可以注明本次上传的简短介绍，用`:wq`保存并退出
 
@@ -645,7 +643,7 @@ osc chroot [platform] [arch]
 
 您可以在Project与Package主页右侧看到当前编译状态
 
-![img](https://openeuler.org/zh/blog/fuchangjie/2020-03-26-how-to-OBS-%E7%BC%96%E8%AF%91%E7%8A%B6%E6%80%81.png)
+<img src="./../fuchangjie/2020-03-26-how-to-OBS-编译状态.png"/>
 
 - `finished` 表示在某个系统平台执行编译链接、安装检查的过程结束
 - `succeeded` 状态为编译成功
@@ -680,7 +678,7 @@ osc chroot [platform] [arch]
 
 1. 通过命令行工具或者网页新建一个空的Package
 
-![img](https://openeuler.org/zh/blog/fuchangjie/2020-03-26-OBS-with-Git-%E7%A9%BAPackage.png)
+<img src="./../fuchangjie/2020-03-26-OBS-with-Git-空Package.png"/>
 
 1. 进入Package目录并创建_service:
    - 网页端点击*Add file* ，点击*Choose a file*，并选择本地建好的_service文件。
@@ -768,13 +766,13 @@ osc chroot [platform] [arch]
 
 对于**git仓库**来说，一般会将所有文件放到仓库的根目录。
 
-![img](https://openeuler.org/zh/blog/fuchangjie/2020-03-26-OBS-with-Git-git%E4%BB%93%E5%BA%93.png)
+<img src="./../fuchangjie/2020-03-26-OBS-with-Git-git仓库.png"/>
 
 此时我们需要将**spec文件、patch文件、源文件**提取出来， **源码**则留在tar包中等待之后的服务将其压缩打包。
 
 对于**OBS仓库**来说，为了方便OBS系统使用，人们已经对源码进行压缩打包。
 
-![img](https://openeuler.org/zh/blog/fuchangjie/2020-03-26-OBS-with-Git-OBS%E4%BB%93%E5%BA%93.png)
+<img src="./../fuchangjie/2020-03-26-OBS-with-Git-OBS仓库.png"/>
 
 此时我们需要将**所有文件**提取出来并省略之后的压缩打包环节。
 
@@ -812,7 +810,7 @@ helloworld-%{version}.tar.xz
 
 由于使用源服务获取源码，所以编译时需要额外过程与时间。
 
-![img](https://openeuler.org/zh/blog/fuchangjie/2020-03-26-OBS-with-Git-OBS%E4%BB%93%E5%BA%93.png)
+<img src="./../fuchangjie/2020-03-26-OBS-with-Git-OBS仓库.png"/>
 
 当状态显示为 **blocked** 时， 表明源服务正在运行。当源服务运行完毕时会正常开始打包过程。
 
@@ -824,7 +822,7 @@ helloworld-%{version}.tar.xz
 
 首先，我们在git仓库中以：**spec文件、patch文件、 **源码tar包** 的格式上传并管理源码。
 
-![img](https://openeuler.org/zh/blog/fuchangjie/2020-03-26-OBS-with-Git-gitee%E4%BB%93%E5%BA%93.png)
+<img src="./../fuchangjie/2020-03-26-OBS-with-Git-gitee仓库.png"/>
 
 在OBS系统中建立对应包并以一下格式定义_service文件：
 
@@ -869,13 +867,13 @@ osc token --create <PROJECT> <PACKAGE>
 
 打开git仓库网址（以github为例）：
 
-![img](https://openeuler.org/zh/blog/fuchangjie/2020-03-26-OBS-with-Git-git%E4%BB%93%E5%BA%93%E9%A1%B5.png)
+<img src="./../fuchangjie/2020-03-26-OBS-with-Git-git仓库页.png"/>
 
 打开仓库 -> Setting -> Webhooks
 
-![img](https://openeuler.org/zh/blog/fuchangjie/2020-03-26-OBS-with-Git-Webhook%E9%A1%B5.png)
+<img src="./../fuchangjie/2020-03-26-OBS-with-Git-Webhook页.png"/>
 点击左上方的 Add webhook 。
-![img](https://openeuler.org/zh/blog/fuchangjie/2020-03-26-OBS-with-Git-%E6%96%B0%E5%BB%BAWebhook.png)
+<img src="./../fuchangjie/2020-03-26-OBS-with-Git-新建Webhook.png"/>
 
 在 Payload URL中以：
 
