@@ -141,6 +141,7 @@
                     <el-input
                         :placeholder="i18n.common.SEARCH_PLACE_HOLDER"
                         v-model="searchData"
+                        @keyup.enter.native="toSearch"
                     >
                     <i
                         class="icon-search el-input__icon"
@@ -364,7 +365,7 @@ export default {
     
     .el-input__icon {
         display: inline-block;
-        margin-top: 3px;
+        margin-top: 4px;
         cursor: pointer;
     }
 }
