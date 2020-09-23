@@ -283,7 +283,7 @@
                         <span>{{ item.frontmatter.author }}</span>
                         <p><router-link class="word-hover" :to="item.path">{{ item.frontmatter.summary }}</router-link></p>
                     </div>
-                    <span><a @click="go('/interaction/blog-list/')">{{ i18n.home.MORE }}</a></span>
+                    <span><a class="room-more" @click="go('/interaction/blog-list/')">{{ i18n.home.MORE }}</a></span>
                 </div>
                 <div class="news-room">
                     <h5>{{ i18n.home.HOME_ROOMS.NEWS_NAME }}</h5>
@@ -295,7 +295,7 @@
                         <span>{{ item.frontmatter.author }}</span>
                         <p><router-link class="word-hover" :to="item.path">{{ item.frontmatter.title }}</router-link></p>
                     </div>
-                    <span><a @click="go('/interaction/news-list/')">{{ i18n.home.MORE }}</a></span>
+                    <span><a class="room-more" @click="go('/interaction/news-list/')">{{ i18n.home.MORE }}</a></span>
                 </div>
             </div>
         </div>
@@ -1787,6 +1787,8 @@
             display: inline-block;
             text-decoration: none;
             color: #002fa7;
+        }
+        .newsroom .room-more {
             margin-bottom: 40px;
         }
         .home-developer {
