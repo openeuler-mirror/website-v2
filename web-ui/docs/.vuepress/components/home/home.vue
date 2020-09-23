@@ -165,10 +165,9 @@
                     class="area-box"
                     v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP"
                     :key="index"
-                    @touchstart="go(item.LINK)"
                     >
-                        <div class="box-icon">{{ item.NAME }}</div>
-                        <p>{{ item.TITLE }}</p>
+                        <div class="box-icon" @touchstart="go(item.LINK)">{{ item.NAME }}</div>
+                        <p @touchstart="go(item.LINK)">{{ item.TITLE }}</p>
                         <img :src="item.IMG" alt=""/>
                 </div>
                 <div :class="['snd-guidance','location',isShowCard?'is-show':'',$lang == 'en'?'en-snd-guidance':'']">
@@ -569,17 +568,19 @@
                 }
             },
             toggleHover() {
-                let hovers = this.es('.area-box');
-                for (let i = 0; i < hovers.length; i++) {
-                    let hover = hovers[i];
-                    hover.addEventListener('mouseenter', function () {
-                        let img = hover.querySelector('.is-hidden');
-                        img.classList.add('is-hovered');
-                    })
-                    hover.addEventListener('mouseleave', function () {
-                        let img = hover.querySelectorAll('img')[1];
-                        img.classList.remove('is-hovered');
-                    })
+                if (window.innerWidth > 1000) {
+                    let hovers = this.es('.area-box');
+                    for (let i = 0; i < hovers.length; i++) {
+                        let hover = hovers[i];
+                        hover.addEventListener('mouseenter', function () {
+                            let img = hover.querySelector('.is-hidden');
+                            img.classList.add('is-hovered');
+                        })
+                        hover.addEventListener('mouseleave', function () {
+                            let img = hover.querySelectorAll('img')[1];
+                            img.classList.remove('is-hovered');
+                        })
+                    }
                 }
             },
             clickDownload() {
