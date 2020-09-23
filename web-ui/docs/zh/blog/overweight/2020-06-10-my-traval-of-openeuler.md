@@ -196,7 +196,7 @@ SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来�
 
 - **Fork仓库**
 
-  ![img](./openEuler-traval.assets/Gitee-workflow-fork.jpg)
+  ![img](./openEuler-traval.assets/Gitee-workflow-fork.png)
 
 - **克隆到本地**
 
@@ -204,7 +204,7 @@ SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来�
   git clone https://gitee.com/openeuler/kernel
   ```
 
-![Gitee-workflow-CopyLink](./openEuler-traval.assets/Gitee-workflow-CopyLink.jpg)
+![Gitee-workflow-CopyLink](./openEuler-traval.assets/Gitee-workflow-CopyLink.png)
 
 - **拉分支**
 
