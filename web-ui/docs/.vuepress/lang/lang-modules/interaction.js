@@ -139,7 +139,7 @@ module.exports = {
                     FORMERLYLINK: 'https://www.bilibili.com/video/BV1dk4y1171e'
                 },
                 {
-                    LIVETITLE: '安装虚拟化&管理虚拟机',
+                    LIVETITLE: '开源版权和License3',
                     LIVETEACHER: '讲师: 卜瑞峰',
                     LIVETIME: '时间: 7月30日 20:00',
                     PHOTOPATH: '/img/live/boruifeng.png',
@@ -580,7 +580,7 @@ module.exports = {
                     FORMERLYLINK: 'https://www.bilibili.com/video/BV1dk4y1171e'
                 },
                 {
-                    LIVETITLE: '安装虚拟化&管理虚拟机',
+                    LIVETITLE: '开源版权和License',
                     LIVETEACHER: '讲师: 卜瑞峰',
                     LIVETIME: '时间: 7月30日 20:00',
                     PHOTOPATH: '/img/live/boruifeng.png',
