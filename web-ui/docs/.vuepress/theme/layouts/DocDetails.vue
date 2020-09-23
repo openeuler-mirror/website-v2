@@ -72,7 +72,7 @@
             </p>
         </div>
         <ul class="second-title-list">
-            <li v-for="(item,index) in secondTitleList" :key="index" :class="isIndex == index?'active':''"><a @click="isActive(index,item)">{{item.innerText}}</a></li>
+            <li v-for="(item,index) in secondTitleList" :key="index" :class="isIndex == index?'active':''"><a @click="isActive(index,item)">{{item.id}}</a></li>
         </ul>
     </div>
   </div>
