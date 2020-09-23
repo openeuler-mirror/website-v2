@@ -278,13 +278,12 @@
                     <div class="rooms"
                          v-for="(item, index) in blogList"
                          :key="index">
-                        <span v-for="tag in item.frontmatter.tags">{{ tag }} <span>|</span> </span>
                         <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
                         <span>|</span>
                         <span>{{ item.frontmatter.author }}</span>
                         <p><router-link class="word-hover" :to="item.path">{{ item.frontmatter.summary }}</router-link></p>
                     </div>
-                    <span><a @click="go('/interaction/blog-list/')">{{ i18n.home.MORE }}</a></span>
+                    <span><a class="room-more" @click="go('/interaction/blog-list/')">{{ i18n.home.MORE }}</a></span>
                 </div>
                 <div class="news-room">
                     <h5>{{ i18n.home.HOME_ROOMS.NEWS_NAME }}</h5>
@@ -296,7 +295,7 @@
                         <span>{{ item.frontmatter.author }}</span>
                         <p><router-link class="word-hover" :to="item.path">{{ item.frontmatter.title }}</router-link></p>
                     </div>
-                    <span><a @click="go('/interaction/news-list/')">{{ i18n.home.MORE }}</a></span>
+                    <span><a class="room-more" @click="go('/interaction/news-list/')">{{ i18n.home.MORE }}</a></span>
                 </div>
             </div>
         </div>
@@ -616,7 +615,13 @@
             filterSiteData(datas, string) {
                 let newData = datas.filter(data => data.path.includes(string));
                 newData.sort(function (date1, date2) {
-                    return(date1.date - date2.date);
+                    let origin1 = date1.frontmatter.date
+                    let origin2 = date2.frontmatter.date
+
+                    let parsed1 = Date.parse(origin1)
+                    let parsed2 = Date.parse(origin2)
+
+                    return(parsed2 - parsed1);
                 })
                 newData = newData.slice(0, 3);
                 return newData;
@@ -1782,6 +1787,8 @@
             display: inline-block;
             text-decoration: none;
             color: #002fa7;
+        }
+        .newsroom .room-more {
             margin-bottom: 40px;
         }
         .home-developer {
