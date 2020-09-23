@@ -16,7 +16,10 @@ module.exports = {
         }]
     ],
     markdown: {
-        lineNumbers: false
+        lineNumbers: false,
+        extendMarkdown: md => {
+            md.disable('emoji');
+        }
     },
     plugins: [
         [require('./sitePlugin.js')]
