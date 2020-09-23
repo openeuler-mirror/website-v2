@@ -5,25 +5,25 @@
       :class="[showMobileMenu && 'show-mobile-menu', !showMobileMenu && 'hide-mobile-menu',$lang == 'en'?'en-mobile-width':'']"
     >
       <div class="version-div" v-if="!showMobileMenu">
-          <span>{{version}}</span>
+          <span>{{versionValue == versionArr[0].value?versionArr[0].name:versionArr[1].name}}</span>
           <div>
               <i class="icon-document" @click="showSelection = !showSelection"></i>
               <div class="version-select" v-show="showSelection">
                   <p v-for="(item,key) in versionArr"
                   :key="key"
-                  :class="item == version?'selected':''"
-                  @click="changeVersion(item)"
-                  >{{item}}</p>
+                  :class="item.value == versionValue?'selected':''"
+                  @click="changeVersion(item.value)"
+                  >{{item.name}}</p>
               </div>
           </div>
       </div>
       <div class="mobile-selection" v-if="showMobileMenu">
-          <el-select v-model="version" @change="changeVersion">
+          <el-select v-model="versionValue" @change="changeVersion">
               <el-option
               v-for="(item, index) in versionArr"
               :key="index"
-              :label="item"
-              :value="item"
+              :label="item.name"
+              :value="item.value"
               ></el-option>
           </el-select>
       </div>
@@ -88,8 +88,8 @@ export default {
       menuData: [],
       //菜单平铺数据
       allPathArr: [],
-      //当前版本
-      version: "",
+      //当前版本路径
+      versionValue: "",
       //意见反馈路径
       feedbackPath: "",
       //当然页面路径
@@ -117,11 +117,11 @@ export default {
   },
   mounted() {
     let currentPath = this.$route.path;
-    this.version = currentPath.split("/")[3];
+    this.versionValue = currentPath.split("/")[3];
     this.menuData = require("../../../" +
       this.$lang +
       "/docs/" +
-      this.version +
+      this.versionValue +
       "/menu/menu.json");
     this.currentDocPath = this.getCurrentDocPath(currentPath);
     this.renderFeedbackPath();//初次进入页面时设置点击意见反馈的链接
@@ -142,7 +142,7 @@ export default {
       this.renderFeedbackPath();
       this.showMobileMenu = false;
       this.$router.push(
-        this.targetLocale + "docs/" + this.version + "/" + data.path + ".html"
+        this.targetLocale + "docs/" + this.versionValue + "/" + data.path + ".html"
       );
       this.secondTitleList=[];
       this.isIndex = 0;
@@ -162,7 +162,7 @@ export default {
         //设置点击意见反馈的链接
       this.feedbackPath =
         "https://gitee.com/openeuler/docs/blob/stable-" +
-        this.version +
+        this.versionValue +
         "/content" +
         this.targetLocale +
         this.currentDocPath +
@@ -191,7 +191,7 @@ export default {
       this.$router.push(
         this.targetLocale +
           "docs/" +
-          this.version +
+          this.versionValue +
           "/" +
           this.currentDocPath +
           ".html"
@@ -237,7 +237,7 @@ export default {
             getSecondTile.forEach((item,index) => {
                 this.secondTitleList.push(item.innerText);
             });
-        },200);
+        },500);
     },
     isActive(index){
         this.isIndex = index;
@@ -249,11 +249,11 @@ export default {
         this.$router.push(this.targetLocale + "docs/" + item + "/docs/Releasenotes/release_notes.html");
         this.timer = setInterval(()=>{
             let currentPath = this.$route.path;
-            this.version = currentPath.split("/")[3];
+            this.versionValue = currentPath.split("/")[3];
             this.menuData = require("../../../" +
             this.$lang +
             "/docs/" +
-            this.version +
+            this.versionValue +
             "/menu/menu.json");
             this.currentDocPath = this.getCurrentDocPath(currentPath);
             this.renderFeedbackPath();//初次进入页面时设置点击意见反馈的链接
@@ -272,12 +272,9 @@ export default {
     },
     getVersionArr(){
         let timer = setTimeout(() => {
-            let allVersions = require("../../../" + this.$lang + "/docs/path/path.json");
-            for(let i of allVersions){
-                this.versionArr.push(i.value);
-            }
+            this.versionArr = require("../../../" + this.$lang + "/docs/path/path.json");
         },500);
-    }
+    },
   },
   destroyed () {
         clearInterval(this.timer);
@@ -443,6 +440,19 @@ export default {
     overflow: hidden;
     position: fixed;
     max-height: calc(100vh - 296px);
+    overflow-y: scroll;
+    &::-webkit-scrollbar-track {
+        border-radius:10px;
+        background-color:#F1F1F1;
+    }
+    &::-webkit-scrollbar {
+        width:4px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius:10px;
+        background-color:#AFBFE8;
+    }
+    overflow-x: hidden;
     .null-box{
         height: 20px;
     }
@@ -500,10 +510,6 @@ export default {
       @media screen and (max-width: 1000px) {
           width: 100%;
       }
-    }
-    img[src*=gif]{
-        width: 25px;
-        height: 25px;
     }
   }
   h1,
@@ -581,7 +587,7 @@ export default {
   }
   .details-left {
     width: 282px;
-    padding-top: 20px;
+    padding-top: 70px;
     vertical-align: top;
     > div > div > div.el-tree-node__content {
       height: 46px;
