@@ -229,7 +229,7 @@ export default {
       });
     },
     showMenu() {
-      this.showMobileMenu = true;
+      this.showMobileMenu = !this.showMobileMenu;
     },
     getSecondTitle(){   
         this.timer = setInterval(()=>{
@@ -291,6 +291,20 @@ export default {
 </script>
 
 <style lang="less">
+.markdown #docs-content table tr:nth-child(odd) td,.markdown #docs-content table tr:nth-child(odd) th{
+    background-color: unset;
+}
+.markdown #docs-content table td,.markdown #docs-content table th{
+    border: 1px solid gray;
+}
+.markdown #docs-content table thead{
+    background: #f7f7f7;
+}
+.markdown #docs-content h1 a,.markdown #docs-content h2 a,.markdown #docs-content h3 a
+.markdown #docs-content h4 a,.markdown #docs-content h5 a,.markdown #docs-content h6 a
+{
+    display: none;
+}
 .doc-details-content {
   width: 1120px;
   margin: 60px auto 400px auto;
