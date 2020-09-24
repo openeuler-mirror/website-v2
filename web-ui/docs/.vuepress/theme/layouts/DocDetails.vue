@@ -144,7 +144,6 @@ export default {
       this.$router.push(
         this.targetLocale + "docs/" + this.versionValue + "/" + data.path + ".html"
       );
-      this.secondTitleList=[];
       this.isIndex = 0;
       this.getSecondTitle();
     },
@@ -198,12 +197,10 @@ export default {
       );
     },
     previous() {
-        this.secondTitleList = [];
         this.getSecondTitle();
         this.changePage(this.previousPath);
     },
     next() {
-        this.secondTitleList = [];
         this.getSecondTitle();
         this.changePage(this.nextPath);
     },
@@ -231,18 +228,23 @@ export default {
     showMenu() {
       this.showMobileMenu = !this.showMobileMenu;
     },
-    getSecondTitle(){   
+    getSecondTitle(){
         this.timer = setInterval(()=>{
+            this.secondTitleList = [];
             let getSecondTile = document.getElementsByTagName("h2");
             if(getSecondTile.length != 0 && this.secondTitleList.length == 0){
+                console.log(getSecondTile);
                 getSecondTile.forEach((item,index) => {
                     this.secondTitleList.push(item);
                     if(getSecondTile.length == this.secondTitleList.length){
                         clearInterval(this.timer);
                     }
                 });
+            }else{
+                clearInterval(this.timer);
             }
-        },300);
+        },500);
+        
     },
     isActive(index,item){
         this.isIndex = index;
@@ -251,7 +253,6 @@ export default {
     },
     changeVersion(item){
         this.menuData = [];
-        this.secondTitleList = [];
         this.showSelection = !this.showSelection;
         this.$router.push(this.targetLocale + "docs/" + item + "/docs/Releasenotes/release_notes.html");
         this.timer = setInterval(()=>{
@@ -283,7 +284,7 @@ export default {
         },500);
     },
   },
-  destroyed () {
+  beforeDestroy () {
         clearInterval(this.timer);
     }
 };
