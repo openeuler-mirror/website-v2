@@ -647,7 +647,7 @@ export default {
   }
   .show-mobile-menu {
     position: fixed;
-    z-index: 1000;
+    z-index: 500;
     padding-left: 30px;
     margin-left: -30px;
     background: #fbfbfb;
