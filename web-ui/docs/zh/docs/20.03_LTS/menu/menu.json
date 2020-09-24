@@ -256,7 +256,7 @@
             "children": [
                 {
                     "label": "账户口令",
-                    "path": "docs/SecHarden/账户口令.html",
+                    "path": "docs/SecHarden/账户口令",
                     "children": [
 
                     ]
