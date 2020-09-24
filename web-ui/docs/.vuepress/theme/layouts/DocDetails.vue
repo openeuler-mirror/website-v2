@@ -272,11 +272,6 @@ export default {
             }
         },300)
     },
-    clickOutside(){
-        if(this.showSelection){
-            this.showSelection = false;
-        }
-    },
     getVersionArr(){
         let timer = setTimeout(() => {
             this.versionArr = require("../../../" + this.$lang + "/docs/path/path.json");
