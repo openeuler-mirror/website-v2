@@ -503,12 +503,12 @@
             this.screenWidth = document.body.clientWidth;
             if(this.screenWidth <= 1000){
                 this.isShowH5 = true;
+                this.$nextTick(() => {
+                    this.mobileSwiperInterval = setInterval(() => {
+                        this.swiper.slideNext();
+                    }, 5000);
+                })
             }
-            this.$nextTick(() => {
-                this.mobileSwiperInterval = setInterval(() => {
-                    this.swiper.slideNext();
-                }, 5000);
-            })
         },
         beforeDestroy () {
             this.mobileSwiperInterval && clearInterval(this.mobileSwiperInterval);
