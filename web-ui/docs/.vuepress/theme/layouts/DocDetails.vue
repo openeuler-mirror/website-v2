@@ -144,6 +144,7 @@ export default {
       this.$router.push(
         this.targetLocale + "docs/" + this.versionValue + "/" + data.path + ".html"
       );
+      this.isIndex = 0;
       this.getSecondTitle();
     },
     getCurrentDocPath(path) {
@@ -196,10 +197,12 @@ export default {
       );
     },
     previous() {
+        this.isIndex = 0;
         this.getSecondTitle();
         this.changePage(this.previousPath);
     },
     next() {
+        this.isIndex = 0;
         this.getSecondTitle();
         this.changePage(this.nextPath);
     },
@@ -228,12 +231,10 @@ export default {
       this.showMobileMenu = !this.showMobileMenu;
     },
     getSecondTitle(){
-        this.isIndex = 0;
         this.timer = setInterval(()=>{
             this.secondTitleList = [];
             let getSecondTile = document.getElementsByTagName("h2");
             if(getSecondTile.length != 0 && this.secondTitleList.length == 0){
-                console.log(getSecondTile);
                 getSecondTile.forEach((item,index) => {
                     this.secondTitleList.push(item);
                     if(getSecondTile.length == this.secondTitleList.length){
@@ -244,6 +245,7 @@ export default {
                 clearInterval(this.timer);
             }
         },500);
+        
     },
     isActive(index,item){
         this.isIndex = index;
@@ -271,11 +273,6 @@ export default {
                 clearInterval(this.timer);
             }
         },300)
-    },
-    clickOutside(){
-        if(this.showSelection){
-            this.showSelection = false;
-        }
     },
     getVersionArr(){
         let timer = setTimeout(() => {
@@ -646,7 +643,7 @@ export default {
   }
   .show-mobile-menu {
     position: fixed;
-    z-index: 500;
+    z-index: 1000;
     padding-left: 30px;
     margin-left: -30px;
     background: #fbfbfb;
