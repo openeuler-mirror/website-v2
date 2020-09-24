@@ -243,7 +243,6 @@ export default {
                 });
             }
         },300);
-        
     },
     isActive(index,item){
         this.isIndex = index;
@@ -531,7 +530,7 @@ export default {
     img {
         max-width: 100%;
       @media screen and (max-width: 1000px) {
-          width: 100%;
+          max-width: 100%;
       }
     }
   }
