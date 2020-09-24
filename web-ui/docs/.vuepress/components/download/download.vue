@@ -135,7 +135,7 @@ export default {
   created () {
       let filterFn = (arr, key, item) => {
             return arr.every((arrItem => {
-                if(arrItem.VALUE !== item[key]){
+                if(item[key] && arrItem.VALUE !== item[key]){
                     return true;
                 }
             }))
