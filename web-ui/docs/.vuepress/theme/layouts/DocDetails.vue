@@ -233,7 +233,6 @@ export default {
             this.secondTitleList = [];
             let getSecondTile = document.getElementsByTagName("h2");
             if(getSecondTile.length != 0 && this.secondTitleList.length == 0){
-                console.log(getSecondTile);
                 getSecondTile.forEach((item,index) => {
                     this.secondTitleList.push(item);
                     if(getSecondTile.length == this.secondTitleList.length){
