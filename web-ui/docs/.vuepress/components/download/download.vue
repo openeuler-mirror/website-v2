@@ -484,6 +484,9 @@ export default {
       }
       .download-item:nth-child(3n) {
         margin-right: 25px;
+          .url-list li:nth-child(3n) {
+              margin-left: 13px;
+          }
       }
     }
    .download-list {
