@@ -21,7 +21,7 @@ title: "Guidance to Post a Blog"
 ## Understand blog format
 
 The openEuler blog is written in markdown format.
-You can read <https://gitee.com/openeuler/website/tree/master/docs/blog_design.md> to get understand how the blog is designed.
+You can read <https://gitee.com/openeuler/website-v2/tree/master/docs/blog_design.md> to get understand how the blog is designed.
 
 The head includes the following information:
 ```
