@@ -207,25 +207,29 @@ export default {
         this.changePage(this.nextPath);
     },
     getNextPathAndPreviousPath() {
-      this.allPathArr.forEach((item, index) => {
-        if (item === this.currentDocPath) {
-          if (index === 0) {
-              //当前是第一篇点击下一篇
-            this.nextPath = this.allPathArr[index + 1];
+        if(this.currentDocPath == 'docs/Releasenotes/%E6%B3%95%E5%BE%8B%E5%A3%B0%E6%98%8E'){
+            this.nextPath = this.allPathArr[1];
             this.previousPath = "";
-            return false;
-          }
-          if (index === this.allPathArr.length - 1) {
-              //当前是最后一篇点击下一篇
-            this.nextPath = "";
-            this.previousPath = this.allPathArr[index - 1];
-            return false;
-          }
-          //当前是第二篇（及以上）文章开始点击下一章
-          this.nextPath = this.allPathArr[index + 1];
-          this.previousPath = this.allPathArr[index - 1];
         }
-      });
+        this.allPathArr.forEach((item, index) => {
+            if (item === this.currentDocPath) {
+            if (index === 0) {
+                //当前是第一篇点击下一篇
+                this.nextPath = this.allPathArr[index + 1];
+                this.previousPath = "";
+                return false;
+            }
+            if (index === this.allPathArr.length - 1) {
+                //当前是最后一篇点击下一篇
+                this.nextPath = "";
+                this.previousPath = this.allPathArr[index - 1];
+                return false;
+            }
+            //当前是第二篇（及以上）文章开始点击下一章
+            this.nextPath = this.allPathArr[index + 1];
+            this.previousPath = this.allPathArr[index - 1];
+            }
+        });
     },
     showMenu() {
       this.showMobileMenu = !this.showMobileMenu;
@@ -312,9 +316,6 @@ export default {
 }
 .el-tree{
     max-height: calc(100vh - 344px);
-    @media screen and (max-width: 1000px) {
-        max-height: calc(100vh - 450px);
-    }
     overflow-y: scroll;
     &::-webkit-scrollbar-track {
         border-radius:10px;
