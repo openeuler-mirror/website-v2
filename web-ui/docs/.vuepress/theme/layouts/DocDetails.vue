@@ -316,9 +316,6 @@ export default {
 }
 .el-tree{
     max-height: calc(100vh - 344px);
-    @media screen and (max-width: 1000px) {
-        max-height: calc(100vh - 450px);
-    }
     overflow-y: scroll;
     &::-webkit-scrollbar-track {
         border-radius:10px;
