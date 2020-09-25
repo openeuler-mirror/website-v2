@@ -42,11 +42,11 @@
                     </a>
                 </el-carousel-item>
                 <el-carousel-item class="carousel-item">
-                    <div class="HC-box">
+                    <div class="HC-box" @click="go(i18n.home.HOME_OPENEULER_NEW.HC_ADRESSION)">
                         <video autoplay loop muted width="100%" height="500px" id="HC-video">
                             <source src="/img/home-video/HC-video.mp4"  type="video/mp4">
                         </video>
-                        <div class="HC-left-box" @click="go(i18n.home.HOME_OPENEULER_NEW.HC_ADRESSION)">
+                        <div class="HC-left-box">
                             <img class="new-img" :src="i18n.home.HOME_OPENEULER_NEW.SMALL_IMG">
                             <div class="center-word">
                                 <p>{{i18n.home.HOME_OPENEULER_NEW.CENTER_WORD.BIG_WORD}}</p>

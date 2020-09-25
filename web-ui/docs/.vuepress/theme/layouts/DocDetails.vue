@@ -5,7 +5,7 @@
       :class="[showMobileMenu && 'show-mobile-menu', !showMobileMenu && 'hide-mobile-menu',$lang == 'en'?'en-mobile-width':'']"
     >
       <div class="version-div" v-if="!showMobileMenu && versionArr.length">
-          <span>{{versionValue == versionArr[0].value?versionArr[0].name:versionArr[1].name}}</span>
+          <span>{{versionName}}</span>
           <div>
               <i class="icon-document" @click="showSelection = !showSelection"></i>
               <div class="version-select" v-show="showSelection">
@@ -90,6 +90,8 @@ export default {
       allPathArr: [],
       //当前版本路径
       versionValue: "",
+      //当前版本名
+      versionName: "",
       //意见反馈路径
       feedbackPath: "",
       //当然页面路径
@@ -111,6 +113,15 @@ export default {
       showSelection:false,
       timer:null
     };
+  },
+  watch: {
+    versionValue:function() {
+        for(let j of this.versionArr){
+            if(this.versionValue == j.value){
+                this.versionName = j.name;
+            }
+        }
+    }
   },
   created() {
     this.targetLocale = this.$lang === "zh" ? "/zh/" : "/en/";
@@ -279,9 +290,7 @@ export default {
         },300)
     },
     getVersionArr(){
-        let timer = setTimeout(() => {
-            this.versionArr = require("../../../" + this.$lang + "/docs/path/path.json");
-        },500);
+        this.versionArr = require("../../../" + this.$lang + "/docs/path/path.json");
     },
   },
   beforeDestroy () {
