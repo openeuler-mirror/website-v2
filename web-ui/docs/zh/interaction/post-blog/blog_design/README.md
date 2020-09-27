@@ -99,4 +99,3 @@ Linking to a url for readers to visit:
 ```
 
 ## Thanks
-The content above refered to <https://jekyllrb.com/docs/posts/#the-posts-folder>. 

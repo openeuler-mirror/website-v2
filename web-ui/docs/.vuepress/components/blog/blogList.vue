@@ -29,9 +29,9 @@
                     </el-select>
                 </el-form-item>
                 <el-form-item class="mobile-blog-write">
-                    <div class="write-blog-btn">
+                    <div class="write-blog-btn" @click="goPostBlog">
                         <img class="middle-img mobile-middle-img" src="/img/blog/edit.svg" alt />
-                        <span @click="goPostBlog" class="blog-write">{{i18n.community.BLOG.BLOGGING}}</span>    
+                        <span class="blog-write">{{i18n.community.BLOG.BLOGGING}}</span>    
                     </div>
                 </el-form-item>
             </el-form>
@@ -392,7 +392,6 @@ export default {
     font-weight: 400;
     color: #002fa7;
     margin-left: 13px;
-    cursor: pointer;
     font-family: PingFangSC-Regular, PingFang SC;
 }
 .blog-item {
@@ -546,6 +545,7 @@ export default {
     justify-content: center;
     align-items: center;
     display: inline-block;
+    cursor: pointer;
     @media (min-width: 1000px) {
         margin-top: 4px;
         display: flex;
