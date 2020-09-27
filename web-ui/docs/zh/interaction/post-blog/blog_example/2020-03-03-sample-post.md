@@ -80,5 +80,5 @@ struct async_entry {
 ## Attachment
 
 Download the file here download:
-[get the PNG](![The architecture](<img src="./2020-03-03-sample-post-01.png" style="width:100%;">)
+[get the PNG](![The architecture](<img src="/blog_example/2020-03-03-sample-post-01.png" style="width:100%;">)
 ) directly.
