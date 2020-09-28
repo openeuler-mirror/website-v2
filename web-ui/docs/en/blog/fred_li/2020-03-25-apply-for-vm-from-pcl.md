@@ -17,7 +17,7 @@ summary: This article is to guide you apply for virtual machines from Peng Cheng
 
 #### Introduction.
 
-In order to facilitate the development or test of developers in the openEuler community, [Peng Cheng Liboratory](http://www.pcl.ac.cn/) provides some virtual machines. This article introduces the application steps for openEuler community developers to apply for Arm virtual machine in Peng Cheng Laboratory.
+In order to facilitate the development or test of developers in the openEuler community, [Peng Cheng Liboratory](https://dw.pcl.ac.cn/) provides some virtual machines. This article introduces the application steps for openEuler community developers to apply for Arm virtual machine in Peng Cheng Laboratory.
 
 **Note**: The resource is for developers who contribute in the openEuler community, including code development, testing, document development, and any other ways of contribution.
 

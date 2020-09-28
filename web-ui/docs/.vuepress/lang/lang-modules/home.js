@@ -299,7 +299,7 @@ module.exports = {
                 DES: "如果缺乏测试设备，可以尝试",
                 APPLY: "在此申请。",
                 SPONSOR: "感谢鹏城实验室赞助",
-                SPONSORLINK:'https://dw.pcl.ac.cn/#/home/index'
+                SPONSORLINK:'https://dw.pcl.ac.cn/'
             },
             SOURCE_MAIL: {
                 TITLE: "邮件订阅",
@@ -594,7 +594,7 @@ module.exports = {
                 DES: "If test devices are not available, you can",
                 APPLY: "apply for resources here.",
                 SPONSOR: "Thanks for the sponsorship of Peng Cheng Laboratory.",
-                SPONSORLINK:'https://dw.pcl.ac.cn/#/home/index'
+                SPONSORLINK:'https://dw.pcl.ac.cn/'
             },
             SOURCE_MAIL: {
                 TITLE: "E-mail Subscription",
