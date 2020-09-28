@@ -20,27 +20,6 @@ module.exports = {
                 DES: "A-Tune是智能性能优化系统软件，即通过机器学习引擎对业务应用建立精准模型, 再根据业务负载智能匹配最佳操作系统配置参数组合，实现系统整体运行效率提升。",
             }
         ],
-        HOME_OPENEULER_NEW:{
-            SMALL_IMG: '/img/home/HC-Banner.png',
-            HC_MOBILE_IMG: "url('/img/home/HC-Mobile-zh.png')",
-            CENTER_WORD: {
-                BIG_WORD: 'NEW VALUE TOGETHER',
-                SMALL_WORD: '共创行业新价值'
-            },
-            BOTTOM_WORD: {
-                UP_WORD: '华为全联接2020',
-                DOWN_WORD: '2020年9月23-26日 | 中国，上海'
-            },
-            BACKGROUND_IMG: "url('/img/home/HC-Banner.gif')",
-            HC_ADRESSION: 'https://e.huawei.com/cn/solutions/hic?utm_campaign=04MHQHQ20W6R9P&utm_medium=pm-display&utm_source=openeluer&source=openeluer&utm_content=hic_hc_2020',
-            BASE_SOFTWARE_PCIMG: "url('/img/home/banner/zh-pc-base.png')",
-            BASE_SOFTWARE_MOBILEIMG: "url('/img/home/banner/zh-mobile-base.png')",
-            BASE_SOFTWARE_LINK: 'http://live.huawei.com/huaweiconnect/meeting/cn/5786.html',
-            TRAIN_PC_IMG: '/img/home/banner/zh-pc-train.png',
-            TRAIN_PC_GIF: '/img/home/banner/BannerS.gif',
-            TRAIN_MOBILE_IMG: "url('/img/home/banner/zh-mobile-train.png')",
-            TRAIN_LINK: 'http://live.huawei.com/huaweiconnect/meeting/cn/5859.html'
-        },
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovated OS Open Source Community",
             INTRO_HEAD: "开始openEuler之旅吧！",
@@ -353,27 +332,6 @@ module.exports = {
                 DES: "A system software to auto-optimize the system adaptively to multiple scenarios with embedded AI-engine.",
             }
         ],
-        HOME_OPENEULER_NEW:{
-            SMALL_IMG: '/img/home/HC-Banner.png',
-            HC_MOBILE_IMG: "url('/img/home/HC-Mobile-en.png')",
-            CENTER_WORD: {
-                BIG_WORD: 'NEW VALUE TOGETHER',
-                SMALL_WORD: ''
-            },
-            BOTTOM_WORD: {
-                UP_WORD: 'HUAWEI CONNECT 2020',
-                DOWN_WORD: 'September 23-26（Shanghai）'
-            },
-            BACKGROUND_IMG: "url('/img/home/HC-Banner.gif')",
-            HC_ADRESSION: 'https://e.huawei.com/cn/solutions/hic?utm_campaign=04MHQHQ20W6R9P&utm_medium=pm-display&utm_source=openeluer&source=openeluer&utm_content=hic_hc_2020',
-            BASE_SOFTWARE_PCIMG: "url('/img/home/banner/en-pc-base.png')",
-            BASE_SOFTWARE_MOBILEIMG: "url('/img/home/banner/en-mobile-base.png')",
-            BASE_SOFTWARE_LINK: 'http://live.huawei.com/huaweiconnect/meeting/cn/5786.html',
-            TRAIN_PC_IMG: '/img/home/banner/en-pc-train.png',
-            TRAIN_PC_GIF: '/img/home/banner/BannerS.gif',
-            TRAIN_MOBILE_IMG: "url('/img/home/banner/en-mobile-train.png')",
-            TRAIN_LINK: 'http://live.huawei.com/huaweiconnect/meeting/cn/5859.html'
-        },
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovated OS Open Source Community",
             INTRO_HEAD: "Start your journey in openEuler",

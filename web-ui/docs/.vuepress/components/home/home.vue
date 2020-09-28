@@ -12,12 +12,6 @@
                         </div>
                     </div>
                 </el-carousel-item>
-                <el-carousel-item class="carousel-item">
-                    <div class="train-banner-box">
-                        <img :src="i18n.home.HOME_OPENEULER_NEW.TRAIN_PC_IMG" alt=""/>
-                        <img :src="i18n.home.HOME_OPENEULER_NEW.TRAIN_PC_GIF" alt=""/>
-                    </div>
-                </el-carousel-item>
                 <el-carousel-item
                         class="carousel-item"
                         v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
@@ -41,28 +35,6 @@
                         </div>
                     </a>
                 </el-carousel-item>
-                <el-carousel-item class="carousel-item">
-                    <div class="HC-box" @click="go(i18n.home.HOME_OPENEULER_NEW.HC_ADRESSION)">
-                        <video autoplay loop muted width="100%" height="500px" id="HC-video">
-                            <source src="/img/home-video/HC-video.mp4"  type="video/mp4">
-                        </video>
-                        <div class="HC-left-box">
-                            <img class="new-img" :src="i18n.home.HOME_OPENEULER_NEW.SMALL_IMG">
-                            <div class="center-word">
-                                <p>{{i18n.home.HOME_OPENEULER_NEW.CENTER_WORD.BIG_WORD}}</p>
-                                <p v-if="i18n.home.HOME_OPENEULER_NEW.CENTER_WORD.SMALL_WORD == ''?false:true">{{i18n.home.HOME_OPENEULER_NEW.CENTER_WORD.SMALL_WORD}}</p>
-                            </div>
-                            <div class="bottom-word">
-                                <p>{{i18n.home.HOME_OPENEULER_NEW.BOTTOM_WORD.UP_WORD}}</p>
-                                <p>{{i18n.home.HOME_OPENEULER_NEW.BOTTOM_WORD.DOWN_WORD}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </el-carousel-item>
-                <el-carousel-item class="carousel-item">
-                    <div class="base-software-box" @click="go(i18n.home.HOME_OPENEULER_NEW.BASE_SOFTWARE_LINK)" :style="{backgroundImage:i18n.home.HOME_OPENEULER_NEW.BASE_SOFTWARE_PCIMG}">
-                    </div>
-                </el-carousel-item>
             </el-carousel>
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
@@ -81,10 +53,6 @@
                         <div class="mobile-btn" v-show="mobilePlayBtnDisplay" @click="playVideo"></div>
                     </div>
                 </swiper-slide>
-                <swiper-slide class="carousel-item">
-                    <div class="train-img" @click="go(i18n.home.HOME_OPENEULER_NEW.TRAIN_LINK)" :style="{backgroundImage:i18n.home.HOME_OPENEULER_NEW.TRAIN_MOBILE_IMG}">
-                    </div>
-                </swiper-slide>
                 <swiper-slide
                         class="carousel-item-index"
                         v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
@@ -98,17 +66,9 @@
                         <img :src="'/img/home/Banner' + index + '.gif'">
                     </a>
                 </swiper-slide>
-                <swiper-slide class="carousel-item">
-                    <div class="HC-mobile-box" @click="go(i18n.home.HOME_OPENEULER_NEW.HC_ADRESSION)" :style="{backgroundImage:i18n.home.HOME_OPENEULER_NEW.HC_MOBILE_IMG}">
-                    </div>
-                </swiper-slide>
-                <swiper-slide class="carousel-item">
-                    <div class="base-software-box" @click="go(i18n.home.HOME_OPENEULER_NEW.BASE_SOFTWARE_LINK)" :style="{backgroundImage:i18n.home.HOME_OPENEULER_NEW.BASE_SOFTWARE_MOBILEIMG}">
-                    </div>
-                </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
-                <li v-for="item in 7" :class="{'mobile-pagination-active': mobilePagenationIndex===item}"></li>
+                <li v-for="item in 4" :class="{'mobile-pagination-active': mobilePagenationIndex===item}"></li>
             </ul>
         </div>
         <div class="home-introduce">
