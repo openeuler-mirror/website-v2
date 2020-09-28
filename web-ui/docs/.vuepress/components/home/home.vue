@@ -387,7 +387,7 @@
                         <img class="pc-img" src="/img/home/link/kunpeng.png" alt="">
                         <img class="mobile-img" src="/img/home/link/mobile-kunpeng.png" alt="">
                     </a>
-                    <a href="https://dw.pcl.ac.cn/dwmain/main/" target="_blank">
+                    <a href="https://dw.pcl.ac.cn/" target="_blank">
                         <img class="pc-img" src="/img/home/link/pengcheng.png" alt="">
                         <img class="mobile-img" src="/img/home/link/mobile-pengcheng.png" alt="">
                     </a>
