@@ -79,19 +79,18 @@ The following are one example.
 ```
 Then, from within any post, they can be linked to using the site’s root as the path for the asset to include. Here are some simple examples in Markdown:
 
-Including an image asset in a post:
+Including images in a post:
 ```
-...If you place your files in the current folder,you can display images in the following ways  
+...Use the html <img> tag,and enter relative path of the image as src attribute.
 <img src="./2020-01-01-new-years-is-coming-01.png" style="width:100%;">
-If you created a folder under the current folder,you can display images in the following ways
-<img src="./folder name/2020-01-01-new-years-is-coming-01.png" style="width:100%;">
 ```
 
 Linking to a PDF for readers to download:
 ```
 ...
-If you place your files in the current folder,you can <a href="./2020-01-01-new-years-is-coming-03.pdf" target="_blank" download >get the PDF</a> directly.
-If you created a folder under the current folder,you can <a href="./folder name/2020-01-01-new-years-is-coming-03.pdf" target="_blank" download >get the PDF</a> directly.
+Use the html <a> tag,and enter relative path of the file as href attribute.
+The file will be downloaded once the link is clicked.
+<a href="./2020-01-01-new-years-is-coming-03.pdf" target="_blank" download >get the PDF</a>.
 ```
 Linking to a url for readers to visit:
 ```

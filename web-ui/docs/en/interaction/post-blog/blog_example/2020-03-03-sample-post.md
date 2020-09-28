@@ -7,7 +7,7 @@ tags:
     - cccc
 archives: 2020-03
 author: openEuler Blog Maintainer
-summary: Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more.
+summary: Just about everything you'll need to style in the theme： headings, paragraphs, blockquotes, tables, code blocks, and more.
 ---
 
 ## HTML Elements
@@ -28,7 +28,7 @@ Below is just about everything you'll need to style in the blog.
 
 This blog is about bla bla. **This is strong**. 
 
-![openEuler is open](./2020-03-03-sample-post-01.png) or ![openEuler is open](./2020-03-03-sample-post-01/2020-03-03-sample-post-01.png)
+![openEuler is open](./2020-03-03-sample-post-01.png)
 
 ### Quotation
 

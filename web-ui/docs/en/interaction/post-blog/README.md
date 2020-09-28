@@ -34,7 +34,7 @@ tags:
     - cccc
 archives: 2020-03
 author: openEuler Blog Maintainer
-summary: Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more.
+summary: Just about everything you'll need to style in the theme：headings, paragraphs, blockquotes, tables, code blocks, and more.
 ---
 
 Here you can edit your blog. 
@@ -51,7 +51,7 @@ The blog posting follows the pull request of [Gitee](gitee.com).
 2. Clone the code to your local environment.
 
 ```
-git clone https://gitee.com/<your-gitee-id>/website
+git clone https://gitee.com/<your-gitee-id>/website-v2
 ```
 
 3. Create a branch
@@ -68,7 +68,7 @@ And if you are going to post a blog in Chinese, the web-ui/docs/zh/blog is your 
 Assume that you are preparing a English blog.
 
 ```
-cd content/en/post
+cd web-ui/docs/en/blog
 mkdir <your-gitee-id>
 cd <your-gitee-id>
 touch YEAR-MONTH-DAY-title.md
