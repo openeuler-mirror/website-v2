@@ -8,22 +8,22 @@ title: "Guidance to Post a Blog"
 
 <div id="post-blog-content">
 
-## Preparation
+## 准备
 
-1. Refer to <http://git.mydoc.io/?t=179267> to register Gitee account.
+1. 参考 http://git.mydoc.io/?t=179267 注册Gitee账号。
 
-2. Set your primary mail box in gitee settings <https://gitee.com/profile/emails>.
+2. 在Gitee个人设置中设置主邮箱地址，在此https://gitee.com/profile/emails。
 
-3. Sign your CLA in <https://openeuler.org/zh/cla.html>.
+3. 签署贡献者协议，https://openeuler.org/en/other/cla。
 
-4. Prepare your git environment refering to <http://git.mydoc.io/?t=180692>.
+4. 参考http://git.mydoc.io/?t=180692准备你的git环境
 
-## Understand blog format
+## 理解博客格式
 
-The openEuler blog is written in markdown format.
-You can read <https://gitee.com/openeuler/website/tree/master/docs/blog_design.md> to get understand how the blog is designed.
+openEuler是用markdown格式写博客的。
+请阅读该文章 <https://gitee.com/openeuler/website-v2/web-ui/docs/interaction/post-blog/blog_design/README.md>来理解openEuler博客是如何设计的。
 
-The head includes the following information:
+文件头需要包含如下信息：
 ```
 ---
 title: Sample Post
@@ -34,60 +34,61 @@ tags:
     - cccc
 archives: 2020-03
 author: openEuler Blog Maintainer
-summary: Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more.
+summary: Just about everything you'll need to style in the theme：headings, paragraphs, blockquotes, tables, code blocks, and more.
 ---
 
 Here you can edit your blog. 
 ```
 
-Tips: you can copy docs/blog_example/2020-03-03-sample-post.md to your folder and edit it.
+小提示：你可以复制  https://gitee.com/openeuler/website-v2/web-ui/docs/interaction/post-blog/blog_example/2020-03-03-sample-post.md 到你的工作路径下然后继续编辑。
 
-## Post your blog
+## 提交博客
 
-The blog posting follows the pull request of [Gitee](gitee.com).
+博客的提交利用了Gitee的PR(Pull Request)。
 
-1. Fork openEuler blog project <https://gitee.com/openeuler/website> to your own gitee. Refer to <http://git.mydoc.io/?t=153749> for detailed guidance.
+1. Fork openEuler 博客项目  <https://gitee.com/openeuler/website-v2> 到你自己的Gitee上。如果需要具体指导请参考 <http://git.mydoc.io/?t=153749> 。
 
-2. Clone the code to your local environment.
+2. Clone代码
 
 ```
-git clone https://gitee.com/<your-gitee-id>/website
+git clone https://gitee.com/<your-gitee-id>/website-v2
 ```
 
-3. Create a branch
+3. 创建分支
 
 ```
 git checkout -b <branch-name>
 ```
 
-4. Create a folder in the website floder
-If you are going to post a blog in English, the content/en/blog is your work path. 
+4. 创建工作路径
 
-And if you are going to post a blog in Chinese, the content/zh/blog is your work path. 
-
-Assume that you are preparing a English blog.
+如果你发表中文博客，工作路径是 web-ui/docs/zh/blog 。
+假设你要写一个英文博客：
 
 ```
-cd content/en/post
+cd web-ui/docs/en/blog
 mkdir <your-gitee-id>
 cd <your-gitee-id>
 touch YEAR-MONTH-DAY-title.md
 ```
 
-And You can put the resources in the same folder as your text file's, and name the resources as 
+你可以以你的md文档名来命名你的资源文件，方便使用。例如： 
 ```
 YEAR-MONTH-DAY-title-NN.MARKUP
 ```
-Where the YEAR, MONTH, DAY, and title are the same as your blog file, and NN is the serial number of the pictures, like 01, 02 and so on. The MARKUP is the file extension, and for pictures it is recommended to use png.
-The following are one example.
+其中，YEAR, MONTH, DAY, 和 title 和你的博客md文件名一致。NN 是01、02、03这样的序号。MARKUP文件扩展名。如下例子：
 ```
 2020-01-01-new-years-is-coming.md
 2020-01-01-new-years-is-coming-01.png
 2020-01-01-new-years-is-coming-02.gif
 2020-01-01-new-years-is-coming-03.pdf
 ```
+使用HTML <img> 标签嵌入图片， 但你的图片资源需要放入当前目录下（即your-gitee-id目录下），输入图片名称作为 src 值：
+```
+<img src = "./2020-01-01-new-years-is-coming-01.png">
+```
 
-1. Commit your post
+1. Commit 你的博客
 
 ```
 git add <file-path>
@@ -95,9 +96,9 @@ git commit -m "<message>"
 git push origin <branch-name>:<branch-name>
 ```
 
-2. Refer to <http://git.mydoc.io/?t=153749> to submit your Pull Request
+2. 参考 <http://git.mydoc.io/?t=153749> 提交你的PR
 
-3. Wait for reviewing and merging. 
+3. 等待评审和合入。 
 
 
 </div>

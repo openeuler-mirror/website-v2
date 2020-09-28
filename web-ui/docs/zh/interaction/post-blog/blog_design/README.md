@@ -79,7 +79,7 @@ The following are one example.
 ```
 Then, from within any post, they can be linked to using the site’s root as the path for the asset to include. Here are some simple examples in Markdown:
 
-Including images in a post:
+Including an image asset in a post:
 ```
 ...Use the html <img> tag,and enter relative path of the image as src attribute.
 <img src="./2020-01-01-new-years-is-coming-01.png" style="width:100%;">
@@ -98,4 +98,3 @@ Linking to a url for readers to visit:
 ```
 
 ## Thanks
-The content above refered to <https://jekyllrb.com/docs/posts/#the-posts-folder>. 
