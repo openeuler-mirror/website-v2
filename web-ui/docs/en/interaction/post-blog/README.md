@@ -21,7 +21,7 @@ title: "Guidance to Post a Blog"
 ## Understand blog format
 
 The openEuler blog is written in markdown format.
-You can read <https://gitee.com/openeuler/website-v2/web-ui/docs/en/interaction/post-blog/blog_design/README.md> to get understand how the blog is designed.
+You can read <https://gitee.com/openeuler/website-v2/blob/master/web-ui/docs/en/interaction/post-blog/README.md> to get understand how the blog is designed.
 
 The head includes the following information:
 ```
@@ -40,7 +40,7 @@ summary: Just about everything you'll need to style in the theme：headings, par
 Here you can edit your blog. 
 ```
 
-Tips: you can copy https://gitee.com/openeuler/website-v2/web-ui/docs/en/interaction/post-blog/blog_example/2020-03-03-sample-post.md to your folder and edit it.
+Tips: you can copy https://gitee.com/openeuler/website-v2/blob/master/web-ui/docs/en/interaction/post-blog/blog_example/2020-03-03-sample-post.md to your folder and edit it.
 
 ## Post your blog
 

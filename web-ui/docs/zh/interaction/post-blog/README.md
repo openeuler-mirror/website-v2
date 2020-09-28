@@ -21,7 +21,7 @@ title: "Guidance to Post a Blog"
 ## 理解博客格式
 
 openEuler是用markdown格式写博客的。
-请阅读该文章 <https://gitee.com/openeuler/website-v2/web-ui/docs/interaction/post-blog/blog_design/README.md>来理解openEuler博客是如何设计的。
+请阅读该文章 <https://gitee.com/openeuler/website-v2/blob/master/web-ui/docs/zh/interaction/post-blog/README.md>来理解openEuler博客是如何设计的。
 
 文件头需要包含如下信息：
 ```
@@ -40,7 +40,7 @@ summary: Just about everything you'll need to style in the theme：headings, par
 Here you can edit your blog. 
 ```
 
-小提示：你可以复制  https://gitee.com/openeuler/website-v2/web-ui/docs/interaction/post-blog/blog_example/2020-03-03-sample-post.md 到你的工作路径下然后继续编辑。
+小提示：你可以复制  https://gitee.com/openeuler/website-v2/blob/master/web-ui/docs/zh/interaction/post-blog/blog_example/2020-03-03-sample-post.md 到你的工作路径下然后继续编辑。
 
 ## 提交博客
 
