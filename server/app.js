@@ -100,9 +100,11 @@ function initESData() {
     readFile.initESData('master', 'zh', 'blog');
     readFile.initESData('master', 'en', 'blog');
 
+    readFile.initESData('20.09', 'zh', 'docs');
+    readFile.initESData('20.09', 'en', 'docs');
     readFile.initESData('20.03_LTS', 'zh', 'docs');
-    readFile.initESData('1.0_Base', 'zh', 'docs');
     readFile.initESData('20.03_LTS', 'en', 'docs');
+    readFile.initESData('1.0_Base', 'zh', 'docs');
     readFile.initESData('1.0_Base', 'en', 'docs');
 }
 
