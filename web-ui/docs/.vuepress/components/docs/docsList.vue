@@ -29,7 +29,7 @@
                             <div class="step-left-box">
                                 <div @click="go(item)" :class="['inner-box',item.path?'':'unClick',targetLocale == '/en/'?'en-box':'']" v-for="(item, index) in items.doc" :key="index">
                                     <img :src="item.img" alt />
-                                    <p>{{ item.name }}</p>
+                                    <p :title="item.name">{{ item.name }}</p>
                                 </div>
                             </div>
                             <div :class="['step-left-num',targetLocale == '/en/'?'left-en':'']">
@@ -47,7 +47,7 @@
                             <div class="step-right-box right-box-en">
                                 <div  @click="go(item)" :class="['inner-box',item.path?'':'unClick',targetLocale == '/en/'?'en-box':'']" v-for="(item, index) in items.doc" :key="index">
                                     <img :src="item.img" alt />
-                                    <p>{{ item.name }}</p>
+                                    <p :title="item.name">{{ item.name }}</p>
                                 </div>
                             </div>
                         </div>
