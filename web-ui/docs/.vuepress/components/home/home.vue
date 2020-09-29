@@ -16,12 +16,12 @@
                         class="carousel-item"
                         v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
                         :key="index">
-                    <a class="banner-link" v-if="index == 0" :href="item.LINK" target="_blank">
+                    <a class="banner-link" v-if="index === 0" :href="item.LINK" target="_blank">
                         <div class="banner-item">
                             <div class="item-info">
                                 <h3>{{ item.TITLE }}</h3>
                                 <span>{{ item.DES }}</span>
-                                <div class="download-version" :class="$lang == 'en'?'en-version':''">
+                                <div class="download-version" :class="$lang === 'en'?'en-version':''">
                                     <i class="el-icon-download"></i>
                                     <div>{{item.DOWNLOAD?item.DOWNLOAD:''}}</div>
                                 </div>
@@ -38,7 +38,7 @@
                             <img class="banner-gif" :src="'/img/home/Banner' + index + '.gif'">
                         </div>
                     </a>
-                    <a class="banner-link" v-if="index !== 0 && index != 1" :href="item.LINK" target="_blank">
+                    <a class="banner-link" v-if="index !== 0 && index !== 1" :href="item.LINK" target="_blank">
                         <div class="banner-item">
                             <div class="item-info">
                                 <h3>{{ item.TITLE }}</h3>
@@ -70,7 +70,7 @@
                         class="carousel-item-index"
                         v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
                         :key="index">
-                    <a v-if="index !== 0 && index !=1" :href="item.LINK" target="_blank">
+                    <a v-if="index !== 0 && index !== 1" :href="item.LINK" target="_blank">
                         <h3>{{ item.TITLE }}</h3>
                         <img :src="'/img/home/Banner' + index + '.gif'">
                     </a>
@@ -78,7 +78,7 @@
                         <h3>{{ item.TITLE }}</h3>
                         <img :src="'/img/home/Banner' + index + '.gif'">
                     </a>
-                    <div class="mobile-version" :style="{backgroundImage:item.MOBILE_IMG?item.MOBILE_IMG:''}" v-if="index == 0"></div>
+                    <div class="mobile-version" @click="go(item.LINK)" :style="{backgroundImage:item.MOBILE_IMG?item.MOBILE_IMG:''}" v-if="index == 0"></div>
                 </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
