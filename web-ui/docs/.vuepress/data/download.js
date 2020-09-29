@@ -76,12 +76,12 @@ module.exports = {
         DOWNLOAD_LIST : [
             {
                 NAME: 'openEuler 20.09',
-                DOWNLOAD_URL : 'https://121.36.97.194/openEuler-20.09/',
+                DOWNLOAD_URL : 'http://121.36.97.194/openEuler-20.09/',
                 DESC: 'The openEuler 20.09 LTS version is an innovative release for open scenarios,with a lifecycle of six months.',
                 RELEASE_DESC_URL: '',
                 INSTALL_GUIDENCE_URL: '',
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
-                GET_ISO_URL: 'https://121.36.97.194/openEuler-20.09/ISO/',
+                GET_ISO_URL: 'http://121.36.97.194/openEuler-20.09/ISO/',
                 LIFE_CYCLE_URL: '/zh/other/lifecycle/',
                 MANUFACTURER: 'openEuler community',
                 PUBLISH_DATE: '2020/09',
