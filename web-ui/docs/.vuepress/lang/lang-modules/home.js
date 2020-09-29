@@ -4,11 +4,19 @@
 
 module.exports = {
     cn: {
-        HOME_CAROUSEL_DATA: [{
+        HOME_CAROUSEL_DATA: [
+            {
+                TITLE: "openEuler 20.09版本全新发布，如约而至",
+                LINK: "https://openeuler.org/openEuler-whitepaper.pdf",
+                DES: "欲知详情，快来下载openEuler 20.09 技术白皮书",
+                DOWNLOAD: '下载',
+                MOBILE_IMG: "url('/img/home/banner/zh-mobile-version.png')"
+            },
+            {
             TITLE: "openEuler Summit 2020",
             LINK: "/interaction/summit-list/",
             DES: "openEuler Virtual Summit 2020 是 openEuler 在发布 20.03 LTS 版本后第一次举行的峰会，本次大会邀请了华为的资深专家、社区 Committer 和多家 openEuler 社区合作厂商的重量嘉宾贡献多场精彩的演讲，不容错过。",
-        },
+            },
             {
                 TITLE: "iSula",
                 LINK: "https://live.bilibili.com/22290444",
@@ -316,11 +324,19 @@ module.exports = {
         RETRACT: "收起全部"
     },
     en: {
-        HOME_CAROUSEL_DATA: [{
+        HOME_CAROUSEL_DATA: [
+            {
+                TITLE: "openEuler 20.09 version released",
+                LINK: "https://openeuler.org/openEuler-whitepaper.pdf",
+                DES: "For more information,download the openEuler 20.09 technical white paper",
+                DOWNLOAD: 'download',
+                MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
+            },
+            {
             TITLE: "openEuler Summit 2020",
             LINK: "/interaction/summit-list/",
             DES: "openEuler Virtual Summit 2020 is the first summit after the release of the openEuler 20.03 LTS version. Senior experts from Huawei, community committers and weight guests from several open Euler community partners were invited to give a number of wonderful speeches, which should not be missed.",
-        },
+            },
             {
                 TITLE: "iSula",
                 LINK: "https://live.bilibili.com/22290444",

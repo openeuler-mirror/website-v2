@@ -16,7 +16,20 @@
                         class="carousel-item"
                         v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
                         :key="index">
-                    <a class="banner-link" v-if="index === 0" @click="go(item.LINK)">
+                    <a class="banner-link" v-if="index === 0" :href="item.LINK" target="_blank">
+                        <div class="banner-item">
+                            <div class="item-info">
+                                <h3>{{ item.TITLE }}</h3>
+                                <span>{{ item.DES }}</span>
+                                <div class="download-version" :class="$lang === 'en'?'en-version':''">
+                                    <i class="el-icon-download"></i>
+                                    <div>{{item.DOWNLOAD?item.DOWNLOAD:''}}</div>
+                                </div>
+                            </div>
+                            <img class="banner-gif" :src="'/img/home/Banner' + index + '.gif'">
+                        </div>
+                    </a>
+                    <a class="banner-link" v-if="index === 1" @click="go(item.LINK)">
                         <div class="banner-item">
                             <div class="item-info">
                                 <h3>{{ item.TITLE }}</h3>
@@ -25,7 +38,7 @@
                             <img class="banner-gif" :src="'/img/home/Banner' + index + '.gif'">
                         </div>
                     </a>
-                    <a class="banner-link" v-if="index !== 0" :href="item.LINK" target="_blank">
+                    <a class="banner-link" v-if="index !== 0 && index !== 1" :href="item.LINK" target="_blank">
                         <div class="banner-item">
                             <div class="item-info">
                                 <h3>{{ item.TITLE }}</h3>
@@ -57,18 +70,19 @@
                         class="carousel-item-index"
                         v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
                         :key="index">
-                    <a v-if="index !== 0" :href="item.LINK" target="_blank">
+                    <a v-if="index !== 0 && index !== 1" :href="item.LINK" target="_blank">
                         <h3>{{ item.TITLE }}</h3>
                         <img :src="'/img/home/Banner' + index + '.gif'">
                     </a>
-                    <a v-if="index === 0" @click="go(item.LINK)">
+                    <a v-if="index === 1" @click="go(item.LINK)">
                         <h3>{{ item.TITLE }}</h3>
                         <img :src="'/img/home/Banner' + index + '.gif'">
                     </a>
+                    <div class="mobile-version" @click="go(item.LINK)" :style="{backgroundImage:item.MOBILE_IMG?item.MOBILE_IMG:''}" v-if="index == 0"></div>
                 </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
-                <li v-for="item in 4" :class="{'mobile-pagination-active': mobilePagenationIndex===item}"></li>
+                <li v-for="item in 5" :class="{'mobile-pagination-active': mobilePagenationIndex===item}"></li>
             </ul>
         </div>
         <div class="home-introduce">
@@ -809,6 +823,24 @@
         margin: 0 auto;
         display: flex;
         justify-content: space-around;
+        .download-version{
+            width: 74px;
+            height: 24px;
+            font-size: 12px;
+            font-family: FZLTXIHJW;
+            margin-top: 60px;
+            color: #ffffff;
+            line-height: 24px;
+            background-color: #002fa7;
+            border-radius: 4px;
+            text-align: center;
+            div{
+                display: inline-block;
+            }
+        }
+        .en-version{
+            width: 108px;
+        }
     }
     .carousel-item .card-summer span {
         margin-left: 0;
@@ -1694,6 +1726,13 @@
             margin: 0;
             display: block;
             margin: 0 auto;
+        }
+        .carousel-item-index .mobile-version{
+            width: 100%;
+            height: 300px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         .home-carousel .el-carousel__item span {
             display: inline-block;
