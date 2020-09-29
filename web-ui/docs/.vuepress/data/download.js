@@ -9,8 +9,8 @@ module.exports = {
                 NAME: 'openEuler 20.09',
                 DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.09/',
                 DESC: 'openEuler 20.09 版本是满足开放场景的创新发行版，生命周期六个月。',
-                RELEASE_DESC_URL: '/zh/docs/20.09/docs/Releasenotes/release_notes.html',
-                INSTALL_GUIDENCE_URL: '/zh/docs/20.09/docs/Installation/installation.html',
+                RELEASE_DESC_URL: '',
+                INSTALL_GUIDENCE_URL: '',
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.09/ISO/',
                 LIFE_CYCLE_URL: '/zh/other/lifecycle/',
@@ -74,6 +74,19 @@ module.exports = {
     },
     en: {
         DOWNLOAD_LIST : [
+            {
+                NAME: 'openEuler 20.09',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.09/',
+                DESC: 'The openEuler 20.09 LTS version is an innovative release for open scenarios,with a lifecycle of six months',
+                RELEASE_DESC_URL: '',
+                INSTALL_GUIDENCE_URL: '',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.09/ISO/',
+                LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+                MANUFACTURER: 'openEuler community',
+                PUBLISH_DATE: '2020/09',
+                LTS: true
+            },
             {
                 NAME: 'openEuler 20.03 LTS',
                 DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.03-LTS/',
