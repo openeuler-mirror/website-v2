@@ -9,8 +9,11 @@ COPY . /home/openeuler/web
 RUN npm install -g vuepress && \
     npm install -g increase-memory-limit && \
     npm install && \
-    increase-memory-limit && \
-    npm run build
+    increase-memory-limit
+
+CMD sed -i 's/"%_prog%"/%_prog/g' mode_modules/.bin/vuepress.cmd
+
+RUN npm run build
 
 FROM nginx:1.19.2
 
