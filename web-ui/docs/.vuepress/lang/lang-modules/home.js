@@ -18,6 +18,13 @@ module.exports = {
                 TITLE: "A-Tune",
                 LINK: "https://gitee.com/openeuler/A-Tune",
                 DES: "A-Tune是智能性能优化系统软件，即通过机器学习引擎对业务应用建立精准模型, 再根据业务负载智能匹配最佳操作系统配置参数组合，实现系统整体运行效率提升。",
+            },
+            {
+                TITLE: "openEuler 20.09版本全新发布，如约而至",
+                LINK: "https://openeuler.org/openEuler-whitepaper.pdf",
+                DES: "欲知详情，快来下载openEuler 20.09 技术白皮书",
+                DOWNLOAD: '下载',
+                MOBILE_IMG: "url('/img/home/banner/zh-mobile-version.png')"
             }
         ],
         HOME_INTRODUCE: {
@@ -330,6 +337,13 @@ module.exports = {
                 TITLE: "A-Tune",
                 LINK: "https://gitee.com/openeuler/A-Tune",
                 DES: "A system software to auto-optimize the system adaptively to multiple scenarios with embedded AI-engine.",
+            },
+            {
+                TITLE: "openEuler 20.09 version released",
+                LINK: "https://openeuler.org/openEuler-whitepaper.pdf",
+                DES: "For more information,download the openEuler 20.09 technical white paper",
+                DOWNLOAD: 'download',
+                MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
             }
         ],
         HOME_INTRODUCE: {
