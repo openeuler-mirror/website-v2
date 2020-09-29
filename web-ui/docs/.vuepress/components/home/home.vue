@@ -16,7 +16,20 @@
                         class="carousel-item"
                         v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
                         :key="index">
-                    <a class="banner-link" v-if="index === 0" @click="go(item.LINK)">
+                    <a class="banner-link" v-if="index == 0" :href="item.LINK" target="_blank">
+                        <div class="banner-item">
+                            <div class="item-info">
+                                <h3>{{ item.TITLE }}</h3>
+                                <span>{{ item.DES }}</span>
+                                <div class="download-version" :class="$lang == 'en'?'en-version':''">
+                                    <i class="el-icon-download"></i>
+                                    <div>{{item.DOWNLOAD?item.DOWNLOAD:''}}</div>
+                                </div>
+                            </div>
+                            <img class="banner-gif" :src="'/img/home/Banner' + index + '.gif'">
+                        </div>
+                    </a>
+                    <a class="banner-link" v-if="index === 1" @click="go(item.LINK)">
                         <div class="banner-item">
                             <div class="item-info">
                                 <h3>{{ item.TITLE }}</h3>
@@ -25,15 +38,11 @@
                             <img class="banner-gif" :src="'/img/home/Banner' + index + '.gif'">
                         </div>
                     </a>
-                    <a class="banner-link" v-if="index !== 0" :href="item.LINK" target="_blank">
+                    <a class="banner-link" v-if="index !== 0 && index != 1" :href="item.LINK" target="_blank">
                         <div class="banner-item">
                             <div class="item-info">
                                 <h3>{{ item.TITLE }}</h3>
                                 <span>{{ item.DES }}</span>
-                                <div class="download-version" v-if="index == 3?true:false" :class="$lang == 'en'?'en-version':''">
-                                    <i class="el-icon-download"></i>
-                                    <div>{{item.DOWNLOAD?item.DOWNLOAD:''}}</div>
-                                </div>
                             </div>
                             <img class="banner-gif" :src="'/img/home/Banner' + index + '.gif'">
                         </div>
@@ -61,15 +70,15 @@
                         class="carousel-item-index"
                         v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
                         :key="index">
-                    <a v-if="index !== 0 && index !=3" :href="item.LINK" target="_blank">
+                    <a v-if="index !== 0 && index !=1" :href="item.LINK" target="_blank">
                         <h3>{{ item.TITLE }}</h3>
                         <img :src="'/img/home/Banner' + index + '.gif'">
                     </a>
-                    <a v-if="index === 0" @click="go(item.LINK)">
+                    <a v-if="index === 1" @click="go(item.LINK)">
                         <h3>{{ item.TITLE }}</h3>
                         <img :src="'/img/home/Banner' + index + '.gif'">
                     </a>
-                    <div class="mobile-version" :style="{backgroundImage:item.MOBILE_IMG?item.MOBILE_IMG:''}" v-if="index == 3"></div>
+                    <div class="mobile-version" :style="{backgroundImage:item.MOBILE_IMG?item.MOBILE_IMG:''}" v-if="index == 0"></div>
                 </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
@@ -819,7 +828,7 @@
             height: 24px;
             font-size: 12px;
             font-family: FZLTXIHJW;
-            margin-top: 100px;
+            margin-top: 60px;
             color: #ffffff;
             line-height: 24px;
             background-color: #002fa7;
