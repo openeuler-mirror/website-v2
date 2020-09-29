@@ -268,6 +268,8 @@ export default {
     line-height: 60px;
     display: inline-block;
     width: calc(100% - 63px);
+    height: 60px;
+    overflow: hidden;
 }
 .inner-box {
     height: 60px;
@@ -283,7 +285,7 @@ export default {
     text-align: left;
 }
 .inner-box img {
-    margin: 0 10px 0 16px;
+    margin: 0 10px 20px 16px;
     width: 22px;
     height: 26px;
     vertical-align: sub;
@@ -346,7 +348,7 @@ export default {
     }
     .step-H5 p {
         font-size: 16px;
-        width:140px;
+        width:200px;
         height:40px;
         line-height: 40px;
         color: #002FA7;
