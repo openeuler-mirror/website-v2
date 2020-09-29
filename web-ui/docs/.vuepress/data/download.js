@@ -56,7 +56,20 @@ module.exports = {
                 MANUFACTURER: 'HopeEdge OS',
                 PUBLISH_DATE: '',
                 LTS: false
-            }
+            },
+            {
+                NAME: 'openEuler 20.09',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.09/',
+                DESC: 'openEuler 20.09 版本是满足开放场景的创新发行版，生命周期六个月。',
+                RELEASE_DESC_URL: '/zh/docs/20.09/docs/Releasenotes/release_notes.html',
+                INSTALL_GUIDENCE_URL: '/zh/docs/20.09/docs/Installation/installation.html',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.09/ISO/',
+                LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+                MANUFACTURER: 'openEuler社区',
+                PUBLISH_DATE: '2020/03',
+                LTS: true
+            },
         ]
     },
     en: {
