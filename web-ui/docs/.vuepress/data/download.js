@@ -77,7 +77,7 @@ module.exports = {
             {
                 NAME: 'openEuler 20.09',
                 DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.09/',
-                DESC: 'The openEuler 20.09 LTS version is an innovative release for open scenarios,with a lifecycle of six months',
+                DESC: 'The openEuler 20.09 LTS version is an innovative release for open scenarios,with a lifecycle of six months.',
                 RELEASE_DESC_URL: '',
                 INSTALL_GUIDENCE_URL: '',
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
