@@ -414,7 +414,6 @@ export default {
         right: -130px;
         z-index: 200000;
         width: 140px;
-        height: 78px;
         background: #FFFFFF;
         border-radius: 4px;
         border: 1px solid #002FA7;
