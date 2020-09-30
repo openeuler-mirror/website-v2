@@ -205,7 +205,7 @@
                     {
                         "img": "/img/docs/docs-user.svg",
                         "path": "/docs/StratoVirt/StratoVirtGuide.html",
-                        "name": "StratoVirt虚拟化用户指南"
+                        "name": "StratoVirt用户指南"
                     },
                     {
                         "img": "/img/docs/docs-user.svg",
@@ -230,7 +230,7 @@
                     {
                         "img": "/img/docs/docs-application.svg",
                         "path": "/docs/userguide/overview.html",
-                        "name": "openEuler工具集用户指南"
+                        "name": "工具集用户指南"
                     }
                 ]
             }

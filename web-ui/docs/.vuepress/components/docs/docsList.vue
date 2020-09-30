@@ -273,7 +273,7 @@ export default {
 }
 .inner-box {
     height: 60px;
-    width: 200px;
+    width: 210px;
     margin-right: 36px;
     margin-bottom: 14px;
     align-items: center;
