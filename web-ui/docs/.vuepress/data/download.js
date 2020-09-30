@@ -16,7 +16,7 @@ module.exports = {
                 LIFE_CYCLE_URL: '/zh/other/lifecycle/',
                 MANUFACTURER: 'openEuler社区',
                 PUBLISH_DATE: '2020/09',
-                LTS: true
+                LTS: false
             },
             {
                 NAME: 'openEuler 20.03 LTS',
