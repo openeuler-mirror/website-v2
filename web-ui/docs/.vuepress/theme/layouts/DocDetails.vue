@@ -171,10 +171,11 @@ export default {
     renderFeedbackPath() {
         //设置点击意见反馈的链接
       this.feedbackPath =
-        "https://gitee.com/openeuler/docs/blob/stable-" +
+        "https://gitee.com/openeuler/docs/blob/stable2-" +
         this.versionValue +
-        "/content" +
+        "/docs" +
         this.targetLocale +
+        'docs/' + this.versionValue + '/' +
         this.currentDocPath +
         ".md";
     },

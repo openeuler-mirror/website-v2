@@ -329,7 +329,7 @@ module.exports = {
                 TITLE: "openEuler 20.09 version released",
                 LINK: "https://openeuler.org/openEuler-whitepaper.pdf",
                 DES: "For more information,download the openEuler 20.09 technical white paper",
-                DOWNLOAD: 'download',
+                DOWNLOAD: 'Download',
                 MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
             },
             {
