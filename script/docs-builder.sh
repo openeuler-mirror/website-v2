@@ -27,11 +27,11 @@ do
   mkdir -p ../web-ui/docs/en/docs/$b
   cp -r ./docs/en/docs/$b/* ../web-ui/docs/en/docs/$b/
 
-  mkdir -p /home/openeuler/website-v2/server/docs/$b/zh/
-  cp -r ./docs/zh/docs/$b/* /home/openeuler/website-v2/server/docs/$b/zh/
+  mkdir -p /home/openeuler/website-v2/server/docs/$b/zh
+  cp -r ./docs/zh/docs/$b/* ../server/docs/$b/zh/
 
-  mkdir -p /home/openeuler/website-v2/server/docs/$b/en/
-  cp -r ./docs/en/docs/$b/* /home/openeuler/website-v2/server/docs/$b/en/
+  mkdir -p /home/openeuler/website-v2/server/docs/$b/en
+  cp -r ./docs/en/docs/$b/* ../server/docs/$b/en/
   
   cd ..
 
