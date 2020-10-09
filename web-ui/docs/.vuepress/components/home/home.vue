@@ -675,7 +675,7 @@
 
     @media screen and (max-width: 1000px) {
         .el-carousel__container {
-            height: 300px;
+            height: 369px;
         }
         .room-card {
             display: none;
@@ -1187,6 +1187,11 @@
         font-size: 12px;
     }
     .en-guide-way {
+        &:first-of-type{
+            img{
+                margin: 10px 0 0 11px !important;
+            }
+        }
         margin: 0 10px 0 0;
         span{
             font-size: 10px !important;
@@ -1339,6 +1344,7 @@
     .room-left {
         overflow: hidden;
         width: 622px;
+        position: relative;
     }
     .room-contain {
         display: none;
@@ -1398,9 +1404,10 @@
     }
     .room-img {
         width: 420px;
-        margin: 13px auto 40px;
+        left: 52px;
+        top: 75px;
         box-shadow: 0 6px 30px 0px rgba(0, 0, 0, .1);
-        position: relative;
+        position: absolute;
         z-index: -1;
         cursor: pointer;
     }

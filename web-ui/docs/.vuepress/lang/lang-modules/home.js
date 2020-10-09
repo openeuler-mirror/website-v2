@@ -183,7 +183,7 @@ module.exports = {
                     TITLE: "Packaging SIG， Base-",
                     RANK: "service SIG maintainer",
                     MAIL_LINK: "hexiaowen@huawei.com",
-                    GITEE_LINK: "https://gitee.com/jimmy_hero",
+                    GITEE_LINK: "https://gitee.com/overweight_co",
                     IMG: "/img/home/developer/hexiaowen.png"
                 },
                 {
