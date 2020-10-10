@@ -266,7 +266,7 @@
     .step .is-hovered {
         display: block;
         position: absolute;
-        top: 41px;
+        top: 45px;
     }
     .step-num span {
         color: #fff;
