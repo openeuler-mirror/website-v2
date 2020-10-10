@@ -69,6 +69,32 @@ module.exports = {
                 MANUFACTURER: 'HopeEdge OS',
                 PUBLISH_DATE: '',
                 LTS: false
+            },
+            {
+                NAME: '中科傲来服务器操作系统',
+                DOWNLOAD_URL : 'https://eulixos.com/#/download',
+                DESC: '中科傲来服务器操作系统是一款基于openEuler操作系统打造的服务器操作系统发行版，支持X86_64、AArch64、RISC-V等多种处理器架构，适用于数据库、云计算、大数据、人工智能、分布式计算等多种应用场景，具备高安全、高可靠、高性能、跨平台等特点，旨在为各类应用及解决方案提供标准、安全、可靠的操作系统及服务。',
+                RELEASE_DESC_URL: 'https://eulixos.com/userguide/%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E/%E7%89%88%E6%9C%AC%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E.html',
+                INSTALL_GUIDENCE_URL: 'https://eulixos.com/userguide/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/%E5%89%8D%E8%A8%80.html',
+                SEEK_HELP_URL: 'https://eulixos.com/#/feedback',
+                GET_ISO_URL: 'https://eulixos.com/#/download',
+                LIFE_CYCLE_URL: '',
+                MANUFACTURER: '中科院软件所',
+                PUBLISH_DATE: '2020/05',
+                LTS: false
+            },
+            {
+                NAME: '普华服务器操作系统v5.1',
+                DOWNLOAD_URL : 'http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso',
+                DESC: '暂无描述',
+                RELEASE_DESC_URL: 'http://www.i-soft.com.cn/type/4/716.jhtml',
+                INSTALL_GUIDENCE_URL: 'http://www.i-soft.com.cn/type/4/716.jhtml ',
+                SEEK_HELP_URL: 'https://p.qiao.baidu.com/cps4/chatIndex?siteToken=9a45f9cee67affa160b6addd06e07a8d&speedLogId=160067949693727da_1600679496937_87121&eid=30746007&reqParam=%7B%22from%22%3A0%2C%22sid%22%3A%22-100%22%2C%22tid%22%3A%22-1%22%2C%22ttype%22%3A1%2C%22siteId%22%3A%2215215804%22%2C%22userId%22%3A%2230746007%22%2C%22pageId%22%3A0%7D ',
+                GET_ISO_URL: 'http://www.i-soft.com.cn/type/4/714.jhtml ',
+                LIFE_CYCLE_URL: '',
+                MANUFACTURER: '普华软件',
+                PUBLISH_DATE: '',
+                LTS: false
             }
         ]
     },
@@ -135,6 +161,32 @@ module.exports = {
                 GET_ISO_URL: 'http://download.hopeedge.com/ISO/HopeEdge-1.0-aarch64-dvd.iso',
                 LIFE_CYCLE_URL: '',
                 MANUFACTURER: 'HopeEdge OS',
+                PUBLISH_DATE: '',
+                LTS: false
+            },
+            {
+                NAME: 'EulixOS Server',
+                DOWNLOAD_URL : 'https://eulixos.com/#/download',
+                DESC: 'The EulixOS is a server OS distribution based on the openEuler OS. The EulixOS supports multiple processor architectures, such as x86_64, AArch64, and RISC-V, and is ideal for various application scenarios, including databases, cloud computing, big data, AI, and distributed computing. It combines high security and reliability with the ultimate performance across platforms, aiming to provide a standard, secure, and reliable operating system and quality services for diverse applications and solutions.',
+                RELEASE_DESC_URL: 'https://eulixos.com/userguide/%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E/%E7%89%88%E6%9C%AC%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E.html',
+                INSTALL_GUIDENCE_URL: 'https://eulixos.com/userguide/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/%E5%89%8D%E8%A8%80.html',
+                SEEK_HELP_URL: 'https://eulixos.com/#/feedback',
+                GET_ISO_URL: 'https://eulixos.com/#/download',
+                LIFE_CYCLE_URL: '',
+                MANUFACTURER: 'ISCAS',
+                PUBLISH_DATE: '2020/05',
+                LTS: false
+            },
+            {
+                NAME: 'iSoftServerOS-Kunpeng-5.1',
+                DOWNLOAD_URL : 'http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso',
+                DESC: 'No description available',
+                RELEASE_DESC_URL: 'http://www.i-soft.com.cn/type/4/716.jhtml',
+                INSTALL_GUIDENCE_URL: 'http://www.i-soft.com.cn/type/4/716.jhtml ',
+                SEEK_HELP_URL: 'https://p.qiao.baidu.com/cps4/chatIndex?siteToken=9a45f9cee67affa160b6addd06e07a8d&speedLogId=160067949693727da_1600679496937_87121&eid=30746007&reqParam=%7B%22from%22%3A0%2C%22sid%22%3A%22-100%22%2C%22tid%22%3A%22-1%22%2C%22ttype%22%3A1%2C%22siteId%22%3A%2215215804%22%2C%22userId%22%3A%2230746007%22%2C%22pageId%22%3A0%7D ',
+                GET_ISO_URL: 'http://www.i-soft.com.cn/type/4/714.jhtml ',
+                LIFE_CYCLE_URL: '',
+                MANUFACTURER: 'iSoft',
                 PUBLISH_DATE: '',
                 LTS: false
             }
