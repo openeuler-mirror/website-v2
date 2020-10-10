@@ -557,8 +557,13 @@ export default {
           margin-bottom: 22px;
           line-height: 24px;
           height: 48px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
           @media (max-width: 1000px) {
-            line-height: 20px;
+            line-height: 25px;
             margin-bottom: 30px;
           }
         }
