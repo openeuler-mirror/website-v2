@@ -13,10 +13,10 @@ const ES_INDEX = 'openeuler_articles';
 const ES_EN_INDEX = 'openeuler_articles_en';
 const ES_TYPE = '_doc';
 let jsonList = '';
+let no = '';
 
 function readFileByPath(dirPath, index, esType, model, version) {
     const files = fs.readdirSync(dirPath);
-    let i = 0;
     files.forEach(function (item) {
         let innerPath = path.join(dirPath, item);
         if (fs.lstatSync(innerPath).isDirectory()) {
@@ -31,7 +31,7 @@ function readFileByPath(dirPath, index, esType, model, version) {
             content = content.replace(/[\r\n]/g, '');
 
             let json = {
-                'id': i,
+                'id': no,
                 'title': item.substring(0, item.length - 3),
                 'textContent': content,
                 'articleName': item,
@@ -41,19 +41,20 @@ function readFileByPath(dirPath, index, esType, model, version) {
             };
             let index = {
                 'index': {
-                    '_id': model + version + i,
+                    '_id': model + version + no,
                     '_type': '_doc'
                 }
             };
             jsonList += JSON.stringify(index) + os.EOL;
             jsonList += JSON.stringify(json) + os.EOL;
-            i++;
+            no++;
         }
     });
 }
 
 function insertES(index, esType, dirPath, model, version) {
     console.log(dirPath);
+    no = 1;
     let json = {
         query: {
             bool: {
@@ -72,7 +73,7 @@ function insertES(index, esType, dirPath, model, version) {
     let token = new Buffer.from(ES.ES_USER_PASS).toString('base64');
     let now = logUtil.getTime();
     HTTP.postES(ES.ES_URL + index + '/_doc/_delete_by_query', token, json).then(data => {
-        let meta = '[' + now + ']' + index + ' ' + model + ' delete elasticsearch index.';
+        let meta = '[' + now + ']' + index + ' ' + version + ' ' + model + ' delete elasticsearch index.';
         console.log(meta + os.EOL + JSON.stringify(data) + os.EOL);
         jsonList = '';
         readFileByPath(dirPath, index, esType, model, version);
