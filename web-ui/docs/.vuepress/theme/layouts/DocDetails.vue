@@ -33,7 +33,7 @@
         node-key="path"
         :highlight-current="true"
         @node-click="handleNodeClick"
-        :class="$lang == 'en'?'dialog-tree':''"
+        class="dialog-tree"
       ></el-tree>
     </div>
     <div class="mobile-previous-and-next" :class="{ mask: showMobileMenu }" @click="showMobileMenu = false"></div>
@@ -323,6 +323,9 @@ export default {
     position: absolute;
     white-space: normal;
     line-height: 20px;
+    &:last-of-type{
+      width: 160px;
+    }
 }
 .el-tree{
     max-height: calc(100vh - 344px);
@@ -450,6 +453,10 @@ export default {
       a[href^='#'] {
         display: inline;
     }
+    pre{
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
     @media (max-width: 1000px) {
       width: 100%;
       padding: 30px 30px 0 30px;
@@ -528,6 +535,9 @@ export default {
   }
 }
 #docs-content {
+  pre,code,p, ul li, ol li,table tr{
+    color: rgba(0, 0, 0, 0.7);
+  }
   p {
     line-height: 24px;
     a {
