@@ -214,6 +214,7 @@ export default {
     width: 400px;
     height:200px;
     box-shadow:0 6px 20px 0 rgba(0,0,0,0.1);
+    border-radius: 8px;
     @media screen and (max-width: 1000px) {
       width: 270px;
       height: 150px;

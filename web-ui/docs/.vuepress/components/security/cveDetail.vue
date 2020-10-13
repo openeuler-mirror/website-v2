@@ -8,7 +8,7 @@
       </p>
       <h2>{{i18n.security.SYNOPSIS}}</h2>
       <p>{{detailData.summary}}</p>
-      <h2>{{i18n.security.METRICS}}</h2>
+      <h2>{{cvVersion != '' && cvVersion.includes("V2") == true?'CVSS v2 指标':'CVSS v3 指标'}}</h2>
       <ul class="metrics-list">
         <li class="item">
           <ul>
@@ -156,8 +156,8 @@ const locationMethods = {
         that.loading = false;
         if (data) {
           that.detailData = data;
+          that.cvVersion = that.detailData.nationalCyberAwarenessSystem;
         }
-
       })
       .catch(data => {
         that.$message.error(data);
@@ -200,13 +200,17 @@ export default {
       loading: false,
       detailData: {},
       packageList: [],
-      noticeList: []
+      noticeList: [],
+      cvVersion: ''
     };
   },
   created () {
     locationMethods.getCveDetail();
     locationMethods.getAffectedProduct();
     locationMethods.getPackage();
+  },
+  mounted (){
+    
   },
   methods: {
     to () {
