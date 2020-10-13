@@ -8,7 +8,7 @@
       </p>
       <h2>{{i18n.security.SYNOPSIS}}</h2>
       <p>{{detailData.summary}}</p>
-      <h2>{{cvVersion != '' && cvVersion.includes("V2") == true?'CVSS v2 指标':'CVSS v3 指标'}}</h2>
+      <h2>{{cvVersion != '' && cvVersion.includes("V2") ?i18n.security.METRICS_V2:i18n.security.METRICS_V3}}</h2>
       <ul class="metrics-list">
         <li class="item">
           <ul>
