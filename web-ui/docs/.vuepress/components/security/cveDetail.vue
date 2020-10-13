@@ -209,9 +209,6 @@ export default {
     locationMethods.getAffectedProduct();
     locationMethods.getPackage();
   },
-  mounted (){
-    
-  },
   methods: {
     to () {
       this.$router.push({
