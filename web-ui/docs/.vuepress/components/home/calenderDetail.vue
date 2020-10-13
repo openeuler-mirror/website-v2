@@ -11,6 +11,15 @@
                 <p>{{item3.detail}}</p>
                 </div>
             </div>
+            <div class="detail-link">
+                <h3>Zoom</h3>
+                <div><img src="/img/home/detail-link.png"><span>{{item3.meeting_id}}</span></div>
+                <div><img src="/img/home/detail-link.png"><span>{{item3.join_url}}</span></div>
+            </div>
+            <div class="detail-link">
+                <h3>Etherpad</h3>
+                <div><img src="/img/home/detail-link.png" alt=""><span>{{item3.etherpad||'-'}}</span></div>
+            </div>
         </div>
     </div>
 </template>
@@ -59,10 +68,7 @@ export default {
     @media screen and (max-width: 1000px) {
         max-width: 180px;
     }
-    width: 260px;
-    min-height: 140px;
     border-radius: 4px;
-    height: 92px;
     padding: 12px 20px 15px;
     position:  absolute;
     top: 50%;
@@ -85,7 +91,6 @@ export default {
     border-radius: 100%;
   }
   .meetDetailDe{
-    width: 140px;
     padding-left: 10px;
   }
   .meetingTime{
@@ -113,5 +118,23 @@ export default {
   h2{
     margin: 0;
     font-size: 14px;
+  }
+  .detail-link {
+      h3 {
+          font-size: 14px;
+          margin-top: 10px;
+      }
+      div {
+          img {
+              vertical-align: middle;
+              margin-right: 5px;
+          }
+          span {
+              vertical-align: middle;
+          }
+          font-size: 12px;
+          margin-top: 8px;
+          color: #929292;
+      }
   }
 </style>
