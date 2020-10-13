@@ -308,12 +308,8 @@ export default {
             return str;
         },
         handleShowDetail(item1, item3) {
-            if (item1.duration > 1 && item3.duration == item1.duration) {
-                return false;
-            } else {
-                this.saveItem = item3;
-                this.isShowDetail = true;
-            }
+            this.saveItem = item3;
+            this.isShowDetail = true;
         },
         close() {
             this.isShowDetail = false;
@@ -609,7 +605,6 @@ button {
     transition: transform 0.5s ease-in-out;
 }
 .cadenderSinge {
-    width: 100%;
     min-height: 56px;
     border-radius: 4px;
     padding: 12px 20px 15px;
@@ -634,7 +629,6 @@ button {
     left: 20px;
     line-height: 14px;
     font-size: 12px;
-    color: #dfdfdf;
 }
 h1 {
     margin: 0;
@@ -651,6 +645,7 @@ h1 {
 }
 .calenderH1 {
     line-height: 30px;
+    cursor: pointer;
 }
 .cadenderSinge.active {
     padding: 15px 20px;
