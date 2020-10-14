@@ -171,7 +171,7 @@
             <p :class="$lang == 'en'?'en-weight-family':''">{{ i18n.home.HOME_ACTIVE.ACTIVE_DESCRIPTION }}</p>
         </div>
 
-        <div class="home-calendar">
+        <div class="home-calendar" v-if="calenderData.length">
             <calender :table-data="calenderData" />
         </div>
 
