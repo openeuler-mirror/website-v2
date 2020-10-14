@@ -17,7 +17,7 @@ export default ({
         data () {
             return {
                 i18n: {},
-
+                isShowH5: false,
             }
         },
         mounted () {
@@ -34,6 +34,10 @@ export default ({
                     Vue.use(ElementUI);
                     Vue.prototype.$isCn = true;
                 }
+            }
+            let screenWidth = document.body.clientWidth;
+            if(screenWidth <= 1000){
+                this.isShowH5 = true;
             }
         },
         created () {
