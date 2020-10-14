@@ -28,7 +28,6 @@ function readFileByPath(dirPath, index, esType, model, version) {
 
             let html = fs.readFileSync(innerPath, 'utf-8');
             let content = cheerio.load(html).text();
-            content = content.replace(/[\r\n]/g, '');
 
             let json = {
                 'id': no,
