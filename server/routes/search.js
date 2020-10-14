@@ -117,6 +117,7 @@ function getSearchResJson(data, keyword, page) {
 
     data.hits.hits.forEach(element => {
         let content = element._source.textContent;
+        content = filterContent(content);
         let index = content.indexOf(keyword);
         if (index > 100) {
             if (content.length > index + 100) {
@@ -150,6 +151,29 @@ function getSearchResJson(data, keyword, page) {
         }
     };
     return json;
+}
+
+const filterArr = ['---', 'title:', '# '];
+
+function filterContent(content) {
+    filterArr.forEach(val => {
+        content = content.replace(val, '');
+    });
+    let arr = content.split(/[\r\n]/);
+    console.log(arr.length);
+    let result = '';
+    let index = -1;
+    arr.forEach(s => {
+        index = s.indexOf('](#');
+        if (index > 1) {
+            s = s.substring(0, index - 1);
+            result += s.replace('-', '').replace('[', '').replace(']', '');
+        } else if (s.indexOf('](./') > -1 && (
+                s.indexOf('.gif') > -1 || s.indexOf('.png') > -1 || s.indexOf('.jpg') > -1)) {} else {
+            result += s;
+        }
+    });
+    return result;
 }
 
 function getSearchReqJson(page, model, keyword, version) {
