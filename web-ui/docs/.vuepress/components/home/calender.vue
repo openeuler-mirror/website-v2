@@ -623,7 +623,6 @@ button {
     float: left;
 }
 .meetDetailDe {
-    width: 140px;
     padding-left: 60px;
 }
 .meetDetail .meetingTime {
@@ -645,6 +644,7 @@ h1 {
     line-height: 18px;
     font-size: 12px;
     margin: 0;
+    width: 140px;
 }
 .calenderH1 {
     line-height: 30px;
@@ -655,6 +655,10 @@ h1 {
     cursor: auto;
 }
 .cadenderSinge.active .calenderH1 {
+    width: 200px;
+    overflow: hidden;    
+ 	text-overflow: ellipsis;
+ 	white-space: nowrap;
     padding-bottom: 30px;
 }
 h2 {
