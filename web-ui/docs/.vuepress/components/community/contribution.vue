@@ -5,7 +5,7 @@
         :outside-name="i18n.community.CONTRIBUTION_H5.TITLE"
         class="is-pc"
         ></common-banner>
-        <div class="bgc is-pc">
+        <div class="bgc is-pc" v-if="!isShowH5">
             <div class="methods is-pc">
                 <div class="mail-guide"
                      v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"
@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <div class="is-h5 mail-list-H5">
+        <div class="is-h5 mail-list-H5" v-else>
             <h3 class="is-h5">{{ i18n.community.CONTRIBUTION_H5.MOBILE_TITLE }}</h3>
             <div class="mail-guide"
                  v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"

@@ -19,7 +19,7 @@
                     </el-select>
                 </el-form-item>
             </el-form>
-            <div :class="['is-pc',targetLocale == '/en/'?'pc-en':'']">
+            <div :class="['is-pc',targetLocale == '/en/'?'pc-en':'']" v-if="!isShowH5">
                 <div class="maillist-divider-mail">
                     <div class="maillist-icon-comm"></div>
                 </div>
@@ -54,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <div class="is-h5">
+            <div class="is-h5" v-else>
                 <div class="mail-guide" v-for="(items, index) in currentDocs" :key="index">
                     <div v-if="items.doc.length" class="step-H5" :class="[items.doc.length === 1 && 'step-left-H5']">
                         <div :class="['step-num',targetLocale == '/en/'?'step-en':'']">

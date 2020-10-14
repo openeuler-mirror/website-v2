@@ -9,7 +9,7 @@
                 class="is-pc"
             ></common-banner>
         </div>
-        <div class="is-pc sig-guidance" v-fade>
+        <div class="is-pc sig-guidance" v-fade v-if="!isShowH5">
             <div class="maillist-divider-mail">
                 <div class="maillist-icon-comm"></div>
             </div>
@@ -56,7 +56,7 @@
                 </div>
             </div>
         </div>
-        <div class="is-h5 sig-guidance-H5">
+        <div class="is-h5 sig-guidance-H5" v-else>
             <div
                 class="mail-guide"
                 v-for="(item, index) in i18n.sig.GUIDANCE_LIST.GUIDE.LINE_CONTENT"

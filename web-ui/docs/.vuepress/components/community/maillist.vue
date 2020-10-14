@@ -7,7 +7,7 @@
             :outside-name="i18n.community.MAILING_LIST.TITLE"
         ></common-banner>
 
-        <div :class="['maillist', 'is-pc', $lang === 'en' ? 'en' : '']" v-fade>
+        <div :class="['maillist', 'is-pc', $lang === 'en' ? 'en' : '']" v-fade v-if="!isShowH5">
             <div :class="['maillist-divider-mail', 'is-pc', $lang === 'en' ? 'en' : '']">
                 <div class="maillist-icon-comm"></div>
             </div>
@@ -56,7 +56,7 @@
             </div>
         </div>
 
-        <div class="maillist is-h5">
+        <div class="maillist is-h5" v-else>
             <div
                 class="mail-guide"
                 v-for="(item, index) in i18n.community.MAILING_LIST
@@ -100,7 +100,7 @@
             </div>
         </div>
 
-        <div class="mail-table is-pc">
+        <div class="mail-table is-pc" v-if="!isShowH5">
             <el-table :data="list" stripe>
                 <el-table-column
                     prop="display_name"
@@ -145,7 +145,7 @@
             </el-table>
         </div>
 
-        <div class="mail-table is-h5">
+        <div class="mail-table is-h5" v-else>
             <ul class="mail-list-h5">
                 <li class="heaed">
                     <ul>
@@ -180,7 +180,7 @@
             </ul>
         </div>
 
-        <div class="mail-subscribe is-pc">
+        <div class="mail-subscribe is-pc" v-if="!isShowH5">
             <el-dialog
                 :title="i18n.community.MAILING_LIST.SUBSCRIBE.TITLE"
                 :visible.sync="dialogFormVisible"
