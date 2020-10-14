@@ -5,7 +5,7 @@
                 <el-carousel-item>
                     <div class="carousel-video">
                         <video poster="/img/home/BannerVideo.png" loop width="100%" height="500px" id="home-video">
-                            <source src="/img/home-video/pc-home-video.mp4"  type="video/mp4">
+                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/pc-home-video.mp4"  type="video/mp4">
                         </video>
                         <playcontroll :ctrl-obj="videoCtrlParams" ref="playctrlEle" @playStatus="checkStatus"></playcontroll>
                         <div class="play-btn" v-if="!isNowPlay" @click="playHomeVideo()">
@@ -61,7 +61,7 @@
                                height="300px"
                                ref="video"
                                @click="playVideo">
-                            <source src="/img/home-video/mobile-home-video.mp4"  type="video/mp4">
+                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/mobile-home-video.mp4"  type="video/mp4">
                         </video>
                         <div class="mobile-btn" v-show="mobilePlayBtnDisplay" @click="playVideo"></div>
                     </div>
