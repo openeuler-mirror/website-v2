@@ -171,12 +171,15 @@ export default {
     },
     props: ["tableData"],
     watch: {
-        tableData: function() {
-            if (!this.flag) {
-                commonUtils.calenderSortData(this.tableData);
-                this.getOriginData(this.tableData);
-            }
-            this.flag = true;
+        tableData: {
+            handler: function() {
+                if (!this.flag) {
+                    commonUtils.calenderSortData(this.tableData);
+                    this.getOriginData(this.tableData);
+                }
+                this.flag = true;
+            },
+            immediate: true
         }
     },
     mounted () {
