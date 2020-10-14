@@ -29,7 +29,7 @@ module.exports = {
             }
         ],
         HOME_INTRODUCE: {
-            INTRO_TITLE: "The Most Innovated OS Open Source Community",
+            INTRO_TITLE: "The Most Innovated Open Source Community",
             INTRO_HEAD: "开始openEuler之旅吧！",
             INTRO_DESCRIPTION: "openEuler通过社区合作，打造创新平台，构建支持多处理架构、统一和开放的操作系统，推动软硬件应用生态繁荣发展。",
             INTRO_IMG_URL: "",
@@ -349,7 +349,7 @@ module.exports = {
             }
         ],
         HOME_INTRODUCE: {
-            INTRO_TITLE: "The Most Innovated OS Open Source Community",
+            INTRO_TITLE: "The Most Innovated Open Source Community",
             INTRO_HEAD: "Start your journey in openEuler",
             INTRO_DESCRIPTION: "openEuler is an innovative platform nurtured by community collaboration. It aims to build a unified and open OS that supports multiple processor architectures, and to advance the hardware/software application ecosystem.",
             INTRO_IMG_URL: "",
