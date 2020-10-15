@@ -319,6 +319,55 @@ module.exports = {
             SOURCE_PUBLISH_TITLE: "基于openEuler的OS发行版",
             SOURCE_LINK_TITLE: "友情链接",
         },
+        HOME_SOURCE_EDITION:[
+            {
+                LEFT_IMG_LINK: 'https://eulixos.com/#/download',
+                LEFT_IMG_PC: '/img/home/link/iscas.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-iscas.png',
+                RIGHT_IMG_LINK: 'http://download.turbolinux.com.cn:8011/',
+                RIGHT_IMG_PC: '/img/home/link/turbo.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-turbo.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso',
+                LEFT_IMG_PC: '/img/home/link/cetc.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-cetc.png',
+                RIGHT_IMG_LINK: 'http://download.hopeedge.com/ISO/HopeEdge-1.0-aarch64-dvd.iso',
+                RIGHT_IMG_PC: '/img/home/link/hopeEdge.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeEdge.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://www.kylinos.cn/',
+                LEFT_IMG_PC: '/img/home/link/qiling.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-qiling.png',
+                RIGHT_IMG_LINK: 'https://www.uniontech.com',
+                RIGHT_IMG_PC: '/img/home/link/tongxin.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongxin.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://www.kylinsec.com.cn/',
+                LEFT_IMG_PC: '/img/home/link/xinan.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-xinan.png'
+            }
+        ],
+        FRIENDSHIP_LINK_LIST:[
+            {
+                LEFT_IMG_LINK: 'http://www.mulanos.cn/',
+                LEFT_IMG_PC: '/img/home/link/mulan.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-mulan.png',
+                RIGHT_IMG_LINK: 'https://www.huaweicloud.com/kunpeng/',
+                RIGHT_IMG_PC: '/img/home/link/kunpeng.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-kunpeng.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://ic-openlabs.huawei.com/chat/#/',
+                LEFT_IMG_PC: '/img/home/link/xiaozhi.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-xiaozhi.png',
+                RIGHT_IMG_LINK: 'https://dw.pcl.ac.cn/',
+                RIGHT_IMG_PC: '/img/home/link/pengcheng.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-pengcheng.png'
+            }
+        ],
         MORE: "更多",
         EXPAND: "展开全部",
         RETRACT: "收起全部"
@@ -622,6 +671,55 @@ module.exports = {
             SOURCE_PUBLISH_TITLE: "openEuler-based OS Release",
             SOURCE_LINK_TITLE: "Reference Links",
         },
+        HOME_SOURCE_EDITION:[
+            {
+                LEFT_IMG_LINK: 'https://eulixos.com/#/download',
+                LEFT_IMG_PC: '/img/home/link/iscas.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-iscas.png',
+                RIGHT_IMG_LINK: 'http://download.turbolinux.com.cn:8011/',
+                RIGHT_IMG_PC: '/img/home/link/turbo.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-turbo.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso',
+                LEFT_IMG_PC: '/img/home/link/cetc.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-cetc.png',
+                RIGHT_IMG_LINK: 'http://download.hopeedge.com/ISO/HopeEdge-1.0-aarch64-dvd.iso',
+                RIGHT_IMG_PC: '/img/home/link/hopeEdge.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeEdge.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://www.kylinos.cn/',
+                LEFT_IMG_PC: '/img/home/link/qiling.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-qiling.png',
+                RIGHT_IMG_LINK: 'https://www.uniontech.com',
+                RIGHT_IMG_PC: '/img/home/link/tongxin.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongxin.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://www.kylinos.cn/',
+                LEFT_IMG_PC: '/img/home/link/xinan.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-xinan.png'
+            }
+        ],
+        FRIENDSHIP_LINK_LIST:[
+            {
+                LEFT_IMG_LINK: 'http://www.mulanos.cn/',
+                LEFT_IMG_PC: '/img/home/link/mulan.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-mulan.png',
+                RIGHT_IMG_LINK: 'https://www.huaweicloud.com/kunpeng/',
+                RIGHT_IMG_PC: '/img/home/link/kunpeng.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-kunpeng.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://ic-openlabs.huawei.com/chat/#/',
+                LEFT_IMG_PC: '/img/home/link/xiaozhi.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-xiaozhi.png',
+                RIGHT_IMG_LINK: 'https://dw.pcl.ac.cn/',
+                RIGHT_IMG_PC: '/img/home/link/pengcheng.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-pengcheng.png'
+            }
+        ],
         MORE: "Read More",
         EXPAND: "展开全部",
         RETRACT: "收起全部"
