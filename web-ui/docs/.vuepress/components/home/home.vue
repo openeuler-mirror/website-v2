@@ -625,6 +625,7 @@
                 }
             },
             changeArr(arr,count){
+                //打乱数组顺序
                 for(let i = 0,len = arr.length;i < len;i++){
                     let currentRandom = parseInt(Math.random() * (len-1));
                     let current = arr[i];
