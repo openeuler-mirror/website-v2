@@ -22,7 +22,10 @@
         <div class="search-tag">
             <div class="tag-title">
                 <ul>
-                    <li v-for="item in tagTitle" :class="{'active': curKey==item.key}" :key="item.key" @click="curKey = item.key">{{i18n.search.TAG_NAME[item.key.toUpperCase()]}}<span>（{{item.doc_count}}）</span></li>
+                    <li v-for="item in tagTitle" :class="{'active': curKey==item.key}" :key="item.key" @click="curKey = item.key">
+                        {{i18n.search.TAG_NAME[item.key.toUpperCase()]}}
+                        <span>（{{item.doc_count}}）</span>
+                    </li>
                 </ul>
             </div>
             <div class="tag-content">
@@ -30,7 +33,7 @@
                     <div class="tags-info" v-for="item in allDatas">
                         <h3 v-html="item.title" @click="goDetail(item)"></h3>
                         <p v-html="item.textContent"></p>
-                        <p class="articla-from"><span>{{ i18n.search.TAG_NAME.FROM }}：</span><span class="artical-tag">{{i18n.search.TAG_NAME[item.type.toUpperCase()]}}</span></p>
+                        <p class="articla-from"><span>{{ i18n.search.TAG_NAME.FROM }}：</span><span class="artical-tag">{{i18n.search.TAG_NAME[item.type.toUpperCase()]}} <span v-if="item.type === 'docs'">{{item.version}}</span></span></p>
                     </div>
                 </div>
                 <div class="tag-right">
