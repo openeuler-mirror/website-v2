@@ -280,8 +280,8 @@
         <div class="home-developer">
             <h3 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_DEV.DEV_TITLE }}</h3>
             <p :class="$lang == 'en'?'en-developer-p':''">{{ i18n.home.HOME_DEV.DEV_DESCRIPTION }}</p>
-            <div class="dev-leader" v-fade>
-                <div class="dev-dever hidden fade-in" v-for="(value, index) in i18n.home.HOME_DEV.DEV_INFO" :key="index">
+            <div class="dev-leader" v-fade v-if="developerList.length">
+                <div class="dev-dever hidden fade-in" v-for="(value, index) in developerList" :key="index" >
                     <img class="dev-img" :src="value.IMG">
                     <p class="dever-name">{{ value.NAME }}</p>
                     <p :class="['dever-rank',$lang == 'en'?'en-rank':'']">{{ value.TITLE }}</p>
@@ -359,51 +359,27 @@
             </div>
             <div class="source-publish-link publish diff-pc-mobile">
                 <h5 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_SOURCE.SOURCE_PUBLISH_TITLE }}</h5>
-                <div class="publish-edition">
-                    <a href="https://eulixos.com/#/download" target="_blank">
-                        <img class="pc-img" src="/img/home/link/iscas.png" alt="">
-                        <img class="mobile-img" src="/img/home/link/mobile-iscas.png" alt="">
+                <div class="publish-edition" v-for="(item,index) in i18n.home.HOME_SOURCE_EDITION">
+                    <a :href="item.LEFT_IMG_LINK" target="_blank">
+                        <img class="pc-img" :src="item.LEFT_IMG_PC" alt="">
+                        <img class="mobile-img" :src="item.LEFT_IMG_MOBILE" alt="">
                     </a>
-                    <a href="http://download.turbolinux.com.cn:8011/" target="_blank">
-                        <img  class="pc-img" src="/img/home/link/turbo.png" alt="">
-                        <img class="mobile-img" src="/img/home/link/mobile-turbo.png" alt="">
-                    </a>
-                </div>
-                <div class="publish-edition">
-                    <a href="http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso" target="_blank">
-                        <img class="pc-img" src="/img/home/link/cetc.png" alt="">
-                        <img class="mobile-img" src="/img/home/link/mobile-cetc.png" alt="">
-                    </a>
-                    <a href="http://download.hopeedge.com/ISO/HopeEdge-1.0-aarch64-dvd.iso" target="_blank">
-                        <img class="pc-img" src="/img/home/link/hopeEdge.png" alt="">
-                        <img class="mobile-img" src="/img/home/link/mobile-hopeEdge.png" alt="">
-                    </a>
-                </div>
-                <div class="publish-edition">
-                    <a href="http://www.kylinos.cn/" target="_blank">
-                        <img class="pc-img" src="/img/home/link/qiling.png" alt="">
-                        <img class="mobile-img" src="/img/home/link/mobile-qiling.png" alt="">
-                    </a>
-                    <a href="https://www.uniontech.com" target="_blank">
-                        <img class="pc-img" src="/img/home/link/tongxin.png" alt="">
-                        <img class="mobile-img" src="/img/home/link/mobile-tongxin.png" alt="">
+                    <a :href="item.RIGHT_IMG_LINK" target="_blank" :class="item.RIGHT_IMG_LINK?'':'empty-a'">
+                        <img class="pc-img" :src="item.RIGHT_IMG_PC" alt="">
+                        <img class="mobile-img" :src="item.RIGHT_IMG_MOBILE" alt="">
                     </a>
                 </div>
             </div>
             <div class="source-publish-link diff-pc-mobile">
                 <h5 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_SOURCE.SOURCE_LINK_TITLE }}</h5>
-                <div class="publish-edition link">
-                    <a href="http://www.mulanos.cn/" target="_blank">
-                        <img class="pc-img" src="/img/home/link/mulan.png" alt="">
-                        <img class="mobile-img" src="/img/home/link/mobile-mulan.png" alt="">
+                <div class="publish-edition" v-for="(item,index) in i18n.home.FRIENDSHIP_LINK_LIST">
+                    <a :href="item.LEFT_IMG_LINK" target="_blank">
+                        <img class="pc-img" :src="item.LEFT_IMG_PC" alt="">
+                        <img class="mobile-img" :src="item.LEFT_IMG_MOBILE" alt="">
                     </a>
-                    <a href="https://www.huaweicloud.com/kunpeng/" target="_blank">
-                        <img class="pc-img" src="/img/home/link/kunpeng.png" alt="">
-                        <img class="mobile-img" src="/img/home/link/mobile-kunpeng.png" alt="">
-                    </a>
-                    <a href="https://dw.pcl.ac.cn/" target="_blank">
-                        <img class="pc-img" src="/img/home/link/pengcheng.png" alt="">
-                        <img class="mobile-img" src="/img/home/link/mobile-pengcheng.png" alt="">
+                    <a :href="item.RIGHT_IMG_LINK" target="_blank" :class="item.RIGHT_IMG_LINK?'':'empty-a'">
+                        <img class="pc-img" :src="item.RIGHT_IMG_PC" alt="">
+                        <img class="mobile-img" :src="item.RIGHT_IMG_MOBILE" alt="">
                     </a>
                 </div>
             </div>
@@ -462,7 +438,8 @@
                     loop: true
                 },
                 mobileSwiperInterval: null,
-                mobilePagenationIndex: 1
+                mobilePagenationIndex: 1,
+                developerList: []
             }
         },
         mounted() {
@@ -478,6 +455,7 @@
                     }, 5000);
                 })
             }
+            this.developerList = this.changeArr(this.i18n.home.HOME_DEV.DEV_INFO,16);
         },
         beforeDestroy () {
             this.mobileSwiperInterval && clearInterval(this.mobileSwiperInterval);
@@ -647,6 +625,16 @@
                     this.isNowPlay = false;
                     this.autoPlay = true;
                 }
+            },
+            changeArr(arr,count){
+                //打乱数组顺序
+                for(let i = 0,len = arr.length;i < len;i++){
+                    let currentRandom = parseInt(Math.random() * (len-1));
+                    let current = arr[i];
+                    arr[i] = arr[currentRandom];
+                    arr[currentRandom] = current;
+                }
+                return arr.slice(0,count);
             }
         }
     }
@@ -1624,6 +1612,14 @@
         height: 80px;
         margin-right: 70px;
     }
+    .publish .publish-edition .empty-a{
+        img{
+            opacity:0;
+            @media screen and (max-width: 1000px){
+                display: none;
+            }
+        }
+    }
     .publish-edition img {
         width: 280px;
         height: 80px;
@@ -1917,10 +1913,6 @@
         }
         .publish-edition {
             display: block;
-        }
-        .publish-edition.link {
-            display: block;
-            margin: 20px 20px 0 20px;
         }
         .publish .publish-edition img {
             width: 280px;
