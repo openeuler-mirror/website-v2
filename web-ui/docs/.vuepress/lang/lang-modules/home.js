@@ -163,9 +163,137 @@ module.exports = {
             DEV_DESCRIPTION: "这里汇聚了无数精英大咖，快找找您感兴趣的Developer吧！",
             DEV_INFO: [
                 {
+                    NAME: "冯涛",
+                    TITLE: "",
+                    RANK: "sig-OS-Builder-Maintainer",
+                    MAIL_LINK: "t.feng94@foxmail.com",
+                    GITEE_LINK: "https://gitee.com/t_feng",
+                    IMG: "/img/home/developer/fengtao.png"
+                },
+                {
+                    NAME: "郭歌",
+                    TITLE: "",
+                    RANK: "Compiler SIG Maintainer",
+                    MAIL_LINK: "nobleprize@foxmail.com",
+                    GITEE_LINK: "https://gitee.com/jdkboy",
+                    IMG: "/img/home/developer/guoge.png"
+                },
+                {
+                    NAME: "杨丽",
+                    TITLE: "",
+                    RANK: "Packaging Maintainer",
+                    MAIL_LINK: "rainbow1981@163.com",
+                    GITEE_LINK: "https://gitee.com/yangli69393",
+                    IMG: "/img/home/developer/yangli.png"
+                },
+                {
+                    NAME: "张旭舟",
+                    TITLE: "",
+                    RANK: "Packaging Maintainer",
+                    MAIL_LINK: "whoisxxx@126.com",
+                    GITEE_LINK: "https://gitee.com/whoisxxx",
+                    IMG: "/img/home/developer/zhangxuzhou.png"
+                },
+                {
+                    NAME: "张芮",
+                    TITLE: "",
+                    RANK: "sig-OS-Builder-Maintainer",
+                    MAIL_LINK: "13851924834@139.com",
+                    GITEE_LINK: "https://gitee.com/anonymous_z",
+                    IMG: "/img/home/developer/zhangrui.png"
+                },
+                {
+                    NAME: "杨颖梁",
+                    TITLE: "",
+                    RANK: "Kernel  Maintainer",
+                    MAIL_LINK: "zjutyyl@163.com",
+                    GITEE_LINK: "https://gitee.com/yangyingliang",
+                    IMG: "/img/home/developer/yangyingliang.png"
+                },
+                {
+                    NAME: "徐延东",
+                    TITLE: "",
+                    RANK: "Virt-Maintainer",
+                    MAIL_LINK: "gwmxyd@163.com",
+                    GITEE_LINK: "https://gitee.com/xydong",
+                    IMG: "/img/home/developer/xuyandong.png"
+                },
+                {
+                    NAME: "夏森林",
+                    TITLE: "",
+                    RANK: "Desktop Maintainer",
+                    MAIL_LINK: "13813374731@163.com",
+                    GITEE_LINK: "https://gitee.com/small_leek",
+                    IMG: "/img/home/developer/xiasenglin.png"
+                },
+                {
+                    NAME: "伍伯东",
+                    TITLE: "",
+                    RANK: "CICD SIG-Maintainer",
+                    MAIL_LINK: "walkingwalk@163.com",
+                    GITEE_LINK: "https://gitee.com/walkingwalk",
+                    IMG: "/img/home/developer/wubodong.png"
+                },
+                {
+                    NAME: "王晓鹏",
+                    TITLE: "",
+                    RANK: "Networking SIG Maintainer",
+                    MAIL_LINK: "wangxp006@163.com",
+                    GITEE_LINK: "https://gitee.com/wangxp006",
+                    IMG: "/img/home/developer/wangxiaopeng.png"
+                },
+                {
+                    NAME: "汪奕如",
+                    TITLE: "",
+                    RANK: "System-Tool Maintainer",
+                    MAIL_LINK: "wangyiruapp@163.com",
+                    GITEE_LINK: "https://gitee.com/ruebb",
+                    IMG: "/img/home/developer/wangyiru.png"
+                },
+                {
+                    NAME: "林飞龙",
+                    TITLE: "",
+                    RANK: "Storage Maintainer",
+                    MAIL_LINK: "404544243@qq.com",
+                    GITEE_LINK: "https://gitee.com/volcanodragon",
+                    IMG: "/img/home/developer/linfeilong.png"
+                },
+                {
+                    NAME: "李清清",
+                    TITLE: "",
+                    RANK: "sig-RISC-V-Maintainer",
+                    MAIL_LINK: "solar.hu@huawei.com",
+                    GITEE_LINK: "https://gitee.com/solarhu",
+                    IMG: "/img/home/developer/liqingqing.png"
+                },
+                {
+                    NAME: "李次华",
+                    TITLE: "",
+                    RANK: "Base-Service  Maintainer",
+                    MAIL_LINK: "lilin_0209@163.com",
+                    GITEE_LINK: "https://gitee.com/licihua",
+                    IMG: "/img/home/developer/licihua.png"
+                },
+                {
+                    NAME: "韩欣科",
+                    TITLE: "",
+                    RANK: "Base-Service  Maintainer",
+                    MAIL_LINK: "1152071778@qq.com",
+                    GITEE_LINK: "https://gitee.com/hanxinke",
+                    IMG: "/img/home/developer/hanxingke.png"
+                },
+                {
+                    NAME: "郭寒军",
+                    TITLE: "",
+                    RANK: "Kernel  Maintainer",
+                    MAIL_LINK: "dileimao@126.com",
+                    GITEE_LINK: "https://gitee.com/hanjun-guo",
+                    IMG: "/img/home/developer/guohanjun.png"
+                },
+                {
                     NAME: "胡峰",
                     TITLE: "Application， System-tool， ",
-                    RANK: "Packaging SIG maintainer",
+                    RANK: "Packaging SIG Maintainer",
                     MAIL_LINK: "solar.hu@huawei.com",
                     GITEE_LINK: "https://gitee.com/solarhu",
                     IMG: "/img/home/developer/hufen.png"
@@ -181,7 +309,7 @@ module.exports = {
                 {
                     NAME: "何晓文",
                     TITLE: "Packaging SIG， Base-",
-                    RANK: "service SIG maintainer",
+                    RANK: "service SIG Maintainer",
                     MAIL_LINK: "hexiaowen@huawei.com",
                     GITEE_LINK: "https://gitee.com/overweight_co",
                     IMG: "/img/home/developer/hexiaowen.png"
@@ -189,7 +317,7 @@ module.exports = {
                 {
                     NAME: "朱春意",
                     TITLE: "Packaging SIG， Base-",
-                    RANK: "service SIG maintainer",
+                    RANK: "service SIG Maintainer",
                     MAIL_LINK: "zhuchunyi@huawei.com",
                     GITEE_LINK: "https://gitee.com/zhuchunyi",
                     IMG: "/img/home/developer/zhuchunyi.png"
@@ -197,7 +325,7 @@ module.exports = {
                 {
                     NAME: "谢秀奇",
                     TITLE: "Kenel SIG",
-                    RANK: "maintainer",
+                    RANK: "Maintainer",
                     MAIL_LINK: "xiexiuqi@huawei.com",
                     GITEE_LINK: "https://gitee.com/xiexiuqi",
                     IMG: "/img/home/developer/xiexiuqi.png"
@@ -205,7 +333,7 @@ module.exports = {
                 {
                     NAME: "董剑",
                     TITLE: "Packaging SIG",
-                    RANK: "maintainer",
+                    RANK: "Maintainer",
                     MAIL_LINK: "dongjian13@huawei.com",
                     GITEE_LINK: "https://gitee.com/dogsheng",
                     IMG: "/img/home/developer/dongjian.png"
@@ -213,7 +341,7 @@ module.exports = {
                 {
                     NAME: "蔡灏旻",
                     TITLE: "iSulad SIG",
-                    RANK: " maintainer",
+                    RANK: " Maintainer",
                     MAIL_LINK: "caihaomin@huawei.com",
                     GITEE_LINK: "https://gitee.com/caihaomin",
                     IMG: "/img/home/developer/caihaomin.png"
@@ -221,7 +349,7 @@ module.exports = {
                 {
                     NAME: "李峰",
                     TITLE: "Container SIG",
-                    RANK: "maintainer",
+                    RANK: "Maintainer",
                     MAIL_LINK: "lifeng68@huawei.com",
                     GITEE_LINK: "https://gitee.com/lifeng2221dd1",
                     IMG: "/img/home/developer/lifeng.png"
@@ -229,7 +357,7 @@ module.exports = {
                 {
                     NAME: "张海亮",
                     TITLE: "Virt SIG",
-                    RANK: "maintainer",
+                    RANK: "Maintainer",
                     MAIL_LINK: "zhang.zhanghailiang@huawei.com",
                     GITEE_LINK: "https://gitee.com/zhanghailiang_lucky",
                     IMG: "/img/home/developer/zhanghailiang.png"
@@ -237,7 +365,7 @@ module.exports = {
                 {
                     NAME: "郑弦",
                     TITLE: "sig-ai-bigdata SIG",
-                    RANK: "maintainer",
+                    RANK: "Maintainer",
                     MAIL_LINK: "sinever@126.com",
                     GITEE_LINK: "gitee.com/sinever",
                     IMG: "/img/home/developer/zhengxian.png"
@@ -245,7 +373,7 @@ module.exports = {
                 {
                     NAME: "朱健伟",
                     TITLE: "Base-Service SIG",
-                    RANK: "maintainer",
+                    RANK: "Maintainer",
                     MAIL_LINK: "zhujianwei7@huawei.com",
                     GITEE_LINK: "https://gitee.com/zhujianwei001",
                     IMG: "/img/home/developer/zhujianwei.png"
@@ -253,7 +381,7 @@ module.exports = {
                 {
                     NAME: "谢志鹏",
                     TITLE: "A-Tune SIG",
-                    RANK: "maintainer",
+                    RANK: "Maintainer",
                     MAIL_LINK: "xiezhipeng1@huawei.com",
                     GITEE_LINK: "https://gitee.com/xiezhipeng1",
                     IMG: "/img/home/developer/xiezhipeng.png"
@@ -261,7 +389,7 @@ module.exports = {
                 {
                     NAME: "熊伟",
                     TITLE: "sig-perl-modules/ sig-perl-",
-                    RANK: "modules SIG maintainer",
+                    RANK: "modules SIG Maintainer",
                     MAIL_LINK: "xiongwei888@huawei.com",
                     GITEE_LINK: "https://gitee.com/myeuler",
                     IMG: "/img/home/developer/xiongwei.png"
@@ -269,7 +397,7 @@ module.exports = {
                 {
                     NAME: "朱延朋",
                     TITLE: "sig-release-management",
-                    RANK: "SIG maintainer",
+                    RANK: "SIG Maintainer",
                     MAIL_LINK: "zhuyanpeng@huawei.com",
                     GITEE_LINK: "https://gitee.com/zyp-rock",
                     IMG: "/img/home/developer/zhuyanpeng.png"
@@ -277,7 +405,7 @@ module.exports = {
                 {
                     NAME: "刘志强",
                     TITLE: "Storage SIG",
-                    RANK: "maintainer",
+                    RANK: "Maintainer",
                     MAIL_LINK: "lzhq28@mail.ustc.edu.cn",
                     GITEE_LINK: "https://gitee.com/liuzhiqiang26",
                     IMG: "/img/home/developer/liuzhiqiang.png"
@@ -285,7 +413,7 @@ module.exports = {
                 {
                     NAME: "林飞龙",
                     TITLE: "Storage SIG",
-                    RANK: "maintainer",
+                    RANK: "Maintainer",
                     MAIL_LINK: "404544243@qq.com",
                     GITEE_LINK: "https://gitee.com/volcanodragon",
                     IMG: "/img/home/developer/linfeilong.png"
@@ -515,6 +643,134 @@ module.exports = {
             DEV_DESCRIPTION: "The brightest minds of the development community gather here. Find the elite developers you are interested in.",
             DEV_INFO: [
                 {
+                    NAME: "Tao Feng",
+                    TITLE: "",
+                    RANK: "sig-OS-Builder-Maintainer",
+                    MAIL_LINK: "t.feng94@foxmail.com",
+                    GITEE_LINK: "https://gitee.com/t_feng",
+                    IMG: "/img/home/developer/fengtao.png"
+                },
+                {
+                    NAME: "Ge Guo",
+                    TITLE: "",
+                    RANK: "Compiler SIG Maintainer",
+                    MAIL_LINK: "nobleprize@foxmail.com",
+                    GITEE_LINK: "https://gitee.com/jdkboy",
+                    IMG: "/img/home/developer/guoge.png"
+                },
+                {
+                    NAME: "Li Yang",
+                    TITLE: "",
+                    RANK: "Packaging Maintainer",
+                    MAIL_LINK: "rainbow1981@163.com",
+                    GITEE_LINK: "https://gitee.com/yangli69393",
+                    IMG: "/img/home/developer/yangli.png"
+                },
+                {
+                    NAME: "Xuzhou Zhang",
+                    TITLE: "",
+                    RANK: "Packaging Maintainer",
+                    MAIL_LINK: "whoisxxx@126.com",
+                    GITEE_LINK: "https://gitee.com/whoisxxx",
+                    IMG: "/img/home/developer/zhangxuzhou.png"
+                },
+                {
+                    NAME: "Rui Zhang",
+                    TITLE: "",
+                    RANK: "sig-OS-Builder-Maintainer",
+                    MAIL_LINK: "13851924834@139.com",
+                    GITEE_LINK: "https://gitee.com/anonymous_z",
+                    IMG: "/img/home/developer/zhangrui.png"
+                },
+                {
+                    NAME: "Yingliang Yang",
+                    TITLE: "",
+                    RANK: "Kernel  Maintainer",
+                    MAIL_LINK: "zjutyyl@163.com",
+                    GITEE_LINK: "https://gitee.com/yangyingliang",
+                    IMG: "/img/home/developer/yangyingliang.png"
+                },
+                {
+                    NAME: "Yandong Xu",
+                    TITLE: "",
+                    RANK: "Virt-Maintainer",
+                    MAIL_LINK: "gwmxyd@163.com",
+                    GITEE_LINK: "https://gitee.com/xydong",
+                    IMG: "/img/home/developer/xuyandong.png"
+                },
+                {
+                    NAME: "Senglin Xia",
+                    TITLE: "",
+                    RANK: "Desktop Maintainer",
+                    MAIL_LINK: "13813374731@163.com",
+                    GITEE_LINK: "https://gitee.com/small_leek",
+                    IMG: "/img/home/developer/xiasenglin.png"
+                },
+                {
+                    NAME: "Bodong Wu",
+                    TITLE: "",
+                    RANK: "CICD SIG-Maintainer",
+                    MAIL_LINK: "walkingwalk@163.com",
+                    GITEE_LINK: "https://gitee.com/walkingwalk",
+                    IMG: "/img/home/developer/wubodong.png"
+                },
+                {
+                    NAME: "Xiaopeng Wang",
+                    TITLE: "",
+                    RANK: "Networking SIG Maintainer",
+                    MAIL_LINK: "wangxp006@163.com",
+                    GITEE_LINK: "https://gitee.com/wangxp006",
+                    IMG: "/img/home/developer/wangxiaopeng.png"
+                },
+                {
+                    NAME: "Yiru Wang",
+                    TITLE: "",
+                    RANK: "System-Tool Maintainer",
+                    MAIL_LINK: "wangyiruapp@163.com",
+                    GITEE_LINK: "https://gitee.com/ruebb",
+                    IMG: "/img/home/developer/wangyiru.png"
+                },
+                {
+                    NAME: "Feilong Lin",
+                    TITLE: "",
+                    RANK: "Storage Maintainer",
+                    MAIL_LINK: "404544243@qq.com",
+                    GITEE_LINK: "https://gitee.com/volcanodragon",
+                    IMG: "/img/home/developer/linfeilong.png"
+                },
+                {
+                    NAME: "Qingqing Li",
+                    TITLE: "",
+                    RANK: "sig-RISC-V-Maintainer",
+                    MAIL_LINK: "solar.hu@huawei.com",
+                    GITEE_LINK: "https://gitee.com/solarhu",
+                    IMG: "/img/home/developer/liqingqing.png"
+                },
+                {
+                    NAME: "Cihua Li",
+                    TITLE: "",
+                    RANK: "Base-Service  Maintainer",
+                    MAIL_LINK: "lilin_0209@163.com",
+                    GITEE_LINK: "https://gitee.com/licihua",
+                    IMG: "/img/home/developer/licihua.png"
+                },
+                {
+                    NAME: "Xingke Han",
+                    TITLE: "",
+                    RANK: "Base-Service  Maintainer",
+                    MAIL_LINK: "1152071778@qq.com",
+                    GITEE_LINK: "https://gitee.com/hanxinke",
+                    IMG: "/img/home/developer/hanxingke.png"
+                },
+                {
+                    NAME: "Hanjun Guo",
+                    TITLE: "",
+                    RANK: "Kernel  Maintainer",
+                    MAIL_LINK: "dileimao@126.com",
+                    GITEE_LINK: "https://gitee.com/hanjun-guo",
+                    IMG: "/img/home/developer/guohanjun.png"
+                },
+                {
                     NAME: "Feng Hu",
                     TITLE: "Application, System-tool, ",
                     RANK: "Packaging SIG Maintainer",
@@ -613,7 +869,7 @@ module.exports = {
                 {
                     NAME: "Wei Xiong",
                     TITLE: "sig-perl-modules/ sig-perl-",
-                    RANK: "Modules SIG maintainer",
+                    RANK: "Modules SIG Maintainer",
                     MAIL_LINK: "xiongwei888@huawei.com",
                     GITEE_LINK: "https://gitee.com/myeuler",
                     IMG: "/img/home/developer/xiongwei.png"
@@ -637,7 +893,7 @@ module.exports = {
                 {
                     NAME: "Feilong Lin",
                     TITLE: "Storage SIG",
-                    RANK: "maintainer",
+                    RANK: "Maintainer",
                     MAIL_LINK: "404544243@qq.com",
                     GITEE_LINK: "https://gitee.com/volcanodragon",
                     IMG: "/img/home/developer/linfeilong.png"

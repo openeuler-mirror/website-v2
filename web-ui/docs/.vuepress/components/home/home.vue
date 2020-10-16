@@ -280,8 +280,8 @@
         <div class="home-developer">
             <h3 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_DEV.DEV_TITLE }}</h3>
             <p :class="$lang == 'en'?'en-developer-p':''">{{ i18n.home.HOME_DEV.DEV_DESCRIPTION }}</p>
-            <div class="dev-leader" v-fade>
-                <div class="dev-dever hidden fade-in" v-for="(value, index) in i18n.home.HOME_DEV.DEV_INFO" :key="index">
+            <div class="dev-leader" v-fade v-if="developerList.length">
+                <div class="dev-dever hidden fade-in" v-for="(value, index) in developerList" :key="index" >
                     <img class="dev-img" :src="value.IMG">
                     <p class="dever-name">{{ value.NAME }}</p>
                     <p :class="['dever-rank',$lang == 'en'?'en-rank':'']">{{ value.TITLE }}</p>
@@ -438,7 +438,8 @@
                     loop: true
                 },
                 mobileSwiperInterval: null,
-                mobilePagenationIndex: 1
+                mobilePagenationIndex: 1,
+                developerList: []
             }
         },
         mounted() {
@@ -454,6 +455,7 @@
                     }, 5000);
                 })
             }
+            this.developerList = this.changeArr(this.i18n.home.HOME_DEV.DEV_INFO,16);
         },
         beforeDestroy () {
             this.mobileSwiperInterval && clearInterval(this.mobileSwiperInterval);
