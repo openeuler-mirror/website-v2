@@ -647,6 +647,10 @@ h1 {
     width: 140px;
 }
 .calenderH1 {
+    width: 200px;
+    overflow: hidden;    
+ 	text-overflow: ellipsis;
+ 	white-space: nowrap;
     line-height: 30px;
     cursor: pointer;
 }
