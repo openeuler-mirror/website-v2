@@ -149,7 +149,7 @@ module.exports = {
         },
         SUMMIT: {
             SUMMIT: '峰会',
-            SUMMITCONTENT: 'OpenEuler Virtual Summit 2020 是 openEuler 在发布 20.03 LTS 版本后第一次举行的峰会，本次大会邀请了华为的资深专家、社区Committer和多家openEuler社区合作厂商的重量嘉宾贡献多场精彩的演讲，不容错过。开发者和合作伙伴可以通过本次峰会全面了解 openEuler 多元化的生态、丰富的特性和广泛的社区，帮助开发者顺利融入社区，合作伙伴参与到openEuler生态体系。',
+            SUMMITCONTENT: 'openEuler Virtual Summit 2020 是 openEuler 在发布 20.03 LTS 版本后第一次举行的峰会，本次大会邀请了华为的资深专家、社区Committer和多家openEuler社区合作厂商的重量嘉宾贡献多场精彩的演讲，不容错过。开发者和合作伙伴可以通过本次峰会全面了解 openEuler 多元化的生态、丰富的特性和广泛的社区，帮助开发者顺利融入社区，合作伙伴参与到openEuler生态体系。',
             HOMETITLE: '往期回顾',
             LISTTITLE: '精彩回顾',
             LISTNEWTITLE:'openEuler 峰会 2020',
