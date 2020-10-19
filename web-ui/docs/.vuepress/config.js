@@ -40,6 +40,16 @@ module.exports = {
             }))
         }
     },
+    chainWebpack: (config, isServer) => {
+        config.module.rule('image-compress')
+                        .test(/\.(png|jpe?g|gif|svg)$/i)
+                        .use('file-loader')
+                            .loader('file-loader')
+                            .end()
+                        .use('image-webpack-loader')
+                            .loader('image-webpack-loader')
+                            .end()
+    },
     locales: {
         '/': {
             lang: 'zh',
