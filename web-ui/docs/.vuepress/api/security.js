@@ -3,7 +3,7 @@
  * */
 
 import appAjax from './../libs/ajax-utils';
-const oldApi = '-old';
+const cveApi = '-cve';
 export const securityList = ({
     keyword,
     page,
@@ -13,7 +13,7 @@ export const securityList = ({
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            otherBaseUrl: oldApi,
+            otherBaseUrl: cveApi,
             url: '/cve-security-notice-server/securitynotice/findAll',
             type: 'post',
             data: {
@@ -53,7 +53,7 @@ export const cveList = ({
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            otherBaseUrl: oldApi,
+            otherBaseUrl: cveApi,
             url: '/cve-security-notice-server/cvedatabase/findAll',
             type: 'post',
             data: {
@@ -88,7 +88,7 @@ export const securityDetail = ({
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            otherBaseUrl: oldApi,
+            otherBaseUrl: cveApi,
             url: '/cve-security-notice-server/securitynotice/getBySecurityNoticeNo',
             type: 'get',
             params: {
@@ -115,7 +115,7 @@ export const cveDetail = ({
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            otherBaseUrl: oldApi,
+            otherBaseUrl: cveApi,
             url: '/cve-security-notice-server/cvedatabase/getByCveId',
             type: 'get',
             params: {
@@ -142,7 +142,7 @@ export const getAffectedProduct = ({
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            otherBaseUrl: oldApi,
+            otherBaseUrl: cveApi,
             url: '/cve-security-notice-server/securitynotice/getByCveId',
             type: 'get',
             params: {
@@ -169,7 +169,7 @@ export const getPackage = ({
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            otherBaseUrl: oldApi,
+            otherBaseUrl: cveApi,
             url: '/cve-security-notice-server/cvedatabase/getPackageByCveId',
             type: 'get',
             params: {
@@ -196,7 +196,7 @@ export const getDownloadUrl = ({
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            otherBaseUrl: oldApi,
+            otherBaseUrl: cveApi,
             url: '/cve-security-notice-server/securitynotice/getPackageLink',
             type: 'post',
             data: {
