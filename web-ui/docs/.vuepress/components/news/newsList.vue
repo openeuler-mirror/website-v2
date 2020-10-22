@@ -127,7 +127,6 @@ export default {
       });
 
       this.showNewsList = listObj;
-
       scrollTo(0, 0);
     },
     sortNewsList(array) {

@@ -1,117 +1,261 @@
 <!-- 沙龙 -->
 <template>
-    <div class="meetups">
-        <div class="banner">
-            <img src="/img/meetups/meetups-banner.png" />
-            <span class="inside">{{i18n.interaction.MEETUPS.INSIDENAME}}</span>
-            <span :class="['outside', $isCn ? 'font-xihjw' : 'font-hwmedium']">{{i18n.interaction.MEETUPS.MEETUPS}}</span>
-            <p class="pc-message">{{i18n.interaction.MEETUPS.MESSAGE}}</p>
+  <div class="meetUps-content">
+    <common-banner
+      :pc-src="'/img/meetups/meetUps-banner.png'"
+      :mobile-src="'/img/meetups/meetUps-banner.png'"
+      :inside-name="'CONNECT'"
+      :outside-name="i18n.interaction.MEETUPS.MEETUPS"
+    ></common-banner>
+    <div class="meetUps-list">
+      <div class="meetUps-year-content" v-for="(item,index) in showMeetsList">
+        <span class="meetUps-year">{{item.MEETUPS_DATE.slice(3,7)}}</span>
+        <div class="meetUps-items">
+          <div class="meetUps-month">
+            <span>{{item.MEETUPS_MONTH}}</span>
+          </div>
+          <div class="meetUps-item">
+            <div @click="goDetail(item.ID)" class="meetUps-img">
+              <img :src="item.MEETUPS_IMG" alt />
+            </div>
+            <div class="meetUps-info meetUps-info-item">
+              <div class="meetUps-time">
+                <p>
+                  <img class="mobile-middle-img" src="/img/blog/date.svg" alt />
+                  <span class="meetUps-date">{{item.fullDate}}</span>
+                </p>
+              </div>
+              <div @click="goDetail(item.ID)" class="meetUps-title word-hover">{{item.MEETUPS_TITLE}}</div>
+              <div class="meetUps-time-mobile">
+                <p>
+                  <span class="meetUps-date">{{item.fullDate}}</span>
+                </p>
+                <p>
+                  <span class="meetUps-date">{{item.MEETUPS_ADDRESS}}</span>
+                </p>
+              </div>
+              <div class="meetUps-summary">{{item.MEETUPS_ADDRESS}}</div>
+            </div>
+          </div>
         </div>
-
-        <div class="banner-mobile">
-            <h3>{{i18n.interaction.MEETUPS.MEETUPS}}</h3>
-            <p class="mobile-message">{{i18n.interaction.MEETUPS.MESSAGE}}</p>
-            <img src="/img/meetups/meetups-banner.png" />
-        </div>
+      </div>
+      <div class="paginationClass">
+        <el-pagination
+          @current-change="handleCurrentChange"
+          :current-page="currentPage"
+          :page-size="5"
+          layout="total, prev, jumper, next"
+          :total="totalSize"
+        ></el-pagination>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
+import dayjs from "dayjs";
+import commonBanner from "./../common/banner.vue";
 export default {
-    data () {
-        return {
-        }
+  data() {
+      return {
+          totalSize: 0,
+          currentPage: 1,
+          PAGESIZE: 6,
+          allMeetsList: [],  
+          showMeetsList: [],
+          currentMeetsList: []   
+      };
+  },
+  components: {
+    commonBanner,
+  },
+  mounted() {
+      this.allMeetsList = this.i18n.interaction.MEETUPS.MEETUPS_DATA;
+      this.totalSize = this.allMeetsList.length;
+      this.sortMeetsList(this.allMeetsList);
+  },
+  methods: {
+    handleCurrentChange(val) {
+      this.currentMeetsList = this.allMeetsList.slice(
+        (val - 1) * this.PAGESIZE,
+        val * this.PAGESIZE
+      );
+      this.showMeetsList = this.currentMeetsList;
+      scrollTo(0, 0);
+    },
+    sortMeetsList(array) {
+      let temp = array;
+      temp.forEach((item)=>{
+          item.fullDate = item.MEETUPS_DATE.slice(3,7) + '-' +  item.MEETUPS_DATE.slice(8,10) + '-' + item.MEETUPS_DATE.slice(11,13);
+      })
+      this.showMeetsList =temp;
+    },
+    goDetail(id) {
+        this.$router.push(
+          {
+              path:'/' + this.$lang + '/interaction/salon-list/detail/',
+              query: {
+                  id: id
+              }
+          });
     }
-}
-
+  },
+};
 </script>
 
-<style lang='less' scoped>
-.word-common-css(@fontSize,@fontFamily1,@fontFamily2,@fontWeight,@color,@lineHeight) {
-    font-size: @fontSize;
-    font-family: @fontFamily1, @fontFamily2;
-    font-weight: @fontWeight;
-    color: @color;
-    line-height: @lineHeight;
+<style lang="less" scoped>
+.meetUps-list {
+  width: 1120px;
+  margin: 0 auto;
 }
-.mr-All(@mr) {
-    margin: @mr;
+.meetUps-year-content {
+  position: relative;
 }
-.wid-and-hei(@width,@height) {
-    width: @width;
-    height: @height;
+.meetUps-year {
+  position: absolute;
+  font-size: 60px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.05);
+  height: 60px;
+  line-height: 60px;
+  top: -35px;
 }
-//具体样式从这里开始
-.meetups {
-    width: 1120px;
-    margin: 0 auto;
-    height: 780px;
-    padding-bottom:200px ;
-    @media (max-width: 1000px) {
-        width: 100%;
-        padding: 0 41px 76px 41px;
-        height: unset;
+.paginationClass {
+  margin: 20px 0 200px 0;
+}
+.meetUps-items {
+  margin: 50px 0;
+}
+.meetUps-item {
+  margin-top: 30px;
+}
+.word-hover{
+    &:hover{
+        color: #002FA7;
     }
-    .banner {
-        height: 100%;
-        width: 100%;
-        position: relative;
-        @media (max-width: 1000px) {
-            display: none;
-        }
-        .pc-message{
-            .word-common-css(25px,PingFangSC-Regular,PingFang SC,400,#000000,30px);
-            position: absolute;
-            top: 260px;
-        }
-        img {
-            height: 400px;
-            width: 400px;
-            position: absolute;
-            right: 0;
-            top: 180px;
-        }
-        .inside {
-            position: absolute;
-            left: 0;
-            top: 120px;
-            font-size: 60px;
-            line-height: 60px;
-            font-family: HuaweiSans-Medium;
-            color: rgba(0, 0, 0, 0.05);
-        }
-        .outside {
-            position: absolute;
-            left: 0;
-            top: 156px;
-            font-size: 48px;
-            line-height: 48px;
-            color: #000;
-            font-weight: normal;
-        }
+}
+.meetUps-img {
+  cursor: pointer;
+  width: 400px;
+  display: inline-block;
+  border-radius:8px;
+  @media screen and (max-width: 1000px) {
+      box-shadow:none;
+  }
+  img {
+    width: 400px;
+    height:200px;
+    box-shadow:0 6px 20px 0 rgba(0,0,0,0.1);
+    border-radius: 8px;
+    @media screen and (max-width: 1000px) {
+      width: 270px;
+      height: 150px;
+      box-shadow: none;
     }
-    .banner-mobile {
-        display: none;
-        @media (max-width: 1000px) {
-            display: block;
+  }
+}
+.meetUps-month {
+  font-size: 24px;
+}
+.meetUps-info {
+  display: inline-block;
+  margin-left: 60px;
+  width: calc(100% - 480px);
+  vertical-align: top;
+}
+.meetUps-time {
+  margin-top: 5px;
+  p {
+    display: inline-block;
+    margin-right: 51px;
+  }
+}
+.meetUps-time-mobile {
+  display: none;
+}
+.meetUps-date {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 12px;
+}
+.meetUps-info-item {
+    .meetUps-title {
+        cursor: pointer;
+        font-size: 24px;
+        margin: 21px 0 16px 0;
+        @media screen and (max-width: 1000px) {
+          font-size: 16px;
+          margin: 0;
         }
-        .mobile-message{
-            .mr-All(20px auto 40px auto);
-            width: 100%;
-            text-align: center;
-        }
-        width: 100%;
-        h3 {
-            font-size: 24px;
-            line-height: 34px;
-            text-align: center;
-            font-family: FZLTHJW;
-            margin-top: 40px;
-        }
-        img {
-            margin-top: 10px;
-            width: 100%;
-        }
+    }   
+}
+
+.meetUps-summary {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 1000px) {
+  .meetUps-content {
+    padding: 40px 30px 80px 30px;
+  }
+  .meetUps-list {
+    width: 100%;
+  }
+  .meetUps-year {
+    display: none;
+  }
+  .paginationClass {
+    margin: 40px 0 0 0;
+  }
+  .meetUps-items {
+    margin: 0;
+  }
+  .meetUps-item {
+    margin-top: 40px;
+    width: 100%;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+  }
+  .meetUps-img {
+    cursor: pointer;
+    width: 100%;
+    margin: 22px 0;
+    text-align: center;
+    img {
+      max-width: 270px;
     }
+  }
+  .meetUps-month {
+    display: none;
+  }
+  .meetUps-info {
+    display: inline-block;
+    margin-left: 0px;
+    padding: 0 22px 30px;
+    width: 100%;
+    vertical-align: top;
+  }
+  .meetUps-time {
+    display: none;
+  }
+  .meetUps-time-mobile {
+    display: inline-block;
+    p {
+      display: inline-block;
+      margin-right: 17px;
+    }
+  }
+  .meetUps-date {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 12px;
+  }
+  .meetUps-title {
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0px 0 10px 0;
+  }
+  .meetUps-summary {
+    display: none;
+  }
 }
 </style>
