@@ -424,8 +424,11 @@ export default {
                     this.dealData = data;
                 });
             });
-            this.indexX = ((this.w == 245) ? (index - 3) : index);
-            this.l = -this.w * this.indexX;
+            this.$nextTick(() => {
+                this.indexX = ((this.w == 245) ? (index - 3) : index);
+                this.l = -this.w * this.indexX;    
+            })
+            
         }
     },
     created() {
