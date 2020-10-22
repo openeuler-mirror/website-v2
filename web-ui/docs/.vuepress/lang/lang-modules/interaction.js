@@ -439,8 +439,12 @@ module.exports = {
         },
         MEETUPS: {
             MEETUPS: '沙龙',
-            MESSAGE: '敬请期待...',
-            INSIDENAME:'CONNECT',
+            DETAIL_DESC: '简介',
+            DETAIL_FLOW: '与会流程',
+            DETAIL_MEET: '参会信息',
+            DETAIL_QRCODE_TEXT: '扫码报名',
+            INSIDENAME: 'CONNECT',
+            MEETUPS_DATA: require('./../../data/salon').en.MEETUPS_LIST
         }
     },
     en: {
@@ -879,9 +883,13 @@ module.exports = {
                 ]
         },
         MEETUPS: {
-            MEETUPS: 'Meetups',
-            MESSAGE: 'Coming soon…',
-            INSIDENAME:'CONNECT',
+            MEETUPS: '沙龙',
+            DETAIL_DESC: '简介',
+            DETAIL_FLOW: '与会流程',
+            DETAIL_MEET: '参会信息',
+            DETAIL_QRCODE_TEXT: '扫码报名',
+            INSIDENAME: 'CONNECT',
+            MEETUPS_DATA: require('./../../data/salon').en.MEETUPS_LIST
         }
     }
 };

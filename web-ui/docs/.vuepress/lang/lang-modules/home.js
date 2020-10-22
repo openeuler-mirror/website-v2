@@ -101,6 +101,9 @@ module.exports = {
             ACTIVE_TITLE: "好玩的活动停不下来",
             ACTIVE_DESCRIPTION: "openEuler社区不定期举办各种workshop、SIG讨论、线下活动、社区峰会，精彩动态随时掌握。"
         },
+        HOME_ROUND_DATA: {
+            ROUND_TITLE: '我们正在不断成长'
+        },
         HOME_ROOMS: {
             ROOM_NAME: ["最新活动", "博客", "新闻"],
             EVENT_NAME: "最新活动",
@@ -597,6 +600,9 @@ module.exports = {
         HOME_ACTIVE: {
             ACTIVE_TITLE: "Join our community activities",
             ACTIVE_DESCRIPTION: "Join us in workshops, SIG discussions, offline activities, and community summits to keep abreast of the latest trend."
+        },
+        HOME_ROUND_DATA: {
+            ROUND_TITLE: 'The community is thriving'
         },
         HOME_ROOMS: {
             ROOM_NAME: ["Latest Activity", "Blog", "News"],
