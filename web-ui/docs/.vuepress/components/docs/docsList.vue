@@ -91,7 +91,6 @@ export default {
         this.versions = require("../../../" + this.$lang + "/docs/path/path.json");
         let versionLen = this.versions.length;
         this.currentDocs = this.versions[versionLen-1].docs;
-        console.log( this.currentDocs);
         this.selectChange(this.versions[versionLen-1].value);
     },
     methods: {
