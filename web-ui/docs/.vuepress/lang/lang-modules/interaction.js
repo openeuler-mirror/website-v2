@@ -444,7 +444,7 @@ module.exports = {
             DETAIL_MEET: '参会信息',
             DETAIL_QRCODE_TEXT: '扫码报名',
             INSIDENAME: 'CONNECT',
-            MEETUPS_DATA: require('./../../data/salon').en.MEETUPS_LIST
+            MEETUPS_DATA: require('./../../data/salon').cn.MEETUPS_LIST
         }
     },
     en: {
