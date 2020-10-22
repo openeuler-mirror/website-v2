@@ -98,10 +98,8 @@ export default {
       .then(response => {
           this.countList=response.data;
           this.allNewsList = this.newsList();
-          console.log(this.allNewsList);
           this.totalSize = this.allNewsList.length;
           this.allNewsList = this.sortNewsList(this.allNewsList);
-          console.log(this.allNewsList);
           this.handleCurrentChange(1);
         })
     for(let i = 0;  i<this.allNewsList.length;i++){
@@ -129,7 +127,6 @@ export default {
       });
 
       this.showNewsList = listObj;
-      console.log(this.showNewsList);
       scrollTo(0, 0);
     },
     sortNewsList(array) {
