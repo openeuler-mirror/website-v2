@@ -89,7 +89,6 @@ export default {
           item.fullDate = item.MEETUPS_DATE.slice(3,7) + '-' +  item.MEETUPS_DATE.slice(8,10) + '-' + item.MEETUPS_DATE.slice(11,13);
       })
       this.showMeetsList =temp;
-      console.log(this.showMeetsList);
     },
     goDetail(id) {
         this.$router.push(

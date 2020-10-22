@@ -105,7 +105,6 @@ export default {
                     this.addressObj = item.MEETINGS_INFO;
                 }
             })
-            console.log(this.detailObj);
         }
     }
 
