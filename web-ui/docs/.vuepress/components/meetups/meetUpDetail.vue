@@ -462,6 +462,9 @@ export default {
                 height: 550px;
                 .address-message{
                     flex-direction: column;
+                    img{
+                        margin: 0 auto;        
+                    }
                     .address-text{
                         margin-left: 0;
                         .location{
