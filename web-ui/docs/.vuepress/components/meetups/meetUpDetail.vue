@@ -434,6 +434,7 @@ export default {
         .step-num span {
             color: #fff;
             font-size: 18px;
+            font-family: Roboto-BoldCondensed;
         }
         .step-H5 .en-p-box{
             width: 256px;
