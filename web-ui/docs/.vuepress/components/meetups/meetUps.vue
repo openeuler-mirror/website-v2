@@ -2,8 +2,8 @@
 <template>
   <div class="meetUps-content">
     <common-banner
-      :pc-src="'/img/meetups/meetUps-banner.png'"
-      :mobile-src="'/img/meetups/meetUps-banner.png'"
+      :pc-src="'/img/meetups/meetup-banner.png'"
+      :mobile-src="'/img/meetups/meetup-banner.png'"
       :inside-name="'CONNECT'"
       :outside-name="i18n.interaction.MEETUPS.MEETUPS"
     ></common-banner>
