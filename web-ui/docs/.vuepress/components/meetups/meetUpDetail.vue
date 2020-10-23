@@ -434,6 +434,7 @@ export default {
         .step-num span {
             color: #fff;
             font-size: 18px;
+            font-family: Roboto-BoldCondensed;
         }
         .step-H5 .en-p-box{
             width: 256px;
@@ -462,6 +463,9 @@ export default {
                 height: 550px;
                 .address-message{
                     flex-direction: column;
+                    img{
+                        margin: 0 auto;        
+                    }
                     .address-text{
                         margin-left: 0;
                         .location{

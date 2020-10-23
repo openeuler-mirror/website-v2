@@ -327,7 +327,7 @@ module.exports = {
                 },
                 {
                     NAME: "谢秀奇",
-                    TITLE: "Kenel SIG",
+                    TITLE: "Kernel SIG",
                     RANK: "Maintainer",
                     MAIL_LINK: "xiexiuqi@huawei.com",
                     GITEE_LINK: "https://gitee.com/xiexiuqi",
@@ -810,7 +810,7 @@ module.exports = {
                 },
                 {
                     NAME: "Xiuqi Xie",
-                    TITLE: "Kenel SIG",
+                    TITLE: "Kernel SIG",
                     RANK: "Maintainer",
                     MAIL_LINK: "xiexiuqi@huawei.com",
                     GITEE_LINK: "https://gitee.com/xiexiuqi",
