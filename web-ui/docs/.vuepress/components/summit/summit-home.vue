@@ -11,11 +11,11 @@
             <p :class="['tip',$lang === 'en'?'font-bold':'']">{{ i18n.interaction.SUMMIT.SUMMITTIP }}</p>
             <p :class="['apply-title',$lang === 'en'?'font-bold':'']">{{ i18n.interaction.SUMMIT.APPLY_TITLE }}</p>
             <div class="apply-process">
-                <div class="speaker process" @click="go('https://shimo.im/forms/VWWtgLsVHzovmbeH/fill')">
+                <div class="speaker process" @click="go('https://shimo.im/forms/XtCTP9jcrXKgjytD/fill')">
                     <img :src="i18n.interaction.SUMMIT.SPEAKER_IMG" alt="" />
                     <p>{{ i18n.interaction.SUMMIT.SPEAKER_TEXT }}</p>
                 </div>
-                <div class="sponsor process" @click="go('https://shimo.im/forms/XtCTP9jcrXKgjytD/fill')">
+                <div class="sponsor process" @click="go('https://shimo.im/forms/VWWtgLsVHzovmbeH/fill')">
                     <img :src="i18n.interaction.SUMMIT.SPONSOR_IMG" alt="" />
                     <p>{{ i18n.interaction.SUMMIT.SPONSOR_TEXT }}</p>
                 </div>
