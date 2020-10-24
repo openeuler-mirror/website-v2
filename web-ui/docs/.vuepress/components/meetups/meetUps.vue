@@ -103,7 +103,7 @@ export default {
             }
             listObj[item.fullYear][item.fullMonth].push(item);
         })
-        console.log(this.showMeetsList);
+        this.showMeetsList = listObj;
     },
     goDetail(id) {
         this.$router.push(
