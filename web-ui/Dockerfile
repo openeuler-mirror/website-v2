@@ -6,8 +6,7 @@ RUN mkdir -p /home/openeuler/web
 WORKDIR /home/openeuler/web
 COPY . /home/openeuler/web
 
-RUN npm install -g vuepress && \
-    npm install
+RUN npm install
 
 COPY ./script/updateBuildScript.js ./node_modules/@vuepress/core/lib/node/build/index.js
 COPY ./script/addWorkerScript.js ./node_modules/@vuepress/core/lib/node/build/worker.js
