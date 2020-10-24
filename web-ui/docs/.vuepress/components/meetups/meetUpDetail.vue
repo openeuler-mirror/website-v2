@@ -4,12 +4,12 @@
             <p class="MeetUps-link">{{ i18n.interaction.MEETUPS.MEETUPS }}\</p>
         </div>
         <div class="top-content">
-            <h3>{{ detailObj.MEETUPS_TITLE }}</h3>
-            <p>{{ detailObj.MEETUPS_DATE }}</p>
+            <h3 :class="$lang === 'en'?'font-bold':''">{{ detailObj.MEETUPS_TITLE }}</h3>
+            <p :class="$lang === 'en'?'font-bold':''">{{ detailObj.MEETUPS_DATE }}</p>
         </div>
         <div class="description">
-            <p class="title">{{ i18n.interaction.MEETUPS.DETAIL_DESC }}</p>
-            <p class="desc-content">{{ detailObj.MEETUPS_DESC }}</p>
+            <p :class="['title',$lang === 'en'?'font-regular':'']">{{ i18n.interaction.MEETUPS.DETAIL_DESC }}</p>
+            <p :class="['desc-content',$lang === 'en'?'font-regular':'']">{{ detailObj.MEETUPS_DESC }}</p>
         </div>
         <div class="meet-flowPath">
             <p class="title">{{ i18n.interaction.MEETUPS.DETAIL_FLOW }}</p>
@@ -58,8 +58,8 @@
             </div>
         </div>
         <div class="meet-message">
-            <p class="title">{{ i18n.interaction.MEETUPS.DETAIL_MEET }}</p>
-            <div class="meet-address">
+            <p :class="['title',$lang === 'en'?'font-regular':'']">{{ i18n.interaction.MEETUPS.DETAIL_MEET }}</p>
+            <div :class="['meet-address',$lang === 'en'?'en-address':'']">
                 <div class="address-message">
                     <img v-if="detailObj.MEETINGS_INFO" :src="detailObj.MEETINGS_INFO.ADDRESS_IMG" alt />
                     <div class="address-text">
@@ -374,6 +374,18 @@ export default {
                 }
             }
         }
+        .en-address{
+            width: 978px;
+            p{
+                font-family: Roboto-Regular !important;
+            }
+            .scan-qrcode{
+                margin-left: 70px;
+                img{
+                    left: 0 !important;
+                }
+            }
+        }
         .map{
             display: block;
             width: 1120px;
@@ -382,6 +394,13 @@ export default {
             position: relative;
             z-index: -1;
         }
+    }
+    .font-regular{
+        font-family: Roboto-Regular !important;
+    }
+    .font-bold{
+        font-weight: bold !important;
+        font-family: Roboto-Bold !important;
     }
     @media screen and (max-width: 1000px) {
         .link-container{
