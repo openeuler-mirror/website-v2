@@ -145,17 +145,17 @@ export default {
 .mr-All(@mr) {
     margin: @mr;
 }
-.word-common-css(@fontSize,@fontFamily1,@fontFamily2,@fontWeight,@color,@lineHeight) {
+.word-common-css(@fontSize,@fontFamily,@fontWeight,@color,@lineHeight) {
     font-size: @fontSize;
-    font-family: @fontFamily1, @fontFamily2;
+    font-family: @fontFamily;
     font-weight: @fontWeight;
     color: @color;
     line-height: @lineHeight;
 }
 .title-css {
-    .word-common-css(24px,FZLTHJW--GB1-0, FZLTHJW--GB1,normal,rgba(0, 0, 0, 1),34px);
+    .word-common-css(24px,FZLTHJW,normal,rgba(0, 0, 0, 1),34px);
     @media (max-width: 1000px) {
-        .word-common-css(16px,FZLTHJW--GB1-0, FZLTHJW--GB1,550,rgba(11, 22, 43, 1),26px);
+        .word-common-css(16px,FZLTHJW,550,rgba(11, 22, 43, 1),26px);
         margin-bottom: 10px;
     }
 }
@@ -216,17 +216,6 @@ export default {
         width: 185px;
     }
 }
-.mobile-word-css(@fontSize,@fontFamily1,@fontFamily2,@fontWeight,@color,@lineHeight) {
-    @media (max-width: 1000px) {
-        max-width: 129px;
-        max-height: 52px;
-        font-size: @fontSize;
-        font-family: @fontFamily1, @fontFamily2;
-        font-weight: @fontWeight;
-        color: @color;
-        line-height: @lineHeight;
-    }
-}
 // 具体样式从这里开始
 .live-ist {
     .background-css("@{urlhead}ball-background.png",repeat,center center,contain);
@@ -282,24 +271,24 @@ export default {
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
-            .word-common-css(18px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0, 0, 0, 1),30px);
+            .word-common-css(18px,FZLTHJW,normal,rgba(0, 0, 0, 1),30px);
             @media (max-width: 1000px) {
-                .word-common-css(14px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,1),26px);
+                .word-common-css(14px,FZLTHJW,normal,rgba(0,0,0,1),26px);
                 max-width: 129px;
                 max-height: 52px;
             }
             }
             .live-teacher {
-            .word-common-css(14px,PingFangSC-Regular,PingFang SC,400,rgba(0, 0, 0, 1),14px);
+            .word-common-css(14px,PingFangSC-Regular,400,rgba(0, 0, 0, 1),14px);
             @media (max-width: 1000px) {
-                .word-common-css(14px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,0.5),24px);
+                .word-common-css(14px,FZLTHJW,normal,rgba(0,0,0,0.5),24px);
             }
             }
             .live-time {
             white-space: nowrap;
-            .word-common-css(14px,PingFangSC-Regular,PingFang SC,400,rgba(0, 0, 0, 1),14px);
+            .word-common-css(14px,PingFangSC-Regular,400,rgba(0, 0, 0, 1),14px);
                 @media (max-width: 1000px) {
-                    .word-common-css(14px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,0.5),24px);
+                    .word-common-css(14px,FZLTHJW,normal,rgba(0,0,0,0.5),24px);
                 }
             }
         }
@@ -358,24 +347,24 @@ export default {
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
-            .word-common-css(18px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0, 0, 0, 1),30px);
+            .word-common-css(18px,FZLTHJW,normal,rgba(0, 0, 0, 1),30px);
             @media (max-width: 1000px) {
-                .word-common-css(14px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,1),26px);
+                .word-common-css(14px,FZLTHJW,normal,rgba(0,0,0,1),26px);
                 max-width: 129px;
                 max-height: 52px;
             }
             }
             .live-teacher {
-            .word-common-css(14px,PingFangSC-Regular,PingFang SC,400,rgba(0, 0, 0, 1),14px);
+            .word-common-css(14px,PingFangSC-Regular,400,rgba(0, 0, 0, 1),14px);
             @media (max-width: 1000px) {
-                .word-common-css(14px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,0.5),24px);
+                .word-common-css(14px,FZLTHJW,normal,rgba(0,0,0,0.5),24px);
             }
             }
             .live-time {
                 white-space: nowrap;
-                .word-common-css(14px,PingFangSC-Regular,PingFang SC,400,rgba(0, 0, 0, 1),14px);
+                .word-common-css(14px,PingFangSC-Regular,400,rgba(0, 0, 0, 1),14px);
                 @media (max-width: 1000px) {
-                    .word-common-css(14px,FZLTHJW--GB1-0,FZLTHJW--GB1,normal,rgba(0,0,0,0.5),24px);
+                    .word-common-css(14px,FZLTHJW,normal,rgba(0,0,0,0.5),24px);
                 }
             }
         }
