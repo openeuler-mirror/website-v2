@@ -8,33 +8,33 @@
       :outside-name="i18n.interaction.MEETUPS.MEETUPS"
     ></common-banner>
     <div class="meetUps-list">
-      <div class="meetUps-year-content" v-for="(item,index) in showMeetsList">
-        <span class="meetUps-year">{{item.MEETUPS_DATE.slice(3,7)}}</span>
-        <div class="meetUps-items">
+      <div class="meetUps-year-content" v-for="(items,indexs) in showMeetsList">
+        <span class="meetUps-year">{{ indexs }}</span>
+        <div class="meetUps-items" v-for="(item,index) in items">
           <div class="meetUps-month">
-            <span>{{item.MEETUPS_MONTH}}</span>
+            <span>{{ index }}</span>
           </div>
-          <div class="meetUps-item">
-            <div @click="goDetail(item.ID)" class="meetUps-img">
-              <img :src="item.MEETUPS_IMG" alt />
+          <div class="meetUps-item" v-for="(value,key) in item">
+            <div @click="goDetail(value.ID)" class="meetUps-img">
+              <img :src="value.MEETUPS_IMG" alt />
             </div>
             <div class="meetUps-info meetUps-info-item">
               <div class="meetUps-time">
                 <p>
                   <img class="mobile-middle-img" src="/img/blog/date.svg" alt />
-                  <span class="meetUps-date">{{item.fullDate}}</span>
+                  <span class="meetUps-date">{{ value.MEETUPS_DATE }}</span>
                 </p>
               </div>
-              <div @click="goDetail(item.ID)" class="meetUps-title word-hover">{{item.MEETUPS_TITLE}}</div>
+              <div @click="goDetail(value.ID)" class="meetUps-title word-hover">{{ value.MEETUPS_TITLE }}</div>
               <div class="meetUps-time-mobile">
                 <p>
-                  <span class="meetUps-date">{{item.fullDate}}</span>
+                  <span class="meetUps-date">{{ value.MEETUPS_DATE }}</span>
                 </p>
                 <p>
-                  <span class="meetUps-date">{{item.MEETUPS_ADDRESS}}</span>
+                  <span class="meetUps-date">{{ value.MEETUPS_ADDRESS }}</span>
                 </p>
               </div>
-              <div class="meetUps-summary">{{item.MEETUPS_ADDRESS}}</div>
+              <div class="meetUps-summary">{{ value.MEETUPS_ADDRESS }}</div>
             </div>
           </div>
         </div>
@@ -62,7 +62,7 @@ export default {
           currentPage: 1,
           PAGESIZE: 6,
           allMeetsList: [],  
-          showMeetsList: [],
+          showMeetsList: {},
           currentMeetsList: []   
       };
   },
@@ -84,11 +84,26 @@ export default {
       scrollTo(0, 0);
     },
     sortMeetsList(array) {
-      let temp = array;
-      temp.forEach((item)=>{
-          item.fullDate = item.MEETUPS_DATE.slice(3,7) + '-' +  item.MEETUPS_DATE.slice(8,10) + '-' + item.MEETUPS_DATE.slice(11,13);
-      })
-      this.showMeetsList =temp;
+        let temp = array;
+        temp.forEach((item)=>{
+            item.number = item.MEETUPS_DATE.slice(0,4) + item.MEETUPS_DATE.slice(5,7) + item.MEETUPS_DATE.slice(8);
+            item.fullYear = item.MEETUPS_DATE.slice(0,4);
+            item.fullMonth = item.MEETUPS_MONTH;
+        });
+        temp.sort((a,b) =>{
+            return b.number - a.number;
+        });
+        let listObj = {};
+        temp.forEach((item)=>{
+            if(!listObj[item.fullYear]){
+                listObj[item.fullYear] = {};
+            }
+            if(!listObj[item.fullYear][item.fullMonth]){
+                listObj[item.fullYear][item.fullMonth] = [];
+            }
+            listObj[item.fullYear][item.fullMonth].push(item);
+        })
+        this.showMeetsList = listObj;
     },
     goDetail(id) {
         this.$router.push(

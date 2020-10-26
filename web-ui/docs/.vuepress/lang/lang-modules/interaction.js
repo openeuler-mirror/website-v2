@@ -883,11 +883,11 @@ module.exports = {
                 ]
         },
         MEETUPS: {
-            MEETUPS: '沙龙',
-            DETAIL_DESC: '简介',
-            DETAIL_FLOW: '与会流程',
-            DETAIL_MEET: '参会信息',
-            DETAIL_QRCODE_TEXT: '扫码报名',
+            MEETUPS: 'Sharon',
+            DETAIL_DESC: 'Introduction',
+            DETAIL_FLOW: 'Agenda',
+            DETAIL_MEET: 'How to attend the event',
+            DETAIL_QRCODE_TEXT: 'Scan the QR code',
             INSIDENAME: 'CONNECT',
             MEETUPS_DATA: require('./../../data/salon').en.MEETUPS_LIST
         }
