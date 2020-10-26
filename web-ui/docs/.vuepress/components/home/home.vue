@@ -389,7 +389,7 @@
 
 <script>
     import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
-    import 'swiper/swiper-bundle.css';
+    import 'swiper/css/swiper.css';
     import { meetingList } from "../../api/home";
     import dayjs from "dayjs";
     import calender from "./calender";
