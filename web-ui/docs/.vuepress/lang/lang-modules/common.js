@@ -125,6 +125,10 @@ module.exports = {
             {
                 NAME: '软件包仓',
                 URL: 'https://gitee.com/src-openeuler'
+            },
+            {
+                NAME: 'Github镜像仓',
+                URL: 'https://github.com/openeuler-mirror'
             }
         ],
         FOOTER: {
@@ -272,6 +276,10 @@ module.exports = {
             {
                 NAME: 'Package sources',
                 URL: 'https://gitee.com/src-openeuler'
+            },
+            {
+                NAME: 'Github mirror',
+                URL: 'https://github.com/openeuler-mirror'
             }
         ],
         FOOTER: {
