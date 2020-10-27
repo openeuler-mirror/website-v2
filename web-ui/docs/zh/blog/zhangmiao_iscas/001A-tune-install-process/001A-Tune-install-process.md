@@ -1,5 +1,5 @@
 ---
-title: A-Tune 实战: 安装, 部署和启动
+title: 'A-Tune 实战: 安装, 部署和启动'
 date: 2020-10-19
 tags: 
     - A-Tune
