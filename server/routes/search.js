@@ -116,8 +116,8 @@ function getSearchResJson(data, keyword, page) {
     });
 
     data.hits.hits.forEach(element => {
-        let content = element._source.textContent;
-        content = filterContent(content);
+        let content = element.highlight.textContent;
+        content = filterContent(content[0]);
         let index = content.indexOf(keyword);
         if (index > 100) {
             if (content.length > index + 100) {
@@ -130,7 +130,7 @@ function getSearchResJson(data, keyword, page) {
         } else {
             content = content.substring(0, content.length);
         }
-        element._source.textContent = content.replace(keyword, '<em>' + keyword + '</em>');
+        element._source.textContent = content;
         let title = element._source.title.replace(keyword, '<em>' + keyword + '</em>');
         element._source.title = title;
         arr.push(element._source);
@@ -160,7 +160,6 @@ function filterContent(content) {
         content = content.replace(val, '');
     });
     let arr = content.split(/[\r\n]/);
-    console.log(arr.length);
     let result = '';
     let index = -1;
     arr.forEach(s => {
@@ -203,6 +202,13 @@ function getSearchReqJson(page, model, keyword, version) {
                     ]
                 }
             },
+            'highlight': {
+                'fields': {
+                    'textContent': {
+                        "number_of_fragments": 0
+                    }
+                }
+            },
             'aggs': {
                 'data': {
                     'terms': {
@@ -232,6 +238,13 @@ function getSearchReqJson(page, model, keyword, version) {
                     ]
                 }
             },
+            'highlight': {
+                'fields': {
+                    'textContent': {
+                        "number_of_fragments": 0
+                    }
+                }
+            },
             'aggs': {
                 'data': {
                     'terms': {
@@ -252,6 +265,13 @@ function getSearchReqJson(page, model, keyword, version) {
                             'textContent': keyword
                         }
                     }]
+                }
+            },
+            'highlight': {
+                'fields': {
+                    'textContent': {
+                        "number_of_fragments": 0
+                    }
                 }
             },
             'aggs': {
