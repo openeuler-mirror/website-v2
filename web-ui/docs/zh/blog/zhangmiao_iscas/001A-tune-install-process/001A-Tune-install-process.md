@@ -1,15 +1,14 @@
-+++
-title=" A-Tune 实战: 安装, 部署和启动"
-date="2020-10-19"
-tags=["A-Tune", "调优", "智能"]
-archives="2020-10"
-author="zhangmiao"
-summary=" A-Tune 安装和启动过程详解"
-
-+++
-
-_张苗 中国科学院软件研究所智能软件研究中心_ 
-
+---
+title: A-Tune 实战: 安装, 部署和启动
+date: 2020-10-19
+tags: 
+    - A-Tune
+    - 调优
+    - 智能
+archives: 2020-10
+author: 张苗, 中国科学院软件研究所智能软件研究中心
+summary:  A-Tune 安装和启动过程详解
+---
 
 
 ### A-Tune介绍
