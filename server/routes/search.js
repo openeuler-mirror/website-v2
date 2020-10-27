@@ -205,7 +205,7 @@ function getSearchReqJson(page, model, keyword, version) {
             'highlight': {
                 'fields': {
                     'textContent': {
-                        "number_of_fragments": 0
+                        'number_of_fragment': 0
                     }
                 }
             },
@@ -241,7 +241,7 @@ function getSearchReqJson(page, model, keyword, version) {
             'highlight': {
                 'fields': {
                     'textContent': {
-                        "number_of_fragments": 0
+                        'number_of_fragments': 0
                     }
                 }
             },
@@ -270,7 +270,7 @@ function getSearchReqJson(page, model, keyword, version) {
             'highlight': {
                 'fields': {
                     'textContent': {
-                        "number_of_fragments": 0
+                        'number_of_fragments': 0
                     }
                 }
             },
