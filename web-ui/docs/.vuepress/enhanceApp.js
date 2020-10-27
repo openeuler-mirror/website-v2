@@ -22,7 +22,7 @@ export default ({
         },
         mounted () {
             if(this.$router && this.$frontmatter) {
-                document.title = this.$frontmatter.title || 'openeuler';
+                document.title = this.$frontmatter.title || 'openEuler';
             }
             if(!checkImport){
                 if (window.location.href.includes('/en/')) {
