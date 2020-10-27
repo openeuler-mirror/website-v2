@@ -11,7 +11,7 @@
                     }}</el-radio>
                 </el-radio-group>
             </div>
-            <div class="web">
+            <div class="web" v-if="!isShowH5">
                 <el-form
                     :model="individual"
                     :rules="individualRules"
@@ -319,7 +319,7 @@
             </div>
 
             <!-- 移动端 -->
-            <div class="mobile">
+            <div class="mobile" v-else>
                 <el-form
                     :model="individual"
                     :rules="individualRules"

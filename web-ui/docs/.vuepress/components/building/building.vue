@@ -29,7 +29,7 @@ export default {
 <style lang='less'>
 .building{
     margin-bottom: 200px;
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
         margin-bottom: 80px;
     }
 }

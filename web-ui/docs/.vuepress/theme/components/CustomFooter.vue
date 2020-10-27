@@ -47,7 +47,7 @@ export default {
 .footer-wrapper {
   height: 176px;
   background-color: #111;
-  @media (max-width: 1000px) {
+  @media screen and (max-width: 1000px) {
     height: 328px;
   }
   .footer-content {
@@ -57,14 +57,14 @@ export default {
     width: 1120px;
     display: flex;
     justify-content: space-between;
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
       flex-direction: column;
       align-items: center;
       width: 100%;
       justify-content: space-evenly;
     }
     .footer-left {
-      @media (max-width: 1000px) {
+      @media screen and (max-width: 1000px) {
         height: unset;
         font-size: 14px;
         align-items: center;
@@ -79,13 +79,13 @@ export default {
       .footer-mail {
         color: #fff;
         margin-top: 17px;
-        @media (max-width: 1000px) {
+        @media screen and (max-width: 1000px) {
           margin-top: 10px;
         }
       }
     }
     .footer-center {
-      @media (max-width: 1000px) {
+      @media screen and (max-width: 1000px) {
         align-items: unset;
         height: unset;
         order: 1;
@@ -101,7 +101,7 @@ export default {
         color: #fff;
         margin-top: 21px;
         font-size: 12px;
-        @media (max-width: 1000px) {
+        @media screen and (max-width: 1000px) {
           margin-top: 16px;
         }
       }
@@ -126,7 +126,7 @@ export default {
       }
     }
     .footer-right {
-      @media (max-width: 1000px) {
+      @media screen and (max-width: 1000px) {
         height: unset;
       }
       height: 100%;
