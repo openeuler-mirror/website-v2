@@ -29,7 +29,7 @@ export default {
   width: 1120px;
   margin: 0 auto;
   height: 380px;
-  @media (max-width: 1000px) {
+  @media screen and (max-width: 1000px) {
     width: 100%;
     padding: 0 30px;
     height: unset;
@@ -38,7 +38,7 @@ export default {
     height: 100%;
     width: 100%;
     position: relative;
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
       display: none;
     }
     img {
@@ -69,7 +69,7 @@ export default {
   }
   .banner-mobile {
     display: none;
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
       display: block;
     }
     width: 100%;

@@ -118,6 +118,7 @@ module.exports = {
         ],
         LANG: 'EN',
         GITTE: '源码',
+        CODE: '代码',
         GITTE_RESOURCE_LIST: [{
                 NAME: '代码仓',
                 URL: 'https://gitee.com/openeuler'
@@ -269,6 +270,7 @@ module.exports = {
         ],
         LANG: '中',
         GITTE: 'Source code',
+        CODE: 'CODE',
         GITTE_RESOURCE_LIST: [{
                 NAME: 'Code sources',
                 URL: 'https://gitee.com/openeuler'

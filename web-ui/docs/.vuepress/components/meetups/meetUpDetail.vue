@@ -156,7 +156,7 @@ export default {
             font-size: 18px;
             color: rgba(0,0,0,.5);
             margin: 0 auto;
-            line-height: 24px;
+            line-height: 40px;
             margin-bottom: 60px;
         }
     }

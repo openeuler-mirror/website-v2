@@ -137,7 +137,7 @@ export default {
     @media screen and (max-width: 1000px) {
         width: 100%;
         .mr-All(40px 0 30px 0);
-        .word-common-css(14px,FZLTHJW,normal,rgba(0, 0, 0, 1),26px);
+        .word-common-css(14px,FZLTHJW,normal,rgba(0, 0, 0, 1),24px);
     }
     p{
         margin-bottom: 30px;
@@ -158,7 +158,7 @@ export default {
         font-size: 20px;
         font-family: FZLTCHJW;
         color: #333333;
-        line-height: 24px;
+        line-height: 40px;
         font-weight: bold;
         margin-bottom: 60px;
     }

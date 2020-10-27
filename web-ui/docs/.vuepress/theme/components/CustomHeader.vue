@@ -155,11 +155,8 @@
                     <li class="lang" @click="toggleLang">
                         <span>{{ i18n.common.LANG }}</span>
                     </li>
-                    <li class="search" @click="pcSearchFlag=true">
-                        <img src="/search.png" alt="" />
-                    </li>
                     <li>
-                        <img src="/code-source.svg" alt="" />
+                        <span>{{ i18n.common.CODE }}</span>
                         <ul>
                             <li
                                 v-for="(item,
@@ -171,6 +168,9 @@
                             </li>
                             <span class="submenu-arrow"></span>
                         </ul>
+                    </li>
+                    <li class="search" @click="pcSearchFlag=true">
+                        <img src="/search.png" alt="" />
                     </li>
                 </ul>
                 <div class="search-input" v-show="pcSearchFlag">
@@ -369,6 +369,13 @@ export default {
         cursor: pointer;
     }
 }
+.nav-other li span {
+    font-size: 16px;
+    font-family: FZLTXIHJW;
+    font-weight: normal;
+    color: #000000;
+    line-height: 16px;
+}
 </style>
 <style lang="less" scoped>
 @keyframes fade-in {
@@ -387,7 +394,7 @@ export default {
             transform:scale(1,1) !important;
         }
     }
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
         color: #0041bd;
     }
 }
@@ -412,7 +419,7 @@ export default {
 }
 .nav-fill {
     height: 60px;
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
         height: 70px;
     }
     .nav-wrapper {
@@ -423,7 +430,7 @@ export default {
         width: 100%;
         position: fixed;
         z-index: 999;
-        @media (max-width: 1000px) {
+        @media screen and (max-width: 1000px) {
             height: 70px;
         }
         .nav-bar {
@@ -433,7 +440,7 @@ export default {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            @media (max-width: 1000px) {
+            @media screen and (max-width: 1000px) {
                 width: 100%;
                 padding: 0 15px;
                 box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
@@ -550,10 +557,10 @@ export default {
                 font-size: 16px;
                 display: flex;
                 align-items: center;
-                @media (max-width: 1000px) {
+                @media screen and (max-width: 1000px) {
                     display: none;
                 }
-                @media (max-width: 1280px) {
+                @media screen and (max-width: 1280px) {
                     flex:2;
                 }
                 .menu-link span {
@@ -625,7 +632,7 @@ export default {
                             color: #002fa7;
                         }
                     }
-                    @media (max-width: 1000px) {
+                    @media screen and (max-width: 1000px) {
                         line-height: 70px;
                     }
                     & > a {
@@ -648,10 +655,10 @@ export default {
                 font-family: FZLTXIHJW;
                 display: flex;
                 justify-content: flex-end;
-                @media (max-width: 1000px) {
+                @media screen and (max-width: 1000px) {
                     display: none;
                 }
-                @media (max-width: 1280px) {
+                @media screen and (max-width: 1280px) {
                     justify-content: flex-start;
                 }
                 & > li {
@@ -663,6 +670,9 @@ export default {
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
+                    &:nth-of-type(2) {
+                        width: 32px;
+                    }
                     img {
                         width: 100%;
                     }
@@ -738,7 +748,7 @@ export default {
                     font-size: 20px;
                 }
             }
-            @media (max-width: 1000px) {
+            @media screen and (max-width: 1000px) {
                 .nav-logo {
                     display: none;
                 }

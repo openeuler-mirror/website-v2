@@ -82,15 +82,15 @@ export default {
 </script>
 <style lang="less" scoped>
 @media screen and (max-width: 1000px) {
-     .moblie-content {
-       padding: 40px 30px 80px 30px;
-     }
+    .moblie-content {
+        padding: 40px 30px 80px 30px;
     }
+}
 .brand-all-word {
   width: 1120px;
   margin: 0 auto;
   padding-top: 60px;
-  @media (max-width: 1000px) {
+  @media screen and (max-width: 1000px) {
      width: 315px;
     }
   .brand-title {
@@ -110,7 +110,7 @@ export default {
     color: rgba(0, 0, 0, 0.5);
     line-height: 32px;
     margin-top: 20px;
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
       width: 315px;
       font-size: 14px;
       font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
@@ -124,20 +124,20 @@ export default {
   width: 1120px;
   margin: 0 auto;
   margin-top: 80px;
-   @media (max-width: 1000px) {
+   @media screen and (max-width: 1000px) {
      width: 315px;
     }
   .card-vertical,
   .card-horizontal {
     display: flex;
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
       flex-direction: column;
       width: 315px;
     }
   }
   .card-horizontal {
     margin-bottom: 200px;
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
       margin-bottom: 80px;
     }
   }
@@ -152,7 +152,7 @@ export default {
     line-height: 24px;
     margin-top: 30px;
     margin-bottom: 10px;
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
       display: none;
     }
   }
@@ -161,7 +161,7 @@ export default {
   }
   .mobile-title {
     display: none;
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
       display: block;
       width: 315px;
       height: 26px;
@@ -186,7 +186,7 @@ export default {
     flex: 1;
     padding-top: 32px;
     margin: 20px 25px 20px 0;
-     @media (max-width: 1000px) {
+     @media screen and (max-width: 1000px) {
      width:315px;
     height:282px;
     background:rgba(255,255,255,1);
@@ -226,7 +226,7 @@ export default {
     width: 78px;
     height: 32px;
     padding: 2px;
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
       margin-bottom: 30px;
       width: 65px;
     }

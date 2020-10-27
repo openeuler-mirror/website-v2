@@ -23,14 +23,14 @@
     .conduct-banner {
         width: 1200px;
         margin: 0 auto;
-        @media (max-width: 1000px) {
+        @media screen and (max-width: 1000px) {
             width: 100%;
             padding: 0 15px;
         }
         .report-banner {
             height: 600px;
             background-color: #002fa7;
-        @media (max-width: 1000px) {
+        @media screen and (max-width: 1000px) {
             display: none;
         }
     }
@@ -50,7 +50,7 @@
                 height: 200px;
                 background-color: #002fa7;
             }
-            @media (max-width: 1000px) {
+            @media screen and (max-width: 1000px) {
                 display: block;
             }
         }
