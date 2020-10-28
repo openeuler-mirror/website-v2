@@ -12,14 +12,13 @@
   "license": "",
   "dependencies": {
     "axios": "^0.19.2",
-    "compression-webpack-plugin": "^1.0.1",
     "dayjs": "^1.8.31",
     "element-ui": "^2.13.2",
-    "file-loader": "^6.2.0",
     "less-loader": "^6.2.0",
     "swiper": "^5.2.0",
     "vue-awesome-swiper": "^4.1.1",
+    "vuepress": "~1.5.2",
     "vue-router": "3.4.5",
-    "vuepress": "~1.5.2"
+    "compression-webpack-plugin": "^1.0.1"
   }
 }
