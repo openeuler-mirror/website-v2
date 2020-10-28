@@ -6,7 +6,7 @@ title: "Legal"
       :pc-src="'/img/security/legal-banner.png'"
       :mobile-src="'/img/security/legal-banner.png'"
       :inside-name="'LEGAL NOTICE'"
-      :outside-name="i18n.security.LEGAL"
+      outside-name="Legal"
   ></common-banner>
 </ClientOnly>
 <div class="markdown">

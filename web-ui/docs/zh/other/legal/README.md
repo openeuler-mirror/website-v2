@@ -6,7 +6,7 @@ title: "法律声明"
       :pc-src="'/img/security/legal-banner.png'"
       :mobile-src="'/img/security/legal-banner.png'"
       :inside-name="'LEGAL NOTICE'"
-      :outside-name="i18n.security.LEGAL"
+      outside-name="法律声明"
   ></common-banner>
 </ClientOnly>
 <div class="markdown">

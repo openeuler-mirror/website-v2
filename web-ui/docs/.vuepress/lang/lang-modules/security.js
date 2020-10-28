@@ -54,8 +54,6 @@ module.exports = {
         SCORE: '评分',
         PRODUCT: '产品',
         STATUS: '状态',
-        LEGAL: "法律声明",
-        PRIVACY: "隐私政策"
     },
     en: {
         SECURITY_ADVISORIES: 'Security Advisories',
@@ -108,7 +106,5 @@ module.exports = {
         SCORE: 'Score',
         PRODUCT: 'Product',
         STATUS: 'Status',
-        LEGAL: "Legal",
-        PRIVACY: "Privacy"
     }
 };
