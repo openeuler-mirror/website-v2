@@ -28,6 +28,11 @@ module.exports = {
                 DES: "A-Tune是智能性能优化系统软件，即通过机器学习引擎对业务应用建立精准模型, 再根据业务负载智能匹配最佳操作系统配置参数组合，实现系统整体运行效率提升。",
             }
         ],
+        HOME_BANNER: {
+            BANNER_PC_IMG: 'url("/img/home/banner/pc-contribution.png")',
+            BANNER_MOBILE_IMG: 'url("/img/home/banner/mobile-contribution.png")',
+            BANNER_LINK: 'https://isrc.iscas.ac.cn/summer2020/#/summitmeeting'
+        },
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovated Open Source Community",
             INTRO_HEAD: "开始openEuler之旅吧！",
@@ -528,6 +533,11 @@ module.exports = {
                 DES: "A system software to auto-optimize the system adaptively to multiple scenarios with embedded AI-engine.",
             }
         ],
+        HOME_BANNER: {
+            BANNER_PC_IMG: 'url("/img/home/banner/pc-contribution.png")',
+            BANNER_MOBILE_IMG: 'url("/img/home/banner/mobile-contribution.png")',
+            BANNER_LINK: 'https://isrc.iscas.ac.cn/summer2020/#/summitmeeting'
+        },
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovated Open Source Community",
             INTRO_HEAD: "Start your journey in openEuler",

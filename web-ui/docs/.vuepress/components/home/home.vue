@@ -48,6 +48,10 @@
                         </div>
                     </a>
                 </el-carousel-item>
+                <el-carousel-item>
+                    <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_BANNER.BANNER_PC_IMG}">
+                    </div>
+                </el-carousel-item>
             </el-carousel>
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
@@ -79,6 +83,10 @@
                         <img :src="'/img/home/Banner' + index + '.gif'">
                     </a>
                     <div class="mobile-version" @click="go(item.LINK)" :style="{backgroundImage:item.MOBILE_IMG?item.MOBILE_IMG:''}" v-if="index == 0"></div>
+                </swiper-slide>
+                <swiper-slide>
+                    <div class="carousel-video" :style="{backgroundImage: i18n.home.HOME_BANNER.BANNER_MOBILE_IMG}">
+                    </div>
                 </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
@@ -952,6 +960,12 @@
         width: 10px;
         background-color: #000;
         border-radius: 50%;
+    }
+    .home-banner .carousel-banner {
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
     .home-introduce {
         padding-top: 100px;
