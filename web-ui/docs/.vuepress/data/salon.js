@@ -9,9 +9,8 @@ module.exports = {
                 ID: 1,
                 MEETUPS_TITLE : '开源操作系统 金陵技术论坛',
                 MEETUPS_IMG: '/img/meetups/1.png',
-                MEETUPS_DATE: '2020-12-24',
+                MEETUPS_DATE: '2020-10-24',
                 MEETUPS_MONTH: '十月',
-                MEETUPS_ADDRESS: '江苏润和 meet-up',
                 MEETUPS_DESC: '进入2020年，信创产业飞速发展，以操作系统为代表的基础软件迎来快速发展机遇，此次论坛聚集国内开源操作系统的技术大咖，分享以HopeEdge，openEuler为代表的操作系统的发展现状，并与硬件厂商、解决方案伙伴们一起探讨未来，携手共建繁荣的信创生态。',
                 MEETUPS_FLOW_PATH: [
                     {
@@ -52,17 +51,77 @@ module.exports = {
                     },
                 ],
                 MEETINGS_INFO: {
-                    TITLE: '参会信息',
-                    ADDRESS_IMG: '/img/meetups/address.png',
+                    ADDRESS_IMG: '/img/meetups/address1.png',
                     ADDRESS_UP: '润和创智中心',
                     ADDRESS_DOWN: [
                         '南京市雨花区软件大道168号','润和创智中心','二楼会议大厅'
                     ],
-                    APPLY_TEXT: '扫码报名',
-                    APPLY_QRCODE: '/img/meetups/qrcode.png',
+                    APPLY_QRCODE: '/img/meetups/qrcode1.png',
                     MAP_IMG: '/img/meetups/map1.png'
                 }
-                
+            },
+            {
+                ID: 2,
+                MEETUPS_TITLE : '长沙meet up详情',
+                MEETUPS_IMG: '/img/meetups/2.png',
+                MEETUPS_DATE: '2020-10-31',
+                MEETUPS_MONTH: '十月',
+                MEETUPS_DESC: '围绕openEuler社区、鲲鹏架构、麒麟信安操作系统（欧拉版）进行经验分享和技术交流。',
+                MEETUPS_FLOW_PATH: [
+                    {
+                        FLOW_PATH_NAME: '签到',
+                        FLOW_PATH_TIME: '13 : 30'
+                    },
+                    {
+                        FLOW_PATH_NAME: '开场与致辞',
+                        FLOW_PATH_TIME: '14 : 00'
+                    },
+                    {
+                        FLOW_PATH_NAME: 'openEuler和社区基本情况介绍',
+                        FLOW_PATH_TIME: '14 : 10'
+                    },
+                    {
+                        FLOW_PATH_NAME: '基于麒麟信安操作系统V3的应用迁移和适配',
+                        FLOW_PATH_TIME: '14 : 15 '
+                    },
+                    {
+                        FLOW_PATH_NAME: '基于鲲鹏架构的云桌面调优和实践',
+                        FLOW_PATH_TIME: '14 : 30'
+                    },
+                    {
+                        FLOW_PATH_NAME: '开源性能调优工具 A-tune 的原理和实践',
+                        FLOW_PATH_TIME: '14 : 45'
+                    },
+                    {
+                        FLOW_PATH_NAME: '华为 Hadoop ARM64 优化探索之路',
+                        FLOW_PATH_TIME: '15 : 05'
+                    },
+                    {
+                        FLOW_PATH_NAME: '参观湖南鲲鹏生态展厅、合影及茶歇',
+                        FLOW_PATH_TIME: '15 : 30'
+                    },
+                    {
+                        FLOW_PATH_NAME: 'openGauss 企业级开源数据库特性解读',
+                        FLOW_PATH_TIME: '15 : 55 '
+                    },
+                    {
+                        FLOW_PATH_NAME: '基于 openGauss 的实验数据分析平台',
+                        FLOW_PATH_TIME: '16 : 20 '
+                    },
+                    {
+                        FLOW_PATH_NAME: '现场观众 Q&A',
+                        FLOW_PATH_TIME: '16 : 45 '
+                    }
+                ],
+                MEETINGS_INFO: {
+                    ADDRESS_IMG: '/img/meetups/address2.png',
+                    ADDRESS_UP: '鲲鹏生态创新中心培训室',
+                    ADDRESS_DOWN: [
+                        '金茂北塔47楼','湖南省鲲鹏生态创新中心培训室'
+                    ],
+                    APPLY_QRCODE: '/img/meetups/qrcode2.png',
+                    MAP_IMG: '/img/meetups/map2.png'
+                }
             }
         ]
     },
@@ -74,7 +133,7 @@ module.exports = {
                 MEETUPS_IMG: '/img/meetups/1.png',
                 MEETUPS_DATE: '2020-12-24',
                 MEETUPS_MONTH: 'October',
-                MEETUPS_ADDRESS: 'Jiangsu HopeRun meet-up',
+                MEETUPS_CONTENT: 'Jiangsu HopeRun meet-up',
                 MEETUPS_DESC: 'In 2020, the information application innovation industry is developing rapidly, and basic software represented by OSs is embracing opportunities. In this event, we invite technical experts of open source OSs in China to present the latest OS developments, such as HopeEdge and openEuler, and discuss with hardware vendors and solution partners on building a prosperous information application innovation ecosystem together.',
                 MEETUPS_FLOW_PATH: [
                     {

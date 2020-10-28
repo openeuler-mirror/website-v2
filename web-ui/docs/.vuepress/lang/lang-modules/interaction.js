@@ -883,7 +883,7 @@ module.exports = {
                 ]
         },
         MEETUPS: {
-            MEETUPS: 'Sharon',
+            MEETUPS: 'Meetups',
             DETAIL_DESC: 'Introduction',
             DETAIL_FLOW: 'Agenda',
             DETAIL_MEET: 'How to attend the event',
