@@ -131,9 +131,8 @@ module.exports = {
                 ID: 1,
                 MEETUPS_TITLE : 'Nanjing Operating System Seminar 2020',
                 MEETUPS_IMG: '/img/meetups/1.png',
-                MEETUPS_DATE: '2020-12-24',
+                MEETUPS_DATE: '2020-10-24',
                 MEETUPS_MONTH: 'October',
-                MEETUPS_CONTENT: 'Jiangsu HopeRun meet-up',
                 MEETUPS_DESC: 'In 2020, the information application innovation industry is developing rapidly, and basic software represented by OSs is embracing opportunities. In this event, we invite technical experts of open source OSs in China to present the latest OS developments, such as HopeEdge and openEuler, and discuss with hardware vendors and solution partners on building a prosperous information application innovation ecosystem together.',
                 MEETUPS_FLOW_PATH: [
                     {
@@ -183,6 +182,69 @@ module.exports = {
                     MAP_IMG: '/img/meetups/map1.png'
                 }
                 
+            },
+            {
+                ID: 2,
+                MEETUPS_TITLE : 'Details for Meetup in Changsha',
+                MEETUPS_IMG: '/img/meetups/2.png',
+                MEETUPS_DATE: '2020-10-31',
+                MEETUPS_MONTH: '十月',
+                MEETUPS_DESC: 'The event aims for the expertise sharing and technical exchange on the openEuler community, Kunpeng architecture, and Kylinsec OS (EulerOS version).',
+                MEETUPS_FLOW_PATH: [
+                    {
+                        FLOW_PATH_NAME: 'Sign-in',
+                        FLOW_PATH_TIME: '13 : 30'
+                    },
+                    {
+                        FLOW_PATH_NAME: 'Opening speech',
+                        FLOW_PATH_TIME: '14 : 00'
+                    },
+                    {
+                        FLOW_PATH_NAME: 'Overview of openEuler OS and  community',
+                        FLOW_PATH_TIME: '14 : 10'
+                    },
+                    {
+                        FLOW_PATH_NAME: 'Application porting and adaptation to Kylinsec OS (EulerOS version) V3',
+                        FLOW_PATH_TIME: '14 : 15 '
+                    },
+                    {
+                        FLOW_PATH_NAME: 'Kunpeng-based cloud desktop tuning and practice',
+                        FLOW_PATH_TIME: '14 : 30'
+                    },
+                    {
+                        FLOW_PATH_NAME: 'Working principles and practice of the open source performance tuning tool A-Tune',
+                        FLOW_PATH_TIME: '14 : 45'
+                    },
+                    {
+                        FLOW_PATH_NAME: "Huawei's exploration of optimizing Hadoop on ARM64",
+                        FLOW_PATH_TIME: '15 : 05'
+                    },
+                    {
+                        FLOW_PATH_NAME: 'Visit to the exhibition hall in Hunan Kunpeng Ecosystem Innovation Center, group photo, and tea break',
+                        FLOW_PATH_TIME: '15 : 30'
+                    },
+                    {
+                        FLOW_PATH_NAME: 'Feature description of openGauss enterprise-grade database',
+                        FLOW_PATH_TIME: '15 : 55 '
+                    },
+                    {
+                        FLOW_PATH_NAME: 'openGauss-based experimental data analytics platform',
+                        FLOW_PATH_TIME: '16 : 20 '
+                    },
+                    {
+                        FLOW_PATH_NAME: 'Q&A',
+                        FLOW_PATH_TIME: '16 : 45 '
+                    }
+                ],
+                MEETINGS_INFO: {
+                    ADDRESS_IMG: '/img/meetups/address2.png',
+                    ADDRESS_UP: 'Training room, Hunan Kunpeng Ecosystem Innovation Center',
+                    ADDRESS_DOWN: [
+                        '47th floor, Jinmao Square North Tower, Changsha, Hunan','Training room, Hunan Kunpeng Ecosystem Innovation Center'
+                    ],
+                    APPLY_QRCODE: '/img/meetups/qrcode2.png',
+                    MAP_IMG: '/img/meetups/map2.png'
+                }
             }
         ]
     }
