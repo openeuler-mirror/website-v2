@@ -6,7 +6,7 @@ title: "Privacy"
       :pc-src="'/img/security/privacy-banner.png'"
       :mobile-src="'/img/security/privacy-banner.png'"
       :inside-name="'PRIVACY POLICY'"
-      :outside-name="i18n.security.PRIVACY"
+      outside-name="Privacy"
   ></common-banner>
 </ClientOnly>
 <div class="other markdown">
