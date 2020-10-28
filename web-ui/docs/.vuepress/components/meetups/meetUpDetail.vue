@@ -158,6 +158,7 @@ export default {
             margin: 0 auto;
             line-height: 40px;
             margin-bottom: 60px;
+            text-align: center;
         }
     }
     .meet-flowPath{

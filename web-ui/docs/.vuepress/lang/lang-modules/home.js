@@ -28,8 +28,13 @@ module.exports = {
                 DES: "A-Tune是智能性能优化系统软件，即通过机器学习引擎对业务应用建立精准模型, 再根据业务负载智能匹配最佳操作系统配置参数组合，实现系统整体运行效率提升。",
             }
         ],
+        HOME_BANNER: {
+            BANNER_PC_IMG: 'url("/img/home/banner/pc-contribution.png")',
+            BANNER_MOBILE_IMG: 'url("/img/home/banner/mobile-contribution.png")',
+            BANNER_LINK: 'https://isrc.iscas.ac.cn/summer2020/#/summitmeeting'
+        },
         HOME_INTRODUCE: {
-            INTRO_TITLE: "The Most Innovated Open Source Community",
+            INTRO_TITLE: "The Most Innovative Open Source Community",
             INTRO_HEAD: "开始openEuler之旅吧！",
             INTRO_DESCRIPTION: "openEuler通过社区合作，打造创新平台，构建支持多处理架构、统一和开放的操作系统，推动软硬件应用生态繁荣发展。",
             INTRO_IMG_URL: "",
@@ -528,8 +533,13 @@ module.exports = {
                 DES: "A system software to auto-optimize the system adaptively to multiple scenarios with embedded AI-engine.",
             }
         ],
+        HOME_BANNER: {
+            BANNER_PC_IMG: 'url("/img/home/banner/pc-contribution.png")',
+            BANNER_MOBILE_IMG: 'url("/img/home/banner/mobile-contribution.png")',
+            BANNER_LINK: 'https://isrc.iscas.ac.cn/summer2020/#/summitmeeting'
+        },
         HOME_INTRODUCE: {
-            INTRO_TITLE: "The Most Innovated Open Source Community",
+            INTRO_TITLE: "The Most Innovative Open Source Community",
             INTRO_HEAD: "Start your journey in openEuler",
             INTRO_DESCRIPTION: "openEuler is an innovative platform nurtured by community collaboration. It aims to build a unified and open OS that supports multiple processor architectures, and to advance the hardware/software application ecosystem.",
             INTRO_IMG_URL: "",

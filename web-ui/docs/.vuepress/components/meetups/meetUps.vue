@@ -31,10 +31,10 @@
                   <span class="meetUps-date">{{ value.MEETUPS_DATE }}</span>
                 </p>
                 <p>
-                  <span class="meetUps-date">{{ value.MEETUPS_ADDRESS }}</span>
+                  <span class="meetUps-date">{{ value.MEETUPS_DESC }}</span>
                 </p>
               </div>
-              <div class="meetUps-summary">{{ value.MEETUPS_ADDRESS }}</div>
+              <div class="meetUps-summary">{{ value.MEETUPS_DESC }}</div>
             </div>
           </div>
         </div>
