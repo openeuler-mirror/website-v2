@@ -85,12 +85,12 @@
                     <div class="mobile-version" @click="go(item.LINK)" :style="{backgroundImage:item.MOBILE_IMG?item.MOBILE_IMG:''}" v-if="index == 0"></div>
                 </swiper-slide>
                 <swiper-slide>
-                    <div class="carousel-video" :style="{backgroundImage: i18n.home.HOME_BANNER.BANNER_MOBILE_IMG}">
+                    <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_BANNER.BANNER_MOBILE_IMG}">
                     </div>
                 </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
-                <li v-for="item in 5" :class="{'mobile-pagination-active': mobilePagenationIndex===item}"></li>
+                <li v-for="item in 6" :class="{'mobile-pagination-active': mobilePagenationIndex===item}"></li>
             </ul>
         </div>
         <div class="home-introduce">
@@ -966,6 +966,10 @@
         height: 100%;
         background-size: contain;
         background-repeat: no-repeat;
+        background-position: center center;
+        @media screen and (max-width: 1000px) {
+            background-size: 100% 100%;
+        }
     }
     .home-introduce {
         padding-top: 100px;
