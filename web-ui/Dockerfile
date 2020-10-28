@@ -8,7 +8,9 @@ COPY . /home/openeuler/web
 
 RUN npm install
 
-RUN npm run build
+RUN mv /home/openeuler/web/script/update-build-script.js /home/openeuler/web/node_modules/@vuepress/core/lib/node/build/index.js
+RUN mv /home/openeuler/web/script/add-worker-script.js /home/openeuler/web/node_modules/@vuepress/core/lib/node/build/worker.js
+RUN node --max_old_space_size=9216 /home/openeuler/web/node_modules/vuepress/cli.js build docs
 
 FROM nginx:1.19.2
 
