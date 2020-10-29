@@ -49,7 +49,7 @@
                     </a>
                 </el-carousel-item>
                 <el-carousel-item>
-                    <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_BANNER.BANNER_PC_IMG}">
+                    <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_BANNER.BANNER_PC_IMG}" @click="go(i18n.home.HOME_BANNER.BANNER_LINK)">
                     </div>
                 </el-carousel-item>
             </el-carousel>
@@ -85,7 +85,7 @@
                     <div class="mobile-version" @click="go(item.LINK)" :style="{backgroundImage:item.MOBILE_IMG?item.MOBILE_IMG:''}" v-if="index == 0"></div>
                 </swiper-slide>
                 <swiper-slide>
-                    <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_BANNER.BANNER_MOBILE_IMG}">
+                    <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_BANNER.BANNER_MOBILE_IMG}" @click="go(i18n.home.HOME_BANNER.BANNER_LINK)">
                     </div>
                 </swiper-slide>
             </swiper>
@@ -964,6 +964,7 @@
     .home-banner .carousel-banner {
         width: 100%;
         height: 100%;
+        cursor: pointer;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
