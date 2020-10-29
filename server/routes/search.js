@@ -11,6 +11,7 @@ const CONF = require('../config/filePathConfig');
 const httpUtil = require('../util/httpUtil');
 const ES = require('../config/searchConfig');
 const logUtil = require('../util/logUtil');
+const APICONF = require('../config/apiConfig');
 
 const ES_INDEX = 'openeuler_articles';
 const ES_EN_INDEX = 'openeuler_articles_en';
@@ -285,5 +286,18 @@ function getSearchReqJson(page, model, keyword, version) {
         return json;
     }
 }
+
+router.get('/statistics', function (req, res, next) {
+    let url = APICONF.STATISTICS_URL + 'query/all?community=openEuler';
+    httpUtil.getUrl(url, '').then(data => {
+        res.send(data);
+    }).catch(ex => {
+        console.log('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
+        res.json({
+            code: 500,
+            date: ex.stack
+        });
+    });
+});
 
 module.exports = router;
