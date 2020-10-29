@@ -188,7 +188,7 @@ module.exports = {
                 MEETUPS_TITLE : 'Details for Meetup in Changsha',
                 MEETUPS_IMG: '/img/meetups/2.png',
                 MEETUPS_DATE: '2020-10-31',
-                MEETUPS_MONTH: '十月',
+                MEETUPS_MONTH: 'October',
                 MEETUPS_DESC: 'The event aims for the expertise sharing and technical exchange on the openEuler community, Kunpeng architecture, and Kylinsec OS (EulerOS version).',
                 MEETUPS_FLOW_PATH: [
                     {
