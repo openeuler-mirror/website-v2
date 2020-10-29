@@ -14,7 +14,7 @@
         <div class="meet-flowPath">
             <p class="title">{{ i18n.interaction.MEETUPS.DETAIL_FLOW }}</p>
             <div class="flowPath-img" v-if="!isShowH5">
-                <div class="maillist-divider-mail" :style="{ height:flowPathList.length*108 + 'px' }">
+                <div class="maillist-divider-mail" :style="{ height:flowPathList.length*117 + 'px' }">
                     <div class="maillist-icon-comm"></div>
                 </div>
                 <div class="mail-guide" v-for="(item,index) in flowPathList">
@@ -201,6 +201,7 @@ export default {
         width: 200px;
         margin-right: 36px;
         min-height: 74px;
+        padding: 9px;
         .en-box{
             width: 370px;
             margin-left: -160px;
