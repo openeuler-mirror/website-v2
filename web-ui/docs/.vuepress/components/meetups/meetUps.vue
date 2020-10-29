@@ -191,6 +191,9 @@ export default {
 .meetUps-date {
   color: rgba(0, 0, 0, 0.4);
   font-size: 12px;
+    @media screen and (max-width: 1000px) {
+        line-height: 16px;
+    }
 }
 .meetUps-info-item {
     .meetUps-title {
@@ -207,6 +210,7 @@ export default {
 .meetUps-summary {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
+  line-height: 24px;
 }
 @media screen and (max-width: 1000px) {
   .meetUps-content {

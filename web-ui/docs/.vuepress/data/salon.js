@@ -62,7 +62,7 @@ module.exports = {
             },
             {
                 ID: 2,
-                MEETUPS_TITLE : '长沙meet up详情',
+                MEETUPS_TITLE : '长沙 Meetup',
                 MEETUPS_IMG: '/img/meetups/2.png',
                 MEETUPS_DATE: '2020-10-31',
                 MEETUPS_MONTH: '十月',

@@ -422,7 +422,7 @@ export default {
           }
         }
         .item-desc {
-            height: 49px;
+            height: 40px;
             margin-bottom: 20px;
             overflow:hidden; 
             text-overflow:ellipsis;
