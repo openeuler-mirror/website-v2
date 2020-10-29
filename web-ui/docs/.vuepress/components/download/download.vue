@@ -238,7 +238,7 @@ export default {
   .el-form-item__content {
     line-height: 32px;
     width: 140px;
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
       width: 100%;
     }
     .el-checkbox__inner {
@@ -298,14 +298,14 @@ export default {
 .download-content {
   width: 1120px;
   margin: 0 auto;
-  @media (max-width: 1000px) {
+  @media screen and (max-width: 1000px) {
     width: 100%;
     padding: 0 15px;
   }
   .download-banner {
     height: 600px;
     background-color: #002fa7;
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
       display: none;
     }
   }
@@ -325,7 +325,7 @@ export default {
       height: 200px;
       background-color: #002fa7;
     }
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
       display: block;
     }
   }
@@ -333,12 +333,12 @@ export default {
     .download-filter {
       margin-top: 22px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-      @media (max-width: 1000px) {
+      @media screen and (max-width: 1000px) {
         display: none;
       }
     }
     .filter-tags {
-      @media (max-width: 1000px) {
+      @media screen and (max-width: 1000px) {
         display: none;
       }
       margin-top: 19px;
@@ -361,7 +361,7 @@ export default {
     .download-list-en {
       padding-top: 30px;
       margin-bottom: 150px;
-      @media (max-width: 1000px) {
+      @media screen and (max-width: 1000px) {
         padding-top: 0;
         border-top: unset;
         margin-bottom: 60px;
@@ -375,7 +375,7 @@ export default {
         border-radius: 8px;
         display: inline-block;
         padding: 15px 10px 26px 20px;
-        @media (max-width: 1000px) {
+        @media screen and (max-width: 1000px) {
           display: block;
           margin: 40px auto !important;
           width: 315px;
@@ -386,7 +386,7 @@ export default {
           font-size: 20px;
           margin-bottom: 16px;
           font-family: HuaweiSansMedium;
-          @media (max-width: 1000px) {
+          @media screen and (max-width: 1000px) {
             text-align: center;
             font-size: 18px;
             margin-bottom: 20px;
@@ -402,7 +402,7 @@ export default {
           color: rgba(255, 255, 255, 1);
           line-height: 22px;
           padding: 0;
-          @media (max-width: 1000px) {
+          @media screen and (max-width: 1000px) {
             display: none;
           }
         }
@@ -416,19 +416,22 @@ export default {
           width: 68px;
           height: 28px;
           display: none;
-          @media (max-width: 1000px) {
+          @media screen and (max-width: 1000px) {
             display: inline-block;
             line-height: 8px;
           }
         }
         .item-desc {
-            height: 40px;
+            height: 49px;
             margin-bottom: 20px;
             overflow:hidden; 
             text-overflow:ellipsis;
             display:-webkit-box; 
             -webkit-box-orient:vertical;
             -webkit-line-clamp:2;
+            @media screen and (max-width: 1000px) {
+                height: 40px;
+            }
         }
         p {
           font-size: 14px;
@@ -437,7 +440,7 @@ export default {
           margin-bottom: 22px;
           line-height: 24px;
           height: 48px;
-          @media (max-width: 1000px) {
+          @media screen and (max-width: 1000px) {
             line-height: 20px;
             margin-bottom: 30px;
           }
@@ -446,7 +449,7 @@ export default {
           display: flex;
           justify-content: space-between;
           font-size: 14px;
-           @media (max-width: 1000px) {
+           @media screen and (max-width: 1000px) {
              font-size: 11px;
            }
           a {
@@ -466,7 +469,7 @@ export default {
               &:nth-of-type(4n){
                   margin-left: 0;
               }
-              @media (max-width: 1000px) {
+              @media screen and (max-width: 1000px) {
                 margin-bottom: 20px;
               }
               img {
@@ -474,7 +477,7 @@ export default {
                 height: 16px;
                 vertical-align: middle;
                 margin-right: 2px;
-                @media (max-width: 1000px) {
+                @media screen and (max-width: 1000px) {
                   display: none;
                 }
               }
@@ -492,7 +495,7 @@ export default {
    .download-list {
       padding-top: 30px;
       margin-bottom: 150px;
-      @media (max-width: 1000px) {
+      @media screen and (max-width: 1000px) {
         padding-top: 0;
         border-top: unset;
         margin-bottom: 60px;
@@ -506,7 +509,7 @@ export default {
         border-radius: 8px;
         display: inline-block;
         padding: 20px 10px 26px 20px;
-        @media (max-width: 1000px) {
+        @media screen and (max-width: 1000px) {
           display: block;
           margin: 40px auto !important;
           width: 315px;
@@ -517,7 +520,7 @@ export default {
           font-size: 20px;
           margin-bottom: 16px;
           font-family: HuaweiSansMedium;
-          @media (max-width: 1000px) {
+          @media screen and (max-width: 1000px) {
             text-align: center;
             font-size: 18px;
             margin-bottom: 20px;
@@ -533,7 +536,7 @@ export default {
           color: rgba(255, 255, 255, 1);
           line-height: 23px;
           padding: 0;
-          @media (max-width: 1000px) {
+          @media screen and (max-width: 1000px) {
             display: none;
           }
         }
@@ -544,7 +547,7 @@ export default {
           width: 68px;
           height: 28px;
           display: none;
-          @media (max-width: 1000px) {
+          @media screen and (max-width: 1000px) {
             display: inline-block;
             line-height: 8px;
             margin-left: -10px;
@@ -562,7 +565,7 @@ export default {
           display: -webkit-box;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 2;
-          @media (max-width: 1000px) {
+          @media screen and (max-width: 1000px) {
             line-height: 25px;
             margin-bottom: 30px;
           }
@@ -576,13 +579,13 @@ export default {
           .url-list {
               display: flex;
               flex-wrap: wrap;
-              @media (max-width: 1000px) {
+              @media screen and (max-width: 1000px) {
                   justify-content: space-between;
               }
             li {
                 width: 106px;
               margin-bottom: 16px;
-              @media (max-width: 1000px) {
+              @media screen and (max-width: 1000px) {
                   width: 68px;
                 margin-bottom: 20px;
                 &:last-of-type {
@@ -594,7 +597,7 @@ export default {
                 height: 16px;
                 vertical-align: middle;
                 margin-right: 10px;
-                @media (max-width: 1000px) {
+                @media screen and (max-width: 1000px) {
                   display: none;
                 }
               }
