@@ -149,55 +149,15 @@ module.exports = {
         },
         SUMMIT: {
             SUMMIT: '峰会',
-            SUMMITCONTENT: [
-                'openEuler Summit 是由 openEuler 社区举办的开发者交流会，首届线下openEuler Summit 2020 将于12月在北京举行。openEuler 不仅是一个支持多种处理器架构的操作系统，更是一个最具活力的开源社区。峰会广泛邀请操作系统生态的开发者、用户、社区贡献者、软件爱好者共同解读openEuler 的最新版，探讨未来的技术路线，让技术、生态、商业在这里产生奇妙的化学反应。',
-                'openEuler代表了一种可能性，一种开源、开放模式下的蓬勃朝气，一种从无到有、从0到1的创造，一个可以燎原的火种。在这里，没有厂商绑定，没有严苛规则，只看代码实力、项目创意，通过社区合作，持续孵化开源项目，推动基础架构技术的发展。',
-                '开源是一种态度，分享是一种精神。无论你报名演讲、演示DEMO、发表案例、参与社区建设、抑或只是来交流，我们都诚挚的欢迎您的到来。'
-            ],
-            HOMETITLE: '精彩回顾',
+            SUMMITCONTENT: 'openEuler Virtual Summit 2020 是 openEuler 在发布 20.03 LTS 版本后第一次举行的峰会，本次大会邀请了华为的资深专家、社区Committer和多家openEuler社区合作厂商的重量嘉宾贡献多场精彩的演讲，不容错过。开发者和合作伙伴可以通过本次峰会全面了解 openEuler 多元化的生态、丰富的特性和广泛的社区，帮助开发者顺利融入社区，合作伙伴参与到openEuler生态体系。',
+            HOMETITLE: '往期回顾',
             LISTTITLE: '精彩回顾',
             LISTNEWTITLE:'openEuler 峰会 2020',
-            SUMMITTIP: '“Show me the Code” “Show me the Idea”,  活动演讲、赞助通道已经开启，期待您的参与！',
             LISTTIME: '2020年4月17-18日',
             SPEECHTITLE: '主题演讲',
             DESIGNTITLE: '设计峰会（项目组专题研讨）',
             VIDEODOWNLOAD: '附件下载',
             FRIENDSHIPLINK: '友情链接',
-            CALL_LIST: [
-                {
-                    CALL_TEXT: 'Call for Speaker',
-                    CALL_IMG: '/img/summit/speaker.png',
-                    FONT_COLOR: '#002FA7',
-                    BACKGROUND_COLOR: '#FEB32A',
-                    CALL_LINK: 'https://shimo.im/forms/XtCTP9jcrXKgjytD/fill'
-                },
-                {
-                    CALL_TEXT: 'Call for Sponsor',
-                    CALL_IMG: '/img/summit/sponsor.png',
-                    FONT_COLOR: '#FEB32A',
-                    BACKGROUND_COLOR: '#002FA7',
-                    CALL_LINK: 'https://shimo.im/forms/VWWtgLsVHzovmbeH/fill'
-                },
-                {
-                    CALL_TEXT: 'Call for SIG',
-                    CALL_IMG: '/img/summit/sig.png',
-                    FONT_COLOR: '#FEB32A',
-                    BACKGROUND_COLOR: '#002FA7',
-                    CALL_LINK: 'https://shimo.im/forms/KSMKHGPHIAsjoNHP/fill'
-                },
-                {
-                    CALL_TEXT: 'Call for Demo',
-                    CALL_IMG: '/img/summit/demo.png',
-                    FONT_COLOR: '#002FA7',
-                    BACKGROUND_COLOR: '#FEB32A',
-                    CALL_LINK: 'https://shimo.im/forms/lMTsArbYcy4hd2dY/fill'
-                }
-            ],
-            SUMMITREMIND: '欢迎成为 openEuler 的一员！',
-            REVIEW_TEXT: 'openEuler Virtual Summit 2020',
-            SUMMIT_WEB_IMG: '/img/summit/zh-pc-summit.png',
-            SUMMIT_H5_IMG: '/img/summit/zh-mobile-summit.png',
-            APPLY_TITLE: 'openEuler，不止于操作系统',
             SPEECHLIST: [{
                     SPEECHTIME: '4 月 17 日    09:30 - 09:40',
                     SPEECHTHEME: 'openEuler 加速多核异构计算产业发展',
@@ -633,56 +593,16 @@ module.exports = {
             ]
         },
         SUMMIT: {
-            SUMMIT: 'Summit',
-            SUMMITCONTENT: [
-                'openEuler Summit is an event held by the openEuler community for developers to exchange the latest developments. The first offline openEuler Summit 2020 will be held in Beijing in December. openEuler is not only an operating system that supports multiple processor architectures, but also the most dynamic open source community. The Summit invites developers, users, community contributors, and software enthusiasts of the OS ecosystem to interpret the latest openEuler version and discuss the future technology roadmap, catalyzing the synergy between technologies, ecosystems, and businesses.',
-                'openEuler unlocks infinite possibilities and dynamism of open source, and encourages innovation that may supercharge various industries in the future. Here developers do not need to concern about vendor binding or rigid rules, because quality code and creative projects matter the most. Through community collaboration, we continue to incubate open source projects and advance the basic architecture technology.',
-                'It is open source and sharing that propel our community to new heights. You can attend the Summit by delivering a speech, displaying demo, sharing cases, building the community, or simply exchanging information with other developers. We are glad to have you join our event.'
-            ],
-            HOMETITLE: 'Wonderful Recall',
+            SUMMIT: 'Virtual Summit',
+            SUMMITCONTENT: 'openEuler Virtual Summit 2020 was the first summit after openEuler released the 20.03 LTS version. Senior experts of Huawei, community Committers, and several heavyweight guests from openEuler community partners were invited to deliver inspiring speeches at this summit. By attending this summit, developers and partners can fully understand the diversified ecosystem, rich features, and inclusive community of openEuler. This will motivate them to play an active role in the openEuler ecosystem and community.',
+            HOMETITLE: 'Replay',
             LISTTITLE: 'Overview',
             LISTNEWTITLE:'openEuler Virtual Summit 2020',
-            SUMMITTIP: '"Show me the code, show me the idea". The channels for speech and sponsorship are now open. We are looking forward to your participation.',
             LISTTIME: 'Apr 17–18, 2020',
             SPEECHTITLE: 'Keynotes',
             DESIGNTITLE: 'Design Summit (SIG Workshop)',
             VIDEODOWNLOAD: 'Slides',
             FRIENDSHIPLINK: 'Links',
-            CALL_LIST: [
-                {
-                    CALL_TEXT: 'Call for Speaker',
-                    CALL_IMG: '/img/summit/speaker.png',
-                    FONT_COLOR: '#002FA7',
-                    BACKGROUND_COLOR: '#FEB32A',
-                    CALL_LINK: 'https://shimo.im/forms/XtCTP9jcrXKgjytD/fill'
-                },
-                {
-                    CALL_TEXT: 'Call for Sponsor',
-                    CALL_IMG: '/img/summit/sponsor.png',
-                    FONT_COLOR: '#FEB32A',
-                    BACKGROUND_COLOR: '#002FA7',
-                    CALL_LINK: 'https://shimo.im/forms/VWWtgLsVHzovmbeH/fill'
-                },
-                {
-                    CALL_TEXT: 'Call for SIG',
-                    CALL_IMG: '/img/summit/sig.png',
-                    FONT_COLOR: '#FEB32A',
-                    BACKGROUND_COLOR: '#002FA7',
-                    CALL_LINK: 'https://shimo.im/forms/KSMKHGPHIAsjoNHP/fill'
-                },
-                {
-                    CALL_TEXT: 'Call for Demo',
-                    CALL_IMG: '/img/summit/demo.png',
-                    FONT_COLOR: '#002FA7',
-                    BACKGROUND_COLOR: '#FEB32A',
-                    CALL_LINK: 'https://shimo.im/forms/lMTsArbYcy4hd2dY/fill'
-                }
-            ],
-            SUMMITREMIND: 'Welcome to join the openEuler community.',
-            REVIEW_TEXT: 'openEuler Virtual Summit 2020',
-            SUMMIT_WEB_IMG: '/img/summit/en-pc-summit.png',
-            SUMMIT_H5_IMG: '/img/summit/en-mobile-summit.png',
-            APPLY_TITLE: 'openEuler , Beyond Operating System',
             SPEECHLIST: [{
                     SPEECHTIME: '09:30 - 09:40, 17th April',
                     SPEECHTHEME: 'openEuler Drives a Robust Multi-Core, Heterogeneous Computing Industry',
