@@ -138,11 +138,11 @@ export default {
 .summit .summit-explain {
     width: 1120px;
     .mr-All(60px auto 24px auto);
-    .word-common-css(20px,FZLTXIHJW,400,rgba(0, 0, 0, 0.85),40px);
+    .word-common-css(20px,FZLTXIHJW,200,rgba(0, 0, 0, 0.85),40px);
     @media screen and (max-width: 1000px) {
         width: 100%;
         .mr-All(40px 0 30px 0);
-        .word-common-css(14px,FZLTHJW,normal,rgba(0, 0, 0, 1),24px);
+        .word-common-css(14px,FZLTHJW,200,rgba(0, 0, 0, 1),24px);
     }
     p{
         margin-bottom: 30px;
@@ -164,7 +164,7 @@ export default {
         font-family: FZLTCHJW;
         color: #000000;
         line-height: 40px;
-        font-weight: bold;
+        font-weight: 400;
         margin-bottom: 60px;
     }
     .apply-title{
