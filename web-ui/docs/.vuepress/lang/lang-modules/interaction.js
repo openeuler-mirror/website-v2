@@ -176,12 +176,12 @@ module.exports = {
                 },
                 {
                     CALL_IMG: '/img/summit/sig.png',
-                    CALL_MOBILE_IMG: '/img/summit/sig-mobile.png',
+                    CALL_MOBILE_IMG: '/img/summit/demo-mobile.png',
                     CALL_LINK: 'https://shimo.im/forms/KSMKHGPHIAsjoNHP/fill'
                 },
                 {
                     CALL_IMG: '/img/summit/demo.png',
-                    CALL_MOBILE_IMG: '/img/summit/demo-mobile.png',
+                    CALL_MOBILE_IMG: '/img/summit/sig-mobile.png',
                     CALL_LINK: 'https://shimo.im/forms/lMTsArbYcy4hd2dY/fill'
                 }
             ],
@@ -653,12 +653,12 @@ module.exports = {
                 },
                 {
                     CALL_IMG: '/img/summit/sig.png',
-                    CALL_MOBILE_IMG: '/img/summit/sig-mobile.png',
+                    CALL_MOBILE_IMG: '/img/summit/demo-mobile.png',
                     CALL_LINK: 'https://shimo.im/forms/KSMKHGPHIAsjoNHP/fill'
                 },
                 {
                     CALL_IMG: '/img/summit/demo.png',
-                    CALL_MOBILE_IMG: '/img/summit/demo-mobile.png',
+                    CALL_MOBILE_IMG: '/img/summit/sig-mobile.png',
                     CALL_LINK: 'https://shimo.im/forms/lMTsArbYcy4hd2dY/fill'
                 }
             ],
