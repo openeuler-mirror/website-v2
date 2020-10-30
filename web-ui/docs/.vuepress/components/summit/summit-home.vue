@@ -170,7 +170,7 @@ export default {
     .apply-title{
         font-size: 32px;
         font-family: FZLTCHJW;
-        font-weight: bold;
+        font-weight: 400;
         color: #000000;
         line-height: 39px;
         margin-bottom: 36px;
