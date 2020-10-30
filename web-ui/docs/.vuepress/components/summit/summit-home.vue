@@ -11,9 +11,9 @@
             <p :class="['tip',$lang === 'en'?'font-bold':'']">{{ i18n.interaction.SUMMIT.SUMMITTIP }}</p>
             <p :class="['apply-title',$lang === 'en'?'font-bold':'']">{{ i18n.interaction.SUMMIT.APPLY_TITLE }}</p>
             <div class="apply-process">
-                <div class="process" @click="go(item.CALL_LINK)" v-for="(item,index) in  i18n.interaction.SUMMIT.CALL_LIST" :key="index" :style="{background: item.BACKGROUND_COLOR}">
-                    <img :src="item.CALL_IMG" alt="" v-if="!isShowH5" />
-                    <img :src="item.CALL_MOBILE_IMG" alt="" v-else />
+                <div class="process" v-for="(item,index) in  i18n.interaction.SUMMIT.CALL_LIST" :key="index" :style="{background: item.BACKGROUND_COLOR}">
+                    <img :src="item.CALL_IMG" alt="" @click="go(item.CALL_LINK)" v-if="!isShowH5" />
+                    <img :src="item.CALL_MOBILE_IMG" alt="" @click="go(item.CALL_MOBILE_LINK)" v-else />
                 </div>
             </div>
             <div :class="['review',$lang === 'en'?'en-font':'']">
