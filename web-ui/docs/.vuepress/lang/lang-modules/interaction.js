@@ -648,21 +648,25 @@ module.exports = {
                 {
                     CALL_IMG: '/img/summit/speaker.png',
                     CALL_MOBILE_IMG: '/img/summit/speaker-mobile.png',
+                    CALL_MOBILE_LINK: 'https://shimo.im/forms/XtCTP9jcrXKgjytD/fill',
                     CALL_LINK: 'https://shimo.im/forms/XtCTP9jcrXKgjytD/fill'
                 },
                 {
                     CALL_IMG: '/img/summit/sponsor.png',
                     CALL_MOBILE_IMG: '/img/summit/sponsor-mobile.png',
+                    CALL_MOBILE_LINK: 'https://shimo.im/forms/VWWtgLsVHzovmbeH/fill',
                     CALL_LINK: 'https://shimo.im/forms/VWWtgLsVHzovmbeH/fill'
                 },
                 {
                     CALL_IMG: '/img/summit/sig.png',
                     CALL_MOBILE_IMG: '/img/summit/demo-mobile.png',
+                    CALL_MOBILE_LINK: 'https://shimo.im/forms/lMTsArbYcy4hd2dY/fill',
                     CALL_LINK: 'https://shimo.im/forms/KSMKHGPHIAsjoNHP/fill'
                 },
                 {
                     CALL_IMG: '/img/summit/demo.png',
                     CALL_MOBILE_IMG: '/img/summit/sig-mobile.png',
+                    CALL_MOBILE_LINK: 'https://shimo.im/forms/KSMKHGPHIAsjoNHP/fill',
                     CALL_LINK: 'https://shimo.im/forms/lMTsArbYcy4hd2dY/fill'
                 }
             ],
