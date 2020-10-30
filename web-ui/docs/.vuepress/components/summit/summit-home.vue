@@ -1,4 +1,4 @@
-<!-- 峰会页 -->
+<!-- 峰会 -->
 <template>
     <div class="summit">
         <h3 v-if="isShowH5">{{ i18n.interaction.SUMMIT.SUMMIT }}</h3>
