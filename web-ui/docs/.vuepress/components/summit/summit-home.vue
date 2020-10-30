@@ -12,8 +12,8 @@
             <p :class="['apply-title',$lang === 'en'?'font-bold':'']">{{ i18n.interaction.SUMMIT.APPLY_TITLE }}</p>
             <div class="apply-process">
                 <div class="process" @click="go(item.CALL_LINK)" v-for="(item,index) in  i18n.interaction.SUMMIT.CALL_LIST" :key="index" :style="{background: item.BACKGROUND_COLOR}">
-                    <img :src="item.CALL_IMG" alt="" />
-                    <p :style="{color: item.FONT_COLOR}">{{ item.CALL_TEXT }}</p>
+                    <img :src="item.CALL_IMG" alt="" v-if="!isShowH5" />
+                    <img :src="item.CALL_MOBILE_IMG" alt="" v-else />
                 </div>
             </div>
             <div :class="['review',$lang === 'en'?'en-font':'']">
@@ -138,7 +138,7 @@ export default {
 .summit .summit-explain {
     width: 1120px;
     .mr-All(60px auto 24px auto);
-    .word-common-css(20px,PingFangSC-Regular,400,rgba(0, 0, 0, 1),40px);
+    .word-common-css(20px,FZLTXIHJW,400,rgba(0, 0, 0, 0.85),40px);
     @media screen and (max-width: 1000px) {
         width: 100%;
         .mr-All(40px 0 30px 0);
@@ -162,7 +162,7 @@ export default {
     .tip{
         font-size: 20px;
         font-family: FZLTCHJW;
-        color: #333333;
+        color: #000000;
         line-height: 40px;
         font-weight: bold;
         margin-bottom: 60px;
@@ -186,22 +186,13 @@ export default {
             width: 400px;
             height: 160px;
             display: flex;
-            
             align-items: center;
             cursor: pointer;
             box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             margin-bottom: 36px;
             img{
-                .wid-and-hei(160px,130px);
-                margin-left: 10px;
-            }
-            p{
-                font-size: 24px;
-                font-family: Roboto-Bold;
-                font-weight: bold;
-                line-height: 24px;
-                margin-left: 17px;
+                .wid-and-hei(400px,160px);
             }
         }
     }
@@ -215,21 +206,22 @@ export default {
             background-repeat: no-repeat;
             background-size: contain;
             left: 124px;
-            top: 95px;
+            top: 86px;
         }
         .en-position{
-            left: 237px;
-            top: 96px;
+            left: 196px;
+            top: 85px;
         }
         p{
             font-size: 26px;
             font-family: FZLTHJW;
-            font-weight: bold;
+            font-weight: normal;
             color: #000000;
             line-height: 30px;
             &:first-of-type{
                 font-size: 20px;
                 margin-bottom: 60px;
+                line-height: 20px;
                 cursor: pointer;
                 color: #002FA7;
                 @media screen and (max-width: 1000px) {
@@ -278,11 +270,7 @@ export default {
                 height: 102px;
                 margin: 0 auto 30px auto;
                 img{
-                    .wid-and-hei(102px,84px);
-                }
-                p{
-                    line-height: 16px;
-                    font-size: 14px;
+                    .wid-and-hei(256px,102px);
                 }
             }
         }
@@ -293,10 +281,15 @@ export default {
              }
              p{
                 font-size: 16px;
+                line-height: 30px;
                  &:last-of-type{
                      font-size: 14px;
                      line-height: 17px;
                      margin-top: 10px;
+                 }
+                 &:first-of-type{
+                     font-size: 14px;
+                     line-height: 26px;
                  }
              }
         }

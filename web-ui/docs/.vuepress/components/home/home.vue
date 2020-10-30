@@ -48,7 +48,7 @@
                         </div>
                     </a>
                 </el-carousel-item>
-                <el-carousel-item>
+                <el-carousel-item v-if="$lang === 'zh'">
                     <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_BANNER.BANNER_PC_IMG}" @click="go(i18n.home.HOME_BANNER.BANNER_LINK)">
                     </div>
                 </el-carousel-item>
@@ -84,13 +84,13 @@
                     </a>
                     <div class="mobile-version" @click="go(item.LINK)" :style="{backgroundImage:item.MOBILE_IMG?item.MOBILE_IMG:''}" v-if="index == 0"></div>
                 </swiper-slide>
-                <swiper-slide>
+                <swiper-slide v-if="$lang === 'zh'">
                     <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_BANNER.BANNER_MOBILE_IMG}" @click="go(i18n.home.HOME_BANNER.BANNER_LINK)">
                     </div>
                 </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
-                <li v-for="item in 6" :class="{'mobile-pagination-active': mobilePagenationIndex===item}"></li>
+                <li v-for="item in bannerAmount" :class="{'mobile-pagination-active': mobilePagenationIndex===item}"></li>
             </ul>
         </div>
         <div class="home-introduce">
@@ -447,7 +447,8 @@
                 },
                 mobileSwiperInterval: null,
                 mobilePagenationIndex: 1,
-                developerList: []
+                developerList: [],
+                bannerAmount: 5
             }
         },
         mounted() {
@@ -464,6 +465,7 @@
                 })
             }
             this.developerList = this.changeArr(this.i18n.home.HOME_DEV.DEV_INFO,16);
+            this.$lang === 'en'?this.bannerAmount = 5:this.bannerAmount = 6;
         },
         beforeDestroy () {
             this.mobileSwiperInterval && clearInterval(this.mobileSwiperInterval);

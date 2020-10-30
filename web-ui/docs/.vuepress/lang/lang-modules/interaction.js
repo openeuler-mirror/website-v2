@@ -150,9 +150,9 @@ module.exports = {
         SUMMIT: {
             SUMMIT: '峰会',
             SUMMITCONTENT: [
-                'openEuler Summit 是由 openEuler 社区举办的开发者交流会，首届线下openEuler Summit 2020 将于12月在北京举行。openEuler 不仅是一个支持多种处理器架构的操作系统，更是一个最具活力的开源社区。峰会广泛邀请操作系统生态的开发者、用户、社区贡献者、软件爱好者共同解读 openEuler 的最新版，探讨未来的技术路线，让技术、生态、商业在这里产生奇妙的化学反应。',
+                'openEuler Summit 是由 openEuler 社区举办的开发者交流会，首届线下 openEuler Summit 2020 将于12月在北京举行。openEuler 不仅是一个支持多种处理器架构的操作系统，更是一个最具活力的开源社区。峰会广泛邀请操作系统生态的开发者、用户、社区贡献者、软件爱好者共同解读 openEuler 的最新版，探讨未来的技术路线，让技术、生态、商业在这里产生奇妙的化学反应。',
                 'openEuler 代表了一种可能性，一种开源、开放模式下的蓬勃朝气，一种从无到有、从0到1的创造，一个可以燎原的火种。在这里，没有厂商绑定，没有严苛规则，只看代码实力、项目创意，通过社区合作，持续孵化开源项目，推动基础架构技术的发展。',
-                '开源是一种态度，分享是一种精神。无论你报名演讲、演示 Demo、发表案例、参与社区建设、抑或只是来交流，我们都诚挚的欢迎您的到来。'
+                '开源是一种态度，分享是一种精神。无论你报名演讲、演示Demo、发表案例、参与社区建设、抑或只是来交流，我们都诚挚的欢迎您的到来。'
             ],
             HOMETITLE: '精彩回顾',
             LISTTITLE: '精彩回顾',
@@ -165,31 +165,23 @@ module.exports = {
             FRIENDSHIPLINK: '友情链接',
             CALL_LIST: [
                 {
-                    CALL_TEXT: 'Call for Speaker',
                     CALL_IMG: '/img/summit/speaker.png',
-                    FONT_COLOR: '#002FA7',
-                    BACKGROUND_COLOR: '#FEB32A',
+                    CALL_MOBILE_IMG: '/img/summit/speaker-mobile.png',
                     CALL_LINK: 'https://shimo.im/forms/XtCTP9jcrXKgjytD/fill'
                 },
                 {
-                    CALL_TEXT: 'Call for Sponsor',
                     CALL_IMG: '/img/summit/sponsor.png',
-                    FONT_COLOR: '#FEB32A',
-                    BACKGROUND_COLOR: '#002FA7',
+                    CALL_MOBILE_IMG: '/img/summit/sponsor-mobile.png',
                     CALL_LINK: 'https://shimo.im/forms/VWWtgLsVHzovmbeH/fill'
                 },
                 {
-                    CALL_TEXT: 'Call for SIG',
                     CALL_IMG: '/img/summit/sig.png',
-                    FONT_COLOR: '#FEB32A',
-                    BACKGROUND_COLOR: '#002FA7',
+                    CALL_MOBILE_IMG: '/img/summit/sig-mobile.png',
                     CALL_LINK: 'https://shimo.im/forms/KSMKHGPHIAsjoNHP/fill'
                 },
                 {
-                    CALL_TEXT: 'Call for Demo',
                     CALL_IMG: '/img/summit/demo.png',
-                    FONT_COLOR: '#002FA7',
-                    BACKGROUND_COLOR: '#FEB32A',
+                    CALL_MOBILE_IMG: '/img/summit/demo-mobile.png',
                     CALL_LINK: 'https://shimo.im/forms/lMTsArbYcy4hd2dY/fill'
                 }
             ],
@@ -650,31 +642,23 @@ module.exports = {
             FRIENDSHIPLINK: 'Links',
             CALL_LIST: [
                 {
-                    CALL_TEXT: 'Call for Speaker',
                     CALL_IMG: '/img/summit/speaker.png',
-                    FONT_COLOR: '#002FA7',
-                    BACKGROUND_COLOR: '#FEB32A',
+                    CALL_MOBILE_IMG: '/img/summit/speaker-mobile.png',
                     CALL_LINK: 'https://shimo.im/forms/XtCTP9jcrXKgjytD/fill'
                 },
                 {
-                    CALL_TEXT: 'Call for Sponsor',
                     CALL_IMG: '/img/summit/sponsor.png',
-                    FONT_COLOR: '#FEB32A',
-                    BACKGROUND_COLOR: '#002FA7',
+                    CALL_MOBILE_IMG: '/img/summit/sponsor-mobile.png',
                     CALL_LINK: 'https://shimo.im/forms/VWWtgLsVHzovmbeH/fill'
                 },
                 {
-                    CALL_TEXT: 'Call for SIG',
                     CALL_IMG: '/img/summit/sig.png',
-                    FONT_COLOR: '#FEB32A',
-                    BACKGROUND_COLOR: '#002FA7',
+                    CALL_MOBILE_IMG: '/img/summit/sig-mobile.png',
                     CALL_LINK: 'https://shimo.im/forms/KSMKHGPHIAsjoNHP/fill'
                 },
                 {
-                    CALL_TEXT: 'Call for Demo',
                     CALL_IMG: '/img/summit/demo.png',
-                    FONT_COLOR: '#002FA7',
-                    BACKGROUND_COLOR: '#FEB32A',
+                    CALL_MOBILE_IMG: '/img/summit/demo-mobile.png',
                     CALL_LINK: 'https://shimo.im/forms/lMTsArbYcy4hd2dY/fill'
                 }
             ],
