@@ -61,7 +61,7 @@
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
                 <swiper-slide v-if="i18n.home.HOME_FIRST_BANNER">
-                    <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_FIRST_BANNER.BANNER_MOBILE_IMG}" @click="go(i18n.home.HOME_FIRST_BANNER.BANNER_LINK)">
+                    <div class="carousel-banner first-banner" :style="{backgroundImage: i18n.home.HOME_FIRST_BANNER.BANNER_MOBILE_IMG}" @click="go(i18n.home.HOME_FIRST_BANNER.BANNER_LINK)">
                     </div>
                 </swiper-slide>
                 <swiper-slide>
@@ -980,6 +980,11 @@
         background-position: center center;
         @media screen and (max-width: 1000px) {
             background-size: 100% 100%;
+        }
+    }
+    .home-banner .first-banner {
+        @media screen and (max-width: 1000px) {
+            background-size: contain !important;
         }
     }
     .home-introduce {
