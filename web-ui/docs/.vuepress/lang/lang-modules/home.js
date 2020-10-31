@@ -13,11 +13,6 @@ module.exports = {
                 MOBILE_IMG: "url('/img/home/banner/zh-mobile-version.png')"
             },
             {
-            TITLE: "openEuler Summit 2020",
-            LINK: "/interaction/summit-list/",
-            DES: "openEuler Virtual Summit 2020 是 openEuler 在发布 20.03 LTS 版本后第一次举行的峰会，本次大会邀请了华为的资深专家、社区 Committer 和多家 openEuler 社区合作厂商的重量嘉宾贡献多场精彩的演讲，不容错过。",
-            },
-            {
                 TITLE: "iSula",
                 LINK: "https://live.bilibili.com/22290444",
                 DES: "iSula是一种云原生轻量级容器解决方案，可通过统一、灵活的架构满足ICT领域端、边、云场景的多种需求。",
@@ -28,10 +23,15 @@ module.exports = {
                 DES: "A-Tune是智能性能优化系统软件，即通过机器学习引擎对业务应用建立精准模型, 再根据业务负载智能匹配最佳操作系统配置参数组合，实现系统整体运行效率提升。",
             }
         ],
-        HOME_BANNER: {
+        HOME_LAST_BANNER: {
             BANNER_PC_IMG: 'url("/img/home/banner/pc-contribution.png")',
             BANNER_MOBILE_IMG: 'url("/img/home/banner/mobile-contribution.png")',
             BANNER_LINK: 'https://isrc.iscas.ac.cn/summer2020/#/summitmeeting'
+        },
+        HOME_FIRST_BANNER: {
+            BANNER_PC_IMG: 'url("/img/home/banner/zh-pc-summit.png")',
+            BANNER_MOBILE_IMG: 'url("/img/home/banner/zh-mobile-summit.png")',
+            BANNER_LINK: '/interaction/summit-list/'
         },
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
@@ -518,11 +518,6 @@ module.exports = {
                 MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
             },
             {
-            TITLE: "openEuler Summit 2020",
-            LINK: "/interaction/summit-list/",
-            DES: "openEuler Virtual Summit 2020 is the first summit after the release of the openEuler 20.03 LTS version. Senior experts from Huawei, community committers and weight guests from several open Euler community partners were invited to give a number of wonderful speeches, which should not be missed.",
-            },
-            {
                 TITLE: "iSula",
                 LINK: "https://live.bilibili.com/22290444",
                 DES: "A cloud-native lightweight container solution that can meet the needs of device, edge, and cloud scenarios in ICT domain with a unified and flexible architecture.",
@@ -533,10 +528,15 @@ module.exports = {
                 DES: "A system software to auto-optimize the system adaptively to multiple scenarios with embedded AI-engine.",
             }
         ],
-        HOME_BANNER: {
+        HOME_LAST_BANNER: {
             BANNER_PC_IMG: 'url("/img/home/banner/pc-contribution.png")',
             BANNER_MOBILE_IMG: 'url("/img/home/banner/mobile-contribution.png")',
             BANNER_LINK: 'https://isrc.iscas.ac.cn/summer2020/#/summitmeeting'
+        },
+        HOME_FIRST_BANNER: {
+            BANNER_PC_IMG: 'url("/img/home/banner/en-pc-summit.png")',
+            BANNER_MOBILE_IMG: 'url("/img/home/banner/en-mobile-summit.png")',
+            BANNER_LINK: '/interaction/summit-list/'
         },
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
