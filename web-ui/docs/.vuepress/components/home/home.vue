@@ -406,7 +406,7 @@
 <script>
     import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
     import 'swiper/css/swiper.css';
-    import { meetingList, statisticsList } from "../../api/home";
+    import { meetingList } from "../../api/home";
     import dayjs from "dayjs";
     import calender from "./calender";
     import playcontroll from './../controll/videoctrl'
@@ -420,15 +420,6 @@
             .catch(data => {
                 that.$message.error(data);
             });
-        },
-        statisticsList () {
-            statisticsList(that.statisticParams)
-            .then(data => {
-                console.log(data);
-            })
-            .catch(data => {
-                that.$message.error(data);
-            })
         }
     }
     export default {
@@ -466,15 +457,11 @@
                 mobilePagenationIndex: 1,
                 developerList: [],
                 bannerAmount: 5,
-                statisticParams: {
-                    type: 'openEuler'
-                }
             }
         },
         mounted() {
             this.videoCtrlParams.element = document.getElementById('home-video');
             remoteMethods.meetingList();
-            remoteMethods.statisticsList();
             this.roomName = this.i18n.home.HOME_ROOMS.ROOM_NAME
             this.toggleHover();
             this.getRoomsData();
@@ -486,7 +473,7 @@
                 })
             }
             this.developerList = this.changeArr(this.i18n.home.HOME_DEV.DEV_INFO,16);
-            this.$lang === 'en'?this.bannerAmount:this.bannerAmount = 6;
+            this.$lang === 'en'?this.bannerAmount = 5:this.bannerAmount = 6;
         },
         beforeDestroy () {
             this.mobileSwiperInterval && clearInterval(this.mobileSwiperInterval);
