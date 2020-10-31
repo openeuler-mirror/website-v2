@@ -2,10 +2,14 @@
     <div class="home">
         <div class="is-pc home-carousel" v-if="!isShowH5">
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" @change="eventChange()">
+                <el-carousel-item v-if="i18n.home.HOME_FIRST_BANNER">
+                    <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_FIRST_BANNER.BANNER_PC_IMG}" @click="go(i18n.home.HOME_FIRST_BANNER.BANNER_LINK)">
+                    </div>
+                </el-carousel-item>
                 <el-carousel-item>
                     <div class="carousel-video">
                         <video poster="/img/home/BannerVideo.png" loop width="100%" height="500px" id="home-video">
-                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/pc-home-video.mp4"  type="video/mp4">
+                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E6%AC%A7%E6%8B%89MG%E5%8A%A8%E7%94%BB_1080%60500_TS.mp4"  type="video/mp4">
                         </video>
                         <playcontroll :ctrl-obj="videoCtrlParams" ref="playctrlEle" @playStatus="checkStatus"></playcontroll>
                         <div class="play-btn" v-if="!isNowPlay" @click="playHomeVideo()">
@@ -49,13 +53,17 @@
                     </a>
                 </el-carousel-item>
                 <el-carousel-item v-if="$lang === 'zh'">
-                    <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_BANNER.BANNER_PC_IMG}" @click="go(i18n.home.HOME_BANNER.BANNER_LINK)">
+                    <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_LAST_BANNER.BANNER_PC_IMG}" @click="go(i18n.home.HOME_LAST_BANNER.BANNER_LINK)">
                     </div>
                 </el-carousel-item>
             </el-carousel>
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
+                <swiper-slide v-if="i18n.home.HOME_FIRST_BANNER">
+                    <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_FIRST_BANNER.BANNER_MOBILE_IMG}" @click="go(i18n.home.HOME_FIRST_BANNER.BANNER_LINK)">
+                    </div>
+                </swiper-slide>
                 <swiper-slide>
                     <div class="carousel-video">
                         <video poster="/img/home/BannerVideo.png"
@@ -65,7 +73,7 @@
                                height="300px"
                                ref="video"
                                @click="playVideo">
-                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/mobile-home-video.mp4"  type="video/mp4">
+                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E6%AC%A7%E6%8B%89MG%E5%8A%A8%E7%94%BB_1080P_TS.mp4"  type="video/mp4">
                         </video>
                         <div class="mobile-btn" v-show="mobilePlayBtnDisplay" @click="playVideo"></div>
                     </div>
@@ -85,7 +93,7 @@
                     <div class="mobile-version" @click="go(item.LINK)" :style="{backgroundImage:item.MOBILE_IMG?item.MOBILE_IMG:''}" v-if="index == 0"></div>
                 </swiper-slide>
                 <swiper-slide v-if="$lang === 'zh'">
-                    <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_BANNER.BANNER_MOBILE_IMG}" @click="go(i18n.home.HOME_BANNER.BANNER_LINK)">
+                    <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_LAST_BANNER.BANNER_MOBILE_IMG}" @click="go(i18n.home.HOME_LAST_BANNER.BANNER_LINK)">
                     </div>
                 </swiper-slide>
             </swiper>
@@ -398,7 +406,7 @@
 <script>
     import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
     import 'swiper/css/swiper.css';
-    import { meetingList } from "../../api/home";
+    import { meetingList, statisticsList } from "../../api/home";
     import dayjs from "dayjs";
     import calender from "./calender";
     import playcontroll from './../controll/videoctrl'
@@ -412,6 +420,15 @@
             .catch(data => {
                 that.$message.error(data);
             });
+        },
+        statisticsList () {
+            statisticsList(that.statisticParams)
+            .then(data => {
+                console.log(data);
+            })
+            .catch(data => {
+                that.$message.error(data);
+            })
         }
     }
     export default {
@@ -448,12 +465,16 @@
                 mobileSwiperInterval: null,
                 mobilePagenationIndex: 1,
                 developerList: [],
-                bannerAmount: 5
+                bannerAmount: 5,
+                statisticParams: {
+                    type: 'openEuler'
+                }
             }
         },
         mounted() {
             this.videoCtrlParams.element = document.getElementById('home-video');
             remoteMethods.meetingList();
+            remoteMethods.statisticsList();
             this.roomName = this.i18n.home.HOME_ROOMS.ROOM_NAME
             this.toggleHover();
             this.getRoomsData();
@@ -465,7 +486,7 @@
                 })
             }
             this.developerList = this.changeArr(this.i18n.home.HOME_DEV.DEV_INFO,16);
-            this.$lang === 'en'?this.bannerAmount = 5:this.bannerAmount = 6;
+            this.$lang === 'en'?this.bannerAmount:this.bannerAmount = 6;
         },
         beforeDestroy () {
             this.mobileSwiperInterval && clearInterval(this.mobileSwiperInterval);
