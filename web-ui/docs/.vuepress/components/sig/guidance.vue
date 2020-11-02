@@ -45,10 +45,10 @@
                         <div class="step-right-box fade-in" :class="$lang == 'en'?'en-step-box':''">
                             <div class="inner-box">
                                 <img :src="item.RIGHT.LEFT_IMG" alt />
-                                <p v-if="$lang == 'zh'?true:false">{{ item.RIGHT.RIGHT_INFO }}</p>
+                                <p v-if="$lang == 'zh'?true:false" v-html="item.RIGHT.RIGHT_INFO"></p>
                                 <p v-if="$lang == 'en'?true:false">
                                     <span class="en-desc">{{item.RIGHT.RIGHT_DESC}}</span>
-                                    <span>{{ item.RIGHT.RIGHT_INFO }}</span>
+                                    <span v-html="item.RIGHT.RIGHT_INFO"></span>
                                 </p>
                             </div>
                         </div>
@@ -77,7 +77,7 @@
                     </div>
                     <div class="inner-box">
                         <img :src="item.RIGHT.LEFT_IMG" alt />
-                        <p>{{ item.RIGHT.RIGHT_INFO }}</p>
+                        <p v-html="item.RIGHT.RIGHT_INFO"></p>
                     </div>
                 </div>
             </div>
