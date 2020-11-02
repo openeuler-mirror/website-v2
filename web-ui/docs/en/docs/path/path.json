@@ -50,7 +50,7 @@
                 ]
             },
             {
-                "title": "Mgmt",
+                "title": "Management",
                 "doc": [
                     {
                         "img": "/img/docs/docs-administration.svg",
@@ -85,7 +85,7 @@
                 ]
             },
             {
-                "title": "Dev",
+                "title": "Develop",
                 "doc": [
                     {
                         "img": "/img/docs/docs-application.svg",
@@ -131,7 +131,7 @@
                 ]
             },
             {
-                "title": "Mgmt",
+                "title": "Management",
                 "doc": [
                     {
                         "img": "/img/docs/docs-administration.svg",
@@ -171,7 +171,7 @@
                 ]
             },
             {
-                "title": "Dev",
+                "title": "Develop",
                 "doc": [
                     {
                         "img": "/img/docs/docs-application.svg",

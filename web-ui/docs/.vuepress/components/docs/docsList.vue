@@ -57,10 +57,10 @@
             <div class="is-h5" v-else>
                 <div class="mail-guide" v-for="(items, index) in currentDocs" :key="index">
                     <div v-if="items.doc.length" class="step-H5" :class="[items.doc.length === 1 && 'step-left-H5']">
-                        <div :class="['step-num',targetLocale == '/en/'?'step-en':'']">
+                        <div :class="targetLocale === '/en/'?'step-en':''">
                             <span>{{ items.title }}</span>
                         </div>
-                        <p  :class="[item.path?'':'unClick',targetLocale == '/en/'?'en-p-box':'']" @click="go(item)" v-for="(item, index) in items.doc" :key="index">{{ item.name }}</p>
+                        <p  :class="[item.path?'':'unClick',targetLocale === '/en/'?'en-p-box':'']" @click="go(item)" v-for="(item, index) in items.doc" :key="index">{{ item.name }}</p>
                     </div>
                 </div>
             </div>
@@ -326,21 +326,17 @@ export default {
     .step-left-H5{
         text-align: center;
     }
-    .step-num {
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
+    .step-H5 .step-en span{
+        font-family: Roboto-BoldCondensed !important;
+    }
+    .step-H5 div span {
+        color: #000000;
+        font-size: 17px;
+        font-family: FZLTXIHJW;
+        display: block;
         text-align: center;
-        border-radius: 50%;
-        background-color: #002fa7;
         margin: 0 auto;
-    }
-    .step-H5 .step-en{
-        font-family: Roboto-BoldCondensed, Roboto;
-    }
-    .step-num span {
-        color: #fff;
-        font-size: 18px;
+        font-weight: bold;
     }
     .step-H5 .en-p-box{
         width: 256px;

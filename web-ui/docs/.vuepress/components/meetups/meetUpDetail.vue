@@ -49,7 +49,7 @@
             <div class="flowPath-img-mobile" v-else>
                 <div class="mail-guide" v-for="(item, index) in flowPathList" :key="index">
                     <div class="step-H5 step-left-H5">
-                        <div :class="['step-num',,$lang == 'en'?'step-en':'']">
+                        <div :class="$lang == 'en'?'step-en':''">
                             <span>{{ item.FLOW_PATH_TIME }}</span>
                         </div>
                         <p  :class="$lang == 'en'?'en-p-box':''">{{ item.FLOW_PATH_NAME }}</p>
@@ -61,11 +61,11 @@
             <p :class="['title',$lang === 'en'?'font-regular':'']">{{ i18n.interaction.MEETUPS.DETAIL_MEET }}</p>
             <div :class="['meet-address',$lang === 'en'?'en-address':'']">
                 <div class="address-message">
-                    <img v-if="detailObj.MEETINGS_INFO" :src="detailObj.MEETINGS_INFO.ADDRESS_IMG" alt />
+                    <img v-if="addressObj" :src="addressObj.ADDRESS_IMG" alt />
                     <div class="address-text">
                         <i class="location"></i>
-                        <p v-if="detailObj.MEETINGS_INFO">{{ detailObj.MEETINGS_INFO.ADDRESS_UP }}</p>
-                        <p v-if="addressObj" v-for="(item,index) in addressObj.ADDRESS_DOWN" :key="index">{{item}}</p>
+                        <p v-if="addressObj">{{ detailObj.MEETINGS_INFO.ADDRESS_UP }}</p>
+                        <p v-if="addressObj" v-for="(item,index) in addressObj.ADDRESS_DOWN" :key="index">{{ item }}</p>
                     </div>
                 </div>
                 <div class="scan-qrcode">
@@ -383,9 +383,6 @@ export default {
             }
             .scan-qrcode{
                 margin-left: 70px;
-                img{
-                    left: 0 !important;
-                }
             }
         }
         .map{
@@ -440,26 +437,18 @@ export default {
         .step-left-H5{
             text-align: center;
         }
-        .step-num {
-            width: 60px;
-            height: 60px;
-            line-height: 60px;
-            text-align: center;
-            border-radius: 50%;
-            background-color: #002fa7;
-            margin: 0 auto;
-        }
-        .step-H5 .step-en{
-            font-family: Roboto-BoldCondensed, Roboto;
+        .step-H5 .step-en span{
+            font-family: Roboto-BoldCondensed !important;
         }
         .step-num span {
-            color: #fff;
-            font-size: 18px;
-            font-family: Roboto-BoldCondensed;
+            color: #000000;
+            font-size: 17px;
+            font-family: FZLTXIHJW;
         }
         .step-H5 .en-p-box{
             width: 256px;
-            font-family: Roboto-Regular, Roboto;
+            height: auto;
+            font-family: Roboto-Regular;
         }
         .step-H5 p {
             font-size: 16px;
@@ -520,6 +509,9 @@ export default {
             }
             .map{
                 display: none;
+            }
+            .en-address{
+                height: auto !important;
             }
         }
     }

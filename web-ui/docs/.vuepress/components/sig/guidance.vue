@@ -63,8 +63,8 @@
                 :key="index"
             >
                 <div class="step-H5">
-                    <div class="step-num">
-                        <span>{{ item.LEFT.LEFT_CIRCLE }}</span>
+                    <div class="step-top">
+                        <span :class="$lang === 'en'?'en-font':''">{{ item.LEFT.LEFT_CIRCLE }}</span>
                     </div>
                     <div class="inner-box">
                         <img :src="item.LEFT.LEFT_IMG" alt />
@@ -72,8 +72,8 @@
                     </div>
                 </div>
                 <div class="step-H5">
-                    <div class="step-num">
-                        <span>{{ item.RIGHT.RIGHT_CIRCLE }}</span>
+                    <div class="step-top">
+                        <span :class="$lang === 'en'?'en-font':''">{{ item.RIGHT.RIGHT_CIRCLE }}</span>
                     </div>
                     <div class="inner-box">
                         <img :src="item.RIGHT.LEFT_IMG" alt />
@@ -246,18 +246,17 @@ h3 {
         margin: 40px auto;
         text-align: center;
     }
-    .step-num {
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        text-align: center;
-        border-radius: 50%;
-        background-color: #002fa7;
-        display: inline-block;
+    .step-top {
+        margin: 0 auto 20px auto;
     }
-    .step-num span {
-        color: #fff;
-        font-size: 18px;
+    .step-top .en-font {
+        font-family: Roboto-BoldCondensed !important;
+    }
+    .step-top span {
+        font-size: 17px;
+        color: #000000;
+        font-family: FZLTXIHJW;
+        font-weight: bold;
     }
     .step-H5 p {
         font-size: 14px;

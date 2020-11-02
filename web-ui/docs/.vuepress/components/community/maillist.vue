@@ -66,14 +66,12 @@
                 <div class="step-left">
                     <div class="mail-box">
                         <div class="step-left-box">
-                            <div class="step-left-num">
-                                <span v-if="$lang === 'en'">{{ '0'+ (index + 1) }}</span>
-                                <span v-if="$lang !== 'en'">{{ item.LEFT.LEFT_CIRCLE }}</span>
+                            <div class="step-top">
+                                <span :class="$lang === 'en'?'en-font':''">{{ item.LEFT.LEFT_CIRCLE }}</span>
                             </div>
                             <div :class="['inner-box',$lang === 'en'?'en-box' + index : '']">
                                 <img :src="item.LEFT.LEFT_IMG" alt="" />
                                 <p>
-                                    <span  v-if="$lang === 'en'" class="en-title">{{ item.LEFT.LEFT_CIRCLE }}<br></span>
                                     {{ item.LEFT.LEFT_INFO }}
                                 </p>
                             </div>
@@ -82,15 +80,13 @@
                 </div>
                 <div class="step-right">
                     <div class="mail-box">
-                        <div class="step-right-num">
-                            <span v-if="$lang === 'en'">{{ '0'+ (index + 3) }}</span>
-                            <span v-if="$lang !== 'en'">{{ item.RIGHT.RIGHT_CIRCLE }}</span>
+                        <div class="step-top">
+                            <span :class="$lang === 'en'?'en-font':''">{{ item.RIGHT.RIGHT_CIRCLE }}</span>
                         </div>
                         <div :class="['step-right-box', $lang === 'en'?'en-box' + index : '']">
                             <div :class="['inner-box',$lang === 'en'?'en-box' + index : '']">
                                 <img :src="item.RIGHT.LEFT_IMG" alt="" />
                                 <p>
-                                    <span v-if="$lang === 'en'" class="en-title">{{ item.RIGHT.RIGHT_CIRCLE }}<br></span>
                                     {{ item.RIGHT.RIGHT_INFO }}
                                 </p>
                             </div>
@@ -711,16 +707,17 @@ p {
     .step-right {
         text-align: center;
     }
-    .step-left-num,
-    .step-right-num {
-        width: 48px;
-        height: 48px;
-        line-height: 48px;
-        margin-bottom: 20px;
+    .step-top{
+        margin: 0 auto 20px auto;
     }
-    .step-left-num span,
-    .step-right-num span {
-        font-size: 18px;
+    .step-top span {
+        font-size: 17px;
+        color: #000000;
+        font-family: FZLTXIHJW;
+        font-weight: bold;
+    }
+    .step-top .en-font {
+        font-family: Roboto-BoldCondensed !important;
     }
     .step-right-box,
     .step-left-box {
