@@ -370,7 +370,6 @@ export default {
                 }
                 img{
                     position: absolute;
-                    right: -10px;
                     width: 100px;
                     height: 100px;
                 }
@@ -501,6 +500,7 @@ export default {
                         text-align: center;
                         margin-bottom: 0;
                         margin-top: 110px;
+                        font-size: 16px;
                     }
                     img{
                         top: 0;
