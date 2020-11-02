@@ -39,14 +39,6 @@ module.exports = {
                 minRatio: 0.8
             }))
         }
-    },
-    chainWebpack: (config, isServer) => {
-        config.module.rule('image-compress')
-                        .test(/\.(png|jpe?g|gif|svg)$/i)
-                        .use('image-webpack-loader')
-                            .loader('image-webpack-loader')
-                            .options({ bypassOnDebug: true })
-                            .end()
     }, 
     locales: {
         '/': {
