@@ -483,8 +483,10 @@ export default {
                         }
                         p{
                             text-align: center;
+                            font-size: 14px;
                              &:first-of-type{
                                 margin: 20px 0 10px 0;
+                                font-size: 16px;
                             }
                         }
                     }
@@ -506,6 +508,9 @@ export default {
                         margin-left: -50px;
                     }
                 }
+            }
+            .title{
+                font-size: 17px;
             }
             .map{
                 display: none;
