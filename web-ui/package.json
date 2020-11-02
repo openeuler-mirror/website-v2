@@ -19,6 +19,8 @@
     "vue-awesome-swiper": "^4.1.1",
     "vuepress": "~1.5.2",
     "vue-router": "3.4.5",
-    "compression-webpack-plugin": "^1.0.1"
+    "compression-webpack-plugin": "^1.0.1",
+    "image-webpack-loader": "^4.0.0",
+    "file-loader": "^6.1.0"
   }
 }
