@@ -173,19 +173,19 @@ module.exports = {
                     },
                 ],
                 MEETINGS_INFO: {
-                    ADDRESS_IMG: '/img/meetups/address.png',
+                    ADDRESS_IMG: '/img/meetups/address1.png',
                     ADDRESS_UP: 'Runhe Innovation & Intelligence Center',
                     ADDRESS_DOWN: [
                         'No.168 Ruanjian Avenue','Yuhua District','Nanjing'
                     ],
-                    APPLY_QRCODE: '/img/meetups/qrcode.png',
+                    APPLY_QRCODE: '/img/meetups/qrcode1.png',
                     MAP_IMG: '/img/meetups/map1.png'
                 }
                 
             },
             {
                 ID: 2,
-                MEETUPS_TITLE : 'Details for Meetup in Changsha',
+                MEETUPS_TITLE : 'Changsha Meetup',
                 MEETUPS_IMG: '/img/meetups/2.png',
                 MEETUPS_DATE: '2020-10-31',
                 MEETUPS_MONTH: 'October',
