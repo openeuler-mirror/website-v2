@@ -288,8 +288,10 @@ function getSearchReqJson(page, model, keyword, version) {
 }
 
 router.get('/statistics', function (req, res, next) {
-    let url = APICONF.STATISTICS_URL + 'query/all?community=openEuler';
-    httpUtil.getUrl(url, '').then(data => {
+    let obj = url.parse(encodeURI(req.url), true);
+    let type = obj.query.type;
+    let reqUrl = APICONF.STATISTICS_URL + 'query/all?community=' + type;
+    httpUtil.getUrl(reqUrl, '').then(data => {
         res.send(data);
     }).catch(ex => {
         console.log('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
