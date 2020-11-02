@@ -318,7 +318,7 @@ export default {
         display: block;
     }
     .step-H5 {
-        margin: 30px auto;
+        margin: 40px auto;
         .unClick{
             color: rgba(0, 0, 0, 0.25);
         }
@@ -348,6 +348,7 @@ export default {
         height:40px;
         line-height: 40px;
         color: #002FA7;
+        font-family: FZLTXIHJW;
         background:rgba(255,255,255,1);
         box-shadow:0px 3px 10px 0px rgba(0,0,0,0.1);
         border-radius:8px;

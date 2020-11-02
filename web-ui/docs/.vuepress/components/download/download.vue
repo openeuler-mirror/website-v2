@@ -397,7 +397,7 @@ export default {
           width: 108px;
           height: 24px;
           font-size: 12px;
-          font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
+          font-family: FZLTXIHJW;
           font-weight: normal;
           color: rgba(255, 255, 255, 1);
           line-height: 22px;
@@ -436,7 +436,7 @@ export default {
         p {
           font-size: 14px;
           color: rgba(0, 0, 0, 0.5);
-          font-family: FZLTXIHJW;
+          font-family: Roboto-Regular;
           margin-bottom: 22px;
           line-height: 24px;
           height: 48px;
@@ -455,14 +455,15 @@ export default {
           a {
             text-decoration: none;
             color: #002fa7;
+            font-family: Roboto-Regular;
           }
           .url-list {
             display: flex;
             flex-wrap: wrap;
-             justify-content: start;
+            justify-content: start;
             li {
               margin-bottom: 14px;
-              margin-left: 20px;
+              margin-left: 22px;
               &:first-of-type{
                   margin-left: 0;
               }
@@ -531,7 +532,7 @@ export default {
           width: 74px;
           height: 24px;
           font-size: 12px;
-          font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
+          font-family: FZLTXIHJW;
           font-weight: normal;
           color: rgba(255, 255, 255, 1);
           line-height: 23px;
@@ -575,6 +576,7 @@ export default {
           a {
             text-decoration: none;
             color: #002fa7;
+            font-family: FZLTXIHJW;
           }
           .url-list {
               display: flex;
@@ -587,10 +589,10 @@ export default {
               margin-bottom: 16px;
               @media screen and (max-width: 1000px) {
                   width: 68px;
-                margin-bottom: 20px;
-                &:last-of-type {
-                  margin-bottom: 30px;
-                }
+                  margin-bottom: 20px;
+                  &:last-of-type {
+                    margin-bottom: 30px;
+                  }
               }
               img {
                 width: 14px;
