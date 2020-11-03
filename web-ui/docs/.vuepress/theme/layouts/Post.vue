@@ -95,7 +95,7 @@ export default {
             targetLocale: "",
             allBlogListData: [],
             otherBlog: [],
-            i18n: {
+            i18n: this.i18n || {
                 community: {
                     BLOG: {}
                 }
