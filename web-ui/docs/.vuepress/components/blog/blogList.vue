@@ -425,7 +425,7 @@ export default {
     }
 }
 .blog-author {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     font-family:HuaweiSans-Bold,HuaweiSans;
 }

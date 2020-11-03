@@ -64,7 +64,7 @@
             >
                 <div class="step-H5">
                     <div class="step-top">
-                        <span :class="$lang === 'en'?'en-font':''">{{ item.LEFT.LEFT_CIRCLE }}</span>
+                        <span :class="$lang === 'en'?'en-font':''">{{ item.LEFT.MOBILE_CIRCLE }}</span>
                     </div>
                     <div class="inner-box">
                         <img :src="item.LEFT.LEFT_IMG" alt />
@@ -73,7 +73,7 @@
                 </div>
                 <div class="step-H5">
                     <div class="step-top">
-                        <span :class="$lang === 'en'?'en-font':''">{{ item.RIGHT.RIGHT_CIRCLE }}</span>
+                        <span :class="$lang === 'en'?'en-font':''">{{ item.RIGHT.MOBILE_CIRCLE }}</span>
                     </div>
                     <div class="inner-box">
                         <img :src="item.RIGHT.LEFT_IMG" alt />

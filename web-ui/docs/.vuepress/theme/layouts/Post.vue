@@ -392,6 +392,9 @@ export default {
 <style lang="less">
 #blog_content {
     @media screen and (max-width: 1000px) {
+        p{
+            word-break: normal;
+        }
         img{
             width: 100%;
         }
