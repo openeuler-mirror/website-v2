@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div :class="['review',$lang === 'en'?'en-font':'']">
-                <p :class="$lang === 'en'?'font-bold':''" @click="go('/other/cla')">{{ i18n.interaction.SUMMIT.SUMMITREMIND }}</p>
+                <p :class="$lang === 'en'?'font-bold':''" @click="go('https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=')">{{ i18n.interaction.SUMMIT.SUMMITREMIND }}</p>
                 <i :class="['icon-video',$lang === 'en'?'en-position':'']"></i>
                 <p :class="$lang === 'en'?'font-regular':''">{{ i18n.interaction.SUMMIT.HOMETITLE }}</p>
                 <p :class="$lang === 'en'?'font-bold':''" @click="toReviewList">{{ i18n.interaction.SUMMIT.REVIEW_TEXT }}</p>

@@ -25,7 +25,7 @@
 export default {
   data () {
     return {
-      i18n: {
+      i18n: this.i18n || {
         common: {
           FOOTER: {}
         }

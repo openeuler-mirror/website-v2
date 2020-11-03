@@ -22,9 +22,6 @@ module.exports = {
             md.disable('emoji');
         }
     },
-    plugins: [
-        [require('./sitePlugin.js')]
-    ],
     shouldPrefetch: () => {
         return false;
     },

@@ -83,7 +83,7 @@ module.exports = {
                     IMG: "/img/community/contribution/cla.png",
                     MOBILEIMG:'/img/community/contribution/mobile-img/cla.png',
                     VIDEO: "/img/community/contribution/cla.gif",
-                    LINK: "/other/cla/"
+                    LINK: "https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI="
                 },
                 {
                     BUTTON: "提出Issue",
@@ -222,7 +222,7 @@ module.exports = {
                     IMG: "/img/community/contribution/cla.png",
                     VIDEO: "/img/community/contribution/cla.gif",
                     MOBILEIMG:'/img/community/contribution/mobile-img/cla.png',
-                    LINK: "/other/cla/"
+                    LINK: "https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI="
                 },
                 {
                     BUTTON: "Submit an Issue",
