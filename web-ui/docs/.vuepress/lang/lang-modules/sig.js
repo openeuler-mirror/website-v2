@@ -15,7 +15,7 @@ module.exports = {
                             LEFT_IMG: "/img/sig/sig1.png"
                         },
                         RIGHT: {
-                            RIGHT_INFO: "按照成立 SIG 组的成立流程，在 Gitee 上创建申请文件，发起 Pull Request ；预约技术委员会会议的时间。",
+                            RIGHT_INFO: "按照成立 SIG 组的<a target='_blank' href='https://gitee.com/openeuler/community/blob/master/zh/technical-committee/governance/README.md'>成立流程</a>，在 Gitee 上创建申请文件，发起 Pull Request ；预约技术委员会会议的时间。",
                             RIGHT_CIRCLE: "申请",
                             LEFT_IMG: "/img/sig/sig2.png"
                         }
@@ -101,9 +101,14 @@ module.exports = {
                             LEFT_DESC: 'Find'
                         },
                         RIGHT: {
+<<<<<<< HEAD
                             RIGHT_INFO: "Create an application file on Gitee and initiate a pull request (PR) according to the procedure for setting up a SIG. Make an appointment for attending the Technical Committee meeting. ",
                             RIGHT_CIRCLE: "02",
                             MOBILE_CIRCLE: 'Apply',
+=======
+                            RIGHT_INFO: "Create an application file on Gitee and initiate a pull request (PR) according to the <a target='_blank' href='https://gitee.com/openeuler/community/blob/master/en/technical-committee/governance/README.md'>procedure</a> for setting up a SIG. Make an appointment for attending the Technical Committee meeting. ",
+                            RIGHT_CIRCLE: "Apply",
+>>>>>>> 62fc4909f869ef34aee84e39ebf82a3b2c5d215b
                             LEFT_IMG: "/img/sig/sig2.png",
                             RIGHT_DESC: 'Apply'
                         }
