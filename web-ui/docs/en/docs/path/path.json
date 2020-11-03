@@ -5,6 +5,7 @@
         "docs": [
             {
                 "title": "Install",
+                "pctitle": "Install",
                 "doc": [
                     {
                         "img": "/img/docs/docs-installation.svg",
@@ -21,6 +22,7 @@
         "docs": [
             {
                 "title": "About",
+                "pctitle": "About",
                 "doc": [
                     {
                         "img": "/img/docs/docs-releasenotes.svg",
@@ -36,6 +38,7 @@
             },
             {
                 "title": "Install",
+                "pctitle": "Install",
                 "doc": [
                     {
                         "img": "/img/docs/docs-quickstart.svg",
@@ -51,6 +54,7 @@
             },
             {
                 "title": "Management",
+                "pctitle": "Mgmt",
                 "doc": [
                     {
                         "img": "/img/docs/docs-administration.svg",
@@ -61,6 +65,7 @@
             },
             {
                 "title": "Use",
+                "pctitle": "Use",
                 "doc": [
                     {
                         "img": "/img/docs/docs-user.svg",
@@ -86,6 +91,7 @@
             },
             {
                 "title": "Develop",
+                "pctitle": "Dev",
                 "doc": [
                     {
                         "img": "/img/docs/docs-application.svg",
@@ -102,6 +108,7 @@
         "docs": [
             {
                 "title": "About",
+                "pctitle": "About",
                 "doc": [
                     {
                         "img": "/img/docs/docs-releasenotes.svg",
@@ -117,6 +124,7 @@
             },
             {
                 "title": "Install",
+                "pctitle": "Install",
                 "doc": [
                     {
                         "img": "/img/docs/docs-quickstart.svg",
@@ -132,6 +140,7 @@
             },
             {
                 "title": "Management",
+                "pctitle": "Mgmt",
                 "doc": [
                     {
                         "img": "/img/docs/docs-administration.svg",
@@ -142,6 +151,7 @@
             },
             {
                 "title": "Use",
+                "pctitle": "Use",
                 "doc": [
                     {
                         "img": "/img/docs/docs-user.svg",
@@ -172,6 +182,7 @@
             },
             {
                 "title": "Develop",
+                "pctitle": "Dev",
                 "doc": [
                     {
                         "img": "/img/docs/docs-application.svg",

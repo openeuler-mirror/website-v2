@@ -33,7 +33,8 @@
                                 </div>
                             </div>
                             <div :class="['step-left-num',targetLocale == '/en/'?'left-en':'']">
-                                <span>{{ items.title }}</span>
+                                <span v-if="$lang === 'zh'">{{ items.title }}</span>
+                                <span v-else>{{ items.pctitle }}</span>
                             </div>
                             <div class="step-line"></div>
                         </div>
@@ -42,7 +43,8 @@
                         <div class="mail-box">
                             <div class="step-line"></div>
                             <div :class="['step-right-num',targetLocale == '/en/'?'right-en':'']">
-                                <span>{{ items.title }}</span>
+                                <span v-if="$lang === 'zh'">{{ items.title }}</span>
+                                <span v-else>{{ items.pctitle }}</span>
                             </div>
                             <div class="step-right-box right-box-en">
                                 <div  @click="go(item)" :class="['inner-box',item.path?'':'unClick',targetLocale == '/en/'?'en-box':'']" v-for="(item, index) in items.doc" :key="index">

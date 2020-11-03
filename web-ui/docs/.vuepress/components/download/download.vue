@@ -45,7 +45,7 @@
           <span @click="delTag(item)">×</span>
         </li>
       </ul>
-      <ul :class="lang=='zh' ? 'download-list' : 'download-list-en'">
+      <ul :class="lang ==='zh' ? 'download-list' : 'download-list-en'">
         <li class="download-item" v-for="(item, index) in downloadList" :key="index">
           <h3 class="title">{{ item.NAME }}</h3>
           <el-button
@@ -152,7 +152,7 @@ export default {
   },
   mounted () {
     this.list = this.i18n.download.DOWNLOAD_LIST;
-    this.lang=this.$lang
+    this.lang = this.$lang;
   },
   computed: {
     filterTags () {
@@ -379,8 +379,8 @@ export default {
           display: block;
           margin: 40px auto !important;
           width: 315px;
-          height: 282px;
-          padding: 30px 22px 30px 23px;
+          height: auto;
+          padding: 30px 22px 35px 23px;
         }
         .title {
           font-size: 20px;
@@ -514,8 +514,8 @@ export default {
           display: block;
           margin: 40px auto !important;
           width: 315px;
-          height: 282px;
-          padding: 30px 22px 30px 23px;
+          height: auto;
+          padding: 30px 22px 35px 23px;
         }
         .title {
           font-size: 20px;
