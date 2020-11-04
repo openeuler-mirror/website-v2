@@ -28,7 +28,7 @@ StratoVirt 作为虚拟化平台，实现了一套架构统一支持虚拟机，
 
 ## 安装 StratoVirt
 
-这里提供了两种方式安装 StratoVirt。如果你只想要使用 StratoVirt 运行一台虚拟机，小编推荐组件安装的方式。你只需要按照软硬件要求，安装好 openEuler 20.09 及更高版本，并且配置好 openEuler yum 源。那么就可以直接使用 yum 命令安装啦。
+这里提供了两种方式安装 StratoVirt。如果你只想要使用 StratoVirt 运行一台虚拟机，小编推荐组件安装的方式。你只需要按照软硬件要求，安装 [openEuler 20.09](https://openeuler.org/zh/docs/20.09/docs/Installation/installation.html) 及更高版本，并且配置好 openEuler yum 源。那么就可以直接使用 yum 命令安装啦。
 
 如果你有很强的好奇心，希望深入了解我们的 StratoVirt。那太好了，编译安装的方式更适合你。作为开源项目，我们的 StratoVirt 源码放在[码云](https://gitee.com/openeuler/stratovirt)平台上。 你可以下载我们的源码，了解它的架构，甚至对其做一些代码修改。
 
@@ -122,7 +122,20 @@ EOF
 [root@openeuler ~]# stratovirt -kernel /home/kernel/vmlinux.bin -append console=ttyS0 root=/dev/vda rw reboot=k panic=1 -drive file=/home/rootfs,id=rootfs -api-channel unix:/tmp/stratovirt.socket -serial stdio
 ```
 
-运行后，在终端会打印内核启动的串口日志，表明虚拟机已经成功启动。
+运行后，在终端会打印内核启动的串口日志，表明虚拟机已经成功启动。以下是虚拟机启动日志的部分内容：
+
+```
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x481fd010]
+[    0.000000] Linux version 4.19.152+ (root@localhost.localdomain) (gcc version (GCC)) #1 SMP Fri Oct 23 14:56:45 CST 2020
+[    0.000000] Machine model: linux,dummy-virt
+[    0.000000] earlycon: uart0 at MMIO 0x0000000040009000 (options '')
+[    0.000000] bootconsole [uart0] enabled
+...
+...
+[    0.113561] Freeing unused kernel memory: 576K
+[    0.113957] Run /sbin/init as init process
+/ #
+```
 
 说明：如果是编译安装，需使用对应路径下二级制文件 stratovirt 运行虚拟机。
 
