@@ -22,6 +22,10 @@ module.exports = {
             md.disable('emoji');
         }
     },
+    plugins: [
+        ['@vuepress/search', false],
+        ['@vuepress/active-header-links', false]
+    ],
     shouldPrefetch: () => {
         return false;
     },
