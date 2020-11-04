@@ -1,4 +1,4 @@
-<!-- 沙龙 -->
+<!-- 沙龙页 -->
 <template>
   <div class="meetUps-content">
     <common-banner
@@ -31,6 +31,7 @@
                   <span class="meetUps-date">{{ value.MEETUPS_DATE }}</span>
                 </p>
               </div>
+              <div class="meetUps-summary">{{ value.MEETUPS_DESC }}</div>
             </div>
           </div>
         </div>
@@ -203,6 +204,11 @@ export default {
     }   
 }
 
+.meetUps-summary {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 24px;
+}
 @media screen and (max-width: 1000px) {
   .meetUps-content {
     padding: 40px 30px 80px 30px;
@@ -263,6 +269,9 @@ export default {
     cursor: pointer;
     font-size: 16px;
     margin: 0px 0 10px 0;
+  }
+  .meetUps-summary {
+    display: none;
   }
 }
 </style>
