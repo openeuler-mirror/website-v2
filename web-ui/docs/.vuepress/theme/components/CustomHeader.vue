@@ -226,7 +226,7 @@ export default {
             mobileActiveFlag : true,
             pcSearchFlag: false,
             gitteResourceFlag: false,
-            i18n: {
+            i18n: this.i18n || {
                 common : {}
             }
         };

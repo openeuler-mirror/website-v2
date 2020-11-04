@@ -14,6 +14,5 @@ module.exports = {
     security: require('./lang-modules/security').cn,
     interaction: require('./lang-modules/interaction').cn,
     brand: require('./lang-modules/brand').cn,
-    cla: require('./lang-modules/cla').cn,
     search: require('./lang-modules/search').cn,
 };

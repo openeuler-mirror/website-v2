@@ -101,7 +101,7 @@ export default {
       //下一把路径
       nextPath: "",
       showMobileMenu: false,
-      i18n: {
+      i18n: this.i18n || {
         documentation: {},
       },
       secondTitleList:[],

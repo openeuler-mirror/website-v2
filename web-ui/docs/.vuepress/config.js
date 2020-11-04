@@ -23,7 +23,8 @@ module.exports = {
         }
     },
     plugins: [
-        [require('./sitePlugin.js')]
+        ['@vuepress/search', false],
+        ['@vuepress/active-header-links', false]
     ],
     shouldPrefetch: () => {
         return false;
