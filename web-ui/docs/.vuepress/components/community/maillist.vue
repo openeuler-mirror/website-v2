@@ -713,7 +713,7 @@ p {
     .step-top span {
         font-size: 17px;
         color: #000000;
-        font-family: FZLTXIHJW;
+        font-family: FZLTHJW;
         font-weight: bold;
     }
     .step-top .en-font {

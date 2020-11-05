@@ -342,6 +342,7 @@ export default {
         background-color:#AFBFE8;
     }
     overflow-x: hidden;
+    padding-bottom: 40px;
 }
 .mask {
   position: fixed;
