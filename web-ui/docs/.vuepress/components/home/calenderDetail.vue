@@ -52,6 +52,14 @@ export default {
 <style lang="less" scoped>
 #showDetail .link {
     cursor: pointer;
+    @media screen and (max-width: 1000px) {
+        span {
+            max-width: 160px;
+            overflow: hidden;
+            display: inline-block;   
+            word-break: break-all;
+        }
+    }
 }
 #showDetail{
     position: absolute;;
