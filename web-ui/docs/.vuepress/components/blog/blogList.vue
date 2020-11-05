@@ -399,7 +399,7 @@ export default {
     border-top: 1px solid;
     border-color: rgba(0, 0, 0, 0.25);
     padding: 40px 0 40px 0;
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
         display: none;
     }
 }
@@ -468,7 +468,7 @@ export default {
 }
 .blog-item-mobile {
     display: none;
-    @media (max-width: 1000px){
+    @media screen and (max-width: 1000px){
         margin-top: 40px;
         padding-bottom: 30px;
         border-bottom: 1px solid #e6e6e6;
