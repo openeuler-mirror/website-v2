@@ -14,11 +14,11 @@
             <div class="detail-link">
                 <h3>Zoom</h3>
                 <div><img src="/img/home/detail-link.png"><span>{{item3.meeting_id}}</span></div>
-                <div class="link" @click="open(item3.join_url)"><img src="/img/home/detail-link.png"><span>{{item3.join_url}}</span></div>
+                <div class="link" @click="open(item3.join_url)"><span><img src="/img/home/detail-link.png">{{item3.join_url}}</span></div>
             </div>
             <div class="detail-link">
                 <h3>Etherpad</h3>
-                <div class="link" @click="open(item3.join_url)"><img src="/img/home/detail-link.png" alt=""><span>{{item3.etherpad||'-'}}</span></div>
+                <div class="link" @click="open(item3.join_url)"><span><img src="/img/home/detail-link.png" alt="">{{item3.etherpad||'-'}}</span></div>
             </div>
         </div>
     </div>
@@ -52,6 +52,14 @@ export default {
 <style lang="less" scoped>
 #showDetail .link {
     cursor: pointer;
+    @media screen and (max-width: 1000px) {
+        span {
+            max-width: 160px;
+            overflow: hidden;
+            display: inline-block;   
+            word-break: break-all;
+        }
+    }
 }
 #showDetail{
     position: absolute;;
