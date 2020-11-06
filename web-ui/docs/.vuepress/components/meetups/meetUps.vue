@@ -1,4 +1,4 @@
-<!-- 沙龙页 -->
+<!-- 沙龙 -->
 <template>
     <div class="meetUps-content">
         <common-banner
