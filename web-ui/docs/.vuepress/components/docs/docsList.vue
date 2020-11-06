@@ -27,7 +27,7 @@
                     <div v-if="index % 2 === 0" class="step-left">
                         <div class="mail-box">
                             <div class="step-left-box">
-                                <div @click="go(item)" :class="['inner-box',item.path?'':'unClick',targetLocale == '/en/'?'en-box':'']" v-for="(item, index) in items.doc" :key="index">
+                                <div @click="go(item)" :class="['inner-box','card-hover',item.path?'':'unClick',targetLocale == '/en/'?'en-box':'']" v-for="(item, index) in items.doc" :key="index">
                                     <img :src="item.img" alt />
                                     <p :title="item.name">{{ item.name }}</p>
                                 </div>
@@ -119,6 +119,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.card-hover:hover {
+    box-shadow: 0px 6px 30px 0px rgba(0, 47, 167, 0.2);
+}
 .docs-content {
     width: 1120px;
     margin: 0 auto;

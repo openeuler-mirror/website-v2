@@ -12,7 +12,7 @@
             <div class="now-start-title">{{i18n.interaction.LIVE.WILLPLAYER}}</div>
             <div class="now-start-content">
             <div
-                class="content-box"
+                class="content-box card-hover"
                 v-for="(item,key) in nowShowArr"
                 :key="key"
                 @click="toBLink(item.NOWLINK)"
@@ -40,21 +40,21 @@
         <div class="replayer">
             <div class="replayer-tile">{{i18n.interaction.LIVE.REPLAYER}}</div>
             <div class="replayer-content" ref="replayerScroll">
-            <div
-                class="content-box"
-                v-for="(item,key) in formerlyShowArr"
-                :key="key"
-                @click="toBLink(item.FORMERLYLINK)"
-            >
-                <div class="left-content">
-                <p class="live-title">{{item.LIVETITLE}}</p>
-                <p class="live-teacher">{{item.LIVETEACHER}}</p>
-                <p class="live-time">{{item.LIVETIME}}</p>
+                <div
+                    class="content-box card-hover"
+                    v-for="(item,key) in formerlyShowArr"
+                    :key="key"
+                    @click="toBLink(item.FORMERLYLINK)"
+                >
+                    <div class="left-content">
+                        <p class="live-title">{{item.LIVETITLE}}</p>
+                        <p class="live-teacher">{{item.LIVETEACHER}}</p>
+                        <p class="live-time">{{item.LIVETIME}}</p>
+                    </div>
+                    <div class="right-content">
+                        <img :src="item.PHOTOPATH" alt />
+                    </div>
                 </div>
-                <div class="right-content">
-                <img :src="item.PHOTOPATH" alt />
-                </div>
-            </div>
             </div>
             <div class="replaypagination">
             <el-pagination
@@ -217,6 +217,9 @@ export default {
     }
 }
 // 具体样式从这里开始
+.card-hover:hover {
+        box-shadow: 0px 6px 30px 0px rgba(0, 47, 167, 0.2) !important;
+}
 .live-ist {
     .background-css("@{urlhead}ball-background.png",repeat,center center,contain);
     margin-top: 68px;

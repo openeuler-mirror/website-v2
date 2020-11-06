@@ -15,7 +15,7 @@
                         <span>{{ index }}</span>
                     </div>
                     <div class="meetUps-item" v-for="(value,key) in item">
-                        <div @click="goDetail(value.ID)" class="meetUps-img">
+                        <div @click="goDetail(value.ID)" class="meetUps-img card-hover">
                           <img :src="value.MEETUPS_IMG" alt />
                         </div>
                         <div class="meetUps-info meetUps-info-item">
@@ -116,6 +116,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.card-hover:hover {
+    box-shadow: 0px 6px 30px 0px rgba(0, 47, 167, 0.2);
+}
 .meetUps-list {
 	width: 1120px;
 	margin: 0 auto;
