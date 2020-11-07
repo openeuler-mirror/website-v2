@@ -30,7 +30,7 @@
                                     <div>{{item.DOWNLOAD?item.DOWNLOAD:''}}</div>
                                 </div>
                             </div>
-                            <img class="banner-gif" :src="'/img/home/Banner' + index + '.gif'">
+                            <img class="banner-gif" v-lazy="'/img/home/Banner' + index + '.gif'">
                         </div>
                     </a>
                     <a class="banner-link" v-if="index === 1" @click="go(item.LINK)">
@@ -39,7 +39,7 @@
                                 <h3>{{ item.TITLE }}</h3>
                                 <span>{{ item.DES }}</span>
                             </div>
-                            <img class="banner-gif" :src="'/img/home/Banner' + index + '.gif'">
+                            <img class="banner-gif" v-lazy="'/img/home/Banner' + index + '.gif'">
                         </div>
                     </a>
                     <a class="banner-link" v-if="index !== 0 && index !== 1" :href="item.LINK" target="_blank">
@@ -48,7 +48,7 @@
                                 <h3>{{ item.TITLE }}</h3>
                                 <span>{{ item.DES }}</span>
                             </div>
-                            <img class="banner-gif" :src="'/img/home/Banner' + index + '.gif'">
+                            <img class="banner-gif" v-lazy="'/img/home/Banner' + index + '.gif'">
                         </div>
                     </a>
                 </el-carousel-item>
@@ -84,11 +84,11 @@
                         :key="index">
                     <a v-if="index !== 0 && index !== 1" :href="item.LINK" target="_blank">
                         <h3>{{ item.TITLE }}</h3>
-                        <img :src="'/img/home/Banner' + index + '.gif'">
+                        <img v-lazy="'/img/home/Banner' + index + '.gif'">
                     </a>
                     <a v-if="index === 1" @click="go(item.LINK)">
                         <h3>{{ item.TITLE }}</h3>
-                        <img :src="'/img/home/Banner' + index + '.gif'">
+                        <img v-lazy="'/img/home/Banner' + index + '.gif'">
                     </a>
                     <div class="mobile-version" @click="go(item.LINK)" :style="{backgroundImage:item.MOBILE_IMG?item.MOBILE_IMG:''}" v-if="index == 0"></div>
                 </swiper-slide>
@@ -110,20 +110,20 @@
                     <a v-if="(index !== 3)" @click="go(item.LINK)" target="_blank">
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p :class="$lang == 'en'?'en-areabox-p':''">{{ item.TITLE }}</p>
-                        <img :src="item.IMG" alt="">
-                        <img :src="item.GIF" alt="" :class="['is-hidden',$lang == 'en'?'en-areabox-gif':'']">
+                        <img v-lazy="item.IMG" alt="">
+                        <img v-lazy="item.GIF" alt="" :class="['is-hidden',$lang == 'en'?'en-areabox-gif':'']">
                     </a>
                     <a class="down" v-if="(index === 3)" @click="go(item.LINK)" target="_blank">
-                        <img :src="item.IMG" alt="">
-                        <img :src="item.GIF" alt="" class="is-hidden">
+                        <img v-lazy="item.IMG" alt="">
+                        <img v-lazy="item.GIF" alt="" class="is-hidden">
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p :class="$lang == 'en'?'en-areabox-p':''">{{ item.TITLE }}</p>
                     </a>
                 </div>
                 <div class="area-box bottom in-pc" @click="clickDownload">
                     <a class="down">
-                        <img src="/img/home/step2.png" alt="">
-                        <img src="/img/home/step-move-2.gif" alt="" class="is-hidden">
+                        <img v-lazy="'/img/home/step2.png'" alt="">
+                        <img v-lazy="'/img/home/step-move-2.gif'" alt="" class="is-hidden">
                         <div class="box-icon">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.NAME }}</div>
                         <p :class="$lang == 'en'?'en-areabox-p':''">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.TITLE }}</p>
                     </a>
@@ -137,7 +137,7 @@
                                     v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_GUIDE.GUIDE_WAY"
                                     :key="index">
                                 <a @click="goInstall(item.LINK)" target="_blank">
-                                    <img :src="item.IMG" alt="">
+                                    <img v-lazy="item.IMG" alt="">
                                     <span>{{ item.TITLE }}</span>
                                 </a>
                             </div>
@@ -146,12 +146,12 @@
                 </div>
             </div>
             <div class="map-rode">
-                <img class="is-pc rode-left" src="/img/home/rodeLeft.svg" alt="">
-                <img class="is-pc plane-left" src="/img/home/planeLeft.svg" alt="">
-                <img class="is-pc rode-middle" src="/img/home/rodeMiddle.svg" alt="">
-                <img class="is-pc plane-middle" src="/img/home/planeMiddle.svg" alt="">
-                <img class="is-pc rode-right" src="/img/home/rodeRight.svg" alt="">
-                <img class="is-pc plane-right" src="/img/home/planeRight.svg" alt="">
+                <img class="is-pc rode-left" v-lazy="'/img/home/rodeLeft.svg'" alt="">
+                <img class="is-pc plane-left" v-lazy="'/img/home/planeLeft.svg'" alt="">
+                <img class="is-pc rode-middle" v-lazy="'/img/home/rodeMiddle.svg'" alt="">
+                <img class="is-pc plane-middle" v-lazy="'/img/home/planeMiddle.svg'" alt="">
+                <img class="is-pc rode-right" v-lazy="'/img/home/rodeRight.svg'" alt="">
+                <img class="is-pc plane-right" v-lazy="'/img/home/planeRight.svg'" alt="">
             </div>
             <div class="is-h5 mapArea" v-if="isShowH5">
                 <div
@@ -161,7 +161,7 @@
                     >
                         <div class="box-icon" @touchstart="go(item.LINK)">{{ item.NAME }}</div>
                         <p @touchstart="go(item.LINK)">{{ item.TITLE }}</p>
-                        <img :src="item.IMG" alt=""/>
+                        <img v-lazy="item.IMG" alt=""/>
                 </div>
                 <div :class="['snd-guidance','location',isShowCard?'is-show':'',$lang == 'en'?'en-snd-guidance':'']">
                     <div class="d3"></div>
@@ -173,7 +173,7 @@
                             v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_GUIDE.GUIDE_WAY"
                             :key="index">
                                 <a :href="item.LINK">
-                                    <img :src="item.IMG" alt="">
+                                    <img v-lazy="item.IMG" alt="">
                                     <span>{{ item.TITLE }}</span>
                                 </a>
                         </div>
@@ -239,17 +239,17 @@
                     <el-carousel indicator-position="none" :autoplay="false" arrow="never" ref="newsroomCard" class="room-card">
                         <el-carousel-item>
                             <a class="room-img active">
-                                <img src="/img/home/eventImg.png" @click="go('/news/20200607.html')" alt="">
+                                <img v-lazy="'/img/home/eventImg.png'" @click="go('/news/20200607.html')" alt="">
                             </a>
                         </el-carousel-item>
                         <el-carousel-item>
                             <a class="room-img active"  @click="go('/interaction/blog-list/')" target="_blank">
-                                <img src="/img/home/blogImg.png" alt="" >
+                                <img v-lazy="'/img/home/blogImg.png'" alt="" >
                             </a>
                         </el-carousel-item>
                         <el-carousel-item>
                             <a class="room-img active" @click="go('/interaction/news-list/')" target="_blank">
-                                <img src="/img/home/newsImg.png" alt="">
+                                <img v-lazy="'/img/home/newsImg.png'" alt="">
                             </a>
                         </el-carousel-item>
                     </el-carousel>
@@ -298,48 +298,48 @@
             <p :class="$lang == 'en'?'en-developer-p':''">{{ i18n.home.HOME_DEV.DEV_DESCRIPTION }}</p>
             <div class="dev-leader" v-fade v-if="developerList.length">
                 <div class="dev-dever hidden fade-in" v-for="(value, index) in developerList" :key="index" >
-                    <img class="dev-img" :src="value.IMG">
+                    <img class="dev-img" v-lazy="value.IMG">
                     <p class="dever-name">{{ value.NAME }}</p>
                     <p :class="['dever-rank',$lang == 'en'?'en-rank':'']">{{ value.TITLE }}</p>
                     <p :class="['dever-rank',$lang == 'en'?'en-rank':'']">{{ value.RANK }}</p>
                     <div class="dev-link">
                         <a :href="'mailto:' + value.MAIL_LINK" target="_blank">
-                            <img class="email-link" src="/img/home/email.png" alt="">
+                            <img class="email-link" v-lazy="'/img/home/email.png'" alt="">
                         </a>
                         <a :href="value.GITEE_LINK" target="_blank">
-                            <img src="/img/home/Gitee.png" alt="">
+                            <img v-lazy="'/img/home/Gitee.png'" alt="">
                         </a>
                     </div>
                 </div>
             </div>
             <div class="show-all" @click="showAll">
                 <p>{{ i18n.home.EXPAND }}</p>
-                <img v-if="flag" src="/img/home/arrow.svg" alt="">
-                <img v-if="!flag" src="/img/home/arrowUp.svg" alt="">
+                <img v-if="flag" v-lazy="'/img/home/arrow.svg'" alt="">
+                <img v-if="!flag" v-lazy="'/img/home/arrowUp.svg'" alt="">
             </div>
         </div>
 
         <div class="home-auth">
             <h3>{{ i18n.home.HOME_AUTH.AUTH_TITLE }}
-                <img class="medal-logo" src="/img/home/medal.svg" alt="">
+                <img class="medal-logo" v-lazy="'/img/home/medal.svg'" alt="">
             </h3>
 
             <p>{{ i18n.home.HOME_AUTH.AUTH_DESCRIPTION }}</p>
             <div class="auth-product">
                 <div class="product-box">
-                    <img src="/img/home/Card1.png" alt="">
+                    <img v-lazy="'/img/home/Card1.png'" alt="">
                     <p>{{ i18n.home.HOME_AUTH.AUTH_HARDWARE }}</p>
                 </div>
                 <div class="product-box">
-                    <img src="/img/home/Card2.png" alt="">
+                    <img v-lazy="'/img/home/Card2.png'" alt="">
                     <p>{{ i18n.home.HOME_AUTH.AUTH_OPEN_SOURCE }}</p>
                 </div>
                 <div class="product-box">
-                    <img src="/img/home/Card3.png" alt="">
+                    <img v-lazy="'/img/home/Card3.png'" alt="">
                     <p>{{ i18n.home.HOME_AUTH.AUTH_FREE }}</p>
                 </div>
                 <div class="product-box">
-                    <img src="/img/home/Card4.png" alt="">
+                    <img v-lazy="'/img/home/Card4.png'" alt="">
                     <p>{{ i18n.home.HOME_AUTH.AUTH_BUSINESS }}</p>
                 </div>
             </div>
@@ -350,7 +350,7 @@
             <div class="source-contain">
                 <div class="source-apply">
                     <div class="apply-img">
-                        <img src="/img/home/sourceApply.gif" alt="">
+                        <img v-lazy="'/img/home/sourceApply.gif'" alt="">
                     </div>
                     <div class="apply-des">
                         <p :class="['source-title',$lang == 'en'?'en-source-title':'']">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.TITLE }}</p>
@@ -363,7 +363,7 @@
                 </div>
                 <div class="source-mail">
                     <div class="mail-img">
-                        <img src="/img/home/sourceMail.gif" alt="">
+                        <img v-lazy="'/img/home/sourceMail.gif'" alt="">
                     </div>
                     <div class="mail-des">
                         <p :class="['source-title',$lang == 'en'?'en-source-title':'']">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.TITLE }}</p>
@@ -377,12 +377,12 @@
                 <h5 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_SOURCE.SOURCE_PUBLISH_TITLE }}</h5>
                 <div class="publish-edition" v-for="(item,index) in i18n.home.HOME_SOURCE_EDITION">
                     <a :href="item.LEFT_IMG_LINK" target="_blank">
-                        <img class="pc-img" :src="item.LEFT_IMG_PC" alt="">
-                        <img class="mobile-img" :src="item.LEFT_IMG_MOBILE" alt="">
+                        <img class="pc-img" v-lazy="item.LEFT_IMG_PC" alt="">
+                        <img class="mobile-img" v-lazy="item.LEFT_IMG_MOBILE" alt="">
                     </a>
                     <a :href="item.RIGHT_IMG_LINK" target="_blank" :class="item.RIGHT_IMG_LINK?'':'empty-a'">
-                        <img class="pc-img" :src="item.RIGHT_IMG_PC" alt="">
-                        <img class="mobile-img" :src="item.RIGHT_IMG_MOBILE" alt="">
+                        <img class="pc-img" v-lazy="item.RIGHT_IMG_PC" alt="">
+                        <img class="mobile-img" v-lazy="item.RIGHT_IMG_MOBILE" alt="">
                     </a>
                 </div>
             </div>
@@ -390,12 +390,12 @@
                 <h5 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_SOURCE.SOURCE_LINK_TITLE }}</h5>
                 <div class="publish-edition" v-for="(item,index) in i18n.home.FRIENDSHIP_LINK_LIST">
                     <a :href="item.LEFT_IMG_LINK" target="_blank">
-                        <img class="pc-img" :src="item.LEFT_IMG_PC" alt="">
-                        <img class="mobile-img" :src="item.LEFT_IMG_MOBILE" alt="">
+                        <img class="pc-img" v-lazy="item.LEFT_IMG_PC" alt="">
+                        <img class="mobile-img" v-lazy="item.LEFT_IMG_MOBILE" alt="">
                     </a>
                     <a :href="item.RIGHT_IMG_LINK" target="_blank" :class="item.RIGHT_IMG_LINK?'':'empty-a'">
-                        <img class="pc-img" :src="item.RIGHT_IMG_PC" alt="">
-                        <img class="mobile-img" :src="item.RIGHT_IMG_MOBILE" alt="">
+                        <img class="pc-img" v-lazy="item.RIGHT_IMG_PC" alt="">
+                        <img class="mobile-img" v-lazy="item.RIGHT_IMG_MOBILE" alt="">
                     </a>
                 </div>
             </div>
