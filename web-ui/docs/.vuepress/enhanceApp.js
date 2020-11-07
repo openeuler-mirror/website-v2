@@ -6,6 +6,7 @@ import'./public/style/markdown.less';
 import directive from './libs/directive';
 import './public/style/font-en.css';
 import './public/style/font-cn.css';
+import VueLazyload from 'vue-lazyload';
 
 export default ({
     Vue,
@@ -13,6 +14,10 @@ export default ({
     isServer
 }) => {
     Vue.directive('fade', directive.fade);
+    Vue.use(VueLazyload, {
+        preLoad: 1.3,
+        attempt: 1
+    })
     if(!isServer){
         let $lang = window.location.href.includes('/en/') ? 'en' : 'zh';
         let screenWidth = document.body.clientWidth;
