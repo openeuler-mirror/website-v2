@@ -238,17 +238,17 @@
                 <template>
                     <el-carousel indicator-position="none" :autoplay="false" arrow="never" ref="newsroomCard" class="room-card">
                         <el-carousel-item>
-                            <a class="room-img active">
+                            <a class="room-img active card-hover">
                                 <img v-lazy="'/img/home/eventImg.png'" @click="go('/news/20200607.html')" alt="">
                             </a>
                         </el-carousel-item>
                         <el-carousel-item>
-                            <a class="room-img active"  @click="go('/interaction/blog-list/')" target="_blank">
+                            <a class="room-img active card-hover"  @click="go('/interaction/blog-list/')" target="_blank">
                                 <img v-lazy="'/img/home/blogImg.png'" alt="" >
                             </a>
                         </el-carousel-item>
                         <el-carousel-item>
-                            <a class="room-img active" @click="go('/interaction/news-list/')" target="_blank">
+                            <a class="room-img active card-hover" @click="go('/interaction/news-list/')" target="_blank">
                                 <img v-lazy="'/img/home/newsImg.png'" alt="">
                             </a>
                         </el-carousel-item>
@@ -756,6 +756,9 @@
         &:hover{
             color: #002FA7;
         }
+    }
+    .card-hover:hover {
+        box-shadow: 0px 6px 30px 0px rgba(0, 47, 167, 0.2);
     }
     .home p {
         font-size:14px;

@@ -142,12 +142,12 @@ export default {
         }
     }
     .title{
-            text-align: center;
-            font-size: 30px;
-            color: #000000;
-            margin-bottom: 50px;
-            font-family: FZLTHJW;
-            line-height: 46px;
+        text-align: center;
+        font-size: 30px;
+        color: #000000;
+        margin-bottom: 50px;
+        font-family: FZLTHJW;
+        line-height: 46px;
     }
     .description{
         margin-top: 60px;
@@ -168,17 +168,17 @@ export default {
         }
     }
     .maillist-divider-mail {
-    width: 2px;
-    left: 50%;
-    background-image: linear-gradient(
-        to top,
-        #002fa7 0%,
-        #002fa7 50%,
-        transparent 50%
-    );
-    background-size: 2px 11px;
-    background-repeat: repeat-y;
-    position: absolute;
+        width: 2px;
+        left: 50%;
+        background-image: linear-gradient(
+            to top,
+            #002fa7 0%,
+            #002fa7 50%,
+            transparent 50%
+        );
+        background-size: 2px 11px;
+        background-repeat: repeat-y;
+        position: absolute;
     }
     .maillist-icon-comm {
         width: 0;
@@ -354,14 +354,14 @@ export default {
                 margin-left: 161px;
                 position: relative;
                 .qrcode{
-                        position: absolute;
-                        width: 20px;
-                        height: 18px;
-                        background-image: url('/img/meetups/link.png');
-                        background-size: contain;
-                        background-repeat: no-repeat;
-                        left: -30px;
-                        top: 4px;
+                    position: absolute;
+                    width: 20px;
+                    height: 18px;
+                    background-image: url('/img/meetups/link.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    left: -30px;
+                    top: 4px;
                 }
                 p{
                     color: #002FA7;

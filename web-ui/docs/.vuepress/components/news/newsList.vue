@@ -14,7 +14,7 @@
             <span>{{i18n.community.NEWS.MONTHS[items[0].month]}}</span>
           </div>
           <div class="news-item" v-for="item in items">
-            <div @click="go(item.path)" class="new-img">
+            <div @click="go(item.path)" class="new-img card-hover">
               <img :src="'/' + item.frontmatter.banner" alt />
             </div>
             <div class="news-info news-info-item">
@@ -171,6 +171,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.card-hover:hover {
+    box-shadow: 0px 6px 30px 0px rgba(0, 47, 167, 0.2);
+}
 .news-content {
   width: 1120px;
   margin: 0 auto;

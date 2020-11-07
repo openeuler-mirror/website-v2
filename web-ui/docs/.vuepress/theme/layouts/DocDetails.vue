@@ -324,7 +324,7 @@ export default {
     white-space: normal;
     line-height: 20px;
     &:last-of-type{
-      width: 160px;
+       width: 100%;
     }
 }
 .el-tree{
@@ -342,6 +342,7 @@ export default {
         background-color:#AFBFE8;
     }
     overflow-x: hidden;
+    padding-bottom: 40px;
 }
 .mask {
   position: fixed;
@@ -439,7 +440,7 @@ export default {
             color: #0041BD;
             background: rgba(0, 65, 189, 0.1);
         }
-        @media (max-width: 1000px) {
+        @media screen and (max-width: 1000px) {
             display: none;
         }
     }
@@ -457,7 +458,7 @@ export default {
       white-space: pre-wrap;
       word-wrap: break-word;
     }
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
       width: 100%;
       padding: 30px 30px 0 30px;
     }
@@ -568,31 +569,31 @@ export default {
     padding-bottom: 20px;
     border-bottom: 1px solid;
     border-color: rgba(0, 0, 0, 0.5);
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
       font-size: 18px;
     }
   }
   h2 {
     font-size: 24px;
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
         font-size: 17px;
     }
   }
   h3 {
     font-size: 20px;
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
         font-size: 16px;
     }
   }
   h4 {
     font-size: 18px;
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
         font-size: 15px;
     }
   }
   h5 {
     font-size: 16px;
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
         font-size: 14px;
     }
   }
@@ -614,7 +615,7 @@ export default {
     }
   }
 }
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
   .doc-details-content {
     width: 100%;
     position: relative;
@@ -625,7 +626,7 @@ export default {
     width: calc(100% + 30px) !important;
   }
   .details-left {
-    width: 282px;
+   width: calc(100% + 30px);
     padding-top: 70px;
     vertical-align: top;
     > div > div > div.el-tree-node__content {

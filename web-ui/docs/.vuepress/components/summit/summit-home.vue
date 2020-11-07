@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import commonBanner from './../common/banner'
+import commonBanner from './../common/banner';
 export default {
     data () {
         return {

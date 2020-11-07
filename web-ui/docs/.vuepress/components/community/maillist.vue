@@ -531,7 +531,7 @@ p {
 .step-right-num span {
     color: #fff;
     font-size: 20px;
-    font-family: FZLTCHJW;
+    font-family: FZLTHJW;
 }
 .step-line {
     width: 107px;
@@ -713,7 +713,7 @@ p {
     .step-top span {
         font-size: 17px;
         color: #000000;
-        font-family: FZLTXIHJW;
+        font-family: FZLTHJW;
         font-weight: bold;
     }
     .step-top .en-font {
