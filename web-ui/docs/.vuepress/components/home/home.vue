@@ -6,6 +6,10 @@
                     <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_FIRST_BANNER.BANNER_PC_IMG}" @click="go(i18n.home.HOME_FIRST_BANNER.BANNER_LINK)">
                     </div>
                 </el-carousel-item>
+                 <el-carousel-item v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
+                    <div class="carousel-banner" :style="{backgroundImage: item.BANNER_PC_IMG}" @click="go(item.BANNER_LINK)">
+                    </div>
+                </el-carousel-item>
                 <el-carousel-item>
                     <div class="carousel-video">
                         <video poster="/img/home/BannerVideo.png" loop width="100%" height="500px" id="home-video">
@@ -52,16 +56,16 @@
                         </div>
                     </a>
                 </el-carousel-item>
-                <el-carousel-item v-if="$lang === 'zh'">
-                    <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_LAST_BANNER.BANNER_PC_IMG}" @click="go(i18n.home.HOME_LAST_BANNER.BANNER_LINK)">
-                    </div>
-                </el-carousel-item>
             </el-carousel>
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
                 <swiper-slide v-if="i18n.home.HOME_FIRST_BANNER">
                     <div class="carousel-banner first-banner" :style="{backgroundImage: i18n.home.HOME_FIRST_BANNER.BANNER_MOBILE_IMG}" @click="go(i18n.home.HOME_FIRST_BANNER.BANNER_LINK)">
+                    </div>
+                </swiper-slide>
+                <swiper-slide v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
+                    <div class="carousel-banner first-banner" :style="{backgroundImage: item.BANNER_MOBILE_IMG}" @click="go(item.BANNER_LINK)">
                     </div>
                 </swiper-slide>
                 <swiper-slide>
@@ -91,10 +95,6 @@
                         <img v-lazy="'/img/home/Banner' + index + '.gif'">
                     </a>
                     <div class="mobile-version" @click="go(item.LINK)" :style="{backgroundImage:item.MOBILE_IMG?item.MOBILE_IMG:''}" v-if="index == 0"></div>
-                </swiper-slide>
-                <swiper-slide v-if="$lang === 'zh'">
-                    <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_LAST_BANNER.BANNER_MOBILE_IMG}" @click="go(i18n.home.HOME_LAST_BANNER.BANNER_LINK)">
-                    </div>
                 </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
@@ -473,7 +473,7 @@
                 })
             }
             this.developerList = this.changeArr(this.i18n.home.HOME_DEV.DEV_INFO,16);
-            this.$lang === 'en'?this.bannerAmount = 5:this.bannerAmount = 6;
+            this.$lang === 'en'?this.bannerAmount = 5:this.bannerAmount = 7;
         },
         beforeDestroy () {
             this.mobileSwiperInterval && clearInterval(this.mobileSwiperInterval);
