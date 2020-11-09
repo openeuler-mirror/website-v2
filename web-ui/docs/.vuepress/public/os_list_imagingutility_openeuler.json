@@ -1,0 +1,15 @@
+{
+    "os_list": [
+        {
+            "name": "openEuler 20.09 (Raspberry Pi 3/4)",
+            "description": "64-bit server OS for arm64 architectures",
+            "url": "https://repo.openeuler.org/openEuler-20.09/raspi_img/aarch64/openEuler-20.09-raspi-aarch64.img.xz",
+            "icon": "https://openeuler.org/Raspberry_Pi_OS_openEuler.png",
+            "extract_size": 2451570688,
+            "extract_sha256": "e1736a2c20137512f3c7caaee0c18d91e0ba4e1e8d67105f1920eeb9d1cbd2f1",
+            "image_download_size": 271477304,
+            "release_date": "2020-09-29",
+            "image_download_sha256": "40dd6bdca8768e0445f06cd9ac93f84d76b4d792ac154d18f147d6004d903bf4"
+        }
+    ]
+}
