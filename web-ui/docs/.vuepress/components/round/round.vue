@@ -45,8 +45,8 @@ export default {
     background: #FFFFFF;
     border-radius: 50%;
     position: absolute;
-    width: 220px;
-    height: 220px;
+    width: 180px;
+    height: 180px;
     img{
         display: block;
         width: 72px;
@@ -76,8 +76,8 @@ export default {
 }
 @media screen and (max-width: 1000px){
     .round{
-        width: 100px;
-        height: 100px;
+        width: 96px;
+        height: 96px;
         img{
             display: block;
             width: 33px;
