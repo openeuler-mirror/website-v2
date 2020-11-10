@@ -72,7 +72,8 @@ module.exports = {
             MAIL_ERROR: "邮件列表发生错误",
             SUBSCRIBE_ERROR: "邮件订阅发生错误",
             SUBSCRIBE_SUCCESS: "您已订阅成功",
-            MAIL_ERROR: "邮箱填写错误"
+            MAIL_ERROR: "邮箱填写错误",
+            SUBSCRIBE_HAS_SENT: '订阅确认邮件已发送到您的邮箱，请按邮件提示回复确认邮件后，订阅才能生效。如您没有收到邮件，请确认是否被您的邮箱服务器拦截或者归类到垃圾邮件。'
         },
         CONTRIBUTION_H5: {
             TITLE: "贡献攻略",
@@ -211,7 +212,8 @@ module.exports = {
             MAIL_ERROR: "Error in mailing list",
             SUBSCRIBE_ERROR: "Mail subscription error",
             SUBSCRIBE_SUCCESS: "Success!",
-            MAIL_ERROR: "Email error"
+            MAIL_ERROR: "Email error",
+            SUBSCRIBE_HAS_SENT: 'The subscription confirmation e-mail has been sent to your mailbox. Please replay to the e-mail as prompted to make the subscription take effect. if you do not receive the e-mail, check whether the e-mail is blocked by your e-mail server or classified as spam.'
         },
         CONTRIBUTION_H5: {
             TITLE: "How to Contribute",
