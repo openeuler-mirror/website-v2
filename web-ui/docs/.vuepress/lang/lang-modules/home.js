@@ -23,16 +23,24 @@ module.exports = {
                 DES: "A-Tune是智能性能优化系统软件，即通过机器学习引擎对业务应用建立精准模型, 再根据业务负载智能匹配最佳操作系统配置参数组合，实现系统整体运行效率提升。",
             }
         ],
-        HOME_LAST_BANNER: {
+        HOME_LAST_BANNER: {},
+        HOME_FIRST_BANNER: {
             BANNER_PC_IMG: 'url("/img/home/banner/pc-contribution.png")',
             BANNER_MOBILE_IMG: 'url("/img/home/banner/mobile-contribution.png")',
             BANNER_LINK: 'https://isrc.iscas.ac.cn/summer2020/#/summitmeeting'
         },
-        HOME_FIRST_BANNER: {
-            BANNER_PC_IMG: 'url("/img/home/banner/zh-pc-summit.png")',
-            BANNER_MOBILE_IMG: 'url("/img/home/banner/zh-mobile-summit.png")',
-            BANNER_LINK: '/interaction/summit-list/'
-        },
+        HOME_OTHER_BANNER: [
+            {
+                BANNER_PC_IMG: 'url("/img/home/banner/zh-pc-race.png")',
+                BANNER_MOBILE_IMG: 'url("/img/home/banner/zh-mobile-race.png")',
+                BANNER_LINK: 'https://www.oschina.net/2020-openeuler/'
+            },
+            {
+                BANNER_PC_IMG: 'url("/img/home/banner/zh-pc-summit.png")',
+                BANNER_MOBILE_IMG: 'url("/img/home/banner/zh-mobile-summit.png")',
+                BANNER_LINK: '/interaction/summit-list/'
+            }
+        ],
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
             INTRO_HEAD: "开始openEuler之旅吧！",
@@ -528,16 +536,13 @@ module.exports = {
                 DES: "A system software to auto-optimize the system adaptively to multiple scenarios with embedded AI-engine.",
             }
         ],
-        HOME_LAST_BANNER: {
-            BANNER_PC_IMG: 'url("/img/home/banner/pc-contribution.png")',
-            BANNER_MOBILE_IMG: 'url("/img/home/banner/mobile-contribution.png")',
-            BANNER_LINK: 'https://isrc.iscas.ac.cn/summer2020/#/summitmeeting'
-        },
+        HOME_LAST_BANNER: {},
         HOME_FIRST_BANNER: {
             BANNER_PC_IMG: 'url("/img/home/banner/en-pc-summit.png")',
             BANNER_MOBILE_IMG: 'url("/img/home/banner/en-mobile-summit.png")',
             BANNER_LINK: '/interaction/summit-list/'
         },
+        HOME_OTHER_BANNER: [],
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
             INTRO_HEAD: "Start your journey in openEuler",
