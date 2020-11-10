@@ -319,6 +319,13 @@
             </div>
         </div>
 
+        <div class="data-round">
+            <h3>{{ i18n.home.HOME_ROUND.ROUND_TITLE }}</h3>
+            <div class="round-box">
+                <round :image="item.ROUND_IMG" :value="item.ROUND_VALUE" :description="item.ROUND_TEXT" :styleParams="item.ROUND_STYLE" v-for="(item,index) in roundList"></round>
+            </div>
+        </div>
+
         <div class="home-auth">
             <h3>{{ i18n.home.HOME_AUTH.AUTH_TITLE }}
                 <img class="medal-logo" v-lazy="'/img/home/medal.svg'" alt="">
@@ -406,10 +413,10 @@
 <script>
     import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
     import 'swiper/css/swiper.css';
-    import { meetingList } from "../../api/home";
+    import { meetingList, statisticsList } from "../../api/home";
     import dayjs from "dayjs";
     import calender from "./calender";
-    import playcontroll from './../controll/videoctrl'
+    import playcontroll from './../controll/videoctrl';
     let that = null;
     let remoteMethods = {
         meetingList () {
@@ -420,7 +427,20 @@
             .catch(data => {
                 that.$message.error(data);
             });
-        }
+        },
+        statisticsList () {
+            statisticsList(that.statisticParams)
+            .then(data => {
+                if(data.code === 200) {
+                    let dataObj = data.data;
+                    that.roundValueObj = dataObj;
+                    that.roundList = that.addValue(that.i18n.home.HOME_ROUND.ROUND_LIST);
+                }
+            })
+            .catch(data => {
+                that.$message.error(data);
+            })
+        }   
     }
     export default {
         name: "home",
@@ -457,11 +477,17 @@
                 mobilePagenationIndex: 1,
                 developerList: [],
                 bannerAmount: 5,
+                statisticParams: {
+                    type: 'openEuler'
+                },
+                roundValueObj: {},
+                roundList: []
             }
         },
         mounted() {
             this.videoCtrlParams.element = document.getElementById('home-video');
             remoteMethods.meetingList();
+            remoteMethods.statisticsList();
             this.roomName = this.i18n.home.HOME_ROOMS.ROOM_NAME
             this.toggleHover();
             this.getRoomsData();
@@ -487,7 +513,8 @@
             calender,
             playcontroll,
             Swiper, 
-            SwiperSlide
+            SwiperSlide,
+            round
         },
         methods: {
             slideChange () {
@@ -653,6 +680,14 @@
                     arr[currentRandom] = current;
                 }
                 return arr.slice(0,count);
+            },
+            addValue(arr) {
+                let temp = arr;
+                temp.forEach(item => {
+                    item.ROUND_VALUE = that.roundValueObj[item.ROUND_KEY];
+                });
+                console.log(temp);
+                return temp;
             }
         }
     }
@@ -781,6 +816,25 @@
         font-size: 18px;
         line-height: 40px;
         margin-top: 30px;
+    }
+    .home .data-round {
+        width: 1120px;
+        margin: 120px auto;
+        height: 713px;
+        .round-box{
+            margin-top: 90px;
+            position: relative;
+            height: 583px;
+        }
+        @media screen and (max-width: 1000px){
+            width: 330px;
+            height: 300px;
+            margin: 61px auto 58px auto;
+            .round-box{
+                height: 230px;
+                margin-top: 32px;
+            }
+        }
     }
     .carousel-item {
         width: 100%;

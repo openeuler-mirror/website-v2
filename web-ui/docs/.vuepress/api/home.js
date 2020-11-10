@@ -25,3 +25,26 @@ export const meetingList = () => {
 
     });
 };
+export const statisticsList = ({
+    type
+}) => {
+    return new Promise((resolve,reject) => {
+        appAjax.postJson({
+            url: '/search/statistics',
+            type: 'get',
+            params: {
+                type
+            },
+            success(result) {
+                if(result) {
+                    resolve(result);
+                    return;
+                }
+                reject(result);
+            },
+            error(msg) {
+                reject(msg);
+            }
+        });
+    });
+}
