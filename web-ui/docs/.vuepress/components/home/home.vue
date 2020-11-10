@@ -417,6 +417,7 @@
     import dayjs from "dayjs";
     import calender from "./calender";
     import playcontroll from './../controll/videoctrl';
+    import round from './../round/round';
     let that = null;
     let remoteMethods = {
         meetingList () {
