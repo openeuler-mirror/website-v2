@@ -684,13 +684,13 @@ module.exports = {
             ACTIVE_DESCRIPTION: "Join us in workshops, SIG discussions, offline activities, and community summits to keep abreast of the latest trend."
         },
         HOME_ROUND: {
-            ROUND_TITLE: 'The community is thriving',
+            ROUND_TITLE: 'We are thriving',
             ROUND_LIST: [
                 {
                     ROUND_VALUE: '',
                     ROUND_KEY: 'contributors',
                     ROUND_IMG: '/img/round/contributer.png',
-                    ROUND_TEXT: '社区贡献者',
+                    ROUND_TEXT: 'Contributors',
                     ROUND_STYLE: {
                         pc_left: 296,
                         pc_top: 360,
@@ -703,7 +703,7 @@ module.exports = {
                     ROUND_VALUE: '',
                     ROUND_KEY: 'modulenums',
                     ROUND_IMG: '/img/round/software.png',
-                    ROUND_TEXT: '社区软件',
+                    ROUND_TEXT: 'Software',
                     ROUND_STYLE: {
                         pc_left: 481,
                         pc_top: 0,
@@ -716,7 +716,7 @@ module.exports = {
                     ROUND_VALUE: '',
                     ROUND_KEY: 'sigs',
                     ROUND_IMG: '/img/round/sig.png',
-                    ROUND_TEXT: 'SIG组',
+                    ROUND_TEXT: 'SIGs',
                     ROUND_STYLE: {
                         pc_left: 131,
                         pc_top: 75,
@@ -729,7 +729,7 @@ module.exports = {
                     ROUND_VALUE: '',
                     ROUND_KEY: 'users',
                     ROUND_IMG: '/img/round/user.png',
-                    ROUND_TEXT: '社区用户',
+                    ROUND_TEXT: 'Users',
                     ROUND_STYLE: {
                         pc_left: 680,
                         pc_top: 330,
@@ -742,7 +742,7 @@ module.exports = {
                     ROUND_VALUE: '',
                     ROUND_KEY: 'businessosv',
                     ROUND_IMG: '/img/round/osv.png',
-                    ROUND_TEXT: '商用OSV',
+                    ROUND_TEXT: 'OS vendors',
                     ROUND_STYLE: {
                         pc_left: 819,
                         pc_top: 60,

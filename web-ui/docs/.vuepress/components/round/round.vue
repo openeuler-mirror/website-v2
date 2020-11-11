@@ -3,12 +3,12 @@
     <div :class="['round',styleParams.backcolor]" :style="{ left:styleParams.pc_left  + 'px',top:styleParams.pc_top  + 'px' }" v-if="!isShowH5">
         <img :class="isOsv?'osv':''" :src="image" alt="" />
         <p>{{ value }}+</p>
-        <p>{{ description }}</p>
+        <p :class="$lang === 'en'?'en-font':''">{{ description }}</p>
     </div>
     <div :class="['round',styleParams.backcolor]" :style="{ left:styleParams.mobile_left  + 'px',top:styleParams.mobile_top  + 'px' }" v-else>
         <img :class="isOsv?'osv':''" :src="image" alt="" />
         <p>{{ value }}+</p>
-        <p>{{ description }}</p>
+        <p :class="$lang === 'en'?'en-font':''">{{ description }}</p>
     </div>
 </template>
 
@@ -41,6 +41,9 @@ export default {
 .yellow {
     box-shadow: 0px 6px 30px 0px rgba(253, 201, 110, 0.25);
 }
+.en-font {
+    font-family: Roboto-Regular !important;
+}
 .round{
     background: #FFFFFF;
     border-radius: 50%;
@@ -51,7 +54,7 @@ export default {
         display: block;
         width: 66px;
         height: 59px;
-        margin: 35px auto 0 auto;
+        margin: 30px auto 0 auto;
     }
     .osv{
         width: 73px;
