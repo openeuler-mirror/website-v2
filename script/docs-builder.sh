@@ -22,16 +22,16 @@ do
   git checkout -b $b $r
   
   mkdir -p ../web-ui/docs/zh/docs/$b
-  cp -r ./docs/zh/docs/$b/* ../web-ui/docs/zh/docs/$b/ 
+  cp -r ./docs/zh/* ../web-ui/docs/zh/docs/$b/ 
  
   mkdir -p ../web-ui/docs/en/docs/$b
-  cp -r ./docs/en/docs/$b/* ../web-ui/docs/en/docs/$b/
+  cp -r ./docs/en/* ../web-ui/docs/en/docs/$b/
 
   mkdir -p ../server/docs/$b/zh/
-  cp -r ./docs/zh/docs/$b/* ../server/docs/$b/zh/
+  cp -r ./docs/zh/* ../server/docs/$b/zh/
 
   mkdir -p ../server/docs/$b/en/
-  cp -r ./docs/en/docs/$b/* ../server/docs/$b/en/
+  cp -r ./docs/en/* ../server/docs/$b/en/
   
   cd ..
 
