@@ -49,18 +49,18 @@ export default {
     height: 180px;
     img{
         display: block;
-        width: 72px;
-        height: 70px;
-        margin: 40px auto 0 auto;
+        width: 66px;
+        height: 59px;
+        margin: 35px auto 0 auto;
     }
     .osv{
-        width: 95px;
-        height: 63px;
+        width: 73px;
+        height: 49px;
     }
     p{
         font-family: FZLTHJW;
         font-weight: normal;
-        margin-top: 10px;
+        margin-top: 4px;
         text-align: center;
         &:first-of-type{
             font-size: 28px;
