@@ -299,10 +299,12 @@ export default {
                     }else{
                         this.dialogFormVisible = false;
                         this.tableLoading = false;
-                        this.$message.error(
-                            this.i18n.community.MAILING_LIST
-                                .SUBSCRIBE_HAS_SENT
-                        );
+                        this.$message({
+                            type: 'error',
+                            message: this.i18n.community.MAILING_LIST.SUBSCRIBE_HAS_SENT,
+                            duration: 0,
+                            showClose: true
+                        });
                     }
                 })
                 .catch(response => {
