@@ -292,15 +292,15 @@ export default {
                     if (response.token) {
                         this.dialogFormVisible = false;
                         this.tableLoading = false;
-                        this.$message.success(
-                            this.i18n.community.MAILING_LIST
-                                .SUBSCRIBE_SUCCESS
-                        );
+                        this.$message({
+                            message: this.i18n.community.MAILING_LIST.SUBSCRIBE_SUCCESS,
+                            duration: 0,
+                            showClose: true
+                        });
                     }else{
                         this.dialogFormVisible = false;
                         this.tableLoading = false;
                         this.$message({
-                            type: 'error',
                             message: this.i18n.community.MAILING_LIST.SUBSCRIBE_HAS_SENT,
                             duration: 0,
                             showClose: true
