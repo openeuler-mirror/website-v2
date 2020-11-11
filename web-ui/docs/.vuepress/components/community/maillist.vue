@@ -289,19 +289,23 @@ export default {
             this.tableLoading = true;
             subscribe(this.form)
                 .then(response => {
+                    this.dialogFormVisible = false;
+                    this.tableLoading = false;
                     if (response.token) {
-                        this.dialogFormVisible = false;
-                        this.tableLoading = false;
                         this.$message({
                             message: this.i18n.community.MAILING_LIST.SUBSCRIBE_SUCCESS,
                             duration: 0,
                             showClose: true
                         });
-                    }else{
-                        this.dialogFormVisible = false;
-                        this.tableLoading = false;
+                    }else if(response.description.includes('pending')){
                         this.$message({
                             message: this.i18n.community.MAILING_LIST.SUBSCRIBE_HAS_SENT,
+                            duration: 0,
+                            showClose: true
+                        });
+                    }else{
+                        this.$message({
+                            message: this.i18n.community.MAILING_LIST.SUBSCRIBE_ALREADY_SUCCESS,
                             duration: 0,
                             showClose: true
                         });
