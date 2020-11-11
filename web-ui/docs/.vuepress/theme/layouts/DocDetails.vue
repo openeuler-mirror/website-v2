@@ -175,7 +175,6 @@ export default {
         this.versionValue +
         "/docs" +
         this.targetLocale +
-        'docs/' + this.versionValue + '/' +
         this.currentDocPath +
         ".md";
     },
