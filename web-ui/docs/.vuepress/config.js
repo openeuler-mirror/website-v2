@@ -88,7 +88,7 @@ module.exports = {
                 }
             },
             '/api': {
-                target: 'https://openeuler.org/api',
+                target: 'http://159.138.45.71',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {

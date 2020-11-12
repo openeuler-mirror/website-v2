@@ -322,7 +322,8 @@
         <div class="data-round">
             <h3>{{ i18n.home.HOME_ROUND.ROUND_TITLE }}</h3>
             <div class="round-box">
-                <round :image="item.ROUND_IMG" :value="item.ROUND_VALUE" :description="item.ROUND_TEXT" :styleParams="item.ROUND_STYLE" v-for="(item,index) in roundList"></round>
+                <round class="round-item" :image="item.ROUND_IMG" :value="item.ROUND_VALUE" :description="item.ROUND_TEXT" 
+                    :styleParams="item.ROUND_STYLE" v-for="(item,index) in roundList"></round>
             </div>
         </div>
 
@@ -823,17 +824,41 @@
         margin: 120px auto;
         height: 713px;
         .round-box{
-            margin-top: 90px;
+            width: 1033px;
+            margin: 90px auto 0 auto;
             position: relative;
-            height: 583px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            .round-item {
+                margin-left: 170px;
+                &:first-of-type {
+                    margin-left: 0;
+                }
+                &:nth-of-type(4),&:last-of-type {
+                    margin-top: 80px;
+                }
+            }
         }
         @media screen and (max-width: 1000px){
             width: 330px;
             height: 300px;
             margin: 61px auto 58px auto;
             .round-box{
-                height: 230px;
+                width: 100%;
                 margin-top: 32px;
+                .round-item {
+                    margin-left: 20px;
+                    &:first-of-type {
+                        margin-left: 0;
+                    }
+                    &:nth-of-type(4) {
+                        margin: 30px 0 0 60px;
+                    }
+                    &:last-of-type {
+                        margin: 30px 0 0 24px;
+                    }
+                }
             }
         }
     }

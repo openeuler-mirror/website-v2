@@ -1,11 +1,6 @@
 <!--数据球-->
 <template>
-    <div :class="['round',styleParams.backcolor]" :style="{ left:styleParams.pc_left  + 'px',top:styleParams.pc_top  + 'px' }" v-if="!isShowH5">
-        <img :class="isOsv?'osv':''" :src="image" alt="" />
-        <p>{{ value }}+</p>
-        <p :class="$lang === 'en'?'en-font':''">{{ description }}</p>
-    </div>
-    <div :class="['round',styleParams.backcolor]" :style="{ left:styleParams.mobile_left  + 'px',top:styleParams.mobile_top  + 'px' }" v-else>
+    <div :class="['round',styleParams.backcolor]">
         <img :class="isOsv?'osv':''" :src="image" alt="" />
         <p>{{ value }}+</p>
         <p :class="$lang === 'en'?'en-font':''">{{ description }}</p>
@@ -47,14 +42,13 @@ export default {
 .round{
     background: #FFFFFF;
     border-radius: 50%;
-    position: absolute;
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
     img{
         display: block;
         width: 66px;
         height: 59px;
-        margin: 30px auto 0 auto;
+        margin: 45px auto 0 auto;
     }
     .osv{
         width: 73px;
