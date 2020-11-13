@@ -2,7 +2,7 @@
 <template>
     <div :class="['round',styleParams.backcolor]">
         <img :class="isOsv?'osv':''" :src="image" alt="" />
-        <p>{{ value }}+</p>
+        <p>{{ value }}</p>
         <p :class="$lang === 'en'?'en-font':''">{{ description }}</p>
     </div>
 </template>
