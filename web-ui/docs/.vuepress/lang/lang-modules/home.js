@@ -114,8 +114,55 @@ module.exports = {
             ACTIVE_TITLE: "好玩的活动停不下来",
             ACTIVE_DESCRIPTION: "openEuler社区不定期举办各种workshop、SIG讨论、线下活动、社区峰会，精彩动态随时掌握。"
         },
-        HOME_ROUND_DATA: {
-            ROUND_TITLE: '我们正在不断成长'
+        HOME_ROUND: {
+            ROUND_TITLE: '我们正在不断成长',
+            ROUND_LIST: [
+                {
+                    ROUND_VALUE: '',
+                    ROUND_KEY: 'contributors',
+                    ROUND_IMG: '/img/round/contributer.png',
+                    ROUND_TEXT: '社区贡献者',
+                    ROUND_STYLE: {
+                        backcolor: 'blue'
+                    }
+                },
+                {
+                    ROUND_VALUE: '',
+                    ROUND_KEY: 'modulenums',
+                    ROUND_IMG: '/img/round/software.png',
+                    ROUND_TEXT: '社区软件',
+                    ROUND_STYLE: {
+                        backcolor: 'pink'
+                    }
+                },
+                {
+                    ROUND_VALUE: '',
+                    ROUND_KEY: 'sigs',
+                    ROUND_IMG: '/img/round/sig.png',
+                    ROUND_TEXT: 'SIG组',
+                    ROUND_STYLE: {
+                        backcolor: 'yellow'
+                    }
+                },
+                {
+                    ROUND_VALUE: '',
+                    ROUND_KEY: 'users',
+                    ROUND_IMG: '/img/round/user.png',
+                    ROUND_TEXT: '社区用户',
+                    ROUND_STYLE: {
+                        backcolor: 'yellow'
+                    }
+                },
+                {
+                    ROUND_VALUE: '',
+                    ROUND_KEY: 'businessosv',
+                    ROUND_IMG: '/img/round/osv.png',
+                    ROUND_TEXT: '商用OSV',
+                    ROUND_STYLE: {
+                        backcolor: 'blue'
+                    }
+                }
+            ]
         },
         HOME_ROOMS: {
             ROOM_NAME: ["最新活动", "博客", "新闻"],
@@ -616,8 +663,55 @@ module.exports = {
             ACTIVE_TITLE: "Join our community activities",
             ACTIVE_DESCRIPTION: "Join us in workshops, SIG discussions, offline activities, and community summits to keep abreast of the latest trend."
         },
-        HOME_ROUND_DATA: {
-            ROUND_TITLE: 'The community is thriving'
+        HOME_ROUND: {
+            ROUND_TITLE: 'We are thriving',
+            ROUND_LIST: [
+                {
+                    ROUND_VALUE: '',
+                    ROUND_KEY: 'contributors',
+                    ROUND_IMG: '/img/round/contributer.png',
+                    ROUND_TEXT: 'Contributors',
+                    ROUND_STYLE: {
+                        backcolor: 'blue'
+                    }
+                },
+                {
+                    ROUND_VALUE: '',
+                    ROUND_KEY: 'modulenums',
+                    ROUND_IMG: '/img/round/software.png',
+                    ROUND_TEXT: 'Software',
+                    ROUND_STYLE: {
+                        backcolor: 'pink'
+                    }
+                },
+                {
+                    ROUND_VALUE: '',
+                    ROUND_KEY: 'sigs',
+                    ROUND_IMG: '/img/round/sig.png',
+                    ROUND_TEXT: 'SIGs',
+                    ROUND_STYLE: {
+                        backcolor: 'yellow'
+                    }
+                },
+                {
+                    ROUND_VALUE: '',
+                    ROUND_KEY: 'users',
+                    ROUND_IMG: '/img/round/user.png',
+                    ROUND_TEXT: 'Users',
+                    ROUND_STYLE: {
+                        backcolor: 'yellow'
+                    }
+                },
+                {
+                    ROUND_VALUE: '',
+                    ROUND_KEY: 'businessosv',
+                    ROUND_IMG: '/img/round/osv.png',
+                    ROUND_TEXT: 'OS vendors',
+                    ROUND_STYLE: {
+                        backcolor: 'blue'
+                    }
+                }
+            ]
         },
         HOME_ROOMS: {
             ROOM_NAME: ["Latest Activity", "Blog", "News"],
