@@ -123,7 +123,7 @@ module.exports = {
                     ROUND_IMG: '/img/round/contributer.png',
                     ROUND_TEXT: '社区贡献者',
                     ROUND_STYLE: {
-                        backcolor: 'pink'
+                        backcolor: 'blue'
                     }
                 },
                 {
@@ -672,7 +672,7 @@ module.exports = {
                     ROUND_IMG: '/img/round/contributer.png',
                     ROUND_TEXT: 'Contributors',
                     ROUND_STYLE: {
-                        backcolor: 'pink'
+                        backcolor: 'blue'
                     }
                 },
                 {
