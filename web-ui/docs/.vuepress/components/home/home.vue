@@ -688,7 +688,6 @@
                 temp.forEach(item => {
                     item.ROUND_VALUE = that.roundValueObj[item.ROUND_KEY];
                 });
-                console.log(temp);
                 return temp;
             }
         }
