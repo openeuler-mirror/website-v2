@@ -63,7 +63,7 @@
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
-                <swiper-slide v-if="i18n.home.HOME_FIRST_BANNER">
+                <swiper-slide v-if="$lang === 'zh'">
                     <div class="carousel-banner mobile-banner" :style="{backgroundImage: i18n.home.HOME_FIRST_BANNER.BANNER_MOBILE_IMG}" @click="go(i18n.home.HOME_FIRST_BANNER.BANNER_LINK)">
                     </div>
                 </swiper-slide>
