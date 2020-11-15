@@ -2,12 +2,15 @@
     <div class="home">
         <div class="is-pc home-carousel" v-if="!isShowH5">
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" @change="eventChange()">
-                <el-carousel-item v-if="i18n.home.HOME_FIRST_BANNER">
+                <el-carousel-item v-if="$lang === 'zh'">
                     <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_FIRST_BANNER.BANNER_PC_IMG}" @click="go(i18n.home.HOME_FIRST_BANNER.BANNER_LINK)">
                     </div>
                 </el-carousel-item>
                  <el-carousel-item v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
                     <div class="carousel-banner" :style="{backgroundImage: item.BANNER_PC_IMG}" @click="go(item.BANNER_LINK)">
+                        <video autoplay loop muted width="40%" height="500px" id="summit-video">
+                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler%20Summit%202020%20mov.mp4"  type="video/mp4">
+                        </video>
                     </div>
                 </el-carousel-item>
                 <el-carousel-item>
@@ -61,11 +64,11 @@
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
                 <swiper-slide v-if="i18n.home.HOME_FIRST_BANNER">
-                    <div class="carousel-banner first-banner" :style="{backgroundImage: i18n.home.HOME_FIRST_BANNER.BANNER_MOBILE_IMG}" @click="go(i18n.home.HOME_FIRST_BANNER.BANNER_LINK)">
+                    <div class="carousel-banner mobile-banner" :style="{backgroundImage: i18n.home.HOME_FIRST_BANNER.BANNER_MOBILE_IMG}" @click="go(i18n.home.HOME_FIRST_BANNER.BANNER_LINK)">
                     </div>
                 </swiper-slide>
                 <swiper-slide v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
-                    <div class="carousel-banner first-banner" :style="{backgroundImage: item.BANNER_MOBILE_IMG}" @click="go(item.BANNER_LINK)">
+                    <div class="carousel-banner mobile-banner" :style="{backgroundImage: item.BANNER_MOBILE_IMG}" @click="go(item.BANNER_LINK)">
                     </div>
                 </swiper-slide>
                 <swiper-slide>
@@ -501,7 +504,7 @@
                 })
             }
             this.developerList = this.changeArr(this.i18n.home.HOME_DEV.DEV_INFO,16);
-            this.$lang === 'en'?this.bannerAmount = 5:this.bannerAmount = 7;
+            this.$lang === 'en'?this.bannerAmount = 5:this.bannerAmount = 6;
         },
         beforeDestroy () {
             this.mobileSwiperInterval && clearInterval(this.mobileSwiperInterval);
@@ -726,6 +729,9 @@
 </style>
 
 <style lang="less" scoped>
+    #summit-video {
+        background-color: white !important;
+    }
     .mobile-swiper {
         height: 300px;
     }
@@ -1068,7 +1074,7 @@
             background-size: 100% 100%;
         }
     }
-    .home-banner .first-banner {
+    .home-banner .mobile-banner {
         @media screen and (max-width: 1000px) {
             background-size: contain !important;
         }
