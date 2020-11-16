@@ -728,6 +728,7 @@
 <style lang="less" scoped>
     #summit-video {
         background-color: white !important;
+        margin-left: 1%;
     }
     .mobile-swiper {
         height: 300px;
