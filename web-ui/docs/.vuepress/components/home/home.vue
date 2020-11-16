@@ -7,10 +7,11 @@
                     </div>
                 </el-carousel-item>
                  <el-carousel-item v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
-                    <div class="carousel-banner" :style="{backgroundImage: item.BANNER_PC_IMG}" @click="go(item.BANNER_LINK)">
-                        <video autoplay loop muted width="40%" height="500px" id="summit-video">
+                    <div class="carousel-banner summmit-banner" @click="go(item.BANNER_LINK)">
+                        <video autoplay loop muted width="700px" height="500px" id="summit-video">
                             <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler%20Summit%202020%20mov.mp4"  type="video/mp4">
                         </video>
+                        <img :src="item.BANNER_PC_IMG" alt="" />
                     </div>
                 </el-carousel-item>
                 <el-carousel-item>
@@ -731,6 +732,7 @@
 <style lang="less" scoped>
     #summit-video {
         background-color: white !important;
+        margin-left: -200px;
     }
     .mobile-swiper {
         height: 300px;
@@ -850,14 +852,14 @@
             }
         }
         @media screen and (max-width: 1000px){
-            width: 330px;
+            width: 336px;
             height: 300px;
             margin: 61px auto 58px auto;
             .round-box{
                 width: 100%;
-                margin-top: 32px;
+                margin: 32px auto 0 auto;
                 .round-item {
-                    margin-left: 20px;
+                    margin-left: 18px;
                     &:first-of-type {
                         margin-left: 0;
                     }
@@ -1067,11 +1069,24 @@
         width: 100%;
         height: 100%;
         cursor: pointer;
+        position: relative;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
         @media screen and (max-width: 1000px) {
             background-size: 100% 100%;
+        }
+    }
+    .home-banner .summmit-banner{
+        width: 1120px !important;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        img{
+            width: 600px;
+            height: 400px;
         }
     }
     .home-banner .mobile-banner {

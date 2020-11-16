@@ -23,7 +23,6 @@ module.exports = {
                 DES: "A-Tune是智能性能优化系统软件，即通过机器学习引擎对业务应用建立精准模型, 再根据业务负载智能匹配最佳操作系统配置参数组合，实现系统整体运行效率提升。",
             }
         ],
-        HOME_LAST_BANNER: {},
         HOME_FIRST_BANNER: {
             BANNER_PC_IMG: 'url("/img/home/banner/zh-pc-race.png")',
             BANNER_MOBILE_IMG: 'url("/img/home/banner/zh-mobile-race.png")',
@@ -31,7 +30,7 @@ module.exports = {
         },
         HOME_OTHER_BANNER: [
             {
-                BANNER_PC_IMG: 'url("/img/home/banner/zh-pc-summit.png")',
+                BANNER_PC_IMG: '/img/home/banner/zh-pc-summit.png',
                 BANNER_MOBILE_IMG: 'url("/img/home/banner/zh-mobile-summit.png")',
                 BANNER_LINK: '/interaction/summit-list/'
             }
@@ -582,7 +581,7 @@ module.exports = {
         HOME_FIRST_BANNER: {},
         HOME_OTHER_BANNER: [
             {
-                BANNER_PC_IMG: 'url("/img/home/banner/en-pc-summit.png")',
+                BANNER_PC_IMG: '/img/home/banner/en-pc-summit.png',
                 BANNER_MOBILE_IMG: 'url("/img/home/banner/en-mobile-summit.png")',
                 BANNER_LINK: '/interaction/summit-list/'
             }
