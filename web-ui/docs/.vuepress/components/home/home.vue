@@ -468,7 +468,7 @@
                 rooms2: false,
                 rooms3: false,
                 calenderData: [],
-                autoPlay: false,
+                autoPlay: true,
                 videoCtrlParams:{
                     element: '',
                     isShow: false,  //默认不显示控制器
