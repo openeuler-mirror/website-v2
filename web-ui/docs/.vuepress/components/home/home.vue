@@ -8,6 +8,9 @@
                 </el-carousel-item>
                  <el-carousel-item v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
                     <div class="carousel-banner" :style="{backgroundImage: item.BANNER_PC_IMG}" @click="go(item.BANNER_LINK)">
+                        <video autoplay loop muted width="40%" height="500px" id="summit-video">
+                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler%20Summit%202020%20mov.mp4"  type="video/mp4">
+                        </video>
                     </div>
                 </el-carousel-item>
                 <el-carousel-item>
@@ -699,6 +702,10 @@
 </script>
 
 <style lang="less">
+    #summit-video {
+        background-color: white !important;
+        margin-left: 1%;
+    }
     .home-banner .el-carousel__button {
         height: 10px;
         width: 10px;
@@ -844,14 +851,14 @@
             }
         }
         @media screen and (max-width: 1000px){
-            width: 350px;
+            width: 336px;
             height: 300px;
             margin: 61px auto 58px auto;
             .round-box{
                 width: 100%;
-                margin-top: 32px;
+                margin: 32px auto 0 auto;
                 .round-item {
-                    margin-left: 20px;
+                    margin-left: 18px;
                     &:first-of-type {
                         margin-left: 0;
                     }
