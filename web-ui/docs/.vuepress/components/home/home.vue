@@ -689,9 +689,12 @@
             addValue(arr) {
                 let temp = arr;
                 temp.forEach(item => {
-                    item.ROUND_VALUE = that.roundValueObj[item.ROUND_KEY];
+                    if(item.ROUND_KEY === 'businessosv') {
+                        item.ROUND_VALUE = 7;
+                    }else{
+                        item.ROUND_VALUE = that.roundValueObj[item.ROUND_KEY];
+                    }
                 });
-                console.log(temp);
                 return temp;
             }
         }
