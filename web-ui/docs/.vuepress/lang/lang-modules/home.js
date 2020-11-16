@@ -25,16 +25,11 @@ module.exports = {
         ],
         HOME_LAST_BANNER: {},
         HOME_FIRST_BANNER: {
-            BANNER_PC_IMG: 'url("/img/home/banner/pc-contribution.png")',
-            BANNER_MOBILE_IMG: 'url("/img/home/banner/mobile-contribution.png")',
-            BANNER_LINK: 'https://isrc.iscas.ac.cn/summer2020/#/summitmeeting'
+            BANNER_PC_IMG: 'url("/img/home/banner/zh-pc-race.png")',
+            BANNER_MOBILE_IMG: 'url("/img/home/banner/zh-mobile-race.png")',
+            BANNER_LINK: 'https://www.oschina.net/2020-openeuler/'
         },
         HOME_OTHER_BANNER: [
-            {
-                BANNER_PC_IMG: 'url("/img/home/banner/zh-pc-race.png")',
-                BANNER_MOBILE_IMG: 'url("/img/home/banner/zh-mobile-race.png")',
-                BANNER_LINK: 'https://www.oschina.net/2020-openeuler/'
-            },
             {
                 BANNER_PC_IMG: 'url("/img/home/banner/zh-pc-summit.png")',
                 BANNER_MOBILE_IMG: 'url("/img/home/banner/zh-mobile-summit.png")',
@@ -584,12 +579,14 @@ module.exports = {
             }
         ],
         HOME_LAST_BANNER: {},
-        HOME_FIRST_BANNER: {
-            BANNER_PC_IMG: 'url("/img/home/banner/en-pc-summit.png")',
-            BANNER_MOBILE_IMG: 'url("/img/home/banner/en-mobile-summit.png")',
-            BANNER_LINK: '/interaction/summit-list/'
-        },
-        HOME_OTHER_BANNER: [],
+        HOME_FIRST_BANNER: {},
+        HOME_OTHER_BANNER: [
+            {
+                BANNER_PC_IMG: 'url("/img/home/banner/en-pc-summit.png")',
+                BANNER_MOBILE_IMG: 'url("/img/home/banner/en-mobile-summit.png")',
+                BANNER_LINK: '/interaction/summit-list/'
+            }
+        ],
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
             INTRO_HEAD: "Start your journey in openEuler",
