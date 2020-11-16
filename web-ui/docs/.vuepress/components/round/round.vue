@@ -73,8 +73,8 @@ export default {
 }
 @media screen and (max-width: 1000px){
     .round{
-        width: 96px;
-        height: 96px;
+        width: 100px;
+        height: 100px;
         img{
             display: block;
             width: 33px;
