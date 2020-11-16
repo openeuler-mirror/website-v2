@@ -703,10 +703,6 @@
 </script>
 
 <style lang="less">
-    #summit-video {
-        background-color: white !important;
-        margin-left: -200px;
-    }
     .home-banner .el-carousel__button {
         height: 10px;
         width: 10px;
@@ -734,6 +730,10 @@
 </style>
 
 <style lang="less" scoped>
+    #summit-video {
+        background-color: white !important;
+        margin-left: -200px;
+    }
     .mobile-swiper {
         height: 300px;
     }
