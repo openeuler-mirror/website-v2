@@ -8,7 +8,7 @@
                 </el-carousel-item>
                  <el-carousel-item v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
                     <div class="carousel-banner" :style="{backgroundImage: item.BANNER_PC_IMG}" @click="go(item.BANNER_LINK)">
-                        <video autoplay loop muted width="40%" height="500px" id="summit-video">
+                        <video autoplay loop muted width="650px" height="500px" id="summit-video">
                             <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler%20Summit%202020%20mov.mp4"  type="video/mp4">
                         </video>
                     </div>
@@ -467,7 +467,7 @@
                 rooms2: false,
                 rooms3: false,
                 calenderData: [],
-                autoPlay: true,
+                autoPlay: false,
                 videoCtrlParams:{
                     element: '',
                     isShow: false,  //默认不显示控制器
@@ -704,7 +704,11 @@
 <style lang="less">
     #summit-video {
         background-color: white !important;
-        margin-left: 1%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -780px;
+        margin-top: -250px;
     }
     .home-banner .el-carousel__button {
         height: 10px;
@@ -1068,6 +1072,7 @@
         width: 100%;
         height: 100%;
         cursor: pointer;
+        position: relative;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
