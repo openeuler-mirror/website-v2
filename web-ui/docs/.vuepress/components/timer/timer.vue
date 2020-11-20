@@ -52,7 +52,7 @@ export default {
     },
     beforeDestroy() {
         clearInterval(this.timer);
-    }
+    },
     methods:{
         getTargetTime() {
             //new Date(year,month,day,hour,min,sec) 得到某日期的日期对象
