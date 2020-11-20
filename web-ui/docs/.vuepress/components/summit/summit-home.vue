@@ -23,11 +23,13 @@
                 <p :class="$lang === 'en'?'font-bold':''" @click="toReviewList">{{ i18n.interaction.SUMMIT.REVIEW_TEXT }}</p>
             </div>
         </div>
+        <countDown></countDown>
     </div>
 </template>
 
 <script>
 import commonBanner from './../common/banner';
+import countDown from './../timer/timer';
 export default {
     data () {
         return {
@@ -47,7 +49,8 @@ export default {
         }
     },
     components: {
-        commonBanner
+        commonBanner,
+        countDown
     }
 }
 
