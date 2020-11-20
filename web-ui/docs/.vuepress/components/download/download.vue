@@ -473,7 +473,7 @@ export default {
             justify-content: start;
             li {
               margin-bottom: 14px;
-              margin-left: 22px;
+              margin-left: 12px;
               &:first-of-type{
                   margin-left: 0;
               }
