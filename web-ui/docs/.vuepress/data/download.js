@@ -95,6 +95,17 @@ module.exports = {
                 MANUFACTURER: '普华软件',
                 PUBLISH_DATE: '',
                 LTS: false
+            },
+            {
+                NAME: 'openEuler Preview',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-preview/',
+                DESC: 'openEuler Preview 为社区制作的尝鲜版，旨在对于新技术的探索，当前包含了对于RISC-V架构的支持。',
+                INSTALL_GUIDENCE_URL: 'https://gitee.com/openeuler/RISC-V/blob/master/documents/Installing.md',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/RISC-V/issues',
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-preview/RISC-V/Image/',
+                MANUFACTURER: 'openEuler RISC-V SIG组',
+                PUBLISH_DATE: '2020/09',
+                LTS: false
             }
         ]
     },
@@ -188,6 +199,17 @@ module.exports = {
                 LIFE_CYCLE_URL: '',
                 MANUFACTURER: 'iSoft',
                 PUBLISH_DATE: '',
+                LTS: false
+            },
+            {
+                NAME: 'openEuler Preview',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-preview/',
+                DESC: 'openEuler Preview is a trial version of the community designed to explore new technologies and currently includes support for the RISC-V architecture.',
+                INSTALL_GUIDENCE_URL: 'https://gitee.com/openeuler/RISC-V/blob/master/documents/Installing.md',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/RISC-V/issues',
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-preview/RISC-V/Image/',
+                MANUFACTURER: 'openEuler RISC-V SIG group',
+                PUBLISH_DATE: '2020/09',
                 LTS: false
             }
         ]
