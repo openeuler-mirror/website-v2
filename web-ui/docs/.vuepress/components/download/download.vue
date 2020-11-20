@@ -376,6 +376,7 @@ export default {
         display: inline-block;
         padding: 15px 10px 26px 20px;
         &:nth-of-type(4) {
+          //为kylinsec卡片写的单独样式
           .url-list {
             li {
               &:nth-of-type(3) {
