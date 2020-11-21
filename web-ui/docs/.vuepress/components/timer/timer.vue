@@ -89,11 +89,17 @@ export default {
 
 <style lang='less' scoped>
 .count-down {
-    width: 300px;
+    width: 400px;
     height: 150px;
     margin: 0 auto;
+    background-image: url('/img/summit/time-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
     p{
         margin-bottom: 20px;
+        text-align: center;
     }
     .timeText{
         font-size: 18px;

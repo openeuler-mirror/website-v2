@@ -387,6 +387,17 @@ export default {
             }
           }
         }
+        &:nth-of-type(3) {
+          .url-list {
+            li {
+              &:nth-of-type(4) {
+                 @media screen and (max-width: 1000px) {
+                   margin-left: 13px !important;
+                 }
+              }
+            }
+          }
+        }
         @media screen and (max-width: 1000px) {
           display: block;
           margin: 40px auto !important;
