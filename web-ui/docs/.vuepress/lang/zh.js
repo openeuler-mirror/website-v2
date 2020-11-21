@@ -11,8 +11,8 @@ module.exports = {
     sig: require('./lang-modules/sig').cn,
     authentication: require('./lang-modules/authentication').cn,
     security: require('./lang-modules/security').cn,
-    security: require('./lang-modules/security').cn,
     interaction: require('./lang-modules/interaction').cn,
     brand: require('./lang-modules/brand').cn,
     search: require('./lang-modules/search').cn,
+    timer: require('./lang-modules/timer').cn
 };
