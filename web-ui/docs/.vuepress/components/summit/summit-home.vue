@@ -29,7 +29,7 @@
 
 <script>
 import commonBanner from './../common/banner';
-import countDown from './../timer/timer';
+import countDown from './../timer/countdown';
 export default {
     data () {
         return {
