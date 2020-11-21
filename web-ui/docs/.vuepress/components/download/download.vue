@@ -375,18 +375,6 @@ export default {
         border-radius: 8px;
         display: inline-block;
         padding: 15px 10px 26px 20px;
-        &:nth-of-type(4) {
-          .url-list {
-            li {
-              &:nth-of-type(3) {
-                margin-left: 0;
-                 @media screen and (max-width: 1000px) {
-                   margin-left: 13px;
-                 }
-              }
-            }
-          }
-        }
         @media screen and (max-width: 1000px) {
           display: block;
           margin: 40px auto !important;
@@ -475,15 +463,10 @@ export default {
             justify-content: start;
             li {
               margin-bottom: 14px;
-              margin-left: 12px;
-              &:first-of-type{
-                  margin-left: 0;
-              }
-              &:nth-of-type(4n){
-                  margin-left: 0;
-              }
+              margin-right: 16px;
               @media screen and (max-width: 1000px) {
                 margin-bottom: 20px;
+                margin-right: 26px;
               }
               img {
                 width: 14px;
