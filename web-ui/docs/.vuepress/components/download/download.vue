@@ -376,11 +376,13 @@ export default {
         display: inline-block;
         padding: 15px 10px 26px 20px;
         &:nth-of-type(4) {
-          //为kylinsec卡片写的单独样式
           .url-list {
             li {
               &:nth-of-type(3) {
                 margin-left: 0;
+                 @media screen and (max-width: 1000px) {
+                   margin-left: 13px;
+                 }
               }
             }
           }
