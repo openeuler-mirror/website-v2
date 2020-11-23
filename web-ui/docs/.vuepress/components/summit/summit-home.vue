@@ -23,7 +23,7 @@
                 <p :class="$lang === 'en'?'font-bold':''" @click="toReviewList">{{ i18n.interaction.SUMMIT.REVIEW_TEXT }}</p>
             </div>
         </div>
-        <countDown :timeImage="'/img/summit/time-background.jpg'" :targetTime="'2020年12月24日 00:00'"></countDown>
+        <countDown :timeImage="'/img/summit/time-background.jpg'" :targetTime="'2020年12月24日 00:00'" :isShowText="false"></countDown>
     </div>
 </template>
 
