@@ -122,6 +122,69 @@ module.exports = {
                     APPLY_QRCODE: '/img/meetups/qrcode2.png',
                     MAP_IMG: '/img/meetups/map2.png'
                 }
+            },
+            {
+                ID: 3,
+                MEETUPS_TITLE : '西安 Meetup',
+                MEETUPS_IMG: '/img/meetups/3.png',
+                MEETUPS_DATE: '2020-10-31',
+                MEETUPS_MONTH: '十月',
+                MEETUPS_DESC: '围绕openEuler社区、鲲鹏架构、麒麟信安操作系统（欧拉版）进行经验分享和技术交流。',
+                MEETUPS_FLOW_PATH: [
+                    {
+                        FLOW_PATH_NAME: '签到',
+                        FLOW_PATH_TIME: '13 : 30'
+                    },
+                    {
+                        FLOW_PATH_NAME: '开场与致辞',
+                        FLOW_PATH_TIME: '14 : 00'
+                    },
+                    {
+                        FLOW_PATH_NAME: 'openEuler和社区基本情况介绍',
+                        FLOW_PATH_TIME: '14 : 10'
+                    },
+                    {
+                        FLOW_PATH_NAME: '基于麒麟信安操作系统V3的应用迁移和适配',
+                        FLOW_PATH_TIME: '14 : 15 '
+                    },
+                    {
+                        FLOW_PATH_NAME: '基于鲲鹏架构的云桌面调优和实践',
+                        FLOW_PATH_TIME: '14 : 30'
+                    },
+                    {
+                        FLOW_PATH_NAME: '开源性能调优工具 A-tune 的原理和实践',
+                        FLOW_PATH_TIME: '14 : 45'
+                    },
+                    {
+                        FLOW_PATH_NAME: '华为 Hadoop ARM64 优化探索之路',
+                        FLOW_PATH_TIME: '15 : 05'
+                    },
+                    {
+                        FLOW_PATH_NAME: '参观湖南鲲鹏生态展厅、合影及茶歇',
+                        FLOW_PATH_TIME: '15 : 30'
+                    },
+                    {
+                        FLOW_PATH_NAME: 'openGauss 企业级开源数据库特性解读',
+                        FLOW_PATH_TIME: '15 : 55 '
+                    },
+                    {
+                        FLOW_PATH_NAME: '基于 openGauss 的实验数据分析平台',
+                        FLOW_PATH_TIME: '16 : 20 '
+                    },
+                    {
+                        FLOW_PATH_NAME: '现场观众 Q&A',
+                        FLOW_PATH_TIME: '16 : 45 '
+                    }
+                ],
+                MEETINGS_INFO: {
+                    ADDRESS_IMG: '/img/meetups/address2.png',
+                    ADDRESS_UP: '鲲鹏生态创新中心培训室',
+                    ADDRESS_DOWN: [
+                        '金茂北塔47楼','湖南省鲲鹏生态创新中心培训室'
+                    ],
+                    APPLY_QRCODE: '/img/meetups/qrcode2.png',
+                    MAP_IMG: '/img/meetups/map2.png'
+                }
             }
         ]
     },

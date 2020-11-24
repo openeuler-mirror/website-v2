@@ -26,7 +26,7 @@ module.exports = {
         HOME_FIRST_BANNER: {
             BANNER_PC_IMG: 'url("/img/home/banner/xian-meetup-pc.png")',
             BANNER_MOBILE_IMG: 'url("/img/home/banner/xian-meetup-mobile.png")',
-            BANNER_LINK: 'https://www.oschina.net/2020-openeuler/'
+            BANNER_LINK: 'https://e.eqxiu.com/s/OEj3U6ys?eqrcode=1&share_level=2&from_user=20201108d4e29dd7&from_id=f2f37a6d-3&share_time=1605953167524'
         },
         HOME_OTHER_BANNER: [
             {
