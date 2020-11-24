@@ -24,11 +24,16 @@ module.exports = {
             }
         ],
         HOME_FIRST_BANNER: {
-            BANNER_PC_IMG: 'url("/img/home/banner/zh-pc-race.png")',
-            BANNER_MOBILE_IMG: 'url("/img/home/banner/zh-mobile-race.png")',
+            BANNER_PC_IMG: 'url("/img/home/banner/xian-meetup-pc.png")',
+            BANNER_MOBILE_IMG: 'url("/img/home/banner/xian-meetup-mobile.png")',
             BANNER_LINK: 'https://www.oschina.net/2020-openeuler/'
         },
         HOME_OTHER_BANNER: [
+            {
+                BANNER_PC_IMG: 'url("/img/home/banner/zh-pc-race.png")',
+                BANNER_MOBILE_IMG: 'url("/img/home/banner/zh-mobile-race.png")',
+                BANNER_LINK: 'https://www.oschina.net/2020-openeuler/'
+            },
             {
                 BANNER_PC_IMG: '/img/home/banner/zh-pc-summit.png',
                 BANNER_MOBILE_IMG: 'url("/img/home/banner/zh-mobile-summit.png")',

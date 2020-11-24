@@ -367,7 +367,7 @@ export default {
         margin-bottom: 60px;
       }
       .download-item {
-        width: 348px;
+        width: 420px;
         margin: 0 25px 30px 0;
         height: 264px;
         box-sizing: border-box;
@@ -375,18 +375,6 @@ export default {
         border-radius: 8px;
         display: inline-block;
         padding: 15px 10px 26px 20px;
-        &:nth-of-type(4) {
-          .url-list {
-            li {
-              &:nth-of-type(3) {
-                margin-left: 0;
-                 @media screen and (max-width: 1000px) {
-                   margin-left: 13px;
-                 }
-              }
-            }
-          }
-        }
         @media screen and (max-width: 1000px) {
           display: block;
           margin: 40px auto !important;
@@ -475,7 +463,7 @@ export default {
             justify-content: start;
             li {
               margin-bottom: 14px;
-              margin-left: 12px;
+              margin-left: 22px;
               &:first-of-type{
                   margin-left: 0;
               }
