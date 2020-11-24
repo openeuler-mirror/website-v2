@@ -4,7 +4,8 @@
             <p class="MeetUps-link">{{ i18n.interaction.MEETUPS.MEETUPS }}\</p>
         </div>
         <div class="top-content">
-            <h3 :class="$lang === 'en'?'font-condensed':''">{{ detailObj.MEETUPS_TITLE }}</h3>
+            <h3 :class="$lang === 'en'?'font-condensed':''" v-if="detailObj.ID === 3">{{ detailObj.MEETUPS_TITLE.slice(0,5) }} <br> {{ detailObj.MEETUPS_TITLE.slice(5) }}</h3>
+            <h3 :class="$lang === 'en'?'font-condensed':''" v-else>{{ detailObj.MEETUPS_TITLE }}</h3>
             <p :class="$lang === 'en'?'font-bold':''">{{ detailObj.MEETUPS_DATE }}</p>
         </div>
         <div class="description">
