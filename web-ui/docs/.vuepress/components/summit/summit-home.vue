@@ -23,13 +23,11 @@
                 <p :class="$lang === 'en'?'font-bold':''" @click="toReviewList">{{ i18n.interaction.SUMMIT.REVIEW_TEXT }}</p>
             </div>
         </div>
-        <countDown :targetTime="'2020年12月24日 00:00'" :isShowText="false"></countDown>
     </div>
 </template>
 
 <script>
 import commonBanner from './../common/banner';
-import countDown from './../timer/countdown';
 export default {
     data () {
         return {
@@ -49,8 +47,7 @@ export default {
         }
     },
     components: {
-        commonBanner,
-        countDown
+        commonBanner
     }
 }
 
