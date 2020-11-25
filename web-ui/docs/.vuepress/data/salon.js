@@ -125,7 +125,7 @@ module.exports = {
             },
             {
                 ID: 3,
-                MEETUPS_TITLE : '共创·共赢 统信UOS & 欧拉开源社区技术研讨论坛',
+                MEETUPS_TITLE : '共创·共赢 统信UOS & openEuler开源社区技术研讨论坛',
                 MEETUPS_IMG: '/img/meetups/3.png',
                 MEETUPS_DATE: '2020-11-28',
                 MEETUPS_MONTH: '十一月',
@@ -315,7 +315,7 @@ module.exports = {
             },
             {
                 ID: 3,
-                MEETUPS_TITLE : '共创·共赢 统信UOS & 欧拉开源社区技术研讨论坛',
+                MEETUPS_TITLE : '共创·共赢 统信UOS & openEuler开源社区技术研讨论坛',
                 MEETUPS_IMG: '/img/meetups/3.png',
                 MEETUPS_DATE: '2020-11-28',
                 MEETUPS_MONTH: '十一月',
@@ -372,7 +372,7 @@ module.exports = {
                 ],
                 MEETINGS_INFO: {
                     ADDRESS_IMG: '/img/meetups/address3.png',
-                    ADDRESS_UP: '陕西华为联合学院',
+                    ADDRESS_UP: '西安软件新城',
                     ADDRESS_DOWN: [
                         '西安市雁塔区','西安软件新城软件研发基地2期C2栋3层'
                     ],
