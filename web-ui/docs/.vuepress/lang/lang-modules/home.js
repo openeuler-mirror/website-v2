@@ -23,6 +23,20 @@ module.exports = {
                 DES: "A-Tune是智能性能优化系统软件，即通过机器学习引擎对业务应用建立精准模型, 再根据业务负载智能匹配最佳操作系统配置参数组合，实现系统整体运行效率提升。",
             }
         ],
+        ROOM_LEFT_IMG:[
+            {
+                IMG: '/img/home/zh-eventImg.png',
+                LINK: '/interaction/summit-list/'
+            },
+            {
+                IMG: '/img/home/blogImg.png',
+                LINK: '/interaction/blog-list/'
+            },
+            {
+                IMG: '/img/home/newsImg.png',
+                LINK: '/interaction/news-list/'
+            }
+        ],
         HOME_FIRST_BANNER: {
             BANNER_PC_IMG: 'url("/img/home/banner/xian-meetup-pc.png")',
             BANNER_MOBILE_IMG: 'url("/img/home/banner/xian-meetup-mobile.png")',
@@ -580,6 +594,20 @@ module.exports = {
                 TITLE: "A-Tune",
                 LINK: "https://gitee.com/openeuler/A-Tune",
                 DES: "A system software to auto-optimize the system adaptively to multiple scenarios with embedded AI-engine.",
+            }
+        ],
+        ROOM_LEFT_IMG:[
+            {
+                IMG: '/img/home/en-eventImg.png',
+                LINK: '/interaction/summit-list/'
+            },
+            {
+                IMG: '/img/home/blogImg.png',
+                LINK: '/interaction/blog-list/'
+            },
+            {
+                IMG: '/img/home/newsImg.png',
+                LINK: '/interaction/news-list/'
             }
         ],
         HOME_LAST_BANNER: {},

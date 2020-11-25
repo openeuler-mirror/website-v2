@@ -243,19 +243,9 @@
             <div class="is-pc room-left" v-if="!isShowH5">
                 <template>
                     <el-carousel indicator-position="none" :autoplay="false" arrow="never" ref="newsroomCard" class="room-card">
-                        <el-carousel-item>
+                        <el-carousel-item v-for="(item,index) in i18n.home.ROOM_LEFT_IMG" :key="index">
                             <a class="room-img active card-hover">
-                                <img v-lazy="'/img/home/eventImg.png'" @click="go('/news/20200607.html')" alt="">
-                            </a>
-                        </el-carousel-item>
-                        <el-carousel-item>
-                            <a class="room-img active card-hover"  @click="go('/interaction/blog-list/')" target="_blank">
-                                <img v-lazy="'/img/home/blogImg.png'" alt="" >
-                            </a>
-                        </el-carousel-item>
-                        <el-carousel-item>
-                            <a class="room-img active card-hover" @click="go('/interaction/news-list/')" target="_blank">
-                                <img v-lazy="'/img/home/newsImg.png'" alt="">
+                                <img v-lazy="item.IMG" @click="go(item.LINK)" alt="">
                             </a>
                         </el-carousel-item>
                     </el-carousel>
@@ -1540,6 +1530,7 @@
     }
     .room-img img {
         width: 420px;
+        height: 260px;
     }
     .room-box a {
         color: #000;

@@ -182,7 +182,7 @@ module.exports = {
                 ],
                 MEETINGS_INFO: {
                     ADDRESS_IMG: '/img/meetups/address3.png',
-                    ADDRESS_UP: '陕西华为联合学院',
+                    ADDRESS_UP: '西安软件新城',
                     ADDRESS_DOWN: [
                         '西安市雁塔区','西安软件新城软件研发基地2期C2栋3层'
                     ],
