@@ -25,8 +25,8 @@ module.exports = {
         ],
         ROOM_LEFT_IMG:[
             {
-                IMG: '/img/home/zh-eventImg.png',
-                LINK: '/interaction/summit-list/'
+                IMG: '/img/home/eventImg.png',
+                LINK: 'https://www.oschina.net/2020-openeuler/'
             },
             {
                 IMG: '/img/home/blogImg.png',
@@ -598,8 +598,8 @@ module.exports = {
         ],
         ROOM_LEFT_IMG:[
             {
-                IMG: '/img/home/en-eventImg.png',
-                LINK: '/interaction/summit-list/'
+                IMG: '/img/home/eventImg.png',
+                LINK: 'https://www.oschina.net/2020-openeuler/'
             },
             {
                 IMG: '/img/home/blogImg.png',
