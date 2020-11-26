@@ -7,7 +7,7 @@ module.exports = {
         MEETUPS_LIST : [
             {
                 ID: 1,
-                MEETUPS_TITLE : '开源操作系统 金陵技术论坛',
+                MEETUPS_TITLE : ['开源操作系统 金陵技术论坛'],
                 MEETUPS_IMG: '/img/meetups/1.png',
                 MEETUPS_DATE: '2020-10-24',
                 MEETUPS_MONTH: '十月',
@@ -62,7 +62,7 @@ module.exports = {
             },
             {
                 ID: 2,
-                MEETUPS_TITLE : '长沙 Meetup',
+                MEETUPS_TITLE : ['长沙 Meetup'],
                 MEETUPS_IMG: '/img/meetups/2.png',
                 MEETUPS_DATE: '2020-10-31',
                 MEETUPS_MONTH: '十月',
@@ -125,7 +125,7 @@ module.exports = {
             },
             {
                 ID: 3,
-                MEETUPS_TITLE : '共创·共赢 统信UOS & openEuler开源社区技术研讨论坛',
+                MEETUPS_TITLE : ['共创·共赢','统信UOS & openEuler开源社区技术研讨论坛'],
                 MEETUPS_IMG: '/img/meetups/3.png',
                 MEETUPS_DATE: '2020-11-28',
                 MEETUPS_MONTH: '十一月',
@@ -146,10 +146,6 @@ module.exports = {
                     {
                         FLOW_PATH_NAME: 'uos欧拉版系统介绍及性能优化',
                         FLOW_PATH_TIME: '14 : 45 '
-                    },
-                    {
-                        FLOW_PATH_NAME: '基于鲲鹏架构的云桌面调优和实践',
-                        FLOW_PATH_TIME: '14 : 30'
                     },
                     {
                         FLOW_PATH_NAME: 'uos欧拉版生态适配',
@@ -196,7 +192,7 @@ module.exports = {
         MEETUPS_LIST : [
             {
                 ID: 1,
-                MEETUPS_TITLE : 'Nanjing Operating System Seminar 2020',
+                MEETUPS_TITLE : ['Nanjing Operating System Seminar 2020'],
                 MEETUPS_IMG: '/img/meetups/1.png',
                 MEETUPS_DATE: '2020-10-24',
                 MEETUPS_MONTH: 'October',
@@ -252,7 +248,7 @@ module.exports = {
             },
             {
                 ID: 2,
-                MEETUPS_TITLE : 'Changsha Meetup',
+                MEETUPS_TITLE : ['Changsha Meetup'],
                 MEETUPS_IMG: '/img/meetups/2.png',
                 MEETUPS_DATE: '2020-10-31',
                 MEETUPS_MONTH: 'October',
@@ -315,59 +311,55 @@ module.exports = {
             },
             {
                 ID: 3,
-                MEETUPS_TITLE : '共创·共赢 统信UOS & openEuler开源社区技术研讨论坛',
+                MEETUPS_TITLE : ['UOS & openEuler Community Tech Forum','UOS & openEuler Community Tech Forum'],
                 MEETUPS_IMG: '/img/meetups/3.png',
                 MEETUPS_DATE: '2020-11-28',
-                MEETUPS_MONTH: '十一月',
-                MEETUPS_DESC: '本次活动旨在通过社区合作，打造创新平台，构建支持多处理器构架、统一和开放的操作系统，推动软硬件应用生态繁荣发展。',
+                MEETUPS_MONTH: 'November',
+                MEETUPS_DESC: 'The Forum aims to fuel community collaboration for a prosperous software and hardware application ecosystem, which is nurtured by an innovative platform and a unified and open OS compatible with multiple processor architectures.',
                 MEETUPS_FLOW_PATH: [
                     {
-                        FLOW_PATH_NAME: '签到区签到',
-                        FLOW_PATH_TIME: '14 : 00'
+                        FLOW_PATH_NAME: 'Sign-in',
+                        FLOW_PATH_TIME: '14:00'
                     },
                     {
-                        FLOW_PATH_NAME: '开场',
-                        FLOW_PATH_TIME: '14 : 30'
+                        FLOW_PATH_NAME: 'Opening Ceremony',
+                        FLOW_PATH_TIME: '14:30'
                     },
                     {
-                        FLOW_PATH_NAME: '领导致辞',
-                        FLOW_PATH_TIME: '14 : 35'
+                        FLOW_PATH_NAME: 'Opening Speech',
+                        FLOW_PATH_TIME: '14:35'
                     },
                     {
-                        FLOW_PATH_NAME: 'uos欧拉版系统介绍及性能优化',
-                        FLOW_PATH_TIME: '14 : 45 '
-                    },
-                    {
-                        FLOW_PATH_NAME: '基于鲲鹏架构的云桌面调优和实践',
-                        FLOW_PATH_TIME: '14 : 30'
+                        FLOW_PATH_NAME: 'UOS Euler Version Overview and Performance Optimization',
+                        FLOW_PATH_TIME: '14:45 '
                     },
                     {
                         FLOW_PATH_NAME: 'uos欧拉版生态适配',
-                        FLOW_PATH_TIME: '15 : 15'
+                        FLOW_PATH_TIME: '15:15'
                     },
                     {
                         FLOW_PATH_NAME: '问答+互动环节',
-                        FLOW_PATH_TIME: '15 : 45'
+                        FLOW_PATH_TIME: '15:45'
                     },
                     {
                         FLOW_PATH_NAME: '高校教授分享',
-                        FLOW_PATH_TIME: '15 : 55'
+                        FLOW_PATH_TIME: '15:55'
                     },
                     {
                         FLOW_PATH_NAME: 'openEuler+ARM64在云计算与大数据开源领域的最佳实践',
-                        FLOW_PATH_TIME: '16 : 05 '
+                        FLOW_PATH_TIME: '16:05 '
                     },
                     {
                         FLOW_PATH_NAME: 'StratoVirt：openEuler下一代开放虚拟化平台StratoVirt',
-                        FLOW_PATH_TIME: '16 : 25 '
+                        FLOW_PATH_TIME: '16:25 '
                     },
                     {
                         FLOW_PATH_NAME: '问答+抽奖环节',
-                        FLOW_PATH_TIME: '16 : 45 '
+                        FLOW_PATH_TIME: '16:45 '
                     },
                     {
                         FLOW_PATH_NAME: '闭幕',
-                        FLOW_PATH_TIME: '16 : 55 '
+                        FLOW_PATH_TIME: '16: 55 '
                     }
                 ],
                 MEETINGS_INFO: {
