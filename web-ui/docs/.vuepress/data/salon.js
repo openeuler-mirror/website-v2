@@ -7,7 +7,8 @@ module.exports = {
         MEETUPS_LIST : [
             {
                 ID: 1,
-                MEETUPS_TITLE : ['开源操作系统 金陵技术论坛'],
+                MEETUPS_TITLE: '开源操作系统 金陵技术论坛',
+                TITLE_LIST: ['开源操作系统 金陵技术论坛'],
                 MEETUPS_IMG: '/img/meetups/1.png',
                 MEETUPS_DATE: '2020-10-24',
                 MEETUPS_MONTH: '十月',
@@ -62,7 +63,8 @@ module.exports = {
             },
             {
                 ID: 2,
-                MEETUPS_TITLE : ['长沙 Meetup'],
+                MEETUPS_TITLE: '长沙 Meetup',
+                TITLE_LIST: ['长沙 Meetup'],
                 MEETUPS_IMG: '/img/meetups/2.png',
                 MEETUPS_DATE: '2020-10-31',
                 MEETUPS_MONTH: '十月',
@@ -125,7 +127,8 @@ module.exports = {
             },
             {
                 ID: 3,
-                MEETUPS_TITLE : ['共创·共赢','统信UOS & openEuler开源社区技术研讨论坛'],
+                MEETUPS_TITLE: '共创·共赢 统信UOS & openEuler开源社区技术研讨论坛',
+                TITLE_LIST: ['共创·共赢','统信UOS & openEuler开源社区技术研讨论坛'],
                 MEETUPS_IMG: '/img/meetups/3.png',
                 MEETUPS_DATE: '2020-11-28',
                 MEETUPS_MONTH: '十一月',
@@ -192,7 +195,8 @@ module.exports = {
         MEETUPS_LIST : [
             {
                 ID: 1,
-                MEETUPS_TITLE : ['Nanjing Operating System Seminar 2020'],
+                MEETUPS_TITLE : 'Nanjing Operating System Seminar 2020',
+                TITLE_LIST: ['Nanjing Operating System Seminar 2020'],
                 MEETUPS_IMG: '/img/meetups/1.png',
                 MEETUPS_DATE: '2020-10-24',
                 MEETUPS_MONTH: 'October',
@@ -248,7 +252,8 @@ module.exports = {
             },
             {
                 ID: 2,
-                MEETUPS_TITLE : ['Changsha Meetup'],
+                MEETUPS_TITLE : 'Changsha Meetup',
+                TITLE_LIST: ['Changsha Meetup'],
                 MEETUPS_IMG: '/img/meetups/2.png',
                 MEETUPS_DATE: '2020-10-31',
                 MEETUPS_MONTH: 'October',
@@ -311,7 +316,8 @@ module.exports = {
             },
             {
                 ID: 3,
-                MEETUPS_TITLE : ['UOS & openEuler Community Tech Forum','UOS & openEuler Community Tech Forum'],
+                MEETUPS_TITLE : 'UOS & openEuler Community Tech Forum For Shared Innovation and Success',
+                TITLE_LIST: ['UOS & openEuler Community Tech Forum','For Shared Innovation and Success'],
                 MEETUPS_IMG: '/img/meetups/3.png',
                 MEETUPS_DATE: '2020-11-28',
                 MEETUPS_MONTH: 'November',
@@ -334,39 +340,39 @@ module.exports = {
                         FLOW_PATH_TIME: '14:45 '
                     },
                     {
-                        FLOW_PATH_NAME: 'uos欧拉版生态适配',
+                        FLOW_PATH_NAME: 'Ecosystem Adaptation of UOS Euler Version',
                         FLOW_PATH_TIME: '15:15'
                     },
                     {
-                        FLOW_PATH_NAME: '问答+互动环节',
+                        FLOW_PATH_NAME: 'Q&A',
                         FLOW_PATH_TIME: '15:45'
                     },
                     {
-                        FLOW_PATH_NAME: '高校教授分享',
+                        FLOW_PATH_NAME: 'Insights of College Professors',
                         FLOW_PATH_TIME: '15:55'
                     },
                     {
-                        FLOW_PATH_NAME: 'openEuler+ARM64在云计算与大数据开源领域的最佳实践',
+                        FLOW_PATH_NAME: 'Success Cases of openEuler+ARM64 in Cloud Computing and Big Data Open Source',
                         FLOW_PATH_TIME: '16:05 '
                     },
                     {
-                        FLOW_PATH_NAME: 'StratoVirt：openEuler下一代开放虚拟化平台StratoVirt',
+                        FLOW_PATH_NAME: 'StratoVirt: Next-Generation Open Virtualization Platform of openEuler',
                         FLOW_PATH_TIME: '16:25 '
                     },
                     {
-                        FLOW_PATH_NAME: '问答+抽奖环节',
+                        FLOW_PATH_NAME: 'Q&A+Lucky draw',
                         FLOW_PATH_TIME: '16:45 '
                     },
                     {
-                        FLOW_PATH_NAME: '闭幕',
-                        FLOW_PATH_TIME: '16: 55 '
+                        FLOW_PATH_NAME: 'End',
+                        FLOW_PATH_TIME: '16:55 '
                     }
                 ],
                 MEETINGS_INFO: {
                     ADDRESS_IMG: '/img/meetups/address3.png',
-                    ADDRESS_UP: '西安软件新城',
+                    ADDRESS_UP: "Xi'an Software New Town",
                     ADDRESS_DOWN: [
-                        '西安市雁塔区','西安软件新城软件研发基地2期C2栋3层'
+                        "Yanta District, Xi'an","3rd Floor, No. C2, Xi'an Software New Town R&D Base Phase 2"
                     ],
                     APPLY_QRCODE: '/img/meetups/qrcode3.png',
                     MAP_IMG: '/img/meetups/map3.png'
