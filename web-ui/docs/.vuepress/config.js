@@ -29,18 +29,6 @@ module.exports = {
     shouldPrefetch: () => {
         return false;
     },
-    configureWebpack: (config, isServer) => {
-        if (!isServer) {
-            const CompressionPlugin = require('compression-webpack-plugin');
-            config.plugins.push(new CompressionPlugin({
-                filename: '[path].gz[query]',
-                algorithm: 'gzip',
-                test: /\.js$|\.ttf$|\.TTF$|\.css$/,
-                threshold: 10240,
-                minRatio: 0.8
-            }))
-        }
-    }, 
     locales: {
         '/': {
             lang: 'zh',
