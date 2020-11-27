@@ -4,7 +4,7 @@
             <p class="MeetUps-link">{{ i18n.interaction.MEETUPS.MEETUPS }}\</p>
         </div>
         <div class="top-content">
-            <h3 :class="$lang === 'en'?'font-condensed':''">{{ detailObj.MEETUPS_TITLE }}</h3>
+            <h3 :class="$lang === 'en'?'font-condensed':''" v-for="(item,index) in detailObj.TITLE_LIST">{{ item }}</h3>
             <p :class="$lang === 'en'?'font-bold':''">{{ detailObj.MEETUPS_DATE }}</p>
         </div>
         <div class="description">
@@ -134,7 +134,12 @@ export default {
         h3{
             font-size: 30px;
             text-align: center;
-            margin: 67px 0 28px 0;
+            &:first-of-type {
+                margin-top: 67px;
+            }
+            &:last-of-type {
+                margin-bottom: 28px;
+            }
         }
         p{
             text-align: center;
