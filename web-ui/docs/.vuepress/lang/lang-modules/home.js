@@ -40,7 +40,7 @@ module.exports = {
         HOME_FIRST_BANNER: {
             BANNER_PC_IMG: 'url("/img/home/banner/xian-meetup-pc.png")',
             BANNER_MOBILE_IMG: 'url("/img/home/banner/xian-meetup-mobile.png")',
-            BANNER_LINK: 'https://e.eqxiu.com/s/OEj3U6ys?eqrcode=1&share_level=2&from_user=20201108d4e29dd7&from_id=f2f37a6d-3&share_time=1605953167524'
+            BANNER_LINK: 'https://wx.vzan.com/live/topicguide-1743579612?jumpitd=1&shareuid=86134056&sharetstamp=1606223683891'
         },
         HOME_OTHER_BANNER: [
             {
