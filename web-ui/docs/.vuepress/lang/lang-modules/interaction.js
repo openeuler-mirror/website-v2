@@ -150,50 +150,223 @@ module.exports = {
         SUMMIT: {
             SUMMIT: '峰会',
             SUMMITCONTENT: [
-                'openEuler Summit 是由 openEuler 社区举办的开发者交流会，首届线下 openEuler Summit 2020 将于12月在北京举行。openEuler 不仅是一个支持多种处理器架构的操作系统，更是一个最具活力的开源社区。峰会广泛邀请操作系统生态的开发者、用户、社区贡献者、软件爱好者共同解读 openEuler 的最新版，探讨未来的技术路线，让技术、生态、商业在这里产生奇妙的化学反应。',
-                'openEuler 代表了一种可能性，一种开源、开放模式下的蓬勃朝气，一种从无到有、从0到1的创造，一个可以燎原的火种。在这里，没有厂商绑定，没有严苛规则，只看代码实力、项目创意，通过社区合作，持续孵化开源项目，推动基础架构技术的发展。',
-                '开源是一种态度，分享是一种精神。无论你报名演讲、演示Demo、发表案例、参与社区建设、抑或只是来交流，我们都诚挚的欢迎您的到来。'
+                '2020 年 12 月 25 日，首届 openEuler Summit 将于北京·望京凯悦酒店举办，这将是 openEuler 社区的第一次大型对外发声，向关心操作系统行业发展的万千开发者们汇报 openEuler 开源一年来的工作进展，将社区协作的智慧结晶与业界分享。 ',
+                'openEuler已经走过了快一年的光景。从正式宣布开源到正式开放所有源代码，从社区的正式成立到 20000个PR、1368名社区开发者、176个 maintainer、71个SIG 组，这份荣耀属于每一位社区开发者。',
+                '让自己写的代码跑在所有人的电脑上是每一位开发者的梦想，而 openEuler 社区希望每一位社区开发者的代码未来都能跑在每一台服务器、每一个物联网终端、每一个万物互联的场景下。这条通往多样化算力的征程，需要每一位社区开发者的参与。 '
             ],
-            HOMETITLE: '精彩回顾',
+            SUMMITTIP: 'openEuler Summit 大会的报名通道正式开启，赶快点击链接报名吧！',
+            SUMMIT_HOME_DATA: {
+                AGENDA: {
+                    OUTSIDE_TEXT: '峰会日程',
+                    INSIDE_TEXT: 'AGENDA',
+                    DATE:['12月24日','12月25日','上午','下午'],
+                    AFTERNOON_AGENDA_24: [
+                        {
+                            TIME: '13:00-14:30',
+                            THEME: 'openEuler 技术委员会工作会议',
+                            SPEAKER: 'openEuler 技术委员会'
+                        },
+                        {
+                            TIME: '15:00-17:00',
+                            THEME: 'Maintainer 工作会议',
+                            SPEAKER: 'openEuler Maintainers'
+                        }
+                    ],
+                    FORENOON_AGENDA_25: [
+                        {
+                            TIME: '09:30-09:35',
+                            THEME: '欢迎致辞',
+                            SPEAKER: '邓泰华',
+                            POSITION: '华为副总裁/计算产品线总裁'
+                            
+                        },
+                        {
+                            TIME: '09:35-09:55',
+                            THEME: 'openEuler 全产业链共享操作系统创新价值',
+                            SPEAKER: '江大勇',
+                            POSITION: 'openEuler 社区理事长'
+                        },
+                        {
+                            TIME: '09:55-10:00',
+                            THEME: 'openEuler 技术委员会成立',
+                            SPEAKER: '邱成锋',
+                            POSITION: 'openEuler 社区副理事长'
+                        },
+                        {
+                            TIME: '10:10-10:20',
+                            THEME: 'openEuler 让技术的创新永无止境',
+                            SPEAKER: '胡欣蔚',
+                            POSITION: 'openEuler 社区技术委员会主席'
+                        },
+                        {
+                            TIME: '10:20-10:40',
+                            THEME: '华为在Linux内核社区的贡献与思考',
+                            SPEAKER: '陈海波',
+                            POSITION: '华为OS首席技术专家、上海交通大学特聘教授、博士生导师'
+                        },
+                        {
+                            TIME: '10:40-10:55',
+                            THEME: '云原生在混合架构平台上的实践',
+                            SPEAKER: '张春',
+                            POSITION: '中国移动信息技术中心研发创新中心副总经理'
+                        },
+                        {
+                            TIME: '10:55-11:10',
+                            THEME: '机密计算保护下的边缘场景移动支付实践',
+                            SPEAKER: '祖立军',
+                            POSITION: '银联研究院 电子支付研究院主管'
+                        },
+                        {
+                            TIME: '11:10-11:30',
+                            THEME: 'openEuler&Friends 生态多样性场景展示',
+                            SPEAKER: '熊伟和社区开发者',
+                        },
+                        {
+                            TIME: '11:30-11:40',
+                            THEME: '开源价值文化倡导 “共建共享共治”',
+                            SPEAKER: '堵俊平',
+                            POSITION: '华为云与计算开源业务总经理'
+                        },
+                        {
+                            TIME: '11:40-11:45',
+                            THEME: 'openEuler 社区开发者大奖颁奖',
+                            SPEAKER: '马全一',
+                            POSITION: 'openEuler 社区 maintainer'
+                        }
+                    ],
+                    AFTERNOON_AGENDA_25: {
+                        TIME_LIST: ['14:00-14:35','14:35-15:10','15:10-15:45','16:15-16:50','16:50-17:25'],
+                        CARD_LIST: [
+                            {
+                                TITLE: ['Session 1','操作系统'],
+                                ITEM_LIST: [
+                                    {
+                                        TIME: '14:00-14:35',
+                                        THEME: '未来操作系统使能多样性算力',
+                                        SPEAKER: ['鲲鹏/飞腾/申威/RISC-V（龙芯/海光）六大芯片厂商技术人员+InfoQ主持']
+                                    },
+                                    {
+                                        TIME: '14:35-15:10',
+                                        THEME: '基于树莓派的openEuler镜像构建及部署Kubernetes + iSula容器集群实践',
+                                        SPEAKER: ['方亚芬 中国科学院软件研究所','李宝林 华为技术有限公司'],
+                                        DESC: ['1. 基于树莓派(Raspberry Pi)的 openEuler 镜像构建方案。','2. 在此树莓派镜像上安装部署 Kubernetes 和 iSula 容器引擎的实践']
+                                    },
+                                    {
+                                        TIME: '15:10-15:45',
+                                        THEME: 'openEuler RISC-V移植与对果壳(NutShell)处理器支持',
+                                        SPEAKER: ['周鹏 中国科学院软件研究所'],
+                                        DESC: ['1. 介绍sig-RISC-V兴趣组openEuler OS对RISC-V的构建移植支持工作',' 2. 介绍sig-RISC-V兴趣组对果壳（NutShell）处理器的移植支持工作','3. 探讨操作系统构建依赖管理现状，对未来操作系统依赖管理模式创新的思路']
+                                    },
+                                    {
+                                        TIME: '16:15-16:50',
+                                        THEME: '替代编写内核模块使用bpf技术实现高效无性能损失的网络监控系统',
+                                        SPEAKER: ['范彬 中国电信股份有限公司云计算分公司'],
+                                        DESC: ['传统网络监控系统大多数是通过编写内核模块或者从用户空间访问 proc 文件来实现。编写内核模块是危险的，并且不容易维护和调试。我们需要一个解决方案，能够实现与内核模块类似的功能，而又不会损失性能。我们可以使用 bpf 程序，将要提取的网络数据发送到 bpf 映射中，然后使用加载器将度量存储到后端存储，对其进行计算或将结果绘制成图表进行分析。bpf 具有安全、可编程、高性能的特点。我们可以使用 bpf 收集系统网络数据指标，进行遥控，实现高效无性能损失的网络监控系统。此次分享主要是描述如何使用bpf技术实现高效无性能损失的网络监控系统，通过该系统可以实现对云原生数据中心网络进行监控和可观测性，对网络延迟、网络丢包等问题故障进行定位排查。']
+                                    },
+                                    {
+                                        
+                                    }
+                                ]
+                            },
+                            {
+                                TITLE: ['Session 2','云和云原生'],
+                                ITEM_LIST: [
+                                    {
+                                        TIME: '14:00-14:35',
+                                        THEME: 'iSula与轻量操作系统HopeEdge',
+                                        SPEAKER: [' 梁栋 江苏润和软件股份有限公司'],
+                                        DESC: ['介绍基于openeuler衍生开发的边缘操作系统HopeEdge,在经过轻量化定制后,通过集成iSula容器引擎,实现应用的快速部署,快速升级。']
+                                    },
+                                    {},{},{},{}
+                                ]
+                            },
+                            {
+                                TITLE: ['Session 3','虚拟化'],
+                                ITEM_LIST: [
+                                    {
+                                        TIME: '14:00-14:35',
+                                        THEME: '面向云桌面的显示优化技术',
+                                        SPEAKER: ['孙利杰 湖南麒麟信安科技有限公司'],
+                                        DESC: ['鲲鹏架构下完全支持基于KVM虚拟化实现云桌面产品。本报告分享图形显示和优化相关问题的技术方案，如显卡虚拟化、显卡穿透、视频重定向等，其中涉及openEuler内核、解码库等相关组件的优化和功能增强。']
+                                    },
+                                    {
+                                        TIME: '14:35-15:10',
+                                        THEME: 'StratoVirt：openEuler下一代虚拟化平台',
+                                        SPEAKER: ['陈振东 华为技术有限公司'],
+                                        DESC: ['StratoVirt 是使用 Rust 语言编写的下一代 VMM 系统，它是面向云数据中心的企业级虚拟化平台，实现了一套架构统一支持虚拟机、容器、Serverless三种场景。']
+                                    },
+                                    {},
+                                    {},
+                                    {}
+                                ]
+                            },
+                            {
+                                TITLE: ['Session 4','开源和基础设施'],
+                                ITEM_LIST: [
+                                    {
+                                        TIME: '14:00-14:35',
+                                        THEME: '贡献社区第一步——签署CLA, 社区和贡献者，您做对了吗？',
+                                        SPEAKER: ['袁志昌 ARM China','陈曾 华为技术有限公司'],
+                                        DESC: [' 1. 作为开源社区，应提供CLA签署的服务以便供开发者签署，但怎么提供？自研，采用开源项目？怎么做到签署的CLA具有法律效力？','2. 作为贡献者，应选择哪种角色来签署CLA？公司参与社区，怎么签署CLA? CLA签署后，在后续的开发活动中如何保证自己的利益？']
+                                    },
+                                    {
+                                        TIME: '14:35-15:10',
+                                        THEME: '开源社区数据如何驱动openEuler社区运营',
+                                        SPEAKER: ['夏小雅 华东师范大学','钟君 华为技术有限公司'],
+                                        DESC: ['1. 为什么要做数字化运营','2. 数字化运营系统如何选型（choass、om、kibble...）','3. 运营系统的系统架构如何搭建 ','4. 运营数据如何展示','5. 开源数据指标体系，CHAOSS 指标如何落地','6. 如何用数字驱动运营并落地openEuler社区']
+                                    },
+                                    {
+                                        TIME: '15:10-15:45',
+                                        THEME: '构建openEuler社区开源基础设施和oepkgs开放软件包服务平台',
+                                        SPEAKER: ['殷佳毅 中国科学院软件研究所','胡胜 华为技术有限公司'],
+                                        DESC: ['1. openEuler 社区开源基础设施构建的技术选型和实践 ','2. oepkgs 开放软件包服务平台包含 oepkgs 容器镜像仓库与 oepkgs RPM软件包仓库，本次分享将阐述oepkgs 平台的成立背景和负责维护的两个仓库的基本架构与使用方式以及未来的发展方向']
+                                    },
+                                    {},{}
+                                ]
+                            },
+                            {
+                                TITLE: ['Session 5','安全和可信'],
+                                ITEM_LIST: [
+                                    {
+                                        TIME: '14:00-14:35',
+                                        THEME: '基于SELinux的机密性和完整性安全策略实现',
+                                        SPEAKER: ['罗求 湖南麒麟信安科技有限公司'],
+                                        DESC: ['在openEuler上SELinux是一个标准的安全基础设施，对于特定的软件业务，如何使用SElinux来实现机密性控制和完整性控制的功能，保证信息流的方向，防止敏感信息泄漏和非授权修改。本次session就基于场景来解析如何利用SELinux来实现可信策略。']
+                                    },
+                                    {},{},{},{}
+                                ]
+                            },
+                            {
+                                TITLE: ['Session 6','基础软件'],
+                                ITEM_LIST: [
+                                    {
+                                        TIME: '14:00-14:35',
+                                        THEME: 'openGauss 数据库在openEuler平台的企业级高可用方案探讨与实践',
+                                        SPEAKER: ['刘伟 云和恩墨（北京）信息技术有限公司'],
+                                        DESC: ['议题将针对openGauss在openEuler平台，如何满足企业级双机，一主多备，跨机房的HA方案进行深入探讨，并分享具体的应用落地实践']
+                                    },
+                                    {
+                                        TIME: '14:35-15:10',
+                                        THEME: 'openGauss基于鲲鹏平台的极致性能和应用实践',
+                                        SPEAKER: ['余江 北京海量数据技术股份有限公司','冯犇 华为技术有限公司','王俊捷 华为技术有限公司'],
+                                        DESC: ['1. 介绍openGauss在鲲鹏多核服务器上OLTP场景的优化实践，内容主要为优化瓶颈分析、优化手段及最终达成效果等。','2. 海量数据库Vastbase是海量数据融合多年对各行业应用场景的深入理解，倾力打造的企业级关系型数据库。','3. 议题还将分享海量数据库Vastbase基于鲲鹏+openEuler系操作系统，高性能、高安全、高度兼容传统数据库、迁移方便的应用实践']
+                                    },
+                                    {},{},{}
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
             LISTTITLE: '精彩回顾',
             LISTNEWTITLE:'openEuler 峰会 2020',
-            SUMMITTIP: '“Show me the Code” “Show me the Idea”,  活动演讲、赞助通道已经开启，期待您的参与！',
             LISTTIME: '2020年4月17-18日',
             SPEECHTITLE: '主题演讲',
             DESIGNTITLE: '设计峰会（项目组专题研讨）',
             VIDEODOWNLOAD: '附件下载',
             FRIENDSHIPLINK: '友情链接',
-            CALL_LIST: [
-                {
-                    CALL_IMG: '/img/summit/speaker.png',
-                    CALL_MOBILE_IMG: '/img/summit/speaker-mobile.png',
-                    CALL_MOBILE_LINK: 'https://shimo.im/forms/XtCTP9jcrXKgjytD/fill',
-                    CALL_LINK: 'https://shimo.im/forms/XtCTP9jcrXKgjytD/fill'
-                },
-                {
-                    CALL_IMG: '/img/summit/sponsor.png',
-                    CALL_MOBILE_IMG: '/img/summit/sponsor-mobile.png',
-                    CALL_MOBILE_LINK: 'https://shimo.im/forms/VWWtgLsVHzovmbeH/fill',
-                    CALL_LINK: 'https://shimo.im/forms/VWWtgLsVHzovmbeH/fill'
-                },
-                {
-                    CALL_IMG: '/img/summit/sig.png',
-                    CALL_MOBILE_IMG: '/img/summit/demo-mobile.png',
-                    CALL_MOBILE_LINK: 'https://shimo.im/forms/lMTsArbYcy4hd2dY/fill',
-                    CALL_LINK: 'https://shimo.im/forms/KSMKHGPHIAsjoNHP/fill'
-                },
-                {
-                    CALL_IMG: '/img/summit/demo.png',
-                    CALL_MOBILE_IMG: '/img/summit/sig-mobile.png',
-                    CALL_MOBILE_LINK: 'https://shimo.im/forms/KSMKHGPHIAsjoNHP/fill',
-                    CALL_LINK: 'https://shimo.im/forms/lMTsArbYcy4hd2dY/fill'
-                }
-            ],
-            SUMMITREMIND: '欢迎成为 openEuler 的一员！',
-            REVIEW_TEXT: 'openEuler Virtual Summit 2020',
-            SUMMIT_WEB_IMG: '/img/summit/zh-pc-summit.png',
-            SUMMIT_H5_IMG: '/img/summit/zh-mobile-summit.png',
-            APPLY_TITLE: 'openEuler，不止于操作系统',
+            SUMMIT_WEB_IMG: '/img/summit/home/zh-pc-summit.png',
+            SUMMIT_H5_IMG: '/img/summit/home/zh-mobile-summit.png',
             SPEECHLIST: [{
                     SPEECHTIME: '4 月 17 日    09:30 - 09:40',
                     SPEECHTHEME: 'openEuler 加速多核异构计算产业发展',
@@ -631,50 +804,223 @@ module.exports = {
         SUMMIT: {
             SUMMIT: 'Summit',
             SUMMITCONTENT: [
-                'openEuler Summit is an event held by the openEuler community for developers to exchange the latest developments. The first offline openEuler Summit 2020 will be held in Beijing in December. openEuler is not only an operating system that supports multiple processor architectures, but also the most dynamic open source community. The Summit invites developers, users, community contributors, and software enthusiasts of the OS ecosystem to interpret the latest openEuler version and discuss the future technology roadmap, catalyzing the synergy between technologies, ecosystems, and businesses.',
-                'openEuler unlocks infinite possibilities and dynamism of open source, and encourages innovation that may supercharge various industries in the future. Here developers do not need to concern about vendor binding or rigid rules, because quality code and creative projects matter the most. Through community collaboration, we continue to incubate open source projects and advance the basic architecture technology.',
-                'It is open source and sharing that propel our community to new heights. You can attend the Summit by delivering a speech, displaying demo, sharing cases, building the community, or simply exchanging information with other developers. We are glad to have you join our event.'
+                '2020 年 12 月 25 日，首届 openEuler Summit 将于北京·望京凯悦酒店举办，这将是 openEuler 社区的第一次大型对外发声，向关心操作系统行业发展的万千开发者们汇报 openEuler 开源一年来的工作进展，将社区协作的智慧结晶与业界分享。 ',
+                'openEuler已经走过了快一年的光景。从正式宣布开源到正式开放所有源代码，从社区的正式成立到 20000个PR、1368名社区开发者、176个 maintainer、71个SIG 组，这份荣耀属于每一位社区开发者。',
+                '让自己写的代码跑在所有人的电脑上是每一位开发者的梦想，而 openEuler 社区希望每一位社区开发者的代码未来都能跑在每一台服务器、每一个物联网终端、每一个万物互联的场景下。这条通往多样化算力的征程，需要每一位社区开发者的参与。 '
             ],
-            HOMETITLE: 'Wonderful Recall',
+            SUMMITTIP: 'openEuler Summit 大会的报名通道正式开启，赶快点击链接报名吧！',
+            SUMMIT_HOME_DATA: {
+                AGENDA: {
+                    OUTSIDE_TEXT: '峰会日程',
+                    INSIDE_TEXT: 'AGENDA',
+                    DATE:['12月24日','12月25日','上午','下午'],
+                    AFTERNOON_AGENDA_24: [
+                        {
+                            TIME: '13:00-14:30',
+                            THEME: 'openEuler 技术委员会工作会议',
+                            SPEAKER: 'openEuler 技术委员会'
+                        },
+                        {
+                            TIME: '15:00-17:00',
+                            THEME: 'Maintainer 工作会议',
+                            SPEAKER: 'openEuler Maintainers'
+                        }
+                    ],
+                    FORENOON_AGENDA_25: [
+                        {
+                            TIME: '09:30-09:35',
+                            THEME: '欢迎致辞',
+                            SPEAKER: '邓泰华',
+                            POSITION: '华为副总裁/计算产品线总裁'
+                            
+                        },
+                        {
+                            TIME: '09:35-09:55',
+                            THEME: 'openEuler 全产业链共享操作系统创新价值',
+                            SPEAKER: '江大勇',
+                            POSITION: 'openEuler 社区理事长'
+                        },
+                        {
+                            TIME: '09:55-10:00',
+                            THEME: 'openEuler 技术委员会成立',
+                            SPEAKER: '邱成锋',
+                            POSITION: 'openEuler 社区副理事长'
+                        },
+                        {
+                            TIME: '10:10-10:20',
+                            THEME: 'openEuler 让技术的创新永无止境',
+                            SPEAKER: '胡欣蔚',
+                            POSITION: 'openEuler 社区技术委员会主席'
+                        },
+                        {
+                            TIME: '10:20-10:40',
+                            THEME: '华为在Linux内核社区的贡献与思考',
+                            SPEAKER: '陈海波',
+                            POSITION: '华为OS首席技术专家、上海交通大学特聘教授、博士生导师'
+                        },
+                        {
+                            TIME: '10:40-10:55',
+                            THEME: '云原生在混合架构平台上的实践',
+                            SPEAKER: '张春',
+                            POSITION: '中国移动信息技术中心研发创新中心副总经理'
+                        },
+                        {
+                            TIME: '10:55-11:10',
+                            THEME: '机密计算保护下的边缘场景移动支付实践',
+                            SPEAKER: '祖立军',
+                            POSITION: '银联研究院 电子支付研究院主管'
+                        },
+                        {
+                            TIME: '11:10-11:30',
+                            THEME: 'openEuler&Friends 生态多样性场景展示',
+                            SPEAKER: '熊伟和社区开发者',
+                        },
+                        {
+                            TIME: '11:30-11:40',
+                            THEME: '开源价值文化倡导 “共建共享共治”',
+                            SPEAKER: '堵俊平',
+                            POSITION: '华为云与计算开源业务总经理'
+                        },
+                        {
+                            TIME: '11:40-11:45',
+                            THEME: 'openEuler 社区开发者大奖颁奖',
+                            SPEAKER: '马全一',
+                            POSITION: 'openEuler 社区 maintainer'
+                        }
+                    ],
+                    AFTERNOON_AGENDA_25: {
+                        TIME_LIST: ['14:00-14:35','14:35-15:10','15:10-15:45','16:15-16:50','16:50-17:25'],
+                        CARD_LIST: [
+                            {
+                                TITLE: ['Session 1','操作系统'],
+                                ITEM_LIST: [
+                                    {
+                                        TIME: '14:00-14:35',
+                                        THEME: '未来操作系统使能多样性算力',
+                                        SPEAKER: ['鲲鹏/飞腾/申威/RISC-V（龙芯/海光）六大芯片厂商技术人员+InfoQ主持']
+                                    },
+                                    {
+                                        TIME: '14:35-15:10',
+                                        THEME: '基于树莓派的openEuler镜像构建及部署Kubernetes + iSula容器集群实践',
+                                        SPEAKER: ['方亚芬 中国科学院软件研究所','李宝林 华为技术有限公司'],
+                                        DESC: ['1. 基于树莓派(Raspberry Pi)的 openEuler 镜像构建方案。','2. 在此树莓派镜像上安装部署 Kubernetes 和 iSula 容器引擎的实践']
+                                    },
+                                    {
+                                        TIME: '15:10-15:45',
+                                        THEME: 'openEuler RISC-V移植与对果壳(NutShell)处理器支持',
+                                        SPEAKER: ['周鹏 中国科学院软件研究所'],
+                                        DESC: ['1. 介绍sig-RISC-V兴趣组openEuler OS对RISC-V的构建移植支持工作',' 2. 介绍sig-RISC-V兴趣组对果壳（NutShell）处理器的移植支持工作','3. 探讨操作系统构建依赖管理现状，对未来操作系统依赖管理模式创新的思路']
+                                    },
+                                    {
+                                        TIME: '16:15-16:50',
+                                        THEME: '替代编写内核模块使用bpf技术实现高效无性能损失的网络监控系统',
+                                        SPEAKER: ['范彬 中国电信股份有限公司云计算分公司'],
+                                        DESC: ['传统网络监控系统大多数是通过编写内核模块或者从用户空间访问 proc 文件来实现。编写内核模块是危险的，并且不容易维护和调试。我们需要一个解决方案，能够实现与内核模块类似的功能，而又不会损失性能。我们可以使用 bpf 程序，将要提取的网络数据发送到 bpf 映射中，然后使用加载器将度量存储到后端存储，对其进行计算或将结果绘制成图表进行分析。bpf 具有安全、可编程、高性能的特点。我们可以使用 bpf 收集系统网络数据指标，进行遥控，实现高效无性能损失的网络监控系统。此次分享主要是描述如何使用bpf技术实现高效无性能损失的网络监控系统，通过该系统可以实现对云原生数据中心网络进行监控和可观测性，对网络延迟、网络丢包等问题故障进行定位排查。']
+                                    },
+                                    {
+                                        
+                                    }
+                                ]
+                            },
+                            {
+                                TITLE: ['Session 2','云和云原生'],
+                                ITEM_LIST: [
+                                    {
+                                        TIME: '14:00-14:35',
+                                        THEME: 'iSula与轻量操作系统HopeEdge',
+                                        SPEAKER: [' 梁栋 江苏润和软件股份有限公司'],
+                                        DESC: ['介绍基于openeuler衍生开发的边缘操作系统HopeEdge,在经过轻量化定制后,通过集成iSula容器引擎,实现应用的快速部署,快速升级。']
+                                    },
+                                    {},{},{},{}
+                                ]
+                            },
+                            {
+                                TITLE: ['Session 3','虚拟化'],
+                                ITEM_LIST: [
+                                    {
+                                        TIME: '14:00-14:35',
+                                        THEME: '面向云桌面的显示优化技术',
+                                        SPEAKER: ['孙利杰 湖南麒麟信安科技有限公司'],
+                                        DESC: ['鲲鹏架构下完全支持基于KVM虚拟化实现云桌面产品。本报告分享图形显示和优化相关问题的技术方案，如显卡虚拟化、显卡穿透、视频重定向等，其中涉及openEuler内核、解码库等相关组件的优化和功能增强。']
+                                    },
+                                    {
+                                        TIME: '14:35-15:10',
+                                        THEME: 'StratoVirt：openEuler下一代虚拟化平台',
+                                        SPEAKER: ['陈振东 华为技术有限公司'],
+                                        DESC: ['StratoVirt 是使用 Rust 语言编写的下一代 VMM 系统，它是面向云数据中心的企业级虚拟化平台，实现了一套架构统一支持虚拟机、容器、Serverless三种场景。']
+                                    },
+                                    {},
+                                    {},
+                                    {}
+                                ]
+                            },
+                            {
+                                TITLE: ['Session 4','开源和基础设施'],
+                                ITEM_LIST: [
+                                    {
+                                        TIME: '14:00-14:35',
+                                        THEME: '贡献社区第一步——签署CLA, 社区和贡献者，您做对了吗？',
+                                        SPEAKER: ['袁志昌 ARM China','陈曾 华为技术有限公司'],
+                                        DESC: [' 1. 作为开源社区，应提供CLA签署的服务以便供开发者签署，但怎么提供？自研，采用开源项目？怎么做到签署的CLA具有法律效力？','2. 作为贡献者，应选择哪种角色来签署CLA？公司参与社区，怎么签署CLA? CLA签署后，在后续的开发活动中如何保证自己的利益？']
+                                    },
+                                    {
+                                        TIME: '14:35-15:10',
+                                        THEME: '开源社区数据如何驱动openEuler社区运营',
+                                        SPEAKER: ['夏小雅 华东师范大学','钟君 华为技术有限公司'],
+                                        DESC: ['1. 为什么要做数字化运营','2. 数字化运营系统如何选型（choass、om、kibble...）','3. 运营系统的系统架构如何搭建 ','4. 运营数据如何展示','5. 开源数据指标体系，CHAOSS 指标如何落地','6. 如何用数字驱动运营并落地openEuler社区']
+                                    },
+                                    {
+                                        TIME: '15:10-15:45',
+                                        THEME: '构建openEuler社区开源基础设施和oepkgs开放软件包服务平台',
+                                        SPEAKER: ['殷佳毅 中国科学院软件研究所','胡胜 华为技术有限公司'],
+                                        DESC: ['1. openEuler 社区开源基础设施构建的技术选型和实践 ','2. oepkgs 开放软件包服务平台包含 oepkgs 容器镜像仓库与 oepkgs RPM软件包仓库，本次分享将阐述oepkgs 平台的成立背景和负责维护的两个仓库的基本架构与使用方式以及未来的发展方向']
+                                    },
+                                    {},{}
+                                ]
+                            },
+                            {
+                                TITLE: ['Session 5','安全和可信'],
+                                ITEM_LIST: [
+                                    {
+                                        TIME: '14:00-14:35',
+                                        THEME: '基于SELinux的机密性和完整性安全策略实现',
+                                        SPEAKER: ['罗求 湖南麒麟信安科技有限公司'],
+                                        DESC: ['在openEuler上SELinux是一个标准的安全基础设施，对于特定的软件业务，如何使用SElinux来实现机密性控制和完整性控制的功能，保证信息流的方向，防止敏感信息泄漏和非授权修改。本次session就基于场景来解析如何利用SELinux来实现可信策略。']
+                                    },
+                                    {},{},{},{}
+                                ]
+                            },
+                            {
+                                TITLE: ['Session 6','基础软件'],
+                                ITEM_LIST: [
+                                    {
+                                        TIME: '14:00-14:35',
+                                        THEME: 'openGauss 数据库在openEuler平台的企业级高可用方案探讨与实践',
+                                        SPEAKER: ['刘伟 云和恩墨（北京）信息技术有限公司'],
+                                        DESC: ['议题将针对openGauss在openEuler平台，如何满足企业级双机，一主多备，跨机房的HA方案进行深入探讨，并分享具体的应用落地实践']
+                                    },
+                                    {
+                                        TIME: '14:35-15:10',
+                                        THEME: 'openGauss基于鲲鹏平台的极致性能和应用实践',
+                                        SPEAKER: ['余江 北京海量数据技术股份有限公司','冯犇 华为技术有限公司','王俊捷 华为技术有限公司'],
+                                        DESC: ['1. 介绍openGauss在鲲鹏多核服务器上OLTP场景的优化实践，内容主要为优化瓶颈分析、优化手段及最终达成效果等。','2. 海量数据库Vastbase是海量数据融合多年对各行业应用场景的深入理解，倾力打造的企业级关系型数据库。','3. 议题还将分享海量数据库Vastbase基于鲲鹏+openEuler系操作系统，高性能、高安全、高度兼容传统数据库、迁移方便的应用实践']
+                                    },
+                                    {},{},{}
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
             LISTTITLE: 'Overview',
             LISTNEWTITLE:'openEuler Virtual Summit 2020',
-            SUMMITTIP: '"Show me the code, show me the idea". The channels for speech and sponsorship are now open. We are looking forward to your participation.',
             LISTTIME: 'Apr 17–18, 2020',
             SPEECHTITLE: 'Keynotes',
             DESIGNTITLE: 'Design Summit (SIG Workshop)',
             VIDEODOWNLOAD: 'Slides',
             FRIENDSHIPLINK: 'Links',
-            CALL_LIST: [
-                {
-                    CALL_IMG: '/img/summit/speaker.png',
-                    CALL_MOBILE_IMG: '/img/summit/speaker-mobile.png',
-                    CALL_MOBILE_LINK: 'https://shimo.im/forms/XtCTP9jcrXKgjytD/fill',
-                    CALL_LINK: 'https://shimo.im/forms/XtCTP9jcrXKgjytD/fill'
-                },
-                {
-                    CALL_IMG: '/img/summit/sponsor.png',
-                    CALL_MOBILE_IMG: '/img/summit/sponsor-mobile.png',
-                    CALL_MOBILE_LINK: 'https://shimo.im/forms/VWWtgLsVHzovmbeH/fill',
-                    CALL_LINK: 'https://shimo.im/forms/VWWtgLsVHzovmbeH/fill'
-                },
-                {
-                    CALL_IMG: '/img/summit/sig.png',
-                    CALL_MOBILE_IMG: '/img/summit/demo-mobile.png',
-                    CALL_MOBILE_LINK: 'https://shimo.im/forms/lMTsArbYcy4hd2dY/fill',
-                    CALL_LINK: 'https://shimo.im/forms/KSMKHGPHIAsjoNHP/fill'
-                },
-                {
-                    CALL_IMG: '/img/summit/demo.png',
-                    CALL_MOBILE_IMG: '/img/summit/sig-mobile.png',
-                    CALL_MOBILE_LINK: 'https://shimo.im/forms/KSMKHGPHIAsjoNHP/fill',
-                    CALL_LINK: 'https://shimo.im/forms/lMTsArbYcy4hd2dY/fill'
-                }
-            ],
-            SUMMITREMIND: 'Welcome to join the openEuler community.',
-            REVIEW_TEXT: 'openEuler Virtual Summit 2020',
-            SUMMIT_WEB_IMG: '/img/summit/en-pc-summit.png',
-            SUMMIT_H5_IMG: '/img/summit/en-mobile-summit.png',
-            APPLY_TITLE: 'openEuler , Beyond Operating System',
+            SUMMIT_WEB_IMG: '/img/summit/home/zh-pc-summit.png',
+            SUMMIT_H5_IMG: '/img/summit/home/zh-mobile-summit.png',
             SPEECHLIST: [{
                     SPEECHTIME: '09:30 - 09:40, 17th April',
                     SPEECHTHEME: 'openEuler Drives a Robust Multi-Core, Heterogeneous Computing Industry',

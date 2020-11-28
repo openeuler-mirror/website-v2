@@ -1,26 +1,65 @@
-<!-- 峰会 -->
+<!-- 峰会首页 -->
 <template>
     <div class="summit">
         <h3 v-if="isShowH5">{{ i18n.interaction.SUMMIT.SUMMIT }}</h3>
-        <img class="top-img" :src="i18n.interaction.SUMMIT.SUMMIT_WEB_IMG" alt="" v-if="!isShowH5" />
-        <img class="mobile-img" :src="i18n.interaction.SUMMIT.SUMMIT_H5_IMG" alt="" v-else />
-        <div :class="['summit-explain',$lang == 'en'?'en-explain':'']">
-            <p :class="$lang === 'en'?'font-regular':''" v-for="(item,index) in i18n.interaction.SUMMIT.SUMMITCONTENT">{{ item }}</p>
+        <div class="top-banner" v-if="!isShowH5" @click="go('https://jinshuju.net/f/PEFJht?x_field_1=openeuler')">
+            <video autoplay loop muted width="700px" height="380px" id="summit-mp4">
+                <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler%20Summit%202020%20mov.mp4"  type="video/mp4">
+            </video>
+            <img class="top-img" :src="i18n.interaction.SUMMIT.SUMMIT_WEB_IMG" alt="" />
         </div>
-        <div class="bottom-content">
-            <p :class="['tip',$lang === 'en'?'font-bold':'']">{{ i18n.interaction.SUMMIT.SUMMITTIP }}</p>
-            <p :class="['apply-title',$lang === 'en'?'font-bold':'']">{{ i18n.interaction.SUMMIT.APPLY_TITLE }}</p>
-            <div class="apply-process">
-                <div class="process" v-for="(item,index) in  i18n.interaction.SUMMIT.CALL_LIST" :key="index" :style="{background: item.BACKGROUND_COLOR}">
-                    <img :src="item.CALL_IMG" alt="" @click="go(item.CALL_LINK)" v-if="!isShowH5" />
-                    <img :src="item.CALL_MOBILE_IMG" alt="" @click="go(item.CALL_MOBILE_LINK)" v-else />
-                </div>
+        <img class="mobile-img" :src="i18n.interaction.SUMMIT.SUMMIT_H5_IMG" alt="" v-else @click="go('https://jinshuju.net/f/PEFJht?x_field_1=openeuler')" />
+        <div class="summit-content">
+            <div :class="['summit-explain',$lang == 'en'?'en-explain':'']">
+                <p :class="$lang === 'en'?'font-regular':''" v-for="(item,index) in i18n.interaction.SUMMIT.SUMMITCONTENT">{{ item }}</p>
             </div>
-            <div :class="['review',$lang === 'en'?'en-font':'']">
-                <p :class="$lang === 'en'?'font-bold':''" @click="go('https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=')">{{ i18n.interaction.SUMMIT.SUMMITREMIND }}</p>
-                <i :class="['icon-video',$lang === 'en'?'en-position':'']"></i>
-                <p :class="$lang === 'en'?'font-regular':''">{{ i18n.interaction.SUMMIT.HOMETITLE }}</p>
-                <p :class="$lang === 'en'?'font-bold':''" @click="toReviewList">{{ i18n.interaction.SUMMIT.REVIEW_TEXT }}</p>
+            <p :class="['tip',$lang === 'en'?'font-bold':'']">{{ i18n.interaction.SUMMIT.SUMMITTIP.slice(0,31) }}<a href="https://jinshuju.net/f/PEFJht?x_field_1=openeuler" target="_blank">{{ i18n.interaction.SUMMIT.SUMMITTIP.slice(31,35) }}</a>{{ i18n.interaction.SUMMIT.SUMMITTIP.slice(35) }}</p>
+            <div class="summit-message">
+                <div class="agenda">
+                    <div class="title">
+                        <h3>{{ agendaData.OUTSIDE_TEXT }}</h3>
+                        <span>{{ agendaData.INSIDE_TEXT }}</span>
+                    </div>
+                    <div class="time-box">
+                        <el-tabs v-model="showTab" @tab-click="tabClick">
+                            <el-tab-pane :label="agendaData.DATE[0]" name="twenty-four"></el-tab-pane>
+                            <el-tab-pane :label="agendaData.DATE[1]" name="twenty-five"></el-tab-pane>
+                        </el-tabs>
+                        <el-radio-group v-model="showBtn" @change="changeTime" v-show="isShowBtn">
+                            <el-radio-button label="forenoon">{{ agendaData.DATE[2] }}</el-radio-button>
+                            <el-radio-button label="afternoon">{{ agendaData.DATE[3] }}</el-radio-button>
+                        </el-radio-group>
+                    </div>
+                    <div class="calendar-content" v-show="!isShowcarousel">
+                        <el-table
+                        :data="agendaTableData"
+                        :show-header=false
+                        style="width: 100%">
+                        <el-table-column
+                            prop="icon"
+                            width="35">
+                            <i class="el-icon-time"></i>
+                        </el-table-column>
+                        <el-table-column
+                            prop="TIME"
+                            width="205">
+                        </el-table-column>
+                        <el-table-column
+                            prop="THEME"
+                            width="400">
+                        </el-table-column>
+                        <el-table-column
+                            prop="SPEAKER"
+                            width="230">
+                        </el-table-column>
+                        <el-table-column
+                            prop="POSITION"
+                            width="250">
+                        </el-table-column>
+                        </el-table>
+                    </div>
+                    <carousel v-show="isShowcarousel"></carousel>
+                </div>
             </div>
         </div>
     </div>
@@ -28,10 +67,22 @@
 
 <script>
 import commonBanner from './../common/banner';
+import carousel from './carousel.vue';
 export default {
     data () {
         return {
+            showTab: 'twenty-four',
+            showBtn: 'forenoon',
+            agendaData: {},
+            agendaTableData: [],
+            isShowcarousel: false,
+            isShowBtn: false
         }
+    },
+    mounted() {
+        let dataObj = this.i18n.interaction.SUMMIT.SUMMIT_HOME_DATA;
+        this.agendaData = dataObj.AGENDA;
+        this.agendaTableData = this.agendaData.AFTERNOON_AGENDA_24;
     },
     methods: {
         toReviewList () {
@@ -44,82 +95,61 @@ export default {
             }else{
                 this.$router.push('/' + this.$lang + path);
             }
+        },
+        tabClick(tab) {
+            if(tab.name === 'twenty-four') {
+                this.isShowcarousel = false;
+                this.agendaTableData = this.agendaData.AFTERNOON_AGENDA_24;
+                this.isShowBtn = false;
+            }else if(tab.name === 'twenty-five') {
+                this.isShowcarousel = false;
+                this.isShowBtn = true;
+                this.agendaTableData = this.agendaData.FORENOON_AGENDA_25;
+                this.showBtn = 'forenoon';
+            }else {
+                return false;
+            }
+        },
+        changeTime(tab) {
+            if(tab === 'forenoon') {
+                this.agendaTableData = this.agendaData.FORENOON_AGENDA_25;
+                this.isShowcarousel = false;
+            }else if(tab === 'afternoon'){
+                this.isShowcarousel = true;
+            }else {
+                return false;
+            }
         }
     },
     components: {
-        commonBanner
+        commonBanner,
+        carousel
     }
 }
 
 </script>
 
 <style lang='less' scoped>
-@mr-left: left;
-@mr-right: right;
-@mr-bottom: bottom;
-@mr-top: top;
-
-.mr(@position,@px) when (@position = @mr-top) {
-    margin-top: @px;
-}
-.mr(@position,@px) when (@position = @mr-right) {
-    margin-right: @px;
-}
-.mr(@position,@px) when (@position = @mr-bottom) {
-    margin-bottom: @px;
-}
-.mr(@position,@px) when (@position = @mr-left) {
-    margin-left: @px;
-}
-.mr-All(@mr) {
-    margin: @mr;
-}
-.wid-and-hei(@width,@height) {
-    width: @width;
-    height: @height;
-}
-.max-wid-hei(@width,@height){
-    max-width:@width ;
-    max-height: @height;
-}
-.word-common-css(@fontSize,@fontFamily,@fontWeight,@color,@lineHeight) {
-    font-size: @fontSize;
-    font-family: @fontFamily;
-    font-weight: @fontWeight;
-    color: @color;
-    line-height: @lineHeight;
-}
-.background-size(@size) {
-    background-size: @size;
-}
-.icon-css(@width,@height,@url,@size) {
-    display: inline-block;
-    width: @width;
-    height: @height;
-    background-image: url(@url);
-    .background-size(@size);
-}
-.back-shadow-radius(@background,@shadow,@radius) {
-    background: @background;
-    box-shadow: @shadow;
-    border-radius: @radius;
-}
-//主题的高度和宽度固定
-.theme-css(@width,@height) {
-    width: @width;
-    height: @height;
-    .word-common-css(36px,FZLTHJW,normal,rgba(0,0,0,1),46px);
-    .mr-All( 0 auto);
-}
-
-// 具体样式从这里开始
 .summit {
     padding-bottom: 180px;
-    .top-img{
-        .wid-and-hei(1120px,380px);
-        display: block;
-        .mr-All(0 auto);
+    .top-banner {
+        width: 1120px;
+        height: 380px;
+        position: relative;
+        margin: 0 auto;
+        cursor: pointer;
+        #summit-mp4 {
+            position: absolute;
+            left: -220px;
+        }
+        .top-img{
+            width: 565px;
+            height: 380px;
+            right: 0;
+            position: absolute;
+        }
     }
+    
     @media screen and (max-width: 1000px) {
         padding: 40px 30px 126px 30px;
         h3{
@@ -135,163 +165,167 @@ export default {
         }
     }
 }
-.summit .summit-explain {
+.summit .summit-content .title {
+    width: 215px;
+    margin: 67px auto 0 auto;
+    position: relative;
+    h3 {
+        width: 215px;
+        height: 53px;
+        background-image: url('/img/summit/home/title-background.png');
+        background-size: contain;
+        font-size: 36px;
+        font-family: FZLTHJW;
+        font-weight: normal;
+        color: #000000;
+        line-height: 46px;
+        text-align: center;
+    }
+    span {   
+        font-size: 60px;
+        font-family: Roboto-Regular, Roboto;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.05);
+        line-height: 60px;
+        position: absolute;
+        top: -25px;
+        left: 70px;
+    }
+    @media screen and (max-width: 1000px) {
+        width: 107px;
+        margin: 50px auto 0 auto;
+        h3 {
+            width: 107px;
+            height: 26px;
+            font-size: 18px;
+            line-height: 23px;
+        }
+        span {
+            font-size: 30px;
+            line-height: 30px;
+            top: -15px;
+            left: 54px;
+        }
+    }
+}
+.summit-content .tip{ 
+    font-size: 20px;
+    font-family: FZLTCHJW;
+    color: #000000;
+    line-height: 40px;
+    font-weight: 400;
+    margin-bottom: 60px;
+    text-align: center;
+    a{
+        color: #002fa7;
+    }
+    @media screen and (max-width: 1000px) {
+        font-size: 14px;
+        line-height: 26px;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+}
+.summit-content .font-bold{ 
+    font-weight: bold !important;
+    font-family: Roboto-Bold !important;
+    @media screen and (max-width: 1000px) {
+        text-align: justify;
+    }
+}
+.summit-content {
+    margin-top: 50px;
+    font-family: FZLTHJW;
+    .summit-message {
+        width: 1120px;
+        position: relative;
+        margin: 0 auto;
+    }
+    @media screen and (max-width: 1000px) {
+        .summit-message {
+            width: 100%;
+        }
+    }
+}
+.summit-content .summit-explain {
     width: 1120px;
-    .mr-All(60px auto 24px auto);
-    .word-common-css(20px,FZLTXIHJW,200,rgba(0, 0, 0, 0.85),40px);
+    margin: 60px auto 24px auto;
+    font-size: 20px;
+    font-family: FZLTXIHJW;
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 40px;
     @media screen and (max-width: 1000px) {
         width: 100%;
-        .mr-All(40px 0 30px 0);
-        .word-common-css(14px,FZLTHJW,200,rgba(0, 0, 0, 1),24px);
+        margin: 40px 0 30px 0;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 1);
+        line-height: 24px;
     }
-    p{
+    p {
         margin-bottom: 30px;
         text-align:justify;
     }
 }
-.summit .en-explain{
-    .word-common-css(20px,Roboto-Regular,400,#000000,40px);
+.summit-content .en-explain {
+    font-family: Roboto-Regular;
+    font-weight: 400;
+    color: #000000;
     @media screen and (max-width: 1000px) {
-        .word-common-css(14px,Roboto-Regular,normal,#000000,26px);
+        font-weight: normal;
+        line-height: 26px;
     }
-    
 }
-.summit .bottom-content{
-    width: 1120px;
-    margin: 0 auto;
-    .tip{
-        font-size: 20px;
-        font-family: FZLTCHJW;
-        color: #000000;
-        line-height: 40px;
-        font-weight: 400;
-        margin-bottom: 60px;
+.summit-message .agenda {
+    .time-box {
+        margin-top: 56px;
+        /deep/ .el-tabs__nav-scroll div{
+            font-size: 22px;
+        }
+        /deep/ .el-radio-group span{   
+            font-family: FZLTXIHJW;  
+            font-size: 16px;
+            line-height: 18px;
+        }
     }
-    .apply-title{
-        font-size: 32px;
-        font-family: FZLTCHJW;
-        font-weight: 400;
-        color: #000000;
-        line-height: 39px;
-        margin-bottom: 36px;
-        text-align: center;
-    }
-    .apply-process{
-        width: 870px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        .process{
-            width: 400px;
-            height: 160px;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            margin-bottom: 36px;
-            img{
-                .wid-and-hei(400px,160px);
+    .calendar-content {
+        margin-top: 43px;
+        /deep/ .el-table tbody tr { 
+            pointer-events:none;
+            height: 100px; 
+        }
+        /deep/ .el-table tbody tr td {
+            font-size: 18px;           
+            line-height: 20px;
+            color: rgba(0, 0, 0, 0.5);
+            &:last-of-type {
+                font-size: 14px;  
             }
-        }
-    }
-    .review{
-        margin-top: 26px;
-        position: relative;
-        .icon-video{
-            position: absolute;
-            .wid-and-hei(28px,20px);
-            background-image: url('/img/summit/icon-video.png');
-            background-repeat: no-repeat;
-            background-size: contain;
-            left: 124px;
-            top: 86px;
-        }
-        .en-position{
-            left: 196px;
-            top: 85px;
-        }
-        p{
-            font-size: 26px;
-            font-family: FZLTHJW;
-            font-weight: normal;
-            color: #000000;
-            line-height: 30px;
-            &:first-of-type{
-                font-size: 20px;
-                margin-bottom: 60px;
-                line-height: 20px;
-                cursor: pointer;
-                color: #002FA7;
-                @media screen and (max-width: 1000px) {
-                    margin-bottom: 40px;
-                    font-size: 14px;
-                    line-height: 16px;
-                }
+            &:nth-of-type(4) {
+                text-align: center;
             }
-            &:last-of-type{
-                color: #002FA7;
-                line-height: 24px;
-                font-size: 20px;
-                margin-top: 30px;
-                font-family: FZLTCHJW;
-                cursor: pointer;
+            &:nth-of-type(3),&:nth-of-type(4) {
+                color: #000000;
             }
-        }
-    }
-    .font-regular{
-        font-family: Roboto-Regular !important;
-    }
-    .font-bold{
-        font-weight: bold !important;
-        font-family: Roboto-Bold !important;
-        @media screen and (max-width: 1000px) {
-            text-align: justify;
-        }
+        }  
     }
     @media screen and (max-width: 1000px) {
-        width: 100%;
-        .tip{
-            font-size: 14px;
-            line-height: 26px;
-            margin-bottom: 30px;
-        }
-        .apply-title{
-            font-size: 18px;
-            line-height: 21px;
-        }
-        .apply-process{
-            width: 100%;
-            justify-content: flex-start;
-            flex-direction: column;
-            .process{
-                width: 256px;
-                height: 102px;
-                margin: 0 auto 30px auto;
-                img{
-                    .wid-and-hei(256px,102px);
-                }
+        .time-box {
+            margin-top: 33px;
+            /deep/ .el-tabs__nav-scroll div{
+                font-size: 16px;
+            }
+            /deep/ .el-radio-group span{   
+                font-size: 14px;
             }
         }
-        .review{
-             margin-top: 10px;
-             .icon-video{
-                 display: none;
-             }
-             p{
-                font-size: 16px;
-                line-height: 30px;
-                 &:last-of-type{
-                     font-size: 14px;
-                     line-height: 17px;
-                     margin-top: 10px;
-                 }
-                 &:first-of-type{
-                     font-size: 14px;
-                     line-height: 26px;
-                 }
-             }
+        .calendar-content {
+            /deep/ .el-table tbody tr td {
+                font-size: 12px;
+                &:last-of-type {
+                    font-size: 12px;  
+                }
+            }
         }
     }
 }
