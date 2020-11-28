@@ -7,7 +7,7 @@
                     </div>
                 </el-carousel-item>
                 <el-carousel-item v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
-                    <div class="carousel-banner summmit-banner" @click="go(item.BANNER_LINK)" v-if="index === 1 || $lang === 'en' && index === 0">
+                    <div class="carousel-banner summmit-banner" @click="go(item.BANNER_LINK)" v-if="index === 0">
                         <video autoplay loop muted width="700px" height="500px" id="summit-video">
                             <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler%20Summit%202020%20mov.mp4"  type="video/mp4">
                         </video>
@@ -497,7 +497,7 @@
                 })
             }
             this.developerList = this.changeArr(this.i18n.home.HOME_DEV.DEV_INFO,16);
-            this.$lang === 'en'?this.bannerAmount = 5:this.bannerAmount = 7;
+            this.$lang === 'en'?this.bannerAmount = 5:this.bannerAmount = 6;
         },
         beforeDestroy () {
             this.mobileSwiperInterval && clearInterval(this.mobileSwiperInterval);

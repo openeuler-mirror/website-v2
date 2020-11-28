@@ -38,16 +38,11 @@ module.exports = {
             }
         ],
         HOME_FIRST_BANNER: {
-            BANNER_PC_IMG: 'url("/img/home/banner/xian-meetup-pc.png")',
-            BANNER_MOBILE_IMG: 'url("/img/home/banner/xian-meetup-mobile.png")',
-            BANNER_LINK: 'https://wx.vzan.com/live/topicguide-1743579612?jumpitd=1&shareuid=86134056&sharetstamp=1606223683891'
+            BANNER_PC_IMG: 'url("/img/home/banner/zh-pc-race.png")',
+            BANNER_MOBILE_IMG: 'url("/img/home/banner/zh-mobile-race.png")',
+            BANNER_LINK: 'https://www.oschina.net/2020-openeuler/'
         },
         HOME_OTHER_BANNER: [
-            {
-                BANNER_PC_IMG: 'url("/img/home/banner/zh-pc-race.png")',
-                BANNER_MOBILE_IMG: 'url("/img/home/banner/zh-mobile-race.png")',
-                BANNER_LINK: 'https://www.oschina.net/2020-openeuler/'
-            },
             {
                 BANNER_PC_IMG: '/img/home/banner/zh-pc-summit.png',
                 BANNER_MOBILE_IMG: 'url("/img/home/banner/zh-mobile-summit.png")',
