@@ -44,8 +44,8 @@ module.exports = {
         },
         HOME_OTHER_BANNER: [
             {
-                BANNER_PC_IMG: '/img/home/banner/zh-pc-summit.png',
-                BANNER_MOBILE_IMG: 'url("/img/home/banner/zh-mobile-summit.png")',
+                BANNER_PC_IMG: '/img/summit/home/zh-pc-summit.png',
+                BANNER_MOBILE_IMG: 'url("/img/summit/home/zh-mobile-summit.png")',
                 BANNER_LINK: '/interaction/summit-list/'
             }
         ],
@@ -609,8 +609,8 @@ module.exports = {
         HOME_FIRST_BANNER: {},
         HOME_OTHER_BANNER: [
             {
-                BANNER_PC_IMG: '/img/home/banner/en-pc-summit.png',
-                BANNER_MOBILE_IMG: 'url("/img/home/banner/en-mobile-summit.png")',
+                BANNER_PC_IMG: '/img/summit/home/zh-pc-summit.png',
+                BANNER_MOBILE_IMG: 'url("/img/summit/home/zh-mobile-summit.png")',
                 BANNER_LINK: '/interaction/summit-list/'
             }
         ],

@@ -1,6 +1,6 @@
 <!-- 峰会首页 -->
 <template>
-    <div class="summit">
+    <div :class="['summit',mobilePadding?'mobile-padding':'']">
         <h3 v-if="isShowH5">{{ i18n.interaction.SUMMIT.SUMMIT }}</h3>
         <div class="top-banner" v-if="!isShowH5" @click="go('https://jinshuju.net/f/PEFJht?x_field_1=openeuler')">
             <video autoplay loop muted width="700px" height="380px" id="summit-mp4">
@@ -9,6 +9,7 @@
             <img class="top-img" :src="i18n.interaction.SUMMIT.SUMMIT_WEB_IMG" alt="" />
         </div>
         <img class="mobile-img" :src="i18n.interaction.SUMMIT.SUMMIT_H5_IMG" alt="" v-else @click="go('https://jinshuju.net/f/PEFJht?x_field_1=openeuler')" />
+        <countdown :targetTime="'2020年12月24日 13:00'" :isShowText="false" :timeImage="'/img/summit/home/countdown.gif'"></countdown>
         <div class="summit-content">
             <div :class="['summit-explain',$lang == 'en'?'en-explain':'']">
                 <p :class="$lang === 'en'?'font-regular':''" v-for="(item,index) in i18n.interaction.SUMMIT.SUMMITCONTENT">{{ item }}</p>
@@ -17,8 +18,8 @@
             <div class="summit-message">
                 <div class="agenda">
                     <div class="title">
-                        <h3>{{ agendaData.OUTSIDE_TEXT }}</h3>
-                        <span>{{ agendaData.INSIDE_TEXT }}</span>
+                         <img src="/img/summit/home/agenda.png" alt="" v-if="!isShowH5" />
+                         <img src="/img/summit/home/mobile-agenda.png" alt="" v-else />
                     </div>
                     <div class="time-box">
                         <el-tabs v-model="showTab" @tab-click="tabClick">
@@ -34,31 +35,79 @@
                         <el-table
                         :data="agendaTableData"
                         :show-header=false
-                        style="width: 100%">
-                        <el-table-column
-                            prop="icon"
-                            width="35">
-                            <i class="el-icon-time"></i>
-                        </el-table-column>
-                        <el-table-column
-                            prop="TIME"
-                            width="205">
-                        </el-table-column>
-                        <el-table-column
-                            prop="THEME"
-                            width="400">
-                        </el-table-column>
-                        <el-table-column
-                            prop="SPEAKER"
-                            width="230">
-                        </el-table-column>
-                        <el-table-column
-                            prop="POSITION"
-                            width="250">
-                        </el-table-column>
+                        style="width: 100%" v-if="!isShowH5">
+                            <el-table-column
+                                prop="icon"
+                                width="50">
+                                <i class="el-icon-time"></i>
+                            </el-table-column>
+                            <el-table-column
+                                prop="TIME"
+                                width="190">
+                            </el-table-column>
+                            <el-table-column
+                                prop="THEME"
+                                width="400">
+                            </el-table-column>
+                            <el-table-column
+                                prop="SPEAKER"
+                                width="230">
+                            </el-table-column>
+                            <el-table-column
+                                prop="POSITION"
+                                width="250">
+                            </el-table-column>
                         </el-table>
+                        <div class="mobile-table" v-if="isShowH5">
+                            <div class="item" v-for="(item,index) in agendaTableData" :key="index">
+                                <div class="time">{{ item.TIME }}</div>
+                                <div class="agenda">
+                                    <p>{{ item.THEME }}</p>
+                                    <p>
+                                        <span>{{ item.SPEAKER }}</span>
+                                        <span>{{ item.POSITION }}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <carousel v-show="isShowcarousel"></carousel>
+                </div>
+                <div class="host-unit">
+                    <div class="title">
+                        <img src="/img/summit/home/host-unit.png" alt="" v-if="!isShowH5" />
+                        <img src="/img/summit/home/mobile-host-unit.png" alt="" v-else />
+                    </div>
+                    <div class="img-list">
+                        <img :src="item.IMG" alt="" v-for="(item,index) in partnersObj.HOST_IMG" />
+                    </div>
+                </div>
+                <div class="undertaker">
+                    <div class="title">
+                        <img src="/img/summit/home/undertaker.png" alt="" v-if="!isShowH5" />
+                        <img src="/img/summit/home/mobile-undertaker.png" alt="" v-else />
+                    </div>
+                     <div class="img-list">
+                        <img :src="item.IMG" alt="" v-for="(item,index) in partnersObj.UNDERTAKER" @click="go(item.LINK)" />
+                    </div>
+                </div>
+                <div class="co-organizer">
+                    <div class="title">
+                        <img src="/img/summit/home/co-organizer.png" alt="" v-if="!isShowH5" />
+                        <img src="/img/summit/home/mobile-co-organizer.png" alt="" v-else />
+                    </div>
+                     <div class="img-list">
+                        <img :src="item.IMG" alt="" v-for="(item,index) in partnersObj.PARTNERS_IMG" @click="go(item.LINK)" />
+                    </div>
+                </div>
+                <div class="foundation">
+                    <div class="title">
+                        <img src="/img/summit/home/foundation.png" alt="" v-if="!isShowH5" />
+                        <img src="/img/summit/home/mobile-foundation.png" alt="" v-else />
+                    </div>
+                     <div class="img-list">
+                        <img :src="item.IMG" alt="" v-for="(item,index) in partnersObj.FOUNDATION_IMG" @click="go(item.LINK)" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,23 +115,30 @@
 </template>
 
 <script>
-import commonBanner from './../common/banner';
 import carousel from './carousel.vue';
+import countdown from './../timer/countdown';
 export default {
     data () {
         return {
-            showTab: 'twenty-four',
+            showTab: 'twenty-five',
             showBtn: 'forenoon',
             agendaData: {},
             agendaTableData: [],
             isShowcarousel: false,
-            isShowBtn: false
+            isShowBtn: true,
+            mobilePadding: false,
+            partnersObj: {}
         }
     },
     mounted() {
         let dataObj = this.i18n.interaction.SUMMIT.SUMMIT_HOME_DATA;
         this.agendaData = dataObj.AGENDA;
-        this.agendaTableData = this.agendaData.AFTERNOON_AGENDA_24;
+        this.partnersObj = dataObj.PARTNERS;
+        this.agendaTableData = this.agendaData.FORENOON_AGENDA_25;
+        let screenWidth = document.body.clientWidth;
+        if(screenWidth < 400) {
+            this.mobilePadding = true;
+        }
     },
     methods: {
         toReviewList () {
@@ -90,10 +146,14 @@ export default {
             window.open(routeUrl.href);
         },
         go(path) {
-            if(path && path.includes("https")) {
-                window.open(path);
-            }else{
-                this.$router.push('/' + this.$lang + path);
+            if(path) {
+                if(path && path.includes("http")) {
+                    window.open(path);
+                }else{
+                    this.$router.push('/' + this.$lang + path);
+                }
+            }else {
+                return false;
             }
         },
         tabClick(tab) {
@@ -122,14 +182,19 @@ export default {
         }
     },
     components: {
-        commonBanner,
-        carousel
+        carousel,
+        countdown
     }
 }
 
 </script>
 
 <style lang='less' scoped>
+.mobile-padding {
+    @media screen and (max-width: 1000px) {
+        padding: 40px 15px 126px 15px !important;
+    }
+}
 .summit {
     padding-bottom: 180px;
     .top-banner {
@@ -140,12 +205,12 @@ export default {
         cursor: pointer;
         #summit-mp4 {
             position: absolute;
-            left: -220px;
+            left: -70px;
         }
         .top-img{
-            width: 565px;
+            width: 430px;
             height: 380px;
-            right: 0;
+            right: 50px;
             position: absolute;
         }
     }
@@ -166,45 +231,18 @@ export default {
     }
 }
 .summit .summit-content .title {
-    width: 215px;
-    margin: 67px auto 0 auto;
+    width: 800px;
     position: relative;
-    h3 {
-        width: 215px;
-        height: 53px;
-        background-image: url('/img/summit/home/title-background.png');
-        background-size: contain;
-        font-size: 36px;
-        font-family: FZLTHJW;
-        font-weight: normal;
-        color: #000000;
-        line-height: 46px;
-        text-align: center;
-    }
-    span {   
-        font-size: 60px;
-        font-family: Roboto-Regular, Roboto;
-        font-weight: 400;
-        color: rgba(0, 0, 0, 0.05);
-        line-height: 60px;
-        position: absolute;
-        top: -25px;
-        left: 70px;
+    margin: 0 auto;
+    img {
+        width: 800px;
+        height: 76px;
     }
     @media screen and (max-width: 1000px) {
-        width: 107px;
-        margin: 50px auto 0 auto;
-        h3 {
-            width: 107px;
-            height: 26px;
-            font-size: 18px;
-            line-height: 23px;
-        }
-        span {
-            font-size: 30px;
-            line-height: 30px;
-            top: -15px;
-            left: 54px;
+        width: 335px;
+        img {
+            width: 335px;
+            height: 38px;
         }
     }
 }
@@ -287,6 +325,9 @@ export default {
             font-size: 16px;
             line-height: 18px;
         }
+        /deep/ .el-tabs__nav-wrap::after {
+            background-color: white;
+        }
     }
     .calendar-content {
         margin-top: 43px;
@@ -304,10 +345,13 @@ export default {
             &:nth-of-type(4) {
                 text-align: center;
             }
+            &:nth-of-type(1) {
+                text-align: right;
+            }
             &:nth-of-type(3),&:nth-of-type(4) {
                 color: #000000;
             }
-        }  
+        }
     }
     @media screen and (max-width: 1000px) {
         .time-box {
@@ -318,13 +362,186 @@ export default {
             /deep/ .el-radio-group span{   
                 font-size: 14px;
             }
+            /deep/ .el-radio-group .el-radio-button__inner {
+                padding:6px 15px;
+            }
         }
         .calendar-content {
+            margin-top: 30px;
             /deep/ .el-table tbody tr td {
                 font-size: 12px;
                 &:last-of-type {
                     font-size: 12px;  
                 }
+            }
+            .mobile-table {
+                .item {
+                    width: 100%;
+                    display: flex;
+                    flex-basis: row;
+                    margin-bottom: 20px;
+                    border-bottom: 1px solid  rgba(0, 0, 0, 0.15);
+                    .time {
+                        width: 82px;
+                        height: 20px;
+                        font-size: 12px;
+                        color: rgba(0, 0, 0, 0.5);
+                        line-height: 20px;
+                        font-family: FZLTXIHJW;
+                        margin: 20px 29px 0 0;
+                    }
+                    .agenda {
+                        p {
+                            font-family: FZLTXIHJW;
+                            color: #000000;
+                            line-height: 20px;
+                            font-size: 12px;
+                            margin-bottom: 20px;
+                            &:first-of-type {
+                                font-family: FZLTHJW;
+                                width: 209px;
+                            }
+                            span {
+                                &:first-of-type {
+                                    margin-right: 25px;
+                                    width: 41px;
+                                    white-space:nowrap;
+                                    vertical-align: top;
+                                }
+                                &:first-of-type,&:last-of-type {
+                                    display: inline-block;
+                                }
+                                &:last-of-type {
+                                    width: 139px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.summit-content .summit-message .host-unit {
+    margin-top: 140px;
+    .img-list {
+        margin-top: 50px;
+        width: 100%;
+        img {
+            width: 280px;
+            height: 80px;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        margin-top: 70px;
+        .img-list {
+            margin-top: 30px;
+            width: 100%;
+            img {
+                width: 140px;
+                height: 40px;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+}
+.summit-content .summit-message .undertaker {
+    margin-top: 100px;
+    .img-list {
+        margin-top: 50px;
+        width: 100%;
+        img {
+            width: 280px;
+            height: 80px;
+            cursor: pointer;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        margin-top: 50px;
+        .img-list {
+            margin-top: 30px;
+            width: 100%;
+            img {
+                width: 140px;
+                height: 40px;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+}
+.summit-content .summit-message .co-organizer {
+    margin-top: 100px;
+    .img-list {
+        margin: 50px auto 0 auto;
+        width: 920px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        img {
+            width: 280px;
+            height: 80px;
+            margin: 0 40px 40px 0;
+            cursor: pointer;
+            display: block;
+            &:nth-of-type(3n) {
+                margin-right: 0;
+            }
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        margin-top: 50px;
+        .img-list {
+            margin-top: 30px;
+            width: 100%;
+            flex-direction: column;
+            img {
+                width: 140px;
+                height: 40px;
+                margin: 20px auto 0 auto;
+                display: block;
+                &:nth-of-type(3n) {
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}
+.summit-content .summit-message .foundation {
+    margin-top: 100px;
+    .img-list {
+        margin: 50px auto 0 auto;
+        width: 600px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        img {
+            width: 280px;
+            height: 80px;
+            margin: 0 40px 40px 0;
+            cursor: pointer;
+            display: block;
+            &:nth-of-type(2n) {
+                    margin-right: auto;
+            }
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        margin-top: 50px;
+        .img-list {
+            margin-top: 25px;
+            width: 100%;
+            flex-direction: column;
+            img {
+                width: 140px;
+                height: 40px;
+                margin: 20px auto 0 auto;
+                display: block;
             }
         }
     }

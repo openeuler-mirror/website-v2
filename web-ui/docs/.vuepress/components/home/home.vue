@@ -724,7 +724,7 @@
 <style lang="less" scoped>
     #summit-video {
         background-color: white !important;
-        margin-left: -200px;
+        margin-left: -100px;
     }
     .mobile-swiper {
         height: 300px;
@@ -1077,8 +1077,8 @@
         justify-content: space-between;
         align-items: center;
         img{
-            width: 600px;
-            height: 400px;
+            width: 430px;
+            height: 380px;
         }
     }
     .home-banner .mobile-banner {

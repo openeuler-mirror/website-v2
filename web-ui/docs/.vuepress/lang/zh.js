@@ -14,4 +14,5 @@ module.exports = {
     interaction: require('./lang-modules/interaction').cn,
     brand: require('./lang-modules/brand').cn,
     search: require('./lang-modules/search').cn,
+    timer: require('./lang-modules/timer').cn
 };
