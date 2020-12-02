@@ -574,9 +574,9 @@ module.exports = {
     en: {
         HOME_CAROUSEL_DATA: [
             {
-                TITLE: "openEuler 20.09 version released",
+                TITLE: "openEuler 20.09 Version Released",
                 LINK: "https://openeuler.org/openEuler-whitepaper.pdf",
-                DES: "For more information,download the openEuler 20.09 technical white paper",
+                DES: "For more information, download the openEuler 20.09 Technical White Paper.",
                 DOWNLOAD: 'Download',
                 MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
             },
@@ -588,7 +588,7 @@ module.exports = {
             {
                 TITLE: "A-Tune",
                 LINK: "https://gitee.com/openeuler/A-Tune",
-                DES: "A system software to auto-optimize the system adaptively to multiple scenarios with embedded AI-engine.",
+                DES: "An AI-based OS tuning engine perfectly adapted to multiple scenarios.",
             }
         ],
         ROOM_LEFT_IMG:[
@@ -629,21 +629,21 @@ module.exports = {
                 },
                 {
                     NAME: "02",
-                    TITLE: "Experience openEuler System",
+                    TITLE: "Use openEuler OS",
                     IMG: "/img/home/step2.png",
                     GIF: "/img/home/step-move-2.gif",
                     LINK: "",
                 },
                 {
                     NAME: "03",
-                    TITLE: "Query openEuler Documentation",
+                    TITLE: "Read openEuler Documentation",
                     IMG: "/img/home/step3.png",
                     GIF: "/img/home/step-move-3.gif",
                     LINK: "/documentation",
                 },
                 {
                     NAME: "04",
-                    TITLE: "Contribute openEuler Community",
+                    TITLE: "Contribute to openEuler Community",
                     IMG: "/img/home/step4.png",
                     GIF: "/img/home/step-move-4.gif",
                     LINK: "/community/contribution/",
@@ -684,11 +684,11 @@ module.exports = {
             }
         },
         HOME_ACTIVE: {
-            ACTIVE_TITLE: "Join our community activities",
+            ACTIVE_TITLE: "Join Us in Community Activities",
             ACTIVE_DESCRIPTION: "Join us in workshops, SIG discussions, offline activities, and community summits to keep abreast of the latest trend."
         },
         HOME_ROUND: {
-            ROUND_TITLE: 'We are thriving',
+            ROUND_TITLE: 'We Are Thriving',
             ROUND_LIST: [
                 {
                     ROUND_VALUE: '',
@@ -703,7 +703,7 @@ module.exports = {
                     ROUND_VALUE: '',
                     ROUND_KEY: 'modulenums',
                     ROUND_IMG: '/img/round/software.png',
-                    ROUND_TEXT: 'Software',
+                    ROUND_TEXT: 'Software Products',
                     ROUND_STYLE: {
                         backcolor: 'pink'
                     }
@@ -1060,7 +1060,7 @@ module.exports = {
                 TITLE: "E-mail Subscription",
                 DES: "Discuss any community topic here.",
                 SUBSCRIBE: "For more subscriptions, please click the ",
-                LINK: "mailing list",
+                LINK: "Mailing list",
                 MAIL: "community@openeuler.org"
             },
             SOURCE_PUBLISH_TITLE: "openEuler-based OS Release",

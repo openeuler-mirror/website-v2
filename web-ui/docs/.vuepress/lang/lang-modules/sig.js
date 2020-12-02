@@ -151,13 +151,13 @@ module.exports = {
         },
         SIG_DETAIL: {
             NO_MEETINGS: 'Not available now',
-            ORGANIZING_MEETINGS: 'organizing meetings',
-            MEMBERS: 'project members',
-            CONTACT: 'contact',
+            ORGANIZING_MEETINGS: 'Meeting Schedule',
+            MEMBERS: 'Project Members',
+            CONTACT: 'Contact',
             MAIL_LIST: 'maillist'
         },
         ROLE_DESCRIPTION:{
-            ROLE_DESCRIPTION:'Role-description',
+            ROLE_DESCRIPTION:'Role Description',
             TABLE_TITLE:'Community Member',
             TABLE_DESCRIPTION:'This article briefly describes the responsibilities and privilege of the contributor in the openEuler community. The responsibilities of most contributor are limited to SIG (Special Interest groups) :',
             TABLE_THEAD:["Role","Responsibilities","Requirement","Defined Document"],

@@ -221,7 +221,7 @@ module.exports = {
                         PATH: '/community/conduct/'
                     },
                     {
-                        NAME: 'Mail lists',
+                        NAME: 'Mailing Lists',
                         PATH: '/community/mailing-list/'
                     },
                     {
@@ -235,7 +235,7 @@ module.exports = {
                 PATH: '',
                 NAME: 'SIG',
                 CHILDREN: [{
-                        NAME: 'SIG lists',
+                        NAME: 'SIG Lists',
                         PATH: '/sig/sig-list/'
                     },
                     {
@@ -243,7 +243,7 @@ module.exports = {
                         PATH: '/sig/sig-guidance/'
                     },
                     {
-                        NAME: 'Characters',
+                        NAME: 'Roles',
                         PATH: '/sig/role-description/'
                     }
                 ],
@@ -253,11 +253,11 @@ module.exports = {
                 PATH: '',
                 NAME: 'Security',
                 CHILDREN: [{
-                        NAME: 'Vulnerability management',
+                        NAME: 'Vulnerability Management',
                         PATH: '/security/vulnerability-reporting/'
                     },
                     {
-                        NAME: 'Security advisories',
+                        NAME: 'Security Advisories',
                         PATH: '/security/safety-bulletin/'
                     },
                     {
@@ -272,15 +272,15 @@ module.exports = {
         GITTE: 'Source code',
         CODE: 'CODE',
         GITTE_RESOURCE_LIST: [{
-                NAME: 'Code sources',
+                NAME: 'Code Sources',
                 URL: 'https://gitee.com/openeuler'
             },
             {
-                NAME: 'Package sources',
+                NAME: 'Package Sources',
                 URL: 'https://gitee.com/src-openeuler'
             },
             {
-                NAME: 'Github mirror',
+                NAME: 'Github Mirror',
                 URL: 'https://github.com/openeuler-mirror'
             }
         ],
