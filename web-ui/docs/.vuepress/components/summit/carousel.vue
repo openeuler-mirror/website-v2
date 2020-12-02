@@ -22,23 +22,24 @@
                         <p>{{ detailMsg.THEME }}</p>
                     </div>
                     <div class="speaker-box">
-                        <i></i>
+                        <i v-if="detailMsg.SPEAKER"></i>
                         <p v-for="(value,key) in detailMsg.SPEAKER" :key="key">{{ value }}</p>
                     </div>
                     <div class="desc-box">
-                        <i></i>
-                        <p v-for="(item,index) in detailMsg.DESC" :key="index">{{ item }}</p>
+                        <i v-if="detailMsg.DESC"></i>
+                        <p v-for="(item,index) in detailMsg.DESC" :key="index" v-if="item">{{ item }}</p>
                     </div>
                 </div>
-                
-                <ul class="card-box">
-                    <li v-for="(item,index) in carouselObj.CARD_LIST.slice(indexTemp, indexTemp + sliceValue)" :key="index">
-                        <p class="section" v-for="(values,keys) in item.TITLE">{{ values }}</p>
-                        <div :class="value.THEME?'card-item':'null-item'" v-for="(value,key) in item.ITEM_LIST" :key="key" @click="showDetail(value)">
-                            <p>{{ value.THEME }}</p>
-                        </div>
-                    </li>
-                </ul>
+                <div class="card-box">
+                    <ul class="card-list" :style="{transform: 'translateX(' + cardPosition + 'px)'}">
+                        <li v-for="(item,index) in carouselObj.CARD_LIST" :key="index">
+                            <p class="section" v-for="(values,keys) in item.TITLE">{{ values }}</p>
+                            <div :class="value.THEME?'card-item':'null-item'" v-for="(value,key) in item.ITEM_LIST" :key="key" @click="showDetail(value)">
+                                <p>{{ value.THEME }}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -51,8 +52,7 @@ export default {
             prev: "/img/home/prev.svg",
             carouselObj: {},
             cardPosition: 0,
-            indexTemp: 0,
-            sliceValue: 3,
+            cardIndex: 0,
             isShowDetail: false,
             detailMsg: {}
         }
@@ -61,20 +61,22 @@ export default {
         let agendaObj = this.i18n.interaction.SUMMIT.SUMMIT_HOME_DATA;
         agendaObj = agendaObj.AGENDA;
         this.carouselObj = agendaObj.AFTERNOON_AGENDA_25;
-        this.isShowH5?this.sliceValue = 1:this.sliceValue = 3;
-        
     },
     methods: {
         handleBtn(direction) {
             if(direction === 'left') {
-                this.indexTemp = this.indexTemp - 1;
-                if(this.indexTemp <= 0) {
-                    this.indexTemp = 0;
+                if(this.cardIndex <= 0) {
+                    this.cardIndex = 0;
+                }else {
+                    this.cardIndex = this.cardIndex - 1;
+                    this.isShowH5?this.cardPosition = this.cardPosition + 220:this.cardPosition = this.cardPosition + 317;
                 }
             }else{
-                this.indexTemp = this.indexTemp + 1;
-                if(this.indexTemp >= 5) {
-                    this.indexTemp = 5;
+                if(this.cardIndex >= 5) {
+                    this.cardIndex = 5;
+                }else {
+                    this.cardIndex = this.cardIndex + 1;
+                    this.isShowH5?this.cardPosition = this.cardPosition - 220:this.cardPosition = this.cardPosition - 317;
                 }
             }
         },
@@ -118,12 +120,17 @@ export default {
         flex-direction: row;
         .time-list {
             margin-top: 50px;
+            position: relative;
+            z-index: 10;
+            background-color: white;
+            margin-right: -20px;
             div {
                 width: 150px;
                 height: 156px;
                 line-height: 156px;
                 margin-top: 40px;
                 font-size: 18px;
+                color: rgba(0, 0, 0, 0.5);
             }
         }
         .card-list {
@@ -144,7 +151,7 @@ export default {
                 font-family: FZLTHJW;
                 color: #000000;
                 line-height: 26px;
-                z-index: 9999;
+                z-index: 20;
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -167,7 +174,7 @@ export default {
                 background: #FFFFFF;
                 box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1), 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
                 border-radius: 4px;
-                padding: 29px 0 0 27px;
+                padding: 26px;
                 .time-box {
                     margin-bottom: 18px;
                     p {
@@ -180,7 +187,11 @@ export default {
                                 display: inline-block;
                                 margin-right: 9px;
                                 background: url('/img/summit/home/time.svg') no-repeat center center;
+                                margin-bottom: -2px;
                             }
+                        }
+                        &:last-of-type {
+                            font-size: 16px;
                         }
                     }
                 }
@@ -199,8 +210,8 @@ export default {
                         width: 284px;
                     }
                     i {
-                        width: 16px;
-                        height: 16px;
+                        width: 18px;
+                        height: 18px;
                         display: block;
                         margin-bottom: 8px;
                         background: url('/img/summit/home/desc.svg') no-repeat center center;
@@ -208,58 +219,75 @@ export default {
                 }
             }
             .left {
-                left: 52px;
+                left: 45px;
             }
             .right {
-                right: 0;
+                right: 15px;
                 transform: rotateZ(-180deg);
             }
             .card-box {
-                position: absolute;
-                display: flex;
-                flex-direction: row;
                 width: 100%;
-                margin-top: 8px;
-                li {
-                    margin-left: 52px;
-                    .null-item {
-                        width: 260px;
-                        height: 156px;
-                    }
-                    .section {
-                        font-size: 20px;
-                        font-family: HuaweiSansMedium;
-                        color: #000000;
-                        line-height: 29px;
-                        text-align: center;
-                        &:last-of-type {
-                            margin-bottom: 30px;
+                overflow: hidden;
+                .card-list {
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    margin-top: 8px;
+                    transition: 0.5s ease-in-out;
+                    li {
+                        margin-left: 47px;
+                        .null-item {
+                            width: 260px;
+                            height: 156px;
                         }
-                    }
-                    .card-item {
-                        width: 270px;
-                        height: 150px;
-                        background: #FFFFFF;
-                        box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
-                        border-radius: 8px;
-                        overflow: hidden;
-                        margin-bottom: 36px;
-                        cursor: pointer;
-                        p {
-                            font-size: 18px;
-                            color: rgba(0, 0, 0, 0.85);
-                            line-height: 30px;
-                            font-family: FZLTXIHJW;
-                            margin: 30px;
-                            text-overflow: ellipsis;
-                            display: -webkit-box;
-                            -webkit-line-clamp: 3;
-                            -webkit-box-orient: vertical;
+                        .section {
+                            font-size: 20px;
+                            font-family: HuaweiSansMedium;
+                            color: #000000;
+                            line-height: 29px;
+                            text-align: center;
+                            &:last-of-type {
+                                margin-bottom: 30px;
+                            }
+                        }
+                        .card-item {
+                            width: 270px;
+                            height: 150px;
+                            border-radius: 8px;
                             overflow: hidden;
-                            height: 90px;
-                            width: 210px;
+                            margin-bottom: 36px;
+                            box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
+                            cursor: pointer;
+                            &:hover {
+                                box-shadow: 0px 6px 20px 0px rgba(0, 47, 167, 0.2);
+                            }
+                            p {
+                                font-size: 18px;
+                                color: rgba(0, 0, 0, 0.85);
+                                line-height: 30px;
+                                font-family: FZLTXIHJW;
+                                margin: 30px;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 3;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                                height: 90px;
+                                width: 210px;
+                            }
                         }
                     }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    .agenda-carousel {
+        .agenda-msg {
+            .card-list {
+                .msg-detail {
+                    margin-left: -95px !important;
                 }
             }
         }
@@ -274,7 +302,10 @@ export default {
             .card-list {
                 width: calc(100% - 120px);
                 .left {
-                    left: -15px;
+                    left: 10px;
+                }
+                .right {
+                    right: -3px;
                 }
                 .shade-remind {
                     width: 250px;
@@ -286,60 +317,62 @@ export default {
                 .msg-detail {
                     width: 220px;
                     height: 357px;
-                    padding: 23px 0 0 20px;
+                    padding: 20px;
                     margin-left: -101px;
                     margin-top: -140px;
+                    font-size: 10px;
                     .speaker-box,.time-box {
                         margin-bottom: 12px;
                     }
                     .time-box {
                         p {
-                            &:first-of-type {
-                                i {
-                                    margin-bottom: -2px;
-                                }
-                            } 
+                            &:last-of-type {
+                                font-size: 12px;
+                            }
                         }
                     }
                     .desc-box {
                         p {
-                            width: 180px;
+                            width: 100%;
+                            word-wrap: break-word;
                         }
                     }
                 }
-                .right {
-                    right: -18px;
-                }
                 .card-box {
-                    overflow: hidden;
-                    li {
-                        margin-left: 20px;
-                        .section {
-                            font-size: 14px;
-                            &:last-of-type {
-                                margin-bottom: 10px;
+                    .card-list {
+                        li {
+                            margin-left: 25px;
+                            .section {
+                                font-size: 14px;
+                                &:last-of-type {
+                                    margin-bottom: 10px;
+                                }
                             }
-                        }
-                        .null-item {
-                            width: 195px;
-                            height: 90px;
-                        }
-                        .card-item {
-                            width: 195px;
-                            height: 90px;
-                            margin-bottom: 15px;
-                            p {
-                                font-size: 12px;
-                                line-height: 18px;
-                                margin: 18px;
-                                width: 160px;
-                                height: 54px;
+                            .null-item {
+                                width: 195px;
+                                height: 90px;
+                            }
+                            .card-item {
+                                &:hover {
+                                    box-shadow: none;
+                                }
+                                width: 195px;
+                                height: 90px;
+                                margin-bottom: 15px;
+                                p {
+                                    font-size: 12px;
+                                    line-height: 18px;
+                                    margin: 18px;
+                                    width: 160px;
+                                    height: 54px;
+                                }
                             }
                         }
                     }
                 }
             }
             .time-list {
+                margin-right: -10px;
                 div {
                     font-size: 12px;
                     width: 120px;
