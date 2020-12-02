@@ -152,7 +152,7 @@ module.exports = {
         BLOG: {
             BLOG: 'Blog',
             LABEL: 'Label',
-            FILE: 'PublishDate',
+            FILE: 'Date of Release',
             BLOGGING: 'Blogging', 
             READ_MORE: 'Read more >>',
             DISCLAIMER_ZH: '【免责声明】本文仅代表作者本人观点，与本网站无关。本网站对文中陈述、观点判断保持中立，不对所包含内容的准确性、可靠性或完整性提供任何明示或暗示的保证。本文仅供读者参考，由此产生的所有法律责任均由读者本人承担。',

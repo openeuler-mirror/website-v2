@@ -1,7 +1,7 @@
 <template>
    <div class="sig-detail">
        <div class="breadcrumbs" @click="back">
-           SIG \
+           SIG 
        </div>
        <h1>{{$route.query.name}}</h1>
        <h2 class="meetings">{{i18n.sig.SIG_DETAIL.ORGANIZING_MEETINGS}}</h2>
@@ -19,8 +19,8 @@
                             style="width: 120px; height: 120px; border-radius: 50%"
                             :src="value.avatar_url"></el-image>
                     <p class="dever-name">{{ value.gitee_id }}</p>
-                    <p class="dever-rank" :title="value.sigs.join('、')+'SIG Maintainer'" :class="['dever-rank',$lang == 'en'?'en-dever-rank':'']">
-                        <span v-for="(item, itemIndex) in value.sigs" :key="itemIndex">{{item}}{{itemIndex!=(value.sigs.length-1)?'、':''}}</span> <span>SIG Maintainer</span>
+                    <p class="dever-rank" :title="value.sigs.join(', ')+'SIG Maintainer'" :class="['dever-rank',$lang == 'en'?'en-dever-rank':'']">
+                        <span v-for="(item, itemIndex) in value.sigs" :key="itemIndex">{{item}}{{itemIndex!=(value.sigs.length-1)?', ':''}}</span> <span>SIG Maintainer</span>
                     </p>
                     <div class="dev-link">
                         <a :href="'mailto:'+value.email" v-if="value.email">

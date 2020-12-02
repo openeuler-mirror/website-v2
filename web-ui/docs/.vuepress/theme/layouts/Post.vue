@@ -1,7 +1,7 @@
 <template>
     <div id="vuepress-theme-blog__post-layout">
         <div class="blog-link-post" @click="goBlog">
-            {{ i18n.community.BLOG.BLOG }}\
+            {{ i18n.community.BLOG.BLOG }}
         </div>
         <div class="post-left">
             <p class="blog-img mobile-hide">
@@ -63,10 +63,10 @@
                 </div>
             </div>
             <p class="blog-item-tag">
-                <span>{{ i18n.community.BLOG.LABEL }}:</span>
+                <span>{{ i18n.community.BLOG.LABEL }}: </span>
                 <span v-for="(tag, index) in $frontmatter.tags" :key="index">
                     <span class="tag-item">{{ tag }}</span>
-                    <span v-if="index != $frontmatter.tags.length - 1">、</span>
+                    <span v-if="index != $frontmatter.tags.length - 1">, </span>
                 </span>
             </p>
             <p class="bottom-line bottom-line-none"></p>
