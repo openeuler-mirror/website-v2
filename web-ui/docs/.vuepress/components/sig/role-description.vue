@@ -13,11 +13,11 @@
             <table class="table-box">
                 <thead>
                     <tr>
-                        <th v-for="(item,index) in theadList" :key="key">{{item}}</th>
+                        <th v-for="(item,index) in theadList" :key="index">{{item}}</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(item,index) in tbodyList" :key="key">
+                    <tr v-for="(item,index) in tbodyList" :key="index">
                         <td style="text-align:left;">{{item.ROLE}}</td>
                         <td style="text-align:left;">{{item.RESPONSIBILITIES}}</td>
                         <td style="text-align:left;">{{item.REQUIREMENT}}</td>
@@ -26,7 +26,7 @@
                 </tbody>
             </table>
             <div class="table-card">
-               <div class="card-box" v-for="(item,index) in tbodyList" :key="key">
+               <div class="card-box" v-for="(item,index) in tbodyList" :key="index">
                    <p><span>{{theadList?theadList[0] + ':':''}}</span><span>{{item.ROLE}}</span></p>
                    <p><span>{{theadList?theadList[1] + ':':''}}</span><span>{{item.RESPONSIBILITIES}}</span></p>
                    <p><span>{{theadList?theadList[2] + ':':''}}</span><span>{{item.REQUIREMENT}}</span></p>

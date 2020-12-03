@@ -128,7 +128,7 @@ module.exports = {
                 URL: 'https://gitee.com/src-openeuler'
             },
             {
-                NAME: 'Github镜像仓',
+                NAME: 'GitHub镜像仓',
                 URL: 'https://github.com/openeuler-mirror'
             }
         ],
@@ -280,7 +280,7 @@ module.exports = {
                 URL: 'https://gitee.com/src-openeuler'
             },
             {
-                NAME: 'Github Mirror',
+                NAME: 'GitHub Mirror',
                 URL: 'https://github.com/openeuler-mirror'
             }
         ],

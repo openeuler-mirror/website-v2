@@ -13,7 +13,7 @@ title: "角色说明"
 
 ## 新的贡献者
 
-欢迎新成员加入社区。我们有关于如何开始贡献的指导文档请参考：[openEuler贡献者指南](/zh/contributors/README.md)
+欢迎新成员加入社区。我们有关于如何开始贡献的指导文档请参考：[openEuler贡献者指南](https://gitee.com/openeuler/community/blob/master/zh/contributors/README.md)
 
 
 
@@ -36,7 +36,7 @@ title: "角色说明"
   + 在Gitee上提交或审核PR
   + 在Gitee上对问题进行归档或评论
   + 参与SIG或社区讨论
-+ 已阅读[贡献者指南](/zh/contributors/README.md)
++ 已阅读[贡献者指南](https://gitee.com/openeuler/community/blob/master/zh/contributors/README.md)
 + 积极参与1个或多个SIG
 
 
