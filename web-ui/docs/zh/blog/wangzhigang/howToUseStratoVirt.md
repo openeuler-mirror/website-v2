@@ -2,8 +2,8 @@
 title: 如何安装并启动StratoVirt
 date: 2020-12-02
 tags: 
-	- StratoVirt
-	- Virt
+    - StratoVirt
+    - Virt
 archives: 2020-12
 author: Xinle Guo, Zhigang Wang
 summary: 本文介绍了如何快速上手安装StratoVirt，并用StratoVirt运行虚拟机。提供StratoVirt对接iSulad并运行安全容器的使用指导。
