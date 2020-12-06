@@ -141,8 +141,9 @@ export default {
             .shade-remind {
                 z-index: 10;
                 width: 100%;
-                height: 919px;
-                background: rgba(84, 129, 163, 0.2);
+                height: 1106px;
+                background: #000;
+                opacity: 0.5;
                 position: absolute;
                 top: 86px;
             }        
@@ -309,7 +310,7 @@ export default {
                 }
                 .shade-remind {
                     width: 250px;
-                    height: 536px;
+                    height: 643px;
                     top: 63px;
                     font-size: 12px;
                     line-height: 24px;
