@@ -9,7 +9,6 @@
             <img class="top-img" :src="i18n.interaction.SUMMIT.SUMMIT_WEB_IMG" alt="" />
         </div>
         <img class="mobile-img" :src="i18n.interaction.SUMMIT.SUMMIT_H5_IMG" alt="" v-else @click="go('https://jinshuju.net/f/PEFJht?x_field_1=openeuler')" />
-        <countdown :targetTime="'2020年12月24日 13:00'" :isShowText="false" :timeImage="'/img/summit/home/countdown.gif'"></countdown>
         <div class="summit-content">
             <div :class="['summit-explain',$lang == 'en'?'en-explain':'']">
                 <p :class="$lang === 'en'?'font-regular':''" v-for="(item,index) in i18n.interaction.SUMMIT.SUMMITCONTENT">{{ item }}</p>
@@ -73,6 +72,31 @@
                     </div>
                     <carousel v-show="isShowcarousel"></carousel>
                 </div>
+                <div class="lecturer">
+                     <div class="title">
+                        <img src="/img/summit/home/lecturer.png" alt="" v-if="!isShowH5" />
+                        <img src="/img/summit/home/mobile-lecturer.png" alt="" v-else />
+                    </div>
+                    <div class="lecturer-box" v-fade v-if="lecturerList.length && !isShowH5">
+                        <div class="item fade-in"  v-for="(item,index) in lecturerList" :key="index">
+                            <img :src="item.IMG" alt="" />
+                            <p>{{ item.NAME }}</p>
+                            <p>{{ item.POSITION }}</p>
+                        </div>
+                    </div>
+                    <div class="lecturer-box" v-fade v-if="lecturerList.length && isShowH5">
+                        <div :class="['item','fade-in',index > 7 && flag?'hidden':'']"  v-for="(item,index) in lecturerList" :key="index">
+                            <img :src="item.IMG" alt="" />
+                            <p>{{ item.NAME }}</p>
+                            <p>{{ item.POSITION }}</p>
+                        </div>
+                    </div>
+                    <div class="show-all" @click="showAll" v-if="isShowH5">
+                        <p>{{ flag?i18n.home.EXPAND:i18n.home.RETRACT }}</p>
+                        <img v-if="flag" src="/img/home/arrow.svg" alt="">
+                        <img v-if="!flag" src="/img/home/arrowUp.svg" alt="">
+                    </div>
+                </div>
                 <div class="host-unit">
                     <div class="title">
                         <img src="/img/summit/home/host-unit.png" alt="" v-if="!isShowH5" />
@@ -109,6 +133,15 @@
                         <img :src="item.IMG" alt="" v-for="(item,index) in partnersObj.FOUNDATION_IMG" @click="go(item.LINK)" />
                     </div>
                 </div>
+                <div class="media">
+                    <div class="title">
+                        <img src="/img/summit/home/media-partner.png" alt="" v-if="!isShowH5" />
+                        <img src="/img/summit/home/mobile-media-partner.png" alt="" v-else />
+                    </div>
+                    <div class="media-box">
+                        <img :src="item.IMG" alt="" v-for="(item,index) in mediaList" @click="go(item.LINK)" />
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -116,7 +149,6 @@
 
 <script>
 import carousel from './carousel.vue';
-import countdown from './../timer/countdown';
 export default {
     data () {
         return {
@@ -127,18 +159,24 @@ export default {
             isShowcarousel: false,
             isShowBtn: true,
             mobilePadding: false,
-            partnersObj: {}
+            partnersObj: {},
+            lecturerList: [],
+            mediaList: [],
+            flag: true,
+            dataObj: {}
         }
     },
     mounted() {
-        let dataObj = this.i18n.interaction.SUMMIT.SUMMIT_HOME_DATA;
-        this.agendaData = dataObj.AGENDA;
-        this.partnersObj = dataObj.PARTNERS;
+        this.dataObj = this.i18n.interaction.SUMMIT.SUMMIT_HOME_DATA;
+        this.agendaData = this.dataObj.AGENDA;
+        this.partnersObj = this.dataObj.PARTNERS;
+        this.mediaList = this.dataObj.MEDIA;
         this.agendaTableData = this.agendaData.FORENOON_AGENDA_25;
         let screenWidth = document.body.clientWidth;
         if(screenWidth < 400) {
             this.mobilePadding = true;
         }
+        this.lecturerList = this.dataObj.LECTURER;
     },
     methods: {
         toReviewList () {
@@ -155,6 +193,9 @@ export default {
             }else {
                 return false;
             }
+        },
+        showAll() {
+            this.flag = !this.flag;
         },
         tabClick(tab) {
             if(tab.name === 'twenty-four') {
@@ -182,8 +223,7 @@ export default {
         }
     },
     components: {
-        carousel,
-        countdown
+        carousel
     }
 }
 
@@ -252,7 +292,7 @@ export default {
     color: #000000;
     line-height: 40px;
     font-weight: 400;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     text-align: center;
     a{
         color: #002fa7;
@@ -272,7 +312,6 @@ export default {
     }
 }
 .summit-content {
-    margin-top: 50px;
     font-family: FZLTHJW;
     .summit-message {
         width: 1120px;
@@ -287,7 +326,7 @@ export default {
 }
 .summit-content .summit-explain {
     width: 1120px;
-    margin: 60px auto 24px auto;
+    margin: 0 auto;
     font-size: 20px;
     font-family: FZLTXIHJW;
     font-weight: 200;
@@ -295,13 +334,12 @@ export default {
     line-height: 40px;
     @media screen and (max-width: 1000px) {
         width: 100%;
-        margin: 40px 0 30px 0;
+        margin: 0 0 30px 0;
         font-size: 14px;
         color: rgba(0, 0, 0, 1);
         line-height: 24px;
     }
     p {
-        margin-bottom: 30px;
         text-align:justify;
     }
 }
@@ -423,7 +461,7 @@ export default {
     }
 }
 .summit-content .summit-message .host-unit {
-    margin-top: 140px;
+    margin-top: 100px;
     .img-list {
         margin-top: 50px;
         width: 100%;
@@ -435,15 +473,14 @@ export default {
         }
     }
     @media screen and (max-width: 1000px) {
-        margin-top: 70px;
+        margin-top: 40px;
         .img-list {
-            margin-top: 30px;
+            margin-top: 20px;
             width: 100%;
             img {
                 width: 140px;
                 height: 40px;
                 margin: 0 auto;
-                display: block;
             }
         }
     }
@@ -451,7 +488,7 @@ export default {
 .summit-content .summit-message .undertaker {
     margin-top: 100px;
     .img-list {
-        margin-top: 50px;
+        margin-top: 20px;
         width: 100%;
         img {
             width: 280px;
@@ -462,15 +499,14 @@ export default {
         }
     }
     @media screen and (max-width: 1000px) {
-        margin-top: 50px;
+        margin-top: 40px;
         .img-list {
-            margin-top: 30px;
+            margin-top: 20px;
             width: 100%;
             img {
                 width: 140px;
                 height: 40px;
                 margin: 0 auto;
-                display: block;
             }
         }
     }
@@ -495,16 +531,15 @@ export default {
         }
     }
     @media screen and (max-width: 1000px) {
-        margin-top: 50px;
+        margin-top: 40px;
         .img-list {
-            margin-top: 30px;
+            margin-top: 20px;
             width: 100%;
             flex-direction: column;
             img {
                 width: 140px;
                 height: 40px;
                 margin: 20px auto 0 auto;
-                display: block;
                 &:nth-of-type(3n) {
                     margin-right: auto;
                 }
@@ -516,32 +551,133 @@ export default {
     margin-top: 100px;
     .img-list {
         margin: 50px auto 0 auto;
-        width: 600px;
+        width: 920px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        flex-direction: row;
         img {
             width: 280px;
             height: 80px;
             margin: 0 40px 40px 0;
             cursor: pointer;
             display: block;
-            &:nth-of-type(2n) {
+            &:nth-of-type(3n) {
                     margin-right: auto;
             }
         }
     }
     @media screen and (max-width: 1000px) {
-        margin-top: 50px;
+        margin-top: 40px;
         .img-list {
-            margin-top: 25px;
+            margin-top: 20px;
             width: 100%;
             flex-direction: column;
             img {
                 width: 140px;
                 height: 40px;
                 margin: 20px auto 0 auto;
+            }
+        }
+    }
+}
+.summit-content .summit-message .lecturer {
+    margin-top: 100px;
+    .lecturer-box {
+        margin-top: 44px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        .item {
+            width: 180px;
+            margin: 0 103px 30px 0;
+            &:nth-of-type(4n) {
+                margin-right: 0;
+            }
+            img {
+                width: 120px;
+                height: 120px;
+                margin: 0 auto;
                 display: block;
+            }
+            p {
+                font-size: 16px;
+                font-family: FZLTHJW;
+                color: #002FA7;
+                line-height: 16px;
+                margin-top: 20px;
+                width: 180px;
+                text-align: center;
+                &:last-of-type {
+                    font-size: 14px;
+                    font-family: PingFangSC-Regular, PingFang SC;
+                    font-weight: 400;
+                    color: #000000;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        margin-top: 40px;
+        .lecturer-box {
+            margin-top: 20px;
+            .hidden {
+                display: none;
+            }
+            .item {
+                width: 140px;
+                margin-right: 65px;
+                &:nth-of-type(2n) {
+                    margin-right: 0;
+                }
+                p {
+                    width: 140px;
+                }
+            }
+        }
+        .show-all {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            p{
+                color: #002fa7;
+            }
+        }
+    }
+}
+.summit-content .summit-message .media {
+    margin-top: 100px;
+    .media-box {
+        width: 920px;
+        margin: 44px auto 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        img {
+            width: 280px;
+            height: 80px;
+            display: block;
+            cursor: pointer;
+            margin: 0 40px 40px 0;
+            &:nth-of-type(3n) {
+                margin-right: 0;
+            }
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        margin-top: 40px;
+        .media-box {
+            width: 100%;
+            margin-top: 20px;
+            flex-direction: column;
+            img {
+                width: 140px;
+                height: 40px;
+                margin: 20px auto 0 auto;
+                &:nth-of-type(3n) {
+                    margin-right: auto;
+                }
             }
         }
     }
