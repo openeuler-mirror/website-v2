@@ -106,6 +106,19 @@ module.exports = {
                 MANUFACTURER: 'openEuler RISC-V SIG组',
                 PUBLISH_DATE: '2020/09',
                 LTS: false
+            },
+            {
+                NAME: '拓林思企业级服务器操作系统',
+                DOWNLOAD_URL : 'http://download.turbolinux.com.cn:8011/',
+                DESC: ' 拓林思企业级服务器操作系统是一款基于openEuler操作系统打造的针对AArch64处理器架构的操作系统发行版，适用于数据库、云计算、大数据、分布式计算等多种应用场景，为客户提供安全、可靠的解决系统方案，为各类应用提供标准、稳定的运行环境。',
+                INSTALL_GUIDENCE_URL: 'http://download.turbolinux.com.cn:8011/docs/TurboLinux15-Aarch64-Installation.pdf',
+                SEEK_HELP_URL: 'http://forum.turbolinux.com.cn/ ',
+                GET_ISO_URL: 'http://download.turbolinux.com.cn:8011/',
+                MANUFACTURER: 'TurboLinux',
+                PUBLISH_DATE: '2020/04',
+                LIFE_CYCLE_URL: 'http://download.turbolinux.com.cn:8011/docs/TLES-OS-PLANNING.pdf',
+                RELEASE_DESC_URL: 'http://www.turbolinux.com.cn/index.php/pages/cat_id/2.html',
+                LTS: false
             }
         ]
     },
