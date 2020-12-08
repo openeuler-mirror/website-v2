@@ -73,7 +73,7 @@
                     <carousel v-show="isShowcarousel"></carousel>
                 </div>
                 <div class="lecturer">
-                     <div class="title">
+                    <div class="title">
                         <img src="/img/summit/home/lecturer.png" alt="" v-if="!isShowH5" />
                         <img src="/img/summit/home/mobile-lecturer.png" alt="" v-else />
                     </div>
@@ -141,6 +141,14 @@
                     <div class="media-box">
                         <img :src="item.IMG" alt="" v-for="(item,index) in mediaList" @click="go(item.LINK)" />
                     </div>
+                </div>
+                <div class="review">
+                    <div class="title">
+                        <img src="/img/summit/home/review.png" alt="" v-if="!isShowH5" />
+                        <img src="/img/summit/home/mobile-review.png" alt="" v-else />
+                    </div>
+                    <img class="review-banner card-hover" src="/img/summit/home/review-img.png" alt="" @click="go('/interaction/summit-list/list/')" v-if="!isShowH5"/>
+                    <img class="review-banner" src="/img/summit/home/mobile-review-img.png" alt="" @click="go('/interaction/summit-list/list/')" v-else />
                 </div>
             </div>
         </div>
@@ -230,6 +238,10 @@ export default {
 </script>
 
 <style lang='less' scoped>
+.card-hover:hover {
+    box-shadow: 0px 6px 30px 0px rgba(0, 47, 167, 0.2);
+    cursor: pointer;
+}
 .mobile-padding {
     @media screen and (max-width: 1000px) {
         padding: 40px 15px 126px 15px !important;
@@ -679,6 +691,22 @@ export default {
                     margin-right: auto;
                 }
             }
+        }
+    }
+}
+.summit-content .summit-message .review {
+    margin-top: 100px;
+    .review-banner {
+        height: 280px;
+        display: block;
+        margin-top: 54px;
+        width: 100%;
+    }
+    @media screen and (max-width: 1000px) {
+        margin-top: 40px;
+        .review-banner {
+            height: 180px;
+            margin-top: 33px;
         }
     }
 }

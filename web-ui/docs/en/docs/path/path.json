@@ -99,6 +99,16 @@
                         "name": "Application Development Guide"
                     }
                 ]
+            },
+            {
+                "title": "Migration",
+                "doc": [
+                    {
+                        "img": "/img/docs/docs-application.svg",
+                        "path": "/docs/ApplicationDev/k8sinstall.html",
+                        "name": "K8S Environmental Construction guidance"
+                    }
+                ]
             }
         ]
     },

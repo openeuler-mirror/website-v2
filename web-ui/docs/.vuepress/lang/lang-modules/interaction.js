@@ -709,140 +709,140 @@ module.exports = {
                     ],
                     PARTNERS_IMG: [
                         {
-                            IMG: '/img/summit/home/yidong.png',
+                            IMG: '/img/summit/home/co-organizer/yidong.png',
                             LINK: 'http://it.10086.cn/indexc.html'
                         },
                         {
-                            IMG: '/img/summit/home/liantong.png',
+                            IMG: '/img/summit/home/co-organizer/liantong.png',
                             LINK: 'https://www.woyun.cn/'
                         },
                         {
-                            IMG: '/img/summit/home/yinlian.png',
+                            IMG: '/img/summit/home/co-organizer/yinlian.png',
                             LINK: ''
                         },
                         {
-                            IMG: '/img/summit/home/pengcheng.png',
+                            IMG: '/img/summit/home/co-organizer/pengcheng.png',
                             LINK: ''
                         },
                         {
-                            IMG: '/img/summit/home/feiteng.png',
+                            IMG: '/img/summit/home/co-organizer/feiteng.png',
                             LINK: ''
                         },
                         {
-                            IMG: '/img/summit/home/qilin.png',
+                            IMG: '/img/summit/home/co-organizer/qilin.png',
                             LINK: 'http://www.kylinos.cn/'
                         },
                         {
-                            IMG: '/img/summit/home/tongxin.png',
+                            IMG: '/img/summit/home/co-organizer/tongxin.png',
                             LINK: ''
                         },
                         {
-                            IMG: '/img/summit/home/cetc.png',
+                            IMG: '/img/summit/home/co-organizer/cetc.png',
                             LINK: 'http://www.i-soft.com.cn/'
                         },
                         {
-                            IMG: '/img/summit/home/xinan.png',
+                            IMG: '/img/summit/home/co-organizer/xinan.png',
                             LINK: 'http://www.kylinsec.com.cn/'
                         },
                         {
-                            IMG: '/img/summit/home/iscas.png',
+                            IMG: '/img/summit/home/co-organizer/iscas.png',
                             LINK: 'http://www.iscas.ac.cn'
                         },
                         {
-                            IMG: '/img/summit/home/turbolinux.png',
+                            IMG: '/img/summit/home/co-organizer/turbolinux.png',
                             LINK: 'http://www.turbolinux.com.cn'
                         },
                         {
-                            IMG: '/img/summit/home/beiming.png',
+                            IMG: '/img/summit/home/co-organizer/beiming.png',
                             LINK: ''
                         },
                         {
-                            IMG: '/img/summit/home/runhe.png',
+                            IMG: '/img/summit/home/co-organizer/runhe.png',
                             LINK: 'http://www.hopeedge.com'
                         },
                         {
-                            IMG: '/img/summit/home/xsky.png',
+                            IMG: '/img/summit/home/co-organizer/xsky.png',
                             LINK: 'http://www.xsky.com'
                         },
                         {
-                            IMG: '/img/summit/home/huayun.png',
+                            IMG: '/img/summit/home/co-organizer/huayun.png',
                             LINK: 'https://huayun.com/'
                         },
                         {
-                            IMG: '/img/summit/home/qingyun.png',
+                            IMG: '/img/summit/home/co-organizer/qingyun.png',
                             LINK: 'https://kubesphere.qingcloud.com/'
                         },
                         {
-                            IMG: '/img/summit/home/shenxinfu.png',
+                            IMG: '/img/summit/home/co-organizer/shenxinfu.png',
                             LINK: ''
                         },
                         {
-                            IMG: '/img/summit/home/yunhong.png',
+                            IMG: '/img/summit/home/co-organizer/yunhong.png',
                             LINK: 'http://www.winhong.com/'
                         },
                         {
-                            IMG: '/img/summit/home/yunhe.png',
+                            IMG: '/img/summit/home/co-organizer/yunhe.png',
                             LINK: 'https://enmotech.com/'
                         },
                         {
-                            IMG: '/img/summit/home/hailiang.png',
+                            IMG: '/img/summit/home/co-organizer/hailiang.png',
                             LINK: 'http://www.vastdata.com.cn'
                         },
                         {
-                            IMG: '/img/summit/home/hangtian.png',
+                            IMG: '/img/summit/home/co-organizer/hangtian.png',
                             LINK: 'https://www.htzhiyun.cn'
                         },
                         {
-                            IMG: '/img/summit/home/langche.png',
+                            IMG: '/img/summit/home/co-organizer/langche.png',
                             LINK: 'https://lstack.com/'
                         }
                     ],
                     FOUNDATION_IMG: [
                         {
-                            IMG: '/img/summit/home/yuanzi.png',
+                            IMG: '/img/summit/home/foundation/yuanzi.png',
                             LINK: 'https://www.openatom.org'
                         },
                         {
-                            IMG: '/img/summit/home/cloudnative.png',
+                            IMG: '/img/summit/home/foundation/cloudnative.png',
                             LINK: ''
                         },
                         {
-                            IMG: '/img/summit/home/linaro.png',
+                            IMG: '/img/summit/home/foundation/linaro.png',
                             LINK: 'https://www.linaro.org/'
                         },
                         {
-                            IMG: '/img/summit/home/linux.png',
+                            IMG: '/img/summit/home/foundation/linux.png',
                             LINK: 'https://Linux.cn'
                         },
                         {
-                            IMG: '/img/summit/home/open.png',
+                            IMG: '/img/summit/home/foundation/open.png',
                             LINK: ''
                         }
                     ]
                 },
                 MEDIA: [
                     {
-                        IMG: '/img/summit/home/csdn.png',
+                        IMG: '/img/summit/home/media/csdn.png',
                         LINK: 'https://www.csdn.net/'
                     },
                     {
-                        IMG: '/img/summit/home/sifou.png',
+                        IMG: '/img/summit/home/media/sifou.png',
                         LINK: 'https://segmentfault.com/'
                     },
                     {
-                        IMG: '/img/summit/home/oschina.png',
+                        IMG: '/img/summit/home/media/oschina.png',
                         LINK: 'https://www.oschina.net/'
                     },
                     {
-                        IMG: '/img/summit/home/51cto.png',
+                        IMG: '/img/summit/home/media/51cto.png',
                         LINK: 'https://www.51cto.com/'
                     },
                     {
-                        IMG: '/img/summit/home/media-linux.png',
+                        IMG: '/img/summit/home/media/media-linux.png',
                         LINK: 'https://linux.cn/'
                     },
                     {
-                        IMG: '/img/summit/home/xianglingshuo.png',
+                        IMG: '/img/summit/home/media/xianglingshuo.png',
                         LINK: ''
                     },
                 ]
@@ -1852,140 +1852,140 @@ module.exports = {
                     ],
                     PARTNERS_IMG: [
                         {
-                            IMG: '/img/summit/home/yidong.png',
+                            IMG: '/img/summit/home/co-organizer/yidong.png',
                             LINK: 'http://it.10086.cn/indexc.html'
                         },
                         {
-                            IMG: '/img/summit/home/liantong.png',
+                            IMG: '/img/summit/home/co-organizer/liantong.png',
                             LINK: 'https://www.woyun.cn/'
                         },
                         {
-                            IMG: '/img/summit/home/yinlian.png',
+                            IMG: '/img/summit/home/co-organizer/yinlian.png',
                             LINK: ''
                         },
                         {
-                            IMG: '/img/summit/home/pengcheng.png',
+                            IMG: '/img/summit/home/co-organizer/pengcheng.png',
                             LINK: ''
                         },
                         {
-                            IMG: '/img/summit/home/feiteng.png',
+                            IMG: '/img/summit/home/co-organizer/feiteng.png',
                             LINK: ''
                         },
                         {
-                            IMG: '/img/summit/home/qilin.png',
+                            IMG: '/img/summit/home/co-organizer/qilin.png',
                             LINK: 'http://www.kylinos.cn/'
                         },
                         {
-                            IMG: '/img/summit/home/tongxin.png',
+                            IMG: '/img/summit/home/co-organizer/tongxin.png',
                             LINK: ''
                         },
                         {
-                            IMG: '/img/summit/home/cetc.png',
+                            IMG: '/img/summit/home/co-organizer/cetc.png',
                             LINK: 'http://www.i-soft.com.cn/'
                         },
                         {
-                            IMG: '/img/summit/home/xinan.png',
+                            IMG: '/img/summit/home/co-organizer/xinan.png',
                             LINK: 'http://www.kylinsec.com.cn/'
                         },
                         {
-                            IMG: '/img/summit/home/iscas.png',
+                            IMG: '/img/summit/home/co-organizer/iscas.png',
                             LINK: 'http://www.iscas.ac.cn'
                         },
                         {
-                            IMG: '/img/summit/home/turbolinux.png',
+                            IMG: '/img/summit/home/co-organizer/turbolinux.png',
                             LINK: 'http://www.turbolinux.com.cn'
                         },
                         {
-                            IMG: '/img/summit/home/beiming.png',
+                            IMG: '/img/summit/home/co-organizer/beiming.png',
                             LINK: ''
                         },
                         {
-                            IMG: '/img/summit/home/runhe.png',
+                            IMG: '/img/summit/home/co-organizer/runhe.png',
                             LINK: 'http://www.hopeedge.com'
                         },
                         {
-                            IMG: '/img/summit/home/xsky.png',
+                            IMG: '/img/summit/home/co-organizer/xsky.png',
                             LINK: 'http://www.xsky.com'
                         },
                         {
-                            IMG: '/img/summit/home/huayun.png',
+                            IMG: '/img/summit/home/co-organizer/huayun.png',
                             LINK: 'https://huayun.com/'
                         },
                         {
-                            IMG: '/img/summit/home/qingyun.png',
+                            IMG: '/img/summit/home/co-organizer/qingyun.png',
                             LINK: 'https://kubesphere.qingcloud.com/'
                         },
                         {
-                            IMG: '/img/summit/home/shenxinfu.png',
+                            IMG: '/img/summit/home/co-organizer/shenxinfu.png',
                             LINK: ''
                         },
                         {
-                            IMG: '/img/summit/home/yunhong.png',
+                            IMG: '/img/summit/home/co-organizer/yunhong.png',
                             LINK: 'http://www.winhong.com/'
                         },
                         {
-                            IMG: '/img/summit/home/yunhe.png',
+                            IMG: '/img/summit/home/co-organizer/yunhe.png',
                             LINK: 'https://enmotech.com/'
                         },
                         {
-                            IMG: '/img/summit/home/hailiang.png',
+                            IMG: '/img/summit/home/co-organizer/hailiang.png',
                             LINK: 'http://www.vastdata.com.cn'
                         },
                         {
-                            IMG: '/img/summit/home/hangtian.png',
+                            IMG: '/img/summit/home/co-organizer/hangtian.png',
                             LINK: 'https://www.htzhiyun.cn'
                         },
                         {
-                            IMG: '/img/summit/home/langche.png',
+                            IMG: '/img/summit/home/co-organizer/langche.png',
                             LINK: 'https://lstack.com/'
                         }
                     ],
                     FOUNDATION_IMG: [
                         {
-                            IMG: '/img/summit/home/yuanzi.png',
+                            IMG: '/img/summit/home/foundation/yuanzi.png',
                             LINK: 'https://www.openatom.org'
                         },
                         {
-                            IMG: '/img/summit/home/cloudnative.png',
+                            IMG: '/img/summit/home/foundation/cloudnative.png',
                             LINK: ''
                         },
                         {
-                            IMG: '/img/summit/home/linaro.png',
+                            IMG: '/img/summit/home/foundation/linaro.png',
                             LINK: 'https://www.linaro.org/'
                         },
                         {
-                            IMG: '/img/summit/home/linux.png',
+                            IMG: '/img/summit/home/foundation/linux.png',
                             LINK: 'https://Linux.cn'
                         },
                         {
-                            IMG: '/img/summit/home/open.png',
+                            IMG: '/img/summit/home/foundation/open.png',
                             LINK: ''
                         }
                     ]
                 },
                 MEDIA: [
                     {
-                        IMG: '/img/summit/home/csdn.png',
+                        IMG: '/img/summit/home/media/csdn.png',
                         LINK: 'https://www.csdn.net/'
                     },
                     {
-                        IMG: '/img/summit/home/sifou.png',
+                        IMG: '/img/summit/home/media/sifou.png',
                         LINK: 'https://segmentfault.com/'
                     },
                     {
-                        IMG: '/img/summit/home/oschina.png',
+                        IMG: '/img/summit/home/media/oschina.png',
                         LINK: 'https://www.oschina.net/'
                     },
                     {
-                        IMG: '/img/summit/home/51cto.png',
+                        IMG: '/img/summit/home/media/51cto.png',
                         LINK: 'https://www.51cto.com/'
                     },
                     {
-                        IMG: '/img/summit/home/media-linux.png',
+                        IMG: '/img/summit/home/media/media-linux.png',
                         LINK: 'https://linux.cn/'
                     },
                     {
-                        IMG: '/img/summit/home/xianglingshuo.png',
+                        IMG: '/img/summit/home/media/xianglingshuo.png',
                         LINK: ''
                     },
                 ]
