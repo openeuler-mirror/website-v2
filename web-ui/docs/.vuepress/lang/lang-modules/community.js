@@ -165,30 +165,34 @@ module.exports = {
             ALL: "All"
         },
         MAILING_LIST: {
-            TITLE: "Mailing List",
+            TITLE: "Mailing Lists",
             GUIDE_CONTENT: [
                 {
                     LEFT: {
-                        LEFT_INFO: "Select the mailing list to be subscribed to on the mailing list page.",
+                        LEFT_INFO: "Select the mailing list to be subscribed to on the Mailing Lists page.",
                         LEFT_CIRCLE: "Select",
-                        LEFT_IMG: "/img/community/maillist/mail1.png"
+                        LEFT_IMG: "/img/community/maillist/mail1.png",
+                        INDEX: '01'
                     },
                     RIGHT: {
                         RIGHT_INFO: "Enter the e-mail address and name (optional), and click Subscribe. ",
                         RIGHT_CIRCLE: "Subscribe ",
-                        LEFT_IMG: "/img/community/maillist/mail2.png"
+                        LEFT_IMG: "/img/community/maillist/mail2.png",
+                        INDEX: '02'
                     }
                 },
                 {
                     LEFT: {
                         LEFT_INFO: "Your mailbox will receive an e-mail from the mailing list, asking you to confirm that you have subscribed to the mailing list. Reply to the e-mail to confirm the subscription.",
                         LEFT_CIRCLE: "Confirm ",
-                        LEFT_IMG: "/img/community/maillist/mail3.png"
+                        LEFT_IMG: "/img/community/maillist/mail3.png",
+                        INDEX: '03'
                     },
                     RIGHT: {
-                        RIGHT_INFO: "Your mailbox receives a welcome e-mail from the mailing list, indication that you have subscribed to the mailing list successfully.",
+                        RIGHT_INFO: "Your mailbox receives a welcome e-mail from the mailing list, indicating that you have subscribed to the mailing list successfully.",
                         RIGHT_CIRCLE: "Succeed",
-                        LEFT_IMG: "/img/community/maillist/mail4.png"
+                        LEFT_IMG: "/img/community/maillist/mail4.png",
+                        INDEX: '04'
                     }
                 },
             ],

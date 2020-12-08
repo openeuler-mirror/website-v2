@@ -37,10 +37,10 @@
             <a class="table-link" @click="go(scope.row.cveId)">{{ scope.row.cveId }}</a>
           </template>
         </el-table-column>
-        <el-table-column width="440" prop="summary" :label="i18n.security.SYNOPSIS"></el-table-column>
+        <el-table-column width="420" prop="summary" :label="i18n.security.SYNOPSIS"></el-table-column>
         <el-table-column width="132" prop="cvsssCoreOE" :label="i18n.security.CVSS_SCORE"></el-table-column>
         <el-table-column width="138" prop="announcementTime" :label="i18n.security.RELEASE_DATE"></el-table-column>
-        <el-table-column prop="updateTime" :label="i18n.security.MODIFIED_TIME"></el-table-column>
+        <el-table-column width="120" prop="updateTime" :label="i18n.security.MODIFIED_TIME"></el-table-column>
         <el-table-column :label="i18n.security.OPERATION">
           <template slot-scope="scope">
             <a class="table-link" @click="go(scope.row.cveId)">{{ i18n.security.DETAIL }}</a>

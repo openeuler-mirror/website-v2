@@ -652,7 +652,7 @@ module.exports = {
             ],
             INTRO_MAP_SND: {
                 NAME: "02",
-                TITLE: "Experience openEuler System",
+                TITLE: "Use openEuler OS",
                 IMG: "/img/home/step2.png",
                 LINK: "",
                 GIF: "/img/home/step-move-2.gif"
@@ -1060,10 +1060,10 @@ module.exports = {
                 TITLE: "E-mail Subscription",
                 DES: "Discuss any community topic here.",
                 SUBSCRIBE: "For more subscriptions, please click the ",
-                LINK: "Mailing list",
+                LINK: "Mailing Lists",
                 MAIL: "community@openeuler.org"
             },
-            SOURCE_PUBLISH_TITLE: "openEuler-based OS Release",
+            SOURCE_PUBLISH_TITLE: "openEuler-based OS Releases",
             SOURCE_LINK_TITLE: "Reference Links",
         },
         HOME_SOURCE_EDITION:[

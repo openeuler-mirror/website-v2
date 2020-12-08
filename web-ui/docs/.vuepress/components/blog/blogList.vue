@@ -90,7 +90,7 @@
                             <span>{{i18n.community.BLOG.LABEL}}:</span>
                             <span v-for="(tag, indexTag) in item.frontmatter.tags" :key="indexTag" class="tag-name">
                                 <span @click="clickTagItem(tag)" class="tag-item">{{tag}}</span>
-                                <span v-if="indexTag != (item.frontmatter.tags.length - 1)">、</span>
+                                <span v-if="indexTag != (item.frontmatter.tags.length - 1)">, </span>
                             </span>
                         </div>
                     </div>

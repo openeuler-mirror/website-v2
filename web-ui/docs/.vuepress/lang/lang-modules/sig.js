@@ -144,8 +144,8 @@ module.exports = {
             }
         },
         SIG_LIST: {
-            HOME_PAGE: 'Go to gitee home page',
-            MAIL: 'mail',
+            HOME_PAGE: 'Go to Gitee home page',
+            MAIL: 'E-mail',
             IRC: 'IRC Channel',
             MANAGER: 'Administrators'
         },
@@ -154,7 +154,7 @@ module.exports = {
             ORGANIZING_MEETINGS: 'Meeting Schedule',
             MEMBERS: 'Project Members',
             CONTACT: 'Contact',
-            MAIL_LIST: 'maillist'
+            MAIL_LIST: 'Mailing list'
         },
         ROLE_DESCRIPTION:{
             ROLE_DESCRIPTION:'Role Description',

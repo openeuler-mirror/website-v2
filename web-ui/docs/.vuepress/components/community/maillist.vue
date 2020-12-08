@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         <div class="step-left-num">
-                            <span v-if="$lang === 'en'">{{ '0'+ (index + 1) }}</span>
+                            <span v-if="$lang === 'en'">{{ item.LEFT.INDEX }}</span>
                             <span v-if="$lang !== 'en'">{{ item.LEFT.LEFT_CIRCLE }}</span>
                         </div>
                         <div class="step-line"></div>
@@ -39,7 +39,7 @@
                     <div class="mail-box">
                         <div class="step-line"></div>
                         <div class="step-right-num">
-                            <span v-if="$lang === 'en'">{{ '0'+ (index + 3) }}</span>
+                            <span v-if="$lang === 'en'">{{ item.RIGHT.INDEX }}</span>
                             <span v-if="$lang !== 'en'">{{ item.RIGHT.RIGHT_CIRCLE }}</span>
                         </div>
                          <div :class="['step-right-box','fade-in',$lang === 'en'?'en-box' + index : '']">
