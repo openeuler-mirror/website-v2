@@ -35,7 +35,7 @@
         </div>
         <h2>{{i18n.sig.SIG_DETAIL.CONTACT}}</h2>
         <div class="contact">
-            <span>{{i18n.sig.SIG_DETAIL.MAIL_LIST}}：</span><a :href="'mailto:' + $route.query.mail">{{$route.query.mail}}</a>
+            <span>{{i18n.sig.SIG_DETAIL.MAIL_LIST}}: </span><a :href="'mailto:' + $route.query.mail">{{$route.query.mail}}</a>
         </div>
    </div>
 </template>

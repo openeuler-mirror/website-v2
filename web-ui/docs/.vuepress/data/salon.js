@@ -204,39 +204,39 @@ module.exports = {
                 MEETUPS_FLOW_PATH: [
                     {
                         FLOW_PATH_NAME: 'Sign-in',
-                        FLOW_PATH_TIME: '13 : 30'
+                        FLOW_PATH_TIME: '13:30'
                     },
                     {
                         FLOW_PATH_NAME: 'Opening',
-                        FLOW_PATH_TIME: '13 : 55'
+                        FLOW_PATH_TIME: '13:55'
                     },
                     {
                         FLOW_PATH_NAME: 'iSula and lightweight operations',
-                        FLOW_PATH_TIME: '14 : 00'
+                        FLOW_PATH_TIME: '14:00'
                     },
                     {
                         FLOW_PATH_NAME: 'Linux kernel security system design',
-                        FLOW_PATH_TIME: '14 : 35 '
+                        FLOW_PATH_TIME: '14:35 '
                     },
                     {
                         FLOW_PATH_NAME: 'Tea break',
-                        FLOW_PATH_TIME: '15 : 10'
+                        FLOW_PATH_TIME: '15:10'
                     },
                     {
                         FLOW_PATH_NAME: 'Development of trusted OS technology',
-                        FLOW_PATH_TIME: '15 : 25'
+                        FLOW_PATH_TIME: '15:25'
                     },
                     {
                         FLOW_PATH_NAME: 'StratoVirt: openEuler lightweight virtualization engine',
-                        FLOW_PATH_TIME: '16 : 00'
+                        FLOW_PATH_TIME: '16:00'
                     },
                     {
                         FLOW_PATH_NAME: 'Partner case sharing',
-                        FLOW_PATH_TIME: '16 : 35'
+                        FLOW_PATH_TIME: '16:35'
                     },
                     {
                         FLOW_PATH_NAME: 'End',
-                        FLOW_PATH_TIME: '17 : 00 '
+                        FLOW_PATH_TIME: '17:00 '
                     },
                 ],
                 MEETINGS_INFO: {
@@ -261,47 +261,47 @@ module.exports = {
                 MEETUPS_FLOW_PATH: [
                     {
                         FLOW_PATH_NAME: 'Sign-in',
-                        FLOW_PATH_TIME: '13 : 30'
+                        FLOW_PATH_TIME: '13:30'
                     },
                     {
                         FLOW_PATH_NAME: 'Opening speech',
-                        FLOW_PATH_TIME: '14 : 00'
+                        FLOW_PATH_TIME: '14:00'
                     },
                     {
                         FLOW_PATH_NAME: 'Overview of openEuler OS and  community',
-                        FLOW_PATH_TIME: '14 : 10'
+                        FLOW_PATH_TIME: '14:10'
                     },
                     {
                         FLOW_PATH_NAME: 'Application porting and adaptation to Kylinsec OS (EulerOS version) V3',
-                        FLOW_PATH_TIME: '14 : 15 '
+                        FLOW_PATH_TIME: '14:15 '
                     },
                     {
                         FLOW_PATH_NAME: 'Kunpeng-based cloud desktop tuning and practice',
-                        FLOW_PATH_TIME: '14 : 30'
+                        FLOW_PATH_TIME: '14:30'
                     },
                     {
                         FLOW_PATH_NAME: 'Working principles and practice of the open source performance tuning tool A-Tune',
-                        FLOW_PATH_TIME: '14 : 45'
+                        FLOW_PATH_TIME: '14:45'
                     },
                     {
                         FLOW_PATH_NAME: "Huawei's exploration of optimizing Hadoop on ARM64",
-                        FLOW_PATH_TIME: '15 : 05'
+                        FLOW_PATH_TIME: '15:05'
                     },
                     {
                         FLOW_PATH_NAME: 'Visit to the exhibition hall in Hunan Kunpeng Ecosystem Innovation Center, group photo, and tea break',
-                        FLOW_PATH_TIME: '15 : 30'
+                        FLOW_PATH_TIME: '15:30'
                     },
                     {
                         FLOW_PATH_NAME: 'Feature description of openGauss enterprise-grade database',
-                        FLOW_PATH_TIME: '15 : 55 '
+                        FLOW_PATH_TIME: '15:55 '
                     },
                     {
                         FLOW_PATH_NAME: 'openGauss-based experimental data analytics platform',
-                        FLOW_PATH_TIME: '16 : 20 '
+                        FLOW_PATH_TIME: '16:20 '
                     },
                     {
                         FLOW_PATH_NAME: 'Q&A',
-                        FLOW_PATH_TIME: '16 : 45 '
+                        FLOW_PATH_TIME: '16:45 '
                     }
                 ],
                 MEETINGS_INFO: {
