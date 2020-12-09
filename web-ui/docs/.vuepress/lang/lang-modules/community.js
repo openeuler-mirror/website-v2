@@ -284,6 +284,9 @@ module.exports = {
         },
         CONDUCT: {
             TITLE: "Code of Covenant"
+        },
+        SERVICE: {
+            SERVICE:''
         }
     }
 };
