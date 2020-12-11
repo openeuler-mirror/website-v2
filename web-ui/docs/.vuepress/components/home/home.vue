@@ -2,10 +2,6 @@
     <div class="home">
         <div class="is-pc home-carousel" v-if="!isShowH5">
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" @change="eventChange()">
-                <el-carousel-item v-if="$lang === 'zh'">
-                    <div class="carousel-banner" :style="{backgroundImage: i18n.home.HOME_FIRST_BANNER.BANNER_PC_IMG}" @click="go(i18n.home.HOME_FIRST_BANNER.BANNER_LINK)">
-                    </div>
-                </el-carousel-item>
                 <el-carousel-item v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
                     <div class="carousel-banner summmit-banner" @click="go(item.BANNER_LINK)" v-if="index === 0">
                         <video autoplay loop muted width="700px" height="500px" id="summit-video">
@@ -66,10 +62,6 @@
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
-                <swiper-slide v-if="$lang === 'zh'">
-                    <div class="carousel-banner mobile-banner" :style="{backgroundImage: i18n.home.HOME_FIRST_BANNER.BANNER_MOBILE_IMG}" @click="go(i18n.home.HOME_FIRST_BANNER.BANNER_LINK)">
-                    </div>
-                </swiper-slide>
                 <swiper-slide v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
                     <div class="carousel-banner mobile-banner" :style="{backgroundImage: item.BANNER_MOBILE_IMG}" @click="go(item.BANNER_LINK)">
                     </div>
@@ -497,7 +489,6 @@
                 })
             }
             this.developerList = this.changeArr(this.i18n.home.HOME_DEV.DEV_INFO,16);
-            this.$lang === 'en'?this.bannerAmount = 5:this.bannerAmount = 6;
         },
         beforeDestroy () {
             this.mobileSwiperInterval && clearInterval(this.mobileSwiperInterval);

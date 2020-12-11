@@ -37,11 +37,7 @@ module.exports = {
                 LINK: '/interaction/news-list/'
             }
         ],
-        HOME_FIRST_BANNER: {
-            BANNER_PC_IMG: 'url("/img/home/banner/zh-pc-race.png")',
-            BANNER_MOBILE_IMG: 'url("/img/home/banner/zh-mobile-race.png")',
-            BANNER_LINK: 'https://www.oschina.net/2020-openeuler/'
-        },
+        HOME_FIRST_BANNER: {},
         HOME_OTHER_BANNER: [
             {
                 BANNER_PC_IMG: '/img/summit/home/zh-pc-summit.png',
