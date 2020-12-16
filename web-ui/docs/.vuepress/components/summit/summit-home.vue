@@ -1,6 +1,20 @@
 <!-- 峰会首页 -->
 <template>
     <div :class="['summit',mobilePadding?'mobile-padding':'']">
+        <div class="summit-nav" v-show="isShowNav" v-if="!isShowH5">
+            <div class="box-line">
+                <img class="gif" src="/img/summit/home/nav.gif" alt="" />
+                <img class="line" src="/img/summit/home/line.png" alt="" />
+            </div>
+            <div class="nav-text">
+                <ul>
+                    <li v-for="(item,index) in i18n.interaction.SUMMIT.NAV_LIST" @click="goTitle(index)" :class="index === activeIndex?'active':''">
+                        <div><div class="inside"></div></div>
+                        <div>{{ item }}</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <h3 v-if="isShowH5">{{ i18n.interaction.SUMMIT.SUMMIT }}</h3>
         <div class="top-banner" v-if="!isShowH5" @click="go('https://jinshuju.net/f/PEFJht?x_field_1=openeuler')">
             <video autoplay loop muted width="700px" height="380px" id="summit-mp4">
@@ -10,24 +24,33 @@
         </div>
         <img class="mobile-img" :src="i18n.interaction.SUMMIT.SUMMIT_H5_IMG" alt="" v-else @click="go('https://jinshuju.net/f/PEFJht?x_field_1=openeuler')" />
         <div class="summit-content">
-            <div :class="['summit-explain',$lang == 'en'?'en-explain':'']">
+            <div class="summit-explain">
                 <p :class="$lang === 'en'?'font-regular':''" v-for="(item,index) in i18n.interaction.SUMMIT.SUMMITCONTENT">{{ item }}</p>
             </div>
-            <p :class="['tip',$lang === 'en'?'font-bold':'']">{{ i18n.interaction.SUMMIT.SUMMITTIP.slice(0,31) }}<a href="https://jinshuju.net/f/PEFJht?x_field_1=openeuler" target="_blank">{{ i18n.interaction.SUMMIT.SUMMITTIP.slice(31,35) }}</a>{{ i18n.interaction.SUMMIT.SUMMITTIP.slice(35) }}</p>
+            <p class="tip" v-if="$lang === 'zh'">{{ i18n.interaction.SUMMIT.SUMMITTIP.slice(0,31) }}
+                <a href="https://jinshuju.net/f/PEFJht?x_field_1=openeuler" target="_blank">
+                {{ i18n.interaction.SUMMIT.SUMMITTIP.slice(31,35) }}</a>
+                {{ i18n.interaction.SUMMIT.SUMMITTIP.slice(35) }}
+            </p>
+            <p class="tip font-bold" v-else>{{ i18n.interaction.SUMMIT.SUMMITTIP.slice(0,10) }}
+                <a href="https://jinshuju.net/f/PEFJht?x_field_1=openeuler" target="_blank">
+                {{ i18n.interaction.SUMMIT.SUMMITTIP.slice(10,14) }}</a>
+                {{ i18n.interaction.SUMMIT.SUMMITTIP.slice(14) }}
+            </p>
             <div class="summit-message">
-                <div class="agenda">
-                    <div class="title">
-                         <img src="/img/summit/home/agenda.png" alt="" v-if="!isShowH5" />
-                         <img src="/img/summit/home/mobile-agenda.png" alt="" v-else />
+                <div class="agenda" title-id="agenda">
+                    <div :class="['title',$lang === 'en'?'en-title':'']">
+                         <img :src="agendaData.WEB_TITLE" alt="" v-if="!isShowH5" />
+                         <img :src="agendaData.MOBILE_TITLE" alt="" v-else />
                     </div>
                     <div class="time-box">
                         <el-tabs v-model="showTab" @tab-click="tabClick">
-                            <el-tab-pane :label="agendaData.DATE[0]" name="twenty-four"></el-tab-pane>
-                            <el-tab-pane :label="agendaData.DATE[1]" name="twenty-five"></el-tab-pane>
+                            <el-tab-pane :label="dateArr[0]" name="twenty-four"></el-tab-pane>
+                            <el-tab-pane :label="dateArr[1]" name="twenty-five"></el-tab-pane>
                         </el-tabs>
                         <el-radio-group v-model="showBtn" @change="changeTime" v-show="isShowBtn">
-                            <el-radio-button label="forenoon">{{ agendaData.DATE[2] }}</el-radio-button>
-                            <el-radio-button label="afternoon">{{ agendaData.DATE[3] }}</el-radio-button>
+                            <el-radio-button label="forenoon">{{ dateArr[2] }}</el-radio-button>
+                            <el-radio-button label="afternoon">{{ dateArr[3] }}</el-radio-button>
                         </el-radio-group>
                     </div>
                     <div class="calendar-content" v-show="!isShowcarousel">
@@ -72,10 +95,10 @@
                     </div>
                     <carousel v-show="isShowcarousel"></carousel>
                 </div>
-                <div class="lecturer">
+                <div class="lecturer" title-id="lecturer">
                     <div class="title">
-                        <img src="/img/summit/home/lecturer.png" alt="" v-if="!isShowH5" />
-                        <img src="/img/summit/home/mobile-lecturer.png" alt="" v-else />
+                        <img :src="lecturerObj.WEB_TITLE" alt="" v-if="!isShowH5" />
+                        <img :src="lecturerObj.MOBILE_TITLE" alt="" v-else />
                     </div>
                     <div class="lecturer-box" v-fade v-if="lecturerList.length && !isShowH5">
                         <div class="item fade-in"  v-for="(item,index) in lecturerList" :key="index">
@@ -97,58 +120,58 @@
                         <img v-if="!flag" src="/img/home/arrowUp.svg" alt="">
                     </div>
                 </div>
-                <div class="host-unit">
+                <div class="host-unit" title-id="host-unit">
                     <div class="title">
-                        <img src="/img/summit/home/host-unit.png" alt="" v-if="!isShowH5" />
-                        <img src="/img/summit/home/mobile-host-unit.png" alt="" v-else />
+                        <img :src="hostUnitObj.WEB_TITLE" alt="" v-if="!isShowH5" />
+                        <img :src="hostUnitObj.MOBILE_TITLE" alt="" v-else />
                     </div>
                     <div class="img-list">
-                        <img :src="item.IMG" alt="" v-for="(item,index) in partnersObj.HOST_IMG" />
+                        <img :src="item.IMG" alt="" v-for="(item,index) in hostUnitObj.LIST" />
                     </div>
                 </div>
                 <div class="undertaker">
                     <div class="title">
-                        <img src="/img/summit/home/undertaker.png" alt="" v-if="!isShowH5" />
-                        <img src="/img/summit/home/mobile-undertaker.png" alt="" v-else />
+                        <img :src="undertakerObj.WEB_TITLE" alt="" v-if="!isShowH5" />
+                        <img :src="undertakerObj.MOBILE_TITLE" alt="" v-else />
                     </div>
                      <div class="img-list">
-                        <img :src="item.IMG" alt="" v-for="(item,index) in partnersObj.UNDERTAKER" @click="go(item.LINK)" />
+                        <img :src="item.IMG" alt="" v-for="(item,index) in undertakerObj.LIST" @click="go(item.LINK)" />
                     </div>
                 </div>
                 <div class="co-organizer">
                     <div class="title">
-                        <img src="/img/summit/home/co-organizer.png" alt="" v-if="!isShowH5" />
-                        <img src="/img/summit/home/mobile-co-organizer.png" alt="" v-else />
+                        <img :src="coOrgObj.WEB_TITLE" alt="" v-if="!isShowH5" />
+                        <img :src="coOrgObj.MOBILE_TITLE" alt="" v-else />
                     </div>
                      <div class="img-list">
-                        <img :src="item.IMG" alt="" v-for="(item,index) in partnersObj.PARTNERS_IMG" @click="go(item.LINK)" />
+                        <img :src="item.IMG" alt="" v-for="(item,index) in coOrgObj.LIST" @click="go(item.LINK)" />
                     </div>
                 </div>
                 <div class="foundation">
                     <div class="title">
-                        <img src="/img/summit/home/foundation.png" alt="" v-if="!isShowH5" />
-                        <img src="/img/summit/home/mobile-foundation.png" alt="" v-else />
+                        <img :src="foundationObj.WEB_TITLE" alt="" v-if="!isShowH5" />
+                        <img :src="foundationObj.MOBILE_TITLE" alt="" v-else />
                     </div>
                      <div class="img-list">
-                        <img :src="item.IMG" alt="" v-for="(item,index) in partnersObj.FOUNDATION_IMG" @click="go(item.LINK)" />
+                        <img :src="item.IMG" alt="" v-for="(item,index) in foundationObj.LIST" @click="go(item.LINK)" />
                     </div>
                 </div>
                 <div class="media">
                     <div class="title">
-                        <img src="/img/summit/home/media-partner.png" alt="" v-if="!isShowH5" />
-                        <img src="/img/summit/home/mobile-media-partner.png" alt="" v-else />
+                        <img :src="mediaObj.WEB_TITLE" alt="" v-if="!isShowH5" />
+                        <img :src="mediaObj.MOBILE_TITLE" alt="" v-else />
                     </div>
                     <div class="media-box">
-                        <img :src="item.IMG" alt="" v-for="(item,index) in mediaList" @click="go(item.LINK)" />
+                        <img :src="item.IMG" alt="" v-for="(item,index) in mediaObj.LIST" @click="go(item.LINK)" />
                     </div>
                 </div>
-                <div class="review">
+                <div class="review" title-id="review">
                     <div class="title">
-                        <img src="/img/summit/home/review.png" alt="" v-if="!isShowH5" />
-                        <img src="/img/summit/home/mobile-review.png" alt="" v-else />
+                        <img :src="reviewObj.WEB_TITLE" alt="" v-if="!isShowH5" />
+                        <img :src="reviewObj.MOBILE_TITLE" alt="" v-else />
                     </div>
-                    <img class="review-banner card-hover" src="/img/summit/home/review-img.png" alt="" @click="go('/interaction/summit-list/list/')" v-if="!isShowH5"/>
-                    <img class="review-banner" src="/img/summit/home/mobile-review-img.png" alt="" @click="go('/interaction/summit-list/list/')" v-else />
+                    <img class="review-banner card-hover" src="/img/summit/home/review/review-img.png" alt="" @click="go('/interaction/summit-list/list/')" v-if="!isShowH5"/>
+                    <img class="review-banner" src="/img/summit/home/review/mobile-review-img.png" alt="" @click="go('/interaction/summit-list/list/')" v-else />
                 </div>
             </div>
         </div>
@@ -163,28 +186,44 @@ export default {
             showTab: 'twenty-five',
             showBtn: 'forenoon',
             agendaData: {},
+            dateArr: [],
             agendaTableData: [],
             isShowcarousel: false,
             isShowBtn: true,
             mobilePadding: false,
-            partnersObj: {},
+            hostUnitObj: {},
+            coOrgObj: {},
+            foundationObj: {},
+            undertakerObj: {},
+            lecturerObj: {},
             lecturerList: [],
-            mediaList: [],
+            mediaObj: {},
+            reviewObj: {},
             flag: true,
-            dataObj: {}
+            dataObj: {},
+            navTitleScroll: [600,1977,5177,7977],
+            activeIndex: -1,
+            isShowNav: false
         }
     },
     mounted() {
         this.dataObj = this.i18n.interaction.SUMMIT.SUMMIT_HOME_DATA;
         this.agendaData = this.dataObj.AGENDA;
-        this.partnersObj = this.dataObj.PARTNERS;
-        this.mediaList = this.dataObj.MEDIA;
+        this.dateArr = this.agendaData.DATE;
+        this.mediaObj = this.dataObj.MEDIA;
+        this.hostUnitObj = this.dataObj.HOST;
+        this.undertakerObj = this.dataObj.UNDERTAKER;
+        this.coOrgObj = this.dataObj.CO_ORGANIZER;
+        this.foundationObj = this.dataObj.FOUNDATION;
         this.agendaTableData = this.agendaData.FORENOON_AGENDA_25;
+        this.lecturerObj = this.dataObj.LECTURER;
+        this.lecturerList = this.lecturerObj.LECTURERLIST;
+        this.reviewObj = this.dataObj.REVIEW;
         let screenWidth = document.body.clientWidth;
         if(screenWidth < 400) {
             this.mobilePadding = true;
         }
-        this.lecturerList = this.dataObj.LECTURER;
+        window.addEventListener('scroll',this.scroTop);
     },
     methods: {
         toReviewList () {
@@ -228,16 +267,47 @@ export default {
             }else {
                 return false;
             }
+        },
+        goTitle(index) {
+            document.documentElement.scrollTop = this.navTitleScroll[index];
+        },
+        scroTop(param) {
+            let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            if(scrollTop < 500) {
+                this.isShowNav = false;
+            }else {
+                this.isShowNav = true;
+            }
+            if(scrollTop > 600 && scrollTop <800) {
+                this.activeIndex = 0;
+            }else if(scrollTop > 1800 && scrollTop < 3000) {
+                this.activeIndex = 1;
+            }else if(scrollTop > 5000 && scrollTop < 6200) {
+                this.activeIndex = 2;
+            }else if(scrollTop > 7800) {
+                this.activeIndex = 3;
+            }else {
+                return false;
+            }
         }
     },
     components: {
         carousel
-    }
+    },
+    destroyed () { 
+        window.removeEventListener('scroll', this.scroTop)
+    } 
 }
 
 </script>
 
 <style lang='less' scoped>
+.font-regular {
+    font-family: Roboto-Regular;
+}
+.font-bold {
+    font-family: Roboto-BoldCondensed;
+}
 .card-hover:hover {
     box-shadow: 0px 6px 30px 0px rgba(0, 47, 167, 0.2);
     cursor: pointer;
@@ -282,12 +352,83 @@ export default {
         }
     }
 }
+.summit .summit-nav {
+    position: fixed;
+    cursor: pointer;
+    top: 170px;
+    right: 70px;
+    z-index: 1000;
+    display: block;
+    font-family: FZLTHJW;
+    .box-line {
+        width: 70px;
+        margin-left: -26px;
+        .gif {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto -30px auto;
+            position: relative;
+            z-index: 20;
+        }
+        .line {
+            display: block;
+            width: 2px;
+            height: 401px;
+            margin: 0 auto;
+        }
+    }
+    .nav-text {
+        position: relative;
+        margin-top: -330px;
+        ul li>div {
+            display: inline-block;
+            &:first-of-type {
+                margin-right: 17px;
+                border-radius: 50%;
+                width: 18px;
+                position: relative;
+                background: #FFFFFF;
+                height: 18px;
+                border: 1px solid #979797;
+                div {
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    background: #D8D8D8;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-left: -7px;
+                    margin-top: -7px;
+                }
+            }
+            &:last-of-type {
+                font-size: 20px;
+                color: #000000;
+                line-height: 30px;
+            }
+        }
+        ul li {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
+        ul .active {
+            &>div {
+                color: #002FA7 !important;
+            }
+            .inside {
+                background: #002FA7;
+            }
+        }
+    }
+}
 .summit .summit-content .title {
-    width: 800px;
+    width: 900px;
     position: relative;
     margin: 0 auto;
     img {
-        width: 800px;
+        width: 900px;
         height: 76px;
     }
     @media screen and (max-width: 1000px) {
@@ -378,6 +519,9 @@ export default {
         /deep/ .el-tabs__nav-wrap::after {
             background-color: white;
         }
+        /deep/ .el-radio-group .el-radio-button:focus {
+            outline: 0 !important;
+        }
     }
     .calendar-content {
         margin-top: 43px;
@@ -431,6 +575,17 @@ export default {
                     flex-basis: row;
                     margin-bottom: 20px;
                     border-bottom: 1px solid  rgba(0, 0, 0, 0.15);
+                    &:nth-of-type(8) {
+                        .agenda {
+                            p {
+                                span {
+                                    &:first-of-type {
+                                        white-space:nowrap;
+                                    }
+                                }
+                            }
+                        }
+                    }
                     .time {
                         width: 82px;
                         height: 20px;
@@ -455,7 +610,6 @@ export default {
                                 &:first-of-type {
                                     margin-right: 25px;
                                     width: 41px;
-                                    white-space:nowrap;
                                     vertical-align: top;
                                 }
                                 &:first-of-type,&:last-of-type {
@@ -593,7 +747,8 @@ export default {
     }
 }
 .summit-content .summit-message .lecturer {
-    margin-top: 100px;
+    width: 1029px;
+    margin: 100px auto 0 auto;
     .lecturer-box {
         margin-top: 44px;
         display: flex;
@@ -631,7 +786,8 @@ export default {
         }
     }
     @media screen and (max-width: 1000px) {
-        margin-top: 40px;
+        width: 345px;
+        margin: 40px auto 0 auto;
         .lecturer-box {
             margin-top: 20px;
             .hidden {

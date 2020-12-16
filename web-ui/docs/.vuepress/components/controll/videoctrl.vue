@@ -1,10 +1,11 @@
 <!-- 视频控制组件 -->
 <template>
     <!-- 父组件上请用.playControll的display实现hover，show-controll支持的是一直显示的情景 -->
-    <div :class="['playControll',ctrlObj.isShow?'show-controll':'']">
+    <div :class="['playControll',ctrlObj.isShow?'big-controll':'']">
         <div :class="['play-pause', isPlay?'pause-icon':'play-icon']" @click="isPlay=!isPlay"></div>
-        <div class="timebar" @click="controllBar()" ref="progress"><span :style="{width:barPercentage + '%'}"></span></div>
+        <div class="timebar" @click="controllBar()" :style="{width: ctrlObj.barWidth + 'px'}"><span :style="{width:barPercentage + '%'}"></span></div>
         <div :class="['voice-mute', isMuted?'mute-icon':'voice-icon']" @click="isMuted=!isMuted"></div>
+        <div class="full-screen" @click="fullScreen()"></div>
     </div>
 </template>
 
@@ -16,6 +17,7 @@ export default {
             isMuted:false,
             realTimeUpdate:null,
             barPercentage:0,    //进度条进度
+            barValue: 0    //进度条长度
         }
     },
     props:['ctrlObj'],
@@ -41,6 +43,9 @@ export default {
             }
         }
     },
+    mounted() {
+        this.barValue = this.ctrlObj.barWidth;
+    },
     methods: {
         progressBar(){
             let duration = this.ctrlObj.element.duration;  //  获取视频总长度
@@ -62,8 +67,11 @@ export default {
             e = e || window.event;
             let nowProgress = e.offsetX;
             let nowDuration = this.ctrlObj.element.duration;
-            this.barPercentage = Math.floor(parseFloat(nowProgress/300)*100);
-            this.ctrlObj.element.currentTime = parseFloat(parseFloat(nowProgress/300) * nowDuration);
+            this.barPercentage = Math.floor(parseFloat(nowProgress/this.barValue)*100);
+            this.ctrlObj.element.currentTime = parseFloat(parseFloat(nowProgress/this.barValue) * nowDuration);
+        },
+        fullScreen() {
+            this.ctrlObj.element.webkitRequestFullScreen();
         }
     },
     destroyed () {
@@ -96,16 +104,15 @@ export default {
         background-size: cover;
     }
     .play-icon{
-        background-image: url('/img/home/icon-play.svg');
+        background-image: url('/img/video/icon-play.svg');
     }
     .pause-icon{
-        background-image: url('/img/home/icon-pause.svg');
+        background-image: url('/img/video/icon-pause.svg');
     }
     .timebar{
         position: absolute;
         top: 16px;
         left: 45px;
-        width: 300px;
         height: 6px;
         background: #222222;
         border-radius: 5px;
@@ -129,13 +136,30 @@ export default {
         background-size: cover;
     }
     .voice-icon{
-        background-image: url('/img/home/icon-voice.svg');
+        background-image: url('/img/video/icon-voice.svg');
     }
     .mute-icon{
-        background-image: url('/img/home/icon-mute.svg');
+        background-image: url('/img/video/icon-mute.svg');
     }
 }
-.hide-Frist{
-    display: block;
+.big-controll {
+    width: 100%;
+    border-radius: 0;
+    bottom: 0;
+    left: 0;
+    margin-left: 0;
+    .voice-mute{
+        right: 45px;
+    }
+    .full-screen {
+        width: 20px;
+        height: 20px;
+        background-image: url('/img/video/full-screen.svg');
+        background-size: contain;
+        position: absolute;
+        right: 15px;
+        bottom: 12px;
+        cursor: pointer;
+    }
 }
 </style>

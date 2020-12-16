@@ -340,6 +340,7 @@ export default {
                     }
                 }
                 .card-box {
+                    width: 234px;
                     .card-list {
                         li {
                             margin-left: 25px;
