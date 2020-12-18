@@ -8,7 +8,7 @@ tags:
     - 添加rpm包
 archives: 2020-12
 author: zhuhuankai
-summary:制作openEuler镜像
+summary: 制作openEuler镜像
 ---
 
 # openEuler镜像制作
