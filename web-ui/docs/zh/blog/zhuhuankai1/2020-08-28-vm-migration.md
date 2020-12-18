@@ -6,7 +6,7 @@ tags:
     - 配置nfs
 archives: 2020-08
 author: zhuhuankai
-summary:热迁移操作 
+summary: 热迁移操作 
 ---
 
 # 小白虚拟化之虚拟机热迁移

@@ -738,7 +738,8 @@ module.exports = {
                     MOBILE_TITLE: '/img/summit/home/undertaker/zh-mobile-undertaker.png',
                     LIST: [
                         {
-                            IMG: '/img/summit/home/undertaker/jikebang.png'
+                            IMG: '/img/summit/home/undertaker/jikebang.png',
+                            LINK: 'https://www.geekbang.org/'
                         }
                     ]
                 },
@@ -756,15 +757,15 @@ module.exports = {
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/yinlian.png',
-                            LINK: ''
+                            LINK: 'https://cn.unionpay.com/'
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/pengcheng.png',
-                            LINK: ''
+                            LINK: 'https://www.pcl.ac.cn/'
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/feiteng.png',
-                            LINK: ''
+                            LINK: 'https://www.phytium.com.cn/'
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/qilin.png',
@@ -772,7 +773,7 @@ module.exports = {
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/tongxin.png',
-                            LINK: ''
+                            LINK: 'https://www.uniontech.com/'
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/cetc.png',
@@ -792,7 +793,7 @@ module.exports = {
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/beiming.png',
-                            LINK: ''
+                            LINK: 'http://www.bmsoft.com.cn/'
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/runhe.png',
@@ -812,7 +813,7 @@ module.exports = {
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/shenxinfu.png',
-                            LINK: ''
+                            LINK: 'https://www.sangfor.com.cn/'
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/yunhong.png',
@@ -846,7 +847,7 @@ module.exports = {
                         },
                         {
                             IMG: '/img/summit/home/foundation/cloudnative.png',
-                            LINK: ''
+                            LINK: 'https://www.cncf.io/'
                         },
                         {
                             IMG: '/img/summit/home/foundation/linaro.png',
@@ -854,11 +855,11 @@ module.exports = {
                         },
                         {
                             IMG: '/img/summit/home/foundation/linux.png',
-                            LINK: 'https://Linux.cn'
+                            LINK: 'https://www.linuxfoundation.org/'
                         },
                         {
                             IMG: '/img/summit/home/foundation/open.png',
-                            LINK: ''
+                            LINK: 'https://www.openinfra.dev/'
                         }
                     ]
                 },
@@ -1927,7 +1928,8 @@ module.exports = {
                     MOBILE_TITLE: '/img/summit/home/undertaker/en-mobile-undertaker.png',
                     LIST: [
                         {
-                            IMG: '/img/summit/home/undertaker/jikebang.png'
+                            IMG: '/img/summit/home/undertaker/jikebang.png',
+                            LINK: 'https://www.geekbang.org/'
                         }
                     ]
                 },
@@ -1945,15 +1947,15 @@ module.exports = {
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/yinlian.png',
-                            LINK: ''
+                            LINK: 'https://cn.unionpay.com/'
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/pengcheng.png',
-                            LINK: ''
+                            LINK: 'https://www.pcl.ac.cn/'
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/feiteng.png',
-                            LINK: ''
+                            LINK: 'https://www.phytium.com.cn/'
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/qilin.png',
@@ -1961,7 +1963,7 @@ module.exports = {
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/tongxin.png',
-                            LINK: ''
+                            LINK: 'https://www.uniontech.com/'
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/cetc.png',
@@ -1981,7 +1983,7 @@ module.exports = {
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/beiming.png',
-                            LINK: ''
+                            LINK: 'http://www.bmsoft.com.cn/'
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/runhe.png',
@@ -2001,7 +2003,7 @@ module.exports = {
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/shenxinfu.png',
-                            LINK: ''
+                            LINK: 'https://www.sangfor.com.cn/'
                         },
                         {
                             IMG: '/img/summit/home/co-organizer/yunhong.png',
@@ -2035,7 +2037,7 @@ module.exports = {
                         },
                         {
                             IMG: '/img/summit/home/foundation/cloudnative.png',
-                            LINK: ''
+                            LINK: 'https://www.cncf.io/'
                         },
                         {
                             IMG: '/img/summit/home/foundation/linaro.png',
@@ -2043,11 +2045,11 @@ module.exports = {
                         },
                         {
                             IMG: '/img/summit/home/foundation/linux.png',
-                            LINK: 'https://Linux.cn'
+                            LINK: 'https://www.linuxfoundation.org/'
                         },
                         {
                             IMG: '/img/summit/home/foundation/open.png',
-                            LINK: ''
+                            LINK: 'https://www.openinfra.dev/'
                         }
                     ]
                 },
