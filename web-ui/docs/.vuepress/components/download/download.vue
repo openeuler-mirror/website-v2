@@ -110,7 +110,6 @@
 </template>
 
 <script>
-import { downloadList } from "../../api/download";
 import commonBanner from "./../common/banner.vue";
 let that = null;
 
