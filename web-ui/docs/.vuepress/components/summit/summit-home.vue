@@ -164,8 +164,12 @@
                     <div class="media-box">
                         <img :src="item.IMG" alt="" v-for="(item,index) in mediaObj.LIST" @click="go(item.LINK)" />
                     </div>
+                    <div class="qrcode-box" v-if="isShowQrcode">
+                        <div class="d3"></div>
+                        <img src="/img/summit/home/media/xianglingshuo.jpg" alt="" />
+                    </div>
                 </div>
-                <div class="review" title-id="review">
+                <div :class="['review',isShowQrcode?'isqrcode':'']" title-id="review">
                     <div class="title">
                         <img :src="reviewObj.WEB_TITLE" alt="" v-if="!isShowH5" />
                         <img :src="reviewObj.MOBILE_TITLE" alt="" v-else />
@@ -203,7 +207,8 @@ export default {
             dataObj: {},
             navTitleScroll: [600,1977,5177,7977],
             activeIndex: -1,
-            isShowNav: false
+            isShowNav: false,
+            isShowQrcode: false
         }
     },
     mounted() {
@@ -234,6 +239,8 @@ export default {
             if(path) {
                 if(path && path.includes("http")) {
                     window.open(path);
+                }else if(path && path === 'qrcode') {
+                    this.isShowQrcode = ! this.isShowQrcode;
                 }else{
                     this.$router.push('/' + this.$lang + path);
                 }
@@ -548,6 +555,7 @@ export default {
         }
     }
     @media screen and (max-width: 1000px) {
+
         .time-box {
             margin-top: 33px;
             /deep/ .el-tabs__nav-scroll div{
@@ -816,6 +824,7 @@ export default {
 }
 .summit-content .summit-message .media {
     margin-top: 100px;
+    position: relative;
     .media-box {
         width: 920px;
         margin: 44px auto 0 auto;
@@ -833,8 +842,43 @@ export default {
             }
         }
     }
+    .qrcode-box {
+        position: absolute;
+        right: 130px;
+        bottom: -116px;
+        box-sizing: border-box;
+        border: 1px solid rgba(0, 47, 167, .5);
+        padding: 0 15px 10px 15px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, .1);
+        img {
+            width: 140px;
+            height: 140px;
+        }
+        .d3 {
+            width: 15px;
+            height: 15px;
+            transform: rotate(45deg);
+            border-left: 1px solid rgba(0, 47, 167, .5);
+            border-top: 1px solid rgba(0, 47, 167, .5);
+            box-sizing: border-box;
+            position: relative;
+            top: -8px;
+            left: 10px;
+            background: #fff;
+        }
+    }
     @media screen and (max-width: 1000px) {
         margin-top: 40px;
+        .qrcode-box {
+            right: 100px;
+            img {
+                width: 80px;
+                height: 80px;
+            }
+
+        }
         .media-box {
             width: 100%;
             margin-top: 20px;
@@ -864,6 +908,11 @@ export default {
             height: 180px;
             margin-top: 33px;
         }
+    }
+}
+.summit-content .summit-message .isqrcode {
+    @media screen and (max-width: 1000px) {
+        margin-top: 140px;
     }
 }
 </style>
