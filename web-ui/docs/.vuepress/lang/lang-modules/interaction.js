@@ -889,7 +889,7 @@ module.exports = {
                         },
                         {
                             IMG: '/img/summit/home/media/xianglingshuo.png',
-                            LINK: ''
+                            LINK: 'qrcode'
                         },
                     ]
                 },
@@ -2079,7 +2079,7 @@ module.exports = {
                         },
                         {
                             IMG: '/img/summit/home/media/xianglingshuo.png',
-                            LINK: ''
+                            LINK: 'qrcode'
                         },
                     ]
                 },
