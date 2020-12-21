@@ -162,14 +162,66 @@ module.exports = {
                     DATE:['12月24日','12月25日（主会）','上午','下午'],
                     AFTERNOON_AGENDA_24: [
                         {
-                            TIME: '13:00-14:30',
-                            THEME: 'openEuler 技术委员会工作会议',
-                            SPEAKER: 'openEuler 技术委员会'
+                            TIME: '13:00-13:10',
+                            THEME: '开场',
+                            SPEAKER: '马全一',
+                            POSITION: 'openEuler 技术委员会委员'
                         },
                         {
-                            TIME: '15:00-17:00',
-                            THEME: 'Maintainer 工作会议',
-                            SPEAKER: 'openEuler Maintainers'
+                            TIME: '13:10-14:40',
+                            THEME: '讨论 openEuler 支持 App Stream 机制'
+                        },
+                        {
+                            TIME: '13:10-14:40',
+                            THEME: '申请成立智能运维 SIG'
+                        },
+                        {
+                            TIME: '13:10-14:40',
+                            THEME: '讨论从 Gitee issue整体切换到 Bugzilla'
+                        },
+                        {
+                            TIME: '13:10-14:40',
+                            THEME: '讨论 2021 年 TC 合作开展方式'
+                        },
+                        {
+                            TIME: '15:00-15:30',
+                            THEME: '开场 & 颁发 Maintainer 纪念徽章',
+                            SPEAKER: '马全一',
+                            POSITION: 'openEuler 技术委员会委员'
+                        },
+                        {
+                            TIME: '15:30-15:50',
+                            THEME: 'openEuler 社区运作分析',
+                            SPEAKER: '周明辉',
+                            POSITION: '北京大学博雅特聘教授'
+                        },
+                        {
+                            TIME: '15:50-16:00',
+                            THEME: '我在 openEuler 社区担任 Maintainer 的那些事儿',
+                            SPEAKER: '方亚芬',
+                            POSITION: 'RaspberryPi SIG Maintainer'
+                        },
+                        {
+                            TIME: '16:00-16:10',
+                            THEME: '我在 openEuler 社区担任 Maintainer 的那些事儿',
+                            SPEAKER: '杨昭',
+                            POSITION: 'Ha SIG Maintainer'
+                        },
+                        {
+                            TIME: '16:10-16:20',
+                            THEME: '我在 openEuler 社区担任 Maintainer 的那些事儿',
+                            SPEAKER: '郑弦',
+                            POSITION: 'ai-bigdata SIG Maintainer'
+                        },
+                        {
+                            TIME: '16:20-17:00',
+                            THEME: '自由问答'
+                        },
+                        {
+                            TIME: '17:00-17:30',
+                            THEME: '总结',
+                            SPEAKER: '胡欣蔚',
+                            POSITION: 'openEuler 社区技术委员会主席'
                         }
                     ],
                     FORENOON_AGENDA_25: [
@@ -476,6 +528,84 @@ module.exports = {
                                 ]
                             }
                         ]
+                    },
+                    SIG_CONTENT: {
+                        TITLE: 'SIG 组开放工作会议',
+                        SIG1_TIME: '16:00 - 16:10' ,
+                        SIG1_DETAIL: ['开场','马全一','openEuler 技术委员会委员'],
+                        SIG2_TIME: '16:10 - 17:00',
+                        SIG2_DETAIL: [
+                            {
+                                THEME: 'sig-DDE',
+                                CONTENT: ['1） DDE 适配 openEuler 成果分享','2） DDE 版本更新计划讨论','3） 爱好者对桌面诉求收集和讨论']
+                            },
+                            {
+                                THEME: 'sig-UKUI',
+                                CONTENT: ['1） UKUI 在 openEuler 20.03 LTS SP1 版本上的工作进展介绍','2） UKUI 后续发展方向讨论']
+                            },
+                            {
+                                THEME: 'sig-Ha',
+                                CONTENT: ['1） Ha 项目进展介绍','2） Ha 项目近期在上游社区的合入计划讨论']
+                            },
+                            {
+                                THEME: 'sig-aarch32',
+                                CONTENT: ['1) 当前 aarch32 与 openEuler 适配进展分享','2）aarch32 适配代码如何与主线共存讨论']
+                            },
+                            {
+                                THEME: 'A-Tune',
+                                CONTENT: ['1）A-Tune 2020年新特性和实践成果回顾','2）A-Tune 未来技术演进路线探讨','3）A-Tune &  wisdom 社区开发流程介绍和重要 issue 分析讨论','4）业界最新调优技术论文观点分享和讨论']
+                            },
+                            {
+                                THEME: 'iSulad & Container',
+                                CONTENT: ['1）云原生相关技术讨论','2）云原生效能提升研讨','3）云原生应用过程中的问题讨论']
+                            },
+                            {
+                                THEME: 'sig-ai-bigdata',
+                                CONTENT: ['1）sig-ai-bigdata 2020年成果和实践回顾','2）LTS 版本选型讨论','3）基于 openEuler 的大数据和 AI 平台探讨','4）SIG 技术范围和路标讨论']
+                            },
+                            {
+                                THEME: 'sig-security-facility & sig-confidential-computing',
+                                CONTENT: ['1）sig-security-facility 已有安全技术分享','2）openEuler 安全技术方向和路标讨论','3）机密计算应用场景和安全相关技术讨论']
+                            },
+                            {
+                                THEME: 'Compiler',
+                                CONTENT: ['1） Compiler SIG 后续工作计划讨论，包括 JDK/GCC 支持路标','2） 对LLVM等其他编译器和Rust\Go语言的支持诉求收集和讨论','3）openJDK 对容器（如iSula）支持计划讨论']
+                            },
+                            {
+                                THEME: 'doc',
+                                CONTENT: ['1）openEuler 社区当前文档体系介绍','2）doc SIG 后续计划和重点方向讨论','3）如何激励参与社区贡献博客、视频等讨论']
+                            },
+                            {
+                                THEME: 'Infrastructure',
+                                CONTENT: ['1)  openEuler 基础设施 2020 年实践回顾','2）openEuler 基础设施 2021 重点工作讨论','3）openEuler 基础设施从自动化转向智能化运维的一些想法与探讨']
+                            },
+                            {
+                                THEME: 'security-committee',
+                                CONTENT: ['1）openEuler 社区漏洞处理流程分析，包括漏洞感知能力、漏洞处理和漏洞披露三部分','2）安全补丁修复策略讨论','3）安全指南如何在社区中应用讨论','4）安全技术委员会如何与各 SIG 协同完成漏洞分析、修复和披露讨论']
+                            },
+                            {
+                                THEME: 'sig-Compatibility-Infra',
+                                CONTENT: ['1）内核 KABI 与南向驱动兼容性讨论','2）软件包兼容性等级与北向应用兼容性讨论','3）版本间前后兼容策略讨论']
+                            },
+                            {
+                                THEME: 'sig-QA',
+                                CONTENT: ['1）openEuler 社区质量度量体系如何构建讨论','2）openEuler 社区如何开展众测活动探讨','3） SIG 未来规划讨论']
+                            },
+                            {
+                                THEME: 'sig-release-management',
+                                CONTENT: ['1）openEuler 社区各版本生命周期规划讨论，包括 20.03 的维护周期、SP2 的发布时间等','2）伙伴版本跟随、组件升级策略讨论，包括补丁回合、版本升级、组件方式、以及二次开发和回合时间等','3） 各 OSV、ISV 如何参与release sig，以及 release sig 运作讨论']
+                            },
+                            {
+                                THEME: 'Kernel',
+                                CONTENT: ['1）内核测试防护和稳定性保证讨论','2）如何通过社区的力量发现和修复 openEuler 内核 Bug ，保证 LTS 版本稳定性的讨论','3）创新版本特性合入策略讨论','4）对 openEuler 5.10 内核版本的诉求和期待收集和讨论']
+                            },
+                            {
+                                THEME: 'Virt',
+                                CONTENT: ['1）Virt SIG 2020 年技术和实践总结','2）Virt SIG 2021 年技术规划讨论','3）对 Virt SIG 的诉求收集和讨论，如新增特性、开发流程、问题解决等']
+                            }
+                        ],
+                        SIG3_TIME: '17:00 - 18:30',
+                        SIG3_DETAIL: ['分享讨论成果 & 交流']
                     }
                 },
                 LECTURER: {

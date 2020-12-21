@@ -53,10 +53,12 @@
                             <el-radio-button label="afternoon">{{ dateArr[3] }}</el-radio-button>
                         </el-radio-group>
                     </div>
-                    <div class="calendar-content" v-show="!isShowcarousel">
+                    <div :class="['calendar-content',showTab === 'twenty-four'?'center-p':'']" v-show="!isShowcarousel">
                         <el-table
                         :data="agendaTableData"
                         :show-header=false
+                        :span-method="objectSpanMethod"
+                        :class="showTab === 'twenty-four'?'hideIcon':''"
                         style="width: 100%" v-if="!isShowH5">
                             <el-table-column
                                 prop="icon"
@@ -296,6 +298,21 @@ export default {
             }else {
                 return false;
             }
+        },
+        objectSpanMethod({ row, column, rowIndex, columnIndex }) {
+            if(this.showTab === 'twenty-four') {
+                if (columnIndex === 0 || columnIndex === 1) {
+                    if (rowIndex === 1) {
+                        return {
+                            rowspan: 4,
+                            colspan: 1
+                        };
+                    }
+                }
+            }else {
+                return false;
+            }
+            
         }
     },
     components: {
@@ -536,6 +553,15 @@ export default {
             pointer-events:none;
             height: 100px; 
         }
+        /deep/ .hideIcon tbody tr:nth-of-type(3) td:first-of-type,
+        /deep/ .hideIcon tbody tr:nth-of-type(4) td:first-of-type,
+        /deep/ .hideIcon tbody tr:nth-of-type(5) td:first-of-type,
+        /deep/ .hideIcon tbody tr:nth-of-type(3) td:nth-of-type(2),
+        /deep/ .hideIcon tbody tr:nth-of-type(4) td:nth-of-type(2),
+        /deep/ .hideIcon tbody tr:nth-of-type(5) td:nth-of-type(2)
+        {
+            display: none;
+        }
         /deep/ .el-table tbody tr td {
             font-size: 18px;           
             line-height: 20px;
@@ -555,7 +581,13 @@ export default {
         }
     }
     @media screen and (max-width: 1000px) {
-
+        /deep/ .hideIcon tbody tr:nth-of-type(3) td:nth-of-type(2),
+        /deep/ .hideIcon tbody tr:nth-of-type(4) td:nth-of-type(2),
+        /deep/ .hideIcon tbody tr:nth-of-type(5) td:nth-of-type(2)
+        {
+            display: block;
+        }
+        /deep/ .hideIcon 
         .time-box {
             margin-top: 33px;
             /deep/ .el-tabs__nav-scroll div{
@@ -566,6 +598,17 @@ export default {
             }
             /deep/ .el-radio-group .el-radio-button__inner {
                 padding:6px 15px;
+            }
+        }
+        .center-p {
+            .mobile-table {
+                .item {
+                    &:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4),&:nth-of-type(5),&:nth-of-type(11) {
+                        .agenda {
+                            margin: 20px 0 0 0;
+                        }
+                    }
+                }
             }
         }
         .calendar-content {
