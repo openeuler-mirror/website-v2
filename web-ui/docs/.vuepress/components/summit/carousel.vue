@@ -606,11 +606,12 @@ export default {
             }
             .sig-3 {
                 .time {
-                   line-height: 29px; 
+                   line-height: 25px; 
                 }
                 .detail {
                     span {
                         font-size: 12px;
+
                     }
                 }
             }
