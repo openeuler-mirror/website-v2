@@ -7,6 +7,36 @@
             <h3 :class="$lang === 'en'?'font-condensed':''" v-for="(item,index) in detailObj.TITLE_LIST">{{ item }}</h3>
             <p :class="$lang === 'en'?'font-bold':''">{{ detailObj.MEETUPS_DATE }}</p>
         </div>
+        <div class="review" v-show="detailObj.MEETUPS_VIDEO_LINK">
+            <p>{{ i18n.interaction.MEETUPS.DETAIL_REVIEW }}</p>
+            <div class="video-box" v-if="!isShowH5">
+                <p :class="$lang === 'en'?'font-regular':''" @click="go('https://space.bilibili.com/527064077/channel/detail?cid=156371')">{{ i18n.interaction.MEETUPS.MORE_VIDEO }}>></p>
+                <div class="video-item">
+                    <video :poster="detailObj.MEETUPS_VIDEO_COVER"
+                           loop
+                           width="768px"
+                           height="432px"
+                           id="meetUp-video">
+                        <source :src="detailObj.MEETUPS_VIDEO_LINK"  type="video/mp4">
+                    </video>
+                    <playcontroll :ctrl-obj="videoCtrlParams" ref="playctrlEle" @playStatus="checkStatus"></playcontroll>
+                    <div class="play-btn" v-if="!isNowPlay" @click="playmeetUpVideo('webBtn')"></div>
+                </div>
+            </div>
+            <div class="mobile-video" v-else>
+                <video :poster="detailObj.MEETUPS_VIDEO_COVER"
+                       loop
+                       muted
+                       width="100%"
+                       height="216px"
+                       ref="mobileVideo"
+                       @click="playmeetUpVideo('videoElement')">
+                    <source :src="detailObj.MEETUPS_VIDEO_LINK"  type="video/mp4">
+                </video>
+                <div class="play-btn" v-if="!isNowPlay" @click="playmeetUpVideo('mobileBtn')"></div>
+                <p :class="$lang === 'en'?'font-regular':''" @click="go('https://space.bilibili.com/527064077/channel/detail?cid=156371')">{{ i18n.interaction.MEETUPS.MORE_VIDEO }}>></p>
+            </div>
+        </div>
         <div class="description">
             <p :class="['title',$lang === 'en'?'font-regular':'']">{{ i18n.interaction.MEETUPS.DETAIL_DESC }}</p>
             <p :class="['desc-content',$lang === 'en'?'font-regular':'']">{{ detailObj.MEETUPS_DESC }}</p>
@@ -64,7 +94,7 @@
                     <img v-if="addressObj" :src="addressObj.ADDRESS_IMG" alt />
                     <div class="address-text">
                         <i class="location"></i>
-                        <p v-if="addressObj">{{ detailObj.MEETINGS_INFO.ADDRESS_UP }}</p>
+                        <p v-if="addressObj">{{ detailObj.MEETINGS_INFO?detailObj.MEETINGS_INFO.ADDRESS_UP:'' }}</p>
                         <p v-if="addressObj" v-for="(item,index) in addressObj.ADDRESS_DOWN" :key="index">{{ item }}</p>
                     </div>
                 </div>
@@ -74,27 +104,40 @@
                     <img v-if="addressObj" :src="addressObj.APPLY_QRCODE" alt />
                 </div>
             </div>
-            <img class="map" v-if="addressObj" :src="addressObj.MAP_IMG" alt />
+            <img class="map" v-if="addressObj.MAP_IMG" :src="addressObj.MAP_IMG" alt />
         </div>
     </div>
 </template>
 
 <script>
+import playcontroll from './../controll/videoctrl';
 export default {
     name: "meetUpDetail",
     data() {
         return {
             flowPathList: [],
             detailObj: {},
-            addressObj: {}
+            addressObj: {},
+            videoCtrlParams:{
+                element: '',
+                isShow: true,
+                barWidth: 646
+            },
+            isNowPlay: false
         };
     },
     mounted (){
+        this.videoCtrlParams.element = document.getElementById('meetUp-video');
         this.detailContent();
     },
     methods: {
         goMeetUps() {
             this.$router.push('/' + this.$lang + "/interaction/salon-list/");
+        },
+        go(path) {
+            if(path && path.includes("http")) {
+                window.open(path);
+            }
         },
         detailContent() {
             let  listData= this.i18n.interaction.MEETUPS.MEETUPS_DATA;
@@ -105,7 +148,27 @@ export default {
                     this.addressObj = item.MEETINGS_INFO;
                 }
             })
+        },
+        checkStatus(status) {
+             if(status === true){
+                this.isNowPlay = true;
+            }else{
+                this.isNowPlay = false;
+            }
+        },
+        playmeetUpVideo(which) {
+            if(which == 'webBtn') {
+                this.$refs.playctrlEle.isPlay = true;
+                this.isNowPlay = true;
+                console.log(1);
+            }else {
+                this.$refs.mobileVideo.play();
+                this.isNowPlay = true;
+            }
         }
+    },
+    components: {
+        playcontroll
     }
 
 }
@@ -146,6 +209,67 @@ export default {
             font-size: 18px;
         }
     }
+    .review {
+        margin: 61px auto 0 auto;
+        width: 876px;
+        .play-btn {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            border-radius: 50px;
+            bottom: 50%;
+            left: 50%;
+            margin: 0 0 -50px -50px;
+            background-image: url('/img/home/play-btn.gif');
+            cursor: pointer;
+            background-size: contain;
+            opacity: 0.6;
+        }
+        &>p {
+            text-align: center;
+            font-size: 30px;
+            font-family: FZLTHJW;
+            color: #000000;
+            line-height: 46px;
+        }
+        .video-box {
+            width: 100%;
+            height: 540px;
+            background: #FFFFFF;
+            box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 50px;
+            padding-right: 54px;
+            position: relative;
+            background-image: url('/img/meetups/review-bg.png');
+            background-size: contain;
+            overflow: hidden;
+            p {
+                text-align: right;
+                font-size: 20px;
+                font-family: FZLTHJW;
+                color: #002FA7;
+                line-height: 54px;
+                text-shadow: 0px 6px 30px rgba(0, 0, 0, 0.1);
+                cursor: pointer;
+            }
+            .video-item {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -384px;
+                margin-top: -216px;
+                &:hover {
+                    .playControll {
+                        display: block;
+                    }
+                }
+                .big-controll {
+                    bottom: 5px;
+                }
+            }
+        }
+    }   
     .title{
         text-align: center;
         font-size: 30px;
@@ -155,7 +279,7 @@ export default {
         line-height: 46px;
     }
     .description{
-        margin-top: 60px;
+        margin-top: 100px;
         .desc-content{
             width: 1020px;
             font-size: 18px;
@@ -377,6 +501,7 @@ export default {
                     position: absolute;
                     width: 100px;
                     height: 100px;
+                    left: -32px;
                 }
             }
         }
@@ -411,6 +536,31 @@ export default {
     @media screen and (max-width: 1000px) {
         .link-container{
             display: none;
+        }
+        .review {
+            margin: 40px 0 0 0;
+            width: 100%;
+            &>p {
+                font-size: 17px;
+                font-weight: bold;
+                text-align: left;
+                margin: 0 0 20px 30px;
+            }
+            .mobile-video {
+                position: relative;
+                .play-btn {
+                    bottom: 60%;
+                }
+                &>p {
+                    text-align: center;
+                    margin-top: 8px;
+                    font-size: 17px;
+                    font-family: FZLTHJW;
+                    color: #002FA7;
+                    line-height: 46px;
+                    text-shadow: 0px 6px 30px rgba(0, 0, 0, 0.1);
+                }
+            }
         }
         .top-content{
             h3{

@@ -455,7 +455,8 @@
                 autoPlay: true,
                 videoCtrlParams:{
                     element: '',
-                    isShow: false,  //默认不显示控制器
+                    isShow: false,  //是否使用大控件
+                    barWidth: 300  
                 },
                 isNowPlay: false,
                 isShowCard: false,  //是否显示移动端点击体验的卡片
@@ -1769,7 +1770,6 @@
                     left: 50%;
                     margin: 0 0 -50px -50px;
                     background-image: url('/img/home/play-btn.gif');
-                    cursor: pointer;
                     background-size: contain;
                     opacity: 0.6;
                 }
