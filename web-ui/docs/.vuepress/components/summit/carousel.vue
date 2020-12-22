@@ -15,7 +15,7 @@
                     @click="handleBtn('right')"
                     :style="{ background: 'url(' + prev + ') no-repeat center' }"
                 ></button>
-                <div class="shade-remind" v-if="isShowDetail" @click="hideDetail()"></div>
+                <div class="shade-remind" v-if="isShowDetail" @click="hideDetail('1')"></div>
                 <div class="msg-detail" @click="showDetail('1')" v-if="isShowDetail">
                     <div class="time-box">
                         <p><i></i>{{ detailMsg.TIME }}</p>
@@ -34,11 +34,41 @@
                     <ul class="card-list" :style="{transform: 'translateX(' + cardPosition + 'px)'}">
                         <li v-for="(item,index) in carouselObj.CARD_LIST" :key="index">
                             <p class="section" v-for="(values,keys) in item.TITLE">{{ values }}</p>
-                            <div :class="value.THEME?'card-item':'null-item'" v-for="(value,key) in item.ITEM_LIST" :key="key" @click="showDetail(value)">
+                            <div :class="value.THEME?'card-item':'null-item'" v-for="(value,key) in item.ITEM_LIST" :key="key" @click="showDetail(value,1)">
                                 <p>{{ value.THEME }}</p>
                             </div>
                         </li>
                     </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sig-content" v-if="sigObj">
+            <p class="sig-title">{{ sigObj.TITLE }}</p>
+            <div class="sig-1">
+                <div class="time">
+                    {{ sigObj.SIG1_TIME }}
+                </div>
+                <div class="detail">
+                    <span v-for="(item,index) in sigObj.SIG1_DETAIL">{{ item }}</span>
+                </div>
+            </div>
+            <div class="sig-2">
+                <div class="shade-remind" @click="hideDetail('2')" v-if="showSigDetail"></div>
+                <div class="msg-detail" @click="showDetail('1')" v-if="showSigDetail">
+                    <div class="desc-box">
+                        <i></i>
+                        <p v-for="(item,index) in sigContent" :key="index" v-if="sigContent.length">{{ item }}</p>
+                    </div>
+                </div>
+                <div class="time">{{ sigObj.SIG2_TIME }}</div>
+                <div class="detail">
+                    <div v-for="(item,index) in sig2DetailList" @click="showDetail(item,2)">{{ item.THEME }}</div>
+                </div>
+            </div>
+            <div class="sig-3">
+                <div class="time">{{ sigObj.SIG3_TIME }}</div>
+                <div class="detail">
+                    <span v-for="(item,index) in sigObj.SIG3_DETAIL">{{ item }}</span>
                 </div>
             </div>
         </div>
@@ -54,13 +84,27 @@ export default {
             cardPosition: 0,
             cardIndex: 0,
             isShowDetail: false,
-            detailMsg: {}
+            detailMsg: {},
+            sigObj: {},
+            sigContent: [],
+            showSigDetail: false,
+            sig2DetailList: []
         }
     },
     mounted() {
         let agendaObj = this.i18n.interaction.SUMMIT.SUMMIT_HOME_DATA;
         agendaObj = agendaObj.AGENDA;
         this.carouselObj = agendaObj.AFTERNOON_AGENDA_25;
+        this.sigObj = agendaObj.SIG_CONTENT;
+        this.sig2DetailList = this.sigObj.SIG2_DETAIL;
+        if(this.isShowH5) {
+            let temp1 = this.sig2DetailList[13];
+            let temp2 = this.sig2DetailList[15];
+            this.sig2DetailList[13] = this.sig2DetailList[12];
+            this.sig2DetailList[12] = temp1;
+            this.sig2DetailList[15] = this.sig2DetailList[14];
+            this.sig2DetailList[14] = temp2;
+        }
     },
     methods: {
         handleBtn(direction) {
@@ -80,18 +124,26 @@ export default {
                 }
             }
         },
-        showDetail(item) {
-            if(item.THEME){
+        showDetail(item,which) {
+            if(item.THEME && which === 1){
                 this.detailMsg = {};
                 this.isShowDetail = true;
                 this.detailMsg = item;
-            }else {
+            }else if(item.CONTENT && which === 2) {
+                this.sigContent = item.CONTENT;
+                this.showSigDetail = true;
+            }
+            else {
                 return false;
             }
 
         },
-        hideDetail() {
-            this.isShowDetail = false;
+        hideDetail(which) {
+            if(which === '1') {
+                this.isShowDetail = false;
+            }else {
+                this.showSigDetail = false;
+            }
         }
     }
 }
@@ -102,6 +154,87 @@ export default {
     position: relative;
     margin-top: 50px;
     display: block;
+    .shade-remind {
+        z-index: 10;
+        width: 100%;
+        height: 1106px;
+        background: #000;
+        opacity: 0.5;
+        position: absolute;
+        top: 86px;
+    }        
+    .msg-detail {
+        font-size: 14px;
+        font-family: FZLTHJW;
+        color: #000000;
+        line-height: 26px;
+        z-index: 20;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -168px;
+        margin-top: -150px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar-track {
+            border-radius:10px;
+            background-color:#F1F1F1;
+        }
+        &::-webkit-scrollbar {
+            width:4px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius:10px;
+            background-color:#AFBFE8;
+        }
+        width: 336px;
+        height: 370px;
+        background: #FFFFFF;
+        box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1), 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+        padding: 26px;
+        .time-box {
+            margin-bottom: 18px;
+            p {
+                &:first-of-type {
+                    color: rgba(0, 0, 0, 0.5);
+                    line-height: 20px;
+                    i {
+                        width: 14px;
+                        height: 14px;
+                        display: inline-block;
+                        margin-right: 9px;
+                        background: url('/img/summit/home/time.svg') no-repeat center center;
+                        margin-bottom: -2px;
+                    }
+                }
+                &:last-of-type {
+                    font-size: 16px;
+                }
+            }
+        }
+        .speaker-box {
+            margin-bottom: 16px;
+            i {
+                width: 16px;
+                height: 16px;
+                display: block;
+                margin-bottom: 8px;
+                background: url('/img/summit/home/speaker.svg') no-repeat center center;
+            }
+        }
+        .desc-box {
+            p {
+                width: 284px;
+            }
+            i {
+                width: 18px;
+                height: 18px;
+                display: block;
+                margin-bottom: 8px;
+                background: url('/img/summit/home/desc.svg') no-repeat center center;
+            }
+        }
+    }
     button {
         width: 20px;
         height: 40px;
@@ -138,87 +271,6 @@ export default {
             width: calc(100% - 150px);
             display: block;
             margin-top: 25px;
-            .shade-remind {
-                z-index: 10;
-                width: 100%;
-                height: 1106px;
-                background: #000;
-                opacity: 0.5;
-                position: absolute;
-                top: 86px;
-            }        
-            .msg-detail {
-                font-size: 14px;
-                font-family: FZLTHJW;
-                color: #000000;
-                line-height: 26px;
-                z-index: 20;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-left: -168px;
-                margin-top: -150px;
-                overflow-y: scroll;
-                &::-webkit-scrollbar-track {
-                    border-radius:10px;
-                    background-color:#F1F1F1;
-                }
-                &::-webkit-scrollbar {
-                    width:4px;
-                }
-                &::-webkit-scrollbar-thumb {
-                    border-radius:10px;
-                    background-color:#AFBFE8;
-                }
-                width: 336px;
-                height: 370px;
-                background: #FFFFFF;
-                box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1), 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
-                border-radius: 4px;
-                padding: 26px;
-                .time-box {
-                    margin-bottom: 18px;
-                    p {
-                        &:first-of-type {
-                            color: rgba(0, 0, 0, 0.5);
-                            line-height: 20px;
-                            i {
-                                width: 14px;
-                                height: 14px;
-                                display: inline-block;
-                                margin-right: 9px;
-                                background: url('/img/summit/home/time.svg') no-repeat center center;
-                                margin-bottom: -2px;
-                            }
-                        }
-                        &:last-of-type {
-                            font-size: 16px;
-                        }
-                    }
-                }
-                .speaker-box {
-                    margin-bottom: 16px;
-                    i {
-                        width: 16px;
-                        height: 16px;
-                        display: block;
-                        margin-bottom: 8px;
-                        background: url('/img/summit/home/speaker.svg') no-repeat center center;
-                    }
-                }
-                .desc-box {
-                    p {
-                        width: 284px;
-                    }
-                    i {
-                        width: 18px;
-                        height: 18px;
-                        display: block;
-                        margin-bottom: 8px;
-                        background: url('/img/summit/home/desc.svg') no-repeat center center;
-                    }
-                }
-            }
             .left {
                 left: 45px;
             }
@@ -282,6 +334,99 @@ export default {
             }
         }
     }
+    .sig-content {
+        width: 1120px;
+        border-top: 1px solid rgba(0, 0, 0, 0.15);
+        position: relative;
+        .shade-remind {
+            height: 100%;
+            width: 854px;
+            height: 311px;
+            top: 168px;
+            left: 175px;
+        }
+        .msg-detail {
+            height: 260px;
+            margin-top: -76px;
+            margin-left: -138px;
+        }
+        .sig-title {
+            font-size: 20px;
+            font-family: FZLTCHJW;
+            font-weight: normal;
+            color: rgba(0, 0, 0, 0.85);
+            line-height: 30px;
+            text-align: center;
+            margin: 50px 0 30px 0;
+        }
+        .sig-1,.sig-2,.sig-3 {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 42px;
+            .time {
+                margin-right: 75px;
+                color: rgba(0, 0, 0, 0.5);              
+                font-size: 18px;
+                font-family: Helvetica;
+                line-height: 20px;
+            }
+        }
+        .sig-1 {
+            .detail {
+                span {
+                    display: inline-block;
+                    font-size: 20px;
+                    font-family: FZLTHJW;
+                    font-weight: normal;
+                    color: #000000;
+                    line-height: 20px;
+                    &:first-of-type {
+                        margin-right: 40px;
+                    }
+                    &:last-of-type {
+                        margin-left: 20px;
+                        font-size: 16px;
+                        color: rgba(0, 0, 0, 0.5);
+                        line-height: 28px;
+                    }
+                }
+            }
+        }
+        .sig-2 {
+            .detail {
+                font-size: 18px;
+                width: 938px;
+                font-family: PingFangSC-Regular;
+                font-weight: 400;
+                color: rgba(0, 0, 0, 0.85);
+                line-height: 30px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                div {
+                    height: 54px;
+                    background: #FFFFFF;
+                    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
+                    border-radius: 8px;
+                    padding: 12px 16px;
+                    box-sizing: border-box;
+                    margin: 0 20px 20px 0;
+                    cursor: pointer;
+                }
+            }
+        }
+        .sig-3 {
+            .detail {
+                span {                  
+                    font-size: 20px;
+                    font-family: FZLTHJW;
+                    font-weight: normal;
+                    color: #000000;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: 400px) {
     .agenda-carousel {
@@ -296,6 +441,37 @@ export default {
 }
 @media screen and (max-width: 1000px) {
     .agenda-carousel {
+        .shade-remind {
+            width: 250px;
+            height: 643px;
+            top: 63px;
+            font-size: 12px;
+            line-height: 24px;
+        }
+        .msg-detail {
+            width: 220px;
+            height: 357px;
+            padding: 20px;
+            margin-left: -101px;
+            margin-top: -140px;
+            font-size: 10px;
+            .speaker-box,.time-box {
+                margin-bottom: 12px;
+            }
+            .time-box {
+                p {
+                    &:last-of-type {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .desc-box {
+                p {
+                    width: 100%;
+                    word-wrap: break-word;
+                }
+            }
+        }
         .more-msg {
             display: none;
         }
@@ -307,37 +483,6 @@ export default {
                 }
                 .right {
                     right: -3px;
-                }
-                .shade-remind {
-                    width: 250px;
-                    height: 643px;
-                    top: 63px;
-                    font-size: 12px;
-                    line-height: 24px;
-                }
-                .msg-detail {
-                    width: 220px;
-                    height: 357px;
-                    padding: 20px;
-                    margin-left: -101px;
-                    margin-top: -140px;
-                    font-size: 10px;
-                    .speaker-box,.time-box {
-                        margin-bottom: 12px;
-                    }
-                    .time-box {
-                        p {
-                            &:last-of-type {
-                                font-size: 12px;
-                            }
-                        }
-                    }
-                    .desc-box {
-                        p {
-                            width: 100%;
-                            word-wrap: break-word;
-                        }
-                    }
                 }
                 .card-box {
                     width: 234px;
@@ -361,6 +506,7 @@ export default {
                                 width: 195px;
                                 height: 90px;
                                 margin-bottom: 15px;
+                                box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
                                 p {
                                     font-size: 12px;
                                     line-height: 18px;
@@ -391,6 +537,82 @@ export default {
                 /deep/ .el-radio-group span {
                     font-size: 14px;
                 }   
+            }
+        }
+        .sig-content {
+            width: 100%;
+            margin-top: 30px;
+            border-top: 1px solid rgba(0, 0, 0, 0.4);
+            .sig-title {
+                margin-top: 40px;
+                font-size: 14px;
+                line-height: 24px;
+            }
+            .sig-1,.sig-2 {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+            }
+            .sig-1,.sig-2,.sig-3 {
+                margin-bottom: 20px;
+                .time {
+                    font-size: 12px;
+                    margin-right: 29px;
+                }
+            }
+            .sig-1 {
+                .time {
+                    line-height: 62px;
+                    margin-bottom: 20px;
+                }
+                .detail {
+                    span {
+                        font-size: 12px;
+                        &:first-of-type {
+                            display: block;
+                            margin: 0 0 20px 0;
+                        }
+                        &:last-of-type {
+                            margin-left: 20px;
+                            font-size: 12px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+            .sig-2 {
+                position: relative;
+                .shade-remind {
+                    left: 0;
+                    top: 10%;
+                    width: 100%;
+                    height: 90%;
+                }
+                .msg-detail {
+                    margin: -100px 0 0 -110px;
+                }
+                .time {
+                    margin: 20px 0; 
+                }
+                flex-direction: column;
+                .detail {
+                    width: 100%;
+                    font-size: 12px;
+                    line-height: 18px;
+                    div {
+                        padding: 10px 20px;
+                        height: auto;
+                        margin: 0 12px 10px 0;
+                    }
+                }
+            }
+            .sig-3 {
+                .time {
+                   line-height: 29px; 
+                }
+                .detail {
+                    span {
+                        font-size: 12px;
+                    }
+                }
             }
         }
     }
