@@ -613,11 +613,6 @@ module.exports = {
                     MOBILE_TITLE: '/img/summit/home/lecturer/zh-mobile-lecturer.png',
                     LECTURERLIST: [
                         {
-                            IMG: '/img/summit/home/lecturer/dengtaihua.png',
-                            NAME: '邓泰华',
-                            POSITION: '华为副总裁/计算产品线总裁'
-                        },
-                        {
                             IMG: '/img/summit/home/lecturer/jiangdayong.png',
                             NAME: '江大勇',
                             POSITION: 'openEuler 社区理事长'
@@ -1802,11 +1797,6 @@ module.exports = {
                     WEB_TITLE: '/img/summit/home/lecturer/en-pc-lecturer.png',
                     MOBILE_TITLE: '/img/summit/home/lecturer/en-mobile-lecturer.png',
                     LECTURERLIST: [
-                        {
-                            IMG: '/img/summit/home/lecturer/dengtaihua.png',
-                            NAME: 'Deng Taihua',
-                            POSITION: 'Vice President, Huawei/President, Computing Product Line, Huawei'
-                        },
                         {
                             IMG: '/img/summit/home/lecturer/jiangdayong.png',
                             NAME: 'Jiang Dayong',
