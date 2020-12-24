@@ -1,10 +1,10 @@
-<!-- 峰会首页 -->
+<!-- 峰会 -->
 <template>
     <div :class="['summit',mobilePadding?'mobile-padding':'']">
         <div class="summit-nav" v-show="isShowNav" v-if="!isShowH5">
             <div class="box-line">
-                <img class="gif" src="/img/summit/home/nav.gif" alt="" />
-                <img class="line" src="/img/summit/home/line.png" alt="" />
+                <img class="gif" v-lazy="'/img/summit/home/nav.gif'" alt="" />
+                <img class="line" v-lazy="'/img/summit/home/line.png'" alt="" />
             </div>
             <div class="nav-text">
                 <ul>
@@ -16,32 +16,49 @@
             </div>
         </div>
         <h3 v-if="isShowH5">{{ i18n.interaction.SUMMIT.SUMMIT }}</h3>
-        <div class="top-banner" v-if="!isShowH5" @click="go('https://jinshuju.net/f/PEFJht?x_field_1=openeuler')">
+        <div class="top-banner" v-if="!isShowH5" @click="go('/interaction/summit-list/')">
             <video autoplay loop muted width="700px" height="380px" id="summit-mp4">
                 <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler%20Summit%202020%20mov.mp4"  type="video/mp4">
             </video>
-            <img class="top-img" :src="i18n.interaction.SUMMIT.SUMMIT_WEB_IMG" alt="" />
+            <img class="top-img" v-lazy="i18n.interaction.SUMMIT.SUMMIT_WEB_IMG" alt="" />
         </div>
-        <img class="mobile-img" :src="i18n.interaction.SUMMIT.SUMMIT_H5_IMG" alt="" v-else @click="go('https://jinshuju.net/f/PEFJht?x_field_1=openeuler')" />
+        <img class="mobile-img" v-lazy="i18n.interaction.SUMMIT.SUMMIT_H5_IMG" alt="" v-else @click="go('/interaction/summit-list/')" />
         <div class="summit-content">
             <div class="summit-explain">
                 <p :class="$lang === 'en'?'font-regular':''" v-for="(item,index) in i18n.interaction.SUMMIT.SUMMITCONTENT">{{ item }}</p>
             </div>
-            <p class="tip" v-if="$lang === 'zh'">{{ i18n.interaction.SUMMIT.SUMMITTIP.slice(0,31) }}
-                <a href="https://jinshuju.net/f/PEFJht?x_field_1=openeuler" target="_blank">
-                {{ i18n.interaction.SUMMIT.SUMMITTIP.slice(31,35) }}</a>
-                {{ i18n.interaction.SUMMIT.SUMMITTIP.slice(35) }}
-            </p>
-            <p class="tip font-bold" v-else>{{ i18n.interaction.SUMMIT.SUMMITTIP.slice(0,10) }}
-                <a href="https://jinshuju.net/f/PEFJht?x_field_1=openeuler" target="_blank">
-                {{ i18n.interaction.SUMMIT.SUMMITTIP.slice(10,14) }}</a>
-                {{ i18n.interaction.SUMMIT.SUMMITTIP.slice(14) }}
-            </p>
+
+            <div class="live-room" v-if="$lang === 'zh'">
+                <div class="title">
+                    <img v-lazy="'/img/summit/home/pc-liveroom.png'" alt="" v-if="!isShowH5" />
+                    <img v-lazy="'/img/summit/home/mobile-liveroom.png'" alt="" v-else />
+                </div>
+                <el-select v-model="nowValue" placeholder="请选择直播间" class="live-choose" v-if="isShowH5" @change="tabLiveRoom">
+                    <el-option
+                    v-for="(item,index) in liveData"
+                    :key="index"
+                    :label="item.name"
+                    :value="item.link">
+                    <span>{{ item.name }}</span>
+                    </el-option>
+                </el-select>
+                <iframe id="livePage" allow="camera *;microphone *;" border="0" scrolling="no" :src="nowLiveSrc"></iframe>
+                <div class="web-box" v-if="!isShowH5">
+                    <p>{{ i18n.interaction.SUMMIT.LIVETITLE }}</p>
+                    <div class="item-box">
+                        <div :class="['live-item',roomId === index?'activeRoom':'']" v-for="(item,index) in i18n.interaction.SUMMIT.SUMMITLIVE" @click="tabLiveRoom(item.LIVEID,index)">
+                            <p>{{ item.THEME }}</p>
+                            <p>{{ item.TIME }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="summit-message">
                 <div class="agenda" title-id="agenda">
                     <div :class="['title',$lang === 'en'?'en-title':'']">
-                         <img :src="agendaData.WEB_TITLE" alt="" v-if="!isShowH5" />
-                         <img :src="agendaData.MOBILE_TITLE" alt="" v-else />
+                         <img v-lazy="agendaData.WEB_TITLE" alt="" v-if="!isShowH5" />
+                         <img v-lazy="agendaData.MOBILE_TITLE" alt="" v-else />
                     </div>
                     <div class="time-box">
                         <el-tabs v-model="showTab" @tab-click="tabClick">
@@ -99,85 +116,85 @@
                 </div>
                 <div class="lecturer" title-id="lecturer">
                     <div class="title">
-                        <img :src="lecturerObj.WEB_TITLE" alt="" v-if="!isShowH5" />
-                        <img :src="lecturerObj.MOBILE_TITLE" alt="" v-else />
+                        <img v-lazy="lecturerObj.WEB_TITLE" alt="" v-if="!isShowH5" />
+                        <img v-lazy="lecturerObj.MOBILE_TITLE" alt="" v-else />
                     </div>
                     <div class="lecturer-box" v-fade v-if="lecturerList.length && !isShowH5">
                         <div class="item fade-in"  v-for="(item,index) in lecturerList" :key="index">
-                            <img :src="item.IMG" alt="" />
+                            <img v-lazy="item.IMG" alt="" />
                             <p>{{ item.NAME }}</p>
                             <p>{{ item.POSITION }}</p>
                         </div>
                     </div>
                     <div class="lecturer-box" v-fade v-if="lecturerList.length && isShowH5">
                         <div :class="['item','fade-in',index > 7 && flag?'hidden':'']"  v-for="(item,index) in lecturerList" :key="index">
-                            <img :src="item.IMG" alt="" />
+                            <img v-lazy="item.IMG" alt="" />
                             <p>{{ item.NAME }}</p>
                             <p>{{ item.POSITION }}</p>
                         </div>
                     </div>
                     <div class="show-all" @click="showAll" v-if="isShowH5">
                         <p>{{ flag?i18n.home.EXPAND:i18n.home.RETRACT }}</p>
-                        <img v-if="flag" src="/img/home/arrow.svg" alt="">
-                        <img v-if="!flag" src="/img/home/arrowUp.svg" alt="">
+                        <img v-if="flag" v-lazy="'/img/home/arrow.svg'" alt="">
+                        <img v-if="!flag" v-lazy="'/img/home/arrowUp.svg'" alt="">
                     </div>
                 </div>
                 <div class="host-unit" title-id="host-unit">
                     <div class="title">
-                        <img :src="hostUnitObj.WEB_TITLE" alt="" v-if="!isShowH5" />
-                        <img :src="hostUnitObj.MOBILE_TITLE" alt="" v-else />
+                        <img v-lazy="hostUnitObj.WEB_TITLE" alt="" v-if="!isShowH5" />
+                        <img v-lazy="hostUnitObj.MOBILE_TITLE" alt="" v-else />
                     </div>
                     <div class="img-list">
-                        <img :src="item.IMG" alt="" v-for="(item,index) in hostUnitObj.LIST" />
+                        <img v-lazy="item.IMG" alt="" v-for="(item,index) in hostUnitObj.LIST" />
                     </div>
                 </div>
                 <div class="undertaker">
                     <div class="title">
-                        <img :src="undertakerObj.WEB_TITLE" alt="" v-if="!isShowH5" />
-                        <img :src="undertakerObj.MOBILE_TITLE" alt="" v-else />
+                        <img v-lazy="undertakerObj.WEB_TITLE" alt="" v-if="!isShowH5" />
+                        <img v-lazy="undertakerObj.MOBILE_TITLE" alt="" v-else />
                     </div>
                      <div class="img-list">
-                        <img :src="item.IMG" alt="" v-for="(item,index) in undertakerObj.LIST" @click="go(item.LINK)" />
+                        <img v-lazy="item.IMG" alt="" v-for="(item,index) in undertakerObj.LIST" @click="go(item.LINK)" />
                     </div>
                 </div>
                 <div class="co-organizer">
                     <div class="title">
-                        <img :src="coOrgObj.WEB_TITLE" alt="" v-if="!isShowH5" />
-                        <img :src="coOrgObj.MOBILE_TITLE" alt="" v-else />
+                        <img v-lazy="coOrgObj.WEB_TITLE" alt="" v-if="!isShowH5" />
+                        <img v-lazy="coOrgObj.MOBILE_TITLE" alt="" v-else />
                     </div>
                      <div class="img-list">
-                        <img :src="item.IMG" alt="" v-for="(item,index) in coOrgObj.LIST" @click="go(item.LINK)" />
+                        <img v-lazy="item.IMG" alt="" v-for="(item,index) in coOrgObj.LIST" @click="go(item.LINK)" />
                     </div>
                 </div>
                 <div class="foundation">
                     <div class="title">
-                        <img :src="foundationObj.WEB_TITLE" alt="" v-if="!isShowH5" />
-                        <img :src="foundationObj.MOBILE_TITLE" alt="" v-else />
+                        <img v-lazy="foundationObj.WEB_TITLE" alt="" v-if="!isShowH5" />
+                        <img v-lazy="foundationObj.MOBILE_TITLE" alt="" v-else />
                     </div>
                      <div class="img-list">
-                        <img :src="item.IMG" alt="" v-for="(item,index) in foundationObj.LIST" @click="go(item.LINK)" />
+                        <img v-lazy="item.IMG" alt="" v-for="(item,index) in foundationObj.LIST" @click="go(item.LINK)" />
                     </div>
                 </div>
                 <div class="media">
                     <div class="title">
-                        <img :src="mediaObj.WEB_TITLE" alt="" v-if="!isShowH5" />
-                        <img :src="mediaObj.MOBILE_TITLE" alt="" v-else />
+                        <img v-lazy="mediaObj.WEB_TITLE" alt="" v-if="!isShowH5" />
+                        <img v-lazy="mediaObj.MOBILE_TITLE" alt="" v-else />
                     </div>
                     <div class="media-box">
-                        <img :src="item.IMG" alt="" v-for="(item,index) in mediaObj.LIST" @click="go(item.LINK)" />
+                        <img v-lazy="item.IMG" alt="" v-for="(item,index) in mediaObj.LIST" @click="go(item.LINK)" />
                     </div>
                     <div class="qrcode-box" v-if="isShowQrcode">
                         <div class="d3"></div>
-                        <img src="/img/summit/home/media/xianglingshuo.jpg" alt="" />
+                        <img v-lazy="'/img/summit/home/media/xianglingshuo.jpg'" alt="" />
                     </div>
                 </div>
                 <div :class="['review',isShowQrcode?'isqrcode':'']" title-id="review">
                     <div class="title">
-                        <img :src="reviewObj.WEB_TITLE" alt="" v-if="!isShowH5" />
-                        <img :src="reviewObj.MOBILE_TITLE" alt="" v-else />
+                        <img v-lazy="reviewObj.WEB_TITLE" alt="" v-if="!isShowH5" />
+                        <img v-lazy="reviewObj.MOBILE_TITLE" alt="" v-else />
                     </div>
-                    <img class="review-banner card-hover" src="/img/summit/home/review/review-img.png" alt="" @click="go('/interaction/summit-list/list/')" v-if="!isShowH5"/>
-                    <img class="review-banner" src="/img/summit/home/review/mobile-review-img.png" alt="" @click="go('/interaction/summit-list/list/')" v-else />
+                    <img class="review-banner card-hover" v-lazy="'/img/summit/home/review/review-img.png'" alt="" @click="go('/interaction/summit-list/list/')" v-if="!isShowH5"/>
+                    <img class="review-banner" v-lazy="'/img/summit/home/review/mobile-review-img.png'" alt="" @click="go('/interaction/summit-list/list/')" v-else />
                 </div>
             </div>
         </div>
@@ -207,11 +224,52 @@ export default {
             reviewObj: {},
             flag: true,
             dataObj: {},
-            navTitleScroll: [600,1977,5177,7977],
+            navTitleScroll: [620,1650,3250,6450,9250],
             activeIndex: -1,
             isShowNav: false,
-            isShowQrcode: false
+            isShowQrcode: false,
+            userName: '',
+            nowLiveSrc: '',
+            roomId: null,
+            liveData: [
+                {
+                    link: 'https://vhall.huawei.com/fe/embed/watch/7095?lang=zh&thirdId=',
+                    name: '09:30-11:55 openEuler Summit 2020'
+                },
+                {
+                    link: 'https://vhall.huawei.com/fe/embed/watch/7096?lang=zh&thirdId=',
+                    name: '14:00-17:20 操作系统'
+                },
+                {
+                    link: 'https://vhall.huawei.com/fe/embed/watch/7097?lang=zh&thirdId=',
+                    name: '14:00-16:55 云和原生云'
+                },
+                {
+                    link: 'https://vhall.huawei.com/fe/embed/watch/7098?lang=zh&thirdId=',
+                    name: '14:00-16:55 虚拟化'
+                },
+                {
+                    link: 'https://vhall.huawei.com/fe/embed/watch/7099?lang=zh&thirdId=',
+                    name: '14:00-16:55 开源与基础建设'
+                },
+                {
+                    link: 'https://vhall.huawei.com/fe/embed/watch/7100?lang=zh&thirdId=',
+                    name: '14:00-17:25 安全与可信'
+                },
+                {
+                    link: 'https://vhall.huawei.com/fe/embed/watch/7101?lang=zh&thirdId=',
+                    name: '14:00-17:25 基础软件'
+                },
+            ],
+            nowValue: ''
         }
+    },
+    created() {
+        let digit = Math.round(Math.random() * 10);
+        digit > 3?digit:digit = 3;
+        this.creatUserId(digit);
+        let liveId = this.$route.query.liveid;
+        this.showIframe(liveId);
     },
     mounted() {
         this.dataObj = this.i18n.interaction.SUMMIT.SUMMIT_HOME_DATA;
@@ -287,14 +345,16 @@ export default {
             }else {
                 this.isShowNav = true;
             }
-            if(scrollTop > 600 && scrollTop <800) {
+            if(scrollTop > 550 && scrollTop < 1000) {
                 this.activeIndex = 0;
-            }else if(scrollTop > 1800 && scrollTop < 3000) {
+            }else if(scrollTop > 1620 && scrollTop < 2020) {
                 this.activeIndex = 1;
-            }else if(scrollTop > 5000 && scrollTop < 6200) {
+            }else if(scrollTop > 2820 && scrollTop < 3720) {
                 this.activeIndex = 2;
-            }else if(scrollTop > 7800) {
+            }else if(scrollTop > 5920 && scrollTop < 6920) {
                 this.activeIndex = 3;
+            }else if(scrollTop > 8720) {
+                this.activeIndex = 4;
             }else {
                 return false;
             }
@@ -312,7 +372,66 @@ export default {
             }else {
                 return false;
             }
-            
+        },
+        creatUserId(num) {
+            let returnId = '';
+            let charStr = '0123456789@#$%&~ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+            for(var i=0; i<num; i++){
+                var index = Math.round(Math.random() * (charStr.length-1));
+                returnId += charStr.substring(index,index+1);
+            }
+            this.userName = returnId;
+        },
+        tabLiveRoom(src,index) {
+            let indexType = typeof index;
+            if(indexType === 'number') {
+                this.nowLiveSrc = src + this.userName;
+                this.roomId = index;
+            }else {
+                this.nowLiveSrc = src + this.userName;
+            }
+        },
+        showIframe(id) {
+            if(id) {
+                switch(id) {
+                    case '7096':
+                        this.nowLiveSrc = this.liveData[1]['link'] + this.userName;
+                        this.nowValue = this.liveData[1]['name'];
+                        this.roomId = 1;
+                        break;
+                    case '7097':
+                        this.nowLiveSrc = this.liveData[2]['link'] + this.userName;
+                        this.nowValue = this.liveData[2]['name'];
+                        this.roomId = 2;
+                        break;
+                    case '7098':
+                        this.nowLiveSrc = this.liveData[3]['link'] + this.userName;
+                        this.nowValue = this.liveData[3]['name'];
+                        this.roomId = 3;
+                        break;
+                    case '7099':
+                        this.nowLiveSrc = this.liveData[4]['link'] + this.userName;
+                        this.nowValue = this.liveData[4]['name'];
+                        this.roomId = 4;
+                        break;
+                    case '7100':
+                        this.nowLiveSrc = this.liveData[5]['link'] + this.userName;
+                        this.nowValue = this.liveData[5]['name'];
+                        this.roomId = 5;
+                        break;
+                    case '7101':
+                        this.nowLiveSrc = this.liveData[6]['link'] + this.userName;
+                        this.nowValue = this.liveData[6]['name'];
+                        this.roomId = 6;
+                        break;
+                    default:
+                        break;
+                }
+            }else {
+                this.nowLiveSrc = this.liveData[0]['link'] + this.userName;
+                this.nowValue = this.liveData[0]['name'];
+                this.roomId = 0;
+            }
         }
     },
     components: {
@@ -376,6 +495,119 @@ export default {
         }
     }
 }
+.summit-content .live-room {
+    width: 1120px;
+    margin: 0 auto ;
+    font-family: FZLTHJW;
+    #livePage {
+        width: 1120px;
+        height: 560px;
+        margin: 40px auto 0 auto;
+        display: block;
+        border: none;
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+            margin-top: 30px;
+            height: 500px;
+        }
+    }
+    .web-box {
+        &>p {
+            font-size: 20px;
+            color: #000000;
+            line-height: 23px;
+            margin: 40px 0 30px 0;
+            text-align: center;
+        }
+        .item-box {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            flex-wrap: wrap;
+            .live-item {
+                width: 160px;
+                height: 76px;
+                margin-right: 30px;
+                cursor: pointer;
+                background: #FFFFFF;
+                box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                &:first-of-type {
+                    width: 100%;
+                    margin: 0 0 30px 0;
+                }
+                &:last-of-type {
+                    margin-right: 0;
+                }
+                p {
+                    margin-top: 10px;
+                    color: #002FA7;
+                    text-align: center;
+                    font-size: 18px;
+                    line-height: 18px;
+                    &:last-of-type {
+                        margin-top: 20px;
+                    }
+                }
+            }
+            .activeRoom {
+                background-color: #002FA7;
+                p {
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        /deep/ .live-choose {
+            width: 100%;
+            margin-top: 30px;
+            .el-input {
+                width: 100%;
+            }
+        }
+        .web-box {
+            &>p {
+                font-size: 16px;
+                margin: 20px 0 15px 0;
+            }
+            .item-box {
+                flex-direction: column;
+                .live-item {
+                    margin: 0 auto 20px auto;
+                    &:first-of-type {
+                        margin: 0 auto 20px auto;
+                    }
+                    &:last-of-type {
+                        margin-right: auto;
+                    }
+                }
+            }
+        }
+        
+    }
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        &>p {
+            font-size: 16px;
+             margin: 20px 0 15px 0;
+        }
+        .item-box {
+            flex-direction: column;
+            .live-item {
+                margin: 0 auto 20px auto;
+                &:first-of-type {
+                    margin: 0 auto 20px auto;
+                }
+                &:last-of-type {
+                    margin-right: auto;
+                }
+            }
+        }
+        
+    }
+}
 .summit .summit-nav {
     position: fixed;
     cursor: pointer;
@@ -397,7 +629,7 @@ export default {
         .line {
             display: block;
             width: 2px;
-            height: 401px;
+            height: 441px;
             margin: 0 auto;
         }
     }
@@ -463,41 +695,17 @@ export default {
         }
     }
 }
-.summit-content .tip{ 
-    font-size: 20px;
-    font-family: FZLTCHJW;
-    color: #000000;
-    line-height: 40px;
-    font-weight: 400;
-    margin-bottom: 30px;
-    text-align: center;
-    a{
-        color: #002fa7;
-    }
-    @media screen and (max-width: 1000px) {
-        font-size: 14px;
-        line-height: 26px;
-        margin-bottom: 30px;
-        text-align: left;
-    }
-}
-.summit-content .font-bold{ 
-    font-weight: bold !important;
-    font-family: Roboto-Bold !important;
-    @media screen and (max-width: 1000px) {
-        text-align: justify;
-    }
-}
 .summit-content {
     font-family: FZLTHJW;
     .summit-message {
         width: 1120px;
         position: relative;
-        margin: 0 auto;
+        margin: 100px auto 0 auto;
     }
     @media screen and (max-width: 1000px) {
         .summit-message {
             width: 100%;
+            margin: 40px auto 0 auto;
         }
     }
 }
@@ -603,6 +811,11 @@ export default {
         .center-p {
             .mobile-table {
                 .item {
+                    &:first-of-type {
+                        .agenda {
+                            margin: 0 0 20px 0;
+                        }
+                    }
                     &:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4),&:nth-of-type(5),&:nth-of-type(11) {
                         .agenda {
                             margin: 20px 0 0 0;
@@ -619,56 +832,61 @@ export default {
                     font-size: 12px;  
                 }
             }
-            .mobile-table {
-                .item {
-                    width: 100%;
-                    display: flex;
-                    flex-basis: row;
-                    margin-bottom: 20px;
-                    border-bottom: 1px solid  rgba(0, 0, 0, 0.15);
-                    &:nth-of-type(8) {
-                        .agenda {
-                            p {
-                                span {
-                                    &:first-of-type {
-                                        white-space:nowrap;
-                                    }
+        }
+        .mobile-table {
+            .item {
+                width: 100%;
+                display: flex;
+                flex-basis: row;
+                margin-bottom: 20px;
+                border-bottom: 1px solid  rgba(0, 0, 0, 0.15);
+                &:first-of-type {
+                    .agenda {
+                        margin: 20px 0 0 0;
+                    }
+                }
+                &:nth-of-type(8) {
+                    .agenda {
+                        p {
+                            span {
+                                &:first-of-type {
+                                    white-space:nowrap;
                                 }
                             }
                         }
                     }
-                    .time {
-                        width: 82px;
-                        height: 20px;
-                        font-size: 12px;
-                        color: rgba(0, 0, 0, 0.5);
-                        line-height: 20px;
+                }
+                .time {
+                    width: 82px;
+                    height: 20px;
+                    font-size: 12px;
+                    color: rgba(0, 0, 0, 0.5);
+                    line-height: 20px;
+                    font-family: FZLTXIHJW;
+                    margin: 20px 29px 0 0;
+                }
+                .agenda {
+                    p {
                         font-family: FZLTXIHJW;
-                        margin: 20px 29px 0 0;
-                    }
-                    .agenda {
-                        p {
-                            font-family: FZLTXIHJW;
-                            color: #000000;
-                            line-height: 20px;
-                            font-size: 12px;
-                            margin-bottom: 20px;
+                        color: #000000;
+                        line-height: 20px;
+                        font-size: 12px;
+                        margin-bottom: 20px;
+                        &:first-of-type {
+                            font-family: FZLTHJW;
+                            width: 209px;
+                        }
+                        span {
                             &:first-of-type {
-                                font-family: FZLTHJW;
-                                width: 209px;
+                                margin-right: 25px;
+                                width: 41px;
+                                vertical-align: top;
                             }
-                            span {
-                                &:first-of-type {
-                                    margin-right: 25px;
-                                    width: 41px;
-                                    vertical-align: top;
-                                }
-                                &:first-of-type,&:last-of-type {
-                                    display: inline-block;
-                                }
-                                &:last-of-type {
-                                    width: 139px;
-                                }
+                            &:first-of-type,&:last-of-type {
+                                display: inline-block;
+                            }
+                            &:last-of-type {
+                                width: 139px;
                             }
                         }
                     }
