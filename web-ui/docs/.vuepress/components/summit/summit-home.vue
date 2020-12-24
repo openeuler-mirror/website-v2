@@ -104,7 +104,7 @@
                                 <div class="time">{{ item.TIME }}</div>
                                 <div class="agenda">
                                     <p>{{ item.THEME }}</p>
-                                    <p>
+                                    <p v-if="item.SPEAKER || item.POSITION">
                                         <span>{{ item.SPEAKER }}</span>
                                         <span>{{ item.POSITION }}</span>
                                     </p>
@@ -635,7 +635,7 @@ export default {
     }
     .nav-text {
         position: relative;
-        margin-top: -330px;
+        margin-top: -375px;
         ul li>div {
             display: inline-block;
             &:first-of-type {
@@ -761,6 +761,9 @@ export default {
             pointer-events:none;
             height: 100px; 
         }
+        /deep/ .el-table .el-table__body>tbody>tr>td div{
+            word-break: normal !important;
+        }
         /deep/ .hideIcon tbody tr:nth-of-type(3) td:first-of-type,
         /deep/ .hideIcon tbody tr:nth-of-type(4) td:first-of-type,
         /deep/ .hideIcon tbody tr:nth-of-type(5) td:first-of-type,
@@ -795,7 +798,6 @@ export default {
         {
             display: block;
         }
-        /deep/ .hideIcon 
         .time-box {
             margin-top: 33px;
             /deep/ .el-tabs__nav-scroll div{
@@ -812,8 +814,8 @@ export default {
             .mobile-table {
                 .item {
                     &:first-of-type {
-                        .agenda {
-                            margin: 0 0 20px 0;
+                        .time {
+                            margin-top: 40px;
                         }
                     }
                     &:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4),&:nth-of-type(5),&:nth-of-type(11) {
@@ -837,7 +839,7 @@ export default {
             .item {
                 width: 100%;
                 display: flex;
-                flex-basis: row;
+                flex-direction: row;
                 margin-bottom: 20px;
                 border-bottom: 1px solid  rgba(0, 0, 0, 0.15);
                 &:first-of-type {
@@ -845,16 +847,8 @@ export default {
                         margin: 20px 0 0 0;
                     }
                 }
-                &:nth-of-type(8) {
-                    .agenda {
-                        p {
-                            span {
-                                &:first-of-type {
-                                    white-space:nowrap;
-                                }
-                            }
-                        }
-                    }
+                &:last-of-type {
+                    border-bottom: 0;
                 }
                 .time {
                     width: 82px;

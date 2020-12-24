@@ -108,6 +108,7 @@ export default {
     },
     methods: {
         handleBtn(direction) {
+            this.isShowDetail = false;
             if(direction === 'left') {
                 if(this.cardIndex <= 0) {
                     this.cardIndex = 0;
@@ -340,7 +341,7 @@ export default {
         position: relative;
         .shade-remind {
             height: 100%;
-            width: 854px;
+            width: 936px;
             height: 311px;
             top: 168px;
             left: 175px;
@@ -542,7 +543,7 @@ export default {
         .sig-content {
             width: 100%;
             margin-top: 30px;
-            border-top: 1px solid rgba(0, 0, 0, 0.4);
+            border-top: 1px solid rgba(0, 0, 0, 0.15);
             .sig-title {
                 margin-top: 40px;
                 font-size: 14px;
@@ -601,12 +602,16 @@ export default {
                         padding: 10px 20px;
                         height: auto;
                         margin: 0 12px 10px 0;
+                        &:last-of-type {
+                            margin-bottom: 20px;
+                        }
                     }
                 }
             }
             .sig-3 {
                 .time {
                    line-height: 25px; 
+                   width: 90px;
                 }
                 .detail {
                     span {
