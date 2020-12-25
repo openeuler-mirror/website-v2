@@ -94,14 +94,20 @@ export default {
 
   created() {},
   mounted() {
-     newsVisitList()
-      .then(response => {
+    newsVisitList()
+        .then(response => {
           this.countList=response.data;
           this.allNewsList = this.newsList();
           this.totalSize = this.allNewsList.length;
           this.allNewsList = this.sortNewsList(this.allNewsList);
           this.handleCurrentChange(1);
-        })
+        }).catch(() => {
+      this.countList=[];
+      this.allNewsList = this.newsList();
+      this.totalSize = this.allNewsList.length;
+      this.allNewsList = this.sortNewsList(this.allNewsList);
+      this.handleCurrentChange(1);
+    })
     for(let i = 0;  i<this.allNewsList.length;i++){
         this.visitCount.newsTitle=this.allNewsList[i].frontmatter.title;
         this.visitCount.newsDate=this.allNewsList[i].frontmatter.date;

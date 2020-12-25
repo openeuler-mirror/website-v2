@@ -149,12 +149,49 @@ module.exports = {
         },
         SUMMIT: {
             SUMMIT: '峰会',
-            NAV_LIST: ['峰会日程','演讲嘉宾','合作伙伴','往期回顾'],
+            NAV_LIST: ['观看直播','峰会日程','演讲嘉宾','合作伙伴','往期回顾'],
             SUMMITCONTENT: [
                 'openEuler Summit 是由 openEuler 社区举办的开发者交流会，首届线下 openEuler Summit 2020 将于 12 月 24-25 日在北京·望京凯悦酒店举办。openEuler 是一个面向未来的开源操作系统，依托于最具活力的 openEuler 社区，它的未来将不止于操作系统！',
                 'openEuler Summit 2020 将聚焦于软硬件协同、云边端协同的技术趋势，万物互联的多算力场景，挖掘技术创新与社区生态的价值。开发者、用户、社区贡献者、软件爱好者在 openEuler Summit 上汇聚成海，连接行业上下游，让全产业链共享操作系统创新价值。'
             ],
-            SUMMITTIP: 'openEuler Summit 大会的报名通道正式开启，赶快点击链接报名吧！',
+            LIVETITLE: '峰会直播间',
+            SUMMITLIVE: [
+                {
+                    THEME: 'openEuler Summit 2020',
+                    TIME: '09:30-11:55',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7095?lang=zh&thirdId='
+                },
+                {
+                    THEME: '操作系统',
+                    TIME: '14:00-17:20',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7096?lang=zh&thirdId='
+                },
+                {
+                    THEME: '云和原生云',
+                    TIME: '14:00-16:55',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7097?lang=zh&thirdId='
+                },
+                {
+                    THEME: '虚拟化',
+                    TIME: '14:00-16:55',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7098?lang=zh&thirdId='
+                },
+                {
+                    THEME: '开源与基础建设',
+                    TIME: '14:00-16:55',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7099?lang=zh&thirdId='
+                },
+                {
+                    THEME: '安全与可信',
+                    TIME: '14:00-17:25',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7100?lang=zh&thirdId='
+                },
+                {
+                    THEME: '基础软件',
+                    TIME: '14:00-17:25',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7101?lang=zh&thirdId='
+                }
+            ],
             SUMMIT_HOME_DATA: {
                 AGENDA: {
                     WEB_TITLE: '/img/summit/home/agenda/zh-pc-agenda.png',
@@ -227,19 +264,17 @@ module.exports = {
                     FORENOON_AGENDA_25: [
                         {
                             TIME: '09:30-09:35',
-                            THEME: '欢迎致辞',
-                            SPEAKER: '邓泰华',
-                            POSITION: '华为副总裁/计算产品线总裁'
+                            THEME: '欢迎致辞'
                         },
                         {
                             TIME: '09:35-09:50',
                             THEME: '全产业链共享操作系统创新价值',
                             SPEAKER: '江大勇',
-                            POSITION: 'openEuler 社区理事长'
+                            POSITION: '华为计算基础软件总经理/openEuler 社区理事长'
                         },
                         {
                             TIME: '09:50-09:55',
-                            THEME: 'openEuler 技术委员会成立',
+                            THEME: 'openEuler 社区技术委员会换届仪式',
                             SPEAKER: '邱成锋',
                             POSITION: 'openEuler 社区副理事长'
                         },
@@ -251,7 +286,7 @@ module.exports = {
                         },
                         {
                             TIME: '10:15-10:35',
-                            THEME: '华为在 Linux 内核社区的历程和思考',
+                            THEME: '华为在 Linux 内核社区的历程与思考',
                             SPEAKER: '陈海波',
                             POSITION: '华为OS首席技术专家/上海交通大学特聘教授/博士生导师'
                         },
@@ -263,13 +298,13 @@ module.exports = {
                         },
                         {
                             TIME: '10:50-11:05',
-                            THEME: '中国移动：云原生在混合架构平台上的实践',
+                            THEME: '中国移动：云原生在混合架构上的实践',
                             SPEAKER: '张春',
                             POSITION: '中国移动信息技术中心研发创新中心副总经理'
                         },
                         {
                             TIME: '11:05-11:20',
-                            THEME: '银联：机密计算保护下的边缘场景移动支付实践',
+                            THEME: '银联：机密计算的理解与探索',
                             SPEAKER: '祖立军',
                             POSITION: '银联研究院电子支付研究院主管'
                         },
@@ -280,7 +315,7 @@ module.exports = {
                         },
                         {
                             TIME: '11:40-11:50',
-                            THEME: '开源价值文化倡导 “共建共享共治”',
+                            THEME: '开源精神与社区文化“共建 共享 共治”',
                             SPEAKER: '堵俊平',
                             POSITION: '华为云与计算开源业务总经理'
                         },
@@ -299,7 +334,8 @@ module.exports = {
                                 ITEM_LIST: [
                                     {
                                         TIME: '14:00-14:40',
-                                        THEME: '圆桌：未来操作系统使能多样性算力'
+                                        THEME: '圆桌：一个面向未来的操作系统是怎样的',
+                                        SPEAKER: ['颜叶 鲲鹏计算研发部部长','包云岗 中科院计算所研究员','陈鲍孜博士 飞腾操作系统总监','费斐 安晟半导体首席软件工程师','张伟 上海兆芯集成电路高级产品经理 '],
                                     },
                                     {
                                         TIME: '14:40-15:10',
@@ -536,76 +572,76 @@ module.exports = {
                         SIG2_TIME: '16:10 - 17:00',
                         SIG2_DETAIL: [
                             {
-                                THEME: 'sig-DDE',
+                                THEME: 'SIG-DDE',
                                 CONTENT: ['1） DDE 适配 openEuler 成果分享','2） DDE 版本更新计划讨论','3） 爱好者对桌面诉求收集和讨论']
                             },
                             {
-                                THEME: 'sig-UKUI',
+                                THEME: 'SIG-UKUI',
                                 CONTENT: ['1） UKUI 在 openEuler 20.03 LTS SP1 版本上的工作进展介绍','2） UKUI 后续发展方向讨论']
                             },
                             {
-                                THEME: 'sig-Ha',
+                                THEME: 'SIG-Ha',
                                 CONTENT: ['1） Ha 项目进展介绍','2） Ha 项目近期在上游社区的合入计划讨论']
                             },
                             {
-                                THEME: 'sig-aarch32',
+                                THEME: 'SIG-aarch32',
                                 CONTENT: ['1) 当前 aarch32 与 openEuler 适配进展分享','2）aarch32 适配代码如何与主线共存讨论']
                             },
                             {
-                                THEME: 'A-Tune',
+                                THEME: 'SIG-A-Tune',
                                 CONTENT: ['1）A-Tune 2020年新特性和实践成果回顾','2）A-Tune 未来技术演进路线探讨','3）A-Tune &  wisdom 社区开发流程介绍和重要 issue 分析讨论','4）业界最新调优技术论文观点分享和讨论']
                             },
                             {
-                                THEME: 'iSulad & Container',
+                                THEME: 'SIG-iSulad & Container',
                                 CONTENT: ['1）云原生相关技术讨论','2）云原生效能提升研讨','3）云原生应用过程中的问题讨论']
                             },
                             {
-                                THEME: 'sig-ai-bigdata',
+                                THEME: 'SIG-ai-bigdata',
                                 CONTENT: ['1）sig-ai-bigdata 2020年成果和实践回顾','2）LTS 版本选型讨论','3）基于 openEuler 的大数据和 AI 平台探讨','4）SIG 技术范围和路标讨论']
                             },
                             {
-                                THEME: 'sig-security-facility & sig-confidential-computing',
+                                THEME: 'SIG-security-facility & sig-confidential-computing',
                                 CONTENT: ['1）sig-security-facility 已有安全技术分享','2）openEuler 安全技术方向和路标讨论','3）机密计算应用场景和安全相关技术讨论']
                             },
                             {
-                                THEME: 'Compiler',
+                                THEME: 'SIG-Compiler',
                                 CONTENT: ['1） Compiler SIG 后续工作计划讨论，包括 JDK/GCC 支持路标','2） 对LLVM等其他编译器和Rust\Go语言的支持诉求收集和讨论','3）openJDK 对容器（如iSula）支持计划讨论']
                             },
                             {
-                                THEME: 'doc',
+                                THEME: 'SIG-doc',
                                 CONTENT: ['1）openEuler 社区当前文档体系介绍','2）doc SIG 后续计划和重点方向讨论','3）如何激励参与社区贡献博客、视频等讨论']
                             },
                             {
-                                THEME: 'Infrastructure',
+                                THEME: 'SIG-Infrastructure',
                                 CONTENT: ['1)  openEuler 基础设施 2020 年实践回顾','2）openEuler 基础设施 2021 重点工作讨论','3）openEuler 基础设施从自动化转向智能化运维的一些想法与探讨']
                             },
                             {
-                                THEME: 'security-committee',
+                                THEME: 'SIG-security-committee',
                                 CONTENT: ['1）openEuler 社区漏洞处理流程分析，包括漏洞感知能力、漏洞处理和漏洞披露三部分','2）安全补丁修复策略讨论','3）安全指南如何在社区中应用讨论','4）安全技术委员会如何与各 SIG 协同完成漏洞分析、修复和披露讨论']
                             },
                             {
-                                THEME: 'sig-Compatibility-Infra',
+                                THEME: 'SIG-Compatibility-Infra',
                                 CONTENT: ['1）内核 KABI 与南向驱动兼容性讨论','2）软件包兼容性等级与北向应用兼容性讨论','3）版本间前后兼容策略讨论']
                             },
                             {
-                                THEME: 'sig-QA',
+                                THEME: 'SIG-QA',
                                 CONTENT: ['1）openEuler 社区质量度量体系如何构建讨论','2）openEuler 社区如何开展众测活动探讨','3） SIG 未来规划讨论']
                             },
                             {
-                                THEME: 'sig-release-management',
+                                THEME: 'SIG-release-management',
                                 CONTENT: ['1）openEuler 社区各版本生命周期规划讨论，包括 20.03 的维护周期、SP2 的发布时间等','2）伙伴版本跟随、组件升级策略讨论，包括补丁回合、版本升级、组件方式、以及二次开发和回合时间等','3） 各 OSV、ISV 如何参与release sig，以及 release sig 运作讨论']
                             },
                             {
-                                THEME: 'Kernel',
+                                THEME: 'SIG-Kernel',
                                 CONTENT: ['1）内核测试防护和稳定性保证讨论','2）如何通过社区的力量发现和修复 openEuler 内核 Bug ，保证 LTS 版本稳定性的讨论','3）创新版本特性合入策略讨论','4）对 openEuler 5.10 内核版本的诉求和期待收集和讨论']
                             },
                             {
-                                THEME: 'Virt',
+                                THEME: 'SIG-Virt',
                                 CONTENT: ['1）Virt SIG 2020 年技术和实践总结','2）Virt SIG 2021 年技术规划讨论','3）对 Virt SIG 的诉求收集和讨论，如新增特性、开发流程、问题解决等']
                             }
                         ],
                         SIG3_TIME: '17:00 - 18:30',
-                        SIG3_DETAIL: ['分享讨论成果 & 交流']
+                        SIG3_DETAIL: ['分享讨论成果 & 交流']
                     }
                 },
                 LECTURER: {
@@ -613,14 +649,9 @@ module.exports = {
                     MOBILE_TITLE: '/img/summit/home/lecturer/zh-mobile-lecturer.png',
                     LECTURERLIST: [
                         {
-                            IMG: '/img/summit/home/lecturer/dengtaihua.png',
-                            NAME: '邓泰华',
-                            POSITION: '华为副总裁/计算产品线总裁'
-                        },
-                        {
                             IMG: '/img/summit/home/lecturer/jiangdayong.png',
                             NAME: '江大勇',
-                            POSITION: 'openEuler 社区理事长'
+                            POSITION: '华为计算基础软件总经理/openEuler 社区理事长'
                         },
                         {
                             IMG: '/img/summit/home/lecturer/qiuchengfeng.png',
@@ -1477,10 +1508,9 @@ module.exports = {
             SUMMIT: 'Summit',
             NAV_LIST: ['Agenda','Speakers','Partners','Review'],
             SUMMITCONTENT: [
-                'The openEuler Summit 2020 (the first offline summit) will be held at Hyatt Regency Beijing Wangjing from December 24 to 25. It is a platform of the openEuler community for developers to exchange the latest OS trends. openEuler is an open source operating system of tomorrow, and will go beyond an operating system as it is nurtured by the vibrant openEuler community.',
-                'The openEuler Summit 2020 will focus on the collaboration across software-hardware and cloud-edge-device, as well as scenarios where all things are connected and diversified computing coexist. The event fully taps into the value of technological innovation and aims to build a flourishing community ecosystem. All this would not be made possible without our developers, users, community contributors, and software enthusiasts, who attend the openEuler Summit 2020 and shed light on the latest OS developments. The Summit provides an opportunity for streamlining the OS industry, and the innovative openEuler OS generates shared value for the entire industry chain.'
+                'The openEuler Summit 2020 will be held at Hyatt Regency Beijing Wangjing from December 24 to 25 in Beijing, China. The second summit this year, the event will dive deep into openEuler, the open source operating system of tomorrow and how it exceeds conventional technologies thanks to community participation. This openEuler event is an opportunity for developers to exchange the latest OS trends with like-minded individuals.',
+                'The upcoming summit will focus on the collaboration across software-hardware and cloud-edge-device, as well as scenarios where all things are connected and diversified computing coexist. This event will discuss how to tap into technological innovation and build an open ecosystem. The summit provides an opportunity for streamlining the OS industry, and will consider how the openEuler OS can create shared value across the entire industry chain. The summit is only possible thanks to the participation of our developers, users, community contributors, and software enthusiasts, who have explored the latest OS developments. Together, we are on the cusp of the next breakthrough.'
             ],
-            SUMMITTIP: 'Click the link to register for the openEuler Summit 2020.',
             SUMMIT_HOME_DATA: {
                 AGENDA: {
                     WEB_TITLE: '/img/summit/home/agenda/en-pc-agenda.png',
@@ -1489,21 +1519,71 @@ module.exports = {
                     AFTERNOON_AGENDA_24: [
                         {
                             TIME: '13:00-14:30',
-                            THEME: 'openEuler Technical Committee Working Session',
-                            SPEAKER: 'openEuler Technical Committee'
+                            THEME: 'Opening Speech',
+                            SPEAKER: 'Ma Quanyi',
+                            POSITION: 'Member, openEuler Technical Committee (TC)'
                         },
                         {
-                            TIME: '15:00-17:00',
-                            THEME: 'openEuler Maintainer Working Session',
-                            SPEAKER: 'openEuler Maintainers'
+                            TIME: '13:10-14:40',
+                            THEME: 'Support of openEuler for the AppStream Mechanism'
+                        },
+                        {
+                            TIME: '13:10-14:40',
+                            THEME: 'Applying for Establishing the Intelligent O&M SIG'
+                        },
+                        {
+                            TIME: '13:10-14:40',
+                            THEME: 'Switching from Gitee Issues to Bugzilla'
+                        },
+                        {
+                            TIME: '13:10-14:40',
+                            THEME: 'TC Collaboration Mode in 2021'
+                        },
+                        {
+                            TIME: '15:00-15:30',
+                            THEME: 'Opening Speech & Maintainer Badge Awarding Ceremony',
+                            SPEAKER: 'Ma Quanyi',
+                            POSITION: 'Member, openEuler TC'
+                        },
+                        {
+                            TIME: '15:30-15:50',
+                            THEME: 'openEuler Community Operation Analysis',
+                            SPEAKER: 'Zhou Minghui',
+                            POSITION: 'Boya Distinguished Professor, Peking University'
+                        },
+                        {
+                            TIME: '15:50-16:00',
+                            THEME: 'Meet Maintainers of openEuler Community',
+                            SPEAKER: 'Fang Yafen',
+                            POSITION: 'Maintainer, RaspberryPi SIG'
+                        },
+                        {
+                            TIME: '16:00-16:10',
+                            THEME: 'Meet Maintainers of openEuler Community',
+                            SPEAKER: 'Yang Zhao',
+                            POSITION: 'Maintainer, Ha SIG'
+                        },
+                        {
+                            TIME: '16:10-16:20',
+                            THEME: 'Meet Maintainers of openEuler Community',
+                            SPEAKER: 'Zheng Xian',
+                            POSITION: 'Maintainer, ai-bigdata SIG'
+                        },
+                        {
+                            TIME: '16:20-17:00',
+                            THEME: 'Q&A'
+                        },
+                        {
+                            TIME: '17:00-17:30',
+                            THEME: 'Summary',
+                            SPEAKER: 'Hu Xinwei',
+                            POSITION: 'Chairman, openEuler TC'
                         }
                     ],
                     FORENOON_AGENDA_25: [
                         {
                             TIME: '09:30-09:35',
-                            THEME: 'Opening Speech',
-                            SPEAKER: 'Deng Taihua',
-                            POSITION: 'Vice President, Huawei; President, Computing Product Line, Huawei'
+                            THEME: 'Opening Speech'
                         },
                         {
                             TIME: '09:35-09:50',
@@ -1796,17 +1876,90 @@ module.exports = {
                                 ]
                             }
                         ]
+                    },
+                    SIG_CONTENT: {
+                        TITLE: 'SIG Open Working Sessions',
+                        SIG1_TIME: '16:00 - 16:10' ,
+                        SIG1_DETAIL: ['Opening Speech','Ma Quanyi','Member of openEuler TC'],
+                        SIG2_TIME: '16:10 - 17:00',
+                        SIG2_DETAIL: [
+                            {
+                                THEME: 'SIG-DDE',
+                                CONTENT: ['1) Achievements of Adapting DDE to openEuler','2) DDE Version Update Plan',"3) Discussion on Enthusiasts' Requirements for the Desktop"]
+                            },
+                            {
+                                THEME: 'SIG-UKUI',
+                                CONTENT: ['1) Work Progress of UKUI for openEuler 20.03 LTS SP1','2) Discussion on the Future Development of UKUI']
+                            },
+                            {
+                                THEME: 'SIG-Ha',
+                                CONTENT: ['1) Progress of the Ha project','2) Discussion on the Plan for Merging the Ha Project into Upstream Community']
+                            },
+                            {
+                                THEME: 'SIG-aarch32',
+                                CONTENT: ['1) Work Progress of Adapting AArch32 to openEuler','2) Discussion on the Coexistence Between AArch32 Adapted Code and Mainline Versions']
+                            },
+                            {
+                                THEME: 'SIG-A-Tune',
+                                CONTENT: ['1) Review of New Features and Achievements of A-Tune in 2020','2) Discussion on Future Technology Evolution of A-Tune','3) Development Process of A-Tune and Wisdom in Community and Key Issue Analysis','4) Discussion on Papers of the Latest Tuning Technology']
+                            },
+                            {
+                                THEME: 'SIG-iSulad & Container',
+                                CONTENT: ['1) Cloud Native Technologies','2) Cloud Native Efficiency Improvement','3) Issues of Cloud Native Application']
+                            },
+                            {
+                                THEME: 'SIG-ai-bigdata',
+                                CONTENT: ['1) Review of Achievements of ai-bigdata SIG in 2020','2) Discussion on LTS Version Selection','3) Discussion on the openEuler-based Big Data and AI Platform',"4) Discussion on the SIG's Technical Scope and Roadmap"]
+                            },
+                            {
+                                THEME: 'SIG-security-facility & sig-confidential-computing',
+                                CONTENT: ['1) Existing Security Technologies of security-facility SIG','2) Discussion on openEuler Security Technology Developments and Roadmap','3) Discussion on Confidential Computing Application Scenarios and Security Technologies']
+                            },
+                            {
+                                THEME: 'SIG-Compiler',
+                                CONTENT: ['1) Working plan of Compiler SIG, Including the JDK/GCC Support Roadmap','2) Discussion on Requirements for Supporting Compilers (LLVM) and Rust/Go Programming Languages','3) Discussion on the Plan for Supporting Containers (iSula) on openJDK']
+                            },
+                            {
+                                THEME: 'SIG-doc',
+                                CONTENT: ['1) Introduction to the Current Document System of openEuler Community','2) Discussion on the Plan and Focus of the Doc SIG','3) Discussion on Encouraging Developers to Contribute Blogs and Videos to Community']
+                            },
+                            {
+                                THEME: 'SIG-Infrastructure',
+                                CONTENT: ['1)Review of the openEuler Infrastructure in 2020','2)Discussion on the openEuler Infrastructure Key Priorities in 2021','3)Ideas of Promoting Intelligent O&M on openEuler Infrastructure']
+                            },
+                            {
+                                THEME: 'SIG-security-committee',
+                                CONTENT: ['1) Analysis of Vulnerability Handling Process of openEuler Community: Vulnerability Awareness, Handling, and Disclosure','2) Discussion on Security Vulnerability Patch Fix Policies','3) Discussion on Applying the Security Guide in Community','4) Discussion on Collaboration Between Security TC and SIGs for Vulnerability Analysis, Fix, and Disclosure']
+                            },
+                            {
+                                THEME: 'SIG-Compatibility-Infra',
+                                CONTENT: ['1) Kernel KABI and Southbound Driver Compatibility','2) Software Package Compatibility Level and Northbound Application Compatibility','3) Compatibility Policy Between Versions']
+                            },
+                            {
+                                THEME: 'SIG-QA',
+                                CONTENT: ['1) Discussion on Building the Quality Measurement System of openEuler Community','2) Discussion on Conducting Crowdtesting in openEuler Community','3) Discussion on the SIG Future Plan']
+                            },
+                            {
+                                THEME: 'SIG-release-management',
+                                CONTENT: ['1) Discussion on Version Lifecycle Plan of openEuler Community: 20.03 Maintenance Lifecycle and SP2 Release Time','2) Discussion on Policies of Partner Version Consistence and Component Upgrade: Patch Backporting, Version Upgrade, Component Mode, Secondary Development, and Backporting Time','3) Discussion on Participation of OSVs and ISVs in the release-management SIG and the SIG Operation']
+                            },
+                            {
+                                THEME: 'SIG-Kernel',
+                                CONTENT: ['1) Kernel Test Protection and Stability Assurance','2) Leveraging Community Expertise to Discover and Fix openEuler Kernel Bugs and Ensure Stability of LTS Versions','3) Discussion on the Policy for Merging Innovation Version Features','4) Discussion on Requirements for the openEuler 5.10 Kernel Version']
+                            },
+                            {
+                                THEME: 'SIG-Virt',
+                                CONTENT: ['1) Overview of New Technologies and Success Practices of Virt SIG in 2020','2) Discussion on the Technical Planning of Virt SIG in 2021','3) Discussion on Requirements for Virt SIG, such as New Features, Development Process, and Issue Resolution']
+                            }
+                        ],
+                        SIG3_TIME: '17:00 - 18:30',
+                        SIG3_DETAIL: ['Presentation & Exchange of Discussion Results']
                     }
                 },
                 LECTURER: {
                     WEB_TITLE: '/img/summit/home/lecturer/en-pc-lecturer.png',
                     MOBILE_TITLE: '/img/summit/home/lecturer/en-mobile-lecturer.png',
                     LECTURERLIST: [
-                        {
-                            IMG: '/img/summit/home/lecturer/dengtaihua.png',
-                            NAME: 'Deng Taihua',
-                            POSITION: 'Vice President, Huawei/President, Computing Product Line, Huawei'
-                        },
                         {
                             IMG: '/img/summit/home/lecturer/jiangdayong.png',
                             NAME: 'Jiang Dayong',
