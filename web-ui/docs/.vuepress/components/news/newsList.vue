@@ -76,7 +76,7 @@ export default {
     return {
       totalSize: 0,
       currentPage: 1,
-      PAGESIZE: 6,
+      PAGESIZE: 5,
       allNewsList: [],
       currentNewsList: [],
       showNewsList: {},
