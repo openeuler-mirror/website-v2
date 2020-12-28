@@ -193,8 +193,8 @@
                         <img v-lazy="reviewObj.WEB_TITLE" alt="" v-if="!isShowH5" />
                         <img v-lazy="reviewObj.MOBILE_TITLE" alt="" v-else />
                     </div>
-                    <img class="review-banner card-hover" v-lazy="'/img/summit/home/review/review-img.png'" alt="" @click="go('/interaction/summit-list/list/')" v-if="!isShowH5"/>
-                    <img class="review-banner" v-lazy="'/img/summit/home/review/mobile-review-img.png'" alt="" @click="go('/interaction/summit-list/list/')" v-else />
+                    <img class="review-banner card-hover" v-lazy="'/img/summit/home/review/review-img.png'" alt="" @click="toReviewList" v-if="!isShowH5"/>
+                    <img class="review-banner" v-lazy="'/img/summit/home/review/mobile-review-img.png'" alt="" @click="toReviewList" v-else />
                 </div>
             </div>
         </div>
