@@ -6,10 +6,10 @@ module.exports = {
     cn: {
         HOME_CAROUSEL_DATA: [
             {
-                TITLE: "openEuler 20.09版本全新发布，如约而至",
-                LINK: "https://openeuler.org/openEuler-whitepaper.pdf",
-                DES: "欲知详情，快来下载openEuler 20.09 技术白皮书",
-                DOWNLOAD: '下载',
+                TITLE: "openEuler 20.03 LTS SP1",
+                LINK: "https://openeuler.org/zh/docs/20.03_LTS_SP1/docs/Releasenotes/%E5%85%B3%E9%94%AE%E7%89%B9%E6%80%A7.html",
+                DES: "现已发布，欢迎体验",
+                DOWNLOAD: '了解更多',
                 MOBILE_IMG: "url('/img/home/banner/zh-mobile-version.png')"
             },
             {
@@ -570,10 +570,10 @@ module.exports = {
     en: {
         HOME_CAROUSEL_DATA: [
             {
-                TITLE: "openEuler 20.09 Version Released",
-                LINK: "https://openeuler.org/openEuler-whitepaper.pdf",
-                DES: "For more information, download the openEuler 20.09 Technical White Paper.",
-                DOWNLOAD: 'Download',
+                TITLE: "openEuler 20.03 LTS SP1 Version",
+                LINK: "https://openeuler.org/en/docs/20.03_LTS_SP1/docs/Releasenotes/key-features.html",
+                DES: "has been released, welcome to use.",
+                DOWNLOAD: 'Learn more',
                 MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
             },
             {
