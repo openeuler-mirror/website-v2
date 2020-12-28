@@ -32,7 +32,6 @@
                                 <h3>{{ item.TITLE }}</h3>
                                 <span>{{ item.DES }}</span>
                                 <div class="download-version" :class="$lang === 'en'?'en-version':''">
-                                    <i class="el-icon-download"></i>
                                     <div>{{item.DOWNLOAD?item.DOWNLOAD:''}}</div>
                                 </div>
                             </div>
