@@ -286,7 +286,7 @@ module.exports = {
         ],
         FOOTER: {
             MAIL: 'contact@openeuler.org',
-            COPY_RIGHT: 'Copyright © 2020 openEuler. All rights reserved.',
+            COPY_RIGHT: 'Copyright © 2021 openEuler. All rights reserved.',
             RIGHT_LIST: [{
                     NAME: 'Trademark',
                     URL: '/other/brand/'
