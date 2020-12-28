@@ -367,7 +367,7 @@ export default {
         margin-bottom: 60px;
       }
       .download-item {
-        width: 420px;
+        width: 348px;
         margin: 0 25px 30px 0;
         height: 264px;
         box-sizing: border-box;
@@ -375,6 +375,17 @@ export default {
         border-radius: 8px;
         display: inline-block;
         padding: 15px 10px 26px 20px;
+        &:nth-of-type(5),&:nth-of-type(6),&:nth-of-type(7) {
+          .url-list-wrapper { 
+            .url-list {
+              li {
+                &:nth-of-type(3){
+                    margin-right: 20px;
+                }
+              }
+            }
+          }
+        }
         @media screen and (max-width: 1000px) {
           display: block;
           margin: 40px auto !important;
@@ -446,8 +457,6 @@ export default {
           }
         }
         .url-list-wrapper {
-          display: flex;
-          justify-content: space-between;
           font-size: 14px;
            @media screen and (max-width: 1000px) {
              font-size: 11px;
@@ -463,12 +472,9 @@ export default {
             justify-content: start;
             li {
               margin-bottom: 14px;
-              margin-left: 22px;
-              &:first-of-type{
-                  margin-left: 0;
-              }
-              &:nth-of-type(4n){
-                  margin-left: 0;
+              margin-right: 20px;
+              &:nth-of-type(3){
+                  margin-right: 0;
               }
               @media screen and (max-width: 1000px) {
                 margin-bottom: 20px;
@@ -485,12 +491,6 @@ export default {
             }
           }
         }
-      }
-      .download-item:nth-child(3n) {
-        margin-right: 25px;
-          .url-list li:nth-child(3n) {
-              margin-left: 13px;
-          }
       }
     }
    .download-list {
