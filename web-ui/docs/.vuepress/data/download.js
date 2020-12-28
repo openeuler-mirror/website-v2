@@ -6,6 +6,19 @@ module.exports = {
     cn: {
         DOWNLOAD_LIST : [
             {
+                NAME: 'openEuler 20.03 LTS SP1',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.03-LTS-SP1/',
+                DESC: 'openEuler 20.03 LTS SP1 是openEuler 20.03 LTS的补丁版本，生命周期与LTS版本相同',
+                RELEASE_DESC_URL: '/zh/docs/20.03_LTS_SP1/docs/Releasenotes/release_notes.html',
+                INSTALL_GUIDENCE_URL: '/zh/docs/20.03_LTS_SP1/docs/Installation/installation.html',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP1/ISO/',
+                LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+                MANUFACTURER: 'openEuler社区',
+                PUBLISH_DATE: '2020/12',
+                LTS: true
+            },
+            {
                 NAME: 'openEuler 20.09',
                 DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.09/',
                 DESC: 'openEuler 20.09 版本是满足开放场景的创新发行版，生命周期六个月。',
@@ -125,14 +138,27 @@ module.exports = {
     en: {
         DOWNLOAD_LIST : [
             {
+                NAME: 'openEuler 20.03 LTS SP1',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.03-LTS-SP1/',
+                DESC: 'openEuler 20.03 LTS SP1 is the patch version of openEuler 20.03 LTS,and both versions have the same lifecycle.',
+                RELEASE_DESC_URL: '/en/docs/20.03_LTS_SP1/docs/Releasenotes/release_notes.html',
+                INSTALL_GUIDENCE_URL: '/en/docs/20.03_LTS_SP1/docs/Installation/Installation.html',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP1/ISO/',
+                LIFE_CYCLE_URL: '/en/other/lifecycle/',
+                MANUFACTURER: 'openEuler社区',
+                PUBLISH_DATE: '2020/12',
+                LTS: true
+            },
+            {
                 NAME: 'openEuler 20.09',
                 DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.09/',
                 DESC: 'The openEuler 20.09 LTS version is an innovative release for open scenarios,with a lifecycle of six months.',
                 RELEASE_DESC_URL: '/en/docs/20.09/docs/Releasenotes/release_notes.html',
-                INSTALL_GUIDENCE_URL: '/en/docs/20.09/docs/Installation/installation.html',
+                INSTALL_GUIDENCE_URL: '/en/docs/20.09/docs/Installation/Installation.html',
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.09/ISO/',
-                LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+                LIFE_CYCLE_URL: '/en/other/lifecycle/',
                 MANUFACTURER: 'openEuler community',
                 PUBLISH_DATE: '2020/09',
                 LTS: false
@@ -142,7 +168,7 @@ module.exports = {
                 DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.03-LTS/',
                 DESC: 'The openEuler 20.03 LTS edition, with a four-year lifecycle, is a standard distribution that meets open scenario requirements, which has a lifecycle of four years.',
                 RELEASE_DESC_URL: '/en/docs/20.03_LTS/docs/Releasenotes/release_notes.html',
-                INSTALL_GUIDENCE_URL: '/en/docs/20.03_LTS/docs/Installation/installation.html',
+                INSTALL_GUIDENCE_URL: '/en/docs/20.03_LTS/docs/Installation/Installation.html',
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS/',
                 LIFE_CYCLE_URL: '/en/other/lifecycle/',
@@ -154,7 +180,7 @@ module.exports = {
                 NAME: 'openEuler 1.0 Base',
                 DOWNLOAD_URL : 'https://repo.openeuler.org/openeuler1.0/base/iso/',
                 DESC: 'The openEuler 1.0 Base is the basic version that contains the core components to run the minimum system.',
-                INSTALL_GUIDENCE_URL: '/en/docs/1.0_Base/docs/Installation/installation.html',
+                INSTALL_GUIDENCE_URL: '/en/docs/1.0_Base/docs/Installation/Installation.html',
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openeuler1.0/base/iso/',
                 LIFE_CYCLE_URL: '/en/other/lifecycle/',
