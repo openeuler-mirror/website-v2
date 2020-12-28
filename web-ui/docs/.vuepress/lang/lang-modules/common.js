@@ -134,7 +134,7 @@ module.exports = {
         ],
         FOOTER: {
             MAIL: 'contact@openeuler.org',
-            COPY_RIGHT: '版权所有 © 2020 openEuler 保留一切权利',
+            COPY_RIGHT: '版权所有 © 2021 openEuler 保留一切权利',
             RIGHT_LIST: [{
                     NAME: '品牌',
                     URL: '/other/brand/'
@@ -286,7 +286,7 @@ module.exports = {
         ],
         FOOTER: {
             MAIL: 'contact@openeuler.org',
-            COPY_RIGHT: 'Copyright © 2020 openEuler. All rights reserved.',
+            COPY_RIGHT: 'Copyright © 2021 openEuler. All rights reserved.',
             RIGHT_LIST: [{
                     NAME: 'Trademark',
                     URL: '/other/brand/'
