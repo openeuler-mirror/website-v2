@@ -6,21 +6,16 @@ module.exports = {
     cn: {
         HOME_CAROUSEL_DATA: [
             {
-                TITLE: "openEuler 20.03 LTS SP1",
-                LINK: "https://openeuler.org/zh/docs/20.03_LTS_SP1/docs/Releasenotes/%E5%85%B3%E9%94%AE%E7%89%B9%E6%80%A7.html",
-                DES: "现已发布，欢迎体验",
-                DOWNLOAD: '了解更多',
-                MOBILE_IMG: "url('/img/home/banner/zh-mobile-version.png')"
-            },
-            {
                 TITLE: "iSula",
                 LINK: "https://live.bilibili.com/22290444",
                 DES: "iSula是一种云原生轻量级容器解决方案，可通过统一、灵活的架构满足ICT领域端、边、云场景的多种需求。",
+                IMG: "/img/home/Banner1.gif"
             },
             {
                 TITLE: "A-Tune",
                 LINK: "https://gitee.com/openeuler/A-Tune",
                 DES: "A-Tune是智能性能优化系统软件，即通过机器学习引擎对业务应用建立精准模型, 再根据业务负载智能匹配最佳操作系统配置参数组合，实现系统整体运行效率提升。",
+                IMG: "/img/home/Banner2.gif"
             }
         ],
         ROOM_LEFT_IMG:[
@@ -37,7 +32,14 @@ module.exports = {
                 LINK: '/interaction/news-list/'
             }
         ],
-        HOME_FIRST_BANNER: {},
+        HOME_FIRST_BANNER: {
+            TITLE: "openEuler 20.03 LTS SP1",
+            LINK: "/zh/news/20201228.html",
+            DES: "现已发布，欢迎体验",
+            DOWNLOAD: '了解更多',
+            IMG: "/img/home/Banner0.gif",
+            MOBILE_IMG: "url('/img/home/banner/zh-mobile-version.png')"
+        },
         HOME_OTHER_BANNER: [
             {
                 BANNER_PC_IMG: '/img/summit/home/zh-pc-summit.png',
@@ -570,21 +572,16 @@ module.exports = {
     en: {
         HOME_CAROUSEL_DATA: [
             {
-                TITLE: "openEuler 20.03 LTS SP1 Version",
-                LINK: "https://openeuler.org/en/docs/20.03_LTS_SP1/docs/Releasenotes/key-features.html",
-                DES: "has been released, welcome to use.",
-                DOWNLOAD: 'Learn more',
-                MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
-            },
-            {
                 TITLE: "iSula",
                 LINK: "https://live.bilibili.com/22290444",
                 DES: "A cloud-native lightweight container solution that can meet the needs of device, edge, and cloud scenarios in ICT domain with a unified and flexible architecture.",
+                IMG: "/img/home/Banner1.gif"
             },
             {
                 TITLE: "A-Tune",
                 LINK: "https://gitee.com/openeuler/A-Tune",
                 DES: "An AI-based OS tuning engine perfectly adapted to multiple scenarios.",
+                IMG: "/img/home/Banner2.gif"
             }
         ],
         ROOM_LEFT_IMG:[
@@ -602,7 +599,14 @@ module.exports = {
             }
         ],
         HOME_LAST_BANNER: {},
-        HOME_FIRST_BANNER: {},
+        HOME_FIRST_BANNER: {
+            TITLE: "openEuler 20.03 LTS SP1 Version",
+            LINK: "https://openeuler.org/en/docs/20.03_LTS_SP1/docs/Releasenotes/key-features.html",
+            DES: "has been released, welcome to use.",
+            DOWNLOAD: 'Learn more',
+            IMG: "/img/home/Banner0.gif",
+            MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
+        },
         HOME_OTHER_BANNER: [
             {
                 BANNER_PC_IMG: '/img/summit/home/en-pc-summit.png',
