@@ -178,7 +178,7 @@ module.exports = {
             },
             {
                 NAME: 'openEuler 1.0 Base',
-                DOWNLOAD_URL : 'https://repo.openeuler.org/openeuler1.0/base/iso/',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openeuler1.0/base/',
                 DESC: 'The openEuler 1.0 Base is the basic version that contains the core components to run the minimum system.',
                 INSTALL_GUIDENCE_URL: '/en/docs/1.0_Base/docs/Installation/Installation.html',
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
