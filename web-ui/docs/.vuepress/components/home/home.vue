@@ -2,6 +2,20 @@
     <div class="home">
         <div class="is-pc home-carousel" v-if="!isShowH5">
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" @change="eventChange()">
+                <el-carousel-item class="carousel-item">
+                <a class="banner-link" :href="i18n.home.HOME_FIRST_BANNER.LINK" target="_blank">
+                  <div class="banner-item">
+                    <div class="item-info">
+                      <h3>{{ i18n.home.HOME_FIRST_BANNER.TITLE }}</h3>
+                      <span>{{ i18n.home.HOME_FIRST_BANNER.DES }}</span>
+                      <div class="download-version" :class="$lang === 'en'?'en-version':''">
+                        <div>{{i18n.home.HOME_FIRST_BANNER.DOWNLOAD}}</div>
+                      </div>
+                    </div>
+                    <img class="banner-gif" v-lazy="i18n.home.HOME_FIRST_BANNER.IMG">
+                  </div>
+                </a>
+              </el-carousel-item>
                 <el-carousel-item v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
                     <div class="carousel-banner summmit-banner" @click="go(item.BANNER_LINK)" v-if="index === 0">
                         <video autoplay loop muted width="700px" height="500px" id="summit-video">
@@ -26,25 +40,13 @@
                         class="carousel-item"
                         v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
                         :key="index">
-                    <a class="banner-link" v-if="index === 0" :href="item.LINK" target="_blank">
-                        <div class="banner-item">
-                            <div class="item-info">
-                                <h3>{{ item.TITLE }}</h3>
-                                <span>{{ item.DES }}</span>
-                                <div class="download-version" :class="$lang === 'en'?'en-version':''">
-                                    <div>{{item.DOWNLOAD?item.DOWNLOAD:''}}</div>
-                                </div>
-                            </div>
-                            <img class="banner-gif" v-lazy="'/img/home/Banner' + index + '.gif'">
-                        </div>
-                    </a>
-                    <a class="banner-link" v-if="index === 1" @click="go(item.LINK)">
+                    <a class="banner-link" @click="go(item.LINK)">
                         <div class="banner-item">
                             <div class="item-info">
                                 <h3>{{ item.TITLE }}</h3>
                                 <span>{{ item.DES }}</span>
                             </div>
-                            <img class="banner-gif" v-lazy="'/img/home/Banner' + index + '.gif'">
+                            <img class="banner-gif" v-lazy="item.IMG">
                         </div>
                     </a>
                     <a class="banner-link" v-if="index !== 0 && index !== 1" :href="item.LINK" target="_blank">
@@ -61,6 +63,9 @@
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
+              <swiper-slide class="carousel-item-index">
+                <div class="mobile-version" @click="go(i18n.home.HOME_FIRST_BANNER.LINK)" :style="{backgroundImage:i18n.home.HOME_FIRST_BANNER.MOBILE_IMG}"></div>
+              </swiper-slide>
                 <swiper-slide v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
                     <div class="carousel-banner mobile-banner" :style="{backgroundImage: item.BANNER_MOBILE_IMG}" @click="go(item.BANNER_LINK)">
                     </div>
@@ -83,15 +88,10 @@
                         class="carousel-item-index"
                         v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
                         :key="index">
-                    <a v-if="index !== 0 && index !== 1" :href="item.LINK" target="_blank">
+                    <a @click="go(item.LINK)">
                         <h3>{{ item.TITLE }}</h3>
-                        <img v-lazy="'/img/home/Banner' + index + '.gif'">
+                        <img v-lazy="item.IMG">
                     </a>
-                    <a v-if="index === 1" @click="go(item.LINK)">
-                        <h3>{{ item.TITLE }}</h3>
-                        <img v-lazy="'/img/home/Banner' + index + '.gif'">
-                    </a>
-                    <div class="mobile-version" @click="go(item.LINK)" :style="{backgroundImage:item.MOBILE_IMG?item.MOBILE_IMG:''}" v-if="index == 0"></div>
                 </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
@@ -809,9 +809,9 @@
     .home-carousel .el-carousel__item span {
         display: inline-block;
         width: 620px;
-        font-size: 18px;
+        font-size: 20px;
         line-height: 40px;
-        margin-top: 30px;
+        margin-top: 48px;
     }
     .home .data-round {
         width: 1120px;
@@ -903,9 +903,9 @@
         display: flex;
         justify-content: space-around;
         .download-version{
-            width: 74px;
-            height: 24px;
-            font-size: 12px;
+            width: 120px;
+            height: 36px;
+            font-size: 18px;
             font-family: FZLTXIHJW;
             margin-top: 60px;
             color: #ffffff;
@@ -914,11 +914,12 @@
             border-radius: 4px;
             text-align: center;
             div{
-                display: inline-block;
+              line-height: 36px;
             }
         }
         .en-version{
-            width: 108px;
+            width: 120px;
+            font-family: HuaweiSans;
         }
     }
     .carousel-item .card-summer span {
@@ -1075,6 +1076,7 @@
     .home-banner .mobile-banner {
         @media screen and (max-width: 1000px) {
             background-size: contain !important;
+            height: 100%;
         }
     }
     .home-introduce {
