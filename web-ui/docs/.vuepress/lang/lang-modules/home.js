@@ -7,7 +7,7 @@ module.exports = {
         HOME_CAROUSEL_DATA: [
             {
                 TITLE: "iSula",
-                LINK: "https://live.bilibili.com/22290444",
+                LINK: "https://gitee.com/openeuler/iSulad",
                 DES: "iSula是一种云原生轻量级容器解决方案，可通过统一、灵活的架构满足ICT领域端、边、云场景的多种需求。",
                 IMG: "/img/home/Banner1.gif"
             },
@@ -34,7 +34,7 @@ module.exports = {
         ],
         HOME_FIRST_BANNER: {
             TITLE: "openEuler 20.03 LTS SP1",
-            LINK: "/zh/news/20201228.html",
+            LINK: "https://openeuler.org/zh/news/20201228.html",
             DES: "现已发布，欢迎体验",
             DOWNLOAD: '了解更多',
             IMG: "/img/home/Banner0.gif",
@@ -573,7 +573,7 @@ module.exports = {
         HOME_CAROUSEL_DATA: [
             {
                 TITLE: "iSula",
-                LINK: "https://live.bilibili.com/22290444",
+                LINK: "https://gitee.com/openeuler/iSulad",
                 DES: "A cloud-native lightweight container solution that can meet the needs of device, edge, and cloud scenarios in ICT domain with a unified and flexible architecture.",
                 IMG: "/img/home/Banner1.gif"
             },
