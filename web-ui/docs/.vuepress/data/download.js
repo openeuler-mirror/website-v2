@@ -146,7 +146,7 @@ module.exports = {
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP1/ISO/',
                 LIFE_CYCLE_URL: '/en/other/lifecycle/',
-                MANUFACTURER: 'openEuler社区',
+                MANUFACTURER: 'openEuler community',
                 PUBLISH_DATE: '2020/12',
                 LTS: true
             },
