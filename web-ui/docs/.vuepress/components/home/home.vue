@@ -2,20 +2,30 @@
     <div class="home">
         <div class="is-pc home-carousel" v-if="!isShowH5">
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" @change="eventChange()">
-                <el-carousel-item class="carousel-item">
-                <a class="banner-link" :href="i18n.home.HOME_FIRST_BANNER.LINK" target="_blank">
-                  <div class="banner-item">
-                    <div class="item-info">
-                      <h3>{{ i18n.home.HOME_FIRST_BANNER.TITLE }}</h3>
-                      <span>{{ i18n.home.HOME_FIRST_BANNER.DES }}</span>
-                      <div class="download-version" :class="$lang === 'en'?'en-version':''">
-                        <div>{{i18n.home.HOME_FIRST_BANNER.DOWNLOAD}}</div>
-                      </div>
+                <el-carousel-item>
+                    <div class="carousel-video">
+                        <video poster="/img/home/BannerVideo.png" loop width="100%" height="500px" id="home-video">
+                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler_Newyear_MG%2B_1920x500_Web.mp4?versionId=null"  type="video/mp4">
+                        </video>
+                        <playcontroll :ctrl-obj="videoCtrlParams" ref="playctrlEle" @playStatus="checkStatus"></playcontroll>
+                        <div class="play-btn" v-if="!isNowPlay" @click="playHomeVideo()">
+                        </div>
                     </div>
-                    <img class="banner-gif" v-lazy="i18n.home.HOME_FIRST_BANNER.IMG">
-                  </div>
-                </a>
-              </el-carousel-item>
+                </el-carousel-item>
+                <el-carousel-item class="carousel-item">
+                    <a class="banner-link" :href="i18n.home.HOME_FIRST_BANNER.LINK" target="_blank">
+                    <div class="banner-item">
+                        <div class="item-info">
+                        <h3>{{ i18n.home.HOME_FIRST_BANNER.TITLE }}</h3>
+                        <span>{{ i18n.home.HOME_FIRST_BANNER.DES }}</span>
+                        <div class="download-version" :class="$lang === 'en'?'en-version':''">
+                            <div>{{i18n.home.HOME_FIRST_BANNER.DOWNLOAD}}</div>
+                        </div>
+                        </div>
+                        <img class="banner-gif" v-lazy="i18n.home.HOME_FIRST_BANNER.IMG">
+                    </div>
+                    </a>
+                </el-carousel-item>
                 <el-carousel-item v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
                     <div class="carousel-banner summmit-banner" @click="go(item.BANNER_LINK)" v-if="index === 0">
                         <video autoplay loop muted width="700px" height="500px" id="summit-video">
@@ -24,16 +34,6 @@
                         <img :src="item.BANNER_PC_IMG" alt="" />
                     </div>
                     <div class="carousel-banner" :style="{backgroundImage: item.BANNER_PC_IMG}" @click="go(item.BANNER_LINK)" v-else>
-                    </div>
-                </el-carousel-item>
-                <el-carousel-item>
-                    <div class="carousel-video">
-                        <video poster="/img/home/BannerVideo.png" loop width="100%" height="500px" id="home-video">
-                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E6%AC%A7%E6%8B%89MG%E5%8A%A8%E7%94%BB_1080%60500_TS.mp4"  type="video/mp4">
-                        </video>
-                        <playcontroll :ctrl-obj="videoCtrlParams" ref="playctrlEle" @playStatus="checkStatus"></playcontroll>
-                        <div class="play-btn" v-if="!isNowPlay" @click="playHomeVideo()">
-                        </div>
                     </div>
                 </el-carousel-item>
                 <el-carousel-item
@@ -63,36 +63,36 @@
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
-              <swiper-slide class="carousel-item-index">
-                <div class="mobile-version" @click="go(i18n.home.HOME_FIRST_BANNER.LINK)" :style="{backgroundImage:i18n.home.HOME_FIRST_BANNER.MOBILE_IMG}"></div>
-              </swiper-slide>
-                <swiper-slide v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
-                    <div class="carousel-banner mobile-banner" :style="{backgroundImage: item.BANNER_MOBILE_IMG}" @click="go(item.BANNER_LINK)">
-                    </div>
-                </swiper-slide>
                 <swiper-slide>
                     <div class="carousel-video">
                         <video poster="/img/home/BannerVideo.png"
-                               loop
-                               muted
-                               width="100%"
-                               height="300px"
-                               ref="video"
-                               @click="playVideo">
-                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E6%AC%A7%E6%8B%89MG%E5%8A%A8%E7%94%BB_1080P_TS.mp4"  type="video/mp4">
+                                loop
+                                muted
+                                width="100%"
+                                height="300px"
+                                ref="video"
+                                @click="playVideo">
+                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler_Newyear_MG%2B_1920x1080_Mob.mp4?versionId=null"  type="video/mp4">
                         </video>
                         <div class="mobile-btn" v-show="mobilePlayBtnDisplay" @click="playVideo"></div>
                     </div>
                 </swiper-slide>
-                <swiper-slide
-                        class="carousel-item-index"
-                        v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
-                        :key="index">
-                    <a @click="go(item.LINK)">
-                        <h3>{{ item.TITLE }}</h3>
-                        <img v-lazy="item.IMG">
-                    </a>
+                <swiper-slide class="carousel-item-index">
+                    <div class="mobile-version" @click="go(i18n.home.HOME_FIRST_BANNER.LINK)" :style="{backgroundImage:i18n.home.HOME_FIRST_BANNER.MOBILE_IMG}"></div>
                 </swiper-slide>
+                    <swiper-slide v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
+                        <div class="carousel-banner mobile-banner" :style="{backgroundImage: item.BANNER_MOBILE_IMG}" @click="go(item.BANNER_LINK)">
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide
+                            class="carousel-item-index"
+                            v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
+                            :key="index">
+                        <a @click="go(item.LINK)">
+                            <h3>{{ item.TITLE }}</h3>
+                            <img v-lazy="item.IMG">
+                        </a>
+                    </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
                 <li v-for="item in bannerAmount" :class="{'mobile-pagination-active': mobilePagenationIndex===item}"></li>
