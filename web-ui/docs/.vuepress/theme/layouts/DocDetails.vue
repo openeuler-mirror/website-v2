@@ -323,7 +323,7 @@ export default {
     white-space: normal;
     line-height: 20px;
     &:last-of-type{
-       width: 100%;
+       width: 94%;
     }
 }
 .el-tree{
@@ -364,6 +364,9 @@ export default {
     span {
       font-size: 16px;
     }
+  }
+  .el-tree-node {
+    padding-top: 10px;
   }
   .el-tree--highlight-current
     .el-tree-node.is-current
