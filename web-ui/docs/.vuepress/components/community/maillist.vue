@@ -279,7 +279,7 @@ export default {
             this.form.list_id = userID;
         },
         getUserInfo() {
-            let reg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            let reg = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
             if (!reg.test(this.form.subscriber)){
                 this.$message.error(
                     this.i18n.community.MAILING_LIST.MAIL_ERROR
