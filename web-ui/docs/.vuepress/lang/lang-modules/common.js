@@ -148,8 +148,7 @@ module.exports = {
                     URL: '/other/legal/'
                 }
             ],
-            QR_CODE: '扫码关注公众号',
-            NEWYEAR_IMG: '/img/common/newyear-zh.png'
+            QR_CODE: '扫码关注公众号'
         },
         BUILDING:{
             BUILDING:'建设中',
@@ -301,8 +300,7 @@ module.exports = {
                     URL: '/other/privacy/'
                 }
             ],
-            QR_CODE: 'WeChat Subscription',
-            NEWYEAR_IMG: '/img/common/newyear-en.png'
+            QR_CODE: 'WeChat Subscription'
         },
         BUILDING:{
             BUILDING:'Building',

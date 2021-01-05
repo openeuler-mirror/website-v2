@@ -24,7 +24,7 @@
             </div>
         </div>
         <img v-if="newYearDisplay" class="newyear-close" @click="newYearDisplay = false" src="/img/common/newyear-img-close.png" alt="">
-        <img v-if="newYearDisplay" class="newyear-img" @click="openNewyearPage" :src="i18n.common.FOOTER.NEWYEAR_IMG" />
+        <img v-if="newYearDisplay" class="newyear-img" @click="openNewyearPage" src="/img/common/newyear-zh.png" />
     </div>
 </template>
 
