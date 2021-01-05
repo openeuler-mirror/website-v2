@@ -157,7 +157,7 @@ Cilium 以eBPF作为其技术基础，为容器场景带来高性能、灵活、
 
 3. bpftool加载elf文件（参考代码struct_ops.c）
 
-   ~ bpftool struct_ops register <elf>
+   ~ bpftool struct_ops register \<elf\>
 
 价值：TCP拥塞算法在CDN这类场景存在大量定制诉求。衍生下，比如file ops，也可以由BPF自定义访问策略。
 
