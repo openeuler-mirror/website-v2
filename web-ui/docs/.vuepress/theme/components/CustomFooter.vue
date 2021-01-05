@@ -60,7 +60,7 @@ export default {
     background-color: #111;
     .newyear-img {
         position: fixed;
-        bottom: 260px;
+        bottom: 220px;
         left: 60px;
         width: 162px;
         height: 167px;
@@ -69,7 +69,7 @@ export default {
     }
     .newyear-close {
         position: fixed;
-        bottom: 410px;
+        bottom: 370px;
         left: 222px;
         width: 22px;
         z-index: 2;
