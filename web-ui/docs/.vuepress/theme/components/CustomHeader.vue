@@ -371,7 +371,7 @@ export default {
 }
 .nav-other li span {
     font-size: 16px;
-    font-family: FZLTXIHJW;
+    
     font-weight: normal;
     color: #000000;
     line-height: 16px;
@@ -505,7 +505,7 @@ export default {
                     a {
                         border: none;
                         font-size: 16px;
-                        font-family: FZLTHJW;
+                        
                         height: 26px;
                         line-height: 26px;
                         display: inline-block;
@@ -531,7 +531,7 @@ export default {
                             height: 26px;
                             line-height: 26px;
                             font-size: 14px;
-                            font-family: FZLTXIHJW;
+                            
                             color: rgba(0, 0, 0, 0.7);
                             margin: 6px 0;
                             &:last-child {
@@ -552,7 +552,7 @@ export default {
             .nav-menu {
                 height: 100%;
                 flex: 3;
-                font-family: FZLTHJW;
+                
                 color: #000;
                 font-size: 16px;
                 display: flex;
@@ -652,7 +652,7 @@ export default {
                 height: 100%;
                 font-size: 16px;
                 color: #000;
-                font-family: FZLTXIHJW;
+                
                 display: flex;
                 justify-content: flex-end;
                 @media screen and (max-width: 1000px) {

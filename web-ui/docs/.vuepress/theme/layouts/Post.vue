@@ -307,13 +307,13 @@ export default {
                     color: rgba(0, 0, 0, 0.5);
                     font-size: 14px;
                     line-height: 24px;
-                    font-family: HuaweiSans-Bold;
+                    
                 }
                 .date-count {
                     color: rgba(0, 0, 0, 0.5);
                     font-size: 12px;
                     line-height: 16px;
-                    font-family: FZLTXIHJW;
+                    
                     .date {
                         margin-right: 16px;
                     }

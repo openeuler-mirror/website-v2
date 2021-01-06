@@ -259,6 +259,7 @@ export default {
 	}
 	.meetUps-time-mobile {
 		display: inline-block;
+		margin-top: 10px;
 		p {
 		display: inline-block;
 			margin-right: 17px;

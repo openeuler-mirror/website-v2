@@ -37,7 +37,7 @@ export default {
     box-shadow: 0px 6px 30px 0px rgba(253, 201, 110, 0.25);
 }
 .en-font {
-    font-family: Roboto-Regular !important;
+    
 }
 .round{
     background: #FFFFFF;
@@ -55,7 +55,7 @@ export default {
         height: 49px;
     }
     p{
-        font-family: FZLTHJW;
+        
         font-weight: normal;
         margin-top: 4px;
         text-align: center;
@@ -86,7 +86,7 @@ export default {
             height: 28px;
         }
         p{
-            font-family: FZLTHJW;
+            
             font-weight: normal;
             margin-top: 4px;
             text-align: center;

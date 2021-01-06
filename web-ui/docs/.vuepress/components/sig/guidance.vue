@@ -98,7 +98,7 @@ export default {
 }
 .en-step-box p{
     font-size: 14px !important;
-    font-family: Roboto-Regular, Roboto !important;
+    
     font-weight: 400 !important;
     color: rgba(0, 0, 0, 0.5) !important;
     line-height: 20px !important;
@@ -160,7 +160,7 @@ h3 {
 }
 .step-left-box .en-desc,.step-right-box .en-desc{
     font-size: 16px !important;
-    font-family: Roboto-Condensed, Roboto !important;
+    
     font-weight: normal !important;
     color: #002FA7 !important;
     line-height: 26px !important;
@@ -191,7 +191,7 @@ h3 {
 .step-right-num span {
     color: #fff;
     font-size: 20px;
-    font-family: FZLTHJW;
+    
 }
 .step-line {
     width: 107px;
@@ -251,12 +251,12 @@ h3 {
         margin: 0 auto 20px auto;
     }
     .step-top .en-font {
-        font-family: Roboto-BoldCondensed !important;
+        
     }
     .step-top span {
         font-size: 17px;
         color: #000000;
-        font-family: FZLTXIHJW;
+        
         font-weight: bold;
     }
     .step-H5 p {
@@ -265,7 +265,7 @@ h3 {
         line-height: 24px;
         margin: 10px 20px;
         text-align: justify;
-        font-family: FZLTXIHJW;
+        
     }
     .inner-box {
         width: 315px;

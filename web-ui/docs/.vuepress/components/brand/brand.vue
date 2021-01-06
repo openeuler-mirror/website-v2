@@ -97,7 +97,7 @@ export default {
     width: 48px;
     height: 24px;
     font-size: 24px;
-    font-family: FZLTHJW--GB1-0, FZLTHJW--GB1;
+    
     font-weight: normal;
     color: rgba(0, 0, 0, 1);
     line-height: 24px;
@@ -105,7 +105,7 @@ export default {
   .brand-word {
     width: 1120px;
     font-size: 14px;
-    font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
+    
     font-weight: normal;
     color: rgba(0, 0, 0, 0.5);
     line-height: 32px;
@@ -113,7 +113,7 @@ export default {
     @media screen and (max-width: 1000px) {
       width: 315px;
       font-size: 14px;
-      font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
+      
       font-weight: normal;
       color: rgba(0, 0, 0, 0.5);
       line-height: 24px;
@@ -146,7 +146,7 @@ export default {
     width: 93px;
     height: 24px;
     font-size: 24px;
-    font-family: FZLTHJW--GB1-0, FZLTHJW--GB1;
+    
     font-weight: normal;
     color: rgba(0, 0, 0, 1);
     line-height: 24px;
@@ -166,7 +166,7 @@ export default {
       width: 315px;
       height: 26px;
       font-size: 16px;
-      font-family: FZLTHJW--GB1-0, FZLTHJW--GB1;
+      
       font-weight: normal;
       color: rgba(0, 0, 0, 1);
       line-height: 26px;
@@ -198,7 +198,7 @@ export default {
     height: 24px;
     text-align: center;
     font-size: 24px;
-    font-family: HuaweiSans;
+    
     color: rgba(0, 0, 0, 1);
     line-height: 24px;
     margin: 0 auto;

@@ -444,7 +444,7 @@ p,
 span,
 li,
 a {
-    font-family: FZLTHJW;
+    
 }
 div::after {
     content: "";
@@ -523,7 +523,7 @@ button {
     text-align: center;
     display: block;
     float: left;
-    font-family: FZLTCHJW;
+    
 }
 .calenderMain {
     position: relative;
@@ -550,7 +550,7 @@ button {
     display: block;
     font-size: 14px;
     text-align: center;
-    font-family: FZLTHJW;
+    
 }
 .calenderLeftTime span.active {
     color: #002FA7;

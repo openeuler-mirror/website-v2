@@ -76,14 +76,14 @@ export default {
             line-height: 24px;
             font-size: 24px;
             margin: 40px 0 20px;
-            font-family: FZLTHJW;
+            
             font-weight: normal;
         }
         .table-description{
             font-size: 14px;
             color: rgba(0,0,0,0.5);
             line-height: 24px;
-            font-family: FZLTXIHJW;
+            
             letter-spacing: 0.8px;
         }
         .table-box{
@@ -93,7 +93,7 @@ export default {
                 tr{
                     height: 60px;
                     font-size: 16px;
-                    font-family: FZLTHJW;
+                    
                     font-weight: normal;
                     color: #000000;
                     line-height: 16px;
@@ -116,7 +116,7 @@ export default {
                     display: flex;
                     height: 56px;
                     font-size: 14px;
-                    font-family: FZLTXIHJW;
+                    
                     font-weight: normal;
                     color: rgba(0, 0, 0, 0.5);
                     line-height: 16px;
@@ -137,9 +137,9 @@ export default {
         }
     }
     .en-table{
-        font-family: HuaweiSans-Medium;
+        
         .table-description{
-            font-family: Roboto-Regular;
+            
             font-weight: normal;
         }
         .table-box{
@@ -165,6 +165,9 @@ export default {
     }
 }
 @media (max-width: 1000px) {
+    .content .markdown p,.content .markdown a,.content .markdown ul li {
+        word-break: normal;
+    }
     .role-description{
         width: 100%;
         position: relative;
@@ -178,7 +181,7 @@ export default {
             }
             .table-description{
                 font-size: 14px;
-                font-family: FZLTXIHJW;
+                
                 font-weight: normal;
                 color: rgba(0, 0, 0, 0.5);
                 line-height: 24px;
@@ -193,7 +196,7 @@ export default {
                     width: 100%;
                     padding: 20px;
                     font-size: 12px;
-                    font-family: FZLTXIHJW;
+                    
                     font-weight: normal;
                     color: #000000;
                     line-height: 16px;

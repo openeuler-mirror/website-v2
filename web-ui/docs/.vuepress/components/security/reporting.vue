@@ -20,13 +20,20 @@ export default {
     }
 };
 </script>
+<style lang="less">
+ @media (max-width: 1000px) {
+    .content .markdown p,.content .markdown a,.content .markdown ul li{
+        word-break: normal;
+    }
+ }
+</style>
 <style lang="less" scoped>
 .report-content {
     width: 1200px;
     margin: 0 auto;
     @media (max-width: 1000px) {
         width: 100%;
-        padding: 0 15px;
+        padding: 0 15px;       
     }
     .report-banner {
         height: 600px;
@@ -41,7 +48,7 @@ export default {
         h3 {
             text-align: center;
             font-size: 24px;
-            font-family: FZLTHJW;
+            
             margin-bottom: 10px;
             height: 34px;
             line-height: 34px;

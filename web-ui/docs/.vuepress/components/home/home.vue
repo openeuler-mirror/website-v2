@@ -5,7 +5,7 @@
                 <el-carousel-item>
                     <div class="carousel-video">
                         <video poster="/img/home/BannerVideo.png" loop width="100%" height="500px" id="home-video">
-                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler_Newyear_MG%2B_1920x500_Web.mp4?versionId=null"  type="video/mp4">
+                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler_MG%2BAnimate_1920x500_0104.mp4?versionId=null"  type="video/mp4">
                         </video>
                         <playcontroll :ctrl-obj="videoCtrlParams" ref="playctrlEle" @playStatus="checkStatus"></playcontroll>
                         <div class="play-btn" v-if="!isNowPlay" @click="playHomeVideo()">
@@ -99,7 +99,7 @@
             </ul>
         </div>
         <div class="home-introduce">
-            <h1>{{ i18n.home.HOME_INTRODUCE.INTRO_TITLE }}</h1>
+            <h1></h1>
             <h3 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_INTRODUCE.INTRO_HEAD }}</h3>
             <p :class="$lang == 'en'?'en-p':''">{{ i18n.home.HOME_INTRODUCE.INTRO_DESCRIPTION }}</p>
             <div class="is-pc mapArea" v-if="!isShowH5">
@@ -108,11 +108,11 @@
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p :class="$lang == 'en'?'en-areabox-p':''">{{ item.TITLE }}</p>
                         <img v-lazy="item.IMG" alt="">
-                        <img v-lazy="item.GIF" alt="" :class="['is-hidden',$lang == 'en'?'en-areabox-gif':'']">
+                        <img :src="item.GIF" alt="" :class="['is-hidden',$lang == 'en'?'en-areabox-gif':'']">
                     </a>
                     <a class="down" v-if="(index === 3)" @click="go(item.LINK)" target="_blank">
                         <img v-lazy="item.IMG" alt="">
-                        <img v-lazy="item.GIF" alt="" class="is-hidden">
+                        <img :src="item.GIF" alt="" class="is-hidden">
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p :class="$lang == 'en'?'en-areabox-p':''">{{ item.TITLE }}</p>
                     </a>
@@ -120,7 +120,7 @@
                 <div class="area-box bottom in-pc" @click="clickDownload">
                     <a class="down">
                         <img v-lazy="'/img/home/step2.png'" alt="">
-                        <img v-lazy="'/img/home/step-move-2.gif'" alt="" class="is-hidden">
+                        <img :src="'/img/home/step-move-2.gif'" alt="" class="is-hidden">
                         <div class="box-icon">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.NAME }}</div>
                         <p :class="$lang == 'en'?'en-areabox-p':''">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.TITLE }}</p>
                     </a>
@@ -157,7 +157,7 @@
                     :key="index"
                     >
                         <div class="box-icon" @touchstart="go(item.LINK)">{{ item.NAME }}</div>
-                        <p @touchstart="go(item.LINK)">{{ item.TITLE }}</p>
+                        <p @touchstart="go(item.LINK)" :class="$lang === 'en'?'lang-en':''">{{ item.TITLE }}</p>
                         <img v-lazy="item.IMG" alt=""/>
                 </div>
                 <div :class="['snd-guidance','location',isShowCard?'is-show':'',$lang == 'en'?'en-snd-guidance':'']">
@@ -743,17 +743,17 @@
         }
     }
     .en-weight-family{ 
-        font-family: Roboto-Regular, Roboto !important;
+        
         font-weight: 400 !important;
     }
     .en-h3{
         line-height: 34px !important;
-        font-family: Roboto-Regular, Roboto !important;
+        
         font-weight: 400 !important;
         color: #000000 !important;
     }
     .en-p{
-        font-family: Roboto-Regular, Roboto !important;
+        
         font-weight: 400 !important;
         line-height: 32px !important;
     }
@@ -775,7 +775,7 @@
     .home p,
     .home span,
     .home a {
-        font-family: FZLTHJW;
+        
     }
     .home h3 {
         font-size: 30px;
@@ -803,7 +803,7 @@
         color: #000;
         text-align: left;
         line-height: 48px;
-        font-family: FZLTCHJW;
+        
         margin-top: 100px;
     }
     .home-carousel .el-carousel__item span {
@@ -906,7 +906,7 @@
             width: 120px;
             height: 36px;
             font-size: 18px;
-            font-family: FZLTXIHJW;
+            
             margin-top: 60px;
             color: #ffffff;
             line-height: 24px;
@@ -919,7 +919,7 @@
         }
         .en-version{
             width: 120px;
-            font-family: HuaweiSans;
+            
         }
     }
     .carousel-item .card-summer span {
@@ -966,13 +966,13 @@
                 text-align: left;
                 &:first-of-type{
                     font-size: 45px;
-                    font-family: HuaweiSansMedium;
+                    
                     color: #1E1E1E;
                     line-height: 61px;
                 }
                 &:last-of-type{
                     font-size: 32px;
-                    font-family: FZLTCHJW;
+                    
                     font-weight: normal;
                     color: #1E1E1E;
                     line-height: 39px;
@@ -985,7 +985,7 @@
             margin-top: 57px;
             p{
                 text-align: left;
-                font-family: FZLTCHJW;
+                
                 font-weight: normal;
                 color: #1E1E1E;
                 &:first-of-type{
@@ -1131,14 +1131,15 @@
         display: block;
     }
     .home-introduce h1 {
-        text-align: center;
-        font-size: 40px;
-        color: #002fa7;
+        width: 771px;
+        height: 40px;
+        background-image: url('/img/home/pc-h1.png');
+        background-size: contain;
         margin-bottom: 40px;
-        font-family: Roboto-BoldCondensed;
+        margin: 0 auto 40px auto;
     }
     .home-introduce .en-p{
-        font-family: Roboto-Regular, Roboto;
+        
         font-weight: 400;
     }
     .home-introduce .en-areabox-down{
@@ -1147,7 +1148,7 @@
     }
     .home-introduce p {
         max-width: 576px;
-        font-family: FZLTXIHJW;
+        
     }
     .home-introduce .mapArea {
         display: inline-block;
@@ -1199,16 +1200,15 @@
         border-radius: 50%;
     }
     .area-box .en-areabox-p{
-        font-family: Roboto-Condensed, Roboto;
         color: #002FA7;
         line-height: 26px;
-        max-width: 138px;
+        max-width: 181px;
     }
     .area-box p {
         display: inline-block;
         font-size: 16px;
         color: #002fa7;
-        margin-left: 10px;
+        margin-left: 8px;
     }
     .area-box img {
         width: 150px;
@@ -1259,7 +1259,7 @@
     }
     .snd-guidance .en-link-title{
         font-size: 12px !important;
-        font-family: Roboto-Regular, Roboto !important;
+        
         font-weight: 400 !important;
         color: #000000 !important;
         line-height: 18px !important;
@@ -1286,7 +1286,7 @@
     .guide-way {
         margin-right: 20px;
         text-align: center;
-        font-family: FZLTXIHJW;
+        
     }
     .guide-way:last-child {
         margin: 0;
@@ -1305,7 +1305,7 @@
         margin: 0 10px 0 0;
         span{
             font-size: 10px !important;
-            font-family: Roboto-Condensed, Roboto !important;
+            
             font-weight: normal !important;
             color: #000000 !important;
             line-height: 12px !important;
@@ -1340,7 +1340,7 @@
         color: #fff;
     }
     .en-h3-home .en-h3-home{
-        font-family: Roboto-Regular, Roboto !important;
+        
         font-weight: 400 !important;
         color: #FFFFFF !important;
         line-height: 34px !important;
@@ -1491,7 +1491,7 @@
         line-height: 16px;
         color: #002fa7;
         text-decoration: none;
-        font-family: PingFangSC-Regular;
+        
         cursor: pointer;
     }
     .room-title {
@@ -1541,7 +1541,7 @@
         margin: 60px auto 0;
     }
     .home-developer .en-developer-p{ 
-        font-family: Roboto-Regular, Roboto !important;
+        
         font-weight: 400 !important;
         line-height: 20px !important;
     }
@@ -1578,7 +1578,7 @@
         font-size: 16px;
         margin: 20px 0 10px;
         text-transform: uppercase;
-        font-family: HuaweiSans-Medium;
+        
     }
     .dev-dever .dever-rank {
         font-size: 16px;
@@ -1587,7 +1587,7 @@
     }
     .dev-dever .en-rank {
         font-size: 14px !important;
-        font-family: HuaweiSans !important;
+        
         line-height: 20px !important;
     }
     .dev-link {
@@ -1651,7 +1651,7 @@
         margin: 0 auto;
     }
     .source-contain .en-source-title{
-        font-family: Roboto-Regular, Roboto;
+        
         font-weight: 400;
         color: #000000;
         line-height: 32px;
@@ -1837,7 +1837,7 @@
         }
         .home-carousel .el-carousel__item h3 {
             font-size: 18px;
-            font-family: FZLTCHJW;
+            
             text-align: center;
             margin-top: 35px;
             margin-bottom: 0;
@@ -1876,8 +1876,9 @@
             width: 100%;
         }
         .home-introduce h1 {
-            font-size: 30px;
-            margin-bottom: 40px;
+            width: 306px;
+            height: 65px;
+            background-image: url('/img/home/mobile-h1.png');
         }
         .area-box .box-icon {
             display: inline-block;
@@ -1894,7 +1895,11 @@
             font-size: 16px;
             color: #002fa7;
             margin-left: 16px;
-            font-family: Roboto-Bold;
+        }
+        .area-box .lang-en {
+           display: block;
+           margin: 4px 0 0 25px;
+           font-weight: bold;
         }
         .area-box img {
             display: block;
@@ -2000,13 +2005,13 @@
         }
         .dev-dever .dever-name {
             font-size: 18px;
-            font-family: Huawei Sans Medium;
+            
             margin: 0;
         }
         .dev-dever .dever-rank {
             margin: 0;
             font-size: 14px;
-            font-family: Huawei Sans;
+            
         }
         .dev-dever:nth-child(-n+4) {
             display: inline-block;

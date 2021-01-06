@@ -1,5 +1,5 @@
 <template>
-  <div id="euler-app" :class="{'lang-en': $lang == 'en'}">
+  <div id="euler-app">
     <CustomHeader />
     <Content v-if="!isPost() && !isDocDetails()" class="content" />
     <Post v-if="isPost()" class="content" />
@@ -55,4 +55,14 @@ export default {
         min-height: calc(100vh - 70px - 328px);
     }
 }
+html[lang="en"] #euler-app {
+    font-family: Roboto !important;
+}
+html[lang="zh"] #euler-app {
+    font-family: FZLT !important;
+}
+html[lang="ru"] #euler-app {
+    font-family: Arial !important;
+}
+
 </style>

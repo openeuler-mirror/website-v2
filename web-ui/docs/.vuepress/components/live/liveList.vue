@@ -147,7 +147,6 @@ export default {
 }
 .word-common-css(@fontSize,@fontFamily,@fontWeight,@color,@lineHeight) {
     font-size: @fontSize;
-    font-family: @fontFamily;
     font-weight: @fontWeight;
     color: @color;
     line-height: @lineHeight;

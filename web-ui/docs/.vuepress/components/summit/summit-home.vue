@@ -446,10 +446,10 @@ export default {
 
 <style lang='less' scoped>
 .font-regular {
-    font-family: Roboto-Regular;
+    
 }
 .font-bold {
-    font-family: Roboto-BoldCondensed;
+    
 }
 .card-hover:hover {
     box-shadow: 0px 6px 30px 0px rgba(0, 47, 167, 0.2);
@@ -485,7 +485,7 @@ export default {
         h3{
             text-align: center;
             font-size: 24px;
-            font-family: FZLTHJW;
+            
             font-weight: normal;
             color: #000000;
             line-height: 34px;
@@ -498,7 +498,7 @@ export default {
 .summit-content .live-room {
     width: 1120px;
     margin: 0 auto ;
-    font-family: FZLTHJW;
+    
     #livePage {
         width: 1120px;
         height: 560px;
@@ -615,7 +615,7 @@ export default {
     right: 70px;
     z-index: 1000;
     display: block;
-    font-family: FZLTHJW;
+    
     .box-line {
         width: 70px;
         margin-left: -26px;
@@ -696,7 +696,7 @@ export default {
     }
 }
 .summit-content {
-    font-family: FZLTHJW;
+    
     .summit-message {
         width: 1120px;
         position: relative;
@@ -713,7 +713,7 @@ export default {
     width: 1120px;
     margin: 0 auto;
     font-size: 20px;
-    font-family: FZLTXIHJW;
+    
     font-weight: 200;
     color: rgba(0, 0, 0, 0.85);
     line-height: 40px;
@@ -729,7 +729,7 @@ export default {
     }
 }
 .summit-content .en-explain {
-    font-family: Roboto-Regular;
+    
     font-weight: 400;
     color: #000000;
     @media screen and (max-width: 1000px) {
@@ -744,7 +744,7 @@ export default {
             font-size: 22px;
         }
         /deep/ .el-radio-group span{   
-            font-family: FZLTXIHJW;  
+              
             font-size: 16px;
             line-height: 18px;
         }
@@ -856,18 +856,18 @@ export default {
                     font-size: 12px;
                     color: rgba(0, 0, 0, 0.5);
                     line-height: 20px;
-                    font-family: FZLTXIHJW;
+                    
                     margin: 20px 29px 0 0;
                 }
                 .agenda {
                     p {
-                        font-family: FZLTXIHJW;
+                        
                         color: #000000;
                         line-height: 20px;
                         font-size: 12px;
                         margin-bottom: 20px;
                         &:first-of-type {
-                            font-family: FZLTHJW;
+                            
                             width: 209px;
                         }
                         span {
@@ -1032,7 +1032,7 @@ export default {
             }
             p {
                 font-size: 16px;
-                font-family: FZLTHJW;
+                
                 color: #002FA7;
                 line-height: 16px;
                 margin-top: 20px;
@@ -1040,7 +1040,7 @@ export default {
                 text-align: center;
                 &:last-of-type {
                     font-size: 14px;
-                    font-family: PingFangSC-Regular, PingFang SC;
+                    
                     font-weight: 400;
                     color: #000000;
                     line-height: 20px;

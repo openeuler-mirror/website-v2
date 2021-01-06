@@ -182,7 +182,7 @@
     }
     .mail-guide .guidance .link-title{
         font-size: 14px;
-        font-family: FZLTHJW;
+        
         font-weight: normal;
         color: #000000;
         line-height: 18px;
@@ -207,7 +207,7 @@
     }
     .mail-guide .guidance .linkbox .linkList span{
         font-size: 12px;
-        font-family: FZLTXIHJW;
+        
         font-weight: normal;
         color: #000000;
         line-height: 12px;
@@ -220,6 +220,7 @@
     }
     .mail-guide:nth-child(1) .step {
         top: 30px;
+        text-align: left;
     }
     .mail-guide:nth-child(2) .step {
         top: 180px;

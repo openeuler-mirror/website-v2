@@ -82,7 +82,7 @@ export default {
         }
     }
     .footer-content {
-        font-family: FZLTXIHJW;
+        
         margin: 0 auto;
         height: 100%;
         width: 1120px;
@@ -106,7 +106,6 @@ export default {
             justify-content: center;
             align-items: baseline;
             font-size: 16px;
-            font-family: HuaweiSans-Light;
             .footer-mail {
                 color: #fff;
                 margin-top: 17px;

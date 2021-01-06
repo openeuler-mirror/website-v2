@@ -326,7 +326,7 @@ export default {
 .mail-table table {
     color: rgba(0, 0, 0, 0.85);
     font-size: 14px;
-    font-family: FZLTXIHJW;
+    
 }
 .mail-table .el-table td {
     border: none;
@@ -340,7 +340,7 @@ export default {
 .mail-table .el-table thead {
     font-size: 16px;
     color: #000;
-    font-family: FZLTHJW;
+    
 }
 .mail-table .el-table__row td p,
 .mail-table .el-table__row td p {
@@ -401,7 +401,7 @@ export default {
         width: 100%;
         color: rgba(0, 0, 0, 0.85);
         font-size: 14px;
-        font-family: FZLTHJW;
+        
     }
     .mail-table .el-table td {
         border: none;
@@ -415,7 +415,7 @@ export default {
     .mail-table .el-table thead {
         font-size: 16px;
         color: #000;
-        font-family: FZLTHJW;
+        
     }
     .mail-table .el-table__row td p,
     .mail-table .el-table__row td p {
@@ -454,12 +454,12 @@ export default {
 p {
     font-size: 16px;
     color: #000;
-    font-family: FZLTXIHJW;
+    
 }
 .lang-en {
     .mail-guide{
         p {
-            font-family: Roboto-Regular;
+            
         }
     }
 }
@@ -542,7 +542,7 @@ p {
 .step-right-num span {
     color: #fff;
     font-size: 20px;
-    font-family: FZLTHJW;
+    
 }
 .step-line {
     width: 107px;
@@ -584,7 +584,7 @@ p {
     display: block;
     color: #002FA7;
     margin-bottom: 10px;
-    font-family: Roboto-Condensed, Roboto;
+    
 }
 .mail-table.is-pc {
     width: 1200px;
@@ -647,7 +647,7 @@ p {
                     .color-blue {
                         color: #002fa7;
                         font-size: 12px;
-                        font-family: FZLTXIHJW;
+                        
                     }
                     li:nth-child(1) {
                         flex-shrink: 1;
@@ -724,11 +724,11 @@ p {
     .step-top span {
         font-size: 17px;
         color: #000000;
-        font-family: FZLTHJW;
+        
         font-weight: bold;
     }
     .step-top .en-font {
-        font-family: Roboto-BoldCondensed !important;
+        
     }
     .step-right-box,
     .step-left-box {
