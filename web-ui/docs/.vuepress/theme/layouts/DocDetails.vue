@@ -72,7 +72,7 @@
             </p>
         </div>
         <ul class="second-title-list">
-            <li v-for="(item,index) in secondTitleList" :key="index" :class="isIndex == index?'active':''"><a @click="isActive(index,item)">{{item.id}}</a></li>
+            <li v-for="(item,index) in secondTitleList" :key="index" :class="isIndex == index?'active':''"><a @click="isActive(index,item)">{{ secondTitleText[index] }}</a></li>
         </ul>
     </div>
   </div>
@@ -111,7 +111,8 @@ export default {
       isIndex:0,
       versionArr:[],
       showSelection:false,
-      timer:null
+      timer:null,
+      secondTitleText: []
     };
   },
   watch: {
@@ -248,10 +249,13 @@ export default {
     getSecondTitle(){
         this.timer = setInterval(()=>{
             this.secondTitleList = [];
+            this.secondTitleText = [];
             let getSecondTile = document.getElementsByTagName("h2");
             if(getSecondTile.length != 0 && this.secondTitleList.length == 0){
                 getSecondTile.forEach((item,index) => {
+                    item.id = item.id.replace(/-/g,' ');
                     this.secondTitleList.push(item);
+                    this.secondTitleText.push(item.innerText);
                     if(getSecondTile.length == this.secondTitleList.length){
                         clearInterval(this.timer);
                     }
@@ -265,7 +269,7 @@ export default {
     isActive(index,item){
         this.isIndex = index;
         let offsetTop = item.offsetTop;
-        document.documentElement.scrollTop = offsetTop;
+        document.documentElement.scrollTop = offsetTop - 60;  //减去固定的导航栏高度
     },
     changeVersion(item){
         this.menuData = [];
@@ -323,7 +327,7 @@ export default {
     white-space: normal;
     line-height: 20px;
     &:last-of-type{
-       width: 94%;
+       width: 90%;
     }
 }
 .el-tree{

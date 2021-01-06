@@ -223,7 +223,9 @@ acronym {
 .font-rthinItalic {
     font-family: Roboto-ThinItalic;
 }
-
+#hm_t_undefined {
+    display: none;
+}
 @font-face {
     font-family: 'icomoon';
     src:  url('../fonts/icomoon.eot?4mtq8t');
