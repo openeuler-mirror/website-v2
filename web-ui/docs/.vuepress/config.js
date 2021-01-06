@@ -24,7 +24,8 @@ module.exports = {
     },
     plugins: [
         ['@vuepress/search', false],
-        ['@vuepress/active-header-links', false]
+        ['@vuepress/active-header-links', false],
+        ['vuepress-plugin-code-copy', true]
     ],
     shouldPrefetch: () => {
         return false;

@@ -132,12 +132,17 @@ export default {
     commonBanner
   },
   created () {
-      let filterFn = (arr, key, item) => {
+      const filterFn = (arr, key, item) => {
             return arr.every((arrItem => {
                 if(item[key] && arrItem.VALUE !== item[key]){
                     return true;
                 }
             }))
+        }
+        const sortFn = (arr) => {
+            return arr.sort((a, b) => {
+                return Number(b.VALUE.replace(/\//g, '')) - Number(a.VALUE.replace(/\//g, ''));
+            })
         }
       this.i18n.download.DOWNLOAD_LIST.forEach(item => {
 
@@ -148,6 +153,7 @@ export default {
               this.downloadDateList.push({VALUE: item.PUBLISH_DATE});
           }
       })
+      sortFn(this.downloadDateList);
   },
   mounted () {
     this.list = this.i18n.download.DOWNLOAD_LIST;
