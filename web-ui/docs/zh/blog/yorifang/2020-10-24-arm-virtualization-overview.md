@@ -31,7 +31,7 @@ AArch64 64-bit执行状态：
 * 定义了4个Exception Level （EL0-EL3）
 * 支持64bit虚拟机地址(virtual address)
 * 定义了一些PSTATE eletems来存储PE的状态
-* 过后ELn缀来表示不同Exception Level下可以操作的系统寄存器
+* 过后ELn后缀来表示不同Exception Level下可以操作的系统寄存器
 
 AArch32 32-bit执行状态：
 
