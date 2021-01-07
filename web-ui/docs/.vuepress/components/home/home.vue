@@ -5,7 +5,7 @@
                 <el-carousel-item>
                     <div class="carousel-video">
                         <video poster="/img/home/BannerVideo.png" loop width="100%" height="500px" id="home-video">
-                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler_Newyear_MG%2B_1920x500_Web.mp4?versionId=null"  type="video/mp4">
+                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler_MG%2BAnimate_1920x500_0104.mp4?versionId=null"  type="video/mp4">
                         </video>
                         <playcontroll :ctrl-obj="videoCtrlParams" ref="playctrlEle" @playStatus="checkStatus"></playcontroll>
                         <div class="play-btn" v-if="!isNowPlay" @click="playHomeVideo()">
