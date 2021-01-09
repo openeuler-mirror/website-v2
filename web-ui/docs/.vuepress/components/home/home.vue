@@ -1898,8 +1898,8 @@
         }
         .area-box .lang-en {
            display: block;
-           margin: 4px 0 0 25px;
-           font-weight: bold;
+           margin: 4px 0 0 8px;
+           font-weight: bold !important;
         }
         .area-box img {
             display: block;
