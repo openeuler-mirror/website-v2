@@ -515,9 +515,7 @@ p {
 .step-right-box {
     margin-left: 40px;
 }
-.step-right-box.en-box1 {
-    height: 320px;
-}
+
 .step-left-box.en-box1 {
     height: 260px;
 }
@@ -693,10 +691,11 @@ p {
             > li:nth-child(odd) {
                 background-color: #f2f2f2;
             }
+
         }
     }
-    .step-right-box .inner-box.en-box1 {
-        height: 320px;
+    .is-h5>div:last-of-type .step-right .en-box1 {
+        height: 200px;
     }
     .step-left-box .inner-box.en-box1 {
         height: 260px;

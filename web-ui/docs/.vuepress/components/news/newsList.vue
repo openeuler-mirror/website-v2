@@ -244,6 +244,12 @@ export default {
   p {
     display: inline-block;
     margin-right: 51px;
+    &:first-of-type {
+      .mobile-middle-img {
+        display: inline-block;
+        margin-bottom: -2px;
+      }
+    }
   }
 }
 .news-time-mobile {
@@ -316,9 +322,19 @@ export default {
   }
   .news-time-mobile {
     display: inline-block;
+    margin-top: 10px;
     p {
       display: inline-block;
       margin-right: 17px;
+      &:last-of-type {
+        .news-date {
+          span {
+            span {
+              display: inline-block;
+            }
+          }
+        }
+      }
     }
   }
   .news-date {
