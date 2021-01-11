@@ -183,6 +183,10 @@ export default {
 	p {
 		display: inline-block;
 		margin-right: 51px;
+		.mobile-middle-img {
+			display: inline-block;
+			margin-bottom: -2px;
+		}
 	}
 }
 .meetUps-time-mobile {
@@ -259,6 +263,7 @@ export default {
 	}
 	.meetUps-time-mobile {
 		display: inline-block;
+		margin-top: 10px;
 		p {
 		display: inline-block;
 			margin-right: 17px;

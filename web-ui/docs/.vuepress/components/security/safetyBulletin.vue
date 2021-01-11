@@ -207,7 +207,7 @@ export default {
     }
     .el-pagination {
         color: #282b33;
-        font-family: FZLTHJW;
+        
     }
     .el-pagination__jump {
         color: #282b33;
@@ -218,7 +218,7 @@ export default {
     .el-form-item__label {
         color: #000;
         font-size: 18px;
-        font-family: FZLTXIHJW;
+        
     }
     .el-radio-button__orig-radio:checked + .el-radio-button__inner {
         color: #fff;
@@ -229,7 +229,7 @@ export default {
         color: rgba(0, 0, 0, 0.5);
         border-color: rgba(0, 0, 0, 0.5);
         font-size: 18px;
-        font-family: FZLTXIHJW;
+        
         padding: 6px 20px;
         @media (max-width: 1000px) {
             padding: 6px 13px;
@@ -245,7 +245,7 @@ export default {
     .el-form-item__label {
         line-height: 32px;
         font-size: 18px;
-        font-family: FZLTXIHJW;
+        
         @media (max-width: 1000px) {
             display: none !important;
         }
@@ -303,7 +303,7 @@ export default {
     .el-pagination__total {
         color: #282b33;
         font-size: 14px;
-        font-family: FZLTXIHJW;
+        
     }
 }
 .has-gutter .el-table_1_column_5 .cell{
@@ -343,7 +343,7 @@ export default {
         h3 {
             text-align: center;
             font-size: 24px;
-            font-family: FZLTHJW;
+            
             margin-bottom: 10px;
             height: 34px;
             line-height: 34px;
@@ -417,7 +417,7 @@ export default {
             width: 100%;
             margin-bottom: 60px;
             font-size: 12px;
-            font-family: FZLTXIHJW;
+            
             @media (max-width: 1000px) {
                 display: block;
             }

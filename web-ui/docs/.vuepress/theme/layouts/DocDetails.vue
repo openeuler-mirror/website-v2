@@ -429,7 +429,6 @@ export default {
         border-radius: 4px;
         border: 1px solid #002FA7;
         font-size: 14px;
-        font-family: FZLTXIHJW, FZLTXIHJW;
         font-weight: normal;
         color: #000000;
         line-height: 24px;
@@ -515,7 +514,7 @@ export default {
             a{
                 text-decoration: none;
                 font-size: 16px;
-                font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
+                
                 font-weight: normal;
                 color: rgba(0, 0, 0, 0.7);
                 line-height: 20px;

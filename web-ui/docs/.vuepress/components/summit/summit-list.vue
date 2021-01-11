@@ -181,7 +181,6 @@ export default {
 }
 .word-common-css(@fontSize,@fontFamily1,@fontFamily2,@fontWeight,@color,@lineHeight) {
     font-size: @fontSize;
-    font-family: @fontFamily1, @fontFamily2;
     font-weight: @fontWeight;
     color: @color;
     line-height: @lineHeight;
@@ -349,7 +348,7 @@ export default {
                         .mr(top,33px);
                         .wid-and-hei(168px,94px);
                         p {
-                            font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
+                            
                             font-weight: normal;
                             &:first-of-type {
                             font-size: 16px;
@@ -396,7 +395,7 @@ export default {
                         font-size: 14px;
                         line-height: 24px;
                         color: rgba(0, 0, 0, 0.5);
-                        font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
+                        
                         span{
                             .mr(left,0);
                         }
@@ -462,7 +461,7 @@ export default {
         width: 70px;
         height: 24px;
         font-size: 20px;
-        font-family: HuaweiSansMedium;
+        
         color: rgba(0, 0, 0, 1);
         line-height: 24px;
         display: inline-block;
@@ -543,7 +542,7 @@ export default {
                 }
                 &:nth-of-type(2) {
                 font-size: 16px;
-                font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
+                
                 line-height: 15px;
                 .mr(top,23px);
                 }
@@ -577,7 +576,7 @@ export default {
                 text-align: center;
                 .mr(top,7px);
                 &:first-of-type {
-                font-family: FZLTCHJW--GB1-0, FZLTCHJW--GB1;
+                
                 color: rgba(0, 0, 0, 0.5);
                 .mr(top,54px);
                 }
@@ -600,7 +599,7 @@ export default {
                 width: 60px;
                 height: 26px;
                 font-size: 16px;
-                font-family: FZLTHJW--GB1-0, FZLTHJW--GB1;
+                
                 font-weight: normal;
                 line-height: 26px;
                 display: block;
@@ -654,7 +653,7 @@ export default {
                 .wid-and-hei(107, 141px);
                 .back-shadow-radius(rgba(255,255,255,1),0px 3px 10px 0px rgba(0,0,0,0.2),4px);
                 p {
-                    font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
+                    
                     font-size: 10px;
                     line-height: 16px;
                     color: rgba(0, 0, 0, 1);

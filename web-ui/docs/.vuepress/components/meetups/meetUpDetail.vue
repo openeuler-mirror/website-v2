@@ -193,7 +193,7 @@ export default {
         background-image: url('/img/home/homeActive.gif');
         overflow: hidden;
         color: #fff;
-        font-family: FZLTHJW;
+        
         h3{
             font-size: 30px;
             text-align: center;
@@ -228,7 +228,7 @@ export default {
         &>p {
             text-align: center;
             font-size: 30px;
-            font-family: FZLTHJW;
+            
             color: #000000;
             line-height: 46px;
         }
@@ -247,7 +247,7 @@ export default {
             p {
                 text-align: right;
                 font-size: 20px;
-                font-family: FZLTHJW;
+                
                 color: #002FA7;
                 line-height: 54px;
                 text-shadow: 0px 6px 30px rgba(0, 0, 0, 0.1);
@@ -275,7 +275,7 @@ export default {
         font-size: 30px;
         color: #000000;
         margin-bottom: 50px;
-        font-family: FZLTHJW;
+        
         line-height: 46px;
     }
     .description{
@@ -335,7 +335,7 @@ export default {
             width: 370px;
             margin-left: -160px;
             p{
-                font-family: Roboto-Regular, Roboto;
+                
             }
         }
     }
@@ -350,7 +350,7 @@ export default {
         .en-box{
             width: 370px;
             p{
-                font-family: Roboto-Regular, Roboto;
+                
             }
         }
     }
@@ -375,10 +375,10 @@ export default {
     .step-right-num span {
         color: #fff;
         font-size: 18px;
-        font-family: Roboto-BoldCondensed;
+        
     }
     .mail-box .left-en,.mail-box .right-en{
-        font-family: Roboto-BoldCondensed, Roboto;
+        
     }
     .step-line {
         width: 100px;
@@ -464,7 +464,7 @@ export default {
                     }
                     p{
                         font-size: 16px;
-                        font-family: FZLTHJW;
+                        
                         color: #000000;
                         line-height: 24px;
                         margin-bottom: 12px;
@@ -508,7 +508,7 @@ export default {
         .en-address{
             width: 978px;
             p{
-                font-family: Roboto-Regular !important;
+                
             }
             .scan-qrcode{
                 margin-left: 70px;
@@ -524,14 +524,14 @@ export default {
         }
     }
     .font-regular{
-        font-family: Roboto-Regular !important;
+        
     }
     .font-bold{
         font-weight: bold !important;
-        font-family: Roboto-Bold !important;
+        
     }
     .font-condensed{
-        font-family: Roboto-BoldCondensed !important;
+        
     }
     @media screen and (max-width: 1000px) {
         .link-container{
@@ -555,7 +555,7 @@ export default {
                     text-align: center;
                     margin-top: 8px;
                     font-size: 17px;
-                    font-family: FZLTHJW;
+                    
                     color: #002FA7;
                     line-height: 46px;
                     text-shadow: 0px 6px 30px rgba(0, 0, 0, 0.1);
@@ -565,6 +565,8 @@ export default {
         .top-content{
             h3{
                 font-size: 20px;
+                max-width: 345px;
+                margin: 0 auto;
             }
             p{
                 font-size: 16px;
@@ -595,22 +597,22 @@ export default {
             text-align: center;
         }
         .step-H5 .step-en span{
-            font-family: Roboto-BoldCondensed !important;
+            
         }
         .step-num span {
             color: #000000;
             font-size: 17px;
-            font-family: FZLTXIHJW;
+            
         }
         .step-H5 .en-p-box{
             width: 256px;
             height: auto;
-            font-family: Roboto-Regular;
+            
         }
         .step-H5 p {
             font-size: 16px;
             width:100%;
-            height:40px;
+            padding: 0 20px;
             line-height: 40px;
             background:rgba(255,255,255,1);
             box-shadow:0px 3px 10px 0px rgba(0,0,0,0.1);

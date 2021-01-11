@@ -54,7 +54,7 @@ export default {
       top: 120px;
       font-size: 60px;
       line-height: 60px;
-      font-family: HuaweiSans-Medium;
+      
       color: rgba(0, 0, 0, 0.05);
     }
     .outside {
@@ -77,7 +77,7 @@ export default {
       font-size: 24px;
       line-height: 34px;
       text-align: center;
-      font-family: FZLTHJW;
+      
       margin-top: 40px;
     }
     img {

@@ -101,13 +101,13 @@ export default {
 .sig-detail .no-meeting {
     font-size: 16px;
     color: rgba(0, 0, 0, .5);
-    font-family: FZLTXIHJW;
+    
 }
 .sig-detail .breadcrumbs {
     margin-top: 28px;
     color: #002fa7;
     font-size: 20px;
-    font-family: FZLTHJW;
+    
     cursor: pointer;
 }
 .sig-detail .meetings {
@@ -126,14 +126,14 @@ export default {
     font-size: 36px;
     color: #000;
     line-height: 46px;
-    font-family: FZLTHJW;
+    
 }
 .sig-detail h2 {
     padding-top: 79px;
     font-size: 24px;
     color: #000;
     line-height: 24px;
-    font-family: FZLTHJW;
+    
 }
 .sig-detail .contact {
     margin-top: 20px;
@@ -170,7 +170,7 @@ export default {
     color: #005cc7;
     font-size: 16px;
     line-height: 1;
-    font-family: HuaweiSans-Medium;
+    
 }
 .sig-detail .developer-wrapper .dev-leader .dev-dever .dever-rank {
     text-align: center;
@@ -184,7 +184,7 @@ export default {
     }
     margin-top: 10px;
     font-size: 14px;
-    font-family: HuaweiSans;
+    
     line-height: 14px;
 }
 .sig-detail .developer-wrapper .dev-leader .dev-dever .dev-link {

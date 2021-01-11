@@ -262,18 +262,18 @@ export default {
   .el-form-item__label {
     font-size: 18px;
     color: #000;
-    font-family: FZLTXIHJW;
+    
   }
 
   .el-input__inner {
     font-size: 14px;
     color: #000;
-    font-family: FZLTXIHJW;
+    
   }
 
   .el-select-dropdown__item {
     color: #000;
-    font-family: FZLTXIHJW;
+    
   }
 
   .el-form-item {
@@ -320,7 +320,7 @@ export default {
     h3 {
       text-align: center;
       font-size: 24px;
-      font-family: FZLTHJW;
+      
       margin-bottom: 10px;
       height: 34px;
       line-height: 34px;
@@ -351,7 +351,7 @@ export default {
         display: inline-block;
         font-size: 14px;
         line-height: 14px;
-        font-family: FZLTXIHJW;
+        
         padding: 9px 16px;
         border: 1px solid #002fa7;
         border-radius: 32px 32px 32px 32px;
@@ -380,7 +380,7 @@ export default {
         border-radius: 8px;
         display: inline-block;
         padding: 15px 10px 26px 20px;
-        &:nth-of-type(5),&:nth-of-type(6),&:nth-of-type(7) {
+        &:nth-of-type(5),&:nth-of-type(6),&:nth-of-type(7),&:nth-of-type(8) {
           .url-list-wrapper { 
             .url-list {
               li {
@@ -401,7 +401,7 @@ export default {
         .title {
           font-size: 20px;
           margin-bottom: 16px;
-          font-family: HuaweiSansMedium;
+          
           @media screen and (max-width: 1000px) {
             text-align: center;
             font-size: 18px;
@@ -413,7 +413,7 @@ export default {
           width: 108px;
           height: 24px;
           font-size: 12px;
-          font-family: FZLTXIHJW;
+          
           font-weight: normal;
           color: rgba(255, 255, 255, 1);
           line-height: 22px;
@@ -452,7 +452,7 @@ export default {
         p {
           font-size: 14px;
           color: rgba(0, 0, 0, 0.5);
-          font-family: Roboto-Regular;
+          
           margin-bottom: 22px;
           line-height: 24px;
           height: 48px;
@@ -469,7 +469,7 @@ export default {
           a {
             text-decoration: none;
             color: #002fa7;
-            font-family: Roboto-Regular;
+            
           }
           .url-list {
             display: flex;
@@ -489,6 +489,7 @@ export default {
                 height: 16px;
                 vertical-align: middle;
                 margin-right: 2px;
+                margin-top: -2px;
                 @media screen and (max-width: 1000px) {
                   display: none;
                 }
@@ -525,7 +526,7 @@ export default {
         .title {
           font-size: 20px;
           margin-bottom: 16px;
-          font-family: HuaweiSansMedium;
+          
           @media screen and (max-width: 1000px) {
             text-align: center;
             font-size: 18px;
@@ -537,7 +538,7 @@ export default {
           width: 74px;
           height: 24px;
           font-size: 12px;
-          font-family: FZLTXIHJW;
+          
           font-weight: normal;
           color: rgba(255, 255, 255, 1);
           line-height: 23px;
@@ -562,7 +563,7 @@ export default {
         p {
           font-size: 14px;
           color: rgba(0, 0, 0, 0.5);
-          font-family: FZLTXIHJW;
+          
           margin-bottom: 22px;
           line-height: 24px;
           height: 48px;
@@ -581,7 +582,7 @@ export default {
           a {
             text-decoration: none;
             color: #002fa7;
-            font-family: FZLTXIHJW;
+            
           }
           .url-list {
               display: flex;
@@ -604,6 +605,7 @@ export default {
                 height: 16px;
                 vertical-align: middle;
                 margin-right: 10px;
+                margin-top: -2px;
                 @media screen and (max-width: 1000px) {
                   display: none;
                 }

@@ -125,7 +125,7 @@ export default {
         h3 {
             text-align: center;
             font-size: 24px;
-            font-family: FZLTHJW;
+            
             margin-bottom: 10px;
             height: 34px;
             line-height: 34px;
@@ -191,7 +191,7 @@ export default {
                 }
                 li {
                     margin-top: 26px;
-                    font-family: FZLTXIHJW;
+                    
                     font-size: 16px;
                     line-height: 20px;
                     @media (max-width: 1000px) {
@@ -204,6 +204,7 @@ export default {
                         height: 20px;
                         margin-right: 10px;
                         vertical-align: middle;
+                        margin-top: -4px;
                         @media (max-width: 1000px) {
                             display: none;
                         }
@@ -263,11 +264,11 @@ export default {
             h2 {
                 font-size: 30px;
                 line-height: 32px;
-                font-family: HuaweiSans-Medium;
+                
                 @media (max-width: 1000px) {
                     font-size: 18px;
                     line-height: 26px;
-                    font-family: HuaweiSans-Bold;
+                    
                     color: #002fa7;
                 }
             }

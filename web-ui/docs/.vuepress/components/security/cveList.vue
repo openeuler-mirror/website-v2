@@ -179,7 +179,7 @@ export default {
   }
   .el-pagination {
     color: #282b33;
-    font-family: FZLTHJW;
+    
     .el-pager {
       li {
         @media (max-width: 1000px) {
@@ -203,7 +203,7 @@ export default {
   .el-form-item__label {
     color: #000;
     font-size: 18px;
-    font-family: FZLTXIHJW;
+    
     @media (max-width: 1000px) {
       display: none !important;
     }
@@ -217,7 +217,7 @@ export default {
     color: rgba(0, 0, 0, 0.5);
     border-color: rgba(0, 0, 0, 0.5);
     font-size: 18px;
-    font-family: FZLTXIHJW;
+    
     padding: 6px 20px;
   }
   .el-radio-button__inner:hover {
@@ -282,7 +282,7 @@ export default {
   .el-pagination__total {
     color: #282b33;
     font-size: 14px;
-    font-family: FZLTXIHJW;
+    
   }
 }
 </style>
@@ -329,7 +329,7 @@ export default {
     h3 {
       text-align: center;
       font-size: 24px;
-      font-family: FZLTHJW;
+      
       margin-bottom: 10px;
       height: 34px;
       line-height: 34px;
@@ -386,7 +386,7 @@ export default {
       width: 100%;
       margin-bottom: 60px;
       font-size: 12px;
-      font-family: FZLTXIHJW;
+      
       @media (max-width: 1000px) {
         display: block;
       }

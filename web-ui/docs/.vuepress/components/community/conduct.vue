@@ -18,7 +18,13 @@
         }
     }
 </script>
-
+<style lang="less">
+@media screen and (max-width: 1000px) {
+    .content .markdown p,.content .markdown a,.content .markdown ul li {
+        word-break: normal;
+    }
+}
+</style>
 <style lang="less" scoped>
     .conduct-banner {
         width: 1200px;
@@ -40,7 +46,7 @@
             h3 {
                 text-align: center;
                 font-size: 24px;
-                font-family: FZLTHJW;
+                
                 margin-bottom: 10px;
                 height: 34px;
                 line-height: 34px;

@@ -181,7 +181,7 @@
         height: 62px;
         line-height: 62px;
         font-size: 20px;
-        font-family: FZLTHJW;
+        
         color: #000;
         border: 1px solid #7f7f7f;
         border-radius: 8px;
@@ -248,7 +248,7 @@
                 text-align: center;
                 font-size: 24px;
                 color: #000;
-                font-family: FZLTHJW;
+                
                 line-height: 34px;
                 margin-top: 40px;
             }
@@ -292,7 +292,7 @@
             margin-bottom: 80px;
             .tag-title ul li {
                 width: 72px;
-                font-family: FZLTXIHJW;
+                
                 padding-bottom: 18px;
                 cursor: pointer;
                 span {
@@ -332,7 +332,7 @@
     }
     .tag-title span {
         font-size: 16px;
-        font-family: FZLTXIHJW;
+        
         cursor: pointer;
     }
     .tag-title li {
@@ -350,7 +350,7 @@
     }
     .tag-left a {
         font-size: 20px;
-        font-family: FZLTHJW;
+        
         text-decoration: none;
         color: #000;
     }
@@ -359,7 +359,7 @@
     }
     .tag-left p {
         font-size: 14px;
-        font-family: FZLTXIHJW;
+        
         color: rgba(0, 0, 0, 0.5);
         line-height: 24px;
     }
@@ -384,12 +384,12 @@
     }
     h4 {
         font-size: 20px;
-        font-family: FZLTCHJW;
+        
         margin-bottom: 15px;
     }
     p {
         font-size: 14px;
-        font-family: FZLTXIHJW;
+        
         color: rgba(0, 0, 0, 0.5);
         line-height: 24px;
         margin: 10px 0 20px;
@@ -397,7 +397,7 @@
     .pkg-title {
         cursor: pointer;
         font-size: 14px;
-        font-family: FZLTXIHJW;
+        
         font-weight: normal;
         color: #002FA7;
         margin: 0;

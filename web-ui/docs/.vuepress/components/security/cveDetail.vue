@@ -240,7 +240,7 @@ export default {
     font-size: 20px;
     color: #002fa7;
     line-height: 20px;
-    font-family: FZLTHJW;
+    
     cursor: pointer;
     @media (max-width: 1000px) {
       display: none;
@@ -259,7 +259,7 @@ export default {
     }
     h2 {
       margin-bottom: 20px;
-      font-family: FZLTHJW;
+      
       font-size: 24px;
       font-weight: normal;
       @media (max-width: 1000px) {
@@ -273,7 +273,7 @@ export default {
       font-size: 14px;
       line-height: 32px;
       margin-bottom: 40px;
-      font-family: FZLTXIHJW;
+      
       @media (max-width: 1000px) {
         line-height: 24px;
         margin-bottom: 30px;

@@ -166,7 +166,7 @@ export default {
     }        
     .msg-detail {
         font-size: 14px;
-        font-family: FZLTHJW;
+        
         color: #000000;
         line-height: 26px;
         z-index: 20;
@@ -296,7 +296,7 @@ export default {
                         }
                         .section {
                             font-size: 20px;
-                            font-family: HuaweiSansMedium;
+                            
                             color: #000000;
                             line-height: 29px;
                             text-align: center;
@@ -319,7 +319,7 @@ export default {
                                 font-size: 18px;
                                 color: rgba(0, 0, 0, 0.85);
                                 line-height: 30px;
-                                font-family: FZLTXIHJW;
+                                
                                 margin: 30px;
                                 text-overflow: ellipsis;
                                 display: -webkit-box;
@@ -353,7 +353,7 @@ export default {
         }
         .sig-title {
             font-size: 20px;
-            font-family: FZLTCHJW;
+            
             font-weight: normal;
             color: rgba(0, 0, 0, 0.85);
             line-height: 30px;
@@ -368,7 +368,7 @@ export default {
                 margin-right: 75px;
                 color: rgba(0, 0, 0, 0.5);              
                 font-size: 18px;
-                font-family: Helvetica;
+                
                 line-height: 20px;
             }
         }
@@ -377,7 +377,7 @@ export default {
                 span {
                     display: inline-block;
                     font-size: 20px;
-                    font-family: FZLTHJW;
+                    
                     font-weight: normal;
                     color: #000000;
                     line-height: 20px;
@@ -397,7 +397,7 @@ export default {
             .detail {
                 font-size: 18px;
                 width: 938px;
-                font-family: PingFangSC-Regular;
+                
                 font-weight: 400;
                 color: rgba(0, 0, 0, 0.85);
                 line-height: 30px;
@@ -420,7 +420,7 @@ export default {
             .detail {
                 span {                  
                     font-size: 20px;
-                    font-family: FZLTHJW;
+                    
                     font-weight: normal;
                     color: #000000;
                     line-height: 20px;

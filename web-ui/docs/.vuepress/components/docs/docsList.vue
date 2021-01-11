@@ -32,7 +32,7 @@
                                     <p :title="item.name">{{ item.name }}</p>
                                 </div>
                             </div>
-                            <div :class="['step-left-num',targetLocale == '/en/'?'left-en':'']">
+                            <div :class="['step-left-num',$lang === 'en'?'step-en':'']">
                                 <span v-if="$lang === 'zh'">{{ items.title }}</span>
                                 <span v-else>{{ items.pctitle }}</span>
                             </div>
@@ -42,7 +42,7 @@
                     <div v-if="index % 2 !== 0" class="step-right">
                         <div class="mail-box">
                             <div class="step-line"></div>
-                            <div :class="['step-right-num',targetLocale == '/en/'?'right-en':'']">
+                            <div :class="['step-right-num',$lang === 'en'?'step-en':'']">
                                 <span v-if="$lang === 'zh'">{{ items.title }}</span>
                                 <span v-else>{{ items.pctitle }}</span>
                             </div>
@@ -132,19 +132,19 @@ export default {
     .el-form-item__label {
         font-size: 18px;
         color: #000;
-        font-family: FZLTXIHJW;
+        
     }
 
     .el-input__inner {
         font-size: 16px;
         height: 32px;
         color: #000;
-        font-family: FZLTXIHJW;
+        
     }
 
     .el-select-dropdown__item {
         color: #000;
-        font-family: FZLTXIHJW;
+        
     }
     .el-form-item__content {
         min-width: 140px;
@@ -200,7 +200,7 @@ export default {
         width: 370px;
         margin-left: -160px;
         p{
-            font-family: Roboto-Regular, Roboto;
+            
         }
     }
 }
@@ -215,7 +215,7 @@ export default {
     .en-box{
         width: 370px;
         p{
-            font-family: Roboto-Regular, Roboto;
+            
         }
     }
 }
@@ -241,8 +241,8 @@ export default {
     color: #fff;
     font-size: 20px;
 }
-.mail-box .left-en,.mail-box .right-en{
-    font-family: Roboto-BoldCondensed, Roboto;
+.step-en span {
+    font-family: Roboto-BoldCondensed !important;
 }
 .step-line {
     width: 100px;
@@ -332,12 +332,12 @@ export default {
         text-align: center;
     }
     .step-H5 .step-en span{
-        font-family: Roboto-BoldCondensed !important;
+        
     }
     .step-H5 div span {
         color: #000000;
         font-size: 17px;
-        font-family: FZLTXIHJW;
+        
         display: block;
         text-align: center;
         margin: 0 auto;
@@ -345,15 +345,13 @@ export default {
     }
     .step-H5 .en-p-box{
         width: 256px;
-        font-family: Roboto-Regular, Roboto;
+        
     }
     .step-H5 p {
         font-size: 16px;
         width:200px;
-        height:40px;
         line-height: 40px;
         color: #002FA7;
-        font-family: FZLTXIHJW;
         background:rgba(255,255,255,1);
         box-shadow:0px 3px 10px 0px rgba(0,0,0,0.1);
         border-radius:8px;
@@ -375,12 +373,12 @@ export default {
         .el-input__inner {
             font-size: 14px;
             color: #000;
-            font-family: FZLTXIHJW;
+            
         }
 
         .el-select-dropdown__item {
             color: #000;
-            font-family: FZLTXIHJW;
+            
         }
 
         .el-form-item {

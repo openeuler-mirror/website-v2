@@ -363,19 +363,19 @@ export default {
     .el-form-item__label {
         font-size: 18px;
         color: #000;
-        font-family: FZLTXIHJW;
+        
     }
 
     .el-input__inner {
         font-size: 16px;
         height: 32px;
         color: #000;
-        font-family: FZLTXIHJW;
+        
     }
 
     .el-select-dropdown__item {
         color: #000;
-        font-family: FZLTXIHJW;
+        
     }
 
     .el-form-item {
@@ -392,7 +392,7 @@ export default {
     font-weight: 400;
     color: #002fa7;
     margin-left: 13px;
-    font-family: PingFangSC-Regular, PingFang SC;
+    
 }
 .blog-item {
     height: 335px;
@@ -427,7 +427,7 @@ export default {
 .blog-author {
     font-size: 14px;
     font-weight: bold;
-    font-family:HuaweiSans-Bold,HuaweiSans;
+    
 }
 .blog-date {
     font-size: 12px;
@@ -477,7 +477,7 @@ export default {
             .title {
                 font-size: 16px;
                 line-height: 26px;
-                font-family: FZLTHJW;
+                
             }
             .user-info {
                 height: 65px;
@@ -495,13 +495,13 @@ export default {
                         color: rgba(0, 0, 0, 0.5);
                         font-size: 14px;
                         line-height: 24px;
-                        font-family: HuaweiSans-Bold;
+                        
                     }
                     .date-count {
                         color: rgba(0, 0, 0, 0.5);
                         font-size: 12px;
                         line-height: 16px;
-                        font-family: FZLTXIHJW;
+                        
                         .date {
                             margin-right: 16px;
                         }
@@ -512,7 +512,7 @@ export default {
                 color: rgba(0, 0, 0, 0.5);
                 font-size: 14px;
                 line-height: 24px;
-                font-family: FZLTXIHJW;
+                
                 text-align: justify;
                 margin-bottom: 10px;
             }
@@ -526,7 +526,7 @@ export default {
             .tag {
                 font-size: 14px;
                 line-height: 24px;
-                font-family: FZLTXIHJW;
+                
                 color: rgba(0, 0, 0, 0.5);
                 .tag-name {
                     color: #002fa7;
@@ -613,11 +613,11 @@ export default {
         .el-input__inner {
             font-size: 14px;
             color: #000;
-            font-family: FZLTXIHJW;
+            
         }
         .el-select-dropdown__item {
             color: #000;
-            font-family: FZLTXIHJW;
+            
         }
         .el-form-item {
             margin-right: 0px !important;
