@@ -385,7 +385,7 @@ export default {
             }
             .pc-select,
             .pc-search {
-                width: 140px;
+                width: 217px;
                 height: 32px;
                 @media (max-width: 1000px) {
                     display: none;
