@@ -8,7 +8,7 @@
         ></common-banner>
 
         <div :class="['maillist', 'is-pc', $lang === 'en' ? 'en' : '']" v-fade v-if="!isShowH5">
-            <div :class="['maillist-divider-mail', 'is-pc', $lang === 'en' ? 'en' : '']">
+            <div :class="['maillist-divider-mail', 'is-pc']">
                 <div class="maillist-icon-comm"></div>
             </div>
             <div
@@ -474,7 +474,7 @@ p {
 .maillist-divider-mail {
     width: 2px;
     left: 50%;
-    height: 605px;
+    height: 620px;
     background-image: linear-gradient(
         to top,
         #002fa7 0%,
@@ -484,9 +484,6 @@ p {
     background-size: 2px 11px;
     background-repeat: repeat-y;
     position: absolute;
-}
-.maillist-divider-mail.en {
-    height: 672px;
 }
 .maillist-icon-comm {
     width: 0;
@@ -559,7 +556,7 @@ p {
 }
 .mail-box {
     padding: 0;
-    height: 200px;
+    height: 202px;
 }
 .mail-box p {
     margin: 0 20px;

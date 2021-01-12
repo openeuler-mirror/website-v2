@@ -334,9 +334,6 @@ export default {
         .en-box{
             width: 370px;
             margin-left: -160px;
-            p{
-                
-            }
         }
     }
     .step-right-box {
@@ -349,9 +346,6 @@ export default {
         }
         .en-box{
             width: 370px;
-            p{
-                
-            }
         }
     }
     .step-left {
@@ -374,11 +368,7 @@ export default {
     .step-left-num span,
     .step-right-num span {
         color: #fff;
-        font-size: 18px;
-        
-    }
-    .mail-box .left-en,.mail-box .right-en{
-        
+        font-size: 16px;
     }
     .step-line {
         width: 100px;
@@ -507,9 +497,6 @@ export default {
         }
         .en-address{
             width: 978px;
-            p{
-                
-            }
             .scan-qrcode{
                 margin-left: 70px;
             }
@@ -523,15 +510,8 @@ export default {
             z-index: -1;
         }
     }
-    .font-regular{
-        
-    }
     .font-bold{
-        font-weight: bold !important;
-        
-    }
-    .font-condensed{
-        
+        font-weight: bold !important;  
     }
     @media screen and (max-width: 1000px) {
         .link-container{
@@ -591,13 +571,10 @@ export default {
             padding: 0 30px;
         }
         .step-H5 {
-            margin: 30px auto;
+            margin: 40px auto 0 auto;
         }
         .step-left-H5{
             text-align: center;
-        }
-        .step-H5 .step-en span{
-            
         }
         .step-num span {
             color: #000000;
