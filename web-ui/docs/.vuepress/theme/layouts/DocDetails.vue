@@ -407,7 +407,7 @@ export default {
   border-bottom: 2px solid #002fa7;
   position: relative;
     span {
-        font-size: 24px;
+        font-size: 22px;
         color: rgba(0, 0, 0, 1);
         line-height: 24px;
     }

@@ -486,7 +486,7 @@ p {
     position: absolute;
 }
 .maillist-divider-mail.en {
-    height: 672px;
+    height: 620px;
 }
 .maillist-icon-comm {
     width: 0;
@@ -559,7 +559,7 @@ p {
 }
 .mail-box {
     padding: 0;
-    height: 200px;
+    height: 202px;
 }
 .mail-box p {
     margin: 0 20px;
