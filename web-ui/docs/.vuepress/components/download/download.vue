@@ -47,7 +47,7 @@
       </ul>
       <ul :class="lang ==='zh' ? 'download-list' : 'download-list-en'">
         <li class="download-item" v-for="(item, index) in downloadList" :key="index">
-          <h3 class="title">{{ item.NAME }}</h3>
+          <h3 class="title" :title="item.NAME">{{ item.NAME }}</h3>
           <el-button
             size="medium"
             class="download-btn"
@@ -401,7 +401,11 @@ export default {
         .title {
           font-size: 20px;
           margin-bottom: 16px;
-          
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
           @media screen and (max-width: 1000px) {
             text-align: center;
             font-size: 18px;
@@ -526,7 +530,11 @@ export default {
         .title {
           font-size: 20px;
           margin-bottom: 16px;
-          
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
           @media screen and (max-width: 1000px) {
             text-align: center;
             font-size: 18px;

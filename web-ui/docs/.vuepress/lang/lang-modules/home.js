@@ -521,7 +521,7 @@ module.exports = {
                 LEFT_IMG_LINK: 'https://eulixos.com/#/download',
                 LEFT_IMG_PC: '/img/home/link/iscas.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-iscas.png',
-                RIGHT_IMG_LINK: 'http://download.turbolinux.com.cn:8011/',
+                RIGHT_IMG_LINK: 'https://www.turbolinux.com.cn/',
                 RIGHT_IMG_PC: '/img/home/link/turbo.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-turbo.png'
             },
@@ -529,7 +529,7 @@ module.exports = {
                 LEFT_IMG_LINK: 'http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso',
                 LEFT_IMG_PC: '/img/home/link/cetc.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-cetc.png',
-                RIGHT_IMG_LINK: 'http://download.hopeedge.com/ISO/HopeEdge-1.0-aarch64-dvd.iso',
+                RIGHT_IMG_LINK: 'http://www.hopeinfra.com/intro/37.html',
                 RIGHT_IMG_PC: '/img/home/link/hopeEdge.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeEdge.png'
             },
@@ -537,7 +537,7 @@ module.exports = {
                 LEFT_IMG_LINK: 'http://www.kylinos.cn/',
                 LEFT_IMG_PC: '/img/home/link/qiling.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-qiling.png',
-                RIGHT_IMG_LINK: 'https://www.uniontech.com',
+                RIGHT_IMG_LINK: 'https://www.uniontech.com/next/product/server-system?edition=Euler',
                 RIGHT_IMG_PC: '/img/home/link/tongxin.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongxin.png'
             },
@@ -1071,7 +1071,7 @@ module.exports = {
                 LEFT_IMG_LINK: 'https://eulixos.com/#/download',
                 LEFT_IMG_PC: '/img/home/link/iscas.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-iscas.png',
-                RIGHT_IMG_LINK: 'http://download.turbolinux.com.cn:8011/',
+                RIGHT_IMG_LINK: 'https://www.turbolinux.com.cn/',
                 RIGHT_IMG_PC: '/img/home/link/turbo.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-turbo.png'
             },
@@ -1079,7 +1079,7 @@ module.exports = {
                 LEFT_IMG_LINK: 'http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso',
                 LEFT_IMG_PC: '/img/home/link/cetc.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-cetc.png',
-                RIGHT_IMG_LINK: 'http://download.hopeedge.com/ISO/HopeEdge-1.0-aarch64-dvd.iso',
+                RIGHT_IMG_LINK: 'http://www.hopeinfra.com/intro/37.html',
                 RIGHT_IMG_PC: '/img/home/link/hopeEdge.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeEdge.png'
             },
@@ -1087,7 +1087,7 @@ module.exports = {
                 LEFT_IMG_LINK: 'http://www.kylinos.cn/',
                 LEFT_IMG_PC: '/img/home/link/qiling.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-qiling.png',
-                RIGHT_IMG_LINK: 'https://www.uniontech.com',
+                RIGHT_IMG_LINK: 'https://www.uniontech.com/next/product/server-system?edition=Euler',
                 RIGHT_IMG_PC: '/img/home/link/tongxin.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongxin.png'
             },
