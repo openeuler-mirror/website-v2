@@ -2,8 +2,8 @@
 title: openEuler中的排队读写锁 
 date: 2021-01-05 
 tags:     
-    -kernel   
-    -排队读写锁   
+    - kernel   
+    - 排队读写锁   
 archives: 2021-01
 author: luoyuzhe
 summary: 介绍openEuler中排队读写锁，涉及自旋锁与原子操作等相关知识

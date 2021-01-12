@@ -2,8 +2,8 @@
 title: openEuler中的Read-Copy Update机制 
 date: 2021-01-05 
 tags:     
-    -kernel   
-    -Read-Copy Update Mechanism    
+    - kernel   
+    - Read-Copy Update Mechanism    
 archives: 2021-01
 author: luoyuzhe
 summary: 介绍openEuler中的RCU机制的基本原理、使用方法、相关的数据结构、静止状态监测机制和上报机制以及回调函数的处理机制等。
