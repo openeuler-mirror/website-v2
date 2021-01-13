@@ -34,6 +34,7 @@
                         <el-option :label="i18n.security.ALL" value="0"></el-option>
                         <el-option label="2019" :value="2019"></el-option>
                         <el-option label="2020" :value="2020"></el-option>
+                        <el-option label="2021" :value="2021"></el-option>
                     </el-select>
                     <el-select
                         class="mobile-select"
@@ -44,6 +45,7 @@
                         <el-option :label="i18n.security.ALL" value="0"></el-option>
                         <el-option label="2019" :value="2019"></el-option>
                         <el-option label="2020" :value="2020"></el-option>
+                        <el-option label="2021" :value="2021"></el-option>
                     </el-select>
                 </el-form-item>
             </el-form>
