@@ -1122,7 +1122,7 @@ module.exports = {
             }
         ],
         MORE: "Read More",
-        EXPAND: "展开全部",
-        RETRACT: "收起全部"
+        EXPAND: "Expand All",
+        RETRACT: "Collapse All"
     }
 };

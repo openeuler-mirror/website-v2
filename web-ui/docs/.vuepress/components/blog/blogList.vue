@@ -160,6 +160,15 @@ export default {
             this.CELECT_LABEL = this.i18n.community.BLOG.CELECT_LABEL;
             this.CELECT_FILE = this.i18n.community.BLOG.CELECT_FILE;
         }
+        }).catch(() => {
+            this.countList = [];
+            this.allBlogListData = this.blogList();
+            this.screenBlogListData = this.allBlogListData;
+            this.screenChange();
+            this.formData.tags = this.getTags();
+            this.formData.times = this.getTimes();
+            this.CELECT_LABEL = this.i18n.community.BLOG.CELECT_LABEL;
+            this.CELECT_FILE = this.i18n.community.BLOG.CELECT_FILE;
         })
     },
     methods: {
@@ -239,12 +248,25 @@ export default {
             });
             return tagsArrUniq;
         },
-        uniq(array) {
+        uniq(array,which) {
             var temp = [];
             for (var i = 0; i < array.length; i++) {
                 if (temp.indexOf(array[i]) == -1) {
                     temp.push(array[i]);
                 }
+            }
+            if(which === 'time') {
+                let timeRes = [];
+                temp.forEach((item) => {
+                    timeRes.push(item.slice(0,4) + item.slice(5))
+                });
+                timeRes.sort((a,b)=>{
+                    return  b-a;
+                });
+                timeRes.forEach((item,index) => {
+                    timeRes[index] = item.slice(0,4) + '-' + item.slice(4);
+                });
+                temp = timeRes;
             }
             return temp;
         },
@@ -261,7 +283,7 @@ export default {
                 }
                 timesArr.push(item.frontmatter.date.slice(0, 7));
             });
-            timesArr = this.uniq(timesArr);
+            timesArr = this.uniq(timesArr,'time');
             timesArr.forEach((item) => {
                 let obj = {
                     value: item,

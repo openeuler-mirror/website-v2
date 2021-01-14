@@ -155,40 +155,49 @@ module.exports = {
                 'openEuler Summit 2020 将聚焦于软硬件协同、云边端协同的技术趋势，万物互联的多算力场景，挖掘技术创新与社区生态的价值。开发者、用户、社区贡献者、软件爱好者在 openEuler Summit 上汇聚成海，连接行业上下游，让全产业链共享操作系统创新价值。'
             ],
             LIVETITLE: '峰会直播间',
+            PC_LIVEIMG: '/img/summit/home/zh-pc-liveroom.png',
+            MOBILE_LIVEIMG: '/img/summit/home/zh-mobile-liveroom.png',
             SUMMITLIVE: [
                 {
                     THEME: 'openEuler Summit 2020',
-                    TIME: '09:30-11:55',
+                    TIME: '09:30-11:55 ',
+                    OPTION: '09:30-11:55 openEuler Summit 2020',
                     LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7095?lang=zh&thirdId='
                 },
                 {
                     THEME: '操作系统',
-                    TIME: '14:00-17:20',
+                    TIME: '14:00-17:20 ',
+                    OPTION: '14:00-17:20 操作系统',
                     LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7096?lang=zh&thirdId='
                 },
                 {
                     THEME: '云和原生云',
-                    TIME: '14:00-16:55',
+                    TIME: '14:00-16:55 ',
+                    OPTION: '14:00-16:55 云和原生云',
                     LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7097?lang=zh&thirdId='
                 },
                 {
                     THEME: '虚拟化',
-                    TIME: '14:00-16:55',
+                    TIME: '14:00-16:55 ',
+                    OPTION: '14:00-16:55 虚拟化',
                     LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7098?lang=zh&thirdId='
                 },
                 {
                     THEME: '开源与基础建设',
-                    TIME: '14:00-16:55',
+                    TIME: '14:00-16:55 ',
+                    OPTION: '14:00-16:55 开源与基础建设',
                     LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7099?lang=zh&thirdId='
                 },
                 {
                     THEME: '安全与可信',
-                    TIME: '14:00-17:25',
+                    TIME: '14:00-17:25 ',
+                    OPTION: '14:00-17:25 安全与可信',
                     LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7100?lang=zh&thirdId='
                 },
                 {
                     THEME: '基础软件',
-                    TIME: '14:00-17:25',
+                    TIME: '14:00-17:25 ',
+                    OPTION: '14:00-17:25 基础软件',
                     LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7101?lang=zh&thirdId='
                 }
             ],
@@ -1506,10 +1515,57 @@ module.exports = {
         },
         SUMMIT: {
             SUMMIT: 'Summit',
-            NAV_LIST: ['Agenda','Speakers','Partners','Review'],
+            NAV_LIST: ['Live Broadcast','Agenda','Speakers','Partners','Review'],
             SUMMITCONTENT: [
                 'The openEuler Summit 2020 will be held at Hyatt Regency Beijing Wangjing from December 24 to 25 in Beijing, China. The second summit this year, the event will dive deep into openEuler, the open source operating system of tomorrow and how it exceeds conventional technologies thanks to community participation. This openEuler event is an opportunity for developers to exchange the latest OS trends with like-minded individuals.',
                 'The upcoming summit will focus on the collaboration across software-hardware and cloud-edge-device, as well as scenarios where all things are connected and diversified computing coexist. This event will discuss how to tap into technological innovation and build an open ecosystem. The summit provides an opportunity for streamlining the OS industry, and will consider how the openEuler OS can create shared value across the entire industry chain. The summit is only possible thanks to the participation of our developers, users, community contributors, and software enthusiasts, who have explored the latest OS developments. Together, we are on the cusp of the next breakthrough.'
+            ],
+            LIVETITLE: 'Live Broadcast',
+            PC_LIVEIMG: '/img/summit/home/en-pc-liveroom.png',
+            MOBILE_LIVEIMG: '/img/summit/home/en-mobile-liveroom.png',
+            SUMMITLIVE: [
+                {
+                    THEME: 'openEuler Summit 2020',
+                    TIME: '09:30-11:55',
+                    OPTION: '09:30-11:55 openEuler Summit 2020',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7095?lang=zh&thirdId='
+                },
+                {
+                    THEME: 'Operating System',
+                    TIME: '14:00-17:20',
+                    OPTION: '14:00-17:20 Operating System',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7096?lang=zh&thirdId='
+                },
+                {
+                    THEME: 'Cloud and Cloud Native',
+                    TIME: '14:00-16:55',
+                    OPTION: '14:00-16:55 Cloud and Cloud Native',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7097?lang=zh&thirdId='
+                },
+                {
+                    THEME: 'Virtualization',
+                    TIME: '14:00-16:55',
+                    OPTION: '14:00-16:55 Virtualization',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7098?lang=zh&thirdId='
+                },
+                {
+                    THEME: 'Open Source and Infrastructure',
+                    TIME: '14:00-16:55',
+                    OPTION: '14:00-16:55 Open Source and Infrastructure',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7099?lang=zh&thirdId='
+                },
+                {
+                    THEME: 'Security & Trustworthiness',
+                    TIME: '14:00-17:25',
+                    OPTION: '14:00-17:25 Security & Trustworthiness',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7100?lang=zh&thirdId='
+                },
+                {
+                    THEME: 'Basic Software',
+                    TIME: '14:00-17:25',
+                    OPTION: '14:00-17:25 Basic Software',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7101?lang=zh&thirdId='
+                }
             ],
             SUMMIT_HOME_DATA: {
                 AGENDA: {
