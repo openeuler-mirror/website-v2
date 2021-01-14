@@ -529,7 +529,7 @@ module.exports = {
                 LEFT_IMG_LINK: 'http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso',
                 LEFT_IMG_PC: '/img/home/link/cetc.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-cetc.png',
-                RIGHT_IMG_LINK: 'http://www.hopeinfra.com/intro/37.html',
+                RIGHT_IMG_LINK: 'http://www.hopeinfra.com/',
                 RIGHT_IMG_PC: '/img/home/link/hopeEdge.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeEdge.png'
             },
@@ -544,7 +544,10 @@ module.exports = {
             {
                 LEFT_IMG_LINK: 'http://www.kylinsec.com.cn/',
                 LEFT_IMG_PC: '/img/home/link/xinan.png',
-                LEFT_IMG_MOBILE: '/img/home/link/mobile-xinan.png'
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-xinan.png',
+                RIGHT_IMG_LINK: 'http://www.hopeinfra.com/intro/37.html',
+                RIGHT_IMG_PC: '/img/home/link/hopeStage.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeStage.png'
             }
         ],
         FRIENDSHIP_LINK_LIST:[
@@ -1079,7 +1082,7 @@ module.exports = {
                 LEFT_IMG_LINK: 'http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso',
                 LEFT_IMG_PC: '/img/home/link/cetc.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-cetc.png',
-                RIGHT_IMG_LINK: 'http://www.hopeinfra.com/intro/37.html',
+                RIGHT_IMG_LINK: 'http://www.hopeinfra.com/',
                 RIGHT_IMG_PC: '/img/home/link/hopeEdge.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeEdge.png'
             },
@@ -1094,7 +1097,10 @@ module.exports = {
             {
                 LEFT_IMG_LINK: 'http://www.kylinos.cn/',
                 LEFT_IMG_PC: '/img/home/link/xinan.png',
-                LEFT_IMG_MOBILE: '/img/home/link/mobile-xinan.png'
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-xinan.png',
+                RIGHT_IMG_LINK: 'http://www.hopeinfra.com/intro/37.html',
+                RIGHT_IMG_PC: '/img/home/link/hopeStage.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeStage.png'
             }
         ],
         FRIENDSHIP_LINK_LIST:[
