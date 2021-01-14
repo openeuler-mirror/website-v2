@@ -878,14 +878,14 @@ module.exports = {
                     LIVETEACHER: '讲师: 夏丹妮',
                     LIVETIME: '时间: 9月17日 20:00（周四）',
                     PHOTOPATH: '/img/live/xiadanni.png',
-                    FORMERLYLINK: ''
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1At4y1e7mq'
                 },
                 {
                     LIVETITLE: 'iSula容器之安全容器',
                     LIVETEACHER: '讲师: 姜鹏飞',
                     LIVETIME: '时间: 9月15日 20:00（周二）',
                     PHOTOPATH: '/img/live/jiangpengfei.png',
-                    FORMERLYLINK: ''
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV14r4y1F7Dp'
                 },
                 {
                     LIVETITLE: 'iSula容器之系统容器',
@@ -906,7 +906,7 @@ module.exports = {
                     LIVETEACHER: '讲师: 刘昊',
                     LIVETIME: '时间: 9月3日 20:00（周四）',
                     PHOTOPATH: '/img/live/liuhao.png',
-                    FORMERLYLINK: ''
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1Mf4y1q7Ek'
                 },
                 {
                     LIVETITLE: '轻量级容器引擎iSulad之功能介绍及架构解析',
@@ -916,18 +916,18 @@ module.exports = {
                     FORMERLYLINK: 'https://www.bilibili.com/video/BV12y4y1C7Gr'
                 },
                 {
-                    LIVETITLE: '深入理解容器镜像构建工具',
+                    LIVETITLE: 'isula-build之架构介绍',
                     LIVETEACHER: '讲师: 刘泽坤',
                     LIVETIME: '时间: 8月25日 20:00（周二）',
                     PHOTOPATH: '/img/live/liuzekun.png',
-                    FORMERLYLINK: 'http://live.bilibili.com/22290444'
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1Gp4y1i7Rs'
                 },
                 {
-                    LIVETITLE: 'isula-build之安全特性',
+                    LIVETITLE: 'isula-build之源码剖析',
                     LIVETEACHER: '讲师: 李翔',
                     LIVETIME: '时间: 8月27日 20:00（周四）',
                     PHOTOPATH: '/img/live/lixiang.png',
-                    FORMERLYLINK: 'http://live.bilibili.com/22290444'
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1Ca4y177te'
                 },
                 {
                     LIVETITLE: '虚拟化技术介绍',
