@@ -28,18 +28,18 @@
                 <p :class="$lang === 'en'?'font-regular':''" v-for="(item,index) in i18n.interaction.SUMMIT.SUMMITCONTENT">{{ item }}</p>
             </div>
 
-            <div class="live-room" v-if="$lang === 'zh'">
+            <div class="live-room">
                 <div class="title">
-                    <img v-lazy="'/img/summit/home/pc-liveroom.png'" alt="" v-if="!isShowH5" />
-                    <img v-lazy="'/img/summit/home/mobile-liveroom.png'" alt="" v-else />
+                    <img v-lazy="i18n.interaction.SUMMIT.PC_LIVEIMG" alt="" v-if="!isShowH5" />
+                    <img v-lazy="i18n.interaction.SUMMIT.MOBILE_LIVEIMG" alt="" v-else />
                 </div>
-                <el-select v-model="nowValue" placeholder="请选择直播间" class="live-choose" v-if="isShowH5" @change="tabLiveRoom">
+                <el-select v-model="nowValue" class="live-choose" v-if="isShowH5" @change="tabLiveRoom">
                     <el-option
                     v-for="(item,index) in liveData"
                     :key="index"
-                    :label="item.name"
-                    :value="item.link">
-                    <span>{{ item.name }}</span>
+                    :label="item.OPTION"
+                    :value="item.LIVEID">
+                    <span>{{ item.OPTION }}</span>
                     </el-option>
                 </el-select>
                 <iframe id="livePage" allow="camera *;microphone *;" border="0" scrolling="no" :src="nowLiveSrc"></iframe>
@@ -231,36 +231,7 @@ export default {
             userName: '',
             nowLiveSrc: '',
             roomId: null,
-            liveData: [
-                {
-                    link: 'https://vhall.huawei.com/fe/embed/watch/7095?lang=zh&thirdId=',
-                    name: '09:30-11:55 openEuler Summit 2020'
-                },
-                {
-                    link: 'https://vhall.huawei.com/fe/embed/watch/7096?lang=zh&thirdId=',
-                    name: '14:00-17:20 操作系统'
-                },
-                {
-                    link: 'https://vhall.huawei.com/fe/embed/watch/7097?lang=zh&thirdId=',
-                    name: '14:00-16:55 云和原生云'
-                },
-                {
-                    link: 'https://vhall.huawei.com/fe/embed/watch/7098?lang=zh&thirdId=',
-                    name: '14:00-16:55 虚拟化'
-                },
-                {
-                    link: 'https://vhall.huawei.com/fe/embed/watch/7099?lang=zh&thirdId=',
-                    name: '14:00-16:55 开源与基础建设'
-                },
-                {
-                    link: 'https://vhall.huawei.com/fe/embed/watch/7100?lang=zh&thirdId=',
-                    name: '14:00-17:25 安全与可信'
-                },
-                {
-                    link: 'https://vhall.huawei.com/fe/embed/watch/7101?lang=zh&thirdId=',
-                    name: '14:00-17:25 基础软件'
-                },
-            ],
+            liveData: [],
             nowValue: ''
         }
     },
@@ -268,8 +239,6 @@ export default {
         let digit = Math.round(Math.random() * 10);
         digit > 3?digit:digit = 3;
         this.creatUserId(digit);
-        let liveId = this.$route.query.liveid;
-        this.showIframe(liveId);
     },
     mounted() {
         this.dataObj = this.i18n.interaction.SUMMIT.SUMMIT_HOME_DATA;
@@ -289,6 +258,9 @@ export default {
             this.mobilePadding = true;
         }
         window.addEventListener('scroll',this.scroTop);
+        this.liveData = this.i18n.interaction.SUMMIT.SUMMITLIVE;
+        let liveId = this.$route.query.liveid;
+        this.showIframe(liveId);
     },
     methods: {
         toReviewList () {
@@ -395,41 +367,41 @@ export default {
             if(id) {
                 switch(id) {
                     case '7096':
-                        this.nowLiveSrc = this.liveData[1]['link'] + this.userName;
-                        this.nowValue = this.liveData[1]['name'];
+                        this.nowLiveSrc = this.liveData[1]['LIVEID'] + this.userName;
+                        this.nowValue = this.liveData[1]['OPTION'];
                         this.roomId = 1;
                         break;
                     case '7097':
-                        this.nowLiveSrc = this.liveData[2]['link'] + this.userName;
-                        this.nowValue = this.liveData[2]['name'];
+                        this.nowLiveSrc = this.liveData[2]['LIVEID'] + this.userName;
+                        this.nowValue = this.liveData[2]['OPTION'];
                         this.roomId = 2;
                         break;
                     case '7098':
-                        this.nowLiveSrc = this.liveData[3]['link'] + this.userName;
-                        this.nowValue = this.liveData[3]['name'];
+                        this.nowLiveSrc = this.liveData[3]['LIVEID'] + this.userName;
+                        this.nowValue = this.liveData[3]['OPTION'];
                         this.roomId = 3;
                         break;
                     case '7099':
-                        this.nowLiveSrc = this.liveData[4]['link'] + this.userName;
-                        this.nowValue = this.liveData[4]['name'];
+                        this.nowLiveSrc = this.liveData[4]['LIVEID'] + this.userName;
+                        this.nowValue = this.liveData[4]['OPTION'];
                         this.roomId = 4;
                         break;
                     case '7100':
-                        this.nowLiveSrc = this.liveData[5]['link'] + this.userName;
-                        this.nowValue = this.liveData[5]['name'];
+                        this.nowLiveSrc = this.liveData[5]['LIVEID'] + this.userName;
+                        this.nowValue = this.liveData[5]['OPTION'];
                         this.roomId = 5;
                         break;
                     case '7101':
-                        this.nowLiveSrc = this.liveData[6]['link'] + this.userName;
-                        this.nowValue = this.liveData[6]['name'];
+                        this.nowLiveSrc = this.liveData[6]['LIVEID'] + this.userName;
+                        this.nowValue = this.liveData[6]['OPTION'];
                         this.roomId = 6;
                         break;
                     default:
                         break;
                 }
             }else {
-                this.nowLiveSrc = this.liveData[0]['link'] + this.userName;
-                this.nowValue = this.liveData[0]['name'];
+                this.nowLiveSrc = this.liveData[0]['LIVEID'] + this.userName;
+                this.nowValue = this.liveData[0]['OPTION'];
                 this.roomId = 0;
             }
         }
@@ -445,12 +417,6 @@ export default {
 </script>
 
 <style lang='less' scoped>
-.font-regular {
-    
-}
-.font-bold {
-    
-}
 .card-hover:hover {
     box-shadow: 0px 6px 30px 0px rgba(0, 47, 167, 0.2);
     cursor: pointer;
@@ -459,6 +425,16 @@ export default {
     @media screen and (max-width: 1000px) {
         padding: 40px 15px 126px 15px !important;
     }
+}
+html[lang="en"] .summit-content .live-room .web-box .item-box .live-item {
+    &:nth-of-type(3),&:nth-of-type(5),&:nth-of-type(6) {
+        p {
+            &:last-of-type {
+                margin-top: 10px;
+            }
+        }
+    }
+    
 }
 .summit {
     padding-bottom: 180px;
@@ -497,8 +473,7 @@ export default {
 }
 .summit-content .live-room {
     width: 1120px;
-    margin: 0 auto ;
-    
+    margin: 40px auto 0 auto;
     #livePage {
         width: 1120px;
         height: 560px;
