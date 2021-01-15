@@ -31,7 +31,7 @@ The mention of non- openEuler community products or services is for information 
 openEuler community does not provide any statement, guarantee or authorization for any of the products or services appearing on the website. 
 The BBS service on this website, including but not limited to the user names, company names, contacts, pictures, and other information, 
 is provided by the community members, who shall assume full responsibility for such information. 
-Any entity or individual who suspects that the content on this website (including but not limited to the commodity information posted by community members on this website) infringes upon legal rights or interests shall notify openEuler community <contact@openeuler.org> in written form and provide the identity, 
+Any entity or individual who suspects that the content on this website (including but not limited to the commodity information posted by community members on this website) infringes upon legal rights or interests shall notify openEuler community <contact@openeuler.io> in written form and provide the identity, 
 ownership certification, associated link (URL), and proof of infringement. openEuler community will remove the content related to the alleged infringement by law upon receiving the foregoing legal documents.
 
 ## Copyright Statement

@@ -67,6 +67,6 @@ openEuler深知您的隐私对您的重要性，并充分尊重您的隐私。�
 
 如果您想联系我们，请通过以下方式与我们联系： 
 
-联系方式：<contact@openeuler.org>
+联系方式：<contact@openeuler.io>
 
 </div>
