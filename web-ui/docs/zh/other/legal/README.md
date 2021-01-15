@@ -28,7 +28,7 @@ openEuler社区并不就网址上提供的任何产品、服务或信息做出�
 鉴于<https://openeuler.org>提供的部分服务属于电子公告牌（BBS）服务，
 <https://openeuler.org>上关于其会员或其会员发布的相关信息（包括但不限于用户名称、公司名称、 联系人及联络信息，相关图片、视讯等）的信息均是由会员自行提供，
 会员依法应对其提供的任何信息承担全部责任。 
-任何企业或个人认为<https://openeuler.org>网页内容（包括但不限于<https://openeuler.org>会员发布的商品信息）可能涉嫌侵犯其合法权益，应该及时向openEuler社区<contact@openeuler.org>提出书面权利通知，并提供身份证明、权属证明、具体链接（URL）及详细侵权情况证明。
+任何企业或个人认为<https://openeuler.org>网页内容（包括但不限于<https://openeuler.org>会员发布的商品信息）可能涉嫌侵犯其合法权益，应该及时向openEuler社区<contact@openeuler.io>提出书面权利通知，并提供身份证明、权属证明、具体链接（URL）及详细侵权情况证明。
 openEuler社区在收到上述法律文件后，将会依法尽快移除相关涉嫌侵权的内容。
 
 ## 著作权说明

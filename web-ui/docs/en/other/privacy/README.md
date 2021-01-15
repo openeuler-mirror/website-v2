@@ -67,6 +67,6 @@ We may update or modify this statement in response to changes in our services or
 
 If you want to contact us, please contact us at:
 
-Contact: <contact@openeuler.org>
+Contact: <contact@openeuler.io>
 
 </div>
