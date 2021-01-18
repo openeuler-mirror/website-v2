@@ -117,7 +117,7 @@ module.exports = {
             }
         ],
         LANG: '中',
-        LANG_LIST: ['中','English','Русский'],
+        LANG_LIST: ['中文','English','Русский'],
         GITTE: '源码',
         CODE: '代码',
         GITTE_RESOURCE_LIST: [{
@@ -270,7 +270,7 @@ module.exports = {
             }
         ],
         LANG: 'English',
-        LANG_LIST: ['中','English','Русский'],
+        LANG_LIST: ['中文','English','Русский'],
         GITTE: 'Source code',
         CODE: 'CODE',
         GITTE_RESOURCE_LIST: [{
@@ -423,7 +423,7 @@ module.exports = {
             }
         ],
         LANG: 'Русский',
-        LANG_LIST: ['中','English','Русский'],
+        LANG_LIST: ['中文','English','Русский'],
         GITTE: 'Source code',
         CODE: 'Код',
         GITTE_RESOURCE_LIST: [{
