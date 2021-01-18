@@ -385,7 +385,7 @@ export default {
         border-radius: 8px;
         display: inline-block;
         padding: 15px 10px 26px 20px;
-        &:nth-of-type(5),&:nth-of-type(6),&:nth-of-type(7),&:nth-of-type(8) {
+        &:nth-of-type(5),&:nth-of-type(6),&:nth-of-type(7),&:nth-of-type(8),&:nth-of-type(11) {
           .url-list-wrapper { 
             .url-list {
               li {
