@@ -5,8 +5,8 @@
         :pcSrc="'/img/404/404-banner.png'"
         :mobileSrc="'/img/404/404-banner.png'"
         :isOther="true"
-        :pcMessage="currentLang.message"
-        :mobileMessage="currentLang.message"
+        :pcMessage="''"
+        :mobileMessage="''"
         >
         </mesbanner>
     </div>
@@ -19,12 +19,10 @@ export default {
         return {
             language:{
                 en:{
-                    title:404,
-                    message:'NOT FOUND...'
+                    title:404
                 },
                 cn:{
-                    title:404,
-                    message:'开小差啦...'
+                    title:404
                 }
             },
             currentLang:{}
