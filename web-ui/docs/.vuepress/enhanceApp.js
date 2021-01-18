@@ -1,12 +1,15 @@
 import ElementUI from 'element-ui';
 import './public/style/theme/index.css';
 import './public/style/base.css';
-import locale from 'element-ui/lib/locale/lang/en'
+import enlocale from 'element-ui/lib/locale/lang/en';
+import rulocale from 'element-ui/lib/locale/lang/ru-RU';
+import locale from 'element-ui/lib/locale';
 import'./public/style/markdown.less';
 import directive from './libs/directive';
 import './public/style/font-en.css';
 import './public/style/font-cn.css';
 import VueLazyload from 'vue-lazyload';
+
 
 export default ({
     Vue,
@@ -17,18 +20,30 @@ export default ({
     Vue.use(VueLazyload, {
         preLoad: 1.3,
         attempt: 1
-    })
+    });
     if(!isServer){
-        let $lang = window.location.href.includes('/en/') ? 'en' : 'zh';
+        let $lang = '';
+        if(window.location.href.includes('/en/')) {
+            $lang = 'en';
+        }else if(window.location.href.includes('/zh/')) {
+            $lang = 'zh';
+        }else {
+            $lang = 'ru';
+        }
         let screenWidth = document.body.clientWidth;
         Vue.prototype.isShowH5 = false;
         if(screenWidth <= 1000){
             Vue.prototype.isShowH5 = true;
         }
         if (window.location.href.includes('/en/')) {
-            Vue.use(ElementUI, {locale});
+            Vue.use(ElementUI);
+            locale.use(enlocale);
             Vue.prototype.$isCn = false;
-        } else {
+        } else if(window.location.href.includes('/ru/')) {
+            Vue.use(ElementUI);
+            locale.use(rulocale);
+            Vue.prototype.$isCn = false;
+        }else {
             Vue.use(ElementUI);
             Vue.prototype.$isCn = true;
         }
@@ -36,7 +51,9 @@ export default ({
         siteData.pages.forEach(item => {
             if($lang === 'zh' && item.path.includes('/zh/')) {
                 pagesArr.push(item);
-            } else if($lang === 'en' && !item.path.includes('/zh/')) {
+            } else if($lang === 'en' && item.path.includes('/en/')) {
+                pagesArr.push(item);
+            }else if($lang === 'ru' && item.path.includes('/ru/')){
                 pagesArr.push(item);
             }
         })
@@ -77,7 +94,14 @@ export default ({
         methods : {
             resolvePath(path){
                 if(path){
-                    const targetLocale = this.$lang === "zh" ? "/zh" : "/en";
+                    let targetLocale = '';
+                    if(this.$lang === 'en') {
+                        targetLocale = '/en';
+                    }else if(this.$lang === 'zh') {
+                        targetLocale = '/zh';
+                    }else {
+                        targetLocale = '/ru';
+                    }
                     return targetLocale + path;    
                 }
                 

@@ -6,7 +6,7 @@
       :inside-name="'DOWNLOAD'"
       :outside-name="i18n.download.DOWNLOAD_BTN_NAME"
     ></common-banner>
-    <div class="download-list-wrapper">
+    <div :class="['download-list-wrapper',$lang === 'ru'?'lang-ru':'']">
       <el-form :inline="true" :model="formData" class="download-filter">
         <el-form-item :label="i18n.download.MANUFACTURER">
           <el-select v-model="formData.manufacturer" multiple placeholder>
@@ -45,7 +45,7 @@
           <span @click="delTag(item)">×</span>
         </li>
       </ul>
-      <ul :class="lang ==='zh' ? 'download-list' : 'download-list-en'">
+      <ul :class="[lang ==='zh' ? 'download-list' : 'download-list-en',$lang === 'ru'?'download-list-ru':'']">
         <li class="download-item" v-for="(item, index) in downloadList" :key="index">
           <h3 class="title" :title="item.NAME">{{ item.NAME }}</h3>
           <el-button
@@ -333,6 +333,11 @@ export default {
     @media screen and (max-width: 1000px) {
       display: block;
     }
+  }
+  .lang-ru {
+      /deep/ .el-form-item__label,/deep/ .el-input__inner, /deep/ .el-select-dropdown__item{
+        font-family: Arial;
+      }
   }
   .download-list-wrapper {
     .download-filter {
@@ -625,6 +630,11 @@ export default {
       .download-item:nth-child(3n) {
         margin-right: 0;
       }
+    }
+    .download-list-ru {
+     .download-item .url-list-wrapper .url-list li:nth-of-type(3) {
+       margin-right: 20px !important;
+     }
     }
   }
 }

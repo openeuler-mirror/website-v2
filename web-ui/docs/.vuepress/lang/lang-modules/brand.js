@@ -140,5 +140,74 @@ module.exports = {
             STYLE:'PDF',
             URL:'/img/other/brand/horizontal-right.pdf'
         }]
+    },
+    ru: {
+        BRAND: 'Бренд',
+        NOTICE:'Примечание',
+        WORDS:'Примечание. Все используемые на этом веб-сайте логотипы и товарные знаки являются собственностью сообщества openEuler или других указанных третьих лиц, если это применимо. Размещенные на веб-сайте сообщества openEuler материалы не должны рассматриваться как предоставленное разрешение или право использовать любой такой товарный знак или логотип косвенным путем, в силу отсутствия возражений или по другой причине без предварительного письменного согласия сообщества openEuler или любого третьего лица, которое может владеть данным товарным знаком. Запрещается кому-бы то ни было использовать любым способом название, товарный знак и логотип сообщества openEuler без предварительного письменного согласия последнего в любых целях, кроме личных, образовательных и некоммерческих. Запрещается кому-бы то ни было использовать товарные знаки и логотипы, принадлежащие третьим лицам, без их согласия.',
+        MOBILETITLE:'Бренд',
+        VERTICAL:'По вертикали',
+        HORIZONTAL:'По горизонтали',
+        PICTURE_TITLE:['Стандартный','Черно-белый','Черный','Стандартный','Белый','Черный'],
+        VERTICAL_LEFT_IMAGE:[{
+            STYLE:'PNG',
+            URL:'/img/other/brand/vertical-left.png'
+        },{
+            STYLE:'SVG',
+            URL:'/img/other/brand/vertical-left.svg'
+        },{
+            STYLE:'PDF',
+            URL:'/img/other/brand/vertical-left.pdf'
+        }],
+        VERTICAL_CENTER_IMAGE:[{
+            STYLE:'PNG',
+            URL:'/img/other/brand/vertical-center.png'
+        },{
+            STYLE:'SVG',
+            URL:'/img/other/brand/vertical-center.svg'
+        },{
+            STYLE:'PDF',
+            URL:'/img/other/brand/vertical-center.pdf'
+        }],
+        VERTICAL_RIGHT_IMAGE:[{
+            STYLE:'PNG',
+            URL:'/img/other/brand/vertical-right.png'
+        },{
+            STYLE:'SVG',
+            URL:'/img/other/brand/vertical-right.svg'
+        },{
+            STYLE:'PDF',
+            URL:'/img/other/brand/vertical-right.pdf'
+        }],
+        HORIZONTAL_LEFT_IMAGE:[{
+            STYLE:'PNG',
+            URL:'/img/other/brand/horizontal-left.png'
+        },{
+            STYLE:'SVG',
+            URL:'/img/other/brand/horizontal-left.svg'
+        },{
+            STYLE:'PDF',
+            URL:'/img/other/brand/horizontal-left.pdf'
+        }],
+        HORIZONTAL_CENTER_IMAGE:[{
+            STYLE:'PNG',
+            URL:'/img/other/brand/horizontal-center.png'
+        },{
+            STYLE:'SVG',
+            URL:'/img/other/brand/horizontal-center.svg'
+        },{
+            STYLE:'PDF',
+            URL:'/img/other/brand/horizontal-center.pdf'
+        }],
+        HORIZONTAL_RIGHT_IMAGE:[{
+            STYLE:'PNG',
+            URL:'/img/other/brand/horizontal-right.png'
+        },{
+            STYLE:'SVG',
+            URL:'/img/other/brand/horizontal-right.svg'
+        },{
+            STYLE:'PDF',
+            URL:'/img/other/brand/horizontal-right.pdf'
+        }]
     }
 };

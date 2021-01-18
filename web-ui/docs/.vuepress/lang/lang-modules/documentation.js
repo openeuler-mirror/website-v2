@@ -20,5 +20,14 @@ module.exports = {
         NEXT: 'Next',
         FEEDBACK: 'Feedback',
         MENU: 'Menu',
+    },
+    ru: {
+        DOCS_LABEL: 'Документы',
+        VERSION: 'Версия',
+        SELECT_VERSION_LABLE: 'Select Version',
+        PREVIOUS: 'Previous',
+        NEXT: 'Next',
+        FEEDBACK: 'Feedback',
+        MENU: 'Menu',
     }
 };

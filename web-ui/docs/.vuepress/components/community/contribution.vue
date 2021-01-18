@@ -77,7 +77,7 @@
             }
         },
         mounted() {
-            this.toggleHover();
+
         },
         methods: {
             es(selector) {
@@ -86,20 +86,6 @@
                     return null;
                 } else {
                     return es;
-                }
-            },
-            toggleHover() {
-                let hovers = this.es('.step');
-                for (let i = 0; i < hovers.length; i++) {
-                    let hover = hovers[i];
-                    hover.addEventListener('mouseenter', function () {
-                        let video = hover.querySelectorAll('img')[1];
-                        video.classList.add('is-hovered');
-                    })
-                    hover.addEventListener('mouseleave', function () {
-                        let video = hover.querySelectorAll('img')[1];
-                        video.classList.remove('is-hovered');
-                    })
                 }
             },
             go(path) {
@@ -126,6 +112,16 @@
 <style lang="less">
     .contribution .common-banner .banner img {
         width: 0!important;
+    }
+    .is-pc .methods .mail-guide .step:hover {
+        img {
+            &:first-of-type {
+                display: none;
+            }
+            &:last-of-type {
+                display: block;
+            }
+        }
     }
 </style>
 <style scoped>

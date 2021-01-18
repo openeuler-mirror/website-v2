@@ -65,15 +65,15 @@ BPF 是一个通用执行引擎，能够高效地安全地执行基于系统事�
 
 BPF 使内核具有可编程性。BPF 程序是运行在各种内核事件上的小型程序。这与JavaScript 程序有一些相似之处：JavaScript 是允许在浏览器事件，例如：鼠标单击上运行的微型 Web 程序。BPF 是允许内核在系统和应用程序事件，例如：磁盘 I/O 上运行的微型程序。内核运行 BPF 程序之前，需要知道程序附加的执行点。程序执行点是由BPF程序类型确定。通过查看/kernel-src/sample/bpf/bpf_load.c 可以查看 BPF 程序类型。下面是定义在 bpf 头文件中的 bpf 程序类型：
 
-<img src=".BPF-3.jpg">
+<img src="./BPF-3.jpg">
 
 BPF 映射提供了内核和用户空间双向数据共享，允许用户从内核和用户空间读取和写入数据。BPF 映射的数据结构类型可以从简单数组、哈希映射到自定义类型映射。下面是定义在 bpf 头文件中的 bpf 映射类型：
 
-<img src=".BPF-4.jpg">
+<img src="./BPF-4.jpg">
 
 下图是 BPF 架构图：
 
-<img src=".BPF-5.jpg">
+<img src="./BPF-5.jpg">
 
 ## 3.3.BPF 与传统 Linux 内核模块的对比
 

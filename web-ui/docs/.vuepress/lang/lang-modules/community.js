@@ -14,8 +14,9 @@ module.exports = {
             FILE: '发布时间',
             BLOGGING: '写博客',
             READ_MORE: '查看全文 >>',
-            DISCLAIMER_ZH: '【免责声明】本文仅代表作者本人观点，与本网站无关。本网站对文中陈述、观点判断保持中立，不对所包含内容的准确性、可靠性或完整性提供任何明示或暗示的保证。本文仅供读者参考，由此产生的所有法律责任均由读者本人承担。',
-            DISCLAIMER_EN: "[Disclaimer] This article only represents the author's opinions, and is irrelevant to this website. This website is neutral in terms of the statements and opinions in this article, and does not provide any express or implied warranty of accuracy, reliability, or completeness of the contents contained therein. This article is for readers' reference only, and all legal responsibilities arising therefrom are borne by the reader himself.",
+            DISCLAIMER: '【免责声明】本文仅代表作者本人观点，与本网站无关。本网站对文中陈述、观点判断保持中立，不对所包含内容的准确性、可靠性或完整性提供任何明示或暗示的保证。本文仅供读者参考，由此产生的所有法律责任均由读者本人承担。',
+            COPYRIGHT_1: "【版权声明】Copyright © 2021 openEuler Community。本文由openEuler社区首发，欢迎遵照",
+            COPYRIGHT_2: "协议规定转载。转载时敬请在正文注明并保留原文链接和作者信息。",
             OTHER_BLOG: "Ta的其他博文",
             CELECT_LABEL: "选择标签",
             CELECT_FILE: "选择发布时间",
@@ -155,8 +156,9 @@ module.exports = {
             FILE: 'Date of Release',
             BLOGGING: 'Blogging', 
             READ_MORE: 'Read more >>',
-            DISCLAIMER_ZH: '【免责声明】本文仅代表作者本人观点，与本网站无关。本网站对文中陈述、观点判断保持中立，不对所包含内容的准确性、可靠性或完整性提供任何明示或暗示的保证。本文仅供读者参考，由此产生的所有法律责任均由读者本人承担。',
-            DISCLAIMER_EN: "[Disclaimer] This article only represents the author's opinions, and is irrelevant to this website. This website is neutral in terms of the statements and opinions in this article, and does not provide any express or implied warranty of accuracy, reliability, or completeness of the contents contained therein. This article is for readers' reference only, and all legal responsibilities arising therefrom are borne by the reader himself.",
+            DISCLAIMER: "[Disclaimer] This article only represents the author's opinions, and is irrelevant to this website. This website is neutral in terms of the statements and opinions in this article, and does not provide any express or implied warranty of accuracy, reliability, or completeness of the contents contained therein. This article is for readers' reference only, and all legal responsibilities arising therefrom are borne by the reader himself.",
+            COPYRIGHT_1: "[Copyright] Copyright © 2021 openEuler Community. This article is first released by the openEuler community. Please reproduce it in compliance with the",
+            COPYRIGHT_2: "license. Please note the text and keep the original link and author information when reproducing the article.",
             OTHER_BLOG: "Other blogs",
             CELECT_LABEL: "Select",
             CELECT_FILE: "Select",
@@ -284,6 +286,152 @@ module.exports = {
         },
         CONDUCT: {
             TITLE: "Code of Covenant"
+        },
+        SERVICE: {
+            SERVICE:''
+        }
+    },
+    ru: {
+        NEWS: {
+            NEWS: 'Новости',
+            MONTHS: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+        },
+        BLOG: {
+            BLOG: 'Блог',
+            LABEL: 'Метка',
+            FILE: 'Дата выпуска релиза',
+            BLOGGING: 'Ведение блога', 
+            READ_MORE: 'Еще >>',
+            DISCLAIMER: "[Заявление об отсутствии гарантий] Данная статья представляет только мнения автора и не имеет отношения к данному веб-сайту. Данный веб-сайт является нейтральным с точки зрения заявлений и мнений, содержащихся в данной статье, и отказывается от всех явно выраженных или подразумеваемых гарантий точности, надежности и полноты содержащейся информации. Информация, содержащаяся в данной статье, предназначена только для справки, и все юридические обязательства, вытекающие из нее, несет сам читатель.",
+            COPYRIGHT_1: "[Заявление об авторском праве]Copyright © 2021 openEuler Community. Данная статья была впервые опубликована сообществом openEuler. Пожалуйста, копируйте и распространяйте ее в соответствии с лицензией",
+            COPYRIGHT_2: "При перепечатке необходимо указать в тексте исходную ссылку и информацию об авторе.",
+            OTHER_BLOG: "Other blogs",
+            CELECT_LABEL: "Выбрать",
+            CELECT_FILE: "Выбрать",
+            BROWSE: "",
+            VIEWED: "Просмотрено",
+            ALL: "Все"
+        },
+        MAILING_LIST: {
+            TITLE: "Списки рассылок",
+            GUIDE_CONTENT: [
+                {
+                    LEFT: {
+                        LEFT_INFO: "На странице Списки рассылок выберите рассылку, на которую хотите подписаться.",
+                        LEFT_CIRCLE: "Выбрать",
+                        LEFT_IMG: "/img/community/maillist/mail1.png",
+                        INDEX: '01'
+                    },
+                    RIGHT: {
+                        RIGHT_INFO: "Введите адрес электронной почты и имя (необязательно), нажмите Подписаться.",
+                        RIGHT_CIRCLE: "Подписаться ",
+                        LEFT_IMG: "/img/community/maillist/mail2.png",
+                        INDEX: '02'
+                    }
+                },
+                {
+                    LEFT: {
+                        LEFT_INFO: "На ваш почтовый ящик поступит электронное письмо с запросом на подтверждение, что вы подписались на данную рассылку. Для подтверждения подписки ответьте на данное электронное письмо.",
+                        LEFT_CIRCLE: "Подтвердить ",
+                        LEFT_IMG: "/img/community/maillist/mail3.png",
+                        INDEX: '03'
+                    },
+                    RIGHT: {
+                        RIGHT_INFO: "На ваш почтовый ящик поступит электронное письмо с сообщением, что вы успешно подписались на данную рассылку.",
+                        RIGHT_CIRCLE: "Успешно",
+                        LEFT_IMG: "/img/community/maillist/mail4.png",
+                        INDEX: '04'
+                    }
+                },
+            ],
+            SUBSCRIBE: {
+                TITLE: "Summary",
+                PART_ONE: "The main contact endpoint of openEuler community",
+                PART_TWO: "To contact the list owners, use the following email address: community-owner@openeuler.org",
+                PART_THREE: "To see the prior posting to the list, visit the archives.",
+                REMIND: "You can also subscribe without creating an account. If you wish to do so, please use the form below.",
+                INPUT_ADD: "Your email address",
+                INPUT_NAME: "Your name(optional)",
+                BUTTON: "Subscribe"
+            },
+            TABLE: {
+                NAME: "Наименование",
+                EMAIL_ADDRESS: "Списки рассылок",
+                ARCHIVE: "Архив",
+                DESCRIPTION: "Описание",
+                NAME_H5: "Наименование",
+                ARCHIVE_H5: "Архив"
+            },
+            MAIL_ERROR: "Error in mailing list",
+            SUBSCRIBE_ERROR: "Mail subscription error",
+            SUBSCRIBE_SUCCESS: "The subscription request has been sent. A subscription confirmation e-mail will be sent to your mailbox later. please replay to the confirmation e-mail as prompted to make the subscription take effect.",
+            MAIL_ERROR: "Email error",
+            SUBSCRIBE_ALREADY_SUCCESS: 'Member already subscribed',
+            SUBSCRIBE_HAS_SENT: 'The subscription confirmation e-mail has been sent to your mailbox. Please replay to the e-mail as prompted to make the subscription take effect. if you do not receive the e-mail, check whether the e-mail is blocked by your e-mail server or classified as spam.'
+        },
+        CONTRIBUTION_H5: {
+            TITLE: "Как принять участие",
+            MOBILE_TITLE: "Как принять участие",
+            GUIDE_CONTENT: [
+                {
+                    BUTTON: "Подписать CLA",
+                    IMG: "/img/community/contribution/cla.png",
+                    VIDEO: "/img/community/contribution/cla.gif",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/cla.png',
+                    LINK: "https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI="
+                },
+                {
+                    BUTTON: "Отправить вопрос",
+                    IMG: "/img/community/contribution/issue.png",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/issue.png',
+                    VIDEO: "/img/community/contribution/issue.gif",
+                    LINK: "",
+                    LINKADRESSLIST:{
+                        TITLE:'Выберите ссылку:',
+                        LINKMESSAGE:[
+                            {
+                                ICONIMAGE:"url('/img/community/contribution/icon/wechat.png')",
+                                TEXT:'Wechat',
+                                LINKADRESS:'/building/'
+                            },
+                            {
+                                ICONIMAGE:"url('/img/community/contribution/icon/email.png')",
+                                TEXT:'Эл. почта',
+                                LINKADRESS:'/building/'
+                            },
+                            {
+                                ICONIMAGE:"url('/img/community/contribution/icon/gitee.png')",
+                                TEXT:'Gitee',
+                                LINKADRESS:'/building/'
+                            }
+                        ]
+                    }
+                },
+                {
+                    BUTTON: "Включить код в проект",
+                    IMG: "/img/community/contribution/contribution.png",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/contribution.png',
+                    VIDEO: "/img/community/contribution/contribution.gif",
+                    LINK: "https://gitee.com/openeuler"
+                },
+                {
+                    BUTTON: "Присоединиться к группе SIG",
+                    IMG: "/img/community/contribution/sig.png",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/sig.png',
+                    VIDEO: "/img/community/contribution/sig.gif",
+                    LINK: "/sig/sig-list/"
+                },
+                {
+                    BUTTON: "Участвовать в выборах в Технический комитет",
+                    IMG: "/img/community/contribution/commit.png",
+                    MOBILEIMG:'/img/community/contribution/mobile-img/commit.png',
+                    VIDEO: "/img/community/contribution/commit.gif",
+                    LINK: "/sig/sig-list/sig-detail.html?id=21&name=TC&mail=tc%40openeuler.org"
+                },
+            ]
+        },
+        CONDUCT: {
+            TITLE: "Кодекс поведения"
         },
         SERVICE: {
             SERVICE:''

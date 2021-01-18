@@ -36,9 +36,6 @@ export default {
 .yellow {
     box-shadow: 0px 6px 30px 0px rgba(253, 201, 110, 0.25);
 }
-.en-font {
-    
-}
 .round{
     background: #FFFFFF;
     border-radius: 50%;
@@ -68,6 +65,8 @@ export default {
             font-size: 18px;
             color: rgba(0, 0, 0, 0.5);
             line-height: 21px;
+            width: 200px;
+            margin: 0 auto;
         }      
     }
 }
@@ -99,6 +98,7 @@ export default {
                 color: rgba(0, 0, 0, 0.5);
                 font-size: 9px;
                 line-height: 8px;
+                width: 80px;
             }      
         }
     }

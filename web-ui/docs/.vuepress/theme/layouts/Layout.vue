@@ -26,22 +26,20 @@ export default {
 
   data() {
     return {
-      targetLocale: "",
     };
   },
   created() {
-    this.targetLocale = this.$lang === "zh" ? "/zh/" : "/en/";
   },
   methods: {
     isPost() {
       let currentPath = this.$route.path;
-      return currentPath.indexOf(this.targetLocale + "blog/") > -1
+      return currentPath.indexOf("/" + this.$lang + "/blog/") > -1
         ? true
         : false;
     },
     isDocDetails() {
       let currentPath = this.$route.path;
-      return currentPath.indexOf(this.targetLocale + "docs/") > -1
+      return currentPath.indexOf("/" + this.$lang + "/docs/") > -1
         ? true
         : false;
     },

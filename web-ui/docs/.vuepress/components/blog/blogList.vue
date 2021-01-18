@@ -6,7 +6,7 @@
         :inside-name="'CONNECT'"
         :outside-name="i18n.community.BLOG.BLOG"
         ></common-banner>
-        <div class="blog-content">
+        <div :class="['blog-content',$lang === 'ru'?'lang-ru':'']">
             <el-form :inline="true" :model="formData" class="blog-filter">
                 <el-form-item :label="i18n.community.BLOG.LABEL">
                     <el-select v-model="formData.tag" @change="selectChange" :placeholder="CELECT_LABEL">
@@ -375,6 +375,17 @@ export default {
 }
 .blog-filter {
     margin-bottom: 8px;
+}
+.lang-ru {
+    /deep/ .el-form-item__label,/deep/ .el-select-dropdown__item,/deep/ .el-input__inner {
+        font-family: Arial !important;
+    }
+    .el-form-item__content .blog-write {
+        font-size: 16px;
+    }
+    .mobile-blog-write .el-form-item__content {
+        min-width: 170px;
+    }
 }
 .blog-content {
     width: 1120px;

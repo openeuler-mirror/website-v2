@@ -1,0 +1,313 @@
+[
+    {
+        "value": "1.0_Base",
+        "name": "1.0 BASE",
+        "docs": [
+            {
+                "title": "Установка",
+                "pctitle": "Установка",
+                "doc": [
+                    {
+                        "img": "/img/docs/docs-installation.svg",
+                        "path": "/docs/Installation/Installation.html",
+                        "name": "Installation Guide"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "value": "20.03_LTS",
+        "name": "20.03 LTS",
+        "docs": [
+            {
+                "title": "О версии",
+                "pctitle": "О версии",
+                "doc": [
+                    {
+                        "img": "/img/docs/docs-releasenotes.svg",
+                        "path": "/docs/Releasenotes/terms-of-use.html",
+                        "name": "Terms of Use"
+                    },
+                    {
+                        "img": "/img/docs/docs-releasenotes.svg",
+                        "path": "/docs/Releasenotes/release_notes.html",
+                        "name": "Release Notes"
+                    }
+                ]
+            },
+            {
+                "title": "Установка",
+                "pctitle": "Установка",
+                "doc": [
+                    {
+                        "img": "/img/docs/docs-quickstart.svg",
+                        "path": "/docs/Quickstart/quick-start.html",
+                        "name": "Quick Start"
+                    },
+                    {
+                        "img": "/img/docs/docs-installation.svg",
+                        "path": "/docs/Installation/Installation.html",
+                        "name": "Installation Guide"
+                    }
+                ]
+            },
+            {
+                "title": "Управление",
+                "pctitle": "Управление",
+                "doc": [
+                    {
+                        "img": "/img/docs/docs-administration.svg",
+                        "path": "/docs/Administration/administration.html",
+                        "name": "Administrator Guide"
+                    }
+                ]
+            },
+            {
+                "title": "Использование",
+                "pctitle": "Использование",
+                "doc": [
+                    {
+                        "img": "/img/docs/docs-user.svg",
+                        "path": "/docs/SecHarden/secHarden.html",
+                        "name": "Security Hardening Guide"
+                    },
+                    {
+                        "img": "/img/docs/docs-user.svg",
+                        "path": "/docs/Virtualization/virtualization.html",
+                        "name": "Virtualization User Guide"
+                    },
+                    {
+                        "img": "/img/docs/docs-user.svg",
+                        "path": "/docs/Container/container.html",
+                        "name": "Container User Guide"
+                    },
+                    {
+                        "img": "/img/docs/docs-user.svg",
+                        "path": "/docs/A-Tune/A-Tune.html",
+                        "name": "A-Tune User Guide"
+                    }
+                ]
+            },
+            {
+                "title": "Разработка",
+                "pctitle": "Разработка",
+                "doc": [
+                    {
+                        "img": "/img/docs/docs-application.svg",
+                        "path": "/docs/ApplicationDev/application-development.html",
+                        "name": "Application Development Guide"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "value": "20.09",
+        "name": "20.09",
+        "docs": [
+            {
+                "title": "О версии",
+                "pctitle": "О версии",
+                "doc": [
+                    {
+                        "img": "/img/docs/docs-releasenotes.svg",
+                        "path": "/docs/Releasenotes/terms-of-use.html",
+                        "name": "Terms of Use"
+                    },
+                    {
+                        "img": "/img/docs/docs-releasenotes.svg",
+                        "path": "/docs/Releasenotes/release_notes.html",
+                        "name": "Release Notes"
+                    }
+                ]
+            },
+            {
+                "title": "Установка",
+                "pctitle": "Установка",
+                "doc": [
+                    {
+                        "img": "/img/docs/docs-quickstart.svg",
+                        "path": "/docs/Quickstart/quick-start.html",
+                        "name": "Quick Start"
+                    },
+                    {
+                        "img": "/img/docs/docs-installation.svg",
+                        "path": "/docs/Installation/Installation.html",
+                        "name": "Installation Guide"
+                    }
+                ]
+            },
+            {
+                "title": "Управление",
+                "pctitle": "Управление",
+                "doc": [
+                    {
+                        "img": "/img/docs/docs-administration.svg",
+                        "path": "/docs/Administration/administration.html",
+                        "name": "Administrator Guide"
+                    }
+                ]
+            },
+            {
+                "title": "Использование",
+                "pctitle": "Использование",
+                "doc": [
+                    {
+                        "img": "/img/docs/docs-user.svg",
+                        "path": "/docs/SecHarden/secHarden.html",
+                        "name": "Security Hardening Guide"
+                    },
+                    {
+                        "img": "/img/docs/docs-user.svg",
+                        "path": "/docs/Virtualization/virtualization.html",
+                        "name": "Virtualization User Guide"
+                    },
+                    {
+                        "img": "/img/docs/docs-user.svg",
+                        "path": "/docs/StratoVirt/StratoVrit_guidence.html",
+                        "name": "StratoVirt User Guide"
+                    },
+                    {
+                        "img": "/img/docs/docs-user.svg",
+                        "path": "/docs/Container/container.html",
+                        "name": "Container User Guide"
+                    },
+                    {
+                        "img": "/img/docs/docs-user.svg",
+                        "path": "/docs/A-Tune/A-Tune.html",
+                        "name": "A-Tune User Guide"
+                    }
+                ]
+            },
+            {
+                "title": "Разработка",
+                "pctitle": "Разработка",
+                "doc": [
+                    {
+                        "img": "/img/docs/docs-application.svg",
+                        "path": "/docs/ApplicationDev/application-development.html",
+                        "name": "Application Development Guide"
+                    },
+                    {
+                        "img": "/img/docs/docs-application.svg",
+                        "path": "/docs/userguide/overview.html",
+                        "name": "openEuler Toolset User Guide"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "value": "20.03_LTS_SP1",
+        "name": "20.03 LTS SP1",
+        "docs": [
+            {
+                "title": "О версии",
+                "pctitle": "О версии",
+                "doc": [
+                    {
+                        "img": "/img/docs/docs-releasenotes.svg",
+                        "path": "/docs/Releasenotes/terms-of-use.html",
+                        "name": "Terms of Use"
+                    },
+                    {
+                        "img": "/img/docs/docs-releasenotes.svg",
+                        "path": "/docs/Releasenotes/release_notes.html",
+                        "name": "Release Notes"
+                    }
+                ]
+            },
+            {
+                "title": "Установка",
+                "pctitle": "Установка",
+                "doc": [
+                    {
+                        "img": "/img/docs/docs-quickstart.svg",
+                        "path": "/docs/Quickstart/quick-start.html",
+                        "name": "Quick Start"
+                    },
+                    {
+                        "img": "/img/docs/docs-installation.svg",
+                        "path": "/docs/Installation/Installation.html",
+                        "name": "Installation Guide"
+                    }
+                ]
+            },
+            {
+                "title": "Управление",
+                "pctitle": "Управление",
+                "doc": [
+                    {
+                        "img": "/img/docs/docs-administration.svg",
+                        "path": "/docs/Administration/administration.html",
+                        "name": "Administrator Guide"
+                    }
+                ]
+            },
+            {
+                "title": "Использование",
+                "pctitle": "Использование",
+                "doc": [
+                    {
+                        "img": "/img/docs/docs-user.svg",
+                        "path": "/docs/SecHarden/secHarden.html",
+                        "name": "Security Hardening Guide"
+                    },
+                    {
+                        "img": "/img/docs/docs-user.svg",
+                        "path": "/docs/Virtualization/virtualization.html",
+                        "name": "Virtualization User Guide"
+                    },
+                    {
+                        "img": "/img/docs/docs-user.svg",
+                        "path": "/docs/StratoVirt/StratoVrit_guidence.html",
+                        "name": "StratoVirt User Guide"
+                    },
+                    {
+                        "img": "/img/docs/docs-user.svg",
+                        "path": "/docs/Container/container.html",
+                        "name": "Container User Guide"
+                    },
+                    {
+                        "img": "/img/docs/docs-user.svg",
+                        "path": "/docs/A-Tune/A-Tune.html",
+                        "name": "A-Tune User Guide"
+                    }
+                ]
+            },
+            {
+                "title": "Разработка",
+                "pctitle": "Разработка",
+                "doc": [
+                    {
+                        "img": "/img/docs/docs-application.svg",
+                        "path": "/docs/ApplicationDev/application-development.html",
+                        "name": "Application Development Guide"
+                    }
+                ]
+            },
+            {
+                "title": "Перенос",
+                "pctitle": "Перенос",
+                "doc": [
+                    {
+                        "img": "/img/docs/docs-application.svg",
+                        "path": "/docs/thirdparty_migration/k8sinstall.html",
+                        "name": "Guide to Porting Kubernetes to openEuler"
+                    },
+                    {
+                        "img": "/img/docs/docs-application.svg",
+                        "path": "/docs/thirdparty_migration/openstack-train.html",
+                        "name": "Guide to Porting OpenStack-Train to openEuler"
+                    },
+                    {
+                        "img": "/img/docs/docs-application.svg",
+                        "path": "/docs/thirdparty_migration/springframework.html",
+                        "name": "Guide to Porting Spring Framework to openEuler"
+                    }
+                ]
+            }
+        ]
+    }
+]

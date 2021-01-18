@@ -304,5 +304,149 @@ module.exports = {
                 LTS: false
             }
         ]
+    },
+    ru: {
+        DOWNLOAD_LIST : [
+            {
+                NAME: 'openEuler 20.03 LTS SP1',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.03-LTS-SP1/',
+                DESC: 'openEuler 20.03 LTS SP1 — это версия патча openEuler 20.03 LTS, и обе версии имеют одинаковый жизненный цикл.',
+                RELEASE_DESC_URL: '/en/docs/20.03_LTS_SP1/docs/Releasenotes/release_notes.html',
+                INSTALL_GUIDENCE_URL: '/en/docs/20.03_LTS_SP1/docs/Installation/Installation.html',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP1/ISO/',
+                LIFE_CYCLE_URL: '/ru/other/lifecycle/',
+                MANUFACTURER: 'openEuler community',
+                PUBLISH_DATE: '2020/12',
+                LTS: true
+            },
+            {
+                NAME: 'openEuler 20.09',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.09/',
+                DESC: 'openEuler 20.09 LTS — это инновационный релиз для сценариев использования программного обеспечения с открытым исходным кодом с жизненным циклом шесть месяцев.',
+                RELEASE_DESC_URL: '/en/docs/20.09/docs/Releasenotes/release_notes.html',
+                INSTALL_GUIDENCE_URL: '/en/docs/20.09/docs/Installation/Installation.html',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.09/ISO/',
+                LIFE_CYCLE_URL: '/ru/other/lifecycle/',
+                MANUFACTURER: 'openEuler community',
+                PUBLISH_DATE: '2020/09',
+                LTS: false
+            },
+            {
+                NAME: 'openEuler 20.03 LTS',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.03-LTS/',
+                DESC: 'openEuler 20.03 LTS — это стандартный релиз для сценариев использования программного обеспечения с открытым исходным кодом с жизненным циклом четыре года.',
+                RELEASE_DESC_URL: '/en/docs/20.03_LTS/docs/Releasenotes/release_notes.html',
+                INSTALL_GUIDENCE_URL: '/en/docs/20.03_LTS/docs/Installation/Installation.html',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS/',
+                LIFE_CYCLE_URL: '/ru/other/lifecycle/',
+                MANUFACTURER: 'openEuler community',
+                PUBLISH_DATE: '2020/03',
+                LTS: true
+            },
+            {
+                NAME: 'openEuler 1.0 Base',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openeuler1.0/base/',
+                DESC: 'openEuler 1.0 Base — это базовая версия, содержащая основные компоненты для запуска системы с минимальными требованиями.',
+                INSTALL_GUIDENCE_URL: '/en/docs/1.0_Base/docs/Installation/Installation.html',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+                GET_ISO_URL: 'https://repo.openeuler.org/openeuler1.0/base/iso/',
+                LIFE_CYCLE_URL: '/ru/other/lifecycle/',
+                MANUFACTURER: 'openEuler community',
+                PUBLISH_DATE: '2020/02',
+                LTS: false
+            },
+            {
+                NAME: 'Kylinsec',
+                DOWNLOAD_URL : 'https://kylinsec.oss-cn-shenzhen.aliyuncs.com/UniKylin-3.3-6A-2005-131421-aarch64.iso',
+                DESC: 'Описание недоступно',
+                RELEASE_DESC_URL: 'http://www.kylinsec.com.cn/Uploads/Download/2020-09-21/5f6846656373a.pdf',
+                INSTALL_GUIDENCE_URL: 'http://www.kylinsec.com.cn/Uploads/Download/2020-09-21/5f6846807a00f.pdf',
+                SEEK_HELP_URL: '',
+                GET_ISO_URL: 'http://www.kylinsec.com.cn/services/14/1.html',
+                LIFE_CYCLE_URL: '',
+                MANUFACTURER: 'Kylinsec',
+                PUBLISH_DATE: '',
+                LTS: false
+            },
+            {
+                NAME: 'HopeEdge',
+                DOWNLOAD_URL : 'http://download.hopeinfra.com/HopeEdge/ISO/',
+                DESC: 'HopeEdge Linux for Edge Computing is an edge computing operating system based on openEuler, which is oriented to IoT scenarios. It has four key characteristics: lightweight security, independent innovation, efficient interconnection and rapid deployment. HopeEdge also provides equipment management, data acquisition, cloud-edge collaboration, artificial intelligence and other characteristics.',
+                RELEASE_DESC_URL: 'http://download.hopeinfra.com/HopeEdge/References/HopeEdgeOS_ReleaseNote.pdf',
+                INSTALL_GUIDENCE_URL: 'http://download.hopeinfra.com/HopeEdge/References/HopeEdgeOS_Installation_Guide.pdf',
+                SEEK_HELP_URL: 'http://www.hopeinfra.com/contactus.html',
+                GET_ISO_URL: '',
+                LIFE_CYCLE_URL: '',
+                MANUFACTURER: 'HOPERUN',
+                PUBLISH_DATE: '2020/07',
+                LTS: false
+            },
+            {
+                NAME: 'EulixOS Server',
+                DOWNLOAD_URL : 'https://eulixos.com/#/download',
+                DESC: 'EulixOS — это дистрибутив серверной операционной системы, основанный на ОС openEuler. Поддерживая такие процессорные архитектуры, как x86_64, AArch64 и RISC-V, EulixOS идеально подходит для применения в различных сценариях, в том числе в базах данных, облачных вычислениях, больших данных, системах искусственного интеллекта и распределенных вычислениях. Сочетая свойства высокой безопасности и надежности, а также превосходной производительности, которая отличает все платформы, данный дистрибутив обеспечит стандартную, безопасную и надежную операционную систему и качественные сервисы, применимые в различных приложениях и решениях.',
+                RELEASE_DESC_URL: 'https://eulixos.com/userguide/%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E/%E7%89%88%E6%9C%AC%E5%8F%91%E8%A1%8C%E8%AF%B4%E6%98%8E.html',
+                INSTALL_GUIDENCE_URL: 'https://eulixos.com/userguide/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/%E5%89%8D%E8%A8%80.html',
+                SEEK_HELP_URL: 'https://eulixos.com/#/feedback',
+                GET_ISO_URL: 'https://eulixos.com/#/download',
+                LIFE_CYCLE_URL: '',
+                MANUFACTURER: 'ISCAS',
+                PUBLISH_DATE: '2020/05',
+                LTS: false
+            },
+            {
+                NAME: 'iSoftServerOS-Kunpeng-5.1',
+                DOWNLOAD_URL : 'http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso',
+                DESC: 'Описание недоступно',
+                RELEASE_DESC_URL: 'http://www.i-soft.com.cn/type/4/716.jhtml',
+                INSTALL_GUIDENCE_URL: 'http://www.i-soft.com.cn/type/4/716.jhtml ',
+                SEEK_HELP_URL: 'https://p.qiao.baidu.com/cps4/chatIndex?siteToken=9a45f9cee67affa160b6addd06e07a8d&speedLogId=160067949693727da_1600679496937_87121&eid=30746007&reqParam=%7B%22from%22%3A0%2C%22sid%22%3A%22-100%22%2C%22tid%22%3A%22-1%22%2C%22ttype%22%3A1%2C%22siteId%22%3A%2215215804%22%2C%22userId%22%3A%2230746007%22%2C%22pageId%22%3A0%7D ',
+                GET_ISO_URL: 'http://www.i-soft.com.cn/type/4/714.jhtml ',
+                LIFE_CYCLE_URL: '',
+                MANUFACTURER: 'iSoft',
+                PUBLISH_DATE: '',
+                LTS: false
+            },
+            {
+                NAME: 'openEuler Preview',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-preview/',
+                DESC: 'Демо-версия openEuler Preview данного сообщества, разработанная в целях изучения новых технологий, в текущий момент поддерживает архитектуру RISC-V.',
+                INSTALL_GUIDENCE_URL: 'https://gitee.com/openeuler/RISC-V/blob/master/documents/Installing.md',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/RISC-V/issues',
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-preview/RISC-V/Image/',
+                MANUFACTURER: 'openEuler RISC-V SIG group',
+                PUBLISH_DATE: '2020/09',
+                LTS: false
+            },
+            {
+                NAME: 'TurboLinux Enterprise server v15',
+                DOWNLOAD_URL : 'http://download.turbolinux.com.cn:8011/',
+                DESC: 'Turbolinux Enterprise Server 15 (TLES15) is the enterprise commercial Linux distribution based on the openEuler community, designed for the AArch64 processor architecture.',
+                INSTALL_GUIDENCE_URL: 'http://download.turbolinux.com.cn:8011/docs/TurboLinux15-Aarch64-Installation.pdf',
+                SEEK_HELP_URL: 'http://forum.turbolinux.com.cn/ ',
+                GET_ISO_URL: 'http://download.turbolinux.com.cn:8011/',
+                MANUFACTURER: 'TurboLinux',
+                PUBLISH_DATE: '2020/04',
+                LIFE_CYCLE_URL: 'http://download.turbolinux.com.cn:8011/docs/TLES-OS-PLANNING.pdf',
+                RELEASE_DESC_URL: 'http://www.turbolinux.com.cn/index.php/pages/cat_id/2.html',
+                LTS: false
+            },
+            {
+                NAME: 'HopeStage',
+                DOWNLOAD_URL : 'http://download.hopeinfra.com/HopeStage/ISO/',
+                DESC: 'HopeStage Enterprise Linux is an enterprise-level Linux operating system based on openEuler, which has the advantages of high efficiency, stability and security. HopeStage is committed to providing a safe and stable operating basis for enterprise-level databases, big data, cloud computing and artificial intelligence platforms.',
+                RELEASE_DESC_URL: 'http://download.hopeinfra.com/HopeStage/References/HopeStage-Enterprise-Linux_ReleaseNotes.pdf',
+                INSTALL_GUIDENCE_URL: 'http://download.hopeinfra.com/HopeStage/References/HopeStage_Installation_Guide.pdf',
+                SEEK_HELP_URL: 'http://www.hopeinfra.com/contactus.html',
+                GET_ISO_URL: '',
+                LIFE_CYCLE_URL: '',
+                MANUFACTURER: 'HOPERUN',
+                PUBLISH_DATE: '2020/09',
+                LTS: false
+            }
+        ]
     }
 };
