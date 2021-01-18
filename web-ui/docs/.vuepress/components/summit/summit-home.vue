@@ -426,7 +426,8 @@ export default {
         padding: 40px 15px 126px 15px !important;
     }
 }
-html[lang="en"] .summit-content .live-room .web-box .item-box .live-item {
+html[lang="en"] .summit-content .live-room .web-box .item-box .live-item,
+html[lang="ru"] .summit-content .live-room .web-box .item-box .live-item {
     &:nth-of-type(3),&:nth-of-type(5),&:nth-of-type(6) {
         p {
             &:last-of-type {
