@@ -74,12 +74,10 @@
         </div>
         <div class="bottom-line"></div>
         <template v-if="!$frontmatter.isNotOriginal">
-            <div v-if="$lang==='zh'" class="disclaimer">【版权声明】Copyright © 2020 openEuler Community。本文由openEuler社区首发，欢迎遵照<a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">CC-BY-SA 4.0</a>协议规定转载。转载时敬请在正文注明并保留原文链接和作者信息。</div>
-            <div v-else class="disclaimer">[Copyright] Copyright © 2020 openEuler Community. This article is first released by the openEuler community. Please reproduce it in compliance with the <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">CC-BY-SA 4.0</a> license. Please note the text and keep the original link and author information when reproducing the article.</div>
+            <div class="disclaimer">{{ i18n.community.BLOG.COPYRIGHT_1 }} <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">CC-BY-SA 4.0</a> {{ i18n.community.BLOG.COPYRIGHT_2 }}</div>
         </template>
-        <div class="disclaimer" v-if="$lang==='zh'">{{ i18n.community.BLOG.DISCLAIMER_ZH }}</div>
-        <div class="disclaimer bottom-height" v-else>
-            {{ i18n.community.BLOG.DISCLAIMER_EN }}
+        <div :class="['disclaimer',$lang !== 'zh'?'bottom-height':'']" >
+            {{ i18n.community.BLOG.DISCLAIMER }}
         </div>
     </div>
 </template>

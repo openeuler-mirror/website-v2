@@ -143,7 +143,6 @@ export default {
   }
   .title-vertical,
   .title-horizontal {
-    width: 93px;
     height: 24px;
     font-size: 24px;
     
@@ -155,9 +154,6 @@ export default {
     @media screen and (max-width: 1000px) {
       display: none;
     }
-  }
-  .title-horizontal {
-    width: 124px;
   }
   .mobile-title {
     display: none;

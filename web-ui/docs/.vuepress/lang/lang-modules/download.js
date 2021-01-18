@@ -24,5 +24,16 @@ module.exports = {
         MANUFACTURER: 'Manufacturer',
         PUBLISH_DATE: 'Date of Release',
         DOWNLOAD_LIST : require('././../../data/download').en.DOWNLOAD_LIST
+    },
+    ru: {
+        RELEASE_DESC: 'Описание релиза',
+        INSTALL_GUIDENCE: 'Руководство по установке',
+        SEEK_HELP: 'Справка',
+        GET_ISO: 'Получить ISO',
+        LIFE_CYCLE: 'Жизненный цикл',
+        DOWNLOAD_BTN_NAME: 'Загрузить',
+        MANUFACTURER: 'Поставщик',
+        PUBLISH_DATE: 'Дата выпуска релиза  ',
+        DOWNLOAD_LIST : require('././../../data/download').ru.DOWNLOAD_LIST
     }
 };

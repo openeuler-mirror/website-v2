@@ -21,16 +21,21 @@
                     </el-input>
                 </el-form-item>
                 <el-form-item>
-                    <el-radio-group v-model="formData.type" @change="initData(1)">
+                    <el-radio-group v-model="formData.type" @change="initData(1)" v-if="$lang !== 'ru' || !isShowH5">
                         <el-radio-button
                         v-for="(item, index) in i18n.security.SEVERITY_LIST"
                         :key="index"
                         :label="item.LABEL"
                         >{{ item.NAME }}</el-radio-button>
                     </el-radio-group>
+                    <el-select v-model="formData.type" :placeholder="i18n.security.SEVERITY_PLACEHOLDER" @change="initData(1)" v-else>
+                        <el-option :label="item.NAME"
+                            :value="item.LABEL"
+                            v-for="(item, index) in i18n.security.SEVERITY_LIST"></el-option>
+                    </el-select>
                 </el-form-item>
                 <el-form-item :label="i18n.security.YEAR">
-                    <el-select class="pc-select" v-model="formData.year" @change="initData(1)">
+                    <el-select class="pc-select" v-model="formData.year" :placeholder="i18n.security.PLACEHOLDER" @change="initData(1)">
                         <el-option :label="i18n.security.ALL" value="0"></el-option>
                         <el-option label="2019" :value="2019"></el-option>
                         <el-option label="2020" :value="2020"></el-option>
@@ -308,8 +313,8 @@ export default {
         
     }
 }
-.has-gutter .el-table_1_column_5 .cell{
-    white-space: pre-line;
+.el-table th>.cell {
+    word-break: normal;
 }
 </style>
 <style lang="less" scoped>

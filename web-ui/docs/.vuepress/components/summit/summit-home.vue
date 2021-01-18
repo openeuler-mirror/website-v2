@@ -28,7 +28,7 @@
                 <p :class="$lang === 'en'?'font-regular':''" v-for="(item,index) in i18n.interaction.SUMMIT.SUMMITCONTENT">{{ item }}</p>
             </div>
 
-            <div class="live-room">
+            <div class="live-room" v-if="i18n.interaction.SUMMIT.SUMMITLIVE">
                 <div class="title">
                     <img v-lazy="i18n.interaction.SUMMIT.PC_LIVEIMG" alt="" v-if="!isShowH5" />
                     <img v-lazy="i18n.interaction.SUMMIT.MOBILE_LIVEIMG" alt="" v-else />

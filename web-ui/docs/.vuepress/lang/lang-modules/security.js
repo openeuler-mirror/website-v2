@@ -30,6 +30,7 @@ module.exports = {
             }
         ],
         YEAR: '年份',
+        PLACEHOLDER: '请选择',
         ALL: '全部',
         ADVISORY: '公告',
         SYNOPSIS: '概要',
@@ -82,6 +83,7 @@ module.exports = {
             }
         ],
         YEAR: 'Year',
+        PLACEHOLDER: 'Select',
         ALL: 'ALL',
         ADVISORY: 'Advisory',
         SYNOPSIS: 'Synopsis',
@@ -95,6 +97,60 @@ module.exports = {
         DETAIL: 'Details',
         REPORTING: 'Vulnerability Report',
         INPUT_CVE_ID: 'Please input CVE ID',
+        BRIEF_INTRODUCTION: 'BriefIntroduction',
+        THEME: 'theme',
+        DESCRIPTION: 'description',
+        PACKAGE: 'packages',
+        REFERENCE_DOCUMENTS: 'referenceDocuments',
+        CVE_DETAIL: 'CVE Detail',
+        METRICS_V3: 'CVSS v3 Metrics',
+        METRICS_V2: 'CVSS v2 Metrics',
+        SCORE: 'Score',
+        PRODUCT: 'Product',
+        STATUS: 'Status',
+    },
+    ru: {
+        SECURITY_ADVISORIES: 'Консультанты по безопасности',
+        SECURITY_ADVISORIES_NAME: 'Title',
+        SEARCH: 'Поиск',
+        SEVERITY_LIST : [
+            {
+                NAME: 'Все',
+                LABEL: ''
+            },
+            {
+                NAME: 'Низкий',
+                LABEL: 'Low'
+            },
+            {
+                NAME: 'Средний',
+                LABEL: 'Medium'
+            },
+            {
+                NAME: 'Высокий',
+                LABEL: 'High'
+            },
+            {
+                NAME: 'Критический',
+                LABEL: 'Critical'
+            }
+        ],
+        YEAR: 'Год',
+        PLACEHOLDER: 'Выбрать',
+        ALL: 'ВСЕ',
+        ADVISORY: 'Консультант',
+        SEVERITY_PLACEHOLDER: 'Степень серьезности',
+        SYNOPSIS: 'Синопсис',
+        SEVERITY: 'Степень серьезности',
+        AFFECTED_PRODUCTS: 'Затронутый продукт',
+        AFFECTED_COMPONENTS: 'Затронутый \n компонент',
+        RELEASE_DATE: 'Дата выпуска релиза',
+        CVSS_SCORE: 'Оценка по CVSS',
+        MODIFIED_TIME: 'Время изменения',
+        OPERATION: 'Действие',
+        DETAIL: 'Описание',
+        REPORTING: 'Сообщение об уязвимостях',
+        INPUT_CVE_ID: 'Введите идентификатор CVE',
         BRIEF_INTRODUCTION: 'BriefIntroduction',
         THEME: 'theme',
         DESCRIPTION: 'description',

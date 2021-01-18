@@ -152,8 +152,20 @@
                     </el-input>
                 </div>
                 <ul class="nav-other" v-show="!pcSearchFlag">
-                    <li class="lang" @click="toggleLang">
-                        <span>{{ i18n.common.LANG }}</span>
+                    <li class="lang">
+                        <span class="icon-lang"></span>
+                        <ul>
+                            <li
+                                v-for="(item,
+                                index) in i18n.common.LANG_LIST"
+                                :key="index"
+                                :class="i18n.common.LANG === item?'lang-list':''"
+                                @click="toggleLang(item)"
+                            >
+                                {{ item }}
+                            </li>
+                            <span class="submenu-arrow"></span>
+                        </ul>
                     </li>
                     <li>
                         <span>{{ i18n.common.CODE }}</span>
@@ -189,9 +201,21 @@
                     </i>
                     </el-input>
                 </div>
-                <ul class="nav-other-mobile">
-                    <li class="lang" @click="toggleLang">
-                        <span>{{ i18n.common.LANG }}</span>
+                <ul class="nav-other-mobile nav-other">
+                    <li :class="['lang',menuMobileFlag?'del-hover':'']">
+                        <span class="icon-lang"></span>
+                        <ul>
+                            <li
+                                v-for="(item,
+                                index) in i18n.common.LANG_LIST"
+                                :key="index"
+                                :class="i18n.common.LANG === item?'lang-list':''"
+                                @click="toggleLang(item)"
+                            >
+                                {{ item }}
+                            </li>
+                            <span class="submenu-arrow"></span>
+                        </ul>
                     </li>
                     <li
                         :class="{ search: true, 'search-active': searchFlag }"
@@ -251,7 +275,7 @@ export default {
             window.open(url);
         },
         goHome() {
-            const targetLocale = this.$lang === "zh" ? "/zh/" : "/en/";
+            const targetLocale = "/" + this.$lang + "/";
             this.$router.push(targetLocale);
             this.menuMobileFlag = false;
         },
@@ -269,8 +293,16 @@ export default {
         hideSub(toggleClass) {
             toggleClass.pop();
         },
-        toggleLang() {
-            window.localStorage.setItem("locale", this.$lang);
+        toggleLang(item) {
+            let lang = '';
+            if(item === '中') {
+                lang = 'zh';
+            }else if(item === 'English') {
+                lang = 'en';
+            }else {
+                lang = 'ru';
+            }
+            window.localStorage.setItem("locale", lang);
             let currentLink = this.$page.path;
             let query = '';
             for(let key in this.$route.query) {
@@ -280,21 +312,11 @@ export default {
                     query +='?' + key + '=' +this.$route.query[key];
                 }
             }
-            if (currentLink.substring(0, 4) === "/zh/") {
-                window.localStorage.setItem("locale", "en");
-                if(this.$page.path.includes('/docs/')){
-                    window.location.href = '/en/documentation/';
-                    return;
-                }
-                currentLink = '/en' + currentLink.substring(3) + query;
-            } else {
-                window.localStorage.setItem("locale", "cn");
-                if(this.$page.path.includes('/docs/')){
-                    window.location.href = '/zh/documentation/';
-                    return;
-                }
-                currentLink = '/zh' + currentLink.substring(3) + query;
+            if(this.$page.path.includes('/docs/')){
+                window.location.href = '/' + lang + '/documentation/';
+                return;
             }
+            currentLink = '/' + lang + currentLink.substring(3) + query;
             window.location.href = currentLink;
         },
         menuActiveFn(item) {    
@@ -460,7 +482,7 @@ export default {
                 height: auto;
             }
             .nav-other-mobile {
-                display: none;
+                display: none !important;
                 height: 100%;
                 .menu-icon-active {
                     color: #0041bd;
@@ -655,6 +677,19 @@ export default {
                 
                 display: flex;
                 justify-content: flex-end;
+                .lang {
+                    .icon-lang {
+                        display: block;
+                        width: 22px;
+                        height: 22px;
+                        background-image: url('/lang.png');
+                        background-size: contain;
+                    }
+                    font-family: Roboto !important;
+                    &>ul .lang-list {
+                        color: #0041bd;
+                    }
+                }
                 @media screen and (max-width: 1000px) {
                     display: none;
                 }
@@ -756,7 +791,29 @@ export default {
                     display: inline-block;
                 }
                 .nav-other-mobile {
-                    display: inline-block;
+                    display: flex !important;
+                    flex: 0;
+                    font-family: Roboto !important;
+                    .lang>ul {
+                        border-bottom-right-radius:0;
+                        border-bottom-left-radius:0;
+                        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+                        border: 1px solid rgba(0, 47, 167, 0.5);
+                        padding: 20px;
+                        li {
+                            margin: 16px 0 0 0;
+                            height: 16px;
+                            line-height: 16px;
+                            font-size: 16px;
+                            font-family: Roboto !important;
+                            &:first-of-type {
+                                margin: 0;
+                            }
+                        }
+                    }
+                    .del-hover>ul {
+                        display: none;
+                    }
                 }
             }
         }

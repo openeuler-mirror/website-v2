@@ -489,14 +489,6 @@ module.exports = {
                 },
             ]
         },
-        HOME_AUTH: {
-            AUTH_TITLE: "集成与认证",
-            AUTH_DESCRIPTION: "集成与认证，就是通过测试，保证上述软件在openEuler操作系统上正常使用，并互相认可（互认证）。",
-            AUTH_HARDWARE: "硬件驱动",
-            AUTH_OPEN_SOURCE: "开源软件",
-            AUTH_FREE: "免费软件",
-            AUTH_BUSINESS: "商业软件"
-        },
         HOME_SOURCE: {
             SOURCE_TITLE: "获取更多资源",
             SOURCE_APPLY: {
@@ -744,7 +736,6 @@ module.exports = {
             ROOM_NAME: ["Latest Activity", "Blog", "News"],
             EVENT_NAME: "Latest Activity",
             BLOG_NAME: "Blog",
-            NEWS_NAME: "News",
             EVENT_LIST: [
                 {
                     TAG: "事件",
@@ -779,6 +770,7 @@ module.exports = {
                     CONTENT: "openEuler开源路带来多样性计算计算技术与产业生态共荣"
                 },
             ],
+            NEWS_NAME: "News"
         },
         HOME_DEV: {
             DEV_TITLE: "Like-Minded Developers",
@@ -1042,14 +1034,6 @@ module.exports = {
                 },
             ]
         },
-        HOME_AUTH: {
-            AUTH_TITLE: "集成与认证",
-            AUTH_DESCRIPTION: "集成与认证，就是通过测试，保证上述软件在openEuler操作系统上正常使用，并互相认可（互认证）。",
-            AUTH_HARDWARE: "硬件驱动",
-            AUTH_OPEN_SOURCE: "开源软件",
-            AUTH_FREE: "免费软件",
-            AUTH_BUSINESS: "商业软件"
-        },
         HOME_SOURCE: {
             SOURCE_TITLE: "More Resources",
             SOURCE_APPLY: {
@@ -1068,6 +1052,551 @@ module.exports = {
             },
             SOURCE_PUBLISH_TITLE: "openEuler-based OS Releases",
             SOURCE_LINK_TITLE: "Reference Links",
+        },
+        HOME_SOURCE_EDITION:[
+            {
+                LEFT_IMG_LINK: 'https://eulixos.com/#/download',
+                LEFT_IMG_PC: '/img/home/link/iscas.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-iscas.png',
+                RIGHT_IMG_LINK: 'https://www.turbolinux.com.cn/',
+                RIGHT_IMG_PC: '/img/home/link/turbo.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-turbo.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso',
+                LEFT_IMG_PC: '/img/home/link/cetc.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-cetc.png',
+                RIGHT_IMG_LINK: 'http://www.hopeinfra.com/',
+                RIGHT_IMG_PC: '/img/home/link/hopeEdge.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeEdge.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://www.kylinos.cn/',
+                LEFT_IMG_PC: '/img/home/link/qiling.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-qiling.png',
+                RIGHT_IMG_LINK: 'https://www.uniontech.com/next/product/server-system?edition=Euler',
+                RIGHT_IMG_PC: '/img/home/link/tongxin.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongxin.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://www.kylinos.cn/',
+                LEFT_IMG_PC: '/img/home/link/xinan.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-xinan.png',
+                RIGHT_IMG_LINK: 'http://www.hopeinfra.com/intro/37.html',
+                RIGHT_IMG_PC: '/img/home/link/hopeStage.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeStage.png'
+            }
+        ],
+        FRIENDSHIP_LINK_LIST:[
+            {
+                LEFT_IMG_LINK: 'http://www.mulanos.cn/',
+                LEFT_IMG_PC: '/img/home/link/mulan.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-mulan.png',
+                RIGHT_IMG_LINK: 'https://www.huaweicloud.com/kunpeng/',
+                RIGHT_IMG_PC: '/img/home/link/kunpeng.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-kunpeng.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://ic-openlabs.huawei.com/chat/#/',
+                LEFT_IMG_PC: '/img/home/link/xiaozhi.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-xiaozhi.png',
+                RIGHT_IMG_LINK: 'https://dw.pcl.ac.cn/',
+                RIGHT_IMG_PC: '/img/home/link/pengcheng.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-pengcheng.png'
+            }
+        ],
+        MORE: "Read More",
+        EXPAND: "Expand All",
+        RETRACT: "Collapse All"
+    },
+    ru: {
+        HOME_CAROUSEL_DATA: [
+            {
+                TITLE: "iSula",
+                LINK: "https://gitee.com/openeuler/iSulad",
+                DES: "A cloud-native lightweight container solution that can meet the needs of device, edge, and cloud scenarios in ICT domain with a unified and flexible architecture.",
+                IMG: "/img/home/Banner1.gif"
+            },
+            {
+                TITLE: "A-Tune",
+                LINK: "https://gitee.com/openeuler/A-Tune",
+                DES: "An AI-based OS tuning engine perfectly adapted to multiple scenarios.",
+                IMG: "/img/home/Banner2.gif"
+            }
+        ],
+        ROOM_LEFT_IMG:[
+            {
+                IMG: '/img/home/eventImg.png',
+                LINK: 'https://www.oschina.net/2020-openeuler/'
+            },
+            {
+                IMG: '/img/home/blogImg.png',
+                LINK: '/interaction/blog-list/'
+            },
+            {
+                IMG: '/img/home/newsImg.png',
+                LINK: '/interaction/news-list/'
+            }
+        ],
+        HOME_LAST_BANNER: {},
+        HOME_FIRST_BANNER: {
+            TITLE: "openEuler 20.03 LTS SP1 Version",
+            LINK: "https://openeuler.org/en/docs/20.03_LTS_SP1/docs/Releasenotes/key-features.html",
+            DES: "has been released, welcome to use.",
+            DOWNLOAD: 'Learn more',
+            IMG: "/img/home/Banner0.gif",
+            MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
+        },
+        HOME_OTHER_BANNER: [
+            {
+                BANNER_PC_IMG: '/img/summit/home/en-pc-summit.png',
+                BANNER_MOBILE_IMG: 'url("/img/summit/home/en-mobile-summit.png")',
+                BANNER_LINK: '/interaction/summit-list/'
+            }
+        ],
+        HOME_INTRODUCE: {
+            INTRO_TITLE: "The Most Innovative Open Source Community",
+            INTRO_HEAD: "Начните свой путь в openEuler",
+            INTRO_DESCRIPTION: "openEuler — это инновационная платформа, созданная совместными усилиями сообщества. Цель создания платформы заключается в разработке унифицированной операционной системы с открытым исходным кодом, поддерживающей несколько архитектур процессоров, а также развитии экосистемы аппаратного обеспечения и приложений.",
+            INTRO_IMG_URL: "",
+            INTRO_MAP: [
+                {
+                    NAME: "01",
+                    TITLE: "Загрузить ISO openEuler",
+                    IMG: "/img/home/step1.png",
+                    GIF: "/img/home/step-move-1.gif",
+                    LINK: "/download/",
+                },
+                {
+                    NAME: "02",
+                    TITLE: "Использовать ОС openEuler",
+                    IMG: "/img/home/step2.png",
+                    GIF: "/img/home/step-move-2.gif",
+                    LINK: "",
+                },
+                {
+                    NAME: "03",
+                    TITLE: "Читать документацию openEuler",
+                    IMG: "/img/home/step3.png",
+                    GIF: "/img/home/step-move-3.gif",
+                    LINK: "/documentation",
+                },
+                {
+                    NAME: "04",
+                    TITLE: "Участвовать в сообществе openEuler",
+                    IMG: "/img/home/step4.png",
+                    GIF: "/img/home/step-move-4.gif",
+                    LINK: "/community/contribution/",
+                },
+
+            ],
+            INTRO_MAP_SND: {
+                NAME: "02",
+                TITLE: "Использовать ОС openEuler",
+                IMG: "/img/home/step2.png",
+                LINK: "",
+                GIF: "/img/home/step-move-2.gif"
+            },
+            INTRO_GUIDE: {
+                INFO: "Choose your favorite experience mode",
+                GUIDE_WAY: [
+                    {
+                        TITLE: "Raspberry Pi",
+                        IMG: "/img/home/areaPai.png",
+                        LINK:"https://gitee.com/openeuler/raspberrypi"
+                    },
+                    {
+                        TITLE: "Hardware",
+                        IMG: "/img/home/areaHardware.svg",
+                        LINK:"/en/docs/20.03_LTS/docs/Installation/installation.html"
+                    },
+                    {
+                        TITLE: "VM",
+                        IMG: "/img/home/areaVirtual.svg",
+                        LINK:"/en/docs/20.03_LTS/docs/Virtualization/virtualization.html"
+                    },
+                    {
+                        TITLE: "ECS",
+                        IMG: "/img/home/areaECS.svg",
+                        LINK:"https://huaweicloud.com/product/ecs.html"
+                    }
+                ]
+            }
+        },
+        HOME_ACTIVE: {
+            ACTIVE_TITLE: "Присоединиться к сообществу",
+            ACTIVE_DESCRIPTION: "Присоединяйтесь к сообществу и участвуйте в семинарах, обсуждениях специальных групп (SIG), традиционных мероприятиях и саммитах сообщества, чтобы быть в курсе актуальных тенденций."
+        },
+        HOME_ROUND: {
+            ROUND_TITLE: 'Мы процветаем',
+            ROUND_LIST: [
+                {
+                    ROUND_VALUE: '',
+                    ROUND_KEY: 'contributors',
+                    ROUND_IMG: '/img/round/contributer.png',
+                    ROUND_TEXT: 'участников',
+                    ROUND_STYLE: {
+                        backcolor: 'blue'
+                    }
+                },
+                {
+                    ROUND_VALUE: '',
+                    ROUND_KEY: 'modulenums',
+                    ROUND_IMG: '/img/round/software.png',
+                    ROUND_TEXT: 'программных продуктов',
+                    ROUND_STYLE: {
+                        backcolor: 'pink'
+                    }
+                },
+                {
+                    ROUND_VALUE: '',
+                    ROUND_KEY: 'sigs',
+                    ROUND_IMG: '/img/round/sig.png',
+                    ROUND_TEXT: 'групп SIG',
+                    ROUND_STYLE: {
+                        backcolor: 'yellow'
+                    }
+                },
+                {
+                    ROUND_VALUE: '',
+                    ROUND_KEY: 'users',
+                    ROUND_IMG: '/img/round/user.png',
+                    ROUND_TEXT: 'пользователей',
+                    ROUND_STYLE: {
+                        backcolor: 'yellow'
+                    }
+                },
+                {
+                    ROUND_VALUE: '',
+                    ROUND_KEY: 'businessosv',
+                    ROUND_IMG: '/img/round/osv.png',
+                    ROUND_TEXT: 'поставщиков ОС',
+                    ROUND_STYLE: {
+                        backcolor: 'blue'
+                    }
+                }
+            ]
+        },
+        HOME_ROOMS: {
+            ROOM_NAME: ["Новое мероприятие", "Блог", "Новости"],
+            EVENT_NAME: "Новое мероприятие",
+            BLOG_NAME: "Блог",
+            EVENT_LIST: [
+                {
+                    TAG: "事件",
+                    DATE: "2020-06-07",
+                    CONTENT: "吹响开源集结号——”点亮“暑假2020"
+                },
+                {
+                    TAG: "事件",
+                    DATE: "2020-01-04",
+                    CONTENT: "去HDC.Cloud 2020 参加黑客松， 玩儿openEuler，赢取大礼"
+                },
+                {
+                    TAG: "事件",
+                    DATE: "2020-12-10",
+                    CONTENT: "HDC.Cloud | openEuler黑客马拉松"
+                },
+            ],
+            NEWS_LIST: [
+                {
+                    TAG: "极云IT杂谈",
+                    DATE: "2020-05-09",
+                    CONTENT: "华为OpenEuler操作系统强势来袭，正式开源时代来了？"
+                },
+                {
+                    TAG: "中国网科学频道",
+                    DATE: "2020-05-06",
+                    CONTENT: "华为联合产业伙伴openEuler2020年峰会成功召开"
+                },
+                {
+                    TAG: "新浪",
+                    DATE: "2020-04-12",
+                    CONTENT: "openEuler开源路带来多样性计算计算技术与产业生态共荣"
+                },
+            ],
+            NEWS_NAME: "Новости"
+        },
+        HOME_DEV: {
+            DEV_TITLE: "Разработчики-единомышленники",
+            DEV_DESCRIPTION: "Здесь собираются блестящие эксперты сообщества разработчиков. Найдите лучшего интересующего вас разработчика.",
+            DEV_INFO: [
+                {
+                    NAME: "Tao Feng",
+                    TITLE: "",
+                    RANK: "sig-OS-Builder-Maintainer",
+                    MAIL_LINK: "t.feng94@foxmail.com",
+                    GITEE_LINK: "https://gitee.com/t_feng",
+                    IMG: "/img/home/developer/fengtao.png"
+                },
+                {
+                    NAME: "Ge Guo",
+                    TITLE: "",
+                    RANK: "Compiler SIG Maintainer",
+                    MAIL_LINK: "nobleprize@foxmail.com",
+                    GITEE_LINK: "https://gitee.com/jdkboy",
+                    IMG: "/img/home/developer/guoge.png"
+                },
+                {
+                    NAME: "Li Yang",
+                    TITLE: "",
+                    RANK: "Packaging Maintainer",
+                    MAIL_LINK: "rainbow1981@163.com",
+                    GITEE_LINK: "https://gitee.com/yangli69393",
+                    IMG: "/img/home/developer/yangli.png"
+                },
+                {
+                    NAME: "Xuzhou Zhang",
+                    TITLE: "",
+                    RANK: "Packaging Maintainer",
+                    MAIL_LINK: "whoisxxx@126.com",
+                    GITEE_LINK: "https://gitee.com/whoisxxx",
+                    IMG: "/img/home/developer/zhangxuzhou.png"
+                },
+                {
+                    NAME: "Rui Zhang",
+                    TITLE: "",
+                    RANK: "sig-OS-Builder-Maintainer",
+                    MAIL_LINK: "13851924834@139.com",
+                    GITEE_LINK: "https://gitee.com/anonymous_z",
+                    IMG: "/img/home/developer/zhangrui.png"
+                },
+                {
+                    NAME: "Yingliang Yang",
+                    TITLE: "",
+                    RANK: "Kernel  Maintainer",
+                    MAIL_LINK: "zjutyyl@163.com",
+                    GITEE_LINK: "https://gitee.com/yangyingliang",
+                    IMG: "/img/home/developer/yangyingliang.png"
+                },
+                {
+                    NAME: "Yandong Xu",
+                    TITLE: "",
+                    RANK: "Virt-Maintainer",
+                    MAIL_LINK: "gwmxyd@163.com",
+                    GITEE_LINK: "https://gitee.com/xydong",
+                    IMG: "/img/home/developer/xuyandong.png"
+                },
+                {
+                    NAME: "Senglin Xia",
+                    TITLE: "",
+                    RANK: "Desktop Maintainer",
+                    MAIL_LINK: "13813374731@163.com",
+                    GITEE_LINK: "https://gitee.com/small_leek",
+                    IMG: "/img/home/developer/xiasenglin.png"
+                },
+                {
+                    NAME: "Bodong Wu",
+                    TITLE: "",
+                    RANK: "CICD SIG-Maintainer",
+                    MAIL_LINK: "walkingwalk@163.com",
+                    GITEE_LINK: "https://gitee.com/walkingwalk",
+                    IMG: "/img/home/developer/wubodong.png"
+                },
+                {
+                    NAME: "Xiaopeng Wang",
+                    TITLE: "",
+                    RANK: "Networking SIG Maintainer",
+                    MAIL_LINK: "wangxp006@163.com",
+                    GITEE_LINK: "https://gitee.com/wangxp006",
+                    IMG: "/img/home/developer/wangxiaopeng.png"
+                },
+                {
+                    NAME: "Yiru Wang",
+                    TITLE: "",
+                    RANK: "System-Tool Maintainer",
+                    MAIL_LINK: "wangyiruapp@163.com",
+                    GITEE_LINK: "https://gitee.com/ruebb",
+                    IMG: "/img/home/developer/wangyiru.png"
+                },
+                {
+                    NAME: "Feilong Lin",
+                    TITLE: "",
+                    RANK: "Storage Maintainer",
+                    MAIL_LINK: "404544243@qq.com",
+                    GITEE_LINK: "https://gitee.com/volcanodragon",
+                    IMG: "/img/home/developer/linfeilong.png"
+                },
+                {
+                    NAME: "Qingqing Li",
+                    TITLE: "",
+                    RANK: "sig-RISC-V-Maintainer",
+                    MAIL_LINK: "solar.hu@huawei.com",
+                    GITEE_LINK: "https://gitee.com/solarhu",
+                    IMG: "/img/home/developer/liqingqing.png"
+                },
+                {
+                    NAME: "Cihua Li",
+                    TITLE: "",
+                    RANK: "Base-Service  Maintainer",
+                    MAIL_LINK: "lilin_0209@163.com",
+                    GITEE_LINK: "https://gitee.com/licihua",
+                    IMG: "/img/home/developer/licihua.png"
+                },
+                {
+                    NAME: "Xingke Han",
+                    TITLE: "",
+                    RANK: "Base-Service  Maintainer",
+                    MAIL_LINK: "1152071778@qq.com",
+                    GITEE_LINK: "https://gitee.com/hanxinke",
+                    IMG: "/img/home/developer/hanxingke.png"
+                },
+                {
+                    NAME: "Hanjun Guo",
+                    TITLE: "",
+                    RANK: "Kernel  Maintainer",
+                    MAIL_LINK: "dileimao@126.com",
+                    GITEE_LINK: "https://gitee.com/hanjun-guo",
+                    IMG: "/img/home/developer/guohanjun.png"
+                },
+                {
+                    NAME: "Feng Hu",
+                    TITLE: "Application, System-tool, ",
+                    RANK: "Packaging SIG Maintainer",
+                    MAIL_LINK: "solar.hu@huawei.com",
+                    GITEE_LINK: "https://gitee.com/solarhu",
+                    IMG: "/img/home/developer/hufen.png"
+                },
+                {
+                    NAME: "Kaitian Du",
+                    TITLE: "Application, CICD SIG",
+                    RANK: "Maintainer",
+                    MAIL_LINK: "dukaitian@huawei.com",
+                    GITEE_LINK: "https://gitee.com/jimmy_hero",
+                    IMG: "/img/home/developer/dukaitian.png"
+                },
+                {
+                    NAME: "Xiaowen He",
+                    TITLE: "Packaging SIG, Base-",
+                    RANK: "service SIG Maintainer",
+                    MAIL_LINK: "hexiaowen@huawei.com",
+                    GITEE_LINK: "https://gitee.com/jimmy_hero",
+                    IMG: "/img/home/developer/hexiaowen.png"
+                },
+                {
+                    NAME: "Chunyi Zhu",
+                    TITLE: "Packaging SIG, Base-",
+                    RANK: "service SIG Maintainer",
+                    MAIL_LINK: "zhuchunyi@huawei.com",
+                    GITEE_LINK: "https://gitee.com/zhuchunyi",
+                    IMG: "/img/home/developer/zhuchunyi.png"
+                },
+                {
+                    NAME: "Xiuqi Xie",
+                    TITLE: "Kernel SIG",
+                    RANK: "Maintainer",
+                    MAIL_LINK: "xiexiuqi@huawei.com",
+                    GITEE_LINK: "https://gitee.com/xiexiuqi",
+                    IMG: "/img/home/developer/xiexiuqi.png"
+                },
+                {
+                    NAME: "Jian Dong",
+                    TITLE: "Packaging SIG",
+                    RANK: "Maintainer",
+                    MAIL_LINK: "dongjian13@huawei.com",
+                    GITEE_LINK: "https://gitee.com/dogsheng",
+                    IMG: "/img/home/developer/dongjian.png"
+                },
+                {
+                    NAME: "Haomin Tsai",
+                    TITLE: "iSulad SIG",
+                    RANK: " Maintainer",
+                    MAIL_LINK: "caihaomin@huawei.com",
+                    GITEE_LINK: "https://gitee.com/caihaomin",
+                    IMG: "/img/home/developer/caihaomin.png"
+                },
+                {
+                    NAME: "Feng Li",
+                    TITLE: "Container SIG",
+                    RANK: "Maintainer",
+                    MAIL_LINK: "lifeng68@huawei.com",
+                    GITEE_LINK: "https://gitee.com/lifeng2221dd1",
+                    IMG: "/img/home/developer/lifeng.png"
+                },
+                {
+                    NAME: "Hailiang Zhang",
+                    TITLE: "Virt SIG",
+                    RANK: "Maintainer",
+                    MAIL_LINK: "zhang.zhanghailiang@huawei.com",
+                    GITEE_LINK: "https://gitee.com/zhanghailiang_lucky",
+                    IMG: "/img/home/developer/zhanghailiang.png"
+                },
+                {
+                    NAME: "Xuan Zheng",
+                    TITLE: "sig-ai-bigdata SIG",
+                    RANK: "Maintainer",
+                    MAIL_LINK: "sinever@126.com",
+                    GITEE_LINK: "gitee.com/sinever",
+                    IMG: "/img/home/developer/zhengxian.png"
+                },
+                {
+                    NAME: "Jianwei Zhu",
+                    TITLE: "Base-Service SIG",
+                    RANK: "Maintainer",
+                    MAIL_LINK: "zhujianwei7@huawei.com",
+                    GITEE_LINK: "https://gitee.com/zhujianwei001",
+                    IMG: "/img/home/developer/zhujianwei.png"
+                },
+                {
+                    NAME: "Zhipeng Xie",
+                    TITLE: "A-Tune SIG",
+                    RANK: "Maintainer",
+                    MAIL_LINK: "xiezhipeng1@huawei.com",
+                    GITEE_LINK: "https://gitee.com/xiezhipeng1",
+                    IMG: "/img/home/developer/xiezhipeng.png"
+                },
+                {
+                    NAME: "Wei Xiong",
+                    TITLE: "sig-perl-modules/ sig-perl-",
+                    RANK: "Modules SIG Maintainer",
+                    MAIL_LINK: "xiongwei888@huawei.com",
+                    GITEE_LINK: "https://gitee.com/myeuler",
+                    IMG: "/img/home/developer/xiongwei.png"
+                },
+                {
+                    NAME: "Yanpeng Zhu",
+                    TITLE: "sig-release-management",
+                    RANK: "SIG Maintainer",
+                    MAIL_LINK: "zhuyanpeng@huawei.com",
+                    GITEE_LINK: "https://gitee.com/zyp-rock",
+                    IMG: "/img/home/developer/zhuyanpeng.png"
+                },
+                {
+                    NAME: "Zhiqiang Liu",
+                    TITLE: "Storage SIG",
+                    RANK: "Maintainer",
+                    MAIL_LINK: "lzhq28@mail.ustc.edu.cn",
+                    GITEE_LINK: "https://gitee.com/liuzhiqiang26",
+                    IMG: "/img/home/developer/liuzhiqiang.png"
+                },
+                {
+                    NAME: "Feilong Lin",
+                    TITLE: "Storage SIG",
+                    RANK: "Maintainer",
+                    MAIL_LINK: "404544243@qq.com",
+                    GITEE_LINK: "https://gitee.com/volcanodragon",
+                    IMG: "/img/home/developer/linfeilong.png"
+                },
+            ]
+        },
+        HOME_SOURCE: {
+            SOURCE_TITLE: "Дополнительные ресурсы",
+            SOURCE_APPLY: {
+                TITLE: "Применение тестовых ресурсов",
+                DES: "Если нет тестовых устройств, вы можете подать",
+                APPLY: "здесь заявку на их получение.",
+                SPONSOR: "Благодарим лабораторию Peng Cheng Laboratory за спонсорскую поддержку.",
+                SPONSORLINK:'https://dw.pcl.ac.cn/'
+            },
+            SOURCE_MAIL: {
+                TITLE: "Подписка по электронной почте",
+                DES: "Вы можете обсудить здесь любую тему сообщества.",
+                SUBSCRIBE: "Для перехода на страницу с подписками нажмите ",
+                LINK: "Списки рассылок.",
+                MAIL: "community@openeuler.org"
+            },
+            SOURCE_PUBLISH_TITLE: "Релизы ОС сообщества openEuler",
+            SOURCE_LINK_TITLE: "Ссылки",
         },
         HOME_SOURCE_EDITION:[
             {

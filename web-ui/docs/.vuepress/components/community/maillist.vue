@@ -19,18 +19,18 @@
             >
                 <div class="step-left">
                     <div class="mail-box">
-                        <div :class="['step-left-box','fade-in',$lang === 'en'?'en-box' + index : '']">
+                        <div :class="['step-left-box','fade-in',$lang === 'en'?'en-box' + index : '',$lang === 'ru'?'ru-box' + index : '']">
                             <div class="inner-box">
                                 <img :src="item.LEFT.LEFT_IMG" alt="" />
                                 <p>
-                                    <span  v-if="$lang === 'en'" class="en-title">{{ item.LEFT.LEFT_CIRCLE }}<br></span>
+                                    <span  v-if="$lang !== 'zh'" class="en-title">{{ item.LEFT.LEFT_CIRCLE }}<br></span>
                                     {{ item.LEFT.LEFT_INFO }}
                                 </p>
                             </div>
                         </div>
                         <div class="step-left-num">
-                            <span v-if="$lang === 'en'">{{ item.LEFT.INDEX }}</span>
-                            <span v-if="$lang !== 'en'">{{ item.LEFT.LEFT_CIRCLE }}</span>
+                            <span v-if="$lang !== 'zh'">{{ item.LEFT.INDEX }}</span>
+                            <span v-else>{{ item.LEFT.LEFT_CIRCLE }}</span>
                         </div>
                         <div class="step-line"></div>
                     </div>
@@ -39,14 +39,14 @@
                     <div class="mail-box">
                         <div class="step-line"></div>
                         <div class="step-right-num">
-                            <span v-if="$lang === 'en'">{{ item.RIGHT.INDEX }}</span>
-                            <span v-if="$lang !== 'en'">{{ item.RIGHT.RIGHT_CIRCLE }}</span>
+                            <span v-if="$lang !== 'zh'">{{ item.RIGHT.INDEX }}</span>
+                            <span v-else>{{ item.RIGHT.RIGHT_CIRCLE }}</span>
                         </div>
-                         <div :class="['step-right-box','fade-in',$lang === 'en'?'en-box' + index : '']">
+                        <div :class="['step-right-box','fade-in',$lang !== 'zh'?'en-box' + index : '']">
                             <div class="inner-box">
                                 <img :src="item.RIGHT.LEFT_IMG" alt="" />
                                 <p>
-                                    <span v-if="$lang === 'en'" class="en-title">{{ item.RIGHT.RIGHT_CIRCLE }}<br></span>
+                                    <span v-if="$lang !== 'zh'" class="en-title">{{ item.RIGHT.RIGHT_CIRCLE }}<br></span>
                                     {{ item.RIGHT.RIGHT_INFO }}
                                 </p>
                             </div>
@@ -65,7 +65,7 @@
             >
                 <div class="step-left">
                     <div class="mail-box">
-                        <div class="step-left-box">
+                        <div :class="['step-left-box',$lang === 'ru'?'ru-box':'']">
                             <div class="step-top">
                                 <span :class="$lang === 'en'?'en-font':''">{{ item.LEFT.LEFT_CIRCLE }}</span>
                             </div>
@@ -456,13 +456,6 @@ p {
     color: #000;
     
 }
-.lang-en {
-    .mail-guide{
-        p {
-            
-        }
-    }
-}
 .maillist {
     width: 1200px;
     position: relative;
@@ -512,9 +505,11 @@ p {
 .step-right-box {
     margin-left: 40px;
 }
-
 .step-left-box.en-box1 {
     height: 260px;
+}
+.step-left-box.ru-box1 {
+    height: 320px;
 }
 .step-left {
     z-index: 20;
@@ -556,7 +551,7 @@ p {
 }
 .mail-box {
     padding: 0;
-    height: 202px;
+    height: 200px;
 }
 .mail-box p {
     margin: 0 20px;
@@ -688,10 +683,15 @@ p {
             > li:nth-child(odd) {
                 background-color: #f2f2f2;
             }
-
         }
     }
-    .is-h5>div:last-of-type .step-right .en-box1 {
+    html[lang="ru"] .mail-list-h5 .heaed li:first-of-type {
+        width: 111px;
+    }
+     html[lang="ru"] .mail-list-h5 .item li:nth-of-type(2) {
+         text-align: right;
+     }
+    .step-right-box .inner-box.en-box1 {
         height: 200px;
     }
     .step-left-box .inner-box.en-box1 {
@@ -753,6 +753,12 @@ p {
         height: 160px;
         margin: 0 auto;
         box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+    .is-h5 div:last-of-type .step-left .ru-box .inner-box {
+        height: 300px;
+    }
+    html[lang="ru"] .is-h5 div:last-of-type .step-right .inner-box {
+        height: 200px;
     }
     .mail-table {
         padding: 0 30px;

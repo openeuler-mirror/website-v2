@@ -2726,5 +2726,1364 @@ module.exports = {
             INSIDENAME: 'CONNECT',
             MEETUPS_DATA: require('./../../data/salon').en.MEETUPS_LIST
         }
+    },
+    ru: {
+        LIVE: {
+            LIVE: 'Прямой эфир',
+            WILLPLAYER: 'About to Begin',
+            REPLAYER: 'Отличная рецензия',
+            LINKTIPS: 'The video is not uploaded yet',
+            LIVENOW: [
+            
+            ],
+            LIVEFORMERLY: [
+                {
+                    LIVETITLE: '手把手带你完成openEuler环境部署 K8S',
+                    LIVETEACHER: '讲师: 夏丹妮',
+                    LIVETIME: '时间: 9月17日 20:00（周四）',
+                    PHOTOPATH: '/img/live/xiadanni.png',
+                    FORMERLYLINK: ''
+                },
+                {
+                    LIVETITLE: 'iSula容器之安全容器',
+                    LIVETEACHER: '讲师: 姜鹏飞',
+                    LIVETIME: '时间: 9月15日 20:00（周二）',
+                    PHOTOPATH: '/img/live/jiangpengfei.png',
+                    FORMERLYLINK: ''
+                },
+                {
+                    LIVETITLE: 'iSula容器之系统容器',
+                    LIVETEACHER: '讲师: 章松',
+                    LIVETIME: '时间: 9月10日 20:00（周四）',
+                    PHOTOPATH: '/img/live/zhangsong.png',
+                    FORMERLYLINK: ''
+                },
+                {
+                    LIVETITLE: 'iSulad之安全特性实现解析',
+                    LIVETEACHER: '讲师: 吴景',
+                    LIVETIME: '时间: 9月8日 20:00（周二）',
+                    PHOTOPATH: '/img/live/wujing.png',
+                    FORMERLYLINK: ''
+                },
+                {
+                    LIVETITLE: 'iSulad之性能测试、分析与比较',
+                    LIVETEACHER: '讲师: 刘昊',
+                    LIVETIME: '时间: 9月3日 20:00（周四）',
+                    PHOTOPATH: '/img/live/liuhao.png',
+                    FORMERLYLINK: ''
+                },
+                {
+                    LIVETITLE: '轻量级容器引擎iSulad之功能介绍及架构解析',
+                    LIVETEACHER: '讲师: 李峰',
+                    LIVETIME: '时间: 9月1日 20:00（周二）',
+                    PHOTOPATH: '/img/live/lifeng.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV12y4y1C7Gr'
+                },
+                {
+                    LIVETITLE: '深入理解容器镜像构建工具',
+                    LIVETEACHER: '讲师: 刘泽坤',
+                    LIVETIME: '时间: 8月25日 20:00（周二）',
+                    PHOTOPATH: '/img/live/liuzekun.png',
+                    FORMERLYLINK: 'http://live.bilibili.com/22290444'
+                },
+                {
+                    LIVETITLE: 'isula-build之安全特性',
+                    LIVETEACHER: '讲师: 李翔',
+                    LIVETIME: '时间: 8月27日 20:00（周四）',
+                    PHOTOPATH: '/img/live/lixiang.png',
+                    FORMERLYLINK: 'http://live.bilibili.com/22290444'
+                },
+                {
+                    LIVETITLE: '虚拟化技术介绍',
+                    LIVETEACHER: '讲师: 张海亮',
+                    LIVETIME: '时间: 7月30日 20:00',
+                    PHOTOPATH: '/img/live/zhanghailiang.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1of4y1X7p1'
+                },
+                {
+                    LIVETITLE: '安装虚拟化&管理虚拟机',
+                    LIVETEACHER: '讲师: 陈振东',
+                    LIVETIME: '时间: 7月30日 20:00',
+                    PHOTOPATH: '/img/live/chenzhendong.png',
+                    FORMERLYLINK: ''
+                },
+                {
+                    LIVETITLE: '初始openEuler',
+                    LIVETEACHER: '讲师: 朱延朋',
+                    LIVETIME: '时间: 7月28日 20:00',
+                    PHOTOPATH: '/img/live/zhuyanpeng.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1it4y197KQ'
+                },
+                {
+                    LIVETITLE: '安装openEuler',
+                    LIVETEACHER: '讲师: 冯涛',
+                    LIVETIME: '时间: 7月28日 20:00',
+                    PHOTOPATH: '/img/live/fengtao.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1vK4y1s7QG'
+                },
+                {
+                    LIVETITLE: '使用openEuler',
+                    LIVETEACHER: '讲师: 沈洋洋',
+                    LIVETIME: '时间: 7月28日 20:00',
+                    PHOTOPATH: '/img/live/shenyangyang.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV13z4y1D7mq'
+                },
+                {
+                    LIVETITLE: 'openEuler构建之OBS使用指导',
+                    LIVETEACHER: '讲师: 朱春意',
+                    LIVETIME: '时间: 7月28日 20:00',
+                    PHOTOPATH: '/img/live/zhuchunyi.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1YK411H7E2'
+                },
+                {
+                    LIVETITLE: 'openEuler软件包的构建、开发与维护',
+                    LIVETEACHER: '讲师: 何晓文',
+                    LIVETIME: '时间: 7月28日 20:00',
+                    PHOTOPATH: '/img/live/hexiaowen.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1pK411J7R9'
+                },
+                {
+                    LIVETITLE: '如何参与openEuler内核开发',
+                    LIVETEACHER: '讲师: 谢秀奇',
+                    LIVETIME: '时间: 7月30日 20:00',
+                    PHOTOPATH: '/img/live/xiexiuqi.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV11i4y1u7r9'
+                },
+                {
+                    LIVETITLE: 'openEuler网络配置',
+                    LIVETEACHER: '讲师: 马郡',
+                    LIVETIME: '时间: 7月30日 20:00',
+                    PHOTOPATH: '/img/live/majun.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV17C4y187sM'
+                },
+                {
+                    LIVETITLE: '可信计算之内核完整性度量',
+                    LIVETEACHER: '讲师: 张天行',
+                    LIVETIME: '时间: 7月30日 20:00',
+                    PHOTOPATH: '/img/live/zhangtianxing.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1dk4y1171e'
+                },
+                {
+                    LIVETITLE: '开源版权和License',
+                    LIVETEACHER: '讲师: 卜瑞峰',
+                    LIVETIME: '时间: 7月30日 20:00',
+                    PHOTOPATH: '/img/live/boruifeng.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1Ty4y1y7eK'
+                },
+            ]
+        },
+        SUMMIT: {
+            SUMMIT: 'Summit',
+            NAV_LIST: ['Live Broadcast','Agenda','Speakers','Partners','Review'],
+            SUMMITCONTENT: [
+                'The openEuler Summit 2020 will be held at Hyatt Regency Beijing Wangjing from December 24 to 25 in Beijing, China. The second summit this year, the event will dive deep into openEuler, the open source operating system of tomorrow and how it exceeds conventional technologies thanks to community participation. This openEuler event is an opportunity for developers to exchange the latest OS trends with like-minded individuals.',
+                'The upcoming summit will focus on the collaboration across software-hardware and cloud-edge-device, as well as scenarios where all things are connected and diversified computing coexist. This event will discuss how to tap into technological innovation and build an open ecosystem. The summit provides an opportunity for streamlining the OS industry, and will consider how the openEuler OS can create shared value across the entire industry chain. The summit is only possible thanks to the participation of our developers, users, community contributors, and software enthusiasts, who have explored the latest OS developments. Together, we are on the cusp of the next breakthrough.'
+            ],
+            LIVETITLE: 'Live Broadcast',
+            PC_LIVEIMG: '/img/summit/home/en-pc-liveroom.png',
+            MOBILE_LIVEIMG: '/img/summit/home/en-mobile-liveroom.png',
+            SUMMITLIVE: [
+                {
+                    THEME: 'openEuler Summit 2020',
+                    TIME: '09:30-11:55',
+                    OPTION: '09:30-11:55 openEuler Summit 2020',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7095?lang=zh&thirdId='
+                },
+                {
+                    THEME: 'Operating System',
+                    TIME: '14:00-17:20',
+                    OPTION: '14:00-17:20 Operating System',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7096?lang=zh&thirdId='
+                },
+                {
+                    THEME: 'Cloud and Cloud Native',
+                    TIME: '14:00-16:55',
+                    OPTION: '14:00-16:55 Cloud and Cloud Native',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7097?lang=zh&thirdId='
+                },
+                {
+                    THEME: 'Virtualization',
+                    TIME: '14:00-16:55',
+                    OPTION: '14:00-16:55 Virtualization',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7098?lang=zh&thirdId='
+                },
+                {
+                    THEME: 'Open Source and Infrastructure',
+                    TIME: '14:00-16:55',
+                    OPTION: '14:00-16:55 Open Source and Infrastructure',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7099?lang=zh&thirdId='
+                },
+                {
+                    THEME: 'Security & Trustworthiness',
+                    TIME: '14:00-17:25',
+                    OPTION: '14:00-17:25 Security & Trustworthiness',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7100?lang=zh&thirdId='
+                },
+                {
+                    THEME: 'Basic Software',
+                    TIME: '14:00-17:25',
+                    OPTION: '14:00-17:25 Basic Software',
+                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7101?lang=zh&thirdId='
+                }
+            ],
+            SUMMIT_HOME_DATA: {
+                AGENDA: {
+                    WEB_TITLE: '/img/summit/home/agenda/en-pc-agenda.png',
+                    MOBILE_TITLE: '/img/summit/home/agenda/en-mobile-agenda.png',
+                    DATE:['Dec 24','Dec 25','Morning','Afternoon'],
+                    AFTERNOON_AGENDA_24: [
+                        {
+                            TIME: '13:00-14:30',
+                            THEME: 'Opening Speech',
+                            SPEAKER: 'Ma Quanyi',
+                            POSITION: 'Member, openEuler Technical Committee (TC)'
+                        },
+                        {
+                            TIME: '13:10-14:40',
+                            THEME: 'Support of openEuler for the AppStream Mechanism'
+                        },
+                        {
+                            TIME: '13:10-14:40',
+                            THEME: 'Applying for Establishing the Intelligent O&M SIG'
+                        },
+                        {
+                            TIME: '13:10-14:40',
+                            THEME: 'Switching from Gitee Issues to Bugzilla'
+                        },
+                        {
+                            TIME: '13:10-14:40',
+                            THEME: 'TC Collaboration Mode in 2021'
+                        },
+                        {
+                            TIME: '15:00-15:30',
+                            THEME: 'Opening Speech & Maintainer Badge Awarding Ceremony',
+                            SPEAKER: 'Ma Quanyi',
+                            POSITION: 'Member, openEuler TC'
+                        },
+                        {
+                            TIME: '15:30-15:50',
+                            THEME: 'openEuler Community Operation Analysis',
+                            SPEAKER: 'Zhou Minghui',
+                            POSITION: 'Boya Distinguished Professor, Peking University'
+                        },
+                        {
+                            TIME: '15:50-16:00',
+                            THEME: 'Meet Maintainers of openEuler Community',
+                            SPEAKER: 'Fang Yafen',
+                            POSITION: 'Maintainer, RaspberryPi SIG'
+                        },
+                        {
+                            TIME: '16:00-16:10',
+                            THEME: 'Meet Maintainers of openEuler Community',
+                            SPEAKER: 'Yang Zhao',
+                            POSITION: 'Maintainer, Ha SIG'
+                        },
+                        {
+                            TIME: '16:10-16:20',
+                            THEME: 'Meet Maintainers of openEuler Community',
+                            SPEAKER: 'Zheng Xian',
+                            POSITION: 'Maintainer, ai-bigdata SIG'
+                        },
+                        {
+                            TIME: '16:20-17:00',
+                            THEME: 'Q&A'
+                        },
+                        {
+                            TIME: '17:00-17:30',
+                            THEME: 'Summary',
+                            SPEAKER: 'Hu Xinwei',
+                            POSITION: 'Chairman, openEuler TC'
+                        }
+                    ],
+                    FORENOON_AGENDA_25: [
+                        {
+                            TIME: '09:30-09:35',
+                            THEME: 'Opening Speech'
+                        },
+                        {
+                            TIME: '09:35-09:50',
+                            THEME: 'openEuler: Innovative OS for Industry Chain of Shared Value',
+                            SPEAKER: 'Jiang Dayong',
+                            POSITION: 'Director, openEuler Community'
+                        },
+                        {
+                            TIME: '09:50-09:55',
+                            THEME: 'Establishment of the openEuler Technical Committee',
+                            SPEAKER: 'Qiu Chengfeng',
+                            POSITION: 'Vice Director, openEuler Community'
+                        },
+                        {
+                            TIME: '09:55-10:15',
+                            THEME: 'openEuler Fuels Constant Technology Innovation',
+                            SPEAKER: 'Hu Xinwei',
+                            POSITION: 'Chairman, openEuler Technical Committee'
+                        },
+                        {
+                            TIME: '10:15-10:35',
+                            THEME: "Huawei' s Contribution and Its Role in the Linux Kernel Community",
+                            SPEAKER: 'Chen Haibo',
+                            POSITION: 'Chief OS technical expert, Huawei; Distinguished Professor, Shanghai Jiao Tong University'
+                        },
+                        {
+                            TIME: '10:50-11:05',
+                            THEME: 'Implementing Cloud Native Computing on Hybrid Architecture Platforms',
+                            SPEAKER: 'Zhang Chun',
+                            POSITION: 'Deputy General Manager, R&D Innovation Center, China Mobile Information Technology Center'
+                        },
+                        {
+                            TIME: '11:05-11:20',
+                            THEME: 'Secure Mobile Edge Payment Powered by Confidential Computing',
+                            SPEAKER: 'Zu Lijun',
+                            POSITION: 'Director, National Engineering Laboratory for Electronic Commerce and Electronic Payment'
+                        },
+                        {
+                            TIME: '11:20-11:40',
+                            THEME: 'openEuler & Friends: Diversified Ecosystem Scenarios',
+                            SPEAKER: 'Xiong Wei and community developers'
+                        },
+                        {
+                            TIME: '11:40-11:50',
+                            THEME: 'Open Source Promotes Shared Development and Governance for the Benefit of All',
+                            SPEAKER: 'Du Junping',
+                            POSITION: 'General Manager, Cloud & AI Open Source Business, Huawei'
+                        },
+                        {
+                            TIME: '11:50-11:55',
+                            THEME: 'Awards Ceremony for openEuler Community Developers',
+                            SPEAKER: 'Ma Quanyi',
+                            POSITION: 'openEuler Maintainer'
+                        }
+                    ],
+                    AFTERNOON_AGENDA_25: {
+                        TIME_LIST: ['14:00-14:40','14:40-15:10','15:10-15:40','15:55-16:25','16:25-16:55','16:55-17:25'],
+                        CARD_LIST: [
+                            {
+                                TITLE: ['Session 1','Operating System'],
+                                ITEM_LIST: [
+                                    {
+                                        TIME: '14:00-14:40',
+                                        THEME: "Roundtable: The Operating System of Tomorrow, Unlocking Today's Diversified Computing"
+                                    },
+                                    {
+                                        TIME: '14:40-15:10',
+                                        THEME: 'Application Performance Tuning of openEuler',
+                                        SPEAKER: ['Chen Qide, Beijing TurboLinux'],
+                                        DESC: ['Databases are one of the typical enterprise-grade Linux applications. To provide better database services for enterprises, we focus on performance indicators when developing distributed databases based on openEuler. These performance indicators include the duration and frequency of invoking functions, time-consuming thread processing, data types of memory cache, and network request delay. During database performance testing, we improve programs to squeeze the best hardware performance. This topic takes the performance tuning during database R&D as an example to describe the application performance tuning of openEuler.']
+                                    },
+                                    {
+                                        TIME: '15:10-15:40',
+                                        THEME: 'Community Helps Port RISC-V and NutShell Processors to openEuler OS',
+                                        SPEAKER: ['Zhou Peng, Institute of Software, Chinese Academy of Sciences (CAS)','Zhang Xuzhou, Huawei'],
+                                        DESC: ['In this topic, two speakers will use the general method for developing OS distributions to introduce how the openEuler Community helps port the RISC-V architecture and NutShell processors to openEuler OS. They will also discuss the challenges and opportunities for developing OS versions, in particular the status quo and problems of OS package dependency management. Furthermore, they will explore a new mode for managing OS dependencies and package distribution.']
+                                    },
+                                    {
+                                        TIME: '15:55-16:25',
+                                        THEME: 'Using Kubernetes to Deploy iSula Container Clusters on Raspberry Pi-based openEuler OS',
+                                        SPEAKER: ['Fang Yafen, Institute of Software, CAS','Li Baolin, Huawei'],
+                                        DESC: ['1. Porting the openEuler OS to Raspberry Pi as a Raspberry Pi-based image.','2. Using Kubernetes to deploy iSula container clusters on Raspberry Pi-based openEuler OS.']
+                                    },
+                                    {
+                                        TIME: '16:25-16:55',
+                                        THEME: 'General Accelerator Framework for Heterogeneous Systems: UADK Ecosystem and Development Progress',
+                                        SPEAKER: ['Gao Zhangfei, Linaro','Li Guozhu, Huawei'],
+                                        DESC: ['The Unified/User-space-access-intended Accelerator Framework (Uacce) is an accelerator framework jointly developed by Huawei HiSilicon and Linaro for heterogeneous systems. The main kernel drivers have been merged into the Linux kernel mainline, and we are developing the user-mode library UADK and OpenSSL engine. We aim to provide a more secure accelerator solution based on the IOMMU Shared Virtual Addressing (SVA) feature. The solution enables the accelerator and main CPU to share the unified address space. We hope to see more partners join us for development.']
+                                    },
+                                    {
+                                        TIME: '16:55-17:25',
+                                        THEME: 'Using eBPF to Replace the Kernel Module Compilation for an Efficient Network Monitoring System Without Performance Loss',
+                                        SPEAKER: ['Fan Bin, e Cloud'],
+                                        DESC: ['Traditional network monitoring systems are mostly implemented by compiling kernel modules or accessing proc files from user space. However, the kernel module compilation is complex and it is difficult to maintain and debug kernel modules. As a result, we need a solution that can implement functions similar to those of the kernel module without compromising performance. This presentation describes how to harness the eBPF technology for an efficient network monitoring system without performance loss. The system can be used to monitor and observe cloud native networks in data centers and locate faults such as network delay and package loss.']
+                                    }
+                                ]
+                            },
+                            {
+                                TITLE: ['Session 2','Cloud and Cloud Native'],
+                                ITEM_LIST: [
+                                    {
+                                        TIME: '14:00-14:30',
+                                        THEME: 'China Mobile: Kubernetes, openEuler, and iSula Empower the Smooth Scheduling Between ARM and x86',
+                                        SPEAKER: ['Wei Baohui, China Mobile Information Technology'],
+                                        DESC: ['In this presentation, Mr. Wei will tell us how China Mobile leverages the Kubernetes+openEuler+iSula for smooth scheduling between ARM and x86 architectures.']
+                                    },
+                                    {
+                                        TIME: '14:30-15:00',
+                                        THEME: 'Adapting and Integrating OpenStack to openEuler OS',
+                                        SPEAKER: ['Li Kunshan, China Unicom Cloud Data Company'],
+                                        DESC: ['This topic describes the progress and technology of adapting the OpenStack cloud platform to the openEuler OS, and shares technologies and cases in this regard.']
+                                    },
+                                    {
+                                        TIME: '15:00-15:30',
+                                        THEME: 'Applying iSula to the Edge Computing OS HopeEdge',
+                                        SPEAKER: ['Liang Dong, Hoperun Information Technology'],
+                                        DESC: ['This topic describes the edge operating system developed based on openEuler. Thanks to the lightweight customization, the edge OS integrates the iSula container engine to quickly deploy and upgrade applications.']
+                                    },
+                                    {
+                                        TIME: '15:45-16:15',
+                                        THEME: 'Huayun Data: Adapting Kubernetes-based Platform to openEuler OS',
+                                        SPEAKER: ['Huang Maofeng, Huayun Data'],
+                                        DESC: ['Huayun Data develops the Kubernetes-based PaaS platform on Archer CloudSuite, and reconstructs and optimizes Kubernetes for different services. The adaptation to openEuler is highly challenging. Thanks to the openEuler Community, Huayun Data overcomes the difficulty and acquires abundant experience during the adaptation.']
+                                    },
+                                    {
+                                        IME: '16:15-16:45',
+                                        THEME: 'Working Principles and Practices of A-Tune: openEuler Intelligent Tuning Engine',
+                                        SPEAKER: ['Xie Zhipeng, Huawei'],
+                                        DESC: ['A-Tune adopts AI technologies to ensure the optimal service running. It builds precise models for services running on the operating system, understands service features and infers specific applications, and dynamically adjusts the parameters based on service loads to provide the optimal parameter configuration. ','This topic will discuss:','1. Implementing the core capabilities of A-Tune: online static tuning and offline dynamic tuning','2. Tuning cases of A-Tune','3. Technology roadmap of A-Tune']
+                                    },
+                                    {
+                                        IME: '16:45-17:15',
+                                        THEME: 'Playing minikube on openEuler',
+                                        SPEAKER: ['Zhao Shuai Linaro','Liu Xinliang Linaro'],
+                                        DESC: ['minikube is a simple tool for the local deployment of Kubernetes. It enables developers to start the Kubernetes cluster in one click and simplify the cluster O&M. In this presentation, two speakers will introduce the basic working principles of minikube and what we have done in the community to run minikube on openEuler. In addition to minikube, the compatibility of other mainstream Kubernetes deployment tools with openEuler will also be discussed in this topic.']
+                                    }
+                                ]
+                            },
+                            {
+                                TITLE: ['Session 3','Virtualization'],
+                                ITEM_LIST: [
+                                    {
+                                        TIME: '14:00-14:30',
+                                        THEME: 'StratoVirt: Next-Generation Virtualization Platform on openEuler',
+                                        SPEAKER: ['Wu Bin, Huawei'],
+                                        DESC: ['StratoVirt is a next-generation Rust-based Virtual Machine Manager (VMM). It is a virtualization platform oriented to enterprise cloud data centers and supports VM, container, and serverless scenarios. This topic describes the features, technical architecture, and roadmap of StratoVirt.']
+                                    },
+                                    {
+                                        TIME: '14:30-15:00',
+                                        THEME: 'Optimized Display Technology Tailored to Cloud Desktops',
+                                        SPEAKER: ['Sun Lijie, Hunan Kylinsec'],
+                                        DESC: ['Some technical issues may occur when cloud desktop products are implemented using the Kernel-based Virtual Machine (KVM). To deal with these issues, this topic describes technical solutions for graphics display and optimization, such as virtualized graphics card optimization, graphics card penetration, and video redirection. In addition, these solutions require the optimization and function enhancement of components such as the openEuler kernel and decoding library.']
+                                    },
+                                    {
+                                        TIME: '15:00-15:30',
+                                        THEME: 'Implementing Virtualization and Private Cloud on openEuler',
+                                        SPEAKER: ['Qiu Dayu, Huayun Data'],
+                                        DESC: ['How to optimize the virtualization platform performance and quickly adapt it to the latest SAN devices, and how to provide high-performance virtual GPUs (vGPUs) are the major issues on the ARM-based platform, especially on the openEuler OS. This topic will show you how Huayun Data optimizes and adapts the virtualization platform to the openEuler OS, and how the company innovates the virtualization platform to support peripheral devices.'] 
+                                    },
+                                    {
+                                        TIME: '15:45-16:15',
+                                        THEME: 'Optimized Virtualization Performance Fueled by openEuler',
+                                        SPEAKER: ['Qi Zhihui, Sangfor Technologies'],
+                                        DESC: ['The topic presents the technologies for optimizing virtualization performance on openEuler, including storage and computing performance.'] 
+                                    },
+                                    {
+                                        TIME: '16:15-16:45',
+                                        THEME: 'Innovative Cloud Products Running on Kunpeng+openEuler',
+                                        SPEAKER: ['Luo Yun, Winhong Information Technology'],
+                                        DESC: ['Winhong has developed an enterprise-grade product powered by Kunpeng-based servers and the openEuler OS. This product supercharges server virtualization and cloud management of enterprises, and has earned good reputation in a wide range of industries, including governments, finance, and carriers. Today, we would like to present this product to our peers.'] 
+                                    },
+                                    {}
+                                ]
+                            },
+                            {
+                                TITLE: ['Session 4','Open Source and Infrastructure'],
+                                ITEM_LIST: [
+                                    {
+                                        TIME: '14:00-14:15',
+                                        THEME: 'openEuler CLA Signing System for Multiple Code Hosting Platforms',
+                                        SPEAKER: ['Yuan Zhichang, ARM China','Chen Zeng, Huawei'],
+                                        DESC: ['This topic will discuss the following questions:','1. How does an open source community provide developer-friendly contribution license agreement (CLA) signing services? Which kind of services is better, self-developed services or services based on open source projects? How to ensure the legal force of the signed CLA? ','2. Which role does a contributor play in signing the CLA? How does an enterprise sign the CLA when participating in the community? After signing the CLA, how does the contributor protect the rights and interests in the subsequent development activities?']
+                                    },
+                                    {
+                                        TIME: '14:15-15:00',
+                                        THEME: 'Compass-CI: A Developer-Friendly Test System',
+                                        SPEAKER: ['Wu Fengguang, Huawei','Du Kaitian, Huawei'],
+                                        DESC: ['This topic presents how Compass-CI provides test services for the open source software ecosystem that supports multiple architectures and systems.']
+                                    },
+                                    {
+                                        TIME: '15:00-15:30',
+                                        THEME: 'Building the Open Source Infrastructure and oepkgs Software Package Service Platform in openEuler Community',
+                                        SPEAKER: ['Yin Jiayi, Institute of Software, CAS','Cao Zhi, Huawei'],
+                                        DESC: ['1. Technology selection and practice of building openEuler Community infrastructure.','2. The oepkgs software package service platform consists of the oepkgs container image repository and oepkgs RedHat Package Manager (RPM) repository. In this topic, we will explain the background of building the oepkgs platform, as well as the basic architecture, usage, and developments of the two repositories for maintenance.']
+                                    },
+                                    {
+                                        TIME: '15:45-16:15',
+                                        THEME: 'How Open Source Community Data Drives the openEuler Operations',
+                                        SPEAKER: ['Xia Xiaoya, East China Normal University','Zhong Jun, Huawei'],
+                                        DESC: ['1. Why do we need digital operation?','2. How to select a proper digital operation system, such as the Community Health Analytics Open Source Software (CHAOSS), OM, and Kibble?','3. How to build the operation system architecture?','4. How to display operation data?','5. How to implement the CHAOSS indicator system?','6. How to drive digital operations in the openEuler Community?']
+                                    },
+                                    {
+                                        TIME: '16:15-16:45',
+                                        THEME: 'Insights into Open Source Products, Better Interactive Experience and Design for openEuler Developers',
+                                        SPEAKER: ['Zhang Shuting, Huawei','Ma Quanyi, Huawei'],
+                                        DESC: ['1. Open source projects and business are becoming interwoven. As a result, a successful open source project is only possible thanks to the innovative commercial product design. The first part of this topic describes how to design products in an open source project.','2. User experience teams are constantly striving to provide better interactive experience and design for open source developers. The second part of this topic describes how openEuler and openLooKeng communities provide developer-friendly products.']
+                                    }
+                                ]
+                            },
+                            {
+                                TITLE: ['Session 5','Security & Trustworthiness'],
+                                ITEM_LIST: [
+                                    {
+                                        TIME: '14:00-14:30',
+                                        THEME: 'openEuler Security Capability Development',
+                                        SPEAKER: ['Wei Gang, Huawei'],
+                                        DESC: ['A Security Committee member will tell you how the openEuler Community develops its security capabilities and the future plan for building a secure open source community. The topic will present a complete capability framework for community security. It focuses on the latest progress and challenges of the community in security coding, security design, and vulnerability collection, response, and handling.']
+                                    },
+                                    {
+                                        TIME: '14:30-15:00',
+                                        THEME: 'How Arm-v8.x Key Features Ensure Higher Performance and Security for openEuler',
+                                        SPEAKER: ['Yuan Zhichang, ARM China'],
+                                        DESC: ['This topic describes the four Arm-v8.x key features related to performance and security, including Large System Extension (LSE), Scalable Vector Extension (SVE), Pointer Authentication (PAuth), and Branch Target Identification (BTI). The topic will also discuss the support for the preceding features in upstream open source communities, OS open source communities, and openEuler Community.']
+                                    },
+                                    {
+                                        TIME: '15:00-15:30',
+                                        THEME: 'RAS on ARM64',
+                                        SPEAKER: ['Chen Gong, Huawei'],
+                                        DESC: ['Reliability is the cornerstone of server platforms. The concept of Reliability, Availability, and Serviceability (RAS) has been the focus of any server platform since it was proposed by IBM 50 years ago. RAS is an essential indicator for both the x86-based Xeon platform and the new ARM64-based platform. This topic will give you an overview of the RAS and present how the openEuler-based ARM64 servers enhance their RAS.  ']
+                                    },
+                                    {
+                                        TIME: '15:45-16:15',
+                                        THEME: 'How to Create a Compliant Open Source Community',
+                                        SPEAKER: ['Bian Naimeng, Hoperun Information Technology','Gao Kun, Huawei'],
+                                        DESC: ['One of the biggest risks of open source projects is non-compliance. To enhance open source compliance, communities need to ensure authorized code source and high code quality. An open source community would flourish only when it is fully compliant. Against this backdrop, the topic describes how to build a compliant open source community.']
+                                    },
+                                    {
+                                        TIME: '16:15-16:45',
+                                        THEME: 'SELinux-based Confidentiality and Integrity Policy',
+                                        SPEAKER: ['Luoqiu, Hunan Kylinsec'],
+                                        DESC: ['Security-Enhanced Linux (SELinux) is a standardized security infrastructure on the openEuler. For specific software services, SELinux controls confidentiality and integrity, ensures that the direction of information flows remains unchanged, and prevents sensitive information leakage and unauthorized modification. This topic analyzes how to implement trustworthiness policies in different scenarios using SELinux.']
+                                    },
+                                    {
+                                        TIME: '16:45-17:15',
+                                        THEME: 'OS Built on Intrinsic Security',
+                                        SPEAKER: ['Wang Jiangtao, iSoft Infrastructure Software'],
+                                        DESC: ['Trustworthy computing requires dedicated servers, which result in the huge workload of software architecture reconstruction. The existing servers of enterprises, public institutions, and Internet data centers are mostly x86-based. As a result, it takes a long time to replace all these x86-based servers with servers running on Chinese-made hardware and software. The solution for faster replacement is the operating system built on intrinsic security, which combines the mature encryption card with encryptor.']
+                                    }
+                                ]
+                            },
+                            {
+                                TITLE: ['Session 6','Basic Software'],
+                                ITEM_LIST: [
+                                    {
+                                        TIME: '14:00-14:30',
+                                        THEME: 'Technical Architecture and Deployment of the BiSheng JDK and BiSheng Compiler',
+                                        SPEAKER: ['Guo Ge, Huawei','Wei Wei, Huawei'],
+                                        DESC: ['The BiSheng JDK and BiSheng Compiler were officially released in the openEuler 20.09 version. This topic describes the core technologies of these two BiSheng software products and how the compilation technology enables upper-layer applications.']
+                                    },
+                                    {
+                                        TIME: '14:30-15:00',
+                                        THEME: 'HA Enterprise Solutions Powered by openGauss on openEuler',
+                                        SPEAKER: ['Liu Weiyun, Beijing Enmotech'],
+                                        DESC: ['The topic discusses how openGauss enables the HA solution on the openEuler platform, including the enterprise-grade two-node cluster, one active node and multiple standby nodes, and cross-equipment room deployment, as well as the success cases of the HA solution.']
+                                    },
+                                    {
+                                        TIME: '15:00-15:30',
+                                        THEME: 'High-Performance SDS Running on Kunpeng+openEuler',
+                                        SPEAKER: ['Chi Xinze, XSKY (Beijing) Data Technology'],
+                                        DESC: ['This topic introduces:','1. The process of porting XEDP from CentOS 7.6 + x86 to openEuler+Kunpeng','2. Problems during the porting and corresponding solutions','3. The performance tuning solution for XEDP on the openEuler+Kunpeng architecture, and the application cases of the solution']
+                                    },
+                                    {
+                                        TIME: '15:45-16:15',
+                                        THEME: 'DDE: Desktop OS Architecture Design',
+                                        SPEAKER: ['Wang Yaohua, Uniontech Software'],
+                                        DESC: ['Uniontech Software offers the ultimate DDE desktop OS, which is powered by the openEuler OS and the optimized kernel of the openEuler Community. This presentation will unveil the basic architecture of the DDE to help you dive deeper into the basic functions, technical principles, and architecture design of the DDE desktop OS.']
+                                    },
+                                    {
+                                        TIME: '16:15-16:45',
+                                        THEME: 'Ultimate Performance and Application Cases of openGauss on Kunpeng Platform',
+                                        SPEAKER: ['Huang Xiaotao, Beijing Vastdata Technology','Feng Jie, Huawei','Wang Junjie, Huawei'],
+                                        DESC: ['1. Speakers from Huawei will describe how openGauss on the multi-core Kunpeng server is optimized in the online transaction processing (OLTP) scenario, including bottleneck analysis, methods, and results of the optimization.','2. Vastbase is an enterprise-class relational database built on years of industry experience. The representative from Vastdata Technology will discuss how the massive Vastbase is ported to the Kunpeng + openEuler OS platform.']
+                                    },
+                                    {
+                                        TIME: '16:45-17:15',
+                                        THEME: 'UKUI: File Manager Architecture Analysis',
+                                        SPEAKER: ['Li Jianfeng, Kylinsoft'],
+                                        DESC: ['The newly designed UKUI 3.0 can be downloaded and installed in openEuler 20.03 SP1 and 20.09 versions. This topic describes the file manager in the UKUI desktop environment, including the upgrade from the UKUI file manager 2.0 to 3.0, technology selection and overall architecture design of the latest file manager, and future developments.']
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    SIG_CONTENT: {
+                        TITLE: 'SIG Open Working Sessions',
+                        SIG1_TIME: '16:00 - 16:10' ,
+                        SIG1_DETAIL: ['Opening Speech','Ma Quanyi','Member of openEuler TC'],
+                        SIG2_TIME: '16:10 - 17:00',
+                        SIG2_DETAIL: [
+                            {
+                                THEME: 'SIG-DDE',
+                                CONTENT: ['1) Achievements of Adapting DDE to openEuler','2) DDE Version Update Plan',"3) Discussion on Enthusiasts' Requirements for the Desktop"]
+                            },
+                            {
+                                THEME: 'SIG-UKUI',
+                                CONTENT: ['1) Work Progress of UKUI for openEuler 20.03 LTS SP1','2) Discussion on the Future Development of UKUI']
+                            },
+                            {
+                                THEME: 'SIG-Ha',
+                                CONTENT: ['1) Progress of the Ha project','2) Discussion on the Plan for Merging the Ha Project into Upstream Community']
+                            },
+                            {
+                                THEME: 'SIG-aarch32',
+                                CONTENT: ['1) Work Progress of Adapting AArch32 to openEuler','2) Discussion on the Coexistence Between AArch32 Adapted Code and Mainline Versions']
+                            },
+                            {
+                                THEME: 'SIG-A-Tune',
+                                CONTENT: ['1) Review of New Features and Achievements of A-Tune in 2020','2) Discussion on Future Technology Evolution of A-Tune','3) Development Process of A-Tune and Wisdom in Community and Key Issue Analysis','4) Discussion on Papers of the Latest Tuning Technology']
+                            },
+                            {
+                                THEME: 'SIG-iSulad & Container',
+                                CONTENT: ['1) Cloud Native Technologies','2) Cloud Native Efficiency Improvement','3) Issues of Cloud Native Application']
+                            },
+                            {
+                                THEME: 'SIG-ai-bigdata',
+                                CONTENT: ['1) Review of Achievements of ai-bigdata SIG in 2020','2) Discussion on LTS Version Selection','3) Discussion on the openEuler-based Big Data and AI Platform',"4) Discussion on the SIG's Technical Scope and Roadmap"]
+                            },
+                            {
+                                THEME: 'SIG-security-facility & sig-confidential-computing',
+                                CONTENT: ['1) Existing Security Technologies of security-facility SIG','2) Discussion on openEuler Security Technology Developments and Roadmap','3) Discussion on Confidential Computing Application Scenarios and Security Technologies']
+                            },
+                            {
+                                THEME: 'SIG-Compiler',
+                                CONTENT: ['1) Working plan of Compiler SIG, Including the JDK/GCC Support Roadmap','2) Discussion on Requirements for Supporting Compilers (LLVM) and Rust/Go Programming Languages','3) Discussion on the Plan for Supporting Containers (iSula) on openJDK']
+                            },
+                            {
+                                THEME: 'SIG-doc',
+                                CONTENT: ['1) Introduction to the Current Document System of openEuler Community','2) Discussion on the Plan and Focus of the Doc SIG','3) Discussion on Encouraging Developers to Contribute Blogs and Videos to Community']
+                            },
+                            {
+                                THEME: 'SIG-Infrastructure',
+                                CONTENT: ['1)Review of the openEuler Infrastructure in 2020','2)Discussion on the openEuler Infrastructure Key Priorities in 2021','3)Ideas of Promoting Intelligent O&M on openEuler Infrastructure']
+                            },
+                            {
+                                THEME: 'SIG-security-committee',
+                                CONTENT: ['1) Analysis of Vulnerability Handling Process of openEuler Community: Vulnerability Awareness, Handling, and Disclosure','2) Discussion on Security Vulnerability Patch Fix Policies','3) Discussion on Applying the Security Guide in Community','4) Discussion on Collaboration Between Security TC and SIGs for Vulnerability Analysis, Fix, and Disclosure']
+                            },
+                            {
+                                THEME: 'SIG-Compatibility-Infra',
+                                CONTENT: ['1) Kernel KABI and Southbound Driver Compatibility','2) Software Package Compatibility Level and Northbound Application Compatibility','3) Compatibility Policy Between Versions']
+                            },
+                            {
+                                THEME: 'SIG-QA',
+                                CONTENT: ['1) Discussion on Building the Quality Measurement System of openEuler Community','2) Discussion on Conducting Crowdtesting in openEuler Community','3) Discussion on the SIG Future Plan']
+                            },
+                            {
+                                THEME: 'SIG-release-management',
+                                CONTENT: ['1) Discussion on Version Lifecycle Plan of openEuler Community: 20.03 Maintenance Lifecycle and SP2 Release Time','2) Discussion on Policies of Partner Version Consistence and Component Upgrade: Patch Backporting, Version Upgrade, Component Mode, Secondary Development, and Backporting Time','3) Discussion on Participation of OSVs and ISVs in the release-management SIG and the SIG Operation']
+                            },
+                            {
+                                THEME: 'SIG-Kernel',
+                                CONTENT: ['1) Kernel Test Protection and Stability Assurance','2) Leveraging Community Expertise to Discover and Fix openEuler Kernel Bugs and Ensure Stability of LTS Versions','3) Discussion on the Policy for Merging Innovation Version Features','4) Discussion on Requirements for the openEuler 5.10 Kernel Version']
+                            },
+                            {
+                                THEME: 'SIG-Virt',
+                                CONTENT: ['1) Overview of New Technologies and Success Practices of Virt SIG in 2020','2) Discussion on the Technical Planning of Virt SIG in 2021','3) Discussion on Requirements for Virt SIG, such as New Features, Development Process, and Issue Resolution']
+                            }
+                        ],
+                        SIG3_TIME: '17:00 - 18:30',
+                        SIG3_DETAIL: ['Presentation & Exchange of Discussion Results']
+                    }
+                },
+                LECTURER: {
+                    WEB_TITLE: '/img/summit/home/lecturer/en-pc-lecturer.png',
+                    MOBILE_TITLE: '/img/summit/home/lecturer/en-mobile-lecturer.png',
+                    LECTURERLIST: [
+                        {
+                            IMG: '/img/summit/home/lecturer/jiangdayong.png',
+                            NAME: 'Jiang Dayong',
+                            POSITION: 'Director, openEuler Community'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/qiuchengfeng.png',
+                            NAME: 'Qiu Chengfeng',
+                            POSITION: 'Vice Director, openEuler Community'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/huxinwei.png',
+                            NAME: 'Hu Xinwei',
+                            POSITION: 'Chairman, openEuler Technical Committee'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/chenhaibo.png',
+                            NAME: 'Chen Haibo',
+                            POSITION: 'Chief OS Technical Expert, Huawei/Distinguished Professor, Shanghai Jiao Tong University'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/zulijun.png',
+                            NAME: 'Zu Lijun',
+                            POSITION: 'Director, National Engineering Laboratory for Electronic Commerce and Electronic Payment'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/xiongwei.png',
+                            NAME: 'Dr. Xiong Wei',
+                            POSITION: 'Member, openEuler Technical Committee'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/dujunping.png',
+                            NAME: 'Du Junping',
+                            POSITION: 'General Manager, Cloud & AI Open Source Business, Huawei'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/maquanyi.png',
+                            NAME: 'Ma Quanyi',
+                            POSITION: 'openEuler Community Maintainer'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/chenqide.png',
+                            NAME: 'Chen Qide',
+                            POSITION: 'Deputy General Manager, Beijing TurboLinux'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/zhoupeng.png',
+                            NAME: 'Zhou Peng',
+                            POSITION: 'Research Fellow, Institute of Software, Chinese Academy of Sciences (CAS)'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/zhangxuzhou.png',
+                            NAME: 'Zhang Xuzhou',
+                            POSITION: 'openEuler RISC-V SIG Maintainer'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/fangyafen.png',
+                            NAME: 'Fang Yafen',
+                            POSITION: 'Engineer, Institute of Software, CAS'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/libaolin.png',
+                            NAME: 'Li Baolin',
+                            POSITION: 'Operation Engineer, openEuler Community'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/zhaoshuai.png',
+                            NAME: 'Zhao Shuai',
+                            POSITION: 'Tech Lead, Linaro'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/liuxinliang.png',
+                            NAME: 'Liu Xinliang',
+                            POSITION: 'Senior Software Engineer, Linaro'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/gaozhangfei.png',
+                            NAME: 'Gao Zhangfei',
+                            POSITION: 'Landing Team Software Engineer, Linaro'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/fanbin.png',
+                            NAME: 'Fan Bin',
+                            POSITION: 'Senior Back-End Development Engineer, e Cloud'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/weibaohui.png',
+                            NAME: 'Wei Baohui',
+                            POSITION: 'PaaS R&D Manager, China Mobile Information Technology'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/likunshan.png',
+                            NAME: 'Li Kunshan',
+                            POSITION: 'OpenStack R&D Engineer, China Unicom Cloud Data Company'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/liangdong.png',
+                            NAME: 'Liang Dong',
+                            POSITION: 'Senior Engineer & HopeEdge Version Manager, Hoperun Information Technology'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/huangmaofeng.png',
+                            NAME: 'Huang Maofeng',
+                            POSITION: 'Senior Technical Manager, Huayun Data'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/wubin.png',
+                            NAME: 'Wu Bin',
+                            POSITION: 'openEuler Virtualization SIG Maintainer/ICT Virtualization Architect, Huawei'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/sunlijie.png',
+                            NAME: 'Sun Lijie',
+                            POSITION: 'R&D Manager, Hunan Kylinsec'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/qiudayu.png',
+                            NAME: 'Qiu Dayu',
+                            POSITION: 'Senior Technical Director, Huayun Data'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/yuzhihui.png',
+                            NAME: 'Qi Zhihui',
+                            POSITION: 'Localized Trusted Cloud R&D Owner, Sangfor Technologies'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/luoyun.png',
+                            NAME: 'Luo Yun',
+                            POSITION: 'Virtualization & Cloud Product Manager, Winhong Information Technology'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/chenzeng.png',
+                            NAME: 'Chen Zeng',
+                            POSITION: 'Senior Engineer, Huawei'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/dukaitian.png',
+                            NAME: 'Du Kaitian',
+                            POSITION: 'openEuler CICD SIG Maintainer'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/yinjiayi.png',
+                            NAME: 'Yin Jiayi',
+                            POSITION: 'System Engineer, Institute of Software, CAS'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/caozhi.png',
+                            NAME: 'Cao Zhi',
+                            POSITION: 'openEuler Infra SIG Maintainer'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/xiaxiaoya.png',
+                            NAME: 'Xia Xiaoya',
+                            POSITION: 'Open Source Expert, East China Normal University'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/zhongjun.png',
+                            NAME: 'Zhong Jun',
+                            POSITION: 'Senior Open Source Engineer, Huawei'
+                        }, 
+                        {
+                            IMG: '/img/summit/home/lecturer/zhangshuting.png',
+                            NAME: 'Zhang Shuting',
+                            POSITION: 'Computing Product Experience Designer, Huawei'
+                        }, 
+                        {
+                            IMG: '/img/summit/home/lecturer/weigang.png',
+                            NAME: 'Wei Gang',
+                            POSITION: 'Security & Trustworthiness Technical Expert, Computing Product Line, Huawei'
+                        }, 
+                        {
+                            IMG: '/img/summit/home/lecturer/yuanzhichang.png',
+                            NAME: 'Yuan Zhichang',
+                            POSITION: 'Chief Software Engineer of Open Source Ecosystem, Arm China'
+                        }, 
+                        {
+                            IMG: '/img/summit/home/lecturer/chengong.png',
+                            NAME: 'Chen Gong',
+                            POSITION: 'Technical Expert, Kunpeng Computing PDU, Huawei'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/biannaimeng.png',
+                            NAME: 'Bian Naimeng',
+                            POSITION: 'Product R&D Director, Cloud Computing Business Group, Hoperun Information Technology'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/gaokun.png',
+                            NAME: 'Gao Kun',
+                            POSITION: 'Engineer, Open Source Software Competence Center, Huawei'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/luoqiu.png',
+                            NAME: 'Luo Qiu',
+                            POSITION: 'R&D Engineer, Hunan Kylinsec'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/wangjiangtao.png',
+                            NAME: 'Wang Jiangtao',
+                            POSITION: 'Senior Security Expert, iSoft Infrastructure Software'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/liuwei.png',
+                            NAME: 'Liu Wei',
+                            POSITION: 'Researcher, 2020 Lab, Beijing Enmotech'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/chixinze.png',
+                            NAME: 'Chi Xinze',
+                            POSITION: 'Distributed System Architect, XSKY (Beijing) Data Technology'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/huangxiaotao.png',
+                            NAME: 'Huang Xiaotao',
+                            POSITION: 'Deputy Director, Database Research Institute, Beijing Vastdata Technology'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/lijianfeng.png',
+                            NAME: 'Li Jianfeng',
+                            POSITION: 'Director, Desktop R&D Community, Kylinsoft'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/wangyaohua.png',
+                            NAME: 'Wang Yaohua',
+                            POSITION: 'R&D Director, Uniontech Software'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/fengben.png',
+                            NAME: 'Feng Ben',
+                            POSITION: 'Expert of Kunpeng Database Optimization, Huawei'
+                        },
+                        {
+                            IMG: '/img/summit/home/lecturer/wangjunjie.png',
+                            NAME: 'Wang Junjie',
+                            POSITION: 'Expert of Kunpeng Database Optimization, Huawei'
+                        }
+                    ]
+                },
+                HOST: {
+                    WEB_TITLE: '/img/summit/home/host-unit/en-host-unit.png',
+                    MOBILE_TITLE: '/img/summit/home/host-unit/en-mobile-zhuban.png',
+                    LIST: [
+                        {
+                            IMG: '/img/summit/home/host-unit/openeuler.png'
+                        }
+                    ]
+                },
+                UNDERTAKER: {
+                    WEB_TITLE: '/img/summit/home/undertaker/en-pc-undertaker.png',
+                    MOBILE_TITLE: '/img/summit/home/undertaker/en-mobile-undertaker.png',
+                    LIST: [
+                        {
+                            IMG: '/img/summit/home/undertaker/jikebang.png',
+                            LINK: 'https://www.geekbang.org/'
+                        }
+                    ]
+                },
+                CO_ORGANIZER: {
+                    WEB_TITLE: '/img/summit/home/co-organizer/en-co-organizer.png',
+                    MOBILE_TITLE: '/img/summit/home/co-organizer/en-mobile-xieban.png',
+                    LIST: [
+                        {
+                            IMG: '/img/summit/home/co-organizer/yidong.png',
+                            LINK: 'http://it.10086.cn/indexc.html'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/liantong.png',
+                            LINK: 'https://www.woyun.cn/'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/yinlian.png',
+                            LINK: 'https://cn.unionpay.com/'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/pengcheng.png',
+                            LINK: 'https://www.pcl.ac.cn/'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/feiteng.png',
+                            LINK: 'https://www.phytium.com.cn/'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/qilin.png',
+                            LINK: 'http://www.kylinos.cn/'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/tongxin.png',
+                            LINK: 'https://www.uniontech.com/'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/cetc.png',
+                            LINK: 'http://www.i-soft.com.cn/'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/xinan.png',
+                            LINK: 'http://www.kylinsec.com.cn/'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/iscas.png',
+                            LINK: 'http://www.iscas.ac.cn'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/turbolinux.png',
+                            LINK: 'http://www.turbolinux.com.cn'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/beiming.png',
+                            LINK: 'http://www.bmsoft.com.cn/'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/runhe.png',
+                            LINK: 'http://www.hopeedge.com'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/xsky.png',
+                            LINK: 'http://www.xsky.com'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/huayun.png',
+                            LINK: 'https://huayun.com/'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/qingyun.png',
+                            LINK: 'https://kubesphere.qingcloud.com/'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/shenxinfu.png',
+                            LINK: 'https://www.sangfor.com.cn/'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/yunhong.png',
+                            LINK: 'http://www.winhong.com/'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/yunhe.png',
+                            LINK: 'https://enmotech.com/'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/hailiang.png',
+                            LINK: 'http://www.vastdata.com.cn'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/hangtian.png',
+                            LINK: 'https://www.htzhiyun.cn'
+                        },
+                        {
+                            IMG: '/img/summit/home/co-organizer/langche.png',
+                            LINK: 'https://lstack.com/'
+                        }
+                    ]
+                },
+                FOUNDATION: {
+                    WEB_TITLE: '/img/summit/home/foundation/en-pc-foundation.png',
+                    MOBILE_TITLE: '/img/summit/home/foundation/en-mobile-foundation.png',
+                    LIST: [
+                        {
+                            IMG: '/img/summit/home/foundation/yuanzi.png',
+                            LINK: 'https://www.openatom.org'
+                        },
+                        {
+                            IMG: '/img/summit/home/foundation/cloudnative.png',
+                            LINK: 'https://www.cncf.io/'
+                        },
+                        {
+                            IMG: '/img/summit/home/foundation/linaro.png',
+                            LINK: 'https://www.linaro.org/'
+                        },
+                        {
+                            IMG: '/img/summit/home/foundation/linux.png',
+                            LINK: 'https://www.linuxfoundation.org/'
+                        },
+                        {
+                            IMG: '/img/summit/home/foundation/open.png',
+                            LINK: 'https://www.openinfra.dev/'
+                        }
+                    ]
+                },
+                MEDIA: {
+                    WEB_TITLE: '/img/summit/home/media/en-pc-media.png',
+                    MOBILE_TITLE: '/img/summit/home/media/en-mobile-media.png',
+                    LIST: [
+                        {
+                            IMG: '/img/summit/home/media/csdn.png',
+                            LINK: 'https://www.csdn.net/'
+                        },
+                        {
+                            IMG: '/img/summit/home/media/sifou.png',
+                            LINK: 'https://segmentfault.com/'
+                        },
+                        {
+                            IMG: '/img/summit/home/media/oschina.png',
+                            LINK: 'https://www.oschina.net/'
+                        },
+                        {
+                            IMG: '/img/summit/home/media/51cto.png',
+                            LINK: 'https://www.51cto.com/'
+                        },
+                        {
+                            IMG: '/img/summit/home/media/media-linux.png',
+                            LINK: 'https://linux.cn/'
+                        },
+                        {
+                            IMG: '/img/summit/home/media/xianglingshuo.png',
+                            LINK: 'qrcode'
+                        },
+                    ]
+                },
+                REVIEW: {
+                    WEB_TITLE: '/img/summit/home/review/en-pc-review.png',
+                    MOBILE_TITLE: '/img/summit/home/review/en-mobile-review.png',
+                }
+            },
+            LISTTITLE: 'Overview',
+            LISTNEWTITLE:'openEuler Virtual Summit 2020',
+            LISTTIME: 'Apr 17–18, 2020',
+            SPEECHTITLE: 'Keynotes',
+            DESIGNTITLE: 'Design Summit (SIG Workshop)',
+            VIDEODOWNLOAD: 'Slides',
+            FRIENDSHIPLINK: 'Links',
+            SUMMIT_WEB_IMG: '/img/summit/home/en-pc-summit.png',
+            SUMMIT_H5_IMG: '/img/summit/home/en-mobile-summit.png',
+            SPEECHLIST: [{
+                    SPEECHTIME: '09:30 - 09:40, 17th April',
+                    SPEECHTHEME: 'openEuler Drives a Robust Multi-Core, Heterogeneous Computing Industry',
+                    SPEECHER: 'Jiang Dayong',
+                    SPEECHCONTENT: '',
+                    SPEECHERIMG: '/img/summit/jiangdayong.png',
+                    SPEECHERINFO: '',
+                    SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
+                },
+                {
+                    SPEECHTIME: '09:40 - 09:50, 17th April',
+                    SPEECHTHEME: 'openEuler: The Industry Propeller and Super Workshop',
+                    SPEECHER: 'WangZhun',
+                    SPEECHCONTENT: 'Focusing on IT transformation and industrial Internet construction in traditional industries, he has chaired the architecture planning of national-level information technology projects and provided consulting services to major ministries and central enterprises. As a member of the Association of Enterprise Architect, he is committed to promoting the rollout and implementation of enterprise architecture in China.',
+                    SPEECHERIMG: '/img/summit/wangzhun.jpg',
+                    SPEECHERINFO: 'Senior Architect, Tongfang',
+                    SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
+                },
+                {
+                    SPEECHTIME: '09:50 - 10:30, 17th April',
+                    SPEECHTHEME: 'Innovation Drives the Future of openEuler',
+                    SPEECHER: 'Dr. Xiong Wei',
+                    SPEECHCONTENT: 'Xiong Wei, joined Huawei in 2014, is now the 2012 laboratory Central Software Institute server operating system chief architect, openEuler technical committee member; Nankai University, doctor of engineering, in TurboLinux, WindRiver and other companies as R & D person in charge, has a long time OS, underlying software experience and technology accumulation; on the processor, architecture, OS, containers, etc. has a broad technical vision, initially established the Kunpeng basic software stack server OS, container engine and other infrastructure of the platform system of self- research.',
+                    SPEECHERIMG: '/img/summit/xiongwei.png',
+                    SPEECHERINFO: 'Member of openEuler Technical Committee',
+                    SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
+                },
+                {
+                    SPEECHTIME: '10:30 - 10:40, 17th April',
+                    SPEECHTHEME: 'openEuler Leads the Way to a Co-Built, Win-Win Global Community',
+                    SPEECHER: 'Yu Liang',
+                    SPEECHCONTENT: 'More than 20 years in the field of basic operating system, witnessed the development history of domestic Linux operating system. In 2016, he joined Puhua as Vice President of Marketing in the Basic Software Division of Puhua Corporation. Since the national e-government intranet "12 banks and 3 gold" project, it has participated in most of the landmark projects of the domestic operating system.',
+                    SPEECHERIMG: '/img/summit/yuliang.png',
+                    SPEECHERINFO: 'Deputy GM, Basic Software Business Group, iSoft',
+                    SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
+                },
+                {
+                    SPEECHTIME: '10:40 - 10:50, 17th April',
+                    SPEECHTHEME: 'Kylin: Scale New Heights on the Wings of Kunpeng',
+                    SPEECHER: 'Li Zhenning',
+                    SPEECHCONTENT: 'The most valuable expert of HUAWEI CLOUD and Tencent Cloud; Director of Shanghai Basic Software Engineering Technology Research Center and mentor of master students at Taiyuan University of Technology. Li Zhenning has served in the open source and operating system field for 20 years, and his clients include many government agencies, national defense and aerospace, banks, securities, universities, etc. He has rich experience in open source operating system software technology, marketing and PR communication. He is currently an expert in the operating system and basic software industry in several ministries, provinces and cities. Research on industry macro development, technology trends, standards policy, etc. Currently, he is also a member of the China-Japan-Korea Northeast Asia Open Source Committee, Secretary General of the Open Source and Basic Software General Technology Innovation Strategic Alliance (UU); Deputy Secretary General of the China High-end Chip Alliance, Deputy Secretary General of the China Open Source Software Promotion Alliance, Deputy Secretary General of the China Open Source Cloud Alliance, Deputy Secretary General of the China Big Data Application Collaboration and Innovation Alliance, Head of the TIAA Automotive Alliance Software Group; Member of the CCF System Software Committee; Deputy Director of the China Big Data and Intelligent Computing Industry Alliance Open Source Software Working Committee, etc.',
+                    SPEECHERIMG: '/img/summit/lizhenning.jpg',
+                    SPEECHERINFO: 'VP, Kylinsoft',
+                    SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
+                },
+                {
+                    SPEECHTIME: '10:50 - 11:00, 17th April',
+                    SPEECHTHEME: ' Open Source Software Supply Lightening Program Boosts a Robust Community',
+                    SPEECHER: 'Wu Yanjun',
+                    SPEECHCONTENT: 'Researcher, Ph.D. supervisor, Deputy Chief Engineer, Institute of Software, Chinese Academy of Sciences, Director of Intelligent Software Research Center. After graduating from Tsinghua University, he joined the Software Institute of Chinese Academy of Sciences and has been working on operating system related research and development for a long time. He has published more than 50 papers in top academic conferences and core journals, and applied for more than 30 patents and softwares. He has been honored by the Beijing Science and Technology Rising Star and the Chinese Academy of Sciences Youth Promotion Association.',
+                    SPEECHERIMG: '/img/summit/wuyanjun.png',
+                    SPEECHERINFO: 'Deputy Chief Engineer, Director of Intelligent Software Research Center, ISCAS',
+                    SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
+                },
+                {
+                    SPEECHTIME: '11:00 - 11:10, 17th April',
+                    SPEECHTHEME: 'openEuler: The Best MySQL Platform on Arm-based Servers',
+                    SPEECHER: 'Ding Wenlong',
+                    SPEECHCONTENT: '',
+                    SPEECHERIMG: '/img/summit/dingwenlong.png',
+                    SPEECHERINFO: 'Senior Engineer, Turbolinux',
+                    SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
+                },
+                {
+                    SPEECHTIME: '11:10 - 11:25, 17th,April',
+                    SPEECHTHEME: 'How to Enjoy openEuler',
+                    SPEECHER: 'Ma Junjie',
+                    SPEECHCONTENT: 'openEuler Infrastructure Committer, openEuler oVirt SIG maintainer, oVirt Member, Istio community Member',
+                    SPEECHERIMG: '/img/summit/majunjie.png',
+                    SPEECHERINFO: 'openEuler Infrastructure SIG Committer',
+                    SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
+                },
+                {
+                    SPEECHTIME: '11:25 - 11:45, 17th,April',
+                    SPEECHTHEME: 'openEuler Community Governance',
+                    SPEECHER: 'Hu Xinwei',
+                    SPEECHCONTENT: '',
+                    SPEECHERIMG: '/img/summit/huxinwei.png',
+                    SPEECHERINFO: 'Chairman of openEuler Technical Committee',
+                    SPEECHLINK: 'https://www.bilibili.com/video/BV1dg4y187cq'
+                },
+            ],
+            TRACKLIST: ['Track 1', 'Track 2', 'Track 3'],
+            DESIGNLIST: [{
+                    DESIGNTIME: [{
+                        DAY: '17th April',
+                        HOUR: '13:30 - 15:00'
+                    }],
+                    TRACK1: [{
+                        TRACK1TITLE: 'openEuler Kernel',
+                        TRACK1TEACHER: 'Hanjun Guo',
+                        TRACK1MAINTAINER: 'openEuler Kernel Maintainer',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1E64y1T76a',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-community-kernel'
+                    }],
+                    TRACK2: [{
+                        TRACK2TITLE: 'RaspberryPi',
+                        TRACK2TEACHER: 'Yafen Fang',
+                        TRACK2MAINTAINER: 'RaspberryPi Maintainer',
+                        TRACK2LINK:'https://www.bilibili.com/video/BV1Ve411s74C',
+                        TRACK2DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-raspberrypi'
+                    }],
+                    TRACK3: [{
+                        TRACK3TITLE: 'UKUI',
+                        TRACK3TEACHER: 'Dou Yan',
+                        TRACK3MAINTAINER: 'UKUI Maintainer, Member of KylinSoft open source community',
+                        TRACK3LINK:'https://www.bilibili.com/video/BV1ei4y187SD',
+                        TRACK3DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-ukui'
+                    }]
+                },
+                {
+                    DESIGNTIME: [{
+                            DAY: '17th April',
+                            HOUR: '15:00 - 16:00'
+                        }
+
+                    ],
+                    TRACK1: [{
+                        TRACK1TITLE: 'Container & iSula',
+                        TRACK1TEACHER: 'Haomin Tsai',
+                        TRACK1MAINTAINER: 'Container & iSula SIG Maintainer',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1A54y1R7iX',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-container'
+                    }],
+                    TRACK2: [{
+                        TRACK2TITLE: 'Documentation',
+                        TRACK2TEACHER: 'Zhipeng Tan',
+                        TRACK2MAINTAINER: 'Documentation Maintainer',
+                        TRACK2LINK:'https://www.bilibili.com/video/BV1yT4y1G78u',
+                        TRACK2DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-documentation'
+                    }],
+                    TRACK3: [{
+                        TRACK3TITLE: 'High Availability',
+                        TRACK3TEACHER: 'jian Hou ',
+                        TRACK3MAINTAINER: 'HA Maintainer; KylinSoft',
+                        TRACK3LINK:'https://www.bilibili.com/video/BV1Wt4y1272N',
+                        TRACK3DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-ha'
+                    }]
+
+                },
+                {
+                    DESIGNTIME: [{
+                        DAY: '17th April',
+                        HOUR: '16:00 - 17:00'
+                    }],
+                    TRACK1: [{
+                        TRACK1TITLE: 'Packaging &amp; Base Service',
+                        TRACK1TEACHER: 'Xiaowen He',
+                        TRACK1MAINTAINER: 'Packaging Maintainer',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1we411s7rQ',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-packaging'
+                    }],
+                    TRACK3: [{
+                        TRACK3TITLE: 'oVirt',
+                        TRACK3TEACHER: 'Huihui Fu ',
+                        TRACK3MAINTAINER: 'oVirt Maintainer; KylinSoft',
+                        TRACK3LINK:'https://www.bilibili.com/video/BV1LK4y1k7Hv',
+                        TRACK3DOWNLOAD:'hhttps://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-ovirt'
+                    }]
+
+                },
+                {
+                    DESIGNTIME: [{
+                        DAY: '17th April',
+                        HOUR: '17:00 - 18:00'
+                    }],
+                    TRACK1: [{
+                        TRACK1TITLE: 'Kubernetes',
+                        TRACK1TEACHER: 'Pengfei Zhou',
+                        TRACK1MAINTAINER: 'SIG-Kubernetes Maintainer',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1ak4y1R7Sq',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-kubernetes'
+                    }],
+                    TRACK2: [{
+                        TRACK2TITLE: 'Networking',
+                        TRACK2TEACHER: 'Zhihao Lu',
+                        TRACK2MAINTAINER: 'Networking Maintainer',
+                        TRACK2LINK:'https://www.bilibili.com/video/BV1KV411Z7nR',
+                        TRACK2DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-networking'
+                    }],
+                    TRACK3: [{
+                        TRACK3TITLE: 'Virualization',
+                        TRACK3TEACHER: 'Hailiang Zhang ',
+                        TRACK3MAINTAINER: 'Vir Maintainer',
+                        TRACK3LINK:'https://www.bilibili.com/video/BV1q54y197CX',
+                        TRACK3DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-virtualization'
+                    }]
+                },
+                {
+                    DESIGNTIME: [{
+                        DAY: '18th April',
+                        HOUR: '09:00 - 10:00'
+                    }],
+                    TRACK1: [{
+                        TRACK1TITLE: 'Community Governance',
+                        TRACK1TEACHER: 'Fred Li',
+                        TRACK1MAINTAINER: 'Head of openEuler Secretariat',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1sA411b74z',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-community-governance'
+                    }],
+                    TRACK2: [{
+                        TRACK2TITLE: 'Compiler',
+                        TRACK2TEACHER: 'Ge Guo',
+                        TRACK2MAINTAINER: 'Compiler Maintainer',
+                        TRACK2LINK:'https://www.bilibili.com/video/BV16Q4y1K7gV',
+                        TRACK2DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-compiler'
+                    }],
+                },
+                {
+                    DESIGNTIME: [{
+                        DAY: '18th April',
+                        HOUR: '10:00 - 11:00'
+                    }],
+                    TRACK1: [{
+                        TRACK1TITLE: 'Release Management',
+                        TRACK1TEACHER: 'Liang Ma',
+                        TRACK1MAINTAINER: 'openEuler 20.09 Release Manager',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1JA411b7tX',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-release'
+                    }],
+                    TRACK2: [{
+                        TRACK2TITLE: 'Compatibility',
+                        TRACK2TEACHER: 'Kaitian Du',
+                        TRACK2MAINTAINER: 'Compatibility Maintainer',
+                        TRACK2LINK:'https://www.bilibili.com/video/BV1F5411b7pJ',
+                        TRACK2DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-compatibility'
+                    }],
+                    TRACK3: [{
+                        TRACK3TITLE: 'Dev-utils',
+                        TRACK3TEACHER: 'Myeuler',
+                        TRACK3MAINTAINER: 'openEuler TC member; Dev-utils Maintainer',
+                        TRACK3LINK:'https://www.bilibili.com/video/BV1Ei4y1t7a8',
+                        TRACK3DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-dev-utils'
+                    }]
+
+                },
+                {
+                    DESIGNTIME: [{
+                        DAY: '18th April',
+                        HOUR: '11:00 - 12:00'
+                    }],
+                    TRACK1: [{
+                        TRACK1TITLE: 'Technical Committee',
+                        TRACK1TEACHER: 'Shinwell Hu',
+                        TRACK1MAINTAINER: 'Chairman of openEuler Technical Committee',
+                        TRACK1LINK:'https://www.bilibili.com/video/BV1rQ4y1K7L6',
+                        TRACK1DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-tc'
+                    }],
+                    TRACK2: [{
+                        TRACK2TITLE: 'Infrastructure',
+                        TRACK2TEACHER: 'freesky-edward',
+                        TRACK2MAINTAINER: 'Infrastructure Maintainer',
+                        TRACK2LINK:'https://www.bilibili.com/video/BV1UT4y1G7fp',
+                        TRACK2DOWNLOAD:'https://etherpad.openeuler.org/p/openeuler-virtual-summit-2020-infrastructure'
+                    }],
+                    TRACK3: [{
+                        TRACK3TITLE: 'Security Committee',
+                        TRACK3TEACHER: 'Jianwen Zhu',
+                        TRACK3MAINTAINER: 'Expert of operating system security',
+                        TRACK3LINK:'https://www.bilibili.com/video/BV17Q4y1T7FN',
+                        TRACK3DOWNLOAD:'https://etherpad.opendev.org/p/openeuler-virtual-summit-2020-security-committee'
+                    }]
+                }
+            ],
+            OTHERLINK:[
+                {
+                    URL:'url("/img/home/link/mulan.png")',
+                    LINK:'http://www.mulanos.cn/'
+                },
+                {
+                    URL:'url("/img/home/link/kunpeng.png")',
+                    LINK:'https://www.huaweicloud.com/kunpeng/'
+                },
+                {
+                    URL:'url("/img/home/link/pengcheng.png")',
+                    LINK:'https://dw.pcl.ac.cn/dwmain/main/'
+                }
+                ]
+        },
+        MEETUPS: {
+            MEETUPS: 'Семинары',
+            DETAIL_DESC: 'Introduction',
+            DETAIL_FLOW: 'Agenda',
+            DETAIL_REVIEW: 'Review',
+            MORE_VIDEO: 'More video',
+            DETAIL_MEET: 'How to attend the event',
+            DETAIL_QRCODE_TEXT: 'Scan the QR code',
+            INSIDENAME: 'CONNECT',
+            MEETUPS_DATA: require('./../../data/salon').en.MEETUPS_LIST
+        }
     }
 };

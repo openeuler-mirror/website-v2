@@ -27,7 +27,8 @@
                     <div v-if="index % 2 === 0" class="step-left">
                         <div class="mail-box">
                             <div class="step-left-box">
-                                <div @click="go(item)" :class="['inner-box','card-hover',item.path?'':'unClick',targetLocale == '/en/'?'en-box':'']" v-for="(item, index) in items.doc" :key="index">
+                                <div @click="go(item)" :class="['inner-box','card-hover',item.path?'':'unClick',targetLocale == '/en/'?'en-box':'']"
+                                    v-for="(item, index) in items.doc" :key="index">
                                     <img :src="item.img" alt />
                                     <p :title="item.name">{{ item.name }}</p>
                                 </div>
@@ -78,6 +79,7 @@ export default {
             version: "",
             currentDocs: [],
             versions: [],
+            targetLocale: '',
             default:true, //判断是否默认选中
         };
     },
@@ -87,7 +89,13 @@ export default {
     computed: {},
 
     created() {
-        this.targetLocale = this.$lang === "zh" ? "/zh/" : "/en/";
+        if(this.$lang === "zh") {
+            this.targetLocale = "/zh/";
+        }else if(this.$lang === "en") {
+            this.targetLocale = "/en/";
+        }else {
+            this.targetLocale = "/ru/";
+        }
     },
     mounted() {
         this.versions = require("../../../" + this.$lang + "/docs/path/path.json");
@@ -199,9 +207,6 @@ export default {
     .en-box{
         width: 370px;
         margin-left: -160px;
-        p{
-            
-        }
     }
 }
 .step-right-box {
@@ -214,9 +219,6 @@ export default {
     }
     .en-box{
         width: 370px;
-        p{
-            
-        }
     }
 }
 .step-left {
@@ -302,8 +304,21 @@ export default {
         color: rgba(0, 0, 0, 0.25);
     }
 }
-
-
+html[lang="ru"] .is-pc .step-left-num,html[lang="ru"] .is-pc .step-right-num {
+    width: 100px;
+    height: 100px;
+}
+html[lang="ru"] .is-pc .step-left-num span,html[lang="ru"] .is-pc .step-right-num span{
+    font-size: 15px;
+    line-height: 100px;
+    font-family: Roboto-BoldCondensed;
+}
+html[lang="ru"] .is-pc .step-line {
+    width: 63px;
+}
+html[lang="ru"] .mail-box .right-box-en {
+    margin-top: -80px;
+}
 @media screen and (max-width: 1000px) {
     .moblieContent {
         padding: 40px 30px 80px 30px;
@@ -349,8 +364,9 @@ export default {
     }
     .step-H5 p {
         font-size: 16px;
-        width:200px;
+        width:240px;
         line-height: 40px;
+        padding: 0 12px;
         color: #002FA7;
         background:rgba(255,255,255,1);
         box-shadow:0px 3px 10px 0px rgba(0,0,0,0.1);

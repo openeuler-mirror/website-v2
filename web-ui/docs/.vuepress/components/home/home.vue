@@ -13,18 +13,18 @@
                     </div>
                 </el-carousel-item>
                 <el-carousel-item class="carousel-item">
-                    <a class="banner-link" :href="i18n.home.HOME_FIRST_BANNER.LINK" target="_blank">
-                    <div class="banner-item">
-                        <div class="item-info">
-                        <h3>{{ i18n.home.HOME_FIRST_BANNER.TITLE }}</h3>
-                        <span>{{ i18n.home.HOME_FIRST_BANNER.DES }}</span>
-                        <div class="download-version" :class="$lang === 'en'?'en-version':''">
-                            <div>{{i18n.home.HOME_FIRST_BANNER.DOWNLOAD}}</div>
+                    <div class="banner-link" @click="go(i18n.home.HOME_FIRST_BANNER.LINK)">
+                        <div class="banner-item">
+                            <div class="item-info">
+                            <h3>{{ i18n.home.HOME_FIRST_BANNER.TITLE }}</h3>
+                            <span>{{ i18n.home.HOME_FIRST_BANNER.DES }}</span>
+                            <div class="download-version" :class="$lang === 'en'?'en-version':''">
+                                <div>{{i18n.home.HOME_FIRST_BANNER.DOWNLOAD}}</div>
+                            </div>
+                            </div>
+                            <img class="banner-gif" v-lazy="i18n.home.HOME_FIRST_BANNER.IMG">
                         </div>
-                        </div>
-                        <img class="banner-gif" v-lazy="i18n.home.HOME_FIRST_BANNER.IMG">
                     </div>
-                    </a>
                 </el-carousel-item>
                 <el-carousel-item v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
                     <div class="carousel-banner summmit-banner" @click="go(item.BANNER_LINK)" v-if="index === 0">
@@ -102,13 +102,13 @@
             <h1></h1>
             <h3 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_INTRODUCE.INTRO_HEAD }}</h3>
             <p :class="$lang == 'en'?'en-p':''">{{ i18n.home.HOME_INTRODUCE.INTRO_DESCRIPTION }}</p>
-            <div class="is-pc mapArea" v-if="!isShowH5">
-                <div :class="['area-box','in-pc',$lang == 'en' && index == 3?'en-areabox-down':'']" v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP" :key="index">
+            <div class="is-pc mapArea" :class="$lang === 'ru'?'lang-ru':''" v-if="!isShowH5">
+                <div :class="['area-box map-flow','in-pc',$lang == 'en' && index == 3?'en-areabox-down':'']" v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP" :key="index">
                     <a v-if="(index !== 3)" @click="go(item.LINK)" target="_blank">
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p :class="$lang == 'en'?'en-areabox-p':''">{{ item.TITLE }}</p>
                         <img v-lazy="item.IMG" alt="">
-                        <img :src="item.GIF" alt="" :class="['is-hidden',$lang == 'en'?'en-areabox-gif':'']">
+                        <img :src="item.GIF" alt="" :class="[$lang == 'en'?'en-areabox-gif':'']">
                     </a>
                     <a class="down" v-if="(index === 3)" @click="go(item.LINK)" target="_blank">
                         <img v-lazy="item.IMG" alt="">
@@ -314,32 +314,6 @@
             </div>
         </div>
 
-        <div class="home-auth">
-            <h3>{{ i18n.home.HOME_AUTH.AUTH_TITLE }}
-                <img class="medal-logo" v-lazy="'/img/home/medal.svg'" alt="">
-            </h3>
-
-            <p>{{ i18n.home.HOME_AUTH.AUTH_DESCRIPTION }}</p>
-            <div class="auth-product">
-                <div class="product-box">
-                    <img v-lazy="'/img/home/Card1.png'" alt="">
-                    <p>{{ i18n.home.HOME_AUTH.AUTH_HARDWARE }}</p>
-                </div>
-                <div class="product-box">
-                    <img v-lazy="'/img/home/Card2.png'" alt="">
-                    <p>{{ i18n.home.HOME_AUTH.AUTH_OPEN_SOURCE }}</p>
-                </div>
-                <div class="product-box">
-                    <img v-lazy="'/img/home/Card3.png'" alt="">
-                    <p>{{ i18n.home.HOME_AUTH.AUTH_FREE }}</p>
-                </div>
-                <div class="product-box">
-                    <img v-lazy="'/img/home/Card4.png'" alt="">
-                    <p>{{ i18n.home.HOME_AUTH.AUTH_BUSINESS }}</p>
-                </div>
-            </div>
-        </div>
-
         <div class="home-source">
             <h3 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_SOURCE.SOURCE_TITLE }}</h3>
             <div class="source-contain">
@@ -479,7 +453,6 @@
             remoteMethods.meetingList();
             remoteMethods.statisticsList();
             this.roomName = this.i18n.home.HOME_ROOMS.ROOM_NAME
-            this.toggleHover();
             this.getRoomsData();
             if(this.screenWidth <= 1000){
                 this.$nextTick(() => {
@@ -577,22 +550,6 @@
                     let p = text.querySelector('p');
                     p.innerHTML = this.i18n.home.EXPAND;
                     this.flag = !this.flag;
-                }
-            },
-            toggleHover() {
-                if (window.innerWidth > 1000) {
-                    let hovers = this.es('.area-box');
-                    for (let i = 0; i < hovers.length; i++) {
-                        let hover = hovers[i];
-                        hover.addEventListener('mouseenter', function () {
-                            let img = hover.querySelector('.is-hidden');
-                            img.classList.add('is-hovered');
-                        })
-                        hover.addEventListener('mouseleave', function () {
-                            let img = hover.querySelectorAll('img')[1];
-                            img.classList.remove('is-hovered');
-                        })
-                    }
                 }
             },
             clickDownload() {
@@ -760,22 +717,11 @@
     [v-cloak] {
         display: none !important;
     }
-    .home-auth {
-        display: none;
-    }
     .is-pc {
         display: block;
     }
     .is-h5 {
         display: none;
-    }
-    .home h1,
-    .home h3,
-    .home h5,
-    .home p,
-    .home span,
-    .home a {
-        
     }
     .home h3 {
         font-size: 30px;
@@ -1157,6 +1103,35 @@
         margin-top: 84px;
         position: relative;
     }
+    .home-introduce .mapArea .map-flow,.home-introduce .mapArea .bottom .down {
+        img {
+            &:last-of-type {
+                display: none;
+            }
+        }
+    }
+    .home-introduce .mapArea .map-flow:hover {
+        img {
+            &:first-of-type {
+                display: none;
+            }
+            &:last-of-type {
+                display: block;
+            }
+        }
+    }
+    .home-introduce .mapArea .bottom:hover {
+        .down {
+            img {
+                &:first-of-type {
+                    display: none;
+                }
+                &:last-of-type {
+                    display: block;
+                }
+            }
+        }
+    }
     .area-box.in-pc:nth-child(1) {
         position: absolute;
         top: 88px;
@@ -1174,6 +1149,10 @@
         position: absolute;
         top: -40px;
         left: 80%;
+    }
+    .lang-ru .area-box.in-pc:nth-child(4) {
+        top: -80px;
+        left: 84%;
     }
     .area-box.in-pc:nth-child(5) {
         position: absolute;
@@ -1607,37 +1586,9 @@
         height: 20px;
         margin-right: 16px;
     }
-    .home-auth {
-        width: 1080px;
-        margin: 68px auto 0;
-    }
     .medal-logo {
         position: relative;
         top: -5px;
-    }
-    .auth-product {
-        width: 1080px;
-        margin: 30px auto 0;
-        display: flex;
-        justify-content: space-between;
-    }
-    .product-box {
-        display: inline-block;
-        width: 240px;
-        height: 160px;
-        margin-right: 30px;
-        text-align: center;
-        border-radius: 8px;
-        box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, .1);
-    }
-    .product-box img {
-        width: 80px;
-        height: 80px;
-        margin: 20px auto 12px;
-    }
-    .product-box p {
-        font-size: 20px;
-        line-height: 20px;
     }
     .home-source {
         width: 1080px;
@@ -1898,8 +1849,8 @@
         }
         .area-box .lang-en {
            display: block;
-           margin: 4px 0 0 8px;
-           font-weight: 700;
+           margin: 4px 0 0 25px;
+           font-weight: bold;
         }
         .area-box img {
             display: block;
@@ -1915,6 +1866,12 @@
         .home-active h3 {
             margin-bottom:  20px;
             padding: 40px 0 20px;
+        }
+        html[lang="ru"] .home-active {
+            height: 250px;
+        }
+        html[lang="ru"] .home-active p {
+            margin-top: -10px;
         }
         .home-active p {
             margin-bottom:  45px;
@@ -2017,30 +1974,9 @@
             display: inline-block;
             margin-top: 35px;
         }
-        .home-auth {
-            width: 100%;
-            margin-top: 70px;
-        }
         .medal-logo {
             position: relative;
             top: 0px;
-        }
-        .auth-product {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-top: 0;
-        }
-        .product-box {
-            width: 50%;
-            min-width: 47%;
-            max-width: 47%;
-            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .2);
-            margin: 20px 10px 0 0;
-        }
-        .product-box:nth-child(even) {
-            margin-right: 0;
         }
         .publish-edition {
             display: block;

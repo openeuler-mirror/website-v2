@@ -9,8 +9,8 @@
                 class="is-pc"
             ></common-banner>
         </div>
-        <div class="is-pc sig-guidance" v-fade v-if="!isShowH5">
-            <div class="maillist-divider-mail">
+        <div class="is-pc sig-guidance" :class="$lang === 'ru'?'ru-guidance':''" v-fade v-if="!isShowH5">
+            <div :class="['maillist-divider-mail',$lang === 'ru'?'ru-line':'']">
                 <div class="maillist-icon-comm"></div>
             </div>
             <div
@@ -20,11 +20,11 @@
             >
                 <div class="step-left">
                     <div class="mail-box">
-                        <div class="step-left-box fade-in" :class="$lang == 'en'?'en-step-box':''">
+                        <div class="step-left-box fade-in" :class="[$lang === 'en'?'en-step-box':'',$lang === 'ru'?'ru-step-box':'']">
                             <div class="inner-box">
                                 <img :src="item.LEFT.LEFT_IMG" alt />
-                                <p v-if="$lang == 'zh'?true:false">{{ item.LEFT.LEFT_INFO }}</p>
-                                <p v-if="$lang == 'en'?true:false">
+                                <p v-if="$lang === 'zh'?true:false">{{ item.LEFT.LEFT_INFO }}</p>
+                                <p v-else>
                                     <span class="en-desc">{{item.LEFT.LEFT_DESC}}</span>
                                     <span>{{ item.LEFT.LEFT_INFO }}</span>
                                 </p>
@@ -42,11 +42,11 @@
                         <div class="step-right-num">
                             <span>{{ item.RIGHT.RIGHT_CIRCLE }}</span>
                         </div>
-                        <div class="step-right-box fade-in" :class="$lang == 'en'?'en-step-box':''">
+                        <div class="step-right-box fade-in" :class="[$lang == 'en'?'en-step-box':'',$lang === 'ru'?'ru-step-box':'']">
                             <div class="inner-box">
                                 <img :src="item.RIGHT.LEFT_IMG" alt />
-                                <p v-if="$lang == 'zh'?true:false" v-html="item.RIGHT.RIGHT_INFO"></p>
-                                <p v-if="$lang == 'en'?true:false">
+                                <p v-if="$lang === 'zh'?true:false" v-html="item.RIGHT.RIGHT_INFO"></p>
+                                <p v-else>
                                     <span class="en-desc">{{item.RIGHT.RIGHT_DESC}}</span>
                                     <span v-html="item.RIGHT.RIGHT_INFO"></span>
                                 </p>
@@ -120,6 +120,9 @@ h3 {
     max-width: 1200px;
     margin: 0 auto 200px;
 }
+.ru-guidance .ru-line {
+    height: 1557px;
+}
 .maillist-divider-mail {
     width: 2px;
     left: 50%;
@@ -154,6 +157,21 @@ h3 {
     display: inline-block;
     vertical-align: middle;
     text-align: left;
+}
+.step-left-box.ru-step-box {
+    height: 280px;
+}
+.ru-guidance div:nth-of-type(2) .step-right .ru-step-box {
+    height: 300px;
+}
+.ru-guidance .mail-box {
+    height: 320px;
+}
+.ru-guidance div:nth-of-type(2) .step-left .ru-step-box {
+    height: 480px;
+}
+.ru-guidance div:nth-of-type(3) .step-right .ru-step-box {
+    height: 330px;
 }
 .step-left-box {
     margin-right: 40px;

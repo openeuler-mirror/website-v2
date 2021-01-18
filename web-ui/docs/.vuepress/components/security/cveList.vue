@@ -284,6 +284,9 @@ export default {
     font-size: 14px;
     
   }
+  .el-table .cell {
+    text-align: left;
+  }
 }
 </style>
 <style lang="less" scoped>
@@ -357,6 +360,7 @@ export default {
         }
       }
       .pc-search {
+        width: 240px;
           .icon-search{
               cursor: pointer;
           }

@@ -24,5 +24,16 @@ module.exports = {
         },
         REPO: 'Related software package',
         SEARCH: 'Search'
+    },
+    ru: {
+        TAG_NAME: {
+            ALL: 'Все',
+            BLOG: 'Блоги',
+            NEWS: 'Новости',
+            DOCS: 'Документы',
+            FROM: 'От кого'
+        },
+        REPO: 'Сопутствующий пакет программного обеспечения',
+        SEARCH: 'Поиск'
     }
 };

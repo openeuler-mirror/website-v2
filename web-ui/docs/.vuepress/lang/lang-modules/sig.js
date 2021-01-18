@@ -182,5 +182,101 @@ module.exports = {
                 }
             ]
         }
+    },
+    ru: {
+        GUIDANCE_LIST: {
+            GUIDE: {
+                MOBILE_TITLE: "SIG申请流程",
+                TITLE: "Процесс применения",
+                LINE_CONTENT: [{
+                        LEFT: {
+                            LEFT_INFO: "Отдельные пользователи или организации могут найти в сообществе openEuler двух-трех участников с общими целями, с которыми можно обсудить вопрос создания специальной группы SIG, направленной на сопровождение пакета программного обеспечения определенного типа в сообществе openEuler или на инициирование проекта развития.",
+                            LEFT_CIRCLE: "01",
+                            MOBILE_CIRCLE: 'Найти',
+                            LEFT_IMG: "/img/sig/sig1.png",
+                            LEFT_DESC: 'Найти'
+                        },
+                        RIGHT: {
+                            RIGHT_INFO: "Создайте файл приложения на Gitee и инициируйте запрос на включение кода в соответствии с процедурой настройки SIG. Сделайте заявку на участие в собрании Технического комитета. ",
+                            RIGHT_CIRCLE: "02",
+                            MOBILE_CIRCLE: 'Применить',
+                            LEFT_IMG: "/img/sig/sig2.png",
+                            RIGHT_DESC: 'Применить'
+                        }
+                    },
+                    {
+                        LEFT: {
+                            LEFT_INFO: "На периодически проходящем собрании Технического комитета обсуждаются технические вопросы и цели группы SIG, вырабатывается определенное компромиссное решение.",
+                            LEFT_CIRCLE: "03",
+                            MOBILE_CIRCLE: 'Обсудить',
+                            LEFT_IMG: "/img/sig/sig3.png",
+                            LEFT_DESC: 'Обсудить'
+                        },
+                        RIGHT: {
+                            RIGHT_INFO: "Создание группы SIG утверждает Технический комитет. В репозиторий исходного кода вносится соответствующий запрос на включение кода, после чего в инфраструктуре автоматически создается соответствующий репозиторий.",
+                            RIGHT_CIRCLE: "04",
+                            MOBILE_CIRCLE: 'Утвердить',
+                            LEFT_IMG: "/img/sig/sig4.png",
+                            RIGHT_DESC: 'Утвердить'
+                        }
+                    },
+                    {
+                        LEFT: {
+                            LEFT_INFO: "Группа SIG приступает к работе. Для проведения обсуждений и работы группы организуются регулярные совещания, участники группы оповещаются через рассылку.",
+                            LEFT_CIRCLE: "05",
+                            MOBILE_CIRCLE: 'Работа группы',
+                            LEFT_IMG: "/img/sig/sig5.png",
+                            LEFT_DESC: 'Работа группы'
+                        },
+                        RIGHT: {
+                            RIGHT_INFO: "Технический комитет периодически проверяет деятельность группы SIG и дает соответствующие указания.",
+                            RIGHT_CIRCLE: "06",
+                            MOBILE_CIRCLE: 'Улучшить',
+                            LEFT_IMG: "/img/sig/sig6.png",
+                            RIGHT_DESC: 'Улучшить'
+                        }
+                    },
+                ]
+            }
+        },
+        SIG_LIST: {
+            HOME_PAGE: 'Перейти на главную страницу Gitee',
+            MAIL: 'Эл. почта',
+            IRC: 'Канал IRC',
+            MANAGER: 'Администраторы'
+        },
+        SIG_DETAIL: {
+            NO_MEETINGS: 'Not available now',
+            ORGANIZING_MEETINGS: 'Meeting Schedule',
+            MEMBERS: 'Project Members',
+            CONTACT: 'Contact',
+            MAIL_LIST: 'Mailing list'
+        },
+        ROLE_DESCRIPTION:{
+            ROLE_DESCRIPTION:'Role Description',
+            TABLE_TITLE:'Community Member',
+            TABLE_DESCRIPTION:'This article briefly describes the responsibilities and privilege of the contributor in the openEuler community. The responsibilities of most contributor are limited to SIG (Special Interest groups) :',
+            TABLE_THEAD:["Role","Responsibilities","Requirement","Defined Document"],
+            TABLE_TBODY:[
+                {
+                    ROLE:'Contributor',
+                    RESPONSIBILITIES:'Contributors of the project',
+                    REQUIREMENT:'',
+                    DEFINED_DOCUMENT:'Registered members on Gitee'
+                },
+                {
+                    ROLE:'Committer',
+                    RESPONSIBILITIES:'Review and approve the contributions submitted',
+                    REQUIREMENT:'Frequently contributing to SIG, experienced,and willing to undertake review work',
+                    DEFINED_DOCUMENT:'developer entry in the OWNERS file owned by openEuler SIG'
+                },
+                {
+                    ROLE:'Maintainer',
+                    RESPONSIBILITIES:'Owner of the project',
+                    REQUIREMENT:'Experienced, responsible, outstanding technologies and management skills',
+                    DEFINED_DOCUMENT:'developer entry in the OWNERS file owned by openEuler SIG'
+                }
+            ]
+        }
     }
 };

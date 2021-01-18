@@ -116,7 +116,8 @@ module.exports = {
                 CLASS: []
             }
         ],
-        LANG: 'EN',
+        LANG: '中',
+        LANG_LIST: ['中','English','Русский'],
         GITTE: '源码',
         CODE: '代码',
         GITTE_RESOURCE_LIST: [{
@@ -268,7 +269,8 @@ module.exports = {
                 CLASS: []
             }
         ],
-        LANG: '中',
+        LANG: 'English',
+        LANG_LIST: ['中','English','Русский'],
         GITTE: 'Source code',
         CODE: 'CODE',
         GITTE_RESOURCE_LIST: [{
@@ -305,6 +307,159 @@ module.exports = {
         BUILDING:{
             BUILDING:'Building',
             BUILDINGMES:'Coming soon…'
+        }
+    },
+    ru: {
+        MEETINGS_TIME: 'Time: ',
+        SEARCH_PLACE_HOLDER: 'Введите текст',
+        NAV_ROUTER_CONFIG: [{
+                PATH: '/download/',
+                NAME: 'Загрузить',
+                CHILDREN: [],
+                CLASS: []
+            },
+            {
+                PATH: '/documentation/',
+                NAME: 'Документация',
+                CHILDREN: [],
+                OTHER_CHILDREN: [
+                    {
+                        PATH: '/docs/'
+                    }
+                ],
+                CLASS: []
+            },
+            {
+                PATH: '',
+                NAME: 'Подключиться',
+                CHILDREN: [{
+                        NAME: 'Новости',
+                        PATH: '/interaction/news-list/'
+                    },
+                    {
+                        NAME: 'Блог',
+                        PATH: '/interaction/blog-list/'
+                    },
+                    {
+                        NAME: 'Прямой эфир',
+                        PATH: '/interaction/live-list/'
+                    },
+                    {
+                        NAME: 'Семинары',
+                        PATH: '/interaction/salon-list/'
+                    },
+                    {
+                        NAME: 'Саммит',
+                        PATH: '/interaction/summit-list/'
+                    }
+                ],
+                OTHER_CHILDREN: [
+                    {
+                        PATH: '/news/'
+                    },
+                    {
+                        PATH: '/blog/'
+                    }
+                ],
+                CLASS: []
+            },
+            {
+                PATH: '',
+                NAME: 'Сообщество',
+                CHILDREN: [{
+                        NAME: 'Участие',
+                        PATH: '/community/contribution/'
+                    },
+                    {
+                        NAME: 'Кодекс',
+                        PATH: '/community/conduct/'
+                    },
+                    {
+                        NAME: 'Списки рассылок',
+                        PATH: '/community/mailing-list/'
+                    },
+                    {
+                        NAME: 'Сертификация',
+                        PATH: '/community/certification-services/'
+                    }
+                ],
+                CLASS: []
+            },
+            {
+                PATH: '',
+                NAME: 'SIG',
+                CHILDREN: [{
+                        NAME: 'Списки SIG',
+                        PATH: '/sig/sig-list/'
+                    },
+                    {
+                        NAME: 'Заявка',
+                        PATH: '/sig/sig-guidance/'
+                    },
+                    {
+                        NAME: 'Роли',
+                        PATH: '/sig/role-description/'
+                    }
+                ],
+                CLASS: []
+            },
+            {
+                PATH: '',
+                NAME: 'Безопасность',
+                CHILDREN: [{
+                        NAME: 'Управление уязвимостями',
+                        PATH: '/security/vulnerability-reporting/'
+                    },
+                    {
+                        NAME: 'Консультанты по безопасности',
+                        PATH: '/security/safety-bulletin/'
+                    },
+                    {
+                        NAME: 'CVE',
+                        PATH: '/security/cve/'
+                    }
+                ],
+                CLASS: []
+            }
+        ],
+        LANG: 'Русский',
+        LANG_LIST: ['中','English','Русский'],
+        GITTE: 'Source code',
+        CODE: 'Код',
+        GITTE_RESOURCE_LIST: [{
+                NAME: 'Источники кода',
+                URL: 'https://gitee.com/openeuler'
+            },
+            {
+                NAME: 'Источники пакетов',
+                URL: 'https://gitee.com/src-openeuler'
+            },
+            {
+                NAME: 'Зеркало GitHub',
+                URL: 'https://github.com/openeuler-mirror'
+            }
+        ],
+        FOOTER: {
+            MAIL: 'contact@openeuler.org',
+            COPY_RIGHT: 'Авторские права © openEuler 2021. Все права защищены.',
+            RIGHT_LIST: [{
+                    NAME: 'Товарный знак',
+                    URL: '/other/brand/'
+                },
+                {
+                    NAME: 'Правовое уведомление',
+                    URL: '/other/legal/'
+                },
+                {
+                    NAME: 'Политика конфиденциальности',
+                    URL: '/other/privacy/'
+                }
+            ],
+            QR_CODE: 'Подписка на WeChat'
+        },
+        BUILDING:{
+            BUILDING:'Создание',
+            BUILDINGMES:'Ожидается...'
         }
     }
 };
