@@ -25,7 +25,7 @@ Kunpeng920芯片支持ARM Trust Zone技术，理论上可以支持基于ARM的�
 
 OP-TEE（ https://github.com/OP-TEE ）是一款由Linaro和ST合作开发的开源TEE解决方案，它遵循GlobalPlatform规范，主要包含正常世界状态的客户端API（optee_client）、一个Linux内核的TEE设备驱动（optee_linuxdriver）和一个Trusted OS（optee_os）。其中Trusted OS 采用BSD开源协议，因此SoC厂商和设备厂商可以在不公布修改内容的情况下对OP-TEE进行修改，从而有利于OP-TEE进入商业产品中。OP-TEE的架构如下图所示：
 
-![](./OP-TEE Architecture.jpg)
+![](./Architecture.jpg)
 
 在上图中，GlobalPlatform TEE Client API在OP-TEE中由libteec库提供，共有10个。它们提供了REE侧的应用程序向TEE侧请求建立联系、请求分配共享内存以及发送命令等功能。这些信息经由OP-TEE在Linux中的驱动程序传递给TEE侧。TEE Supplicant则是REE侧的一个常驻进程，负责接收并处理来自TEE侧的请求。TEE侧的应用程序（Trusted Application, TA）通过远程过程调用（RPC）将请求通过OP-TEE驱动发送给REE侧。TEE Supplicant会监控驱动中来自TEE侧的RPC请求的状况，一旦接到请求就会对该请求进行解析和处理。常见的来自TA的RPC请求有TA镜像加载、REE侧文件系统操作、Socket操作和REE侧数据库操作等。OP-TEE在Linux中的驱动程序会为RPC请求创建一个请求队列，TEE Supplicant每次接到一个来自TEE侧的RPC请求后都会自动创建一个线程用于接收来自请求队列的其他RPC请求，从而实现RPC请求的并发处理。TEE Supplicant将RPC请求处理完成后将处理结果通过OP-TEE驱动发送给TEE侧。
 
