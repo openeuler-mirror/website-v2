@@ -55,7 +55,7 @@ ATF完成了ARMv8的安全启动功能，其源代码分为bl1、bl2、bl31、bl
 
 1. 基于QEMU-v8的OP-TEE编译文件进行修改，去掉与QEMU相关的编译项；
 2. 基于QEMU-v8编译结果进行bios修改，注意device tree的加载过程；
-3. 修改ATF的安全引导过程，将BootLoader换成修改后的BIOS。
+3. 修改ATF的安全引导过程，将BootLoader换成修改后的bios，这一过程应该可以通过ATF支持的自有固件引导实现。
 
 
 
