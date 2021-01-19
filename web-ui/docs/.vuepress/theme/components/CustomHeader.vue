@@ -295,7 +295,7 @@ export default {
         },
         toggleLang(item) {
             let lang = '';
-            if(item === '中') {
+            if(item === '中文') {
                 lang = 'zh';
             }else if(item === 'English') {
                 lang = 'en';

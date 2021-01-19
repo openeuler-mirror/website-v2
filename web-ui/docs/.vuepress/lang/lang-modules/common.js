@@ -116,7 +116,7 @@ module.exports = {
                 CLASS: []
             }
         ],
-        LANG: '中',
+        LANG: '中文',
         LANG_LIST: ['中文','English','Русский'],
         GITTE: '源码',
         CODE: '代码',
