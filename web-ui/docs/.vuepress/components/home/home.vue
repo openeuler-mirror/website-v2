@@ -2038,6 +2038,9 @@
             line-height: 18px;
             margin-bottom: 0;
         }
+        html[lang="ru"] .source-publish-link h5 {
+          line-height: 34px;
+        }
         .apply-img,
         .mail-img {
             display: none;

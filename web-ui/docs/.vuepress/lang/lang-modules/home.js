@@ -505,12 +505,12 @@ module.exports = {
                 LINK: "邮件列表",
                 MAIL: "community@openeuler.org"
             },
-            SOURCE_PUBLISH_TITLE: "基于openEuler的OS发行版",
+            SOURCE_PUBLISH_TITLE: "发布 openEuler 商业发行版的厂商",
             SOURCE_LINK_TITLE: "友情链接",
         },
         HOME_SOURCE_EDITION:[
             {
-                LEFT_IMG_LINK: 'https://eulixos.com/#/download',
+                LEFT_IMG_LINK: 'http://www.iscas.ac.cn/',
                 LEFT_IMG_PC: '/img/home/link/iscas.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-iscas.png',
                 RIGHT_IMG_LINK: 'https://www.turbolinux.com.cn/',
@@ -518,28 +518,28 @@ module.exports = {
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-turbo.png'
             },
             {
-                LEFT_IMG_LINK: 'http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso',
+                LEFT_IMG_LINK: 'http://www.i-soft.com.cn/',
                 LEFT_IMG_PC: '/img/home/link/cetc.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-cetc.png',
-                RIGHT_IMG_LINK: 'http://www.hopeinfra.com/',
-                RIGHT_IMG_PC: '/img/home/link/hopeEdge.png',
-                RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeEdge.png'
+                RIGHT_IMG_LINK: 'https://www.uniontech.com/',
+                RIGHT_IMG_PC: '/img/home/link/tongxin.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongxin.png'
             },
             {
                 LEFT_IMG_LINK: 'http://www.kylinos.cn/',
                 LEFT_IMG_PC: '/img/home/link/qiling.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-qiling.png',
-                RIGHT_IMG_LINK: 'https://www.uniontech.com/next/product/server-system?edition=Euler',
-                RIGHT_IMG_PC: '/img/home/link/tongxin.png',
-                RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongxin.png'
+                RIGHT_IMG_LINK: 'http://www.hoperun.com/',
+                RIGHT_IMG_PC: '/img/home/link/hopeRun.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeRun.png'
             },
             {
                 LEFT_IMG_LINK: 'http://www.kylinsec.com.cn/',
                 LEFT_IMG_PC: '/img/home/link/xinan.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-xinan.png',
-                RIGHT_IMG_LINK: 'http://www.hopeinfra.com/intro/37.html',
-                RIGHT_IMG_PC: '/img/home/link/hopeStage.png',
-                RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeStage.png'
+                RIGHT_IMG_LINK: 'http://www.tongyuanos.com/',
+                RIGHT_IMG_PC: '/img/home/link/tongYuan.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongYuan.png'
             }
         ],
         FRIENDSHIP_LINK_LIST:[
@@ -1050,12 +1050,12 @@ module.exports = {
                 LINK: "Mailing Lists",
                 MAIL: "community@openeuler.org"
             },
-            SOURCE_PUBLISH_TITLE: "openEuler-based OS Releases",
+            SOURCE_PUBLISH_TITLE: "openEuler-powered Commercial OS Editions",
             SOURCE_LINK_TITLE: "Reference Links",
         },
         HOME_SOURCE_EDITION:[
             {
-                LEFT_IMG_LINK: 'https://eulixos.com/#/download',
+                LEFT_IMG_LINK: 'http://www.iscas.ac.cn/',
                 LEFT_IMG_PC: '/img/home/link/iscas.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-iscas.png',
                 RIGHT_IMG_LINK: 'https://www.turbolinux.com.cn/',
@@ -1063,28 +1063,28 @@ module.exports = {
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-turbo.png'
             },
             {
-                LEFT_IMG_LINK: 'http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso',
+                LEFT_IMG_LINK: 'http://www.i-soft.com.cn/',
                 LEFT_IMG_PC: '/img/home/link/cetc.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-cetc.png',
-                RIGHT_IMG_LINK: 'http://www.hopeinfra.com/',
-                RIGHT_IMG_PC: '/img/home/link/hopeEdge.png',
-                RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeEdge.png'
-            },
-            {
-                LEFT_IMG_LINK: 'http://www.kylinos.cn/',
-                LEFT_IMG_PC: '/img/home/link/qiling.png',
-                LEFT_IMG_MOBILE: '/img/home/link/mobile-qiling.png',
-                RIGHT_IMG_LINK: 'https://www.uniontech.com/next/product/server-system?edition=Euler',
+                RIGHT_IMG_LINK: 'https://www.uniontech.com/',
                 RIGHT_IMG_PC: '/img/home/link/tongxin.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongxin.png'
             },
             {
                 LEFT_IMG_LINK: 'http://www.kylinos.cn/',
+                LEFT_IMG_PC: '/img/home/link/qiling.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-qiling.png',
+                RIGHT_IMG_LINK: 'http://www.hoperun.com/',
+                RIGHT_IMG_PC: '/img/home/link/hopeRun.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeRun.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://www.kylinos.cn/',
                 LEFT_IMG_PC: '/img/home/link/xinan.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-xinan.png',
-                RIGHT_IMG_LINK: 'http://www.hopeinfra.com/intro/37.html',
-                RIGHT_IMG_PC: '/img/home/link/hopeStage.png',
-                RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeStage.png'
+                RIGHT_IMG_LINK: 'http://www.tongyuanos.com/',
+                RIGHT_IMG_PC: '/img/home/link/tongYuan.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongYuan.png'
             }
         ],
         FRIENDSHIP_LINK_LIST:[
@@ -1595,12 +1595,12 @@ module.exports = {
                 LINK: "Списки рассылок.",
                 MAIL: "community@openeuler.org"
             },
-            SOURCE_PUBLISH_TITLE: "Релизы ОС сообщества openEuler",
+            SOURCE_PUBLISH_TITLE: "Коммерческие версии ОС на базе openEuler",
             SOURCE_LINK_TITLE: "Ссылки",
         },
         HOME_SOURCE_EDITION:[
             {
-                LEFT_IMG_LINK: 'https://eulixos.com/#/download',
+                LEFT_IMG_LINK: 'http://www.iscas.ac.cn/',
                 LEFT_IMG_PC: '/img/home/link/iscas.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-iscas.png',
                 RIGHT_IMG_LINK: 'https://www.turbolinux.com.cn/',
@@ -1608,28 +1608,28 @@ module.exports = {
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-turbo.png'
             },
             {
-                LEFT_IMG_LINK: 'http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso',
+                LEFT_IMG_LINK: 'http://www.i-soft.com.cn/',
                 LEFT_IMG_PC: '/img/home/link/cetc.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-cetc.png',
-                RIGHT_IMG_LINK: 'http://www.hopeinfra.com/',
-                RIGHT_IMG_PC: '/img/home/link/hopeEdge.png',
-                RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeEdge.png'
-            },
-            {
-                LEFT_IMG_LINK: 'http://www.kylinos.cn/',
-                LEFT_IMG_PC: '/img/home/link/qiling.png',
-                LEFT_IMG_MOBILE: '/img/home/link/mobile-qiling.png',
-                RIGHT_IMG_LINK: 'https://www.uniontech.com/next/product/server-system?edition=Euler',
+                RIGHT_IMG_LINK: 'https://www.uniontech.com/',
                 RIGHT_IMG_PC: '/img/home/link/tongxin.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongxin.png'
             },
             {
                 LEFT_IMG_LINK: 'http://www.kylinos.cn/',
+                LEFT_IMG_PC: '/img/home/link/qiling.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-qiling.png',
+                RIGHT_IMG_LINK: 'http://www.hoperun.com/',
+                RIGHT_IMG_PC: '/img/home/link/hopeRun.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeRun.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://www.kylinos.cn/',
                 LEFT_IMG_PC: '/img/home/link/xinan.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-xinan.png',
-                RIGHT_IMG_LINK: 'http://www.hopeinfra.com/intro/37.html',
-                RIGHT_IMG_PC: '/img/home/link/hopeStage.png',
-                RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeStage.png'
+                RIGHT_IMG_LINK: 'http://www.tongyuanos.com/',
+                RIGHT_IMG_PC: '/img/home/link/tongYuan.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongYuan.png'
             }
         ],
         FRIENDSHIP_LINK_LIST:[
