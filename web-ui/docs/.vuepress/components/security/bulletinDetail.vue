@@ -6,29 +6,51 @@
             <h2>{{detailData.securityNoticeNo}}</h2>
             <p>{{i18n.security.SYNOPSIS}}: {{detailData.summary}}</p>
             <p>{{i18n.security.RELEASE_DATE}}: {{detailData.announcementTime}}</p>
-            <h2>{{i18n.security.BRIEF_INTRODUCTION}}</h2>
-            <p>{{detailData.introduction}}</p>
-            <h2>{{i18n.security.SEVERITY}}</h2>
-            <p>{{detailData.type}}</p>
-            <h2>{{i18n.security.THEME}}</h2>
-            <p>{{detailData.subject}}</p>
-            <h2>{{i18n.security.DESCRIPTION}}</h2>
-            <p>{{detailData.description}}</p>
-            <h2>{{i18n.security.AFFECTED_COMPONENTS}}</h2>
-            <p>{{detailData.affectedComponent}}</p>
-            <h2>{{i18n.security.AFFECTED_PRODUCTS}}</h2>
-            <p>{{detailData.affectedProduct}}</p>
-            <h2>CVE</h2>
-            <div class="link-group">
-                <a v-for="(item, index) in detailData.cveId.split(';')" :key="index" @click="go(item)">{{item}}</a>    
+            <div class="tabs">
+                <div v-for="item in tabsList" :class="{'tab-item': true, 'active': item.id===curTab}" @click="curTab=item.id">{{item.name}}</div>
             </div>
-            <h2>{{i18n.security.PACKAGE}}</h2>
-            <div class="link-group">
-                <a v-for="(item, index) in detailData.packageName.split(';')" @click="open(item)">{{item}}</a>    
+            <div v-show="curTab===1">
+                <h2>{{i18n.security.BRIEF_INTRODUCTION}}</h2>
+                <p>{{detailData.introduction}}</p>
+                <h2>{{i18n.security.SEVERITY}}</h2>
+                <p>{{detailData.type}}</p>
+                <h2>{{i18n.security.THEME}}</h2>
+                <p>{{detailData.subject}}</p>
+                <h2>{{i18n.security.DESCRIPTION}}</h2>
+                <p>{{detailData.description}}</p>
+                <h2>{{i18n.security.AFFECTED_COMPONENTS}}</h2>
+                <p>{{detailData.affectedComponent}}</p>
+                <h2>CVE</h2>
+                <div class="link-group">
+                    <a v-for="(item, index) in detailData.cveId.split(';')" :key="index" @click="go(item)">{{item}}</a>    
+                </div>
+                <h2>{{i18n.security.REFERENCE_DOCUMENTS}}</h2>
+                <div class="link-group">
+                    <a :href="item.url" target="_blank" v-for="(item, index) in detailData.referenceList">{{item.url}}</a>    
+                </div>    
             </div>
-            <h2>{{i18n.security.REFERENCE_DOCUMENTS}}</h2>
-            <div class="link-group">
-                <a :href="item" target="_blank" v-for="(item, index) in detailData.referenceDocuments.split('\n')" @click="open(item)">{{item}}</a>    
+            <div v-show="curTab===2">
+                <div class="package-list-wraper" v-for="item in detailData.packageHelperList">
+                    <h1>{{item.productName}}</h1>
+                    <ul class="package-list" v-for="item1 in item.child">
+                        <li class="item">
+                            <ul>
+                                <li>{{item1.productName}}</li>
+                            </ul>
+                        </li>
+                        <li class="item" v-for="item2 in item1.child">
+                            <ul>
+                                <li>
+                                    {{item2.packageName}}
+                                </li>
+                                <li v-if="item2.sha256">
+                                    {{item2.sha256}}
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>    
+                </div>
+                
             </div>
             
         </div>
@@ -36,7 +58,7 @@
 </template>
 
 <script>
-import { securityDetail, getDownloadUrl } from "../../api/security"
+import { securityDetail } from "../../api/security"
 let that = null;
 
 const locationMethods = {
@@ -58,17 +80,6 @@ const locationMethods = {
             that.$message.error(data);
             that.loading = false;
         });
-    },
-    getDownloadUrl (id) {
-        getDownloadUrl({
-            id
-        })
-        .then(data => {
-            window.open(data.packageLink);
-        })
-        .catch(data => {
-            that.$message.error(data);
-        });
     }
 }
 export default {
@@ -80,7 +91,18 @@ export default {
                 cveId: '',
                 packageName: '',
                 referenceDocuments: ''
-            }
+            },
+            tabsList: [
+                {
+                    name: that.i18n.security.OVERVIEW,
+                    id: 1
+                },
+                {
+                    name: that.i18n.security.UPDATED_PACKAGES,
+                    id: 2
+                }
+            ],
+            curTab: 1
         };
     },
     created () {
@@ -97,9 +119,6 @@ export default {
                 path: this.resolvePath('/security/cve/detail.html'),
                 query: {id}
             })
-        },
-        open(id) {
-            locationMethods.getDownloadUrl(id);
         }
     }
 };
@@ -127,6 +146,120 @@ export default {
         }
     }
     .bulletinInner {
+        .tabs {
+            margin-bottom: 40px;
+            .tab-item {
+                display: inline-block;
+                font-size: 20px;
+                line-height: 40px;
+                color: rgba(0, 0, 0, .5);
+                margin-right: 50px;
+                cursor: pointer;
+            }
+            .active {
+                color: #000;
+                border-bottom: 2px solid #002fa7;
+            }
+            @media (max-width: 1000px) {
+                margin-bottom: 30px;
+                .tab-item {
+                    font-size: 16px;
+                    line-height: 36px;
+                    margin-right: 40px;
+                }
+            }
+        }
+        .package-list-wraper {
+            &>h1 {
+                font-size: 24px;
+                font-weight: normal;
+                line-height: 24px;
+                margin-bottom: 30px;
+                @media (max-width: 1000px) {
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .package-list {
+            margin-bottom: 40px;
+            @media (max-width: 1000px) {
+                margin-bottom: 30px;
+            }
+            .item:first-child {
+                li {
+                color: #000 !important;
+                font-size: 16px !important;
+                }
+            }
+            .item:first-child > ul {
+                height: 60px;
+                @media (max-width: 1000px) {
+                    height: 50px;
+                }
+            }
+            .item > ul {
+                height: 46px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 14px;
+                color: rgba(0, 0, 0, 0.85);
+                @media (max-width: 1000px) {
+                    height: 38px !important;
+                }
+                li {
+                    color: rgba(0, 0, 0, .5) !important;
+                }
+                li:nth-child(2) {
+                font-size: 14px;
+                color: rgba(0, 0, 0, 0.85);
+                text-align: center;
+                }
+                li:nth-child(3) {
+                font-size: 14px;
+                text-align: right;
+                color: rgba(0, 0, 0, 0.85);
+                }
+                li:nth-child(4) {
+                font-size: 14px;
+                text-align: right;
+                color: rgba(0, 0, 0, 0.85);
+                }
+                li {
+                flex: 1;
+                span {
+                    display: none;
+                }
+                }
+            }
+            .item {
+                border-top: 1px solid rgba(0, 0, 0, .15);
+            }
+            .item:first-child {
+                border: none;
+            }
+            @media (max-width: 1000px) {
+                .item > ul {
+                    height: 52px;
+                    font-size: 12px;
+                    &:first-child {
+                        font-size: 14px;
+                    }
+                    li:first-child {
+                        font-size: 12px;
+                        color: #000;
+                    }
+                }
+                margin-bottom: 30px;
+                .item:first-child {
+                    li {
+                        color: #000 !important;
+                        font-size: 14px !important;
+                    }
+                }
+            }
+        }
         h1 {
             font-size: 36px;
             margin-bottom: 104px;

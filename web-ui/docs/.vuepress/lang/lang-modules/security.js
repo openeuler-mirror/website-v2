@@ -4,6 +4,8 @@
 
 module.exports = {
     cn: {
+        OVERVIEW: '概述',
+        UPDATED_PACKAGES: '更新的软件包',
         SECURITY_ADVISORIES: '安全公告',
         SECURITY_ADVISORIES_NAME: '公告名',
         SEARCH: '搜索',
@@ -57,6 +59,8 @@ module.exports = {
         STATUS: '状态',
     },
     en: {
+        OVERVIEW: 'Overview',
+        UPDATED_PACKAGES: 'Updated software packages',
         SECURITY_ADVISORIES: 'Security Advisories',
         SECURITY_ADVISORIES_NAME: 'Title',
         SEARCH: 'Search',
@@ -110,6 +114,8 @@ module.exports = {
         STATUS: 'Status',
     },
     ru: {
+        OVERVIEW: 'Краткое описание',
+        UPDATED_PACKAGES: 'Обновленные пакеты ПО',
         SECURITY_ADVISORIES: 'Консультанты по безопасности',
         SECURITY_ADVISORIES_NAME: 'Title',
         SEARCH: 'Поиск',
