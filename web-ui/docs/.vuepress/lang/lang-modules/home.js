@@ -1050,7 +1050,7 @@ module.exports = {
                 LINK: "Mailing Lists",
                 MAIL: "community@openeuler.org"
             },
-            SOURCE_PUBLISH_TITLE: "openEuler-powered Commercial OS Editions",
+            SOURCE_PUBLISH_TITLE: "Vendors with openEuler-based Commercial Editions",
             SOURCE_LINK_TITLE: "Reference Links",
         },
         HOME_SOURCE_EDITION:[
@@ -1595,7 +1595,7 @@ module.exports = {
                 LINK: "Списки рассылок.",
                 MAIL: "community@openeuler.org"
             },
-            SOURCE_PUBLISH_TITLE: "Коммерческие версии ОС на базе openEuler",
+            SOURCE_PUBLISH_TITLE: "Поставщики с коммерческими версиями на базе openEuler",
             SOURCE_LINK_TITLE: "Ссылки",
         },
         HOME_SOURCE_EDITION:[
