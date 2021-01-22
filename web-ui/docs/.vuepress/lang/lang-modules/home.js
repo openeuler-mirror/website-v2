@@ -547,7 +547,7 @@ module.exports = {
                 LEFT_IMG_LINK: 'http://www.mulanos.cn/',
                 LEFT_IMG_PC: '/img/home/link/mulan.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-mulan.png',
-                RIGHT_IMG_LINK: 'https://www.huaweicloud.com/kunpeng/',
+                RIGHT_IMG_LINK: 'https://kunpeng.huawei.com/',
                 RIGHT_IMG_PC: '/img/home/link/kunpeng.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-kunpeng.png'
             },
@@ -1092,7 +1092,7 @@ module.exports = {
                 LEFT_IMG_LINK: 'http://www.mulanos.cn/',
                 LEFT_IMG_PC: '/img/home/link/mulan.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-mulan.png',
-                RIGHT_IMG_LINK: 'https://www.huaweicloud.com/kunpeng/',
+                RIGHT_IMG_LINK: 'https://kunpeng.huawei.com/',
                 RIGHT_IMG_PC: '/img/home/link/kunpeng.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-kunpeng.png'
             },
@@ -1637,7 +1637,7 @@ module.exports = {
                 LEFT_IMG_LINK: 'http://www.mulanos.cn/',
                 LEFT_IMG_PC: '/img/home/link/mulan.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-mulan.png',
-                RIGHT_IMG_LINK: 'https://www.huaweicloud.com/kunpeng/',
+                RIGHT_IMG_LINK: 'https://kunpeng.huawei.com/',
                 RIGHT_IMG_PC: '/img/home/link/kunpeng.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-kunpeng.png'
             },

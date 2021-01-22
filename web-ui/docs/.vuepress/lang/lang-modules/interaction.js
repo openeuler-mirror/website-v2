@@ -1348,7 +1348,7 @@ module.exports = {
                 },
                 {
                     URL:'url("/img/home/link/kunpeng.png")',
-                    LINK:'https://www.huaweicloud.com/kunpeng/'
+                    LINK:'https://kunpeng.huawei.com/'
                 },
                 {
                     URL:'url("/img/home/link/pengcheng.png")',
@@ -2707,7 +2707,7 @@ module.exports = {
                 },
                 {
                     URL:'url("/img/home/link/kunpeng.png")',
-                    LINK:'https://www.huaweicloud.com/kunpeng/'
+                    LINK:'https://kunpeng.huawei.com/'
                 },
                 {
                     URL:'url("/img/home/link/pengcheng.png")',
@@ -4066,7 +4066,7 @@ module.exports = {
                 },
                 {
                     URL:'url("/img/home/link/kunpeng.png")',
-                    LINK:'https://www.huaweicloud.com/kunpeng/'
+                    LINK:'https://kunpeng.huawei.com/'
                 },
                 {
                     URL:'url("/img/home/link/pengcheng.png")',
