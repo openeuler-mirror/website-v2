@@ -52,15 +52,6 @@
                         "name": "安全加固"
                     }
                 ]
-            },
-            {
-                "title": "开发",
-                "doc": [
-                    {
-                        "img":"/img/docs/docs-exploit.svg",
-                        "name": "应用开发指南"
-                    }
-                ]
             }
         ]
     },
