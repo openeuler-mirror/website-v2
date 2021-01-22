@@ -20,6 +20,10 @@
                 <h3>Etherpad</h3>
                 <div class="link" @click="open(item3.join_url)"><span><img src="/img/home/detail-link.png" alt="">{{item3.etherpad||'-'}}</span></div>
             </div>
+            <div class="detail-link" v-if="item3.video_url">
+                <h3>{{i18n.common.MEETINGS_REPLAY}}</h3>
+                <div class="link" @click="open(item3.video_url)"><span><img src="/img/home/detail-link.png" alt="">{{item3.video_url||'-'}}</span></div>
+            </div>
         </div>
     </div>
 </template>
@@ -54,7 +58,6 @@ export default {
     cursor: pointer;
     @media screen and (max-width: 1000px) {
         span {
-            max-width: 160px;
             overflow: hidden;
             display: inline-block;   
             word-break: break-all;
@@ -66,9 +69,10 @@ export default {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 740px;
     z-index: 100;
     text-align: left;
+    overflow: hidden;
 }
 .bg{
     position: absolute;
@@ -82,7 +86,7 @@ export default {
 }
 .cadenderSinge{
     @media screen and (max-width: 1000px) {
-        max-width: 180px;
+        width: 90%;
     }
     border-radius: 4px;
     padding: 12px 20px 15px;

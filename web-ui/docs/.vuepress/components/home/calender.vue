@@ -26,6 +26,7 @@
             </div>
         </div>
         <div class="calenderMain">
+            <calenderDetail :item3="saveItem" @close-detail="close" v-if="isShowDetail" />
             <div class="calenderLeft">
                 <button
                     class="top"
@@ -51,7 +52,7 @@
                 </div>
             </div>
             <div class="calendarSlide" :style="{'width': ((w == 245)? 985 : w) + 'px'}">
-                <calenderDetail :item3="saveItem" @close-detail="close" v-if="isShowDetail" />
+                
                 <div class="calendarSlideItem" :style="'transform: translateX(' + l + 'px)'">
                     <template v-for="(item, key) in dealData">
                         <div
@@ -72,6 +73,7 @@
                                             :style="returnInsideH(item2)"
                                             v-if="item1.duration < 16"
                                         >
+                                            <img v-if="item2.data.length && item2.data[item2.index-1].video_url" class="record-img" src="/img/common/record.png">
                                             <button
                                                 class="left btnMy"
                                                 v-if="item2.data.length > 1"
@@ -439,13 +441,6 @@ export default {
 };
 </script>
 <style scoped lang="less">
-h1,
-p,
-span,
-li,
-a {
-    
-}
 div::after {
     content: "";
     display: block;
@@ -602,6 +597,13 @@ button {
     box-shadow: 0px 4px 10px #ececec;
     margin-bottom: 20px;
     overflow: hidden;
+}
+.calenderListSinge .record-img {
+    width: 32px;
+    height: 16px;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 .calenderInsideAll {
     width: 10000000px;
