@@ -5,6 +5,7 @@
 module.exports = {
     cn: {
         MEETINGS_TIME: '会议时间：',
+        MEETINGS_REPLAY: '回放链接',
         SEARCH_PLACE_HOLDER: '输入内容',
         NAV_ROUTER_CONFIG: [{
                 PATH: '/download/',
@@ -158,6 +159,7 @@ module.exports = {
     },
     en: {
         MEETINGS_TIME: 'Time: ',
+        MEETINGS_REPLAY: 'Replay',
         SEARCH_PLACE_HOLDER: 'Input content',
         NAV_ROUTER_CONFIG: [{
                 PATH: '/download/',
@@ -311,6 +313,7 @@ module.exports = {
     },
     ru: {
         MEETINGS_TIME: 'Time: ',
+        MEETINGS_REPLAY: 'Воспроизведение',
         SEARCH_PLACE_HOLDER: 'Введите текст',
         NAV_ROUTER_CONFIG: [{
                 PATH: '/download/',
