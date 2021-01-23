@@ -1,4 +1,5 @@
 @font-face {
+    font-display: swap;
     font-family: "FZLT";
     src: url("https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/Font/FZLTHJW.TTF");
 }
