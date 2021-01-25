@@ -47,7 +47,7 @@
                  v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"
                  :key="index">
                 <div class="step-H5">
-                    <div class="step-num"  @touchstart="go(item.LINK)">
+                    <div class="step-num"  @click="go(item.LINK)">
                         <span>{{ item.BUTTON}}</span>
                     </div>
                     <img :src="item.MOBILEIMG" alt="">
