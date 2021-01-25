@@ -47,7 +47,7 @@
                  v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"
                  :key="index">
                 <div class="step-H5">
-                    <div class="step-num"  @touchstart="go(item.LINK, isShowH5)">
+                    <div class="step-num"  @click="go(item.LINK)">
                         <span>{{ item.BUTTON}}</span>
                     </div>
                     <img :src="item.MOBILEIMG" alt="">
@@ -56,7 +56,7 @@
                         <div class="angle"></div>
                         <p class="link-title">{{item.LINKADRESSLIST.TITLE}}</p>
                         <div class="linkbox">
-                            <div class="linkList" v-for="(item,index) in item.LINKADRESSLIST.LINKMESSAGE" @click="go(item.LINKADRESS, isShowH5)">
+                            <div class="linkList" v-for="(item,index) in item.LINKADRESSLIST.LINKMESSAGE" @click="go(item.LINKADRESS)">
                                 <i :style="{backgroundImage:item.ICONIMAGE}"></i>
                                 <span>{{item.TEXT}}</span>
                             </div>
@@ -94,11 +94,7 @@
                     return;
                 }
                 if(path.includes('https')){
-                    if (isH5) {
-                        window.location.href = path;
-                    } else {
-                        window.open(path);
-                    }
+                    window.open(path);
                 }else if(path.includes('cla')){
                     let routeUrl = this.$router.resolve(this.resolvePath(path));
                         window.open(routeUrl.href);
