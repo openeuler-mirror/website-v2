@@ -88,7 +88,7 @@
                     return es;
                 }
             },
-            go(path, isH5) {
+            go(path) {
                 if(path == ''){
                     this.ishide = !this.ishide;
                     return;
