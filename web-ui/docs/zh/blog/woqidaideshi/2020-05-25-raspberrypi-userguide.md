@@ -18,9 +18,9 @@ summary: openEuler Raspberry Pi 版本镜像的构建、使用。
 
 本文主要包括三部分：
 
-- [刷写镜像](#刷写镜像)
-- [使用树莓派](#使用树莓派)
-- [构建镜像](#构建镜像)
+- 刷写镜像
+- 使用树莓派
+- 构建镜像
 
 本文内容参考自 [openEuler-RaspberryPi](https://gitee.com/openeuler/raspberrypi)。如有疑问，欢迎大家在本文提交评论或者在 [openEuler-RaspberryPi](https://gitee.com/openeuler/raspberrypi) 提交 issue。
 
@@ -34,20 +34,20 @@ summary: openEuler Raspberry Pi 版本镜像的构建、使用。
 
 ## 获取树莓派 img 镜像
 
-下载适配树莓派的最新 openEuler 镜像，也可以参照 [构建镜像](#构建镜像) 定制自己的 openEuler 树莓派镜像，下面以 `XXX.img` 表示该镜像。
+下载适配树莓派的 openEuler 镜像，也可以参照 [构建镜像](#构建镜像) 定制自己的 openEuler 树莓派镜像。
 
-当前最新的 openEuler 20.03 LTS 的内测版本镜像，[下载](https://isrc.iscas.ac.cn/EulixOS/repo/dailybuild/1/isos/20200508/openEuler_20200508151847.img.xz)。
+下载 openEuler 发布的 openEuler 20.09 版本镜像，[下载](https://repo.openeuler.org/openEuler-20.09/raspi_img/aarch64/openEuler-20.09-raspi-aarch64.img.xz)。
 
 该镜像的基本信息：
 
-- [更新日志](https://gitee.com/openeuler/raspberrypi/blob/master/documents/changelog.md)
-- 发布时间：2020-05-11
-- 大小：245 MiB
-- 操作系统版本：openEuler 20.03 LTS
-- 内核版本：4.19.90-2003.4.0.0036
+- [更新日志](https://gitee.com/openeuler/raspberrypi/blob/master/documents/changelog/changelog-20.09-release.md)
+- 发布时间：2020-09-30
+- 大小：259 MiB
+- 操作系统版本：openEuler 20.09
+- 内核版本：4.19.138-2008.1.0.0001
 - 固件来源：[firmware](https://github.com/raspberrypi/firmware)、[bluez-firmware](https://github.com/RPi-Distro/bluez-firmware)、[firmware-nonfree](https://github.com/RPi-Distro/firmware-nonfree)
-- 构建文件系统的源仓库：[openEuler-20.03-LTS](http://repo.openeuler.org/openEuler-20.03-LTS/everything/aarch64/)
-- 镜像内置源仓库：[openEuler 20.03 LTS 源仓库](https://gitee.com/openeuler/raspberrypi/blob/master/scripts/config/openEuler-20.03-LTS.repo)
+- 构建文件系统的源仓库：[openEuler 20.09 源仓库](https://gitee.com/src-openeuler/openEuler-repos/blob/openEuler-20.09/generic.repo)
+- 镜像内置源仓库：[openEuler 20.09 源仓库](https://gitee.com/src-openeuler/openEuler-repos/blob/openEuler-20.09/generic.repo)
 
 发布的镜像更新情况参见 [openEuler-RaspberryPi](https://gitee.com/openeuler/raspberrypi/blob/master/README.md)。
 
@@ -59,33 +59,31 @@ summary: openEuler Raspberry Pi 版本镜像的构建、使用。
 
 ### 格式化 SD 卡
 
-下载应用：SDFormater，用于格式化 SD 卡。
+请按照以下步骤格式化 SD 卡：
 
-若 SD 卡之前未安装过镜像，盘符正常只有一个，选择 SD 卡对应盘符，直接格式化即可；
+1.  下载并安装格式化 SD 卡工具，以下操作以 SD Card Formatter 格式化工具为例。
+2.  打开 SD Card Formatter，在 “Select card” 中选择需要格式化的 SD 卡的盘符。
 
-若 SD 卡之前安装过镜像，盘符会有三个，选择 SD 卡对应盘符（图例中为 E: 盘），格式化即可：
+    若 SD 卡之前未安装过镜像，盘符只有一个。在 “Select card” 中选择需要格式化的 SD 卡对应盘符。
 
-<img src="./images/2020-05-25-raspberrypi-userguide-disk.jpg">
+    若 SD 卡之前安装过镜像，盘符会有一个或多个。例如，SD 卡对应三个盘符：E、G、H。在 “Select card” 中选择需要格式化的 SD 卡对应 boot 分区盘符 E。
 
-<img src="./images/2020-05-25-raspberrypi-userguide-disk-beforeformat.jpg">
-
-<img src="./images/2020-05-25-raspberrypi-userguide-disk-afterformat.jpg">
-
-<img src="./images/2020-05-25-raspberrypi-userguide-disk-after.jpg">
+3.  在 “Formatting options” 中选择格式化方式。默认为 “Qick format”。
+4.  单击“Format”开始格式化。界面通过进度条显示格式化进度。
+5.  格式化完成后会弹出 “Formatting was successfully completed” 的提示框，单击“确定”完成格式化。
 
 ### 写入 SD 卡
 
-下载应用：Win32 Disk Imager。
+注意，如果获取的是压缩后的镜像文件，如 `openEuler-20.09-raspi-aarch64.img.xz`，需要先将压缩文件解压得到 `openEuler-20.09-raspi-aarch64.img` 镜像文件。
 
-右键选择“以管理员身份运行”，打开 Win32 Disk Imager，选择镜像 img 文件和待写入的 SD 卡，点击【写入/Write】。
+请按照以下步骤将 `openEuler-20.09-raspi-aarch64.img` 镜像文件写入 SD 卡：
 
-<img src="./images/2020-05-25-raspberrypi-userguide-writeSD.jpg">
-
-写入完成即可。
-
-写入成功后，SD 卡自动分区后的盘符为：
-
-<img src="./images/2020-05-25-raspberrypi-userguide-disk.jpg">
+1.  下载并安装刷写镜像的工具，以下操作以 Win32 Disk Imager 工具为例。
+2.  右键选择“以管理员身份运行”，打开 Win32 Disk Imager。
+3.  在“映像文件”中选择 img 格式的镜像文件路径。
+4.  在“设备”中选择待写入的 SD 卡盘符。
+5.  单击“写入”。界面通过任务进度条显示写入 SD 卡的进度。
+6.  写入完成后会弹出 “写入成功” 的提示框，单击“OK”完成写入。
 
 # 使用树莓派
 
@@ -95,27 +93,17 @@ summary: openEuler Raspberry Pi 版本镜像的构建、使用。
 
 默认用户名：root，密码：openeuler。
 
-将刷好的 SD 卡插入树莓派，通电启用。树莓派正常启动，还需连接网线至局域网。
+将刷写镜像后的 SD 卡插入树莓派，通电启用。
 
-由于使用树莓派时，大多都使用 ssh 远程连接；在树莓派启动联网时，无法得知其 IP 地址。
+登录树莓派有以下两种方式：
 
-有以下两种方式：
+1.  本地登录
 
-1. 本地登录
+    树莓派连接显示器（树莓派视频输出接口为 Micro HDMI）、键盘、鼠标后，启动树莓派，可以看到树莓派启动日志输出到显示器上。待树莓派启动成功，输入用户名（root）和密码（openeuler）登录。
 
-将树莓派连接显示器（树莓派视频输出接口为 Micro HDMI）、键盘、鼠标后，启动树莓派，可以看到树莓派启动日志输出到显示器上。待树莓派启动成功，输入用户名（root）和密码（openeuler）登录。目前，openEuler 系统无桌面环境，添加桌面支持相关进度可关注 [期望增加桌面支持](https://gitee.com/openeuler/raspberrypi/issues/I1F21F)，欢迎大家参与。
+2.  ssh 远程登录
 
-登录成功后，树莓派即显示本机相关信息，包括本机 IP。如下图（ssh 登录也显示这些信息）：
-
-<img src="./images/2020-05-25-raspberrypi-userguide-loginPi.jpg">
-
-1. ssh 远程登录
-
-如果树莓派连接已知路由器，可登录路由器管理，新增的 IP 即为树莓派 IP：
-
-<img src="./images/2020-05-25-raspberrypi-userguide-getIP.jpg">
-
-从上图看到，树莓派对应 IP 为：192.168.1.102，使用命令 `ssh root@192.168.1.102` 后输入密码 `openeuler`，即可远程登录树莓派。
+    树莓派默认采用 DHCP 的方式自动获取 IP。如果树莓派连接已知路由器，可登录路由器查看，新增的 IP 即为树莓派 IP。例如，树莓派对应 IP 为：192.168.31.109，使用命令 `ssh root@192.168.31.109` 后输入密码 `openeuler`，即可远程登录树莓派。
 
 ## 根目录分区扩展
 
@@ -140,7 +128,8 @@ wifi 使用详情参见 [wifi 连接
 ## GPIO
 
 GPIO 使用详情参见 [GPIO
-](https://gitee.com/openeuler/raspberrypi/blob/master/documents/树莓派使用.md#GPIO)。
+](https://gitee.com/openeuler/raspberrypi/blob/master/documents/树莓派使用.md#gpio)。
+
 
 # 构建镜像
 
@@ -148,11 +137,11 @@ GPIO 使用详情参见 [GPIO
 
 主要过程包括：
 
-1. 准备环境
-2. 编译内核
-3. 准备树莓派固件和应用
-4. 制作 openEuler 的 rootfs
-5. 制作镜像
+1.  准备环境
+2.  编译内核
+3.  准备树莓派固件和应用
+4.  制作 openEuler 的 rootfs
+5.  制作镜像
 
 ## 准备环境
 
@@ -195,9 +184,9 @@ GPIO 使用详情参见 [GPIO
 
 rootfs 的基本信息：
 
-- 操作系统版本：openEuler 20.03 LTS
-- 构建文件系统的源仓库：[openEuler-20.03-LTS](http://repo.openeuler.org/openEuler-20.03-LTS/everything/aarch64/)
-- 镜像内置源仓库：[openEuler 20.03 LTS 源仓库](https://gitee.com/openeuler/raspberrypi/blob/master/scripts/config/openEuler-20.03-LTS.repo)
+- 操作系统版本：openEuler 20.09
+- 构建文件系统的源仓库：[openEuler 20.09 源仓库](https://gitee.com/src-openeuler/openEuler-repos/blob/openEuler-20.09/generic.repo)
+- 镜像内置源仓库：[openEuler 20.09 源仓库](https://gitee.com/src-openeuler/openEuler-repos/blob/openEuler-20.09/generic.repo)
 
 ## 制作镜像
 
