@@ -12,6 +12,55 @@ module.exports = {
                 
             ],
             LIVEFORMERLY: [
+                 {
+                    LIVETITLE: '手把手教你编写Avocado-VT用例',
+                    LIVETEACHER: '讲师: 朱欢凯',
+                    LIVETIME: '时间: 12月14日 20:00（周二）',
+                    PHOTOPATH: '/img/live/zhuhuankai.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1Vz4y1r7fk'
+                },
+                {
+                    LIVETITLE: '玩转虚拟化测试Avocado-VT',
+                    LIVETEACHER: '讲师: 柯志明',
+                    LIVETIME: '时间: 12月1日 20:00（周二）',
+                    PHOTOPATH: '/img/live/kezhiming.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1Ey4y1S7xv'
+                },
+                {
+                    LIVETITLE: 'StratoVirt之IO子系统剖析',
+                    LIVETEACHER: '讲师: 张亮',
+                    LIVETIME: '时间: 11月17日 20:00（周二）',
+                    PHOTOPATH: '/img/live/zhangliang.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV17z4y1y7ME'
+                },
+                {
+                    LIVETITLE: 'StratoVirt之内存子系统剖析',
+                    LIVETEACHER: '讲师: 杨晓鹤',
+                    LIVETIME: '时间: 11月10日 20:00（周二）',
+                    PHOTOPATH: '/img/live/yangxiaohe.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1XV411y73z'
+                },
+                {
+                    LIVETITLE: 'StratoVirt之CPU子系统剖析',
+                    LIVETEACHER: '讲师: 高玮',
+                    LIVETIME: '时间: 11月3日 20:00（周二）',
+                    PHOTOPATH: '/img/live/gaowei.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1YA411j7Ws'
+                },
+                {
+                    LIVETITLE: '如何安装并使用StratoVirt',
+                    LIVETEACHER: '讲师: 郭馨乐',
+                    LIVETIME: '时间: 10月27日 20:00（周二）',
+                    PHOTOPATH: '/img/live/guoxinle.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1Ji4y177NC'
+                },
+                {
+                    LIVETITLE: '下一代虚拟化技术StratoVirt介绍',
+                    LIVETEACHER: '讲师: 王志钢',
+                    LIVETIME: '时间: 10月20日 20:00（周二）',
+                    PHOTOPATH: '/img/live/wangzhigang.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1gv411C7sK'
+                },
                 {
                     LIVETITLE: '手把手带你完成openEuler环境部署 K8S',
                     LIVETEACHER: '讲师: 夏丹妮',
@@ -1379,6 +1428,55 @@ module.exports = {
             ],
             LIVEFORMERLY: [
                 {
+                    LIVETITLE: '手把手教你编写Avocado-VT用例',
+                    LIVETEACHER: '讲师: 朱欢凯',
+                    LIVETIME: '时间: 12月14日 20:00（周二）',
+                    PHOTOPATH: '/img/live/zhuhuankai.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1Vz4y1r7fk'
+                },
+                {
+                    LIVETITLE: '玩转虚拟化测试Avocado-VT',
+                    LIVETEACHER: '讲师: 柯志明',
+                    LIVETIME: '时间: 12月1日 20:00（周二）',
+                    PHOTOPATH: '/img/live/kezhiming.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1Ey4y1S7xv'
+                },
+                {
+                    LIVETITLE: 'StratoVirt之IO子系统剖析',
+                    LIVETEACHER: '讲师: 张亮',
+                    LIVETIME: '时间: 11月17日 20:00（周二）',
+                    PHOTOPATH: '/img/live/zhangliang.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV17z4y1y7ME'
+                },
+                {
+                    LIVETITLE: 'StratoVirt之内存子系统剖析',
+                    LIVETEACHER: '讲师: 杨晓鹤',
+                    LIVETIME: '时间: 11月10日 20:00（周二）',
+                    PHOTOPATH: '/img/live/yangxiaohe.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1XV411y73z'
+                },
+                {
+                    LIVETITLE: 'StratoVirt之CPU子系统剖析',
+                    LIVETEACHER: '讲师: 高玮',
+                    LIVETIME: '时间: 11月3日 20:00（周二）',
+                    PHOTOPATH: '/img/live/gaowei.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1YA411j7Ws'
+                },
+                {
+                    LIVETITLE: '如何安装并使用StratoVirt',
+                    LIVETEACHER: '讲师: 郭馨乐',
+                    LIVETIME: '时间: 10月27日 20:00（周二）',
+                    PHOTOPATH: '/img/live/guoxinle.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1Ji4y177NC'
+                },
+                {
+                    LIVETITLE: '下一代虚拟化技术StratoVirt介绍',
+                    LIVETEACHER: '讲师: 王志钢',
+                    LIVETIME: '时间: 10月20日 20:00（周二）',
+                    PHOTOPATH: '/img/live/wangzhigang.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1gv411C7sK'
+                },
+                {
                     LIVETITLE: '手把手带你完成openEuler环境部署 K8S',
                     LIVETEACHER: '讲师: 夏丹妮',
                     LIVETIME: '时间: 9月17日 20:00（周四）',
@@ -2737,6 +2835,55 @@ module.exports = {
             
             ],
             LIVEFORMERLY: [
+                {
+                    LIVETITLE: '手把手教你编写Avocado-VT用例',
+                    LIVETEACHER: '讲师: 朱欢凯',
+                    LIVETIME: '时间: 12月14日 20:00（周二）',
+                    PHOTOPATH: '/img/live/zhuhuankai.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1Vz4y1r7fk'
+                },
+                {
+                    LIVETITLE: '玩转虚拟化测试Avocado-VT',
+                    LIVETEACHER: '讲师: 柯志明',
+                    LIVETIME: '时间: 12月1日 20:00（周二）',
+                    PHOTOPATH: '/img/live/kezhiming.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1Ey4y1S7xv'
+                },
+                {
+                    LIVETITLE: 'StratoVirt之IO子系统剖析',
+                    LIVETEACHER: '讲师: 张亮',
+                    LIVETIME: '时间: 11月17日 20:00（周二）',
+                    PHOTOPATH: '/img/live/zhangliang.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV17z4y1y7ME'
+                },
+                {
+                    LIVETITLE: 'StratoVirt之内存子系统剖析',
+                    LIVETEACHER: '讲师: 杨晓鹤',
+                    LIVETIME: '时间: 11月10日 20:00（周二）',
+                    PHOTOPATH: '/img/live/yangxiaohe.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1XV411y73z'
+                },
+                {
+                    LIVETITLE: 'StratoVirt之CPU子系统剖析',
+                    LIVETEACHER: '讲师: 高玮',
+                    LIVETIME: '时间: 11月3日 20:00（周二）',
+                    PHOTOPATH: '/img/live/gaowei.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1YA411j7Ws'
+                },
+                {
+                    LIVETITLE: '如何安装并使用StratoVirt',
+                    LIVETEACHER: '讲师: 郭馨乐',
+                    LIVETIME: '时间: 10月27日 20:00（周二）',
+                    PHOTOPATH: '/img/live/guoxinle.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1Ji4y177NC'
+                },
+                {
+                    LIVETITLE: '下一代虚拟化技术StratoVirt介绍',
+                    LIVETEACHER: '讲师: 王志钢',
+                    LIVETIME: '时间: 10月20日 20:00（周二）',
+                    PHOTOPATH: '/img/live/wangzhigang.png',
+                    FORMERLYLINK: 'https://www.bilibili.com/video/BV1gv411C7sK'
+                },
                 {
                     LIVETITLE: '手把手带你完成openEuler环境部署 K8S',
                     LIVETEACHER: '讲师: 夏丹妮',
