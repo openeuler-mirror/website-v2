@@ -89,8 +89,12 @@
                     :href="item.INSTALL_GUIDENCE_URL"
                     >{{ i18n.download.INSTALL_GUIDENCE }}</a>
                 </li>
-                <li>
-                   
+                <li v-if="item.WHITE_PAPER">
+                  <img src="/img/download/release.svg" alt />
+                  <a
+                      target="_blank" download
+                      :href="item.WHITE_PAPER"
+                  >{{ i18n.download.WHITE_PAPER }}</a>
                 </li>
             </ul>
           </div>

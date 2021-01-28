@@ -12,6 +12,7 @@ module.exports = {
         DOWNLOAD_BTN_NAME: '下载',
         MANUFACTURER: '厂商',
         PUBLISH_DATE: '发行时间',
+        WHITE_PAPER: '白皮书',
         DOWNLOAD_LIST : require('././../../data/download').cn.DOWNLOAD_LIST
     },
     en: {
