@@ -27,6 +27,7 @@ module.exports = {
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.09/ISO/',
                 LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+                WHITE_PAPER: "/whitepaper/openEuler-whitepaper-2009.pdf",
                 MANUFACTURER: 'openEuler社区',
                 PUBLISH_DATE: '2020/09',
                 LTS: false
