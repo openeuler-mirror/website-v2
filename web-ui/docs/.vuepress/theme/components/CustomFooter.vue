@@ -23,8 +23,6 @@
                 <div class="qrcode-desc">{{ i18n.common.FOOTER.QR_CODE }}</div>
             </div>
         </div>
-        <img v-if="newYearDisplay" class="newyear-close" @click="newYearDisplay = false" src="/img/common/newyear-img-close.png" alt="">
-        <img v-if="newYearDisplay" class="newyear-img" @click="openNewyearPage" src="/img/common/newyear-zh.png" />
     </div>
 </template>
 
@@ -36,8 +34,7 @@ export default {
                 common: {
                     FOOTER: {}
                 }
-            },
-            newYearDisplay: true
+            }
         };
     },
     methods: {
@@ -45,9 +42,6 @@ export default {
             this.$router.push({
                 path: this.resolvePath(url)
             });
-        },
-        openNewyearPage () {
-            window.open('https://openeuler.org/2020summary/index.html');
         }
     },
     components: {}
@@ -58,28 +52,8 @@ export default {
 .footer-wrapper {
     height: 176px;
     background-color: #111;
-    .newyear-img {
-        position: fixed;
-        bottom: 60px;
-        left: 60px;
-        width: 162px;
-        height: 167px;
-        z-index: 2;
-        cursor: pointer;
-    }
-    .newyear-close {
-        position: fixed;
-        bottom: 210px;
-        left: 222px;
-        width: 22px;
-        z-index: 2;
-        cursor: pointer;
-    }
     @media screen and (max-width: 1000px) {
         height: 328px;
-        .newyear-img,.newyear-close {
-            display: none;
-        }
     }
     .footer-content {
         
