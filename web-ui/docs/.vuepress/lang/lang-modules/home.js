@@ -558,6 +558,11 @@ module.exports = {
                 RIGHT_IMG_LINK: 'https://dw.pcl.ac.cn/',
                 RIGHT_IMG_PC: '/img/home/link/pengcheng.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-pengcheng.png'
+            },
+            {
+                LEFT_IMG_LINK: 'https://www.infoq.cn/?utm_source=openeuler&utm_medium=youlian',
+                LEFT_IMG_PC: '/img/home/link/infoQ.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-infoQ.png',
             }
         ],
         MORE: "更多",
@@ -1103,6 +1108,11 @@ module.exports = {
                 RIGHT_IMG_LINK: 'https://dw.pcl.ac.cn/',
                 RIGHT_IMG_PC: '/img/home/link/pengcheng.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-pengcheng.png'
+            },
+            {
+                LEFT_IMG_LINK: 'https://www.infoq.cn/?utm_source=openeuler&utm_medium=youlian',
+                LEFT_IMG_PC: '/img/home/link/infoQ.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-infoQ.png',
             }
         ],
         MORE: "Read More",
@@ -1648,6 +1658,11 @@ module.exports = {
                 RIGHT_IMG_LINK: 'https://dw.pcl.ac.cn/',
                 RIGHT_IMG_PC: '/img/home/link/pengcheng.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-pengcheng.png'
+            },
+            {
+                LEFT_IMG_LINK: 'https://www.infoq.cn/?utm_source=openeuler&utm_medium=youlian',
+                LEFT_IMG_PC: '/img/home/link/infoQ.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-infoQ.png',
             }
         ],
         MORE: "Read More",
