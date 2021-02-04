@@ -271,8 +271,8 @@
                     },
                     {
                         "img": "/img/docs/docs-user.svg",
-                        "path": "/docs/A-Tune/A-Tune.html",
-                        "name": "A-Tune User Guide"
+                        "path": "/docs/desktop/desktop.html",
+                        "name": "Desktop Environment User Guide"
                     }
                 ]
             },
