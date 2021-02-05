@@ -12,13 +12,12 @@ summary: 结合源码进一步分析glibc malloc原理，本文先对malloc的�
 在上一篇文章中我们了解了glibc内存管理的基本原理，从本章开始，我们将在这一基础上深入代码细节对glibc的malloc/free操作作进一步分析。本文将结合glibc源码介绍malloc相关的数据结构。
 
 软件信息如下：
-| <div style="width: 40pt">软件项</div> | <div style="width: 140pt">版本信息</div> | 
+| <div style="width: 30pt">软件项</div> | <div style="width: 150pt">版本信息</div> | 
 | :----:| :----: | 
-| <div style="width: 40pt">OS</div> | <div style="width: 140pt">openEuler 20.03 (LTS)</div> | 
-| <div style="width: 40pt">kernel</div>| <div style="width: 140pt">4.19.90-2003.4.0.0036.oe1</div>| 
-| <div style="width: 40pt">glibc</div>| <div style="width: 140pt">2.28</div> | 
-| <div style="width: 40pt">gcc</div>| <div style="width: 140pt">7.3.0</div> | 
-||
+| <div style="width: 30pt">OS</div> | <div style="width: 150pt">openEuler 20.03 (LTS)</div> | 
+| <div style="width: 30pt">kernel</div>| <div style="width: 150pt">4.19.90-2003.4.0.0036.oe1</div>| 
+| <div style="width: 30pt">glibc</div>| <div style="width: 150pt">2.28</div> | 
+| <div style="width: 30pt">gcc</div>| <div style="width: 150pt">7.3.0</div> | 
 <br>
 
 # 2 chunk
