@@ -14,5 +14,5 @@ module.exports = {
     interaction: require('./lang-modules/interaction').en,
     brand: require('./lang-modules/brand').en,
     search: require('./lang-modules/search').en,
-    timer: require('./lang-modules/timer').en
+    minisite: require('./lang-modules/minisite').en
 };
