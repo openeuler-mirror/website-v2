@@ -41,21 +41,15 @@
                         v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
                         :key="index">
                     <a class="banner-link" @click="go(item.LINK)">
-                        <div class="banner-item">
+                        <div class="banner-item minisite">
                             <div class="item-info">
                                 <h3>{{ item.TITLE }}</h3>
                                 <span>{{ item.DES }}</span>
                             </div>
-                            <img class="banner-gif" v-lazy="item.IMG">
-                        </div>
-                    </a>
-                    <a class="banner-link" v-if="index !== 0 && index !== 1" :href="item.LINK" target="_blank">
-                        <div class="banner-item">
-                            <div class="item-info">
-                                <h3>{{ item.TITLE }}</h3>
-                                <span>{{ item.DES }}</span>
-                            </div>
-                            <img class="banner-gif" v-lazy="'/img/home/Banner' + index + '.gif'">
+                            <img class="banner-gif" v-lazy="item.IMG" v-if="isShowH5">
+                            <video autoplay loop muted width="300px" height="300px" id="minisite-video" v-else>
+                                <source :src="item.VIDEO_URL"  type="video/mp4">
+                            </video>
                         </div>
                     </a>
                 </el-carousel-item>
@@ -88,10 +82,10 @@
                             class="carousel-item-index"
                             v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
                             :key="index">
-                        <a @click="go(item.LINK)">
+                        <div @click="go(item.LINK)" :key="index"> 
                             <h3>{{ item.TITLE }}</h3>
                             <img v-lazy="item.IMG">
-                        </a>
+                        </div>
                     </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
@@ -440,7 +434,7 @@
                 mobileSwiperInterval: null,
                 mobilePagenationIndex: 1,
                 developerList: [],
-                bannerAmount: 5,
+                bannerAmount: 6,
                 statisticParams: {
                     type: 'openEuler'
                 },
@@ -842,6 +836,13 @@
         cursor: pointer;
         text-decoration: none;
         color: #000;
+        .minisite {
+            justify-content: space-between;
+            #minisite-video {
+                position: relative;
+                margin-top: 80px;
+            }
+        }
     }
     .banner-item {
         width: 1080px;
@@ -1793,11 +1794,8 @@
             margin-top: 35px;
             margin-bottom: 0;
         }
-        .carousel-item-index a {
-            text-decoration: none;
-        }
         .carousel-item-index img {
-            width: 200px;
+            width: 260px;
             height: 200px;
             margin: 0;
             display: block;

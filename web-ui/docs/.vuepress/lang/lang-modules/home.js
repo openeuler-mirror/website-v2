@@ -7,15 +7,24 @@ module.exports = {
         HOME_CAROUSEL_DATA: [
             {
                 TITLE: "iSula",
-                LINK: "https://gitee.com/openeuler/iSulad",
-                DES: "iSula是一种云原生轻量级容器解决方案，可通过统一、灵活的架构满足ICT领域端、边、云场景的多种需求。",
-                IMG: "/img/home/Banner1.gif"
+                LINK: "/other/minisite/isula",
+                DES: "小个头 大能量",
+                IMG: "/img/minisite/isula/mobile-banner.png",
+                VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/iSula.mp4"
             },
             {
                 TITLE: "A-Tune",
-                LINK: "https://gitee.com/openeuler/A-Tune",
-                DES: "A-Tune是智能性能优化系统软件，即通过机器学习引擎对业务应用建立精准模型, 再根据业务负载智能匹配最佳操作系统配置参数组合，实现系统整体运行效率提升。",
-                IMG: "/img/home/Banner2.gif"
+                LINK: "/other/minisite/atune",
+                DES: "一款基于AI开发的智能优化引擎",
+                IMG: "/img/minisite/atune/mobile-banner.png",
+                VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/A-Tune.mp4"
+            },
+            {
+                TITLE: "StratoVirt",
+                LINK: "/other/minisite/stratovirt",
+                DES: "面向云数据中心的企业级虚拟化平台",
+                IMG: "/img/minisite/svirt/mobile-banner.png",
+                VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/StratoVirt-minisite.mp4"
             }
         ],
         ROOM_LEFT_IMG:[
@@ -573,15 +582,24 @@ module.exports = {
         HOME_CAROUSEL_DATA: [
             {
                 TITLE: "iSula",
-                LINK: "https://gitee.com/openeuler/iSulad",
-                DES: "A cloud-native lightweight container solution that can meet the needs of device, edge, and cloud scenarios in ICT domain with a unified and flexible architecture.",
-                IMG: "/img/home/Banner1.gif"
+                LINK: "/other/minisite/isula",
+                DES: "小个头 大能量",
+                IMG: "/img/minisite/isula/mobile-banner.png",
+                VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/iSula.mp4"
             },
             {
                 TITLE: "A-Tune",
-                LINK: "https://gitee.com/openeuler/A-Tune",
-                DES: "An AI-based OS tuning engine perfectly adapted to multiple scenarios.",
-                IMG: "/img/home/Banner2.gif"
+                LINK: "/other/minisite/atune",
+                DES: "一款基于AI开发的智能优化引擎",
+                IMG: "/img/minisite/atune/mobile-banner.png",
+                VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/A-Tune.mp4"
+            },
+            {
+                TITLE: "StratoVirt",
+                LINK: "/other/minisite/stratovirt",
+                DES: "面向云数据中心的企业级虚拟化平台",
+                IMG: "/img/minisite/svirt/mobile-banner.png",
+                VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/StratoVirt-minisite.mp4"
             }
         ],
         ROOM_LEFT_IMG:[
@@ -1123,15 +1141,24 @@ module.exports = {
         HOME_CAROUSEL_DATA: [
             {
                 TITLE: "iSula",
-                LINK: "https://gitee.com/openeuler/iSulad",
-                DES: "A cloud-native lightweight container solution that can meet the needs of device, edge, and cloud scenarios in ICT domain with a unified and flexible architecture.",
-                IMG: "/img/home/Banner1.gif"
+                LINK: "/other/minisite/isula",
+                DES: "小个头 大能量",
+                IMG: "/img/minisite/isula/mobile-banner.png",
+                VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/iSula.mp4"
             },
             {
                 TITLE: "A-Tune",
-                LINK: "https://gitee.com/openeuler/A-Tune",
-                DES: "An AI-based OS tuning engine perfectly adapted to multiple scenarios.",
-                IMG: "/img/home/Banner2.gif"
+                LINK: "/other/minisite/atune",
+                DES: "一款基于AI开发的智能优化引擎",
+                IMG: "/img/minisite/atune/mobile-banner.png",
+                VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/A-Tune.mp4"
+            },
+            {
+                TITLE: "StratoVirt",
+                LINK: "/other/minisite/stratovirt",
+                DES: "面向云数据中心的企业级虚拟化平台",
+                IMG: "/img/minisite/svirt/mobile-banner.png",
+                VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/StratoVirt-minisite.mp4"
             }
         ],
         ROOM_LEFT_IMG:[
