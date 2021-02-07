@@ -296,8 +296,8 @@
                     },
                     {
                         "img": "/img/docs/docs-user.svg",
-                        "path": "/docs/USERGUIDE/UKUIuserguide.html",
-                        "name": "UKUI用户指南"
+                        "path": "/docs/desktop/desktop.html",
+                        "name": "桌面环境用户指南"
                     }
                 ]
             },
