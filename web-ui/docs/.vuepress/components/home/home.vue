@@ -448,7 +448,7 @@
             remoteMethods.statisticsList();
             this.roomName = this.i18n.home.HOME_ROOMS.ROOM_NAME
             this.getRoomsData();
-            if(this.screenWidth <= 1000){
+            if(this.isShowH5){
                 this.$nextTick(() => {
                     this.mobileSwiperInterval = setInterval(() => {
                         this.swiper.slideNext();
