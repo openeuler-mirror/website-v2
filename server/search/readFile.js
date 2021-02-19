@@ -28,10 +28,29 @@ function readFileByPath(dirPath, index, esType, model, version) {
 
             let html = fs.readFileSync(innerPath, 'utf-8');
             let content = cheerio.load(html).text();
-
+            let title = '';
+            if (model === 'blog') {
+                let arr = content.split(/[\r\n]/);
+                let flag = false;
+                arr.forEach(s => {
+                    if (s.startsWith('---')) {
+                        flag = !flag;
+                    }
+                    if (flag) {
+                        if (s.indexOf('title') > -1) {
+                            title = s;
+                        }
+                    }
+                });
+                title = title.replace('title: ', '');
+                let index = content.indexOf('---', 1);
+                if (index > 1) {
+                    content = content.substring(index + 3);
+                }
+            }
             let json = {
                 'id': no,
-                'title': item.substring(0, item.length - 3),
+                'title': title === '' ? item.substring(0, item.length - 3) : title,
                 'textContent': content,
                 'articleName': item,
                 'path': dirPath,
