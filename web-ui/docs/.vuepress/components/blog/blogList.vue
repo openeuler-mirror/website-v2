@@ -98,10 +98,10 @@
             </div>
             <div class="paginationClass" v-show="screenBlogListData.length>1">
                 <el-pagination
+                background
                 @current-change="handleCurrentChange"
-                :current-page="currentPage"
                 :page-size="5"
-                layout="total, prev, jumper, next"
+                :layout="paginationLayout"
                 :total="totalSize"
                 ></el-pagination>
             </div>

@@ -32,8 +32,10 @@ export default ({
         }
         let screenWidth = document.body.clientWidth;
         Vue.prototype.isShowH5 = false;
+        Vue.prototype.paginationLayout = "total,prev, pager, next"
         if(screenWidth <= 1000){
             Vue.prototype.isShowH5 = true;
+            Vue.prototype.paginationLayout = "total, prev, jumper, next"
         }
         if (window.location.href.includes('/en/')) {
             Vue.use(ElementUI);
