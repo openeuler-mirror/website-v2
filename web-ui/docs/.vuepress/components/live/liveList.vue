@@ -29,10 +29,10 @@
             </div>
             <div class="nowpagination">
             <el-pagination
+                background="#002FA7"
                 @current-change="handleCurrentChange1"
-                :current-page="currentPage"
                 :page-size="6"
-                layout="total, prev, jumper, next"
+                :layout="paginationLayout"
                 :total="nowTotalSize"
             ></el-pagination>
             </div>
@@ -57,13 +57,13 @@
                 </div>
             </div>
             <div class="replaypagination">
-            <el-pagination
-                @current-change="handleCurrentChange2"
-                :current-page="currentPage"
-                :page-size="6"
-                layout="total, prev, jumper, next"
-                :total="formerlyTotalSize"
-            ></el-pagination>
+                <el-pagination
+                    background
+                    @current-change="handleCurrentChange2"
+                    :page-size="6"
+                    :layout="paginationLayout"
+                    :total="formerlyTotalSize"
+                ></el-pagination>
             </div>
         </div>
         <!-- 此div用于增加高度显示背景图的效果 -->

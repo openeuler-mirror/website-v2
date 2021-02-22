@@ -115,10 +115,10 @@
             </ul>
             <el-pagination
                 class="safety-bulletin-pagination"
-                :current-page.sync="formData.page"
-                :page-size="formData.pageSize"
-                :layout="pagerLayout.join()"
+                background
                 @current-change="initData"
+                :page-size="formData.pageSize"
+                :layout="paginationLayout"
                 :total="total"
             ></el-pagination>
         </div>
@@ -165,10 +165,6 @@ export default {
             tableData: [],
             total: 0,
             tableLoading: false,
-            showPager:['total, prev, pager, next, jumper'],
-            hidePager:['total, prev, next, jumper'],
-            pagerLayout:[],
-            screenWidth:document.body.clientWidth
         };
     },
     components: {
@@ -178,11 +174,7 @@ export default {
         this.initData(1);
     },
     mounted () {
-        if(this.screenWidth<=1000){
-            this.pagerLayout = this.hidePager;
-        }else{
-            this.pagerLayout = this.showPager;
-        }
+
     },
     methods: {
         initData (flag) {

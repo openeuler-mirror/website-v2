@@ -89,19 +89,11 @@
         </li>
       </ul>
       <el-pagination
-        class="cve-list-pagination"
+        :class="isShowH5?'cve-list-pagination-mobile':'cve-list-pagination'"
+        background
         :current-page.sync="formData.page"
         :page-size="formData.pageSize"
-        layout="total, prev, pager, next, jumper"
-        @current-change="initData"
-        :total="total"
-      ></el-pagination>
-      <el-pagination
-        :pager-count="5"
-        class="cve-list-pagination-mobile"
-        :current-page.sync="formData.page"
-        :page-size="formData.pageSize"
-        layout="total, prev, pager, next, jumper"
+        :layout="paginationLayout"
         @current-change="initData"
         :total="total"
       ></el-pagination>
