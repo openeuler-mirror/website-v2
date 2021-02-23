@@ -146,11 +146,19 @@
                     locationMethods.repoSearch();  
                 }
             },
-            goDetail ({path, articleName}){
+            goDetail ({type, version, path, articleName}){
                 let dealPath = null;
                 path = path.split('/');
                 path = path[path.length - 1] + '/' + articleName.split('.')[0];
-                this.$sitePages.forEach(item => {
+                let sitePagesArr = [];
+                if(type === 'docs'){
+                    sitePagesArr = this.$sitePages.filter((item) => {
+                        return item.path.includes('/' + encodeURI(version) + '/');
+                    })
+                }else{
+                    sitePagesArr = this.$sitePages;
+                }
+                sitePagesArr.forEach(item => {
                     if(item.path.includes(encodeURI(path))){
                         dealPath = item.path;
                     }
