@@ -14,5 +14,6 @@ module.exports = {
     interaction: require('./lang-modules/interaction').cn,
     brand: require('./lang-modules/brand').cn,
     search: require('./lang-modules/search').cn,
-    minisite: require('./lang-modules/minisite').cn
+    minisite: require('./lang-modules/minisite').cn,
+    learn: require('./lang-modules/learn').cn
 };
