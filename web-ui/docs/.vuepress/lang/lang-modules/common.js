@@ -14,12 +14,15 @@ module.exports = {
                 CLASS: []
             },
             {
-                PATH: '/documentation/',
-                NAME: '文档',
-                CHILDREN: [],
-                OTHER_CHILDREN: [
+                NAME: '学习',
+                CHILDREN: [
                     {
-                        PATH: '/docs/'
+                        NAME: '文档',
+                        PATH: '/documentation/',
+                    },
+                    {
+                        NAME: '慕课',
+                        PATH: '/learn/mooc/'
                     }
                 ],
                 CLASS: []
@@ -100,6 +103,24 @@ module.exports = {
             },
             {
                 PATH: '',
+                NAME: '探索',
+                CHILDREN: [{
+                        NAME: 'A-Tune',
+                        PATH: '/other/minisite/atune'
+                    },
+                    {
+                        NAME: 'iSula',
+                        PATH: '/other/minisite/isula'
+                    },
+                    {
+                        NAME: 'StratoVirt',
+                        PATH: '/other/minisite/stratovirt'
+                    }
+                ],
+                CLASS: []
+            },
+            {
+                PATH: '',
                 NAME: '安全',
                 CHILDREN: [{
                         NAME: '漏洞管理',
@@ -168,12 +189,15 @@ module.exports = {
                 CLASS: []
             },
             {
-                PATH: '/documentation/',
-                NAME: 'Documentation',
-                CHILDREN: [],
-                OTHER_CHILDREN: [
+                NAME: 'Learning',
+                CHILDREN: [
                     {
-                        PATH: '/docs/'
+                        NAME: 'Documentation',
+                        PATH: '/documentation/',
+                    },
+                    {
+                        NAME: 'MOOC',
+                        PATH: '/learn/mooc/'
                     }
                 ],
                 CLASS: []
@@ -254,6 +278,24 @@ module.exports = {
             },
             {
                 PATH: '',
+                NAME: 'Discovery',
+                CHILDREN: [{
+                        NAME: 'A-Tune',
+                        PATH: '/other/minisite/atune'
+                    },
+                    {
+                        NAME: 'iSula',
+                        PATH: '/other/minisite/isula'
+                    },
+                    {
+                        NAME: 'StratoVirt',
+                        PATH: '/other/minisite/stratovirt'
+                    }
+                ],
+                CLASS: []
+            },
+            {
+                PATH: '',
                 NAME: 'Security',
                 CHILDREN: [{
                         NAME: 'Vulnerability Management',
@@ -322,12 +364,15 @@ module.exports = {
                 CLASS: []
             },
             {
-                PATH: '/documentation/',
-                NAME: 'Документация',
-                CHILDREN: [],
-                OTHER_CHILDREN: [
+                NAME: 'Обучение',
+                CHILDREN: [
                     {
-                        PATH: '/docs/'
+                        NAME: 'Документация',
+                        PATH: '/documentation/',
+                    },
+                    {
+                        NAME: 'МООК',
+                        PATH: '/learn/mooc/'
                     }
                 ],
                 CLASS: []
@@ -402,6 +447,24 @@ module.exports = {
                     {
                         NAME: 'Роли',
                         PATH: '/sig/role-description/'
+                    }
+                ],
+                CLASS: []
+            },
+            {
+                PATH: '',
+                NAME: 'Открытие',
+                CHILDREN: [{
+                        NAME: 'A-Tune',
+                        PATH: '/other/minisite/atune'
+                    },
+                    {
+                        NAME: 'iSula',
+                        PATH: '/other/minisite/isula'
+                    },
+                    {
+                        NAME: 'StratoVirt',
+                        PATH: '/other/minisite/stratovirt'
                     }
                 ],
                 CLASS: []
