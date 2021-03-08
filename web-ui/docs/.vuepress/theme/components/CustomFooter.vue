@@ -23,8 +23,6 @@
                 <div class="qrcode-desc">{{ i18n.common.FOOTER.QR_CODE }}</div>
             </div>
         </div>
-        <img v-if="isShowQrcode" class="icon-close" @click="isShowQrcode = false" src="/img/common/icon-close.png" alt="" />
-        <img v-if="isShowQrcode" class="qrcode-img"  src="/img/common/qrcode.png" />
     </div>
 </template>
 
@@ -36,8 +34,7 @@ export default {
                 common: {
                     FOOTER: {}
                 }
-            },
-            isShowQrcode: true
+            }
         };
     },
     methods: {
@@ -55,27 +52,8 @@ export default {
 .footer-wrapper {
     height: 176px;
     background-color: #111;
-    .qrcode-img {
-        position: fixed;
-        bottom: 60px;
-        left: 60px;
-        width: 162px;
-        height: 167px;
-        z-index: 2;
-    }
-    .icon-close {
-        position: fixed;
-        bottom: 210px;
-        left: 222px;
-        width: 22px;
-        z-index: 2;
-        cursor: pointer;
-    }
     @media screen and (max-width: 1000px) {
         height: 328px;
-        .qrcode-img,.icon-close {
-            display: none;
-        }
     }
     .footer-content {
         
