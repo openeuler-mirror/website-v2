@@ -27,17 +27,17 @@ IBM社区曾有篇名为《glibc与Linux 的国际化与本地化机制》的帖
 
 ## 2.1 文件层面
 文件层面，各个模块的功能如下：
-<center><img src="./文件粒度.jpg" style="zoom:100%"></center>
+<center><img src="./1.jpg" style="zoom:100%"></center>
 <br>
 
 ## 2.2 用户层面
 用户使用层面，各个模块的功能如下：
-<center><img src="./用户使用粒度.jpg" style="zoom:100%"></center>
+<center><img src="./2.jpg" style="zoom:100%"></center>
 <br>
 
 ## 2.3 rpm包层面
 rpm包层面，各个模块的功能如下：
-<center><img src="./rpm包粒度.jpg" style="zoom:100%"></center>
+<center><img src="./3.jpg" style="zoom:100%"></center>
 <br>
 
 图中各个层面都已有大致的介绍，在此不再加文字赘述。
