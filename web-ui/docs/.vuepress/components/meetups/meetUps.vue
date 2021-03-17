@@ -9,7 +9,7 @@
         ></common-banner>
         <div class="meetUps-list">
             <div class="meetUps-year-content" v-for="(items,indexs) in showMeetsList">
-                <span class="meetUps-year">{{ indexs }}</span>
+                <span class="meetUps-year">{{ indexs.slice(0,4) }}</span>
                 <div class="meetUps-items" v-for="(item,index) in items">
                     <div class="meetUps-month">
                         <span>{{ index }}</span>
@@ -31,7 +31,9 @@
 									<span class="meetUps-date">{{ value.MEETUPS_DATE }}</span>
 								</p>
 							</div>
-                          	<div class="meetUps-summary">{{ value.MEETUPS_DESC }}</div>
+                          	<div class="meetUps-summary">
+								<p v-for="(values,keys) in value.MEETUPS_DESC" :key="keys">{{ values }}</p>	  
+							</div>
                         </div>
                     </div>
                 </div>
@@ -67,9 +69,10 @@ export default {
     commonBanner,
   },
   mounted() {
-      this.allMeetsList = this.i18n.interaction.MEETUPS.MEETUPS_DATA;
+      let allList = this.i18n.interaction.MEETUPS.MEETUPS_DATA;
       this.totalSize = this.allMeetsList.length;
-      this.sortMeetsList(this.allMeetsList);
+      this.allMeetsList = this.sortMeetsList(allList);
+	  this.handleCurrentChange(1);
   },
   methods: {
     handleCurrentChange(val) {
@@ -77,30 +80,31 @@ export default {
 			(val - 1) * this.PAGESIZE,
 			val * this.PAGESIZE
 		);
-		this.showMeetsList = this.currentMeetsList;
-		scrollTo(0, 0);
-    },
-    sortMeetsList(array) {
-        let temp = array;
-        temp.forEach((item)=>{
-            item.number = item.MEETUPS_DATE.slice(0,4) + item.MEETUPS_DATE.slice(5,7) + item.MEETUPS_DATE.slice(8);
-            item.fullYear = item.MEETUPS_DATE.slice(0,4);
-            item.fullMonth = item.MEETUPS_MONTH;
-        });
-        temp.sort((a,b) =>{
-            return b.number - a.number;
-        });
-        let listObj = {};
-        temp.forEach((item)=>{
+		let listObj = {};
+        this.currentMeetsList.forEach((item)=>{
             if(!listObj[item.fullYear]){
                 listObj[item.fullYear] = {};
             }
             if(!listObj[item.fullYear][item.fullMonth]){
                 listObj[item.fullYear][item.fullMonth] = [];
             }
+			console.log(listObj);
             listObj[item.fullYear][item.fullMonth].push(item);
-        })
-        this.showMeetsList = listObj;
+        });
+		this.showMeetsList = listObj;
+		scrollTo(0, 0);
+    },
+    sortMeetsList(array) {
+        let temp = array;
+        temp.forEach((item)=>{
+            item.number = item.MEETUPS_DATE.slice(0,4) + item.MEETUPS_DATE.slice(5,7) + item.MEETUPS_DATE.slice(8);
+            item.fullYear = item.MEETUPS_DATE.slice(0,4) + "year";
+            item.fullMonth = item.MEETUPS_MONTH;
+        });
+        temp.sort((a,b) =>{
+            return b.number - a.number;
+        });
+		return temp;
     },
     goDetail(id) {
         this.$router.push(
@@ -154,6 +158,7 @@ export default {
 	width: 400px;
 	display: inline-block;
 	border-radius:8px;
+	height: 200px;
 	@media screen and (max-width: 1000px) {
 		box-shadow:none;
 	}
@@ -242,6 +247,7 @@ export default {
 	.meetUps-img {
 		cursor: pointer;
 		width: 100%;
+		height: 150px;
 		margin: 22px 0;
 		text-align: center;
 		img {
