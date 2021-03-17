@@ -39,7 +39,7 @@
         </div>
         <div class="description">
             <p :class="['title',$lang === 'en'?'font-regular':'']">{{ i18n.interaction.MEETUPS.DETAIL_DESC }}</p>
-            <p :class="['desc-content',$lang === 'en'?'font-regular':'']">{{ detailObj.MEETUPS_DESC }}</p>
+            <p :class="['desc-content',$lang === 'en'?'font-regular':'']" v-for="(item,index) in detailObj.MEETUPS_DESC">{{ item }}</p>
         </div>
         <div class="meet-flowPath">
             <p :class="['title',$lang === 'en'?'font-regular':'']">{{ i18n.interaction.MEETUPS.DETAIL_FLOW }}</p>
@@ -286,8 +286,10 @@ export default {
             color: rgba(0,0,0,.5);
             margin: 0 auto;
             line-height: 40px;
-            margin-bottom: 60px;
             text-align: center;
+            &:last-of-type {
+                margin-bottom: 60px;
+            }
         }
     }
     .meet-flowPath{
