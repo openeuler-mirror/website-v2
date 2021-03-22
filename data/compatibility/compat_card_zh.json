@@ -15,7 +15,7 @@
     "chipVendor": "Mellanox",
     "boardModel": "Mellanox CX-4 Lx 25GE",
     "chipModel": "CX4 Lx EN",
-    "pdm": "03025SNT",
+    "pdm": "item",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.5.0.0054.oe1.x86_64.x86_64.rpm"
   },
   {
@@ -34,7 +34,7 @@
     "chipVendor": "Mellanox",
     "boardModel": "Mellanox CX-4 Lx 25GE",
     "chipModel": "CX4 Lx EN",
-    "pdm": "03025SNT",
+    "pdm": "item",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages /mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
   },
   {
@@ -53,7 +53,7 @@
     "chipVendor": "Mellanox",
     "boardModel": "Mellanox CX-5 25GE",
     "chipModel": "CX5",
-    "pdm": "03026PUN",
+    "pdm": "item",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.5.0.0054.oe1.x86_64.x86_64.rpm"
   },
   {
@@ -72,7 +72,7 @@
     "chipVendor": "Mellanox",
     "boardModel": "Mellanox CX-5 25GE",
     "chipModel": "CX5",
-    "pdm": "03026PUN",
+    "pdm": "item",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages /mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
   },
   {
@@ -91,7 +91,7 @@
     "chipVendor": "NVIDIA",
     "boardModel": "Tesla A100",
     "chipModel": "A100",
-    "pdm": 6320168,
+    "pdm": "item",
     "downloadLink": "https://www.nvidia.com/Download/index.aspx"
   },
   {
@@ -110,7 +110,7 @@
     "chipVendor": "Mellanox",
     "boardModel": "MCX515A-CCAT",
     "chipModel": "CX5",
-    "pdm": 6310149,
+    "pdm": "item",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.5.0.0054.oe1.x86_64.x86_64.rpm"
   },
   {
@@ -129,7 +129,7 @@
     "chipVendor": "Mellanox",
     "boardModel": "MCX515A-CCAT",
     "chipModel": "CX5",
-    "pdm": 6310149,
+    "pdm": "item",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages /mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
   },
   {
@@ -148,7 +148,7 @@
     "chipVendor": "Qlogic",
     "boardModel": "QLE2560-HUA-SP",
     "chipModel": "ISP2532",
-    "pdm": 6030221,
+    "pdm": "item",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/qla2xxx-10.02.04.00_k-1dkms.noarch.rpm"
   },
   {
@@ -167,7 +167,7 @@
     "chipVendor": "Qlogic",
     "boardModel": "QLE2560-HUA-SP",
     "chipModel": "ISP2532",
-    "pdm": 6030221,
+    "pdm": "item",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/qla2xxx-10.02.04.00_k-1dkms.noarch.rpm"
   },
   {
@@ -186,7 +186,7 @@
     "chipVendor": "Mellanox",
     "boardModel": "Mellanox CX3-Pro",
     "chipModel": "CX3-PRO",
-    "pdm": 6310105,
+    "pdm": "item",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.5.0.0054.oe1.x86_64.x86_64.rpm"
   },
   {
@@ -205,7 +205,7 @@
     "chipVendor": "Mellanox",
     "boardModel": "Mellanox CX3-Pro",
     "chipModel": "CX3-PRO",
-    "pdm": 6310105,
+    "pdm": "item",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages /mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
   },
   {
@@ -224,7 +224,7 @@
     "chipVendor": "AMD",
     "boardModel": "AMD WX5100",
     "chipModel": "Polaris 11",
-    "pdm": 6320140,
+    "pdm": "item",
     "downloadLink": "inbox"
   },
   {
@@ -243,7 +243,7 @@
     "chipVendor": "AMD",
     "boardModel": "AMD WX5100",
     "chipModel": "Polaris 11",
-    "pdm": 6320140,
+    "pdm": "item",
     "downloadLink": "inbox"
   },
   {
@@ -262,7 +262,7 @@
     "chipVendor": "Mellanox",
     "boardModel": "CN21ITGF 10G",
     "chipModel": "CX4 Lx EN",
-    "pdm": "",
+    "pdm": "item",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.5.0.0054.oe1.x86_64.x86_64.rpm"
   },
   {
@@ -281,7 +281,7 @@
     "chipVendor": "Mellanox",
     "boardModel": "CN21ITGF 10G",
     "chipModel": "CX4 Lx EN",
-    "pdm": "",
+    "pdm": "item",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages /mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
   },
   {
@@ -300,7 +300,7 @@
     "chipVendor": "Huawei",
     "boardModel": "ES3600C-3200GB NVMe SSD",
     "chipModel": "Hi1812E V100",
-    "pdm": "03032YRF",
+    "pdm": "item",
     "downloadLink": "inbox"
   },
   {
@@ -319,7 +319,7 @@
     "chipVendor": "Huawei",
     "boardModel": "ES3600C-3200GB NVMe SSD",
     "chipModel": "Hi1812E V100",
-    "pdm": "03032YRF",
+    "pdm": "item",
     "downloadLink": "inbox"
   },
   {
@@ -338,7 +338,7 @@
     "chipVendor": "Huawei",
     "boardModel": 1822,
     "chipModel": "Hi1822",
-    "pdm": "",
+    "pdm": "item",
     "downloadLink": "inbox"
   },
   {
@@ -357,7 +357,7 @@
     "chipVendor": "Huawei",
     "boardModel": 1822,
     "chipModel": "Hi1822",
-    "pdm": "",
+    "pdm": "item",
     "downloadLink": "inbox"
   },
   {
@@ -376,7 +376,7 @@
     "chipVendor": "Huawei",
     "boardModel": "SR150-M LSI SAS3408",
     "chipModel": "3408 riad",
-    "pdm": "03024JNF",
+    "pdm": "item",
     "downloadLink": "inbox"
   },
   {
@@ -395,7 +395,7 @@
     "chipVendor": "Huawei",
     "boardModel": "SR150-M LSI SAS3408",
     "chipModel": "3408 riad",
-    "pdm": "03024JNF",
+    "pdm": "item",
     "downloadLink": "inbox"
   },
   {
@@ -414,7 +414,7 @@
     "chipVendor": "Intel",
     "boardModel": "SP210",
     "chipModel": "i350",
-    "pdm": "",
+    "pdm": "item",
     "downloadLink": "inbox"
   },
   {
@@ -433,7 +433,7 @@
     "chipVendor": "Intel",
     "boardModel": "SP210",
     "chipModel": "i350",
-    "pdm": "",
+    "pdm": "item",
     "downloadLink": "inbox"
   },
   {
@@ -452,7 +452,7 @@
     "chipVendor": "Emulex",
     "boardModel": "Emulex 16Gb LPe31002",
     "chipModel": "LPe31002",
-    "pdm": 6030463,
+    "pdm": "item",
     "downloadLink": "https://docs.broadcom.com/docs/12399390"
   },
   {
@@ -471,7 +471,7 @@
     "chipVendor": "Emulex",
     "boardModel": "Emulex 16Gb LPe31002",
     "chipModel": "LPe31002",
-    "pdm": 6030463,
+    "pdm": "item",
     "downloadLink": "https://docs.broadcom.com/docs/12399390"
   },
   {
@@ -490,7 +490,7 @@
     "chipVendor": "Emulex",
     "boardModel": "Emulex 8Gb(LPe12000)",
     "chipModel": "LPe12000",
-    "pdm": 6030216,
+    "pdm": "item",
     "downloadLink": ""
   },
   {
@@ -509,7 +509,7 @@
     "chipVendor": "Huawei",
     "boardModel": "TM210 hisi",
     "chipModel": "hisi",
-    "pdm": "03025VYQ",
+    "pdm": "item",
     "downloadLink": ""
   },
   {
@@ -528,7 +528,7 @@
     "chipVendor": "Avago",
     "boardModel": "SR150-M Avago 3408iMR",
     "chipModel": "Avago 3408iMR",
-    "pdm": "03033FAT",
+    "pdm": "item",
     "downloadLink": ""
   },
   {
@@ -547,7 +547,7 @@
     "chipVendor": "Avago",
     "boardModel": "SR450C-M Avago 3508",
     "chipModel": "Avago 3508",
-    "pdm": "03033EFT",
+    "pdm": "item",
     "downloadLink": ""
   },
   {
@@ -566,7 +566,7 @@
     "chipVendor": "Avago",
     "boardModel": "SP150IT-M Avago 3408IT",
     "chipModel": "Avago 3408IT",
-    "pdm": "02312HFD",
+    "pdm": "item",
     "downloadLink": ""
   },
   {
@@ -585,7 +585,7 @@
     "chipVendor": "Avago",
     "boardModel": "SP150IT-M Avago 3408IT",
     "chipModel": "Avago 3408IT",
-    "pdm": "02312HFD",
+    "pdm": "item",
     "downloadLink": ""
   },
   {
@@ -604,7 +604,7 @@
     "chipVendor": "Mellanox",
     "boardModel": "MCX512A-ACAT",
     "chipModel": "ConnectX-5 EN",
-    "pdm": 6310156,
+    "pdm": "item",
     "downloadLink": ""
   },
   {
@@ -623,7 +623,7 @@
     "chipVendor": "Mellanox",
     "boardModel": "MCX512A-ACAT",
     "chipModel": "ConnectX-5 EN",
-    "pdm": 6310156,
+    "pdm": "item",
     "downloadLink": ""
   },
   {
@@ -642,7 +642,7 @@
     "chipVendor": "Mellanox",
     "boardModel": "MCX4121A-ACAT",
     "chipModel": "ConnectX-4",
-    "pdm": "",
+    "pdm": "item",
     "downloadLink": ""
   },
   {
@@ -661,7 +661,7 @@
     "chipVendor": "Mellanox",
     "boardModel": "MCX4121A-ACAT",
     "chipModel": "ConnectX-4",
-    "pdm": "",
+    "pdm": "item",
     "downloadLink": ""
   },
   {
@@ -680,7 +680,7 @@
     "chipVendor": "Mellanox",
     "boardModel": "SP380",
     "chipModel": "ConnectX-4 Lx",
-    "pdm": "02312LDK",
+    "pdm": "item",
     "downloadLink": ""
   },
   {
@@ -699,7 +699,7 @@
     "chipVendor": "",
     "boardModel": "SP330",
     "chipModel": "",
-    "pdm": "",
+    "pdm": "item",
     "downloadLink": ""
   },
   {
@@ -718,7 +718,7 @@
     "chipVendor": "Intel",
     "boardModel": "SP210",
     "chipModel": "I350",
-    "pdm": "02311DCA",
+    "pdm": "item",
     "downloadLink": ""
   },
   {
@@ -737,7 +737,7 @@
     "chipVendor": "",
     "boardModel": "INTEL SX710",
     "chipModel": "",
-    "pdm": "",
+    "pdm": "item",
     "downloadLink": ""
   },
   {
@@ -756,7 +756,7 @@
     "chipVendor": "",
     "boardModel": "SILICOM PE340",
     "chipModel": "",
-    "pdm": "",
+    "pdm": "item",
     "downloadLink": ""
   }
 ]
