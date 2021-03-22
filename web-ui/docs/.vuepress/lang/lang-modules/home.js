@@ -549,6 +549,11 @@ module.exports = {
                 RIGHT_IMG_LINK: 'http://www.tongyuanos.com/',
                 RIGHT_IMG_PC: '/img/home/link/tongYuan.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongYuan.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://www.chinaredflag.cn/',
+                LEFT_IMG_PC: '/img/home/link/zhongkehongqi.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-zhongkehongqi.png',
             }
         ],
         FRIENDSHIP_LINK_LIST:[
@@ -1108,6 +1113,11 @@ module.exports = {
                 RIGHT_IMG_LINK: 'http://www.tongyuanos.com/',
                 RIGHT_IMG_PC: '/img/home/link/tongYuan.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongYuan.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://www.chinaredflag.cn/',
+                LEFT_IMG_PC: '/img/home/link/zhongkehongqi.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-zhongkehongqi.png',
             }
         ],
         FRIENDSHIP_LINK_LIST:[
@@ -1667,6 +1677,11 @@ module.exports = {
                 RIGHT_IMG_LINK: 'http://www.tongyuanos.com/',
                 RIGHT_IMG_PC: '/img/home/link/tongYuan.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongYuan.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://www.chinaredflag.cn/',
+                LEFT_IMG_PC: '/img/home/link/zhongkehongqi.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-zhongkehongqi.png',
             }
         ],
         FRIENDSHIP_LINK_LIST:[
