@@ -1,7 +1,7 @@
 [
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200 Server(Model 2280)",
+    "hardwareModel": "泰山 200 服务器(型号 2280)",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "aarch64",
     "date": "2020/12/04",
@@ -13,7 +13,7 @@
         "commitID": "",
         "motherBoardRevision": "",
         "biosUefi": "",
-        "cpu": "Kunpeng-920",
+        "cpu": "鲲鹏-920",
         "ram": "16*16G DIMMs",
         "portsBusTypes": "",
         "videoAdapter": "",
@@ -23,7 +23,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200 Server(Model 2280)",
+    "hardwareModel": "泰山 200 服务器(型号 2280)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "2020/12/04",
@@ -35,7 +35,7 @@
         "commitID": "",
         "motherBoardRevision": "",
         "biosUefi": "",
-        "cpu": "Kunpeng-920",
+        "cpu": "鲲鹏-920",
         "ram": "16*16G DIMMs",
         "portsBusTypes": "",
         "videoAdapter": "",
@@ -67,7 +67,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Fusionserver 2288H V5",
+    "hardwareModel": "FusionServer 2288H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86",
     "date": "2020/12/21",
@@ -79,7 +79,7 @@
         "commitID": "",
         "motherBoardRevision": "",
         "biosUefi": "",
-        "cpu": "Intel(R) Xeon(R) Gold 6266C CPU@3.00GHz",
+        "cpu": "英特尔(R) 至强(R) 金牌 6266C CPU@3.00GHz",
         "ram": "12*32G DIMMs ",
         "portsBusTypes": "",
         "videoAdapter": "",
@@ -89,7 +89,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Fusionserver 2288H V5",
+    "hardwareModel": "FusionServer 2288H V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86",
     "date": "2020/12/21",
@@ -101,7 +101,7 @@
         "commitID": "",
         "motherBoardRevision": "",
         "biosUefi": "",
-        "cpu": "Intel(R) Xeon(R) Gold 6266C CPU@3.00GHz",
+        "cpu": "英特尔(R) 至强(R) 金牌 6266C CPU@3.00GHz",
         "ram": "12*32G DIMMs ",
         "portsBusTypes": "",
         "videoAdapter": "",
@@ -111,7 +111,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 100 Server(Model 2280)",
+    "hardwareModel": "泰山 100 服务器(型号 2280)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -133,7 +133,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 100 Server(Model 5280)",
+    "hardwareModel": "泰山 100 服务器(型号 5280)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -155,7 +155,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200 (Model 2280)(VE)",
+    "hardwareModel": "泰山 200 服务器 型号(VE)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -177,7 +177,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200 (Model 5280)(VE)",
+    "hardwareModel": "泰山 200 服务器 型号(VE)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -199,7 +199,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200 Server(Model 1280)",
+    "hardwareModel": "泰山 200 服务器(型号 1280)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -221,7 +221,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200 Server(Model 2180)",
+    "hardwareModel": "泰山 200 服务器(型号 2180)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -243,7 +243,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200 Server(Model 2280)",
+    "hardwareModel": "泰山 200 服务器(型号 2280)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -265,7 +265,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200 Server(Model 2280E)",
+    "hardwareModel": "泰山 200 服务器(型号 2280E)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -287,7 +287,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200 Server(Model 5280)",
+    "hardwareModel": "泰山 200 服务器(型号 5280)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -309,7 +309,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "TaiShan 200K Server(Model 2180K)",
+    "hardwareModel": "泰山 200K 服务器(型号 2180K)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -331,7 +331,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "TaiShan 200K Server(Model 2280K)",
+    "hardwareModel": "泰山 200K 服务器(型号 2280K)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -353,7 +353,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "TaiShan 200K Server(Model 5280K)",
+    "hardwareModel": "泰山 200K 服务器(型号 5280K)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -375,7 +375,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "TaiShan 200K Server(Model 5290K)",
+    "hardwareModel": "泰山 200K 服务器(型号 5290K)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
