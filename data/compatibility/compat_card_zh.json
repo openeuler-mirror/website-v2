@@ -35,7 +35,7 @@
     "boardModel": "Mellanox CX-4 Lx 25GE",
     "chipModel": "CX4 Lx EN",
     "pdm": "item",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages /mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
   },
   {
     "vendorID": "15b3",
@@ -73,7 +73,7 @@
     "boardModel": "Mellanox CX-5 25GE",
     "chipModel": "CX5",
     "pdm": "item",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages /mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
   },
   {
     "vendorID": "10de",
@@ -130,7 +130,7 @@
     "boardModel": "MCX515A-CCAT",
     "chipModel": "CX5",
     "pdm": "item",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages /mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
   },
   {
     "vendorID": 1077,
@@ -172,7 +172,7 @@
   },
   {
     "vendorID": "",
-    "deviceID": "",
+    "deviceID": 0.0,
     "ssID": "",
     "svID": "",
     "architecture": "x86_64",
@@ -191,7 +191,7 @@
   },
   {
     "vendorID": "",
-    "deviceID": "",
+    "deviceID": 0.0,
     "ssID": "",
     "svID": "",
     "architecture": "aarch64",
@@ -206,7 +206,7 @@
     "boardModel": "Mellanox CX3-Pro",
     "chipModel": "CX3-PRO",
     "pdm": "item",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages /mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
   },
   {
     "vendorID": 1002,
@@ -282,7 +282,7 @@
     "boardModel": "CN21ITGF 10G",
     "chipModel": "CX4 Lx EN",
     "pdm": "item",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages /mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
   },
   {
     "vendorID": "19e5",
@@ -400,7 +400,7 @@
   },
   {
     "vendorID": "",
-    "deviceID": "",
+    "deviceID": 0.0,
     "ssID": "",
     "svID": "",
     "architecture": "x86_64",
@@ -419,7 +419,7 @@
   },
   {
     "vendorID": "",
-    "deviceID": "",
+    "deviceID": 0.0,
     "ssID": "",
     "svID": "",
     "architecture": "aarch64",
@@ -491,15 +491,15 @@
     "boardModel": "Emulex 8Gb(LPe12000)",
     "chipModel": "LPe12000",
     "pdm": "item",
-    "downloadLink": ""
+    "downloadLink": "https://docs.broadcom.com/docs/12399390"
   },
   {
     "vendorID": "",
-    "deviceID": "",
+    "deviceID": 0.0,
     "ssID": "",
     "svID": "",
     "architecture": "aarch64",
-    "os": "openEuler 20.03 LTS",
+    "os": "openEuler 20.03 LTS SP1",
     "driverName": "",
     "version": "",
     "type": "NIC",
@@ -510,15 +510,15 @@
     "boardModel": "TM210 hisi",
     "chipModel": "hisi",
     "pdm": "item",
-    "downloadLink": ""
+    "downloadLink": "inbox"
   },
   {
     "vendorID": "",
-    "deviceID": "",
+    "deviceID": 0.0,
     "ssID": "",
     "svID": "",
     "architecture": "aarch64",
-    "os": "openEuler 20.03 LTS",
+    "os": "openEuler 20.03 LTS SP1",
     "driverName": "",
     "version": "",
     "type": "raid",
@@ -529,15 +529,15 @@
     "boardModel": "SR150-M Avago 3408iMR",
     "chipModel": "Avago 3408iMR",
     "pdm": "item",
-    "downloadLink": ""
+    "downloadLink": "inbox"
   },
   {
     "vendorID": "",
-    "deviceID": "",
+    "deviceID": 0.0,
     "ssID": "",
     "svID": "",
     "architecture": "aarch64",
-    "os": "openEuler 20.03 LTS",
+    "os": "openEuler 20.03 LTS SP1",
     "driverName": "",
     "version": "",
     "type": "raid",
@@ -548,15 +548,15 @@
     "boardModel": "SR450C-M Avago 3508",
     "chipModel": "Avago 3508",
     "pdm": "item",
-    "downloadLink": ""
+    "downloadLink": "inbox"
   },
   {
     "vendorID": "",
-    "deviceID": "",
+    "deviceID": 0.0,
     "ssID": "",
     "svID": "",
     "architecture": "aarch64",
-    "os": "openEuler 20.03 LTS",
+    "os": "openEuler 20.03 LTS SP1",
     "driverName": "",
     "version": "",
     "type": "raid",
@@ -567,11 +567,11 @@
     "boardModel": "SP150IT-M Avago 3408IT",
     "chipModel": "Avago 3408IT",
     "pdm": "item",
-    "downloadLink": ""
+    "downloadLink": "inbox"
   },
   {
     "vendorID": "",
-    "deviceID": "",
+    "deviceID": 0.0,
     "ssID": "",
     "svID": "",
     "architecture": "x86_64",
@@ -586,15 +586,15 @@
     "boardModel": "SP150IT-M Avago 3408IT",
     "chipModel": "Avago 3408IT",
     "pdm": "item",
-    "downloadLink": ""
+    "downloadLink": "inbox"
   },
   {
     "vendorID": "",
-    "deviceID": "",
+    "deviceID": 0.0,
     "ssID": "",
     "svID": "",
     "architecture": "aarch64",
-    "os": "openEuler 20.03 LTS",
+    "os": "openEuler 20.03 LTS SP1",
     "driverName": "",
     "version": "",
     "type": "NIC",
@@ -605,15 +605,15 @@
     "boardModel": "MCX512A-ACAT",
     "chipModel": "ConnectX-5 EN",
     "pdm": "item",
-    "downloadLink": ""
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
   },
   {
     "vendorID": "",
-    "deviceID": "",
+    "deviceID": 0.0,
     "ssID": "",
     "svID": "",
     "architecture": "x86_64",
-    "os": "openEuler 20.03 LTS",
+    "os": "openEuler 20.03 LTS SP1",
     "driverName": "",
     "version": "",
     "type": "NIC",
@@ -624,15 +624,15 @@
     "boardModel": "MCX512A-ACAT",
     "chipModel": "ConnectX-5 EN",
     "pdm": "item",
-    "downloadLink": ""
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.5.0.0054.oe1.x86_64.x86_64.rpm"
   },
   {
     "vendorID": "",
-    "deviceID": "",
+    "deviceID": 0.0,
     "ssID": "",
     "svID": "",
     "architecture": "aarch64",
-    "os": "openEuler 20.03 LTS",
+    "os": "openEuler 20.03 LTS SP1",
     "driverName": "",
     "version": "",
     "type": "NIC",
@@ -643,15 +643,15 @@
     "boardModel": "MCX4121A-ACAT",
     "chipModel": "ConnectX-4",
     "pdm": "item",
-    "downloadLink": ""
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
   },
   {
     "vendorID": "",
-    "deviceID": "",
+    "deviceID": 0.0,
     "ssID": "",
     "svID": "",
     "architecture": "x86_64",
-    "os": "openEuler 20.03 LTS",
+    "os": "openEuler 20.03 LTS SP1",
     "driverName": "",
     "version": "",
     "type": "NIC",
@@ -662,15 +662,15 @@
     "boardModel": "MCX4121A-ACAT",
     "chipModel": "ConnectX-4",
     "pdm": "item",
-    "downloadLink": ""
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.5.0.0054.oe1.x86_64.x86_64.rpm"
   },
   {
     "vendorID": "",
-    "deviceID": "",
+    "deviceID": 0.0,
     "ssID": "",
     "svID": "",
     "architecture": "x86_64",
-    "os": "openEuler 20.03 LTS",
+    "os": "openEuler 20.03 LTS SP1",
     "driverName": "",
     "version": "",
     "type": "NIC",
@@ -681,15 +681,15 @@
     "boardModel": "SP380",
     "chipModel": "ConnectX-4 Lx",
     "pdm": "item",
-    "downloadLink": ""
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.5.0.0054.oe1.x86_64.x86_64.rpm"
   },
   {
     "vendorID": "",
-    "deviceID": "",
+    "deviceID": 0.0,
     "ssID": "",
     "svID": "",
     "architecture": "x86_64",
-    "os": "openEuler 20.03 LTS",
+    "os": "openEuler 20.03 LTS SP1",
     "driverName": "",
     "version": "",
     "type": "",
@@ -700,15 +700,15 @@
     "boardModel": "SP330",
     "chipModel": "",
     "pdm": "item",
-    "downloadLink": ""
+    "downloadLink": "inbox"
   },
   {
     "vendorID": "",
-    "deviceID": "",
+    "deviceID": 0.0,
     "ssID": "",
     "svID": "",
     "architecture": "x86_64",
-    "os": "openEuler 20.03 LTS",
+    "os": "openEuler 20.03 LTS SP1",
     "driverName": "",
     "version": "",
     "type": "NIC",
@@ -719,15 +719,15 @@
     "boardModel": "SP210",
     "chipModel": "I350",
     "pdm": "item",
-    "downloadLink": ""
+    "downloadLink": "inbox"
   },
   {
     "vendorID": "",
-    "deviceID": "",
+    "deviceID": 0.0,
     "ssID": "",
     "svID": "",
     "architecture": "x86_64",
-    "os": "openEuler 20.03 LTS",
+    "os": "openEuler 20.03 LTS SP1",
     "driverName": "",
     "version": "",
     "type": "",
@@ -738,15 +738,15 @@
     "boardModel": "INTEL SX710",
     "chipModel": "",
     "pdm": "item",
-    "downloadLink": ""
+    "downloadLink": "inbox"
   },
   {
     "vendorID": "",
-    "deviceID": "",
+    "deviceID": 0.0,
     "ssID": "",
     "svID": "",
     "architecture": "x86_64",
-    "os": "openEuler 20.03 LTS",
+    "os": "openEuler 20.03 LTS SP1",
     "driverName": "",
     "version": "",
     "type": "",
@@ -757,6 +757,6 @@
     "boardModel": "SILICOM PE340",
     "chipModel": "",
     "pdm": "item",
-    "downloadLink": ""
+    "downloadLink": "inbox"
   }
 ]
