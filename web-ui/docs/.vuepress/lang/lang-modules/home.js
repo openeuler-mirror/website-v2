@@ -552,8 +552,8 @@ module.exports = {
             },
             {
                 LEFT_IMG_LINK: 'http://www.chinaredflag.cn/',
-                LEFT_IMG_PC: '/img/home/link/hongqi.png',
-                LEFT_IMG_MOBILE: '/img/home/link/mobile-hongqi.png',
+                LEFT_IMG_PC: '/img/home/link/zhongkehongqi.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-zhongkehongqi.png',
             }
         ],
         FRIENDSHIP_LINK_LIST:[
@@ -1116,8 +1116,8 @@ module.exports = {
             },
             {
                 LEFT_IMG_LINK: 'http://www.chinaredflag.cn/',
-                LEFT_IMG_PC: '/img/home/link/hongqi.png',
-                LEFT_IMG_MOBILE: '/img/home/link/mobile-hongqi.png',
+                LEFT_IMG_PC: '/img/home/link/zhongkehongqi.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-zhongkehongqi.png',
             }
         ],
         FRIENDSHIP_LINK_LIST:[
@@ -1680,8 +1680,8 @@ module.exports = {
             },
             {
                 LEFT_IMG_LINK: 'http://www.chinaredflag.cn/',
-                LEFT_IMG_PC: '/img/home/link/hongqi.png',
-                LEFT_IMG_MOBILE: '/img/home/link/mobile-hongqi.png',
+                LEFT_IMG_PC: '/img/home/link/zhongkehongqi.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-zhongkehongqi.png',
             }
         ],
         FRIENDSHIP_LINK_LIST:[
