@@ -20,24 +20,25 @@ for r in $(git branch -r --list "origin/stable2-*")
 do
   b=${r##*origin/stable2-}
   git checkout -b $b $r
-  
-  mkdir -p ../web-ui/docs/zh/docs/$b
-  cp -r ./docs/zh/* ../web-ui/docs/zh/docs/$b/ 
- 
-  mkdir -p ../web-ui/docs/en/docs/$b
-  cp -r ./docs/en/* ../web-ui/docs/en/docs/$b/
 
   mkdir -p ../server/docs/$b/zh/
-  cp -r ./docs/zh/* ../server/docs/$b/zh/
+  cp -r ./docs/zh/docs/$b/* ../server/docs/$b/zh/
 
   mkdir -p ../server/docs/$b/en/
-  cp -r ./docs/en/* ../server/docs/$b/en/
+  cp -r ./docs/en/docs/$b/* ../server/docs/$b/en/
+  
+  if [ -d "/home/openeuler/docs/docs/ru" ]; then
+    mkdir -p /home/openeuler/website-v2/server/docs/$b/ru/
+    cp -r /home/openeuler/docs/docs/ru/* /home/openeuler/website-v2/server/docs/$b/ru/
+  fi
   
   cd ..
-
   cd ./docs
-  
 done
+
+if [ -d "/home/openeuler/website-v2/server/docs/1.0_Base" ];then
+    rm -rf /home/openeuler/website-v2/server/docs/1.0_Base
+fi
 
 cd ..
 rm -rf ./docs
