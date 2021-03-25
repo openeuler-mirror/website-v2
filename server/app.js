@@ -74,7 +74,7 @@ app.use('/cve', cveRouter);
 app.use('/securityNotice', securityNoticeRouter);
 app.use('/news', newsRouter);
 app.use('/blog', blogRouter);
-app.use('/docs',docsRouter);
+app.use('/docs', docsRouter);
 app.use('/search', searchRouter);
 app.use('/sig', sigRouter);
 // catch 404 and forward to error handler
@@ -104,13 +104,12 @@ function initESData() {
 
     readFile.initESData('20.09', 'zh', 'docs');
     readFile.initESData('20.09', 'en', 'docs');
-    readFile.initESData('20.09', 'ru', 'docs');
     readFile.initESData('20.03_LTS', 'zh', 'docs');
     readFile.initESData('20.03_LTS', 'en', 'docs');
-    readFile.initESData('20.03_LTS', 'ru', 'docs');
     readFile.initESData('20.03_LTS_SP1', 'zh', 'docs');
     readFile.initESData('20.03_LTS_SP1', 'en', 'docs');
-    readFile.initESData('20.03_LTS_SP1', 'ru', 'docs');
+    readFile.initESData('21.03', 'zh', 'docs');
+    readFile.initESData('21.03', 'en', 'docs');
 }
 
 initESData();
