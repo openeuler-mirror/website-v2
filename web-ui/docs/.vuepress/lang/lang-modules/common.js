@@ -48,7 +48,7 @@ module.exports = {
                     },
                     {
                         NAME: '峰会',
-                        PATH: '/interaction/summit-list/'
+                        PATH: '/interaction/summit-list/devday2021/'
                     }
                 ],
                 OTHER_CHILDREN: [
@@ -223,7 +223,7 @@ module.exports = {
                     },
                     {
                         NAME: 'Summit',
-                        PATH: '/interaction/summit-list/'
+                        PATH: '/interaction/summit-list/devday2021/'
                     }
                 ],
                 OTHER_CHILDREN: [
@@ -398,7 +398,7 @@ module.exports = {
                     },
                     {
                         NAME: 'Саммит',
-                        PATH: '/interaction/summit-list/'
+                        PATH: '/interaction/summit-list/devday2021/'
                     }
                 ],
                 OTHER_CHILDREN: [
