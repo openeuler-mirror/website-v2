@@ -148,13 +148,16 @@
             },
             goDetail ({type, version, path, articleName}){
                 let dealPath = null;
+                const docsPath = path;
                 path = path.split('/');
                 path = path[path.length - 1] + '/' + articleName.split('.')[0];
                 let sitePagesArr = [];
                 if(type === 'docs'){
-                    sitePagesArr = this.$sitePages.filter((item) => {
-                        return item.path.includes('/' + encodeURI(version) + '/');
-                    })
+                    const flagLang = '/' + this.$lang + '/';
+                    const resPath = docsPath.split('/server/')[1].split(flagLang)[0] + '/' + docsPath.split('/server/')[1].split(flagLang)[1] + '/';
+                    const tempPath = this.$site.themeConfig.docsUrl + '/' + this.$lang + '/' + resPath + articleName.split('.')[0] + '.html';
+                    window.open(tempPath);
+                    return;
                 }else{
                     sitePagesArr = this.$sitePages;
                 }
@@ -164,9 +167,8 @@
                     }
                 })
                 if(dealPath){
-                    this.$router.push({
-                        path: dealPath
-                    });
+                    const routeUrl = this.$router.resolve(dealPath);
+                    window.open(routeUrl.href);
                 }else {
                     this.$message.error('找不到此路径');
                 }

@@ -63,7 +63,8 @@ module.exports = {
                 lang: require('./lang/ru.js')
             }
         },
-        smoothScroll: true
+        smoothScroll: true,
+        docsUrl: 'http://159.138.45.71:8081'
 
     },
     devServer: {
