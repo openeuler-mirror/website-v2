@@ -43,7 +43,7 @@ module.exports = {
         ],
         HOME_FIRST_BANNER: {
             TITLE: "openEuler 20.03 LTS SP1",
-            LINK: "https://openeuler.org/zh/news/20201228.html",
+            LINK: "/zh/docs/20.03_LTS_SP1/docs/Releasenotes/关键特性.html",
             DES: "现已发布，欢迎体验",
             DOWNLOAD: '了解更多',
             IMG: "/img/home/Banner0.gif",
@@ -81,7 +81,8 @@ module.exports = {
                     TITLE: "openEuler文档",
                     IMG: "/img/home/step3.png",
                     GIF: "/img/home/step-move-3.gif",
-                    LINK: "/documentation",
+                    LINK: "/docs/",
+                    OTHER_LINK: "/zh/"
                 },
                 {
                     NAME: "贡献",
@@ -624,7 +625,7 @@ module.exports = {
         HOME_LAST_BANNER: {},
         HOME_FIRST_BANNER: {
             TITLE: "openEuler 20.03 LTS SP1 Version",
-            LINK: "https://openeuler.org/en/docs/20.03_LTS_SP1/docs/Releasenotes/key-features.html",
+            LINK: "/en/docs/20.03_LTS_SP1/docs/Releasenotes/key-features.html",
             DES: "has been released, welcome to use.",
             DOWNLOAD: 'Learn more',
             IMG: "/img/home/Banner0.gif",
@@ -662,7 +663,8 @@ module.exports = {
                     TITLE: "Read openEuler Documentation",
                     IMG: "/img/home/step3.png",
                     GIF: "/img/home/step-move-3.gif",
-                    LINK: "/documentation",
+                    LINK: "/docs/",
+                    OTHER_LINK: "/en/"
                 },
                 {
                     NAME: "04",
@@ -1188,7 +1190,7 @@ module.exports = {
         HOME_LAST_BANNER: {},
         HOME_FIRST_BANNER: {
             TITLE: "openEuler 20.03 LTS SP1 Version",
-            LINK: "https://openeuler.org/en/docs/20.03_LTS_SP1/docs/Releasenotes/key-features.html",
+            LINK: "/en/docs/20.03_LTS_SP1/docs/Releasenotes/key-features.html",
             DES: "has been released, welcome to use.",
             DOWNLOAD: 'Learn more',
             IMG: "/img/home/Banner0.gif",
@@ -1220,13 +1222,14 @@ module.exports = {
                     IMG: "/img/home/step2.png",
                     GIF: "/img/home/step-move-2.gif",
                     LINK: "",
+                    OTHER_LINK: "/ru/"
                 },
                 {
                     NAME: "03",
                     TITLE: "Читать документацию openEuler",
                     IMG: "/img/home/step3.png",
                     GIF: "/img/home/step-move-3.gif",
-                    LINK: "/documentation",
+                    LINK: "/docs/",
                 },
                 {
                     NAME: "04",

@@ -23,7 +23,7 @@
                         :class="item.CLASS"
                     >
                         <a
-                            @click="go(item.PATH)"
+                            @click="go(item)"
                             :class="{
                                 'menu-link': true,
                                 'menu-active': menuActiveFn(item)
@@ -43,7 +43,7 @@
                                     v-for="(subItem,
                                     subItemIndex) in item.CHILDREN"
                                     :key="subItemIndex"
-                                    @click="go(subItem.PATH)"
+                                    @click="go(subItem)"
                                 >
                                     {{ subItem.NAME }}
                                 </li>
@@ -93,7 +93,7 @@
                                                 $route.path.includes(resolvePath(subItem.PATH))
                                         }"
                                         :key="subIndex"
-                                        @click="go(subItem.PATH)"
+                                        @click="go(subItem)"
                                     >
                                         {{ subItem.NAME }}
                                     </li>
@@ -279,10 +279,14 @@ export default {
             this.$router.push(targetLocale);
             this.menuMobileFlag = false;
         },
-        go(path) {
-            if (path) {
+        go(item) {
+            if(item.IS_OPEN_WINDOW){
+                window.open(this.$site.themeConfig.docsUrl + item.PATH);
+                return;
+            }
+            if (item.PATH) {
                 this.$router.push({
-                    path: this.resolvePath(path)
+                    path: this.resolvePath(item.PATH)
                 });
                 this.menuMobileFlag = false;
             }

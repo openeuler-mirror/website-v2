@@ -18,7 +18,8 @@ module.exports = {
                 CHILDREN: [
                     {
                         NAME: '文档',
-                        PATH: '/documentation/',
+                        PATH: '/zh/',
+                        IS_OPEN_WINDOW: 1
                     },
                     {
                         NAME: '慕课',
@@ -193,7 +194,8 @@ module.exports = {
                 CHILDREN: [
                     {
                         NAME: 'Documentation',
-                        PATH: '/documentation/',
+                        PATH: '/en/',
+                        IS_OPEN_WINDOW: 1
                     },
                     {
                         NAME: 'MOOC',
@@ -368,7 +370,8 @@ module.exports = {
                 CHILDREN: [
                     {
                         NAME: 'Документация',
-                        PATH: '/documentation/',
+                        PATH: '/ru/',
+                        IS_OPEN_WINDOW: 1
                     },
                     {
                         NAME: 'МООК',

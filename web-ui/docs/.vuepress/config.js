@@ -63,7 +63,8 @@ module.exports = {
                 lang: require('./lang/ru.js')
             }
         },
-        smoothScroll: true
+        smoothScroll: true,
+        docsUrl: 'http://159.138.45.71:8081'
 
     },
     devServer: {
@@ -77,8 +78,7 @@ module.exports = {
                 }
             },
             '/api-cve': {
-                // target: 'https://openeuler.org/api-cve',
-                target: 'http://159.138.45.71',
+                target: 'https://openeuler.org/api-cve',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {

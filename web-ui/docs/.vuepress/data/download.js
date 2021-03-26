@@ -46,19 +46,6 @@ module.exports = {
                 LTS: true
             },
             {
-                NAME: 'openEuler 1.0 Base',
-                DOWNLOAD_URL : 'https://repo.openeuler.org/openeuler1.0/base/',
-                DESC: 'openEuler 1.0 Base 版本是基础版本，包含了运行最小系统的核心组件。',
-                RELEASE_DESC_URL: '/zh/docs/1.0_Base/docs/Releasenotes/release_notes.html',
-                INSTALL_GUIDENCE_URL: '/zh/docs/1.0_Base/docs/Installation/installation.html',
-                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
-                GET_ISO_URL: 'https://repo.openeuler.org/openeuler1.0/base/iso/',
-                LIFE_CYCLE_URL: '/zh/other/lifecycle/',
-                MANUFACTURER: 'openEuler社区',
-                PUBLISH_DATE: '2020/02',
-                LTS: false
-            },
-            {
                 NAME: '麒麟信安 Kylinsec',
                 DOWNLOAD_URL : 'https://kylinsec.oss-cn-shenzhen.aliyuncs.com/UniKylin-3.3-6A-2005-131421-aarch64.iso',
                 DESC: '暂无描述',
@@ -204,18 +191,6 @@ module.exports = {
                 LTS: true
             },
             {
-                NAME: 'openEuler 1.0 Base',
-                DOWNLOAD_URL : 'https://repo.openeuler.org/openeuler1.0/base/',
-                DESC: 'The openEuler 1.0 Base is the basic version that contains the core components to run the minimum system.',
-                INSTALL_GUIDENCE_URL: '/en/docs/1.0_Base/docs/Installation/Installation.html',
-                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
-                GET_ISO_URL: 'https://repo.openeuler.org/openeuler1.0/base/iso/',
-                LIFE_CYCLE_URL: '/en/other/lifecycle/',
-                MANUFACTURER: 'openEuler community',
-                PUBLISH_DATE: '2020/02',
-                LTS: false
-            },
-            {
                 NAME: 'Kylinsec',
                 DOWNLOAD_URL : 'https://kylinsec.oss-cn-shenzhen.aliyuncs.com/UniKylin-3.3-6A-2005-131421-aarch64.iso',
                 DESC: 'No description available',
@@ -346,18 +321,6 @@ module.exports = {
                 MANUFACTURER: 'openEuler community',
                 PUBLISH_DATE: '2020/03',
                 LTS: true
-            },
-            {
-                NAME: 'openEuler 1.0 Base',
-                DOWNLOAD_URL : 'https://repo.openeuler.org/openeuler1.0/base/',
-                DESC: 'openEuler 1.0 Base — это базовая версия, содержащая основные компоненты для запуска системы с минимальными требованиями.',
-                INSTALL_GUIDENCE_URL: '/en/docs/1.0_Base/docs/Installation/Installation.html',
-                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
-                GET_ISO_URL: 'https://repo.openeuler.org/openeuler1.0/base/iso/',
-                LIFE_CYCLE_URL: '/ru/other/lifecycle/',
-                MANUFACTURER: 'openEuler community',
-                PUBLISH_DATE: '2020/02',
-                LTS: false
             },
             {
                 NAME: 'Kylinsec',
