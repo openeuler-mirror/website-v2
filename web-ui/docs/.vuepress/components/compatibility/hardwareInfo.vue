@@ -94,8 +94,6 @@
                         <el-table-column prop="version" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.VERSION"  width="140"></el-table-column>
                         <el-table-column prop="type" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.TYPE" width="140" ></el-table-column>
                         <el-table-column prop="driverDate" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.DRIVE_DATE" width="140"></el-table-column>
-                        <el-table-column prop="sha256" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.SHA_256" width="420"></el-table-column>
-                        <el-table-column prop="driverSize" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.DRIVER_SIZE" width="140"></el-table-column>
                     </el-table>
                 </div>
                 <ul class="table-mobile" v-loading.fullscreen="tableLoading">
@@ -117,14 +115,6 @@
                             <span>{{i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.DRIVE_DATE}}:</span>
                             {{item.driverDate}}
                         </li>
-                        <li>
-                            <span>{{i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.SHA_256}}:</span>
-                            {{item.sha256}}
-                        </li>
-                        <li>
-                            <span>{{i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.DRIVER_SIZE}}:</span>
-                            {{item.driverSize}}
-                        </li>
                     </ul>
                     </li>
                 </ul>
@@ -140,8 +130,6 @@
 </template>
 
 <script>
-import Vue from "vue";
-import dayjs from "dayjs";
 import { detailList,  detailAapterList} from "../../api/compatibility"
 
 let that = null;

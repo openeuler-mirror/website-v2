@@ -83,9 +83,9 @@
                         style="width: 100%"
                     >
                         <el-table-column prop="hardwareFactory" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.VENDOR" width="110"></el-table-column>
-                        <el-table-column prop="hardwareModel" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.MODEL" width="220"></el-table-column>
-                        <el-table-column prop="osVersion" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.OS" width="200"></el-table-column>
-                        <el-table-column prop="date" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.DATE" width="170"></el-table-column>
+                        <el-table-column prop="hardwareModel" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.MODEL" width="230"></el-table-column>
+                        <el-table-column prop="osVersion" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.OS" width="240"></el-table-column>
+                        <el-table-column prop="date" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.DATE" width="190"></el-table-column>
                         <el-table-column prop="productInformation" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.COMPATIBILITY_CONFIGURATION" width="230">
                             <template slot-scope="scope">
                                 <a
@@ -94,7 +94,7 @@
                                 >{{ i18n.compatibility.HARDWARE_TABLE_COLUMN.COMPATIBILITY_CONFIGURATION2}}</a>
                             </template>
                         </el-table-column>
-                        <el-table-column prop="friendlyLink" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.REFERRENCE" width="190">
+                        <el-table-column prop="friendlyLink" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.REFERRENCE" width="120">
                             <template slot-scope="scope">
                                 <a
                                     class="table-link"
@@ -216,16 +216,14 @@
                         stripe
                         style="width: 100%"
                     >
-                        <el-table-column prop="architecture" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.ARCHITECTURE" width="110"></el-table-column>
-                        <el-table-column prop="driverName" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_NAME" width="120"></el-table-column>
-                        <el-table-column prop="version" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.VERSION"  width="80"></el-table-column>
-                        <el-table-column prop="type" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.TYPE" width="60" ></el-table-column>
-                        <el-table-column prop="driverDate" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_DATE" width="110"></el-table-column>
-                        <el-table-column prop="sha256" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.SHA_256_DRIVER" width="140"></el-table-column>
-                        <el-table-column prop="driverSize" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.SIZE" width="100"></el-table-column>
-                        <el-table-column prop="chipVendor" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.CHIP_VENDOR" width="120"></el-table-column>
-                        <el-table-column prop="boardModel" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.BOARD_MODEL" width="165"></el-table-column>
-                        <el-table-column prop="chipModel" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.CHIP_MODEL" width="115"></el-table-column>
+                        <el-table-column prop="architecture" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.ARCHITECTURE" width="140"></el-table-column>
+                        <el-table-column prop="driverName" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_NAME" width="140"></el-table-column>
+                        <el-table-column prop="version" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.VERSION"  width="130"></el-table-column>
+                        <el-table-column prop="type" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.TYPE" width="130" ></el-table-column>
+                        <el-table-column prop="driverDate" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_DATE" width="140"></el-table-column>
+                        <el-table-column prop="chipVendor" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.CHIP_VENDOR" width="140"></el-table-column>
+                        <el-table-column prop="boardModel" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.BOARD_MODEL" width="160"></el-table-column>
+                        <el-table-column prop="chipModel" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.CHIP_MODEL" width="140"></el-table-column>
                     </el-table>
                     <ul class="table-mobile" v-loading.fullscreen="tableLoading">
                         <li class="item" v-for="(item, index) in driverTableData" :key="index">
@@ -249,14 +247,6 @@
                                 <li>
                                     <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_DATE}}:</span>
                                     {{item.driverDate}}
-                                </li>
-                                <li>
-                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.SHA_256_DRIVER}}:</span>
-                                    {{item.sha256}}
-                                </li>
-                                <li>
-                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.SIZE}}:</span>
-                                    {{item.driverSize}}
                                 </li>
                                 <li>
                                     <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.CHIP_VENDOR}}:</span>
@@ -290,8 +280,6 @@
 </template>
 
 <script>
-import Vue from "vue";
-import dayjs from "dayjs";
 import commonBanner from "./../common/banner.vue";
 import { 
     hardwareList,
@@ -378,7 +366,14 @@ export default {
         this.initData(this.formData);
 
         // 下拉选项
-        let lang = window.location.pathname.indexOf('/en/') === -1 ? 'zh' : 'en';
+        let lang = '';
+        if(window.location.pathname.indexOf('/en/') !== -1) {
+            lang = 'en';
+        } else if (window.location.pathname.indexOf('/ru/') !== -1) {
+            lang = 'en';
+        } else {
+             lang = 'zh';
+        }
         hardwareOSOptions({lang: lang})
         .then(data => {
             if(data && data.length > 0) {
@@ -461,6 +456,10 @@ export default {
     }
     /deep/ .el-tabs__item {
         font-size: 24px;
+        color:rgba(0, 0, 0, 0.5);
+    }
+    /deep/ .el-tabs__item.is-active {
+        font-size: 24px;
         color:#000;
     }
     /deep/ .el-tabs__nav-wrap::after {
@@ -484,6 +483,7 @@ export default {
         }
         .el-form-item {
             margin-bottom: 0;
+            margin-right: 20px;
             @media (max-width: 1000px) {
                 margin-bottom: 20px;
                 margin-right: 0;

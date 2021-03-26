@@ -1,5 +1,5 @@
 /**
- * @file  博客页浏览次数接口配置文件
+ * @file  兼容性页面及详情接口配置文件
  * */
 
 import appAjax from '../libs/ajax-utils';
