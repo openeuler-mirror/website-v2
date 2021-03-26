@@ -18,8 +18,13 @@ function sqlUtil(name, args) {
     this.insertVisits = function (value) {
         return 'insert into ' + name + ' ' + value;
     };
+
     this.updateVisits = function (value) {
         return 'update ' + name + ' ' + value;
+    };
+
+    this.insertReviews = function (value) {
+        return 'insert into ' + name + ' ' + value;
     };
 }
 

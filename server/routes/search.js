@@ -15,6 +15,7 @@ const APICONF = require('../config/apiConfig');
 
 const ES_INDEX = 'openeuler_articles';
 const ES_EN_INDEX = 'openeuler_articles_en';
+const ES_RU_INDEX = 'openeuler_articles_ru';
 const ES_TYPE = '_doc';
 
 router.get('/index', function (req, res, next) {

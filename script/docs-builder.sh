@@ -20,12 +20,6 @@ for r in $(git branch -r --list "origin/stable2-*")
 do
   b=${r##*origin/stable2-}
   git checkout -b $b $r
-  
-  mkdir -p ../web-ui/docs/zh/docs/$b
-  cp -r ./docs/zh/* ../web-ui/docs/zh/docs/$b/ 
- 
-  mkdir -p ../web-ui/docs/en/docs/$b
-  cp -r ./docs/en/* ../web-ui/docs/en/docs/$b/
 
   mkdir -p ../server/docs/$b/zh/
   cp -r ./docs/zh/* ../server/docs/$b/zh/
@@ -33,10 +27,13 @@ do
   mkdir -p ../server/docs/$b/en/
   cp -r ./docs/en/* ../server/docs/$b/en/
   
-  cd ..
-
-  cd ./docs
+  if [ -d "./docs/ru" ]; then
+    mkdir -p ../server/docs/$b/ru/
+    cp -r ./docs/ru/* ../server/docs/$b/ru/
+  fi
   
+  cd ..
+  cd ./docs
 done
 
 cd ..
