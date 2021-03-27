@@ -42,11 +42,11 @@ module.exports = {
             }
         ],
         HOME_FIRST_BANNER: {
-            TITLE: "openEuler 20.03 LTS SP1",
-            LINK: "/zh/docs/20.03_LTS_SP1/docs/Releasenotes/关键特性.html",
+            TITLE: "openEuler 21.03",
+            LINK: "/zh/docs/21.03/docs/Releasenotes/关键特性.html",
             DES: "现已发布，欢迎体验",
             DOWNLOAD: '了解更多',
-            IMG: "/img/home/Banner0.gif",
+            IMG: "/img/home/banner0.png",
             MOBILE_IMG: "url('/img/home/banner/zh-mobile-version.png')"
         },
         HOME_OTHER_BANNER: [
@@ -624,11 +624,11 @@ module.exports = {
         ],
         HOME_LAST_BANNER: {},
         HOME_FIRST_BANNER: {
-            TITLE: "openEuler 20.03 LTS SP1 Version",
-            LINK: "/en/docs/20.03_LTS_SP1/docs/Releasenotes/key-features.html",
+            TITLE: "openEuler 21.03 Version",
+            LINK: "/en/docs/21.03/docs/Releasenotes/key-features.html",
             DES: "has been released, welcome to use.",
             DOWNLOAD: 'Learn more',
-            IMG: "/img/home/Banner0.gif",
+            IMG: "/img/home/banner0.png",
             MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
         },
         HOME_OTHER_BANNER: [
@@ -1189,11 +1189,11 @@ module.exports = {
         ],
         HOME_LAST_BANNER: {},
         HOME_FIRST_BANNER: {
-            TITLE: "openEuler 20.03 LTS SP1 Version",
-            LINK: "/en/docs/20.03_LTS_SP1/docs/Releasenotes/key-features.html",
+            TITLE: "openEuler 21.03 Version",
+            LINK: "/en/docs/21.03/docs/Releasenotes/key-features.html",
             DES: "has been released, welcome to use.",
             DOWNLOAD: 'Learn more',
-            IMG: "/img/home/Banner0.gif",
+            IMG: "/img/home/banner0.png",
             MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
         },
         HOME_OTHER_BANNER: [
