@@ -98,6 +98,9 @@ export default {
         color: #000;
         font-size: 20px;
         line-height: 40px;
+        .title {
+            margin-top: 20px;
+        }
         @media screen and (max-width: 1000px) {
             font-size: 14px;
             line-height: 26px;
