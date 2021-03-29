@@ -1415,6 +1415,10 @@ module.exports = {
             DETAIL_QRCODE_TEXT: '扫码报名',
             INSIDENAME: 'CONNECT',
             MEETUPS_DATA: require('./../../data/salon').cn.MEETUPS_LIST
+        },
+        DEVDAY_2021: {
+            PC_BANNER: '/img/summit/devday-2021/devday-2021-zh.png',
+            H5_BANNER: '/img/summit/devday-2021/banner-h5-zh.png'
         }
     },
     en: {
@@ -2823,6 +2827,10 @@ module.exports = {
             DETAIL_QRCODE_TEXT: 'Scan the QR code',
             INSIDENAME: 'CONNECT',
             MEETUPS_DATA: require('./../../data/salon').en.MEETUPS_LIST
+        },
+        DEVDAY_2021: {
+            PC_BANNER: '/img/summit/devday-2021/devday-2021-en.png',
+            H5_BANNER: '/img/summit/devday-2021/banner-h5-en.png'
         }
     },
     ru: {
@@ -4231,6 +4239,10 @@ module.exports = {
             DETAIL_QRCODE_TEXT: 'Scan the QR code',
             INSIDENAME: 'CONNECT',
             MEETUPS_DATA: require('./../../data/salon').en.MEETUPS_LIST
+        },
+        DEVDAY_2021: {
+            PC_BANNER: '/img/summit/devday-2021/devday-2021-en.png',
+            H5_BANNER: '/img/summit/devday-2021/banner-h5-en.png'
         }
     }
 };

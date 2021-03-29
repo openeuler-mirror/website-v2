@@ -3,6 +3,11 @@
         <div class="is-pc home-carousel" v-if="!isShowH5">
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" @change="eventChange()">
                 <el-carousel-item>
+                    <div class="carousel-dev2021" @click="go('/interaction/summit-list/devday2021/')">
+                        <img :src="i18n.home.HOME_DEV2021_IMG.PC_BANNER">
+                    </div>
+                </el-carousel-item>
+                <el-carousel-item>
                     <div class="carousel-video">
                         <video poster="/img/home/BannerVideo.png" loop width="100%" height="500px" id="home-video">
                             <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler_MG%2BAnimate_1920x500_0128.mp4"  type="video/mp4">
@@ -57,6 +62,9 @@
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
+                <swiper-slide class="carousel-item-index">
+                    <div class="mobile-version" @click="go('/interaction/summit-list/devday2021/')" :style="{backgroundImage:i18n.home.HOME_DEV2021_IMG.H5_BANNER}"></div>
+                </swiper-slide>
                 <swiper-slide>
                     <div class="carousel-video">
                         <video poster="/img/home/BannerVideo.png"
@@ -74,19 +82,19 @@
                 <swiper-slide class="carousel-item-index">
                     <div class="mobile-version" @click="go(i18n.home.HOME_FIRST_BANNER.LINK)" :style="{backgroundImage:i18n.home.HOME_FIRST_BANNER.MOBILE_IMG}"></div>
                 </swiper-slide>
-                    <swiper-slide v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
-                        <div class="carousel-banner mobile-banner" :style="{backgroundImage: item.BANNER_MOBILE_IMG}" @click="go(item.BANNER_LINK)">
-                        </div>
-                    </swiper-slide>
-                    <swiper-slide
-                            class="carousel-item-index"
-                            v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
-                            :key="index">
-                        <div @click="go(item.LINK)" :key="index"> 
-                            <h3>{{ item.TITLE }}</h3>
-                            <img v-lazy="item.IMG">
-                        </div>
-                    </swiper-slide>
+                <swiper-slide v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
+                    <div class="carousel-banner mobile-banner" :style="{backgroundImage: item.BANNER_MOBILE_IMG}" @click="go(item.BANNER_LINK)">
+                    </div>
+                </swiper-slide>
+                <swiper-slide
+                        class="carousel-item-index"
+                        v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
+                        :key="index">
+                    <div @click="go(item.LINK)" :key="index"> 
+                        <h3>{{ item.TITLE }}</h3>
+                        <img v-lazy="item.IMG">
+                    </div>
+                </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
                 <li v-for="item in bannerAmount" :class="{'mobile-pagination-active': mobilePagenationIndex===item}"></li>
@@ -434,7 +442,7 @@
                 mobileSwiperInterval: null,
                 mobilePagenationIndex: 1,
                 developerList: [],
-                bannerAmount: 6,
+                bannerAmount: 7,
                 statisticParams: {
                     type: 'openEuler'
                 },
@@ -951,6 +959,18 @@
         width: 1080px;
         height: 480px;
         z-index: -1;
+    }
+    .carousel-dev2021 {
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background: url(/img/home/banner/dev2021/bg-img.png);
+        background-size: auto 500px;
+        img {
+            height: 500px;
+            width: 1120px;
+        }
     }
     .carousel-video{
         &:hover{

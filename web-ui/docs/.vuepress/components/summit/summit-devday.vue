@@ -1,15 +1,11 @@
 <template>
     <div class="container">
         <div class="banner">
-            <div class="title-wrapper">
-                <div class="title">openEuler Developer Day 2021</div>
-                <div class="date">5月21日 北京</div>
-            </div>
-            <img src="/img/summit/devday-2021/devday-2021.png">
+            <img :src="i18n.interaction.DEVDAY_2021.PC_BANNER">
         </div>
         <div class="h5-banner">
             <div class="title">峰会</div>
-            <img src="/img/summit/devday-2021/banner-h5.png">
+            <img :src="i18n.interaction.DEVDAY_2021.H5_BANNER">
         </div>
         <div class="text-wrapper">
             <p class="text">openEuler Developer Day 2021 是由 openEuler 社区发起，面向社区开发者的一场技术盛会。旨在推动 openEuler 社区在多样性计算、云原生全栈、全场景协同等技术发展方向的持续探索和创新。本次大会以开放工作会议以及小组讨论等形式，让开发者找到关注的技术小组、快速融入社区、围绕下一版本发布，热点技术方向，用户核心需求，展开面对面的头脑风暴。每一个开发者都是 openEuler 社区的一颗星，一滴水，最终点点滴滴汇聚成科技创新的星辰大海。</p>
@@ -71,28 +67,10 @@ export default {
         }
         height: 380px;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         margin-bottom: 50px;
-        .title-wrapper {
-            height: 100%;
-            .title {
-                margin-top: 153px;
-                color: #000;
-                font-size: 38px;
-                line-height: 50px;
-            }
-            .date {
-                margin-top: 50px;
-                font-size: 26px;
-                line-height: 30px;
-                color: #000;
-            }
-        }
         img {
-            width: 500px;
-            height: 360px;
+            width: 1120px;
+            height: 380px;
         }
     }
     .h5-banner {

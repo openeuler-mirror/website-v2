@@ -4,6 +4,10 @@
 
 module.exports = {
     cn: {
+        HOME_DEV2021_IMG: {
+            PC_BANNER: '/img/home/banner/dev2021/pc-dev2021-zh.png',
+            H5_BANNER: "url('/img/home/banner/dev2021/h5-dev2021-zh.png"
+        },
         HOME_CAROUSEL_DATA: [
             {
                 TITLE: "iSula",
@@ -584,6 +588,10 @@ module.exports = {
         RETRACT: "收起全部"
     },
     en: {
+        HOME_DEV2021_IMG: {
+            PC_BANNER: '/img/home/banner/dev2021/pc-dev2021-en.png',
+            H5_BANNER: "url('/img/home/banner/dev2021/h5-dev2021-en.png"
+        },
         HOME_CAROUSEL_DATA: [
             {
                 TITLE: "iSula",
@@ -1148,6 +1156,10 @@ module.exports = {
         RETRACT: "Collapse All"
     },
     ru: {
+        HOME_DEV2021_IMG: {
+            PC_BANNER: '/img/home/banner/dev2021/pc-dev2021-en.png',
+            H5_BANNER: "url('/img/home/banner/dev2021/h5-dev2021-en.png"
+        },
         HOME_CAROUSEL_DATA: [
             {
                 TITLE: "iSula",
