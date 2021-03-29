@@ -80,7 +80,7 @@ export default {
             .title {
                 margin-top: 153px;
                 color: #000;
-                font-size: 40px;
+                font-size: 38px;
                 line-height: 50px;
             }
             .date {
