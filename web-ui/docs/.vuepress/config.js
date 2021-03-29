@@ -77,7 +77,8 @@ module.exports = {
                 }
             },
             '/api-cve': {
-                target: 'https://openeuler.org/api-cve',
+                // target: 'https://openeuler.org/api-cve',
+                target: 'http://159.138.45.71',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {

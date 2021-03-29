@@ -18,6 +18,7 @@ var cveRouter = require('./routes/cve');
 var securityNoticeRouter = require('./routes/SecurityNotice');
 var newsRouter = require('./routes/news');
 var blogRouter = require('./routes/blog');
+var docsRouter = require('./routes/docs');
 var searchRouter = require('./routes/search');
 var sigRouter = require('./routes/sig');
 var readFile = require('./search/readFile');
@@ -73,6 +74,7 @@ app.use('/cve', cveRouter);
 app.use('/securityNotice', securityNoticeRouter);
 app.use('/news', newsRouter);
 app.use('/blog', blogRouter);
+app.use('/docs', docsRouter);
 app.use('/search', searchRouter);
 app.use('/sig', sigRouter);
 // catch 404 and forward to error handler
@@ -106,8 +108,8 @@ function initESData() {
     readFile.initESData('20.03_LTS', 'en', 'docs');
     readFile.initESData('20.03_LTS_SP1', 'zh', 'docs');
     readFile.initESData('20.03_LTS_SP1', 'en', 'docs');
-    readFile.initESData('1.0_Base', 'zh', 'docs');
-    readFile.initESData('1.0_Base', 'en', 'docs');
+    readFile.initESData('21.03', 'zh', 'docs');
+    readFile.initESData('21.03', 'en', 'docs');
 }
 
 initESData();

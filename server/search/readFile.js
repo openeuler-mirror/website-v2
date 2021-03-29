@@ -11,6 +11,7 @@ const logUtil = require('../util/logUtil');
 const CONF = require('../config/filePathConfig');
 const ES_INDEX = 'openeuler_articles';
 const ES_EN_INDEX = 'openeuler_articles_en';
+const ES_RU_INDEX = 'openeuler_articles_ru';
 const ES_TYPE = '_doc';
 let jsonList = '';
 let no = '';
@@ -121,6 +122,8 @@ function initESData(version, lang, model) {
         insertES(ES_INDEX, ES_TYPE, dirPath, model, version);
     } else if (lang === 'en') {
         insertES(ES_EN_INDEX, ES_TYPE, dirPath, model, version);
+    } else if (lang === 'ru') {
+        insertES(ES_RU_INDEX, ES_TYPE, dirPath, model, version);
     }
 }
 

@@ -22,7 +22,7 @@ RISC-V 是一个基于精简指令集（RISC）原则的开源指令集架构（
 - 2020年 10 月，中科院成功移植 openEuler RISC-V 到果壳（nutshell）。
 - 2020年 11 月，在 openEuler 镜像仓发布第二版 rootfs 和 kernel 镜像，可以在 qemu 中启动镜像，体验 openEuler RISC-V 移植版。
 
-![openEuler summit 上展示的运行在果壳芯片上的openEuler RISC-V ](.\2021-3-12-start-a-containerd-on-riscv-01.jpg)
+![openEuler summit 上展示的运行在果壳芯片上的openEuler RISC-V ](./2021-3-12-start-a-containerd-on-riscv-01.jpg)
 
 **openEuler Summit 上展示的运行在果壳芯片上的 openEuler RISC-V **
 
