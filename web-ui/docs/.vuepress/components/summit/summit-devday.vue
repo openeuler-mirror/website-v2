@@ -20,10 +20,10 @@
             <p class="text">openEuler SIG 小组开放工作会：在社区公开招募 20-30 个 SIG，小组成员在 SIG Maintainer 的带领下，召开现场工作会议，落实兴趣小组的工作重点、接受社区公开需求、完成下一个版本的开发路线规划。</p>
         </div>
         <div class="link-wrapper">
-            <a href="https://docs.qq.com/form/page/DUk9YeU9WbkJzVFZ0" target="_blank"><img src="/img/summit/devday-2021/link-img1.png"></a>
-            <a href="https://docs.qq.com/form/page/DUllVRmRmbEtGcGpl" target="_blank"><img src="/img/summit/devday-2021/link-img2.png"></a>
-            <a href="https://docs.qq.com/form/page/DUkZYbXJoUGhNYkVN" target="_blank"><img src="/img/summit/devday-2021/link-img3.png"></a>
-            <a href="https://docs.qq.com/form/page/DUlFBaXBleFVqR0do" target="_blank"><img src="/img/summit/devday-2021/link-img4.png"></a>
+            <a href="https://shimo.im/forms/KgXxt8JCYKYtVXHx/fill" target="_blank"><img src="/img/summit/devday-2021/link-img1.png"></a>
+            <a href="https://shimo.im/forms/vwCC68q3pQvvR3Yc/fill" target="_blank"><img src="/img/summit/devday-2021/link-img2.png"></a>
+            <a href="https://shimo.im/forms/x6vXyW8QHCGK9QJD/fill" target="_blank"><img src="/img/summit/devday-2021/link-img3.png"></a>
+            <a href="https://shimo.im/forms/PQTvWKjHgg96DjD8/fill" target="_blank"><img src="/img/summit/devday-2021/link-img4.png"></a>
         </div>
         <div class="review-wrapper">
             <div class="title">
