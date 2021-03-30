@@ -21,7 +21,8 @@
             <p class="text">openEuler 品牌委员会开放工作会议：会议将对 openEuler 社区的营销传播推广工作进行梳理和介绍</p>
             <p class="text">openEuler SIG 小组开放工作会：在社区公开招募 20-30 个 SIG，小组成员在 SIG Maintainer 的带领下，召开现场工作会议，落实兴趣小组的工作重点、接受社区公开需求、完成下一个版本的开发路线规划。</p>
         </div>
-        
+        <img class="schedule-pc" src="/img/summit/devday-2021/schedule-pc.png" >
+        <img class="schedule-h5" src="/img/summit/devday-2021/schedule-h5.png" >
         <div class="review-wrapper">
             <div class="title">
                 <span>精彩回顾</span>
@@ -102,6 +103,7 @@ export default {
         @media screen and (max-width: 1000px) {
             font-size: 14px;
             line-height: 26px;
+            margin-bottom: 40px;
         }
     }
     .link-wrapper {
@@ -122,6 +124,19 @@ export default {
             @media screen and (max-width: 1000px) {
                 margin-bottom: 30px;
             }
+        }
+    }
+    .schedule-pc {
+        margin-bottom: 50px;
+        @media screen and (max-width: 1000px) {
+            display: none;
+        }
+    }
+    .schedule-h5 {
+        display: none;
+        margin-bottom: 40px;
+        @media screen and (max-width: 1000px) {
+            display: block;
         }
     }
     .review-wrapper {
