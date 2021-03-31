@@ -275,6 +275,14 @@
                 :total="total"
                 :hide-on-single-page="pageValue"
             ></el-pagination>
+            <div class="bottomBanner">
+                <div class="bottomBanner-content">
+                    {{i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT}}
+                    <a @click="goToHareware()" class="bottom-link">
+                        {{i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE}}
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -347,6 +355,7 @@ export default {
                 architecture: '',
                 page: 1,
                 pageSize: 10,
+                lang:'zh'
             },
             hardwareTableData: [],
             driverTableData: [],
@@ -363,9 +372,6 @@ export default {
     created() {},
 
     mounted() {
-        this.initData(this.formData);
-
-        // 下拉选项
         let lang = '';
         if(window.location.pathname.indexOf('/en/') !== -1) {
             lang = 'en';
@@ -374,6 +380,11 @@ export default {
         } else {
              lang = 'zh';
         }
+
+        this.formData.lang = lang;
+        this.initData(this.formData);
+
+        // 下拉选项
         hardwareOSOptions({lang: lang})
         .then(data => {
             if(data && data.length > 0) {
@@ -411,12 +422,21 @@ export default {
             }
         },
         handleTabClick(tab, event) {
+            let lang = '';
+            if(window.location.pathname.indexOf('/en/') !== -1) {
+                lang = 'en';
+            } else if (window.location.pathname.indexOf('/ru/') !== -1) {
+                lang = 'en';
+            } else {
+                 lang = 'zh';
+            }
             this.formData = {
                 keyword: '',
                 os: '',
                 architecture: '',
                 page: 1,
                 pageSize: 10,
+                lang:lang
             }
             this.initData(this.formData);
         },
@@ -438,6 +458,11 @@ export default {
             this.$router.push({
                 path: this.resolvePath('/compatibility/hardware-info/'),
                 query: { id: id}
+            })
+        },
+        goToHareware () {
+            this.$router.push({
+                path: this.resolvePath('/compatibility/hardware/')
             })
         }
     },
@@ -573,6 +598,15 @@ export default {
     }
     .compatibility-pagination {
         margin-top: 60px;
+    }
+    .bottomBanner {
+        margin-top:40px;
+        font-size: 18px;
+        a {
+            color: #002fa7;
+            text-decoration: none;
+            cursor: pointer;
+        }
     }
     /deep/ .el-table {
         color: rgba(0, 0, 0, 0.85);

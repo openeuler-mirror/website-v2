@@ -12,6 +12,7 @@ export const hardwareList = ({
     architecture,
     page,
     pageSize,
+    lang
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
@@ -25,7 +26,8 @@ export const hardwareList = ({
                 pages: {
                     page,
                     size: pageSize
-                }
+                },
+                lang
             },
             success(result) {
                 let res = {
@@ -54,6 +56,7 @@ export const driverList = ({
     architecture,
     page,
     pageSize,
+    lang
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
@@ -67,7 +70,8 @@ export const driverList = ({
                 pages: {
                     page,
                     size: pageSize
-                }
+                },
+                lang
             },
             success(result) {
                 let res = {
