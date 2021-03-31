@@ -2,8 +2,8 @@
   {
     "vendorID": "15b3",
     "deviceID": "1015",
-    "ssID": "d130",
     "svID": "19e5",
+    "ssID": "d130",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "mlx5_core",
@@ -21,8 +21,8 @@
   {
     "vendorID": "15b3",
     "deviceID": "1015",
-    "ssID": "d130",
     "svID": "19e5",
+    "ssID": "d130",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "mlx5_core",
@@ -40,8 +40,8 @@
   {
     "vendorID": "15b3",
     "deviceID": "1017",
-    "ssID": "d135",
     "svID": "19e5",
+    "ssID": "d135",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "mlx5_core",
@@ -59,8 +59,8 @@
   {
     "vendorID": "15b3",
     "deviceID": "1017",
-    "ssID": "d135",
     "svID": "19e5",
+    "ssID": "d135",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "mlx5_core",
@@ -78,8 +78,8 @@
   {
     "vendorID": "10de",
     "deviceID": "1eb8",
-    "ssID": "12a2",
     "svID": "10de",
+    "ssID": "12a2",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "nouveau",
@@ -97,8 +97,8 @@
   {
     "vendorID": "15b3",
     "deviceID": "1017",
-    "ssID": "0006",
     "svID": "15B3",
+    "ssID": "0006",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "mlx5_core",
@@ -116,8 +116,8 @@
   {
     "vendorID": "15b3",
     "deviceID": "1017",
-    "ssID": "0006",
     "svID": "15B3",
+    "ssID": "0006",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "mlx5_core",
@@ -135,8 +135,8 @@
   {
     "vendorID": "1077",
     "deviceID": "2532",
-    "ssID": "015C",
     "svID": "1077",
+    "ssID": "015C",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "qla2xxx",
@@ -154,8 +154,8 @@
   {
     "vendorID": "1077",
     "deviceID": "2532",
-    "ssID": "015C",
     "svID": "1077",
+    "ssID": "015C",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "qla2xxx",
@@ -173,8 +173,8 @@
   {
     "vendorID": "15B3",
     "deviceID": "1007",
-    "ssID": "0006",
     "svID": "15B3",
+    "ssID": "0006",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "mlx5_core",
@@ -192,8 +192,8 @@
   {
     "vendorID": "15B3",
     "deviceID": "1007",
-    "ssID": "0006",
     "svID": "15B3",
+    "ssID": "0006",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "mlx5_core",
@@ -211,8 +211,8 @@
   {
     "vendorID": "1002",
     "deviceID": "67c7",
-    "ssID": "0b0d",
     "svID": "1002",
+    "ssID": "0b0d",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "amdgpu",
@@ -230,8 +230,8 @@
   {
     "vendorID": "1002",
     "deviceID": "67c7",
-    "ssID": "0b0d",
     "svID": "1002",
+    "ssID": "0b0d",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "amdgpu",
@@ -249,8 +249,8 @@
   {
     "vendorID": "15b3",
     "deviceID": "1015",
-    "ssID": "d11b",
     "svID": "19e5",
+    "ssID": "d11b",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "mlx5_core",
@@ -268,8 +268,8 @@
   {
     "vendorID": "15b3",
     "deviceID": "1015",
-    "ssID": "d11b",
     "svID": "19e5",
+    "ssID": "d11b",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "mlx5_core",
@@ -287,8 +287,8 @@
   {
     "vendorID": "19e5",
     "deviceID": "3714",
-    "ssID": "5133",
     "svID": "19e5",
+    "ssID": "5133",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "nvme",
@@ -306,8 +306,8 @@
   {
     "vendorID": "19e5",
     "deviceID": "3714",
-    "ssID": "5133",
     "svID": "19e5",
+    "ssID": "5133",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "nvme",
@@ -325,8 +325,8 @@
   {
     "vendorID": "19e5",
     "deviceID": "1822",
-    "ssID": "d129",
     "svID": "19e5",
+    "ssID": "d129",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "hinic",
@@ -344,8 +344,8 @@
   {
     "vendorID": "19e5",
     "deviceID": "1822",
-    "ssID": "d129",
     "svID": "19e5",
+    "ssID": "d129",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "hinic",
@@ -363,8 +363,8 @@
   {
     "vendorID": "8086",
     "deviceID": "37d1",
-    "ssID": "d122",
     "svID": "19e5",
+    "ssID": "d122",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "i40e",
@@ -382,8 +382,8 @@
   {
     "vendorID": "1000",
     "deviceID": "0017",
-    "ssID": "d213",
     "svID": "19e5",
+    "ssID": "d213",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "megaraid_sas",
@@ -401,8 +401,8 @@
   {
     "vendorID": "1000",
     "deviceID": "0017",
-    "ssID": "d213",
     "svID": "19e5",
+    "ssID": "d213",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "megaraid_sas",
@@ -420,8 +420,8 @@
   {
     "vendorID": "8086",
     "deviceID": "1521",
-    "ssID": "D112",
     "svID": "19E5",
+    "ssID": "D112",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "igb",
@@ -439,8 +439,8 @@
   {
     "vendorID": "8086",
     "deviceID": "1521",
-    "ssID": "D112",
     "svID": "19E5",
+    "ssID": "D112",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "igb",
@@ -458,8 +458,8 @@
   {
     "vendorID": "10df",
     "deviceID": "e300",
-    "ssID": "10df",
     "svID": "e310",
+    "ssID": "10df",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "lpfc",
@@ -477,8 +477,8 @@
   {
     "vendorID": "10df",
     "deviceID": "e300",
-    "ssID": "10df",
     "svID": "e310",
+    "ssID": "10df",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "lpfc",
@@ -496,8 +496,8 @@
   {
     "vendorID": "10df",
     "deviceID": "f100",
-    "ssID": "10df",
     "svID": "f100",
+    "ssID": "10df",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "lpfc",
@@ -515,8 +515,8 @@
   {
     "vendorID": "",
     "deviceID": "",
-    "ssID": "",
     "svID": "",
+    "ssID": "",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "hns3",
@@ -534,8 +534,8 @@
   {
     "vendorID": "1000",
     "deviceID": "0017",
-    "ssID": "D213",
     "svID": "19E5",
+    "ssID": "D213",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "megaraid_sas",
@@ -553,8 +553,8 @@
   {
     "vendorID": "1000",
     "deviceID": "0016",
-    "ssID": "D215",
     "svID": "19E5",
+    "ssID": "D215",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "megaraid_sas",
@@ -572,8 +572,8 @@
   {
     "vendorID": "1000",
     "deviceID": "00AF",
-    "ssID": "D225",
     "svID": "19E5",
+    "ssID": "D225",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "mpt3sas",
@@ -591,8 +591,8 @@
   {
     "vendorID": "1000",
     "deviceID": "00AF",
-    "ssID": "D225",
     "svID": "19E5",
+    "ssID": "D225",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "mpt3sas",
@@ -610,8 +610,8 @@
   {
     "vendorID": "15B3",
     "deviceID": "1017",
-    "ssID": "0020",
     "svID": "15B3",
+    "ssID": "0020",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "mlx5_core",
@@ -629,8 +629,8 @@
   {
     "vendorID": "15B3",
     "deviceID": "1017",
-    "ssID": "0020",
     "svID": "15B3",
+    "ssID": "0020",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "mlx5_core",
@@ -648,8 +648,8 @@
   {
     "vendorID": "15B3",
     "deviceID": "1015",
-    "ssID": "009C",
     "svID": "15B3",
+    "ssID": "009C",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "mlx5_core",
@@ -667,8 +667,8 @@
   {
     "vendorID": "15B3",
     "deviceID": "1015",
-    "ssID": "009C",
     "svID": "15B3",
+    "ssID": "009C",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "mlx5_core",
@@ -686,8 +686,8 @@
   {
     "vendorID": "15B3",
     "deviceID": "1015",
-    "ssID": "D11B",
     "svID": "19E5",
+    "ssID": "D11B",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "mlx5_core",
@@ -705,8 +705,8 @@
   {
     "vendorID": "8086",
     "deviceID": "1521",
-    "ssID": "D113",
     "svID": "19E5",
+    "ssID": "D113",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "igb",
@@ -724,8 +724,8 @@
   {
     "vendorID": "8086",
     "deviceID": "158B",
-    "ssID": "0002",
     "svID": "8086",
+    "ssID": "0002",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "i40e",
@@ -743,8 +743,8 @@
   {
     "vendorID": "8086",
     "deviceID": "1584",
-    "ssID": "0000",
     "svID": "8086",
+    "ssID": "0000",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "i40e",
