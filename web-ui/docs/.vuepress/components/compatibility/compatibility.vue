@@ -279,7 +279,7 @@
                 <div class="bottomBanner-content">
                     {{i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT}}
                     <a @click="goToHareware()" class="bottom-link">
-                        {{i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE}}
+                        {{i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE}}.
                     </a>
                 </div>
             </div>

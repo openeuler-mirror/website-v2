@@ -5,8 +5,8 @@
 module.exports = {
     cn: {
         COMPATIBILITY: '兼容性列表',
-        HARDWARE: '硬件',
-        DRIVE: '驱动',
+        HARDWARE: '整机',
+        DRIVE: '板卡',
         OS: '操作系统',
         ARCHITECTURE: '架构',
         SELECT_PLACEHOLDER: '请选择',
@@ -113,8 +113,8 @@ module.exports = {
     },
     en: {
         COMPATIBILITY: 'Compatibility List',
-        HARDWARE: 'Hardware',
-        DRIVE: 'Drive',
+        HARDWARE: 'Server',
+        DRIVE: 'Card',
         OS: 'OS',
         ARCHITECTURE: 'Architecture',
         SELECT_PLACEHOLDER: 'Select',
@@ -175,54 +175,54 @@ module.exports = {
             }
         },
         HARDWARE_OEC_DETAIL: {
-            TEXT:'关于硬件兼容性测试，openEuler提供了完整的测试流程和工具，详见',
-            TITLE: 'openEuler 硬件兼容性测试整体介绍',
-            DISCRIPTION_TITLE: '简介',
-            DISCRIPTION_CONTENT: '关于openEuler与硬件兼容性，openEuler提供了一系列的工具、指导文档以及整套流程。如果您需要对服务器等硬件展开兼容性测试。可遵循如下流程进行，整理流程说明如下',
-            PROCESS_TITLE:'兼容性测试流程',
+            TEXT:'openEuler provides a complete process and tools for hardware compatibility test. For details, see the ',
+            TITLE: 'Overall Introduction to the openEuler Hardware Compatibility Test',
+            DISCRIPTION_TITLE: 'Introduction',
+            DISCRIPTION_CONTENT: 'openEuler provides a series of tools, guides, and a complete set of processes to ensure the compatibility between openEuler and hardware. If you need to perform compatibility tests on hardware such as servers, perform the following process:',
+            PROCESS_TITLE:'Compatibility Test Process',
             ITEM_ARR: [{
                 ID:'01',
-                TITLE:'申请兼容性测试',
-                DESCRIPTION_1:'您需要向公共邮箱（',
+                TITLE:'Apply for a compatibility test.',
+                DESCRIPTION_1:'Send a compatibility test application to the public mailbox (',
                 A_TEXT:'oecompatibility@openeuler.org',
-                DESCRIPTION_2:'）发送兼容性申请，邮件标题需要注明“申请硬件兼容性测试”。收到邮件后，openEuler团队会与您沟通并在线下签署协议。'
+                DESCRIPTION_2:'). The email subject must contain "Apply for a Hardware Compatibility Test". After receiving the email, the openEuler team will contact you and sign an agreement with you offline.'
             },{
                 ID:'02',
-                TITLE:'了解兼容性策略',
-                DESCRIPTION_1:'在开展兼容性测试前，您需要详细了解openEuler硬件兼容性策略的说明，',
-                A_TEXT:'点击此处获取文档。',
+                TITLE:'Learn about the compatibility test policies.',
+                DESCRIPTION_1:'Before performing the compatibility test, learn about the openEuler hardware compatibility policies.',
+                A_TEXT:'Click here to obtain the document.',
             },{
                 ID:'03',
-                TITLE:'创建issue',
-                DESCRIPTION_1:'完成协议签署后，您需要在openEuler社区（',
+                TITLE:'Create an issue.',
+                DESCRIPTION_1:'After signing the agreement, create an issue under the oech project in the openEuler community (',
                 A_TEXT:'https://gitee.com/openeuler/oec-hardware',
-                DESCRIPTION_2:'）的oech项目下创建issue，将所需要认证的硬件信息在issue中明确。openEuler团队会及时了解issue的信息，并提出建议。'
+                DESCRIPTION_2:') and specify the hardware information in the issue. The openEuler team will give feedback on the issue in a timely manner.'
             },{
                 ID:'04',
-                TITLE:'测试兼容性',
-                DESCRIPTION_1:'完成issue创建后，即可开展兼容性测试。openEuler团队提供了兼容性测试框架以及使用指南，您可以根据使用指南自助完成兼容性测试。',
-                A_TEXT:'点击此处下载兼容性测试工具套件',
-                A_TEXT_2:'点击此处获取使用指南',
+                TITLE:'Perform the compatibility test.',
+                DESCRIPTION_1:'After the issue is created, you can perform the compatibility test. The openEuler team provides the compatibility test framework and user guide that help you complete the test. ',
+                A_TEXT:'Click here to download the compatibility test tool suite.',
+                A_TEXT_2:'Click here to obtain the user guide.',
                 DESCRIPTION_2:'|'
             }, {
                 ID:'05',
-                TITLE:'提交结果审核',
-                DESCRIPTION_1:'完成兼容性测试套测试并通过后，需要您把测试结果更新到issue中。并且按照兼容性测试指南将对应测试结果发送给公共邮箱：您需要向公共邮箱（',
-                A_TEXT:'oecompatibility@openeuler.org',
-                DESCRIPTION_2:'）发送兼容性结果审核申请，邮件标题需要注明“xxx硬件兼容性测试结果信息”。'
+                TITLE:'Submit the result for review.',
+                DESCRIPTION_1:'After the compatibility test case is completed and passed, update the test result to the issue. Send the test result to the public mailbox as instructed by the compatibility test guide. Send the application for reviewing the compatibility result to ',
+                A_TEXT:'oecompatibility@openeuler.org.',
+                DESCRIPTION_2:' The email subject must contain "xxx Hardware Compatibility Test Result", where xxx indicates the community issue ID.'
             }, {
                 ID:'06',
-                TITLE:'结果发布',
-                DESCRIPTION_1:'openEuler团队会针对提交结果进行审核，如果通过，会将硬件添加到',
-                A_TEXT:'兼容性清单',
-                DESCRIPTION_2:'中'
+                TITLE:'Release the result.',
+                DESCRIPTION_1:'The openEuler team will review the submitted result and add the hardware to the ',
+                A_TEXT:'Compatibility List',
+                DESCRIPTION_2:' after it is approved.'
             }]
         },
     },
     ru: {
         COMPATIBILITY: 'Compatibility List',
-        HARDWARE: 'Hardware',
-        DRIVE: 'Drive',
+        HARDWARE: 'Server',
+        DRIVE: 'Card',
         OS: 'OS',
         ARCHITECTURE: 'Architecture',
         SELECT_PLACEHOLDER: 'Select',
@@ -283,47 +283,47 @@ module.exports = {
             }
         },
         HARDWARE_OEC_DETAIL: {
-            TEXT:'关于硬件兼容性测试，openEuler提供了完整的测试流程和工具，详见',
-            TITLE: 'openEuler 硬件兼容性测试整体介绍',
-            DISCRIPTION_TITLE: '简介',
-            DISCRIPTION_CONTENT: '关于openEuler与硬件兼容性，openEuler提供了一系列的工具、指导文档以及整套流程。如果您需要对服务器等硬件展开兼容性测试。可遵循如下流程进行，整理流程说明如下',
-            PROCESS_TITLE:'兼容性测试流程',
+            TEXT:'openEuler provides a complete process and tools for hardware compatibility test. For details, see the ',
+            TITLE: 'Overall Introduction to the openEuler Hardware Compatibility Test',
+            DISCRIPTION_TITLE: 'Introduction',
+            DISCRIPTION_CONTENT: 'openEuler provides a series of tools, guides, and a complete set of processes to ensure the compatibility between openEuler and hardware. If you need to perform compatibility tests on hardware such as servers, perform the following process:',
+            PROCESS_TITLE:'Compatibility Test Process',
             ITEM_ARR: [{
                 ID:'01',
-                TITLE:'申请兼容性测试',
-                DESCRIPTION_1:'您需要向公共邮箱（',
+                TITLE:'Apply for a compatibility test.',
+                DESCRIPTION_1:'Send a compatibility test application to the public mailbox (',
                 A_TEXT:'oecompatibility@openeuler.org',
-                DESCRIPTION_2:'）发送兼容性申请，邮件标题需要注明“申请硬件兼容性测试”。收到邮件后，openEuler团队会与您沟通并在线下签署协议。'
+                DESCRIPTION_2:'). The email subject must contain "Apply for a Hardware Compatibility Test". After receiving the email, the openEuler team will contact you and sign an agreement with you offline.'
             },{
                 ID:'02',
-                TITLE:'了解兼容性策略',
-                DESCRIPTION_1:'在开展兼容性测试前，您需要详细了解openEuler硬件兼容性策略的说明，',
-                A_TEXT:'点击此处获取文档。',
+                TITLE:'Learn about the compatibility test policies.',
+                DESCRIPTION_1:'Before performing the compatibility test, learn about the openEuler hardware compatibility policies.',
+                A_TEXT:'Click here to obtain the document.',
             },{
                 ID:'03',
-                TITLE:'创建issue',
-                DESCRIPTION_1:'完成协议签署后，您需要在openEuler社区（',
+                TITLE:'Create an issue.',
+                DESCRIPTION_1:'After signing the agreement, create an issue under the oech project in the openEuler community (',
                 A_TEXT:'https://gitee.com/openeuler/oec-hardware',
-                DESCRIPTION_2:'）的oech项目下创建issue，将所需要认证的硬件信息在issue中明确。openEuler团队会及时了解issue的信息，并提出建议。'
+                DESCRIPTION_2:') and specify the hardware information in the issue. The openEuler team will give feedback on the issue in a timely manner.'
             },{
                 ID:'04',
-                TITLE:'测试兼容性',
-                DESCRIPTION_1:'完成issue创建后，即可开展兼容性测试。openEuler团队提供了兼容性测试框架以及使用指南，您可以根据使用指南自助完成兼容性测试。',
-                A_TEXT:'点击此处下载兼容性测试工具套件',
-                A_TEXT_2:'点击此处获取使用指南',
+                TITLE:'Perform the compatibility test.',
+                DESCRIPTION_1:'After the issue is created, you can perform the compatibility test. The openEuler team provides the compatibility test framework and user guide that help you complete the test. ',
+                A_TEXT:'Click here to download the compatibility test tool suite.',
+                A_TEXT_2:'Click here to obtain the user guide.',
                 DESCRIPTION_2:'|'
             }, {
                 ID:'05',
-                TITLE:'提交结果审核',
-                DESCRIPTION_1:'完成兼容性测试套测试并通过后，需要您把测试结果更新到issue中。并且按照兼容性测试指南将对应测试结果发送给公共邮箱：您需要向公共邮箱（',
-                A_TEXT:'oecompatibility@openeuler.org',
-                DESCRIPTION_2:'）发送兼容性结果审核申请，邮件标题需要注明“xxx硬件兼容性测试结果信息”。'
+                TITLE:'Submit the result for review.',
+                DESCRIPTION_1:'After the compatibility test case is completed and passed, update the test result to the issue. Send the test result to the public mailbox as instructed by the compatibility test guide. Send the application for reviewing the compatibility result to ',
+                A_TEXT:'oecompatibility@openeuler.org.',
+                DESCRIPTION_2:' The email subject must contain "xxx Hardware Compatibility Test Result", where xxx indicates the community issue ID.'
             }, {
                 ID:'06',
-                TITLE:'结果发布',
-                DESCRIPTION_1:'openEuler团队会针对提交结果进行审核，如果通过，会将硬件添加到',
-                A_TEXT:'兼容性清单',
-                DESCRIPTION_2:'中'
+                TITLE:'Release the result.',
+                DESCRIPTION_1:'The openEuler team will review the submitted result and add the hardware to the ',
+                A_TEXT:'Compatibility List',
+                DESCRIPTION_2:' after it is approved.'
             }]
         },
     }
