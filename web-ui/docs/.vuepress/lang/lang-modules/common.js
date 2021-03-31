@@ -122,7 +122,7 @@ module.exports = {
             },
             {
                 PATH: '',
-                NAME: '安全',
+                NAME: '支持',
                 CHILDREN: [{
                         NAME: '漏洞管理',
                         PATH: '/security/vulnerability-reporting/'
@@ -134,6 +134,10 @@ module.exports = {
                     {
                         NAME: 'CVE',
                         PATH: '/security/cve/'
+                    },
+                    {
+                        NAME: '兼容性查询',
+                        PATH: '/compatibility/'
                     }
                 ],
                 CLASS: []
@@ -298,7 +302,7 @@ module.exports = {
             },
             {
                 PATH: '',
-                NAME: 'Security',
+                NAME: 'Support',
                 CHILDREN: [{
                         NAME: 'Vulnerability Management',
                         PATH: '/security/vulnerability-reporting/'
@@ -310,6 +314,10 @@ module.exports = {
                     {
                         NAME: 'CVE',
                         PATH: '/security/cve/'
+                    },
+                    {
+                        NAME: 'Compatibility Search',
+                        PATH: '/compatibility/'
                     }
                 ],
                 CLASS: []
@@ -474,7 +482,7 @@ module.exports = {
             },
             {
                 PATH: '',
-                NAME: 'Безопасность',
+                NAME: 'Поддержка',
                 CHILDREN: [{
                         NAME: 'Управление уязвимостями',
                         PATH: '/security/vulnerability-reporting/'
@@ -486,6 +494,10 @@ module.exports = {
                     {
                         NAME: 'CVE',
                         PATH: '/security/cve/'
+                    },
+                    {
+                        NAME: 'Запрос совместимости',
+                        PATH: '/compatibility/'
                     }
                 ],
                 CLASS: []
