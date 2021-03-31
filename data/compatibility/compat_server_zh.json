@@ -1,7 +1,7 @@
 [
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200 服务器(型号 2280)",
+    "hardwareModel": "TaiShan 200 服务器(型号 2280)",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "aarch64",
     "date": "2020/12/04",
@@ -43,7 +43,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200 服务器(型号 2280)",
+    "hardwareModel": "TaiShan 200 服务器(型号 2280)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "2020/12/04",
@@ -211,7 +211,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200 服务器(型号 2280)",
+    "hardwareModel": "TaiShan 200 服务器(型号 2280)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -272,7 +272,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200 服务器 (型号 5280)(VE)",
+    "hardwareModel": "TaiShan 200 服务器 (型号 5280)(VE)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -333,7 +333,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200 服务器(型号 1280)",
+    "hardwareModel": "TaiShan 200 服务器(型号 1280)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -413,7 +413,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200 服务器(型号 2180)",
+    "hardwareModel": "TaiShan 200 服务器(型号 2180)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -493,7 +493,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200 服务器(型号 2280)",
+    "hardwareModel": "TaiShan 200 服务器(型号 2280)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -573,7 +573,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200 服务器(型号 2280E)",
+    "hardwareModel": "TaiShan 200 服务器(型号 2280E)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -615,7 +615,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200 服务器(型号 5280)",
+    "hardwareModel": "TaiShan 200 服务器(型号 5280)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -676,7 +676,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200K 服务器(型号 2180K)",
+    "hardwareModel": "TaiShan 200K 服务器(型号 2180K)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -737,7 +737,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200K 服务器(型号 2280K)",
+    "hardwareModel": "TaiShan 200K 服务器(型号 2280K)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -817,7 +817,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200K 服务器(型号 5280K)",
+    "hardwareModel": "TaiShan 200K 服务器(型号 5280K)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
@@ -859,7 +859,7 @@
   },
   {
     "hardwareFactory": "华为",
-    "hardwareModel": "Taishan 200K 服务器(型号 5290K)",
+    "hardwareModel": "TaiShan 200K 服务器(型号 5290K)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
     "date": "",
