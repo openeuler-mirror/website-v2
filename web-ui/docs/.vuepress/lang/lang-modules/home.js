@@ -693,7 +693,7 @@ module.exports = {
                     {
                         TITLE: "Hardware",
                         IMG: "/img/home/areaHardware.svg",
-                        LINK:"/en/docs/20.03_LTS/docs/Installation/installation.html"
+                        LINK:"/en/docs/20.03_LTS/docs/Installation/Installation.html"
                     },
                     {
                         TITLE: "VM",
@@ -1230,6 +1230,7 @@ module.exports = {
                     IMG: "/img/home/step3.png",
                     GIF: "/img/home/step-move-3.gif",
                     LINK: "/docs/",
+                    OTHER_LINK: "/en/"
                 },
                 {
                     NAME: "04",
@@ -1258,7 +1259,7 @@ module.exports = {
                     {
                         TITLE: "Hardware",
                         IMG: "/img/home/areaHardware.svg",
-                        LINK:"/en/docs/20.03_LTS/docs/Installation/installation.html"
+                        LINK:"/en/docs/20.03_LTS/docs/Installation/Installation.html"
                     },
                     {
                         TITLE: "VM",
