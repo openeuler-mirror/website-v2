@@ -90,10 +90,10 @@
                         stripe
                         style="width: 100%"
                     >
-                        <el-table-column prop="driverName" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.DRIVE_NAME" width="140"></el-table-column>
-                        <el-table-column prop="version" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.VERSION"  width="140"></el-table-column>
-                        <el-table-column prop="type" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.TYPE" width="140" ></el-table-column>
-                        <el-table-column prop="driverDate" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.DRIVE_DATE" width="140"></el-table-column>
+                        <el-table-column prop="driverName" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.DRIVE_NAME" width="280"></el-table-column>
+                        <el-table-column prop="version" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.VERSION"  width="280"></el-table-column>
+                        <el-table-column prop="type" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.TYPE" width="280" ></el-table-column>
+                        <el-table-column prop="driverDate" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.DRIVE_DATE" width="280"></el-table-column>
                     </el-table>
                 </div>
                 <ul class="table-mobile" v-loading.fullscreen="tableLoading">
