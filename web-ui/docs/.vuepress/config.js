@@ -64,7 +64,7 @@ module.exports = {
             }
         },
         smoothScroll: true,
-        docsUrl: 'http://159.138.45.71:8081'
+        docsUrl: 'https://docs.openeuler.org'
 
     },
     devServer: {
