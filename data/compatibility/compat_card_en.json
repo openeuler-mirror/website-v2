@@ -515,8 +515,8 @@
   {
     "vendorID": "19e5",
     "deviceID": "a222",
-    "svID": "19e5",
-    "ssID": "cc04",
+    "svID": "0000",
+    "ssID": "0000",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "hns3",
