@@ -394,7 +394,7 @@
     "driverSize": "68.4K",
     "chipVendor": "Avago",
     "boardModel": "SR150-M",
-    "chipModel": "LSI SAS3408",
+    "chipModel": "3408iMR",
     "item": "03024JNF",
     "downloadLink": "inbox"
   },
@@ -413,7 +413,7 @@
     "driverSize": "68.4K",
     "chipVendor": "Avago",
     "boardModel": "SR150-M",
-    "chipModel": "LSI SAS3408",
+    "chipModel": "3408iMR",
     "item": "03024JNF",
     "downloadLink": "inbox"
   },
@@ -507,16 +507,16 @@
     "sha256": "67CB2F34DC66D76DE0C84BBF64688B91CE243549",
     "driverSize": "2.6M\n13K",
     "chipVendor": "Emulex",
-    "boardModel": "Emulex 8Gb(LPe12000)",
-    "chipModel": "LPe12000",
+    "boardModel": "LPe12000",
+    "chipModel": "IOC540",
     "item": "6030216",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/elx-lpfc-12.8.340.17-1.x86_64.rpm\nhttps://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/elx-lpfc-extras-12.8.340.16-1.openEuler20.noarch.rpm\n"
   },
   {
-    "vendorID": "",
-    "deviceID": "",
-    "svID": "",
-    "ssID": "",
+    "vendorID": "19e5",
+    "deviceID": "a222",
+    "svID": "0000",
+    "ssID": "0000",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "hns3",
@@ -622,7 +622,7 @@
     "driverSize": "1.2M",
     "chipVendor": "Mellanox",
     "boardModel": "MCX512A-ACAT",
-    "chipModel": "CX5",
+    "chipModel": "ConnectX-5 EN",
     "item": "6310156",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
   },
@@ -641,7 +641,7 @@
     "driverSize": "1.1M",
     "chipVendor": "Mellanox",
     "boardModel": "MCX512A-ACAT",
-    "chipModel": "CX5",
+    "chipModel": "ConnectX-5 EN",
     "item": "6310156",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.5.0.0054.oe1.x86_64.x86_64.rpm"
   },
@@ -660,8 +660,8 @@
     "driverSize": "1.2M",
     "chipVendor": "Mellanox",
     "boardModel": "MCX4121A-ACAT",
-    "chipModel": "CX4Lx",
-    "item": "02311UPK",
+    "chipModel": "CX4 Lx EN",
+    "item": "6310106",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
   },
   {
@@ -679,8 +679,8 @@
     "driverSize": "1.1M",
     "chipVendor": "Mellanox",
     "boardModel": "MCX4121A-ACAT",
-    "chipModel": "CX4Lx",
-    "item": "02311UPK",
+    "chipModel": "CX4 Lx EN",
+    "item": "6310106",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.5.0.0054.oe1.x86_64.x86_64.rpm"
   },
   {
@@ -698,8 +698,8 @@
     "driverSize": "1.1M",
     "chipVendor": "Mellanox",
     "boardModel": "SP333",
-    "chipModel": "CX4Lx",
-    "item": "2570063",
+    "chipModel": "CX4 Lx EN",
+    "item": "02311WTS",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.5.0.0054.oe1.x86_64.x86_64.rpm"
   },
   {
@@ -718,7 +718,7 @@
     "chipVendor": "Intel",
     "boardModel": "SP212",
     "chipModel": "I350",
-    "item": "2570060",
+    "item": "02311CWM",
     "downloadLink": "inbox"
   },
   {
@@ -735,8 +735,8 @@
     "sha256": "67CB2F34DC66D76DE0C84BBF64688B91CE243549",
     "driverSize": "649K",
     "chipVendor": "Intel",
-    "boardModel": "INTEL XXV710",
-    "chipModel": "XXV710",
+    "boardModel": "Intel XXV710DA2G1P5 948661",
+    "chipModel": "XXV710DA2G1P5 948661",
     "item": "",
     "downloadLink": "inbox"
   },
