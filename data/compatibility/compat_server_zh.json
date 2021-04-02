@@ -366,7 +366,7 @@
     "hardwareModel": "TaiShan 200 服务器(型号 2280)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
-    "date": "",
+    "date": "2020/11/26",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/taishan-server/taishan-2280-v2",
     "boardCards": [
       {
@@ -503,7 +503,7 @@
     "hardwareModel": "TaiShan 200 服务器 (型号 5280)(VE)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
-    "date": "",
+    "date": "2020/11/26",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/taishan-server/taishan-5280-v2",
     "boardCards": [
       {
@@ -640,7 +640,7 @@
     "hardwareModel": "TaiShan 200 服务器(型号 1280)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
-    "date": "",
+    "date": "2020/08/17",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/taishan-server/taishan-1280-v2",
     "boardCards": [
       {
@@ -701,7 +701,7 @@
     "hardwareModel": "TaiShan 200 服务器(型号 2180)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
-    "date": "",
+    "date": "2020/04/27",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/taishan-server/taishan-2180-v2",
     "boardCards": [
       {
@@ -762,7 +762,7 @@
     "hardwareModel": "TaiShan 200 服务器(型号 2280)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
-    "date": "",
+    "date": "2020/03/28",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/taishan-server/taishan-2280-v2",
     "boardCards": [
       {
@@ -880,7 +880,7 @@
     "hardwareModel": "TaiShan 200 服务器(型号 2280E)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
-    "date": "",
+    "date": "2020/04/29",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/taishan-server/taishan-2280e",
     "boardCards": [
       {
@@ -922,7 +922,7 @@
     "hardwareModel": "TaiShan 200 服务器(型号 5280)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
-    "date": "",
+    "date": "2020/04/29",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/taishan-server/taishan-5280-v2",
     "boardCards": [
       {
@@ -983,7 +983,7 @@
     "hardwareModel": "TaiShan 200K 服务器(型号 2180K)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
-    "date": "",
+    "date": "2020/04/27",
     "friendlyLink": "",
     "boardCards": [
       {
@@ -1044,7 +1044,7 @@
     "hardwareModel": "TaiShan 200K 服务器(型号 2280K)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
-    "date": "",
+    "date": "2020/04/27",
     "friendlyLink": "",
     "boardCards": [
       {
@@ -1105,7 +1105,7 @@
     "hardwareModel": "TaiShan 200K 服务器(型号 5280K)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
-    "date": "",
+    "date": "2020/10/28",
     "friendlyLink": "",
     "boardCards": [
       {
@@ -1166,7 +1166,7 @@
     "hardwareModel": "TaiShan 200K 服务器(型号 5290K)",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "aarch64",
-    "date": "",
+    "date": "2020/06/17",
     "friendlyLink": "",
     "boardCards": [
       {
@@ -1208,7 +1208,7 @@
     "hardwareModel": "FusionServer 1288H V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86",
-    "date": "",
+    "date": "2021/02/04",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/1288h-v5",
     "boardCards": [
       {
@@ -1269,7 +1269,7 @@
     "hardwareModel": "FusionServer 2288C V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86",
-    "date": "",
+    "date": "2020/11/16",
     "friendlyLink": "",
     "boardCards": [
       {
@@ -1311,7 +1311,7 @@
     "hardwareModel": "FusionServer 2288H V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86",
-    "date": "",
+    "date": "2020/11/16",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/2288h-v5",
     "boardCards": [
       {
@@ -1353,7 +1353,7 @@
     "hardwareModel": "FusionServer 2488H V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86",
-    "date": "",
+    "date": "2021/01/18",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/2488h-v5",
     "boardCards": [
       {
@@ -1395,7 +1395,7 @@
     "hardwareModel": "FusionServer 2488H V6",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86",
-    "date": "",
+    "date": "2020/11/26",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/2488h-v6",
     "boardCards": [
       {
@@ -1437,7 +1437,7 @@
     "hardwareModel": "FusionServer 5288 V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86",
-    "date": "",
+    "date": "2021/02/04",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/5288-v5",
     "boardCards": [
       {
@@ -1479,7 +1479,7 @@
     "hardwareModel": "FusionServer 5885H V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86",
-    "date": "",
+    "date": "2021/02/04",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/5885h-v5",
     "boardCards": [
       {
@@ -1521,7 +1521,7 @@
     "hardwareModel": "FusionServer 1288H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86",
-    "date": "",
+    "date": "2021/03/03",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/1288h-v5",
     "boardCards": [
       {
@@ -1582,7 +1582,7 @@
     "hardwareModel": "FusionServer 2288C V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86",
-    "date": "",
+    "date": "2021/03/03",
     "friendlyLink": "",
     "boardCards": [
       {
@@ -1624,7 +1624,7 @@
     "hardwareModel": "FusionServer 2288H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86",
-    "date": "",
+    "date": "2021/03/03",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/2288h-v5",
     "boardCards": [
       {
@@ -1666,7 +1666,7 @@
     "hardwareModel": "FusionServer 2488H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86",
-    "date": "",
+    "date": "2021/02/04",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/2488h-v5",
     "boardCards": [
       {
@@ -1708,7 +1708,7 @@
     "hardwareModel": "FusionServer 5288 V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86",
-    "date": "",
+    "date": "2021/03/03",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/5288-v5",
     "boardCards": [
       {
@@ -1750,7 +1750,7 @@
     "hardwareModel": "FusionServer 5885H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86",
-    "date": "",
+    "date": "2021/01/29",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/5885h-v5",
     "boardCards": [
       {
