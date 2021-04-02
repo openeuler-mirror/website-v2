@@ -62,6 +62,7 @@
                             <el-input 
                                 v-model="formData.keyword" 
                                 class="pc-search"
+                                @keyup.enter.native='driverChange()'
                                 :placeholder="i18n.compatibility.DRIVE_SEARCH_PLACEHOLDER"
                             >
                                 <i slot="suffix" class="icon-search" @click="driverChange()"></i>
@@ -69,6 +70,7 @@
                             <el-input 
                                 v-model="formData.keyword" 
                                 class="mobile-search"
+                                @keyup.enter.native='driverChange()'
                                 :placeholder="i18n.compatibility.SEARCH_LABEL"
                             >
                                 <i slot="suffix" class="icon-search" @click="driverChange()"></i>
@@ -82,14 +84,15 @@
                         stripe
                         style="width: 100%"
                     >
-                        <el-table-column prop="architecture" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.ARCHITECTURE" width="140"></el-table-column>
-                        <el-table-column prop="driverName" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_NAME" width="140"></el-table-column>
-                        <el-table-column prop="version" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.VERSION"  width="130"></el-table-column>
-                        <el-table-column prop="type" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.TYPE" width="130" ></el-table-column>
-                        <el-table-column prop="driverDate" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_DATE" width="140"></el-table-column>
-                        <el-table-column prop="chipVendor" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.CHIP_VENDOR" width="140"></el-table-column>
+                        <el-table-column prop="architecture" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.ARCHITECTURE" width="110"></el-table-column>
+                        <el-table-column prop="driverName" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_NAME" width="115"></el-table-column>
+                        <el-table-column prop="os" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_OS" width="190"></el-table-column>
+                        <el-table-column prop="version" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.VERSION"  width="115"></el-table-column>
+                        <el-table-column prop="type" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.TYPE" width="85" ></el-table-column>
+                        <el-table-column prop="driverDate" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_DATE" width="115"></el-table-column>
+                        <el-table-column prop="chipVendor" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.CHIP_VENDOR" width="115"></el-table-column>
                         <el-table-column prop="boardModel" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.BOARD_MODEL" width="160"></el-table-column>
-                        <el-table-column prop="chipModel" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.CHIP_MODEL" width="140"></el-table-column>
+                        <el-table-column prop="chipModel" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.CHIP_MODEL" width="115"></el-table-column>
                     </el-table>
                     <ul class="table-mobile" v-loading.fullscreen="tableLoading">
                         <li class="item" v-for="(item, index) in driverTableData" :key="index">
@@ -101,6 +104,10 @@
                                 <li>
                                     <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_NAME}}:</span>
                                     {{item.driverName}}
+                                </li>
+                                <li>
+                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_OS}}:</span>
+                                    {{item.os}}
                                 </li>
                                 <li>
                                     <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.VERSION}}:</span>
@@ -182,8 +189,9 @@
                         </el-form-item>
                         <el-form-item :label="i18n.compatibility.SEARCH_LABEL" class="search-box">
                             <el-input 
-                                v-model="formData.keyword" 
+                                v-model="formData.keyword"
                                 class="pc-search"
+                                @keyup.enter.native='hardwareChange()'
                                 :placeholder="i18n.compatibility.HARDWARE_SEARCH_PLACEHOLDER"
                             >
                                 <i slot="suffix" class="icon-search" @click="hardwareChange()"></i>
@@ -191,6 +199,7 @@
                             <el-input
                                 v-model="formData.keyword"
                                 class="mobile-search"
+                                @keyup.enter.native='hardwareChange()'
                                 :placeholder="i18n.compatibility.SEARCH_LABEL"
                             >
                                 <i slot="suffix" class="icon-search" @click="hardwareChange()"></i>
@@ -465,7 +474,7 @@ export default {
                 path: this.resolvePath('/compatibility/hardware/')
             })
         }
-    },
+    }
 };
 </script>
 

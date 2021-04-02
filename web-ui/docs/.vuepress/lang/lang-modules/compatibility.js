@@ -12,8 +12,8 @@ module.exports = {
         SELECT_PLACEHOLDER: '请选择',
         SEARCH_ALL:'全部',
         SEARCH_LABEL: "搜索",
-        HARDWARE_SEARCH_PLACEHOLDER: "请输入关键字",
-        DRIVE_SEARCH_PLACEHOLDER:'请输入关键字',
+        HARDWARE_SEARCH_PLACEHOLDER: "厂家、型号、操作系统",
+        DRIVE_SEARCH_PLACEHOLDER:'驱动名称、板卡型号',
         LINK: 'link',
         HARDWARE_TABLE_COLUMN: {
             VENDOR: '硬件厂家',
@@ -27,6 +27,7 @@ module.exports = {
         DRIVE_TABLE_COLUMN: {
             ARCHITECTURE: '架构',
             DRIVE_NAME: '驱动名称',
+            DRIVE_OS: '操作系统',
             VERSION: '版本',
             TYPE: '类型',
             DRIVE_DATE: 'Driver Date',
@@ -62,22 +63,23 @@ module.exports = {
                 VERSION: 'Version',
                 TYPE: 'Type',
                 DRIVE_DATE: 'Driver Date',
-                SHA_256: 'SHA 256',
-                DRIVER_SIZE: 'Size (Byte)'
+                DRIVE_CHIP_VENDOR: 'Chip Vendor',
+                DRIVE_BOARD_MODEL: 'Board Model',
+                DRIVE_CHIP_MODEL: 'Chip Model'
             }
         },
         HARDWARE_OEC_DETAIL: {
             TEXT:'关于硬件兼容性测试，openEuler提供了完整的测试流程和工具，详见',
             TITLE: 'openEuler 硬件兼容性测试整体介绍',
             DISCRIPTION_TITLE: '简介',
-            DISCRIPTION_CONTENT: '关于openEuler与硬件兼容性，openEuler提供了一系列的工具、指导文档以及整套流程。如果您需要对服务器等硬件展开兼容性测试。可遵循如下流程进行，整理流程说明如下',
+            DISCRIPTION_CONTENT: 'openEuler提供了一系列的工具、文档和操作流程帮助用户测试openEuler与硬件的兼容性。如果您需要对服务器等硬件展开兼容性测试，可参考下文进行。',
             PROCESS_TITLE:'兼容性测试流程',
             ITEM_ARR: [{
                 ID:'01',
                 TITLE:'申请兼容性测试',
                 DESCRIPTION_1:'您需要向公共邮箱（',
                 A_TEXT:'oecompatibility@openeuler.org',
-                DESCRIPTION_2:'）发送兼容性申请，邮件标题需要注明“申请硬件兼容性测试”。收到邮件后，openEuler团队会与您沟通并在线下签署协议。'
+                DESCRIPTION_2:'）发送兼容性申请，邮件标题需要注明“申请硬件兼容性测试”。收到邮件后，openEuler团队中sig组会与您沟通进行协议签署。'
             },{
                 ID:'02',
                 TITLE:'了解兼容性策略',
@@ -121,7 +123,7 @@ module.exports = {
         SEARCH_ALL:'ALL',
         SEARCH_LABEL: "Search",
         HARDWARE_SEARCH_PLACEHOLDER:'Vendor or Model or OS',
-        DRIVE_SEARCH_PLACEHOLDER:'Driver Name or Board Size',
+        DRIVE_SEARCH_PLACEHOLDER:'Driver Name or Card Model',
         LINK: 'link',
         HARDWARE_TABLE_COLUMN: {
             VENDOR: 'Vendor',
@@ -135,6 +137,7 @@ module.exports = {
         DRIVE_TABLE_COLUMN: {
             ARCHITECTURE: 'Architecture',
             DRIVE_NAME: 'Driver Name',
+            DRIVE_OS: 'OS',
             VERSION: 'Version',
             TYPE: 'Type',
             DRIVE_DATE: 'Driver Date',
@@ -170,22 +173,23 @@ module.exports = {
                 VERSION: 'Version',
                 TYPE: 'Type',
                 DRIVE_DATE: 'Driver Date',
-                SHA_256: 'SHA 256',
-                DRIVER_SIZE: 'Size (Byte)'
+                DRIVE_CHIP_VENDOR: 'Chip Vendor',
+                DRIVE_BOARD_MODEL: 'Board Model',
+                DRIVE_CHIP_MODEL: 'Chip Model'
             }
         },
         HARDWARE_OEC_DETAIL: {
             TEXT:'openEuler provides a complete process and tools for hardware compatibility test. For details, see the ',
             TITLE: 'Overall Introduction to the openEuler Hardware Compatibility Test',
             DISCRIPTION_TITLE: 'Introduction',
-            DISCRIPTION_CONTENT: 'openEuler provides a series of tools, guides, and a complete set of processes to ensure the compatibility between openEuler and hardware. If you need to perform compatibility tests on hardware such as servers, perform the following process:',
+            DISCRIPTION_CONTENT: 'Openeuler provides a series of tools, documents and operation procedures to help you test the compatibility between openEuler and hardware. If you need to perform compatibility tests on hardware such as servers, perform the following process:',
             PROCESS_TITLE:'Compatibility Test Process',
             ITEM_ARR: [{
                 ID:'01',
                 TITLE:'Apply for a compatibility test.',
                 DESCRIPTION_1:'Send a compatibility test application to the public mailbox (',
                 A_TEXT:'oecompatibility@openeuler.org',
-                DESCRIPTION_2:'). The email subject must contain "Apply for a Hardware Compatibility Test". After receiving the email, the openEuler team will contact you and sign an agreement with you offline.'
+                DESCRIPTION_2:'). The email subject must contain "Apply for a Hardware Compatibility Test". After receiving the email, the sig team of openEuler will contact you and sign an agreement with you offline.'
             },{
                 ID:'02',
                 TITLE:'Learn about the compatibility test policies.',
@@ -229,7 +233,7 @@ module.exports = {
         SEARCH_ALL:'ALL',
         SEARCH_LABEL: "Search",
         HARDWARE_SEARCH_PLACEHOLDER:'Vendor or Model or OS',
-        DRIVE_SEARCH_PLACEHOLDER:'Driver Name or Board Size',
+        DRIVE_SEARCH_PLACEHOLDER:'Driver Name or Card Model',
         LINK: 'link',
         HARDWARE_TABLE_COLUMN: {
             VENDOR: 'Vendor',
@@ -243,6 +247,7 @@ module.exports = {
         DRIVE_TABLE_COLUMN: {
             ARCHITECTURE: 'Architecture',
             DRIVE_NAME: 'Driver Name',
+            DRIVE_OS: 'OS',
             VERSION: 'Version',
             TYPE: 'Type',
             DRIVE_DATE: 'Driver Date',
@@ -278,22 +283,23 @@ module.exports = {
                 VERSION: 'Version',
                 TYPE: 'Type',
                 DRIVE_DATE: 'Driver Date',
-                SHA_256: 'SHA 256',
-                DRIVER_SIZE: 'Size (Byte)'
+                DRIVE_CHIP_VENDOR: 'Chip Vendor',
+                DRIVE_BOARD_MODEL: 'Board Model',
+                DRIVE_CHIP_MODEL: 'Chip Model'
             }
         },
         HARDWARE_OEC_DETAIL: {
             TEXT:'openEuler provides a complete process and tools for hardware compatibility test. For details, see the ',
             TITLE: 'Overall Introduction to the openEuler Hardware Compatibility Test',
             DISCRIPTION_TITLE: 'Introduction',
-            DISCRIPTION_CONTENT: 'openEuler provides a series of tools, guides, and a complete set of processes to ensure the compatibility between openEuler and hardware. If you need to perform compatibility tests on hardware such as servers, perform the following process:',
+            DISCRIPTION_CONTENT: 'Openeuler provides a series of tools, documents and operation procedures to help you test the compatibility between openEuler and hardware. If you need to perform compatibility tests on hardware such as servers, perform the following process:',
             PROCESS_TITLE:'Compatibility Test Process',
             ITEM_ARR: [{
                 ID:'01',
                 TITLE:'Apply for a compatibility test.',
                 DESCRIPTION_1:'Send a compatibility test application to the public mailbox (',
                 A_TEXT:'oecompatibility@openeuler.org',
-                DESCRIPTION_2:'). The email subject must contain "Apply for a Hardware Compatibility Test". After receiving the email, the openEuler team will contact you and sign an agreement with you offline.'
+                DESCRIPTION_2:'). The email subject must contain "Apply for a Hardware Compatibility Test". After receiving the email, the sig team of openEuler will contact you and sign an agreement with you offline.'
             },{
                 ID:'02',
                 TITLE:'Learn about the compatibility test policies.',
