@@ -136,7 +136,7 @@ module.exports = {
                         PATH: '/security/cve/'
                     },
                     {
-                        NAME: '兼容性查询',
+                        NAME: '兼容性列表',
                         PATH: '/compatibility/'
                     }
                 ],
@@ -316,7 +316,7 @@ module.exports = {
                         PATH: '/security/cve/'
                     },
                     {
-                        NAME: 'Compatibility Search',
+                        NAME: 'Compatibility List',
                         PATH: '/compatibility/'
                     }
                 ],
@@ -496,7 +496,7 @@ module.exports = {
                         PATH: '/security/cve/'
                     },
                     {
-                        NAME: 'Запрос совместимости',
+                        NAME: 'Список совместимости',
                         PATH: '/compatibility/'
                     }
                 ],
