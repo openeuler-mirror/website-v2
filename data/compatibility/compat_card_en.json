@@ -262,7 +262,7 @@
     "chipVendor": "AMD",
     "boardModel": "Radeon Pro WX5100 Audio",
     "chipModel": "Polaris 11 ",
-    "item": 6320140,
+    "item": "6320140",
     "downloadLink": "inbox"
   },
   {
@@ -281,7 +281,7 @@
     "chipVendor": "AMD",
     "boardModel": "Radeon Pro WX5100 Audio",
     "chipModel": "Polaris 11",
-    "item": 6320140,
+    "item": "6320140",
     "downloadLink": "inbox"
   },
   {
@@ -549,44 +549,6 @@
     "chipModel": "IOC540",
     "item": "6030216",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/elx-lpfc-12.8.340.17-1.x86_64.rpm\nhttps://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/elx-lpfc-extras-12.8.340.16-1.openEuler20.noarch.rpm\n"
-  },
-  {
-    "vendorID": "19e5",
-    "deviceID": "a222",
-    "svID": "",
-    "ssID": "",
-    "architecture": "aarch64",
-    "os": "openEuler 20.03 LTS SP1",
-    "driverName": "hns3",
-    "version": "1.9.38.8",
-    "type": "NIC",
-    "driverDate": "2020.12.28",
-    "sha256": "4C5D1B8BFF927AAADF5D6AFC162F91CE0445A417",
-    "driverSize": "164K",
-    "chipVendor": "Huawei",
-    "boardModel": "TM210/TM280",
-    "chipModel": "hisi",
-    "item": "03025VYQ",
-    "downloadLink": "inbox"
-  },
-  {
-    "vendorID": "19e5",
-    "deviceID": "a221",
-    "svID": "",
-    "ssID": "",
-    "architecture": "aarch64",
-    "os": "openEuler 20.03 LTS SP1",
-    "driverName": "hns3",
-    "version": "1.9.38.8",
-    "type": "NIC",
-    "driverDate": "2020.12.28",
-    "sha256": "4C5D1B8BFF927AAADF5D6AFC162F91CE0445A417",
-    "driverSize": "164K",
-    "chipVendor": "Huawei",
-    "boardModel": "TM210/TM280",
-    "chipModel": "hisi",
-    "item": "03025VYQ",
-    "downloadLink": "inbox"
   },
   {
     "vendorID": "19e5",
