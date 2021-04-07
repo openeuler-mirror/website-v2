@@ -1414,6 +1414,7 @@ module.exports = {
             MORE_VIDEO: '更多视频',
             DETAIL_QRCODE_TEXT: '扫码报名',
             INSIDENAME: 'CONNECT',
+            DEFAULT_IMG: '/img/meetups/default-address.png',
             MEETUPS_DATA: require('./../../data/salon').cn.MEETUPS_LIST
         }
     },
@@ -2822,6 +2823,7 @@ module.exports = {
             DETAIL_MEET: 'How to attend the event',
             DETAIL_QRCODE_TEXT: 'Scan the QR code',
             INSIDENAME: 'CONNECT',
+            DEFAULT_IMG: '/img/meetup/default-address.png',
             MEETUPS_DATA: require('./../../data/salon').en.MEETUPS_LIST
         }
     },
@@ -4230,6 +4232,7 @@ module.exports = {
             DETAIL_MEET: 'How to attend the event',
             DETAIL_QRCODE_TEXT: 'Scan the QR code',
             INSIDENAME: 'CONNECT',
+            DEFAULT_IMG: '/img/meetups/default-address.png',
             MEETUPS_DATA: require('./../../data/salon').en.MEETUPS_LIST
         }
     }

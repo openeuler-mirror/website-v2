@@ -41,48 +41,40 @@
             <p :class="['title',$lang === 'en'?'font-regular':'']">{{ i18n.interaction.MEETUPS.DETAIL_DESC }}</p>
             <p :class="['desc-content',$lang === 'en'?'font-regular':'']" v-for="(item,index) in detailObj.MEETUPS_DESC">{{ item }}</p>
         </div>
-        <div class="meet-flowPath">
+        <div class="meet-flowPath" v-if="flowPathList.length">
             <p :class="['title',$lang === 'en'?'font-regular':'']">{{ i18n.interaction.MEETUPS.DETAIL_FLOW }}</p>
-            <div class="flowPath-img" v-if="!isShowH5">
-                <div class="maillist-divider-mail" :style="{ height:flowPathList.length*113 + 'px' }">
-                    <div class="maillist-icon-comm"></div>
-                </div>
-                <div class="mail-guide" v-for="(item,index) in flowPathList">
-                    <div v-if="index % 2 === 0" class="step-left">
-                        <div class="mail-box">
-                            <div class="step-left-box">
-                                <div :class="['inner-box',$lang == 'en'?'en-box':'']">
-                                    <p :title="item.FLOW_PATH_NAME">{{ item.FLOW_PATH_NAME }}</p>
-                                </div>
-                            </div>
-                            <div :class="['step-left-num',$lang == 'en'?'left-en':'']">
-                                <span>{{ item.FLOW_PATH_TIME }}</span>
-                            </div>
-                            <div class="step-line"></div>
+            <div class="calendar">
+                <el-table
+                :data="flowPathList"
+                :show-header=false
+                style="width: 100%" v-if="!isShowH5">
+                    <el-table-column
+                        prop="icon"
+                        width="50">
+                        <i class="el-icon-time"></i>
+                    </el-table-column>
+                    <el-table-column
+                        prop="TIME"
+                        width="300">
+                    </el-table-column>
+                    <el-table-column
+                        prop="THEME"
+                        width="540">
+                    </el-table-column>
+                    <el-table-column
+                        prop="SPEAKER"
+                        width="230">
+                    </el-table-column>
+                </el-table>
+                <div class="mobile-table" v-if="isShowH5">
+                    <div class="item" v-for="(item,index) in flowPathList" :key="index">
+                        <div class="time">{{ item.TIME }}</div>
+                        <div class="agenda">
+                            <p>{{ item.THEME }}</p>
+                            <p v-if="item.SPEAKER || item.POSITION">
+                                <span>{{ item.SPEAKER }}</span>
+                            </p>
                         </div>
-                    </div>
-                    <div v-if="index % 2 !== 0" class="step-right">
-                        <div class="mail-box">
-                            <div class="step-line"></div>
-                            <div :class="['step-right-num',$lang == 'en'?'right-en':'']">
-                                <span>{{ item.FLOW_PATH_TIME }}</span>
-                            </div>
-                            <div class="step-right-box right-box-en">
-                                <div :class="['inner-box',$lang == 'en'?'en-box':'']">
-                                    <p :title="item.FLOW_PATH_NAME">{{ item.FLOW_PATH_NAME }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="flowPath-img-mobile" v-else>
-                <div class="mail-guide" v-for="(item, index) in flowPathList" :key="index">
-                    <div class="step-H5 step-left-H5">
-                        <div :class="$lang == 'en'?'step-en':''">
-                            <span>{{ item.FLOW_PATH_TIME }}</span>
-                        </div>
-                        <p  :class="$lang == 'en'?'en-p-box':''">{{ item.FLOW_PATH_NAME }}</p>
                     </div>
                 </div>
             </div>
@@ -91,7 +83,8 @@
             <p :class="['title',$lang === 'en'?'font-regular':'']">{{ i18n.interaction.MEETUPS.DETAIL_MEET }}</p>
             <div :class="['meet-address',$lang === 'en'?'en-address':'']">
                 <div class="address-message">
-                    <img v-if="addressObj" :src="addressObj.ADDRESS_IMG" alt />
+                    <img v-if="addressObj.ADDRESS_IMG" :src="addressObj.ADDRESS_IMG" alt />
+                    <img v-else :src="i18n.interaction.MEETUPS.DEFAULT_IMG" alt />
                     <div class="address-text">
                         <i class="location"></i>
                         <p v-if="addressObj">{{ detailObj.MEETINGS_INFO?detailObj.MEETINGS_INFO.ADDRESS_UP:'' }}</p>
@@ -160,7 +153,6 @@ export default {
             if(which == 'webBtn') {
                 this.$refs.playctrlEle.isPlay = true;
                 this.isNowPlay = true;
-                console.log(1);
             }else {
                 this.$refs.mobileVideo.play();
                 this.isNowPlay = true;
@@ -281,146 +273,59 @@ export default {
     .description{
         margin-top: 100px;
         .desc-content{
-            width: 1020px;
+            width: 1120px;
             font-size: 18px;
             color: rgba(0,0,0,.5);
             margin: 0 auto;
             line-height: 40px;
-            text-align: center;
             &:last-of-type {
                 margin-bottom: 60px;
             }
         }
     }
     .meet-flowPath{
-        .flowPath-img{
+        .calendar{
             width: 1120px;
             margin: 0 auto;
         }
     }
-    .maillist-divider-mail {
-        width: 2px;
-        left: 50%;
-        background-image: linear-gradient(
-            to top,
-            #002fa7 0%,
-            #002fa7 50%,
-            transparent 50%
-        );
-        background-size: 2px 11px;
-        background-repeat: repeat-y;
-        position: absolute;
-    }
-    .maillist-icon-comm {
-        width: 0;
-        height: 0;
-        border-width: 15px;
-        border-style: solid;
-        border-color: #002fa7 transparent transparent transparent;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 2;
-    }
-    .step-right-box,
-    .step-left-box {
-        display: inline-block;
-        vertical-align: middle;
-        text-align: left;
-    }
-    .step-left-box {
-        width: 200px;
-        margin-right: 36px;
-        min-height: 74px;
-        padding-top: 9px;
-        .en-box{
-            width: 370px;
-            margin-left: -160px;
+    .meet-flowPath .calendar {
+        /deep/ .el-table::before {
+            background-color: #ffffff;
         }
-    }
-    .step-right-box {
-        width: 540px;
-        vertical-align: top;
-        .inner-box {
-            width: 240px;
-            margin-right: 0px;
-            margin-left: 30px;
+        /deep/ .el-table tbody tr { 
+            pointer-events:none;
+            height: 100px;
         }
-        .en-box{
-            width: 370px;
+        /deep/ .el-table .el-table__body>tbody>tr>td div{
+            word-break: normal !important;
         }
-    }
-    .step-left {
-        z-index: 20;
-    }
-    .step-right {
-        margin: -30px 0;
-        margin-left: 406px;
-    }
-    .step-left-num,
-    .step-right-num {
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        text-align: center;
-        border-radius: 50%;
-        background-color: #002fa7;
-        display: inline-block;
-    }
-    .step-left-num span,
-    .step-right-num span {
-        color: #fff;
-        font-size: 16px;
-    }
-    .step-line {
-        width: 100px;
-        height: 2px;
-        display: inline-block;
-        vertical-align: middle;
-        border-spacing: 24px;
-        background-image: linear-gradient(
-            to right,
-            #002fa7 0%,
-            #002fa7 50%,
-            transparent 50%
-        );
-        background-size: 8px 2px;
-        background-repeat: repeat-x;
-    }
-    .mail-box {
-        padding: 0;
-        padding-top: 60px;
-        padding-left: 156px;
-        .right-box-en{
-            margin: -60px 0 0 160px;
+        /deep/ .hideIcon tbody tr:nth-of-type(3) td:first-of-type,
+        /deep/ .hideIcon tbody tr:nth-of-type(4) td:first-of-type,
+        /deep/ .hideIcon tbody tr:nth-of-type(5) td:first-of-type,
+        /deep/ .hideIcon tbody tr:nth-of-type(3) td:nth-of-type(2),
+        /deep/ .hideIcon tbody tr:nth-of-type(4) td:nth-of-type(2),
+        /deep/ .hideIcon tbody tr:nth-of-type(5) td:nth-of-type(2)
+        {
+            display: none;
         }
-    }
-    .mail-box p {
-        font-size: 16px;
-        font-weight: normal;
-        line-height: 60px;
-        display: inline-block;
-        width: calc(100% - 63px);
-        height: 60px;
-        overflow: hidden;
-    }
-    .inner-box {
-        height: 60px;
-        width: 210px;
-        margin-right: 36px;
-        margin-bottom: 14px;
-        align-items: center;
-        box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        display: inline-block;
-        vertical-align: middle;
-        text-align: center;
-    }
-    .inner-box img {
-        margin: 0 10px 20px 16px;
-        width: 22px;
-        height: 26px;
-        vertical-align: sub;
+        /deep/ .el-table tbody tr td {
+            font-size: 18px;           
+            line-height: 20px;
+            color: rgba(0, 0, 0, 0.5);
+            &:last-of-type {
+                font-size: 14px;  
+            }
+            &:nth-of-type(4) {
+                text-align: center;
+            }
+            &:nth-of-type(1) {
+                text-align: right;
+            }
+            &:nth-of-type(3),&:nth-of-type(4) {
+                color: #000000;
+            }
+        }
     }
     .meet-message{
         margin-top: 60px;
@@ -431,7 +336,8 @@ export default {
             margin: 0 auto;
             display: flex;
             flex-direction: row;
-            padding: 50px 0 77px 50px;
+            justify-content: space-between;
+            padding: 45px;
             background: #ffffff;
             box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
@@ -456,7 +362,7 @@ export default {
                     }
                     p{
                         font-size: 16px;
-                        
+                        max-width: 350px;
                         color: #000000;
                         line-height: 24px;
                         margin-bottom: 12px;
@@ -472,7 +378,6 @@ export default {
                 }
             }
             .scan-qrcode{
-                margin-left: 161px;
                 position: relative;
                 .qrcode{
                     position: absolute;
@@ -497,12 +402,6 @@ export default {
                 }
             }
         }
-        .en-address{
-            width: 978px;
-            .scan-qrcode{
-                margin-left: 70px;
-            }
-        }
         .map{
             display: block;
             width: 1120px;
@@ -510,6 +409,12 @@ export default {
             margin: -50px auto 0 auto;
             position: relative;
             z-index: -1;
+        }
+        .en-address{
+            width: 978px;
+            .scan-qrcode{
+                margin-left: 70px;
+            }
         }
     }
     .font-bold{
@@ -571,33 +476,54 @@ export default {
         }
         .meet-flowPath{
             padding: 0 30px;
+            .calendar {
+                width: 100%;
+            }
         }
-        .step-H5 {
-            margin: 40px auto 0 auto;
-        }
-        .step-left-H5{
-            text-align: center;
-        }
-        .step-num span {
-            color: #000000;
-            font-size: 17px;
-            
-        }
-        .step-H5 .en-p-box{
-            width: 256px;
-            height: auto;
-            
-        }
-        .step-H5 p {
-            font-size: 16px;
-            width:100%;
-            padding: 0 20px;
-            line-height: 40px;
-            background:rgba(255,255,255,1);
-            box-shadow:0px 3px 10px 0px rgba(0,0,0,0.1);
-            border-radius:8px;
-            text-align: center;
-            margin: 20px auto 0 auto;
+        .mobile-table {
+            .item {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 20px;
+                border-bottom: 1px solid  rgba(0, 0, 0, 0.15);
+                &:last-of-type {
+                    border-bottom: 0;
+                }
+                .time {
+                    width: 82px;
+                    height: 20px;
+                    font-size: 12px;
+                    color: rgba(0, 0, 0, 0.5);
+                    line-height: 20px;
+                    margin: 0 29px 0 0;
+                }
+                .agenda {
+                    p {
+                        
+                        color: #000000;
+                        line-height: 20px;
+                        font-size: 12px;
+                        margin-bottom: 20px;
+                        &:first-of-type {
+                            width: 209px;
+                        }
+                        span {
+                            &:first-of-type {
+                                margin-right: 25px;
+                                width: 41px;
+                                vertical-align: top;
+                            }
+                            &:first-of-type,&:last-of-type {
+                                display: inline-block;
+                            }
+                            &:last-of-type {
+                                width: 139px;
+                            }
+                        }
+                    }
+                }
+            }
         }
         .meet-message{
             padding: 0 30px;
@@ -608,7 +534,7 @@ export default {
                 padding: 40px;
                 border-bottom: none;
                 width: 100%;
-                height: 550px;
+                height: 486px;
                 .address-message{
                     flex-direction: column;
                     img{
@@ -622,6 +548,7 @@ export default {
                         p{
                             text-align: center;
                             font-size: 14px;
+                            max-width: 100%;
                              &:first-of-type{
                                 margin: 20px 0 10px 0;
                                 font-size: 16px;
@@ -630,7 +557,6 @@ export default {
                     }
                 }
                 .scan-qrcode{
-                    margin: 40px auto 0 auto;
                     .qrcode{
                         display: none;
                     }
