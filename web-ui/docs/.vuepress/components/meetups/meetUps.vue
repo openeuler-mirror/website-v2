@@ -52,7 +52,6 @@
 </template>
 
 <script>
-import dayjs from "dayjs";
 import commonBanner from "./../common/banner.vue";
 export default {
   data() {
@@ -70,7 +69,7 @@ export default {
   },
   mounted() {
       let allList = this.i18n.interaction.MEETUPS.MEETUPS_DATA;
-      this.totalSize = this.allMeetsList.length;
+      this.totalSize = allList.length;
       this.allMeetsList = this.sortMeetsList(allList);
 	  this.handleCurrentChange(1);
   },
@@ -88,7 +87,6 @@ export default {
             if(!listObj[item.fullYear][item.fullMonth]){
                 listObj[item.fullYear][item.fullMonth] = [];
             }
-			console.log(listObj);
             listObj[item.fullYear][item.fullMonth].push(item);
         });
 		this.showMeetsList = listObj;
