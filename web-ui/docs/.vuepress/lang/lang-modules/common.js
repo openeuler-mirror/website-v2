@@ -18,7 +18,8 @@ module.exports = {
                 CHILDREN: [
                     {
                         NAME: '文档',
-                        PATH: '/documentation/',
+                        PATH: '/zh/',
+                        IS_OPEN_WINDOW: 1
                     },
                     {
                         NAME: '慕课',
@@ -121,7 +122,7 @@ module.exports = {
             },
             {
                 PATH: '',
-                NAME: '安全',
+                NAME: '支持',
                 CHILDREN: [{
                         NAME: '漏洞管理',
                         PATH: '/security/vulnerability-reporting/'
@@ -133,6 +134,10 @@ module.exports = {
                     {
                         NAME: 'CVE',
                         PATH: '/security/cve/'
+                    },
+                    {
+                        NAME: '兼容性列表',
+                        PATH: '/compatibility/'
                     }
                 ],
                 CLASS: []
@@ -193,7 +198,8 @@ module.exports = {
                 CHILDREN: [
                     {
                         NAME: 'Documentation',
-                        PATH: '/documentation/',
+                        PATH: '/en/',
+                        IS_OPEN_WINDOW: 1
                     },
                     {
                         NAME: 'MOOC',
@@ -296,7 +302,7 @@ module.exports = {
             },
             {
                 PATH: '',
-                NAME: 'Security',
+                NAME: 'Support',
                 CHILDREN: [{
                         NAME: 'Vulnerability Management',
                         PATH: '/security/vulnerability-reporting/'
@@ -308,6 +314,10 @@ module.exports = {
                     {
                         NAME: 'CVE',
                         PATH: '/security/cve/'
+                    },
+                    {
+                        NAME: 'Compatibility List',
+                        PATH: '/compatibility/'
                     }
                 ],
                 CLASS: []
@@ -368,7 +378,8 @@ module.exports = {
                 CHILDREN: [
                     {
                         NAME: 'Документация',
-                        PATH: '/documentation/',
+                        PATH: '/ru/',
+                        IS_OPEN_WINDOW: 1
                     },
                     {
                         NAME: 'МООК',
@@ -471,7 +482,7 @@ module.exports = {
             },
             {
                 PATH: '',
-                NAME: 'Безопасность',
+                NAME: 'Поддержка',
                 CHILDREN: [{
                         NAME: 'Управление уязвимостями',
                         PATH: '/security/vulnerability-reporting/'
@@ -483,6 +494,10 @@ module.exports = {
                     {
                         NAME: 'CVE',
                         PATH: '/security/cve/'
+                    },
+                    {
+                        NAME: 'Список совместимости',
+                        PATH: '/compatibility/'
                     }
                 ],
                 CLASS: []

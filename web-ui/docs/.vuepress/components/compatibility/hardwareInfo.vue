@@ -90,10 +90,13 @@
                         stripe
                         style="width: 100%"
                     >
-                        <el-table-column prop="driverName" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.DRIVE_NAME" width="140"></el-table-column>
-                        <el-table-column prop="version" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.VERSION"  width="140"></el-table-column>
-                        <el-table-column prop="type" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.TYPE" width="140" ></el-table-column>
-                        <el-table-column prop="driverDate" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.DRIVE_DATE" width="140"></el-table-column>
+                        <el-table-column prop="driverName" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.DRIVE_NAME" width="160"></el-table-column>
+                        <el-table-column prop="version" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.VERSION"  width="160"></el-table-column>
+                        <el-table-column prop="type" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.TYPE" width="160" ></el-table-column>
+                        <el-table-column prop="driverDate" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.DRIVE_DATE" width="160"></el-table-column>
+                        <el-table-column prop="chipVendor" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.DRIVE_CHIP_VENDOR" width="160"></el-table-column>
+                        <el-table-column prop="boardModel" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.DRIVE_BOARD_MODEL" width="160"></el-table-column>
+                        <el-table-column prop="chipModel" :label="i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.DRIVE_CHIP_MODEL" width="160"></el-table-column>
                     </el-table>
                 </div>
                 <ul class="table-mobile" v-loading.fullscreen="tableLoading">
@@ -114,6 +117,18 @@
                         <li>
                             <span>{{i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.DRIVE_DATE}}:</span>
                             {{item.driverDate}}
+                        </li>
+                        <li>
+                            <span>{{i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.DRIVE_CHIP_VENDOR}}:</span>
+                            {{item.chipVendor}}
+                        </li>
+                        <li>
+                            <span>{{i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.DRIVE_BOARD_MODEL}}:</span>
+                            {{item.boardModel}}
+                        </li>
+                        <li>
+                            <span>{{i18n.compatibility.HARDWARE_DETAIL.TABLE_CULUMN.DRIVE_BOARD_MODEL}}:</span>
+                            {{item.chipModel}}
                         </li>
                     </ul>
                     </li>

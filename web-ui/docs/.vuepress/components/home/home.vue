@@ -18,7 +18,7 @@
                     </div>
                 </el-carousel-item>
                 <el-carousel-item class="carousel-item">
-                    <div class="banner-link" @click="go(i18n.home.HOME_FIRST_BANNER.LINK)">
+                    <div class="banner-link" @click="go($site.themeConfig.docsUrl+i18n.home.HOME_FIRST_BANNER.LINK)">
                         <div class="banner-item">
                             <div class="item-info">
                             <h3>{{ i18n.home.HOME_FIRST_BANNER.TITLE }}</h3>
@@ -80,7 +80,7 @@
                     </div>
                 </swiper-slide>
                 <swiper-slide class="carousel-item-index">
-                    <div class="mobile-version" @click="go(i18n.home.HOME_FIRST_BANNER.LINK)" :style="{backgroundImage:i18n.home.HOME_FIRST_BANNER.MOBILE_IMG}"></div>
+                    <div class="mobile-version" @click="go($site.themeConfig.docsUrl+i18n.home.HOME_FIRST_BANNER.LINK)" :style="{backgroundImage:i18n.home.HOME_FIRST_BANNER.MOBILE_IMG}"></div>
                 </swiper-slide>
                 <swiper-slide v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
                     <div class="carousel-banner mobile-banner" :style="{backgroundImage: item.BANNER_MOBILE_IMG}" @click="go(item.BANNER_LINK)">
@@ -106,13 +106,13 @@
             <p :class="$lang == 'en'?'en-p':''">{{ i18n.home.HOME_INTRODUCE.INTRO_DESCRIPTION }}</p>
             <div class="is-pc mapArea" :class="$lang === 'ru'?'lang-ru':''" v-if="!isShowH5">
                 <div :class="['area-box map-flow','in-pc',$lang == 'en' && index == 3?'en-areabox-down':'']" v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP" :key="index">
-                    <a v-if="(index !== 3)" @click="go(item.LINK)" target="_blank">
+                    <a v-if="(index !== 3)" @click="go(item.LINK.includes('/docs/')?$site.themeConfig.docsUrl+item.OTHER_LINK:item.LINK)" target="_blank">
                         <div class="box-icon">{{ item.NAME }}</div>
                         <p :class="$lang == 'en'?'en-areabox-p':''">{{ item.TITLE }}</p>
                         <img v-lazy="item.IMG" alt="">
                         <img :src="item.GIF" alt="" :class="[$lang == 'en'?'en-areabox-gif':'']">
                     </a>
-                    <a class="down" v-if="(index === 3)" @click="go(item.LINK)" target="_blank">
+                    <a class="down" v-if="(index === 3)" @click="go(item.LINK.includes('/docs/')?$site.themeConfig.docsUrl+item.OTHER_LINK:item.LINK)" target="_blank">
                         <img v-lazy="item.IMG" alt="">
                         <img :src="item.GIF" alt="" class="is-hidden">
                         <div class="box-icon">{{ item.NAME }}</div>
@@ -135,7 +135,7 @@
                                     :class="$lang == 'en'?'en-guide-way':''"
                                     v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_GUIDE.GUIDE_WAY"
                                     :key="index">
-                                <a @click="goInstall(item.LINK)" target="_blank">
+                                <a @click="goInstall(item.LINK.includes('/docs/')?$site.themeConfig.docsUrl+item.LINK:item.LINK)" target="_blank">
                                     <img v-lazy="item.IMG" alt="">
                                     <span>{{ item.TITLE }}</span>
                                 </a>
@@ -158,8 +158,8 @@
                     v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP"
                     :key="index"
                     >
-                        <div class="box-icon" @touchstart="go(item.LINK)">{{ item.NAME }}</div>
-                        <p @touchstart="go(item.LINK)" :class="$lang === 'en'?'lang-en':''">{{ item.TITLE }}</p>
+                        <div class="box-icon" @touchstart="go(item.LINK.includes('/docs/')?$site.themeConfig.docsUrl+item.LINK:item.LINK)">{{ item.NAME }}</div>
+                        <p @touchstart="go(item.LINK.includes('/docs/')?$site.themeConfig.docsUrl+item.OTHER_LINK:item.LINK)" :class="$lang === 'en'?'lang-en':''">{{ item.TITLE }}</p>
                         <img v-lazy="item.IMG" alt=""/>
                 </div>
                 <div :class="['snd-guidance','location',isShowCard?'is-show':'',$lang == 'en'?'en-snd-guidance':'']">
@@ -171,7 +171,7 @@
                             :class="$lang == 'en'?'en-guide-way':''"
                             v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_GUIDE.GUIDE_WAY"
                             :key="index">
-                                <a :href="item.LINK">
+                                <a :href="item.LINK.includes('/docs/')?$site.themeConfig.docsUrl+item.LINK:item.LINK">
                                     <img v-lazy="item.IMG" alt="">
                                     <span>{{ item.TITLE }}</span>
                                 </a>

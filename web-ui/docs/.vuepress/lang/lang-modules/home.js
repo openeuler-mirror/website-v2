@@ -46,11 +46,11 @@ module.exports = {
             }
         ],
         HOME_FIRST_BANNER: {
-            TITLE: "openEuler 20.03 LTS SP1",
-            LINK: "https://openeuler.org/zh/news/20201228.html",
+            TITLE: "openEuler 21.03",
+            LINK: "/zh/docs/21.03/docs/Releasenotes/关键特性.html",
             DES: "现已发布，欢迎体验",
             DOWNLOAD: '了解更多',
-            IMG: "/img/home/Banner0.gif",
+            IMG: "/img/home/banner0.png",
             MOBILE_IMG: "url('/img/home/banner/zh-mobile-version.png')"
         },
         HOME_OTHER_BANNER: [
@@ -85,7 +85,8 @@ module.exports = {
                     TITLE: "openEuler文档",
                     IMG: "/img/home/step3.png",
                     GIF: "/img/home/step-move-3.gif",
-                    LINK: "/documentation",
+                    LINK: "/docs/",
+                    OTHER_LINK: "/zh/"
                 },
                 {
                     NAME: "贡献",
@@ -631,11 +632,11 @@ module.exports = {
         ],
         HOME_LAST_BANNER: {},
         HOME_FIRST_BANNER: {
-            TITLE: "openEuler 20.03 LTS SP1 Version",
-            LINK: "https://openeuler.org/en/docs/20.03_LTS_SP1/docs/Releasenotes/key-features.html",
+            TITLE: "openEuler 21.03 Version",
+            LINK: "/en/docs/21.03/docs/Releasenotes/key-features.html",
             DES: "has been released, welcome to use.",
             DOWNLOAD: 'Learn more',
-            IMG: "/img/home/Banner0.gif",
+            IMG: "/img/home/banner0.png",
             MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
         },
         HOME_OTHER_BANNER: [
@@ -670,7 +671,8 @@ module.exports = {
                     TITLE: "Read openEuler Documentation",
                     IMG: "/img/home/step3.png",
                     GIF: "/img/home/step-move-3.gif",
-                    LINK: "/documentation",
+                    LINK: "/docs/",
+                    OTHER_LINK: "/en/"
                 },
                 {
                     NAME: "04",
@@ -699,7 +701,7 @@ module.exports = {
                     {
                         TITLE: "Hardware",
                         IMG: "/img/home/areaHardware.svg",
-                        LINK:"/en/docs/20.03_LTS/docs/Installation/installation.html"
+                        LINK:"/en/docs/20.03_LTS/docs/Installation/Installation.html"
                     },
                     {
                         TITLE: "VM",
@@ -1199,11 +1201,11 @@ module.exports = {
         ],
         HOME_LAST_BANNER: {},
         HOME_FIRST_BANNER: {
-            TITLE: "openEuler 20.03 LTS SP1 Version",
-            LINK: "https://openeuler.org/en/docs/20.03_LTS_SP1/docs/Releasenotes/key-features.html",
+            TITLE: "openEuler 21.03 Version",
+            LINK: "/en/docs/21.03/docs/Releasenotes/key-features.html",
             DES: "has been released, welcome to use.",
             DOWNLOAD: 'Learn more',
-            IMG: "/img/home/Banner0.gif",
+            IMG: "/img/home/banner0.png",
             MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
         },
         HOME_OTHER_BANNER: [
@@ -1232,13 +1234,15 @@ module.exports = {
                     IMG: "/img/home/step2.png",
                     GIF: "/img/home/step-move-2.gif",
                     LINK: "",
+                    OTHER_LINK: "/ru/"
                 },
                 {
                     NAME: "03",
                     TITLE: "Читать документацию openEuler",
                     IMG: "/img/home/step3.png",
                     GIF: "/img/home/step-move-3.gif",
-                    LINK: "/documentation",
+                    LINK: "/docs/",
+                    OTHER_LINK: "/en/"
                 },
                 {
                     NAME: "04",
@@ -1267,7 +1271,7 @@ module.exports = {
                     {
                         TITLE: "Hardware",
                         IMG: "/img/home/areaHardware.svg",
-                        LINK:"/en/docs/20.03_LTS/docs/Installation/installation.html"
+                        LINK:"/en/docs/20.03_LTS/docs/Installation/Installation.html"
                     },
                     {
                         TITLE: "VM",
