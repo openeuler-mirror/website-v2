@@ -236,48 +236,6 @@
     }
   },
   {
-    "hardwareFactory": "Phytium",
-    "hardwareModel": "FT-2000",
-    "osVersion": "openEuler 20.03 LTS SP1",
-    "architecture": "aarch64",
-    "date": "2020/12/11",
-    "friendlyLink": "https://www.phytium.com.cn/article/20",
-    "boardCards": [
-      {
-        "vendorID": "8086",
-        "deviceID": "1521",
-        "svID": "19E5",
-        "ssID": "D112",
-        "architecture": "x86_64",
-        "os": "openEuler 20.03 LTS SP1",
-        "driverName": "igb",
-        "version": "5.4.0-k",
-        "type": "NIC",
-        "driverDate": "2020.12.28",
-        "sha256": "67CB2F34DC66D76DE0C84BBF64688B91CE243549",
-        "driverSize": "487K",
-        "chipVendor": "Intel",
-        "boardModel": "SP210",
-        "chipModel": "i350",
-        "item": "02311DCA",
-        "downloadLink": "inbox"
-      }
-    ],
-    "compatibilityConfiguration": {
-      "productInformation": "https://www.phytium.com.cn/article/20",
-      "certificationTime": "2020/12/11",
-      "commitID": "",
-      "motherBoardRevision": "",
-      "biosUefi": "",
-      "cpu": "FT-2000+/64",
-      "ram": "8*16G DIMMs",
-      "portsBusTypes": "SP210",
-      "videoAdapter": "1711",
-      "hostBusAdapter": "Avago 3508",
-      "hardDiskDrive": ""
-    }
-  },
-  {
     "hardwareFactory": "Huawei",
     "hardwareModel": "Fusionserver 2288H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
@@ -1784,6 +1742,48 @@
       "portsBusTypes": "SP330",
       "videoAdapter": "1711",
       "hostBusAdapter": "",
+      "hardDiskDrive": ""
+    }
+  },
+  {
+    "hardwareFactory": "Phytium",
+    "hardwareModel": "FT-2000",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "aarch64",
+    "date": "2020/12/11",
+    "friendlyLink": "https://www.phytium.com.cn/article/20",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "19E5",
+        "ssID": "D112",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "igb",
+        "version": "5.4.0-k",
+        "type": "NIC",
+        "driverDate": "2020.12.28",
+        "sha256": "67CB2F34DC66D76DE0C84BBF64688B91CE243549",
+        "driverSize": "487K",
+        "chipVendor": "Intel",
+        "boardModel": "SP210",
+        "chipModel": "i350",
+        "item": "02311DCA",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.phytium.com.cn/article/20",
+      "certificationTime": "2020/12/11",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "",
+      "cpu": "FT-2000+/64",
+      "ram": "8*16G DIMMs",
+      "portsBusTypes": "SP210",
+      "videoAdapter": "1711",
+      "hostBusAdapter": "Avago 3508",
       "hardDiskDrive": ""
     }
   }
