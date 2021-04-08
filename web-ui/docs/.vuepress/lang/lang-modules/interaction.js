@@ -2823,7 +2823,7 @@ module.exports = {
             DETAIL_MEET: 'How to attend the event',
             DETAIL_QRCODE_TEXT: 'Scan the QR code',
             INSIDENAME: 'CONNECT',
-            DEFAULT_IMG: '/img/meetup/default-address.png',
+            DEFAULT_IMG: '/img/meetups/default-address.png',
             MEETUPS_DATA: require('./../../data/salon').en.MEETUPS_LIST
         }
     },

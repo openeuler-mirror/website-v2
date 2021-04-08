@@ -461,7 +461,7 @@ module.exports = {
                 MEETUPS_FLOW_PATH: [
                     {
                         THEME: '开场',
-                        TIME: '13:00-14:30',
+                        TIME: '13:30-14:00',
                         SPEAKER: ''
                     },
                     {
@@ -517,6 +517,11 @@ module.exports = {
                 MEETUPS_MONTH: '四月',
                 MEETUPS_DESC: ['云计算、处理器、操作系统是上层业务的基石，开源云计算的事实标准OpenStack，旨在打造最具活力开源社区的openEuler，风头正劲的Arm架构所组成的跨界全栈，能碰撞出怎样的火花？技术分享、头脑风暴、大咖圆桌、现场Q&A，一站式的技术盛宴等你享用。'],
                 MEETUPS_FLOW_PATH: [
+                    {
+                        THEME: 'PTG议程',
+                        TIME: '09:00-12:00',
+                        SPEAKER: ''
+                    },
                     {
                         THEME: '签到',
                         TIME: '13:30-14:00',
@@ -1026,7 +1031,7 @@ module.exports = {
                 MEETUPS_FLOW_PATH: [
                     {
                         THEME: '开场',
-                        TIME: '13:00-14:30',
+                        TIME: '13:30-14:00',
                         SPEAKER: ''
                     },
                     {
@@ -1082,6 +1087,11 @@ module.exports = {
                 MEETUPS_MONTH: '四月',
                 MEETUPS_DESC: ['云计算、处理器、操作系统是上层业务的基石，开源云计算的事实标准OpenStack，旨在打造最具活力开源社区的openEuler，风头正劲的Arm架构所组成的跨界全栈，能碰撞出怎样的火花？技术分享、头脑风暴、大咖圆桌、现场Q&A，一站式的技术盛宴等你享用。'],
                 MEETUPS_FLOW_PATH: [
+                    {
+                        THEME: 'PTG议程',
+                        TIME: '09:00-12:00',
+                        SPEAKER: ''
+                    },
                     {
                         THEME: '签到',
                         TIME: '13:30-14:00',
