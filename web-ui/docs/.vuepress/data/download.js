@@ -163,7 +163,7 @@ module.exports = {
             {
                 NAME: '红旗Asianux服务器操作系统V8.1',
                 DOWNLOAD_URL : 'http://pan.chinaredflag.cn/d/d3041d958a8d4da1881d/',
-                DESC: '暂无描述',
+                DESC: '红旗Asianux服务器操作系统（欧拉版）是基于openEuler20.03 LTS SP1进行二次开发的商业发行版，目前内核版本为4.19。',
                 RELEASE_DESC_URL: 'http://www.linuxsir.cn/?product.htm&pid=2',
                 INSTALL_GUIDENCE_URL: 'http://www.linuxsir.cn/?product.htm&pid=2',
                 SEEK_HELP_URL: '',
@@ -321,7 +321,7 @@ module.exports = {
             {
                 NAME: 'RedFlag Asianux Server - 8.1',
                 DOWNLOAD_URL : 'http://pan.chinaredflag.cn/d/d3041d958a8d4da1881d/',
-                DESC: 'No description available',
+                DESC: 'Red Flag Asianux Server OS (openEuler) is a commercial release based on the secondary development of openEuler 20.03 LTS SP1. The current kernel version is 4.19.',
                 RELEASE_DESC_URL: 'http://www.linuxsir.cn/?product.htm&pid=2',
                 INSTALL_GUIDENCE_URL: 'http://www.linuxsir.cn/?product.htm&pid=2',
                 SEEK_HELP_URL: '',
@@ -479,7 +479,7 @@ module.exports = {
             {
                 NAME: 'RedFlag Asianux Server - 8.1',
                 DOWNLOAD_URL : 'http://pan.chinaredflag.cn/d/d3041d958a8d4da1881d/',
-                DESC: 'Описание недоступно',
+                DESC: 'Red Flag Asianux Server OS (openEuler) is a commercial release based on the secondary development of openEuler 20.03 LTS SP1. The current kernel version is 4.19.',
                 RELEASE_DESC_URL: 'http://www.linuxsir.cn/?product.htm&pid=2',
                 INSTALL_GUIDENCE_URL: 'http://www.linuxsir.cn/?product.htm&pid=2',
                 SEEK_HELP_URL: '',
