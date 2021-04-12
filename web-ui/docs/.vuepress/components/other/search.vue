@@ -123,7 +123,7 @@
         },
         mounted() {
             this.formData.keyword = decodeURI(this.$route.query.keyword|| '') || '';
-            this.formData.indexEs = this.$lang == 'en' ? 'openeuler_articles_en' : 'openeuler_articles';
+            this.formData.indexEs = this.$lang == 'en' ? 'openeuler_articles_en' : (this.$lang == 'ru' ? 'openeuler_articles_ru' : 'openeuler_articles');
             this.formData.model = '';
             this.search();
         },
