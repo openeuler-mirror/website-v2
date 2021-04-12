@@ -92,18 +92,35 @@
                     </div>
                 </div>
                 <div class="scan-qrcode">
-                    <i class="qrcode"></i>
-                    <p>{{ i18n.interaction.MEETUPS.DETAIL_QRCODE_TEXT }}</p>
+                    <div>
+                         <i class="qrcode"></i>
+                        <span>{{ i18n.interaction.MEETUPS.DETAIL_QRCODE_TEXT }}</span>
+                    </div>
                     <img v-if="addressObj" :src="addressObj.APPLY_QRCODE" alt />
                 </div>
             </div>
-            <img class="map" v-if="addressObj.MAP_IMG" :src="addressObj.MAP_IMG" alt />
+            <div class="map" v-if="position.length">
+                <baidu-map :center="{lng: position[0],lat: position[1]}" :zoom="17" style="height:373px" 
+                :scroll-wheel-zoom="true" ak="E8fzNbGP929RhtOZQGNsSKYO">
+                    <bm-marker :position="{lng: position[0],lat: position[1]}" :dragging="true">
+                    </bm-marker>
+                </baidu-map>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
 import playcontroll from './../controll/videoctrl';
+import baiduMap from 'vue-baidu-map/components/map/Map.vue';
+import bmMarker from 'vue-baidu-map/components/overlays/Marker.vue';
+window.global = (() => {
+    if (typeof self !== 'undefined') { return self; }
+    if (typeof window !== 'undefined') { return window; }
+    if (typeof global !== 'undefined') { return global; }
+    if (typeof globalThis !== 'undefined') { return globalThis; }
+    throw new Error('unable to locate global object');
+})();
 export default {
     name: "meetUpDetail",
     data() {
@@ -116,12 +133,14 @@ export default {
                 isShow: true,
                 barWidth: 646
             },
-            isNowPlay: false
+            isNowPlay: false,
+            position: []
         };
     },
     mounted (){
         this.videoCtrlParams.element = document.getElementById('meetUp-video');
         this.detailContent();
+        this.position = this.addressObj.ADDRESS_LOCATION;
     },
     methods: {
         goMeetUps() {
@@ -160,7 +179,9 @@ export default {
         }
     },
     components: {
-        playcontroll
+        playcontroll,
+        baiduMap,
+        bmMarker
     }
 
 }
@@ -379,42 +400,41 @@ export default {
             }
             .scan-qrcode{
                 position: relative;
+                &>div {
+                    display: flex;
+                    flex-direction: row;
+                }
                 .qrcode{
-                    position: absolute;
+                    display: block;
                     width: 20px;
                     height: 18px;
                     background-image: url('/img/meetups/link.png');
                     background-size: contain;
                     background-repeat: no-repeat;
-                    left: -30px;
-                    top: 4px;
+                    margin-right: 10px;
                 }
-                p{
+                span{
                     color: #002FA7;
                     font-size: 20px;
+                    line-height: 18px;
                     margin-bottom: 10px;
                 }
                 img{
-                    position: absolute;
+                    display: block;
                     width: 100px;
                     height: 100px;
-                    left: -32px;
+                    margin-top: 20px;
                 }
             }
         }
-        .map{
-            display: block;
+        .map {
             width: 1120px;
-            height: 373px;
             margin: -50px auto 0 auto;
             position: relative;
             z-index: -1;
         }
         .en-address{
             width: 978px;
-            .scan-qrcode{
-                margin-left: 70px;
-            }
         }
     }
     .font-bold{
@@ -534,9 +554,10 @@ export default {
                 padding: 40px;
                 border-bottom: none;
                 width: 100%;
-                height: 486px;
+                height: auto !important;
                 .address-message{
                     flex-direction: column;
+                    margin-bottom: 30px;
                     img{
                         margin: 0 auto;        
                     }
@@ -557,20 +578,20 @@ export default {
                     }
                 }
                 .scan-qrcode{
+                    display: flex;
+                    flex-direction: column-reverse;
+                    
                     .qrcode{
                         display: none;
                     }
-                    p{
+                    span{
                         width: 100%;
                         text-align: center;
-                        margin-bottom: 0;
-                        margin-top: 110px;
                         font-size: 16px;
+                        margin: 20px 0 0 0;
                     }
                     img{
-                        top: 0;
-                        left: 50%;
-                        margin-left: -50px;
+                        margin: 0 auto;
                     }
                 }
             }
