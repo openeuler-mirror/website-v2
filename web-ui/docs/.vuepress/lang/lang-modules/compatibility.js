@@ -103,7 +103,7 @@ module.exports = {
                 TITLE:'提交结果审核',
                 DESCRIPTION_1:'完成兼容性测试并通过后，需要您把测试结果更新到issue中。并且按照使用指南将对应测试结果发送给公共邮箱：您需要向公共邮箱（',
                 A_TEXT:'oecompatibility@openeuler.org',
-                DESCRIPTION_2:'）发送兼容性结果审核申请，邮件标题需要注明“xxx硬件兼容性测试结果信息”。（其中xxx为社区issue ID）'
+                DESCRIPTION_2:'）发送兼容性结果审核申请，邮件标题需要注明“xxx硬件兼容性测试结果信息”（其中xxx为社区issue ID）。'
             }, {
                 ID:'06',
                 TITLE:'结果发布',
