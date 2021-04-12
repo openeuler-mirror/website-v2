@@ -71,10 +71,10 @@ module.exports = {
                     ADDRESS_IMG: '/img/meetups/address1.png',
                     ADDRESS_UP: '润和创智中心',
                     ADDRESS_DOWN: [
-                        '南京市雨花区软件大道168号','润和创智中心','二楼会议大厅'
+                        '南京市雨花区软件大道168号','润和创智中心二楼会议大厅'
                     ],
                     APPLY_QRCODE: '/img/meetups/qrcode1.png',
-                    MAP_IMG: '/img/meetups/map1.png'
+                    ADDRESS_LOCATION: ['118.76466','31.979428'],
                 }
             },
             {
@@ -156,7 +156,7 @@ module.exports = {
                         '金茂北塔47楼','湖南省鲲鹏生态创新中心培训室'
                     ],
                     APPLY_QRCODE: '/img/meetups/qrcode2.png',
-                    MAP_IMG: '/img/meetups/map2.png'
+                    ADDRESS_LOCATION: ['112.910516','28.202771'],
                 }
             },
             {
@@ -233,7 +233,7 @@ module.exports = {
                         '西安市雁塔区','西安软件新城软件研发基地2期C2栋3层'
                     ],
                     APPLY_QRCODE: '/img/meetups/qrcode3.png',
-                    MAP_IMG: '/img/meetups/map3.png'
+                    ADDRESS_LOCATION: ['108.841531','34.213187'],
                 }
             },
             {
@@ -298,6 +298,7 @@ module.exports = {
                         '上午：福州软件园A区双创新城1号楼1层','下午：郊野公园'
                     ],
                     APPLY_QRCODE: '/img/meetups/qrcode4.png',
+                    ADDRESS_LOCATION: ['119.276427','26.117974'],
                 }
             },
             {
@@ -382,7 +383,7 @@ module.exports = {
                         '上海市浦东新区博云路111号爱酷空间B1'
                     ],
                     APPLY_QRCODE: '/img/meetups/qrcode5.png',
-                    MAP_IMG: '/img/meetups/map5.png'
+                    ADDRESS_LOCATION: ['121.613359','31.208858'],
                 }
             },
             {
@@ -447,7 +448,7 @@ module.exports = {
                         '深圳市福田区中康路136号新一代产业园4栋19楼'
                     ],
                     APPLY_QRCODE: '/img/meetups/qrcode6.png',
-                    MAP_IMG: '/img/meetups/map6.png'
+                    ADDRESS_LOCATION: ['114.067925','22.578717'],
                 }
             },
             {
@@ -506,6 +507,7 @@ module.exports = {
                         '北京市海淀区北四环西路9号银谷大厦12层东侧'
                     ],
                     APPLY_QRCODE: '/img/meetups/qrcode7.png',
+                    ADDRESS_LOCATION: ['116.340773','39.992655'],
                 }
             },
             {
@@ -569,6 +571,71 @@ module.exports = {
                         '北京市海淀区中关村创业大街昊海楼5号楼103怡仁空间'
                     ],
                     APPLY_QRCODE: '/img/meetups/qrcode8.png',
+                    ADDRESS_LOCATION: ['116.313623','39.990418'],
+                }
+            },
+            {
+                ID: 9,
+                MEETUPS_TITLE: 'openEuler Cloud Native Meetup',
+                TITLE_LIST: ['openEuler Cloud Native Meetup'],
+                MEETUPS_IMG: '/img/meetups/9.png',
+                MEETUPS_DATE: '2021-04-17',
+                MEETUPS_MONTH: '四月',
+                MEETUPS_DESC: ['本次会议openEuler围绕系统、存储、网络、云原生、kubernetes等多个领域话题展开分享。届时将邀请LGT俱乐部相关领域资深技术专家，就行业动态、技术创新、高端应用等方面开展精彩分享，会后将以论坛和体验式沙龙形式与大咖近距离面对面交流。'],
+                MEETUPS_FLOW_PATH: [
+                    {
+                        THEME: '签到',
+                        TIME: '12:30-13:00',
+                        SPEAKER: ''
+                    },
+                    {
+                        THEME: '极简kubernetes发行版-k8e介绍',
+                        TIME: '13:00-13:15',
+                        SPEAKER: ''
+                    },
+                    {
+                        THEME: '云原生安全初探',
+                        TIME: '13:15-13:45',
+                        SPEAKER: ''
+                    },
+                    {
+                        THEME: 'K8S扩展开发-CRD与Controller',
+                        TIME: '13:45-14:15',
+                        SPEAKER: ''
+                    },
+                    {
+                        THEME: '茶歇',
+                        TIME: '14:15-14:30',
+                        SPEAKER: ''
+                    },
+                    {
+                        THEME: '用WebAssembly快速把AI推理带到生产环境',
+                        TIME: '14:30-15:00',
+                        SPEAKER: ''
+                    },
+                    {
+                        THEME: '打造比Nginx还快的web服务器',
+                        TIME: '15:00-15:30',
+                        SPEAKER: ''
+                    },
+                    {
+                        THEME: '互动交流',
+                        TIME: '15:30-16:00',
+                        SPEAKER: ''
+                    },
+                    {
+                        THEME: '活动抽奖',
+                        TIME: '16:00-16:15',
+                        SPEAKER: ''
+                    }
+                ],
+                MEETINGS_INFO: {
+                    ADDRESS_UP: '地址',
+                    ADDRESS_DOWN: [
+                        '高新园区黄浦路507号','海创（大连）科技交流中心三楼海创厅B'
+                    ],
+                    APPLY_QRCODE: '/img/meetups/qrcode9.png',
+                    ADDRESS_LOCATION: ['121.540054','38.872889'],
                 }
             },
         ]
@@ -641,10 +708,10 @@ module.exports = {
                     ADDRESS_IMG: '/img/meetups/address1.png',
                     ADDRESS_UP: '润和创智中心',
                     ADDRESS_DOWN: [
-                        '南京市雨花区软件大道168号','润和创智中心','二楼会议大厅'
+                        '南京市雨花区软件大道168号','润和创智中心二楼会议大厅'
                     ],
                     APPLY_QRCODE: '/img/meetups/qrcode1.png',
-                    MAP_IMG: '/img/meetups/map1.png'
+                    ADDRESS_LOCATION: ['118.76466','31.979428'],
                 }
             },
             {
@@ -726,7 +793,7 @@ module.exports = {
                         '金茂北塔47楼','湖南省鲲鹏生态创新中心培训室'
                     ],
                     APPLY_QRCODE: '/img/meetups/qrcode2.png',
-                    MAP_IMG: '/img/meetups/map2.png'
+                    ADDRESS_LOCATION: ['112.910516','28.202771'],
                 }
             },
             {
@@ -803,7 +870,7 @@ module.exports = {
                         '西安市雁塔区','西安软件新城软件研发基地2期C2栋3层'
                     ],
                     APPLY_QRCODE: '/img/meetups/qrcode3.png',
-                    MAP_IMG: '/img/meetups/map3.png'
+                    ADDRESS_LOCATION: ['108.841531','34.213187'],
                 }
             },
             {
@@ -868,6 +935,7 @@ module.exports = {
                         '上午：福州软件园A区双创新城1号楼1层','下午：郊野公园'
                     ],
                     APPLY_QRCODE: '/img/meetups/qrcode4.png',
+                    ADDRESS_LOCATION: ['119.276427','26.117974'],
                 }
             },
             {
@@ -952,7 +1020,7 @@ module.exports = {
                         '上海市浦东新区博云路111号爱酷空间B1'
                     ],
                     APPLY_QRCODE: '/img/meetups/qrcode5.png',
-                    MAP_IMG: '/img/meetups/map5.png'
+                    ADDRESS_LOCATION: ['121.613359','31.208858'],
                 }
             },
             {
@@ -1017,7 +1085,7 @@ module.exports = {
                         '深圳市福田区中康路136号新一代产业园4栋19楼'
                     ],
                     APPLY_QRCODE: '/img/meetups/qrcode6.png',
-                    MAP_IMG: '/img/meetups/map6.png'
+                    ADDRESS_LOCATION: ['114.067925','22.578717'],
                 }
             },
             {
@@ -1076,6 +1144,7 @@ module.exports = {
                         '北京市海淀区北四环西路9号银谷大厦12层东侧'
                     ],
                     APPLY_QRCODE: '/img/meetups/qrcode7.png',
+                    ADDRESS_LOCATION: ['116.340773','39.992655'],
                 }
             },
             {
@@ -1139,6 +1208,71 @@ module.exports = {
                         '北京市海淀区中关村创业大街昊海楼5号楼103怡仁空间'
                     ],
                     APPLY_QRCODE: '/img/meetups/qrcode8.png',
+                    ADDRESS_LOCATION: ['116.313623','39.990418'],
+                }
+            },
+            {
+                ID: 9,
+                MEETUPS_TITLE: 'openEuler Cloud Native Meetup',
+                TITLE_LIST: ['openEuler Cloud Native Meetup'],
+                MEETUPS_IMG: '/img/meetups/9.png',
+                MEETUPS_DATE: '2021-04-17',
+                MEETUPS_MONTH: '四月',
+                MEETUPS_DESC: ['本次会议openEuler围绕系统、存储、网络、云原生、kubernetes等多个领域话题展开分享。届时将邀请LGT俱乐部相关领域资深技术专家，就行业动态、技术创新、高端应用等方面开展精彩分享，会后将以论坛和体验式沙龙形式与大咖近距离面对面交流。'],
+                MEETUPS_FLOW_PATH: [
+                    {
+                        THEME: '签到',
+                        TIME: '12:30-13:00',
+                        SPEAKER: ''
+                    },
+                    {
+                        THEME: '极简kubernetes发行版-k8e介绍',
+                        TIME: '13:00-13:15',
+                        SPEAKER: ''
+                    },
+                    {
+                        THEME: '云原生安全初探',
+                        TIME: '13:15-13:45',
+                        SPEAKER: ''
+                    },
+                    {
+                        THEME: 'K8S扩展开发-CRD与Controller',
+                        TIME: '13:45-14:15',
+                        SPEAKER: ''
+                    },
+                    {
+                        THEME: '茶歇',
+                        TIME: '14:15-14:30',
+                        SPEAKER: ''
+                    },
+                    {
+                        THEME: '用WebAssembly快速把AI推理带到生产环境',
+                        TIME: '14:30-15:00',
+                        SPEAKER: ''
+                    },
+                    {
+                        THEME: '打造比Nginx还快的web服务器',
+                        TIME: '15:00-15:30',
+                        SPEAKER: ''
+                    },
+                    {
+                        THEME: '互动交流',
+                        TIME: '15:30-16:00',
+                        SPEAKER: ''
+                    },
+                    {
+                        THEME: '活动抽奖',
+                        TIME: '16:00-16:15',
+                        SPEAKER: ''
+                    }
+                ],
+                MEETINGS_INFO: {
+                    ADDRESS_UP: '地址',
+                    ADDRESS_DOWN: [
+                        '高新园区黄浦路507号','海创（大连）科技交流中心三楼海创厅B'
+                    ],
+                    APPLY_QRCODE: '/img/meetups/qrcode9.png',
+                    ADDRESS_LOCATION: ['121.540054','38.872889'],
                 }
             },
         ]
