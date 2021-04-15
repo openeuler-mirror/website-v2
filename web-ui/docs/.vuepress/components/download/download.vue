@@ -80,13 +80,13 @@
                 </li>
                 <li v-if="item.RELEASE_DESC_URL?true:false">
                     <img src="/img/download/release.svg" alt />
-                    <a target="_blank" :href="item.NAME.includes('openEuler')?$site.themeConfig.docsUrl+item.RELEASE_DESC_URL:item.RELEASE_DESC_URL">{{ i18n.download.RELEASE_DESC }}</a>
+                    <a target="_blank" :href="item.RELEASE_DESC_URL">{{ i18n.download.RELEASE_DESC }}</a>
                 </li>
                 <li v-if="item.INSTALL_GUIDENCE_URL?true:false">
                     <img src="/img/download/release.svg" alt />
                     <a
                     target="_blank"
-                    :href="item.NAME.includes('openEuler')?$site.themeConfig.docsUrl+item.INSTALL_GUIDENCE_URL:item.INSTALL_GUIDENCE_URL"
+                    :href="item.INSTALL_GUIDENCE_URL"
                     >{{ i18n.download.INSTALL_GUIDENCE }}</a>
                 </li>
                 <li v-if="item.WHITE_PAPER">

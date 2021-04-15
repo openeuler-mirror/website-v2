@@ -306,14 +306,9 @@ module.exports = {
                     LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%85%8D%E7%BD%AE.md'
                 },
                 {
-                    ICON: '/img/minisite/svirt/doc-life.png',
-                    TEXT: '管理虚拟机生命周期',
-                    LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E7%AE%A1%E7%90%86%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.md'
-                },
-                {
                     ICON: '/img/minisite/svirt/doc-source.png',
-                    TEXT: '管理虚拟机资源',
-                    LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E7%AE%A1%E7%90%86%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%B5%84%E6%BA%90.md'
+                    TEXT: '虚拟机管理',
+                    LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%A1%E7%90%86.md'
                 },
                 {
                     ICON: '/img/minisite/svirt/doc-box.png',
@@ -627,14 +622,9 @@ module.exports = {
                     LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%85%8D%E7%BD%AE.md'
                 },
                 {
-                    ICON: '/img/minisite/svirt/doc-life.png',
-                    TEXT: '管理虚拟机生命周期',
-                    LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E7%AE%A1%E7%90%86%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.md'
-                },
-                {
                     ICON: '/img/minisite/svirt/doc-source.png',
-                    TEXT: '管理虚拟机资源',
-                    LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E7%AE%A1%E7%90%86%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%B5%84%E6%BA%90.md'
+                    TEXT: '虚拟机管理',
+                    LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%A1%E7%90%86.md'
                 },
                 {
                     ICON: '/img/minisite/svirt/doc-box.png',
@@ -947,14 +937,9 @@ module.exports = {
                     LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%85%8D%E7%BD%AE.md'
                 },
                 {
-                    ICON: '/img/minisite/svirt/doc-life.png',
-                    TEXT: '管理虚拟机生命周期',
-                    LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E7%AE%A1%E7%90%86%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.md'
-                },
-                {
                     ICON: '/img/minisite/svirt/doc-source.png',
-                    TEXT: '管理虚拟机资源',
-                    LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E7%AE%A1%E7%90%86%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%B5%84%E6%BA%90.md'
+                    TEXT: '虚拟机管理',
+                    LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%A1%E7%90%86.md'
                 },
                 {
                     ICON: '/img/minisite/svirt/doc-box.png',

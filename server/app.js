@@ -104,6 +104,7 @@ function initESData() {
 
     readFile.initESData('20.09', 'zh', 'docs');
     readFile.initESData('20.09', 'en', 'docs');
+    readFile.initESData('20.09', 'ru', 'docs');
     readFile.initESData('20.03_LTS', 'zh', 'docs');
     readFile.initESData('20.03_LTS', 'en', 'docs');
     readFile.initESData('20.03_LTS_SP1', 'zh', 'docs');

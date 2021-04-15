@@ -76,25 +76,6 @@
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
   },
   {
-    "vendorID": "10de",
-    "deviceID": "1eb8",
-    "svID": "10de",
-    "ssID": "12a2",
-    "architecture": "x86_64",
-    "os": "openEuler 20.03 LTS SP1",
-    "driverName": "nouveau",
-    "version": "7.9",
-    "type": "NIC",
-    "driverDate": "2021.3.19",
-    "sha256": "0DF5433B2358D645500BD488B91E3C22F1B6F7B5",
-    "driverSize": "170M",
-    "chipVendor": "NVIDIA",
-    "boardModel": "Tesla T4",
-    "chipModel": "TU104-895",
-    "item": "2570029",
-    "downloadLink": "https://www.nvidia.com/Download/index.aspx"
-  },
-  {
     "vendorID": "15b3",
     "deviceID": "1017",
     "svID": "15b3",

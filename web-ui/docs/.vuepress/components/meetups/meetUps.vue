@@ -32,7 +32,9 @@
 								</p>
 							</div>
                           	<div class="meetUps-summary">
-								<p v-for="(values,keys) in value.MEETUPS_DESC" :key="keys">{{ values }}</p>	  
+								<p>
+									<span v-for="(values,keys) in value.MEETUPS_DESC" :key="keys">{{ values }}</span>
+								</p>	  
 							</div>
                         </div>
                     </div>
@@ -52,7 +54,6 @@
 </template>
 
 <script>
-import dayjs from "dayjs";
 import commonBanner from "./../common/banner.vue";
 export default {
   data() {
@@ -70,7 +71,7 @@ export default {
   },
   mounted() {
       let allList = this.i18n.interaction.MEETUPS.MEETUPS_DATA;
-      this.totalSize = this.allMeetsList.length;
+      this.totalSize = allList.length;
       this.allMeetsList = this.sortMeetsList(allList);
 	  this.handleCurrentChange(1);
   },
@@ -88,7 +89,6 @@ export default {
             if(!listObj[item.fullYear][item.fullMonth]){
                 listObj[item.fullYear][item.fullMonth] = [];
             }
-			console.log(listObj);
             listObj[item.fullYear][item.fullMonth].push(item);
         });
 		this.showMeetsList = listObj;
@@ -129,6 +129,13 @@ export default {
 }
 .meetUps-year-content {
   	position: relative;
+	&:first-of-type {
+		margin-bottom: 85px;
+		@media screen and (max-width: 1000px) {
+			margin-bottom: 0;
+		}
+	}
+	
 }
 .meetUps-year {
 	position: absolute;
@@ -220,6 +227,14 @@ export default {
 	font-size: 14px;
 	color: rgba(0, 0, 0, 0.5);
 	line-height: 24px;
+	p {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		height: 72px;
+	}
 }
 @media screen and (max-width: 1000px) {
 	.meetUps-content {
