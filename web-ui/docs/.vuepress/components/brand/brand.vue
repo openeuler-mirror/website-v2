@@ -7,13 +7,11 @@
       :outside-name="i18n.brand.BRAND"
     ></common-banner>
     <div class="brand-all-word">
-      <h3 class="brand-title">{{i18n.brand.NOTICE}}</h3>
+      <h3 class="brand-title">{{i18n.brand.MOBILETITLE}}</h3>
       <p class="brand-word">{{i18n.brand.WORDS}}</p>
     </div>
     <!-- 六个带有下载功能的卡片 -->
     <div class="brand-six-cards">
-      <p class="title-vertical">{{i18n.brand.VERTICAL}}</p>
-      <p class="mobile-title">{{i18n.brand.MOBILETITLE}}</p>
       <ul class="card-vertical">
         <li class="vertical-left">
           <h3>{{i18n.brand.PICTURE_TITLE[0]}}</h3>
@@ -41,7 +39,6 @@
           </a>
         </li>
       </ul>
-      <p class="title-horizontal">{{i18n.brand.HORIZONTAL}}</p>
       <ul class="card-horizontal">
         <li class="horizontal-left">
           <h3>{{i18n.brand.PICTURE_TITLE[3]}}</h3>
@@ -65,6 +62,16 @@
           <a :href="item.URL" target="_blank" download
           v-for="(item, index) in i18n.brand.HORIZONTAL_RIGHT_IMAGE" :key="index">
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">{{item.STYLE}}</el-button>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="ppt-box">
+      <h3>{{ i18n.brand.PPT_TEXT }}</h3>
+      <ul class="ppt-list">
+        <li v-for="(item,index) in i18n.brand.PPT_LIST" :key="index">
+          <a :href="item.LINK" target="_blank" download>
+            <img :src="item.URL" alt="" />
           </a>
         </li>
       </ul>
@@ -123,49 +130,17 @@ export default {
 .brand-six-cards {
   width: 1120px;
   margin: 0 auto;
-  margin-top: 80px;
    @media screen and (max-width: 1000px) {
      width: 315px;
     }
   .card-vertical,
   .card-horizontal {
     display: flex;
+    margin-bottom: 60px;
     @media screen and (max-width: 1000px) {
       flex-direction: column;
       width: 315px;
-    }
-  }
-  .card-horizontal {
-    margin-bottom: 200px;
-    @media screen and (max-width: 1000px) {
-      margin-bottom: 80px;
-    }
-  }
-  .title-vertical,
-  .title-horizontal {
-    height: 24px;
-    font-size: 24px;
-    
-    font-weight: normal;
-    color: rgba(0, 0, 0, 1);
-    line-height: 24px;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    @media screen and (max-width: 1000px) {
-      display: none;
-    }
-  }
-  .mobile-title {
-    display: none;
-    @media screen and (max-width: 1000px) {
-      display: block;
-      width: 315px;
-      height: 26px;
-      font-size: 16px;
-      
-      font-weight: normal;
-      color: rgba(0, 0, 0, 1);
-      line-height: 26px;
+      margin-bottom: 40px;
     }
   }
   .vertical-left,
@@ -181,7 +156,7 @@ export default {
     border-radius: 8px;
     flex: 1;
     padding-top: 32px;
-    margin: 20px 25px 20px 0;
+    margin: 30px 25px 0 0;
      @media screen and (max-width: 1000px) {
      width:315px;
     height:282px;
@@ -227,5 +202,47 @@ export default {
       width: 65px;
     }
   }
+}
+.ppt-box {
+  width: 1120px;
+  margin: 0 auto;
+  padding-bottom: 200px;
+  &>h3{
+    font-size: 24px;
+    color: #000000;
+    line-height: 24px;
+  }
+  .ppt-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li {
+      width: 350px;
+      height: 260px;
+      background: #FFFFFF;
+      box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+  }
+   @media screen and (max-width: 1000px) {
+      width: 315px;
+      padding-bottom: 80px;
+      .ppt-list {
+        flex-direction: column;
+        justify-content: center;
+        li {
+          box-shadow:0px 3px 10px 0px rgba(0,0,0,0.2);
+          width: 315px;
+          height: 234px;
+          img {
+            width: 315px;
+            height: 234px;
+            display: block;
+          }
+        }
+      }
+    }
 }
 </style>
