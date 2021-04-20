@@ -320,7 +320,7 @@ export default {
 			var isTrue = false;
 			labelArr.forEach((selectItem) => {
 				if(arr.indexOf(selectItem) > -1) {
-					isLabelTrue =  true;
+					isTrue =  true;
 				}
 			})
 			return isTrue;
