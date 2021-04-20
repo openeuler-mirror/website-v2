@@ -17,4 +17,5 @@ module.exports = {
     minisite: require('./lang-modules/minisite').en,
     learn: require('./lang-modules/learn').en,
     compatibility: require('./lang-modules/compatibility').en,
+    activities: require('./lang-modules/activities').en,
 };

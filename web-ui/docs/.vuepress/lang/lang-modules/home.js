@@ -29,6 +29,10 @@ module.exports = {
         ],
         ROOM_LEFT_IMG:[
             {
+                IMG: '/img/activities/pc_home_bottom_banner.png',
+                LINK: '/activities/'
+            },
+            {
                 IMG: '/img/home/eventImg.png',
                 LINK: 'https://www.oschina.net/2020-openeuler/'
             },
@@ -48,6 +52,11 @@ module.exports = {
             DOWNLOAD: '了解更多',
             IMG: "/img/home/banner0.png",
             MOBILE_IMG: "url('/img/home/banner/zh-mobile-version.png')"
+        },
+        HOME_ACTIVETIES: {
+            MOBILE_IMG: "url('/img/activities/home_mobile_banner.png')",
+            PC_IMG: "url('/img/activities/home_pc_banner.png')",
+            LINK: '/activities/'
         },
         HOME_OTHER_BANNER: [
             {
@@ -610,6 +619,10 @@ module.exports = {
         ],
         ROOM_LEFT_IMG:[
             {
+                IMG: '/img/activities/pc_home_bottom_banner.png',
+                LINK: '/activities/'
+            },
+            {
                 IMG: '/img/home/eventImg.png',
                 LINK: 'https://www.oschina.net/2020-openeuler/'
             },
@@ -630,6 +643,11 @@ module.exports = {
             DOWNLOAD: 'Learn more',
             IMG: "/img/home/banner0.png",
             MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
+        },
+        HOME_ACTIVETIES: {
+            MOBILE_IMG: "url('/img/activities/home_mobile_banner.png')",
+            PC_IMG: "url('/img/activities/home_pc_banner.png')",
+            LINK: '/activities/'
         },
         HOME_OTHER_BANNER: [
             {
@@ -1175,6 +1193,10 @@ module.exports = {
         ],
         ROOM_LEFT_IMG:[
             {
+                IMG: '/img/activities/pc_home_bottom_banner.png',
+                LINK: '/activities/'
+            },
+            {
                 IMG: '/img/home/eventImg.png',
                 LINK: 'https://www.oschina.net/2020-openeuler/'
             },
@@ -1195,6 +1217,11 @@ module.exports = {
             DOWNLOAD: 'Learn more',
             IMG: "/img/home/banner0.png",
             MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
+        },
+        HOME_ACTIVETIES: {
+            MOBILE_IMG: "url('/img/activities/home_mobile_banner.png')",
+            PC_IMG: "url('/img/activities/home_pc_banner.png')",
+            LINK: '/activities/'
         },
         HOME_OTHER_BANNER: [
             {
