@@ -243,7 +243,7 @@
         "ID": 31,
         "NAME": "StratoVirt虚拟化平台启动时间的优化",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3EDJ4?from=project-issue",
-        "TECHNOLOGY_FIELD": "RUST,操作系统虚拟化",
+        "TECHNOLOGY_FIELD": "Rust,操作系统虚拟化",
         "TECHNICAL_LABELS": "StratoVirt",
         "DIFFICULTY": "高"
     },
@@ -251,7 +251,7 @@
         "ID": 32,
         "NAME": "在StratoVirt虚拟化平台实现io_uring特性",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3EDQ9?from=project-issue",
-        "TECHNOLOGY_FIELD": "RUST,操作系统虚拟化",
+        "TECHNOLOGY_FIELD": "Rust,操作系统虚拟化",
         "TECHNICAL_LABELS": "StratoVirt",
         "DIFFICULTY": "高"
     },
@@ -300,7 +300,7 @@
         "NAME": "优化secGear编译框架",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3EFP5?from=project-issue",
         "TECHNOLOGY_FIELD": "操作系统安全",
-        "TECHNICAL_LABELS": "secGear，编译框架",
+        "TECHNICAL_LABELS": "secGear,编译框架",
         "DIFFICULTY": "中"
     },
     {
@@ -356,7 +356,7 @@
         "NAME": "提供通用的软件故障注入工具",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3EGGH?from=project-issue",
         "TECHNOLOGY_FIELD": "操作系统内核",
-        "TECHNICAL_LABELS": "kprobe/uprobe机制，ebpf机制",
+        "TECHNICAL_LABELS": "kprobe/uprobe机制,ebpf机制",
         "DIFFICULTY": "高"
     },
  {
@@ -404,7 +404,7 @@
         "NAME": " isula-build镜像构建工具支持跨架构镜像构建",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3EI2P?from=project-issue",
         "TECHNOLOGY_FIELD": "操作系统云原生",
-        "TECHNICAL_LABELS": "容器，iSula",
+        "TECHNICAL_LABELS": "容器,iSula",
         "DIFFICULTY": "中"
     },
  {
@@ -460,7 +460,7 @@
         "NAME": "实现Linux memory cgroup 子系统的水线分级功能",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3EJ05?from=project-issue",
         "TECHNOLOGY_FIELD": "操作系统内核",
-        "TECHNICAL_LABELS": "memory cgroup ",
+        "TECHNICAL_LABELS": "memory cgroup",
         "DIFFICULTY": "中"
     },
  {
@@ -667,7 +667,7 @@
         "ID": 84,
         "NAME": "开发Rust crates包仓库病毒扫描功能",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3HG1K",
-        "TECHNOLOGY_FIELD": "RUST",
+        "TECHNOLOGY_FIELD": "Rust",
         "TECHNICAL_LABELS": "安全",
         "DIFFICULTY": "中"
     },

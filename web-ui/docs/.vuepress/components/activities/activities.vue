@@ -57,7 +57,7 @@
 								<div class="content">
 									<p class="step-text">
 										{{i18n.activities.STEP_3.CONTENT_1}}<a 
-											href="https://summer.iscas.ac.cn/" target="_blank"
+											href="https://summer.iscas.ac.cn/#/org/projectlist" target="_blank"
 										>{{i18n.activities.STEP_3.A_LINK}}</a>{{i18n.activities.STEP_3.CONTENT_2}}
 									</p>
 									<p class="step-title">{{i18n.activities.STEP_3.TITLE}}</p>
@@ -88,7 +88,7 @@
 								{{i18n.activities.GUIDE_LABEL}}<a href="https://summer.iscas.ac.cn/help/student/" target="_blank">{{i18n.activities.GUIDE_LINK}}</a>{{i18n.activities.PERIOD}}
 							</p>
 							<p>
-								{{i18n.activities.OFFICIAL_WEBSITE_LABLE}}<a href="https://summer.iscas.ac.cn/" target="_blank">{{i18n.activities.OFFICIAL_WEBSITE_LINK}}</a>{{i18n.activities.PERIOD}}
+								{{i18n.activities.OFFICIAL_WEBSITE_LABLE}}<a href="https://summer.iscas.ac.cn/#/org/projectlist" target="_blank">{{i18n.activities.OFFICIAL_WEBSITE_LINK}}</a>{{i18n.activities.PERIOD}}
 							</p>
 							<p class="line">{{i18n.activities.DESCRIPTION_4}}</p>
 						</div>
@@ -232,7 +232,7 @@ export default {
 				})
 				let resultArray = this.technologyDirectionOptions.sort(
 			    	function compareFunction(param1, param2) {
-			        	return param1.localeCompare(param2,"zh");
+			        	return param1.localeCompare(param2, 'zh');
 			    	}
 				);
 				this.technologyDirectionOptions = resultArray;
@@ -334,7 +334,7 @@ export default {
 			});
 			let resultArray = arr.sort(
 			    function compareFunction(param1, param2) {
-			        return param1.sortName.localeCompare(param2.sortName,"zh");
+			        return param1.sortName.localeCompare(param2.sortName, 'zh');
 			    }
 			);
 			return resultArray;
@@ -401,72 +401,78 @@ export default {
 </script>
 <style lang="less">
 .activities-content {
-  .el-select__tags {
-    display: none;
-  }
-  .el-input__icon {
-    line-height: 32px;
-  }
-  .el-form-item__label {
-    line-height: 32px;
-  }
-  .el-form-item__content {
-    line-height: 32px;
-    width: 140px;
-    @media screen and (max-width: 1000px) {
-      width: 100%;
-    }
-    .el-checkbox__inner {
-      border-radius: 50%;
-    }
-  }
-  .el-input__inner {
-    height: 32px;
-    line-height: 32px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    color: #000;
-  }
-  .el-select__tags {
-    min-width: 140px !important;
-  }
-  .el-form-item__label {
-    font-size: 18px;
-    color: #000;
-    
-  }
-
-  .el-input__inner {
-    font-size: 14px;
-    color: #000;
-    
-  }
-
-  .el-select-dropdown__item {
-    color: #000;
-    
-  }
-
-  .el-form-item {
-    margin-right: 50px !important;
-  }
-
-  .el-form-item__content {
-    min-width: 140px;
-    min-height: 32px;
-  }
-
-  .el-button--primary {
-    background-color: #002fa7;
-  }
-
-  .el-button--primary:focus,
-  .el-button--primary:hover {
-    background-color: #002fa7;
-  }
-  .el-input {
-    width: unset;
-    margin: unset;
-  }
+  	.el-select__tags {
+  	  	display: none;
+  	}
+  	.el-input__icon {
+  	  	line-height: 32px;
+  	}
+  	.el-form-item__label {
+  	  	line-height: 32px;
+  	}
+  	.el-form-item__content {
+  	  	line-height: 32px;
+  	  	width: 140px;
+  	  	@media screen and (max-width: 1000px) {
+  	  	  	width: 100%;
+  	  	}
+  	  	.el-checkbox__inner {
+  	  	  	border-radius: 50%;
+  	  	}
+  	}
+  	.el-input__inner {
+  	  	height: 32px;
+  	  	line-height: 32px;
+  	  	border: 1px solid rgba(0, 0, 0, 0.5);
+  	  	color: #000;
+  	}
+  	.el-select__tags {
+  	  	min-width: 140px !important;
+  	}
+  	.el-form-item__label {
+  	  font-size: 18px;
+  	  color: #000;
+  	}
+  	.el-input__inner {
+  	  	font-size: 14px;
+  	  	color: #000;
+  	}
+  	.el-select-dropdown__item {
+  	  	color: #000;
+  	}
+  	.el-form-item {
+  	  	margin-right: 50px !important;
+  	}
+  	.el-form-item__content {
+  	  	min-width: 140px;
+  	  	min-height: 32px;
+  	}
+  	.el-button--primary {
+  	  	background-color: #002fa7;
+  	}
+  	.el-button--primary:focus,
+  	.el-button--primary:hover {
+  	  	background-color: #002fa7;
+  	}
+  	.el-input {
+  	  	width: unset;
+  	  	margin: unset;
+  	}
+  	.el-pagination__editor {
+    	line-height: 18px;
+    	padding: 0 2px;
+    	height: 28px;
+    	text-align: center;
+    	margin: 0 2px;
+    	box-sizing: border-box;
+    	border-radius: 3px;
+	}
+	.el-pagination__editor.el-input .el-input__inner {
+    	height: 28px;
+	}
+	.el-pagination__editor.el-input{
+		width: 50px;
+	}
 }
 </style>
 
@@ -493,7 +499,7 @@ export default {
 		margin-bottom: 60px;
 		background-image: url('/img/activities/pc/banner_all.png');
 		@media screen and (max-width: 1000px) {
-			width: 375px;
+			width: 100%;
 			height: 300px;
 			margin-bottom: 20px;
 			background-image: url('/img/activities/mobile/banner.png');
@@ -521,7 +527,7 @@ export default {
     	    }
     	    .line {
     	        display: block;
-    	        width: 2px;
+    	        width: 3px;
     	        height: 252px;
     	        margin: 0 auto;
     	    }
@@ -737,6 +743,10 @@ export default {
 						color: #000;
 						font-size: 18px;
 						font-weight: 400;
+						@media screen and (max-width: 1000px) {
+							line-height: 26px;
+							font-size: 16px;
+						}
 					}
 					a {
 						text-decoration: none;
