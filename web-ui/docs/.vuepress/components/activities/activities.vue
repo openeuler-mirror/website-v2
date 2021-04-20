@@ -622,6 +622,7 @@ export default {
 					height: 367px;
 					padding: 40px 20px 40px 60px;
   			  		background-image: url('/img/activities/mobile/step_1.png');
+					margin: 0 auto;
   				}
 				.content {
 					line-height: 24px;
@@ -649,6 +650,7 @@ export default {
 							margin-top: 30px;
 							padding: 40px 20px 40px 60px;
   			  				background-image: url('/img/activities/mobile/step_2.png');
+							margin: 0 auto;
   						}
 					}
 					.right-top-right {
@@ -662,6 +664,7 @@ export default {
 							margin-top: 30px;
 							padding: 40px 20px 40px 60px;
   			  				background-image: url('/img/activities/mobile/step_3.png');
+							margin: 0 auto;
   						}
 
 					}
@@ -683,6 +686,7 @@ export default {
 							margin-top: 30px;
 							padding: 40px 20px 40px 60px;
   			  				background-image: url('/img/activities/mobile/step_4.png');
+							margin: 0 auto;
   						}
 					}
 					.right-bottom-right {
@@ -696,6 +700,7 @@ export default {
 							margin-top: 30px;
 							padding: 40px 20px 40px 60px;
   			  				background-image: url('/img/activities/mobile/step_5.png');
+							margin: 0 auto;
   						}
 					}
 				}
@@ -843,7 +848,7 @@ export default {
 			text-decoration: none;
 			cursor: pointer;
 			&:hover {
-				box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.2);
+				box-shadow: 0px 6px 30px 0px rgba(0, 47, 167, 0.2);
 			}
 			@media screen and (max-width: 1000px) {
   			  	width: 100%;
