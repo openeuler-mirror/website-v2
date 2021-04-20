@@ -619,10 +619,6 @@ module.exports = {
         ],
         ROOM_LEFT_IMG:[
             {
-                IMG: '/img/activities/pc_home_bottom_banner.png',
-                LINK: '/activities/'
-            },
-            {
                 IMG: '/img/home/eventImg.png',
                 LINK: 'https://www.oschina.net/2020-openeuler/'
             },
@@ -1192,10 +1188,6 @@ module.exports = {
             }
         ],
         ROOM_LEFT_IMG:[
-            {
-                IMG: '/img/activities/pc_home_bottom_banner.png',
-                LINK: '/activities/'
-            },
             {
                 IMG: '/img/home/eventImg.png',
                 LINK: 'https://www.oschina.net/2020-openeuler/'
