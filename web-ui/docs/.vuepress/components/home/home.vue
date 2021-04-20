@@ -12,6 +12,12 @@
                         </div>
                     </div>
                 </el-carousel-item>
+                <el-carousel-item v-if="$lang === 'zh'">
+                    <div class="carousel-banner" 
+                        :style="{backgroundImage: i18n.home.HOME_ACTIVETIES.PC_IMG}"
+                        @click="go(i18n.home.HOME_ACTIVETIES.LINK)"
+                    ></div>
+                </el-carousel-item>
                 <el-carousel-item class="carousel-item">
                     <div class="banner-link" @click="go($site.themeConfig.docsUrl+i18n.home.HOME_FIRST_BANNER.LINK)">
                         <div class="banner-item">
@@ -70,6 +76,9 @@
                         </video>
                         <div class="mobile-btn" v-show="mobilePlayBtnDisplay" @click="playVideo"></div>
                     </div>
+                </swiper-slide>
+                 <swiper-slide class="carousel-item-index" v-if="$lang === 'zh'">
+                    <div class="mobile-version" @click="go(i18n.home.HOME_ACTIVETIES.LINK)" :style="{backgroundImage:i18n.home.HOME_ACTIVETIES.MOBILE_IMG}"></div>
                 </swiper-slide>
                 <swiper-slide class="carousel-item-index">
                     <div class="mobile-version" @click="go($site.themeConfig.docsUrl+i18n.home.HOME_FIRST_BANNER.LINK)" :style="{backgroundImage:i18n.home.HOME_FIRST_BANNER.MOBILE_IMG}"></div>
@@ -434,7 +443,7 @@
                 mobileSwiperInterval: null,
                 mobilePagenationIndex: 1,
                 developerList: [],
-                bannerAmount: 6,
+                bannerAmount: 7,
                 statisticParams: {
                     type: 'openEuler'
                 },
