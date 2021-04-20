@@ -99,32 +99,41 @@
 			</div>
       		<el-form :inline="true" :model="formData" class="activities-filter">
       		  	<el-form-item :label="i18n.activities.FILTER.LABEL_1">
-					<el-select v-model="formData.technologyDirection" placeholder multiple>
+					<el-select 
+						v-model="formData.technologyDirection"
+						@change="selectChange"
+						placeholder multiple
+					>
                         <el-option
                             v-for="(item, index) in technologyDirectionOptions"
                             :key="index"
                             :value="item"
-							@change="currentChange(1)"
                         ></el-option>
                     </el-select>
       		  	</el-form-item>
       		  	<el-form-item :label="i18n.activities.FILTER.LABEL_2">
-					<el-select v-model="formData.technologyLables" placeholder multiple>
+					<el-select 
+						v-model="formData.technologyLables"
+						@change="selectChange"
+						placeholder multiple
+					>
                         <el-option
                             v-for="(item, index) in technologyLablesOptions"
                             :key="index"
                             :value="item"
-							@change="currentChange(1)"
                         ></el-option>
                     </el-select>
       		  	</el-form-item>
       		  	<el-form-item :label="i18n.activities.FILTER.LABEL_3">
-					<el-select v-model="formData.difficulty" placeholder multiple>
+					<el-select 
+						v-model="formData.difficulty"
+						@change="selectChange"
+						placeholder multiple
+					>
                         <el-option
                             v-for="(item, index) in difficultyOptions"
                             :key="index"
                             :value="item"
-							@change="currentChange(1)"
                         ></el-option>
                     </el-select>
       		  	</el-form-item>
@@ -141,10 +150,10 @@
      		    	<span @click="delTag(item)">×</span>
      		  	</li>
      		</ul>
-      		<div class="activities-list">
+      		<div class="activities-list" v-if="filterList.length > 0">
 				<a class="activities-list-item" 
 					target="_blank"
-				  	v-for="(item, index) in pageChange"
+				  	v-for="(item, index) in filterList"
 					:key="index"
 					:href="item.LINK">
 					<div class="activities-list-item-title">{{item.NAME}}</div>
@@ -157,6 +166,9 @@
 						<span>{{item.DIFFICULTY}}</span>
 					</div>
 				</a>
+      		</div>
+      		<div class="activities-list" v-if="filterList.length === 0">
+				<div class="no-data-info">{{i18n.activities.NO_DATA_INFO}}</div>
       		</div>
 			<el-pagination
                 class="activities-pagination"
@@ -183,13 +195,14 @@ export default {
 				technologyLables: [],
 				difficulty: [],
 				page: 1,
-                pageSize: 12
+                pageSize: 18
 			},
 			technologyDirectionOptions: [],
 			technologyLablesOptions: [],
 			difficultyOptions: [],
 			lang: '',
 			list: [],
+			filterList: [],
 			total: 0,
 			pageValue: true,
 			navTitleScroll: [780,1430],
@@ -217,6 +230,12 @@ export default {
 						this.technologyDirectionOptions.push(inner_item);
 					}
 				})
+				let resultArray = this.technologyDirectionOptions.sort(
+			    	function compareFunction(param1, param2) {
+			        	return param1.localeCompare(param2,"zh");
+			    	}
+				);
+				this.technologyDirectionOptions = resultArray;
   	        }
   	        if(filterFn(this.technologyLablesOptions, 'TECHNICAL_LABELS', item)){
 				let newArr = item.TECHNICAL_LABELS.split(',');
@@ -226,20 +245,20 @@ export default {
 						this.technologyLablesOptions.push(inner_item);
 					}
 				})
-  	        }
-  	        if(filterFn(this.difficultyOptions, 'DIFFICULTY', item)){
-  	            this.difficultyOptions.push(item.DIFFICULTY);
+				let resultArray = this.technologyLablesOptions.sort();
+				this.technologyLablesOptions = resultArray;
   	        }
   	    })
-	
   	},
   	mounted () {
   	  	this.list = this.i18n.activities.ACTIVITIES_LIST;
 		this.lang = this.$lang;
+		this.difficultyOptions = this.i18n.activities.FILTER.DIFFICULTY_OPTIONS;
 		window.addEventListener('scroll',this.atuneScroll);
+		this.pageChange(1);
   	},
 	 computed: {
-		 filterTags () {
+		filterTags () {
 			let allTags = this.technologyDirectionOptions.concat(
 				this.technologyLablesOptions,
 				this.difficultyOptions
@@ -305,16 +324,28 @@ export default {
 					)
 				})
 			}
-    	},
-		pageChange () {
-			let pageNum = this.formData.page;
-			this.total = this.activitiesList.length;
-			let oldList = this.activitiesList;
-			let newList = oldList.slice((pageNum-1)*12, pageNum*12);
-			return newList;
-		}
+    	}
   },
   	methods: {
+		sortList(arr,eachName){//排序函数
+			arr.forEach(function(item){
+				let temp=item[eachName];
+				item.sortName=temp;
+			});
+			let resultArray = arr.sort(
+			    function compareFunction(param1, param2) {
+			        return param1.sortName.localeCompare(param2.sortName,"zh");
+			    }
+			);
+			return resultArray;
+		},
+		pageChange(page) {
+			let pageNum = page;
+			this.total = this.activitiesList.length;
+			let oldList = this.sortList(this.activitiesList, 'TECHNOLOGY_FIELD');
+			let newList = oldList.slice((pageNum-1)*18, pageNum*18);
+			this.filterList = newList;
+		},
 		selectFilter(arr, str) {
 			let labelArr =  str.split(',');
 			var isTrue = false;
@@ -327,8 +358,13 @@ export default {
 		},
 		currentChange(value) {
 			this.formData.page = value;
+			this.pageChange(value);
 		},
-  	  	delTag (tag) {
+		selectChange() {
+			this.formData.page = 1;
+			this.pageChange(1);
+		},
+  	  	delTag(tag) {
 			this.formData.page = 1;
       		const technologyDirectionIndex = this.formData.technologyDirection.indexOf(tag);
       		const technologyLablesIndex = this.formData.technologyLables.indexOf(tag);
@@ -340,6 +376,7 @@ export default {
 			} else if(difficultyIndex > -1) {
 				this.formData.difficulty.splice(difficultyIndex, 1);
 			}
+			this.pageChange(1);
     	},
 		atuneScroll(value) {
             let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
@@ -358,7 +395,7 @@ export default {
         },
 		goTitle(index) {
             document.documentElement.scrollTop = this.navTitleScroll[index];
-        },
+        }
   	}
 };
 </script>
@@ -441,8 +478,13 @@ export default {
 	color: #000;
 	@media screen and (max-width: 1000px) {
   	  	width: 100%;
-  	  	padding: 0 15px;
+		padding-bottom: 80px;
   	}
+	.activities-list-wrapper {
+		@media screen and (max-width: 1000px) {
+  	  		padding: 0 30px;
+  		}
+	}
 	.activities-banner a{
 		cursor: pointer;
 		display: inline-block;
@@ -536,7 +578,8 @@ export default {
 			line-height: 40px;
 			font-weight: 400;
 			@media screen and (max-width: 1000px) {
-				font-size: 20px;
+				font-size: 16px;
+				line-height: 26px;
   			}
 		}
 		.title {
@@ -571,7 +614,7 @@ export default {
 				@media screen and (max-width: 1000px) {
 					width: 325px;
 					height: 367px;
-					padding: 40px 40px 40px 60px;
+					padding: 40px 20px 40px 60px;
   			  		background-image: url('/img/activities/mobile/step_1.png');
   				}
 				.content {
@@ -598,7 +641,7 @@ export default {
 							width: 325px;
 							height: 127px;
 							margin-top: 30px;
-							padding: 40px 40px 40px 60px;
+							padding: 40px 20px 40px 60px;
   			  				background-image: url('/img/activities/mobile/step_2.png');
   						}
 					}
@@ -611,7 +654,7 @@ export default {
 							width: 325px;
 							height: 175px;
 							margin-top: 30px;
-							padding: 40px 40px 40px 60px;
+							padding: 40px 20px 40px 60px;
   			  				background-image: url('/img/activities/mobile/step_3.png');
   						}
 
@@ -632,7 +675,7 @@ export default {
 							width: 325px;
 							height: 223px;
 							margin-top: 30px;
-							padding: 40px 40px 40px 60px;
+							padding: 40px 20px 40px 60px;
   			  				background-image: url('/img/activities/mobile/step_4.png');
   						}
 					}
@@ -645,7 +688,7 @@ export default {
 							width: 325px;
 							height: 151px;
 							margin-top: 30px;
-							padding: 40px 40px 40px 60px;
+							padding: 40px 20px 40px 60px;
   			  				background-image: url('/img/activities/mobile/step_5.png');
   						}
 					}
@@ -692,7 +735,7 @@ export default {
 					p {
 						line-height: 40px;
 						color: #000;
-						font-size: 20px;
+						font-size: 18px;
 						font-weight: 400;
 					}
 					a {
@@ -702,7 +745,7 @@ export default {
 					}
 					.line {
 						margin-top: 10px;
-						width: 428px;
+						width: 396px;
 						@media screen and (max-width: 1000px) {
 							width: 100%;
 						}
@@ -775,6 +818,9 @@ export default {
 	}
 	.activities-list {
 		margin-top: 30px;
+		.no-data-info {
+			text-align: center;
+		}
 		.activities-list-item {
 			position: relative;
 			width: 350px;
@@ -805,7 +851,12 @@ export default {
           		-webkit-line-clamp: 3;
           		-webkit-box-orient: vertical;
 				margin-bottom: 20px;
-				color:rgba(0, 0, 0, 1)
+				color:rgba(0, 0, 0, 1);
+				@media screen and (max-width: 1000px) {
+  			  		font-size: 16px;
+					line-height: 26px;
+					height: 72px;
+  				}
 			}
 			.activities-list-item-field {
 				overflow: hidden;
@@ -813,7 +864,7 @@ export default {
 				text-overflow: ellipsis;
 				margin-bottom: 14px;
 				font-size: 14px;
-				color: #002fa7;
+				color: rgba(0, 0, 0, 0.5);
 				.lable {
 					color: rgba(0, 0, 0, 0.5);
 				}
@@ -823,7 +874,7 @@ export default {
 				white-space: nowrap;
 				text-overflow: ellipsis;
 				font-size: 14px;
-				color: #002fa7;
+				color: rgba(0, 0, 0, 0.5);
 				.lable {
 					color: rgba(0, 0, 0, 0.5);
 				}
