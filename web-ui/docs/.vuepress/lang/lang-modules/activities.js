@@ -173,5 +173,5 @@ module.exports = {
         ACTIVITIES_LIST: require('././../../data/activities/zh.json'),
         ACTIVETIES_LIST_LABLE_1: '方向',
         ACTIVETIES_LIST_LABLE_2: '标签'
-    },
+    }
 };
