@@ -292,7 +292,7 @@
         "NAME": " 在openeuler内核中引进maple tree，优化vma管理",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3EFL4?from=project-issue",
         "TECHNOLOGY_FIELD": "操作系统内核",
-        "TECHNICAL_LABELS": "maple tree, vam",
+        "TECHNICAL_LABELS": "maple tree,vam",
         "DIFFICULTY": "高"
     },
     {
@@ -483,7 +483,7 @@
         "ID": 61,
         "NAME": "实现memory cgroup子系统OOM优先级的功能",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3EL9X",
-        "TECHNOLOGY_FIELD": "操作系统内核,云原生",
+        "TECHNOLOGY_FIELD": "操作系统内核,操作系统云原生",
         "TECHNICAL_LABELS": "memory cgroup",
         "DIFFICULTY": "中"
     },
