@@ -57,7 +57,7 @@
 								<div class="content">
 									<p class="step-text">
 										{{i18n.activities.STEP_3.CONTENT_1}}<a 
-											href="https://summer.iscas.ac.cn/" target="_blank"
+											href="https://summer.iscas.ac.cn/#/org/projectlist" target="_blank"
 										>{{i18n.activities.STEP_3.A_LINK}}</a>{{i18n.activities.STEP_3.CONTENT_2}}
 									</p>
 									<p class="step-title">{{i18n.activities.STEP_3.TITLE}}</p>
@@ -88,7 +88,7 @@
 								{{i18n.activities.GUIDE_LABEL}}<a href="https://summer.iscas.ac.cn/help/student/" target="_blank">{{i18n.activities.GUIDE_LINK}}</a>{{i18n.activities.PERIOD}}
 							</p>
 							<p>
-								{{i18n.activities.OFFICIAL_WEBSITE_LABLE}}<a href="https://summer.iscas.ac.cn/" target="_blank">{{i18n.activities.OFFICIAL_WEBSITE_LINK}}</a>{{i18n.activities.PERIOD}}
+								{{i18n.activities.OFFICIAL_WEBSITE_LABLE}}<a href="https://summer.iscas.ac.cn/#/org/projectlist" target="_blank">{{i18n.activities.OFFICIAL_WEBSITE_LINK}}</a>{{i18n.activities.PERIOD}}
 							</p>
 							<p class="line">{{i18n.activities.DESCRIPTION_4}}</p>
 						</div>
@@ -99,32 +99,41 @@
 			</div>
       		<el-form :inline="true" :model="formData" class="activities-filter">
       		  	<el-form-item :label="i18n.activities.FILTER.LABEL_1">
-					<el-select v-model="formData.technologyDirection" placeholder multiple>
+					<el-select 
+						v-model="formData.technologyDirection"
+						@change="selectChange"
+						placeholder multiple
+					>
                         <el-option
                             v-for="(item, index) in technologyDirectionOptions"
                             :key="index"
                             :value="item"
-							@change="currentChange(1)"
                         ></el-option>
                     </el-select>
       		  	</el-form-item>
       		  	<el-form-item :label="i18n.activities.FILTER.LABEL_2">
-					<el-select v-model="formData.technologyLables" placeholder multiple>
+					<el-select 
+						v-model="formData.technologyLables"
+						@change="selectChange"
+						placeholder multiple
+					>
                         <el-option
                             v-for="(item, index) in technologyLablesOptions"
                             :key="index"
                             :value="item"
-							@change="currentChange(1)"
                         ></el-option>
                     </el-select>
       		  	</el-form-item>
       		  	<el-form-item :label="i18n.activities.FILTER.LABEL_3">
-					<el-select v-model="formData.difficulty" placeholder multiple>
+					<el-select 
+						v-model="formData.difficulty"
+						@change="selectChange"
+						placeholder multiple
+					>
                         <el-option
                             v-for="(item, index) in difficultyOptions"
                             :key="index"
                             :value="item"
-							@change="currentChange(1)"
                         ></el-option>
                     </el-select>
       		  	</el-form-item>
@@ -141,10 +150,10 @@
      		    	<span @click="delTag(item)">×</span>
      		  	</li>
      		</ul>
-      		<div class="activities-list">
+      		<div class="activities-list" v-if="filterList.length > 0">
 				<a class="activities-list-item" 
 					target="_blank"
-				  	v-for="(item, index) in pageChange"
+				  	v-for="(item, index) in filterList"
 					:key="index"
 					:href="item.LINK">
 					<div class="activities-list-item-title">{{item.NAME}}</div>
@@ -157,6 +166,9 @@
 						<span>{{item.DIFFICULTY}}</span>
 					</div>
 				</a>
+      		</div>
+      		<div class="activities-list" v-if="filterList.length === 0">
+				<div class="no-data-info">{{i18n.activities.NO_DATA_INFO}}</div>
       		</div>
 			<el-pagination
                 class="activities-pagination"
@@ -183,13 +195,14 @@ export default {
 				technologyLables: [],
 				difficulty: [],
 				page: 1,
-                pageSize: 12
+                pageSize: 18
 			},
 			technologyDirectionOptions: [],
 			technologyLablesOptions: [],
 			difficultyOptions: [],
 			lang: '',
 			list: [],
+			filterList: [],
 			total: 0,
 			pageValue: true,
 			navTitleScroll: [780,1430],
@@ -217,6 +230,12 @@ export default {
 						this.technologyDirectionOptions.push(inner_item);
 					}
 				})
+				let resultArray = this.technologyDirectionOptions.sort(
+			    	function compareFunction(param1, param2) {
+			        	return param1.localeCompare(param2, 'zh');
+			    	}
+				);
+				this.technologyDirectionOptions = resultArray;
   	        }
   	        if(filterFn(this.technologyLablesOptions, 'TECHNICAL_LABELS', item)){
 				let newArr = item.TECHNICAL_LABELS.split(',');
@@ -226,20 +245,20 @@ export default {
 						this.technologyLablesOptions.push(inner_item);
 					}
 				})
-  	        }
-  	        if(filterFn(this.difficultyOptions, 'DIFFICULTY', item)){
-  	            this.difficultyOptions.push(item.DIFFICULTY);
+				let resultArray = this.technologyLablesOptions.sort();
+				this.technologyLablesOptions = resultArray;
   	        }
   	    })
-	
   	},
   	mounted () {
   	  	this.list = this.i18n.activities.ACTIVITIES_LIST;
 		this.lang = this.$lang;
+		this.difficultyOptions = this.i18n.activities.FILTER.DIFFICULTY_OPTIONS;
 		window.addEventListener('scroll',this.atuneScroll);
+		this.pageChange(1);
   	},
 	 computed: {
-		 filterTags () {
+		filterTags () {
 			let allTags = this.technologyDirectionOptions.concat(
 				this.technologyLablesOptions,
 				this.difficultyOptions
@@ -305,16 +324,16 @@ export default {
 					)
 				})
 			}
-    	},
-		pageChange () {
-			let pageNum = this.formData.page;
-			this.total = this.activitiesList.length;
-			let oldList = this.activitiesList;
-			let newList = oldList.slice((pageNum-1)*12, pageNum*12);
-			return newList;
-		}
+    	}
   },
   	methods: {
+		pageChange(page) {
+			let pageNum = page;
+			this.total = this.activitiesList.length;
+			let oldList = this.activitiesList;
+			let newList = oldList.slice((pageNum-1)*18, pageNum*18);
+			this.filterList = newList;
+		},
 		selectFilter(arr, str) {
 			let labelArr =  str.split(',');
 			var isTrue = false;
@@ -327,8 +346,13 @@ export default {
 		},
 		currentChange(value) {
 			this.formData.page = value;
+			this.pageChange(value);
 		},
-  	  	delTag (tag) {
+		selectChange() {
+			this.formData.page = 1;
+			this.pageChange(1);
+		},
+  	  	delTag(tag) {
 			this.formData.page = 1;
       		const technologyDirectionIndex = this.formData.technologyDirection.indexOf(tag);
       		const technologyLablesIndex = this.formData.technologyLables.indexOf(tag);
@@ -340,6 +364,7 @@ export default {
 			} else if(difficultyIndex > -1) {
 				this.formData.difficulty.splice(difficultyIndex, 1);
 			}
+			this.pageChange(1);
     	},
 		atuneScroll(value) {
             let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
@@ -358,78 +383,84 @@ export default {
         },
 		goTitle(index) {
             document.documentElement.scrollTop = this.navTitleScroll[index];
-        },
+        }
   	}
 };
 </script>
 <style lang="less">
 .activities-content {
-  .el-select__tags {
-    display: none;
-  }
-  .el-input__icon {
-    line-height: 32px;
-  }
-  .el-form-item__label {
-    line-height: 32px;
-  }
-  .el-form-item__content {
-    line-height: 32px;
-    width: 140px;
-    @media screen and (max-width: 1000px) {
-      width: 100%;
-    }
-    .el-checkbox__inner {
-      border-radius: 50%;
-    }
-  }
-  .el-input__inner {
-    height: 32px;
-    line-height: 32px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    color: #000;
-  }
-  .el-select__tags {
-    min-width: 140px !important;
-  }
-  .el-form-item__label {
-    font-size: 18px;
-    color: #000;
-    
-  }
-
-  .el-input__inner {
-    font-size: 14px;
-    color: #000;
-    
-  }
-
-  .el-select-dropdown__item {
-    color: #000;
-    
-  }
-
-  .el-form-item {
-    margin-right: 50px !important;
-  }
-
-  .el-form-item__content {
-    min-width: 140px;
-    min-height: 32px;
-  }
-
-  .el-button--primary {
-    background-color: #002fa7;
-  }
-
-  .el-button--primary:focus,
-  .el-button--primary:hover {
-    background-color: #002fa7;
-  }
-  .el-input {
-    width: unset;
-    margin: unset;
-  }
+  	.el-select__tags {
+  	  	display: none;
+  	}
+  	.el-input__icon {
+  	  	line-height: 32px;
+  	}
+  	.el-form-item__label {
+  	  	line-height: 32px;
+  	}
+  	.el-form-item__content {
+  	  	line-height: 32px;
+  	  	width: 140px;
+  	  	@media screen and (max-width: 1000px) {
+  	  	  	width: 100%;
+  	  	}
+  	  	.el-checkbox__inner {
+  	  	  	border-radius: 50%;
+  	  	}
+  	}
+  	.el-input__inner {
+  	  	height: 32px;
+  	  	line-height: 32px;
+  	  	border: 1px solid rgba(0, 0, 0, 0.5);
+  	  	color: #000;
+  	}
+  	.el-select__tags {
+  	  	min-width: 140px !important;
+  	}
+  	.el-form-item__label {
+  	  font-size: 18px;
+  	  color: #000;
+  	}
+  	.el-input__inner {
+  	  	font-size: 14px;
+  	  	color: #000;
+  	}
+  	.el-select-dropdown__item {
+  	  	color: #000;
+  	}
+  	.el-form-item {
+  	  	margin-right: 50px !important;
+  	}
+  	.el-form-item__content {
+  	  	min-width: 140px;
+  	  	min-height: 32px;
+  	}
+  	.el-button--primary {
+  	  	background-color: #002fa7;
+  	}
+  	.el-button--primary:focus,
+  	.el-button--primary:hover {
+  	  	background-color: #002fa7;
+  	}
+  	.el-input {
+  	  	width: unset;
+  	  	margin: unset;
+  	}
+  	.el-pagination__editor {
+    	line-height: 18px;
+    	padding: 0 2px;
+    	height: 28px;
+    	text-align: center;
+    	margin: 0 2px;
+    	box-sizing: border-box;
+    	border-radius: 3px;
+	}
+	.el-pagination__editor.el-input .el-input__inner {
+    	height: 28px;
+	}
+	.el-pagination__editor.el-input{
+		width: 50px;
+	}
 }
 </style>
 
@@ -441,20 +472,27 @@ export default {
 	color: #000;
 	@media screen and (max-width: 1000px) {
   	  	width: 100%;
-  	  	padding: 0 15px;
+		padding-bottom: 80px;
   	}
+	.activities-list-wrapper {
+		@media screen and (max-width: 1000px) {
+  	  		padding: 0 30px;
+  		}
+	}
 	.activities-banner a{
 		cursor: pointer;
 		display: inline-block;
 		width: 1120px;
 		height: 380px;
 		margin-bottom: 60px;
-		background-image: url('/img/activities/pc/banner_all.png');
+		background: url('/img/activities/pc/banner_all.png') no-repeat;
+		background-size: 100% 100%;
 		@media screen and (max-width: 1000px) {
-			width: 375px;
+			width: 100%;
 			height: 300px;
 			margin-bottom: 20px;
-			background-image: url('/img/activities/mobile/banner.png');
+			background: url('/img/activities/mobile/banner.png') no-repeat;
+			background-size: 100% 100%;
   		}
 	}
 	.activities-title-nav {
@@ -479,7 +517,7 @@ export default {
     	    }
     	    .line {
     	        display: block;
-    	        width: 2px;
+    	        width: 3px;
     	        height: 252px;
     	        margin: 0 auto;
     	    }
@@ -536,7 +574,8 @@ export default {
 			line-height: 40px;
 			font-weight: 400;
 			@media screen and (max-width: 1000px) {
-				font-size: 20px;
+				font-size: 16px;
+				line-height: 26px;
   			}
 		}
 		.title {
@@ -571,8 +610,9 @@ export default {
 				@media screen and (max-width: 1000px) {
 					width: 325px;
 					height: 367px;
-					padding: 40px 40px 40px 60px;
+					padding: 40px 20px 40px 60px;
   			  		background-image: url('/img/activities/mobile/step_1.png');
+					margin: 0 auto;
   				}
 				.content {
 					line-height: 24px;
@@ -598,8 +638,9 @@ export default {
 							width: 325px;
 							height: 127px;
 							margin-top: 30px;
-							padding: 40px 40px 40px 60px;
+							padding: 40px 20px 40px 60px;
   			  				background-image: url('/img/activities/mobile/step_2.png');
+							margin: 0 auto;
   						}
 					}
 					.right-top-right {
@@ -611,8 +652,9 @@ export default {
 							width: 325px;
 							height: 175px;
 							margin-top: 30px;
-							padding: 40px 40px 40px 60px;
+							padding: 40px 20px 40px 60px;
   			  				background-image: url('/img/activities/mobile/step_3.png');
+							margin: 0 auto;
   						}
 
 					}
@@ -632,8 +674,9 @@ export default {
 							width: 325px;
 							height: 223px;
 							margin-top: 30px;
-							padding: 40px 40px 40px 60px;
+							padding: 40px 20px 40px 60px;
   			  				background-image: url('/img/activities/mobile/step_4.png');
+							margin: 0 auto;
   						}
 					}
 					.right-bottom-right {
@@ -645,8 +688,9 @@ export default {
 							width: 325px;
 							height: 151px;
 							margin-top: 30px;
-							padding: 40px 40px 40px 60px;
+							padding: 40px 20px 40px 60px;
   			  				background-image: url('/img/activities/mobile/step_5.png');
+							margin: 0 auto;
   						}
 					}
 				}
@@ -692,8 +736,12 @@ export default {
 					p {
 						line-height: 40px;
 						color: #000;
-						font-size: 20px;
+						font-size: 18px;
 						font-weight: 400;
+						@media screen and (max-width: 1000px) {
+							line-height: 26px;
+							font-size: 16px;
+						}
 					}
 					a {
 						text-decoration: none;
@@ -702,7 +750,7 @@ export default {
 					}
 					.line {
 						margin-top: 10px;
-						width: 428px;
+						width: 396px;
 						@media screen and (max-width: 1000px) {
 							width: 100%;
 						}
@@ -775,6 +823,9 @@ export default {
 	}
 	.activities-list {
 		margin-top: 30px;
+		.no-data-info {
+			text-align: center;
+		}
 		.activities-list-item {
 			position: relative;
 			width: 350px;
@@ -787,7 +838,7 @@ export default {
 			text-decoration: none;
 			cursor: pointer;
 			&:hover {
-				box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.2);
+				box-shadow: 0px 6px 30px 0px rgba(0, 47, 167, 0.2);
 			}
 			@media screen and (max-width: 1000px) {
   			  	width: 100%;
@@ -805,7 +856,12 @@ export default {
           		-webkit-line-clamp: 3;
           		-webkit-box-orient: vertical;
 				margin-bottom: 20px;
-				color:rgba(0, 0, 0, 1)
+				color:rgba(0, 0, 0, 1);
+				@media screen and (max-width: 1000px) {
+  			  		font-size: 16px;
+					line-height: 26px;
+					height: 72px;
+  				}
 			}
 			.activities-list-item-field {
 				overflow: hidden;
@@ -813,7 +869,7 @@ export default {
 				text-overflow: ellipsis;
 				margin-bottom: 14px;
 				font-size: 14px;
-				color: #002fa7;
+				color: rgba(0, 0, 0, 0.5);
 				.lable {
 					color: rgba(0, 0, 0, 0.5);
 				}
@@ -823,7 +879,7 @@ export default {
 				white-space: nowrap;
 				text-overflow: ellipsis;
 				font-size: 14px;
-				color: #002fa7;
+				color: rgba(0, 0, 0, 0.5);
 				.lable {
 					color: rgba(0, 0, 0, 0.5);
 				}
