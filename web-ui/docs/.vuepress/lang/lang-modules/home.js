@@ -55,7 +55,7 @@ module.exports = {
         },
         HOME_ACTIVETIES: {
             MOBILE_IMG: "url('/img/activities/home_mobile_banner.png')",
-            PC_IMG: "url('/img/activities/home_pc_banner.png')",
+            PC_IMG: "url('/img/activities/pc/banner_all.png')",
             LINK: '/activities/'
         },
         HOME_OTHER_BANNER: [
@@ -642,7 +642,7 @@ module.exports = {
         },
         HOME_ACTIVETIES: {
             MOBILE_IMG: "url('/img/activities/home_mobile_banner.png')",
-            PC_IMG: "url('/img/activities/home_pc_banner.png')",
+            PC_IMG: "url('/img/activities/pc/banner_all.png')",
             LINK: '/activities/'
         },
         HOME_OTHER_BANNER: [
@@ -1212,7 +1212,7 @@ module.exports = {
         },
         HOME_ACTIVETIES: {
             MOBILE_IMG: "url('/img/activities/home_mobile_banner.png')",
-            PC_IMG: "url('/img/activities/home_pc_banner.png')",
+            PC_IMG: "url('/img/activities/pc/banner_all.png')",
             LINK: '/activities/'
         },
         HOME_OTHER_BANNER: [
