@@ -70,7 +70,7 @@ module.exports = {
     devServer: {
         proxy: {
             '/api-sig/': {
-                target: 'https://api.openeuler.org/meetings',
+                target: 'https://api.openeuler.org/meetings/',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {
@@ -78,7 +78,7 @@ module.exports = {
                 }
             },
             '/api-cve/': {
-                target: 'https://openeuler.org/api-cve',
+                target: 'https://openeuler.org/api-cve/',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {
@@ -86,7 +86,7 @@ module.exports = {
                 }
             },
             '/api/': {
-                target: 'https://openeuler.org/api',
+                target: 'https://openeuler.org/api/',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {
