@@ -640,11 +640,6 @@ module.exports = {
             IMG: "/img/home/banner0.png",
             MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
         },
-        HOME_ACTIVETIES: {
-            MOBILE_IMG: "url('/img/activities/home_mobile_banner.png')",
-            PC_IMG: "url('/img/activities/pc/banner_all.png')",
-            LINK: '/activities/'
-        },
         HOME_OTHER_BANNER: [
             {
                 BANNER_PC_IMG: '/img/summit/home/en-pc-summit.png',
@@ -1209,11 +1204,6 @@ module.exports = {
             DOWNLOAD: 'Learn more',
             IMG: "/img/home/banner0.png",
             MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
-        },
-        HOME_ACTIVETIES: {
-            MOBILE_IMG: "url('/img/activities/home_mobile_banner.png')",
-            PC_IMG: "url('/img/activities/pc/banner_all.png')",
-            LINK: '/activities/'
         },
         HOME_OTHER_BANNER: [
             {
