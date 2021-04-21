@@ -327,22 +327,10 @@ export default {
     	}
   },
   	methods: {
-		sortList(arr,eachName){//排序函数
-			arr.forEach(function(item){
-				let temp=item[eachName];
-				item.sortName=temp;
-			});
-			let resultArray = arr.sort(
-			    function compareFunction(param1, param2) {
-			        return param1.sortName.localeCompare(param2.sortName, 'zh');
-			    }
-			);
-			return resultArray;
-		},
 		pageChange(page) {
 			let pageNum = page;
 			this.total = this.activitiesList.length;
-			let oldList = this.sortList(this.activitiesList, 'TECHNOLOGY_FIELD');
+			let oldList = this.activitiesList;
 			let newList = oldList.slice((pageNum-1)*18, pageNum*18);
 			this.filterList = newList;
 		},
@@ -497,12 +485,14 @@ export default {
 		width: 1120px;
 		height: 380px;
 		margin-bottom: 60px;
-		background-image: url('/img/activities/pc/banner_all.png');
+		background: url('/img/activities/pc/banner_all.png') no-repeat;
+		background-size: 100% 100%;
 		@media screen and (max-width: 1000px) {
 			width: 100%;
 			height: 300px;
 			margin-bottom: 20px;
-			background-image: url('/img/activities/mobile/banner.png');
+			background: url('/img/activities/mobile/banner.png') no-repeat;
+			background-size: 100% 100%;
   		}
 	}
 	.activities-title-nav {

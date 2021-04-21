@@ -3,7 +3,7 @@
         <div class="is-pc home-carousel" v-if="!isShowH5">
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" @change="eventChange()">
                 <el-carousel-item v-if="$lang === 'zh'">
-                    <div class="carousel-banner" 
+                    <div class="activities-banner" 
                         :style="{backgroundImage: i18n.home.HOME_ACTIVETIES.PC_IMG}"
                         @click="go(i18n.home.HOME_ACTIVETIES.LINK)"
                     ></div>
@@ -852,6 +852,13 @@
                 margin-top: 80px;
             }
         }
+    }
+    .activities-banner {
+        width: 1120px;
+        margin: 0 auto; 
+        height: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
     .banner-item {
         width: 1080px;
