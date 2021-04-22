@@ -60,7 +60,7 @@ module.exports = {
             },
             {
                 NAME: '麒麟信安 Kylinsec',
-                DOWNLOAD_URL : 'https://kylinsec.oss-cn-shenzhen.aliyuncs.com/UniKylin-3.3-6A-2005-131421-aarch64.iso',
+                DOWNLOAD_URL : 'http://mirrors.kylinsec.com.cn/isos/aarch64/',
                 DESC: '暂无描述',
                 RELEASE_DESC_URL: 'http://www.kylinsec.com.cn/Uploads/Download/2020-09-21/5f6846656373a.pdf',
                 INSTALL_GUIDENCE_URL: 'http://www.kylinsec.com.cn/Uploads/Download/2020-09-21/5f6846807a00f.pdf',
@@ -231,7 +231,7 @@ module.exports = {
             },
             {
                 NAME: 'Kylinsec',
-                DOWNLOAD_URL : 'https://kylinsec.oss-cn-shenzhen.aliyuncs.com/UniKylin-3.3-6A-2005-131421-aarch64.iso',
+                DOWNLOAD_URL : 'http://mirrors.kylinsec.com.cn/isos/aarch64/',
                 DESC: 'No description available',
                 RELEASE_DESC_URL: 'http://www.kylinsec.com.cn/Uploads/Download/2020-09-21/5f6846656373a.pdf',
                 INSTALL_GUIDENCE_URL: 'http://www.kylinsec.com.cn/Uploads/Download/2020-09-21/5f6846807a00f.pdf',
@@ -389,7 +389,7 @@ module.exports = {
             },
             {
                 NAME: 'Kylinsec',
-                DOWNLOAD_URL : 'https://kylinsec.oss-cn-shenzhen.aliyuncs.com/UniKylin-3.3-6A-2005-131421-aarch64.iso',
+                DOWNLOAD_URL : 'http://mirrors.kylinsec.com.cn/isos/aarch64/',
                 DESC: 'Описание недоступно',
                 RELEASE_DESC_URL: 'http://www.kylinsec.com.cn/Uploads/Download/2020-09-21/5f6846656373a.pdf',
                 INSTALL_GUIDENCE_URL: 'http://www.kylinsec.com.cn/Uploads/Download/2020-09-21/5f6846807a00f.pdf',

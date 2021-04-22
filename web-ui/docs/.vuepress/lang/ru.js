@@ -17,4 +17,5 @@ module.exports = {
     minisite: require('./lang-modules/minisite').ru,
     learn: require('./lang-modules/learn').ru,
     compatibility: require('./lang-modules/compatibility').ru,
+    activities: require('./lang-modules/activities').cn,
 };

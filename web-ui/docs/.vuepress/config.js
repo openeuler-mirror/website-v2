@@ -69,28 +69,28 @@ module.exports = {
     },
     devServer: {
         proxy: {
-            '/api-sig': {
-                target: 'https://api.openeuler.org/meetings',
+            '/api-sig/': {
+                target: 'https://api.openeuler.org/meetings/',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {
-                    '^/api-sig': ''
+                    '^/api-sig/': ''
                 }
             },
-            '/api-cve': {
-                target: 'https://openeuler.org/api-cve',
+            '/api-cve/': {
+                target: 'https://openeuler.org/api-cve/',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {
-                    '^/api-cve': ''
+                    '^/api-cve/': ''
                 }
             },
-            '/api': {
-                target: 'https://openeuler.org/api',
+            '/api/': {
+                target: 'https://openeuler.org/api/',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {
-                    '^/api': ''
+                    '^/api/': ''
                 }
             }
         }

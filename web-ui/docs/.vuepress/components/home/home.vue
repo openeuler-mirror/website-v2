@@ -2,6 +2,18 @@
     <div class="home">
         <div class="is-pc home-carousel" v-if="!isShowH5">
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" @change="eventChange()">
+                <el-carousel-item v-if="$lang === 'zh'">
+                    <div class="activities-banner" 
+                        :style="{backgroundImage: i18n.home.HOME_ACTIVETIES.PC_IMG}"
+                        @click="go(i18n.home.HOME_ACTIVETIES.LINK)"
+                    ></div>
+                </el-carousel-item>
+                <el-carousel-item v-if="$lang === 'zh'">
+                    <div class="activities-banner" 
+                        :style="{backgroundImage: i18n.home.DEV_COMPETITION.PC_IMG}"
+                        @click="go(i18n.home.DEV_COMPETITION.LINK)"
+                    ></div>
+                </el-carousel-item>
                 <el-carousel-item>
                     <div class="carousel-dev2021" @click="go('/interaction/summit-list/devday2021/')">
                         <img :src="i18n.home.HOME_DEV2021_IMG.PC_BANNER">
@@ -64,6 +76,12 @@
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
                 <swiper-slide class="carousel-item-index">
                     <div class="mobile-version" @click="go('/interaction/summit-list/devday2021/')" :style="{backgroundImage:i18n.home.HOME_DEV2021_IMG.H5_BANNER}"></div>
+                </swiper-slide>
+                <swiper-slide class="carousel-item-index" v-if="$lang === 'zh'">
+                    <div class="mobile-version" @click="go(i18n.home.HOME_ACTIVETIES.LINK)" :style="{backgroundImage:i18n.home.HOME_ACTIVETIES.MOBILE_IMG}"></div>
+                </swiper-slide>
+                <swiper-slide class="carousel-item-index" v-if="$lang === 'zh'">
+                    <div class="mobile-version" @click="go(i18n.home.DEV_COMPETITION.LINK)" :style="{backgroundImage:i18n.home.DEV_COMPETITION.MOBILE_IMG}"></div>
                 </swiper-slide>
                 <swiper-slide>
                     <div class="carousel-video">
@@ -442,7 +460,7 @@
                 mobileSwiperInterval: null,
                 mobilePagenationIndex: 1,
                 developerList: [],
-                bannerAmount: 7,
+                bannerAmount: 9,
                 statisticParams: {
                     type: 'openEuler'
                 },
@@ -851,6 +869,14 @@
                 margin-top: 80px;
             }
         }
+    }
+    .activities-banner {
+        width: 1120px;
+        margin: 0 auto; 
+        height: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
     }
     .banner-item {
         width: 1080px;

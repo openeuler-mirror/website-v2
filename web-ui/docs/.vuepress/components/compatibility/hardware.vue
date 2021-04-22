@@ -60,7 +60,7 @@
                            <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].TITLE}}</div>
                            <div class="item-content">
                                 {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].DESCRIPTION_1}}
-                               <a target="_blank" href="https://gitee.com/air9/oec-hardware/releases/1.0.0-h1">
+                               <a target="_blank" href="https://gitee.com/src-openeuler/oec-hardware/releases">
                                    {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].A_TEXT}}
                                </a>
                                {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].DESCRIPTION_2}}
