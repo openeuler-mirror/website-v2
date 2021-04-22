@@ -53,6 +53,11 @@ module.exports = {
             IMG: "/img/home/banner0.png",
             MOBILE_IMG: "url('/img/home/banner/zh-mobile-version.png')"
         },
+        DEV_COMPETITION: {
+            MOBILE_IMG: "url('/img/banners/developer-competition-h5.png')",
+            PC_IMG: "url('/img/banners/developer-competition-pc.png')",
+            LINK: '/interaction/hdc/2021-developer.html'
+        },
         HOME_ACTIVETIES: {
             MOBILE_IMG: "url('/img/activities/home_mobile_banner.png')",
             PC_IMG: "url('/img/activities/home_pc_banner.png')",
