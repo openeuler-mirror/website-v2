@@ -16,7 +16,7 @@ summary: containerd-shim-kata-v2作为kata容器的runtime，相较于shimv1, �
 
 在shimV1架构中，安全容器的启动涉及kata-shim、 kata-runtime、  kata-proxy、kata-agent组件以及用于创建虚机的qemu组件。在shimV2架构中，将shim、proxy和runtime集成到一个二进制中，当启动pause容器和在pause中启动业务容器时，host os中只存在一个containerd-shim-kata-v2进程和qemu-kvm进程，也就是说pause容器和其中的业务容器共用同一个containerd-shim-kata-v2进程和虚拟机。[shimV2和shimV1架构对比](<https://github.com/kata-containers/documentation/blob/master/design/architecture.md>)如下。shimV1在单pause+多业务容器场景，每启动一个pause或者业务容器都有一个containerd-shim或者isulad-shim、kata-shim进程被拉起，pause和其中的业务容器共用kata-proxy(非vsock)进程和虚机进程（2N+1）。然而， shimV2在单pause+多业务容器场景中，host os中只有一个containerd-shim-kata-v2进程和qemu-kvm进程，调用链更短， 总体底噪更低，特别是当pause中业务容器数量增加时，低底噪优势将更加明显。
 
-![](./2021-04-09-isulad-shimv2-arch.png)
+![](./2021-04-09-isulad-shimv2-arch-1.png)
 
 ### iSulad与shimV1和shimV2关系
 
@@ -32,7 +32,7 @@ summary: containerd-shim-kata-v2作为kata容器的runtime，相较于shimv1, �
 
 ![shimv-shimv2-diff](./2021-04-09-isulad-shimv2-shimv2-differences.png)
 
-
+2021-04-09-isulad-shimv2-arch
 
 ### iSulad中容器退出监控剖析
 
