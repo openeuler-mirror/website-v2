@@ -32,7 +32,6 @@ summary: containerd-shim-kata-v2作为kata容器的runtime，相较于shimv1, �
 
 ![shimv-shimv2-diff](./2021-04-09-isulad-shimv2-shimv2-differences.png)
 
-2021-04-09-isulad-shimv2-arch
 
 ### iSulad中容器退出监控剖析
 
