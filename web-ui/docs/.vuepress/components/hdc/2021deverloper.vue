@@ -20,10 +20,10 @@
         </div>
         <img :src="'/img/hdc/2021-developer/second-title-'+deviceText" class="second-title" />
         <div class="second-wrapper">
-            <a href="" target="_blank" class="link">
+            <a target="_blank" class="link">
                 <img :src="'/img/hdc/2021-developer/left-link-'+deviceText" />
             </a>
-            <a href="" target="_blank" class="link">
+            <a target="_blank" class="link">
                 <img :src="'/img/hdc/2021-developer/right-link-'+deviceText" />
             </a>
         </div>
@@ -39,7 +39,7 @@
                 </p>
                 <p>小助手在线时间：每天9:00~18:00。</p>
             </div>
-            <img :src="'/img/hdc/2021-developer/qrcode-'+deviceText" class="right" />
+            <img src="/img/hdc/2021-developer/qrcode.png" class="right" />
         </div>
     </div>
 </template>
@@ -110,6 +110,9 @@ export default {
                 margin-bottom: 30px;
             }
         }
+        .link {
+            cursor: auto;
+        }
     }
     .third-title {
         margin: 0 auto 30px;
@@ -136,6 +139,7 @@ export default {
             @media screen and (max-width: 1000px) {
                 width: unset;
                 flex-shrink: unset;
+                margin-bottom: 20px;
             }
             text-align: left;
         }
