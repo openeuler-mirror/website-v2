@@ -550,7 +550,7 @@ module.exports = {
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongxin.png'
             },
             {
-                LEFT_IMG_LINK: 'http://www.kylinos.cn/',
+                LEFT_IMG_LINK: 'https://www.kylinos.cn/',
                 LEFT_IMG_PC: '/img/home/link/qiling.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-qiling.png',
                 RIGHT_IMG_LINK: 'http://www.hoperun.com/',
@@ -1115,7 +1115,7 @@ module.exports = {
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongxin.png'
             },
             {
-                LEFT_IMG_LINK: 'http://www.kylinos.cn/',
+                LEFT_IMG_LINK: 'https://www.kylinos.cn/',
                 LEFT_IMG_PC: '/img/home/link/qiling.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-qiling.png',
                 RIGHT_IMG_LINK: 'http://www.hoperun.com/',
@@ -1123,7 +1123,7 @@ module.exports = {
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeRun.png'
             },
             {
-                LEFT_IMG_LINK: 'http://www.kylinos.cn/',
+                LEFT_IMG_LINK: 'http://www.kylinsec.com.cn/',
                 LEFT_IMG_PC: '/img/home/link/xinan.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-xinan.png',
                 RIGHT_IMG_LINK: 'http://www.tongyuanos.com/',
@@ -1681,7 +1681,7 @@ module.exports = {
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongxin.png'
             },
             {
-                LEFT_IMG_LINK: 'http://www.kylinos.cn/',
+                LEFT_IMG_LINK: 'https://www.kylinos.cn/',
                 LEFT_IMG_PC: '/img/home/link/qiling.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-qiling.png',
                 RIGHT_IMG_LINK: 'http://www.hoperun.com/',
@@ -1689,7 +1689,7 @@ module.exports = {
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeRun.png'
             },
             {
-                LEFT_IMG_LINK: 'http://www.kylinos.cn/',
+                LEFT_IMG_LINK: 'http://www.kylinsec.com.cn/',
                 LEFT_IMG_PC: '/img/home/link/xinan.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-xinan.png',
                 RIGHT_IMG_LINK: 'http://www.tongyuanos.com/',
