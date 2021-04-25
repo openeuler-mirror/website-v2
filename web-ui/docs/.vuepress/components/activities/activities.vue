@@ -88,7 +88,7 @@
 								{{i18n.activities.GUIDE_LABEL}}<a href="https://summer.iscas.ac.cn/help/student/" target="_blank">{{i18n.activities.GUIDE_LINK}}</a>{{i18n.activities.PERIOD}}
 							</p>
 							<p>
-								{{i18n.activities.OFFICIAL_WEBSITE_LABLE}}<a href="https://summer.iscas.ac.cn/#/org/projectlist" target="_blank">{{i18n.activities.OFFICIAL_WEBSITE_LINK}}</a>{{i18n.activities.PERIOD}}
+								{{i18n.activities.OFFICIAL_WEBSITE_LABLE}}<a href="https://summer.iscas.ac.cn/" target="_blank">{{i18n.activities.OFFICIAL_WEBSITE_LINK}}</a>{{i18n.activities.PERIOD}}
 							</p>
 							<p class="line">{{i18n.activities.DESCRIPTION_4}}</p>
 						</div>
