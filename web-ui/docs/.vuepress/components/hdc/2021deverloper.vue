@@ -35,7 +35,7 @@
                     小助手备注“华为开发者大赛”即可入群。
                 </p>
                 <p>
-                    微信号“openEuler小助手”：openeuler123，小助手会为参赛者实时进行答疑解惑的贴心服务，及时为参赛者解决问题。
+                    微信号“openEuler小助手”：SoftCorePro，小助手会为参赛者实时进行答疑解惑的贴心服务，及时为参赛者解决问题。
                 </p>
                 <p>小助手在线时间：每天9:00~18:00。</p>
             </div>
@@ -142,6 +142,10 @@ export default {
                 margin-bottom: 20px;
             }
             text-align: left;
+        }
+        .right {
+            width: 200px;
+            height: 200px;
         }
     }
 }

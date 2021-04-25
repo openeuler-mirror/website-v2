@@ -742,7 +742,7 @@ export default {
                         li {
                             cursor: pointer;
                             display: block;
-                            margin-bottom: 16px;
+                            line-height: 25px;
                             &:hover {
                                 color: #0041bd;
                             }
