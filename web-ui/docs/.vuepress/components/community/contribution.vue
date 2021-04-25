@@ -34,6 +34,12 @@ export default {
         margin-bottom: 80px;
         width: 375px;
     }
+    img {
+        width: 1120px;
+        @media screen and (max-width: 1000px) {
+            width: 375px;
+        }
+    }
     a {
         position: absolute;
     }
