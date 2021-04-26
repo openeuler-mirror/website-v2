@@ -369,6 +369,9 @@ export default {
     }
 
 }
+html[lang="ru"] .character-box .document .list-box .item {
+    width: unset;
+}
 @media screen and (max-width: 1000px) {
     .StratoVirt .sVirt-desc,
     .character-box .character,
