@@ -603,21 +603,21 @@ module.exports = {
             {
                 TITLE: "iSula",
                 LINK: "/other/minisite/isula",
-                DES: "小个头 大能量",
+                DES: "Packs a huge punch in a small size",
                 IMG: "/img/minisite/isula/mobile-banner.png",
                 VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/iSula.mp4"
             },
             {
                 TITLE: "A-Tune",
                 LINK: "/other/minisite/atune",
-                DES: "一款基于AI开发的智能优化引擎",
+                DES: "AI-based Tuning Engine",
                 IMG: "/img/minisite/atune/mobile-banner.png",
                 VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/A-Tune.mp4"
             },
             {
                 TITLE: "StratoVirt",
                 LINK: "/other/minisite/stratovirt",
-                DES: "面向云数据中心的企业级虚拟化平台",
+                DES: "Virtualization platform for cloud data centers",
                 IMG: "/img/minisite/svirt/mobile-banner.png",
                 VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/StratoVirt-minisite.mp4"
             }
@@ -1168,21 +1168,21 @@ module.exports = {
             {
                 TITLE: "iSula",
                 LINK: "/other/minisite/isula",
-                DES: "小个头 大能量",
+                DES: "Ударная сила в компактном размере",
                 IMG: "/img/minisite/isula/mobile-banner.png",
                 VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/iSula.mp4"
             },
             {
                 TITLE: "A-Tune",
                 LINK: "/other/minisite/atune",
-                DES: "一款基于AI开发的智能优化引擎",
+                DES: "инструмент настройки на базе ИИ",
                 IMG: "/img/minisite/atune/mobile-banner.png",
                 VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/A-Tune.mp4"
             },
             {
                 TITLE: "StratoVirt",
                 LINK: "/other/minisite/stratovirt",
-                DES: "面向云数据中心的企业级虚拟化平台",
+                DES: "Платформа виртуализации для облачных центров обработки данных",
                 IMG: "/img/minisite/svirt/mobile-banner.png",
                 VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/StratoVirt-minisite.mp4"
             }

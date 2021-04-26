@@ -301,7 +301,6 @@ export default {
     }
     .framework-box {
         width: 100%;
-        height: 1082px;
         overflow: hidden;
         background: linear-gradient(180deg, #F8FBFF 0%, #FCFDFF 100%);
         .framework {
@@ -323,6 +322,9 @@ export default {
             }
         }
     }
+}
+html[lang="ru"] .A-Tune .atune-center .tune-desc {
+    height: unset;
 }
 .A-Tune .document {
     width: 1120px;
@@ -367,6 +369,7 @@ export default {
                         line-height: 30px;
                         font-size: 16px;
                         margin-top: 16px;
+                        display: none;
                     }
                 }
             }
