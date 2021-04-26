@@ -1,13 +1,5 @@
 [
     {
-        "ID": 1,
-        "NAME": "使用 ARM SVE 向量指令实现 BLAS Level-3 高性能计算",
-        "LINK" : "https://gitee.com/openeuler-competition/summer-2021/issues/I3D35W?from=project-issue",
-        "TECHNOLOGY_FIELD": "操作系统综合",
-        "TECHNICAL_LABELS": "性能计算,HPC,ARM,BLIS",
-        "DIFFICULTY": "高"
-    },
-    {
         "ID": 2,
         "NAME": "为 openEuler DDE桌面添加系统资源监控报警应用",
         "LINK" : "https://gitee.com/openeuler-competition/summer-2021/issues/I3D35W?from=project-issue",
