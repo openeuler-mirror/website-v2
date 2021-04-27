@@ -521,4 +521,10 @@ html[lang="ru"] .character-box .document .list-box .item {
         }
     }
 }
+.character-box .character .character-list .item {
+    width: 240px;
+}
+html[lang="en"] .character-box .character .character-list .item p{
+    line-height: 32px;
+}
 </style>
