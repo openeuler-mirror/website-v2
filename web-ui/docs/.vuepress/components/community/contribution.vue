@@ -10,7 +10,7 @@
             :href="item"
             target="_blank"
         ></a>
-        <a>{{ i18n.community.CONTRIBUTION.LOOK_DESC }}</a>
+        <a :href="'/'+$lang+'/community/contribution/detail.html'">{{ i18n.community.CONTRIBUTION.LOOK_DESC }}</a>
         <a download="trail-chess.pdf" :href="i18n.community.CONTRIBUTION.DOWLOAD_PDF_URL">{{ i18n.community.CONTRIBUTION.PRINT_MAP }}</a>
     </div>
 </template>
@@ -376,6 +376,7 @@ export default {
         line-height: 28px;
         text-align: center;
         border-radius: 1px;
+        text-decoration: none;
         @media screen and (max-width: 1000px) {
             display: none;
         }
