@@ -479,7 +479,7 @@ module.exports = {
                     IMG: '/img/minisite/isula/desc.png',
                     DESC: [
                         {
-                            TEXT:'架构说明',
+                            TEXT:'Architecture',
                             LINK: 'https://gitee.com/openeuler/iSulad/blob/master/docs/architecture_zh.md'
                         }
                     ]
@@ -488,15 +488,15 @@ module.exports = {
                     IMG: '/img/minisite/isula/compile.png',
                     DESC: [
                         {
-                            TEXT:'编译手册',
+                            TEXT:'Build Guide',
                             LINK: 'https://gitee.com/openeuler/iSulad/blob/master/docs/build_guide_zh.md'
                         },
                         {
-                            TEXT:'在risc-v上面',
+                            TEXT:'for RISC-V',
                             LINK: 'https://gitee.com/openeuler/iSulad/blob/master/docs/build_guide_riscv.md'
                         },
                         {
-                            TEXT:'与k8s/CNI集成',
+                            TEXT:'Integration',
                             LINK: 'https://gitee.com/openeuler/iSulad/blob/master/docs/integration.md'
                         }
                     ]
@@ -516,7 +516,7 @@ module.exports = {
                     IMG: '/img/minisite/isula/use.png',
                     DESC: [
                         {
-                            TEXT:'使用手册',
+                            TEXT:'Manual',
                             LINK: 'https://gitee.com/openeuler/isula-build/blob/master/doc/manual_zh.md'
                         }
                     ]
@@ -794,7 +794,7 @@ module.exports = {
                     IMG: '/img/minisite/isula/desc.png',
                     DESC: [
                         {
-                            TEXT:'架构说明',
+                            TEXT:'Architecture ',
                             LINK: 'https://gitee.com/openeuler/iSulad/blob/master/docs/architecture_zh.md'
                         }
                     ]
@@ -803,15 +803,15 @@ module.exports = {
                     IMG: '/img/minisite/isula/compile.png',
                     DESC: [
                         {
-                            TEXT:'编译手册',
+                            TEXT:'Build Guide',
                             LINK: 'https://gitee.com/openeuler/iSulad/blob/master/docs/build_guide_zh.md'
                         },
                         {
-                            TEXT:'在risc-v上面',
+                            TEXT:'for RISC-V',
                             LINK: 'https://gitee.com/openeuler/iSulad/blob/master/docs/build_guide_riscv.md'
                         },
                         {
-                            TEXT:'与k8s/CNI集成',
+                            TEXT:'Integration',
                             LINK: 'https://gitee.com/openeuler/iSulad/blob/master/docs/integration.md'
                         }
                     ]
@@ -831,7 +831,7 @@ module.exports = {
                     IMG: '/img/minisite/isula/use.png',
                     DESC: [
                         {
-                            TEXT:'使用手册',
+                            TEXT:'Manual',
                             LINK: 'https://gitee.com/openeuler/isula-build/blob/master/doc/manual_zh.md'
                         }
                     ]

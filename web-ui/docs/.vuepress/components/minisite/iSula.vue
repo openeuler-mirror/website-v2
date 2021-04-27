@@ -19,7 +19,6 @@
                 <div>
                     <p v-for="(item,index) in i18n.minisite.ISULA_BANNER_TEXT" :key="index">{{ item }}</p>
                 </div>
-                <img :src="i18n.minisite.ISULA_LOGO" alt="" />
             </div>
             <video
             preload="auto"
@@ -33,6 +32,7 @@
             <div class="isula-desc">
                 <div class="up-text">
                     <p>{{ i18n.minisite.ISULA_DESC_UP }}</p>
+                    <img :src="i18n.minisite.ISULA_LOGO" alt="" />
                 </div>
                 <div class="link">
                     <div v-for="(item,index) in i18n.minisite.ISULA_LINK" :key="index" @click="go(item.LINK)" >
@@ -342,6 +342,9 @@ export default {
         .up-text {
             margin-bottom: 20px;
             width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 40px;
         }
         img {
             width: 720px;
@@ -668,5 +671,15 @@ export default {
             }
         }
     }
+}
+.i-Sula .isula-banner .text > div {
+    width: 280px;
+}
+.i-Sula .desc-box .isula-desc .up-text p {
+    width: 880px;
+}
+.i-Sula .desc-box .isula-desc .up-text img {
+    width: 139px;
+    height: 144px;
 }
 </style>
