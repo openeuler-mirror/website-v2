@@ -31,7 +31,7 @@
         <div class="third-wrapper">
             <div class="left">
                 <p>
-                    openEuler 社区了创建了一个赛事交流的微信群，添加 openEuler
+                    openEuler 社区创建了一个赛事交流的微信群，添加 openEuler
                     小助手备注“华为开发者大赛”即可入群。
                 </p>
                 <p>
