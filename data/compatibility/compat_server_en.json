@@ -1847,5 +1847,169 @@
       "hostBusAdapter": "Avago 3508",
       "hardDiskDrive": ""
     }
+  },
+  {
+    "hardwareFactory": "TONGFANG",
+    "hardwareModel": "CQK620",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "aarch64",
+    "date": "2021/4/22",
+    "friendlyLink": "https://www.tongfangpc.com/index.php/gallery-76.html",
+    "boardCards": [
+      {
+        "vendorID": "19e5",
+        "deviceID": "a222",
+        "svID": "19e5",
+        "ssID": "04cc",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "hns3",
+        "version": "1.9.38.8",
+        "type": "NIC",
+        "driverDate": "2020.12.28",
+        "sha256": "2EEC80BC58F59DBB7551CA377B2997E2F4C01CC4",
+        "driverSize": "164k",
+        "chipVendor": "huawei",
+        "boardModel": "TM210",
+        "chipModel": "hisi",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+	  {
+        "vendorID": "1000",
+        "deviceID": "0016",
+        "svID": "19e5",
+        "ssID": "d215",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "megaraid_sas",
+        "version": "31.100.01.00",
+        "type": "raid",
+        "driverDate": "2020.12.28",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Avago",
+        "boardModel": "SR450C-M",
+        "chipModel": "3508",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.tongfangpc.com/index.php/gallery-76.html",
+      "certificationTime": "2021/4/23",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "41.017.TF.201225.R",
+      "cpu": "Kunpeng-920 5251K",
+      "ram": "32*16G DIMMs"
+      "portsBusTypes": "SP210",
+      "videoAdapter": "1711",
+      "hostBusAdapter": "Avago 3508",
+      "hardDiskDrive": ""
+    }
+  },
+  {
+    "hardwareFactory": "TONGFANG",
+    "hardwareModel": "CQK640",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "aarch64",
+    "date": "2021/4/22",
+    "friendlyLink": "https://www.tongfangpc.com/index.php/gallery-83.html",
+    "boardCards": [
+      {
+        "vendorID": "19e5",
+        "deviceID": "a222",
+        "svID": "19e5",
+        "ssID": "04cc",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "hns3",
+        "version": "1.9.38.8",
+        "type": "NIC",
+        "driverDate": "2020.12.28",
+        "sha256": "2EEC80BC58F59DBB7551CA377B2997E2F4C01CC4",
+        "driverSize": "164k",
+        "chipVendor": "huawei",
+        "boardModel": "TM210",
+        "chipModel": "hisi",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+	  {
+        "vendorID": "1000",
+        "deviceID": "0016",
+        "svID": "19e5",
+        "ssID": "d215",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "megaraid_sas",
+        "version": "31.100.01.00",
+        "type": "raid",
+        "driverDate": "2020.12.28",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Avago",
+        "boardModel": "SR450C-M",
+        "chipModel": "3508",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.tongfangpc.com/index.php/gallery-83.html",
+      "certificationTime": "2021/4/23",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "41.017.TF.201225.R",
+      "cpu": "Kunpeng-920 5251K",
+      "ram": "32*16G DIMMs"
+      "portsBusTypes": "SP210",
+      "videoAdapter": "1711",
+      "hostBusAdapter": "Avago 3508",
+      "hardDiskDrive": ""
+    }
+  },
+  {
+    "hardwareFactory": "huanghe",
+    "hardwareModel": "Huanghe 2280 V2",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "aarch64",
+    "date": "2021/4/19",
+    "friendlyLink": "http://www.chinahuanghe.com/product/2.html",
+    "boardCards": [
+      {
+        "vendorID": "19e5",
+        "deviceID": "a222",
+        "svID": "19e5",
+        "ssID": "cc04",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "hns3",
+        "version": "1.9.38.8",
+        "type": "NIC",
+        "driverDate": "2020.12.21",
+        "sha256": "2EEC80BC58F59DBB7551CA377B2997E2F4C01CC4",
+        "driverSize": "167.5K",
+        "chipVendor": "华为",
+        "boardModel": "TM210",
+        "chipModel": "hisi",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "http://www.chinahuanghe.com/product/2.html",
+      "certificationTime": "2021/4/23",
+      "commitID": "",
+      "motherBoardRevision": "S920X00-5250",
+      "biosUefi": "1.68 (U75)",
+      "cpu": "Kunpeng-920",
+      "ram": "4*16G DIMMs"
+      "portsBusTypes": "SP570",
+      "videoAdapter": "1711",
+      "hostBusAdapter": "Avago 3508",
+      "hardDiskDrive": ""
+    }
   }
 ]
