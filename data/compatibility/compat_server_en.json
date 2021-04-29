@@ -1902,7 +1902,7 @@
       "motherBoardRevision": "",
       "biosUefi": "41.017.TF.201225.R",
       "cpu": "Kunpeng-920 5251K",
-      "ram": "32*16G DIMMs"
+      "ram": "32*16G DIMMs",
       "portsBusTypes": "SP210",
       "videoAdapter": "1711",
       "hostBusAdapter": "Avago 3508",
@@ -1963,7 +1963,7 @@
       "motherBoardRevision": "",
       "biosUefi": "41.017.TF.201225.R",
       "cpu": "Kunpeng-920 5251K",
-      "ram": "32*16G DIMMs"
+      "ram": "32*16G DIMMs",
       "portsBusTypes": "SP210",
       "videoAdapter": "1711",
       "hostBusAdapter": "Avago 3508",
@@ -2005,7 +2005,7 @@
       "motherBoardRevision": "S920X00-5250",
       "biosUefi": "1.68 (U75)",
       "cpu": "Kunpeng-920",
-      "ram": "4*16G DIMMs"
+      "ram": "4*16G DIMMs",
       "portsBusTypes": "SP570",
       "videoAdapter": "1711",
       "hostBusAdapter": "Avago 3508",
