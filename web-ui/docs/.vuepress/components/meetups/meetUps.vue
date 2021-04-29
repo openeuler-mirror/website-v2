@@ -17,6 +17,7 @@
                     <div class="meetUps-item" v-for="(value,key) in item">
                         <div @click="goDetail(value)" class="meetUps-img card-hover">
                           <img :src="value.MEETUPS_IMG" alt />
+                          <span v-if="value.IS_MINI" class="banner-title">{{value.MEETUPS_TITLE}}</span>
                         </div>
                         <div class="meetUps-info meetUps-info-item">
                             <div class="meetUps-time">
@@ -205,10 +206,30 @@ export default {
 	width: 400px;
 	display: inline-block;
 	border-radius:8px;
-	height: 200px;
+    height: 200px;
+    position: relative;
 	@media screen and (max-width: 1000px) {
 		box-shadow:none;
-	}
+    }
+    .banner-title {
+        position: absolute;
+        width: 400px;
+        text-align: center;
+        font-size: 24px;
+        line-height: 20px;
+        height: 20px;
+        top: 90px;
+        left: 0;
+        color: #fff;
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+            font-size: 16px;
+            height: 20px;
+            top: 68px;
+            left: 0;
+            color: #fff;
+        }
+    }
 	img {
 		width: 400px;
 		height:200px;
