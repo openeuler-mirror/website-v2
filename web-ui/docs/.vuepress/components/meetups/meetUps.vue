@@ -15,8 +15,9 @@
                         <span>{{ index }}</span>
                     </div>
                     <div class="meetUps-item" v-for="(value,key) in item">
-                        <div @click="goDetail(value.ID)" class="meetUps-img card-hover">
+                        <div @click="goDetail(value)" class="meetUps-img card-hover">
                           <img :src="value.MEETUPS_IMG" alt />
+                          <span v-if="value.IS_MINI" class="banner-title">{{value.MEETUPS_TITLE}}</span>
                         </div>
                         <div class="meetUps-info meetUps-info-item">
                             <div class="meetUps-time">
@@ -25,7 +26,7 @@
                                     <span class="meetUps-date">{{ value.MEETUPS_DATE }}</span>
                                 </p>
                             </div>
-                          	<div @click="goDetail(value.ID)" class="meetUps-title word-hover">{{ value.MEETUPS_TITLE }}</div>
+                          	<div @click="goDetail(value)" class="meetUps-title word-hover">{{ value.MEETUPS_TITLE }}</div>
 							<div class="meetUps-time-mobile">
 								<p>
 									<span class="meetUps-date">{{ value.MEETUPS_DATE }}</span>
@@ -44,7 +45,7 @@
 				<el-pagination
 					background
 					@current-change="handleCurrentChange"
-					:page-size="5"
+					:page-size="PAGESIZE"
 					:layout="paginationLayout"
 					:total="totalSize"
 				></el-pagination>
@@ -55,6 +56,7 @@
 
 <script>
 import commonBanner from "./../common/banner.vue";
+import {eventsList} from "./../../api/meetup";
 export default {
   data() {
       return {
@@ -63,17 +65,47 @@ export default {
           PAGESIZE: 6,
           allMeetsList: [],  
           showMeetsList: {},
-          currentMeetsList: []   
+          currentMeetsList: [],
+          mapping: {
+              '01': '一月',
+              '02': '二月',
+              '03': '三月',
+              '04': '四月',
+              '05': '五月',
+              '06': '六月',
+              '07': '七月',
+              '08': '八月',
+              '09': '九月',
+              '10': '十月',
+              '11': '十一月',
+              '12': '十二月'
+          }
       };
   },
   components: {
     commonBanner,
   },
   mounted() {
-      let allList = this.i18n.interaction.MEETUPS.MEETUPS_DATA;
-      this.totalSize = allList.length;
-      this.allMeetsList = this.sortMeetsList(allList);
-	  this.handleCurrentChange(1);
+
+    eventsList().then(res => {
+        let tempArr = [];
+        res.forEach(item => {
+            tempArr.push({
+                MEETUPS_IMG: `https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/website-meetup/website${item.poster}.png`,
+                MEETUPS_DATE: item.date,
+                MEETUPS_TITLE: item.title,
+                MEETUPS_DESC: [item.synopsis],
+                IS_MINI: 1,
+                ID: item.id,
+                MEETUPS_MONTH: this.mapping[item.date.split('-')[1]]
+            })
+        })
+        
+        let allList = this.i18n.interaction.MEETUPS.MEETUPS_DATA.concat(tempArr);
+        this.totalSize = allList.length;
+        this.allMeetsList = this.sortMeetsList(allList);
+        this.handleCurrentChange(1);
+    })
   },
   methods: {
     handleCurrentChange(val) {
@@ -106,13 +138,22 @@ export default {
         });
 		return temp;
     },
-    goDetail(id) {
+    goDetail(item) {
+        let query = null;
+        if(item.IS_MINI){
+            query = {
+                id: item.ID,
+                isMini: 1
+            }
+        } else {
+            query = {
+                id: item.ID
+            }
+        }
         this.$router.push(
           {
               path:'/' + this.$lang + '/interaction/salon-list/detail/',
-              query: {
-                  id: id
-              }
+              query
           });
     }
   },
@@ -165,10 +206,30 @@ export default {
 	width: 400px;
 	display: inline-block;
 	border-radius:8px;
-	height: 200px;
+    height: 200px;
+    position: relative;
 	@media screen and (max-width: 1000px) {
 		box-shadow:none;
-	}
+    }
+    .banner-title {
+        position: absolute;
+        width: 400px;
+        text-align: center;
+        font-size: 24px;
+        line-height: 20px;
+        height: 20px;
+        top: 90px;
+        left: 0;
+        color: #fff;
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+            font-size: 16px;
+            height: 20px;
+            top: 68px;
+            left: 0;
+            color: #fff;
+        }
+    }
 	img {
 		width: 400px;
 		height:200px;
