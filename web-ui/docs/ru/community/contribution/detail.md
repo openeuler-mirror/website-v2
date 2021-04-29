@@ -63,7 +63,7 @@ SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来�
 ### 3.3 参与社区贡献
 
 在签署了[CLA协议](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=)、找到了你想参与的[SIG组](https://openeuler.org/zh/sig/sig-list/)之后，就可以开始你的社区贡献之旅啦！社区贡献的方式有很多种，每一种贡献都将受到社区的欢迎和重视。  
-1.提交Issue/处理issue任务  
+##### 1.提交Issue/处理issue任务  
 
 - 找到Issue列表：  
   在您感兴趣的SIG项目Gitee主页内，点击“Issues”，您可以找到其Issue列表（如[Community团队的Issue列表](https://gitee.com/openeuler/community/issues))
@@ -75,7 +75,7 @@ SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来�
 - 找到愿意处理的Issue  
   如果您愿意处理其中的一个issue，可以将它分配给自己。只需要在评论框内输入 /assign或 /assign @yourself，机器人就会将问题分配给您，您的名字将显示在负责人列表里。
 
-2.贡献编码  
+##### 2.贡献编码  
 
 - 准备openEuler的开发环境  
   如果您想参与编码贡献，需要准备openEuler的开发环境，请参考[开发环境准备](https://gitee.com/openeuler/community/blob/master/zh/contributors/prepare-environment.md)。
@@ -88,15 +88,16 @@ SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来�
 - 提交一个Pull-Request  
   当你提交一个PR的时候，就意味您已经开始给社区贡献代码了。请参考 openEuler社区PR提交指导。  
   为了使您的提交更容易被接受，您需要：  
-	&nbsp;&nbsp;遵循SIG组的编码约定，如果有的话  
-	&nbsp;&nbsp;准备完善的提交信息  
-	&nbsp;&nbsp;如果一次提交的代码量较大，建议将大型的内容分解成一系列逻辑上较小的内容，分别进行提交会更便于检视者理解您的想法  
-	&nbsp;&nbsp;使用适当的SIG组和监视者标签去标记PR：社区机器人会发送给您消息，以方便您更好的完成整个PR的过程  
+	- 遵循SIG组的编码约定，如果有的话  
+	- 准备完善的提交信息  
+	- 如果一次提交的代码量较大，建议将大型的内容分解成一系列逻辑上较小的内容，分别进行提交会更便于检视者理解您的想法  
+	- 使用适当的SIG组和监视者标签去标记PR：社区机器人会发送给您消息，以方便您更好的完成整个PR的过程  
+
   注意：如果您的PR请求没有引起足够的关注，可以在SIG的邮件列表或dev@openeuler.org求助。
 
-3.贡献软件包  
+##### 3.贡献软件包  
 如果你发现openEuler缺失了一个软件包，可以帮openEuler把这个软件包补上。实际上贡献软件包的过程就是帮助openEuler提供更丰富功能的过程。希望随着大家的参与，openEuler能够成为一个“无所不有”的软件生态系统。openEuler支持在gitee新增软件包的同时自动在obs的openEuler:Fctory上创建同名仓库。这样在向已创建的gitee仓库提交代码时，会自动对代码编译进行检测。具体流程可参考 如何新增软件包。  
-4.贡献原创开源项目  
+##### 4.贡献原创开源项目  
 如果你想将自己原创的开源项目贡献到openEuler社区，成为openEuler发行版本中的一份子，那么可参考以下两种方式：  
 - 方式一：在其它社区开发，集成到openEuler中  
   假定你已经在github，gitlab或者gitee上拥有了自己的项目，那么只需要按照以上提到的 [如何新增软件包](https://gitee.com/openeuler/community/blob/master/zh/contributors/create-package.md) 那样，将软件加入到src-openeuler这个repo仓就可以了。
@@ -108,21 +109,21 @@ SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来�
   3.这个项目在openeuler中持续开发和孵化，直到项目逐渐成熟，那么就可以在src-openeuler中建立一个仓，为该项目提供相关的spec文件，制作成为一个rpm；  
   4.最终这个原创的开源项目会随着openEuler的发布版本走遍全世界，为世界人民所使用。
 
-5.检视代码  
+##### 5.检视代码  
 openEuler是一个开放的社区，我们希望所有参与社区的人都能成为活跃的检视者。当成为SIG组的committer或maintainer角色时，便拥有审核代码的责任与权利。  
 强烈建议本着[行为准则](https://gitee.com/openeuler/community/blob/master/code-of-conduct.md)，超越自我，相互尊重和促进协作。[《补丁审核的柔和艺术》](https://sage.thesharps.us/2014/09/01/the-gentle-art-of-patch-review/)一文中提出了一系列检视的重点，说明代码检视的活动也希望能够促进新的贡献者积极参与，而不会使贡献者一开始就被细微的错误淹没，所以检视的时候，可以重点关注包括：  
 &nbsp;&nbsp;1.贡献背后的想法是否合理  
 &nbsp;&nbsp;2.贡献的架构是否正确  
 &nbsp;&nbsp;3.贡献是否完善  
 
-6.测试  
+##### 6.测试  
 测试——是所有贡献者的责任，对于社区版本来说，[sig-qa](https://gitee.com/openeuler/QA)组是负责测试活动的社区官方组织。如果您希望在自己的基础架构上开展测试活动，可以参考：[社区测试体系介绍](https://gitee.com/openeuler/QA/blob/master/%E7%A4%BE%E5%8C%BA%E6%B5%8B%E8%AF%95%E4%BD%93%E7%B3%BB%E4%BB%8B%E7%BB%8D.md) 。  
 为了成功发行一个社区版本，需要完成多种测试活动。不同的测试活动，测试代码的位置也有所不同，成功运行测试所需的环境的细节也会有差异，有关的信息可以参考：[社区开发者测试贡献指南](https://gitee.com/openeuler/QA/blob/master/%E7%A4%BE%E5%8C%BA%E5%BC%80%E5%8F%91%E8%80%85%E6%B5%8B%E8%AF%95%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97.md)。  
-7.选择社区组件打包  
+##### 7.选择社区组件打包  
 您也可以参与社区组件打包，请参考 [如何打包](https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md)。  
-8.参与非代码类贡献  
+##### 8.参与非代码类贡献  
 如果您的兴趣不在编写代码方面，可以在[ 非代码贡献指南 ](https://gitee.com/openeuler/community/blob/master/zh/contributors/non-code-contributions.md)中找到感兴趣的工作。  
-9.社区安全问题披露  
+##### 9.社区安全问题披露  
 [安全处理流程](https://gitee.com/openeuler/community/blob/master/zh/security-committee/security-process.md)——简要描述了处理安全问题的过程。  
 [安全披露信息](https://gitee.com/openeuler/community/blob/master/zh/security-committee/security-disclosure.md)——如果您希望报告安全漏洞，请参考此页面。  
 
