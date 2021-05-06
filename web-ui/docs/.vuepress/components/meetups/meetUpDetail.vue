@@ -114,6 +114,7 @@
 import playcontroll from './../controll/videoctrl';
 import baiduMap from 'vue-baidu-map/components/map/Map.vue';
 import bmMarker from 'vue-baidu-map/components/overlays/Marker.vue';
+import {eventDetail} from "./../../api/meetup";
 window.global = (() => {
     if (typeof self !== 'undefined') { return self; }
     if (typeof window !== 'undefined') { return window; }
@@ -139,8 +140,41 @@ export default {
     },
     mounted (){
         this.videoCtrlParams.element = document.getElementById('meetUp-video');
-        this.detailContent();
-        this.position = this.addressObj.ADDRESS_LOCATION;
+
+        if(this.$route.query.isMini){
+            eventDetail(this.$route.query.id).then(res => {
+                this.detailObj = {
+                    TITLE_LIST: [res.title],
+                    MEETUPS_DATE: res.date,
+                    MEETUPS_DESC: [res.synopsis],
+                    MEETINGS_INFO: {
+                        ADDRESS_UP: res.address || this.i18n.interaction.MEETUPS.LIVE_ADDRESS
+                    },
+                    SHOW_MAP: res.address
+                }
+                const tempArr = JSON.parse(res.schedules);
+                tempArr.forEach(item => {
+                    this.flowPathList.push({
+                        THEME: item.topic,
+                        TIME: item.start + '-' + item.end,
+                        SPEAKER: item.speaker
+                    })
+                })
+                this.addressObj = {
+                    ADDRESS_IMG: `https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/website-meetup/${res.poster}.png`,
+                    ADDRESS_DOWN: [res.detail_address || res.live_address],
+                    APPLY_QRCODE: res.wx_code,
+                    LATITUDE: res.latitude,
+                    LONGTITUDE: res.longitude
+                }
+                this.position = [res.longitude, res.latitude];
+            })
+        } else {
+            
+            this.detailContent();
+            this.position = this.addressObj.ADDRESS_LOCATION;
+        }
+
     },
     methods: {
         goMeetUps() {

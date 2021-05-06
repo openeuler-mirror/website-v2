@@ -176,67 +176,11 @@
             </ul>
         </div>
 
-        <div class="mail-subscribe is-pc" v-if="!isShowH5">
-            <el-dialog
-                :title="i18n.community.MAILING_LIST.SUBSCRIBE.TITLE"
-                :visible.sync="dialogFormVisible"
-            >
-                <div class="description">
-                    <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.PART_ONE }}</p>
-                    <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.PART_TWO }}</p>
-                    <p>
-                        {{ i18n.community.MAILING_LIST.SUBSCRIBE.PART_THREE }}
-                    </p>
-                </div>
-                <el-form :model="form">
-                    <p>{{ i18n.community.MAILING_LIST.SUBSCRIBE.REMIND }}</p>
-                    <el-form-item :label-width="formLabelWidth">
-                        <img
-                            class="user-icon"
-                            src="/img/home/userName.svg"
-                            alt=""
-                        />
-                        <el-input
-                            v-model="form.display_name"
-                            autocomplete="off"
-                            :placeholder="
-                                i18n.community.MAILING_LIST.SUBSCRIBE.INPUT_NAME
-                            "
-                        ></el-input>
-                    </el-form-item>
-                    <el-form-item :label-width="formLabelWidth">
-                        <img
-                            class="user-icon"
-                            src="/img/home/userEmail.svg"
-                            alt=""
-                        />
-                        <el-input
-                            v-model="form.subscriber"
-                            autocomplete="off"
-                            :placeholder="
-                                i18n.community.MAILING_LIST.SUBSCRIBE.INPUT_ADD
-                            "
-                        ></el-input>
-                    </el-form-item>
-                </el-form>
-                <div slot="footer" class="dialog-footer">
-                    <el-button
-                        type="primary"
-                        @click="getUserInfo"
-                        icon="el-icon-document-checked"
-                        >{{
-                            i18n.community.MAILING_LIST.SUBSCRIBE.BUTTON
-                        }}</el-button
-                    >
-                </div>
-            </el-dialog>
-        </div>
     </div>
 </template>
 
 <script>
 import { mailList } from "../../api/maillist";
-import { subscribe } from "../../api/mailsubscribe";
 
 export default {
     name: "maillist",
@@ -245,14 +189,6 @@ export default {
             inPC: true,
             inEn: true,
             list: null,
-            subscribe: null,
-            dialogFormVisible: false,
-            form: {
-                list_id: "",
-                subscriber: "",
-                display_name: ""
-            },
-            formLabelWidth: "0",
             tableLoading: false
         };
     },
@@ -275,48 +211,7 @@ export default {
             window.open('https://mailweb.openeuler.org/hyperkitty/list/' + name.toLowerCase() + '@openeuler.org/');
         },
         userSubscribe(userID) {
-            this.dialogFormVisible = true;
-            this.form.list_id = userID;
-        },
-        getUserInfo() {
-            let reg = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
-            if (!reg.test(this.form.subscriber)){
-                this.$message.error(
-                    this.i18n.community.MAILING_LIST.MAIL_ERROR
-                );
-                return false;
-            }
-            this.tableLoading = true;
-            subscribe(this.form)
-                .then(response => {
-                    this.dialogFormVisible = false;
-                    this.tableLoading = false;
-                    if (response.token) {
-                        this.$message({
-                            message: this.i18n.community.MAILING_LIST.SUBSCRIBE_SUCCESS,
-                            duration: 0,
-                            showClose: true
-                        });
-                    }else if(response.description.includes('pending')){
-                        this.$message({
-                            message: this.i18n.community.MAILING_LIST.SUBSCRIBE_HAS_SENT,
-                            duration: 0,
-                            showClose: true
-                        });
-                    }else{
-                        this.$message({
-                            message: this.i18n.community.MAILING_LIST.SUBSCRIBE_ALREADY_SUCCESS,
-                            duration: 0,
-                            showClose: true
-                        });
-                    }
-                })
-                .catch(response => {
-                    this.tableLoading = false;
-                    this.$message.error(
-                        this.i18n.community.MAILING_LIST.SUBSCRIBE_ERROR
-                    );
-                });
+            window.open('https://mailweb.openeuler.org/postorius/lists/' + userID + '/');
         }
     }
 };

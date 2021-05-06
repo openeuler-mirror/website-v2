@@ -1,367 +1,403 @@
 <template>
-    <div class="contribution">
-        <common-banner
-        :inside-name="'COMMUNITY'"
-        :outside-name="i18n.community.CONTRIBUTION_H5.TITLE"
-        class="is-pc"
-        ></common-banner>
-        <div class="bgc is-pc" v-if="!isShowH5">
-            <div class="methods is-pc">
-                <div class="mail-guide"
-                     v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"
-                     :key="index">
-                    <div class="step" :class="{'over-flow': index === 4}">
-                        <a class="step-num" @click="go(item.LINK)">
-                            <span :class="{'over-flow': index === 4}">{{ item.BUTTON }}</span>
-                        </a>
-                        <img :src="item.IMG" alt="">
-                        <img :src="item.VIDEO" class="is-hidden" :class="{'over-flow': index === 4}">
-                    </div>
-                    <div :class="['guidance',ishide?'is-hide':'']" v-if="item.LINK?false:true">
-                        <div class="angle"></div>
-                        <p class="link-title">{{item.LINKADRESSLIST.TITLE}}</p>
-                        <div class="linkbox">
-                            <div class="linkList" v-for="(item,index) in item.LINKADRESSLIST.LINKMESSAGE" @click="go(item.LINKADRESS)">
-                                <i :style="{backgroundImage:item.ICONIMAGE}"></i>
-                                <span>{{item.TEXT}}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="map-rode">
-                    <img class="is-pc rode-1" src="/img/community/contribution/rode1.svg" alt="">
-                    <img class="is-pc plane-1" src="/img/community/contribution/plane1.svg" alt="">
-                    <img class="is-pc rode-2" src="/img/community/contribution/rode2.svg" alt="">
-                    <img class="is-pc plane-2" src="/img/community/contribution/plane2.svg" alt="">
-                    <img class="is-pc rode-3" src="/img/community/contribution/rode3.svg" alt="">
-                    <img class="is-pc plane-3" src="/img/community/contribution/plane3.svg" alt="">
-                    <img class="is-pc rode-4" src="/img/community/contribution/rode4.svg" alt="">
-                    <img class="is-pc plane-4" src="/img/community/contribution/plane4.svg" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="is-h5 mail-list-H5" v-else>
-            <h3 class="is-h5">{{ i18n.community.CONTRIBUTION_H5.MOBILE_TITLE }}</h3>
-            <div class="mail-guide"
-                 v-for="(item, index) in i18n.community.CONTRIBUTION_H5.GUIDE_CONTENT"
-                 :key="index">
-                <div class="step-H5">
-                    <div class="step-num"  @click="go(item.LINK)">
-                        <span>{{ item.BUTTON}}</span>
-                    </div>
-                    <img :src="item.MOBILEIMG" alt="">
-                </div>
-                <div :class="['guidance',ishide?'is-hide':'']" v-if="item.LINK?false:true">
-                        <div class="angle"></div>
-                        <p class="link-title">{{item.LINKADRESSLIST.TITLE}}</p>
-                        <div class="linkbox">
-                            <div class="linkList" v-for="(item,index) in item.LINKADRESSLIST.LINKMESSAGE" @click="go(item.LINKADRESS)">
-                                <i :style="{backgroundImage:item.ICONIMAGE}"></i>
-                                <span>{{item.TEXT}}</span>
-                            </div>
-                        </div>
-                </div>
-            </div>
-        </div>
+    <div class="container">
+        <img
+            v-if="!isShowH5"
+            :src="i18n.community.CONTRIBUTION.BACKGROUND_IMG"
+        />
+        <img v-else :src="i18n.community.CONTRIBUTION.BACKGROUND_IMG_H5" />
+        <a
+            v-for="item in i18n.community.CONTRIBUTION.LINK_LIST"
+            :href="item"
+            target="_blank"
+        ></a>
+        <a :href="'/'+$lang+'/community/contribution/detail.html'">{{ i18n.community.CONTRIBUTION.LOOK_DESC }}</a>
+        <a download="trail-chess.pdf" :href="i18n.community.CONTRIBUTION.DOWLOAD_PDF_URL">{{ i18n.community.CONTRIBUTION.PRINT_MAP }}</a>
     </div>
 </template>
 
 <script>
-    export default {
-        name: "contribution",
-        data () {
-            return {
-                bkgImg: "/img/community/contribution/bkg-community.png",
-                ishide:true
-            }
-        },
-        mounted() {
-
-        },
-        methods: {
-            es(selector) {
-                let es = document.querySelectorAll(selector)
-                if (es.length === 0) {
-                    return null;
-                } else {
-                    return es;
-                }
-            },
-            go(path) {
-                if(path == ''){
-                    this.ishide = !this.ishide;
-                    return;
-                }
-                if(path.includes('https')){
-                    window.open(path);
-                }else if(path.includes('cla')){
-                    let routeUrl = this.$router.resolve(this.resolvePath(path));
-                        window.open(routeUrl.href);
-                }else{
-                    if(path){
-                        this.$router.push({
-                            path: this.resolvePath(path)
-                        });
-                    }
-                }
-            }
-        }
-    }
+export default {
+    name: "contribution",
+    data() {
+        return {};
+    },
+    mounted() {},
+    methods: {}
+};
 </script>
-<style lang="less">
-    .contribution .common-banner .banner img {
-        width: 0!important;
+<style lang="less" scoped>
+.container {
+    width: 1120px;
+    margin: 0 auto 200px;
+    position: relative;
+    @media screen and (max-width: 1000px) {
+        margin-bottom: 80px;
+        width: 375px;
     }
-    .is-pc .methods .mail-guide .step:hover {
-        img {
-            &:first-of-type {
-                display: none;
-            }
-            &:last-of-type {
-                display: block;
-            }
+    img {
+        width: 1120px;
+        @media screen and (max-width: 1000px) {
+            width: 375px;
         }
     }
-</style>
-<style scoped>
-    .is-h5 {
-        display: none;
-    }
-    .is-pc {
-        display: block;
-    }
-    .methods {
-        width: 1120px;
-        margin: 0 auto;
-    }
-    .bgc.is-pc {
-        background: url("/img/community/contribution/bkg-community.png");
-        background-size: 100%;
-        height: 780px;
-        width: 100%;
-        overflow: hidden;
-        background-repeat: no-repeat;
-    }
-    .mail-guide {
-        max-width: 1120px;
-        margin: 0 auto;
-        position: relative;
-    }
-    .mail-guide .guidance{
-        box-sizing: border-box;
-        border: 1px solid rgba(0, 47, 167, .5);
-        padding: 10px 23px 23px;
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, .1);
-        text-align: left;
-        width: 200px;
+    a {
         position: absolute;
-        left: 36%;
-        bottom: -87%;
     }
-    .mail-guide .guidance .angle{
-        margin-left: 30px;
-        width: 15px;
-        height: 15px;
-        transform: rotate(45deg);
-        border-left: 1px solid rgba(0, 47, 167, .5);
-        border-top: 1px solid rgba(0, 47, 167, .5);
-        box-sizing: border-box;
-        position: relative;
-        top: -18px;
-        background: #fff;
-    }
-    .mail-guide .is-hide{
-        display: none;
-    }
-    .mail-guide .guidance .link-title{
-        font-size: 14px;
-        
-        font-weight: normal;
-        color: #000000;
-        line-height: 18px;
-    }
-    .mail-guide .guidance .linkbox{
-        width: 140px;
+    a:nth-of-type(1) {
+        width: 40px;
         height: 60px;
-        display: flex;
-        justify-content: space-between;
+        top: 261px;
+        left: 179px;
+        @media screen and (max-width: 1000px) {
+            top: 224px;
+            left: 112px;
+        }
     }
-    .mail-guide .guidance .linkbox .linkList{
-        cursor: pointer;
-         z-index: 10;
+    a:nth-of-type(2) {
+        width: 40px;
+        height: 60px;
+        top: 261px;
+        left: 239px;
+        @media screen and (max-width: 1000px) {
+            top: 224px;
+            left: 172px;
+        }
     }
-    .mail-guide .guidance .linkbox .linkList i,.mail-guide .guidance .linkbox .linkList span{
-        display: block;
+    a:nth-of-type(3) {
+        width: 40px;
+        height: 60px;
+        top: 261px;
+        left: 299px;
+        @media screen and (max-width: 1000px) {
+            top: 224px;
+            left: 232px;
+        }
     }
-    .mail-guide .guidance .linkbox .linkList i{
-       width:40px;
-       height:40px;
-       background-size: cover;
+    a:nth-of-type(4) {
+        width: 40px;
+        height: 60px;
+        top: 261px;
+        left: 359px;
+        @media screen and (max-width: 1000px) {
+            top: 224px;
+            left: 292px;
+        }
     }
-    .mail-guide .guidance .linkbox .linkList span{
-        font-size: 12px;
-        
-        font-weight: normal;
-        color: #000000;
-        line-height: 12px;
-        text-align: center;
+    a:nth-of-type(5) {
+        width: 132px;
+        height: 50px;
+        top: 397px;
+        left: 179px;
+        @media screen and (max-width: 1000px) {
+            top: 360px;
+            left: 112px;
+        }
     }
-    .step {
-        width: 200px;
-        text-align: right;
-        position: relative;
+    a:nth-of-type(6) {
+        width: 76px;
+        height: 50px;
+        top: 397px;
+        left: 321px;
+        @media screen and (max-width: 1000px) {
+            top: 360px;
+            left: 254px;
+        }
     }
-    .mail-guide:nth-child(1) .step {
-        top: 30px;
-        text-align: left;
+    a:nth-of-type(7) {
+        width: 106px;
+        height: 50px;
+        top: 457px;
+        left: 291px;
+        @media screen and (max-width: 1000px) {
+            top: 420px;
+            left: 224px;
+        }
     }
-    .mail-guide:nth-child(2) .step {
-        top: 180px;
-        left: 20%;
-        z-index: 200;
+    a:nth-of-type(8) {
+        width: 102px;
+        height: 50px;
+        top: 457px;
+        left: 179px;
+        @media screen and (max-width: 1000px) {
+            top: 420px;
+            left: 112px;
+        }
     }
-    .mail-guide:nth-child(3) .step {
-        top: -340px;
-        left: 45%;
+    a:nth-of-type(9) {
+        width: 144px;
+        height: 50px;
+        top: 514px;
+        left: 253px;
+        @media screen and (max-width: 1000px) {
+            top: 447px;
+            left: 186px;
+        }
     }
-    .mail-guide:nth-child(4) .step {
-        top: -160px;
-        left: 54%;
+    a:nth-of-type(10) {
+        width: 218px;
+        height: 50px;
+        top: 634px;
+        left: 179px;
+        @media screen and (max-width: 1000px) {
+            top: 597px;
+            left:112px;
+        }
     }
-    .mail-guide:nth-child(5) .step {
-        top: -720px;
-        left: 80%;
+    a:nth-of-type(11) {
+        width: 126px;
+        height: 50px;
+        top: 574px;
+        left: 179px;
+        @media screen and (max-width: 1000px) {
+            top: 537px;
+            left:112px;
+        }
     }
-
-    .step-num {
-        display: inline-block;
-        padding: 10px 15px;
-        text-align: center;
-        border-radius: 4px;
-        background-color: #002FA7;
-        margin: 0 auto;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    .step.over-flow {
+    a:nth-of-type(12) {
         width: 210px;
+        height: 24px;
+        top: 869px;
+        left: 90px;
+        @media screen and (max-width: 1000px) {
+            top: 757px;
+            left:118px;
+        }
     }
-    .step-num .over-flow {
-        display: inline-block;
-        max-width: 180px;
-        text-align: left;
+    a:nth-of-type(13) {
+        width: 50px;
+        height: 70px;
+        top: 923px;
+        left: 90px;
+        @media screen and (max-width: 1000px) {
+            top: 811px;
+            left:118px;
+        }
     }
-    .step .is-hidden {
-        display: none;
+    a:nth-of-type(14) {
+        width: 50px;
+        height: 70px;
+        top: 923px;
+        left: 150px;
+        @media screen and (max-width: 1000px) {
+            top: 811px;
+            left:178px;
+        }
     }
-    .lang-en .over-flow.is-hovered {
-        top: 61px;
+    a:nth-of-type(15) {
+        width: 50px;
+        height: 70px;
+        top: 923px;
+        left: 210px;
+        @media screen and (max-width: 1000px) {
+            top: 811px;
+            left:238px;
+        }
     }
-    .step .is-hovered {
-        display: block;
-        position: absolute;
-        top: 45px;
+    a:nth-of-type(16) {
+        width: 70px;
+        height: 90px;
+        top: 903px;
+        left: 591px;
+        @media screen and (max-width: 1000px) {
+            top: 1019px;
+            left:112px;
+        }
     }
-    .step-num span {
-        color: #fff;
-        font-size: 16px;
+    a:nth-of-type(17) {
+        width: 70px;
+        height: 90px;
+        top: 903px;
+        left: 691px;
+        @media screen and (max-width: 1000px) {
+            top: 1019px;
+            left:232px;
+        }
     }
-    .step img {
-        display: block;
-        height: 150px;
-        width: 150px;
+    a:nth-of-type(18) {
+        width: 70px;
+        height: 90px;
+        top: 903px;
+        left: 791px;
+        @media screen and (max-width: 1000px) {
+            top: 1115px;
+            left:112px;
+        }
     }
-    .map-rode {
-        position: relative;
-        top: -800px;
+    a:nth-of-type(19) {
+        width: 70px;
+        height: 90px;
+        top: 903px;
+        left: 891px;
+        @media screen and (max-width: 1000px) {
+            top: 1115px;
+            left:232px;
+        }
     }
-    .rode-1 {
-        position: absolute;
-        left: 70px;
-        top: 70px;
-        z-index: -10;
+    a:nth-of-type(20) {
+        width: 60px;
+        height: 80px;
+        top: 747px;
+        left: 791px;
+        @media screen and (max-width: 1000px) {
+            top: 1337px;
+            left:114px;
+        }
     }
-    .plane-1 {
-        position: absolute;
-        left: 30px;
-        top: 170px;
-        z-index: -10;
-     }
-    .rode-2 {
-        position: absolute;
-        left: 360px;
-        top: 30px;
-        z-index: -10;
+    a:nth-of-type(21) {
+        width: 60px;
+        height: 80px;
+        top: 747px;
+        left: 892px;
+        @media screen and (max-width: 1000px) {
+            top: 1337px;
+            left:234px;
+        }
     }
-    .plane-2 {
-        position: absolute;
-        left: 320px;
-        top: 85px;
-        z-index: -10;
+    a:nth-of-type(22) {
+        width: 80px;
+        height: 28px;
+        top: 580px;
+        left: 627px;
+        @media screen and (max-width: 1000px) {
+            top: 1549px;
+            left:144px;
+        }
     }
-    .rode-3 {
-        position: absolute;
-        left: 598px;
-        top: 110px;
-        z-index: -10;
+    a:nth-of-type(23) {
+        width: 80px;
+        height: 28px;
+        top: 627px;
+        left: 627px;
+        @media screen and (max-width: 1000px) {
+            top: 1599px;
+            left:270px;
+        }
     }
-    .plane-3 {
-        position: absolute;
-        left: 541px;
-        top: 184px;
-        z-index: -12;
+    a:nth-of-type(24) {
+        width: 80px;
+        height: 28px;
+        top: 667px;
+        left: 627px;
+        @media screen and (max-width: 1000px) {
+            top: 1682px;
+            left:148px;
+        }
     }
-    .rode-4 {
-        position: absolute;
-        left: 792px;
-        top: 85px;
-        z-index: -10;
+    a:nth-of-type(25) {
+        width: 80px;
+        height: 28px;
+        top: 587px;
+        left: 763px;
+        @media screen and (max-width: 1000px) {
+            top: 1550px;
+            left:266px;
+        }
     }
-    .plane-4 {
-        position: absolute;
-        left: 876px;
-        top: 195px;
-        z-index: -10;
+    a:nth-of-type(26) {
+        width: 80px;
+        height: 28px;
+        top: 627px;
+        left: 763px;
+        @media screen and (max-width: 1000px) {
+            top: 1640px;
+            left:148px;
+        }
     }
-    @media screen and (max-width: 1000px){
-        .is-pc {
+    a:nth-of-type(27) {
+        width: 80px;
+        height: 28px;
+        top: 667px;
+        left: 763px;
+        @media screen and (max-width: 1000px) {
+            top: 1683px;
+            left:270px;
+        }
+    }
+    a:nth-of-type(28) {
+        width: 80px;
+        height: 28px;
+        top: 586px;
+        left: 909px;
+        @media screen and (max-width: 1000px) {
+            top: 1591px;
+            left:148px;
+        }
+    }
+    a:nth-of-type(29) {
+        width: 80px;
+        height: 28px;
+        top: 627px;
+        left: 909px;
+        @media screen and (max-width: 1000px) {
+            top: 1634px;
+            left:270px;
+        }
+    }
+    a:nth-of-type(30) {
+        width: 80px;
+        height: 28px;
+        top: 667px;
+        left: 909px;
+        @media screen and (max-width: 1000px) {
+            top: 1717px;
+            left:148px;
+        }
+    }
+    a:nth-of-type(31) {
+        width: 84px;
+        height: 16px;
+        top: 161px;
+        left: 700px;
+        @media screen and (max-width: 1000px) {
+            top: 1836px;
+            left:112px;
+        }
+    }
+    a:nth-of-type(32) {
+        width: 84px;
+        height: 16px;
+        top: 259px;
+        left: 700px;
+        @media screen and (max-width: 1000px) {
+            top: 1934px;
+            left:112px;
+        }
+    }
+    a:nth-of-type(33) {
+        cursor: pointer;
+        width: 100px;
+        height: 30px;
+        top: 22px;
+        left: 888px;
+        background-color: #fff;
+        color: #002fa7;
+        border: 1px solid #002da7;
+        font-size: 12px;
+        line-height: 28px;
+        text-align: center;
+        border-radius: 1px;
+        text-decoration: none;
+        @media screen and (max-width: 1000px) {
             display: none;
         }
-        .is-h5 {
-            display: block;
-        }
-        h3 {
-            font-size: 24px;
-            line-height: 34px;
-            text-align: center;
-            margin: 40px 0 10px;
-        }
-        .mail-list-H5 {
-            margin-bottom: 80px;
-        }
-        .step-H5 {
-            margin: 40px auto;
-            text-align: center;
-        }
-        .step-H5 img {
-            display: block;
-            width: 200px;
-            height: 140px;
-            margin: 10px auto 0;
-        }
-        .step-H5 p {
-            font-size: 14px;
-            color: rgba(0, 0, 0, 0.5);
-            line-height: 24px;
-            margin: 10px 30px;
-            text-align: left;
-        }
-        .mail-guide .guidance{
-            left:26%;
-            bottom: 4%;
+    }
+    a:nth-of-type(34) {
+        cursor: pointer;
+        width: 100px;
+        height: 30px;
+        top: 22px;
+        left: 998px;
+        background-color: #fff;
+        color: #002fa7;
+        border: 1px solid #002da7;
+        font-size: 12px;
+        line-height: 28px;
+        text-align: center;
+        border-radius: 1px;
+        text-decoration: none;
+        @media screen and (max-width: 1000px) {
+            display: none;
         }
     }
+}
 </style>
