@@ -1,18 +1,22 @@
 <template>
-    <div class="container">
-        <img
-            v-if="!isShowH5"
-            :src="i18n.community.CONTRIBUTION.BACKGROUND_IMG"
-        />
-        <img v-else :src="i18n.community.CONTRIBUTION.BACKGROUND_IMG_H5" />
-        <a
-            v-for="item in i18n.community.CONTRIBUTION.LINK_LIST"
-            :href="item"
-            target="_blank"
-        ></a>
-        <a :href="'/'+$lang+'/community/contribution/detail.html'">{{ i18n.community.CONTRIBUTION.LOOK_DESC }}</a>
-        <a download="trail-chess.pdf" :href="i18n.community.CONTRIBUTION.DOWLOAD_PDF_URL">{{ i18n.community.CONTRIBUTION.PRINT_MAP }}</a>
+    <div class="content-map">
+        <div class="position"></div>
+        <div class="container">
+            <img
+                v-if="!isShowH5"
+                :src="i18n.community.CONTRIBUTION.BACKGROUND_IMG"
+            />
+            <img v-else :src="i18n.community.CONTRIBUTION.BACKGROUND_IMG_H5" />
+            <a
+                v-for="item in i18n.community.CONTRIBUTION.LINK_LIST"
+                :href="item"
+                target="_blank"
+            ></a>
+            <a :href="'/'+$lang+'/community/contribution/detail.html'">{{ i18n.community.CONTRIBUTION.LOOK_DESC }}</a>
+            <a download="trail-chess.pdf" :href="i18n.community.CONTRIBUTION.DOWLOAD_PDF_URL">{{ i18n.community.CONTRIBUTION.PRINT_MAP }}</a>
+        </div>    
     </div>
+    
 </template>
 
 <script>
@@ -26,6 +30,12 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+.content-map .position {
+    height: 0;
+      @media screen and (max-width: 1000px) {
+        height: 110px;
+    }      
+}
 .container {
     width: 1120px;
     margin: 0 auto 200px;
@@ -378,7 +388,8 @@ export default {
         border-radius: 1px;
         text-decoration: none;
         @media screen and (max-width: 1000px) {
-            display: none;
+            top: -68px;
+            left: 30px;
         }
     }
     a:nth-of-type(34) {
