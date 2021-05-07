@@ -726,7 +726,7 @@
         "TECHNOLOGY_FIELD": "操作系统内核",
         "TECHNICAL_LABELS": "",
         "DIFFICULTY": "高"
-    }
+    },
      {
         "ID": 93,
         "NAME": "No.93 StratoVirt虚拟化平台内存底噪优化",
@@ -822,5 +822,5 @@
         "TECHNOLOGY_FIELD": "操作系统运维",
         "TECHNICAL_LABELS": "",
         "DIFFICULTY": "高"
-    },
+    }
 ]
