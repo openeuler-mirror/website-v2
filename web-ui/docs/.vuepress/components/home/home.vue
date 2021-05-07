@@ -80,7 +80,7 @@
                 <swiper-slide class="carousel-item-index" v-if="$lang === 'zh'">
                     <div class="mobile-version" @click="go(i18n.home.DEV_COMPETITION.LINK)" :style="{backgroundImage:i18n.home.DEV_COMPETITION.MOBILE_IMG}"></div>
                 </swiper-slide>
-                <swiper-slide class="carousel-item-index" v-if="$lang === 'zh'">
+                <swiper-slide class="carousel-item-index">
                     <div class="mobile-version" @click="go('/interaction/summit-list/devday2021/')" :style="{backgroundImage:i18n.home.HOME_DEV2021_IMG.H5_BANNER}"></div>
                 </swiper-slide>
                 <swiper-slide>

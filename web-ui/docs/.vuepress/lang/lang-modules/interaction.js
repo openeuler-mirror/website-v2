@@ -2831,8 +2831,8 @@ module.exports = {
             MEETUPS_DATA: require('./../../data/salon').en.MEETUPS_LIST
         },
         DEVDAY_2021: {
-            PC_BANNER: '/img/summit/devday-2021/devday-2021-en.png',
-            H5_BANNER: '/img/summit/devday-2021/banner-h5-en.png'
+            PC_BANNER: '/img/summit/devday-2021/devday-2021-zh.png',
+            H5_BANNER: '/img/summit/devday-2021/banner-h5-zh.png'
         }
     },
     ru: {
@@ -4244,8 +4244,8 @@ module.exports = {
             MEETUPS_DATA: require('./../../data/salon').en.MEETUPS_LIST
         },
         DEVDAY_2021: {
-            PC_BANNER: '/img/summit/devday-2021/devday-2021-en.png',
-            H5_BANNER: '/img/summit/devday-2021/banner-h5-en.png'
+            PC_BANNER: '/img/summit/devday-2021/devday-2021-zh.png',
+            H5_BANNER: '/img/summit/devday-2021/banner-h5-zh.png'
         }
     }
 };
