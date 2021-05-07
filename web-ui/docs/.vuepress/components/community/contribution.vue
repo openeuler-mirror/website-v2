@@ -33,7 +33,7 @@ export default {
 .content-map .position {
     height: 0;
       @media screen and (max-width: 1000px) {
-        height: 110px;
+        height: 90px;
     }      
 }
 .container {
@@ -388,7 +388,7 @@ export default {
         border-radius: 1px;
         text-decoration: none;
         @media screen and (max-width: 1000px) {
-            top: -68px;
+            top: -46px;
             left: 30px;
         }
     }
