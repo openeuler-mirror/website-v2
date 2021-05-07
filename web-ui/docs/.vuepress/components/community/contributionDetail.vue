@@ -20,6 +20,15 @@
         }
     }
 </script>
+<style lang="less">
+[id]::before {
+  content: '';
+  display: block;
+  height: 60px;
+  margin-top: -60px;
+  visibility: hidden;
+}
+</style>
 <style lang="less" scoped>
 .container {
     .pc-btn {
