@@ -18,10 +18,10 @@
             <img class="schedule-pc" src="/img/summit/devday-2021/schedule-pc.png" >
             <img class="schedule-h5" src="/img/summit/devday-2021/schedule-h5.png" >
             <p class="title">openEuler 开放工作会议介绍：</p>
-            <p class="text">openEuler 技术委员会开放工作会议：会议将集中探讨 openEuler 技术路线和下一版本的发布计划</p>
-            <p class="text">openEuler 用户委员会开放工作会议：会议将集中收集用户在技术落地应用中碰到的问题，以及系统迁移路径的实践和分享</p>
-            <p class="text">openEuler 品牌委员会开放工作会议：会议将对 openEuler 社区的营销传播推广工作进行梳理和介绍</p>
-            <p class="text">openEuler SIG 小组开放工作会：在社区公开招募 20-30 个 SIG，小组成员在 SIG Maintainer 的带领下，召开现场工作会议，落实兴趣小组的工作重点、接受社区公开需求、完成下一个版本的开发路线规划。</p>
+            <p class="text">openEuler 技术委员会开放工作会议：会议将集中探讨 openEuler 技术路线和下一版本的发布计划。</p>
+            <p class="text">openEuler 用户委员会开放工作会议：会议将集中收集用户在技术落地应用中碰到的问题，以及系统迁移路径的实践和分享。</p>
+            <p class="text">openEuler 品牌委员会开放工作会议：会议将对 openEuler 社区的营销传播推广工作进行梳理和介绍。</p>
+            <p class="text">openEuler SIG 小组开放工作会：在社区公开招募 15-20 个 SIG，小组成员在 SIG Maintainer 的带领下，召开现场工作会议，落实兴趣小组的工作重点、接受社区公开需求、完成下一个版本的开发路线规划。</p>
         </div>
         <div class="review-wrapper">
             <div class="title">
