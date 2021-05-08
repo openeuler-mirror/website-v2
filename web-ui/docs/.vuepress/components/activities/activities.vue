@@ -48,7 +48,7 @@
 									<p class="step-text">{{i18n.activities.STEP_2.CONTENT_1}}</p>
 									<p class="step-text">
 										{{i18n.activities.STEP_2.CONTENT_2}}<a 
-											href="https://isrc.iscas.ac.cn/summer2020/help/assets/%E9%A1%B9%E7%9B%AE%E7%94%B3%E8%AF%B7%E6%A8%A1%E6%9D%BF.txt" target="_blank"
+											href="https://summer.iscas.ac.cn/help/assets/%E9%A1%B9%E7%9B%AE%E7%94%B3%E8%AF%B7%E6%A8%A1%E6%9D%BF.pdf" target="_blank"
 										>{{i18n.activities.STEP_2.A_LINK}}</a>{{i18n.activities.PERIOD}}
 									</p>
 								</div>
