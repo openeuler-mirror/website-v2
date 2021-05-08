@@ -188,14 +188,6 @@
                         <img v-lazy="'/img/summit/home/media/xianglingshuo.jpg'" alt="" />
                     </div>
                 </div>
-                <div :class="['review',isShowQrcode?'isqrcode':'']" title-id="review">
-                    <div class="title">
-                        <img v-lazy="reviewObj.WEB_TITLE" alt="" v-if="!isShowH5" />
-                        <img v-lazy="reviewObj.MOBILE_TITLE" alt="" v-else />
-                    </div>
-                    <img class="review-banner card-hover" v-lazy="'/img/summit/home/review/review-img.png'" alt="" @click="toReviewList" v-if="!isShowH5"/>
-                    <img class="review-banner" v-lazy="'/img/summit/home/review/mobile-review-img.png'" alt="" @click="toReviewList" v-else />
-                </div>
             </div>
         </div>
     </div>
@@ -224,7 +216,7 @@ export default {
             reviewObj: {},
             flag: true,
             dataObj: {},
-            navTitleScroll: [620,1650,3250,6450,9250],
+            navTitleScroll: [620,1650,3250,6450],
             activeIndex: -1,
             isShowNav: false,
             isShowQrcode: false,
@@ -263,10 +255,6 @@ export default {
         this.showIframe(liveId);
     },
     methods: {
-        toReviewList () {
-            let routeUrl = this.$router.resolve(this.resolvePath('/interaction/summit-list/list/'));
-            window.open(routeUrl.href);
-        },
         go(path) {
             if(path) {
                 if(path && path.includes("http")) {
