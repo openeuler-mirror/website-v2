@@ -481,7 +481,7 @@
     },
     {
         "ID": 62,
-        "NAME": "No.62 实现UBI并发扫描加速attach过程",
+        "NAME": "实现UBI并发扫描加速attach过程",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3EM3I",
         "TECHNOLOGY_FIELD": "操作系统内核",
         "TECHNICAL_LABELS": "",
@@ -729,7 +729,7 @@
     },
      {
         "ID": 93,
-        "NAME": "No.93 StratoVirt虚拟化平台内存底噪优化",
+        "NAME": "StratoVirt虚拟化平台内存底噪优化",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3J1HP",
         "TECHNOLOGY_FIELD": "操作系统虚拟化,Rust",
         "TECHNICAL_LABELS": "StratoVirt",
@@ -737,7 +737,7 @@
     },
     {
         "ID": 94,
-        "NAME": "No.94 在openeuler社区孵化生物信息单细胞领域开源应用软件",
+        "NAME": "在openeuler社区孵化生物信息单细胞领域开源应用软件",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3J85G",
         "TECHNOLOGY_FIELD": "HPC",
         "TECHNICAL_LABELS": "",
@@ -745,7 +745,7 @@
     },
     {
         "ID": 95,
-        "NAME": "No.95 在openeuler社区孵化生物信息单细胞领域交互式数据分析平台",
+        "NAME": "在openeuler社区孵化生物信息单细胞领域交互式数据分析平台",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3M2TL",
         "TECHNOLOGY_FIELD": "HPC",
         "TECHNICAL_LABELS": "",
@@ -753,23 +753,15 @@
     },
     {
         "ID": 96,
-        "NAME": "No.96 在openEuler系统中提供可扩展的应用可视化配置软件",
+        "NAME": "在openEuler系统中提供可扩展的应用可视化配置软件",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3O5OI",
         "TECHNOLOGY_FIELD": "操作系统综合",
         "TECHNICAL_LABELS": "",
         "DIFFICULTY": "中"
     },
     {
-        "ID": 97,
-        "NAME": "No.97 Linux内核源码编译安装",
-        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3OBLR",
-        "TECHNOLOGY_FIELD": "操作系统内核",
-        "TECHNICAL_LABELS": "",
-        "DIFFICULTY": "低"
-    },
-    {
         "ID": 98,
-        "NAME": "No.98 开源软件测试平台Compass-CI的git-mirror 模块加速",
+        "NAME": "开源软件测试平台Compass-CI的git-mirror 模块加速",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3OBQI",
         "TECHNOLOGY_FIELD": "操作系统测试",
         "TECHNICAL_LABELS": "Git,Compass-CI",
@@ -777,7 +769,7 @@
     },
     {
         "ID": 99,
-        "NAME": "No.99 在openEuler的UKUI桌面环境适配麒麟影音",
+        "NAME": "在openEuler的UKUI桌面环境适配麒麟影音",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3OBRF",
         "TECHNOLOGY_FIELD": "操作系统桌面环境",
         "TECHNICAL_LABELS": "UKUI",
@@ -785,7 +777,7 @@
     },
     {
         "ID": 100,
-        "NAME": "No.100 为openEuler的UKUI桌面增加或适配日程管理应用",
+        "NAME": "为openEuler的UKUI桌面增加或适配日程管理应用",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3OBS1",
         "TECHNOLOGY_FIELD": "操作系统桌面环境",
         "TECHNICAL_LABELS": "UKUI",
@@ -793,7 +785,7 @@
     },
     {
         "ID": 101,
-        "NAME": "No.101 在openEuler的UKUI桌面中增加一款快速启动的软件",
+        "NAME": "在openEuler的UKUI桌面中增加一款快速启动的软件",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3OBSG",
         "TECHNOLOGY_FIELD": "操作系统桌面环境",
         "TECHNICAL_LABELS": "UKUI",
@@ -801,7 +793,7 @@
     },
     {
         "ID": 102,
-        "NAME": "No.102 在openEuler的UKUI桌面环境中增加一款取色计软件 ",
+        "NAME": "在openEuler的UKUI桌面环境中增加一款取色计软件 ",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3OBTD",
         "TECHNOLOGY_FIELD": "操作系统桌面环境",
         "TECHNICAL_LABELS": "UKUI",
@@ -809,7 +801,7 @@
     },
     {
         "ID": 103,
-        "NAME": "No.103 完成在树莓派上部署测试服务平台Compass-CI",
+        "NAME": "完成在树莓派上部署测试服务平台Compass-CI",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3OBTK",
         "TECHNOLOGY_FIELD": "操作系统测试",
         "TECHNICAL_LABELS": "Compass-CI",
@@ -817,7 +809,7 @@
     },
     {
         "ID": 104,
-        "NAME": "No.104 开发openEuler社区原生的运维管理平台",
+        "NAME": "开发openEuler社区原生的运维管理平台",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3OCZ3",
         "TECHNOLOGY_FIELD": "操作系统运维",
         "TECHNICAL_LABELS": "",
