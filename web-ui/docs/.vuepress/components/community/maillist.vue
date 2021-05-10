@@ -109,7 +109,7 @@
                             @click="userSubscribe(scope.row.list_id)"
                             ref="listName"
                         >
-                            <p>{{ scope.row.display_name }}</p>
+                            <p :id="scope.row.display_name">{{ scope.row.display_name }}</p>
                         </a>
                     </template>
                 </el-table-column>
@@ -199,6 +199,9 @@ export default {
                 this.list.forEach(item => {
                     item.archive = "Archive";
                 });
+                setTimeout(() => {
+                    this.fixPositionOfId(); 
+                }, 1000);
             })
             .catch(response => {
                 this.$message.error(
@@ -212,7 +215,24 @@ export default {
         },
         userSubscribe(userID) {
             window.open('https://mailweb.openeuler.org/postorius/lists/' + userID + '/');
-        }
+        },
+        fixPositionOfId(){
+            var url=window.location.href;
+            var positionId=url.split('#')[1];
+            if(positionId){
+                var target = document.getElementById(positionId);
+                if (!target) {
+                    return;
+                }
+                var targetOffset = target.parentNode.parentNode.parentNode.parentNode.offsetTop  + 1300;//首先算出id所在TR元素的偏移量+表格元素偏移量1300
+                window.scrollTo({ 
+                    top: targetOffset, 
+                    behavior: "smooth" 
+                });
+            }else{
+                return;
+            }     
+        },
     }
 };
 </script>
