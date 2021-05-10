@@ -814,5 +814,93 @@
         "TECHNOLOGY_FIELD": "操作系统运维",
         "TECHNICAL_LABELS": "",
         "DIFFICULTY": "高"
+    },
+     {
+        "ID": 105,
+        "NAME": "StratoVirt-hydropper测试框架增强",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3OXXZ",
+        "TECHNOLOGY_FIELD": "操作系统虚拟化,测试",
+        "TECHNICAL_LABELS": "StratoVirt,测试框架",
+        "DIFFICULTY": "低"
+    },
+    {
+        "ID": 106,
+        "NAME": "vmtop添加磁盘和网卡io监控功能",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3P0LO",
+        "TECHNOLOGY_FIELD": "操作系统虚拟化",
+        "TECHNICAL_LABELS": "监测工具",
+        "DIFFICULTY": "低"
+    },
+    {
+        "ID": 107,
+        "NAME": "用户态热补丁框架（libcareplus）线程变量（TLS）增强",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3PRML",
+        "TECHNOLOGY_FIELD": "操作系统综合",
+        "TECHNICAL_LABELS": "用户态热补丁框架",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 108,
+        "NAME": "家庭智能安全防范示例系统开发",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3PRPK",
+        "TECHNOLOGY_FIELD": "操作系统IOT",
+        "TECHNICAL_LABELS": "家居智能",
+        "DIFFICULTY": "高"
+    },
+    {
+        "ID": 109,
+        "NAME": "用户态热补丁框架（libcareplus）补丁制作汇编对比增强",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3PRQU",
+        "TECHNOLOGY_FIELD": "操作系统综合",
+        "TECHNICAL_LABELS": "用户态热补丁框架",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 110,
+        "NAME": "操作系统安全漏洞扫描与报警项目",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3PRRT",
+        "TECHNOLOGY_FIELD": "操作系统IOT",
+        "TECHNICAL_LABELS": "家居智能",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 111,
+        "NAME": "avocado-vt测试框架增加支持StratoVirt的json配置管理虚拟机",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3PS21",
+        "TECHNOLOGY_FIELD": "操作系统虚拟化,测试",
+        "TECHNICAL_LABELS": "测试框架",
+        "DIFFICULTY": "低"
+    },
+    {
+        "ID": 112,
+        "NAME": "qemu设备fuzz测试完善",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3PXE8",
+        "TECHNOLOGY_FIELD": "操作系统虚拟化,测试",
+        "TECHNICAL_LABELS": "qemu",
+        "DIFFICULTY": "低"
+    },
+    {
+        "ID": 113,
+        "NAME": "完善StratoVirt在x86_64平台上的RTC设备模拟",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3Q0Q5",
+        "TECHNOLOGY_FIELD": "操作系统虚拟化",
+        "TECHNICAL_LABELS": "StratoVir,RTC",
+        "DIFFICULTY": "低"
+    },
+    {
+        "ID": 114,
+        "NAME": "添加StratoVirt对中断控制器gic-v2的支持",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3Q0UV",
+        "TECHNOLOGY_FIELD": "操作系统虚拟化",
+        "TECHNICAL_LABELS": "StratoVirt,gic-v2",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 115,
+        "NAME": "新增stratovirt支持balloon内存信息统计",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3Q1A8",
+        "TECHNOLOGY_FIELD": "操作系统虚拟化",
+        "TECHNICAL_LABELS": "stratovirt,balloon",
+        "DIFFICULTY": "低"
     }
 ]
