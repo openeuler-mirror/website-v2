@@ -1982,7 +1982,7 @@
         "vendorID": "19e5",
         "deviceID": "a222",
         "svID": "19e5",
-        "ssID": "cc04",
+        "ssID": "04cc",
         "architecture": "aarch64",
         "os": "openEuler 20.03 LTS SP1",
         "driverName": "hns3",
@@ -2009,6 +2009,48 @@
       "portsBusTypes": "SP570",
       "videoAdapter": "1711",
       "hostBusAdapter": "Avago 3508",
+      "hardDiskDrive": ""
+    }
+  },
+  {
+    "hardwareFactory": "黄河科技",
+    "hardwareModel": "Huanghe RK22C",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "aarch64",
+    "date": "2021/5/6",
+    "friendlyLink": "http://www.chinahuanghe.com/product/27.html",
+    "boardCards": [
+      {
+        "vendorID": "19e5",
+        "deviceID": "a222",
+        "svID": "19e5",
+        "ssID": "04cc",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "hns3",
+        "version": "1.9.38.8",
+        "type": "NIC",
+        "driverDate": "2020.12.21",
+        "sha256": "2EEC80BC58F59DBB7551CA377B2997E2F4C01CC4",
+        "driverSize": "167.5K",
+        "chipVendor": "华为",
+        "boardModel": "TM210",
+        "chipModel": "hisi",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "http://www.chinahuanghe.com/product/27.html",
+      "certificationTime": "2021/4/23",
+      "commitID": "",
+      "motherBoardRevision": "S920X00-5250",
+      "biosUefi": "3.18 (U6293)",
+      "cpu": "Kunpeng-920",
+      "ram": "4*16G DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "Hi1710",
+      "hostBusAdapter": "AVAGO MegaRAID SAS 9460-8i",
       "hardDiskDrive": ""
     }
   }
