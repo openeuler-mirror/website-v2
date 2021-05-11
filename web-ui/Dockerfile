@@ -12,7 +12,7 @@ RUN mv /home/openeuler/web/script/update-build-script.js /home/openeuler/web/nod
 RUN mv /home/openeuler/web/script/add-worker-script.js /home/openeuler/web/node_modules/@vuepress/core/lib/node/build/worker.js
 RUN node --max_old_space_size=9216 /home/openeuler/web/node_modules/vuepress/cli.js build docs
 
-FROM nginx:1.19.2
+FROM nginx:1.20.0
 
 COPY --from=Builder /home/openeuler/web/docs/.vuepress/dist/ /usr/share/nginx/html/
 RUN chmod -R 755 /usr/share/nginx/html
