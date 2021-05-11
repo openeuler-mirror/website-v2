@@ -2,6 +2,11 @@
     <div class="home">
         <div class="is-pc home-carousel" v-if="!isShowH5">
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" @change="eventChange()">
+                <el-carousel-item>
+                    <div class="carousel-dev2021" @click="go('/interaction/summit-list/devday2021/')">
+                        <img :src="i18n.home.HOME_DEV2021_IMG.PC_BANNER">
+                    </div>
+                </el-carousel-item>
                 <el-carousel-item v-if="$lang === 'zh'">
                     <div class="activities-banner" 
                         :style="{backgroundImage: i18n.home.HOME_ACTIVETIES.PC_IMG}"
@@ -13,11 +18,6 @@
                         :style="{backgroundImage: i18n.home.DEV_COMPETITION.PC_IMG}"
                         @click="go(i18n.home.DEV_COMPETITION.LINK)"
                     ></div>
-                </el-carousel-item>
-                <el-carousel-item>
-                    <div class="carousel-dev2021" @click="go('/interaction/summit-list/devday2021/')">
-                        <img :src="i18n.home.HOME_DEV2021_IMG.PC_BANNER">
-                    </div>
                 </el-carousel-item>
                 <el-carousel-item>
                     <div class="carousel-video">
@@ -53,35 +53,18 @@
                     <div class="carousel-banner" :style="{backgroundImage: item.BANNER_PC_IMG}" @click="go(item.BANNER_LINK)" v-else>
                     </div>
                 </el-carousel-item>
-                <el-carousel-item
-                        class="carousel-item"
-                        v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
-                        :key="index">
-                    <a class="banner-link" @click="go(item.LINK)">
-                        <div class="banner-item minisite">
-                            <div class="item-info">
-                                <h3>{{ item.TITLE }}</h3>
-                                <span>{{ item.DES }}</span>
-                            </div>
-                            <img class="banner-gif" v-lazy="item.IMG" v-if="isShowH5">
-                            <video autoplay loop muted width="300px" height="300px" id="minisite-video" v-else>
-                                <source :src="item.VIDEO_URL"  type="video/mp4">
-                            </video>
-                        </div>
-                    </a>
-                </el-carousel-item>
             </el-carousel>
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
+                <swiper-slide class="carousel-item-index">
+                    <div class="mobile-version" @click="go('/interaction/summit-list/devday2021/')" :style="{backgroundImage:i18n.home.HOME_DEV2021_IMG.H5_BANNER}"></div>
+                </swiper-slide>
                 <swiper-slide class="carousel-item-index" v-if="$lang === 'zh'">
                     <div class="mobile-version" @click="go(i18n.home.HOME_ACTIVETIES.LINK)" :style="{backgroundImage:i18n.home.HOME_ACTIVETIES.MOBILE_IMG}"></div>
                 </swiper-slide>
                 <swiper-slide class="carousel-item-index" v-if="$lang === 'zh'">
                     <div class="mobile-version" @click="go(i18n.home.DEV_COMPETITION.LINK)" :style="{backgroundImage:i18n.home.DEV_COMPETITION.MOBILE_IMG}"></div>
-                </swiper-slide>
-                <swiper-slide class="carousel-item-index">
-                    <div class="mobile-version" @click="go('/interaction/summit-list/devday2021/')" :style="{backgroundImage:i18n.home.HOME_DEV2021_IMG.H5_BANNER}"></div>
                 </swiper-slide>
                 <swiper-slide>
                     <div class="carousel-video">
@@ -102,15 +85,6 @@
                 </swiper-slide>
                 <swiper-slide v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
                     <div class="carousel-banner mobile-banner" :style="{backgroundImage: item.BANNER_MOBILE_IMG}" @click="go(item.BANNER_LINK)">
-                    </div>
-                </swiper-slide>
-                <swiper-slide
-                        class="carousel-item-index"
-                        v-for="(item, index) in i18n.home.HOME_CAROUSEL_DATA"
-                        :key="index">
-                    <div @click="go(item.LINK)" :key="index"> 
-                        <h3>{{ item.TITLE }}</h3>
-                        <img v-lazy="item.IMG">
                     </div>
                 </swiper-slide>
             </swiper>
@@ -460,7 +434,7 @@
                 mobileSwiperInterval: null,
                 mobilePagenationIndex: 1,
                 developerList: [],
-                bannerAmount: 9,
+                bannerAmount: 6,
                 statisticParams: {
                     type: 'openEuler'
                 },
