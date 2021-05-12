@@ -7,6 +7,8 @@ module.exports = {
         MEETINGS_TIME: '会议时间：',
         MEETINGS_REPLAY: '回放链接',
         SEARCH_PLACE_HOLDER: '输入内容',
+        COOKIE_LEGAL_TEXT: '本站点使用Cookies，继续浏览表示您同意我们使用Cookies。',
+        COOKIE_LEGAL_LINK_TEXT: 'Cookies和隐私政策>',
         NAV_ROUTER_CONFIG: [{
                 PATH: '/download/',
                 NAME: '下载',
@@ -187,6 +189,8 @@ module.exports = {
         MEETINGS_TIME: 'Time: ',
         MEETINGS_REPLAY: 'Replay',
         SEARCH_PLACE_HOLDER: 'Input content',
+        COOKIE_LEGAL_TEXT: 'This site uses cookies. By continuing to browse the site you are agreeing to our use of cookies.',
+        COOKIE_LEGAL_LINK_TEXT: 'Read our privacy policy>',
         NAV_ROUTER_CONFIG: [{
                 PATH: '/download/',
                 NAME: 'Download',
@@ -367,6 +371,8 @@ module.exports = {
         MEETINGS_TIME: 'Time: ',
         MEETINGS_REPLAY: 'Воспроизведение',
         SEARCH_PLACE_HOLDER: 'Введите текст',
+        COOKIE_LEGAL_TEXT: 'This site uses cookies. By continuing to browse the site you are agreeing to our use of cookies.',
+        COOKIE_LEGAL_LINK_TEXT: 'Read our privacy policy>',
         NAV_ROUTER_CONFIG: [{
                 PATH: '/download/',
                 NAME: 'Загрузить',
