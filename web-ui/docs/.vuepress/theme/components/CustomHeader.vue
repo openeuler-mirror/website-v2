@@ -1,5 +1,5 @@
 <template>
-    <div class="nav-fill">
+    <div :class="'nav-fill '+(cookiesShow?'cookies-show':'')">
         <div class="nav-wrapper">
             <div class="nav-bar">
                 <img
@@ -235,10 +235,16 @@
                 </ul>
             </div>
         </div>
+        <div class="cookie-legal" v-if="cookiesShow">
+            {{i18n.common.COOKIE_LEGAL_TEXT}}
+            <a :href="'/'+$lang+'/other/privacy/'">{{i18n.common.COOKIE_LEGAL_LINK_TEXT}}</a>
+            <img @click="close" src="/img/common/icon-close.png">
+        </div>
     </div>
 </template>
 
 <script>
+let cookieUtils = null;
 export default {
     data() {
         return {
@@ -252,10 +258,19 @@ export default {
             gitteResourceFlag: false,
             i18n: this.i18n || {
                 common : {}
-            }
+            },
+            cookiesShow: false
         };
     },
+    mounted() {
+        cookieUtils = require('./../../libs/cookie-utils').default;
+        this.cookiesShow = !cookieUtils.get('key');
+    },
     methods: {
+        close() {
+            cookieUtils.set('key', 'key', 30);
+            this.cookiesShow = false;
+        },
         hidePcSearchInput (){
             setTimeout(() => {
                 this.pcSearchFlag = false;
@@ -819,6 +834,47 @@ export default {
                         display: none;
                     }
                 }
+            }
+        }
+    }
+}
+.cookies-show {
+    height: 120px;
+    @media screen and (max-width: 1000px) {
+        height: 130px;
+    }
+    .nav-wrapper {
+        top: 60px;
+        .nav-menu-mobile,.search-mobile,.mask {
+            top: 130px !important;
+        }
+    }
+    .cookie-legal {
+        line-height: 60px;
+        z-index: 999;
+        width: 100%;
+        position: fixed;
+        height: 60px;
+        text-align: center;
+        background-color: #ccc;
+        color: #333;
+        font-size: 14px;
+        @media screen and (max-width: 1000px) {
+            font-size: 12px;
+            line-height: 30px;
+        }
+        a {
+            cursor: pointer;
+            text-decoration: solid;
+        }
+        img {
+            cursor: pointer;
+            vertical-align: middle;
+            margin-left: 20px;
+            @media screen and (max-width: 1000px) {
+                width: 20px;
+                height: 20px;
+                margin-left: 0;
             }
         }
     }
