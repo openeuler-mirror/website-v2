@@ -216,9 +216,9 @@ export default {
         width: 400px;
         text-align: center;
         font-size: 24px;
-        line-height: 20px;
+        line-height: 37px;;
         height: 20px;
-        top: 90px;
+        top: 80px;
         left: 0;
         color: #fff;
         @media screen and (max-width: 1000px) {
