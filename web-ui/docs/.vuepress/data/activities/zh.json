@@ -902,5 +902,61 @@
         "TECHNOLOGY_FIELD": "操作系统虚拟化",
         "TECHNICAL_LABELS": "stratovirt,balloon",
         "DIFFICULTY": "低"
+    },
+     {
+        "ID": 116,
+        "NAME": "支持 iSula 的软件定义网络仿真器扩展设计",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3QBX1",
+        "TECHNOLOGY_FIELD": "操作系统云原生",
+        "TECHNICAL_LABELS": "容器,iSula",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 117,
+        "NAME": "基于 iSula 的容器编排系统设计",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3QC2O",
+        "TECHNOLOGY_FIELD": "操作系统云原生",
+        "TECHNICAL_LABELS": "容器,iSula",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 118,
+        "NAME": "在openEuler引入ELK Stack",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3QEFQ",
+        "TECHNOLOGY_FIELD": "操作系统综合",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "低"
+    },
+    {
+        "ID": 119,
+        "NAME": "Linux Lab 镜像添加 openEuler",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3QG1G",
+        "TECHNOLOGY_FIELD": "操作系统综合",
+        "TECHNICAL_LABELS": "Linux Lab ",
+        "DIFFICULTY": "高"
+    },
+    {
+        "ID": 120,
+        "NAME": " 为openEuler官网添加修改文件实时渲染功能",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3QJWW",
+        "TECHNOLOGY_FIELD": "开源基础设施,操作系统云原生",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "高"
+    },
+    {
+        "ID": 121,
+        "NAME": "将Harbor引入openEuler",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3QL3H",
+        "TECHNOLOGY_FIELD": "操作系统综合,操作系统云原生",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "低"
+    },
+    {
+        "ID": 122,
+        "NAME": " 将Nexus引入openEuler",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3QONP?from=project-issue",
+        "TECHNOLOGY_FIELD": "操作系统综合,Java",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "低"
     }
 ]
