@@ -237,7 +237,7 @@
         </div>
         <div class="cookie-legal" v-if="cookiesShow">
             {{i18n.common.COOKIE_LEGAL_TEXT}}
-            <a :href="'/'+$lang+'/other/legal/'">{{i18n.common.COOKIE_LEGAL_LINK_TEXT}}</a>
+            <a :href="'/'+$lang+'/other/privacy/'">{{i18n.common.COOKIE_LEGAL_LINK_TEXT}}</a>
             <img @click="close" src="/img/common/icon-close.png">
         </div>
     </div>
