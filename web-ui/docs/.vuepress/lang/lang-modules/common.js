@@ -10,9 +10,18 @@ module.exports = {
         COOKIE_LEGAL_TEXT: '本站点使用Cookies，继续浏览表示您同意我们使用Cookies。',
         COOKIE_LEGAL_LINK_TEXT: 'Cookies和隐私政策>',
         NAV_ROUTER_CONFIG: [{
-                PATH: '/download/',
+                PATH: '',
                 NAME: '下载',
-                CHILDREN: [],
+                CHILDREN: [
+                    {
+                        NAME: '软件包',
+                        PATH: '/download/'
+                    },
+                    {
+                        NAME: '镜像列表',
+                        PATH: '/mirror/list/'
+                    }
+                ],
                 CLASS: []
             },
             {
@@ -192,9 +201,18 @@ module.exports = {
         COOKIE_LEGAL_TEXT: 'This site uses cookies. By continuing to browse the site you are agreeing to our use of cookies.',
         COOKIE_LEGAL_LINK_TEXT: 'Read our privacy policy>',
         NAV_ROUTER_CONFIG: [{
-                PATH: '/download/',
+                PATH: '',
                 NAME: 'Download',
-                CHILDREN: [],
+                CHILDREN: [
+                    {
+                        NAME: 'Software Packages',
+                        PATH: '/download/'
+                    },
+                    {
+                        NAME: 'Mirrors',
+                        PATH: '/mirror/list/'
+                    }
+                ],
                 CLASS: []
             },
             {
@@ -374,9 +392,18 @@ module.exports = {
         COOKIE_LEGAL_TEXT: 'This site uses cookies. By continuing to browse the site you are agreeing to our use of cookies.',
         COOKIE_LEGAL_LINK_TEXT: 'Read our privacy policy>',
         NAV_ROUTER_CONFIG: [{
-                PATH: '/download/',
+                PATH: '',
                 NAME: 'Загрузить',
-                CHILDREN: [],
+                CHILDREN: [
+                    {
+                        NAME: 'Software Packages',
+                        PATH: '/download/'
+                    },
+                    {
+                        NAME: 'Mirrors',
+                        PATH: '/mirror/list/'
+                    }
+                ],
                 CLASS: []
             },
             {
