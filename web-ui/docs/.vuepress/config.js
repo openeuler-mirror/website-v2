@@ -85,6 +85,14 @@ module.exports = {
                     '^/api-cve/': ''
                 }
             },
+            '/api-mirror': {
+                target: 'https://api.openeuler.org/mirrors',
+                ws: true,
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api-mirror': ''
+                }
+            },
             '/api/': {
                 target: 'https://openeuler.org/api/',
                 ws: true,

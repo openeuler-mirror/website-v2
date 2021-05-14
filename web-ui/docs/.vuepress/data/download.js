@@ -15,6 +15,7 @@ module.exports = {
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-21.03/ISO/',
                 LIFE_CYCLE_URL: '/zh/other/lifecycle/',
                 WHITE_PAPER: "/whitepaper/openEuler-whitepaper-2103.pdf",
+                WEBSITE_SELECT: "/zh/mirror/select/?version=21.03",
                 MANUFACTURER: 'openEuler社区',
                 PUBLISH_DATE: '2021/03',
                 LTS: false
@@ -28,6 +29,7 @@ module.exports = {
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP1/ISO/',
                 LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+                WEBSITE_SELECT: "/zh/mirror/select/?version=20.03-LTS-SP1",
                 MANUFACTURER: 'openEuler社区',
                 PUBLISH_DATE: '2020/12',
                 LTS: true
@@ -42,6 +44,7 @@ module.exports = {
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.09/ISO/',
                 LIFE_CYCLE_URL: '/zh/other/lifecycle/',
                 WHITE_PAPER: "/whitepaper/openEuler-whitepaper-2009.pdf",
+                WEBSITE_SELECT: "/zh/mirror/select/?version=20.09",
                 MANUFACTURER: 'openEuler社区',
                 PUBLISH_DATE: '2020/09',
                 LTS: false
@@ -55,6 +58,7 @@ module.exports = {
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS/ISO/',
                 LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+                WEBSITE_SELECT: "/zh/mirror/select/?version=20.03-LTS",
                 MANUFACTURER: 'openEuler社区',
                 PUBLISH_DATE: '2020/03',
                 LTS: true
@@ -187,6 +191,7 @@ module.exports = {
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-21.03/ISO/',
                 LIFE_CYCLE_URL: '/en/other/lifecycle/',
+                WEBSITE_SELECT: "/en/mirror/select/?version=21.03",
                 MANUFACTURER: 'openEuler community',
                 PUBLISH_DATE: '2021/03',
                 LTS: false
@@ -200,6 +205,7 @@ module.exports = {
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP1/ISO/',
                 LIFE_CYCLE_URL: '/en/other/lifecycle/',
+                WEBSITE_SELECT: "/en/mirror/select/?version=20.03-LTS-SP1",
                 MANUFACTURER: 'openEuler community',
                 PUBLISH_DATE: '2020/12',
                 LTS: true
@@ -213,6 +219,7 @@ module.exports = {
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.09/ISO/',
                 LIFE_CYCLE_URL: '/en/other/lifecycle/',
+                WEBSITE_SELECT: "/en/mirror/select/?version=20.09",
                 MANUFACTURER: 'openEuler community',
                 PUBLISH_DATE: '2020/09',
                 LTS: false
@@ -226,6 +233,7 @@ module.exports = {
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS/',
                 LIFE_CYCLE_URL: '/en/other/lifecycle/',
+                WEBSITE_SELECT: "/en/mirror/select/?version=20.03-LTS",
                 MANUFACTURER: 'openEuler community',
                 PUBLISH_DATE: '2020/03',
                 LTS: true
@@ -345,6 +353,7 @@ module.exports = {
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-21.03/ISO/',
                 LIFE_CYCLE_URL: '/ru/other/lifecycle/',
+                WEBSITE_SELECT: "/ru/mirror/select/?version=21.03",
                 MANUFACTURER: 'openEuler community',
                 PUBLISH_DATE: '2021/03',
                 LTS: false
@@ -358,6 +367,7 @@ module.exports = {
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP1/ISO/',
                 LIFE_CYCLE_URL: '/ru/other/lifecycle/',
+                WEBSITE_SELECT: "/ru/mirror/select/?version=20.03-LTS-SP1",
                 MANUFACTURER: 'openEuler community',
                 PUBLISH_DATE: '2020/12',
                 LTS: true
@@ -371,6 +381,7 @@ module.exports = {
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.09/ISO/',
                 LIFE_CYCLE_URL: '/ru/other/lifecycle/',
+                WEBSITE_SELECT: "/ru/mirror/select/?version=20.09",
                 MANUFACTURER: 'openEuler community',
                 PUBLISH_DATE: '2020/09',
                 LTS: false
@@ -384,6 +395,7 @@ module.exports = {
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS/',
                 LIFE_CYCLE_URL: '/ru/other/lifecycle/',
+                WEBSITE_SELECT: "/ru/mirror/select/?version=20.03-LTS",
                 MANUFACTURER: 'openEuler community',
                 PUBLISH_DATE: '2020/03',
                 LTS: true

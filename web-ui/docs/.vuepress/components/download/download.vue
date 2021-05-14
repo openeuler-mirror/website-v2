@@ -96,6 +96,13 @@
                       :href="item.WHITE_PAPER"
                   >{{ i18n.download.WHITE_PAPER }}</a>
                 </li>
+                <li v-if="item.WEBSITE_SELECT">
+                  <img src="/img/download/release.svg" alt />
+                  <a
+                      target="_blank"
+                      :href="item.WEBSITE_SELECT"
+                  >{{ i18n.download.WEBSITE_SELECT }}</a>
+                </li>
             </ul>
           </div>
 
@@ -383,7 +390,7 @@ export default {
       .download-item {
         width: 348px;
         margin: 0 25px 30px 0;
-        height: 264px;
+        height: 280px;
         box-sizing: border-box;
         box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
         border-radius: 8px;
@@ -523,7 +530,7 @@ export default {
       .download-item {
         width: 350px;
         margin: 0 25px 30px 0;
-        height: 252px;
+        height: 290px;
         box-sizing: border-box;
         box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
         border-radius: 8px;
