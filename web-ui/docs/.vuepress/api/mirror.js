@@ -37,7 +37,7 @@
         let script = document.createElement('script')
         script.type = 'text/javascript'
         script.src =
-            'http://api.map.baidu.com/api?v=2.0&ak=' + ak + '&callback=onBMapCallback'
+            'https://api.map.baidu.com/api?v=2.0&ak=' + ak + '&callback=onBMapCallback'
         script.onerror = reject
         document.head.appendChild(script)
     })
