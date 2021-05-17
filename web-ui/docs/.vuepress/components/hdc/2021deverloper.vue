@@ -19,13 +19,37 @@
             </p>
         </div>
         <img :src="'/img/hdc/2021-developer/second-title-'+deviceText" class="second-title" />
-        <div class="second-wrapper">
-            <a target="_blank" class="link">
-                <img :src="'/img/hdc/2021-developer/left-link-'+deviceText" />
-            </a>
-            <a target="_blank" class="link">
-                <img :src="'/img/hdc/2021-developer/right-link-'+deviceText" />
-            </a>
+        <div class="channel">
+            <div class="channel-left">
+                    <div class="info-box">
+                        <h4>任务打榜赛</h4>
+                        <p>参赛对象：个人开发者</p>
+                        <img class="isH5" src="/img/hdc/2021-developer/h5-mission.png" alt="">
+                        <a href="https://competition.huaweicloud.com/information/1000041420/introduction" target="_blank">全国统一报名入口</a>
+                    </div>
+                    <img class="isPc" src="/img/hdc/2021-developer/pc-mission.png" alt="">
+            </div>
+            <div class="channel-right">
+                <div class="channel-info">
+                    <div class="r-top">
+                        <div class="info-box">
+                            <h4>特性命题赛</h4>
+                            <p>参赛对象：开发者团队</p>
+                            <img class="isH5" src="/img/hdc/2021-developer/h5-feature.png" alt="">
+                            <p class="btn2">区域报名入口
+                                <img src="/img/hdc/2021-developer/open.svg" alt="">
+                            </p>
+                        </div>
+                        <img class="isPc" src="/img/hdc/2021-developer/pc-feature.png" alt="">
+                    </div>
+                    <p class="r-ps">注：请按所属地区点击以下入口报名参赛（按首字母顺序排列）</p>
+                    <div class="join-city">
+                        <a class="city-item" target="_blank" :style="{backgroundImage: item.img}" v-for="(item,index) in cityData" :key="index" @click="go(item.link)" v-if="item.link || item.city === '贵州'">
+                            
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
         <img :src="'/img/hdc/2021-developer/third-title-'+deviceText" class="third-title" />
         <div class="third-wrapper">
@@ -48,10 +72,140 @@
 export default {
     data() {
         return {
-            deviceText: ''
+            deviceText: '',
+            cityData: [
+                {
+                    city: '北京',
+                    open: '立即报名',
+                    img: 'url("/img/hdc/2021-developer/img_beijing.png")',
+                    link: 'https://competition.huaweicloud.com/information/1000041447/introduction'
+                },
+                {
+                    city: '重庆',
+                    open: '即将开放',
+                    img: 'url("/img/hdc/2021-developer/img_chongqing.png")',
+                    link: ''
+                },
+                {
+                    city: '福建',
+                    open: '即将开放',
+                    img: 'url("/img/hdc/2021-developer/img_fujian.png")',
+                    link: ''
+                },
+                {
+                    city: '广西',
+                    open: '立即报名',
+                    img: 'url("/img/hdc/2021-developer/img_guangxi.png")',
+                    link: 'https://competition.huaweicloud.com/information/1000041437/introduction'
+                },
+                {
+                    city: '广州',
+                    open: '立即报名',
+                    img: 'url("/img/hdc/2021-developer/img_guangzhou.png")',
+                    link: 'https://competition.huaweicloud.com/information/1000041451/introduction'
+                },
+                {
+                    city: '河北',
+                    open: '立即报名',
+                    img: 'url("/img/hdc/2021-developer/img_hebei.png")',
+                    link: 'https://competition.huaweicloud.com/information/1000041424/introduction'
+                },
+                {
+                    city: '河南',
+                    open: '立即报名',
+                    img: 'url("/img/hdc/2021-developer/img_henan.png")',
+                    link: 'https://competition.huaweicloud.com/information/1000041454/introduction'
+                },
+                {
+                    city: '湖北',
+                    open: '立即报名',
+                    img: 'url("/img/hdc/2021-developer/img_hubei.png")',
+                    link: 'https://competition.huaweicloud.com/information/1000041422/introduction'
+                },
+                {
+                    city: '湖南',
+                    open: '立即报名',
+                    img: 'url("/img/hdc/2021-developer/img_hunan.png")',
+                    link: 'https://competition.huaweicloud.com/information/1000041466/introduction'
+                },
+                {
+                    city: '吉林',
+                    open: '即将开放',
+                    img: 'url("/img/hdc/2021-developer/img_jilin.png")',
+                    link: ''
+                },
+                {
+                    city: '江苏',
+                    open: '立即报名',
+                    img: 'url("/img/hdc/2021-developer/img_jiangsu.png")',
+                    link: 'https://competition.huaweicloud.com/information/1000041443/introduction'
+                },
+                {
+                    city: '辽宁',
+                    open: '立即报名',
+                    img: 'url("/img/hdc/2021-developer/img_liaoning.png")',
+                    link: 'https://competition.huaweicloud.com/information/1000041442/introduction'
+                },
+                {
+                    city: '山东',
+                    open: '即将开放',
+                    img: 'url("/img/hdc/2021-developer/img_shandong.png")',
+                    link: ''
+                },
+                {
+                    city: '山西',
+                    open: '立即报名',
+                    img: 'url("/img/hdc/2021-developer/img_shanxi.png")',
+                    link: 'https://competition.huaweicloud.com/information/1000041471/circumstance'
+                },
+                {
+                    city: '陕西',
+                    open: '立即报名',
+                    img: 'url("/img/hdc/2021-developer/img_shanxi3.png")',
+                    link: 'https://competition.huaweicloud.com/information/1000041473/introduction'
+                },
+                {
+                    city: '上海',
+                    open: '立即报名',
+                    img: 'url("/img/hdc/2021-developer/img_shanghai.png")',
+                    link: 'https://competition.huaweicloud.com/information/1000041433/introduction'
+                },
+                {
+                    city: '深圳',
+                    open: '立即报名',
+                    img: 'url("/img/hdc/2021-developer/img_shenzhen.png")',
+                    link: 'https://competition.huaweicloud.com/information/1000041448/introduction'
+                },
+                {
+                    city: '四川',
+                    open: '立即报名',
+                    img: 'url("/img/hdc/2021-developer/img_sichuan.png")',
+                    link: ''
+                },
+                {
+                    city: '浙江',
+                    open: '立即报名',
+                    img: 'url("/img/hdc/2021-developer/img_hangzhou.png")',
+                    link: 'https://competition.huaweicloud.com/information/1000041430/introduction'
+                },
+                {
+                    city: '贵州',
+                    open: '立即报名',
+                    img: 'url("/img/hdc/2021-developer/img_guizhou.png")',
+                    link: ''
+                },
+            ]
         };
     },
-    methods: {},
+    methods: {
+        go(link) {
+            if (link == '') {
+                return false;
+            } else {
+                window.open(link);
+            }
+        }
+    },
     mounted: function() {
         this.deviceText = this.isShowH5 ? 'h5.png' : 'pc.png';
     }
@@ -97,23 +251,167 @@ export default {
     .second-title {
         margin: 0 auto 30px;
     }
-    .second-wrapper {
+    .isPc {
+        display: block;
+    }
+    .isH5 {
+        display: none;
+    }
+    .channel h4 {
+        font-weight: normal;
+        font-size: 32px;
+        color: #002FA7;
+        margin-top: 24px;
+    }
+    .channel-left {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 50px;
-        @media screen and (max-width: 1000px) {
-            flex-direction: column;
-            align-items: center;
-            padding: 0 30px;
-            margin-bottom: 40px;
-            .link:nth-of-type(1) {
-                margin-bottom: 30px;
-            }
-        }
-        .link {
-            cursor: auto;
-        }
+        width: 660px;
+        background: #FEB32A;
+        border-radius: 8px;
     }
+    .channel-left .isPc,.channel-right .isPc {
+        width: 260px;
+        height: 140px;
+    }
+    .channel a {
+        display: block;
+    }
+
+    .channel a {
+        text-decoration: none;
+    }
+    .channel-right,
+    .channel-left {
+        padding: 0 40px;
+        margin: 0 auto 40px;
+    }
+
+    .channel-left p{
+        color: #000000!important;
+        margin: 8px 0;
+    }
+    .channel-right p {
+        color: #FFFFFF!important;
+        margin: 8px 0;
+    }
+
+    .channel-left a {
+        width: 160px;
+        height: 40px;
+        color: #FFFFFF;
+        line-height: 40px;
+        text-align: center;
+        background: #002FA7;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        text-decoration: none;
+    }
+    .channel-right {
+        background: #002FA7;
+        width: 660px;
+        border-radius: 8px;
+    }
+    .channel-right .btn2 {
+        width: 160px;
+        height: 40px;
+        background: #FEB32A;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        color: #002fa7 !important;
+        text-align: center;
+        line-height: 40px!important;
+    }
+    .r-top {
+        display: flex;
+        justify-content: space-between;
+    }
+    .r-top h4 {
+        color: #FEB32A;
+    }
+    .r-ps {
+        font-size: 12px!important;
+    }
+    .join-city {
+        display: flex;
+        justify-content: left;
+        flex-wrap: wrap;
+    }
+    .hdc-code {
+        width: 100%;
+        text-align: center;
+    }
+    .city-item {
+        width: 77px;
+        height: 116px;
+        margin-bottom: 20px;
+        margin-right: 46px;
+        cursor: pointer;
+    }
+    .city-item:nth-child(5n) {
+        margin-right: 0;
+    }
+    .btn2 img {
+        margin-left: 18px;
+    }
+    @media screen and (max-width: 1000px) {
+    .isPc {
+        display: none;
+    }
+    .isH5 {
+        display: block;
+    }
+    .channel {
+        display: block;
+        text-align: center;
+        padding: 0 15px;
+    }
+    #hdc-2021 h1 {
+        margin-bottom: 30px;
+    }
+    .hdc-code img {
+        margin-top: 30px;
+        width: 200px;
+    }
+    .channel-right,
+    .channel-left {
+        width: 100%;
+    }
+    .channel-left .info-box>img,
+    .channel-right .info-box>img {
+        width: 120px;
+        height: 100px;
+        display: block;
+        margin: 0 auto;
+    }
+    .channel-right .btn2 {
+        margin: 0 auto 16px;
+    }
+    .channel-right, .channel-left {
+        padding: 0;
+    }
+    .info-box {
+        margin: 0 auto;
+    }
+    .join-city {
+        text-align: left;
+        display: block;
+        padding: 0 10px;
+        font-size: 14px;
+        -webkit-text-size-adjust:none;
+        padding-bottom: 12px;
+    }
+    .channel a {
+        display: inline-block;
+    }
+    .city-item:nth-child(5n) {
+        margin: 0 46px 20px 0;
+    }
+    .city-item:nth-child(3n) {
+        margin-right: 0;
+    }
+}
+
     .third-title {
         margin: 0 auto 30px;
         @media screen and (max-width: 1000px) {
