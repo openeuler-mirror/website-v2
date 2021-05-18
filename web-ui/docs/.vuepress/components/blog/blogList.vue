@@ -9,9 +9,9 @@
         <div :class="['blog-content',$lang === 'ru'?'lang-ru':'']">
             <el-form :inline="true" :model="formData" class="blog-filter">
                 <el-form-item :label="i18n.community.BLOG.LABEL">
-                    <el-select v-model="formData.tag" @change="selectChange" :placeholder="CELECT_LABEL">
+                    <el-select v-model="formData.tags" @change="selectChange" :placeholder="CELECT_LABEL">
                         <el-option
-                        v-for="(item, index) in formData.tags"
+                        v-for="(item, index) in formData.tagArr"
                         :key="index"
                         :label="item.name"
                         :value="item.value"
@@ -19,9 +19,19 @@
                     </el-select>
                 </el-form-item>
                 <el-form-item :label="i18n.community.BLOG.FILE">
-                    <el-select v-model="formData.time" @change="selectChange" :placeholder="CELECT_FILE">
+                    <el-select v-model="formData.date" @change="selectChange" :placeholder="CELECT_FILE">
                         <el-option
-                        v-for="(item, index) in formData.times"
+                        v-for="(item, index) in formData.dateArr"
+                        :key="index"
+                        :label="item.name"
+                        :value="item.value"
+                        ></el-option>
+                    </el-select>
+                </el-form-item>
+                <el-form-item :label="i18n.community.BLOG.AUTHOR">
+                    <el-select v-model="formData.author" @change="selectChange" :placeholder="i18n.community.BLOG.SELECT_AUTHOR">
+                        <el-option
+                        v-for="(item, index) in formData.authorArr"
                         :key="index"
                         :label="item.name"
                         :value="item.value"
@@ -127,10 +137,12 @@ export default {
         totalSize: 0,
         currentPage: 1,
         formData: {
-            tag: null,
-            time: null,
-            tags: [],
-            times: [],
+            tags: null,
+            date: null,
+            author: null,
+            tagsArr: [],
+            dateArr: [],
+            authorArr: [],
         },
         //常量每页显示数量
         PAGESIZE: 5,
@@ -155,8 +167,9 @@ export default {
             this.allBlogListData = this.blogList();
             this.screenBlogListData = this.allBlogListData;
             this.screenChange();
-            this.formData.tags = this.getTags();
-            this.formData.times = this.getTimes();
+            this.formData.tagArr = this.getTags();
+            this.formData.dateArr = this.getTimes();
+            this.formData.authorArr = this.getAuthors();
             this.CELECT_LABEL = this.i18n.community.BLOG.CELECT_LABEL;
             this.CELECT_FILE = this.i18n.community.BLOG.CELECT_FILE;
         }
@@ -165,8 +178,9 @@ export default {
             this.allBlogListData = this.blogList();
             this.screenBlogListData = this.allBlogListData;
             this.screenChange();
-            this.formData.tags = this.getTags();
-            this.formData.times = this.getTimes();
+            this.formData.tagArr = this.getTags();
+            this.formData.dateArr = this.getTimes();
+            this.formData.authorArr = this.getAuthors();
             this.CELECT_LABEL = this.i18n.community.BLOG.CELECT_LABEL;
             this.CELECT_FILE = this.i18n.community.BLOG.CELECT_FILE;
         })
@@ -192,34 +206,29 @@ export default {
             this.currentPage = 1;
         },
         selectChange() {
-            let screenTagArr = [];
-            let screenTimeArr = [];
-            if (this.formData.tag === null || this.formData.tag === '全部') {
-                screenTagArr = this.allBlogListData;
+            let resultArr = [];
+            this.allBlogListData
+            resultArr= this.filterChange(this.allBlogListData,'tags');
+            resultArr= this.filterChange(resultArr,'date');
+            resultArr= this.filterChange(resultArr,'author');
+            this.screenBlogListData = resultArr;
+            this.screenChange();
+        },
+        filterChange (blogList,filterElement) {
+            let resultArr = [];
+            if (this.formData[filterElement] === null || this.formData[filterElement] === '全部' || this.formData[filterElement] === 'All' ) {
+                resultArr = blogList;
             } else {
-                this.allBlogListData.forEach((item) => {
-                if (!item.frontmatter.tags) {
-                    return;
-                }
-                if (item.frontmatter.tags.indexOf(this.formData.tag) > -1) {
-                    screenTagArr.push(item);
-                }
-                });
-            }
-            if (this.formData.time === null || this.formData.time === '全部') {
-                screenTimeArr = screenTagArr;
-            } else {
-                screenTagArr.forEach((item) => {
-                    if (!item.frontmatter.date) {
+                blogList.forEach((item) => {
+                    if (!item.frontmatter[filterElement]) {
                         return;
                     }
-                    if (item.frontmatter.date.indexOf(this.formData.time) > -1) {
-                        screenTimeArr.push(item);
+                    if (item.frontmatter[filterElement].indexOf(this.formData[filterElement]) > -1) {
+                        resultArr.push(item);
                     }
                 });
             }
-            this.screenBlogListData = screenTimeArr;
-            this.screenChange();
+            return resultArr;
         },
         clickTagItem(tag) {
             this.formData.tag = tag;
@@ -292,6 +301,29 @@ export default {
                 timesArrUniq.push(obj);
             });
             return timesArrUniq;
+        },
+        getAuthors() {
+            let authorsArr = [];
+            let authorsArrUniq = [];
+            authorsArrUniq.push({value:this.i18n.community.BLOG.ALL,label:'all'});
+            this.$sitePages.forEach((item) => {
+                if (item.path.indexOf("/" + this.$lang + "/blog/") !== 0) {
+                    return;
+                }
+                if (!item.frontmatter.author) {
+                    return;
+                }
+                authorsArr.push(item.frontmatter.author);
+            });
+            authorsArr = this.uniq(authorsArr);
+            authorsArr.forEach((item) => {
+                let obj = {
+                    value: item,
+                    label: item,
+                };
+                authorsArrUniq.push(obj);
+            });
+            return authorsArrUniq;
         },
         blogList() {
             let list = this.$sitePages.filter((item) => {

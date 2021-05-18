@@ -4,6 +4,10 @@
       <img :src="pcSrc" />
       <span class="inside">{{insideName}}</span>
       <span :class="['outside', $isCn ? 'font-xihjw' : 'font-hwmedium']">{{outsideName}}</span>
+      <div class="paragraph">
+        <div>{{p1}}</div>
+        <div>{{p2}}</div>
+      </div>
       <slot name="pc-slot"></slot>
     </div>
 
@@ -11,6 +15,10 @@
       <h3>{{ outsideName }}</h3>
       <slot name="mobile-slot"></slot>
       <img :src="mobileSrc" />
+      <div class="mobile-paragraph">
+        <div>{{p1}}</div>
+        <div>{{p2}}</div>
+      </div>
     </div>
   </div>
 </template>
@@ -20,7 +28,7 @@ export default {
   data () {
     return {};
   },
-  props: ['insideName', 'outsideName', 'pcSrc', 'mobileSrc']
+  props: ['insideName', 'outsideName', 'pcSrc', 'mobileSrc','p1','p2']
 };
 </script>
 
@@ -54,7 +62,6 @@ export default {
       top: 120px;
       font-size: 60px;
       line-height: 60px;
-      
       color: rgba(0, 0, 0, 0.05);
     }
     .outside {
@@ -65,6 +72,16 @@ export default {
       line-height: 48px;
       color: #000;
       font-weight: normal;
+    }
+    .paragraph{
+      position: absolute;
+      left: 0;
+      top: 228px;
+      width: calc(100% - 500px);
+      font-size: 16px;
+      line-height: 32px;
+      font-weight: normal;
+      color: rgba(0, 0, 0, 0.85);
     }
   }
   .banner-mobile {
@@ -77,7 +94,6 @@ export default {
       font-size: 24px;
       line-height: 34px;
       text-align: center;
-      
       margin-top: 40px;
     }
     img {
@@ -85,6 +101,11 @@ export default {
       width: 260px;
       height: 200px;
       display: block;
+    }
+    .mobile-paragraph{
+      margin: 0 -30px  !important;
+      line-height: 24px;
+      font-size: 14px;
     }
   }
 }

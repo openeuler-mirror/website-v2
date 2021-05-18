@@ -51,7 +51,19 @@ module.exports = {
             HOME_PAGE: '前往gitee首页',
             MAIL: '邮件',
             IRC: 'IRC频道',
-            MANAGER: '管理员'
+            MANAGER: '管理员',
+            NAME: 'SIG名称',
+            GITEE_PAGE: 'Gitee主页'
+        },
+        SIG_DESCRIPTION: {
+            P1: 'SIG 就是 Special Interest Group 的缩写，openEuler 社区按照不同的 SIG 来组织，以便于更好的管理和改善工作流程。',
+            P2: 'SIG 组均是开放的，欢迎任何人来参与。',
+            LI1: '每一个SIG在Gitee上都会拥有一个或多个项目，这些项目会拥有一个或多个Repository，SIG的交付成果会保存在这些Repository内。您可以在SIG对应的Repository内提交Issue、针对特定问题参与讨论，提交和解决问题，参与评审等。',
+            LI2: 'SIG都是针对特定的一个或多个技术主题而成立的。SIG的核心成员主导SIG的治理，SIG内的成员推动交付成果输出，并争取让交付成果成为openEuler社区发行的一部分。',
+            LI3: '在SIG团队项目的gitee首页README.md文件中，可以找到该项目所属的SIG信息、交流方式、成员和联系方式等，欢迎通过邮件列表、公开例会及对应的README.md 文件中提到的联系方式积极参与进SIG内的交流。'
+        },
+        SIG_LANDSCAPE: {
+            BUILDING: '建设中，敬请期待'
         },
         SIG_DETAIL: {
             NO_MEETINGS: '暂无会议',
@@ -147,7 +159,19 @@ module.exports = {
             HOME_PAGE: 'Go to Gitee home page',
             MAIL: 'E-mail',
             IRC: 'IRC Channel',
-            MANAGER: 'Administrators'
+            MANAGER: 'Administrators',
+            NAME: 'SIG',
+            GITEE_PAGE: 'Gitee'
+        },
+        SIG_DESCRIPTION: {
+            P1: 'The openEuler community is organized based on Special Interest Groups (SIGs) to better manage and improve the work processes.',
+            P2: 'SIGs are open to everyone.',
+            LI1: 'Each SIG comprises one or more projects on Gitee, and each project has repositories that store SIG deliverables. Registering with an SIG enables you to submit, discuss, and resolve issues with other members, as well as participate in reviews in an SIG repository.',
+            LI2: 'An SIG is established for one or more specific technical topics. Core members of an SIG can manage each group, and members can contribute to the quality and the output of deliverables for the openEuler community.',
+            LI3: 'In the README.md file on the project Gitee page, you can find project SIG information, members, and contact information. You can join specific SIGs by mailing the listed email addresses. Also, you can attend public meetings, join discussions or forums, or participate in other activities listed in the corresponding README.md file.'
+        },
+        SIG_LANDSCAPE: {
+            BUILDING: 'Coming soon'
         },
         SIG_DETAIL: {
             NO_MEETINGS: 'Not available now',
