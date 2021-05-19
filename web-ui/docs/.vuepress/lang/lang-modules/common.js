@@ -127,6 +127,21 @@ module.exports = {
                     {
                         NAME: 'StratoVirt',
                         PATH: '/other/minisite/stratovirt'
+                    },
+                    {
+                        NAME: 'Compass-CI',
+                        PATH: 'https://compass-ci.openeuler.org/',
+                        IS_OPEN_MINISITE_WINDOW: 1
+                    },
+                    {
+                        NAME: 'Compliance',
+                        PATH: 'https://compliance.openeuler.org/',
+                        IS_OPEN_MINISITE_WINDOW: 1
+                    },
+                    {
+                        NAME: 'Pkgship',
+                        PATH: 'https://pkgmanage.openeuler.org/',
+                        IS_OPEN_MINISITE_WINDOW: 1
                     }
                 ],
                 CLASS: []
@@ -318,6 +333,21 @@ module.exports = {
                     {
                         NAME: 'StratoVirt',
                         PATH: '/other/minisite/stratovirt'
+                    },
+                    {
+                        NAME: 'Compass-CI',
+                        PATH: 'https://compass-ci.openeuler.org/',
+                        IS_OPEN_MINISITE_WINDOW: 1
+                    },
+                    {
+                        NAME: 'Compliance',
+                        PATH: 'https://compliance.openeuler.org/',
+                        IS_OPEN_MINISITE_WINDOW: 1
+                    },
+                    {
+                        NAME: 'Pkgship',
+                        PATH: 'https://pkgmanage.openeuler.org/',
+                        IS_OPEN_MINISITE_WINDOW: 1
                     }
                 ],
                 CLASS: []
@@ -509,6 +539,21 @@ module.exports = {
                     {
                         NAME: 'StratoVirt',
                         PATH: '/other/minisite/stratovirt'
+                    },
+                    {
+                        NAME: 'Compass-CI',
+                        PATH: 'https://compass-ci.openeuler.org/',
+                        IS_OPEN_MINISITE_WINDOW: 1
+                    },
+                    {
+                        NAME: 'Compliance',
+                        PATH: 'https://compliance.openeuler.org/',
+                        IS_OPEN_MINISITE_WINDOW: 1
+                    },
+                    {
+                        NAME: 'Pkgship',
+                        PATH: 'https://pkgmanage.openeuler.org/',
+                        IS_OPEN_MINISITE_WINDOW: 1
                     }
                 ],
                 CLASS: []

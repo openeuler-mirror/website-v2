@@ -299,6 +299,10 @@ export default {
                 window.open(this.$site.themeConfig.docsUrl + item.PATH);
                 return;
             }
+            if(item.IS_OPEN_MINISITE_WINDOW){
+                window.open(item.PATH);
+                return;
+            }
             if (item.PATH) {
                 this.$router.push({
                     path: this.resolvePath(item.PATH)
