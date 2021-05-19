@@ -2053,5 +2053,47 @@
       "hostBusAdapter": "AVAGO MegaRAID SAS 9460-8i",
       "hardDiskDrive": ""
     }
+  },
+  {
+    "hardwareFactory": "H3C",
+    "hardwareModel": "UniServer R4960 G3",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "aarch64",
+    "date": "2021/05/14",
+    "friendlyLink": "http://www.h3c.com/cn/Products___Technology/Products/NewServer/Catalog/H3CIndustrial/RackServer/Dualway_Server/R4960G3/",
+    "boardCards": [
+      {
+        "vendorID": "19e5",
+        "deviceID": "a222",
+        "svID": "19e5",
+        "ssID": "0000",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "hns3",
+        "version": "1.9.38.8",
+        "type": "NIC",
+        "driverDate": "2020.12.21",
+        "sha256": "2EEC80BC58F59DBB7551CA377B2997E2F4C01CC4",
+        "driverSize": "164K",
+        "chipVendor": "huawei",
+        "boardModel": "TM212",
+        "chipModel": "hisi",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "http://www.h3c.com/cn/Products___Technology/Products/NewServer/Catalog/H3CIndustrial/RackServer/Dualway_Server/R4960G3/",
+      "certificationTime": "2021/5/14",
+      "commitID": "",
+      "motherBoardRevision": "S920X00-5250",
+      "biosUefi": "3.05",
+      "cpu": "Kunpeng-920",
+      "ram": "16*32G DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "Hi1710",
+      "hostBusAdapter": "MegaRAID 9460-8i",
+      "hardDiskDrive": ""
+    }
   }
 ]
