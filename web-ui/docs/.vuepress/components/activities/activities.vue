@@ -92,7 +92,7 @@
 							</p>
 							<p class="line">{{i18n.activities.DESCRIPTION_4}}</p>
 						</div>
-						<img class="guide-qr-code" src="/img/activities/WechatIMG329.png" />
+						<img class="guide-qr-code" src="/img/activities/WechatIMG329.jpg" />
 					</div>
 				</div>
 				<div class="title">{{i18n.activities.FILTER_TITLE}}</div>
