@@ -133,7 +133,7 @@
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3E9Y8?from=project-issue",
         "TECHNOLOGY_FIELD": "操作系统内核",
         "TECHNICAL_LABELS": "Kernel",
-        "DIFFICULTY": "低"
+        "DIFFICULTY": "高"
     },
     {
         "ID": 19,
@@ -958,5 +958,270 @@
         "TECHNOLOGY_FIELD": "操作系统综合,Java",
         "TECHNICAL_LABELS": "",
         "DIFFICULTY": "低"
+    },
+    {
+        "ID": 123,
+        "NAME": "No.123 调研 Linux桌面测试自动化工具",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3QR6P",
+        "TECHNOLOGY_FIELD": "操作系统测试,操作系统桌面",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 124,
+        "NAME": "No.124 基于mugen测试框架开发实现前端管理，实现任务触发及最终的结果展示",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3QRI4",
+        "TECHNOLOGY_FIELD": "操作系统测试,操作系统桌面",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "低"
+    },
+    {
+        "ID": 125,
+        "NAME": "No.125 开源软件源码license文本信息扫描工具开发",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3R0JW",
+        "TECHNOLOGY_FIELD": "开源合规",
+        "TECHNICAL_LABELS": "license",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 126,
+        "NAME": "No. 126 为openEuler操作系统移植RDMA协议栈OFED",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3R25U",
+        "TECHNOLOGY_FIELD": "操作系统网络",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 127,
+        "NAME": "No. 127 用Rust实现DPDK封装",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3R27U",
+        "TECHNOLOGY_FIELD": "Rust,操作系统网络",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "高"
+    },
+    {
+        "ID": 128,
+        "NAME": "No. 128 基于openEuler操作系统搭建开源EDA工具OpenLane自动化处理流程",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3R2A3",
+        "TECHNOLOGY_FIELD": "操作系统综合",
+        "TECHNICAL_LABELS": "EDA工具",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 129,
+        "NAME": "No. 129 UCX通信库的Rust异步封装",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3R2NR",
+        "TECHNOLOGY_FIELD": "Rust,操作系统网络",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 130,
+        "NAME": "No.130 将LFS-10.1-systemd项目进行openEuler适配",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3R4EC",
+        "TECHNOLOGY_FIELD": "操作系统综合",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 131,
+        "NAME": "No. 131 为openEuler操作系统中安装的memcached应用进行性能调优",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3R6AC",
+        "TECHNOLOGY_FIELD": "操作系统性能调试,操作系统AI",
+        "TECHNICAL_LABELS": "A-Tune",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 132,
+        "NAME": "No. 132 为openEuler操作系统中安装的kafka应用进行性能调优",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3R6BO",
+        "TECHNOLOGY_FIELD": "操作系统性能调试,操作系统AI",
+        "TECHNICAL_LABELS": "A-Tune",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 133,
+        "NAME": "No. 133 为openEuler操作系统中安装的TiDB应用进行性能调优",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3R6C9",
+        "TECHNOLOGY_FIELD": "操作系统性能调试,操作系统AI",
+        "TECHNICAL_LABELS": "A-Tune",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 134,
+        "NAME": "No. 134 为openEuler操作系统中安装的gaussdb应用进行性能调优",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3R6J1",
+        "TECHNOLOGY_FIELD": "操作系统性能调试,操作系统AI",
+        "TECHNICAL_LABELS": "A-Tune",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 135,
+        "NAME": "No. 135 识别软件包里的Python脚本与其调用的系统命令和服务",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3R99W",
+        "TECHNOLOGY_FIELD": "操作系统综合",
+        "TECHNICAL_LABELS": "Python",
+        "DIFFICULTY": "高"
+    },
+    {
+        "ID": 136,
+        "NAME": "No. 136 识别软件包里的Shell脚本与其调用的系统命令和服务",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3R9IQ",
+        "TECHNOLOGY_FIELD": "操作系统综合",
+        "TECHNICAL_LABELS": "Shell",
+        "DIFFICULTY": "高"
+    },
+    {
+        "ID": 137,
+        "NAME": "No.137 openEuler社区官网和文档官网SEO优化",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3RA23",
+        "TECHNOLOGY_FIELD": "开源基础设施",
+        "TECHNICAL_LABELS": "SEO",
+        "DIFFICULTY": "低"
+    },
+    {
+        "ID": 138,
+        "NAME": "No.138 智能分析可执行文件命令的差异",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3RC9K",
+        "TECHNOLOGY_FIELD": "操作系统综合",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 139,
+        "NAME": "No.139  DPDK，SPDK 用户态驱动开发和兼容性测试用例补充",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3RD4W",
+        "TECHNOLOGY_FIELD": "操作系统存储,操作系统网络",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 140,
+        "NAME": "No.140 基于secGear机密计算框架实现软件TPM",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3RG4C",
+        "TECHNOLOGY_FIELD": "操作系统机密计算与安全",
+        "TECHNICAL_LABELS": "secGear",
+        "DIFFICULTY": "高"
+    },
+    {
+        "ID": 141,
+        "NAME": "No.141 openEuler社区体验地图的Web 3D小游戏开发",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3RJ5M",
+        "TECHNOLOGY_FIELD": "开源基础设施",
+        "TECHNICAL_LABELS": "游戏开发",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 142,
+        "NAME": "No.142 将Graphene引入openEuler，并利用secGear改造",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3RMRH",
+        "TECHNOLOGY_FIELD": "操作系统机密计算与安全",
+        "TECHNICAL_LABELS": "secGear",
+        "DIFFICULTY": "高"
+    },
+    {
+        "ID": 143,
+        "NAME": "No.143 适配回合upstream社区qemu 4.2的microvm等Feature",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3RQXN",
+        "TECHNOLOGY_FIELD": "操作系统虚拟化",
+        "TECHNICAL_LABELS": "qemu",
+        "DIFFICULTY": "低"
+    },
+    {
+        "ID": 144,
+        "NAME": "No. 144 - 开发Linux 跨进程共享地址空间引擎",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3RT2T",
+        "TECHNOLOGY_FIELD": "操作系统综合",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "高"
+    },
+    {
+        "ID": 145,
+        "NAME": "No. 145 开源项目开发者组织识别",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3RTC5",
+        "TECHNOLOGY_FIELD": "开源度量",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "高"
+    },
+    {
+        "ID": 146,
+        "NAME": "No. 146 开源社区运营活动效果评估",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3RU30",
+        "TECHNOLOGY_FIELD": "开源度量",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "高"
+    },
+    {
+        "ID": 147,
+        "NAME": "No.147 招募云原生K8S集群管理解决方案Eggo体验官",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3RX06",
+        "TECHNOLOGY_FIELD": "操作系统云原生",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "低"
+    },
+    {
+        "ID": 148,
+        "NAME": "No.148 实现Eggo的kubeadm模式的控制面模块",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3RXH7",
+        "TECHNOLOGY_FIELD": "操作系统云原生",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 149,
+        "NAME": "No.149 实现Eggo的kubeadm模式的基础设施与etcd模块",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3RXO3",
+        "TECHNOLOGY_FIELD": "操作系统云原生",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "中"
+    },
+    {
+        "ID": 150,
+        "NAME": "No. 150 用Rust为RDMA实现K8S的CNI容器网络接口",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3RYUT",
+        "TECHNOLOGY_FIELD": "Rust,操作系统网络,操作系统云原生",
+        "TECHNICAL_LABELS": "K8S,容器",
+        "DIFFICULTY": "高"
+    },
+    {
+        "ID": 151,
+        "NAME": "No. 151 用Rust实现Serverless无感知存储层",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3S1DY",
+        "TECHNOLOGY_FIELD": "Rust,操作系统网络,操作系统云原生",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "高"
+    },
+    {
+        "ID": 152,
+        "NAME": "No.152 制作openEuler桌面版发行版",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3S1KF",
+        "TECHNOLOGY_FIELD": "操作系统桌面",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "低"
+    },
+    {
+        "ID": 153,
+        "NAME": "No.153 使用 Rust 语言开发 Kubernetes Obejct 解析引擎",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3S2M3",
+        "TECHNOLOGY_FIELD": "Rust,操作系统云原生",
+        "TECHNICAL_LABELS": "",
+        "DIFFICULTY": "高"
+    },
+    {
+        "ID": 154,
+        "NAME": "No.154 使用 Rust 语言解析 Git 对象",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3S2MP",
+        "TECHNOLOGY_FIELD": "Rust",
+        "TECHNICAL_LABELS": "Git",
+        "DIFFICULTY": "高"
+    },
+    {
+        "ID": 155,
+        "NAME": "No. 155 使用 Rust 编写一个 DAG 解析引擎",
+        "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3S2NP",
+        "TECHNOLOGY_FIELD": "Rust",
+        "TECHNICAL_LABELS": "DAG",
+        "DIFFICULTY": "高"
     }
+
 ]
