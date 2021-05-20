@@ -1212,15 +1212,15 @@
         "NAME": "No.154 使用 Rust 语言解析 Git 对象",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3S2MP",
         "TECHNOLOGY_FIELD": "Rust",
-        "TECHNICAL_LABELS": " Git",
+        "TECHNICAL_LABELS": "Git",
         "DIFFICULTY": "高"
     },
     {
         "ID": 155,
         "NAME": "No. 155 使用 Rust 编写一个 DAG 解析引擎",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3S2NP",
-        "TECHNOLOGY_FIELD": " Rust",
-        "TECHNICAL_LABELS": " DAG ",
+        "TECHNOLOGY_FIELD": "Rust",
+        "TECHNICAL_LABELS": "DAG",
         "DIFFICULTY": "高"
     }
 
