@@ -715,16 +715,18 @@ export default {
 		.guide {
 			margin-top: 38px;
 			width: 1120px;
-			height: 210px;
-			background-image: url('/img/activities/pc/bg.png');
+			height: 251px;
+			background: url('/img/activities/pc/bg.png') no-repeat;
+			background-size: 100% 100%;
 			@media screen and (max-width: 1000px) {
 				width: 100%;
 				height: auto;
-  			  	background-image: none;
+  			  	background: none;
 			}
 			.guide-box {
 				padding: 20px 210px;
 				display: flex;
+				align-items: center;
 				justify-content: space-between;
 				@media screen and (max-width: 1000px) {
 					display: block;
@@ -750,7 +752,7 @@ export default {
 					}
 					.line {
 						margin-top: 10px;
-						width: 396px;
+						width: 445px;
 						@media screen and (max-width: 1000px) {
 							width: 100%;
 						}

@@ -50,7 +50,7 @@ module.exports = {
         OFFICIAL_WEBSITE_LABLE: '活动整体详情可以访问',
         OFFICIAL_WEBSITE_LINK: '暑期2021活动官网',
         PERIOD: '。',
-        DESCRIPTION_4: '欢迎加入暑期2021活动openEuler社区交流群，项目任务讲解直播等活动将在群内通知。',
+        DESCRIPTION_4: '扫码添加openEuler小助手微信，备注“暑期2021”，邀请你进暑期2021 openEuler 项目交流群，项目任务讲解直播等信息将在群内通知。',
         FILTER_TITLE: '选择任务',
         FILTER: {
             LABEL_1: '技术方向',
