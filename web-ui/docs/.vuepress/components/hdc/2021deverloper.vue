@@ -44,7 +44,7 @@
                     </div>
                     <p class="r-ps">注：请按所属地区点击以下入口报名参赛（按首字母顺序排列）</p>
                     <div class="join-city">
-                        <a class="city-item" target="_blank" :style="{backgroundImage: item.img}" v-for="(item,index) in cityData" :key="index" @click="go(item.link)" v-if="item.link || item.city === '贵州'">
+                        <a class="city-item" target="_blank" :style="{backgroundImage: item.img}" v-for="(item,index) in cityData" :key="index" @click="go(item.link)" v-if="item.link">
                             
                         </a>
                     </div>
@@ -192,7 +192,7 @@ export default {
                     city: '贵州',
                     open: '立即报名',
                     img: 'url("/img/hdc/2021-developer/img_guizhou.png")',
-                    link: ''
+                    link: 'https://competition.huaweicloud.com/information/1000041494/cirumastance'
                 },
             ]
         };
@@ -217,7 +217,7 @@ export default {
     width: 1120px;
     margin: 0 auto 200px;
     text-align: center;
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1120px){
         margin-bottom: 80px;
         width: 100%;
     }
@@ -342,11 +342,12 @@ export default {
         text-align: center;
     }
     .city-item {
-        width: 77px;
-        height: 116px;
+        width: 75px;
+        height: 90px;
         margin-bottom: 20px;
         margin-right: 46px;
         cursor: pointer;
+        background-size: contain;
     }
     .city-item:nth-child(5n) {
         margin-right: 0;
@@ -355,62 +356,105 @@ export default {
         margin-left: 18px;
     }
     @media screen and (max-width: 1000px) {
-    .isPc {
-        display: none;
+        .isPc {
+            display: none;
+        }
+        .isH5 {
+            display: block;
+        }
+        .channel {
+            display: block;
+            text-align: center;
+            padding: 0 15px;
+        }
+        #hdc-2021 h1 {
+            margin-bottom: 30px;
+        }
+        .hdc-code img {
+            margin-top: 30px;
+            width: 200px;
+        }
+        .channel-right,
+        .channel-left {
+            width: 100%;
+        }
+        .channel-left .info-box>img,
+        .channel-right .info-box>img {
+            width: 120px;
+            height: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+        .channel-right .btn2 {
+            margin: 0 auto 16px;
+        }
+        .channel-right, .channel-left {
+            padding: 0;
+        }
+        .info-box {
+            margin: 0 auto;
+        }
+        .join-city {
+            text-align: left;
+            display: block;
+            padding: 0 10px;
+            font-size: 14px;
+            -webkit-text-size-adjust:none;
+            padding-bottom: 12px;
+        }
+        .channel a {
+            display: inline-block;
+        }
     }
-    .isH5 {
-        display: block;
+    @media screen and (min-width: 620px) and (max-width: 1000px) {
+        .join-city {
+            width: 580px;
+            margin: 0 auto;
+        }
     }
-    .channel {
-        display: block;
-        text-align: center;
-        padding: 0 15px;
+    @media screen and (min-width: 500px) and (max-width: 620px) {
+        .join-city {
+            width: 460px;
+            margin: 0 auto;
+        }
+        .city-item:nth-child(5n) {
+            margin-bottom: 20px;
+            margin-right: 46px;
+        }
+        .city-item:nth-child(4n) {
+            margin-right: 0;
+        }
     }
-    #hdc-2021 h1 {
-        margin-bottom: 30px;
+    @media screen and (min-width: 360px) and (max-width: 500px) {
+        .join-city {
+            width: 340px;
+            margin: 0 auto;
+        }
+        .city-item:nth-child(5n) {
+            margin-bottom: 20px;
+            margin-right: 46px;
+        }
+        .city-item:nth-child(3n) {
+            margin-right: 0;
+        }
     }
-    .hdc-code img {
-        margin-top: 30px;
-        width: 200px;
+    @media screen and (max-width: 360px) {
+        .banner {
+            width: 300px;
+            height: 240px;
+        }
+        .join-city {
+            width: 220px;
+            margin: 0 auto;
+        }
+        .city-item:nth-child(5n) {
+            margin-bottom: 20px;
+            margin-right: 46px;
+        }
+        .city-item:nth-child(2n) {
+            margin-right: 0;
+        }
     }
-    .channel-right,
-    .channel-left {
-        width: 100%;
-    }
-    .channel-left .info-box>img,
-    .channel-right .info-box>img {
-        width: 120px;
-        height: 100px;
-        display: block;
-        margin: 0 auto;
-    }
-    .channel-right .btn2 {
-        margin: 0 auto 16px;
-    }
-    .channel-right, .channel-left {
-        padding: 0;
-    }
-    .info-box {
-        margin: 0 auto;
-    }
-    .join-city {
-        text-align: left;
-        display: block;
-        padding: 0 10px;
-        font-size: 14px;
-        -webkit-text-size-adjust:none;
-        padding-bottom: 12px;
-    }
-    .channel a {
-        display: inline-block;
-    }
-    .city-item:nth-child(5n) {
-        margin: 0 46px 20px 0;
-    }
-    .city-item:nth-child(3n) {
-        margin-right: 0;
-    }
-}
 
     .third-title {
         margin: 0 auto 30px;
