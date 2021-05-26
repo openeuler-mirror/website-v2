@@ -41,7 +41,7 @@
           </el-table-column>
           <el-table-column :label="i18n.sig.SIG_LIST.MAIL">
               <template slot-scope="scope">
-                <a :href="'mailto:' + 'scope.row.maillist'" target="_blank">
+                <a :href="'mailto:' + scope.row.maillist" target="_blank">
                     {{scope.row.maillist}}
                 </a>
               </template>
