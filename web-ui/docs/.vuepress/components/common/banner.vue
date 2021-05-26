@@ -6,7 +6,6 @@
       <span :class="['outside', $isCn ? 'font-xihjw' : 'font-hwmedium']">{{outsideName}}</span>
       <slot name="pc-slot"></slot>
     </div>
-
     <div class="banner-mobile">
       <h3>{{ outsideName }}</h3>
       <slot name="mobile-slot"></slot>
@@ -54,7 +53,6 @@ export default {
       top: 120px;
       font-size: 60px;
       line-height: 60px;
-      
       color: rgba(0, 0, 0, 0.05);
     }
     .outside {
@@ -77,7 +75,6 @@ export default {
       font-size: 24px;
       line-height: 34px;
       text-align: center;
-      
       margin-top: 40px;
     }
     img {

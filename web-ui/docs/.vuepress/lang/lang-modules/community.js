@@ -12,6 +12,7 @@ module.exports = {
             BLOG: '博客',
             LABEL: '标签',
             FILE: '发布时间',
+            AUTHOR: '作者',
             BLOGGING: '写博客',
             READ_MORE: '查看全文 >>',
             DISCLAIMER: '【免责声明】本文仅代表作者本人观点，与本网站无关。本网站对文中陈述、观点判断保持中立，不对所包含内容的准确性、可靠性或完整性提供任何明示或暗示的保证。本文仅供读者参考，由此产生的所有法律责任均由读者本人承担。',
@@ -20,6 +21,7 @@ module.exports = {
             OTHER_BLOG: "Ta的其他博文",
             CELECT_LABEL: "选择标签",
             CELECT_FILE: "选择发布时间",
+            SELECT_AUTHOR: "请选择作者",
             BROWSE: "浏览",
             VIEWED: "次",
             ALL: "全部"
@@ -194,6 +196,7 @@ module.exports = {
         BLOG: {
             BLOG: 'Blog',
             LABEL: 'Label',
+            AUTHOR: "Author",
             FILE: 'Date of Release',
             BLOGGING: 'Blogging', 
             READ_MORE: 'Read more >>',
@@ -201,8 +204,9 @@ module.exports = {
             COPYRIGHT_1: "[Copyright] Copyright © 2021 openEuler Community. This article is first released by the openEuler community. Please reproduce it in compliance with the",
             COPYRIGHT_2: "license. Please note the text and keep the original link and author information when reproducing the article.",
             OTHER_BLOG: "Other blogs",
-            CELECT_LABEL: "Select",
-            CELECT_FILE: "Select",
+            CELECT_LABEL: "Select tag",
+            CELECT_FILE: "Select date",
+            SELECT_AUTHOR: "Select author",
             BROWSE: "",
             VIEWED: " Viewed",
             ALL: "All"
@@ -381,6 +385,7 @@ module.exports = {
         BLOG: {
             BLOG: 'Блог',
             LABEL: 'Метка',
+            AUTHOR: "Author",
             FILE: 'Дата выпуска релиза',
             BLOGGING: 'Ведение блога', 
             READ_MORE: 'Еще >>',
@@ -390,6 +395,7 @@ module.exports = {
             OTHER_BLOG: "Other blogs",
             CELECT_LABEL: "Выбрать",
             CELECT_FILE: "Выбрать",
+            SELECT_AUTHOR: "Select author",
             BROWSE: "",
             VIEWED: "Просмотрено",
             ALL: "Все"
