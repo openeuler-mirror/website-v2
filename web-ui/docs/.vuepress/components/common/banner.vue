@@ -4,21 +4,12 @@
       <img :src="pcSrc" />
       <span class="inside">{{insideName}}</span>
       <span :class="['outside', $isCn ? 'font-xihjw' : 'font-hwmedium']">{{outsideName}}</span>
-      <div class="paragraph">
-        <div>{{p1}}</div>
-        <div>{{p2}}</div>
-      </div>
       <slot name="pc-slot"></slot>
     </div>
-
     <div class="banner-mobile">
       <h3>{{ outsideName }}</h3>
       <slot name="mobile-slot"></slot>
       <img :src="mobileSrc" />
-      <div class="mobile-paragraph">
-        <div>{{p1}}</div>
-        <div>{{p2}}</div>
-      </div>
     </div>
   </div>
 </template>
@@ -28,7 +19,7 @@ export default {
   data () {
     return {};
   },
-  props: ['insideName', 'outsideName', 'pcSrc', 'mobileSrc','p1','p2']
+  props: ['insideName', 'outsideName', 'pcSrc', 'mobileSrc']
 };
 </script>
 
@@ -73,16 +64,6 @@ export default {
       color: #000;
       font-weight: normal;
     }
-    .paragraph{
-      position: absolute;
-      left: 0;
-      top: 228px;
-      width: calc(100% - 500px);
-      font-size: 16px;
-      line-height: 32px;
-      font-weight: normal;
-      color: rgba(0, 0, 0, 0.85);
-    }
   }
   .banner-mobile {
     display: none;
@@ -101,11 +82,6 @@ export default {
       width: 260px;
       height: 200px;
       display: block;
-    }
-    .mobile-paragraph{
-      margin: 0 -30px  !important;
-      line-height: 24px;
-      font-size: 14px;
     }
   }
 }

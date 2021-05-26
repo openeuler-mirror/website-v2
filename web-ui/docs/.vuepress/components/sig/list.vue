@@ -5,9 +5,16 @@
       :mobile-src="'/img/sig/sig-banner.png'"
       :inside-name="'SIG'"
       :outside-name="'SIG'"
-      :p1="i18n.sig.SIG_DESCRIPTION.P1"
-      :p2="i18n.sig.SIG_DESCRIPTION.P2"
-    ></common-banner>
+    >
+    <div slot="pc-slot" class="paragraph">
+        <div>{{i18n.sig.SIG_DESCRIPTION.P1}}</div>
+        <div>{{i18n.sig.SIG_DESCRIPTION.P2}}</div>
+      </div>
+    <div slot="mobile-slot" class="mobile-paragraph">
+        <div>{{i18n.sig.SIG_DESCRIPTION.P1}}</div>
+        <div>{{i18n.sig.SIG_DESCRIPTION.P2}}</div>
+      </div>
+    </common-banner>
     <ul class="instructions">
       <li>
         {{ i18n.sig.SIG_DESCRIPTION.LI1}}
@@ -165,6 +172,21 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+.paragraph{
+      position: absolute;
+      left: 0;
+      top: 228px;
+      width: calc(100% - 500px);
+      font-size: 16px;
+      line-height: 32px;
+      font-weight: normal;
+      color: rgba(0, 0, 0, 0.85);
+    }
+.mobile-paragraph{
+      margin: 0 -30px  !important;
+      line-height: 24px;
+      font-size: 14px;
+    }
 a {
     color:#002FA7;
     text-decoration: none;
