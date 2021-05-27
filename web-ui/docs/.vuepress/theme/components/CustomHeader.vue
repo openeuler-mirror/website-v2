@@ -860,7 +860,7 @@ export default {
         position: fixed;
         height: 60px;
         text-align: center;
-        background-color: #ccc;
+        background-color: #f3f3f3;
         color: #333;
         font-size: 14px;
         @media screen and (max-width: 1000px) {

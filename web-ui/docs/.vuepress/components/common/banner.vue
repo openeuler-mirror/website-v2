@@ -8,8 +8,8 @@
     </div>
     <div class="banner-mobile">
       <h3>{{ outsideName }}</h3>
-      <slot name="mobile-slot"></slot>
       <img :src="mobileSrc" />
+      <slot name="mobile-slot"></slot>
     </div>
   </div>
 </template>

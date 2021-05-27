@@ -212,6 +212,7 @@ a {
   margin-bottom: 30px;
   @media (max-width: 1000px) {
     margin-bottom: 10px;
+    display: none;
   }
 }
 /deep/.el-tabs__content{
@@ -228,15 +229,24 @@ a {
 /deep/.is-active {
   color: #000000 !important;
 }
-/deep/.el-table thead{
-  font-size: 16px;
-  color: #000000;
-  th {
-    background-color: rgba(0, 0, 0, 0.05);
+/deep/.el-table {
+  margin-bottom: 200px;
+  thead{
+    font-size: 16px;
+    color: #000000;
+    th {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+    @media (max-width: 1000px) {
+      font-size: 14px;
+    }
   }
-  @media (max-width: 1000px) {
-    font-size: 14px;
-  }
+}
+/deep/ .el-table_1_column_2 {
+  text-align: left;
+ @media (max-width: 1000px) {
+      text-align: center;
+    }
 }
 
 .sig-list-content /deep/.el-tabs__nav-wrap::after {
