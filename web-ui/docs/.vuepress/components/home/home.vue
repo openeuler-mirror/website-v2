@@ -3,8 +3,7 @@
         <div class="is-pc home-carousel" v-if="!isShowH5">
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" @change="eventChange()">
                 <el-carousel-item>
-                    <div class="carousel-dev2021" @click="go('/interaction/summit-list/devday2021/')">
-                        <img :src="i18n.home.HOME_DEV2021_IMG.PC_BANNER">
+                    <div class="carousel-dev2021" :style="{backgroundImage: i18n.home.HOME_DEV2021_IMG.PC_BANNER}" @click="go('/interaction/summit-list/devday2021/')">
                     </div>
                 </el-carousel-item>
                 <el-carousel-item v-if="$lang === 'zh'">
@@ -965,12 +964,9 @@
         width: 100%;
         height: 100%;
         text-align: center;
-        background: url(/img/home/banner/dev2021/bg-img.png);
-        background-size: auto 500px;
-        img {
-            height: 500px;
-            width: 1120px;
-        }
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
     }
     .carousel-video{
         &:hover{

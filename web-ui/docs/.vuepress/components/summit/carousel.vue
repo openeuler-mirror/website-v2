@@ -44,7 +44,7 @@
         </div>
         <div class="sig-content" v-if="sigObj">
             <p class="sig-title">{{ sigObj.TITLE }}</p>
-            <div class="sig-1">
+            <div class="sig-1" v-if="sigObj.SIG1_TIME">
                 <div class="time">
                     {{ sigObj.SIG1_TIME }}
                 </div>
@@ -62,10 +62,10 @@
                 </div>
                 <div class="time">{{ sigObj.SIG2_TIME }}</div>
                 <div class="detail">
-                    <div v-for="(item,index) in sig2DetailList" @click="showDetail(item,2)">{{ item.THEME }}</div>
+                    <div v-for="(item,index) in sig2DetailList" @click="showDetail(item,2)" :class="item.CONTENT?'':'not-click'">{{ item.THEME }}</div>
                 </div>
             </div>
-            <div class="sig-3">
+            <div class="sig-3" v-if="sigObj.SIG3_TIME">
                 <div class="time">{{ sigObj.SIG3_TIME }}</div>
                 <div class="detail">
                     <span v-for="(item,index) in sigObj.SIG3_DETAIL">{{ item }}</span>
@@ -91,20 +91,13 @@ export default {
             sig2DetailList: []
         }
     },
+    props: ['agendaData','sigData'],
     mounted() {
         let agendaObj = this.i18n.interaction.SUMMIT.SUMMIT_HOME_DATA;
         agendaObj = agendaObj.AGENDA;
-        this.carouselObj = agendaObj.AFTERNOON_AGENDA_25;
-        this.sigObj = agendaObj.SIG_CONTENT;
+        this.carouselObj = this.agendaData?this.agendaData:agendaObj.AFTERNOON_AGENDA_25;
+        this.sigObj = this.sigData?this.sigData:agendaObj.SIG_CONTENT;
         this.sig2DetailList = this.sigObj.SIG2_DETAIL;
-        if(this.isShowH5) {
-            let temp1 = this.sig2DetailList[13];
-            let temp2 = this.sig2DetailList[15];
-            this.sig2DetailList[13] = this.sig2DetailList[12];
-            this.sig2DetailList[12] = temp1;
-            this.sig2DetailList[15] = this.sig2DetailList[14];
-            this.sig2DetailList[14] = temp2;
-        }
     },
     methods: {
         handleBtn(direction) {
@@ -117,8 +110,8 @@ export default {
                     this.isShowH5?this.cardPosition = this.cardPosition + 220:this.cardPosition = this.cardPosition + 317;
                 }
             }else{
-                if(this.cardIndex >= 5) {
-                    this.cardIndex = 5;
+                if(this.cardIndex >= this.carouselObj.CARD_LIST.length - 1) {
+                    this.cardIndex = this.carouselObj.CARD_LIST.length - 1;
                 }else {
                     this.cardIndex = this.cardIndex + 1;
                     this.isShowH5?this.cardPosition = this.cardPosition - 220:this.cardPosition = this.cardPosition - 317;
@@ -158,7 +151,7 @@ export default {
     .shade-remind {
         z-index: 10;
         width: 100%;
-        height: 1106px;
+        height: 92%;
         background: #000;
         opacity: 0.5;
         position: absolute;
@@ -340,9 +333,8 @@ export default {
         border-top: 1px solid rgba(0, 0, 0, 0.15);
         position: relative;
         .shade-remind {
-            height: 100%;
             width: 936px;
-            height: 311px;
+            height: 370px;
             top: 168px;
             left: 175px;
         }
@@ -365,10 +357,10 @@ export default {
             flex-direction: row;
             margin-bottom: 42px;
             .time {
-                margin-right: 75px;
+                margin-right: 60px;
                 color: rgba(0, 0, 0, 0.5);              
                 font-size: 18px;
-                
+                white-space: nowrap;
                 line-height: 20px;
             }
         }
@@ -414,6 +406,9 @@ export default {
                     margin: 0 20px 20px 0;
                     cursor: pointer;
                 }
+                .not-click {
+                    cursor: inherit;
+                }
             }
         }
         .sig-3 {
@@ -440,11 +435,64 @@ export default {
         }
     }
 }
+@media screen and (max-width: 370px) {
+    // 适配iphone5
+    .agenda-carousel .agenda-msg .time-list div {
+        width: 80px !important;
+    }
+    .agenda-carousel .agenda-msg .card-list .right {
+        right: -64px !important;
+    }
+    .agenda-carousel .card-list .msg-detail {
+        left: 60% !important;
+    }
+    .agenda-carousel .sig-content .sig-2 .shade-remind {
+        top: 5% !important;
+        height: 94% !important;
+    }
+}
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+    // 适配ipad
+    .agenda-carousel .agenda-msg .card-list .card-box,.agenda-carousel .card-list .shade-remind {
+        width: 458px !important;
+    }
+    .agenda-carousel .agenda-msg .card-list .right {
+        right: 130px !important;
+    }
+    .agenda-carousel .card-list .msg-detail {
+        left: 40% !important;
+    }
+    .agenda-carousel .sig-content .msg-detail {
+        top: 46% !important;
+    }
+}
+@media screen and (min-width: 1000px) and (max-width: 1120px) {
+    // 适配ipad Pro
+    .agenda-carousel .agenda-msg .card-list .card-box,.agenda-carousel .card-list .shade-remind {
+        width: 660px !important;
+    }
+    .agenda-carousel .agenda-msg .card-list .right {
+        right: 225px !important;
+    }
+    .agenda-carousel .card-list .shade-remind {
+        width: 75% !important;
+    }
+    .agenda-carousel .card-list .msg-detail {
+        left: 35% !important;
+    }   
+    .agenda-carousel .sig-content .shade-remind {
+        height: 380px !important;
+        width: 80%;
+    }
+    .agenda-carousel .sig-content {
+        width: 100% !important;
+    }
+}
 @media screen and (max-width: 1000px) {
     .agenda-carousel {
         .shade-remind {
             width: 250px;
-            height: 643px;
+            height: 95%;
             top: 63px;
             font-size: 12px;
             line-height: 24px;
@@ -453,7 +501,7 @@ export default {
             width: 220px;
             height: 357px;
             padding: 20px;
-            margin-left: -101px;
+            margin-left: -116px;
             margin-top: -140px;
             font-size: 10px;
             .speaker-box,.time-box {
