@@ -925,7 +925,7 @@
     "sha256": "67CB2F34DC66D76DE0C84BBF64688B91CE243549",
     "driverSize": "1.3M",
     "chipVendor": "QLogic",
-    "boardModel": "MQLE3442-RJ-SP",
+    "boardModel": "QLE3442-RJ-SP",
     "chipModel": "BCM57840",
     "item": "",
     "downloadLink": "inbox"
@@ -1214,5 +1214,24 @@
     "chipModel": "ISP2812",
     "item": "",
     "downloadLink": "https://driverdownloads.qlogic.com/QLogicDriverDownloads_UI/ShowEula.aspx?resourceid=33441&docid=98262&ProductCategory=39&Product=1301&Os=65"
+  },
+  {
+    "vendorID": "14e4",
+    "deviceID": "16a1",
+    "svID": "1077",
+    "ssID": "e3c1",
+    "architecture": "aarch64",
+    "os": "openEuler 20.03 LTS SP1",
+    "driverName": "bnx2x",
+    "version": "1.712.30-0",
+    "type": "NIC",
+    "driverDate": "2021.3.11",
+    "sha256": "554DFB914E75278081ECBEC60A50AF95B0C7C543",
+    "driverSize": "1.3M",
+    "chipVendor": "QLogic",
+    "boardModel": "QLE3442-RJ-SP",
+    "chipModel": "BCM57840",
+    "item": "",
+    "downloadLink": "inbox"
   }
 ]
