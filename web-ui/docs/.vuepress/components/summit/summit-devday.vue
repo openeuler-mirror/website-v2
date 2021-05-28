@@ -191,7 +191,7 @@ export default {
                             },
                             {
                                 TIME: '14:10-14:30',
-                                THEME: '携手共进，丰富国产操作系统生态',
+                                THEME: '统信软件：携手共进，丰富国产操作系统生态',
                                 SPEAKER: ['高冲 统信软件资深研发工程师'],
                                 DESC: ['介绍统信软件在UOS操作系统生态建设的成果，主要包括开源或商业软件适配中的经典案例以及未来在软件生态适配中的规划。分享实战案例总结出的典型问题、解决方案，期望能够对openEuler生态适配提供更多的帮助。']
                             },
@@ -274,7 +274,7 @@ export default {
                         THEME: 'SIG-Virt'
                     },
                     {
-                        THEME: 'SIG-Compiler'
+                        THEME: 'SIG-Migration'
                     },
                     {
                         THEME: 'SIG-ops'
@@ -303,6 +303,9 @@ export default {
                     {
                         THEME: 'SIG-RISC-V'
                     },
+                    {
+                        THEME: 'SIG-Compiler'
+                    }
                 ]
             }
         }
@@ -321,7 +324,17 @@ export default {
     }
 }
 </script>
+<style>
+.time-box .el-radio-button:focus:not(.is-focus):not(:active):not(.is-disabled) {
+    box-shadow: none !important;
+}
+@media screen and (max-width: 1000px) {
+    .text-wrapper .agenda-carousel .sig-content .sig-2 {
+        border-bottom: 0 !important;
+    }
+}
 
+</style>
 <style lang="less" scoped>
 .container {
     width: 1120px;
