@@ -2156,5 +2156,89 @@
       "hostBusAdapter": "Avago 3508",
       "hardDiskDrive": ""
     }
+  },
+  {
+    "hardwareFactory": "宝德",
+    "hardwareModel": "PR210K",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "aarch64",
+    "date": "2021/05/26",
+    "friendlyLink": "http://www.powerleader.com.cn/product_100/1110.html",
+    "boardCards": [
+	  {
+        "vendorID": "19e5",
+        "deviceID": "a222",
+        "svID": "19e5",
+        "ssID": "04cc",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "hns3",
+        "version": "1.9.38.8",
+        "type": "NIC",
+        "driverDae": "2020.12.28",
+        "sha256": "2EEC80BC58F59DBB7551CA377B2997E2F4C01CC4",
+        "driverSize": "",
+        "chipVendor": "华为",
+        "boardModel": "TM210",
+        "chipModel": "hisi",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "http://www.powerleader.com.cn/product_100/1110.html",
+      "certificationTime": "2021/5/26",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "1.21",
+      "cpu": "Kunpeng-920",
+      "ram": "2*32G DIMMs",
+      "portsBusTypes": "eth2",
+      "videoAdapter": "PL24V1",
+      "hostBusAdapter": "Avago 3508",
+      "hardDiskDrive": ""
+    }
+  },
+  {
+    "hardwareFactory": "宝德",
+    "hardwareModel": "PR212K",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "aarch64",
+    "date": "2021/03/27",
+    "friendlyLink": "http://www.powerleader.com.cn/product_100/1111.html",
+    "boardCards": [
+	  {
+        "vendorID": "19e5",
+        "deviceID": "a222",
+        "svID": "19e5",
+        "ssID": "04cc",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "hns3",
+        "version": "1.9.38.8",
+        "type": "NIC",
+        "driverDae": "2020.12.28",
+        "sha256": "2EEC80BC58F59DBB7551CA377B2997E2F4C01CC4",
+        "driverSize": "",
+        "chipVendor": "huawei",
+        "boardModel": "TM210",
+        "chipModel": "hisi",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "http://www.powerleader.com.cn/product_100/1111.html",
+      "certificationTime": "2021/05/28",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "1.68",
+      "cpu": "Kunpeng-920",
+      "ram": "2*32G DIMMs",
+      "portsBusTypes": "enp125s0f0",
+      "videoAdapter": "PL24V1",
+      "hostBusAdapter": "Avago 3408",
+      "hardDiskDrive": ""
+    }
   }
 ]
