@@ -9,6 +9,7 @@ let unvisibleRect = null;
 let unvisibleRectElemTop = null;
 let unvisibleRectElemBottom = null;
 let unvisibleRectElemTopAll = null;
+let fadeinArr = [];
 
 const privacyMethods = {
 
@@ -43,12 +44,14 @@ const privacyMethods = {
 const exportMethods = {
     fade : {
         inserted(el){
-            fadeInElements = Array.from(el.getElementsByClassName('fade-in'));
+            fadeInElements = fadeinArr.concat(Array.from(el.getElementsByClassName('fade-in')));
+            fadeinArr = fadeInElements;
             document.addEventListener('scroll', privacyMethods.handleScroll);
             privacyMethods.handleScroll();
         },
         unbind() {
             document.removeEventListener('scroll', privacyMethods.handleScroll);
+            fadeinArr = [];
         }
     }
 };
