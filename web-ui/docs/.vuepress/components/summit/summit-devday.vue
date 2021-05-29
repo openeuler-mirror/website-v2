@@ -10,8 +10,8 @@
         <div class="text-wrapper">
             <p class="text">openEuler Developer Day 2021 是由 openEuler 社区发起，面向社区开发者的一场技术盛会。旨在推动 openEuler 社区在多样性计算、云原生全栈、全场景协同等技术发展方向的持续探索和创新。本次大会以开放工作会议以及小组讨论等形式，让开发者找到关注的技术小组、快速融入社区、围绕下一版本发布，热点技术方向，用户核心需求，展开面对面的头脑风暴。每一个开发者都是 openEuler 社区的一颗星，一滴水，最终点点滴滴汇聚成科技创新的星辰大海。</p>
             <div class="title">
-                <img src="/img/summit/devday-2021/agenda-h5.png" alt="" v-if="isShowH5" />
-                <img src="/img/summit/devday-2021/agenda-web.png" alt="" v-else />
+                <img v-lazy="'/img/summit/devday-2021/agenda/agenda-h5.png'" alt="" v-if="isShowH5" />
+                <img v-lazy="'/img/summit/devday-2021/agenda/agenda-web.png'" alt="" v-else />
             </div>
             <div class="time-box">
                 <el-radio-group v-model="currentTime"> 
@@ -21,17 +21,55 @@
                 </el-radio-group>
             </div>
             <div class="calendar-content" v-if="currentTime === 'forenoon'">
-                <img src="/img/summit/devday-2021/mo_agenda.png" alt="" v-if="isShowH5"/>
-                <img src="/img/summit/devday-2021/web_agenda.png" alt="" v-else/>
+                <img v-lazy="'/img/summit/devday-2021/agenda/mo_agenda.png'" alt="" v-if="isShowH5"/>
+                <img v-lazy="'/img/summit/devday-2021/agenda/web_agenda.png'" alt="" v-else/>
             </div>
             <carousel :agendaData="agenda_obj" :sigData="sig_obj" v-else-if="currentTime === 'afternoon'"></carousel>
             <div class="party-box" v-else>
-                <img src="/img/summit/devday-2021/party-h5.png" alt="" v-if="isShowH5"/>
-                <img src="/img/summit/devday-2021/party-web.png" alt="" v-else/>
+                <img v-lazy="'/img/summit/devday-2021/agenda/party-h5.png'" alt="" v-if="isShowH5"/>
+                <img v-lazy="'/img/summit/devday-2021/agenda/party-web.png'" alt="" v-else/>
+            </div>
+        </div>
+        <div class="lecturer" id="lecturer">
+            <div class="title">
+                <img v-lazy="lecturerBanner.mobile" alt="" v-if="isShowH5" />
+                <img v-lazy="lecturerBanner.web" alt="" v-else />
+            </div>
+            <div class="lecturer-box" v-fade v-if="lecturerList.length && !isShowH5">
+                <div class="item fade-in"  v-for="(item,index) in lecturerList" :key="index">
+                    <img v-lazy="item.IMG" alt="" />
+                    <p>{{ item.NAME }}</p>
+                    <p>{{ item.POSITION }}</p>
+                </div>
+            </div>
+            <div class="lecturer-box" v-fade v-if="lecturerList.length && isShowH5">
+                <div :class="['item','fade-in',index > 7 && flag?'hidden':'']"  v-for="(item,index) in lecturerList" :key="index">
+                    <img v-lazy="item.IMG" alt="" />
+                    <p>{{ item.NAME }}</p>
+                    <p>{{ item.POSITION }}</p>
+                </div>
+            </div>
+            <div class="show-all" @click="showAll" v-if="isShowH5">
+                <p>{{ flag?i18n.home.EXPAND:i18n.home.RETRACT }}</p>
+                <img v-if="flag" v-lazy="'/img/home/arrow.svg'" alt="">
+                <img v-if="!flag" v-lazy="'/img/home/arrowUp.svg'" alt="">
+            </div>
+        </div>
+        <div class="lecturer community" id="community">
+            <div class="title">
+                <img v-lazy="communityBanner.mobile" alt="" v-if="isShowH5" />
+                <img v-lazy="communityBanner.web" alt="" v-else />
+            </div>
+            <div class="lecturer-box" v-fade v-if="communityList.length">
+                <div class="item fade-in"  v-for="(item,index) in communityList" :key="index">
+                    <img v-lazy="item.IMG" alt="" />
+                    <p>{{ item.NAME }}</p>
+                    <p>{{ item.POSITION }}</p>
+                </div>
             </div>
         </div>
         <div class="review-wrapper">
-            <div class="title">
+            <div class="top">
                 <span>精彩回顾</span>
                 <img src="/img/summit/devday-2021/review.png">
             </div>
@@ -55,7 +93,8 @@ export default {
                         ITEM_LIST: [
                             {
                                 TIME: '13:30-13:40',
-                                THEME: '联合出品人开场致辞'
+                                THEME: '联合出品人开场致辞',
+                                SPEAKER: ['郭寒军 openEuler社区技术委员会委员','李勇 Linux bcache Maintainer','胡松 麒麟软件内核核心开发者'],
                             },
                             {
                                 TIME: '13:40-14:10',
@@ -94,7 +133,7 @@ export default {
                             {
                                 TIME: '13:30-13:40',
                                 THEME: '联合出品人开场致辞',
-                                SPEAKER: ['蔡灏旻']
+                                SPEAKER: ['蔡灏旻 兼容性SIG组maintainer','沈翔 普华基础软件事业部总经理'],
                             },
                             {
                                 TIME: '13:40-14:10',
@@ -138,7 +177,8 @@ export default {
                         ITEM_LIST: [
                             {
                                 TIME: '13:30-13:40',
-                                THEME: '联合出品人开场致辞'
+                                THEME: '联合出品人开场致辞',
+                                SPEAKER: ['管延杰 ','石勇 openEuler社区技术委员会委员'],
                             },
                             {
                                 TIME: '13:40-14:10',
@@ -181,7 +221,8 @@ export default {
                         ITEM_LIST: [
                             {
                                 TIME: '13:30-13:40',
-                                THEME: '联合出品人开场致辞'
+                                THEME: '联合出品人开场致辞',
+                                SPEAKER: ['杜开田 openEuler社区兼容性SIG组maintainer','叶青龙 统信服务器欧拉版研发负责人'],
                             },
                             {
                                 TIME: '13:40-14:10',
@@ -218,7 +259,8 @@ export default {
                         ITEM_LIST: [
                             {
                                 TIME: '13:30-13:40',
-                                THEME: '联合出品人开场致辞'
+                                THEME: '联合出品人开场致辞',
+                                SPEAKER: ['张旭舟 华为操作系统高级开发工程师','刘勇鹏 飞腾信息技术有限公司软件生态部总经理'],
                             },
                             {
                                 TIME: '13:40-14:10',
@@ -307,7 +349,281 @@ export default {
                         THEME: 'SIG-Compiler'
                     }
                 ]
-            }
+            },
+            flag: true,
+            lecturerBanner:{
+                web: '/img/summit/home/lecturer/zh-pc-lecturer.png',
+                mobile: '/img/summit/home/lecturer/zh-mobile-lecturer.png'
+            },
+            lecturerList: [
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/niguangnan.png',
+                    NAME: '倪光南',
+                    POSITION: '中国工程院院士'
+                },
+                {
+                    IMG: '/img/summit/home/lecturer/dujunping.png',
+                    NAME: '堵俊平',
+                    POSITION: '开放院子开源基金会TOC主席'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/chehab.png',
+                    NAME: 'Mauro Carvalho  Chehab',
+                    POSITION: 'Linux 社区 Maintainer'
+                },
+                
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/tuguoyi.png',
+                    NAME: '涂国义',
+                    POSITION: '中国电信虚拟化高级工程师'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/wangyao.png',
+                    NAME: '王耀',
+                    POSITION: '百度云总架构师'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/zhongxin.png',
+                    NAME: '钟忻',
+                    POSITION: '中国建行金科首席技术官'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/weixiaoqiang.png',
+                    NAME: '魏小强',
+                    POSITION: '360未来研究院副院长'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/huangyong.png',
+                    NAME: '黄勇',
+                    POSITION: '中国电信虚拟化高级工程师'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/huotaiwen.png',
+                    NAME: '霍泰稳',
+                    POSITION: '极客邦科技创始人 & CEO'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/mada.png',
+                    NAME: '马达',
+                    POSITION: '华为云批量计算首席架构师'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/weizhao.png',
+                    NAME: '魏昭',
+                    POSITION: '华为云研发效能专家'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/chentingyue.png',
+                    NAME: '陈亭岳',
+                    POSITION: '华为OS兼容性验证技术专家'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/caihaomin.png',
+                    NAME: '蔡灏旻',
+                    POSITION: '华为容器团队架构师'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/yaowei.png',
+                    NAME: '姚伟',
+                    POSITION: '华为高级工程师'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/zhangxuzhou.png',
+                    NAME: '张旭舟',
+                    POSITION: '华为操作系统高级开发工程师'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/zhouzhongyuan.png',
+                    NAME: '周中元',
+                    POSITION: '华为开源软件工程师'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/zhulin.png',
+                    NAME: '朱玲',
+                    POSITION: '华为研发工程师'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/yeqinglong.png',
+                    NAME: '叶青龙',
+                    POSITION: '统信服务器欧拉版研发负责人'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/gaochong.png',
+                    NAME: '高冲',
+                    POSITION: '统信软件资深研发工程师'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/daihongjian.png',
+                    NAME: '戴宏剑',
+                    POSITION: '麒麟信安科技 股份有限公司研发工程师'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/shenxiang.png',
+                    NAME: '沈翔',
+                    POSITION: '普华基础软件事业部总经理'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/wujingzheng.png',
+                    NAME: '吴敬征',
+                    POSITION: '中国科学院软件研究所研究员'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/dongziqiang.png',
+                    NAME: '董自强',
+                    POSITION: '普华基础软件事业部 产品部总经理'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/zhoujie.png',
+                    NAME: '周杰',
+                    POSITION: 'Linaro 中国区负责人'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/liuyongpeng.png',
+                    NAME: '刘勇鹏',
+                    POSITION: '飞腾信息技术有限公司软件生态部总经理'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/feifei.png',
+                    NAME: '费斐',
+                    POSITION: 'Ampere Principle Engineer'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/zhouxiaohu.png',
+                    NAME: '周晓虎',
+                    POSITION: 'Ampere Principle Engineer'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/fanghuaqi.png',
+                    NAME: '方华启',
+                    POSITION: '芯来科技软件 总监'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/wangluye.png',
+                    NAME: '王路业',
+                    POSITION: '优矽总经理'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/wangyanhao.png',
+                    NAME: '王衍豪',
+                    POSITION: '奇安信技术研究院安全研究员'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/dijin.png',
+                    NAME: '邸津',
+                    POSITION: '广州市品高软件 股份有限公司 生态总监'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/luoyun.png',
+                    NAME: '罗云',
+                    POSITION: '云宏信创云 产品经理'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/linjie.png',
+                    NAME: '凌杰',
+                    POSITION: '绿盟科技云原生安全资深架构师'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/moliangwei.png',
+                    NAME: '莫良伟',
+                    POSITION: '深圳市宝德 计算机系统有限公司 软件开发部总监'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/dudong.png',
+                    NAME: '杜东',
+                    POSITION: '上海交大并行与分布式系统实验室博士生/蓬莱可信执行环境项目负责人'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/jiangqinghua.png',
+                    NAME: '蒋庆华',
+                    POSITION: '哈尔滨工业大学 教授'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/liyong.png',
+                    NAME: '李勇',
+                    POSITION: 'Linux bcache maintainer'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/jiangguoqing.png',
+                    NAME: '江国庆',
+                    POSITION: '麒麟软件内核资深技术专家'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/husong.png',
+                    NAME: '胡松',
+                    POSITION: '麒麟软件 内核核心开发者'
+                }
+            ],
+            communityBanner:{
+                web: '/img/summit/devday-2021/community/community-web.png',
+                mobile: '/img/summit/devday-2021/community/community-mobile.png'
+            },
+            communityList: [
+                {
+                    IMG: '/img/summit/devday-2021/community/jiangdayong.png',
+                    NAME: '江大勇',
+                    POSITION: 'openEuler社区理事长'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/community/qiuchengfeng.png',
+                    NAME: '邱成峰',
+                    POSITION: 'openEuler社区副理事长'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/community/huxinwei.png',
+                    NAME: '胡欣蔚',
+                    POSITION: 'openEuler社区技术委员会主席'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/community/xiongwei.png',
+                    NAME: '熊伟',
+                    POSITION: 'openEuler社区技术委员会委员'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/community/liujingang.png',
+                    NAME: '刘金刚',
+                    POSITION: 'openEuler社区技术委员会委员'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/community/wufengguang.png',
+                    NAME: '吴峰光',
+                    POSITION: 'openEuler社区技术委员会委员'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/community/guohanjun.png',
+                    NAME: '郭寒军',
+                    POSITION: 'openEuler社区内核 Maintainer'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/community/maquanyi.png',
+                    NAME: '马全一',
+                    POSITION: 'openEuler社区技术委员会委员'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/community/xiexiuqi.png',
+                    NAME: '谢秀奇',
+                    POSITION: 'openEuler kernel Commiter'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/community/dukaitian.png',
+                    NAME: '杜开田',
+                    POSITION: 'openEuler社区 兼容性SIG组 maintainer'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/community/liangbin.png',
+                    NAME: '梁冰',
+                    POSITION: 'openEuler社区品牌委员会主席'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/community/gaowei.png',
+                    NAME: '高巍',
+                    POSITION: 'openEuler社区用户委员会主席'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/community/shiyong.png',
+                    NAME: '石勇',
+                    POSITION: 'openEuler社区技术委员会委员'
+                }
+            ]
         }
     },
     mounted() {
@@ -317,6 +633,9 @@ export default {
         go(url) {
             const routeUrl = this.$router.resolve(this.resolvePath(url));
             window.open(routeUrl.href);
+        },
+        showAll() {
+            this.flag = !this.flag;
         }
     },
     components: {
@@ -344,6 +663,22 @@ export default {
         margin-bottom: 60px;
         padding: 0 10px;
         width: 100%;
+    }
+    .title {
+        margin: 100px 0 50px 0;
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 900px;
+            height: 76px;
+        }
+        @media screen and (max-width: 1000px) {
+            margin: 40px 0 30px 0;
+            img {
+                width: 335px;
+                height: 38px;
+            }
+        }
     }
     .banner {
         @media screen and (max-width: 1000px) {
@@ -378,27 +713,15 @@ export default {
         }
     }
     .text-wrapper {
-        margin-bottom: 50px;
         color: #000;
         font-size: 20px;
         line-height: 40px;
         .agenda-carousel {
             margin-top: -40px;
         }
-        .title {
-            margin-top: 100px;
-            img {
-                display: block;
-                margin: 0 auto;
-            }
-            @media screen and (max-width: 1000px) {
-                margin-top: 40px;
-            }
-        }
         .time-box {
-            margin: 50px 0 40px 0;
+            margin: 0 0 40px 0;
             @media screen and (max-width: 1000px) {
-                margin-top: 30px 0;
                 /deep/ .el-radio-group .el-radio-button__inner {
                     padding: 6px 15px;
                 }
@@ -462,8 +785,88 @@ export default {
             margin-bottom: 40px;
         }
     }
+    .lecturer {
+        width: 1029px;
+        margin: 0 auto;
+        .lecturer-box {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            .item {
+                width: 180px;
+                margin: 0 103px 30px 0;
+                &:nth-of-type(4n) {
+                    margin-right: 0;
+                }
+                img {
+                    width: 120px;
+                    height: 120px;
+                    margin: 0 auto;
+                    display: block;
+                }
+                p {
+                    font-size: 16px;
+                    
+                    color: #002FA7;
+                    line-height: 16px;
+                    margin-top: 20px;
+                    width: 180px;
+                    text-align: center;
+                    &:last-of-type {
+                        font-size: 14px;
+                        
+                        font-weight: 400;
+                        color: #000000;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            width: 345px;
+            margin: 40px auto 0 auto;
+            .lecturer-box {
+                margin-top: 20px;
+                .hidden {
+                    display: none;
+                }
+                .item {
+                    width: 140px;
+                    margin-right: 65px;
+                    &:nth-of-type(2n) {
+                        margin-right: 0;
+                    }
+                    p {
+                        width: 140px;
+                    }
+                }
+            }
+            .show-all {
+                display: block;
+                text-align: center;
+                margin-top: 20px;
+                p{
+                    color: #002fa7;
+                }
+            }
+        }
+        @media screen and (min-width: 1000px) and (max-width: 1120px) {
+            width: 1020px;
+            .lecturer-box {
+                .item {
+                    margin-right: 100px;
+                }
+            }
+        }
+    }
     .review-wrapper {
-        .title {
+        margin-top: 100px;
+        @media screen and (max-width: 1000px) {
+            margin-top: 40px;
+        }
+        .top {
             font-size: 26px;
             margin-bottom: 32px;
             @media screen and (max-width: 1000px) {
@@ -506,7 +909,19 @@ export default {
     .container .text-wrapper .party-box img{
         width: 270px;
     }
-
+    .container .lecturer {
+        width: 300px !important;
+    }
+    .container .title img {
+        width: 300px !important;
+        height: 34px !important;
+    }
+    .container .lecturer .lecturer-box .item {
+        margin-right: 20px !important;
+    }
+    .container .lecturer .lecturer-box .item:nth-of-type(2n) {
+        margin-right: 0 !important;
+    }
 }
 @media screen and (min-width: 1000px) and (max-width: 1120px) {
     // 适配ipad Pro

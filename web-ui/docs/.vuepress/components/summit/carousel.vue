@@ -110,7 +110,10 @@ export default {
                     this.isShowH5?this.cardPosition = this.cardPosition + 220:this.cardPosition = this.cardPosition + 317;
                 }
             }else{
-                if(this.cardIndex >= this.carouselObj.CARD_LIST.length - 1) {
+                //当最后一列已经是数据的最后一组时不能再往右移
+                if(this.cardIndex >= this.carouselObj.CARD_LIST.length - 3 && !this.isShowH5) {
+                    this.cardIndex = this.carouselObj.CARD_LIST.length - 3;
+                }else if(this.cardIndex >= this.carouselObj.CARD_LIST.length - 1 && this.isShowH5){
                     this.cardIndex = this.carouselObj.CARD_LIST.length - 1;
                 }else {
                     this.cardIndex = this.cardIndex + 1;
