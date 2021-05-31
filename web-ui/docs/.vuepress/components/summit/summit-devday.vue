@@ -68,6 +68,42 @@
                 </div>
             </div>
         </div>
+        <div class="host-unit" id="host-unit">
+            <div class="title">
+                <img v-lazy="hostUnitObj.mobile" alt="" v-if="isShowH5" />
+                <img v-lazy="hostUnitObj.web" alt="" v-else />
+            </div>
+            <div class="img-list">
+                <img v-lazy="item.IMG" alt="" v-for="(item,index) in hostUnitList" @click="go(item.LINK)" />
+            </div>
+        </div>
+        <div class="co-organizer">
+            <div class="title">
+                <img v-lazy="coOrgObj.mobile" alt="" v-if="isShowH5" />
+                <img v-lazy="coOrgObj.web" alt="" v-else />
+            </div>
+            <div class="img-list">
+                <img v-lazy="item.IMG" alt="" v-for="(item,index) in coOrgList" @click="go(item.LINK)" />
+            </div>
+        </div>
+        <div class="foundation">
+            <div class="title">
+                <img v-lazy="foundationObj.mobile" alt="" v-if="isShowH5" />
+                <img v-lazy="foundationObj.web" alt="" v-else />
+            </div>
+            <div class="img-list">
+                <img v-lazy="item.IMG" alt="" v-for="(item,index) in foundationList" @click="go(item.LINK)" />
+            </div>
+        </div>
+        <div class="media">
+            <div class="title">
+                <img v-lazy="mediaObj.mobile" alt="" v-if="isShowH5" />
+                <img v-lazy="mediaObj.web" alt="" v-else />
+            </div>
+            <div class="media-box">
+                <img v-lazy="'/img/summit/home/undertaker/jikebang.png'" alt="" @click="go('https://www.geekbang.org/')" />
+            </div>
+        </div>
         <div class="review-wrapper">
             <div class="top">
                 <span>精彩回顾</span>
@@ -128,7 +164,7 @@ export default {
                         ]
                     },
                     {
-                        TITLE: ['Session 2','云原生'],
+                        TITLE: ['Session 2','云原生&虚拟化'],
                         ITEM_LIST: [
                             {
                                 TIME: '13:30-13:40',
@@ -623,7 +659,125 @@ export default {
                     NAME: '石勇',
                     POSITION: 'openEuler社区技术委员会委员'
                 }
-            ]
+            ],
+            hostUnitObj: {
+                web: '/img/summit/devday-2021/host-unit/host-unit-web.png',
+                mobile: '/img/summit/devday-2021/host-unit/host-unit-mobile.png'
+            },
+            hostUnitList: [
+                {
+                    IMG: '/img/summit/devday-2021/host-unit/huawei.png',
+                    LINK: 'https://www.huawei.com/cn/'
+                },
+                {
+                    IMG: '/img/summit/home/co-organizer/feiteng.png',
+                    LINK: 'https://www.phytium.com.cn/'
+                },
+                {
+                    IMG: '/img/summit/home/co-organizer/cetc.png',
+                    LINK: 'http://www.i-soft.com.cn/'
+                },
+                {
+                    IMG: '/img/summit/home/co-organizer/qilin.png',
+                    LINK: 'https://www.kylinos.cn/'
+                },
+                {
+                    IMG: '/img/summit/home/co-organizer/xinan.png',
+                    LINK: 'http://www.kylinsec.com.cn/'
+                },
+                {
+                    IMG: '/img/summit/home/co-organizer/tongxin.png',
+                    LINK: 'https://www.uniontech.com/'
+                }
+            ],
+            coOrgObj: {
+                web: '/img/summit/home/co-organizer/zh-co-organizer.png',
+                mobile: '/img/summit/home/co-organizer/zh-mobile-xieban.png'
+            },
+            coOrgList: [
+                {
+                    IMG: '/img/summit/devday-2021/co-organizer/baolande.png',
+                    LINK: 'https://www.bessystem.com/'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/co-organizer/baode.png',
+                    LINK: 'http://www.powerleader.com.cn/'
+                },
+                {
+                    IMG: '/img/summit/home/co-organizer/turbolinux.png',
+                    LINK: 'https://www.turbolinux.com.cn/'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/co-organizer/huasheng.png',
+                    LINK: 'http://www.teamsun.com.cn'
+                },
+                {
+                    IMG: '/img/summit/home/co-organizer/huayun.png',
+                    LINK: 'https://huayun.com/'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/co-organizer/lvmengkeji.png',
+                    LINK: 'https://www.nsfocus.com.cn/'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/co-organizer/pingao.png',
+                    LINK: 'https://www.bingocloud.cn/'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/co-organizer/qihu360.png',
+                    LINK: 'https://www.360.com/'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/co-organizer/qianxin.png',
+                    LINK: 'https://www.qianxin.com/'
+                },
+                {
+                    IMG: '/img/summit/home/co-organizer/runhe.png',
+                    LINK: 'http://www.hopeinfra.com/'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/co-organizer/xinlaikeji.png',
+                    LINK: 'https://www.nucleisys.com/index.php'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/co-organizer/youxikeji.png',
+                    LINK: 'https://www.uctechip.com/'
+                },
+                {
+                    IMG: '/img/summit/home/co-organizer/yunhong.png',
+                    LINK: 'http://www.winhong.com/'
+                },
+                {
+                    IMG: '/img/summit/home/co-organizer/iscas.png',
+                    LINK: 'http://www.iscas.ac.cn/'
+                },
+            ],
+            foundationObj: {
+                web: '/img/summit/home/foundation/zh-pc-foundation.png',
+                mobile: '/img/summit/home/foundation/zh-mobile-foundation.png'
+            },
+            foundationList: [
+                {
+                    IMG: '/img/summit/home/foundation/linux.png',
+                    LINK: 'https://www.linuxfoundation.org/'
+                },
+                {
+                    IMG: '/img/summit/home/foundation/linaro.png',
+                    LINK: 'https://www.linaro.org/'
+                },
+                {
+                    IMG: '/img/summit/home/foundation/open.png',
+                    LINK: 'https://openinfra.dev/'
+                },
+                {
+                    IMG: '/img/summit/home/foundation/yuanzi.png',
+                    LINK: 'https://www.openatom.org/#/'
+                }
+            ],
+            mediaObj: {
+                web: '/img/summit/home/media/zh-pc-media.png',
+                mobile: '/img/summit/home/media/zh-mobile-media.png'
+            }
         }
     },
     mounted() {
@@ -631,12 +785,16 @@ export default {
     },
     methods: {
         go(url) {
-            const routeUrl = this.$router.resolve(this.resolvePath(url));
-            window.open(routeUrl.href);
+            if(url && url.includes("http")) {
+                window.open(url);
+            }else {
+                const routeUrl = this.$router.resolve(this.resolvePath(url));
+                window.open(routeUrl.href);
+            }
         },
         showAll() {
             this.flag = !this.flag;
-        }
+        },
     },
     components: {
         carousel
@@ -663,6 +821,38 @@ export default {
         margin-bottom: 60px;
         padding: 0 10px;
         width: 100%;
+    }
+    .img-list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 920px;
+        margin: 0 auto;
+        img {
+            width: 280px;
+            height: 80px;
+            display: block;
+            margin: 0 40px 40px 0;
+            cursor: pointer;
+            &:nth-last-of-type(3n) {
+                margin-right: 0;
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+            flex-direction: column;
+            img {
+                width: 140px;
+                height: 40px;
+                margin: 20px auto 0 auto;
+                &:nth-last-of-type(3n) {
+                    margin-right: auto;
+                }
+                &:first-of-type {
+                    margin-top: 0;
+                }
+            }
+        }
     }
     .title {
         margin: 100px 0 50px 0;
@@ -857,6 +1047,25 @@ export default {
             .lecturer-box {
                 .item {
                     margin-right: 100px;
+                }
+            }
+        }
+    }
+    .media {
+        .media-box {
+            img {
+                width: 280px;
+                height: 80px;
+                display: block;
+                margin:  0 auto;
+                cursor: pointer;
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            .media-box {
+                img {
+                    width: 140px;
+                    height: 40px;
                 }
             }
         }
