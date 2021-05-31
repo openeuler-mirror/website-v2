@@ -111,9 +111,10 @@ export default {
                 }
             }else{
                 //当最后一列已经是数据的最后一组时不能再往右移
-                if(this.cardIndex >= this.carouselObj.CARD_LIST.length - 3 && !this.isShowH5) {
+                let screenWidth = document.body.clientWidth;        //为了适配ipad Pro
+                if(this.cardIndex >= this.carouselObj.CARD_LIST.length - 3 && screenWidth > 1120) {
                     this.cardIndex = this.carouselObj.CARD_LIST.length - 3;
-                }else if(this.cardIndex >= this.carouselObj.CARD_LIST.length - 1 && this.isShowH5){
+                }else if(this.cardIndex >= this.carouselObj.CARD_LIST.length - 1 && screenWidth < 1120){
                     this.cardIndex = this.carouselObj.CARD_LIST.length - 1;
                 }else {
                     this.cardIndex = this.cardIndex + 1;

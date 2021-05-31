@@ -38,10 +38,6 @@
                             <span>{{ i18n.download.MIRROR_ALL.FTP }}</span>
                             <span>{{ item.ftp }}</span>
                         </li>
-                        <li>
-                            <span>{{ i18n.download.MIRROR_ALL.TIME }}</span>
-                            <span>{{ item.time }}</span>
-                        </li>
                     </ul>
                 </li>
             </ul>
@@ -80,11 +76,6 @@
                 show-overflow-tooltip
                 prop="ftp"
                 label="FTP">
-                </el-table-column>
-                <el-table-column
-                width="220"
-                prop="time"
-                label="Last Sync time">
                 </el-table-column>
             </el-table>
         </div>
@@ -143,8 +134,7 @@ export default {
                     sponsorLogo: '',
                     http: '',
                     rsnc: '',
-                    ftp: '',
-                    time: ''
+                    ftp: ''
                 };
                 itemObj.name = item.Name;
                 itemObj.location = item.Country?item.Country:'-';
@@ -153,12 +143,6 @@ export default {
                 itemObj.http = item.HttpURL?item.HttpURL:'-';
                 itemObj.rsnc = item.RsyncURL?item.RsyncURL:'-';
                 itemObj.ftp = item.FtpURL?item.FtpURL:'-';
-                itemObj.time = item.LastSuccessfulSync;
-                if(!(item.RsyncURL || item.FtpURL)) {
-                    itemObj.time = 'Disabled';
-                }else {
-                    itemObj.time = this.exchangeTime(item.LastSuccessfulSync);
-                }
                 this.tableData.push(itemObj);
             });
         },
@@ -171,20 +155,7 @@ export default {
                 message: text,
                 type: 'success'
             });
-        },
-        exchangeTime(time) {
-            let date = new Date(time);
-            let year = this.addZero(date.getFullYear());
-            let month = this.addZero(date.getMonth() + 1); //获取到的时间中月份的值是0-11
-            let day = this.addZero(date.getDate());
-            let hour = this.addZero(date.getHours());
-            let minute = this.addZero(date.getMinutes());
-            let second = this.addZero(date.getSeconds());
-            return year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
-        },
-        addZero(number) {
-            return number<10?'0'+number:number;
-        },
+        }
     }
 }
 </script>
@@ -320,6 +291,11 @@ export default {
                 }
             }
         }
+    }
+}
+@media screen and (min-width: 1000px) and (max-width: 1120px) {
+    .mirror-all {
+        width: 100%;
     }
 }
 </style>
