@@ -137,6 +137,11 @@
                         ></el-option>
                     </el-select>
       		  	</el-form-item>
+      		  	<el-form-item class="video-btn-pc">
+					<a target="_blank" href="https://www.bilibili.com/video/BV13v411V7KV">
+						<img src="/img/activities/video_btn.png" />
+					</a>
+      		  	</el-form-item>
       		</el-form>
 			<ul class="filter-tags">
         		<li v-for="(item, index) in filterTags" 
@@ -150,6 +155,11 @@
      		    	<span @click="delTag(item)">×</span>
      		  	</li>
      		</ul>
+			 <div class="video-btn-mobile">
+				<a target="_blank" href="https://www.bilibili.com/video/BV13v411V7KV">
+					<img src="/img/activities/video_btn.png" />
+				</a>
+      		</div>
       		<div class="activities-list" v-if="filterList.length > 0">
 				<a class="activities-list-item" 
 					target="_blank"
@@ -592,7 +602,7 @@ export default {
 				font-size: 18px;
 				line-height: 34px;
 				text-align: center;
-				margin: 50px auto 36px;
+				margin: 50px auto 30px;
   			  	background-image: url('/img/activities/mobile/title_bg.png');
   			}
 		}
@@ -906,6 +916,28 @@ export default {
 		.activities-list-item:nth-child(3n) {
         	margin-right: 0;
       	}
+	}
+	.video-btn-pc {
+		float: right;
+		margin-right: 0;
+		img {
+			width: 152px;
+			height: 40px;
+		}
+		@media (max-width: 1000px) {
+            display: none;
+        }
+	}
+	.video-btn-mobile {
+		display: none;
+		@media (max-width: 1000px) {
+			display: block;
+			text-align: center;
+			img {
+				width: 91px;
+				height: 24px;
+			}   
+        }
 	}
 }
 
