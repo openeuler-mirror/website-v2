@@ -154,7 +154,7 @@ export default {
                 }
                 const tempArr = JSON.parse(res.schedules);
                 tempArr.forEach(item => {
-                    if (item.speaker) {
+                    if (!item.speakerList) {
                         this.flowPathList.push({
                             THEME: item.topic,
                             TIME: item.start + '-' + item.end,
