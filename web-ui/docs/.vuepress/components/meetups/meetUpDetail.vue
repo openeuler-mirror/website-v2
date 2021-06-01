@@ -154,11 +154,22 @@ export default {
                 }
                 const tempArr = JSON.parse(res.schedules);
                 tempArr.forEach(item => {
-                    this.flowPathList.push({
-                        THEME: item.topic,
-                        TIME: item.start + '-' + item.end,
-                        SPEAKER: item.speaker
-                    })
+                    if (!item.speakerList) {
+                        this.flowPathList.push({
+                            THEME: item.topic,
+                            TIME: item.start + '-' + item.end,
+                            SPEAKER: item.speaker
+                        })    
+                    } else {
+                        this.flowPathList.push({
+                            THEME: item.topic,
+                            TIME: item.start + '-' + item.end,
+                            SPEAKER: item.speakerList.map((item) => {
+                                return item.name
+                            }).join('，')
+                        }) 
+                    }
+                    
                 })
                 this.addressObj = {
                     ADDRESS_IMG: `https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/website-meetup/${res.poster}.png`,
