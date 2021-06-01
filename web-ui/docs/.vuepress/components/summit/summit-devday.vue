@@ -7,9 +7,25 @@
             <div class="title">峰会</div>
             <a href="https://e-campaign.huawei.com/m/mIzQFr" target="_blank"><img :src="i18n.interaction.DEVDAY_2021.H5_BANNER" alt="" /></a>
         </div>
+        <div class="summit-nav" v-show="isShowNav">
+            <div class="box-line">
+                <img class="gif" v-lazy="'/img/summit/home/nav.gif'" alt="" />
+                <img class="line" v-lazy="'/img/summit/home/line.png'" alt="" />
+            </div>
+            <div class="nav-text">
+                <ul>
+                    <li v-for="(item,index) in navList" :class="index === activeIndex?'active':''">
+                        <a :href="item.key">
+                            <div><div class="inside"></div></div>
+                            <div>{{ item.name }}</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div class="text-wrapper">
             <p class="text">openEuler Developer Day 2021 是由 openEuler 社区发起，面向社区开发者的一场技术盛会。旨在推动 openEuler 社区在多样性计算、云原生全栈、全场景协同等技术发展方向的持续探索和创新。本次大会以开放工作会议以及小组讨论等形式，让开发者找到关注的技术小组、快速融入社区、围绕下一版本发布，热点技术方向，用户核心需求，展开面对面的头脑风暴。每一个开发者都是 openEuler 社区的一颗星，一滴水，最终点点滴滴汇聚成科技创新的星辰大海。</p>
-            <div class="title">
+            <div class="title" id="agenda">
                 <img v-lazy="'/img/summit/devday-2021/agenda/agenda-h5.png'" alt="" v-if="isShowH5" />
                 <img v-lazy="'/img/summit/devday-2021/agenda/agenda-web.png'" alt="" v-else />
             </div>
@@ -120,6 +136,26 @@ import carousel from './carousel.vue';
 export default {
     data() {
         return {
+            activeIndex: 0,
+            isShowNav: false,
+            navList: [
+                {
+                    key: '#agenda',
+                    name: '大会日程'
+                },
+                {
+                    key: '#lecturer',
+                    name: '演讲嘉宾'
+                },
+                {
+                    key: '#community',
+                    name: '社区天团'
+                },
+                {
+                    key: '#host-unit',
+                    name: '合作伙伴'
+                }
+            ],
             currentTime: 'forenoon',
             agenda_obj: {
                 TIME_LIST: ['13:30-13:40','13:40-14:10','14:10-14:30','14:30-14:50','14:50-15:10','15:10-15:30','15:30-15:50'],
@@ -434,9 +470,19 @@ export default {
                     POSITION: '中国电信虚拟化高级工程师'
                 },
                 {
+                    IMG: '/img/summit/devday-2021/lecturer/lijiansheng.png',
+                    NAME: '李建盛',
+                    POSITION: '开源之道主创 / Linux基金会 APAC 开源布道者 '
+                },
+                {
                     IMG: '/img/summit/devday-2021/lecturer/huotaiwen.png',
                     NAME: '霍泰稳',
                     POSITION: '极客邦科技创始人 & CEO'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/wangyunbo.png',
+                    NAME: '王蕴博',
+                    POSITION: '滴滴开源技术负责人'
                 },
                 {
                     IMG: '/img/summit/devday-2021/lecturer/mada.png',
@@ -758,20 +804,20 @@ export default {
             },
             foundationList: [
                 {
-                    IMG: '/img/summit/home/foundation/linux.png',
-                    LINK: 'https://www.linuxfoundation.org/'
+                    IMG: '/img/summit/home/foundation/yuanzi.png',
+                    LINK: 'https://www.openatom.org/#/'
                 },
                 {
                     IMG: '/img/summit/home/foundation/linaro.png',
                     LINK: 'https://www.linaro.org/'
                 },
                 {
-                    IMG: '/img/summit/home/foundation/open.png',
-                    LINK: 'https://openinfra.dev/'
+                    IMG: '/img/summit/home/foundation/linux.png',
+                    LINK: 'https://www.linuxfoundation.org/'
                 },
                 {
-                    IMG: '/img/summit/home/foundation/yuanzi.png',
-                    LINK: 'https://www.openatom.org/#/'
+                    IMG: '/img/summit/home/foundation/open.png',
+                    LINK: 'https://openinfra.dev/'
                 }
             ],
             mediaObj: {
@@ -781,7 +827,7 @@ export default {
         }
     },
     mounted() {
-        
+         window.addEventListener('scroll',this.scroTop);
     },
     methods: {
         go(url) {
@@ -795,6 +841,38 @@ export default {
         showAll() {
             this.flag = !this.flag;
         },
+        scroTop() {
+            let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            let value = this.ifAddValue();
+            if(scrollTop < 600) {
+                this.isShowNav = false;
+            }else {
+                this.isShowNav = true;
+            }
+            if(scrollTop > 650 && scrollTop < 1900 + value) {
+                this.activeIndex = 0;
+            }else if(scrollTop > 1920 + value && scrollTop < 4600 + value) {
+                this.activeIndex = 1;
+            }else if(scrollTop > 4700 + value && scrollTop < 5800 + value) {
+                this.activeIndex = 2;
+            }else if(scrollTop > 5800 + value) {
+                this.activeIndex = 3;
+            }else {
+                return false;
+            }
+        },
+        ifAddValue() {
+            //上午、下午、晚上日程盒子的高度不一致，计算误差值使得滚动时能够准确
+            let value = 0;
+            if(this.currentTime === 'afternoon') {
+                value = 800;
+            }else if(this.currentTime === 'evening') {
+                value = -700;
+            }else {
+                return 0;
+            }
+            return value;
+        }
     },
     components: {
         carousel
@@ -822,6 +900,91 @@ export default {
         padding: 0 10px;
         width: 100%;
     }
+    //瞄点定位消除误差
+    #agenda::before,#lecturer::before,#community::before,#host-unit::before {
+        content: '';
+        display: block;
+        height: 60px;
+        margin-top: -60px;
+        visibility: hidden;
+    }
+    .summit-nav {
+        position: fixed;
+        cursor: pointer;
+        top: 170px;
+        right: 70px;
+        z-index: 1000;
+        display: block;
+        
+        .box-line {
+            width: 70px;
+            margin-left: -26px;
+            .gif {
+                width: 70px;
+                height: 70px;
+                margin: 0 auto -30px auto;
+                position: relative;
+                z-index: 20;
+            }
+            .line {
+                display: block;
+                width: 2px;
+                height: 441px;
+                margin: 0 auto;
+            }
+        }
+        .nav-text {
+            position: relative;
+            margin-top: -375px;
+            ul li a>div {
+                display: inline-block;
+                &:first-of-type {
+                    margin-right: 17px;
+                    border-radius: 50%;
+                    width: 18px;
+                    position: relative;
+                    background: #FFFFFF;
+                    height: 18px;
+                    border: 1px solid #979797;
+                    div {
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 50%;
+                        background: #D8D8D8;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        margin-left: -7px;
+                        margin-top: -7px;
+                    }
+                }
+                &:last-of-type {
+                    font-size: 20px;
+                    color: #000000;
+                    line-height: 30px;
+                }
+            }
+            ul li {
+                margin-bottom: 30px;
+                display: flex;
+                align-items: center;
+            }
+            ul .active {
+                & a>div {
+                    color: #002FA7 !important;
+                }
+                .inside {
+                    background: #002FA7;
+                }
+            }
+            ul li>a{
+                text-decoration: none;
+            }
+        }
+        @media screen and (max-width: 1120px) {
+            display: none;
+        }
+    }
     .img-list {
         display: flex;
         flex-wrap: wrap;
@@ -834,7 +997,7 @@ export default {
             display: block;
             margin: 0 40px 40px 0;
             cursor: pointer;
-            &:nth-last-of-type(3n) {
+            &:nth-of-type(3n) {
                 margin-right: 0;
             }
         }
@@ -845,7 +1008,7 @@ export default {
                 width: 140px;
                 height: 40px;
                 margin: 20px auto 0 auto;
-                &:nth-last-of-type(3n) {
+                &:nth-of-type(3n) {
                     margin-right: auto;
                 }
                 &:first-of-type {
