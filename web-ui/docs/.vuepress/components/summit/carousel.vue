@@ -393,7 +393,7 @@ export default {
             .detail {
                 font-size: 18px;
                 width: 938px;
-                
+                align-items: start;
                 font-weight: 400;
                 color: rgba(0, 0, 0, 0.85);
                 line-height: 30px;
