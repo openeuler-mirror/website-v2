@@ -1,0 +1,115 @@
+<template>
+    <div class="title-nav">
+        <div class="box-line">
+                <img class="gif" v-lazy="'/img/summit/home/nav.gif'" alt="" />
+                <img class="line" v-lazy="'/img/summit/home/line.png'" alt="" />
+        </div>
+        <div class="nav-text">
+            <ul>
+                <li v-for="(item,index) in dataList" :class="index === currentIndex?'active':''">
+                    <a :href="item.key">
+                        <div><div class="inside"></div></div>
+                        <div>{{ item.name }}</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    data () {
+        return {
+            
+        }
+    },
+    props:['currentIndex','dataList'],
+    mounted () {
+        
+    },
+    methods: {
+        
+    }
+}
+</script>
+
+<style lang="less" scpoed>
+.title-nav {
+    position: fixed;
+    cursor: pointer;
+    top: 170px;
+    right: 70px;
+    z-index: 1000;
+    display: block;
+    
+    .box-line {
+        width: 70px;
+        margin-left: -26px;
+        .gif {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto -30px auto;
+            position: relative;
+            z-index: 20;
+        }
+        .line {
+            display: block;
+            width: 2px;
+            height: 441px;
+            margin: 0 auto;
+        }
+    }
+    .nav-text {
+        position: relative;
+        margin-top: -375px;
+        ul li a>div {
+            display: inline-block;
+            &:first-of-type {
+                margin-right: 17px;
+                border-radius: 50%;
+                width: 18px;
+                position: relative;
+                background: #FFFFFF;
+                height: 18px;
+                border: 1px solid #979797;
+                div {
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    background: #D8D8D8;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-left: -7px;
+                    margin-top: -7px;
+                }
+            }
+            &:last-of-type {
+                font-size: 20px;
+                color: #000000;
+                line-height: 30px;
+            }
+        }
+        ul li {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
+        ul .active {
+            & a>div {
+                color: #002FA7 !important;
+            }
+            .inside {
+                background: #002FA7;
+            }
+        }
+        ul li>a{
+            text-decoration: none;
+        }
+    }
+    @media screen and (max-width: 1120px) {
+        display: none;
+    }
+}
+</style>

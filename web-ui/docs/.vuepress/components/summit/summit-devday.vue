@@ -7,43 +7,30 @@
             <div class="title">峰会</div>
             <a href="https://e-campaign.huawei.com/m/mIzQFr" target="_blank"><img :src="i18n.interaction.DEVDAY_2021.H5_BANNER" alt="" /></a>
         </div>
-        <div class="summit-nav" v-show="isShowNav">
-            <div class="box-line">
-                <img class="gif" v-lazy="'/img/summit/home/nav.gif'" alt="" />
-                <img class="line" v-lazy="'/img/summit/home/line.png'" alt="" />
-            </div>
-            <div class="nav-text">
-                <ul>
-                    <li v-for="(item,index) in navList" :class="index === activeIndex?'active':''">
-                        <a :href="item.key">
-                            <div><div class="inside"></div></div>
-                            <div>{{ item.name }}</div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <titlenav v-show="isShowNav" :currentIndex="activeIndex" :dataList="navList"></titlenav>
         <div class="text-wrapper">
             <p class="text">openEuler Developer Day 2021 是由 openEuler 社区发起，面向社区开发者的一场技术盛会。旨在推动 openEuler 社区在多样性计算、云原生全栈、全场景协同等技术发展方向的持续探索和创新。本次大会以开放工作会议以及小组讨论等形式，让开发者找到关注的技术小组、快速融入社区、围绕下一版本发布，热点技术方向，用户核心需求，展开面对面的头脑风暴。每一个开发者都是 openEuler 社区的一颗星，一滴水，最终点点滴滴汇聚成科技创新的星辰大海。</p>
-            <div class="title" id="agenda">
-                <img v-lazy="'/img/summit/devday-2021/agenda/agenda-h5.png'" alt="" v-if="isShowH5" />
-                <img v-lazy="'/img/summit/devday-2021/agenda/agenda-web.png'" alt="" v-else />
-            </div>
-            <div class="time-box">
-                <el-radio-group v-model="currentTime"> 
-                    <el-radio-button label="forenoon">上午</el-radio-button>
-                    <el-radio-button label="afternoon">下午</el-radio-button>
-                    <el-radio-button label="evening">晚上</el-radio-button>
-                </el-radio-group>
-            </div>
-            <div class="calendar-content" v-if="currentTime === 'forenoon'">
-                <img v-lazy="'/img/summit/devday-2021/agenda/mo_agenda.png'" alt="" v-if="isShowH5"/>
-                <img v-lazy="'/img/summit/devday-2021/agenda/web_agenda.png'" alt="" v-else/>
-            </div>
-            <carousel :agendaData="agenda_obj" :sigData="sig_obj" v-else-if="currentTime === 'afternoon'"></carousel>
-            <div class="party-box" v-else>
-                <img v-lazy="'/img/summit/devday-2021/agenda/party-h5.png'" alt="" v-if="isShowH5"/>
-                <img v-lazy="'/img/summit/devday-2021/agenda/party-web.png'" alt="" v-else/>
+            <div id="agenda">
+                <div class="title">
+                    <img v-lazy="'/img/summit/devday-2021/agenda/agenda-h5.png'" alt="" v-if="isShowH5" />
+                    <img v-lazy="'/img/summit/devday-2021/agenda/agenda-web.png'" alt="" v-else />
+                </div>
+                <div class="time-box">
+                    <el-radio-group v-model="currentTime"> 
+                        <el-radio-button label="forenoon">上午</el-radio-button>
+                        <el-radio-button label="afternoon">下午</el-radio-button>
+                        <el-radio-button label="evening">晚上</el-radio-button>
+                    </el-radio-group>
+                </div>
+                <div class="calendar-content" v-if="currentTime === 'forenoon'">
+                    <img v-lazy="'/img/summit/devday-2021/agenda/mo_agenda.png'" alt="" v-if="isShowH5"/>
+                    <img v-lazy="'/img/summit/devday-2021/agenda/web_agenda.png'" alt="" v-else/>
+                </div>
+                <carousel :agendaData="agenda_obj" :sigData="sig_obj" v-else-if="currentTime === 'afternoon'"></carousel>
+                <div class="party-box" v-else>
+                    <img v-lazy="'/img/summit/devday-2021/agenda/party-h5.png'" alt="" v-if="isShowH5"/>
+                    <img v-lazy="'/img/summit/devday-2021/agenda/party-web.png'" alt="" v-else/>
+                </div>
             </div>
         </div>
         <div class="lecturer" id="lecturer">
@@ -133,6 +120,7 @@
 
 <script>
 import carousel from './carousel.vue';
+import titlenav from './titleNav.vue';
 export default {
     data() {
         return {
@@ -370,55 +358,85 @@ export default {
                 SIG2_TIME: '16:00 – 18:00',
                 SIG2_DETAIL: [
                     {
-                        THEME: 'SIG-CloudNative & SIG-iSulad'
+                        THEME: 'SIG-CloudNative & iSulad',
+                        CONTENT: ['1）CloudNative SIG 成果回顾和孵化项目盘点','2）对 openEuler CloudNative SIG 的诉求收集','3）探讨 CloudNative SIG 的发展和规划'],
+                        DESC: ['CloudNative SIG 致力于为广大用户、开发者、爱好者提供便捷、易用的云原生基础设施，提供简单、高效的云原生应用开发托管环境，共建云原生生态。']
                     },
                     {
-                        THEME: 'SIG-security-facility & SIG-confidential-computing'
+                        THEME: 'SIG-security-facility & sig-confidential-computing  & security-committee',
+                        CONTENT: ['1）openEuler 社区安全技术需求讨论','2）OS 及机密计算的可信执行环境中，国密算法的支持','3）机密计算新技术规划讨论','4）openEuler 社区 CVE 处理流程介绍和演示'],
+                        DESC: ['security-facility SIG 通过使能主流的 Linux 安全特性，提供系统安全工具、库、基础设施等，提升系统安全性，改善现有安全技术在 openEuler 上的应用体验。','confidential-computing SIG 致力于机密计算技术在 openEuler 社区的探索和落地，包括提供统一的机密计算开发框架、支持硬件机密技术（如 Intel SGX 和 ARM Trustzone）、中间件和服务，以及面向未来的机密计算讨论和规划。','security-committee SIG 负责 openEuler 社区安全问题的管理，包括接受和响应 openEuler 安全问题报告、提供安全指导、开展安全治理等，为 openEuler 用户提供最安全的产品和开发环境。']
                     },
                     {
-                        THEME: 'SIG-Infrastructure'
+                        THEME: 'Infrastructure',
+                        CONTENT: ['1）openEuler 基础设施社区工作回顾','2）openEuler 基础设施典型应用：','      CLA 系统实践与成长；OBS 构建系统应用与挑战；CI-Bot 现状与优化','3）openEuler 基础设施需求收集'],
+                        DESC: ['Infrastructure SIG 致力于为 openEuler 社区提供稳定、可信、易用的基础设施平台和服务，包括 CI 门禁构建、OBS 包构建、邮件列表服务、门户网站等。']
                     },
                     {
-                        THEME: 'SIG-openstack'
+                        THEME: 'SIG-openstack',
+                        CONTENT: ['1）OpenStack Q&R 版本适配进度审查与讨论','2）openEuler 21.09 适配计划讨论与确定','3）OpenStack SIG 诉求收集'],
+                        DESC: ['openEuler OpenStack SIG 致力于结合多样性算力为 OpenStack 社区贡献更适合行业发展的平台功能增强，并且定期组织会议为社区发展提供建议和回馈。']
                     },
                     {
-                        THEME: 'SIG-release-management'
+                        THEME: 'SIG-release-management',
+                        CONTENT: ['1）LTS 版本组件升级、软件衰退后维护策略、版本变更报告模板讨论','2）需求收集、分支管理和代码同步、版本发布等环节问题及流程讨论','3）release-management SIG 运作讨论，包括会议主持、关键特性进展汇报等'],
+                        DESC: ['release-management SIG 协调社区各 SIG 完成 openEuler 社区版本开发、发布，包括规划版本发布时间表、收集管理需求、管理过程风险和问题协调、组织版本构建/转测试/发布。']
                     },
                     {
-                        THEME: 'SIG-Virt'
+                        THEME: 'Virt',
+                        CONTENT: ['1）Virt SIG 技术成果和实践总结','2）Virt SIG 技术规划讨论','3）对 Virt SIG 的诉求收集和讨论，如新增特性、开发流程、问题解决等'],
+                        DESC: ['Virt SIG 致力于打造面向全场景、支撑多样性算力的虚拟化解决方案，提供高性能、高可靠和高安全的虚拟化组件。']
                     },
                     {
                         THEME: 'SIG-Migration'
                     },
                     {
-                        THEME: 'SIG-ops'
+                        THEME: 'SIG-ops',
+                        CONTENT: ['1）以 OS 为中心的 a-ops 架构探讨','2）架构感知方案分享','3）混合补丁 & 升级机制介绍'],
+                        DESC: ['ops SIG 旨在推动系统运维的可视化、自动化、智能化；构建系统数据信息体系，实现操作系统的全栈运维；提供基础设施热补丁、热替换等技术，保证基础设施服务不中断，并在运维过程中提供问题诊断、性能分析、系统调优等技术和工具。']
                     },
                     {
                         THEME: 'SIG-Compatibility-Infra'
                     },
                     {
-                        THEME: 'SIG-QA'
+                        THEME: 'SIG-QA',
+                        CONTENT: ['1）openEuler 社区质量度量体系如何构建讨论','2）openEuler 社区如何开展众测活动探讨','3）QA SIG 未来规划讨论'],
+                        DESC: ['Quality assurance，not just test! 持续构建各类质量保证能力，不断提升 openEuler 社区质量!']
                     },
                     {
-                        THEME: 'SIG-Kernel'
+                        THEME: 'Kernel',
+                        CONTENT: ['需求和场景:','a）openEuler 默认采用 xfs 文件系统讨论','b）openEuler 支持实时内核讨论','c）内存可靠性问题及应对策略讨论','d）openEuler 5.10 kernel 特性规划及需求讨论','操作系统评测：','a）如何评测操作系统性能和稳定性','社区运作:','a）网讯设备对 openEuler 社区的支持讨论','b）openEuler kernel SIG 会议运作','c）kernel 合作开发、committer 运作机制'],
+                        DESC: ['内核是操作系统的基础，终有一天，openEuler Kernel 将支撑着各行各业运行的 openEuler 系统及 openEuler 的衍生系统。期待您的参与能让 openEuler 运行的更好，让各行各业受益。']
                     },
                     {
-                        THEME: 'SIG-UKUI'
+                        THEME: 'SIG-UKUI',
+                        CONTENT: ['1）openEuler 社区 UKUI 目前的进展和规划','2）评估在社区引入麒麟影音和麒麟音乐的可行性'],
+                        DESC: ['UKUI SIG 小组致力于将 UKUI 桌面环境提供到 openEuler 社区中，为用户带来简单易用，便捷高效的桌面使用体验。']
                     },
                     {
-                        THEME: 'SIG-OKD'                       
+                        THEME: 'SIG-OKD',
+                        CONTENT: ['1）讨论制定 OKD 引进 openEuler 社区的计划','2）探讨 OKD 底层容器引擎切换为 isulad 的可行性','3）介绍 OKD 原生社区最新发行版兼容 aarch64 的情况'],
+                        DESC: ['OKD 是基于 kubernetes 的企业级 PaaS 平台，openEuler OKD SIG 致力于依托 openEuler 社区生态，发展多引擎、多平台的 OKD 衍生版本。']                       
                     },
                     {
-                        THEME: 'SIG-HA'
+                        THEME: 'SIG-Ha',
+                        CONTENT: ['1）HA SIG 当前技术及实践总结','2）HA SIG 发展规划和路标讨论','3）用户 HA 需求收集和讨论'],
+                        DESC: ['openEuler HA SIG 致力于将 HA 这个业界知名的开源企业级高可用解决方案引入至 openEuler 社区中，并进行相关适配、迁移和优化，帮助用户解决生产环境的实际问题。']     
                     },
                     {
-                        THEME: 'SIG-DB'
+                        THEME: 'DB',
+                        CONTENT: ['1）DB SIG 近期工作规划，含配合 openEuler 发布周期的软件包引入，版本策略以及优化相关事宜','2）DB SIG 维护和开发责任梳理和划分','3）现有成员及开源贡献组织投入建议和计划等','4）DB 未来技术演进讨论'],
+                        DESC: ['openEuler DB SIG 致力于推动 openEuler 开源操作系统与各主流开源数据库的适配与融合，推动基础软件根技术发展，打造开放可靠的开源数据库技术栈。'] 
                     },
                     {
-                        THEME: 'SIG-RISC-V'
+                        THEME: 'SIG-RISC-V',
+                        CONTENT: ['1）openEuler RISC-V SIG 当前特性介绍和未来版本规划','2）未来技术路标讨论','3）轮值会议机制讨论'],
+                        DESC: ['openEuler RISC-V SIG 持续构建发布 openEuler RISC-V 版本，作为提供支持 RISC-V 南北向生态的统一稳定的创新平台，并为广大企业、组织、技术爱好者提供 openEuler RISC-V 的软件包编译、系统构建等指导，推动 openEuler 更好的完成对于多样化算力的支持。']
                     },
                     {
-                        THEME: 'SIG-Compiler'
+                        THEME: 'Compiler',
+                        CONTENT: ['1）Compiler SIG 成果回顾','2）Compiler SIG 技术路标','3）Compiler 诉求收集'],
+                        DESC: ['Compiler SIG 专注于编译优化技术，目前覆盖的产品包括：JVM、LLVM 和 GCC。在 openEuler 社区中积极演化编译技术的发展，同时回馈到上游社区。']   
                     }
                 ]
             },
@@ -827,7 +845,7 @@ export default {
         }
     },
     mounted() {
-         window.addEventListener('scroll',this.scroTop);
+        window.addEventListener('scroll',this.scroTop);
     },
     methods: {
         go(url) {
@@ -844,7 +862,7 @@ export default {
         scroTop() {
             let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
             let value = this.ifAddValue();
-            if(scrollTop < 600) {
+            if(scrollTop < 500) {
                 this.isShowNav = false;
             }else {
                 this.isShowNav = true;
@@ -875,13 +893,21 @@ export default {
         }
     },
     components: {
-        carousel
-    }
+        carousel,
+        titlenav
+    },
+    destroyed () { 
+        window.removeEventListener('scroll', this.scroTop)
+    } 
 }
 </script>
 <style>
 .time-box .el-radio-button:focus:not(.is-focus):not(:active):not(.is-disabled) {
     box-shadow: none !important;
+}
+.container .agenda-carousel .sig-2 .shade-remind {
+    height: 92%;
+    top: 86px;
 }
 @media screen and (max-width: 1000px) {
     .text-wrapper .agenda-carousel .sig-content .sig-2 {
@@ -907,83 +933,6 @@ export default {
         height: 60px;
         margin-top: -60px;
         visibility: hidden;
-    }
-    .summit-nav {
-        position: fixed;
-        cursor: pointer;
-        top: 170px;
-        right: 70px;
-        z-index: 1000;
-        display: block;
-        
-        .box-line {
-            width: 70px;
-            margin-left: -26px;
-            .gif {
-                width: 70px;
-                height: 70px;
-                margin: 0 auto -30px auto;
-                position: relative;
-                z-index: 20;
-            }
-            .line {
-                display: block;
-                width: 2px;
-                height: 441px;
-                margin: 0 auto;
-            }
-        }
-        .nav-text {
-            position: relative;
-            margin-top: -375px;
-            ul li a>div {
-                display: inline-block;
-                &:first-of-type {
-                    margin-right: 17px;
-                    border-radius: 50%;
-                    width: 18px;
-                    position: relative;
-                    background: #FFFFFF;
-                    height: 18px;
-                    border: 1px solid #979797;
-                    div {
-                        width: 14px;
-                        height: 14px;
-                        border-radius: 50%;
-                        background: #D8D8D8;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        margin-left: -7px;
-                        margin-top: -7px;
-                    }
-                }
-                &:last-of-type {
-                    font-size: 20px;
-                    color: #000000;
-                    line-height: 30px;
-                }
-            }
-            ul li {
-                margin-bottom: 30px;
-                display: flex;
-                align-items: center;
-            }
-            ul .active {
-                & a>div {
-                    color: #002FA7 !important;
-                }
-                .inside {
-                    background: #002FA7;
-                }
-            }
-            ul li>a{
-                text-decoration: none;
-            }
-        }
-        @media screen and (max-width: 1120px) {
-            display: none;
-        }
     }
     .img-list {
         display: flex;

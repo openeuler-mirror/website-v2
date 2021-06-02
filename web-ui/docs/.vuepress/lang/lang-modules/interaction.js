@@ -198,7 +198,26 @@ module.exports = {
         },
         SUMMIT: {
             SUMMIT: '峰会',
-            NAV_LIST: ['观看直播','峰会日程','演讲嘉宾','合作伙伴'],
+            SIG_MEETING: 'sig议程',
+            SIG_DESC: 'sig简介',
+            NAV_LIST: [
+                {
+                    key: '#liveroom',
+                    name: '观看直播'
+                },
+                {
+                    key: '#agenda',
+                    name: '峰会日程'
+                },
+                {
+                    key: '#lecturer',
+                    name: '演讲嘉宾'
+                },
+                {
+                    key: '#host-unit',
+                    name: '合作伙伴'
+                }
+            ],
             SUMMITCONTENT: [
                 'openEuler Summit 是由 openEuler 社区举办的开发者交流会，首届线下 openEuler Summit 2020 将于 12 月 24-25 日在北京·望京凯悦酒店举办。openEuler 是一个面向未来的开源操作系统，依托于最具活力的 openEuler 社区，它的未来将不止于操作系统！',
                 'openEuler Summit 2020 将聚焦于软硬件协同、云边端协同的技术趋势，万物互联的多算力场景，挖掘技术创新与社区生态的价值。开发者、用户、社区贡献者、软件爱好者在 openEuler Summit 上汇聚成海，连接行业上下游，让全产业链共享操作系统创新价值。'
@@ -1618,7 +1637,26 @@ module.exports = {
         },
         SUMMIT: {
             SUMMIT: 'Summit',
-            NAV_LIST: ['Live Broadcast','Agenda','Speakers','Partners'],
+            SIG_MEETING: 'sig议程',
+            SIG_DESC: 'sig简介',
+            NAV_LIST: [
+                {
+                    key: '#liveroom',
+                    name: 'Live Broadcast'
+                },
+                {
+                    key: '#agenda',
+                    name: 'Agenda'
+                },
+                {
+                    key: '#lecturer',
+                    name: 'Speakers'
+                },
+                {
+                    key: '#host-unit',
+                    name: 'Partners'
+                }
+            ],
             SUMMITCONTENT: [
                 'The openEuler Summit 2020 will be held at Hyatt Regency Beijing Wangjing from December 24 to 25 in Beijing, China. The second summit this year, the event will dive deep into openEuler, the open source operating system of tomorrow and how it exceeds conventional technologies thanks to community participation. This openEuler event is an opportunity for developers to exchange the latest OS trends with like-minded individuals.',
                 'The upcoming summit will focus on the collaboration across software-hardware and cloud-edge-device, as well as scenarios where all things are connected and diversified computing coexist. This event will discuss how to tap into technological innovation and build an open ecosystem. The summit provides an opportunity for streamlining the OS industry, and will consider how the openEuler OS can create shared value across the entire industry chain. The summit is only possible thanks to the participation of our developers, users, community contributors, and software enthusiasts, who have explored the latest OS developments. Together, we are on the cusp of the next breakthrough.'
@@ -3031,7 +3069,26 @@ module.exports = {
         },
         SUMMIT: {
             SUMMIT: 'Summit',
-            NAV_LIST: ['Live Broadcast','Agenda','Speakers','Partners'],
+            SIG_MEETING: 'sig议程',
+            SIG_DESC: 'sig简介',
+            NAV_LIST: [
+                {
+                    key: '#liveroom',
+                    name: 'Live Broadcast'
+                },
+                {
+                    key: '#agenda',
+                    name: 'Agenda'
+                },
+                {
+                    key: '#lecturer',
+                    name: 'Speakers'
+                },
+                {
+                    key: '#host-unit',
+                    name: 'Partners'
+                }
+            ],
             SUMMITCONTENT: [
                 'The openEuler Summit 2020 will be held at Hyatt Regency Beijing Wangjing from December 24 to 25 in Beijing, China. The second summit this year, the event will dive deep into openEuler, the open source operating system of tomorrow and how it exceeds conventional technologies thanks to community participation. This openEuler event is an opportunity for developers to exchange the latest OS trends with like-minded individuals.',
                 'The upcoming summit will focus on the collaboration across software-hardware and cloud-edge-device, as well as scenarios where all things are connected and diversified computing coexist. This event will discuss how to tap into technological innovation and build an open ecosystem. The summit provides an opportunity for streamlining the OS industry, and will consider how the openEuler OS can create shared value across the entire industry chain. The summit is only possible thanks to the participation of our developers, users, community contributors, and software enthusiasts, who have explored the latest OS developments. Together, we are on the cusp of the next breakthrough.'
