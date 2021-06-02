@@ -1,20 +1,7 @@
 <!-- 峰会 -->
 <template>
     <div :class="['summit',mobilePadding?'mobile-padding':'']">
-        <div class="summit-nav" v-show="isShowNav" v-if="!isShowH5">
-            <div class="box-line">
-                <img class="gif" v-lazy="'/img/summit/home/nav.gif'" alt="" />
-                <img class="line" v-lazy="'/img/summit/home/line.png'" alt="" />
-            </div>
-            <div class="nav-text">
-                <ul>
-                    <li v-for="(item,index) in i18n.interaction.SUMMIT.NAV_LIST" @click="goTitle(index)" :class="index === activeIndex?'active':''">
-                        <div><div class="inside"></div></div>
-                        <div>{{ item }}</div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <titlenav v-show="isShowNav" :currentIndex="activeIndex" :dataList="i18n.interaction.SUMMIT.NAV_LIST"></titlenav>
         <h3 v-if="isShowH5">{{ i18n.interaction.SUMMIT.SUMMIT }}</h3>
         <div class="top-banner" v-if="!isShowH5" @click="go('/interaction/summit-list/')">
             <video autoplay loop muted width="700px" height="380px" id="summit-mp4">
@@ -28,7 +15,7 @@
                 <p :class="$lang === 'en'?'font-regular':''" v-for="(item,index) in i18n.interaction.SUMMIT.SUMMITCONTENT">{{ item }}</p>
             </div>
 
-            <div class="live-room" v-if="i18n.interaction.SUMMIT.SUMMITLIVE">
+            <div class="live-room" v-if="i18n.interaction.SUMMIT.SUMMITLIVE" id="liveroom">
                 <div class="title">
                     <img v-lazy="i18n.interaction.SUMMIT.PC_LIVEIMG" alt="" v-if="!isShowH5" />
                     <img v-lazy="i18n.interaction.SUMMIT.MOBILE_LIVEIMG" alt="" v-else />
@@ -55,7 +42,7 @@
             </div>
 
             <div class="summit-message">
-                <div class="agenda" title-id="agenda">
+                <div class="agenda" id="agenda">
                     <div :class="['title',$lang === 'en'?'en-title':'']">
                          <img v-lazy="agendaData.WEB_TITLE" alt="" v-if="!isShowH5" />
                          <img v-lazy="agendaData.MOBILE_TITLE" alt="" v-else />
@@ -114,7 +101,7 @@
                     </div>
                     <carousel v-show="isShowcarousel"></carousel>
                 </div>
-                <div class="lecturer" title-id="lecturer">
+                <div class="lecturer" id="lecturer">
                     <div class="title">
                         <img v-lazy="lecturerObj.WEB_TITLE" alt="" v-if="!isShowH5" />
                         <img v-lazy="lecturerObj.MOBILE_TITLE" alt="" v-else />
@@ -139,7 +126,7 @@
                         <img v-if="!flag" v-lazy="'/img/home/arrowUp.svg'" alt="">
                     </div>
                 </div>
-                <div class="host-unit" title-id="host-unit">
+                <div class="host-unit" id="host-unit">
                     <div class="title">
                         <img v-lazy="hostUnitObj.WEB_TITLE" alt="" v-if="!isShowH5" />
                         <img v-lazy="hostUnitObj.MOBILE_TITLE" alt="" v-else />
@@ -195,6 +182,7 @@
 
 <script>
 import carousel from './carousel.vue';
+import titlenav from './titleNav.vue';
 export default {
     data () {
         return {
@@ -295,9 +283,6 @@ export default {
                 return false;
             }
         },
-        goTitle(index) {
-            document.documentElement.scrollTop = this.navTitleScroll[index];
-        },
         scroTop(param) {
             let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
             if(scrollTop < 500) {
@@ -395,7 +380,8 @@ export default {
         }
     },
     components: {
-        carousel
+        carousel,
+        titlenav
     },
     destroyed () { 
         window.removeEventListener('scroll', this.scroTop)
@@ -405,6 +391,13 @@ export default {
 </script>
 
 <style lang='less' scoped>
+#agenda::before,#lecturer::before,#liveroom::before,#host-unit::before {
+    content: '';
+    display: block;
+    height: 60px;
+    margin-top: -60px;
+    visibility: hidden;
+}
 .card-hover:hover {
     box-shadow: 0px 6px 30px 0px rgba(0, 47, 167, 0.2);
     cursor: pointer;
@@ -570,77 +563,6 @@ html[lang="ru"] .summit-content .live-room .web-box .item-box .live-item {
             }
         }
         
-    }
-}
-.summit .summit-nav {
-    position: fixed;
-    cursor: pointer;
-    top: 170px;
-    right: 70px;
-    z-index: 1000;
-    display: block;
-    
-    .box-line {
-        width: 70px;
-        margin-left: -26px;
-        .gif {
-            width: 70px;
-            height: 70px;
-            margin: 0 auto -30px auto;
-            position: relative;
-            z-index: 20;
-        }
-        .line {
-            display: block;
-            width: 2px;
-            height: 441px;
-            margin: 0 auto;
-        }
-    }
-    .nav-text {
-        position: relative;
-        margin-top: -375px;
-        ul li>div {
-            display: inline-block;
-            &:first-of-type {
-                margin-right: 17px;
-                border-radius: 50%;
-                width: 18px;
-                position: relative;
-                background: #FFFFFF;
-                height: 18px;
-                border: 1px solid #979797;
-                div {
-                    width: 14px;
-                    height: 14px;
-                    border-radius: 50%;
-                    background: #D8D8D8;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    margin-left: -7px;
-                    margin-top: -7px;
-                }
-            }
-            &:last-of-type {
-                font-size: 20px;
-                color: #000000;
-                line-height: 30px;
-            }
-        }
-        ul li {
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-        }
-        ul .active {
-            &>div {
-                color: #002FA7 !important;
-            }
-            .inside {
-                background: #002FA7;
-            }
-        }
     }
 }
 .summit .summit-content .title {

@@ -56,8 +56,14 @@
                 <div class="shade-remind" @click="hideDetail('2')" v-if="showSigDetail"></div>
                 <div class="msg-detail" @click="showDetail('1')" v-if="showSigDetail">
                     <div class="desc-box">
-                        <i></i>
-                        <p v-for="(item,index) in sigContent" :key="index" v-if="sigContent.length">{{ item }}</p>
+                        <div class="desc" v-if="sigDesc.length">
+                            <div class="top-title"><i></i><span>{{ i18n.interaction.SUMMIT.SIG_DESC }}</span></div>
+                            <p v-for="(item,index) in sigDesc" :key="index">{{ item }}</p>
+                        </div>
+                        <div class="content" v-if="sigContent.length">
+                            <div class="top-title"><i></i><span>{{ i18n.interaction.SUMMIT.SIG_MEETING }}</span></div>
+                            <p v-for="(item,index) in sigContent" :key="index">{{ item }}</p>
+                        </div>
                     </div>
                 </div>
                 <div class="time">{{ sigObj.SIG2_TIME }}</div>
@@ -87,6 +93,7 @@ export default {
             detailMsg: {},
             sigObj: {},
             sigContent: [],
+            sigDesc: [],
             showSigDetail: false,
             sig2DetailList: []
         }
@@ -129,6 +136,7 @@ export default {
                 this.detailMsg = item;
             }else if(item.CONTENT && which === 2) {
                 this.sigContent = item.CONTENT;
+                this.sigDesc = item.DESC ? item.DESC : [];
                 this.showSigDetail = true;
             }
             else {
@@ -221,14 +229,32 @@ export default {
             }
         }
         .desc-box {
+            .top-title {
+                margin-bottom: 8px;
+                display: flex;
+                align-items: center;
+                span {
+                    letter-spacing: 1px;
+                    color: rgba(0, 0, 0, 0.5);
+                }
+            }
             p {
                 width: 284px;
+                font-size: 16px;
             }
             i {
                 width: 18px;
                 height: 18px;
-                display: block;
-                margin-bottom: 8px;
+                display: inline-block;
+                margin-right: 6px;
+            }
+            .desc {
+                margin-bottom: 20px;
+            }
+            .content i {
+                background: url('/img/summit/home/content.svg') no-repeat center center;
+            }
+            .desc i {
                 background: url('/img/summit/home/desc.svg') no-repeat center center;
             }
         }
@@ -519,9 +545,11 @@ export default {
                 }
             }
             .desc-box {
+                
                 p {
                     width: 100%;
                     word-wrap: break-word;
+                    font-size: 14px;
                 }
             }
         }
