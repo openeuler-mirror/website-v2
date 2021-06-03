@@ -51,6 +51,251 @@
                 </div>
             </div>
         </div>
+        <img :src="'/img/hdc/2021-developer/fourth-title-'+deviceText" class="fourth-title" />
+        <div class="fourth-wrapper" v-if="score[curKey]">
+            <div class="pc" v-if="!isShowH5">
+                <div class="tabs">
+                    <div :class="'item ' + (curKey==='weekly'?'active':'')" @click="swichTab('weekly')">
+                        <div class="title">周榜单</div>
+                        <div class="date">{{score.weeklyRange}}</div>
+                    </div>
+                    <div :class="'item ' + (curKey==='monthly'?'active':'')" @click="swichTab('monthly')">
+                        <div class="title">月榜单</div>
+                        <div class="date">{{score.monthlyRange}}</div>
+                    </div>
+                    <div :class="'item ' + (curKey==='total'?'active':'')" @click="swichTab('total')">
+                        <div class="title">总榜单</div>
+                        <div class="date">{{score.totalRange}}</div>
+                    </div>
+                </div>
+                <div class="score-list">
+                    <div class="top-three">
+                        <div class="top-item second">
+                            <div class="user-info">
+                                <div class="name" @click="go(score[curKey][1].name==='虚位以待'?'':giteeUrl+score[curKey][1].name)">
+                                    {{score[curKey][1].name}}
+                                </div>
+                                <div class="score">
+                                    <span>{{score[curKey][1].score||'-'}}</span>积分
+                                </div>
+                            </div>
+                            <div class="floor">第二名</div>
+                        </div>
+                        <div class="top-item first">
+                            <div class="user-info">
+                                <div class="name" @click="go(score[curKey][0].name==='虚位以待'?'':giteeUrl+score[curKey][0].name)">
+                                    {{score[curKey][0].name}}
+                                </div>
+                                <div class="score">
+                                    <span>{{score[curKey][0].score||'-'}}</span>积分
+                                </div>
+                            </div>
+                            <div class="floor">第一名</div>
+                        </div>
+                        <div class="top-item three">
+                            <div class="user-info">
+                                <div class="name" @click="go(score[curKey][2].name==='虚位以待'?'':giteeUrl+score[curKey][2].name)">
+                                    {{score[curKey][2].name}}
+                                </div>
+                                <div class="score">
+                                    <span>{{score[curKey][2].score||'-'}}</span>积分
+                                </div>
+                            </div>
+                            <div class="floor">第三名</div>
+                        </div>
+                    </div>
+                    <ul class="other">
+                        <li v-for="(item, index) in score[curKey].slice(3)" :key="index">
+                            <div class="left">
+                                <span class="index">{{index+4<10?'0'+(index+4):(index+4)}}</span>
+                                <span class="name" @click="go(item.name==='虚位以待'?'':giteeUrl+item.name)">{{item.name}}</span>
+                            </div>
+                            <div class="right">
+                                <span class="score">{{item.score||'-'}}</span>
+                                <span>积分</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pc"v-if="isShowH5">
+                <div class="tabs">
+                    <div class="title">
+                        周榜单
+                    </div>
+                    <div class="date">
+                        {{score.weeklyRange}}
+                    </div>
+                </div>
+                <div class="score-list">
+                    <div class="top-three">
+                        <div class="top-item second">
+                            <div class="user-info">
+                                <div class="name" @click="go(score.weekly[1].name==='虚位以待'?'':giteeUrl+score.weekly[1].name)">
+                                    {{score.weekly[1].name}}
+                                </div>
+                                <div class="score">
+                                    <span>{{score.weekly[1].score||'-'}}</span>积分
+                                </div>
+                            </div>
+                            <div class="floor">第二名</div>
+                        </div>
+                        <div class="top-item first">
+                            <div class="user-info">
+                                <div class="name" @click="go(score.weekly[0].name==='虚位以待'?'':giteeUrl+score.weekly[0].name)">
+                                    {{score.weekly[0].name}}
+                                </div>
+                                <div class="score">
+                                    <span>{{score.weekly[0].score||'-'}}</span>积分
+                                </div>
+                            </div>
+                            <div class="floor">第一名</div>
+                        </div>
+                        <div class="top-item three">
+                            <div class="user-info">
+                                <div class="name" @click="go(score.weekly[2].name==='虚位以待'?'':giteeUrl+score.weekly[2].name)">
+                                    {{score.weekly[2].name}}
+                                </div>
+                                <div class="score">
+                                    <span>{{score.weekly[2].score||'-'}}</span>积分
+                                </div>
+                            </div>
+                            <div class="floor">第三名</div>
+                        </div>
+                    </div>
+                    <ul class="other">
+                        <li v-for="(item, index) in score.weekly.slice(3)" :key="index">
+                            <div class="left">
+                                <span class="index">{{index+4<10?'0'+(index+4):(index+4)}}</span>
+                                <span class="name" @click="go(item.name==='虚位以待'?'':giteeUrl+item.name)">{{item.name}}</span>
+                            </div>
+                            <div class="right">
+                                <span class="score">{{item.score||'-'}}</span>
+                                <span>积分</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pc"v-if="isShowH5">
+                <div class="tabs">
+                    <div class="title">
+                        月榜单
+                    </div>
+                    <div class="date">
+                        {{score.monthlyRange}}
+                    </div>
+                </div>
+                <div class="score-list">
+                    <div class="top-three">
+                        <div class="top-item second">
+                            <div class="user-info">
+                                <div class="name" @click="go(score.monthly[1].name==='虚位以待'?'':giteeUrl+score.monthly[1].name)">
+                                    {{score.monthly[1].name}}
+                                </div>
+                                <div class="score">
+                                    <span>{{score.monthly[1].score||'-'}}</span>积分
+                                </div>
+                            </div>
+                            <div class="floor">第二名</div>
+                        </div>
+                        <div class="top-item first">
+                            <div class="user-info">
+                                <div class="name" @click="go(score.monthly[0].name==='虚位以待'?'':giteeUrl+score.monthly[0].name)">
+                                    {{score.monthly[0].name}}
+                                </div>
+                                <div class="score">
+                                    <span>{{score.monthly[0].score||'-'}}</span>积分
+                                </div>
+                            </div>
+                            <div class="floor">第一名</div>
+                        </div>
+                        <div class="top-item three">
+                            <div class="user-info">
+                                <div class="name" @click="go(score.monthly[2].name==='虚位以待'?'':giteeUrl+score.monthly[2].name)">
+                                    {{score.monthly[2].name}}
+                                </div>
+                                <div class="score">
+                                    <span>{{score.monthly[2].score||'-'}}</span>积分
+                                </div>
+                            </div>
+                            <div class="floor">第三名</div>
+                        </div>
+                    </div>
+                    <ul class="other">
+                        <li v-for="(item, index) in score.monthly.slice(3)" :key="index">
+                            <div class="left">
+                                <span class="index">{{index+4<10?'0'+(index+4):(index+4)}}</span>
+                                <span class="name" @click="go(item.name==='虚位以待'?'':giteeUrl+item.name)">{{item.name}}</span>
+                            </div>
+                            <div class="right">
+                                <span class="score">{{item.score||'-'}}</span>
+                                <span>积分</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pc"v-if="isShowH5">
+                <div class="tabs">
+                    <div class="title">
+                        总榜单
+                    </div>
+                    <div class="date">
+                        {{score.totalRange}}
+                    </div>
+                </div>
+                <div class="score-list">
+                    <div class="top-three">
+                        <div class="top-item second">
+                            <div class="user-info">
+                                <div class="name" @click="go(score.total[1].name==='虚位以待'?'':giteeUrl+score.total[1].name)">
+                                    {{score.total[1].name}}
+                                </div>
+                                <div class="score">
+                                    <span>{{score.total[1].score||'-'}}</span>积分
+                                </div>
+                            </div>
+                            <div class="floor">第二名</div>
+                        </div>
+                        <div class="top-item first">
+                            <div class="user-info">
+                                <div class="name" @click="go(score.total[0].name==='虚位以待'?'':giteeUrl+score.total[0].name)">
+                                    {{score.total[0].name}}
+                                </div>
+                                <div class="score">
+                                    <span>{{score.total[0].score||'-'}}</span>积分
+                                </div>
+                            </div>
+                            <div class="floor">第一名</div>
+                        </div>
+                        <div class="top-item three">
+                            <div class="user-info">
+                                <div class="name" @click="go(score.total[2].name==='虚位以待'?'':giteeUrl+score.total[2].name)">
+                                    {{score.total[2].name}}
+                                </div>
+                                <div class="score">
+                                    <span>{{score.total[2].score||'-'}}</span>积分
+                                </div>
+                            </div>
+                            <div class="floor">第三名</div>
+                        </div>
+                    </div>
+                    <ul class="other">
+                        <li v-for="(item, index) in score.total.slice(3)" :key="index">
+                            <div class="left">
+                                <span class="index">{{index+4<10?'0'+(index+4):(index+4)}}</span>
+                                <span class="name" @click="go(item.name==='虚位以待'?'':giteeUrl+item.name)">{{item.name}}</span>
+                            </div>
+                            <div class="right">
+                                <span class="score">{{item.score||'-'}}</span>
+                                <span>积分</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <img :src="'/img/hdc/2021-developer/third-title-'+deviceText" class="third-title" />
         <div class="third-wrapper">
             <div class="left">
@@ -69,6 +314,8 @@
 </template>
 
 <script>
+import {getGiteeJson} from "./../../api/common";
+
 export default {
     data() {
         return {
@@ -194,7 +441,10 @@ export default {
                     img: 'url("/img/hdc/2021-developer/img_guizhou.png")',
                     link: 'https://competition.huaweicloud.com/information/1000041494/cirumastance'
                 },
-            ]
+            ],
+            score: {},
+            curKey: 'weekly',
+            giteeUrl:'https://gitee.com/'
         };
     },
     methods: {
@@ -204,10 +454,16 @@ export default {
             } else {
                 window.open(link);
             }
+        },
+        swichTab(str) {
+            this.curKey = str;
         }
     },
     mounted: function() {
         this.deviceText = this.isShowH5 ? 'h5.png' : 'pc.png';
+        getGiteeJson('hdc-2021-developer/score.json').then((res) => {
+            this.score = res;
+        });
     }
 };
 </script>
@@ -488,6 +744,210 @@ export default {
         .right {
             width: 200px;
             height: 200px;
+        }
+    }
+
+    .fourth-title {
+        margin: 0 auto 30px;
+    }
+
+    .fourth-wrapper {
+        width: 660px;
+        margin: 0 auto 55px;
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+            padding: 0 15px;
+            .pc {
+                margin-bottom: 30px;
+            }
+        }
+        
+        .pc .tabs {
+            height: 160px;
+            background-color: #3165e8;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            @media screen and (max-width: 1000px) {
+                display: block;
+                height: 160px;
+                text-align: left;
+                background-image: url("/img/hdc/2021-developer/score-bg-h5.png");
+                background-size: 100% 100%;
+                padding-top: 47px;
+                .title {
+                    margin: 0 0 2px 32px;
+                    color: #002fa7;
+                    font-size: 32px;
+                    line-height: 32px;
+                }
+                .date {
+                    margin: 0 0 0 32px;
+                    color: #000;
+                    font-size: 14px;
+                    line-height: 32px;
+                }
+            }
+            .item {
+                cursor: pointer;
+                height: 160px;
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .title {
+                    font-size: 32px;
+                    line-height: 32px;
+                    margin-bottom: 2px;
+                    color: #feb32a;
+                }
+                .date {
+                    font-size: 14px;
+                    line-height: 32px;
+                    color: #feb32a;
+                }
+            }
+            .active {
+                height: 174px;
+                border-radius: 8px 8px 0 0;
+                background-image: url("/img/hdc/2021-developer/score-bg-pc.png");
+                background-size: 100% 100%;
+                margin-top: -14px;
+                .title {
+                    font-size: 32px;
+                    line-height: 32px;
+                    margin-bottom: 2px;
+                    color: #002fa7;
+                }
+                .date {
+                    font-size: 14px;
+                    line-height: 32px;
+                    color: #000;
+                }
+            }
+        }
+        .pc .score-list {
+            padding: 50px 40px;
+            border-radius: 0 0 8px 8px;
+            background-color: #002fa7;
+            .top-three {
+                padding: 0 36px 50px;
+                display: flex;
+                .top-item {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    .user-info {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        color: #fff;
+                        .name {
+                            font-size: 14px;
+                            line-height: 16px;
+                            margin-bottom: 10px;
+                            cursor: pointer;
+                            @media screen and (max-width: 1000px) {
+                                font-size: 12px;
+                            }
+                        }
+                        .score {
+                            font-size: 14px;
+                            line-height: 16px;
+                            margin-bottom: 20px;
+                            span {
+                                color: #f9762d;
+                                font-size: 18px;
+                                margin-right: 10px;
+                            }
+                            @media screen and (max-width: 1000px) {
+                                font-size: 12px;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                    .floor {
+                        font-size: 24px;
+                        color: #feb32a;
+                        @media screen and (max-width: 1000px) {
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .second .floor {
+                    height: 66px;
+                    line-height: 66px;
+                    border-left: 1px solid #feb32a;
+                    border-top: 1px solid #feb32a;
+                    border-bottom: 1px solid #feb32a;
+                    @media screen and (max-width: 1000px) {
+                        height: 60px;
+                        line-height: 60px;
+                    }
+                }
+                .first .floor {
+                    line-height: 106px;
+                    height: 104px;
+                    border: 1px solid #feb32a;
+                    @media screen and (max-width: 1000px) {
+                        height: 85px;
+                        line-height: 85px;
+                    }
+                }
+                .three .floor {
+                    line-height: 48px;
+                    height: 48px;
+                    border-right: 1px solid #feb32a;
+                    border-top: 1px solid #feb32a;
+                    border-bottom: 1px solid #feb32a;
+                    @media screen and (max-width: 1000px) {
+                        height: 40px;
+                        line-height: 40px;
+                    }
+                }
+            }
+            .other li {
+                height: 64px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 14px;
+                color: #fff;
+                border-top: 1px dashed #3165eb;
+                @media screen and (max-width: 1000px) {
+                    height: 44px;
+                    font-size: 12px;
+                }
+                .left .index {
+                    font-size: 24px;
+                    color: #feb32a;
+                    margin-right: 20px;
+                    @media screen and (max-width: 1000px) {
+                        font-size: 16px;
+                        margin-right: 10px;
+                    }
+                }
+                .left .name {
+                    cursor: pointer;
+                }
+                .right .score {
+                    font-size: 18px;
+                    color: #f9762d;
+                    margin-right: 30px;
+                    @media screen and (max-width: 1000px) {
+                        font-size: 14px;
+                        margin-right: 6px;
+                    }
+                }
+            }
+            @media screen and (max-width: 1000px) {
+                padding: 20px;
+                .top-three {
+                    padding: 0 0 20px;
+                }
+            }
         }
     }
 }
