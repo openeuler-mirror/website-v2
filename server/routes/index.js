@@ -13,11 +13,21 @@ const ES = require('../config/searchConfig');
 const logUtil = require('../util/logUtil');
 const REPO_ES_INDEX = 'openeuler';
 const OPENEULER_URL = 'https://repo.openeuler.org';
+const GITEE_URL = 'https://gitee.com/openeuler/website-v2/raw/master/data';
 
 router.get('/', function (req, res, next) {
     res.json({
         code: 200,
         data: 'index'
+    });
+});
+
+router.get('/get/json', function (req, res, next) {
+    let reqUrl = new URL(req.url, OPENEULER_URL);
+    HTTP.getSig(GITEE_URL + '/' + reqUrl.searchParams.get('path')).then(data => {
+        res.send(data);
+    }).catch(ex => {
+        res.send(HTTP.sigError);
     });
 });
 
