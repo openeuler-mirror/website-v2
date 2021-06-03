@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container devday">
         <div class="banner">
             <a href="https://e-campaign.huawei.com/m/mIzQFr" target="_blank"><img :src="i18n.interaction.DEVDAY_2021.PC_BANNER" alt="" /></a>
         </div>
@@ -26,7 +26,9 @@
                     <img v-lazy="'/img/summit/devday-2021/agenda/mo_agenda.png'" alt="" v-if="isShowH5"/>
                     <img v-lazy="'/img/summit/devday-2021/agenda/web_agenda.png'" alt="" v-else/>
                 </div>
-                <carousel :agendaData="agenda_obj" :sigData="sig_obj" v-else-if="currentTime === 'afternoon'"></carousel>
+                <carousel :agendaData="agenda_obj" :sigData="sig_obj" v-else-if="currentTime === 'afternoon'">
+                    <img :src="otherSrc" alt="" class="other-sig" slot="othersig" />
+                </carousel>
                 <div class="party-box" v-else>
                     <img v-lazy="'/img/summit/devday-2021/agenda/party-h5.png'" alt="" v-if="isShowH5"/>
                     <img v-lazy="'/img/summit/devday-2021/agenda/party-web.png'" alt="" v-else/>
@@ -126,6 +128,7 @@ export default {
         return {
             activeIndex: 0,
             isShowNav: false,
+            otherSrc: '',
             navList: [
                 {
                     key: '#agenda',
@@ -325,7 +328,7 @@ export default {
                             {
                                 TIME: '13:40-14:10',
                                 THEME: '拥抱智能时代的Arm基础软件开源生态',
-                                SPEAKER: ['周杰 Linux中国区负责人'],
+                                SPEAKER: ['周杰 Linaro中国区负责人'],
                                 DESC: ['本演讲将从Arm架构的新特性出发，从人工智能、安全、云端一体等维度来介绍Linaro如何与合作伙伴一起推动Arm基础软件开源生态的发展。同时，本演讲也将介绍Linaro和openEuler社区的相关合作。']
                             },
                             {
@@ -846,6 +849,7 @@ export default {
     },
     mounted() {
         window.addEventListener('scroll',this.scroTop);
+        this.otherSrc = this.isShowH5 ? '/img/summit/devday-2021/agenda/h5_other_sig.png':'/img/summit/devday-2021/agenda/web_other_sig.png';
     },
     methods: {
         go(url) {
@@ -883,7 +887,7 @@ export default {
             //上午、下午、晚上日程盒子的高度不一致，计算误差值使得滚动时能够准确
             let value = 0;
             if(this.currentTime === 'afternoon') {
-                value = 800;
+                value = 1000;
             }else if(this.currentTime === 'evening') {
                 value = -700;
             }else {
@@ -905,13 +909,37 @@ export default {
 .time-box .el-radio-button:focus:not(.is-focus):not(:active):not(.is-disabled) {
     box-shadow: none !important;
 }
-.container .agenda-carousel .sig-2 .shade-remind {
+.devday .agenda-carousel .sig-2 .shade-remind {
     height: 92%;
     top: 86px;
+    width: 100%;
+    left: 0;
+}
+.devday .sig-content .other-sig {
+    width: 1120px;
+    height: 349px;
+    display: block;
+    margin: 30px 0;
+}
+.devday .agenda-carousel .sig-content .sig-2 .time {
+    display: none;
 }
 @media screen and (max-width: 1000px) {
     .text-wrapper .agenda-carousel .sig-content .sig-2 {
         border-bottom: 0 !important;
+    }
+    .devday .sig-content .other-sig {
+        width: 315px;
+        margin: 20px auto; 
+        height: 541px;
+    }
+    .devday .agenda-carousel .sig-content .sig-2 .shade-remind {
+        top: 0;
+        height: 100%;
+    }
+    .devday .agenda-carousel .sig-content .sig-2 .detail {
+        width: 315px;
+        margin: 0 auto; 
     }
 }
 

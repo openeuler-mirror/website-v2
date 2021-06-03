@@ -52,6 +52,7 @@
                     <span v-for="(item,index) in sigObj.SIG1_DETAIL">{{ item }}</span>
                 </div>
             </div>
+            <slot name="othersig"></slot>
             <div class="sig-2">
                 <div class="shade-remind" @click="hideDetail('2')" v-if="showSigDetail"></div>
                 <div class="msg-detail" @click="showDetail('1')" v-if="showSigDetail">
