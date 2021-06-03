@@ -1,136 +1,139 @@
 {
-    "week": [
-          {
-              "name": "aaa",
-              "score": 123
-          },
-          {
-              "name": "aa1a",
-              "score": 122
-          },
-          {
-              "name": "aa12a",
-              "score": 123
-          },
-          {
-              "name": "aa12a",
-              "score": 123
-          },
-          {
-              "name": "aa12a",
-              "score": 123
-          },
-          {
-              "name": "aa12a",
-              "score": 123
-          },
-          {
-              "name": "aa12a",
-              "score": 123
-          },
-          {
-              "name": "aa12a",
-              "score": 123
-          },
-          {
-              "name": "aa12a",
-              "score": 123
-          },
-          {
-              "name": "aa12a",
-              "score": 123
-          }
+    "weeklyRange": "5月24日-5月30日",
+    "monthlyRange": "4月01日-5月01日",
+    "totalRange": "4月01日-5月01日",
+    "weekly": [
+        {
+            "name": "yaozc701",
+            "score": 12
+        },
+        {
+            "name": "polite2anyone",
+            "score": 10
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        }
     ],
-    "month": [
-          {
-              "name": "aasfa",
-              "score": 135
-          },
-          {
-              "name": "aea1a",
-              "score": 134
-          },
-          {
-              "name": "aagt12a",
-              "score": 123
-          },
-          {
-              "name": "aa1gt2a",
-              "score": 123
-          },
-          {
-              "name": "aagt12a",
-              "score": 123
-          },
-          {
-              "name": "aagt12a",
-              "score": 123
-          },
-          {
-              "name": "aa12a",
-              "score": 123
-          },
-          {
-              "name": "aa12a",
-              "score": 123
-          },
-          {
-              "name": "aa12a",
-              "score": 123
-          },
-          {
-              "name": "aa12a",
-              "score": 123
-          }
-      ],
-      "all": [
-          {
-              "name": "aasgrefa",
-              "score": 153
-          },
-          {
-              "name": "aefra1a",
-              "score": 152
-          },
-          {
-              "name": "aagt12a",
-              "score": 133
-          },
-          {
-              "name": "aa1gt2a",
-              "score": 123
-          },
-          {
-              "name": "aagt12a",
-              "score": 123
-          },
-          {
-              "name": "aagt12a",
-              "score": 123
-          },
-          {
-              "name": "aa12a",
-              "score": 123
-          },
-          {
-              "name": "aa12a",
-              "score": 123
-          },
-          {
-              "name": "aa12a",
-              "score": 123
-          },
-          {
-              "name": "aa12a",
-              "score": 123
-          },
-          {
-              "name": "aa12a",
-              "score": 123
-          },
-          {
-              "name": "aa12a",
-              "score": 123
-          }
-      ]
+    "monthly": [
+        {
+            "name": "yaozc701",
+            "score": 12
+        },
+        {
+            "name": "polite2anyone",
+            "score": 10
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        }
+    ],
+    "total": [
+        {
+            "name": "yaozc701",
+            "score": 18
+        },
+        {
+            "name": "polite2anyone",
+            "score": 10
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
+        }
+    ]
 }
