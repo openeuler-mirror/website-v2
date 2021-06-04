@@ -58,11 +58,11 @@
                 <div class="msg-detail" @click="showDetail('1')" v-if="showSigDetail">
                     <div class="desc-box">
                         <div class="desc" v-if="sigDesc.length">
-                            <div class="top-title"><i></i><span>{{ i18n.interaction.SUMMIT.SIG_DESC }}</span></div>
+                            <div class="top-title"><i></i></div>
                             <p v-for="(item,index) in sigDesc" :key="index">{{ item }}</p>
                         </div>
                         <div class="content" v-if="sigContent.length">
-                            <div class="top-title"><i></i><span>{{ i18n.interaction.SUMMIT.SIG_MEETING }}</span></div>
+                            <div class="top-title"><i></i></div>
                             <p v-for="(item,index) in sigContent" :key="index">{{ item }}</p>
                         </div>
                     </div>
@@ -165,22 +165,20 @@ export default {
         z-index: 10;
         width: 100%;
         height: 92%;
-        background: #000;
-        opacity: 0.5;
+        background: rgba(0, 0, 0, 0.05);
         position: absolute;
         top: 86px;
     }        
     .msg-detail {
         font-size: 14px;
-        
         color: #000000;
         line-height: 26px;
         z-index: 20;
         position: absolute;
         top: 50%;
         left: 50%;
-        margin-left: -168px;
-        margin-top: -150px;
+        margin-left: -225px;
+        margin-top: -175px;
         overflow-y: scroll;
         &::-webkit-scrollbar-track {
             border-radius:10px;
@@ -193,10 +191,10 @@ export default {
             border-radius:10px;
             background-color:#AFBFE8;
         }
-        width: 336px;
-        height: 370px;
+        width: 450px;
+        height: 350px;
         background: #FFFFFF;
-        box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1), 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.1);
         border-radius: 4px;
         padding: 26px;
         .time-box {
@@ -213,9 +211,6 @@ export default {
                         background: url('/img/summit/home/time.svg') no-repeat center center;
                         margin-bottom: -2px;
                     }
-                }
-                &:last-of-type {
-                    font-size: 16px;
                 }
             }
         }
@@ -238,10 +233,6 @@ export default {
                     letter-spacing: 1px;
                     color: rgba(0, 0, 0, 0.5);
                 }
-            }
-            p {
-                width: 284px;
-                font-size: 16px;
             }
             i {
                 width: 18px;
@@ -363,20 +354,8 @@ export default {
         width: 1120px;
         border-top: 1px solid rgba(0, 0, 0, 0.15);
         position: relative;
-        .shade-remind {
-            width: 936px;
-            height: 370px;
-            top: 168px;
-            left: 175px;
-        }
-        .msg-detail {
-            height: 260px;
-            margin-top: -76px;
-            margin-left: -138px;
-        }
         .sig-title {
             font-size: 20px;
-            
             font-weight: normal;
             color: rgba(0, 0, 0, 0.85);
             line-height: 30px;
@@ -669,6 +648,7 @@ export default {
                     height: 90%;
                 }
                 .msg-detail {
+                    height: 260px;
                     margin: -100px 0 0 -110px;
                 }
                 .time {

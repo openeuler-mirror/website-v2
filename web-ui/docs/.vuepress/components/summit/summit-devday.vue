@@ -506,9 +506,9 @@ export default {
                     POSITION: '滴滴开源技术负责人'
                 },
                 {
-                    IMG: '/img/summit/devday-2021/lecturer/mada.png',
-                    NAME: '马达',
-                    POSITION: '华为云批量计算首席架构师'
+                    IMG: '/img/summit/devday-2021/lecturer/zouqiubo.png',
+                    NAME: '邹秋波',
+                    POSITION: '光大银行信息科技部云技术管理处技术专家'
                 },
                 {
                     IMG: '/img/summit/devday-2021/lecturer/weizhao.png',
@@ -536,9 +536,9 @@ export default {
                     POSITION: '华为操作系统高级开发工程师'
                 },
                 {
-                    IMG: '/img/summit/devday-2021/lecturer/zhouzhongyuan.png',
-                    NAME: '周中元',
-                    POSITION: '华为开源软件工程师'
+                    IMG: '/img/summit/devday-2021/lecturer/mada.png',
+                    NAME: '马达',
+                    POSITION: '华为云批量计算首席架构师'
                 },
                 {
                     IMG: '/img/summit/devday-2021/lecturer/zhulin.png',
@@ -654,6 +654,11 @@ export default {
                     IMG: '/img/summit/devday-2021/lecturer/husong.png',
                     NAME: '胡松',
                     POSITION: '麒麟软件 内核核心开发者'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/zhouzhongyuan.png',
+                    NAME: '周中元',
+                    POSITION: '华为开源软件工程师'
                 }
             ],
             communityBanner:{
@@ -871,13 +876,13 @@ export default {
             }else {
                 this.isShowNav = true;
             }
-            if(scrollTop > 650 && scrollTop < 1900 + value) {
+            if(scrollTop > 650 && scrollTop < 2600 + value) {
                 this.activeIndex = 0;
-            }else if(scrollTop > 1920 + value && scrollTop < 4600 + value) {
+            }else if(scrollTop > 2620 + value && scrollTop < 5500 + value) {
                 this.activeIndex = 1;
-            }else if(scrollTop > 4700 + value && scrollTop < 5800 + value) {
+            }else if(scrollTop > 5520 + value && scrollTop < 6800 + value) {
                 this.activeIndex = 2;
-            }else if(scrollTop > 5800 + value) {
+            }else if(scrollTop > 6800 + value) {
                 this.activeIndex = 3;
             }else {
                 return false;
@@ -887,9 +892,9 @@ export default {
             //上午、下午、晚上日程盒子的高度不一致，计算误差值使得滚动时能够准确
             let value = 0;
             if(this.currentTime === 'afternoon') {
-                value = 1000;
+                value = 400;
             }else if(this.currentTime === 'evening') {
-                value = -700;
+                value = -1600;
             }else {
                 return 0;
             }
@@ -941,6 +946,9 @@ export default {
         width: 315px;
         margin: 0 auto; 
     }
+    .devday .agenda-carousel .sig-content .sig-2 .detail div:last-of-type {
+        margin-bottom: 0;
+    }
 }
 
 </style>
@@ -953,14 +961,6 @@ export default {
         margin-bottom: 60px;
         padding: 0 10px;
         width: 100%;
-    }
-    //瞄点定位消除误差
-    #agenda::before,#lecturer::before,#community::before,#host-unit::before {
-        content: '';
-        display: block;
-        height: 60px;
-        margin-top: -60px;
-        visibility: hidden;
     }
     .img-list {
         display: flex;
@@ -1112,7 +1112,11 @@ export default {
         @media screen and (max-width: 1000px) {
             font-size: 14px;
             line-height: 26px;
-            margin-bottom: 40px;
+            .calendar-content img {
+                width: 325px;
+                margin: 0 auto;
+                display: block;
+            }
         }
     }
     .lecturer {
