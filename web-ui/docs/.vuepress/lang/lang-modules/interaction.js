@@ -198,8 +198,6 @@ module.exports = {
         },
         SUMMIT: {
             SUMMIT: '峰会',
-            SIG_MEETING: 'sig议程',
-            SIG_DESC: 'sig简介',
             NAV_LIST: [
                 {
                     key: '#liveroom',
@@ -1134,6 +1132,8 @@ module.exports = {
                 REVIEW: {
                     WEB_TITLE: '/img/summit/home/review/zh-pc-review.png',
                     MOBILE_TITLE: '/img/summit/home/review/zh-mobile-review.png',
+                    WEB_BANNER: '/img/summit/home/review/web-review-banner.png',
+                    MOBILE_BANNER: '/img/summit/home/review/h5-review-banner.png'
                 }
             },
             LISTTITLE: '精彩回顾',
@@ -1637,8 +1637,6 @@ module.exports = {
         },
         SUMMIT: {
             SUMMIT: 'Summit',
-            SIG_MEETING: 'sig议程',
-            SIG_DESC: 'sig简介',
             NAV_LIST: [
                 {
                     key: '#liveroom',
@@ -2566,6 +2564,8 @@ module.exports = {
                 REVIEW: {
                     WEB_TITLE: '/img/summit/home/review/en-pc-review.png',
                     MOBILE_TITLE: '/img/summit/home/review/en-mobile-review.png',
+                    WEB_BANNER: '/img/summit/home/review/web-review-banner.png',
+                    MOBILE_BANNER: '/img/summit/home/review/h5-review-banner.png'
                 }
             },
             LISTTITLE: 'Overview',
@@ -3069,8 +3069,6 @@ module.exports = {
         },
         SUMMIT: {
             SUMMIT: 'Summit',
-            SIG_MEETING: 'sig议程',
-            SIG_DESC: 'sig简介',
             NAV_LIST: [
                 {
                     key: '#liveroom',
@@ -3998,6 +3996,8 @@ module.exports = {
                 REVIEW: {
                     WEB_TITLE: '/img/summit/home/review/en-pc-review.png',
                     MOBILE_TITLE: '/img/summit/home/review/en-mobile-review.png',
+                    WEB_BANNER: '/img/summit/home/review/web-review-banner.png',
+                    MOBILE_BANNER: '/img/summit/home/review/h5-review-banner.png'
                 }
             },
             LISTTITLE: 'Overview',

@@ -175,6 +175,16 @@
                         <img v-lazy="'/img/summit/home/media/xianglingshuo.jpg'" alt="" />
                     </div>
                 </div>
+                <div class="review">
+                    <div class="title">
+                        <img v-lazy="reviewObj.MOBILE_TITLE" alt="" v-if="isShowH5" />
+                        <img v-lazy="reviewObj.WEB_TITLE" alt="" v-else />
+                    </div>
+                    <div class="review-banner" @click="go('/interaction/summit-list/list/')">
+                        <img v-lazy="reviewObj.MOBILE_BANNER" alt="" v-if="isShowH5" />
+                        <img v-lazy="reviewObj.WEB_BANNER" alt="" v-else />
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -391,13 +401,6 @@ export default {
 </script>
 
 <style lang='less' scoped>
-#agenda::before,#lecturer::before,#liveroom::before,#host-unit::before {
-    content: '';
-    display: block;
-    height: 60px;
-    margin-top: -60px;
-    visibility: hidden;
-}
 .card-hover:hover {
     box-shadow: 0px 6px 30px 0px rgba(0, 47, 167, 0.2);
     cursor: pointer;
@@ -1036,16 +1039,17 @@ html[lang="ru"] .summit-content .live-room .web-box .item-box .live-item {
     }
 }
 .summit-content .summit-message .review {
-    margin-top: 100px;
-    .review-banner {
+    margin-top: 60px;
+    .review-banner img{
         height: 280px;
         display: block;
         margin-top: 54px;
         width: 100%;
+        cursor: pointer;
     }
     @media screen and (max-width: 1000px) {
         margin-top: 40px;
-        .review-banner {
+        .review-banner img{
             height: 180px;
             margin-top: 33px;
         }
