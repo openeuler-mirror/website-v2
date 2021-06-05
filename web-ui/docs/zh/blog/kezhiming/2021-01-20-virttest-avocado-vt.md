@@ -71,7 +71,7 @@ summary: 介绍openEuler上虚拟化测试avocado-vt测试框架安装部署、�
 
 - avocado安装
 
-  依赖包安装：pip3 install -r requirements-selftest.txt
+  依赖包安装：pip3 install -r requirements-selftests.txt
   
   avocado框架安装： python3 setup.py install
 
@@ -79,7 +79,7 @@ summary: 介绍openEuler上虚拟化测试avocado-vt测试框架安装部署、�
   
   配置test-providers：配置libvirt、qemu
   
-  依赖包安装：pip3 install -r requirements-selftest.txt
+  依赖包安装：pip3 install -r requirements.txt
   
   avocado-vt插件安装： python3 setup.py install
 
@@ -88,8 +88,8 @@ summary: 介绍openEuler上虚拟化测试avocado-vt测试框架安装部署、�
   引导tp-libvirt、tp-qemu用例集 
   
   ```
-  avocado vt-bootstrap –vt-type qemu –vt-skip-verify-download-asserts –yes-to-all
-  avocado vt-bootstrap –vt-type libvirt –vt-skip-verify-download-asserts –yes-to-all
+  avocado vt-bootstrap --vt-type qemu --vt-skip-verify-download-assets --yes-to-all
+  avocado vt-bootstrap --vt-type libvirt --vt-skip-verify-download-assets --yes-to-all
   ```
 
 以上的部署过程总结成如下代码：
