@@ -67,13 +67,6 @@ module.exports = {
             PC_IMG: "url('/img/activities/home_pc_banner.png')",
             LINK: '/activities/'
         },
-        HOME_OTHER_BANNER: [
-            {
-                BANNER_PC_IMG: '/img/summit/home/zh-pc-summit.png',
-                BANNER_MOBILE_IMG: 'url("/img/summit/home/zh-mobile-summit.png")',
-                BANNER_LINK: '/interaction/summit-list/'
-            }
-        ],
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
             INTRO_HEAD: "开始openEuler之旅吧！",
@@ -653,13 +646,6 @@ module.exports = {
             IMG: "/img/home/banner0.png",
             MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
         },
-        HOME_OTHER_BANNER: [
-            {
-                BANNER_PC_IMG: '/img/summit/home/en-pc-summit.png',
-                BANNER_MOBILE_IMG: 'url("/img/summit/home/en-mobile-summit.png")',
-                BANNER_LINK: '/interaction/summit-list/'
-            }
-        ],
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
             INTRO_HEAD: "Start your journey in openEuler",
@@ -1222,13 +1208,6 @@ module.exports = {
             IMG: "/img/home/banner0.png",
             MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
         },
-        HOME_OTHER_BANNER: [
-            {
-                BANNER_PC_IMG: '/img/summit/home/en-pc-summit.png',
-                BANNER_MOBILE_IMG: 'url("/img/summit/home/en-mobile-summit.png")',
-                BANNER_LINK: '/interaction/summit-list/'
-            }
-        ],
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
             INTRO_HEAD: "Начните свой путь в openEuler",
