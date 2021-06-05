@@ -42,16 +42,6 @@
                         </div>
                     </div>
                 </el-carousel-item>
-                <el-carousel-item v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
-                    <div class="carousel-banner summmit-banner" @click="go(item.BANNER_LINK)" v-if="index === 0">
-                        <video autoplay loop muted width="700px" height="500px" id="summit-video">
-                            <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler%20Summit%202020%20mov.mp4"  type="video/mp4">
-                        </video>
-                        <img :src="item.BANNER_PC_IMG" alt="" />
-                    </div>
-                    <div class="carousel-banner" :style="{backgroundImage: item.BANNER_PC_IMG}" @click="go(item.BANNER_LINK)" v-else>
-                    </div>
-                </el-carousel-item>
             </el-carousel>
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
@@ -81,10 +71,6 @@
                 </swiper-slide>
                 <swiper-slide class="carousel-item-index">
                     <div class="mobile-version" @click="go($site.themeConfig.docsUrl+i18n.home.HOME_FIRST_BANNER.LINK)" :style="{backgroundImage:i18n.home.HOME_FIRST_BANNER.MOBILE_IMG}"></div>
-                </swiper-slide>
-                <swiper-slide v-for="(item,index) in i18n.home.HOME_OTHER_BANNER">
-                    <div class="carousel-banner mobile-banner" :style="{backgroundImage: item.BANNER_MOBILE_IMG}" @click="go(item.BANNER_LINK)">
-                    </div>
                 </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
@@ -433,7 +419,7 @@
                 mobileSwiperInterval: null,
                 mobilePagenationIndex: 1,
                 developerList: [],
-                bannerAmount: 6,
+                bannerAmount: 5,
                 statisticParams: {
                     type: 'openEuler'
                 },
