@@ -1,14 +1,14 @@
 <template>
   <div class="common-banner">
     <div class="banner">
-      <img :src="pcSrc" />
+      <img class="common-img" :src="pcSrc" />
       <span class="inside">{{insideName}}</span>
       <span :class="['outside', $isCn ? 'font-xihjw' : 'font-hwmedium']">{{outsideName}}</span>
       <slot name="pc-slot"></slot>
     </div>
     <div class="banner-mobile">
       <h3>{{ outsideName }}</h3>
-      <img :src="mobileSrc" />
+      <img class="common-img" :src="mobileSrc" />
       <slot name="mobile-slot"></slot>
     </div>
   </div>
@@ -40,7 +40,7 @@ export default {
     @media screen and (max-width: 1000px) {
       display: none;
     }
-    img {
+    .common-img {
       height: 360px;
       width: 500px;
       position: absolute;
@@ -77,7 +77,7 @@ export default {
       text-align: center;
       margin-top: 40px;
     }
-    img {
+    .common-img {
       margin: 10px auto 0 auto;
       width: 260px;
       height: 200px;

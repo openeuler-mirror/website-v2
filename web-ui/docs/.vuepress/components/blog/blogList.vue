@@ -5,107 +5,108 @@
         :mobile-src="'/img/blog/blog_banner.png'"
         :inside-name="'CONNECT'"
         :outside-name="i18n.community.BLOG.BLOG"
-        ></common-banner>
+        >
+            <div slot="pc-slot" class="write-blog-btn banner-btn" @click="goPostBlog">
+                <span class="blog-write">{{i18n.community.BLOG.BLOGGING}}</span>    
+            </div>
+        </common-banner>
         <div :class="['blog-content',$lang === 'ru'?'lang-ru':'']">
-            <el-form :inline="true" :model="formData" class="blog-filter">
-                <el-form-item :label="i18n.community.BLOG.LABEL">
-                    <el-select v-model="formData.tags" @change="selectChange" :placeholder="CELECT_LABEL">
-                        <el-option
-                        v-for="(item, index) in formData.tagArr"
-                        :key="index"
-                        :label="item.name"
-                        :value="item.value"
-                        ></el-option>
-                    </el-select>
-                </el-form-item>
-                <el-form-item :label="i18n.community.BLOG.FILE">
-                    <el-select v-model="formData.date" @change="selectChange" :placeholder="CELECT_FILE">
-                        <el-option
-                        v-for="(item, index) in formData.dateArr"
-                        :key="index"
-                        :label="item.name"
-                        :value="item.value"
-                        ></el-option>
-                    </el-select>
-                </el-form-item>
-                <el-form-item :label="i18n.community.BLOG.AUTHOR">
-                    <el-select v-model="formData.author" @change="selectChange" :placeholder="i18n.community.BLOG.SELECT_AUTHOR">
-                        <el-option
-                        v-for="(item, index) in formData.authorArr"
-                        :key="index"
-                        :label="item.name"
-                        :value="item.value"
-                        ></el-option>
-                    </el-select>
-                </el-form-item>
-                <el-form-item class="mobile-blog-write">
-                    <div class="write-blog-btn" @click="goPostBlog">
-                        <img class="middle-img mobile-middle-img" src="/img/blog/edit.svg" alt />
-                        <span class="blog-write">{{i18n.community.BLOG.BLOGGING}}</span>    
+            <div class="main-content">
+                <el-form :model="formData" class="blog-filter">
+                    <el-form-item :label="i18n.community.BLOG.FILE">
+                        <el-select v-model="formData.date" @change="selectChange" :placeholder="CELECT_FILE">
+                            <el-option
+                            v-for="(item, index) in formData.dateArr"
+                            :key="index"
+                            :label="item.name"
+                            :value="item.value"
+                            ></el-option>
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item :label="i18n.community.BLOG.AUTHOR">
+                        <el-select v-model="formData.author" @change="selectChange" :placeholder="i18n.community.BLOG.SELECT_AUTHOR">
+                            <el-option
+                            v-for="(item, index) in formData.authorArr"
+                            :key="index"
+                            :label="item.name"
+                            :value="item.value"
+                            ></el-option>
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item v-if="!isShowH5" :label="i18n.community.BLOG.LABEL">
+                        <el-select v-model="formData.tags" multiple @change="selectChange" :placeholder="CELECT_LABEL">
+                            <el-option
+                            v-for="(item, index) in formData.tagArr"
+                            :key="index"
+                            :label="item.name"
+                            :value="item.value"
+                            ></el-option>
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item v-if="isShowH5" :label="i18n.community.BLOG.LABEL">
+                        <el-select v-model="formData.tags" @change="selectChange" :placeholder="CELECT_LABEL">
+                            <el-option
+                            v-for="(item, index) in formData.tagArr"
+                            :key="index"
+                            :label="item.name"
+                            :value="item.value"
+                            ></el-option>
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item v-if="isShowH5" class="mobile-blog-write">
+                        <div class="write-blog-btn" @click="goPostBlog">
+                            <img class="middle-img mobile-middle-img" src="/img/blog/edit.svg" alt />
+                            <span class="blog-write">{{i18n.community.BLOG.BLOGGING}}</span>    
+                        </div>
+                    </el-form-item>
+                    <div v-if="!isShowH5" class="tags-active">
+                        <span class="tags-active-item" v-for="(item, index) in formData.tags">{{item}} <span @click="delTag(index)">x</span></span>
                     </div>
-                </el-form-item>
-            </el-form>
-            <div>
-                <div class="blog-item" v-for="(item, index) in currentBlogListData" :key="'info'+index">
-                    <div class="blog-item-left">
-                        <p class="blog-img">
-                            <img class="middle-img" src="/img/blog/blog_user.png" alt />
-                        </p>
-                        <p>
-                            <img class="middle-img mobile-middle-img" src="/img/blog/account.svg" alt />
-                            <span class="blog-author">{{item.frontmatter.author}}</span>
-                        </p>
-                        <p>
-                            <img class="middle-img mobile-middle-img" src="/img/blog/date.svg" alt />
-                            <span class="blog-date">{{resolvePostDate(item.frontmatter.date)}}</span>
-                        </p>
-                        <p class="fz12">
-                            <img class="middle-img mobile-middle-img" src="/img/blog/visibility.svg" alt />
-                            <span>{{i18n.community.BLOG.BROWSE}}</span>
-                            <span>{{item.count}}</span>
-                            <span>{{i18n.community.BLOG.VIEWED}}</span>
-                        </p>
-                    </div>
-                    <div class="blog-item-right">
-                        <p @click="go(item.path)" class="blog-item-title word-hover">{{item.frontmatter.title}}</p>
-                        <p class="blog-item-content"><span class="summary">{{item.frontmatter.summary}}</span></p>
-                        <p @click="go(item.path)" class="blog-item-all">{{i18n.community.BLOG.READ_MORE}}</p>
-                        <p class="blog-item-tag">
-                            <span class="first-tag">{{i18n.community.BLOG.LABEL}}:</span>
-                            <span v-for="(tag, indexTag) in item.frontmatter.tags" :key="indexTag">
-                                <span @click="clickTagItem(tag)" class="tag-item">{{tag}}</span>
-                                <span v-if="indexTag != (item.frontmatter.tags.length - 1)">, </span>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <div class="blog-item-mobile" v-for="(item, index) in currentBlogListData" :key="index">
-                    <div class="item-wraper">
-                        <p class="title" @click="go(item.path)">{{item.frontmatter.title}}</p>
-                        <div class="user-info">
-                            <div class="left">
-                                <img src="/img/blog/blog_user.png" alt />
-                            </div>
-                            <div class="right">
-                                <p class="name">{{item.frontmatter.author}}</p>
-                                <p class="date-count">
-                                    <span class="date">{{resolvePostDate(item.frontmatter.date)}}</span>
-                                    <span class="count">{{i18n.community.BLOG.BROWSE}}{{item.count}}{{i18n.community.BLOG.VIEWED}}</span>
+                </el-form>
+                <div class="blog-list">
+                    <div v-if="!isShowH5">
+                        <div class="blog-item" v-for="(item, index) in currentBlogListData" :key="'info'+index">
+                            <div class="blog-item-right">
+                                <p @click="go(item.path)" class="blog-item-title word-hover">{{item.frontmatter.title}}</p>
+                                <p class="blog-item-content"><span class="summary">{{item.frontmatter.summary}}</span></p>
+                                <div class="blog-desc">
+                                    <span><img src="/img/blog/account.svg">{{item.frontmatter.author}}</span>
+                                    <span><img src="/img/blog/date.svg">{{resolvePostDate(item.frontmatter.date)}}</span>
+                                    <span><img src="/img/blog/visibility.svg"><span>{{i18n.community.BLOG.BROWSE}}</span>{{item.count}}<span>{{i18n.community.BLOG.VIEWED}}</span></span>
+                                </div>
+                                <p class="blog-item-tag">
+                                    <img src="/img/blog/tag.svg">
+                                    <span @click="switchTag(tag, indexTag, (formData.tags.length&&(formData.tags.indexOf(tag)>-1)))" v-for="(tag, indexTag) in item.frontmatter.tags" :key="indexTag" :class="'tag-item ' + ((formData.tags.length&&(formData.tags.indexOf(tag)>-1))?'active':'')">
+                                        {{tag}}
+                                    </span>
                                 </p>
                             </div>
-                        </div>
-                        <div class="summary">{{item.frontmatter.summary}}</div>
-                        <div class="more" @click="go(item.path)">{{i18n.community.BLOG.READ_MORE}}</div>
-                        <div class="tag">
-                            <span>{{i18n.community.BLOG.LABEL}}:</span>
-                            <span v-for="(tag, indexTag) in item.frontmatter.tags" :key="indexTag" class="tag-name">
-                                <span @click="clickTagItem(tag)" class="tag-item">{{tag}}</span>
-                                <span v-if="indexTag != (item.frontmatter.tags.length - 1)">, </span>
-                            </span>
-                        </div>
+                        </div>   
                     </div>
-                </div>
+                    <div v-else>
+                        <div class="blog-item-mobile" v-for="(item, index) in currentBlogListData" :key="index">
+                            <div class="item-wraper">
+                                <p class="title" @click="go(item.path)">{{item.frontmatter.title}}</p>
+                                <div class="summary">{{item.frontmatter.summary}}</div>
+                                <div class="blog-desc">
+                                    <span>{{item.frontmatter.author}}</span>
+                                    <span>{{resolvePostDate(item.frontmatter.date)}}</span>
+                                    <span>{{i18n.community.BLOG.BROWSE}}{{item.count}}{{i18n.community.BLOG.VIEWED}}</span>
+                                </div>
+                                <div class="tag">
+                                    <span v-for="(tag, indexTag) in item.frontmatter.tags" :key="indexTag" class="tag-name">
+                                        <span @click="clickTagItem(tag)" class="tag-item">{{tag}}</span>
+                                        <span v-if="indexTag != (item.frontmatter.tags.length - 1)">, </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    
+                </div>  
+                  
             </div>
+            
             <div class="paginationClass" v-show="screenBlogListData.length>1">
                 <el-pagination
                 background
@@ -137,7 +138,7 @@ export default {
         totalSize: 0,
         currentPage: 1,
         formData: {
-            tags: null,
+            tags: [],
             date: null,
             author: null,
             tagsArr: [],
@@ -160,6 +161,9 @@ export default {
         this.dataList = this.$sitePages;
     },
     mounted() {
+        if (this.isShowH5) {
+            this.formData.tags = null;
+        }
         blogVisitList()
         .then(response => {
         if(response){
@@ -186,6 +190,18 @@ export default {
         })
     },
     methods: {
+        switchTag(tag, index, flag) {
+            if (flag) {
+                this.formData.tags.splice(this.formData.tags.indexOf(tag), 1);
+            } else {
+                this.formData.tags.push(tag);
+            }
+            this.selectChange();
+        },
+        delTag(index) {
+            this.formData.tags.splice(index, 1);
+            this.selectChange();
+        },
         handleCurrentChange(val) {
             this.currentBlogListData = this.screenBlogListData.slice(
             (val - 1) * this.PAGESIZE,
@@ -216,28 +232,42 @@ export default {
         },
         filterChange (blogList,filterElement) {
             let resultArr = [];
-            if (this.formData[filterElement] === null || this.formData[filterElement] === '全部' || this.formData[filterElement] === 'All' ) {
+            if (this.formData[filterElement] === null || (this.formData[filterElement] && !this.formData[filterElement].length) || this.formData[filterElement] === '全部' || this.formData[filterElement] === 'All' ) {
                 resultArr = blogList;
             } else {
                 blogList.forEach((item) => {
                     if (!item.frontmatter[filterElement]) {
                         return;
                     }
-                    if (item.frontmatter[filterElement].indexOf(this.formData[filterElement]) > -1) {
-                        resultArr.push(item);
+                    if (!this.isShowH5 && (filterElement === 'tags')) {
+                        let tempArr = [];
+                        tempArr = this.formData[filterElement].filter((filterElementItem)=>{
+                            return (item.frontmatter[filterElement].indexOf(filterElementItem) > -1);
+                        })
+                        if (tempArr.length) {
+                            resultArr.push(item);
+                        }  
+                    } else {
+                        if (item.frontmatter[filterElement].indexOf(this.formData[filterElement]) > -1) {
+                            resultArr.push(item);
+                        }    
                     }
+                    
                 });
             }
             return resultArr;
         },
         clickTagItem(tag) {
-            this.formData.tag = tag;
+            this.formData.tags = tag;
             this.selectChange();
         },
         getTags() {
             let tagsArr = [];
             let tagsArrUniq = [];
-            tagsArrUniq.push({value:this.i18n.community.BLOG.ALL,label:'all'});
+            if (this.isShowH5) {
+                tagsArrUniq.push({value:this.i18n.community.BLOG.ALL,label:'all'});    
+            }
+            
             this.$sitePages.forEach((item) => {
                 if (item.path.indexOf("/" + this.$lang + "/blog/") !== 0) {
                     return;
@@ -424,6 +454,7 @@ export default {
     margin: 0 auto;
     .el-select__tags {
         min-width: 140px !important;
+        display: none;
     }
     .el-form-item__label {
         font-size: 18px;
@@ -456,7 +487,6 @@ export default {
     font-size: 18px;
     font-weight: 400;
     color: #002fa7;
-    margin-left: 13px;
     
 }
 .blog-item {
@@ -603,32 +633,45 @@ export default {
 .paginationClass {
     margin: 20px 0 200px 0;
 }
-.blog-content .write-blog-btn {
+.write-blog-btn {
     background-color: #002fa7;
     height: 32px;
-    border-radius: 4px;
+    border-radius: 8px;
     justify-content: center;
     align-items: center;
     display: inline-block;
     cursor: pointer;
+    padding: 0 20px;
     @media (min-width: 1000px) {
         margin-top: 4px;
-        display: flex;
+        display: none;
     }
     
     .blog-write {
         color: #fff;
-        line-height: 25px;
         vertical-align: middle;
         @media (min-width: 1000px) {
             margin-top: -2px;
         }
     }
     .middle-img {
-        width: 20px;
-        height: 20px;
+        width: 20px ;
+        height: 20px ;
     }
 }
+
+.banner-btn {
+    position: absolute;
+    display: flex !important;
+    padding: 0 30px;
+    height: 40px;
+    top: 252px;
+    .blog-write {
+        font-size: 14px !important;
+        line-height: 18px !important;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .moblie-content {
         padding: 40px 30px 80px 30px;
@@ -708,7 +751,6 @@ export default {
     }
     .blog-write {
         display: inline-block;
-        width: 82px;
         height: 28px;
         line-height: 28px;
         color: #fff;
@@ -794,5 +836,113 @@ export default {
     .paginationClass {
         margin: 40px 0 0 0;
     }
+    
+}
+.blog-content .main-content {
+    @media screen and (min-width: 1000px) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        .blog-filter {
+            width: 230px;
+        }
+        .blog-filter .tags-active {
+            margin-bottom: 50px;
+            .tags-active-item {
+                display: inline-block;
+                height: 32px;
+                line-height: 32px;
+                color: #002fa7;
+                border: 1px solid #002fa7;
+                border-radius: 16px;
+                padding: 0 16px;
+                margin-right: 15px;
+                margin-bottom: 20px;
+                font-size: 14px;
+                span {
+                    cursor: pointer;
+                    margin-left: 5px;
+                }
+            }
+        }
+        .blog-list {
+            width: 860px;
+            margin-right: 68px;
+        }
+        .el-form-item {
+            margin: 0 0 20px !important;
+        }
+        .blog-item:first-of-type {
+            border: none;
+        }
+        .blog-item {
+            padding: 30px 0;
+            &:first-of-type {
+                padding-top: 0;
+            }
+            height: unset;
+            .blog-item-right {
+                width: unset;
+                .blog-item-content {
+                    height: unset;
+                    margin-bottom: 20px;
+                }
+                .blog-item-title {
+                    margin-bottom: 20px;
+                }
+                .blog-desc {
+                    font-size: 12px;
+                    color: rgba(0, 0, 0, .4);
+                    margin-bottom: 18px;
+                    img {
+                        margin-right: 14px;
+                    }
+                }
+                .blog-desc > span {
+                    margin-right: 31px;
+                }
+                .blog-item-tag {
+                    img {
+                        margin-right: 7px;
+                        vertical-align: middle;
+                    }
+                    .tag-item {
+                        display: inline-block;
+                        height: 26px;
+                        padding: 0 16px;
+                        border-radius: 13px;
+                        margin-right: 12px;
+                        line-height: 26px;
+                        background-color: rgba(0,0,0,0.04);
+                    }
+                    .active {
+                        border: 1px solid #002fa7;
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        .blog-item-mobile {
+            .item-wraper {
+                .title {
+                    margin-bottom: 10px;
+                }
+                .blog-desc {
+                    color: rgba(0, 0, 0, 0.5);
+                    font-size: 12px;
+                    line-height: 16px;
+                    margin-bottom: 10px;
+                    span {
+                        margin-right: 16px;
+                    }
+                }
+            }
+        }
+
+    }
+    
 }
 </style>
