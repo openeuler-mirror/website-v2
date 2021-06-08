@@ -28,7 +28,7 @@
                     alt
                 />
                 <span class="blog-date">
-                    <span id="busuanzi_container_page_pv">
+                    <span>
                         <span>{{ i18n.community.BLOG.BROWSE }}</span>
                         <span>{{ blogVisit }}</span>
                         <span>{{ i18n.community.BLOG.VIEWED }}</span>
@@ -83,7 +83,6 @@
 </template>
 
 <script>
-let script;
 import dayjs from "dayjs";
 import { blogVisitDetail, addVisit } from "../../api/blogCount";
 export default {
@@ -118,13 +117,6 @@ export default {
         this.visitCount.lang = this.$lang;
         this.getBlogCount();
         this.addBlogsCount();
-    },
-    watch: {
-        $route(to, from) {
-            if (to.path != from.path) {
-                script.fetch();
-            }
-        }
     },
 
     methods: {
