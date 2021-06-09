@@ -225,46 +225,53 @@ module.exports = {
             MOBILE_LIVEIMG: '/img/summit/home/zh-mobile-liveroom.png',
             SUMMITLIVE: [
                 {
+                    ID: 7095,
                     THEME: 'openEuler Summit 2020',
                     TIME: '09:30-11:55 ',
                     OPTION: '09:30-11:55 openEuler Summit 2020',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7095?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7095?lang=zh&thirdId='
                 },
                 {
+                    ID: 7096,
                     THEME: '操作系统',
                     TIME: '14:00-17:20 ',
                     OPTION: '14:00-17:20 操作系统',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7096?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7096?lang=zh&thirdId='
                 },
                 {
+                    ID: 7097,
                     THEME: '云和原生云',
                     TIME: '14:00-16:55 ',
                     OPTION: '14:00-16:55 云和原生云',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7097?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7097?lang=zh&thirdId='
                 },
                 {
+                    ID: 7098,
                     THEME: '虚拟化',
                     TIME: '14:00-16:55 ',
                     OPTION: '14:00-16:55 虚拟化',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7098?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7098?lang=zh&thirdId='
                 },
                 {
+                    ID: 7099,
                     THEME: '开源与基础建设',
                     TIME: '14:00-16:55 ',
                     OPTION: '14:00-16:55 开源与基础建设',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7099?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7099?lang=zh&thirdId='
                 },
                 {
+                    ID: 7100,
                     THEME: '安全与可信',
                     TIME: '14:00-17:25 ',
                     OPTION: '14:00-17:25 安全与可信',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7100?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7100?lang=zh&thirdId='
                 },
                 {
+                    ID: 7101,
                     THEME: '基础软件',
                     TIME: '14:00-17:25 ',
                     OPTION: '14:00-17:25 基础软件',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7101?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7101?lang=zh&thirdId='
                 }
             ],
             SUMMIT_HOME_DATA: {
@@ -1664,46 +1671,53 @@ module.exports = {
             MOBILE_LIVEIMG: '/img/summit/home/en-mobile-liveroom.png',
             SUMMITLIVE: [
                 {
+                    ID: 7095,
                     THEME: 'openEuler Summit 2020',
                     TIME: '09:30-11:55',
                     OPTION: '09:30-11:55 openEuler Summit 2020',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7095?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7095?lang=zh&thirdId='
                 },
                 {
+                    ID: 7096,
                     THEME: 'Operating System',
                     TIME: '14:00-17:20',
                     OPTION: '14:00-17:20 Operating System',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7096?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7096?lang=zh&thirdId='
                 },
                 {
+                    ID: 7097,
                     THEME: 'Cloud and Cloud Native',
                     TIME: '14:00-16:55',
                     OPTION: '14:00-16:55 Cloud and Cloud Native',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7097?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7097?lang=zh&thirdId='
                 },
                 {
+                    ID: 7098,
                     THEME: 'Virtualization',
                     TIME: '14:00-16:55',
                     OPTION: '14:00-16:55 Virtualization',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7098?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7098?lang=zh&thirdId='
                 },
                 {
+                    ID: 7099,
                     THEME: 'Open Source and Infrastructure',
                     TIME: '14:00-16:55',
                     OPTION: '14:00-16:55 Open Source and Infrastructure',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7099?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7099?lang=zh&thirdId='
                 },
                 {
+                    ID: 7100,
                     THEME: 'Security & Trustworthiness',
                     TIME: '14:00-17:25',
                     OPTION: '14:00-17:25 Security & Trustworthiness',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7100?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7100?lang=zh&thirdId='
                 },
                 {
+                    ID: 7101,
                     THEME: 'Basic Software',
                     TIME: '14:00-17:25',
                     OPTION: '14:00-17:25 Basic Software',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7101?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7101?lang=zh&thirdId='
                 }
             ],
             SUMMIT_HOME_DATA: {
@@ -3096,46 +3110,53 @@ module.exports = {
             MOBILE_LIVEIMG: '/img/summit/home/en-mobile-liveroom.png',
             SUMMITLIVE: [
                 {
+                    ID: 7095,
                     THEME: 'openEuler Summit 2020',
                     TIME: '09:30-11:55',
                     OPTION: '09:30-11:55 openEuler Summit 2020',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7095?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7095?lang=zh&thirdId='
                 },
                 {
+                    ID: 7096,
                     THEME: 'Operating System',
                     TIME: '14:00-17:20',
                     OPTION: '14:00-17:20 Operating System',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7096?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7096?lang=zh&thirdId='
                 },
                 {
+                    ID: 7097,
                     THEME: 'Cloud and Cloud Native',
                     TIME: '14:00-16:55',
                     OPTION: '14:00-16:55 Cloud and Cloud Native',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7097?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7097?lang=zh&thirdId='
                 },
                 {
+                    ID: 7098,
                     THEME: 'Virtualization',
                     TIME: '14:00-16:55',
                     OPTION: '14:00-16:55 Virtualization',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7098?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7098?lang=zh&thirdId='
                 },
                 {
+                    ID: 7099,
                     THEME: 'Open Source and Infrastructure',
                     TIME: '14:00-16:55',
                     OPTION: '14:00-16:55 Open Source and Infrastructure',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7099?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7099?lang=zh&thirdId='
                 },
                 {
+                    ID: 7100,
                     THEME: 'Security & Trustworthiness',
                     TIME: '14:00-17:25',
                     OPTION: '14:00-17:25 Security & Trustworthiness',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7100?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7100?lang=zh&thirdId='
                 },
                 {
+                    ID: 7101,
                     THEME: 'Basic Software',
                     TIME: '14:00-17:25',
                     OPTION: '14:00-17:25 Basic Software',
-                    LIVEID: 'https://vhall.huawei.com/fe/embed/watch/7101?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/7101?lang=zh&thirdId='
                 }
             ],
             SUMMIT_HOME_DATA: {
