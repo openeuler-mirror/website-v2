@@ -563,7 +563,7 @@ export default {
                 {
                     IMG: '/img/summit/devday-2021/lecturer/fangbingyi.png',
                     NAME: '房秉毅',
-                    POSITION: '联通数科云计算事业部研发部负责人'
+                    POSITION: '联通数科云计算研发部负责人'
                 },
                 {
                     IMG: '/img/summit/devday-2021/lecturer/zouqiubo.png',
