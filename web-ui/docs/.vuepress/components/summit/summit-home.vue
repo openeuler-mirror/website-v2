@@ -15,31 +15,7 @@
                 <p :class="$lang === 'en'?'font-regular':''" v-for="(item,index) in i18n.interaction.SUMMIT.SUMMITCONTENT">{{ item }}</p>
             </div>
 
-            <div class="live-room" v-if="i18n.interaction.SUMMIT.SUMMITLIVE" id="liveroom">
-                <div class="title">
-                    <img v-lazy="i18n.interaction.SUMMIT.PC_LIVEIMG" alt="" v-if="!isShowH5" />
-                    <img v-lazy="i18n.interaction.SUMMIT.MOBILE_LIVEIMG" alt="" v-else />
-                </div>
-                <el-select v-model="nowValue" class="live-choose" v-if="isShowH5" @change="tabLiveRoom">
-                    <el-option
-                    v-for="(item,index) in liveData"
-                    :key="index"
-                    :label="item.OPTION"
-                    :value="item.LIVEID">
-                    <span>{{ item.OPTION }}</span>
-                    </el-option>
-                </el-select>
-                <iframe id="livePage" allow="camera *;microphone *;" border="0" scrolling="no" :src="nowLiveSrc"></iframe>
-                <div class="web-box" v-if="!isShowH5">
-                    <p>{{ i18n.interaction.SUMMIT.LIVETITLE }}</p>
-                    <div class="item-box">
-                        <div :class="['live-item',roomId === index?'activeRoom':'']" v-for="(item,index) in i18n.interaction.SUMMIT.SUMMITLIVE" @click="tabLiveRoom(item.LIVEID,index)">
-                            <p>{{ item.THEME }}</p>
-                            <p>{{ item.TIME }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <liveroom :liveData="i18n.interaction.SUMMIT.SUMMITLIVE" :isPass="true"></liveroom>
 
             <div class="summit-message">
                 <div class="agenda" id="agenda">
@@ -193,6 +169,7 @@
 <script>
 import carousel from './carousel.vue';
 import titlenav from './titleNav.vue';
+import liveroom from './liveroom.vue';
 export default {
     data () {
         return {
@@ -218,17 +195,7 @@ export default {
             activeIndex: -1,
             isShowNav: false,
             isShowQrcode: false,
-            userName: '',
-            nowLiveSrc: '',
-            roomId: null,
-            liveData: [],
-            nowValue: ''
         }
-    },
-    created() {
-        let digit = Math.round(Math.random() * 10);
-        digit > 3?digit:digit = 3;
-        this.creatUserId(digit);
     },
     mounted() {
         this.dataObj = this.i18n.interaction.SUMMIT.SUMMIT_HOME_DATA;
@@ -249,8 +216,7 @@ export default {
         }
         window.addEventListener('scroll',this.scroTop);
         this.liveData = this.i18n.interaction.SUMMIT.SUMMITLIVE;
-        let liveId = this.$route.query.liveid;
-        this.showIframe(liveId);
+
     },
     methods: {
         go(path) {
@@ -328,70 +294,12 @@ export default {
                 return false;
             }
         },
-        creatUserId(num) {
-            let returnId = '';
-            let charStr = '0123456789@#$%&~ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-            for(var i=0; i<num; i++){
-                var index = Math.round(Math.random() * (charStr.length-1));
-                returnId += charStr.substring(index,index+1);
-            }
-            this.userName = returnId;
-        },
-        tabLiveRoom(src,index) {
-            let indexType = typeof index;
-            if(indexType === 'number') {
-                this.nowLiveSrc = src + this.userName;
-                this.roomId = index;
-            }else {
-                this.nowLiveSrc = src + this.userName;
-            }
-        },
-        showIframe(id) {
-            if(id) {
-                switch(id) {
-                    case '7096':
-                        this.nowLiveSrc = this.liveData[1]['LIVEID'] + this.userName;
-                        this.nowValue = this.liveData[1]['OPTION'];
-                        this.roomId = 1;
-                        break;
-                    case '7097':
-                        this.nowLiveSrc = this.liveData[2]['LIVEID'] + this.userName;
-                        this.nowValue = this.liveData[2]['OPTION'];
-                        this.roomId = 2;
-                        break;
-                    case '7098':
-                        this.nowLiveSrc = this.liveData[3]['LIVEID'] + this.userName;
-                        this.nowValue = this.liveData[3]['OPTION'];
-                        this.roomId = 3;
-                        break;
-                    case '7099':
-                        this.nowLiveSrc = this.liveData[4]['LIVEID'] + this.userName;
-                        this.nowValue = this.liveData[4]['OPTION'];
-                        this.roomId = 4;
-                        break;
-                    case '7100':
-                        this.nowLiveSrc = this.liveData[5]['LIVEID'] + this.userName;
-                        this.nowValue = this.liveData[5]['OPTION'];
-                        this.roomId = 5;
-                        break;
-                    case '7101':
-                        this.nowLiveSrc = this.liveData[6]['LIVEID'] + this.userName;
-                        this.nowValue = this.liveData[6]['OPTION'];
-                        this.roomId = 6;
-                        break;
-                    default:
-                        break;
-                }
-            }else {
-                this.nowLiveSrc = this.liveData[0]['LIVEID'] + this.userName;
-                this.nowValue = this.liveData[0]['OPTION'];
-                this.roomId = 0;
-            }
-        }
+        
     },
     components: {
         carousel,
-        titlenav
+        titlenav,
+        liveroom
     },
     destroyed () { 
         window.removeEventListener('scroll', this.scroTop)
@@ -454,118 +362,6 @@ html[lang="ru"] .summit-content .live-room .web-box .item-box .live-item {
         .mobile-img{
             width: 100%;
         }
-    }
-}
-.summit-content .live-room {
-    width: 1120px;
-    margin: 40px auto 0 auto;
-    #livePage {
-        width: 1120px;
-        height: 560px;
-        margin: 40px auto 0 auto;
-        display: block;
-        border: none;
-        @media screen and (max-width: 1000px) {
-            width: 100%;
-            margin-top: 30px;
-            height: 500px;
-        }
-    }
-    .web-box {
-        &>p {
-            font-size: 20px;
-            color: #000000;
-            line-height: 23px;
-            margin: 40px 0 30px 0;
-            text-align: center;
-        }
-        .item-box {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            flex-wrap: wrap;
-            .live-item {
-                width: 160px;
-                height: 76px;
-                margin-right: 30px;
-                cursor: pointer;
-                background: #FFFFFF;
-                box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
-                &:first-of-type {
-                    width: 100%;
-                    margin: 0 0 30px 0;
-                }
-                &:last-of-type {
-                    margin-right: 0;
-                }
-                p {
-                    margin-top: 10px;
-                    color: #002FA7;
-                    text-align: center;
-                    font-size: 18px;
-                    line-height: 18px;
-                    &:last-of-type {
-                        margin-top: 20px;
-                    }
-                }
-            }
-            .activeRoom {
-                background-color: #002FA7;
-                p {
-                    color: #FFFFFF;
-                }
-            }
-        }
-    }
-    @media screen and (max-width: 1000px) {
-        width: 100%;
-        /deep/ .live-choose {
-            width: 100%;
-            margin-top: 30px;
-            .el-input {
-                width: 100%;
-            }
-        }
-        .web-box {
-            &>p {
-                font-size: 16px;
-                margin: 20px 0 15px 0;
-            }
-            .item-box {
-                flex-direction: column;
-                .live-item {
-                    margin: 0 auto 20px auto;
-                    &:first-of-type {
-                        margin: 0 auto 20px auto;
-                    }
-                    &:last-of-type {
-                        margin-right: auto;
-                    }
-                }
-            }
-        }
-        
-    }
-    @media screen and (max-width: 1000px) {
-        width: 100%;
-        &>p {
-            font-size: 16px;
-             margin: 20px 0 15px 0;
-        }
-        .item-box {
-            flex-direction: column;
-            .live-item {
-                margin: 0 auto 20px auto;
-                &:first-of-type {
-                    margin: 0 auto 20px auto;
-                }
-                &:last-of-type {
-                    margin-right: auto;
-                }
-            }
-        }
-        
     }
 }
 .summit .summit-content .title {

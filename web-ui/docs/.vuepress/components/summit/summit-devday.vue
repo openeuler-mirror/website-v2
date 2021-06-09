@@ -10,6 +10,7 @@
         <titlenav v-show="isShowNav" :currentIndex="activeIndex" :dataList="navList"></titlenav>
         <div class="text-wrapper">
             <p class="text">openEuler Developer Day 2021 是由 openEuler 社区发起，面向社区开发者的一场技术盛会。旨在推动 openEuler 社区在多样性计算、云原生全栈、全场景协同等技术发展方向的持续探索和创新。本次大会以开放工作会议以及小组讨论等形式，让开发者找到关注的技术小组、快速融入社区、围绕下一版本发布，热点技术方向，用户核心需求，展开面对面的头脑风暴。每一个开发者都是 openEuler 社区的一颗星，一滴水，最终点点滴滴汇聚成科技创新的星辰大海。</p>
+            <liveroom :liveData="liveList" :isPass="false" class="devday"></liveroom>
             <div id="agenda">
                 <div class="title">
                     <img v-lazy="'/img/summit/devday-2021/agenda/agenda-h5.png'" alt="" v-if="isShowH5" />
@@ -123,13 +124,62 @@
 <script>
 import carousel from './carousel.vue';
 import titlenav from './titleNav.vue';
+import liveroom from './liveroom.vue';
 export default {
     data() {
         return {
-            activeIndex: 0,
+            liveList: [
+                {
+                    ID: 8765,
+                    THEME: 'openEuler developer day 2021',
+                    TIME: '9:10 - 12:00',
+                    OPTION: '9:10 - 12:00 openEuler developer day 2021',
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/8765?lang=zh&thirdId='
+                },
+                {
+                    ID: 8766,
+                    THEME: 'Linux内核',
+                    TIME: '13:30 - 15:30',
+                    OPTION: '13:30 - 15:30 Linux内核',
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/8766?lang=zh&thirdId='
+                },
+                {
+                    ID: 8767,
+                    THEME: '云原生&虚拟化',
+                    TIME: '13:30 - 15:50',
+                    OPTION: '13:30 - 15:50 云原生&虚拟化',
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/8767?lang=zh&thirdId='
+                },
+                {
+                    ID: 8768,
+                    THEME: '安全',
+                    TIME: '13:30 - 15:50',
+                    OPTION: '13:30 - 15:50 安全',
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/8768?lang=zh&thirdId='
+                },
+                {
+                    ID: 8769,
+                    THEME: '兼容性',
+                    TIME: '13:30 - 15:30',
+                    OPTION: '13:30 - 15:30 兼容性',
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/8769?lang=zh&thirdId='
+                },
+                {
+                    ID: 8770,
+                    THEME: '多样性算力',
+                    TIME: '13:30 - 15:30',
+                    OPTION: '13:30 - 15:30 多样性算力',
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/8770?lang=zh&thirdId='
+                }
+            ],
             isShowNav: false,
+            activeIndex: 0,
             otherSrc: '',
             navList: [
+                {
+                    key: '#liveroom',
+                    name: '现场直播'
+                },
                 {
                     key: '#agenda',
                     name: '大会日程'
@@ -876,14 +926,16 @@ export default {
             }else {
                 this.isShowNav = true;
             }
-            if(scrollTop > 650 && scrollTop < 2600 + value) {
+            if(scrollTop > 650 && scrollTop < 1600) {
                 this.activeIndex = 0;
-            }else if(scrollTop > 2620 + value && scrollTop < 5500 + value) {
+            }else if(scrollTop > 1620 && scrollTop < 3700 + value) {
                 this.activeIndex = 1;
-            }else if(scrollTop > 5520 + value && scrollTop < 6800 + value) {
+            }else if(scrollTop > 3720 + value && scrollTop < 6600 + value) {
                 this.activeIndex = 2;
-            }else if(scrollTop > 6800 + value) {
+            }else if(scrollTop > 6620 + value && scrollTop < 7800 + value) {
                 this.activeIndex = 3;
+            }else if(scrollTop > 7820 + value){
+                this.activeIndex = 4;
             }else {
                 return false;
             }
@@ -899,11 +951,12 @@ export default {
                 return 0;
             }
             return value;
-        }
+        },
     },
     components: {
         carousel,
-        titlenav
+        titlenav,
+        liveroom
     },
     destroyed () { 
         window.removeEventListener('scroll', this.scroTop)
@@ -928,6 +981,9 @@ export default {
 }
 .devday .agenda-carousel .sig-content .sig-2 .time {
     display: none;
+}
+.devday .web-box .item-box .live-item {
+    width: 200px;
 }
 @media screen and (max-width: 1000px) {
     .text-wrapper .agenda-carousel .sig-content .sig-2 {
@@ -1160,7 +1216,6 @@ export default {
         }
         @media screen and (max-width: 1000px) {
             width: 345px;
-            margin: 40px auto 0 auto;
             .lecturer-box {
                 margin-top: 20px;
                 .hidden {
