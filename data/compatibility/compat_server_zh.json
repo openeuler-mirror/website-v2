@@ -2240,5 +2240,47 @@
       "hostBusAdapter": "Avago 3408",
       "hardDiskDrive": ""
     }
+  },
+  {
+    "hardwareFactory": "湘江鲲鹏",
+    "hardwareModel": "兆瀚服务器(型号 RH220K)",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "aarch64",
+    "date": "2021/06/08",
+    "friendlyLink": "http://www.hnxjkp.com/intro/22.html",
+    "boardCards": [
+	  {
+        "vendorID": "1000",
+        "deviceID": "0016",
+        "svID": "19e5",
+        "ssID": "d215",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "megaraid_sas",
+        "version": "31.100.01.00",
+        "type": "raid",
+        "driverDae": "2020.12.28",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Avago",
+        "boardModel": "SR450C-M",
+        "chipModel": "HW-SAS3508",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "http://www.hnxjkp.com/intro/22.html",
+      "certificationTime": "2021/05/28",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "1.69.K",
+      "cpu": "Kunpeng-920",
+      "ram": "16*32G DIMMs",
+      "portsBusTypes": "SP580",
+      "videoAdapter": "1710",
+      "hostBusAdapter": "Avago 3508",
+      "hardDiskDrive": ""
+    }
   }
 ]
