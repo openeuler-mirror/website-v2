@@ -19,7 +19,7 @@
             <span>{{ item.OPTION }}</span>
             </el-option>
         </el-select>
-        <iframe id="livePage" allow="camera *;microphone *;" border="0" scrolling="no" :src="nowLiveSrc" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+        <iframe id="livePage" :height="iframeHeight" allow="camera *;microphone *;" border="0" scrolling="no" :src="nowLiveSrc" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
         <div class="web-box" v-if="!isShowH5">
             <p>{{ i18n.interaction.SUMMIT.LIVETITLE }}</p>
             <div class="item-box">
@@ -40,6 +40,7 @@ export default {
             nowValue: '',
             roomId: null,
             userName: '',
+            iframeHeight: 560
         }
     },
     props: ['liveData','isPass'],
@@ -51,6 +52,17 @@ export default {
     mounted () {
         let liveId = this.$route.query.liveid;
         this.showIframe(liveId);
+        window.addEventListener('message', (event) => {
+            let data = '';
+            try {
+                data = JSON.parse(event.data);
+            }catch(e) {
+                data = event.data;
+            }
+            if(data.height) {
+                this.iframeHeight = parseInt(data.height);
+            }
+        }, false);
     },
     methods: {
         showIframe(id) {
@@ -126,14 +138,12 @@ export default {
     }
     #livePage {
         width: 1120px;
-        height: 560px;
         margin: 40px auto 0 auto;
         display: block;
         border: none;
         @media screen and (max-width: 1000px) {
             width: 100%;
             margin-top: 30px;
-            height: 500px;
         }
     }
     .web-box {
@@ -185,45 +195,6 @@ export default {
     }
     @media screen and (max-width: 1000px) {
         width: 100%;
-        .web-box {
-            &>p {
-                font-size: 16px;
-                margin: 20px 0 15px 0;
-            }
-            .item-box {
-                flex-direction: column;
-                .live-item {
-                    margin: 0 auto 20px auto;
-                    &:first-of-type {
-                        margin: 0 auto 20px auto;
-                    }
-                    &:last-of-type {
-                        margin-right: auto;
-                    }
-                }
-            }
-        }
-        
-    }
-    @media screen and (max-width: 1000px) {
-        width: 100%;
-        &>p {
-            font-size: 16px;
-            margin: 20px 0 15px 0;
-        }
-        .item-box {
-            flex-direction: column;
-            .live-item {
-                margin: 0 auto 20px auto;
-                &:first-of-type {
-                    margin: 0 auto 20px auto;
-                }
-                &:last-of-type {
-                    margin-right: auto;
-                }
-            }
-        }
-        
     }
 }
 </style>

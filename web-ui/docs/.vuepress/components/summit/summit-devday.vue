@@ -507,7 +507,7 @@ export default {
                 {
                     IMG: '/img/summit/home/lecturer/dujunping.png',
                     NAME: '堵俊平',
-                    POSITION: '开放院子开源基金会TOC主席'
+                    POSITION: '开放原子开源基金会TOC主席 / 云与计算开源业务总经理'
                 },
                 {
                     IMG: '/img/summit/devday-2021/lecturer/chehab.png',
@@ -533,7 +533,7 @@ export default {
                 {
                     IMG: '/img/summit/devday-2021/lecturer/weixiaoqiang.png',
                     NAME: '魏小强',
-                    POSITION: '360未来研究院副院长'
+                    POSITION: '360未来安全研究院副院长'
                 },
                 {
                     IMG: '/img/summit/devday-2021/lecturer/huangyong.png',
@@ -547,7 +547,7 @@ export default {
                 },
                 {
                     IMG: '/img/summit/devday-2021/lecturer/huotaiwen.png',
-                    NAME: '霍泰稳',
+                    NAME: '霍太稳',
                     POSITION: '极客邦科技创始人 & CEO'
                 },
                 {
@@ -573,7 +573,7 @@ export default {
                 {
                     IMG: '/img/summit/devday-2021/lecturer/liuwenzong.png',
                     NAME: '刘文宗',
-                    POSITION: '国网科东公司平台架构师'
+                    POSITION: '国电南瑞北京科东公司平台架构师'
                 },
                 {
                     IMG: '/img/summit/devday-2021/lecturer/weizhao.png',
@@ -699,6 +699,26 @@ export default {
                     IMG: '/img/summit/devday-2021/lecturer/dudong.png',
                     NAME: '杜东',
                     POSITION: '上海交大并行与分布式系统实验室博士生/蓬莱可信执行环境项目负责人'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/gaokun.png',
+                    NAME: '高琨',
+                    POSITION: 'openEuler合规SIG maintainer'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/lizi.png',
+                    NAME: '李自',
+                    POSITION: '华为开源能力中心主任工程师'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/yangcong.png',
+                    NAME: '杨聪',
+                    POSITION: '华为开源能力中心工程师'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/zhengzhipeng.png',
+                    NAME: '郑志鹏',
+                    POSITION: '华为开源能力中心高级工程师'
                 },
                 {
                     IMG: '/img/summit/devday-2021/lecturer/jiangqinghua.png',
@@ -957,15 +977,15 @@ export default {
             }else {
                 this.isShowNav = true;
             }
-            if(scrollTop > 650 && scrollTop < 1600) {
+            if(scrollTop > 650 && scrollTop < 1700) {
                 this.activeIndex = 0;
-            }else if(scrollTop > 1620 && scrollTop < 3700 + value) {
+            }else if(scrollTop > 1720 && scrollTop < 3800 + value) {
                 this.activeIndex = 1;
-            }else if(scrollTop > 3720 + value && scrollTop < 6700 + value) {
+            }else if(scrollTop > 3820 + value && scrollTop < 7100 + value) {
                 this.activeIndex = 2;
-            }else if(scrollTop > 6720 + value && scrollTop < 7900 + value) {
+            }else if(scrollTop > 7120 + value && scrollTop < 8300 + value) {
                 this.activeIndex = 3;
-            }else if(scrollTop > 7920 + value){
+            }else if(scrollTop > 8320 + value){
                 this.activeIndex = 4;
             }else {
                 return false;
