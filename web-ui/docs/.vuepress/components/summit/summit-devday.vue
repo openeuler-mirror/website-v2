@@ -107,7 +107,7 @@
                 <img v-lazy="mediaObj.web" alt="" v-else />
             </div>
             <div class="media-box">
-                <img v-lazy="'/img/summit/home/undertaker/jikebang.png'" alt="" @click="go('https://www.geekbang.org/')" />
+                <img v-lazy="'/img/summit/devday-2021/infoq.png'" alt="" @click="go('https://www.geekbang.org/')" />
             </div>
         </div>
         <div class="review-wrapper">
@@ -556,9 +556,24 @@ export default {
                     POSITION: '滴滴开源技术负责人'
                 },
                 {
+                    IMG: '/img/summit/devday-2021/lecturer/liujunwei.png',
+                    NAME: '刘军卫',
+                    POSITION: '中国移动云能力中心laaS产品部总经理'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/fangbingyi.png',
+                    NAME: '房秉毅',
+                    POSITION: '联通数科云计算事业部研发部负责人'
+                },
+                {
                     IMG: '/img/summit/devday-2021/lecturer/zouqiubo.png',
                     NAME: '邹秋波',
                     POSITION: '光大银行信息科技部云技术管理处技术专家'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/lecturer/liuwenzong.png',
+                    NAME: '刘文宗',
+                    POSITION: '国网科东公司平台架构师'
                 },
                 {
                     IMG: '/img/summit/devday-2021/lecturer/weizhao.png',
@@ -792,6 +807,10 @@ export default {
                     LINK: 'https://www.huawei.com/cn/'
                 },
                 {
+                    IMG: '/img/summit/devday-2021/host-unit/baidu.png',
+                    LINK: 'https://cloud.baidu.com/'
+                },
+                {
                     IMG: '/img/summit/home/co-organizer/feiteng.png',
                     LINK: 'https://www.phytium.com.cn/'
                 },
@@ -838,6 +857,10 @@ export default {
                     LINK: 'https://huayun.com/'
                 },
                 {
+                    IMG: '/img/summit/devday-2021/co-organizer/liantong.png',
+                    LINK: 'https://www.cubigdata.cn/'
+                },
+                {
                     IMG: '/img/summit/devday-2021/co-organizer/lvmengkeji.png',
                     LINK: 'https://www.nsfocus.com.cn/'
                 },
@@ -858,6 +881,10 @@ export default {
                     LINK: 'http://www.hopeinfra.com/'
                 },
                 {
+                    IMG: '/img/summit/devday-2021/co-organizer/wuxi.png',
+                    LINK: 'http://www.wxiat.com/'
+                },
+                {
                     IMG: '/img/summit/devday-2021/co-organizer/xinlaikeji.png',
                     LINK: 'https://www.nucleisys.com/index.php'
                 },
@@ -868,6 +895,10 @@ export default {
                 {
                     IMG: '/img/summit/home/co-organizer/yunhong.png',
                     LINK: 'http://www.winhong.com/'
+                },
+                {
+                    IMG: '/img/summit/devday-2021/co-organizer/zhaoxin.png',
+                    LINK: 'http://www.zhaoxin.com/'
                 },
                 {
                     IMG: '/img/summit/home/co-organizer/iscas.png',
@@ -930,11 +961,11 @@ export default {
                 this.activeIndex = 0;
             }else if(scrollTop > 1620 && scrollTop < 3700 + value) {
                 this.activeIndex = 1;
-            }else if(scrollTop > 3720 + value && scrollTop < 6600 + value) {
+            }else if(scrollTop > 3720 + value && scrollTop < 6700 + value) {
                 this.activeIndex = 2;
-            }else if(scrollTop > 6620 + value && scrollTop < 7800 + value) {
+            }else if(scrollTop > 6720 + value && scrollTop < 7900 + value) {
                 this.activeIndex = 3;
-            }else if(scrollTop > 7820 + value){
+            }else if(scrollTop > 7920 + value){
                 this.activeIndex = 4;
             }else {
                 return false;
@@ -1102,6 +1133,9 @@ export default {
         color: #000;
         font-size: 20px;
         line-height: 40px;
+        .calendar-content img {
+            max-width: 1120px;
+        }
         .agenda-carousel {
             margin-top: -40px;
         }
