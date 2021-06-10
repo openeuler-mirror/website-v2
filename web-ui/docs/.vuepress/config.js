@@ -25,7 +25,11 @@ module.exports = {
     plugins: [
         ['@vuepress/search', false],
         ['@vuepress/active-header-links', false],
-        ['vuepress-plugin-code-copy', true]
+        ['vuepress-plugin-code-copy', true],
+        ['sitemap', {
+            hostname: "https://openeuler.org/"
+          }
+      ]
     ],
     shouldPrefetch: () => {
         return false;
