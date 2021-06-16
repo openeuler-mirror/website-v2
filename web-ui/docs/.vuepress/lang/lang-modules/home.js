@@ -69,8 +69,8 @@ module.exports = {
         },
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
-            INTRO_HEAD: "开始openEuler之旅吧！",
-            INTRO_DESCRIPTION: "openEuler通过社区合作，打造创新平台，构建支持多处理架构、统一和开放的操作系统，推动软硬件应用生态繁荣发展。",
+            INTRO_HEAD: "开始openEuler之旅",
+            INTRO_DESCRIPTION: "你愿意做点亮 openEuler 小宇宙的那个人吗? 快来探索星星里的秘密吧！",
             INTRO_IMG_URL: "",
             INTRO_MAP: [
                 {
@@ -104,6 +104,40 @@ module.exports = {
                 },
 
             ],
+            INTRO_SPARK: [
+                {   
+                    NAME: "Compass-Cl",
+                    LINK: "https://compass-ci.openeuler.org/",
+                    IMG: "/img/home/sparkImg1.png"
+                },
+                {   
+                    NAME: "secGear",
+                    LINK: "other/minisite/secgear/",
+                    IMG: "/img/home/sparkImg2.png"
+                },
+                {   
+                    NAME: "A-Tune",
+                    LINK: "other/minisite/atune/" 
+                },
+                {   
+                    NAME: "StratoVirt",
+                    LINK: "other/minisite/stratovirt/"
+                },
+                {
+                    NAME: "iSula",
+                    LINK: "other/minisite/isula/"
+                },
+                                         
+               {
+                   NAME: "Bisheng",
+                   LINK: "other/minisite/bisheng/"
+               },                         
+               {
+                  NAME: "START",
+                  LINK: "community/contribution/",
+                  IMG: "/img/home/Start.png"
+               }
+               ],
             INTRO_MAP_SND: {
                 NAME: "体验",
                 TITLE: "openEuler系统",
@@ -683,6 +717,40 @@ module.exports = {
                 },
 
             ],
+            INTRO_SPARK: [
+                {   
+                    NAME: "Compass-Cl",
+                    LINK: "https://compass-ci.openeuler.org/",
+                    IMG: "/img/home/sparkImg1.png"
+                },
+                {   
+                    NAME: "secGear",
+                    LINK: "other/minisite/secgear/",
+                    IMG: "/img/home/sparkImg2.png"
+                },
+                {   
+                    NAME: "A-Tune",
+                    LINK: "other/minisite/atune/" 
+                },
+                {   
+                    NAME: "StratoVirt",
+                    LINK: "other/minisite/stratovirt/"
+                },
+                {
+                    NAME: "iSula",
+                    LINK: "other/minisite/isula/"
+                },
+                                         
+               {
+                   NAME: "Bisheng",
+                   LINK: "other/minisite/bisheng/"
+               },                         
+               {
+                  NAME: "START",
+                  LINK: "community/contribution/",
+                  IMG: "/img/home/Start.png"
+               }
+               ],
             INTRO_MAP_SND: {
                 NAME: "02",
                 TITLE: "Use openEuler OS",
@@ -1246,6 +1314,40 @@ module.exports = {
                 },
 
             ],
+            INTRO_SPARK: [
+                {   
+                    NAME: "Compass-Cl",
+                    LINK: "https://compass-ci.openeuler.org/",
+                    IMG: "/img/home/sparkImg1.png"
+                },
+                {   
+                    NAME: "secGear",
+                    LINK: "other/minisite/secgear/",
+                    IMG: "/img/home/sparkImg2.png"
+                },
+                {   
+                    NAME: "A-Tune",
+                    LINK: "other/minisite/atune/" 
+                },
+                {   
+                    NAME: "StratoVirt",
+                    LINK: "other/minisite/stratovirt/"
+                },
+                {
+                    NAME: "iSula",
+                    LINK: "other/minisite/isula/"
+                },
+                                         
+               {
+                   NAME: "Bisheng",
+                   LINK: "other/minisite/bisheng/"
+               },                         
+               {
+                  NAME: "START",
+                  LINK: "community/contribution/",
+                  IMG: "/img/home/Start.png"
+               }
+               ],
             INTRO_MAP_SND: {
                 NAME: "02",
                 TITLE: "Использовать ОС openEuler",

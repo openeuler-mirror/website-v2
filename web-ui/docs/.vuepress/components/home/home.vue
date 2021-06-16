@@ -81,80 +81,30 @@
             <h1></h1>
             <h3 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_INTRODUCE.INTRO_HEAD }}</h3>
             <p :class="$lang == 'en'?'en-p':''">{{ i18n.home.HOME_INTRODUCE.INTRO_DESCRIPTION }}</p>
-            <div class="is-pc mapArea" :class="$lang === 'ru'?'lang-ru':''" v-if="!isShowH5">
-                <div :class="['area-box map-flow','in-pc',$lang == 'en' && index == 3?'en-areabox-down':'']" v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP" :key="index">
-                    <a v-if="(index !== 3)" @click="go(item.LINK.includes('/docs/')?$site.themeConfig.docsUrl+item.OTHER_LINK:item.LINK)" target="_blank">
-                        <div class="box-icon">{{ item.NAME }}</div>
-                        <p :class="$lang == 'en'?'en-areabox-p':''">{{ item.TITLE }}</p>
-                        <img v-lazy="item.IMG" alt="">
-                        <img :src="item.GIF" alt="" :class="[$lang == 'en'?'en-areabox-gif':'']">
-                    </a>
-                    <a class="down" v-if="(index === 3)" @click="go(item.LINK.includes('/docs/')?$site.themeConfig.docsUrl+item.OTHER_LINK:item.LINK)" target="_blank">
-                        <img v-lazy="item.IMG" alt="">
-                        <img :src="item.GIF" alt="" class="is-hidden">
-                        <div class="box-icon">{{ item.NAME }}</div>
-                        <p :class="$lang == 'en'?'en-areabox-p':''">{{ item.TITLE }}</p>
+            <div class="wrap is-pc" >  
+                <div class="martian">
+                    <img class="martian-pic" :src="martianImg" alt=""/>
+                </div>
+                <div class="spark">
+                    <a @click="goPage(item.LINK)" v-for="(item,index) in i18n.home.HOME_INTRODUCE.INTRO_SPARK" :key="index">
+                        <img class="spark-pic" :src="item.IMG" v-if="item.IMG"/>
+                        <span>{{ item.NAME }}</span>
                     </a>
                 </div>
-                <div class="area-box bottom in-pc" @click="clickDownload">
-                    <a class="down">
-                        <img v-lazy="'/img/home/step2.png'" alt="">
-                        <img :src="'/img/home/step-move-2.gif'" alt="" class="is-hidden">
-                        <div class="box-icon">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.NAME }}</div>
-                        <p :class="$lang == 'en'?'en-areabox-p':''">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.TITLE }}</p>
-                    </a>
-                    <div class="snd-guidance" :class="$lang == 'en'?'en-snd-guidance':''">
-                        <div class="d3"></div>
-                        <p :class="$lang == 'en'?'en-link-title':''">{{ i18n.home.HOME_INTRODUCE.INTRO_GUIDE.INFO }}</p>
-                        <div class="d3-guide">
-                            <div
-                                    class="guide-way"
-                                    :class="$lang == 'en'?'en-guide-way':''"
-                                    v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_GUIDE.GUIDE_WAY"
-                                    :key="index">
-                                <a @click="goInstall(item.LINK.includes('/docs/')?$site.themeConfig.docsUrl+item.LINK:item.LINK)" target="_blank">
-                                    <img v-lazy="item.IMG" alt="">
-                                    <span>{{ item.TITLE }}</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="stars">
+                    <img class="star1" :src="star1"/>
+                    <img class="star2" :src="star2"/>
                 </div>
-            </div>
-            <div class="map-rode">
-                <img class="is-pc rode-left" v-lazy="'/img/home/rodeLeft.svg'" alt="">
-                <img class="is-pc plane-left" v-lazy="'/img/home/planeLeft.svg'" alt="">
-                <img class="is-pc rode-middle" v-lazy="'/img/home/rodeMiddle.svg'" alt="">
-                <img class="is-pc plane-middle" v-lazy="'/img/home/planeMiddle.svg'" alt="">
-                <img class="is-pc rode-right" v-lazy="'/img/home/rodeRight.svg'" alt="">
-                <img class="is-pc plane-right" v-lazy="'/img/home/planeRight.svg'" alt="">
-            </div>
-            <div class="is-h5 mapArea" v-if="isShowH5">
-                <div
-                    class="area-box"
-                    v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP"
-                    :key="index"
-                    >
-                        <div class="box-icon" @touchstart="go(item.LINK.includes('/docs/')?$site.themeConfig.docsUrl+item.LINK:item.LINK)">{{ item.NAME }}</div>
-                        <p @touchstart="go(item.LINK.includes('/docs/')?$site.themeConfig.docsUrl+item.OTHER_LINK:item.LINK)" :class="$lang === 'en'?'lang-en':''">{{ item.TITLE }}</p>
-                        <img v-lazy="item.IMG" alt=""/>
-                </div>
-                <div :class="['snd-guidance','location',isShowCard?'is-show':'',$lang == 'en'?'en-snd-guidance':'']">
-                    <div class="d3"></div>
-                    <p :class="$lang == 'en'?'en-link-title':''">{{ i18n.home.HOME_INTRODUCE.INTRO_GUIDE.INFO }}</p>
-                    <div class="d3-guide">
-                        <div
-                            class="guide-way"
-                            :class="$lang == 'en'?'en-guide-way':''"
-                            v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_GUIDE.GUIDE_WAY"
-                            :key="index">
-                                <a :href="item.LINK.includes('/docs/')?$site.themeConfig.docsUrl+item.LINK:item.LINK">
-                                    <img v-lazy="item.IMG" alt="">
-                                    <span>{{ item.TITLE }}</span>
-                                </a>
-                        </div>
-                    </div>
-                </div>
+                <div class="grad-round">
+                    <span class="grad-round1"></span>
+                    <span class="grad-round2"></span>
+                    <span class="grad-round3"></span>
+                </div> 
+		    </div>
+
+            <div class="mobile-wrap is-h5">
+                 <img class="mobile-martian" src="/img/home/Spark.png"/>
+                 <a @click="goPage(item.LINK)" v-for="(item,index) of i18n.home.HOME_INTRODUCE.INTRO_SPARK" :key="index"></a>
             </div>
         </div>
 
@@ -394,6 +344,9 @@
                 height: "380px",
                 banner1: "/img/home/Banner1.gif",
                 activeImg: "/img/home/homeActive.gif",
+                martianImg:'/img/home/Martian.png',
+                star1:'/img/home/Star1.png',
+                star2:'/img/home/Star2.png',
                 startIndex: 0,
                 endIndex: 4,
                 blogList: null,
@@ -458,9 +411,6 @@
             round
         },
         methods: {
-            slideChange () {
-                this.mobilePagenationIndex = this.$refs.mySwiper.$swiper.realIndex + 1;
-            },
             go(path) {
                 if (path && !path.includes("http")) {
                     this.$router.push({
@@ -478,6 +428,17 @@
                 } else {
                     this.$router.push(path);
                 }
+            },
+            goPage(path) {
+                if (path.includes("http") || path.includes("https")) {
+                    window.open(path);
+                } else {
+                    this.$router.push(path);
+                }
+            },
+
+            slideChange () {
+                this.mobilePagenationIndex = this.$refs.mySwiper.$swiper.realIndex + 1;
             },
             e(selector) {
                 let e = document.querySelector(selector)
@@ -620,6 +581,315 @@
         }
     }
 </script>
+<style scoped>
+    .mobile-wrap {
+        position: relative;
+        margin:20px auto;
+    }
+    .mobile-wrap img {
+        width:345px;
+    }
+    .mobile-wrap a:nth-of-type(1) {
+        width:69px;
+        height:66px;
+        position:absolute;
+        left: 0;
+        top:104px;
+    }
+    .mobile-wrap a:nth-of-type(2) {
+        width:40px;
+        height:40px;
+        position:absolute;
+        left:295px;
+        top:75px;
+    }
+    .mobile-wrap a:nth-of-type(3) {
+        width:44px;
+        height:44px;
+        position:absolute;
+        left:62px;
+        top:34px;
+    }
+    .mobile-wrap a:nth-of-type(4) {
+        width:38px;
+        height:38px;
+        position:absolute;
+        left:243px;
+        top:0px;
+    }
+    .mobile-wrap a:nth-of-type(5) {
+        width:42px;
+        height:42px;
+        position:absolute;
+        left:232px;
+        top:135px;
+    }
+    .mobile-wrap a:nth-of-type(6) {
+        width:44px;
+        height:44px;
+        position:absolute;
+        left:132px;
+        top:180px;
+    }
+    .mobile-wrap a:nth-of-type(7) {
+        width:60px;
+        height:50px;
+        position:absolute;
+        left:116px;
+        top:29px;
+    }
+    @media screen and (max-width: 360px) {
+    .mobile-wrap img {
+        width:330px;
+     }
+    .mobile-wrap a:nth-of-type(3) {
+        left:57px;
+        top:30px;
+    }
+    .mobile-wrap a:nth-of-type(4) {
+        left:230px;
+        top:0px;
+    }
+    .mobile-wrap a:nth-of-type(5) {
+        left:220px;
+        top:125px;
+    }
+    .mobile-wrap a:nth-of-type(6) {
+        left:122px;
+        top:170px;
+    }
+    .mobile-wrap a:nth-of-type(2) {
+        left:282px;
+        top:66px;
+    }
+   }
+    @media screen and (max-width: 320px) {
+    .mobile-wrap img {
+        width:290px;
+     }
+    .mobile-wrap a:nth-of-type(3) {
+        left:50px;
+        top:25px;
+    }
+    .mobile-wrap a:nth-of-type(4) {
+        left:200px;
+        top:0px;
+    }
+    .mobile-wrap a:nth-of-type(5) {
+        left:190px;
+        top:110px;
+    }
+    .mobile-wrap a:nth-of-type(6) {
+        left:110px;
+        top:150px;
+    }
+    .mobile-wrap a:nth-of-type(1) {
+        left:0px;
+        top:80px;
+    }
+    .mobile-wrap a:nth-of-type(2) {
+        left:245px;
+        top:60px;
+    }
+    .mobile-wrap a:nth-of-type(7) {
+        left:90px;
+        top:20px;
+    }
+   }
+    @media screen and (min-width: 410px) {
+    .mobile-wrap a:nth-of-type(3) {
+        left:80px;
+        top:33px;
+    }
+    .mobile-wrap a:nth-of-type(4) {
+        left:260px;
+        top:0px;
+    }
+    .mobile-wrap a:nth-of-type(5) {
+        left:250px;
+        top:134px;
+    }
+    .mobile-wrap a:nth-of-type(6) {
+        left:150px;
+        top:180px;
+    }
+    .mobile-wrap a:nth-of-type(1) {
+        left:20px;
+        top:100px;
+    }
+    .mobile-wrap a:nth-of-type(2) {
+        left:315px;
+        top:72px;
+    }
+   }
+    a {
+        text-decoration:none;
+    }
+    .wrap {
+        height:490px;
+        margin-top:49px;
+        margin-bottom: -120px;
+        position: relative;
+    }
+    .wrap .martian {
+        width:520px;
+        height:342px;
+        margin:0 auto;	
+    }
+    .wrap .spark a:nth-of-type(1) {
+        width:157px;
+        height:157px;
+        position: absolute;
+        left:108px;
+        top:183px;
+    }
+    .wrap .spark a:nth-of-type(1) span{
+        position: absolute;
+        left:36px;
+        top:60px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+    .wrap .spark a:nth-of-type(2) {
+        width:149px;
+        height:124px;
+        position: absolute;
+        left:823px;
+        top:70px;
+    }
+    .wrap .spark a:nth-of-type(2) span{
+        position: absolute;
+        left:48px;
+        top:52px;
+        font-size: 12px;
+        font-weight: bold;
+        color: #FFFFFF;   
+    }
+    .wrap .spark a:nth-of-type(1):hover,.wrap .spark a:nth-of-type(2):hover,.spark a:nth-of-type(7):hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    .wrap .spark a:nth-of-type(3) {
+        width:80px;
+        height:80px;
+        text-align:center;
+        line-height:80px;
+        border-radius:40px;
+        background-image: linear-gradient(to right,rgba(49, 101, 243, 1), rgba(255, 202, 110, 1));
+        position: absolute;
+        left:300px;
+        top:13px;
+    }
+    .wrap .spark a:nth-of-type(4) {
+        width:60px;
+        height:60px;
+        text-align:center;
+        line-height:60px;
+        border-radius:30px;
+        background-image: linear-gradient(to left,rgba(126, 28, 115, 0.17), rgba(170, 131, 185, 0.5),rgba(129, 138, 197, 0.72),rgba(87, 122, 190, 1),rgba(12, 52, 131, 1));
+        position: absolute;
+        left:726px;
+        top:-29px;
+    }
+    .wrap .spark a:nth-of-type(5) {
+        width:70px;
+        height:70px;
+        text-align:center;
+        line-height:70px;
+        border-radius:35px;
+        background-image: linear-gradient(to bottom right,rgba(86, 49, 122, 1), rgba(61, 153, 190, 1),rgba(58, 181, 176, 1));
+        position: absolute;
+        left:683px;
+        top:251px;
+    }
+    .wrap .spark a:nth-of-type(6) {
+        width:80px;
+        height:80px;
+        text-align:center;
+        line-height:80px;
+        border-radius:40px;
+        background-image: linear-gradient(rgba(118, 75, 162, 1), rgba(102, 126, 234, 1));
+        position: absolute;
+        left:479px;
+        top:336px;
+    }
+    .wrap .spark a:nth-of-type(3):hover,.wrap .spark a:nth-of-type(4):hover,
+    .wrap .spark a:nth-of-type(5):hover,.wrap .spark a:nth-of-type(6):hover{
+        cursor: pointer;
+        box-shadow: 0px 0px 10px #000;
+        transform:scale(1.1) ;
+    }
+   .wrap .spark a:nth-of-type(3),.wrap .spark a:nth-of-type(5),.wrap .spark a:nth-of-type(6) {
+        display:block; 
+        font-size: 16px;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+    .wrap .spark a:nth-of-type(4) {
+        display:block;
+        font-size: 12px;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+    .wrap .spark a:nth-of-type(7){
+        width:155px;
+        height:136px;
+        position: absolute;
+        left:370px;
+        top:-14px;
+    }
+    .wrap .spark a:nth-of-type(7) span{
+        position: absolute;
+        left:56px;
+        top:60px;
+        font-size: 10px;
+        font-weight: bold;
+        color: #000000;
+        cursor: pointer;
+    }
+    .wrap .stars .star1{
+        width:36px;
+        height:34px;
+        position: absolute;
+        left:311px;
+        top:162px;
+    }
+    .wrap .stars .star2{
+        width:51px;
+        height:48px;
+        position: absolute;
+        left:789px;
+        top:113px;
+    }
+    .wrap .grad-round1 {
+        width:18px;
+        height:18px;
+        border-radius:9px;
+        position: absolute;
+        left:136px;
+        top:313px;
+        background-image: linear-gradient(to right,rgba(0, 47, 167, 0.3), rgba(252, 117, 108, 0.3));
+    }
+    .wrap .grad-round2 {
+        width:12px;
+        height:12px;
+        border-radius:6px;
+        position: absolute;
+        left:646px;
+        top:221px;
+        background-image: linear-gradient(to bottom right,rgba(214, 36, 97, 0.5), rgba(170, 131, 185, 0.5),rgba(59, 176, 179, 1));
+    }
+    .wrap .grad-round3 {
+        width:10px;
+        height:10px;
+        border-radius:5px;
+        position: absolute;
+        left:798px;
+        top:21px;
+        background-image: linear-gradient(to bottom left,rgba(126, 28, 115, 0), rgba(170, 131, 185, 0.1),rgba(171, 129, 183, 0.5),rgba(214, 36, 97, 0.5),rgba(230, 0, 64, 0.5));
+    }
+</style>
 
 <style lang="less">
     .home-banner .el-carousel__button {
@@ -646,6 +916,7 @@
             display: none;
         }
     }
+
 </style>
 
 <style lang="less" scoped>
