@@ -6,8 +6,6 @@ import rulocale from 'element-ui/lib/locale/lang/ru-RU';
 import locale from 'element-ui/lib/locale';
 import'./public/style/markdown.less';
 import directive from './libs/directive';
-import './public/style/font-en.css';
-import './public/style/font-cn.css';
 import VueLazyload from 'vue-lazyload';
 
 

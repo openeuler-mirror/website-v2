@@ -44,14 +44,5 @@ export default {
         min-height: calc(100vh - 70px - 328px);
     }
 }
-html[lang="en"] #euler-app {
-    font-family: Roboto !important;
-}
-html[lang="zh"] #euler-app {
-    font-family: FZLT !important;
-}
-html[lang="ru"] #euler-app {
-    font-family: Arial !important;
-}
 
 </style>
