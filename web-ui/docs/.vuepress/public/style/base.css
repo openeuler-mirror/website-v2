@@ -185,3 +185,7 @@ acronym {
   .icon-search:before {
     content: "\e902";
   }
+
+  body {
+    font-family: Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,STHeiti,Microsoft YaHei,Microsoft JhengHei,SimSun,sans-serif;
+  }
