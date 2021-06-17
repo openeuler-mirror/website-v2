@@ -676,7 +676,7 @@
     "type": "NIC",
     "driverDate": "2021.4.16",
     "sha256": "4d6ac45a022480d99756907d6536596f",
-    "driverSize": "307MB"
+    "driverSize": "307MB",
     "chipVendor": "Mellanox",
     "boardModel": "MCX512A-ACAT",
     "chipModel": "ConnectX-5 EN",
