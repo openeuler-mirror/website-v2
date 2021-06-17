@@ -9,14 +9,14 @@
     "driverName": "mlx5_core",
     "version": "5.1-2.5.2",
     "type": "NIC",
-    "driverDate": "2021.3.19",
+    "driverDate": "2021.4.16",
     "sha256": "4d6ac45a022480d99756907d6536596f",
-    "driverSize": "1.1M",
+    "driverSize": "307MB",
     "chipVendor": "Mellanox",
     "boardModel": "SP380",
     "chipModel": "CX-4 Lx EN",
     "item": "03025SNT",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.5.0.0054.oe1.x86_64.x86_64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/MLNX_OFED_LINUX-5.1-2.5.2.0-openeuler20.03-x86_64-ext.tgz"
   },
   {
     "vendorID": "15b3",
@@ -28,14 +28,14 @@
     "driverName": "mlx5_core",
     "version": "5.1-2.5.2",
     "type": "NIC",
-    "driverDate": "2021.3.19",
+    "driverDate": "2021.4.16",
     "sha256": "4d6ac45a022480d99756907d6536596f",
-    "driverSize": "1.2M",
+    "driverSize": "241MB",
     "chipVendor": "Mellanox",
     "boardModel": "SP380",
     "chipModel": "CX-4 Lx EN",
     "item": "03025SNT",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/aarch64/MLNX_OFED_LINUX-5.1-2.5.0-openeuler20.03-aarch64-ext.tgz"
   },
   {
     "vendorID": "15b3",
@@ -47,14 +47,14 @@
     "driverName": "mlx5_core",
     "version": "5.1-2.5.2",
     "type": "NIC",
-    "driverDate": "2021.3.19",
+    "driverDate": "2021.4.16",
     "sha256": "4d6ac45a022480d99756907d6536596f",
-    "driverSize": "1.1M",
+    "driverSize": "307MB",
     "chipVendor": "Mellanox",
     "boardModel": "SP382",
     "chipModel": "CX5",
     "item": "03026PUN",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.5.0.0054.oe1.x86_64.x86_64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/MLNX_OFED_LINUX-5.1-2.5.2.0-openeuler20.03-x86_64-ext.tgz"
   },
   {
     "vendorID": "15b3",
@@ -66,14 +66,14 @@
     "driverName": "mlx5_core",
     "version": "5.1-2.5.2",
     "type": "NIC",
-    "driverDate": "2021.3.19",
+    "driverDate": "2021.4.16",
     "sha256": "4d6ac45a022480d99756907d6536596f",
-    "driverSize": "1.2M",
+    "driverSize": "241MB",
     "chipVendor": "Mellanox",
     "boardModel": "SP382",
     "chipModel": "CX5",
     "item": "03026PUN",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/aarch64/MLNX_OFED_LINUX-5.1-2.5.0-openeuler20.03-aarch64-ext.tgz"
   },
   {
     "vendorID": "15b3",
@@ -85,14 +85,14 @@
     "driverName": "mlx5_core",
     "version": "5.1-2.5.2",
     "type": "NIC",
-    "driverDate": "2021.3.19",
+    "driverDate": "2021.4.16",
     "sha256": "4d6ac45a022480d99756907d6536596f",
-    "driverSize": "1.1M",
+    "driverSize": "307MB",
     "chipVendor": "Mellanox",
     "boardModel": "MCX515A-CCAT",
     "chipModel": "CX5",
     "item": "6310149",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.5.0.0054.oe1.x86_64.x86_64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/MLNX_OFED_LINUX-5.1-2.5.2.0-openeuler20.03-x86_64-ext.tgz"
   },
   {
     "vendorID": "15b3",
@@ -104,14 +104,14 @@
     "driverName": "mlx5_core",
     "version": "5.1-2.5.2",
     "type": "NIC",
-    "driverDate": "2021.3.19",
+    "driverDate": "2021.4.16",
     "sha256": "4d6ac45a022480d99756907d6536596f",
-    "driverSize": "1.2M",
+    "driverSize": "241MB",
     "chipVendor": "Mellanox",
     "boardModel": "MCX515A-CCAT",
     "chipModel": "CX5",
     "item": "6310149",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/aarch64/MLNX_OFED_LINUX-5.1-2.5.0-openeuler20.03-aarch64-ext.tgz"
   },
   {
     "vendorID": "1077",
@@ -123,7 +123,7 @@
     "driverName": "qla2xxx",
     "version": "10.02.04.00_k",
     "type": "FC",
-    "driverDate": "2021.3.19",
+    "driverDate": "2021.3.22",
     "sha256": "7028d69d70f0eb7525c80bc35a7b247f",
     "driverSize": "992K",
     "chipVendor": "Qlogic",
@@ -142,9 +142,9 @@
     "driverName": "qla2xxx",
     "version": "10.02.04.00_k",
     "type": "FC",
-    "driverDate": "2021.3.19",
+    "driverDate": "2021.3.22",
     "sha256": "7028d69d70f0eb7525c80bc35a7b247f",
-    "driverSize": "1.1M",
+    "driverSize": "922KB",
     "chipVendor": "Qlogic",
     "boardModel": "QLE2560",
     "chipModel": "ISP2532",
@@ -161,14 +161,14 @@
     "driverName": "mlx5_core",
     "version": "5.1-2.5.2",
     "type": "NIC",
-    "driverDate": "2021.3.19",
+    "driverDate": "2021.4.16",
     "sha256": "4d6ac45a022480d99756907d6536596f",
-    "driverSize": "1.1M",
+    "driverSize": "307MB",
     "chipVendor": "Mellanox",
     "boardModel": "MCX314A-BCCT",
     "chipModel": "CX3-PRO",
     "item": "6310105",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.5.0.0054.oe1.x86_64.x86_64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/MLNX_OFED_LINUX-5.1-2.5.2.0-openeuler20.03-x86_64-ext.tgz"
   },
   {
     "vendorID": "15b3",
@@ -180,14 +180,14 @@
     "driverName": "mlx5_core",
     "version": "5.1-2.5.2",
     "type": "NIC",
-    "driverDate": "2021.3.19",
+    "driverDate": "2021.4.16",
     "sha256": "4d6ac45a022480d99756907d6536596f",
-    "driverSize": "1.2M",
+    "driverSize": "241MB",
     "chipVendor": "Mellanox",
     "boardModel": "MCX314A-BCCT",
     "chipModel": "CX3-PRO",
     "item": "6310105",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/aarch64/MLNX_OFED_LINUX-5.1-2.5.0-openeuler20.03-aarch64-ext.tgz"
   },
   {
     "vendorID": "1002",
@@ -275,14 +275,14 @@
     "driverName": "mlx5_core",
     "version": "5.1-2.5.2",
     "type": "NIC",
-    "driverDate": "2021.3.19",
+    "driverDate": "2021.4.16",
     "sha256": "4d6ac45a022480d99756907d6536596f",
-    "driverSize": "1.1M",
+    "driverSize": "307MB",
     "chipVendor": "Mellanox",
     "boardModel": "SP333",
     "chipModel": "CX4 Lx EN",
     "item": "03023TYJ",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.5.0.0054.oe1.x86_64.x86_64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/MLNX_OFED_LINUX-5.1-2.5.2.0-openeuler20.03-x86_64-ext.tgz"
   },
   {
     "vendorID": "15b3",
@@ -294,14 +294,14 @@
     "driverName": "mlx5_core",
     "version": "5.1-2.5.2",
     "type": "NIC",
-    "driverDate": "2021.3.19",
+    "driverDate": "2021.4.16",
     "sha256": "4d6ac45a022480d99756907d6536596f",
-    "driverSize": "1.2M",
+    "driverSize": "241MB",
     "chipVendor": "Mellanox",
     "boardModel": "SP333",
     "chipModel": "CX4 Lx EN",
     "item": "03023TYJ",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/aarch64/MLNX_OFED_LINUX-5.1-2.5.0-openeuler20.03-aarch64-ext.tgz"
   },
   {
     "vendorID": "19e5",
@@ -484,14 +484,14 @@
     "driverName": "lpfc",
     "version": "0.1",
     "type": "FC",
-    "driverDate": "2021.03.05",
+    "driverDate": "2021.04.25",
     "sha256": "67CB2F34DC66D76DE0C84BBF64688B91CE243549",
-    "driverSize": "2.6M\n13K",
+    "driverSize": "3.4MB",
     "chipVendor": "Emulex",
     "boardModel": "LPe31002",
     "chipModel": "XE501",
     "item": "6030463",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/elx-lpfc-12.8.340.17-1.x86_64.rpm\nhttps://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/elx-lpfc-extras-12.8.340.16-1.openEuler20.noarch.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/elx-lpfc-dd-openEuler20-12.8.340.17-ds-1.x86_64.tgz"
   },
   {
     "vendorID": "10df",
@@ -503,14 +503,14 @@
     "driverName": "lpfc",
     "version": "12.8.340.17-1",
     "type": "FC",
-    "driverDate": "2021.03.02",
+    "driverDate": "2021.04.25",
     "sha256": "67CB2F34DC66D76DE0C84BBF64688B91CE243549",
-    "driverSize": "3.4M",
+    "driverSize": "3.4MB",
     "chipVendor": "Emulex",
     "boardModel": "LPe31002",
     "chipModel": "XE501",
     "item": "6030463",
-    "downloadLink": "https://docs.broadcom.com/docs/12399390"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/aarch64/elx-lpfc-dd-openEuler20-12.8.340.17-ds-1.aarch64.tgz"
   },
   {
     "vendorID": "10df",
@@ -522,14 +522,14 @@
     "driverName": "lpfc",
     "version": "0.1",
     "type": "FC",
-    "driverDate": "2021.03.05",
+    "driverDate": "2021.04.25",
     "sha256": "67CB2F34DC66D76DE0C84BBF64688B91CE243549",
-    "driverSize": "2.6M\n13K",
+    "driverSize": "3.4MB",
     "chipVendor": "Emulex",
     "boardModel": "LPe12000",
     "chipModel": "IOC540",
     "item": "6030216",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/elx-lpfc-12.8.340.17-1.x86_64.rpm\nhttps://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/elx-lpfc-extras-12.8.340.16-1.openEuler20.noarch.rpm\n"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/elx-lpfc-dd-openEuler20-12.8.340.17-ds-1.x86_64.tgz"
   },
   {
     "vendorID": "19e5",
@@ -655,14 +655,14 @@
     "driverName": "mlx5_core",
     "version": "5.1-2.5.2",
     "type": "NIC",
-    "driverDate": "2021.3.19",
+    "driverDate": "2021.4.16",
     "sha256": "4d6ac45a022480d99756907d6536596f",
-    "driverSize": "1.2M",
+    "driverSize": "241MB",
     "chipVendor": "Mellanox",
     "boardModel": "MCX512A-ACAT",
     "chipModel": "ConnectX-5 EN",
     "item": "6310156",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/aarch64/MLNX_OFED_LINUX-5.1-2.5.0-openeuler20.03-aarch64-ext.tgz"
   },
   {
     "vendorID": "15b3",
@@ -674,14 +674,14 @@
     "driverName": "mlx5_core",
     "version": "5.1-2.5.2",
     "type": "NIC",
-    "driverDate": "2021.3.19",
+    "driverDate": "2021.4.16",
     "sha256": "4d6ac45a022480d99756907d6536596f",
-    "driverSize": "1.1M",
+    "driverSize": "307MB"
     "chipVendor": "Mellanox",
     "boardModel": "MCX512A-ACAT",
     "chipModel": "ConnectX-5 EN",
     "item": "6310156",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.5.0.0054.oe1.x86_64.x86_64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/MLNX_OFED_LINUX-5.1-2.5.2.0-openeuler20.03-x86_64-ext.tgz"
   },
   {
     "vendorID": "15b3",
@@ -693,14 +693,14 @@
     "driverName": "mlx5_core",
     "version": "5.1-2.5.2",
     "type": "NIC",
-    "driverDate": "2021.3.19",
+    "driverDate": "2021.4.16",
     "sha256": "4d6ac45a022480d99756907d6536596f",
-    "driverSize": "1.2M",
+    "driverSize": "241MB",
     "chipVendor": "Mellanox",
     "boardModel": "MCX4121A-ACAT",
     "chipModel": "CX4 Lx EN",
     "item": "6310106",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.4.0.0053.oe1.aarch64.aarch64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/aarch64/MLNX_OFED_LINUX-5.1-2.5.0-openeuler20.03-aarch64-ext.tgz"
   },
   {
     "vendorID": "15b3",
@@ -712,14 +712,14 @@
     "driverName": "mlx5_core",
     "version": "5.1-2.5.2",
     "type": "NIC",
-    "driverDate": "2021.3.19",
+    "driverDate": "2021.4.16",
     "sha256": "4d6ac45a022480d99756907d6536596f",
-    "driverSize": "1.1M",
+    "driverSize": "307MB",
     "chipVendor": "Mellanox",
     "boardModel": "MCX4121A-ACAT",
     "chipModel": "CX4 Lx EN",
     "item": "6310106",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.5.0.0054.oe1.x86_64.x86_64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/MLNX_OFED_LINUX-5.1-2.5.2.0-openeuler20.03-x86_64-ext.tgz"
   },
   {
     "vendorID": "15b3",
@@ -731,14 +731,14 @@
     "driverName": "mlx5_core",
     "version": "5.1-2.5.2",
     "type": "NIC",
-    "driverDate": "2021.3.19",
+    "driverDate": "2021.4.16",
     "sha256": "4d6ac45a022480d99756907d6536596f",
-    "driverSize": "1.1M",
+    "driverSize": "307MB",
     "chipVendor": "Mellanox",
     "boardModel": "SP333",
     "chipModel": "CX4 Lx EN",
     "item": "02311WTS",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/mlnx-ofa_kernel-modules-5.1-OFED.5.1.2.5.2.1.kver.4.19.90_2012.5.0.0054.oe1.x86_64.x86_64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/MLNX_OFED_LINUX-5.1-2.5.2.0-openeuler20.03-x86_64-ext.tgz"
   },
   {
     "vendorID": "8086",
@@ -847,12 +847,12 @@
     "type": "FC",
     "driverDate": "2021.4.25",
     "sha256": "4C5D1B8BFF927AAADF5D6AFC162F91CE0445A417",
-    "driverSize": "3.5M",
+    "driverSize": "3.4M",
     "chipVendor": "Emulex",
     "boardModel": "LPE16002",
     "chipModel": "XE201",
     "item": "6030276",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/elx-lpfc-12.8.340.17-1.x86_64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/elx-lpfc-dd-openEuler20-12.8.340.17-ds-1.x86_64.tgz"
   },
   {
     "vendorID": "10df",
@@ -864,14 +864,14 @@
     "driverName": "lpfc",
     "version": "0:12.8.340.17",
     "type": "FC",
-    "driverDate": "2021.4.25",
+    "driverDate": "2021.4.20",
     "sha256": "4C5D1B8BFF927AAADF5D6AFC162F91CE0445A417",
-    "driverSize": "3.4M",
+    "driverSize": "2.4MB",
     "chipVendor": "Emulex",
     "boardModel": "LPE16002",
     "chipModel": "XE201",
     "item": "6030276",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/aarch64/elx-lpfc-12.8.340.17-1.aarch64.rpm"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/i40e-2.15.9-1.aarch64.rpm "
   },
   {
     "vendorID": "8086",
@@ -883,7 +883,7 @@
     "driverName": "i40e",
     "version": "2.15.9",
     "type": "NIC",
-    "driverDate": "2021.4.19",
+    "driverDate": "2021.4.20",
     "sha256": "",
     "driverSize": "2.5M",
     "chipVendor": "Intel",
@@ -947,7 +947,7 @@
     "boardModel": "E810XXVDA2G1P5",
     "chipModel": "E810-XXV",
     "item": "06310219",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/ice-1.4.11-1.x86_64.rpm "
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/ice-1.4.11-1.x86_64.rpm"
   },
   {
     "vendorID": "1000",
@@ -1056,12 +1056,12 @@
     "type": "FC",
     "driverDate": "2021.04.25",
     "sha256": "",
-    "driverSize": "3.4M",
+    "driverSize": "3.4MB",
     "chipVendor": "Emulex",
     "boardModel": "LPe32002-AP",
     "chipModel": "XE201",
     "item": "06030393",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/elx-lpfc-dd-openEuler20-12.8.340.17-ds-1.x86_64"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/aarch64/elx-lpfc-dd-openEuler20-12.8.340.17-ds-1.aarch64.tgz"
   },
   {
     "vendorID": "8086",
@@ -1092,14 +1092,14 @@
     "driverName": "qla2xxx",
     "version": "10.02.04.00-k",
     "type": "FC",
-    "driverDate": "2021.1.25",
+    "driverDate": "2021.3.22",
     "sha256": "",
-    "driverSize": "577 KB",
+    "driverSize": "922KB",
     "chipVendor": "Marvell/Qlogic",
     "boardModel": "QLE2562",
     "chipModel": "ISP2532",
     "item": "06030220",
-    "downloadLink": "https://driverdownloads.qlogic.com/QLogicDriverDownloads_UI/ShowEula.aspx?resourceid=33416&docid=98382&ProductCategory=39&Product=1044&Os=222"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/qla2xxx-10.02.04.00_k-1dkms.noarch.rpm"
   },
   {
     "vendorID": "1077",
@@ -1111,14 +1111,14 @@
     "driverName": "qla2xxx",
     "version": "10.02.04.00-k",
     "type": "FC",
-    "driverDate": "2021.1.25",
+    "driverDate": "2021.3.22",
     "sha256": "",
-    "driverSize": "577 KB",
+    "driverSize": "922KB",
     "chipVendor": "Marvell/Qlogic",
     "boardModel": "QLE2690",
     "chipModel": "ISP2722",
     "item": "06030381",
-    "downloadLink": "https://driverdownloads.qlogic.com/QLogicDriverDownloads_UI/ShowEula.aspx?resourceid=33416&docid=98382&ProductCategory=39&Product=1258&Os=222"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/qla2xxx-10.02.04.00_k-1dkms.noarch.rpm"
   },
   {
     "vendorID": "1077",
@@ -1130,14 +1130,14 @@
     "driverName": "qla2xxx",
     "version": "10.02.04.00-k",
     "type": "FC",
-    "driverDate": "2021.1.25",
+    "driverDate": "2021.3.22",
     "sha256": "",
-    "driverSize": "577 KB",
+    "driverSize": "922KB",
     "chipVendor": "Marvell/Qlogic",
     "boardModel": "QLE2692",
     "chipModel": "ISP2722",
     "item": "06030382",
-    "downloadLink": "https://driverdownloads.qlogic.com/QLogicDriverDownloads_UI/ShowEula.aspx?resourceid=33416&docid=98382&ProductCategory=39&Product=1259&Os=222"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/qla2xxx-10.02.04.00_k-1dkms.noarch.rpm"
   },
   {
     "vendorID": "1077",
@@ -1149,14 +1149,14 @@
     "driverName": "qla2xxx",
     "version": "10.02.04.00-k",
     "type": "FC",
-    "driverDate": "2021.1.25",
+    "driverDate": "2021.3.22",
     "sha256": "",
-    "driverSize": "577 KB",
+    "driverSize": "922KB",
     "chipVendor": "Marvell/Qlogic",
     "boardModel": "QLE2740",
     "chipModel": "ISP2722",
     "item": "06030390",
-    "downloadLink": "https://driverdownloads.qlogic.com/QLogicDriverDownloads_UI/ShowEula.aspx?resourceid=33416&docid=98382&ProductCategory=39&Product=1260&Os=222"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/qla2xxx-10.02.04.00_k-1dkms.noarch.rpm"
   },
   {
     "vendorID": "1077",
@@ -1168,14 +1168,14 @@
     "driverName": "qla2xxx",
     "version": "10.02.04.00-k",
     "type": "FC",
-    "driverDate": "2021.1.25",
+    "driverDate": "2021.3.22",
     "sha256": "",
-    "driverSize": "577 KB",
+    "driverSize": "922KB",
     "chipVendor": "Marvell/Qlogic",
     "boardModel": "QLE2742",
     "chipModel": "ISP2722",
     "item": "06030392",
-    "downloadLink": "https://driverdownloads.qlogic.com/QLogicDriverDownloads_UI/ShowEula.aspx?resourceid=33416&docid=98382&ProductCategory=39&Product=1261&Os=222"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/qla2xxx-10.02.04.00_k-1dkms.noarch.rpm"
   },
   {
     "vendorID": "14e4",
@@ -1251,7 +1251,7 @@
     "boardModel": "SM233",
     "chipModel": "X540",
     "item": "03022GEX",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/aarch64/Packages/ixgbe-5.11.3-1.x86_64.rpm "
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/ixgbe-5.11.3-1.x86_64.rpm"
   },
   {
     "vendorID": "19e5",
@@ -1289,7 +1289,7 @@
     "boardModel": "SP310",
     "chipModel": "82599",
     "item": "02311LSY",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/ixgbe-5.11.3-1.x86_64.rpm "
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/ixgbe-5.11.3-1.x86_64.rpm"
   },
   {
     "vendorID": "8086",
@@ -1358,9 +1358,9 @@
     "driverName": "ixgbe",
     "version": "5.11.3",
     "type": "NIC",
-    "driverDate": "2021.4.19",
+    "driverDate": "2021.4.20",
     "sha256": "",
-    "driverSize": "13M",
+    "driverSize": "2.3MB",
     "chipVendor": "intel",
     "boardModel": "SP331",
     "chipModel": "x550",
@@ -1384,7 +1384,7 @@
     "boardModel": "EXL710QDA2G1P5",
     "chipModel": "XL710",
     "item": "06310146",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packag/i40e-2.15.9-1.x86_64.rpm "
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/i40e-2.15.9-1.x86_64.rpm "
   },
   {
     "vendorID": "8086",
@@ -1396,9 +1396,9 @@
     "driverName": "i40e",
     "version": "2.15.9",
     "type": "NIC",
-    "driverDate": "2021.4.19",
+    "driverDate": "2021.4.20",
     "sha256": "",
-    "driverSize": "13M",
+    "driverSize": "2.4MB",
     "chipVendor": "intel",
     "boardModel": "EXL710QDA2G1P5",
     "chipModel": "XL710",
@@ -1422,7 +1422,7 @@
     "boardModel": "XL710QSR1G1P5 950495",
     "chipModel": "XL710",
     "item": "06310102",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packag/i40e-2.15.9-1.x86_64.rpm "
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras/x86_64/Packages/i40e-2.15.9-1.x86_64.rpm "
   },
   {
     "vendorID": "8086",
@@ -1434,9 +1434,9 @@
     "driverName": "i40e",
     "version": "2.15.9",
     "type": "NIC",
-    "driverDate": "2021.4.19",
+    "driverDate": "2021.4.20",
     "sha256": "",
-    "driverSize": "13M",
+    "driverSize": "2.4MB",
     "chipVendor": "intel",
     "boardModel": "XL710QSR1G1P5 950495",
     "chipModel": "XL710",
@@ -1474,7 +1474,7 @@
     "type": "FC",
     "driverDate": "2021.4.25",
     "sha256": "",
-    "driverSize": "15M",
+    "driverSize": "3.4MB",
     "chipVendor": "Emulex",
     "boardModel": "LPe32002-AP",
     "chipModel": "XE501",
@@ -1586,14 +1586,14 @@
       "driverName": "mlx5_core",
       "version": "5.1-2.5.2",
       "type": "IB",
-      "driverDate": "2021.04.14",
+      "driverDate": "2021.4.16",
       "sha256": "",
-      "driverSize": "2.8MB",
+      "driverSize": "307MB",
       "chipVendor": "Mellanox",
       "boardModel": "SP351",
       "chipModel": "MT27808A0-FCCF-EV",
       "item": "03024QAY",
-      "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/MLNX_OFED_LINUX-5.1-2.5.0-openeuler20.03-x86_64-ext.tgz"
+      "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/MLNX_OFED_LINUX-5.1-2.5.2.0-openeuler20.03-x86_64-ext.tgz"
     },
     {
       "vendorID": "15b3",
@@ -2289,9 +2289,9 @@
       "driverName": "qla2xxx",
       "version": "10.02.04.00-k",
       "type": "FC",
-      "driverDate": "",
+      "driverDate": "2021.3.22",
       "sha256": "",
-      "driverSize": "1.4MB",
+      "driverSize": "922KB",
       "chipVendor": "Qlogic",
       "boardModel": "QLE2740-HUA-SP",
       "chipModel": "ISP2722",
@@ -2308,9 +2308,9 @@
       "driverName": "qla2xxx",
       "version": "10.02.04.00-k",
       "type": "FC",
-      "driverDate": "",
+      "driverDate": "2021.3.22",
       "sha256": "",
-      "driverSize": "1.4MB",
+      "driverSize": "922KB",
       "chipVendor": "Qlogic",
       "boardModel": "QLE2692-HUA-SP",
       "chipModel": "ISP2722",
@@ -2327,9 +2327,9 @@
       "driverName": "qla2xxx",
       "version": "10.02.04.00-k",
       "type": "FC",
-      "driverDate": "",
+      "driverDate": "2021.3.22",
       "sha256": "",
-      "driverSize": "1.4MB",
+      "driverSize": "922KB",
       "chipVendor": "QLogic",
       "boardModel": "QLE2742-HUA-SP",
       "chipModel": "ISP2722",
@@ -2346,14 +2346,14 @@
       "driverName": "mlx5_core",
       "version": "5.1-2.5.2",
       "type": "IB",
-      "driverDate": "2021.04.14",
+      "driverDate": "2021.4.16",
       "sha256": "",
-      "driverSize": "2.8MB",
+      "driverSize": "307MB",
       "chipVendor": "Mellanox",
       "boardModel": "MCX653105A-EFAT",
       "chipModel": "CX6",
       "item": "06030516",
-      "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/MLNX_OFED_LINUX-5.1-2.5.0-openeuler20.03-x86_64-ext.tgz"
+      "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/MLNX_OFED_LINUX-5.1-2.5.2.0-openeuler20.03-x86_64-ext.tgz"
     },
     {
       "vendorID": "15b3",
@@ -2365,9 +2365,9 @@
       "driverName": "mlx5_core",
       "version": "5.1-2.5.2",
       "type": "IB",
-      "driverDate": "2021.04.15",
+      "driverDate": "2021.4.16",
       "sha256": "",
-      "driverSize": "2.5MB",
+      "driverSize": "241MB",
       "chipVendor": "Mellanox",
       "boardModel": "MCX653105A-ECAT",
       "chipModel": "MT28908",
@@ -2384,7 +2384,7 @@
       "driverName": "ixgbe",
       "version": "5.11.3",
       "type": "NIC",
-      "driverDate": "2021.05.11",
+      "driverDate": "2021.04.20",
       "sha256": "",
       "driverSize": "2.3MB",
       "chipVendor": "Huawei",
