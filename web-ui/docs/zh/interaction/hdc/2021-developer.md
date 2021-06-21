@@ -1,5 +1,5 @@
 ---
-title: "2021-deverloper"
+title: "2021-developer"
 ---
 <ClientOnly>
   <hdc-2021deverloper />
