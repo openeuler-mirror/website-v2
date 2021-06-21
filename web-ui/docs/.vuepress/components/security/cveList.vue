@@ -39,6 +39,7 @@
                         @change="initData(1)"
                         :placeholder="i18n.security.INPUT_STATUS"
                     >
+                        <el-option :label="i18n.security.ALL" value=""></el-option>
                         <el-option label="Fixed" value="Fixed"></el-option>
                         <el-option
                             label="Unaffected"
@@ -51,6 +52,7 @@
                         @change="initData(1)"
                         :placeholder="i18n.security.INPUT_STATUS"
                     >
+                        <el-option :label="i18n.security.ALL" value=""></el-option>
                         <el-option label="Fixed" value="Fixed"></el-option>
                         <el-option
                             label="Unaffected"
