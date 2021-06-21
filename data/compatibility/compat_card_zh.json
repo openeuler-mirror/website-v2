@@ -2411,5 +2411,24 @@
       "chipModel": "MT27804A0-FCCF-EV",
       "item": "03024QAX",
       "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/MLNX_OFED_LINUX-5.1-2.5.2.0-openeuler20.03-x86_64-ext.tgz"
+    },
+	{
+      "vendorID": "1000",
+      "deviceID": "0097",
+      "svID": "1000",
+      "ssID": "3090",
+      "architecture": "x86_64",
+      "os": "openEuler 20.03 LTS SP1",
+      "driverName": "mpt3sas",
+      "version": "26.100.00.00",
+      "type": "RAID",
+      "driverDate": "2020.12.23",
+      "sha256": "67CB2F34DC66D76DE0C84BBF64688B91CE243549",
+      "driverSize": "540K",
+      "chipVendor": "Avago",
+      "boardModel": "SR130",
+      "chipModel": "LSI SAS3008",
+      "item": "03022CDE",
+      "downloadLink": "inbox"
     }
 ]
