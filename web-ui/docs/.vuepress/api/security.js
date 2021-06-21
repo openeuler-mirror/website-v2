@@ -49,7 +49,8 @@ export const securityList = ({
 export const cveList = ({
     keyword,
     page,
-    pageSize
+    pageSize,
+    status
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
@@ -58,6 +59,7 @@ export const cveList = ({
             type: 'post',
             data: {
                 keyword,
+                status,
                 pages: {
                     page,
                     size: pageSize
