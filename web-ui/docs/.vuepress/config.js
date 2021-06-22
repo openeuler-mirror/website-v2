@@ -12,7 +12,7 @@ module.exports = {
             content: 'width=device-width,initial-scale=1,user-scalable=no'
         }],
         ['script', {
-            src: '/js/ba.js'
+            src: '/js/analytics.js'
         }],
         ['meta', { name: 'keywords', content: 'openEuler, 操作系统, 开放, 生态, 开源, Linux 开源, OS, open, ecosystem, open source, Linux open source'}]
     ],
