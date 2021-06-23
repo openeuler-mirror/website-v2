@@ -2525,5 +2525,43 @@
       "chipModel": "BCM57414",
       "item": "06310148",
       "downloadLink": "inbox"
-	}
+	},
+    {
+      "vendorID": "10de",
+      "deviceID": "1bb3",
+      "svID": "1bb3",
+      "ssID": "11d8",
+      "architecture": "x86_64",
+      "os": "openEuler 20.03 LTS SP1",
+      "driverName": "nouveau",
+      "version": "460.32.03",
+      "type": "GPU",
+      "driverDate": "2021.04.19",
+      "sha256": "",
+      "driverSize": "170MB",
+      "chipVendor": "NVIDIA",
+      "boardModel": "Tesla P4",
+      "chipModel": "GP104GL",
+      "item": "",
+      "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/NVIDIA-Linux-x86_64-460.32.03.run"
+    },
+    {
+      "vendorID": "10de",
+      "deviceID": "13f2",
+      "svID": "10de",
+      "ssID": "115e",
+      "architecture": "x86_64",
+      "os": "openEuler 20.03 LTS SP1",
+      "driverName": "nouveau",
+      "version": "460.32.03",
+      "type": "GPU",
+      "driverDate": "2021.04.19",
+      "sha256": "",
+      "driverSize": "170MB",
+      "chipVendor": "NVIDIA",
+      "boardModel": "Tesla M60",
+      "chipModel": "GM204GL",
+      "item": "06320094",
+      "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/x86_64/NVIDIA-Linux-x86_64-460.32.03.run"
+    }
 ]
