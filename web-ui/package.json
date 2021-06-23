@@ -23,6 +23,7 @@
     "vue-router": "3.4.5",
     "vuepress": "~1.5.2",
     "vuepress-plugin-code-copy": "^1.0.6",
-    "vuepress-plugin-sitemap": "^2.3.1"
+    "vuepress-plugin-sitemap": "^2.3.1",
+    "optimize-css-assets-webpack-plugin": "5.0.6"
   }
 }

@@ -1,16 +1,5 @@
 .lang-en {
-    .markdown {
-        h2, h3, h4, h5{
-            
-        }
-        p, ul li {
-            
-        }
-    }
     .other.markdown {
-        h2, h3, h4, h5{
-            
-        }
         p {
             font-weight: 400;
         }
@@ -30,6 +19,13 @@
     }
 }
 .markdown {
+    [id]::before {
+        content: '';
+        display: block;
+        height: 60px;
+        margin-top: -60px;
+        visibility: hidden;
+    }
     width: 1120px;
     margin: 0 auto;
     margin-bottom: 200px;
