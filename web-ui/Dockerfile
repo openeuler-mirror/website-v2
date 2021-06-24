@@ -6,6 +6,9 @@ RUN mkdir -p /home/openeuler/web
 WORKDIR /home/openeuler/web
 COPY . /home/openeuler/web
 
+RUN rm -rf ./docs/ru
+RUN cp ./docs/.vuepress/config.zh.js ./docs/.vuepress/config.js
+
 RUN npm install
 
 RUN mv /home/openeuler/web/script/update-build-script.js /home/openeuler/web/node_modules/@vuepress/core/lib/node/build/index.js
