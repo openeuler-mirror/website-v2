@@ -27,11 +27,6 @@ do
   mkdir -p ../server/docs/$b/en/
   cp -r ./docs/en/* ../server/docs/$b/en/
   
-  if [ -d "./docs/ru" ]; then
-    mkdir -p ../server/docs/$b/ru/
-    cp -r ./docs/ru/* ../server/docs/$b/ru/
-  fi
-  
   cd ..
   cd ./docs
 done
