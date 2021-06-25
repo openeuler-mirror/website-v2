@@ -25,3 +25,6 @@ done
 
 cd ..
 rm -rf ./docs
+
+cp ./website-v2/script/server-dockerfile-ru ./website-v2/server/Dockerfile
+cp ./website-v2/script/webui-dockerfile-ru ./website-v2/web-ui/Dockerfile
