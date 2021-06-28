@@ -589,6 +589,14 @@ module.exports = {
                 LEFT_IMG_LINK: 'https://www.infoq.cn/?utm_source=openeuler&utm_medium=youlian',
                 LEFT_IMG_PC: '/img/home/link/infoQ.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-infoQ.png',
+                RIGHT_IMG_LINK: 'https://openanolis.cn',
+                RIGHT_IMG_PC: '/img/home/link/OpenAnolis-logo.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/OpenAnolis-logo-mobile.png',
+            },
+            {
+                LEFT_IMG_LINK: 'https://kaiyuanshe.cn/',
+                LEFT_IMG_PC: '/img/home/link/kaiyuanshe-logo.png',
+                LEFT_IMG_MOBILE: '/img/home/link/kaiyuanshe-logo-mobile.png'
             }
         ],
         MORE: "更多",
@@ -1151,6 +1159,14 @@ module.exports = {
                 LEFT_IMG_LINK: 'https://www.infoq.cn/?utm_source=openeuler&utm_medium=youlian',
                 LEFT_IMG_PC: '/img/home/link/infoQ.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-infoQ.png',
+                RIGHT_IMG_LINK: 'https://openanolis.cn',
+                RIGHT_IMG_PC: '/img/home/link/OpenAnolis-logo.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/OpenAnolis-logo-mobile.png',
+            },
+            {
+                LEFT_IMG_LINK: 'https://kaiyuanshe.cn/',
+                LEFT_IMG_PC: '/img/home/link/kaiyuanshe-logo.png',
+                LEFT_IMG_MOBILE: '/img/home/link/kaiyuanshe-logo-mobile.png'
             }
         ],
         MORE: "Read More",
@@ -1714,6 +1730,14 @@ module.exports = {
                 LEFT_IMG_LINK: 'https://www.infoq.cn/?utm_source=openeuler&utm_medium=youlian',
                 LEFT_IMG_PC: '/img/home/link/infoQ.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-infoQ.png',
+                RIGHT_IMG_LINK: 'https://openanolis.cn',
+                RIGHT_IMG_PC: '/img/home/link/OpenAnolis-logo.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/OpenAnolis-logo-mobile.png',
+            },
+            {
+                LEFT_IMG_LINK: 'https://kaiyuanshe.cn/',
+                LEFT_IMG_PC: '/img/home/link/kaiyuanshe-logo.png',
+                LEFT_IMG_MOBILE: '/img/home/link/kaiyuanshe-logo-mobile.png'
             }
         ],
         MORE: "Read More",
