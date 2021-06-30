@@ -6,10 +6,18 @@ module.exports = {
     cn: {
         ATUNE_BANNER_TEXT: ['A-Tune','一款基于AI开发的智能优化引擎'],
         ATUNE_BANNER_IMG: '/img/minisite/atune/mobile-banner.png',
-        ATUNE_DESC: 'A-Tune是一款基于openEuler开发的，自动化、智能化性能调优引擎。它利用人工智能技术，对运行在操作系统上的业务建立精准模型，动态感知业务特征并推理出具体应用，根据业务负载情况动态调节并给出最佳的参数配置组合，从而使业务处于最佳运行状态。',
+        ATUNE_DESC: ['A-Tune是一款基于openEuler开发的，自动化、智能化性能调优引擎。它利用人工智能技术，对运行在操作系统上的业务建立精准模型，动态感知业务特征并推理出具体应用，根据业务负载情况动态调节并给出最佳的参数配置组合，从而使业务处于最佳运行状态。'],
         ATUNE_MAIL: 'mail to:a-tune@openeuler.org',
-        ATUNE_MB_MAIL: ['mail to:','a-tune@openeuler.org'],
-        ATUNE_NAV_TEXT: ['架构','文档'],
+        NAV_TEXT: [
+            {
+                key: '#framework',
+                name: '架构'
+            },
+            {
+                key: '#document',
+                name: '文档'
+            }
+        ],
         ATUNE_LINK: [
             {
                 IMG:'/img/minisite/atune/zh-start.png',
@@ -73,12 +81,10 @@ module.exports = {
         ISULA_BANNER_TEXT: ['iSula','小个头 大能量'],
         ISULA_BANNER_IMG: '/img/minisite/isula/mobile-banner.png',
         ISULA_LOGO: '/img/minisite/isula/isula-logo.png',
-        ISULA_DESC_UP: "iSula /'i.zu.la/，华为容器技术方案品牌。其原意是一种非常强大的蚂蚁，学术上称为“子弹蚁”，因为被它咬一口，犹如被子弹打到那般疼痛。iSula是世界上强大的昆虫之一。华为容器技术方案品牌因其“小个头、大能量”的含义而取名。",
+        ISULA_DESC_UP: ["iSula /'i.zu.la/，华为容器技术方案品牌。其原意是一种非常强大的蚂蚁，学术上称为“子弹蚁”，因为被它咬一口，犹如被子弹打到那般疼痛。iSula是世界上强大的昆虫之一。华为容器技术方案品牌因其“小个头、大能量”的含义而取名。"],
         ISULA_DESC_DOWN: ['目前 iSula 家族提供了如下组件:','iSulad：容器引擎，提供容器的全生命周期管理，北向兼容Kubernetes的CRI接口，南向兼容OCI 生态。','isula-build：容器镜像构建工具，提供快速构建容器镜像的能力。','isula-transform：容器迁移工具，提供Docker容器冷迁移至iSulad的能力。'],
         ISULA_DESC_IMG: '/img/minisite/isula/zh-desc.png',
         ISULA_MAIL: 'mail to:isulad@openeuler.org',
-        ISULA_MB_MAIL: ['mail to:','isulad@openeuler.org'],
-        ISULA_NAV_TEXT: ['架构','文档'],
         ISULA_LINK: [
             {
                 IMG:'/img/minisite/isula/zh-start.png',
@@ -224,7 +230,21 @@ module.exports = {
         SVIRT_DESC: ['StratoVirt是面向云数据中心的企业级虚拟化平台，实现一套架构对虚拟机、容器、Serverless三种场景的统一支持。在轻量低噪、软硬协同、Rust语言级安全等方面具备关键技术竞争优势。','StratoVirt在架构设计上预留了组件化拼装的能力和接口，可以按需灵活组装高级特性直至演化到支持标准虚拟化，在特性需求、应用场景和轻快灵巧之间找到最佳的平衡点。'],
         SVIRT_IMG: '/img/minisite/svirt/pc-svirt.png',
         SVIRT_MB_IMG: '/img/minisite/svirt/mobile-svirt.png',
-        SVIRT_NAV_TEXT: ['特征','架构','文档'],
+        SVIRT_NAV_TEXT: [
+            {
+                key: '#character',
+                name: '特征'
+            },
+            {
+                key: '#framework',
+                name: '架构'
+            },
+            {
+                key: '#document',
+                name: '文档'
+            },
+        ],
+        
         SVIRT_LINK: [
             {
                 IMG:'/img/minisite/svirt/zh-start.png',
@@ -316,16 +336,204 @@ module.exports = {
                     LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E5%AF%B9%E6%8E%A5iSula%E5%AE%89%E5%85%A8%E5%AE%B9%E5%99%A8.md'
                 }
             ]
+        },
+        BISHENG_BANNER_TEXT: ['毕昇JDK','ARM上最好用的JDK'],
+        BISHENG_DESC: ['毕昇JDK是华为内部基于OpenJDK定制的Huawei JDK的开源版本。Huawei JDK运行在华为内部500多个产品上，研发团队积累了丰富的开发经验，解决了业务实际运行中遇到的多个疑难问题。','毕昇JDK作为OpenJDK的下游，是一款高性能、可用于生产环境的OpenJDK发行版。毕昇JDK对华为内部应用场景中遇到的一些性能问题和稳定性问题进行了修复，并在ARM架构上进行了性能优化和稳定性增强，在ARM架构上更稳定，在大数据等场景下可以获得更好的性能。','毕昇JDK致力于为JAVA开发者提供一款稳定可靠、高性能、易调测的JDK，也为用户在ARM架构上提供一个更好的选择。'],
+        BISHENG_LINK: [
+            {
+                IMG:'/img/minisite/bisheng/zh-speker.png',
+                LINK_LIST: [
+                    {
+                        TEXT: '毕昇JDK8',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-8'
+                    },
+                    {
+                        TEXT: '毕昇JDK11',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-11'
+                    }
+                ],
+                STATUS: false
+            },
+            {
+                IMG:'/img/minisite/bisheng/zh-sponsor.png',
+                LINK_LIST: [
+                    {
+                        TEXT: '毕昇JDK8',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-8/issues'
+                    },
+                    {
+                        TEXT: '毕昇JDK11',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-11/issues'
+                    }
+                ],
+                STATUS: false
+            }
+        ],
+        BISHENG_MORE: '更多信息：',
+        BISHENG_INFO: [
+            {
+                THEME: 'License: ',
+                BODY: '采用GPLv2 with Classpath Exception协议。'
+            },
+            {
+                THEME: '支持Java版本: ',
+                BODY: '目前毕昇JDK支持8和11两个LTS版本。'
+            },
+            {
+                THEME: '支持架构: ',
+                BODY: '支持Linux/AArch64架构。'
+            },
+            {
+                THEME: '支持操作系统: ',
+                BODY: '目前仅支持Linux版本，对操作系统的要求是AArch64上glibc版本不低于2.17，基本覆盖所有主流操作系统，发布前经过稳定性验证的操作系统有openEuler 全系列操作系统和CentOS 7.6。'
+            }
+        ],
+        BISHENG_FRAMEWORK: {
+            TITLE_OUTSIDE: '架构',
+            TITLE_INSIDE: 'ARCHITECTURE',
+            DESC_LIST: [
+                'JDK整体架构如下图所示，其中JRE指的是Java Runtime Environment，包括了Java运行时的虚拟机JVM（Java Virtual Machine）、Libraries等。而JDK是JRE的超集，包括了JRE的所有内容，并包含javac、jdb等开发者必须的编译器和调试器。JRE仅提供运行时库、Java虚拟机和其他一些运行Java应用程序所必须的组件。'
+            ],
+            FRAMEWORK_IMG: '/img/minisite/bisheng/framework.png'
+        },
+        BISHENG_LEARN: {
+            TITLE_OUTSIDE: '学习与下载',
+            TITLE_INSIDE: 'LEARNING',
+            DATA_LIST: [
+                {
+                    IMG: '/img/minisite/isula/compile.png',
+                    THEME: '文档',
+                    LINK: [
+                        {
+                            TEXT: '毕昇JDK 8',
+                            LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/Home'
+                        },
+                        {
+                            TEXT: '毕昇JDK 11',
+                            LINK: 'https://gitee.com/openeuler/bishengjdk-11/wikis/Home'
+                        },
+                    ]
+                },
+                {
+                    IMG: '/img/minisite/atune/install.png',
+                    THEME: '课程',
+                    LINK: [
+                        {
+                            TEXT: '毕昇JDK使用',
+                            LINK: 'https://education.huaweicloud.com/courses/course-v1:HuaweiX+CBUCNXK067+Self-paced/about'
+                        },
+                    ]
+                },
+                {
+                    IMG: '/img/minisite/isula/desc.png',
+                    THEME: '下载',
+                    LINK: [
+                        {
+                            TEXT: '毕昇JDK历史版本',
+                            LINK: 'https://mirrors.huaweicloud.com/kunpeng/archive/compiler/bisheng_jdk/'
+                        },
+                    ]
+                }
+            ]
+        },
+        BISHENG_REFERENCE: {
+            TITLE_OUTSIDE: '友情链接',
+            TITLE_INSIDE: 'LINKS',
+            LINK_LIST: [
+                {
+                    TEXT: '毕昇JDK（鲲鹏社区） ',
+                    LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=JDK'
+                },
+                {
+                    TEXT: '毕昇编译器（鲲鹏社区）',
+                    LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=bisheng'
+                },
+                {
+                    TEXT: '毕昇鲲鹏GCC（鲲鹏社区）',
+                    LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=hgcc'
+                }
+            ]
+        },
+        SECGEAR_BANNER_TEXT: ['secGear','secGear是一款供开发者开发安全应用的机密计算框架'],
+        SECGEAR_DESC: ['secGear是面向计算产业的机密计算安全应用开发套件，旨在方便开发者在不同的硬件设备上提供统一开发框架，让用户不感知底层各种机密计算架构和接口的差异，目前secGear支持Intel SGX硬件和ARM Trustzone(安全os支持iTrustee)。','secGear同时在中间件层和服务层提供丰富的扩展能力，让开发者能够方便得调用安全组件，乃至直接使用机密计算安全服务。'],
+        SECGEAR_FRAMEWORK: {
+            TITLE_OUTSIDE: '架构',
+            TITLE_INSIDE: 'ARCHITECTURE ',
+            DESC_LIST: [
+                '如图所示，secGear 主题包含三个层级（当前仅开源基础层 Base Layer，服务层和中间件层逐步开源）：',
+                '服务层：提供完整的基于机密计算的安全服务，用户直接使用相关服务，享受机密计算带来的安全性。',
+                '中间件层：提供常见的安全协议组件以及各种安全函数库，用户可以直接在安全及非安全侧调用相关接口，不必从头造轮子，当前构建中的有pkcs11、pake等',
+                '基础层：提供丰富的 enclave 开发接口或工具，包含代码生成工具和enclave声明周期管理等接口，并且在安全侧支持POSIX APIs 和标准 OpenSSL 接口，用户基于这些接口可以自由开发安全应用程序 。'
+            ],
+            FRAMEWORK_IMG: '/img/minisite/secgear/framework.png'
+        },
+        SECGEAR_DOCUMENT: {
+            TITLE_OUTSIDE: '文档',
+            TITLE_INSIDE: 'DOCUMENTATION',
+            DATA_LIST: [
+                {
+                    IMG: '/img/minisite/isula/readme.png',
+                    LINK: [
+                        {
+                            TEXT: '整体介绍',
+                            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E8%AE%A4%E8%AF%86secGear.md'
+                        }
+                    ]
+                },
+                {
+                    IMG: '/img/minisite/isula/desc.png',
+                    LINK: [
+                        {
+                            TEXT: '安装',
+                            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E5%AE%89%E8%A3%85secGear.md'
+                        }
+                    ]
+                },
+                {
+                    IMG: '/img/minisite/isula/compile.png',
+                    LINK: [
+                        {
+                            TEXT: '开发指南',
+                            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E5%BC%80%E5%8F%91secGear%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F.md'
+                        }
+                    ]
+                },
+                {
+                    IMG: '/img/minisite/atune/install.png',
+                    LINK: [
+                        {
+                            TEXT: '工具使用文档',
+                            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E4%BD%BF%E7%94%A8secGear%E5%B7%A5%E5%85%B7.md'
+                        }
+                    ]
+                },
+                {
+                    IMG: '/img/minisite/atune/use.png',
+                    LINK: [
+                        {
+                            TEXT: 'API接口文档',
+                            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E6%8E%A5%E5%8F%A3%E5%8F%82%E8%80%83.md'
+                        }
+                    ]
+                }
+            ]
         }
-
     },
     en: {
         ATUNE_BANNER_TEXT: ['A-Tune','AI-based Tuning Engine'],
         ATUNE_BANNER_IMG: '/img/minisite/atune/mobile-banner.png',
-        ATUNE_DESC: 'A-Tune is an automatic and intelligent performance tuning engine developed based on openEuler. It adopts AI technologies to ensure the optimal service running. A-Tune builds precise models for services running on the operating system, understands service features dynamically to infer specific applications. And it adjusts the parameters based on service loads to provide the optimal parameter configurations.',
+        ATUNE_DESC: ['A-Tune is an automatic and intelligent performance tuning engine developed based on openEuler. It adopts AI technologies to ensure the optimal service running. A-Tune builds precise models for services running on the operating system, understands service features dynamically to infer specific applications. And it adjusts the parameters based on service loads to provide the optimal parameter configurations.'],
         ATUNE_MAIL: 'mail to:a-tune@openeuler.org',
-        ATUNE_MB_MAIL: ['mail to:','a-tune@openeuler.org'],
-        ATUNE_NAV_TEXT: ['Architecture','Documentation'],
+        NAV_TEXT: [
+            {
+                key: '#framework',
+                name: 'Architecture'
+            },
+            {
+                key: '#document',
+                name: 'Documentation'
+            }
+        ],
         ATUNE_LINK: [
             {
                 IMG:'/img/minisite/atune/en-start.png',
@@ -389,12 +597,10 @@ module.exports = {
         ISULA_BANNER_TEXT: ['iSula','Packs a huge punch in a small size'],
         ISULA_BANNER_IMG: '/img/minisite/isula/mobile-banner.png',
         ISULA_LOGO: '/img/minisite/isula/isula-logo.png',
-        ISULA_DESC_UP: "iSula is the brand of Huawei container solution. It derives its name from a species of ant, one of the most powerful insects in the world despite its small size. This combination of ultimate power and minimal size is the perfect description of the iSula container technology solution.",
+        ISULA_DESC_UP: ["iSula is the brand of Huawei container solution. It derives its name from a species of ant, one of the most powerful insects in the world despite its small size. This combination of ultimate power and minimal size is the perfect description of the iSula container technology solution."],
         ISULA_DESC_DOWN: ['Currently, the iSula family includes the following components:','iSulad: iSulad is the universal container engine that provides full lifecycle management. It is compatible with the Container Runtime Interface (CRI) of Kubernetes in the northbound direction as well as the OCI ecosystem in the southbound direction.','isula-build: isula-build is the container image building tool that helps you quickly build container images.','isula-transform: isula-transform is the container migration tool that enables the cold migration of Docker containers to iSulad.'],
         ISULA_DESC_IMG: '/img/minisite/isula/en_desc.png',
         ISULA_MAIL: 'mail to:isulad@openeuler.org',
-        ISULA_MB_MAIL: ['mail to:','isulad@openeuler.org'],
-        ISULA_NAV_TEXT: ['Architecture','Documentation'],
         ISULA_LINK: [
             {
                 IMG:'/img/minisite/isula/en-start.png',
@@ -540,7 +746,20 @@ module.exports = {
         SVIRT_DESC: ['StratoVirt is an enterprise-grade virtualization cloud platform that uses a single architecture to support VM, containers, and serverless data center scenarios. StratoVirt has competitive advantages in key technologies such as lightweight and low noise, software and hardware collaboration, as well as premium security using Rust language.','StratoVirt reserves component-based assembling capabilities and interfaces in the architecture design, that is, premium features can be flexibly assembled and evolve to support standard virtualization. In this way, StratoVirt strikes a perfect balance between feature requirements, application scenarios, and flexibility.'],
         SVIRT_IMG: '/img/minisite/svirt/pc-svirt.png',
         SVIRT_MB_IMG: '/img/minisite/svirt/mobile-svirt.png',
-        SVIRT_NAV_TEXT: ['Feature','Architecture','Documentation'],
+        SVIRT_NAV_TEXT: [
+            {
+                key: '#character',
+                name: 'Feature'
+            },
+            {
+                key: '#framework',
+                name: 'Architecture'
+            },
+            {
+                key: '#document',
+                name: 'Documentation'
+            }
+        ],
         SVIRT_LINK: [
             {
                 IMG:'/img/minisite/svirt/en-start.png',
@@ -632,15 +851,204 @@ module.exports = {
                     LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E5%AF%B9%E6%8E%A5iSula%E5%AE%89%E5%85%A8%E5%AE%B9%E5%99%A8.md'
                 }
             ]
+        },
+        BISHENG_BANNER_TEXT: ['毕昇JDK','ARM上最好用的JDK'],
+        BISHENG_DESC: ['毕昇JDK是华为内部基于OpenJDK定制的Huawei JDK的开源版本。Huawei JDK运行在华为内部500多个产品上，研发团队积累了丰富的开发经验，解决了业务实际运行中遇到的多个疑难问题。','毕昇JDK作为OpenJDK的下游，是一款高性能、可用于生产环境的OpenJDK发行版。毕昇JDK对华为内部应用场景中遇到的一些性能问题和稳定性问题进行了修复，并在ARM架构上进行了性能优化和稳定性增强，在ARM架构上更稳定，在大数据等场景下可以获得更好的性能。','毕昇JDK致力于为JAVA开发者提供一款稳定可靠、高性能、易调测的JDK，也为用户在ARM架构上提供一个更好的选择。'],
+        BISHENG_LINK: [
+            {
+                IMG:'/img/minisite/bisheng/zh-speker.png',
+                LINK_LIST: [
+                    {
+                        TEXT: '毕昇JDK8',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-8'
+                    },
+                    {
+                        TEXT: '毕昇JDK11',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-11'
+                    }
+                ],
+                STATUS: false
+            },
+            {
+                IMG:'/img/minisite/bisheng/zh-sponsor.png',
+                LINK_LIST: [
+                    {
+                        TEXT: '毕昇JDK8',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-8/issues'
+                    },
+                    {
+                        TEXT: '毕昇JDK11',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-11/issues'
+                    }
+                ],
+                STATUS: false
+            }
+        ],
+        BISHENG_MORE: '更多信息：',
+        BISHENG_INFO: [
+            {
+                THEME: 'License: ',
+                BODY: '采用GPLv2 with Classpath Exception协议。'
+            },
+            {
+                THEME: '支持Java版本: ',
+                BODY: '目前毕昇JDK支持8和11两个LTS版本。'
+            },
+            {
+                THEME: '支持架构: ',
+                BODY: '支持Linux/AArch64架构。'
+            },
+            {
+                THEME: '支持操作系统: ',
+                BODY: '目前仅支持Linux版本，对操作系统的要求是AArch64上glibc版本不低于2.17，基本覆盖所有主流操作系统，发布前经过稳定性验证的操作系统有openEuler 全系列操作系统和CentOS 7.6。'
+            }
+        ],
+        BISHENG_FRAMEWORK: {
+            TITLE_OUTSIDE: '架构',
+            TITLE_INSIDE: 'ARCHITECTURE',
+            DESC_LIST: [
+                'JDK整体架构如下图所示，其中JRE指的是Java Runtime Environment，包括了Java运行时的虚拟机JVM（Java Virtual Machine）、Libraries等。而JDK是JRE的超集，包括了JRE的所有内容，并包含javac、jdb等开发者必须的编译器和调试器。JRE仅提供运行时库、Java虚拟机和其他一些运行Java应用程序所必须的组件。'
+            ],
+            FRAMEWORK_IMG: '/img/minisite/bisheng/framework.png'
+        },
+        BISHENG_LEARN: {
+            TITLE_OUTSIDE: '学习与下载',
+            TITLE_INSIDE: 'LEARNING',
+            DATA_LIST: [
+                {
+                    IMG: '/img/minisite/isula/compile.png',
+                    THEME: '文档',
+                    LINK: [
+                        {
+                            TEXT: '毕昇JDK 8',
+                            LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/Home'
+                        },
+                        {
+                            TEXT: '毕昇JDK 11',
+                            LINK: 'https://gitee.com/openeuler/bishengjdk-11/wikis/Home'
+                        },
+                    ]
+                },
+                {
+                    IMG: '/img/minisite/atune/install.png',
+                    THEME: '课程',
+                    LINK: [
+                        {
+                            TEXT: '毕昇JDK使用',
+                            LINK: 'https://education.huaweicloud.com/courses/course-v1:HuaweiX+CBUCNXK067+Self-paced/about'
+                        },
+                    ]
+                },
+                {
+                    IMG: '/img/minisite/isula/desc.png',
+                    THEME: '下载',
+                    LINK: [
+                        {
+                            TEXT: '毕昇JDK历史版本',
+                            LINK: 'https://mirrors.huaweicloud.com/kunpeng/archive/compiler/bisheng_jdk/'
+                        },
+                    ]
+                }
+            ]
+        },
+        BISHENG_REFERENCE: {
+            TITLE_OUTSIDE: '友情链接',
+            TITLE_INSIDE: 'LINKS',
+            LINK_LIST: [
+                {
+                    TEXT: '毕昇JDK（鲲鹏社区） ',
+                    LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=JDK'
+                },
+                {
+                    TEXT: '毕昇编译器（鲲鹏社区）',
+                    LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=bisheng'
+                },
+                {
+                    TEXT: '毕昇鲲鹏GCC（鲲鹏社区）',
+                    LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=hgcc'
+                }
+            ]
+        },
+        SECGEAR_BANNER_TEXT: ['secGear','secGear是一款供开发者开发安全应用的机密计算框架'],
+        SECGEAR_DESC: ['secGear是面向计算产业的机密计算安全应用开发套件，旨在方便开发者在不同的硬件设备上提供统一开发框架，让用户不感知底层各种机密计算架构和接口的差异，目前secGear支持Intel SGX硬件和ARM Trustzone(安全os支持iTrustee)。','secGear同时在中间件层和服务层提供丰富的扩展能力，让开发者能够方便得调用安全组件，乃至直接使用机密计算安全服务。'],
+        SECGEAR_FRAMEWORK: {
+            TITLE_OUTSIDE: '架构',
+            TITLE_INSIDE: 'ARCHITECTURE ',
+            DESC_LIST: [
+                '如图所示，secGear 主题包含三个层级（当前仅开源基础层 Base Layer，服务层和中间件层逐步开源）：',
+                '服务层：提供完整的基于机密计算的安全服务，用户直接使用相关服务，享受机密计算带来的安全性。',
+                '中间件层：提供常见的安全协议组件以及各种安全函数库，用户可以直接在安全及非安全侧调用相关接口，不必从头造轮子，当前构建中的有pkcs11、pake等',
+                '基础层：提供丰富的 enclave 开发接口或工具，包含代码生成工具和enclave声明周期管理等接口，并且在安全侧支持POSIX APIs 和标准 OpenSSL 接口，用户基于这些接口可以自由开发安全应用程序 。'
+            ],
+            FRAMEWORK_IMG: '/img/minisite/secgear/framework.png'
+        },
+        SECGEAR_DOCUMENT: {
+            TITLE_OUTSIDE: '文档',
+            TITLE_INSIDE: 'DOCUMENTATION',
+            DATA_LIST: [
+                {
+                    IMG: '/img/minisite/isula/readme.png',
+                    LINK: [
+                        {
+                            TEXT: '整体介绍',
+                            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E8%AE%A4%E8%AF%86secGear.md'
+                        }
+                    ]
+                },
+                {
+                    IMG: '/img/minisite/isula/desc.png',
+                    LINK: [
+                        {
+                            TEXT: '安装',
+                            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E5%AE%89%E8%A3%85secGear.md'
+                        }
+                    ]
+                },
+                {
+                    IMG: '/img/minisite/isula/compile.png',
+                    LINK: [
+                        {
+                            TEXT: '开发指南',
+                            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E5%BC%80%E5%8F%91secGear%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F.md'
+                        }
+                    ]
+                },
+                {
+                    IMG: '/img/minisite/atune/install.png',
+                    LINK: [
+                        {
+                            TEXT: '工具使用文档',
+                            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E4%BD%BF%E7%94%A8secGear%E5%B7%A5%E5%85%B7.md'
+                        }
+                    ]
+                },
+                {
+                    IMG: '/img/minisite/atune/use.png',
+                    LINK: [
+                        {
+                            TEXT: 'API接口文档',
+                            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E6%8E%A5%E5%8F%A3%E5%8F%82%E8%80%83.md'
+                        }
+                    ]
+                }
+            ]
         }
     },
     ru: {
         ATUNE_BANNER_TEXT: ['A-Tune','инструмент настройки на базе ИИ'],
         ATUNE_BANNER_IMG: '/img/minisite/atune/mobile-banner.png',
-        ATUNE_DESC: 'A-Tune — это автоматический интеллектуальный инструмент настройки рабочих параметров, разработанный сообществом openEuler. За счет использования технологий искусственного интеллекта инструмент обеспечивает оптимальную работу служб. A-Tune создает точные модели работающих в операционной системе служб, динамически отслеживает изменения их показателей и делает логические выводы о состоянии работы конкретных приложений. Настраивая параметры на основе данных о сервисной нагрузке, инструмент позволяет добиться их оптимальной конфигурации.',
+        ATUNE_DESC: ['A-Tune — это автоматический интеллектуальный инструмент настройки рабочих параметров, разработанный сообществом openEuler. За счет использования технологий искусственного интеллекта инструмент обеспечивает оптимальную работу служб. A-Tune создает точные модели работающих в операционной системе служб, динамически отслеживает изменения их показателей и делает логические выводы о состоянии работы конкретных приложений. Настраивая параметры на основе данных о сервисной нагрузке, инструмент позволяет добиться их оптимальной конфигурации.'],
         ATUNE_MAIL: 'mail to:a-tune@openeuler.org',
-        ATUNE_MB_MAIL: ['mail to:','a-tune@openeuler.org'],
-        ATUNE_NAV_TEXT: ['Архитектура','Документы'],
+        NAV_TEXT: [
+            {
+                key: '#framework',
+                name: 'Архитектура'
+            },
+            {
+                key: '#document',
+                name: 'Документы'
+            }
+        ],
         ATUNE_LINK: [
             {
                 IMG:'/img/minisite/atune/ru-start.png',
@@ -704,12 +1112,10 @@ module.exports = {
         ISULA_BANNER_TEXT: ['iSula','Ударная сила в компактном размере'],
         ISULA_BANNER_IMG: '/img/minisite/isula/mobile-banner.png',
         ISULA_LOGO: '/img/minisite/isula/isula-logo.png',
-        ISULA_DESC_UP: "iSula — это контейнерное решение компании Huawei. Название решения происходит от вида муравьев, обитающих в джунглях Перу, — легких, быстрых и живучих. Сочетание невероятной мощности и компактного размера — самое точная характеристика контейнерного решения iSula.",
+        ISULA_DESC_UP: ["iSula — это контейнерное решение компании Huawei. Название решения происходит от вида муравьев, обитающих в джунглях Перу, — легких, быстрых и живучих. Сочетание невероятной мощности и компактного размера — самое точная характеристика контейнерного решения iSula."],
         ISULA_DESC_DOWN: ['На сегодняшний день в семейство iSula входят следующие компоненты:','iSulad: Это универсальный контейнерный движок, который обеспечивает полное управление жизненным циклом. Он совместим с интерфейсом Container Runtime Interface (CRI) от Kubernetes на северной стороне и экосистемой OCI на южной стороне.','isula-build: Это инструмент, помогающий быстро создавать образы контейнера.','isula-transform: Инструмент, позволяющий осуществлять холодную миграцию контейнеров Docker в iSulad.'],
         ISULA_DESC_IMG: '/img/minisite/isula/ru-desc.png',
         ISULA_MAIL: 'mail to:isulad@openeuler.org',
-        ISULA_MB_MAIL: ['mail to:','isulad@openeuler.org'],
-        ISULA_NAV_TEXT: ['Архитектура','Документы'],
         ISULA_LINK: [
             {
                 IMG:'/img/minisite/isula/ru-start.png',
@@ -855,7 +1261,20 @@ module.exports = {
         SVIRT_DESC: ['StratoVirt — это облачная платформа виртуализации корпоративного класса, на единой архитектуре которой поддерживаются виртуальные машины, контейнеры и центры обработки данных, работающие без сервера. StratoVirt обладает конкурентными преимуществами: облегченное решение с низким уровнем помех, взаимодействие программного и аппаратного обеспечения, а также безопасность премиум-уровня за счет использования языка программирования Rust.','StratoVirt предоставляет функционалы высокого класса для гибкой компонентной сборки и интерфейсы, необходимые в проектировании архитектуры и поддержки стандартной виртуализации. StratoVirt позволяет добиться идеального баланса между функциональными требованиями, сценариями применения и гибкостью.'],
         SVIRT_IMG: '/img/minisite/svirt/pc-svirt.png',
         SVIRT_MB_IMG: '/img/minisite/svirt/mobile-svirt.png',
-        SVIRT_NAV_TEXT: ['Особенности','Архитектура','Документы'],
+        SVIRT_NAV_TEXT: [
+            {
+                key: '#character',
+                name: 'Особенности'
+            },
+            {
+                key: '#framework',
+                name: 'Архитектура'
+            },
+            {
+                key: '#document',
+                name: 'Документы'
+            }
+        ],
         SVIRT_LINK: [
             {
                 IMG:'/img/minisite/svirt/ru-start.png',
@@ -945,6 +1364,187 @@ module.exports = {
                     ICON: '/img/minisite/svirt/doc-box.png',
                     TEXT: 'Подключение к контейнерам безопасности iSula',
                     LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/StratoVirt/%E5%AF%B9%E6%8E%A5iSula%E5%AE%89%E5%85%A8%E5%AE%B9%E5%99%A8.md'
+                }
+            ]
+        },
+        BISHENG_BANNER_TEXT: ['毕昇JDK','ARM上最好用的JDK'],
+        BISHENG_DESC: ['毕昇JDK是华为内部基于OpenJDK定制的Huawei JDK的开源版本。Huawei JDK运行在华为内部500多个产品上，研发团队积累了丰富的开发经验，解决了业务实际运行中遇到的多个疑难问题。','毕昇JDK作为OpenJDK的下游，是一款高性能、可用于生产环境的OpenJDK发行版。毕昇JDK对华为内部应用场景中遇到的一些性能问题和稳定性问题进行了修复，并在ARM架构上进行了性能优化和稳定性增强，在ARM架构上更稳定，在大数据等场景下可以获得更好的性能。','毕昇JDK致力于为JAVA开发者提供一款稳定可靠、高性能、易调测的JDK，也为用户在ARM架构上提供一个更好的选择。'],
+        BISHENG_LINK: [
+            {
+                IMG:'/img/minisite/bisheng/zh-speker.png',
+                LINK_LIST: [
+                    {
+                        TEXT: '毕昇JDK8',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-8'
+                    },
+                    {
+                        TEXT: '毕昇JDK11',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-11'
+                    }
+                ],
+                STATUS: false
+            },
+            {
+                IMG:'/img/minisite/bisheng/zh-sponsor.png',
+                LINK_LIST: [
+                    {
+                        TEXT: '毕昇JDK8',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-8/issues'
+                    },
+                    {
+                        TEXT: '毕昇JDK11',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-11/issues'
+                    }
+                ],
+                STATUS: false
+            }
+        ],
+        BISHENG_MORE: '更多信息：',
+        BISHENG_INFO: [
+            {
+                THEME: 'License: ',
+                BODY: '采用GPLv2 with Classpath Exception协议。'
+            },
+            {
+                THEME: '支持Java版本: ',
+                BODY: '目前毕昇JDK支持8和11两个LTS版本。'
+            },
+            {
+                THEME: '支持架构: ',
+                BODY: '支持Linux/AArch64架构。'
+            },
+            {
+                THEME: '支持操作系统: ',
+                BODY: '目前仅支持Linux版本，对操作系统的要求是AArch64上glibc版本不低于2.17，基本覆盖所有主流操作系统，发布前经过稳定性验证的操作系统有openEuler 全系列操作系统和CentOS 7.6。'
+            }
+        ],
+        BISHENG_FRAMEWORK: {
+            TITLE_OUTSIDE: '架构',
+            TITLE_INSIDE: 'ARCHITECTURE',
+            DESC_LIST: [
+                'JDK整体架构如下图所示，其中JRE指的是Java Runtime Environment，包括了Java运行时的虚拟机JVM（Java Virtual Machine）、Libraries等。而JDK是JRE的超集，包括了JRE的所有内容，并包含javac、jdb等开发者必须的编译器和调试器。JRE仅提供运行时库、Java虚拟机和其他一些运行Java应用程序所必须的组件。'
+            ],
+            FRAMEWORK_IMG: '/img/minisite/bisheng/framework.png'
+        },
+        BISHENG_LEARN: {
+            TITLE_OUTSIDE: '学习与下载',
+            TITLE_INSIDE: 'LEARNING',
+            DATA_LIST: [
+                {
+                    IMG: '/img/minisite/isula/compile.png',
+                    THEME: '文档',
+                    LINK: [
+                        {
+                            TEXT: '毕昇JDK 8',
+                            LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/Home'
+                        },
+                        {
+                            TEXT: '毕昇JDK 11',
+                            LINK: 'https://gitee.com/openeuler/bishengjdk-11/wikis/Home'
+                        },
+                    ]
+                },
+                {
+                    IMG: '/img/minisite/atune/install.png',
+                    THEME: '课程',
+                    LINK: [
+                        {
+                            TEXT: '毕昇JDK使用',
+                            LINK: 'https://education.huaweicloud.com/courses/course-v1:HuaweiX+CBUCNXK067+Self-paced/about'
+                        },
+                    ]
+                },
+                {
+                    IMG: '/img/minisite/isula/desc.png',
+                    THEME: '下载',
+                    LINK: [
+                        {
+                            TEXT: '毕昇JDK历史版本',
+                            LINK: 'https://mirrors.huaweicloud.com/kunpeng/archive/compiler/bisheng_jdk/'
+                        },
+                    ]
+                }
+            ]
+        },
+        BISHENG_REFERENCE: {
+            TITLE_OUTSIDE: '友情链接',
+            TITLE_INSIDE: 'LINKS',
+            LINK_LIST: [
+                {
+                    TEXT: '毕昇JDK（鲲鹏社区） ',
+                    LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=JDK'
+                },
+                {
+                    TEXT: '毕昇编译器（鲲鹏社区）',
+                    LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=bisheng'
+                },
+                {
+                    TEXT: '毕昇鲲鹏GCC（鲲鹏社区）',
+                    LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=hgcc'
+                }
+            ]
+        },
+        SECGEAR_BANNER_TEXT: ['secGear','secGear是一款供开发者开发安全应用的机密计算框架'],
+        SECGEAR_DESC: ['secGear是面向计算产业的机密计算安全应用开发套件，旨在方便开发者在不同的硬件设备上提供统一开发框架，让用户不感知底层各种机密计算架构和接口的差异，目前secGear支持Intel SGX硬件和ARM Trustzone(安全os支持iTrustee)。','secGear同时在中间件层和服务层提供丰富的扩展能力，让开发者能够方便得调用安全组件，乃至直接使用机密计算安全服务。'],
+        SECGEAR_FRAMEWORK: {
+            TITLE_OUTSIDE: '架构',
+            TITLE_INSIDE: 'ARCHITECTURE ',
+            DESC_LIST: [
+                '如图所示，secGear 主题包含三个层级（当前仅开源基础层 Base Layer，服务层和中间件层逐步开源）：',
+                '服务层：提供完整的基于机密计算的安全服务，用户直接使用相关服务，享受机密计算带来的安全性。',
+                '中间件层：提供常见的安全协议组件以及各种安全函数库，用户可以直接在安全及非安全侧调用相关接口，不必从头造轮子，当前构建中的有pkcs11、pake等',
+                '基础层：提供丰富的 enclave 开发接口或工具，包含代码生成工具和enclave声明周期管理等接口，并且在安全侧支持POSIX APIs 和标准 OpenSSL 接口，用户基于这些接口可以自由开发安全应用程序 。'
+            ],
+            FRAMEWORK_IMG: '/img/minisite/secgear/framework.png'
+        },
+        SECGEAR_DOCUMENT: {
+            TITLE_OUTSIDE: '文档',
+            TITLE_INSIDE: 'DOCUMENTATION',
+            DATA_LIST: [
+                {
+                    IMG: '/img/minisite/isula/readme.png',
+                    LINK: [
+                        {
+                            TEXT: '整体介绍',
+                            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E8%AE%A4%E8%AF%86secGear.md'
+                        }
+                    ]
+                },
+                {
+                    IMG: '/img/minisite/isula/desc.png',
+                    LINK: [
+                        {
+                            TEXT: '安装',
+                            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E5%AE%89%E8%A3%85secGear.md'
+                        }
+                    ]
+                },
+                {
+                    IMG: '/img/minisite/isula/compile.png',
+                    LINK: [
+                        {
+                            TEXT: '开发指南',
+                            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E5%BC%80%E5%8F%91secGear%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F.md'
+                        }
+                    ]
+                },
+                {
+                    IMG: '/img/minisite/atune/install.png',
+                    LINK: [
+                        {
+                            TEXT: '工具使用文档',
+                            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E4%BD%BF%E7%94%A8secGear%E5%B7%A5%E5%85%B7.md'
+                        }
+                    ]
+                },
+                {
+                    IMG: '/img/minisite/atune/use.png',
+                    LINK: [
+                        {
+                            TEXT: 'API接口文档',
+                            LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E6%8E%A5%E5%8F%A3%E5%8F%82%E8%80%83.md'
+                        }
+                    ]
                 }
             ]
         }

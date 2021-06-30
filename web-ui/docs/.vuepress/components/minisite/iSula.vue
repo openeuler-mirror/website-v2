@@ -1,58 +1,21 @@
 <template>
     <div class="i-Sula">
-        <div class="title-nav" v-show="isShowNav" v-if="!isShowH5">
-            <div class="box-line">
-                <img class="gif" v-lazy="'/img/summit/home/nav.gif'" alt="" />
-                <img class="line" v-lazy="'/img/minisite/isula/isula-line.png'" alt="" />
-            </div>
-            <div class="nav-text">
-                <ul>
-                    <li v-for="(item,index) in i18n.minisite.ISULA_NAV_TEXT" @click="goTitle(index)" :class="index === activeIndex?'active':''">
-                        <div><div class="inside"></div></div>
-                        <div>{{ item }}</div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="isula-banner">
-            <div class="text">
-                <div>
-                    <p v-for="(item,index) in i18n.minisite.ISULA_BANNER_TEXT" :key="index">{{ item }}</p>
-                </div>
-            </div>
-            <video
-            preload="auto"
-            playsinline="true"
-            autoplay="autoplay" loop="loop" muted="muted" id="isula-video" v-if="!isShowH5">
-                <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/iSula.mp4"  type="video/mp4">
-            </video>
-            <img :src="i18n.minisite.ISULA_BANNER_IMG" alt="" v-else />
-        </div>
+        <titlenav v-show="isShowNav" :currentIndex="activeIndex" :dataList="i18n.minisite.NAV_TEXT"></titlenav>
+        <minibanner :themeArr="i18n.minisite.ISULA_BANNER_TEXT" :mobileImg="i18n.minisite.ISULA_BANNER_IMG" 
+        videoUrl="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/iSula.mp4"></minibanner>
         <div class="desc-box">
             <div class="isula-desc">
-                <div class="up-text">
-                    <p>{{ i18n.minisite.ISULA_DESC_UP }}</p>
-                    <img :src="i18n.minisite.ISULA_LOGO" alt="" />
-                </div>
-                <div class="link">
-                    <div v-for="(item,index) in i18n.minisite.ISULA_LINK" :key="index" @click="go(item.LINK)" >
-                        <img :src="item.IMG" alt="" />
-                        <div class="guide" v-if="isShowTip && item.SHOW">
-                            <div class="d3"></div>
-                            <p v-if="!isShowH5">{{ i18n.minisite.ISULA_MAIL }}</p>
-                            <p v-else><span>{{ mailList[0] }}</span><br><span>{{ mailList[1] }}</span></p>
-                        </div>
-                    </div>
-                </div>
+                <minidesc :isOther="false" :descArr="i18n.minisite.ISULA_DESC_UP" :descImg="i18n.minisite.ISULA_LOGO"></minidesc>
+                <miniimg :dataList="i18n.minisite.ISULA_LINK" :mailAddress="i18n.minisite.ISULA_MAIL"></miniimg>
                 <p v-for="(item,index) in i18n.minisite.ISULA_DESC_DOWN" :key="index">{{ item }}</p>
                 <img :src="i18n.minisite.ISULA_DESC_IMG" alt="" />
             </div>
         </div>
-        <div class="framework-box">
+        <div class="framework-box" id="framework">
             <p class="title">{{ i18n.minisite.ISULA_FRAMEWORK.TITLE_OUTSIDE }}<span>{{ i18n.minisite.ISULA_FRAMEWORK.TITLE_INSIDE }}</span></p>
             <div class="framework-desc">
                 <div class="tab-list">
-                    <div :class="['item',frameworkIndex === index?'active':'']" v-for="(item,index) in i18n.minisite.ISULA_FRAMEWORK.TAB" @click="changeTab(item.KEY,index,0)">{{ item.VALUE }}</div>
+                    <div :class="['item',frameworkIndex === index?'active':'']" v-for="(item,index) in i18n.minisite.ISULA_FRAMEWORK.TAB" @click="changeTab(item.KEY,index,0)" :key="index">{{ item.VALUE }}</div>
                 </div>
                 <div :class="['description',frameworkIndex == 0?'indent':'']">
                     <p v-for="(item,index) in frameworkData.DESC_LIST" :key="index">{{ item }}</p>
@@ -63,7 +26,7 @@
                 <img :class="[frameworkIndex === 1?'img-2':'',frameworkIndex === 2?'img-3':'']" :src="frameworkData.FRAMEWORK_IMG" alt="" />
             </div>
         </div>
-        <div class="document">
+        <div class="document" id="document">
             <p class="title">{{ i18n.minisite.ISULA_DOCUMENT.TITLE_OUTSIDE }}<span>{{ i18n.minisite.ISULA_DOCUMENT.TITLE_INSIDE }}</span></p>
             <div class="tab-list">
                 <div :class="['item',documentIndex === index?'active':'']" v-for="(item,index) in i18n.minisite.ISULA_DOCUMENT.TAB" :key="index" @click="changeTab(item.KEY,index,1)">{{ item.VALUE }}</div>
@@ -72,7 +35,7 @@
                 <div class="item" v-for="(item,index) in documentData" :key="index">
                     <img :src="item.IMG" alt="" />
                     <div>
-                        <p v-for="value in item.DESC" @click="go(value.LINK)">{{ value.TEXT }}</p>
+                        <p v-for="(value,key) in item.DESC" @click="go(value.LINK)" :key="key">{{ value.TEXT }}</p>
                     </div>
                 </div>
             </div>
@@ -81,6 +44,10 @@
 </template>
 
 <script>
+import titlenav from './../summit/titleNav.vue';
+import miniimg from './imglink.vue';
+import minibanner from './banner.vue';
+import minidesc from './description.vue';
 export default {
     data() {
         return {
@@ -88,27 +55,21 @@ export default {
             documentData: [],
             frameworkIndex: 0,
             documentIndex: 0,
-            isShowTip: false,
-            mailList: [],
             activeIndex: -1,
-            navTitleScroll: [1200,2600],
             isShowNav: false
         }
     },
     mounted (){
         this.frameworkData = this.i18n.minisite.ISULA_FRAMEWORK['ISULAD'];
         this.documentData = this.i18n.minisite.ISULA_DOCUMENT['ISULAD'];
-        this.mailList = this.i18n.minisite.ISULA_MB_MAIL;
-        window.addEventListener('scroll',this.isulaScroll);
+        if(!this.isShowH5) {
+            window.addEventListener('scroll',this.isulaScroll);
+        }
     },
     methods:{
         go(path) {
             if(path) {
-                if(path === 'mail') {
-                    this.isShowTip = ! this.isShowTip;
-                }else {
-                    window.open(path);
-                }
+                window.open(path);
             }
         },
         changeTab(key,index,which) {
@@ -137,16 +98,32 @@ export default {
                 return false;
             }
         },
-        goTitle(index) {
-            document.documentElement.scrollTop = this.navTitleScroll[index];
-        },
     },
     destroyed () { 
         window.removeEventListener('scroll', this.isulaScroll);
-    } 
+    },
+    components: {
+        titlenav,
+        miniimg,
+        minibanner,
+        minidesc
+    },
 }
 </script>
-
+<style>
+.i-Sula .description .content img {
+    width: 139px;
+    height: 144px;
+}
+.i-Sula .link-box {
+    width: 552px;
+}
+@media screen and (max-width: 1120px) {
+    .i-Sula .link-box {
+        width: 315px;
+    }
+}
+</style>
 <style lang="less" scoped>
 .i-Sula {
     width: 100%;
@@ -173,113 +150,7 @@ export default {
         top: -24px;
     }
 }
-.i-Sula .title-nav {
-    position: fixed;
-    cursor: pointer;
-    top: 170px;
-    right: 70px;
-    z-index: 1000;
-    display: block;
-    
-    .box-line {
-        width: 70px;
-        margin-left: -26px;
-        .gif {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto -30px 5px;
-            position: relative;
-            z-index: 20;
-        }
-        .line {
-            display: block;
-            width: 2px;
-            height: 252px;
-            margin: 0 auto;
-        }
-    }
-    .nav-text {
-        position: relative;
-        margin-top: -200px;
-        ul li>div {
-            display: inline-block;
-            &:first-of-type {
-                margin-right: 17px;
-                border-radius: 50%;
-                width: 18px;
-                position: relative;
-                background: #FFFFFF;
-                height: 18px;
-                border: 1px solid #979797;
-                div {
-                    width: 14px;
-                    height: 14px;
-                    border-radius: 50%;
-                    background: #D8D8D8;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    margin-left: -7px;
-                    margin-top: -7px;
-                }
-            }
-            &:last-of-type {
-                font-size: 20px;
-                color: #000000;
-                line-height: 30px;
-            }
-        }
-        ul li {
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-        }
-        ul .active {
-            &>div {
-                color: #002FA7 !important;
-            }
-            .inside {
-                background: #002FA7;
-            }
-        }
-    }
-}
-.i-Sula .isula-banner{
-    width: 900px;
-    margin: 78px auto;
-    display: flex;
-    flex-direction: row;
-    .text {
-        margin-right: 443px;
-        display: flex;
-        flex-direction: row;
-        &>div {
-            width: 180px;
-            margin-top: 37px;
-        }
-        p {
-            color: #000000;
-            font-size: 28px;
-            font-weight: bold;
-            line-height: 48px;
-            &:first-of-type {
-                font-size: 50px;
-                line-height: 60px;
-                margin-bottom: 40px;
-            }
-        }
-        img {
-            width: 139px;
-            height: 144px;
-            display: block;
-            margin: 37px 0 0 30px;
-        }
-    }
-    #isula-video {
-        width: 266px;
-        height: 220px;
-    }
-}
+
 .i-Sula .desc-box {
     width: 100%;
     background-image: url('/img/minisite/isula/pc-desc-bg.png');
@@ -288,63 +159,10 @@ export default {
     background-position: center center;
     overflow: hidden;
     .isula-desc {
-        .link {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 552px;
-            margin: 0 auto 30px auto;
-            &>div {
-                position: relative;
-            }
-            img {
-                width: 192px;
-                height: 157px;
-                display: block;
-                cursor: pointer;
-            }
-            p {
-                font-size: 18px;
-                color: #000000;
-                line-height: 60px;
-            }
-            .guide {
-                position: absolute;
-                box-sizing: border-box;
-                border: 1px solid rgba(0, 47, 167, .5);
-                width: 290px;
-                padding: 10px;
-                background: #fff;
-                border-radius: 8px;
-                box-shadow: 0 6px 20px 0 rgba(0, 0, 0, .1);
-                text-align: left;
-                left: 20%;
-                top: 72%;
-                .d3{
-                    margin-left: 10px;
-                    width: 15px;
-                    height: 15px;
-                    transform: rotate(45deg);
-                    border-left: 1px solid rgba(0, 47, 167, .5);
-                    border-top: 1px solid rgba(0, 47, 167, .5);
-                    box-sizing: border-box;
-                    position: relative;
-                    top: -18px;
-                    background: #fff;
-                }
-            } 
-        }
         p {
             font-size: 18px;
             color: #000000;
             line-height: 48px;
-        }
-        .up-text {
-            margin-bottom: 20px;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            margin-bottom: 40px;
         }
         img {
             width: 720px;
@@ -491,81 +309,13 @@ export default {
             white-space:nowrap;
         }
     }
-    .i-Sula .isula-banner {
-        flex-direction: column-reverse;
-        width: 375px;
-        margin: 0 auto 20px auto;
-        position: relative;
-        .text {
-            margin: 20px auto 10px auto;
-            width: 315px;
-            flex-direction: column;
-            &>div {
-                margin: 0 auto;
-            }
-            p {
-                line-height: 20px;
-                text-align: center;
-                font-size: 18px;
-                color: #002FA7;
-                margin-top: 20px;
-                &:first-of-type {
-                    font-size: 28px;
-                    line-height: 30px;
-                    margin: 0 0 16px 0;
-                    color: #000000;
-                    position: absolute;
-                    width: 100%;
-                    left: 0;
-                    top: 38px;
-                }
-            }
-            img {
-                margin: 20px auto 0 auto;
-                width: 81px;
-                height: 84px;
-            }
-        }
-        img {
-            width: 260px;
-            height: 200px;
-            display: block;
-            margin: 68px auto 0 auto;
-        }
-    }
+    
     .i-Sula .desc-box {
         background-image: none;
         .isula-desc {
-            .link {
-                flex-direction: column;
-                width: 315px;
-                margin: 0 auto 31px auto;
-                align-items: center;
-                &>div {
-                    margin-bottom: 21px;
-                    &:last-of-type {
-                        margin-bottom: 0;
-                    }
-                }
-                img {
-                    width: 176px;
-                    height: 141px;
-                    margin: 0 auto;
-                }
-                p {
-                    font-size: 16px;
-                    line-height: 30px;
-                }
-                .guide {
-                    width: 200px;
-                }
-            }
             p {
                 width: 315px;
                 margin: 0 auto;
-            }
-            .up-text {
-                margin-bottom: 40px;
             }
             img {
                 width: 360px;
@@ -671,15 +421,5 @@ export default {
             }
         }
     }
-}
-.i-Sula .isula-banner .text > div {
-    width: 280px;
-}
-.i-Sula .desc-box .isula-desc .up-text p {
-    width: 880px;
-}
-.i-Sula .desc-box .isula-desc .up-text img {
-    width: 139px;
-    height: 144px;
 }
 </style>
