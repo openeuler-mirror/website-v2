@@ -7,11 +7,13 @@ The website used vuepress + node.js as the basic framework of the front and back
 
 The file directory is explained as follows:
 
+```
 website-v2
     ├─ data    //This directory stores the module data independently maintained by a specific responsible person. For example, the current directory stores the data required for compatibility query.
     ├─ script  //This directory stores the scripts needed to import documents, blogs and news into es (elastic search).
     ├─ server  //This directory stores the code needed for back-end deployment and operation. For details, please refer to the README.md file in this directory.
     ├─ web-ui  //This directory stores the code needed for front-end deployment and operation. For details, please refer to the README.md file in this directory.
+```
 
 #### Installation
 
