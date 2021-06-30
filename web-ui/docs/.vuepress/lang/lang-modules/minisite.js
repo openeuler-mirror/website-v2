@@ -519,7 +519,7 @@ module.exports = {
             ]
         }
     },
-    en: {
+    en: {   
         ATUNE_BANNER_TEXT: ['A-Tune','AI-based Tuning Engine'],
         ATUNE_BANNER_IMG: '/img/minisite/atune/mobile-banner.png',
         ATUNE_DESC: ['A-Tune is an automatic and intelligent performance tuning engine developed based on openEuler. It adopts AI technologies to ensure the optimal service running. A-Tune builds precise models for services running on the operating system, understands service features dynamically to infer specific applications. And it adjusts the parameters based on service loads to provide the optimal parameter configurations.'],
@@ -852,18 +852,18 @@ module.exports = {
                 }
             ]
         },
-        BISHENG_BANNER_TEXT: ['毕昇JDK','ARM上最好用的JDK'],
-        BISHENG_DESC: ['毕昇JDK是华为内部基于OpenJDK定制的Huawei JDK的开源版本。Huawei JDK运行在华为内部500多个产品上，研发团队积累了丰富的开发经验，解决了业务实际运行中遇到的多个疑难问题。','毕昇JDK作为OpenJDK的下游，是一款高性能、可用于生产环境的OpenJDK发行版。毕昇JDK对华为内部应用场景中遇到的一些性能问题和稳定性问题进行了修复，并在ARM架构上进行了性能优化和稳定性增强，在ARM架构上更稳定，在大数据等场景下可以获得更好的性能。','毕昇JDK致力于为JAVA开发者提供一款稳定可靠、高性能、易调测的JDK，也为用户在ARM架构上提供一个更好的选择。'],
+        BISHENG_BANNER_TEXT: ['Bisheng JDK','Top-notch JDK on ARM'],
+        BISHENG_DESC: ['Bisheng JDK is an open source version of Huawei JDK customized based on OpenJDK. Huawei JDK runs on more than 500 Huawei products. The R&D team has accumulated rich development experience and resolved the problems that arose during service running.','As a downstream product of OpenJDK, Bisheng JDK is a high-performance OpenJDK distribution that can be used in production environments. Bisheng JDK fixes some performance and stability issues encountered in Huawei internal applications, optimizes performance and enhances stability on the ARM architecture, and delivers improved performance in big data scenarios.','Bisheng JDK is committed to providing Java developers with a stable, reliable, high-performance, and easy-to-debug JDK. It is also a better choice on the ARM architecture.  '],
         BISHENG_LINK: [
             {
                 IMG:'/img/minisite/bisheng/zh-speker.png',
                 LINK_LIST: [
                     {
-                        TEXT: '毕昇JDK8',
+                        TEXT: 'Bisheng JDK 8',
                         LINK: 'https://gitee.com/openeuler/bishengjdk-8'
                     },
                     {
-                        TEXT: '毕昇JDK11',
+                        TEXT: 'Bisheng JDK 11',
                         LINK: 'https://gitee.com/openeuler/bishengjdk-11'
                     }
                 ],
@@ -873,78 +873,78 @@ module.exports = {
                 IMG:'/img/minisite/bisheng/zh-sponsor.png',
                 LINK_LIST: [
                     {
-                        TEXT: '毕昇JDK8',
+                        TEXT: 'Bisheng JDK 8',
                         LINK: 'https://gitee.com/openeuler/bishengjdk-8/issues'
                     },
                     {
-                        TEXT: '毕昇JDK11',
+                        TEXT: 'Bisheng JDK 11',
                         LINK: 'https://gitee.com/openeuler/bishengjdk-11/issues'
                     }
                 ],
                 STATUS: false
             }
         ],
-        BISHENG_MORE: '更多信息：',
+        BISHENG_MORE: 'More information:',
         BISHENG_INFO: [
             {
                 THEME: 'License: ',
-                BODY: '采用GPLv2 with Classpath Exception协议。'
+                BODY: 'The GPLv2 with Classpath Exception protocol is used.'
             },
             {
-                THEME: '支持Java版本: ',
-                BODY: '目前毕昇JDK支持8和11两个LTS版本。'
+                THEME: 'Java versions: ',
+                BODY: 'Bisheng JDK supports version 8 (LTS) and version 11 (LTS).'
             },
             {
-                THEME: '支持架构: ',
-                BODY: '支持Linux/AArch64架构。'
+                THEME: 'Supported architecture:',
+                BODY: 'Linux/AArch64'
             },
             {
-                THEME: '支持操作系统: ',
-                BODY: '目前仅支持Linux版本，对操作系统的要求是AArch64上glibc版本不低于2.17，基本覆盖所有主流操作系统，发布前经过稳定性验证的操作系统有openEuler 全系列操作系统和CentOS 7.6。'
+                THEME: 'Supported OSs: ',
+                BODY: 'Almost all mainstream Linux OSs are supported. The glibc version for AArch64 must be 2.17 or later. The OSs that have passed the stability verification before release include the full series of openEuler OSs and CentOS 7.6.'
             }
         ],
         BISHENG_FRAMEWORK: {
-            TITLE_OUTSIDE: '架构',
+            TITLE_OUTSIDE: 'Architecture',
             TITLE_INSIDE: 'ARCHITECTURE',
             DESC_LIST: [
-                'JDK整体架构如下图所示，其中JRE指的是Java Runtime Environment，包括了Java运行时的虚拟机JVM（Java Virtual Machine）、Libraries等。而JDK是JRE的超集，包括了JRE的所有内容，并包含javac、jdb等开发者必须的编译器和调试器。JRE仅提供运行时库、Java虚拟机和其他一些运行Java应用程序所必须的组件。'
+                'The following figure shows the overall architecture of the JDK. JRE is short for Java Runtime Environment, including the Java Virtual Machine (JVM) and libraries. JDK is a superset of JRE, and therefore includes all JRE content as well as the compilers and debuggers such as javac and JDB required by developers. JRE provides only runtime libraries, JVMs, and other components required to run Java applications.'
             ],
-            FRAMEWORK_IMG: '/img/minisite/bisheng/framework.png'
+            FRAMEWORK_IMG: '/img/minisite/bisheng/jiagoutu.png'
         },
         BISHENG_LEARN: {
-            TITLE_OUTSIDE: '学习与下载',
+            TITLE_OUTSIDE: 'Download',
             TITLE_INSIDE: 'LEARNING',
             DATA_LIST: [
                 {
                     IMG: '/img/minisite/isula/compile.png',
-                    THEME: '文档',
+                    THEME: 'Documentation',
                     LINK: [
                         {
-                            TEXT: '毕昇JDK 8',
+                            TEXT: 'Bisheng JDK 8',
                             LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/Home'
                         },
                         {
-                            TEXT: '毕昇JDK 11',
+                            TEXT: 'Bisheng JDK 11',
                             LINK: 'https://gitee.com/openeuler/bishengjdk-11/wikis/Home'
                         },
                     ]
                 },
                 {
                     IMG: '/img/minisite/atune/install.png',
-                    THEME: '课程',
+                    THEME: 'Learn and Practice',
                     LINK: [
                         {
-                            TEXT: '毕昇JDK使用',
+                            TEXT: 'Using Bisheng JDK',
                             LINK: 'https://education.huaweicloud.com/courses/course-v1:HuaweiX+CBUCNXK067+Self-paced/about'
                         },
                     ]
                 },
                 {
                     IMG: '/img/minisite/isula/desc.png',
-                    THEME: '下载',
+                    THEME: 'Download',
                     LINK: [
                         {
-                            TEXT: '毕昇JDK历史版本',
+                            TEXT: 'Earlier Versions',
                             LINK: 'https://mirrors.huaweicloud.com/kunpeng/archive/compiler/bisheng_jdk/'
                         },
                     ]
@@ -952,45 +952,45 @@ module.exports = {
             ]
         },
         BISHENG_REFERENCE: {
-            TITLE_OUTSIDE: '友情链接',
+            TITLE_OUTSIDE: 'Links',
             TITLE_INSIDE: 'LINKS',
             LINK_LIST: [
                 {
-                    TEXT: '毕昇JDK（鲲鹏社区） ',
+                    TEXT: 'Bisheng JDK (Kunpeng Community) ',
                     LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=JDK'
                 },
                 {
-                    TEXT: '毕昇编译器（鲲鹏社区）',
+                    TEXT: 'Bisheng Compiler (Kunpeng Community)',
                     LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=bisheng'
                 },
                 {
-                    TEXT: '毕昇鲲鹏GCC（鲲鹏社区）',
+                    TEXT: 'Kunpeng GCC (Kunpeng Community)',
                     LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=hgcc'
                 }
             ]
         },
-        SECGEAR_BANNER_TEXT: ['secGear','secGear是一款供开发者开发安全应用的机密计算框架'],
-        SECGEAR_DESC: ['secGear是面向计算产业的机密计算安全应用开发套件，旨在方便开发者在不同的硬件设备上提供统一开发框架，让用户不感知底层各种机密计算架构和接口的差异，目前secGear支持Intel SGX硬件和ARM Trustzone(安全os支持iTrustee)。','secGear同时在中间件层和服务层提供丰富的扩展能力，让开发者能够方便得调用安全组件，乃至直接使用机密计算安全服务。'],
+        SECGEAR_BANNER_TEXT: ['secGear','Confidential computing framework for developing secure applications'],
+        SECGEAR_DESC: ['secGear is a confidential computing development suite used to develop secure applications in the computing industry. It aims to provide a unified development framework for different hardware devices, shielding the differences between underlying confidential computing architectures and APIs. Currently, secGear supports Intel® SGX hardware and Arm TrustZone (iTrustee supported).','secGear provides rich extensibility capabilities at both the middleware layer and service layer, allowing developers to easily call security components and even directly use the confidential computing services.'],
         SECGEAR_FRAMEWORK: {
-            TITLE_OUTSIDE: '架构',
+            TITLE_OUTSIDE: 'Architecture',
             TITLE_INSIDE: 'ARCHITECTURE ',
             DESC_LIST: [
-                '如图所示，secGear 主题包含三个层级（当前仅开源基础层 Base Layer，服务层和中间件层逐步开源）：',
-                '服务层：提供完整的基于机密计算的安全服务，用户直接使用相关服务，享受机密计算带来的安全性。',
-                '中间件层：提供常见的安全协议组件以及各种安全函数库，用户可以直接在安全及非安全侧调用相关接口，不必从头造轮子，当前构建中的有pkcs11、pake等',
-                '基础层：提供丰富的 enclave 开发接口或工具，包含代码生成工具和enclave声明周期管理等接口，并且在安全侧支持POSIX APIs 和标准 OpenSSL 接口，用户基于这些接口可以自由开发安全应用程序 。'
+                'As shown in the figure, secGear consists of three layers. Currently, only the base layer is open source. The service layer and middleware layer will be gradually brought to open source.',
+                'The service layer provides complete security services based on confidential computing. You can directly use related services to enjoy the security brought by confidential computing.',
+                'The middleware layer provides common security protocol components and various security function libraries. You can directly call related APIs on the secure and non-secure sides without creating them by yourself. Currently, PKCS11 and PAKE are being built.',
+                'The base layer provides rich enclave development APIs or tools, including code generation tools and enclave life cycle management APIs. POSIX APIs and standard OpenSSL APIs are supported on the secure side. You can develop secure applications based on these APIs.'
             ],
             FRAMEWORK_IMG: '/img/minisite/secgear/framework.png'
         },
         SECGEAR_DOCUMENT: {
-            TITLE_OUTSIDE: '文档',
+            TITLE_OUTSIDE: 'Documentation',
             TITLE_INSIDE: 'DOCUMENTATION',
             DATA_LIST: [
                 {
                     IMG: '/img/minisite/isula/readme.png',
                     LINK: [
                         {
-                            TEXT: '整体介绍',
+                            TEXT: 'Overview',
                             LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E8%AE%A4%E8%AF%86secGear.md'
                         }
                     ]
@@ -999,7 +999,7 @@ module.exports = {
                     IMG: '/img/minisite/isula/desc.png',
                     LINK: [
                         {
-                            TEXT: '安装',
+                            TEXT: 'Installation',
                             LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E5%AE%89%E8%A3%85secGear.md'
                         }
                     ]
@@ -1008,7 +1008,7 @@ module.exports = {
                     IMG: '/img/minisite/isula/compile.png',
                     LINK: [
                         {
-                            TEXT: '开发指南',
+                            TEXT: 'Developer Guide',
                             LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E5%BC%80%E5%8F%91secGear%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F.md'
                         }
                     ]
@@ -1017,7 +1017,7 @@ module.exports = {
                     IMG: '/img/minisite/atune/install.png',
                     LINK: [
                         {
-                            TEXT: '工具使用文档',
+                            TEXT: 'Tool Usage',
                             LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E4%BD%BF%E7%94%A8secGear%E5%B7%A5%E5%85%B7.md'
                         }
                     ]
@@ -1026,7 +1026,7 @@ module.exports = {
                     IMG: '/img/minisite/atune/use.png',
                     LINK: [
                         {
-                            TEXT: 'API接口文档',
+                            TEXT: 'API Reference',
                             LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E6%8E%A5%E5%8F%A3%E5%8F%82%E8%80%83.md'
                         }
                     ]
@@ -1367,18 +1367,18 @@ module.exports = {
                 }
             ]
         },
-        BISHENG_BANNER_TEXT: ['毕昇JDK','ARM上最好用的JDK'],
-        BISHENG_DESC: ['毕昇JDK是华为内部基于OpenJDK定制的Huawei JDK的开源版本。Huawei JDK运行在华为内部500多个产品上，研发团队积累了丰富的开发经验，解决了业务实际运行中遇到的多个疑难问题。','毕昇JDK作为OpenJDK的下游，是一款高性能、可用于生产环境的OpenJDK发行版。毕昇JDK对华为内部应用场景中遇到的一些性能问题和稳定性问题进行了修复，并在ARM架构上进行了性能优化和稳定性增强，在ARM架构上更稳定，在大数据等场景下可以获得更好的性能。','毕昇JDK致力于为JAVA开发者提供一款稳定可靠、高性能、易调测的JDK，也为用户在ARM架构上提供一个更好的选择。'],
+        BISHENG_BANNER_TEXT: ['Bisheng JDK','Top-notch JDK on ARM'],
+        BISHENG_DESC: ['Bisheng JDK is an open source version of Huawei JDK customized based on OpenJDK. Huawei JDK runs on more than 500 Huawei products. The R&D team has accumulated rich development experience and resolved the problems that arose during service running.','As a downstream product of OpenJDK, Bisheng JDK is a high-performance OpenJDK distribution that can be used in production environments. Bisheng JDK fixes some performance and stability issues encountered in Huawei internal applications, optimizes performance and enhances stability on the ARM architecture, and delivers improved performance in big data scenarios.','Bisheng JDK is committed to providing Java developers with a stable, reliable, high-performance, and easy-to-debug JDK. It is also a better choice on the ARM architecture.'],
         BISHENG_LINK: [
             {
                 IMG:'/img/minisite/bisheng/zh-speker.png',
                 LINK_LIST: [
                     {
-                        TEXT: '毕昇JDK8',
+                        TEXT: 'Bisheng JDK 8',
                         LINK: 'https://gitee.com/openeuler/bishengjdk-8'
                     },
                     {
-                        TEXT: '毕昇JDK11',
+                        TEXT: 'Bisheng JDK 11',
                         LINK: 'https://gitee.com/openeuler/bishengjdk-11'
                     }
                 ],
@@ -1388,78 +1388,78 @@ module.exports = {
                 IMG:'/img/minisite/bisheng/zh-sponsor.png',
                 LINK_LIST: [
                     {
-                        TEXT: '毕昇JDK8',
+                        TEXT: 'Bisheng JDK 8',
                         LINK: 'https://gitee.com/openeuler/bishengjdk-8/issues'
                     },
                     {
-                        TEXT: '毕昇JDK11',
+                        TEXT: 'Bisheng JDK 11',
                         LINK: 'https://gitee.com/openeuler/bishengjdk-11/issues'
                     }
                 ],
                 STATUS: false
             }
         ],
-        BISHENG_MORE: '更多信息：',
+        BISHENG_MORE: 'More information:',
         BISHENG_INFO: [
             {
                 THEME: 'License: ',
-                BODY: '采用GPLv2 with Classpath Exception协议。'
+                BODY: 'The GPLv2 with Classpath Exception protocol is used.'
             },
             {
-                THEME: '支持Java版本: ',
-                BODY: '目前毕昇JDK支持8和11两个LTS版本。'
+                THEME: 'Java versions: ',
+                BODY: 'Bisheng JDK supports version 8 (LTS) and version 11 (LTS).'
             },
             {
-                THEME: '支持架构: ',
-                BODY: '支持Linux/AArch64架构。'
+                THEME: 'Supported architecture:: ',
+                BODY: ' Linux/AArch64'
             },
             {
-                THEME: '支持操作系统: ',
-                BODY: '目前仅支持Linux版本，对操作系统的要求是AArch64上glibc版本不低于2.17，基本覆盖所有主流操作系统，发布前经过稳定性验证的操作系统有openEuler 全系列操作系统和CentOS 7.6。'
+                THEME: 'Supported OSs: ',
+                BODY: 'Almost all mainstream Linux OSs are supported. The glibc version for AArch64 must be 2.17 or later. The OSs that have passed the stability verification before release include the full series of openEuler OSs and CentOS 7.6.'
             }
         ],
         BISHENG_FRAMEWORK: {
-            TITLE_OUTSIDE: '架构',
+            TITLE_OUTSIDE: 'Architecture',
             TITLE_INSIDE: 'ARCHITECTURE',
             DESC_LIST: [
-                'JDK整体架构如下图所示，其中JRE指的是Java Runtime Environment，包括了Java运行时的虚拟机JVM（Java Virtual Machine）、Libraries等。而JDK是JRE的超集，包括了JRE的所有内容，并包含javac、jdb等开发者必须的编译器和调试器。JRE仅提供运行时库、Java虚拟机和其他一些运行Java应用程序所必须的组件。'
+                'The following figure shows the overall architecture of the JDK. JRE is short for Java Runtime Environment, including the Java Virtual Machine (JVM) and libraries. JDK is a superset of JRE, and therefore includes all JRE content as well as the compilers and debuggers such as javac and JDB required by developers. JRE provides only runtime libraries, JVMs, and other components required to run Java applications.'
             ],
             FRAMEWORK_IMG: '/img/minisite/bisheng/framework.png'
         },
         BISHENG_LEARN: {
-            TITLE_OUTSIDE: '学习与下载',
+            TITLE_OUTSIDE: 'Learn and Practice',
             TITLE_INSIDE: 'LEARNING',
             DATA_LIST: [
                 {
                     IMG: '/img/minisite/isula/compile.png',
-                    THEME: '文档',
+                    THEME: 'Documentation',
                     LINK: [
                         {
-                            TEXT: '毕昇JDK 8',
+                            TEXT: 'Bisheng JDK 8',
                             LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/Home'
                         },
                         {
-                            TEXT: '毕昇JDK 11',
+                            TEXT: 'Bisheng JDK 11',
                             LINK: 'https://gitee.com/openeuler/bishengjdk-11/wikis/Home'
                         },
                     ]
                 },
                 {
                     IMG: '/img/minisite/atune/install.png',
-                    THEME: '课程',
+                    THEME: 'Learn and Practice',
                     LINK: [
                         {
-                            TEXT: '毕昇JDK使用',
+                            TEXT: 'Using Bisheng JDK',
                             LINK: 'https://education.huaweicloud.com/courses/course-v1:HuaweiX+CBUCNXK067+Self-paced/about'
                         },
                     ]
                 },
                 {
                     IMG: '/img/minisite/isula/desc.png',
-                    THEME: '下载',
+                    THEME: 'Download',
                     LINK: [
                         {
-                            TEXT: '毕昇JDK历史版本',
+                            TEXT: 'Earlier Versions',
                             LINK: 'https://mirrors.huaweicloud.com/kunpeng/archive/compiler/bisheng_jdk/'
                         },
                     ]
@@ -1467,45 +1467,45 @@ module.exports = {
             ]
         },
         BISHENG_REFERENCE: {
-            TITLE_OUTSIDE: '友情链接',
+            TITLE_OUTSIDE: 'Links',
             TITLE_INSIDE: 'LINKS',
             LINK_LIST: [
                 {
-                    TEXT: '毕昇JDK（鲲鹏社区） ',
+                    TEXT: 'Bisheng JDK (Kunpeng Community) ',
                     LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=JDK'
                 },
                 {
-                    TEXT: '毕昇编译器（鲲鹏社区）',
+                    TEXT: 'Bisheng Compiler (Kunpeng Community)',
                     LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=bisheng'
                 },
                 {
-                    TEXT: '毕昇鲲鹏GCC（鲲鹏社区）',
+                    TEXT: 'Kunpeng GCC (Kunpeng Community)',
                     LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=hgcc'
                 }
             ]
         },
-        SECGEAR_BANNER_TEXT: ['secGear','secGear是一款供开发者开发安全应用的机密计算框架'],
-        SECGEAR_DESC: ['secGear是面向计算产业的机密计算安全应用开发套件，旨在方便开发者在不同的硬件设备上提供统一开发框架，让用户不感知底层各种机密计算架构和接口的差异，目前secGear支持Intel SGX硬件和ARM Trustzone(安全os支持iTrustee)。','secGear同时在中间件层和服务层提供丰富的扩展能力，让开发者能够方便得调用安全组件，乃至直接使用机密计算安全服务。'],
+        SECGEAR_BANNER_TEXT: ['secGear','Confidential computing framework for developing secure applications'],
+        SECGEAR_DESC: ['secGear is a confidential computing development suite used to develop secure applications in the computing industry. It aims to provide a unified development framework for different hardware devices, shielding the differences between underlying confidential computing architectures and APIs. Currently, secGear supports Intel® SGX hardware and Arm TrustZone (iTrustee supported).','secGear provides rich extensibility capabilities at both the middleware layer and service layer, allowing developers to easily call security components and even directly use the confidential computing services.'],
         SECGEAR_FRAMEWORK: {
-            TITLE_OUTSIDE: '架构',
+            TITLE_OUTSIDE: 'Architecture',
             TITLE_INSIDE: 'ARCHITECTURE ',
             DESC_LIST: [
-                '如图所示，secGear 主题包含三个层级（当前仅开源基础层 Base Layer，服务层和中间件层逐步开源）：',
-                '服务层：提供完整的基于机密计算的安全服务，用户直接使用相关服务，享受机密计算带来的安全性。',
-                '中间件层：提供常见的安全协议组件以及各种安全函数库，用户可以直接在安全及非安全侧调用相关接口，不必从头造轮子，当前构建中的有pkcs11、pake等',
-                '基础层：提供丰富的 enclave 开发接口或工具，包含代码生成工具和enclave声明周期管理等接口，并且在安全侧支持POSIX APIs 和标准 OpenSSL 接口，用户基于这些接口可以自由开发安全应用程序 。'
+                'As shown in the figure, secGear consists of three layers. Currently, only the base layer is open source. The service layer and middleware layer will be gradually brought to open source.',
+                'The service layer provides complete security services based on confidential computing. You can directly use related services to enjoy the security brought by confidential computing.',
+                'The middleware layer provides common security protocol components and various security function libraries. You can directly call related APIs on the secure and non-secure sides without creating them by yourself. Currently, PKCS11 and PAKE are being built.',
+                'The base layer provides rich enclave development APIs or tools, including code generation tools and enclave life cycle management APIs. POSIX APIs and standard OpenSSL APIs are supported on the secure side. You can develop secure applications based on these APIs.'
             ],
             FRAMEWORK_IMG: '/img/minisite/secgear/framework.png'
         },
         SECGEAR_DOCUMENT: {
-            TITLE_OUTSIDE: '文档',
+            TITLE_OUTSIDE: 'Documentation',
             TITLE_INSIDE: 'DOCUMENTATION',
             DATA_LIST: [
                 {
                     IMG: '/img/minisite/isula/readme.png',
                     LINK: [
                         {
-                            TEXT: '整体介绍',
+                            TEXT: 'Overview ',
                             LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E8%AE%A4%E8%AF%86secGear.md'
                         }
                     ]
@@ -1514,7 +1514,7 @@ module.exports = {
                     IMG: '/img/minisite/isula/desc.png',
                     LINK: [
                         {
-                            TEXT: '安装',
+                            TEXT: 'Installation',
                             LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E5%AE%89%E8%A3%85secGear.md'
                         }
                     ]
@@ -1523,7 +1523,7 @@ module.exports = {
                     IMG: '/img/minisite/isula/compile.png',
                     LINK: [
                         {
-                            TEXT: '开发指南',
+                            TEXT: 'Developer Guide',
                             LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E5%BC%80%E5%8F%91secGear%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F.md'
                         }
                     ]
@@ -1532,7 +1532,7 @@ module.exports = {
                     IMG: '/img/minisite/atune/install.png',
                     LINK: [
                         {
-                            TEXT: '工具使用文档',
+                            TEXT: 'Tool Usage',
                             LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E4%BD%BF%E7%94%A8secGear%E5%B7%A5%E5%85%B7.md'
                         }
                     ]
@@ -1541,7 +1541,7 @@ module.exports = {
                     IMG: '/img/minisite/atune/use.png',
                     LINK: [
                         {
-                            TEXT: 'API接口文档',
+                            TEXT: 'API Reference',
                             LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/secGear/%E6%8E%A5%E5%8F%A3%E5%8F%82%E8%80%83.md'
                         }
                     ]
