@@ -1,56 +1,25 @@
 <template>
     <div class="StratoVirt">
-        <div class="title-nav" v-show="isShowNav" v-if="!isShowH5">
-            <div class="box-line">
-                <img class="gif" v-lazy="'/img/summit/home/nav.gif'" alt="" />
-                <img class="line" v-lazy="'/img/minisite/svirt/svirt-line.png'" alt="" />
-            </div>
-            <div class="nav-text">
-                <ul>
-                    <li v-for="(item,index) in i18n.minisite.SVIRT_NAV_TEXT" @click="goTitle(index)" :class="index === activeIndex?'active':''">
-                        <div><div class="inside"></div></div>
-                        <div>{{ item }}</div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="sVirt-banner">
-            <div class="text">
-                <p v-for="(item,index) in i18n.minisite.SVIRT_BANNER_TEXT" :key="index">{{ item }}</p>
-            </div>
-            <video
-            preload="auto"
-            playsinline="true"
-            autoplay="autoplay" loop="loop" muted="muted" id="sVirt-video" v-if="!isShowH5">
-                <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/StratoVirt-minisite.mp4"  type="video/mp4">
-            </video>
-             <img :src="i18n.minisite.SVIRT_BANNER_IMG" alt="" v-else />
-        </div>
+        <titlenav v-show="isShowNav" :currentIndex="activeIndex" :dataList="i18n.minisite.SVIRT_NAV_TEXT"></titlenav>
+        <minibanner :themeArr="i18n.minisite.SVIRT_BANNER_TEXT" :mobileImg="i18n.minisite.SVIRT_BANNER_IMG"
+        videoUrl="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/StratoVirt-minisite.mp4"></minibanner>
         <div class="sVirt-desc">
-            <div class="up">
-                <div class="description">
-                    <p v-for="(item,index) in i18n.minisite.SVIRT_DESC" :key="index">{{ item }}</p>
-                </div>
-                <img :src="i18n.minisite.SVIRT_IMG" alt="" />
-                
-            </div>
-            <div class="down">
-                <img :src="item.IMG" alt="" v-for="(item,index) in i18n.minisite.SVIRT_LINK" :key="index" @click="go(item.LINK)" />
-            </div>
+            <minidesc :isOther="false" :descArr="i18n.minisite.SVIRT_DESC" :descImg="i18n.minisite.SVIRT_IMG"></minidesc>
+            <miniimg :dataList="i18n.minisite.SVIRT_LINK" :mailAddress="i18n.minisite.ISULA_MAIL"></miniimg>
         </div>
         <div class="character-box">
-            <div class="character">
+            <div class="character" id="character">
                 <p class="title">{{ i18n.minisite.SVIRT_CHARACTER.TITLE_OUTSIDE }}<span>{{ i18n.minisite.SVIRT_CHARACTER.TITLE_INSIDE }}</span></p>
                 <p>{{ i18n.minisite.SVIRT_CHARACTER.CHARACTER_TEXT }}</p>
                 <div class="character-list">
-                    <div class="item" v-for="(item,index) in i18n.minisite.SVIRT_CHARACTER.CHARACTER_LIST">
+                    <div class="item" v-for="(item,index) in i18n.minisite.SVIRT_CHARACTER.CHARACTER_LIST" :key="index">
                         <img :src="item.IMG" alt="" />
                         <p>{{ item.TITLE }}</p>
                         <p>{{ item.DESC }}</p>
                     </div>
                 </div>
             </div>
-            <div class="framework-box">
+            <div class="framework-box" id="framework">
                 <p class="title">{{ i18n.minisite.SVIRT_FRAMEWORK.TITLE_OUTSIDE }}<span>{{ i18n.minisite.SVIRT_FRAMEWORK.TITLE_INSIDE }}</span></p>
                 <div class="framework">
                     <img :src="i18n.minisite.SVIRT_FRAMEWORK.LEFT_IMG" alt="" />
@@ -59,7 +28,7 @@
                     </div>
                 </div>
             </div>
-            <div class="document">
+            <div class="document" id="document">
                 <p class="title">{{ i18n.minisite.SVIRT_DOCUMENT.TITLE_OUTSIDE }}<span>{{ i18n.minisite.SVIRT_DOCUMENT.TITLE_INSIDE }}</span></p>
                 <div class="list-box">
                     <div class="item" v-for="(item,index) in i18n.minisite.SVIRT_DOCUMENT.LIST">
@@ -73,6 +42,10 @@
 </template>
 
 <script>
+import titlenav from './../summit/titleNav.vue';
+import miniimg from './imglink.vue';
+import minibanner from './banner.vue';
+import minidesc from './description.vue';
 export default {
     data() {
         return {
@@ -82,7 +55,9 @@ export default {
         }
     },
     mounted (){
-        window.addEventListener('scroll',this.svirtScroll);
+        if(!this.isShowH5) {
+            window.addEventListener('scroll',this.svirtScroll);
+        }
     },
     methods: {
         go(path) {
@@ -105,13 +80,16 @@ export default {
                 return false;
             }
         },
-        goTitle(index) {
-            document.documentElement.scrollTop = this.navTitleScroll[index];
-        },
     },
     destroyed () { 
         window.removeEventListener('scroll', this.svirtScroll);
-    }
+    },
+    components: {
+        titlenav,
+        miniimg,
+        minibanner,
+        minidesc
+    },
 }
 </script>
 
@@ -142,77 +120,6 @@ export default {
         top: -24px;
     }
 }
-.StratoVirt .title-nav {
-    position: fixed;
-    cursor: pointer;
-    top: 170px;
-    right: 70px;
-    z-index: 1000;
-    display: block;
-    
-    .box-line {
-        width: 70px;
-        margin-left: -26px;
-        .gif {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto -30px 5px;
-            position: relative;
-            z-index: 20;
-        }
-        .line {
-            display: block;
-            width: 2px;
-            height: 302px;
-            margin: 0 auto;
-        }
-    }
-    .nav-text {
-        position: relative;
-        margin-top: -250px;
-        ul li>div {
-            display: inline-block;
-            &:first-of-type {
-                margin-right: 17px;
-                border-radius: 50%;
-                width: 18px;
-                position: relative;
-                background: #FFFFFF;
-                height: 18px;
-                border: 1px solid #979797;
-                div {
-                    width: 14px;
-                    height: 14px;
-                    border-radius: 50%;
-                    background: #D8D8D8;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    margin-left: -7px;
-                    margin-top: -7px;
-                }
-            }
-            &:last-of-type {
-                font-size: 20px;
-                color: #000000;
-                line-height: 30px;
-            }
-        }
-        ul li {
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-        }
-        ul .active {
-            &>div {
-                color: #002FA7 !important;
-            }
-            .inside {
-                background: #002FA7;
-            }
-        }
-    }
-}
 .StratoVirt .sVirt-banner {
     width: 1018px;
     margin: 78px auto;
@@ -239,38 +146,6 @@ export default {
 }
 .StratoVirt .sVirt-desc {
     margin-bottom: 124px;
-    .up {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 40px;
-        .description {
-            width: 854px;
-            p {
-                font-size: 18px;
-                line-height: 48px;
-                color: #000000;
-            }
-        }
-        img {
-            width: 186px;
-            height: 186px;
-            display: block;
-            margin-left: 40px;
-        }
-    }
-    .down {
-        display: flex;
-        flex-direction: row;
-        width: 908px;
-        margin: 0 auto;
-        justify-content: space-between;
-        img {
-            width: 196px;
-            height: 157px;
-            display: block;
-            cursor: pointer;
-        }
-    }
 }
 .StratoVirt .character-box {
     width:100%;
@@ -426,35 +301,6 @@ html[lang="ru"] .character-box .document .list-box .item {
     }
     .StratoVirt .sVirt-desc {
         margin-bottom: 58px;
-        .up {
-            flex-direction: column-reverse;
-            justify-content: center;
-            .description {
-                width: 315px;
-                p {
-                    font-size: 16px;
-                    line-height: 30px;
-                }
-            }
-            img {
-                width: 100px;
-                height: 100px;
-                margin: 0 auto 20px auto;
-            }
-        }
-        .down {
-            flex-direction: column;
-            width: 315px;
-            margin: 0 auto;
-            img {
-                width: 177px;
-                height: 142px;
-                margin: 0 auto 20px auto;
-                &:last-of-type {
-                    margin-bottom: 0;
-                }
-            }
-        }
     }
     .StratoVirt .character-box {
         background-image: unset;
