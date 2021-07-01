@@ -118,15 +118,23 @@ module.exports = {
                 NAME: '探索',
                 CHILDREN: [{
                         NAME: 'A-Tune',
-                        PATH: '/other/minisite/atune'
+                        PATH: '/other/projects/atune'
+                    },
+                    {
+                        NAME: 'Bisheng JDK',
+                        PATH: '/other/projects/bisheng'
                     },
                     {
                         NAME: 'iSula',
-                        PATH: '/other/minisite/isula'
+                        PATH: '/other/projects/isula'
+                    },
+                    {
+                        NAME: 'secGear',
+                        PATH: '/other/projects/secgear'
                     },
                     {
                         NAME: 'StratoVirt',
-                        PATH: '/other/minisite/stratovirt'
+                        PATH: '/other/projects/stratovirt'
                     },
                     {
                         NAME: 'Compass-CI',
@@ -324,15 +332,23 @@ module.exports = {
                 NAME: 'Discovery',
                 CHILDREN: [{
                         NAME: 'A-Tune',
-                        PATH: '/other/minisite/atune'
+                        PATH: '/other/projects/atune'
+                    },
+                    {
+                        NAME: 'Bisheng JDK',
+                        PATH: '/other/projects/bisheng'
                     },
                     {
                         NAME: 'iSula',
-                        PATH: '/other/minisite/isula'
+                        PATH: '/other/projects/isula'
+                    },
+                    {
+                        NAME: 'secGear',
+                        PATH: '/other/projects/secgear'
                     },
                     {
                         NAME: 'StratoVirt',
-                        PATH: '/other/minisite/stratovirt'
+                        PATH: '/other/projects/stratovirt'
                     },
                     {
                         NAME: 'Compass-CI',
@@ -530,15 +546,23 @@ module.exports = {
                 NAME: 'Открытие',
                 CHILDREN: [{
                         NAME: 'A-Tune',
-                        PATH: '/other/minisite/atune'
+                        PATH: '/other/projects/atune'
+                    },
+                    {
+                        NAME: 'Bisheng JDK',
+                        PATH: '/other/projects/bisheng'
                     },
                     {
                         NAME: 'iSula',
-                        PATH: '/other/minisite/isula'
+                        PATH: '/other/projects/isula'
+                    },
+                    {
+                        NAME: 'secGear',
+                        PATH: '/other/projects/secgear'
                     },
                     {
                         NAME: 'StratoVirt',
-                        PATH: '/other/minisite/stratovirt'
+                        PATH: '/other/projects/stratovirt'
                     },
                     {
                         NAME: 'Compass-CI',
