@@ -1,7 +1,8 @@
 # website-v2
+简体中文 | [English](./README.en.md)
 
 #### 介绍
-自2020年10月起，website-v2替代原website仓库，作为openEuler社区官网（https://openeuler.org/zh/）的源码仓库。
+自2020年10月起，website-v2替代原website仓库，作为[openEuler社区官网](https://openeuler.org/zh/)的源码仓库。
 
 #### 软件架构
 官网使用vuepress+node.js作为前后端的基础框架搭建。大部分功能仅通过静态文件渲染，只有少部分功能模块（日历、CVE、搜索）需要后端部署配合运行。
@@ -27,5 +28,3 @@ website-v2
 3.  新建 Feat_xxx 分支进行开发
 3.  开发完成后，提交代码到个人Fork仓
 4.  新建pull request,把修改以PR形式提交到本仓库
-
-
