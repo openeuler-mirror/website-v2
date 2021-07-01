@@ -170,7 +170,7 @@ module.exports = {
             }
         ],
         LANG: '中文',
-        LANG_LIST: ['中文','English'],
+        LANG_LIST: ['中文','English','Русский'],
         GITTE: '源码',
         CODE: '代码',
         GITTE_RESOURCE_LIST: [{
@@ -376,7 +376,7 @@ module.exports = {
             }
         ],
         LANG: 'English',
-        LANG_LIST: ['中文','English'],
+        LANG_LIST: ['中文','English','Русский'],
         GITTE: 'Source code',
         CODE: 'CODE',
         GITTE_RESOURCE_LIST: [{
@@ -546,11 +546,6 @@ module.exports = {
                         IS_OPEN_MINISITE_WINDOW: 1
                     },
                     {
-                        NAME: 'Compliance',
-                        PATH: 'https://compliance.openeuler.org/',
-                        IS_OPEN_MINISITE_WINDOW: 1
-                    },
-                    {
                         NAME: 'Pkgship',
                         PATH: 'https://pkgmanage.openeuler.org/',
                         IS_OPEN_MINISITE_WINDOW: 1
@@ -582,7 +577,7 @@ module.exports = {
             }
         ],
         LANG: 'Русский',
-        LANG_LIST: ['中文','English'],
+        LANG_LIST: ['中文','English','Русский'],
         GITTE: 'Source code',
         CODE: 'Код',
         GITTE_RESOURCE_LIST: [{
