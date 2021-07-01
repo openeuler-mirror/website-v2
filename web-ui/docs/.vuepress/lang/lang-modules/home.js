@@ -11,21 +11,21 @@ module.exports = {
         HOME_CAROUSEL_DATA: [
             {
                 TITLE: "iSula",
-                LINK: "/other/minisite/isula",
+                LINK: "/other/projects/isula",
                 DES: "小个头 大能量",
                 IMG: "/img/minisite/isula/mobile-banner.png",
                 VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/iSula.mp4"
             },
             {
                 TITLE: "A-Tune",
-                LINK: "/other/minisite/atune",
+                LINK: "/other/projects/atune",
                 DES: "一款基于AI开发的智能优化引擎",
                 IMG: "/img/minisite/atune/mobile-banner.png",
                 VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/A-Tune.mp4"
             },
             {
                 TITLE: "StratoVirt",
-                LINK: "/other/minisite/stratovirt",
+                LINK: "/other/projects/stratovirt",
                 DES: "面向云数据中心的企业级虚拟化平台",
                 IMG: "/img/minisite/svirt/mobile-banner.png",
                 VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/StratoVirt-minisite.mp4"
@@ -611,21 +611,21 @@ module.exports = {
         HOME_CAROUSEL_DATA: [
             {
                 TITLE: "iSula",
-                LINK: "/other/minisite/isula",
+                LINK: "/other/projects/isula",
                 DES: "Packs a huge punch in a small size",
                 IMG: "/img/minisite/isula/mobile-banner.png",
                 VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/iSula.mp4"
             },
             {
                 TITLE: "A-Tune",
-                LINK: "/other/minisite/atune",
+                LINK: "/other/projects/atune",
                 DES: "AI-based Tuning Engine",
                 IMG: "/img/minisite/atune/mobile-banner.png",
                 VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/A-Tune.mp4"
             },
             {
                 TITLE: "StratoVirt",
-                LINK: "/other/minisite/stratovirt",
+                LINK: "/other/projects/stratovirt",
                 DES: "Virtualization platform for cloud data centers",
                 IMG: "/img/minisite/svirt/mobile-banner.png",
                 VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/StratoVirt-minisite.mp4"
@@ -1181,21 +1181,21 @@ module.exports = {
         HOME_CAROUSEL_DATA: [
             {
                 TITLE: "iSula",
-                LINK: "/other/minisite/isula",
+                LINK: "/other/projects/isula",
                 DES: "Ударная сила в компактном размере",
                 IMG: "/img/minisite/isula/mobile-banner.png",
                 VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/iSula.mp4"
             },
             {
                 TITLE: "A-Tune",
-                LINK: "/other/minisite/atune",
+                LINK: "/other/projects/atune",
                 DES: "инструмент настройки на базе ИИ",
                 IMG: "/img/minisite/atune/mobile-banner.png",
                 VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/A-Tune.mp4"
             },
             {
                 TITLE: "StratoVirt",
-                LINK: "/other/minisite/stratovirt",
+                LINK: "/other/projects/stratovirt",
                 DES: "Платформа виртуализации для облачных центров обработки данных",
                 IMG: "/img/minisite/svirt/mobile-banner.png",
                 VIDEO_URL: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/StratoVirt-minisite.mp4"

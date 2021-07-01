@@ -23,9 +23,9 @@ title: "Contribution"
 
 您可以体验openEuler社区里的以下原创开源项目：
 
-- [StratoVirt](https://openeuler.org/zh/other/minisite/stratovirt/)：面向云数据中心的企业级虚拟化平台
-- [A-Tune](https://openeuler.org/zh/other/minisite/atune/)：一款基于AI开发的智能优化引擎
-- [iSula](https://openeuler.org/zh/other/minisite/isula/)：轻量级容器解决方案
+- [StratoVirt](https://openeuler.org/zh/other/projects/stratovirt/)：面向云数据中心的企业级虚拟化平台
+- [A-Tune](https://openeuler.org/zh/other/projects/atune/)：一款基于AI开发的智能优化引擎
+- [iSula](https://openeuler.org/zh/other/projects/isula/)：轻量级容器解决方案
 - [secGear](https://gitee.com/openeuler/secGear)：面向计算产业的机密计算安全应用开发套件
 - [PkgShip](https://gitee.com/openeuler/pkgship)：管理OS软件包依赖关系，提供依赖和被依赖关系完整图谱的查询工具
 - [BishengJDK ](https://gitee.com/openeuler/bishengjdk-8): OpenJDK定制版Huawei JDK的开源版本，是一个高性能、可用于生产环境的OpenJDK发行版
