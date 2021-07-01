@@ -1,7 +1,8 @@
 # website-v2
+English | [简体中文](./README.md)
 
 #### Description
-Website-v2 is the source code repository of openeuler community official website(https://openeuler.org/en/).
+Website-v2 is the source code repository of [openeuler community official website](https://openeuler.org/en/).
 #### Software Architecture
 The website used vuepress + node.js as the basic framework of the front and back end. Most of the functions are only rendered through static files, and only a few function modules (calendar, CVE, search) need back-end deployment.
 
