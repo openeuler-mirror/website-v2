@@ -23,10 +23,9 @@ export default {
         return {
             currentIndex: 0,
             scrollTop: 0,
-            isShow: false
+            isShow: !this.reserveOffsetTop
         };
     },
-    props: ["anchorList", "reserveOffsetTop"],
     props: {
         anchorList: {
             type: Array,
@@ -104,6 +103,7 @@ export default {
             width: 2px;
             height: 441px;
             margin: 0 auto;
+            visibility: hidden;
         }
     }
     .nav-text {
