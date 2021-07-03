@@ -1,17 +1,18 @@
 <template>
    <div class="sig-detail">
+       <anchor :anchor-list="anchorList"></anchor>
        <div class="breadcrumbs" @click="back">
            SIG 
        </div>
        <h1>{{$route.query.name}}</h1>
-       <h2 class="meetings">{{i18n.sig.SIG_DETAIL.ORGANIZING_MEETINGS}}</h2>
+       <h2 id="meeting" class="meetings">{{i18n.sig.SIG_DETAIL.ORGANIZING_MEETINGS}}</h2>
         <div class="calender-wrapper" v-if="calenderData.length">
             <calender :table-data="calenderData" />
         </div>
         <p v-else class="no-meeting">
             {{i18n.sig.SIG_DETAIL.NO_MEETINGS}}
         </p>
-        <h2>{{i18n.sig.SIG_DETAIL.MEMBERS}}</h2>
+        <h2 id="member">{{i18n.sig.SIG_DETAIL.MEMBERS}}</h2>
         <div class="developer-wrapper">
             <div class="dev-leader">
                 <div class="dev-dever" v-for="(value, index) in memberList" :key="index">
@@ -33,7 +34,11 @@
                 </div>
             </div>
         </div>
-        <h2>{{i18n.sig.SIG_DETAIL.CONTACT}}</h2>
+        <h2 id="contact">{{i18n.sig.SIG_DETAIL.CONTACT}}</h2>
+        <div class="contact">
+            <span>{{i18n.sig.SIG_DETAIL.MAIL_LIST}}: </span><a :href="'mailto:' + $route.query.mail">{{$route.query.mail}}</a>
+        </div>
+        <h2 id="contact1">{{i18n.sig.SIG_DETAIL.CONTACT}}</h2>
         <div class="contact">
             <span>{{i18n.sig.SIG_DETAIL.MAIL_LIST}}: </span><a :href="'mailto:' + $route.query.mail">{{$route.query.mail}}</a>
         </div>
@@ -43,12 +48,31 @@
 <script>
 import { sigDetail, sigMember } from "../../api/sig";
 import calender from "./../home/calender";
+import anchor from "./../common/anchor";
 let that = null;
 let remoteMethods = {
     getSigDetail() {
         sigDetail(that.$route.query.id)
         .then(data => {
             that.calenderData = data.tableData;
+                that.anchorList = [
+                    {
+                        name: "会议",
+                        anchorId: "meeting"
+                    },
+                    {
+                        name: "成员",
+                        anchorId: "member"
+                    },
+                    {
+                        name: "contact",
+                        anchorId: "contact"
+                    },
+                    {
+                        name: "aaa",
+                        anchorId: "contact1"
+                    }
+                ]
         })
         .catch(data => {
             that.$message.error(data);
@@ -58,6 +82,24 @@ let remoteMethods = {
         sigMember(that.$route.query.id)
         .then(data => {
             that.memberList = JSON.parse(data.owners);
+                that.anchorList = [
+                    {
+                        name: "会议",
+                        anchorId: "meeting"
+                    },
+                    {
+                        name: "成员",
+                        anchorId: "member"
+                    },
+                    {
+                        name: "contact",
+                        anchorId: "contact"
+                    },
+                    {
+                        name: "aaa",
+                        anchorId: "contact1"
+                    }
+                ]
         })
         .catch(data => {
             that.$message.error(data);
@@ -69,11 +111,13 @@ export default {
         that = this;
         return {
             calenderData: [],
-            memberList: []
+            memberList: [],
+            anchorList: []
         }
     },
     components: {
-        calender
+        calender,
+        anchor
     },
     mounted () {
         remoteMethods.getSigDetail();
