@@ -91,7 +91,7 @@ export default {
         let tempArr = [];
         res.forEach(item => {
             tempArr.push({
-                MEETUPS_IMG: `https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/website-meetup/website${item.poster}.png`,
+                MEETUPS_IMG: `https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/website-meetup/website${item.poster}.png`,
                 MEETUPS_DATE: item.date,
                 MEETUPS_TITLE: item.title,
                 MEETUPS_DESC: [item.synopsis],

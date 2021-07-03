@@ -2,7 +2,7 @@
     <div class="StratoVirt">
         <titlenav v-show="isShowNav" :currentIndex="activeIndex" :dataList="i18n.minisite.SVIRT_NAV_TEXT"></titlenav>
         <minibanner :themeArr="i18n.minisite.SVIRT_BANNER_TEXT" :mobileImg="i18n.minisite.SVIRT_BANNER_IMG"
-        videoUrl="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/StratoVirt-minisite.mp4"></minibanner>
+        videoUrl="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/StratoVirt-minisite.mp4"></minibanner>
         <div class="sVirt-desc">
             <minidesc :isOther="false" :descArr="i18n.minisite.SVIRT_DESC" :descImg="i18n.minisite.SVIRT_IMG"></minidesc>
             <miniimg :dataList="i18n.minisite.SVIRT_LINK" :mailAddress="i18n.minisite.ISULA_MAIL"></miniimg>

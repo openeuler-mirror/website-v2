@@ -72,19 +72,19 @@ module.exports = {
         PPT_LIST: [
             {
                 URL: '/img/other/brand/zh-ppt1.png',
-                LINK: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/PPT/ppt01.pptx'
+                LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/ppt01.pptx'
             },
             {
                 URL: '/img/other/brand/zh-ppt2.png',
-                LINK: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/PPT/ppt02.pptx'
+                LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/ppt02.pptx'
             },
             {
                 URL: '/img/other/brand/zh-ppt3.png',
-                LINK: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/PPT/ppt03.pptx'
+                LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/ppt03.pptx'
             },
             {
                 URL: '/img/other/brand/zh-ppt4.png',
-                LINK: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/PPT/ppt04.pptx'
+                LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/ppt04.pptx'
             }
         ]
     },
@@ -157,19 +157,19 @@ module.exports = {
         PPT_LIST: [
             {
                 URL: '/img/other/brand/en-ppt1.png',
-                LINK: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/PPT/enppt01.pptx'
+                LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/enppt01.pptx'
             },
             {
                 URL: '/img/other/brand/en-ppt2.png',
-                LINK: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/PPT/enppt02.pptx'
+                LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/enppt02.pptx'
             },
             {
                 URL: '/img/other/brand/en-ppt3.png',
-                LINK: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/PPT/enppt03.pptx'
+                LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/enppt03.pptx'
             },
             {
                 URL: '/img/other/brand/en-ppt4.png',
-                LINK: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/PPT/enppt04.pptx'
+                LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/enppt04.pptx'
             }
         ]
     },
@@ -242,19 +242,19 @@ module.exports = {
         PPT_LIST: [
             {
                 URL: '/img/other/brand/en-ppt1.png',
-                LINK: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/PPT/enppt01.pptx'
+                LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/enppt01.pptx'
             },
             {
                 URL: '/img/other/brand/en-ppt2.png',
-                LINK: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/PPT/enppt02.pptx'
+                LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/enppt02.pptx'
             },
             {
                 URL: '/img/other/brand/en-ppt3.png',
-                LINK: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/PPT/enppt03.pptx'
+                LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/enppt03.pptx'
             },
             {
                 URL: '/img/other/brand/en-ppt4.png',
-                LINK: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/PPT/enppt04.pptx'
+                LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/enppt04.pptx'
             }
         ]
     }
