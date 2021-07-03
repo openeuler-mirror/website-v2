@@ -5,7 +5,7 @@
         <h3 v-if="isShowH5">{{ i18n.interaction.SUMMIT.SUMMIT }}</h3>
         <div class="top-banner" v-if="!isShowH5" @click="go('/interaction/summit-list/')">
             <video autoplay loop muted width="700px" height="380px" id="summit-mp4">
-                <source src="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler%20Summit%202020%20mov.mp4"  type="video/mp4">
+                <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler%20Summit%202020%20mov.mp4"  type="video/mp4">
             </video>
             <img class="top-img" v-lazy="i18n.interaction.SUMMIT.SUMMIT_WEB_IMG" alt="" />
         </div>

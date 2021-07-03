@@ -172,7 +172,7 @@ export default {
                     
                 })
                 this.addressObj = {
-                    ADDRESS_IMG: `https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/website-meetup/${res.poster}.png`,
+                    ADDRESS_IMG: `https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/website-meetup/${res.poster}.png`,
                     ADDRESS_DOWN: [res.detail_address || res.live_address],
                     APPLY_QRCODE: res.wx_code,
                     LATITUDE: res.latitude,
