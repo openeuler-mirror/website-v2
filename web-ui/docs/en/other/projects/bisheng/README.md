@@ -1,5 +1,5 @@
 ---
-title: "毕昇"
+title: "毕昇JDK"
 ---
 <ClientOnly>
   <minisite-bisheng/>

@@ -235,7 +235,7 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 552px;
+    width: 1120px;
     margin: 50px auto;
     &>div {
         position: relative;
@@ -245,6 +245,7 @@ export default {
         height: 157px;
         display: block;
         cursor: pointer;
+        // margin-right: 112px;
     }
     .tip {
         display: none;
