@@ -367,6 +367,34 @@ module.exports = {
                     }
                 ],
                 STATUS: false
+            },
+            {
+                IMG:'/img/minisite/bisheng/meeting.png',
+                LINK_LIST: [
+                    {
+                        TEXT: '毕昇JDK8',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234'
+                    },
+                    {
+                        TEXT: '毕昇JDK11',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-11/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234'
+                    }
+                ],
+                STATUS: false
+            },
+            {
+                IMG:'/img/minisite/bisheng/roadmap.png',
+                LINK_LIST: [
+                    {
+                        TEXT: '毕昇JDK8',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/项目路标?sort_id=4182245'
+                    },
+                    {
+                        TEXT: '毕昇JDK11',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-11/wikis/项目路标?sort_id=4182245'
+                    }
+                ],
+                STATUS: false
             }
         ],
         BISHENG_MORE: '更多信息：',
@@ -570,25 +598,25 @@ module.exports = {
                 {
                     IMG: '/img/minisite/atune/know.png',
                     TITLE: 'About A-Tune',
-                    DESC: '查看A-Tune的简介、架构。了解其支持特性与业务模型。',
+                    DESC: 'Learn about the architecture, supported features, and service models of A-Tune.',
                     LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/A-Tune/%E8%AE%A4%E8%AF%86A-Tune.md'
                 },
                 {
                     IMG: '/img/minisite/atune/install.png',
                     TITLE: 'Installation and Deployment',
-                    DESC: '了解安装A-Tune的软硬件要求与环境准备，学习安装、部署和启动A-Tune。',
+                    DESC: 'Discover the hardware and software requirements as well as the environment preparations for installing A-Tune. Learn how to install, deploy, and start A-Tune.',
                     LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/A-Tune/%E5%AE%89%E8%A3%85%E4%B8%8E%E9%83%A8%E7%BD%B2.md'
                 },
                 {
                     IMG: '/img/minisite/atune/use.png',
                     TITLE: 'How to Use',
-                    DESC: '本章介绍A-Tune客户端包含的功能和使用方法。学习用命令行使用A-Tune。',
+                    DESC: 'Find out the functions and usage of the A-Tune client. Learn to use A-Tune from the CLI.',
                     LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/A-Tune/%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.md'
                 },
                 {
                     IMG: '/img/minisite/atune/problem.png',
                     TITLE: 'FAQs',
-                    DESC: '点击查看A-Tune常见问题，在这里您可以获取解决方案。',
+                    DESC: 'View the A-Tune FAQs.',
                     LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/A-Tune/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.md'
                 }
             ]
@@ -882,6 +910,34 @@ module.exports = {
                     }
                 ],
                 STATUS: false
+            },
+            {
+                IMG:'/img/minisite/bisheng/meeting.png',
+                LINK_LIST: [
+                    {
+                        TEXT: 'Bisheng JDK 8',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234'
+                    },
+                    {
+                        TEXT: 'Bisheng JDK 11',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-11/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234'
+                    }
+                ],
+                STATUS: false
+            },
+            {
+                IMG:'/img/minisite/bisheng/roadmap.png',
+                LINK_LIST: [
+                    {
+                        TEXT: 'Bisheng JDK 8',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/项目路标?sort_id=4182245'
+                    },
+                    {
+                        TEXT: 'Bisheng JDK 11',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-11/wikis/项目路标?sort_id=4182245'
+                    }
+                ],
+                STATUS: false
             }
         ],
         BISHENG_MORE: 'More information:',
@@ -1085,25 +1141,25 @@ module.exports = {
                 {
                     IMG: '/img/minisite/atune/know.png',
                     TITLE: 'Об инструменте A-Tune',
-                    DESC: '查看A-Tune的简介、架构。了解其支持特性与业务模型。',
+                    DESC: 'Learn about the architecture, supported features, and service models of A-Tune.',
                     LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/A-Tune/%E8%AE%A4%E8%AF%86A-Tune.md'
                 },
                 {
                     IMG: '/img/minisite/atune/install.png',
                     TITLE: 'Установка и развертывание',
-                    DESC: '了解安装A-Tune的软硬件要求与环境准备，学习安装、部署和启动A-Tune。',
+                    DESC: 'Discover the hardware and software requirements as well as the environment preparations for installing A-Tune. Learn how to install, deploy, and start A-Tune.',
                     LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/A-Tune/%E5%AE%89%E8%A3%85%E4%B8%8E%E9%83%A8%E7%BD%B2.md'
                 },
                 {
                     IMG: '/img/minisite/atune/use.png',
                     TITLE: 'Использование инструмента',
-                    DESC: '本章介绍A-Tune客户端包含的功能和使用方法。学习用命令行使用A-Tune。',
+                    DESC: 'Find out the functions and usage of the A-Tune client. Learn to use A-Tune from the CLI.',
                     LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/A-Tune/%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.md'
                 },
                 {
                     IMG: '/img/minisite/atune/problem.png',
                     TITLE: 'Вопросы и ответы',
-                    DESC: '点击查看A-Tune常见问题，在这里您可以获取解决方案。',
+                    DESC: 'View the A-Tune FAQs.',
                     LINK: 'https://gitee.com/openeuler/docs/blob/master/docs/zh/docs/A-Tune/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.md'
                 }
             ]
@@ -1394,6 +1450,34 @@ module.exports = {
                     {
                         TEXT: 'Bisheng JDK 11',
                         LINK: 'https://gitee.com/openeuler/bishengjdk-11/issues'
+                    }
+                ],
+                STATUS: false
+            },
+            {
+                IMG:'/img/minisite/bisheng/meeting.png',
+                LINK_LIST: [
+                    {
+                        TEXT: 'Bisheng JDK 8',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234'
+                    },
+                    {
+                        TEXT: 'Bisheng JDK 11',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-11/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234'
+                    }
+                ],
+                STATUS: false
+            },
+            {
+                IMG:'/img/minisite/bisheng/roadmap.png',
+                LINK_LIST: [
+                    {
+                        TEXT: 'Bisheng JDK 8',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/项目路标?sort_id=4182245'
+                    },
+                    {
+                        TEXT: 'Bisheng JDK 11',
+                        LINK: 'https://gitee.com/openeuler/bishengjdk-11/wikis/项目路标?sort_id=4182245'
                     }
                 ],
                 STATUS: false
