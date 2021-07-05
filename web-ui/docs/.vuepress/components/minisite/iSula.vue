@@ -2,7 +2,7 @@
     <div class="i-Sula">
         <titlenav v-show="isShowNav" :currentIndex="activeIndex" :dataList="i18n.minisite.NAV_TEXT"></titlenav>
         <minibanner :themeArr="i18n.minisite.ISULA_BANNER_TEXT" :mobileImg="i18n.minisite.ISULA_BANNER_IMG" 
-        videoUrl="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/iSula.mp4"></minibanner>
+        videoUrl="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/iSula.mp4"></minibanner>
         <div class="desc-box">
             <div class="isula-desc">
                 <minidesc :isOther="false" :descArr="i18n.minisite.ISULA_DESC_UP" :descImg="i18n.minisite.ISULA_LOGO"></minidesc>

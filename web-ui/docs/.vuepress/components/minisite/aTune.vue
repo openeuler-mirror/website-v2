@@ -2,7 +2,7 @@
     <div class="A-Tune">
         <titlenav v-show="isShowNav" :currentIndex="activeIndex" :dataList="i18n.minisite.NAV_TEXT"></titlenav>
         <minibanner :themeArr="i18n.minisite.ATUNE_BANNER_TEXT" :mobileImg="i18n.minisite.ATUNE_BANNER_IMG" 
-        videoUrl="https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/A-Tune.mp4"></minibanner>
+        videoUrl="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/A-Tune.mp4"></minibanner>
         <div class="atune-center">
             <minidesc :isOther="true" :descArr="i18n.minisite.ATUNE_DESC"></minidesc>
             <miniimg :dataList="i18n.minisite.ATUNE_LINK" :mailAddress="i18n.minisite.ATUNE_MAIL"></miniimg>

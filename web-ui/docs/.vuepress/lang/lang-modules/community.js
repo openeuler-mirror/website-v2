@@ -142,8 +142,8 @@ module.exports = {
         },
         CONTRIBUTION: {
             DOWLOAD_PDF_URL: '/openeuler-trail-chess.pdf',
-            BACKGROUND_IMG_H5: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E6%89%8B%E6%9C%BA%E5%9C%B0%E5%9B%BE5x.png',
-            BACKGROUND_IMG: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/webtrailchess5x.png',
+            BACKGROUND_IMG_H5: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E6%89%8B%E6%9C%BA%E5%9C%B0%E5%9B%BE5x.png',
+            BACKGROUND_IMG: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/webtrailchess5x.png',
             LOOK_DESC: '查看文字版攻略',
             PRINT_MAP: '打印攻略地图',
             LINK_LIST: [
@@ -331,8 +331,8 @@ module.exports = {
         },
         CONTRIBUTION: {
             DOWLOAD_PDF_URL: '/openeuler-trail-chess.pdf',
-            BACKGROUND_IMG_H5: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E6%89%8B%E6%9C%BA%E5%9C%B0%E5%9B%BE5x.png',
-            BACKGROUND_IMG: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/webtrailchess5x.png',
+            BACKGROUND_IMG_H5: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E6%89%8B%E6%9C%BA%E5%9C%B0%E5%9B%BE5x.png',
+            BACKGROUND_IMG: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/webtrailchess5x.png',
             LOOK_DESC: '查看文字版攻略',
             PRINT_MAP: '打印攻略地图',
             LINK_LIST: [
@@ -520,8 +520,8 @@ module.exports = {
         },
         CONTRIBUTION: {
             DOWLOAD_PDF_URL: '/openeuler-trail-chess.pdf',
-            BACKGROUND_IMG_H5: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E6%89%8B%E6%9C%BA%E5%9C%B0%E5%9B%BE5x.png',
-            BACKGROUND_IMG: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/webtrailchess5x.png',
+            BACKGROUND_IMG_H5: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E6%89%8B%E6%9C%BA%E5%9C%B0%E5%9B%BE5x.png',
+            BACKGROUND_IMG: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/webtrailchess5x.png',
             LOOK_DESC: '查看文字版攻略',
             PRINT_MAP: '打印攻略地图',
             LINK_LIST: [

@@ -7,7 +7,7 @@ module.exports = {
         MEETUPS_LIST : [
             {
                 ID: 1,
-                MEETUPS_VIDEO_LINK: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E5%8D%97%E4%BA%AC%E5%BF%AB%E9%97%AA.mp4',
+                MEETUPS_VIDEO_LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%8D%97%E4%BA%AC%E5%BF%AB%E9%97%AA.mp4',
                 MEETUPS_VIDEO_COVER: '/img/meetups/review1.png',
                 MEETUPS_TITLE: '开源操作系统 金陵技术论坛',
                 TITLE_LIST: ['开源操作系统 金陵技术论坛'],
@@ -79,7 +79,7 @@ module.exports = {
             },
             {
                 ID: 2,
-                MEETUPS_VIDEO_LINK: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E9%95%BF%E6%B2%99%E5%BF%AB%E9%97%AA.mp4',
+                MEETUPS_VIDEO_LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E9%95%BF%E6%B2%99%E5%BF%AB%E9%97%AA.mp4',
                 MEETUPS_VIDEO_COVER: '/img/meetups/review2.png',
                 MEETUPS_TITLE: '长沙 Meetup',
                 TITLE_LIST: ['长沙 Meetup'],
@@ -161,7 +161,7 @@ module.exports = {
             },
             {
                 ID: 3,
-                MEETUPS_VIDEO_LINK: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E8%A5%BF%E5%AE%89%E5%BF%AB%E9%97%AA.mp4',
+                MEETUPS_VIDEO_LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E8%A5%BF%E5%AE%89%E5%BF%AB%E9%97%AA.mp4',
                 MEETUPS_VIDEO_COVER: '/img/meetups/review3.png',
                 MEETUPS_TITLE: '共创·共赢 统信UOS & openEuler开源社区技术研讨论坛',
                 TITLE_LIST: ['共创·共赢','统信UOS & openEuler开源社区技术研讨论坛'],
@@ -644,7 +644,7 @@ module.exports = {
         MEETUPS_LIST : [
             {
                 ID: 1,
-                MEETUPS_VIDEO_LINK: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E5%8D%97%E4%BA%AC%E5%BF%AB%E9%97%AA.mp4',
+                MEETUPS_VIDEO_LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%8D%97%E4%BA%AC%E5%BF%AB%E9%97%AA.mp4',
                 MEETUPS_VIDEO_COVER: '/img/meetups/review1.png',
                 MEETUPS_TITLE: '开源操作系统 金陵技术论坛',
                 TITLE_LIST: ['开源操作系统 金陵技术论坛'],
@@ -716,7 +716,7 @@ module.exports = {
             },
             {
                 ID: 2,
-                MEETUPS_VIDEO_LINK: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E9%95%BF%E6%B2%99%E5%BF%AB%E9%97%AA.mp4',
+                MEETUPS_VIDEO_LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E9%95%BF%E6%B2%99%E5%BF%AB%E9%97%AA.mp4',
                 MEETUPS_VIDEO_COVER: '/img/meetups/review2.png',
                 MEETUPS_TITLE: '长沙 Meetup',
                 TITLE_LIST: ['长沙 Meetup'],
@@ -798,7 +798,7 @@ module.exports = {
             },
             {
                 ID: 3,
-                MEETUPS_VIDEO_LINK: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E8%A5%BF%E5%AE%89%E5%BF%AB%E9%97%AA.mp4',
+                MEETUPS_VIDEO_LINK: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E8%A5%BF%E5%AE%89%E5%BF%AB%E9%97%AA.mp4',
                 MEETUPS_VIDEO_COVER: '/img/meetups/review3.png',
                 MEETUPS_TITLE: '共创·共赢 统信UOS & openEuler开源社区技术研讨论坛',
                 TITLE_LIST: ['共创·共赢','统信UOS & openEuler开源社区技术研讨论坛'],
