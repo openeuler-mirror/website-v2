@@ -968,7 +968,7 @@ module.exports = {
             FRAMEWORK_IMG: '/img/minisite/bisheng/jiagoutu.png'
         },
         BISHENG_LEARN: {
-            TITLE_OUTSIDE: 'Download',
+            TITLE_OUTSIDE: 'LEARNING',
             TITLE_INSIDE: 'LEARNING',
             DATA_LIST: [
                 {
