@@ -18,6 +18,12 @@
                         <a :href="value.LINK" v-for="(value,key) in item.LINK_LIST" :key="key" target="_blank">{{ value.TEXT }}</a>
                     </div>
                 </div>
+                <div>
+                    <a href=""></a>
+                </div>
+                <div>
+                    <img :src="item.IMG" alt="" />
+                </div>
             </div>
             <div class="more-info">
                 <p>{{ i18n.minisite.BISHENG_MORE }}</p>
