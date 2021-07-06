@@ -122,7 +122,7 @@ module.exports = {
                     },
                     {
                         NAME: 'Bisheng JDK',
-                        PATH: '/other/projects/bisheng'
+                        PATH: '/other/projects/bishengjdk'
                     },
                     {
                         NAME: 'iSula',
@@ -336,7 +336,7 @@ module.exports = {
                     },
                     {
                         NAME: 'Bisheng JDK',
-                        PATH: '/other/projects/bisheng'
+                        PATH: '/other/projects/bishengjdk'
                     },
                     {
                         NAME: 'iSula',
@@ -550,7 +550,7 @@ module.exports = {
                     },
                     {
                         NAME: 'Bisheng JDK',
-                        PATH: '/other/projects/bisheng'
+                        PATH: '/other/projects/bishengjdk'
                     },
                     {
                         NAME: 'iSula',

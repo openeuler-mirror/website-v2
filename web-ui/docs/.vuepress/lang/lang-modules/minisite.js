@@ -425,7 +425,7 @@ module.exports = {
             FRAMEWORK_IMG: '/img/minisite/bisheng/framework.png'
         },
         BISHENG_LEARN: {
-            TITLE_OUTSIDE: '学习与下载',
+            TITLE_OUTSIDE: '学习',
             TITLE_INSIDE: 'LEARNING',
             DATA_LIST: [
                 {
@@ -968,7 +968,7 @@ module.exports = {
             FRAMEWORK_IMG: '/img/minisite/bisheng/jiagoutu.png'
         },
         BISHENG_LEARN: {
-            TITLE_OUTSIDE: 'Download',
+            TITLE_OUTSIDE: 'Learning',
             TITLE_INSIDE: 'LEARNING',
             DATA_LIST: [
                 {
@@ -1511,7 +1511,7 @@ module.exports = {
             FRAMEWORK_IMG: '/img/minisite/bisheng/framework.png'
         },
         BISHENG_LEARN: {
-            TITLE_OUTSIDE: 'Learn and Practice',
+            TITLE_OUTSIDE: 'Learning',
             TITLE_INSIDE: 'LEARNING',
             DATA_LIST: [
                 {
