@@ -18,12 +18,6 @@
                         <a :href="value.LINK" v-for="(value,key) in item.LINK_LIST" :key="key" target="_blank">{{ value.TEXT }}</a>
                     </div>
                 </div>
-                <div>
-                    <a href=""></a>
-                </div>
-                <div>
-                    <img :src="item.IMG" alt="" />
-                </div>
             </div>
             <div class="more-info">
                 <p>{{ i18n.minisite.BISHENG_MORE }}</p>
@@ -84,7 +78,7 @@ export default {
     height: 650px;
 }
 .bisheng .document .title span {
-    left: 42%;
+    left: 41.7%;
 }
 @media screen and (max-width: 1120px) {
     .bisheng .framework-box .framework img {
@@ -119,7 +113,7 @@ export default {
         color: rgba(0, 0, 0, 0.05);
         line-height: 48px;
         position: absolute;
-        left: 46%;
+        left: 47%;
         top: -24px;
     }
     @media screen and (max-width: 1120px) {
