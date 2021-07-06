@@ -51,7 +51,7 @@ module.exports = {
             }
         },
         smoothScroll: true,
-        docsUrl: 'https://ru-docs.openeuler.org'
+        docsUrl: 'https://docs.ru.openeuler.org'
 
     },
     devServer: {

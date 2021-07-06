@@ -419,8 +419,10 @@ module.exports = {
         MEETINGS_TIME: 'Time: ',
         MEETINGS_REPLAY: 'Воспроизведение',
         SEARCH_PLACE_HOLDER: 'Введите текст',
-        COOKIE_LEGAL_TEXT: 'This site uses cookies. By continuing to browse the site you are agreeing to our use of cookies.',
-        COOKIE_LEGAL_LINK_TEXT: 'Read our privacy policy>',
+        COOKIE_LEGAL_TEXT: 'Продолжая просмотр сайта и(или) нажимая X, я соглашаюсь с использованием файлов cookie владельцем сайта в соответствии с ',
+        COOKIE_LEGAL_TEXT_OTHER: 'в том числе на передачу данных, указанных в Политике, третьим лицам (статистическим службам сети Интернет), в соответствии с ',
+        COOKIE_LEGAL_LINK_TEXT: 'Политикой в отношении файлов cookie ',
+        COOKIE_LEGAL_LINK_TEXT_OTHER: 'Пользовательским соглашением >',
         NAV_ROUTER_CONFIG: [{
                 PATH: '',
                 NAME: 'Загрузить',
@@ -488,17 +490,10 @@ module.exports = {
             {
                 PATH: '',
                 NAME: 'Сообщество',
-                CHILDREN: [{
-                        NAME: 'Участие',
-                        PATH: '/community/contribution/'
-                    },
+                CHILDREN: [
                     {
                         NAME: 'Кодекс',
                         PATH: '/community/conduct/'
-                    },
-                    {
-                        NAME: 'Списки рассылок',
-                        PATH: '/community/mailing-list/'
                     },
                     {
                         NAME: 'Сертификация',
