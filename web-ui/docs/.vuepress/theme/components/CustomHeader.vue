@@ -235,9 +235,17 @@
                 </ul>
             </div>
         </div>
-        <div class="cookie-legal" v-if="cookiesShow">
-            {{i18n.common.COOKIE_LEGAL_TEXT}}
-            <a :href="'/'+$lang+'/other/privacy/'">{{i18n.common.COOKIE_LEGAL_LINK_TEXT}}</a>
+        <div :class="'cookie-legal ' + (($lang==='ru')?'cookie-legal-ru':'')" v-if="cookiesShow">
+            <template v-if="$lang!=='ru'">
+                {{i18n.common.COOKIE_LEGAL_TEXT}}
+                <a :href="'/'+$lang+'/other/privacy/'">{{i18n.common.COOKIE_LEGAL_LINK_TEXT}}</a>    
+            </template>
+            <template v-else>
+                {{i18n.common.COOKIE_LEGAL_TEXT}}
+                <a :href="'/'+$lang+'/other/privacy/'">{{i18n.common.COOKIE_LEGAL_LINK_TEXT}}</a>
+                {{i18n.common.COOKIE_LEGAL_TEXT_OTHER}}
+                <a :href="'/'+$lang+'/other/privacy/'">{{i18n.common.COOKIE_LEGAL_LINK_TEXT_OTHER}}</a>   
+            </template>
             <img @click="close" src="/img/common/icon-close.png">
         </div>
     </div>
@@ -880,6 +888,12 @@ export default {
                 height: 20px;
                 margin-left: 0;
             }
+        }
+    }
+    .cookie-legal-ru {
+        line-height: 30px;
+        @media screen and (max-width: 1000px) {
+            line-height: 10px;
         }
     }
 }
