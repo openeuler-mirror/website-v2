@@ -66,11 +66,20 @@ module.exports = {
             BUILDING: '建设中，敬请期待'
         },
         SIG_DETAIL: {
+            VIDEO: '视频',
+            NEWS: '新闻',
+            MORE: '更多 >',
+            BLOG: '博客',
+            LATEST_DYNAMIC: '最新动态',
+            SIG_EMPTY_TEXT: '这里空空如也，快给你的SIG<a href="baidu.com">添加简介</a>吧!',
+            INTRODUCTION: 'SIG简介',
             NO_MEETINGS: '暂无会议',
-            ORGANIZING_MEETINGS: '组织会议',
-            MEMBERS: '项目成员',
+            ORGANIZING_MEETINGS: 'SIG会议',
+            MEMBERS: 'SIG成员',
             CONTACT: '联系方式',
-            MAIL_LIST: '邮件列表'
+            MAIL_LIST: '邮件列表',
+            EXPAND: "展开全部",
+            RETRACT: "收起全部"
         },
         ROLE_DESCRIPTION:{
             ROLE_DESCRIPTION:'角色说明',
@@ -174,11 +183,20 @@ module.exports = {
             BUILDING: 'Coming soon'
         },
         SIG_DETAIL: {
+            VIDEO: 'Video',
+            NEWS: 'News',
+            MORE: 'Read More',
+            BLOG: 'Blog',
+            LATEST_DYNAMIC: '最新动态',
+            SIG_EMPTY_TEXT: '这里空空如也，快给你的SIG<a href="baidu.com">添加简介</a>吧!',
+            INTRODUCTION: 'SIG Introduction',
             NO_MEETINGS: 'Not available now',
-            ORGANIZING_MEETINGS: 'Meeting Schedule',
-            MEMBERS: 'Project Members',
+            ORGANIZING_MEETINGS: 'SIG Schedule',
+            MEMBERS: 'SIG Members',
             CONTACT: 'Contact',
-            MAIL_LIST: 'Mailing list'
+            MAIL_LIST: 'Mailing list',
+            EXPAND: "Expand All",
+            RETRACT: "Collapse All"
         },
         ROLE_DESCRIPTION:{
             ROLE_DESCRIPTION:'Role Description',
@@ -270,11 +288,20 @@ module.exports = {
             MANAGER: 'Администраторы'
         },
         SIG_DETAIL: {
+            VIDEO: 'Video',
+            NEWS: 'News',
+            MORE: 'Read More',
+            BLOG: 'Blog',
+            LATEST_DYNAMIC: '最新动态',
+            SIG_EMPTY_TEXT: '这里空空如也，快给你的SIG<a href="baidu.com">添加简介</a>吧!',
+            INTRODUCTION: 'SIG Introduction',
             NO_MEETINGS: 'Not available now',
-            ORGANIZING_MEETINGS: 'Meeting Schedule',
-            MEMBERS: 'Project Members',
+            ORGANIZING_MEETINGS: 'SIG Schedule',
+            MEMBERS: 'SIG Members',
             CONTACT: 'Contact',
-            MAIL_LIST: 'Mailing list'
+            MAIL_LIST: 'Mailing list',
+            EXPAND: "Expand All",
+            RETRACT: "Collapse All"
         },
         ROLE_DESCRIPTION:{
             ROLE_DESCRIPTION:'Role Description',
