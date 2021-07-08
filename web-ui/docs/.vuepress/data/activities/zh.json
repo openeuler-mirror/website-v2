@@ -835,7 +835,7 @@
         "ID": 107,
         "NAME": "用户态热补丁框架（libcareplus）线程变量（TLS）增强",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3PRML",
-        "TECHNOLOGY_FIELD": "操作系统综合",
+        "TECHNOLOGY_FIELD": "操作系统虚拟化",
         "TECHNICAL_LABELS": "用户态热补丁框架",
         "DIFFICULTY": "中"
     },
@@ -851,7 +851,7 @@
         "ID": 109,
         "NAME": "用户态热补丁框架（libcareplus）补丁制作汇编对比增强",
         "LINK": "https://gitee.com/openeuler-competition/summer-2021/issues/I3PRQU",
-        "TECHNOLOGY_FIELD": "操作系统综合",
+        "TECHNOLOGY_FIELD": "操作系统虚拟化",
         "TECHNICAL_LABELS": "用户态热补丁框架",
         "DIFFICULTY": "中"
     },
