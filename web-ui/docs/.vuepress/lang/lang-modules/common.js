@@ -400,12 +400,12 @@ module.exports = {
                     URL: '/other/brand/'
                 },
                 {
-                    NAME: 'Legal Notice',
-                    URL: '/other/legal/'
-                },
-                {
                     NAME: 'Privacy Policy',
                     URL: '/other/privacy/'
+                },
+                {
+                    NAME: 'Legal Notice',
+                    URL: '/other/legal/'
                 }
             ],
             QR_CODE: 'WeChat Subscription'
@@ -596,13 +596,13 @@ module.exports = {
                     URL: '/other/brand/'
                 },
                 {
+                    NAME: 'Политика конфиденциальности',
+                    URL: '/other/privacy/'
+                },
+                {
                     NAME: 'Правовое уведомление',
                     URL: '/other/legal/'
                 },
-                {
-                    NAME: 'Политика конфиденциальности',
-                    URL: '/other/privacy/'
-                }
             ],
             QR_CODE: 'Подписка на WeChat'
         },
