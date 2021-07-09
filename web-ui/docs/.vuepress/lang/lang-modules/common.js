@@ -178,7 +178,7 @@ module.exports = {
             }
         ],
         LANG: '中文',
-        LANG_LIST: ['中文','English'],
+        LANG_LIST: ['中文','English','Русский'],
         GITTE: '源码',
         CODE: '代码',
         GITTE_RESOURCE_LIST: [{
@@ -392,7 +392,7 @@ module.exports = {
             }
         ],
         LANG: 'English',
-        LANG_LIST: ['中文','English'],
+        LANG_LIST: ['中文','English','Русский'],
         GITTE: 'Source code',
         CODE: 'CODE',
         GITTE_RESOURCE_LIST: [{
@@ -416,12 +416,12 @@ module.exports = {
                     URL: '/other/brand/'
                 },
                 {
-                    NAME: 'Legal Notice',
-                    URL: '/other/legal/'
-                },
-                {
                     NAME: 'Privacy Policy',
                     URL: '/other/privacy/'
+                },
+                {
+                    NAME: 'Legal Notice',
+                    URL: '/other/legal/'
                 }
             ],
             QR_CODE: 'WeChat Subscription'
@@ -435,8 +435,10 @@ module.exports = {
         MEETINGS_TIME: 'Time: ',
         MEETINGS_REPLAY: 'Воспроизведение',
         SEARCH_PLACE_HOLDER: 'Введите текст',
-        COOKIE_LEGAL_TEXT: 'This site uses cookies. By continuing to browse the site you are agreeing to our use of cookies.',
-        COOKIE_LEGAL_LINK_TEXT: 'Read our privacy policy>',
+        COOKIE_LEGAL_TEXT: 'Продолжая просмотр сайта и(или) нажимая X, я соглашаюсь с использованием файлов cookie владельцем сайта в соответствии с ',
+        COOKIE_LEGAL_TEXT_OTHER: 'в том числе на передачу данных, указанных в Политике, третьим лицам (статистическим службам сети Интернет), в соответствии с ',
+        COOKIE_LEGAL_LINK_TEXT: 'Политикой в отношении файлов cookie ',
+        COOKIE_LEGAL_LINK_TEXT_OTHER: 'Пользовательским соглашением >',
         NAV_ROUTER_CONFIG: [{
                 PATH: '',
                 NAME: 'Загрузить',
@@ -504,17 +506,10 @@ module.exports = {
             {
                 PATH: '',
                 NAME: 'Сообщество',
-                CHILDREN: [{
-                        NAME: 'Участие',
-                        PATH: '/community/contribution/'
-                    },
+                CHILDREN: [
                     {
                         NAME: 'Кодекс',
                         PATH: '/community/conduct/'
-                    },
-                    {
-                        NAME: 'Списки рассылок',
-                        PATH: '/community/mailing-list/'
                     },
                     {
                         NAME: 'Сертификация',
@@ -570,11 +565,6 @@ module.exports = {
                         IS_OPEN_MINISITE_WINDOW: 1
                     },
                     {
-                        NAME: 'Compliance',
-                        PATH: 'https://compliance.openeuler.org/',
-                        IS_OPEN_MINISITE_WINDOW: 1
-                    },
-                    {
                         NAME: 'Pkgship',
                         PATH: 'https://pkgmanage.openeuler.org/',
                         IS_OPEN_MINISITE_WINDOW: 1
@@ -606,7 +596,7 @@ module.exports = {
             }
         ],
         LANG: 'Русский',
-        LANG_LIST: ['中文','English'],
+        LANG_LIST: ['中文','English','Русский'],
         GITTE: 'Source code',
         CODE: 'Код',
         GITTE_RESOURCE_LIST: [{
@@ -630,13 +620,13 @@ module.exports = {
                     URL: '/other/brand/'
                 },
                 {
+                    NAME: 'Политика конфиденциальности',
+                    URL: '/other/privacy/'
+                },
+                {
                     NAME: 'Правовое уведомление',
                     URL: '/other/legal/'
                 },
-                {
-                    NAME: 'Политика конфиденциальности',
-                    URL: '/other/privacy/'
-                }
             ],
             QR_CODE: 'Подписка на WeChat'
         },
