@@ -613,7 +613,7 @@ module.exports = {
             }
         ],
         FOOTER: {
-            MAIL: 'contact@openeuler.org',
+            MAIL: 'contact@openeuler.io',
             COPY_RIGHT: 'Авторские права © openEuler 2021. Все права защищены.',
             RIGHT_LIST: [{
                     NAME: 'Товарный знак',
