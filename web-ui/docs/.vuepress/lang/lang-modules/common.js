@@ -558,16 +558,6 @@ module.exports = {
                     {
                         NAME: 'StratoVirt',
                         PATH: '/other/projects/stratovirt'
-                    },
-                    {
-                        NAME: 'Compass-CI',
-                        PATH: 'https://compass-ci.openeuler.org/',
-                        IS_OPEN_MINISITE_WINDOW: 1
-                    },
-                    {
-                        NAME: 'Pkgship',
-                        PATH: 'https://pkgmanage.openeuler.org/',
-                        IS_OPEN_MINISITE_WINDOW: 1
                     }
                 ],
                 CLASS: []
