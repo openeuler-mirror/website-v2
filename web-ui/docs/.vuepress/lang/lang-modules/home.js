@@ -50,8 +50,8 @@ module.exports = {
             }
         ],
         HOME_FIRST_BANNER: {
-            TITLE: "openEuler 21.03",
-            LINK: "/zh/docs/21.03/docs/Releasenotes/关键特性.html",
+            TITLE: "openEuler 20.03 LTS SP2",
+            LINK: "/zh/docs/20.03_LTS_SP2/docs/Releasenotes/关键特性.html",
             DES: "现已发布，欢迎体验",
             DOWNLOAD: '了解更多',
             IMG: "/img/home/banner0.png",
@@ -647,8 +647,8 @@ module.exports = {
         ],
         HOME_LAST_BANNER: {},
         HOME_FIRST_BANNER: {
-            TITLE: "openEuler 21.03 Version",
-            LINK: "/en/docs/21.03/docs/Releasenotes/key-features.html",
+            TITLE: "openEuler 20.03 LTS SP2 Version",
+            LINK: "/en/docs/20.03_LTS_SP2/docs/Releasenotes/key-features.html",
             DES: "has been released, welcome to use.",
             DOWNLOAD: 'Learn more',
             IMG: "/img/home/banner0.png",
@@ -1217,8 +1217,8 @@ module.exports = {
         ],
         HOME_LAST_BANNER: {},
         HOME_FIRST_BANNER: {
-            TITLE: "openEuler 21.03 Version",
-            LINK: "/en/docs/21.03/docs/Releasenotes/key-features.html",
+            TITLE: "openEuler 20.03 LTS SP2 Version",
+            LINK: "/en/docs/20.03_LTS_SP2/docs/Releasenotes/key-features.html",
             DES: "has been released, welcome to use.",
             DOWNLOAD: 'Learn more',
             IMG: "/img/home/banner0.png",
