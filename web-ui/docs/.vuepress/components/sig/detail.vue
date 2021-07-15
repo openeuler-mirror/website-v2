@@ -1,11 +1,21 @@
 <template>
     <div class="sig-detail">
-        <!-- <anchor :anchor-list="anchorList"></anchor> -->
+        <anchor :anchor-list="anchorList"></anchor>
         <div class="breadcrumbs" @click="back">SIG \</div>
         <h1>{{ $route.query.name }}</h1>
-        <h2>{{ i18n.sig.SIG_DETAIL.INTRODUCTION }}</h2>
-        <p class="no-meeting" v-if="description">{{description}}</p>
-        <p class="no-meeting" v-else>{{i18n.sig.SIG_DETAIL.SIG_EMPTY_TEXT1}}<a target="_blank" :href="'https://gitee.com/openeuler/community/tree/master/sig/'+$route.query.name">{{i18n.sig.SIG_DETAIL.SIG_EMPTY_TEXT2}}</a>{{i18n.sig.SIG_DETAIL.SIG_EMPTY_TEXT3}}</p>
+        <h2 id="introduction">{{ i18n.sig.SIG_DETAIL.INTRODUCTION }}</h2>
+        <p class="no-meeting" v-if="description">{{ description }}</p>
+        <p class="no-meeting" v-else>
+            {{ i18n.sig.SIG_DETAIL.SIG_EMPTY_TEXT1
+            }}<a
+                target="_blank"
+                :href="
+                    'https://gitee.com/openeuler/community/tree/master/sig/' +
+                    $route.query.name
+                "
+                >{{ i18n.sig.SIG_DETAIL.SIG_EMPTY_TEXT2 }}</a
+            >{{ i18n.sig.SIG_DETAIL.SIG_EMPTY_TEXT3 }}
+        </p>
         <div class="contact">
             <span>{{ i18n.sig.SIG_DETAIL.MAIL_LIST }}: </span
             ><a :href="'mailto:' + $route.query.mail">{{
@@ -93,7 +103,7 @@
                 </template>
             </div>
         </div>
-        <h2>{{ i18n.sig.SIG_DETAIL.LATEST_DYNAMIC }}</h2>
+        <h2 id="dynamic">{{ i18n.sig.SIG_DETAIL.LATEST_DYNAMIC }}</h2>
         <div class="dynamic">
             <div class="item">
                 <div class="header">
@@ -113,7 +123,12 @@
                         {{ item.frontmatter.title }}
                     </li>
                     <li v-if="!blogList.length" class="empty">
-                        {{i18n.sig.SIG_DETAIL.BLOG_EMPTY1}}<a target="_blank" :href="'/'+$lang+'/interaction/post-blog/'">{{i18n.sig.SIG_DETAIL.BLOG_EMPTY2}}</a>{{i18n.sig.SIG_DETAIL.BLOG_EMPTY3}}
+                        {{ i18n.sig.SIG_DETAIL.BLOG_EMPTY1
+                        }}<a
+                            target="_blank"
+                            :href="'/' + $lang + '/interaction/post-blog/'"
+                            >{{ i18n.sig.SIG_DETAIL.BLOG_EMPTY2 }}</a
+                        >{{ i18n.sig.SIG_DETAIL.BLOG_EMPTY3 }}
                     </li>
                 </ul>
             </div>
@@ -135,7 +150,7 @@
                         {{ item.frontmatter.title }}
                     </li>
                     <li v-if="!blogList.length" class="empty">
-                        {{i18n.sig.SIG_DETAIL.NEWS_EMPTY}}
+                        {{ i18n.sig.SIG_DETAIL.NEWS_EMPTY }}
                     </li>
                 </ul>
             </div>
@@ -159,29 +174,13 @@ import { sigDetail, sigMember } from "../../api/sig";
 import calender from "./../home/calender";
 import anchor from "./../common/anchor";
 let that = null;
+let anchorList = [];
 let remoteMethods = {
     getSigDetail() {
         sigDetail(that.$route.query.id)
             .then((data) => {
                 that.calenderData = data.tableData;
-                that.anchorList = [
-                    {
-                        name: "会议",
-                        anchorId: "meeting",
-                    },
-                    {
-                        name: "成员",
-                        anchorId: "member",
-                    },
-                    {
-                        name: "contact",
-                        anchorId: "contact",
-                    },
-                    {
-                        name: "aaa",
-                        anchorId: "contact1",
-                    },
-                ];
+                that.anchorList = anchorList;
             })
             .catch((data) => {
                 that.$message.error(data);
@@ -196,24 +195,7 @@ let remoteMethods = {
                 if (that.isShowH5 && that.memberList.length > 4) {
                     that.memberCurLen = 4;
                 }
-                that.anchorList = [
-                    {
-                        name: "会议",
-                        anchorId: "meeting",
-                    },
-                    {
-                        name: "成员",
-                        anchorId: "member",
-                    },
-                    {
-                        name: "contact",
-                        anchorId: "contact",
-                    },
-                    {
-                        name: "aaa",
-                        anchorId: "contact1",
-                    },
-                ];
+                that.anchorList = anchorList;
             })
             .catch((data) => {
                 that.$message.error(data);
@@ -243,6 +225,24 @@ export default {
         this.newsList = this.getList("/news/");
         remoteMethods.getSigDetail();
         remoteMethods.getSigMember();
+        anchorList = [
+            {
+                name: that.i18n.sig.SIG_DETAIL.INTRODUCTION,
+                anchorId: "introduction",
+            },
+            {
+                name: that.i18n.sig.SIG_DETAIL.ORGANIZING_MEETINGS,
+                anchorId: "meeting",
+            },
+            {
+                name: that.i18n.sig.SIG_DETAIL.MEMBERS,
+                anchorId: "member",
+            },
+            {
+                name: that.i18n.sig.SIG_DETAIL.LATEST_DYNAMIC,
+                anchorId: "dynamic",
+            },
+        ];
     },
     methods: {
         getList(val) {

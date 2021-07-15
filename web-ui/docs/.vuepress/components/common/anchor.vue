@@ -6,7 +6,7 @@
         </div>
         <div class="nav-text">
             <ul>
-                <li v-for="(item,index) in computedAnchorList" :class="index === currentIndex?'active':''">
+                <li v-for="(item,index) in computedAnchorList" :class="index === currentIndex?'active':''" :key="index">
                     <a @click="scroll(item.offsetTop)">
                         <div><div class="inside"></div></div>
                         <div>{{ item.name }}</div>
