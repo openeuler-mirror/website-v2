@@ -4,10 +4,8 @@
         <div class="breadcrumbs" @click="back">SIG \</div>
         <h1>{{ $route.query.name }}</h1>
         <h2>{{ i18n.sig.SIG_DETAIL.INTRODUCTION }}</h2>
-        <p
-            class="no-meeting"
-            v-html="description || i18n.sig.SIG_DETAIL.SIG_EMPTY_TEXT"
-        ></p>
+        <p class="no-meeting" v-if="description">{{description}}</p>
+        <p class="no-meeting" v-else>{{i18n.sig.SIG_DETAIL.SIG_EMPTY_TEXT1}}<a target="_blank" :href="'https://gitee.com/openeuler/community/tree/master/sig/'+$route.query.name">{{i18n.sig.SIG_DETAIL.SIG_EMPTY_TEXT2}}</a>{{i18n.sig.SIG_DETAIL.SIG_EMPTY_TEXT3}}</p>
         <div class="contact">
             <span>{{ i18n.sig.SIG_DETAIL.MAIL_LIST }}: </span
             ><a :href="'mailto:' + $route.query.mail">{{
@@ -28,7 +26,7 @@
             <div class="dev-leader">
                 <div
                     class="dev-dever"
-                    v-for="(value, index) in memberList.slice(0,memberCurLen)"
+                    v-for="(value, index) in memberList.slice(0, memberCurLen)"
                     :key="index"
                 >
                     <el-image
@@ -68,14 +66,30 @@
                     </div>
                 </div>
             </div>
-            <div v-if="isShowH5&&(memberList.length > 4)" class="more-wrapper">
+            <div v-if="isShowH5 && memberList.length > 4" class="more-wrapper">
                 <template v-if="flag">
-                    <div class="more-text">{{ i18n.sig.SIG_DETAIL.EXPAND }}</div>
-                    <img @click="memberCurLen = memberList.length;flag = !flag" src="/img/home/arrow.svg">
+                    <div class="more-text">
+                        {{ i18n.sig.SIG_DETAIL.EXPAND }}
+                    </div>
+                    <img
+                        @click="
+                            memberCurLen = memberList.length;
+                            flag = !flag;
+                        "
+                        src="/img/home/arrow.svg"
+                    />
                 </template>
                 <template v-else>
-                    <div class="more-text">{{ i18n.sig.SIG_DETAIL.RETRACT }}</div>
-                    <img @click="memberCurLen = 4;flag = !flag" src="/img/home/arrowUp.svg">
+                    <div class="more-text">
+                        {{ i18n.sig.SIG_DETAIL.RETRACT }}
+                    </div>
+                    <img
+                        @click="
+                            memberCurLen = 4;
+                            flag = !flag;
+                        "
+                        src="/img/home/arrowUp.svg"
+                    />
                 </template>
             </div>
         </div>
@@ -84,34 +98,58 @@
             <div class="item">
                 <div class="header">
                     <span class="left">{{ i18n.sig.SIG_DETAIL.BLOG }}</span>
-                    <span class="right" @click="go('/'+$lang+'/interaction/blog-list/')">{{ i18n.sig.SIG_DETAIL.MORE }}</span>
+                    <span
+                        class="right"
+                        @click="go('/' + $lang + '/interaction/blog-list/')"
+                        >{{ i18n.sig.SIG_DETAIL.MORE }}</span
+                    >
                 </div>
                 <ul class="body">
-                    <li v-for="item in blogList.slice(0, 3)" :key="item.path" @click="go(item.path)">{{item.frontmatter.title}}</li>
-                    <li v-if="!blogList.length" class="empty">assdadsdsasaasdasdasdasdasdasda</li>
+                    <li
+                        v-for="item in blogList.slice(0, 3)"
+                        :key="item.path"
+                        @click="go(item.path)"
+                    >
+                        {{ item.frontmatter.title }}
+                    </li>
+                    <li v-if="!blogList.length" class="empty">
+                        {{i18n.sig.SIG_DETAIL.BLOG_EMPTY1}}<a target="_blank" :href="'/'+$lang+'/interaction/post-blog/'">{{i18n.sig.SIG_DETAIL.BLOG_EMPTY2}}</a>{{i18n.sig.SIG_DETAIL.BLOG_EMPTY3}}
+                    </li>
                 </ul>
             </div>
             <div class="item">
                 <div class="header">
                     <span class="left">{{ i18n.sig.SIG_DETAIL.NEWS }}</span>
-                    <span class="right" @click="go('/'+$lang+'/interaction/news-list/')">{{ i18n.sig.SIG_DETAIL.MORE }}</span>
+                    <span
+                        class="right"
+                        @click="go('/' + $lang + '/interaction/news-list/')"
+                        >{{ i18n.sig.SIG_DETAIL.MORE }}</span
+                    >
                 </div>
                 <ul class="body">
-                    <li v-for="item in newsList.slice(0, 3)" :key="item.path" @click="go(item.path)">{{item.frontmatter.title}}</li>
-                    <li v-if="!blogList.length" class="empty">assdadsdsasaasdasdasdasdasdasda</li>
+                    <li
+                        v-for="item in newsList.slice(0, 3)"
+                        :key="item.path"
+                        @click="go(item.path)"
+                    >
+                        {{ item.frontmatter.title }}
+                    </li>
+                    <li v-if="!blogList.length" class="empty">
+                        {{i18n.sig.SIG_DETAIL.NEWS_EMPTY}}
+                    </li>
                 </ul>
             </div>
-            <div class="item">
+            <!-- <div class="item">
                 <div class="header">
                     <span class="left">{{ i18n.sig.SIG_DETAIL.VIDEO }}</span>
                     <span class="right">{{ i18n.sig.SIG_DETAIL.MORE }}</span>
                 </div>
                 <ul class="body">
                     <li class="empty">
-                        assdadsdsasaasdasdasdasd asdasdasdasdasdasdasd
+                        {{i18n.sig.SIG_DETAIL.VIDEO_EMPTY}}
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
@@ -154,8 +192,8 @@ let remoteMethods = {
             .then((data) => {
                 that.description = data.description || "";
                 that.memberList = JSON.parse(data.owners);
-                that.memberCurLen = that.memberList.length -1;
-                if(that.isShowH5 && (that.memberList.length > 4)){
+                that.memberCurLen = that.memberList.length - 1;
+                if (that.isShowH5 && that.memberList.length > 4) {
                     that.memberCurLen = 4;
                 }
                 that.anchorList = [
@@ -193,7 +231,7 @@ export default {
             blogList: [],
             newsList: [],
             memberCurLen: 0,
-            flag: true
+            flag: true,
         };
     },
     components: {
@@ -201,8 +239,8 @@ export default {
         anchor,
     },
     mounted() {
-        this.blogList = this.getList('/blog/');
-        this.newsList = this.getList('/news/');
+        this.blogList = this.getList("/blog/");
+        this.newsList = this.getList("/news/");
         remoteMethods.getSigDetail();
         remoteMethods.getSigMember();
     },
@@ -229,7 +267,7 @@ export default {
         },
         go(path) {
             this.$router.push(path);
-        }
+        },
     },
 };
 </script>
@@ -361,11 +399,12 @@ export default {
     margin-bottom: 200px;
     @media screen and (max-width: 1000px) {
         margin-bottom: 80px;
+        flex-direction: column;
     }
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     .item {
-        width: 352px;
+        width: 546px;
         height: 234px;
         box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.1);
         @media screen and (max-width: 1000px) {
@@ -416,7 +455,7 @@ export default {
                 margin: 23px 0;
                 color: #000;
                 font-size: 16px;
-                width: 292px;
+                width: 482px;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -442,6 +481,7 @@ export default {
                 padding: 0 20px;
                 li {
                     font-size: 14px;
+                    width: 292px;
                 }
             }
         }

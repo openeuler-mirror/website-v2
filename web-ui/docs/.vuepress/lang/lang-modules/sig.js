@@ -71,7 +71,9 @@ module.exports = {
             MORE: '更多 >',
             BLOG: '博客',
             LATEST_DYNAMIC: '最新动态',
-            SIG_EMPTY_TEXT: '这里空空如也，快给你的SIG<a href="baidu.com">添加简介</a>吧!',
+            SIG_EMPTY_TEXT1: '这里空空如也，快给你的SIG',
+            SIG_EMPTY_TEXT2: '添加简介',
+            SIG_EMPTY_TEXT3: '吧!',
             INTRODUCTION: 'SIG简介',
             NO_MEETINGS: '暂无会议',
             ORGANIZING_MEETINGS: 'SIG会议',
@@ -79,7 +81,12 @@ module.exports = {
             CONTACT: '联系方式',
             MAIL_LIST: '邮件列表',
             EXPAND: "展开全部",
-            RETRACT: "收起全部"
+            RETRACT: "收起全部",
+            BLOG_EMPTY1: "我看你骨骼惊奇，必是写文好手。这里有一本",
+            BLOG_EMPTY2: "发博客攻略",
+            BLOG_EMPTY3: "，赶紧拿回去看看吧。",
+            NEWS_EMPTY: '不想当裁缝的厨子不是好司机，不发新闻的博客不是好视频。',
+            VIDEO_EMPTY: '我都把最好的位置留给你啦，你愿意投递一个视频吗？'
         },
         ROLE_DESCRIPTION:{
             ROLE_DESCRIPTION:'角色说明',
@@ -187,8 +194,10 @@ module.exports = {
             NEWS: 'News',
             MORE: 'Read More',
             BLOG: 'Blog',
-            LATEST_DYNAMIC: '最新动态',
-            SIG_EMPTY_TEXT: '这里空空如也，快给你的SIG<a href="baidu.com">添加简介</a>吧!',
+            LATEST_DYNAMIC: "What's New",
+            SIG_EMPTY_TEXT1: 'Nothing found.',
+            SIG_EMPTY_TEXT2: 'Add a profile',
+            SIG_EMPTY_TEXT3: 'to your SIG.',
             INTRODUCTION: 'SIG Introduction',
             NO_MEETINGS: 'Not available now',
             ORGANIZING_MEETINGS: 'SIG Schedule',
@@ -196,7 +205,12 @@ module.exports = {
             CONTACT: 'Contact',
             MAIL_LIST: 'Mailing list',
             EXPAND: "Expand All",
-            RETRACT: "Collapse All"
+            RETRACT: "Collapse All",
+            BLOG_EMPTY1: "Dive into the ",
+            BLOG_EMPTY2: "blogging guide",
+            BLOG_EMPTY3: "and post your first blog.",
+            NEWS_EMPTY: 'Broadcast the latest news of your SIG.',
+            VIDEO_EMPTY: 'Share your first video now.'
         },
         ROLE_DESCRIPTION:{
             ROLE_DESCRIPTION:'Role Description',
@@ -292,8 +306,10 @@ module.exports = {
             NEWS: 'News',
             MORE: 'Read More',
             BLOG: 'Blog',
-            LATEST_DYNAMIC: '最新动态',
-            SIG_EMPTY_TEXT: '这里空空如也，快给你的SIG<a href="baidu.com">添加简介</a>吧!',
+            LATEST_DYNAMIC: "What's New",
+            SIG_EMPTY_TEXT1: 'Nothing found.',
+            SIG_EMPTY_TEXT2: 'Add a profile',
+            SIG_EMPTY_TEXT3: 'to your SIG.',
             INTRODUCTION: 'SIG Introduction',
             NO_MEETINGS: 'Not available now',
             ORGANIZING_MEETINGS: 'SIG Schedule',
@@ -301,7 +317,12 @@ module.exports = {
             CONTACT: 'Contact',
             MAIL_LIST: 'Mailing list',
             EXPAND: "Expand All",
-            RETRACT: "Collapse All"
+            RETRACT: "Collapse All",
+            BLOG_EMPTY1: "Dive into the ",
+            BLOG_EMPTY2: "blogging guide",
+            BLOG_EMPTY3: "and post your first blog.",
+            NEWS_EMPTY: 'Broadcast the latest news of your SIG.',
+            VIDEO_EMPTY: 'Share your first video now.'
         },
         ROLE_DESCRIPTION:{
             ROLE_DESCRIPTION:'Role Description',

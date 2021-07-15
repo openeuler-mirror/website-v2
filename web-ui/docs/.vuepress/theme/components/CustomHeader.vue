@@ -329,8 +329,8 @@ export default {
             let currentLink = this.$page.path;
             let query = '';
             for(let key in this.$route.query) {
-                if(query.includes('?=')){
-                    query += key + '=' +this.$route.query[key];
+                if(query.includes('?')){
+                    query +='&' + key + '=' +this.$route.query[key];
                 } else {
                     query +='?' + key + '=' +this.$route.query[key];
                 }
@@ -340,7 +340,7 @@ export default {
                 return;
             }
             currentLink = '/' + lang + currentLink.substring(3) + query;
-            window.location.href = currentLink;
+            window.location.href = decodeURIComponent(currentLink);
         },
         menuActiveFn(item) {    
             const $route = this.$route;
