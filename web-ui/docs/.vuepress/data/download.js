@@ -6,6 +6,20 @@ module.exports = {
     cn: {
         DOWNLOAD_LIST : [
             {
+                NAME: 'openEuler 20.03 LTS SP2',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.03-LTS-SP2/',
+                DESC: 'openEuler 20.03 LTS SP2 是openEuler 20.03 LTS的补丁版本，生命周期与LTS版本相同',
+                RELEASE_DESC_URL: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP2/docs/Releasenotes/release_notes.html',
+                INSTALL_GUIDENCE_URL: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP2/docs/Installation/installation.html',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP2/ISO/',
+                LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+                WEBSITE_SELECT: "/zh/mirror/select/?version=20.03-LTS-SP2",
+                MANUFACTURER: 'openEuler社区',
+                PUBLISH_DATE: '2021/07',
+                LTS: true
+            },
+            {
                 NAME: 'openEuler 21.03',
                 DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-21.03/',
                 DESC: 'openEuler 21.03 版本是满足开放场景的创新发行版，生命周期六个月。',
@@ -183,6 +197,20 @@ module.exports = {
     en: {
         DOWNLOAD_LIST : [
             {
+                NAME: 'openEuler 20.03 LTS SP2',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.03-LTS-SP2/',
+                DESC: 'openEuler 20.03 LTS SP2 is the patch version of openEuler 20.03 LTS,and both versions have the same lifecycle.',
+                RELEASE_DESC_URL: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP2/docs/Releasenotes/release_notes.html',
+                INSTALL_GUIDENCE_URL: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP2/docs/Installation/Installation.html',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP2/ISO/',
+                LIFE_CYCLE_URL: '/en/other/lifecycle/',
+                WEBSITE_SELECT: "/en/mirror/select/?version=20.03-LTS-SP2",
+                MANUFACTURER: 'openEuler community',
+                PUBLISH_DATE: '2021/07',
+                LTS: true
+            },
+            {
                 NAME: 'openEuler 21.03',
                 DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-21.03/',
                 DESC: 'The openEuler 21.03 version is an innovative release for open scenarios,with a lifecycle of six months.',
@@ -345,6 +373,20 @@ module.exports = {
     },
     ru: {
         DOWNLOAD_LIST : [
+            {
+                NAME: 'openEuler 20.03 LTS SP2',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.03-LTS-SP2/',
+                DESC: 'openEuler 20.03 LTS SP2 — это версия патча openEuler 20.03 LTS, и обе версии имеют одинаковый жизненный цикл.',
+                RELEASE_DESC_URL: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP2/docs/Releasenotes/release_notes.html',
+                INSTALL_GUIDENCE_URL: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP2/docs/Installation/Installation.html',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP2/ISO/',
+                LIFE_CYCLE_URL: '/en/other/lifecycle/',
+                WEBSITE_SELECT: "/en/mirror/select/?version=20.03-LTS-SP2",
+                MANUFACTURER: 'openEuler community',
+                PUBLISH_DATE: '2021/07',
+                LTS: true
+            },
             {
                 NAME: 'openEuler 21.03',
                 DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-21.03/',

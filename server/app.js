@@ -101,7 +101,6 @@ function initESData() {
     readFile.initESData('master', 'en', 'news');
     readFile.initESData('master', 'zh', 'blog');
     readFile.initESData('master', 'en', 'blog');
-
     readFile.initESData('20.09', 'zh', 'docs');
     readFile.initESData('20.09', 'en', 'docs');
     readFile.initESData('20.09', 'ru', 'docs');
@@ -111,6 +110,8 @@ function initESData() {
     readFile.initESData('20.03_LTS_SP1', 'en', 'docs');
     readFile.initESData('21.03', 'zh', 'docs');
     readFile.initESData('21.03', 'en', 'docs');
+    readFile.initESData('20.03_LTS_SP2', 'zh', 'docs');
+    readFile.initESData('20.03_LTS_SP2', 'en', 'docs');
 }
 
 initESData();
