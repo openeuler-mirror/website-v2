@@ -180,6 +180,7 @@ let remoteMethods = {
         sigDetail(that.$route.query.id)
             .then((data) => {
                 that.calenderData = data.tableData;
+                that.anchorList = [];
                 that.anchorList = anchorList;
             })
             .catch((data) => {
@@ -195,6 +196,7 @@ let remoteMethods = {
                 if (that.isShowH5 && that.memberList.length > 4) {
                     that.memberCurLen = 4;
                 }
+                that.anchorList = [];
                 that.anchorList = anchorList;
             })
             .catch((data) => {
