@@ -89,7 +89,7 @@ module.exports = {
                         PATH: '/community/mailing-list/'
                     },
                     {
-                        NAME: '认证服务',
+                        NAME: '个人认证',
                         PATH: '/community/certification-services/'
                     }
                 ],

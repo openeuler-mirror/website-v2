@@ -185,7 +185,57 @@ module.exports = {
             TITLE: "行为守则"
         },
         SERVICE: {
-            SERVICE:''
+            TITLE:"openEuler 证书",
+            DOWN:{
+                DPSCRIPT_ONE:"openEuler 认证是面向对 openEuler 操作系统感兴趣的IT专业人员或学生 ，证明其对 openEuler 开发、技术支持、运维能力的一种认证。",
+                GET_CARD:"证书获取",
+                GET_CARD_DISC:"openEuler-HCIA /openEuler-HCIP/openEuler-HCIE 认证是 openEuler 社区承认的不同等级的能力认证，如果您有兴趣获取相应证书，可点击下列项目进行报名培训与认证考试，通过考试后，您即可同步获得对应等级的证书。",
+                NOT_CARDURL:"敬请期待",
+                OUTLINE_DOWN_TIP:"验证码已发送至您的邮箱，请输入验证码以获取证书",
+                CARD_MODEL:[
+                    {
+                        DISC:"openEuler-HCIA",
+                        NAME:"认证工程师",
+                        IMG:"/img/community/conduct/hcia-icon.png",
+                        NEXT_URL:"https://e.huawei.com/cn/talent/#/cert/product-details?certifiedProductId=383&amp;authenticationLevel=CTYPE_CARE_HCIA&amp;technicalField=PSC&amp;version=1.0",
+                    },
+                    {
+                        DISC:"openEuler-HCIP",
+                        NAME:"认证高级工程师",
+                        IMG:"/img/community/conduct/hcip-icon.png",
+                        NEXT_URL:""
+                    },
+                    {
+                        DISC:"openEuler-HCIE",
+                        NAME:"认证专家",
+                        IMG:"/img/community/conduct/hcie-icon.png",
+                        NEXT_URL:""
+                    },
+                ],
+                DOWN_CARD:"证书下载",
+                DOWN_CHOOSE_CARD:"下载选中证书",
+                DOWN_CARD_DISC:"通过认证考试后可在此处下载证书。",
+                SEARCH_RESULTS:"您的证书信息如下：",
+                NO_CARD:"当前无可下载证书！",
+                DOWN_FAIL_DISC_LEFT:"您的下载链接已过期，请点击",
+                DOWN_FAIL_DISC_RIGHT:"重新获取下载链接。",
+                DOWNCREDENT:[{
+                    NAME:"证书下载",
+                    IMG:"/img/community/conduct/down-card-icon.png",
+                }]
+            },
+            SEARCH:{
+                SEARCH:"证书查询",
+                SEARCH_DISC:"请输入认证考试所用的邮箱以获取验证码，查询您的证书。",
+                SEND_CODE:"发送验证码",
+                SEND_AGAIN:"重新发送",
+                EMAIL_ERROR:"您输入的邮箱有误",
+                EMAIL_PLAHD:"您绑定的邮箱",
+                CODE_PLAHD:"输入您获取的验证码",
+                CODE_ERROR:"您输入的验证码有误！",
+                SHOW_TEMPLATE:"/img/community/conduct/showtemplate.png"
+            },
+            BTNSURE:"确定"
         }
     },
     en: {
@@ -374,7 +424,57 @@ module.exports = {
             TITLE: "Code of Covenant"
         },
         SERVICE: {
-            SERVICE:''
+            TITLE:"openEuler Certification",
+            DOWN:{
+                DPSCRIPT_ONE:"openEuler certification is intended for IT professionals or students interested in the openEuler OS to prove their capabilities in openEuler development, technical support, and O&M.",
+                GET_CARD:"Take Exams",
+                GET_CARD_DISC:"openEuler-HCIA, openEuler-HCIP and openEuler-HCIE are the capability certifications at different levels recognized by the openEuler community. If you are interested in obtaining any of these certificates, click the following items to sign up for the trainings and tests.",
+                NOT_CARDURL:"Coming soon",
+                OUTLINE_DOWN_TIP:"The verification code has been sent to your email address. Enter the verification code to obtain the certificate.",
+                CARD_MODEL:[
+                    {
+                        DISC:"openEuler-HCIA",
+                        NAME:"Certified Engineer",
+                        IMG:"/img/community/conduct/hcia-icon.png",
+                        NEXT_URL:"https://e.huawei.com/cn/talent/#/cert/product-details?certifiedProductId=383&amp;authenticationLevel=CTYPE_CARE_HCIA&amp;technicalField=PSC&amp;version=1.0",
+                    },
+                    {
+                        DISC:"openEuler-HCIP",
+                        NAME:"Certified Senior Enginee",
+                        IMG:"/img/community/conduct/hcip-icon.png",
+                        NEXT_URL:""
+                    },
+                    {
+                        DISC:"openEuler-HCIE",
+                        NAME:"Certified Expert",
+                        IMG:"/img/community/conduct/hcie-icon.png",
+                        NEXT_URL:""
+                    },
+                ],
+                DOWN_CARD:"Download Certificates",
+                DOWN_CHOOSE_CARD:"Download Selected Certificates",
+                DOWN_CARD_DISC:"Click to download the certificate after passing the exam.",
+                SEARCH_RESULTS:"The information of your certificates is as follows:",
+                NO_CARD:"No certificate is available for download.",
+                DOWN_FAIL_DISC_LEFT:"Your download link has expired. Click ",
+                DOWN_FAIL_DISC_RIGHT:" to obtain a new link.",
+                DOWNCREDENT:[{
+                    NAME:"Download Certificates",
+                    IMG:"/img/community/conduct/down-card-icon.png",
+                }]
+            },
+            SEARCH:{
+                SEARCH:"Query Certificates",
+                SEARCH_DISC:"Enter the email address used for the certification exam to obtain the verification code and query your certificate.",
+                SEND_CODE:"Send a verification code",
+                SEND_AGAIN:"Resend",
+                EMAIL_ERROR:"The email address is incorrect.",
+                EMAIL_PLAHD:"Your email address",
+                CODE_PLAHD:"Enter the verification code.",
+                CODE_ERROR:"The verification code is incorrect.",
+                SHOW_TEMPLATE:"/img/community/conduct/showtemplate.png"
+            },
+            BTNSURE:"Confirm"
         }
     },
     ru: {
@@ -563,7 +663,57 @@ module.exports = {
             TITLE: "Кодекс поведения"
         },
         SERVICE: {
-            SERVICE:''
+            TITLE:"openEuler Certification",
+            DOWN:{
+                DPSCRIPT_ONE:"openEuler certification is intended for IT professionals or students interested in the openEuler OS to prove their capabilities in openEuler development, technical support, and O&M.",
+                GET_CARD:"Take Exams",
+                GET_CARD_DISC:"openEuler-HCIA, openEuler-HCIP and openEuler-HCIE are the capability certifications at different levels recognized by the openEuler community. If you are interested in obtaining any of these certificates, click the following items to sign up for the trainings and tests.",
+                NOT_CARDURL:"Coming soon",
+                OUTLINE_DOWN_TIP:"The verification code has been sent to your email address. Enter the verification code to obtain the certificate.",
+                CARD_MODEL:[
+                    {
+                        DISC:"openEuler-HCIA",
+                        NAME:"Certified Engineer",
+                        IMG:"/img/community/conduct/hcia-icon.png",
+                        NEXT_URL:"https://e.huawei.com/cn/talent/#/cert/product-details?certifiedProductId=383&amp;authenticationLevel=CTYPE_CARE_HCIA&amp;technicalField=PSC&amp;version=1.0",
+                    },
+                    {
+                        DISC:"openEuler-HCIP",
+                        NAME:"Certified Senior Enginee",
+                        IMG:"/img/community/conduct/hcip-icon.png",
+                        NEXT_URL:""
+                    },
+                    {
+                        DISC:"openEuler-HCIE",
+                        NAME:"Certified Expert",
+                        IMG:"/img/community/conduct/hcie-icon.png",
+                        NEXT_URL:""
+                    },
+                ],
+                DOWN_CARD:"Download Certificates",
+                DOWN_CHOOSE_CARD:"Download Selected Certificates",
+                DOWN_CARD_DISC:"Click to download the certificate after passing the exam.",
+                SEARCH_RESULTS:"The information of your certificates is as follows:",
+                NO_CARD:"No certificate is available for download.",
+                DOWN_FAIL_DISC_LEFT:"Your download link has expired. Click ",
+                DOWN_FAIL_DISC_RIGHT:" to obtain a new link.",
+                DOWNCREDENT:[{
+                    NAME:"Download Certificates",
+                    IMG:"/img/community/conduct/down-card-icon.png",
+                }]
+            },
+            SEARCH:{
+                SEARCH:"Query Certificates",
+                SEARCH_DISC:"Enter the email address used for the certification exam to obtain the verification code and query your certificate.",
+                SEND_CODE:"Send a verification code",
+                SEND_AGAIN:"Resend",
+                EMAIL_ERROR:"The email address is incorrect.",
+                EMAIL_PLAHD:"Your email address",
+                CODE_PLAHD:"Enter the verification code.",
+                CODE_ERROR:"The verification code is incorrect.",
+                SHOW_TEMPLATE:"/img/community/conduct/showtemplate.png"
+            },
+            BTNSURE:"Confirm"
         }
     }
 };

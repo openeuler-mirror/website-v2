@@ -21,7 +21,9 @@ let postJson = params => {
         baseURL: (serviceBaseUrl + (params.otherBaseUrl || '')) || ''
     });
     api.defaults.headers.post['Content-Type'] = 'application/json';
-
+    if(params.headLanguage){
+        api.defaults.headers.common['Accept-Language'] = params.headLanguage;
+    }
     // 添加随机数
     params['url'] = addUrlParam(params['url'], 'rnd', Math.random());
 
@@ -40,7 +42,7 @@ let postJson = params => {
         }
     }
     return api({
-        headers: {
+        headers: params.notAuthorization ? {}: {
             'Authorization': authConfig
         },
         method: params['type'] || 'post',
