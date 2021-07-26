@@ -2,12 +2,8 @@
     <div class="home">
         <div class="is-pc home-carousel" v-if="!isShowH5">
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" @change="eventChange()">
-                <el-carousel-item>
-                    <div class="carousel-dev2021" :style="{backgroundImage: i18n.home.HOME_DEV2021_IMG.PC_BANNER}" @click="go('/interaction/summit-list/devday2021/')">
-                    </div>
-                </el-carousel-item>
                 <el-carousel-item v-if="$lang === 'zh'">
-                    <div class="activities-banner" 
+                    <div class="activities-banner full-fill"
                         :style="{backgroundImage: i18n.home.HOME_ACTIVETIES.PC_IMG}"
                         @click="go(i18n.home.HOME_ACTIVETIES.LINK)"
                     ></div>
@@ -28,27 +24,10 @@
                         </div>
                     </div>
                 </el-carousel-item>
-                <el-carousel-item class="carousel-item">
-                    <div class="banner-link" @click="go($site.themeConfig.docsUrl+i18n.home.HOME_FIRST_BANNER.LINK)">
-                        <div class="banner-item">
-                            <div class="item-info">
-                            <h3>{{ i18n.home.HOME_FIRST_BANNER.TITLE }}</h3>
-                            <span>{{ i18n.home.HOME_FIRST_BANNER.DES }}</span>
-                            <div class="download-version" :class="$lang === 'en'?'en-version':''">
-                                <div>{{i18n.home.HOME_FIRST_BANNER.DOWNLOAD}}</div>
-                            </div>
-                            </div>
-                            <img class="banner-gif" v-lazy="i18n.home.HOME_FIRST_BANNER.IMG">
-                        </div>
-                    </div>
-                </el-carousel-item>
             </el-carousel>
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
-                <swiper-slide class="carousel-item-index">
-                    <div class="mobile-version" @click="go('/interaction/summit-list/devday2021/')" :style="{backgroundImage:i18n.home.HOME_DEV2021_IMG.H5_BANNER}"></div>
-                </swiper-slide>
                 <swiper-slide class="carousel-item-index" v-if="$lang === 'zh'">
                     <div class="mobile-version" @click="go(i18n.home.HOME_ACTIVETIES.LINK)" :style="{backgroundImage:i18n.home.HOME_ACTIVETIES.MOBILE_IMG}"></div>
                 </swiper-slide>
@@ -68,9 +47,6 @@
                         </video>
                         <div class="mobile-btn" v-show="mobilePlayBtnDisplay" @click="playVideo"></div>
                     </div>
-                </swiper-slide>
-                <swiper-slide class="carousel-item-index">
-                    <div class="mobile-version" @click="go($site.themeConfig.docsUrl+i18n.home.HOME_FIRST_BANNER.LINK)" :style="{backgroundImage:i18n.home.HOME_FIRST_BANNER.MOBILE_IMG}"></div>
                 </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
@@ -419,7 +395,7 @@
                 mobileSwiperInterval: null,
                 mobilePagenationIndex: 1,
                 developerList: [],
-                bannerAmount: 5,
+                bannerAmount: 3,
                 statisticParams: {
                     type: 'openEuler'
                 },
@@ -441,6 +417,8 @@
                 })
             }
             this.developerList = this.changeArr(this.i18n.home.HOME_DEV.DEV_INFO,16);
+            let lang = this.$lang;
+            this.bannerAmount = lang === 'zh' ? 3 : 1;
         },
         beforeDestroy () {
             this.mobileSwiperInterval && clearInterval(this.mobileSwiperInterval);
@@ -836,6 +814,9 @@
         background-size: contain;
         background-repeat: no-repeat;
         cursor: pointer;
+    }
+    .activities-banner.full-fill {
+        width: 100%;
     }
     .banner-item {
         width: 1080px;

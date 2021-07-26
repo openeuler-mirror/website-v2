@@ -4,10 +4,6 @@
 
 module.exports = {
     cn: {
-        HOME_DEV2021_IMG: {
-            PC_BANNER: "url('/img/home/banner/dev2021/pc-dev2021-zh.png",
-            H5_BANNER: "url('/img/home/banner/dev2021/h5-dev2021-zh.png"
-        },
         HOME_CAROUSEL_DATA: [
             {
                 TITLE: "iSula",
@@ -49,23 +45,15 @@ module.exports = {
                 LINK: '/interaction/news-list/'
             }
         ],
-        HOME_FIRST_BANNER: {
-            TITLE: "openEuler 20.03 LTS SP2",
-            LINK: "/zh/docs/20.03_LTS_SP2/docs/Releasenotes/关键特性.html",
-            DES: "现已发布，欢迎体验",
-            DOWNLOAD: '了解更多',
-            IMG: "/img/home/banner0.png",
-            MOBILE_IMG: "url('/img/home/banner/zh-mobile-version.png')"
-        },
         DEV_COMPETITION: {
             MOBILE_IMG: "url('/img/banners/developer-competition-h5.png')",
             PC_IMG: "url('/img/banners/developer-competition-pc.png')",
             LINK: '/interaction/hdc/2021-developer.html'
         },
         HOME_ACTIVETIES: {
-            MOBILE_IMG: "url('/img/activities/home_mobile_banner.png')",
-            PC_IMG: "url('/img/activities/home_pc_banner.png')",
-            LINK: '/activities/'
+            MOBILE_IMG: "url('/img/home/banner/home_mobile_banner.png')",
+            PC_IMG: "url('/img/home/banner/home_pc_banner.png')",
+            LINK: 'https://www.hikunpeng.com/activities/xinchuang2021'
         },
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
@@ -604,10 +592,6 @@ module.exports = {
         RETRACT: "收起全部"
     },
     en: {
-        HOME_DEV2021_IMG: {
-            PC_BANNER: "url('/img/home/banner/dev2021/pc-dev2021-en.png",
-            H5_BANNER: "url('/img/home/banner/dev2021/h5-dev2021-en.png"
-        },
         HOME_CAROUSEL_DATA: [
             {
                 TITLE: "iSula",
@@ -646,14 +630,6 @@ module.exports = {
             }
         ],
         HOME_LAST_BANNER: {},
-        HOME_FIRST_BANNER: {
-            TITLE: "openEuler 20.03 LTS SP2 Version",
-            LINK: "/en/docs/20.03_LTS_SP2/docs/Releasenotes/key-features.html",
-            DES: "has been released, welcome to use.",
-            DOWNLOAD: 'Learn more',
-            IMG: "/img/home/banner0.png",
-            MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
-        },
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
             INTRO_HEAD: "Start your journey in openEuler",
@@ -1174,10 +1150,6 @@ module.exports = {
         RETRACT: "Collapse All"
     },
     ru: {
-        HOME_DEV2021_IMG: {
-            PC_BANNER: '/img/home/banner/dev2021/pc-dev2021-en.png',
-            H5_BANNER: "url('/img/home/banner/dev2021/h5-dev2021-en.png"
-        },
         HOME_CAROUSEL_DATA: [
             {
                 TITLE: "iSula",
@@ -1216,14 +1188,6 @@ module.exports = {
             }
         ],
         HOME_LAST_BANNER: {},
-        HOME_FIRST_BANNER: {
-            TITLE: "openEuler 20.03 LTS SP2 Version",
-            LINK: "/en/docs/20.03_LTS_SP2/docs/Releasenotes/key-features.html",
-            DES: "has been released, welcome to use.",
-            DOWNLOAD: 'Learn more',
-            IMG: "/img/home/banner0.png",
-            MOBILE_IMG: "url('/img/home/banner/en-mobile-version.png')"
-        },
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
             INTRO_HEAD: "Начните свой путь в openEuler",
