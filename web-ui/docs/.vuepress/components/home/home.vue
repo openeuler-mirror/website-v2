@@ -3,7 +3,7 @@
         <div class="is-pc home-carousel" v-if="!isShowH5">
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" @change="eventChange()">
                 <el-carousel-item v-if="$lang === 'zh'">
-                    <div class="activities-banner full-fill"
+                    <div class="carousel-banner"
                         :style="{backgroundImage: i18n.home.HOME_ACTIVETIES.PC_IMG}"
                         @click="go(i18n.home.HOME_ACTIVETIES.LINK)"
                     ></div>
