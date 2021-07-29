@@ -667,7 +667,7 @@ module.exports = {
             DOWN:{
                 DPSCRIPT_ONE:"Сертификация openEuler предназначена для ИТ-профессионалов или студентов, интересующихся ОС openEuler, чтобы они могли подтвердить свои способности в разработке, технической поддержке и эксплуатации openEuler.",
                 GET_CARD:"Сдавать экзамены",
-                GET_CARD_DISC:"openEuler-HCIA, openEuler-HCIP and openEuler-HCIE are the capability certifications at different levels recognized by the openEuler community. If you are interested in obtaining any of these certificates, click the following items to sign up for the trainings and tests.",
+                GET_CARD_DISC:"openEuler-HCIA, openEuler-HCIP и openEuler-HCIE являются сертификатами, доказывающими возможности различных уровней, признанными сообществом openEuler. Если вы заинтересованы в получении сертификата, щелкните по следующим пунктам, чтобы зарегистрироваться для прохождения обучения и сертификационного экзамена.",
                 NOT_CARDURL:"Скоро",
                 OUTLINE_DOWN_TIP:"Проверочный код был отправлен на вашу электронную почту. Введите проверочный код для получения сертификата.",
                 CARD_MODEL:[
@@ -705,15 +705,15 @@ module.exports = {
             SEARCH:{
                 SEARCH:"Запросить сертификаты",
                 SEARCH_DISC:"Введите адрес электронной почты, используемый при проведении сертификационного экзамена, для получения проверочного кода и запроса сертификата.",
-                SEND_CODE:"Send a verification code",
-                SEND_AGAIN:"Resend",
+                SEND_CODE:"Отправить проверочный код",
+                SEND_AGAIN:"Отправить заново",
                 EMAIL_ERROR:"Неверный адрес электронной почты.",
-                EMAIL_PLAHD:"Your email address",
-                CODE_PLAHD:"Enter the verification code.",
+                EMAIL_PLAHD:"Ваш адрес электронной почты",
+                CODE_PLAHD:"Введите проверочный код.",
                 CODE_ERROR:"Неверный проверочный код.",
                 SHOW_TEMPLATE:"/img/community/conduct/showtemplate.png"
             },
-            BTNSURE:"Confirm"
+            BTNSURE:"Подтвердить"
         }
     }
 };
