@@ -14,7 +14,7 @@ export const getCode = (email,lang) => {
             params:{
                 email,
             },
-            headLanguage:lang == "zh"?false:lang,
+            headLanguage:lang == "zh"?false:lang == "en"?"en-US":"ru-RU",
             success(result) {
                 if (result) {
                     resolve(result);
@@ -38,7 +38,7 @@ export const searchCard = (params,lang) => {
             url: '/certification/list',
             type: 'GET',
             params,
-            headLanguage:lang == "zh"?false:lang,
+            headLanguage:lang == "zh"?false:lang == "en"?"en-US":"ru-RU",
             success(result) {
                 if (result) {
                     resolve(result);
@@ -60,7 +60,7 @@ export const downCard = (params,lang) => {
             url: '/certification',
             type: 'GET',
             params,
-            headLanguage:lang == "zh"?false:lang,
+            headLanguage:lang == "zh"?false:lang == "en"?"en-US":"ru-RU",
             success(result) {
                 if (result) {
                     resolve(result);
@@ -82,7 +82,7 @@ export const refleshDownUrl = (params,lang) => {
             url: '/refreshDonwnurl',
             type: 'GET',
             params,
-            headLanguage:lang == "zh"?false:lang,
+            headLanguage:lang == "zh"?false:lang == "en"?"en-US":"ru-RU",
             success(result) {
                 if (result) {
                     resolve(result);
@@ -104,7 +104,7 @@ export const refleshDownCard = (params,lang) => {
             url: '/refreshDonwnurl',
             type: 'PATCH',
             params,
-            headLanguage:lang == "zh"?false:lang,
+            headLanguage:lang == "zh"?false:lang == "en"?"en-US":"ru-RU",
             success(result) {
                 if (result) {
                     resolve(result);
