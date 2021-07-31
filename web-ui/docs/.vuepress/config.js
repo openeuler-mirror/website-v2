@@ -89,12 +89,12 @@ module.exports = {
                     '^/api-cve/': ''
                 }
             },
-            '/api-mirror': {
-                target: 'https://api.openeuler.org/mirrors',
+            '/api-mirror/': {
+                target: 'https://api.openeuler.org/mirrors/',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {
-                    '^/api-mirror': ''
+                    '^/api-mirror/': ''
                 }
             },
             '/api/': {
@@ -103,6 +103,14 @@ module.exports = {
                 changeOrigin: true,
                 pathRewrite: {
                     '^/api/': ''
+                }
+            },
+            '/api-certification/': {
+                target: 'https://ccs.openeuler.org/ccs/base/',
+                ws: true,
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api-certification/': ''
                 }
             }
         }
