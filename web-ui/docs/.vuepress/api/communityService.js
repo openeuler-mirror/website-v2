@@ -4,6 +4,11 @@
 
 import appAjax from './../libs/ajax-utils';
 const authApi = '-certification';
+const pravacyMethods = {
+    resolveLang(lang) {
+        return (lang == "zh"?false:lang == "en"?"en-US":"ru-RU");
+    }
+}
 export const getCode = (email,lang) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
@@ -14,7 +19,7 @@ export const getCode = (email,lang) => {
             params:{
                 email,
             },
-            headLanguage:lang == "zh"?false:lang,
+            headLanguage: pravacyMethods.resolveLang(lang),
             success(result) {
                 if (result) {
                     resolve(result);
@@ -38,7 +43,7 @@ export const searchCard = (params,lang) => {
             url: '/certification/list',
             type: 'GET',
             params,
-            headLanguage:lang == "zh"?false:lang,
+            headLanguage: pravacyMethods.resolveLang(lang),
             success(result) {
                 if (result) {
                     resolve(result);
@@ -60,7 +65,7 @@ export const downCard = (params,lang) => {
             url: '/certification',
             type: 'GET',
             params,
-            headLanguage:lang == "zh"?false:lang,
+            headLanguage: pravacyMethods.resolveLang(lang),
             success(result) {
                 if (result) {
                     resolve(result);
@@ -82,7 +87,7 @@ export const refleshDownUrl = (params,lang) => {
             url: '/refreshDonwnurl',
             type: 'GET',
             params,
-            headLanguage:lang == "zh"?false:lang,
+            headLanguage: pravacyMethods.resolveLang(lang),
             success(result) {
                 if (result) {
                     resolve(result);
@@ -104,7 +109,7 @@ export const refleshDownCard = (params,lang) => {
             url: '/refreshDonwnurl',
             type: 'PATCH',
             params,
-            headLanguage:lang == "zh"?false:lang,
+            headLanguage: pravacyMethods.resolveLang(lang),
             success(result) {
                 if (result) {
                     resolve(result);

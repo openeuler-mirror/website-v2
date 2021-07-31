@@ -663,57 +663,57 @@ module.exports = {
             TITLE: "Кодекс поведения"
         },
         SERVICE: {
-            TITLE:"openEuler Certification",
+            TITLE:"сертификаты openEuler",
             DOWN:{
-                DPSCRIPT_ONE:"openEuler certification is intended for IT professionals or students interested in the openEuler OS to prove their capabilities in openEuler development, technical support, and O&M.",
-                GET_CARD:"Take Exams",
-                GET_CARD_DISC:"openEuler-HCIA, openEuler-HCIP and openEuler-HCIE are the capability certifications at different levels recognized by the openEuler community. If you are interested in obtaining any of these certificates, click the following items to sign up for the trainings and tests.",
-                NOT_CARDURL:"Coming soon",
-                OUTLINE_DOWN_TIP:"The verification code has been sent to your email address. Enter the verification code to obtain the certificate.",
+                DPSCRIPT_ONE:"Сертификация openEuler предназначена для ИТ-профессионалов или студентов, интересующихся ОС openEuler, чтобы они могли подтвердить свои способности в разработке, технической поддержке и эксплуатации openEuler.",
+                GET_CARD:"Сдавать экзамены",
+                GET_CARD_DISC:"openEuler-HCIA, openEuler-HCIP и openEuler-HCIE являются сертификатами, доказывающими возможности различных уровней, признанными сообществом openEuler. Если вы заинтересованы в получении сертификата, щелкните по следующим пунктам, чтобы зарегистрироваться для прохождения обучения и сертификационного экзамена.",
+                NOT_CARDURL:"Скоро",
+                OUTLINE_DOWN_TIP:"Проверочный код был отправлен на вашу электронную почту. Введите проверочный код для получения сертификата.",
                 CARD_MODEL:[
                     {
                         DISC:"openEuler-HCIA",
-                        NAME:"Certified Engineer",
+                        NAME:"Сертифицированный инженер",
                         IMG:"/img/community/conduct/hcia-icon.png",
                         NEXT_URL:"https://e.huawei.com/cn/talent/#/cert/product-details?certifiedProductId=383&amp;authenticationLevel=CTYPE_CARE_HCIA&amp;technicalField=PSC&amp;version=1.0",
                     },
                     {
                         DISC:"openEuler-HCIP",
-                        NAME:"Certified Senior Enginee",
+                        NAME:"Сертифицированный старший инженер",
                         IMG:"/img/community/conduct/hcip-icon.png",
                         NEXT_URL:""
                     },
                     {
                         DISC:"openEuler-HCIE",
-                        NAME:"Certified Expert",
+                        NAME:"Сертифицированный эксперт",
                         IMG:"/img/community/conduct/hcie-icon.png",
                         NEXT_URL:""
                     },
                 ],
-                DOWN_CARD:"Download Certificates",
-                DOWN_CHOOSE_CARD:"Download Selected Certificates",
-                DOWN_CARD_DISC:"Click to download the certificate after passing the exam.",
-                SEARCH_RESULTS:"The information of your certificates is as follows:",
-                NO_CARD:"No certificate is available for download.",
-                DOWN_FAIL_DISC_LEFT:"Your download link has expired. Click ",
-                DOWN_FAIL_DISC_RIGHT:" to obtain a new link.",
+                DOWN_CARD:"Загрузить сертификаты",
+                DOWN_CHOOSE_CARD:"Загрузить выбранные сертификаты",
+                DOWN_CARD_DISC:"Нажмите и загрузите сертификат после сдачи экзамена.",
+                SEARCH_RESULTS:"Ниже приведена информация о ваших сертификатах:",
+                NO_CARD:"Нет сертификата, доступного для загрузки.",
+                DOWN_FAIL_DISC_LEFT:"Срок действия ссылки на загрузку истек. Нажмите Загрузить сертификаты ",
+                DOWN_FAIL_DISC_RIGHT:" чтобы получить новую ссылку.",
                 DOWNCREDENT:[{
-                    NAME:"Download Certificates",
+                    NAME:"Загрузить сертификаты",
                     IMG:"/img/community/conduct/down-card-icon.png",
                 }]
             },
             SEARCH:{
-                SEARCH:"Query Certificates",
-                SEARCH_DISC:"Enter the email address used for the certification exam to obtain the verification code and query your certificate.",
-                SEND_CODE:"Send a verification code",
-                SEND_AGAIN:"Resend",
-                EMAIL_ERROR:"The email address is incorrect.",
-                EMAIL_PLAHD:"Your email address",
-                CODE_PLAHD:"Enter the verification code.",
-                CODE_ERROR:"The verification code is incorrect.",
+                SEARCH:"Запросить сертификаты",
+                SEARCH_DISC:"Введите адрес электронной почты, используемый при проведении сертификационного экзамена, для получения проверочного кода и запроса сертификата.",
+                SEND_CODE:"Отправить проверочный код",
+                SEND_AGAIN:"Отправить заново",
+                EMAIL_ERROR:"Неверный адрес электронной почты.",
+                EMAIL_PLAHD:"Ваш адрес электронной почты",
+                CODE_PLAHD:"Введите проверочный код.",
+                CODE_ERROR:"Неверный проверочный код.",
                 SHOW_TEMPLATE:"/img/community/conduct/showtemplate.png"
             },
-            BTNSURE:"Confirm"
+            BTNSURE:"Подтвердить"
         }
     }
 };
