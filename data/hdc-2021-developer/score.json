@@ -1,126 +1,130 @@
 {
-    "weeklyRange": "7月19日-7月26日",
+    "weeklyRange": "7月26日-8月02日",
     "monthlyRange": "6月01日-7月01日",
     "totalRange": "5月17日-7月26日",
     "weekly": [
         {
+            "name": "lihao9900",
+            "score": 24
+        },
+        {
             "name": "yaozc701",
-            "score": 21
-        },
-        {
-            "name": "duyiwei7w",
-            "score": 14
-        },
-        {
-            "name": "ice-kylin",
             "score": 13
         },
         {
-            "name": "houlibao",
+            "name": "duyiwei7w",
             "score": 12
-        },
-        {
-            "name": "fire-kylin",
-            "score": 12
-        },
-        {
-            "name": "gaosa3",
-            "score": 10
         },
         {
             "name": "WangTsing-Yan",
+            "score": 10
+        },
+        {
+            "name": "houlibao",
             "score": 6
         },
         {
-            "name": "jhon-hsu",
-            "score": 4
+            "name": "mcfd",
+            "score": 6
         },
         {
-            "name": "linx26",
-            "score": 4
+            "name": "shuyao13",
+            "score": 2
         },
         {
             "name": "shao1112",
             "score": 2
+        },
+        {
+            "name": "dada5208",
+            "score": 2
+        },
+        {
+            "name": "虚位以待",
+            "score": 0
         }
     ],
     "monthly": [
         {
             "name": "yaozc701",
-            "score": 78
-        },
-        {
-            "name": "shuyao13",
-            "score": 32
-        },
-        {
-            "name": "houlibao",
-            "score": 28
-        },
-        {
-            "name": "dada5208",
-            "score": 24
-        },
-        {
-            "name": "gc7500",
-            "score": 16
-        },
-        {
-            "name": "liuerwuliu",
-            "score": 16
-        },
-        {
-            "name": "weidongkl",
-            "score": 14
-        },
-        {
-            "name": "wss1235",
-            "score": 14
-        },
-        {
-            "name": "hw999666",
-            "score": 12
-        },
-        {
-            "name": "polite2anyone",
-            "score": 10
-        }
-    ],
-    "total": [
-        {
-            "name": "yaozc701",
-            "score": 145
-        },
-        {
-            "name": "houlibao",
-            "score": 48
-        },
-        {
-            "name": "shuyao13",
-            "score": 40
-        },
-        {
-            "name": "dada5208",
-            "score": 40
+            "score": 62
         },
         {
             "name": "WangTsing-Yan",
-            "score": 40
+            "score": 50
         },
         {
-            "name": "gc7500",
-            "score": 36
-        },
-        {
-            "name": "wss1235",
-            "score": 36
+            "name": "duyiwei7w",
+            "score": 44
         },
         {
             "name": "gaosa3",
             "score": 32
         },
         {
+            "name": "houlibao",
+            "score": 26
+        },
+        {
+            "name": "lihao9900",
+            "score": 24
+        },
+        {
+            "name": "wss1235",
+            "score": 22
+        },
+        {
+            "name": "gc7500",
+            "score": 20
+        },
+        {
+            "name": "dada5208",
+            "score": 18
+        },
+        {
+            "name": "jhon-hsu",
+            "score": 18
+        }
+    ],
+    "total": [
+        {
+            "name": "yaozc701",
+            "score": 158
+        },
+        {
+            "name": "houlibao",
+            "score": 54
+        },
+        {
+            "name": "WangTsing-Yan",
+            "score": 50
+        },
+        {
             "name": "duyiwei7w",
+            "score": 44
+        },
+        {
+            "name": "shuyao13",
+            "score": 42
+        },
+        {
+            "name": "dada5208",
+            "score": 42
+        },
+        {
+            "name": "gc7500",
+            "score": 36
+        },
+        {
+            "name": "wss1235",
+            "score": 36
+        },
+        {
+            "name": "liuerwuliu",
+            "score": 34
+        },
+        {
+            "name": "gaosa3",
             "score": 32
         },
         {
@@ -128,12 +132,8 @@
             "score": 30
         },
         {
-            "name": "liuerwuliu",
-            "score": 28
-        },
-        {
-            "name": "shao1112",
-            "score": 20
+            "name": "lihao9900",
+            "score": 24
         }
     ]
 }
