@@ -14,7 +14,8 @@ module.exports = {
         ['script', {
             src: '/js/analytics.js'
         }],
-        ['meta', { name: 'keywords', content: 'openEuler, 操作系统, 开放, 生态, 开源, Linux 开源, OS, open, ecosystem, open source, Linux open source'}]
+        ['meta', { name: 'keywords', content: 'openEuler, 操作系统, 开放, 生态, 开源, Linux 开源, OS, open, ecosystem, open source, Linux open source'}],
+        ['meta', { name: 'baidu-site-verification', content: 'code-EWzbQRssNU'}]
     ],
     markdown: {
         lineNumbers: false,
