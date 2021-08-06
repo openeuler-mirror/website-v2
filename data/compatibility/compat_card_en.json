@@ -3095,5 +3095,24 @@
       "chipModel": "3108",
       "item": "02311DPA",
       "downloadLink": "inbox"
+    },
+    {
+      "vendorID": "144d",
+      "deviceID": "a822",
+      "svID": "144d",
+      "ssID": "a80b",
+      "architecture": "aarch64",
+      "os": "openEuler 20.03 LTS SP1",
+      "driverName": "nvme ",
+      "version": "1.0",
+      "type": "SSD",
+      "driverDate": "2021.7.23",
+      "sha256": "4F1A7AF3341C7B2E91FD39C6B64CC40C9E2530BA",
+      "driverSize": "82KB",
+      "chipVendor": "Samsung",
+      "boardModel": "PM1725b",
+      "chipModel": "172Xa/172Xb",
+      "item": "",
+      "downloadLink": "inbox"
     }
 ]
