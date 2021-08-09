@@ -1,18 +1,22 @@
 {
-    "weeklyRange": "7月26日-8月02日",
-    "monthlyRange": "6月01日-7月01日",
-    "totalRange": "5月17日-8月02日",
+    "weeklyRange": "8月02日-8月09日",
+    "monthlyRange": "7月01日-8月01日",
+    "totalRange": "5月17日-8月09日",
     "weekly": [
         {
-            "name": "lihao9900",
-            "score": 24
+            "name": "jhon-hsu",
+            "score": 23
+        },
+        {
+            "name": "houlibao",
+            "score": 14
         },
         {
             "name": "yaozc701",
-            "score": 13
+            "score": 12
         },
         {
-            "name": "duyiwei7w",
+            "name": "shao1112",
             "score": 12
         },
         {
@@ -20,28 +24,24 @@
             "score": 10
         },
         {
-            "name": "houlibao",
-            "score": 6
-        },
-        {
-            "name": "mcfd",
-            "score": 6
-        },
-        {
             "name": "shuyao13",
-            "score": 2
+            "score": 8
         },
         {
-            "name": "shao1112",
-            "score": 2
+            "name": "duyiwei7w",
+            "score": 8
         },
         {
-            "name": "dada5208",
-            "score": 2
+            "name": "liuerwuliu",
+            "score": 6
         },
         {
-            "name": "虚位以待",
-            "score": 0
+            "name": "d85",
+            "score": 6
+        },
+        {
+            "name": "panjianqiao",
+            "score": 2
         }
     ],
     "monthly": [
@@ -89,27 +89,31 @@
     "total": [
         {
             "name": "yaozc701",
-            "score": 158
+            "score": 170
         },
         {
             "name": "houlibao",
-            "score": 54
+            "score": 68
         },
         {
             "name": "WangTsing-Yan",
-            "score": 50
+            "score": 60
         },
         {
             "name": "duyiwei7w",
-            "score": 44
+            "score": 52
         },
         {
             "name": "shuyao13",
-            "score": 42
+            "score": 50
         },
         {
             "name": "dada5208",
             "score": 42
+        },
+        {
+            "name": "jhon-hsu",
+            "score": 41
         },
         {
             "name": "gc7500",
@@ -120,20 +124,16 @@
             "score": 36
         },
         {
+            "name": "shao1112",
+            "score": 34
+        },
+        {
             "name": "liuerwuliu",
             "score": 34
         },
         {
             "name": "gaosa3",
             "score": 32
-        },
-        {
-            "name": "polite2anyone",
-            "score": 30
-        },
-        {
-            "name": "lihao9900",
-            "score": 24
         }
     ]
 }
