@@ -39,9 +39,13 @@ export default {
     },
     methods: {
         goFooterUrl(url) {
-            this.$router.push({
-                path: this.resolvePath(url)
-            });
+            if (url.includes('https')) {
+                window.open(url)
+            } else {
+                this.$router.push({
+                    path: this.resolvePath(url)
+                });
+            }
         }
     },
     components: {}
@@ -125,6 +129,10 @@ export default {
                 li:nth-child(2) {
                     padding: 0 16px;
                     border-left: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                }
+                li:nth-child(3) {
+                    padding: 0 16px;
                     border-right: 1px solid #fff;
                 }
             }

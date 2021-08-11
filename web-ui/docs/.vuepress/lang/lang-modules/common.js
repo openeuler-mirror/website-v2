@@ -208,6 +208,10 @@ module.exports = {
                 {
                     NAME: '法律声明',
                     URL: '/other/legal/'
+                },
+                {
+                    NAME: '服务状态',
+                    URL: 'https://status.openeuler.org/'
                 }
             ],
             QR_CODE: '扫码关注公众号'
@@ -422,6 +426,10 @@ module.exports = {
                 {
                     NAME: 'Legal Notice',
                     URL: '/other/legal/'
+                },
+                {
+                    NAME: 'Service Status',
+                    URL: 'https://status.openeuler.org/'
                 }
             ],
             QR_CODE: 'WeChat Subscription'
@@ -617,6 +625,10 @@ module.exports = {
                     NAME: 'Правовое уведомление',
                     URL: '/other/legal/'
                 },
+                {
+                    NAME: 'Статус сервиса',
+                    URL: 'https://status.openeuler.org/'
+                }
             ],
             QR_CODE: 'Подписка на WeChat'
         },
