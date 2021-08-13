@@ -53,7 +53,7 @@
                 v-else>
                 <el-table-column
                 class-name="mirror-name"
-                width="360"
+                width="300"
                 label="Mirror Name">
                     <template slot-scope="scope">
                         <a :href="scope.row.http" target="_blank">{{ scope.row.name }}</a>
@@ -82,7 +82,8 @@
                 label="FTP">
                 </el-table-column>
                 <el-table-column
-                    width="220"
+                    width="260"
+                    class-name="mirror-last-row"
                     prop="netband"
                     label="NetworkBandwidth(Mb/s)">
                 </el-table-column>
@@ -197,8 +198,11 @@ export default {
         background: rgba(0, 0, 0, 0.03);
     }
     /deep/ .mirror-list .el-table tr>.mirror-name {
-        padding-left: 60px;
+        padding-left: 30px;
     }
+  /deep/ .mirror-list .el-table tr > .mirror-last-row {
+    padding-right: 30px;
+  }
     /deep/ .mirror-list .el-table__header-wrapper tr th>div {
         font-size: 16px;
         color: #000000;
