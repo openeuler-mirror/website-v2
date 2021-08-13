@@ -124,7 +124,6 @@ export default {
                 let mapData = res;
                 if(mapData.length) {
                     this.mapData = res;
-                    console.log('map data', res);
                     this.initTable();
                 }
             }).catch((err)=>{
