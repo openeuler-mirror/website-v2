@@ -38,6 +38,10 @@
                             <span>{{ i18n.download.MIRROR_ALL.FTP }}</span>
                             <span>{{ item.ftp }}</span>
                         </li>
+                        <li>
+                            <span>{{ i18n.download.MIRROR_ALL.Mbs }}</span>
+                            <span>{{ item.netband }}</span>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -49,7 +53,7 @@
                 v-else>
                 <el-table-column
                 class-name="mirror-name"
-                width="360"
+                width="300"
                 label="Mirror Name">
                     <template slot-scope="scope">
                         <a :href="scope.row.http" target="_blank">{{ scope.row.name }}</a>
@@ -76,6 +80,12 @@
                 show-overflow-tooltip
                 prop="ftp"
                 label="FTP">
+                </el-table-column>
+                <el-table-column
+                    width="260"
+                    class-name="mirror-last-row"
+                    prop="netband"
+                    label="NetworkBandwidth(Mb/s)">
                 </el-table-column>
             </el-table>
         </div>
@@ -143,6 +153,7 @@ export default {
                 itemObj.http = item.HttpURL?item.HttpURL:'-';
                 itemObj.rsnc = item.RsyncURL?item.RsyncURL:'-';
                 itemObj.ftp = item.FtpURL?item.FtpURL:'-';
+                itemObj.netband = item.NetworkBandwidth?item.NetworkBandwidth:'-';
                 this.tableData.push(itemObj);
             });
         },
@@ -186,8 +197,11 @@ export default {
         background: rgba(0, 0, 0, 0.03);
     }
     /deep/ .mirror-list .el-table tr>.mirror-name {
-        padding-left: 60px;
+        padding-left: 30px;
     }
+  /deep/ .mirror-list .el-table tr > .mirror-last-row {
+    padding-right: 30px;
+  }
     /deep/ .mirror-list .el-table__header-wrapper tr th>div {
         font-size: 16px;
         color: #000000;

@@ -34,6 +34,7 @@ module.exports = {
             HTTPS: 'Http(s)：',
             RSNC: 'RSNC：',
             FTP: 'FTP：',
+            Mbs: 'NetworkBandwidth(Mb/s)：',
             TIME: 'Last Sync time：',
             CONTENT: ['openEuler welcomes new mirror sites. If you are considering to set up a public mirror site for openEuler, please follow the mirror guidelines to make sure that your mirror is consistent with the other mirror sites. Any questions, feel free to','contact us']
         }
@@ -69,6 +70,7 @@ module.exports = {
             HTTPS: 'Http(s)：',
             RSNC: 'RSNC：',
             FTP: 'FTP：',
+            Mbs: 'NetworkBandwidth(Mb/s)：',
             TIME: 'Last Sync time：',
             CONTENT: ['openEuler welcomes new mirror sites. If you are considering to set up a public mirror site for openEuler, please follow the mirror guidelines to make sure that your mirror is consistent with the other mirror sites. Any questions, feel free to','contact us']
         }
@@ -104,6 +106,7 @@ module.exports = {
             HTTPS: 'Http(s)：',
             RSNC: 'RSNC：',
             FTP: 'FTP：',
+            Mbs: 'NetworkBandwidth(Mb/s)：',
             TIME: 'Last Sync time：',
             CONTENT: ['openEuler welcomes new mirror sites. If you are considering to set up a public mirror site for openEuler, please follow the mirror guidelines to make sure that your mirror is consistent with the other mirror sites. Any questions, feel free to','contact us']
         }
