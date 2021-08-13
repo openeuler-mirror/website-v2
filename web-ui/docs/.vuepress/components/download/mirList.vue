@@ -38,6 +38,10 @@
                             <span>{{ i18n.download.MIRROR_ALL.FTP }}</span>
                             <span>{{ item.ftp }}</span>
                         </li>
+                        <li>
+                            <span>{{ i18n.download.MIRROR_ALL.Mbs }}</span>
+                            <span>{{ item.netband }}</span>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -77,6 +81,11 @@
                 prop="ftp"
                 label="FTP">
                 </el-table-column>
+                <el-table-column
+                    width="220"
+                    prop="netband"
+                    label="NetworkBandwidth(Mb/s)">
+                </el-table-column>
             </el-table>
         </div>
         <div class="input-box">
@@ -114,6 +123,7 @@ export default {
                 let mapData = res;
                 if(mapData.length) {
                     this.mapData = res;
+                    console.log('map data', res);
                     this.initTable();
                 }
             }).catch((err)=>{
@@ -143,6 +153,7 @@ export default {
                 itemObj.http = item.HttpURL?item.HttpURL:'-';
                 itemObj.rsnc = item.RsyncURL?item.RsyncURL:'-';
                 itemObj.ftp = item.FtpURL?item.FtpURL:'-';
+                itemObj.netband = item.NetworkBandwidth?item.NetworkBandwidth:'-';
                 this.tableData.push(itemObj);
             });
         },
