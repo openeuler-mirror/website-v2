@@ -1,6 +1,6 @@
 # Qemu Fuzzer 学习
 
-> 本文章来自于[开源软件供应链点亮计划](https://summer.iscas.ac.cn/)的Openeuler社区项目
+> 本文章来自于[开源软件供应链点亮计划](https://summer.iscas.ac.cn/)的openEuler社区项目
 > 项目名称：[No.112 qemu设备fuzz测试完善](https://gitee.com/openeuler-competition/summer2021-112)
  
 ## 前言
