@@ -2587,5 +2587,127 @@
       "hostBusAdapter": "Avago 3508",
       "hardDiskDrive": ""
     }
+  },
+  {
+    "hardwareFactory": "LENOVO",
+    "hardwareModel": "ThinkSystem SR358F V2",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "aarch64",
+    "date": "2020/05/11",
+    "friendlyLink": "https://www.lenovo.com",
+    "boardCards": [
+      {
+        "vendorID": "1000",
+        "deviceID": "005d",
+        "svID": "1d49",
+        "ssID": "0602",
+        "architecture": "megaraid_sas",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "megaraid_sas",
+        "version": "07.706.03.00-rc1",
+        "type": "RAID",
+        "driverDate": "2021.3.19",
+        "sha256": "523085c93b25b91fec48fe334e93417b384f430a93479c649e74a02bdfc74cf1",
+        "driverSize": "",
+        "chipVendor": "LSI",
+        "boardModel": "",
+        "chipModel": "",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "19e5",
+        "ssID": "d215",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "Intel I350",
+        "version": "5.4.0-k",
+        "type": "raid",
+        "driverDate": "2020.12.28",
+        "sha256": "06f5999620a8f107b8a177237621b87a56d8e46d316a85c6a22799e6843301f0",
+        "driverSize": "",
+        "chipVendor": "Intel",
+        "boardModel": "",
+        "chipModel": "",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://lenovopress.com/",
+      "certificationTime": "2021/8/05",
+      "commitID": "",
+      "motherBoardRevision": "v1.0",
+      "biosUefi": "4.018",
+      "cpu": "FT2000+",
+      "ram": "8*16G DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "1a03",
+      "hostBusAdapter": "LSI 730-8i",
+      "hardDiskDrive": "Intel S4610"
+    }
+  },
+  {
+    "hardwareFactory": "LENOVO",
+    "hardwareModel": "ThinkSystem SR658H",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "x86_64",
+    "date": "2021/08/05",
+    "friendlyLink": "https://www.lenovo.com",
+    "boardCards": [
+      {
+        "vendorID": "1000",
+        "deviceID": "0014",
+        "svID": "1d49",
+        "ssID": "0602",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "megaraid_sas",
+        "version": "07.706.03.00-rc1",
+        "type": "RAID",
+        "driverDate": "2021.3.19",
+        "sha256": "12bf7db93b721978107266e43d09404be9ad107f2565fb62bc35a3b825f56cf8",
+        "driverSize": "",
+        "chipVendor": "LSI",
+        "boardModel": "",
+        "chipModel": "",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "19e5",
+        "ssID": "d215",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "Intel I350",
+        "version": "5.4.0-k",
+        "type": "raid",
+        "driverDate": "2020.12.28",
+        "sha256": "6a5f51c55b743462c8251e810c4c0a356e07656810bc8cc278dd787c060ac055",
+        "driverSize": "",
+        "chipVendor": "Intel",
+        "boardModel": "",
+        "chipModel": "",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://lenovopress.com/",
+      "certificationTime": "2021/8/05",
+      "commitID": "",
+      "motherBoardRevision": "v1.1",
+      "biosUefi": "0.62",
+      "cpu": "Hygon 7185",
+      "ram": "16*32G DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "1a03",
+      "hostBusAdapter": "LSI 930-16i",
+      "hardDiskDrive": "Intel S4610"
+    }
   }
 ]

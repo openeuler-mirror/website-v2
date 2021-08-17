@@ -3114,5 +3114,43 @@
       "chipModel": "172Xa/172Xb",
       "item": "",
       "downloadLink": "inbox"
+    },
+    {
+      "vendorID": "9005",
+      "deviceID": "028f",
+      "svID": "9005",
+      "ssID": "0801",
+      "architecture": "x86_64",
+      "os": "openEuler 20.03 LTS SP1",
+      "driverName": "smartpqi",
+      "version": "1.1.4-130",
+      "type": "RAID",
+      "driverDate": "2021.7.23",
+      "sha256": "",
+      "driverSize": "147K",
+      "chipVendor": "PMC-Sierra",
+      "boardModel": "SAS3512",
+      "chipModel": "PMC Series 8 12G SAS/PCIe 3",
+      "item": "",
+      "downloadLink": "inbox"
+    },
+    {
+      "vendorID": "9005",
+      "deviceID": "028f",
+      "svID": "9005",
+      "ssID": "0801",
+      "architecture": "aarch64",
+      "os": "openEuler 20.03 LTS SP1",
+      "driverName": "smartpqi",
+      "version": "1.1.4-130",
+      "type": "RAID",
+      "driverDate": "2021.7.23",
+      "sha256": "",
+      "driverSize": "141K",
+      "chipVendor": "PMC-Sierra",
+      "boardModel": "SAS3512",
+      "chipModel": "PM3152",
+      "item": "",
+      "downloadLink": "inbox"
     }
 ]
