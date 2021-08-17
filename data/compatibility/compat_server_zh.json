@@ -2288,7 +2288,7 @@
     "hardwareModel": "KunTai R2280",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "aarch64",
-    "date": "2020/03/24",
+    "date": "2021/03/24",
     "friendlyLink": "http://www.yunke-china.com/index.php?m=content&c=index&a=show&catid=79&id=316",
     "boardCards": [
       {
@@ -2349,7 +2349,7 @@
     "hardwareModel": "KunTai R2260",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "aarch64",
-    "date": "2020/03/24",
+    "date": "2021/03/24",
     "friendlyLink": "http://www.yunke-china.com/index.php?m=content&c=index&a=show&catid=79&id=316",
     "boardCards": [
       {
@@ -2410,7 +2410,7 @@
     "hardwareModel": "KunTai R522",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "aarch64",
-    "date": "2020/05/11",
+    "date": "2021/05/11",
     "friendlyLink": "http://www.yunke-china.com/index.php?m=content&c=index&a=show&catid=79&id=322",
     "boardCards": [
       {
@@ -2471,7 +2471,7 @@
     "hardwareModel": "KunTai R524",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "aarch64",
-    "date": "2020/05/11",
+    "date": "2021/05/11",
     "friendlyLink": "http://www.yunke-china.com/index.php?m=content&c=index&a=show&catid=79&id=323",
     "boardCards": [
       {
@@ -2532,7 +2532,7 @@
     "hardwareModel": "KunTai R722",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "aarch64",
-    "date": "2020/05/11",
+    "date": "2021/05/11",
     "friendlyLink": "http://www.yunke-china.com/index.php?m=content&c=index&a=show&catid=79&id=324",
     "boardCards": [
       {
@@ -2593,7 +2593,7 @@
     "hardwareModel": "ThinkSystem SR358F V2",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "aarch64",
-    "date": "2020/05/11",
+    "date": "2021/08/5",
     "friendlyLink": "https://www.lenovo.com",
     "boardCards": [
       {
@@ -2624,7 +2624,7 @@
         "os": "openEuler 20.03 LTS SP1",
         "driverName": "Intel I350",
         "version": "5.4.0-k",
-        "type": "raid",
+        "type": "NIC",
         "driverDate": "2020.12.28",
         "sha256": "06f5999620a8f107b8a177237621b87a56d8e46d316a85c6a22799e6843301f0",
         "driverSize": "",
@@ -2685,7 +2685,7 @@
         "os": "openEuler 20.03 LTS SP1",
         "driverName": "Intel I350",
         "version": "5.4.0-k",
-        "type": "raid",
+        "type": "NIC",
         "driverDate": "2020.12.28",
         "sha256": "6a5f51c55b743462c8251e810c4c0a356e07656810bc8cc278dd787c060ac055",
         "driverSize": "",
