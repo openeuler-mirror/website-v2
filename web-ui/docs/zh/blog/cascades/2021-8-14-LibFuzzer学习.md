@@ -1,4 +1,16 @@
-# LibFuzzer 学习
+---
+title: 【开源软件供应链点亮计划】LibFuzzer学习
+date: 2021-08-14
+tags: 
+    - Fuzzing
+    - 鹏程实验室
+    - summer2021
+archives: 2021-08
+author: cascades
+summary: LibFuzzer是一个in-process, coverage-guided, evolutionary的针对库函数的模糊测试引擎，包含在LLVM项目中。
+---
+
+# LibFuzzer学习
 
 > 本文章来自于[开源软件供应链点亮计划](https://summer.iscas.ac.cn/)的openEuler社区项目
 > 项目名称：[No.112 qemu设备fuzz测试完善](https://gitee.com/openeuler-competition/summer2021-112)
@@ -10,7 +22,7 @@ LibFuzzer是一个`in-process`，`coverage-based`，`evolutionary`的模糊测�
 * [项目地址](https://www.llvm.org/docs/LibFuzzer.html)
 * [代码路径](https://github.com/llvm/llvm-project/tree/main/compiler-rt/lib/fuzzer)
 
-## LibFuzzer 使用方法
+## libFuzzer 使用方法
 
 ### 实验环境
 

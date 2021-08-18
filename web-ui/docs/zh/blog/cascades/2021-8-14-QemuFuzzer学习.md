@@ -1,4 +1,16 @@
-# Qemu Fuzzer 学习
+---
+title: 【开源软件供应链点亮计划】Qemu Fuzzer学习
+date: 2021-08-15
+tags: 
+    - Qemu 
+    - Virtio
+    - summer2021
+archives: 2021-08
+author: cascades
+summary: Qemu Fuzzer是一个借助libqtest和LibFuzzer，对GusetOS读写设备的过程进行模糊测试的框架，包含在Qemu 5.0以后的版本中。
+---
+
+# Qemu Fuzzer学习
 
 > 本文章来自于[开源软件供应链点亮计划](https://summer.iscas.ac.cn/)的openEuler社区项目
 > 项目名称：[No.112 qemu设备fuzz测试完善](https://gitee.com/openeuler-competition/summer2021-112)
@@ -255,7 +267,7 @@ fuzz_add_qos_target(&(FuzzTarget){
 |             |                                                           | eg: detect the memory map                                               |
 |             |                                                           | Can be NULL                                                             |
 +-------------+-----------------------------------------------------------+-------------------------------------------------------------------------+
-| fuzz        | void(*fuzz)(QTestState *, const unsigned char *, size_t); | accepts and executes an input from libfuzzer.                           |
+| fuzz        | void(*fuzz)(QTestState *, const unsigned char *, size_t); | accepts and executes an input from LibFuzzer.                           |
 |             |                                                           | this is repeatedly executed during the fuzzing loop.                    |
 |             |                                                           | Its should handle setup, input execution and cleanup.                   |
 |             |                                                           | Cannot be NULL                                                          |
