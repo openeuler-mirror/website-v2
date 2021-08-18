@@ -70,7 +70,7 @@
                     </template>
                 </el-table-column>
                 <el-table-column
-                label="RSNC">
+                label="RSYNC">
                     <template slot-scope="scope">
                        <span v-if="scope.row.rsnc === '-'">{{ scope.row.rsnc }}</span>
                        <span @click="copyText(scope.row.rsnc)" class="rsnc" v-else></span>
