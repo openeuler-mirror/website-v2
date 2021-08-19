@@ -12,10 +12,7 @@ const httpUtil = require('../util/httpUtil');
 const ES = require('../config/searchConfig');
 const logUtil = require('../util/logUtil');
 const APICONF = require('../config/apiConfig');
-
-const ES_INDEX = 'openeuler_articles';
-const ES_EN_INDEX = 'openeuler_articles_en';
-const ES_RU_INDEX = 'openeuler_articles_ru';
+const apiConfig = require('../config/apiConfig');
 const ES_TYPE = '_doc';
 
 router.get('/index', function (req, res, next) {
@@ -23,23 +20,11 @@ router.get('/index', function (req, res, next) {
     let lang = obj.query.lang;
     let token = new Buffer.from(ES.ES_USER_PASS).toString('base64');
     let meta = '[' + logUtil.getTime() + '] create elasticsearch index.';
-
-    if (lang === 'zh') {
-        httpUtil.indexES(ES.ES_URL + ES_INDEX, token).then(data => {
-            console.log(meta + os.EOL + JSON.stringify(data) + os.EOL);
-        }).catch(ex => {
-            console.log('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
-        });
-    }
-
-    if (lang === 'en') {
-        httpUtil.indexES(ES.ES_URL + ES_EN_INDEX, token).then(data => {
-            console.log(meta + os.EOL + JSON.stringify(data) + os.EOL);
-        }).catch(ex => {
-            console.log('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
-        });
-    }
-
+    httpUtil.indexES(ES.ES_URL + apiConfig.ES_INDEX[lang], token).then(data => {
+        console.log(meta + os.EOL + JSON.stringify(data) + os.EOL);
+    }).catch(ex => {
+        console.log('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
+    });
     res.json({
         code: 200,
         date: 'success'
@@ -70,9 +55,9 @@ router.get('/insert', function (req, res, next) {
     }
 
     if (lang === 'zh') {
-        readFile.insertES(ES_INDEX, ES_TYPE, dirPath, model, version);
+        readFile.insertES(lang, ES_TYPE, dirPath, model, version);
     } else if (lang === 'en') {
-        readFile.insertES(ES_EN_INDEX, ES_TYPE, dirPath, model, version);
+        readFile.insertES(lang, ES_TYPE, dirPath, model, version);
     } else {
         res.json({
             code: 210,
@@ -158,7 +143,8 @@ function filterContent(content) {
             s = s.substring(0, index - 1);
             result += s.replace('-', '').replace('[', '').replace(']', '');
         } else if (s.indexOf('](./') > -1 && (
-                s.indexOf('.gif') > -1 || s.indexOf('.png') > -1 || s.indexOf('.jpg') > -1)) {} else {
+            s.indexOf('.gif') > -1 || s.indexOf('.png') > -1 || s.indexOf('.jpg') > -1)) {
+        } else {
             result += s;
         }
     });
@@ -169,16 +155,16 @@ function getSearchReqJson(page, model, keyword, version) {
     page = parseInt(page, 10);
     // docs query by version
     if (model === 'docs' && version !== '') {
-        let json = {
+        return {
             'from': (page - 1) * 10,
             'size': 10,
             'query': {
                 'bool': {
                     'must': [{
-                            'match_phrase': {
-                                'type': model
-                            }
-                        },
+                        'match_phrase': {
+                            'type': model
+                        }
+                    },
                         {
                             'match_phrase': {
                                 'textContent': keyword
@@ -200,24 +186,23 @@ function getSearchReqJson(page, model, keyword, version) {
             'aggs': {
                 'data': {
                     'terms': {
-                        'field': 'type'
+                        'field': 'type.keyword'
                     }
                 }
             }
         };
-        return json;
     }
     if (model !== '') {
-        let json = {
+        return {
             'from': (page - 1) * 10,
             'size': 10,
             'query': {
                 'bool': {
                     'must': [{
-                            'match_phrase': {
-                                'type': model
-                            }
-                        },
+                        'match_phrase': {
+                            'type.keyword': model
+                        }
+                    },
                         {
                             'match_phrase': {
                                 'textContent': keyword
@@ -234,14 +219,13 @@ function getSearchReqJson(page, model, keyword, version) {
             'aggs': {
                 'data': {
                     'terms': {
-                        'field': 'type'
+                        'field': 'type.keyword'
                     }
                 }
             }
         };
-        return json;
     } else {
-        let json = {
+        return {
             'from': (page - 1) * 10,
             'size': 10,
             'query': {
@@ -261,12 +245,11 @@ function getSearchReqJson(page, model, keyword, version) {
             'aggs': {
                 'data': {
                     'terms': {
-                        'field': 'type'
+                        'field': 'type.keyword'
                     }
                 }
             }
         };
-        return json;
     }
 }
 

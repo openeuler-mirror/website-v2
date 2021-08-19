@@ -10,6 +10,17 @@ const SIG_API = process.env.SIG_API;
 const API_USER_PASS = process.env.API_USER_PASS;
 const API_AUTH = 'Basic ' + new Buffer.from(API_USER_PASS).toString('base64');
 const STATISTICS_URL = process.env.STATISTICS_URL;
+const UPDATE_VIEWS_FROM_MYSQL = process.env.UPDATE_VIEWS_FROM_MYSQL;
+const ES_INDEX = {
+    zh: 'openeuler_articles',
+    en: 'openeuler_articles_en',
+    ru: 'openeuler_articles_ru'
+};
+const ES_REINDEX = {
+    zh: 're_openeuler_articles',
+    en: 're_openeuler_articles_en',
+    ru: 're_openeuler_articles_ru'
+};
 module.exports = {
     MAIL_LIST_URL: MAIL_LIST_URL,
     MAIL_ADD_URL: MAIL_ADD_URL,
@@ -17,5 +28,8 @@ module.exports = {
     SIG_API: SIG_API,
     API_USER_PASS: API_USER_PASS,
     API_AUTH: API_AUTH,
-    STATISTICS_URL: STATISTICS_URL
+    STATISTICS_URL: STATISTICS_URL,
+    ES_INDEX,
+    ES_REINDEX,
+    UPDATE_VIEWS_FROM_MYSQL
 };

@@ -2,80 +2,90 @@
  * @file news router
  */
 var express = require('express');
+var os = require('os');
 var router = express.Router();
 
-const dbUtil = require('../mysql/dbUtil');
-const SqlUtil = require('../mysql/sqlUtil');
-const sql = new SqlUtil('news_visits', ['title', 'date', 'lang']);
+const httpUtil = require('../util/httpUtil');
+var esUtil = require('../util/esParams');
+const logUtil = require('../util/logUtil');
+const apiConfig = require('../config/apiConfig');
+const ES = require('../config/searchConfig');
 
 router.get('/list', function (req, res) {
-    dbUtil.query(sql.newsList, function (err, result) {
-        if (result) {
-            res.json({
-                code: 200,
-                data: result
-            });
-        } else {
-            console.log(err.stack);
-            res.json({
-                code: 500,
-                msg: err
-            });
-        }
+    let url = ES.ES_URL;
+    for (let key in apiConfig.ES_REINDEX) {
+        url += apiConfig.ES_REINDEX[key] + ',';
+    }
+    url += '/_search';
+    let json = esUtil.getSearchViewsReqJson('news', 'list');
+    httpUtil.getViews(url, 'GET', false, esUtil.esToken, json).then(data => {
+        let response = esUtil.getSearchViewsResJson('list', data);
+        res.json({
+            code: 200,
+            data: response
+        });
+    }).catch(ex => {
+        console.log('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
+        res.json({
+            code: 500,
+            data: ex.stack
+        });
     });
 });
 
 router.post('/visit', function (req, res) {
-    let args = [];
     if (req.body.title == null || req.body.title.length === 0) {
         res.json({
             code: 400,
             data: 'title is null'
         });
     } else {
-        args.push(req.body.title);
-        args.push(req.body.date);
-        args.push(req.body.lang);
-        dbUtil.queryByArgs(sql.select('title = ? and date = ? and lang = ?'), args, function (err, result) {
-            if (result.length === 0) {
-                insertNewsVisits(args);
+        let title = req.body.title;
+        let lang = req.body.lang;
+        let indexEs = apiConfig.ES_REINDEX[lang];
+        let url = ES.ES_URL + indexEs + '/_search';
+        let json = esUtil.getSearchViewsReqJson('news', 'one', title);
+        httpUtil.getViews(url, 'GET', false, esUtil.esToken, json).then(data => {
+            let newData = JSON.parse(data);
+            if (newData.hits.hits.length) {
+                let url = ES.ES_URL + indexEs + '/_update/' + newData.hits.hits[0]._id;
+                let updateViewJson = esUtil.getUpdateViewJson();
+                httpUtil.updateViews(url, 'POST', false, esUtil.esToken, updateViewJson).then(data => {
+                }).catch(err => {
+                });
             } else {
-                updateNewsVisits(result[0].id);
+                let now = logUtil.getTime();
+                let meta = '[' + now + ']' + indexEs + ' get views failed';
+                console.log(meta + os.EOL + JSON.stringify(data) + os.EOL);
             }
-        });
-        res.json({
-            code: 200,
-            data: 'success'
+        }).catch(ex => {
+            console.log('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
+            res.json({
+                code: 500,
+                data: ex.stack
+            });
         });
     }
 });
 
-function insertNewsVisits(args) {
-    dbUtil.queryByArgs(sql.insertVisits('set title = ?, date = ?, lang = ?,count = 1'), args,
-        function (err, result) {});
-}
-
-function updateNewsVisits(id) {
-    dbUtil.queryByArgs(sql.updateVisits('set count = count + 1 where id = ?'), id, function (err, result) {});
-}
-
 router.post('/one', function (req, res) {
-    let args = [];
-    args.push(req.body.title);
-    args.push(req.body.date);
-    args.push(req.body.lang);
-    dbUtil.queryByArgs(sql.select('title = ? and date = ? and lang = ?'), args, function (err, result) {
-        if (err) {
-            res.send({
-                code: 500,
-                data: err
-            });
-        } else {
-            res.send({
-                code: 200,
-                data: result
-            });
-        }
+    let title = req.body.title;
+    let lang = req.body.lang;
+    let indexEs = apiConfig.ES_REINDEX[lang];
+    let url = ES.ES_URL + indexEs + '/_search';
+    let json = esUtil.getSearchViewsReqJson('news', 'one', title);
+    httpUtil.getViews(url, 'GET', false, esUtil.esToken, json).then(data => {
+        let response = esUtil.getSearchViewsResJson('one', data);
+        res.json({
+            code: 200,
+            data: response
+        });
+    }).catch(ex => {
+        console.log('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
+        res.json({
+            code: 500,
+            data: ex.stack
+        });
     });
 });
 
