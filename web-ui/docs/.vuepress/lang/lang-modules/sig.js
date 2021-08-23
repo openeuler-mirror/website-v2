@@ -86,6 +86,9 @@ module.exports = {
             BLOG_EMPTY2: "发博客攻略",
             BLOG_EMPTY3: "，赶紧拿回去看看吧。",
             NEWS_EMPTY: '不想当裁缝的厨子不是好司机，不发新闻的博客不是好视频。',
+            NEWS_EMPTY2: '',
+            NEWS_EMPTY3: '点击',
+            NEWS_EMPTY4: '发送SIG的第一篇新闻。',
             VIDEO_EMPTY: '我都把最好的位置留给你啦，你愿意投递一个视频吗？'
         },
         ROLE_DESCRIPTION:{
@@ -210,6 +213,9 @@ module.exports = {
             BLOG_EMPTY2: "blogging guide",
             BLOG_EMPTY3: " and post your first blog.",
             NEWS_EMPTY: 'Broadcast the latest news of your SIG.',
+            NEWS_EMPTY2: 'Click ',
+            NEWS_EMPTY3: 'here ',
+            NEWS_EMPTY4: 'to publish your first SIG news.',
             VIDEO_EMPTY: 'Share your first video now.'
         },
         ROLE_DESCRIPTION:{
@@ -322,6 +328,9 @@ module.exports = {
             BLOG_EMPTY2: "blogging guide",
             BLOG_EMPTY3: " and post your first blog.",
             NEWS_EMPTY: 'Broadcast the latest news of your SIG.',
+            NEWS_EMPTY2: 'Click ',
+            NEWS_EMPTY3: 'here ',
+            NEWS_EMPTY4: 'to publish your first SIG news.',
             VIDEO_EMPTY: 'Share your first video now.'
         },
         ROLE_DESCRIPTION:{

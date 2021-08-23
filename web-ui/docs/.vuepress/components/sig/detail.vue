@@ -151,6 +151,12 @@
                     </li>
                     <li v-if="!blogList.length" class="empty">
                         {{ i18n.sig.SIG_DETAIL.NEWS_EMPTY }}
+                        {{ i18n.sig.SIG_DETAIL.NEWS_EMPTY2 }}
+                        <a
+                            target="_blank"
+                            :href="'https://gitee.com/openeuler/website-v2/blob/master/web-ui/docs/' + $lang + '/interaction/post-news/README.md'"
+                            >{{ i18n.sig.SIG_DETAIL.NEWS_EMPTY3 }}</a>
+                            {{ i18n.sig.SIG_DETAIL.NEWS_EMPTY4 }}
                     </li>
                 </ul>
             </div>
