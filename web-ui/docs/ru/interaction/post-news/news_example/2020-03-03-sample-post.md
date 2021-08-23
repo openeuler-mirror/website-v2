@@ -5,15 +5,16 @@ tags:
     - Sample
     - ABC
     - cccc
-sig: sig-xxx
+sig: A-Tune
+banner: img/news/20201225/poster.png
 archives: 2020-03
-author: openEuler Blog Maintainer
-summary: Just about everything you'll need to style in the theme： headings, paragraphs, blockquotes, tables, code blocks, and more.
+author: openEuler news Maintainer
+summary: Just about everything you'll need to style in the theme：headings, paragraphs, blockquotes, tables, code blocks, and more.
 ---
 
 ## HTML Elements
 
-Below is just about everything you'll need to style in the blog.
+Below is just about everything you'll need to style in the news.
 
 # Heading 1
 
@@ -27,10 +28,9 @@ Below is just about everything you'll need to style in the blog.
 
 ### Body text
 
-This blog is about bla bla. **This is strong**. 
+This news is about bla bla. **This is strong**. 
 
 ![openEuler is open](./2020-03-03-sample-post-01.png)
-
 ### Quotation
 
 > The sites that have been chosen are listed and described next to each work, with encapsulating quotes or pieces of text narrating central themes for the groups.

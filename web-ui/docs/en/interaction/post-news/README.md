@@ -1,12 +1,12 @@
 ---
-title: "Guidance to Post a Blog"
+title: "Guidance to Post a News"
 
 ---
 <ClientOnly>
-  <blog-postBlog />
+  <news-postNews />
 </ClientOnly>
 
-<div id="post-blog-content">
+<div id="post-news-content">
 
 ## 准备
 
@@ -18,10 +18,10 @@ title: "Guidance to Post a Blog"
 
 4. 参考http://git.mydoc.io/?t=180692准备你的git环境
 
-## 理解博客格式
+## 理解新闻格式
 
-openEuler是用markdown格式写博客的。
-请阅读该文章 <https://gitee.com/openeuler/website-v2/blob/master/web-ui/docs/zh/interaction/post-blog/README.md>来理解openEuler博客是如何设计的。
+openEuler是用markdown格式写新闻的。
+请阅读该文章 <https://gitee.com/openeuler/website-v2/blob/master/web-ui/docs/en/interaction/post-news/README.md>来理解openEuler新闻是如何设计的。
 
 文件头需要包含如下信息：
 ```
@@ -29,25 +29,23 @@ openEuler是用markdown格式写博客的。
 title: Sample Post
 date: 2020-03-03
 tags: 
-    - Sample
-    - ABC
-    - cccc
+    - theme
+banner: img/banners/banner-2020hdc.png
+author: openEuler
 sig: sig-xxx
-archives: 2020-03
-author: openEuler Blog Maintainer
 summary: Just about everything you'll need to style in the theme：headings, paragraphs, blockquotes, tables, code blocks, and more.
 ---
 
-Here you can edit your blog. 
+Here you can edit your news. 
 ```
 
-小提示：你可以复制  https://gitee.com/openeuler/website-v2/blob/master/web-ui/docs/zh/interaction/post-blog/blog_example/2020-03-03-sample-post.md 到你的工作路径下然后继续编辑。
+小提示：你可以复制  https://gitee.com/openeuler/website-v2/blob/master/web-ui/docs/en/interaction/post-news/news_example/2020-03-03-sample-post.md 到你的工作路径下然后继续编辑。
 
-## 提交博客
+## 提交新闻
 
-博客的提交利用了Gitee的PR(Pull Request)。
+新闻的提交利用了Gitee的PR(Pull Request)。
 
-1. Fork openEuler 博客项目  <https://gitee.com/openeuler/website-v2> 到你自己的Gitee上。如果需要具体指导请参考 <http://git.mydoc.io/?t=153749> 。
+1. Fork openEuler 新闻项目  <https://gitee.com/openeuler/website-v2> 到你自己的Gitee上。如果需要具体指导请参考 <http://git.mydoc.io/?t=153749> 。
 
 2. Clone代码
 
@@ -63,11 +61,11 @@ git checkout -b <branch-name>
 
 4. 创建工作路径
 
-如果你发表中文博客，工作路径是 web-ui/docs/zh/blog 。
-假设你要写一个英文博客：
+如果你发表中文新闻，工作路径是 web-ui/docs/zh/news 。
+假设你要写一个英文新闻：
 
 ```
-cd web-ui/docs/en/blog
+cd web-ui/docs/en/news
 mkdir <your-gitee-id>
 cd <your-gitee-id>
 touch YEAR-MONTH-DAY-title.md
@@ -77,7 +75,7 @@ touch YEAR-MONTH-DAY-title.md
 ```
 YEAR-MONTH-DAY-title-NN.MARKUP
 ```
-其中，YEAR, MONTH, DAY, 和 title 和你的博客md文件名一致。NN 是01、02、03这样的序号。MARKUP文件扩展名。如下例子：
+其中，YEAR, MONTH, DAY, 和 title 和你的新闻md文件名一致。NN 是01、02、03这样的序号。MARKUP文件扩展名。如下例子：
 ```
 2020-01-01-new-years-is-coming.md
 2020-01-01-new-years-is-coming-01.png
@@ -89,7 +87,7 @@ YEAR-MONTH-DAY-title-NN.MARKUP
 <img src = "./2020-01-01-new-years-is-coming-01.png">
 ```
 
-1. Commit 你的博客
+1. Commit 你的新闻
 
 ```
 git add <file-path>
@@ -105,7 +103,7 @@ git push origin <branch-name>:<branch-name>
 </div>
 
 <style lang="less">
-#post-blog-content{
+#post-news-content{
   width: 1120px;
   margin: 0 auto;
   margin-bottom: 200px;
@@ -164,7 +162,7 @@ git push origin <branch-name>:<branch-name>
   }
 }
 @media screen and (max-width: 1000px) {
-    #post-blog-content {
+    #post-news-content {
         width: 100%;
         margin: 0 auto;
         padding: 0 15px;
