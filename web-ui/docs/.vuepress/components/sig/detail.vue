@@ -160,17 +160,6 @@
                     </li>
                 </ul>
             </div>
-            <!-- <div class="item">
-                <div class="header">
-                    <span class="left">{{ i18n.sig.SIG_DETAIL.VIDEO }}</span>
-                    <span class="right">{{ i18n.sig.SIG_DETAIL.MORE }}</span>
-                </div>
-                <ul class="body">
-                    <li class="empty">
-                        {{i18n.sig.SIG_DETAIL.VIDEO_EMPTY}}
-                    </li>
-                </ul>
-            </div> -->
         </div>
     </div>
 </template>
@@ -252,8 +241,14 @@ export default {
         ];
     },
     methods: {
+        /**
+         * 获取属于当前sig下的博客或新闻列表
+         * @param { string } 博客或新闻对应的枚举字符串
+         * @return { Array } 筛选之后的列表
+         */
         getList(val) {
             let list = this.$sitePages.filter((item) => {
+                // 筛选当前语言和当前传入的枚举参数进行过滤
                 if (
                     item.path.indexOf("/" + this.$lang + val) === 0 &&
                     item.frontmatter.sig === this.$route.query.name
