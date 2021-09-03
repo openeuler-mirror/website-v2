@@ -554,6 +554,9 @@ module.exports = {
                 LEFT_IMG_LINK: 'http://www.chinaredflag.cn/',
                 LEFT_IMG_PC: '/img/home/link/zhongkehongqi.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-zhongkehongqi.png',
+                RIGHT_IMG_LINK: 'https://www.suse.com/',
+                RIGHT_IMG_PC: '/img/home/link/suse.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-suse.png'
             }
         ],
         FRIENDSHIP_LINK_LIST:[
@@ -1112,6 +1115,9 @@ module.exports = {
                 LEFT_IMG_LINK: 'http://www.chinaredflag.cn/',
                 LEFT_IMG_PC: '/img/home/link/zhongkehongqi.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-zhongkehongqi.png',
+                RIGHT_IMG_LINK: 'https://www.suse.com/',
+                RIGHT_IMG_PC: '/img/home/link/suse.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-suse.png'
             }
         ],
         FRIENDSHIP_LINK_LIST:[
@@ -1671,6 +1677,9 @@ module.exports = {
                 LEFT_IMG_LINK: 'http://www.chinaredflag.cn/',
                 LEFT_IMG_PC: '/img/home/link/zhongkehongqi.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-zhongkehongqi.png',
+                RIGHT_IMG_LINK: 'https://www.suse.com/',
+                RIGHT_IMG_PC: '/img/home/link/suse.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-suse.png'
             }
         ],
         FRIENDSHIP_LINK_LIST:[
