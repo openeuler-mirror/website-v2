@@ -3209,5 +3209,24 @@
       "chipModel": "3508",
       "item": "03024JMY",
       "downloadLink": "inbox"
+    },
+	{
+      "vendorID": "144d",
+      "deviceID": "a80a",
+      "svID": "144d",
+      "ssID": "13a8",
+      "architecture": "x86_64",
+      "os": "openEuler 20.03 LTS SP1",
+      "driverName": "nvme",
+      "version": "1.0",
+      "type": "SSD",
+      "driverDate": "2020.12.03",
+      "sha256": "",
+      "driverSize": "84KB",
+      "chipVendor": "Samsung",
+      "boardModel": "pm9A3",
+      "chipModel": "a80a",
+      "item": "",
+      "downloadLink": "inbox"
     }
 ]

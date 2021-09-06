@@ -2709,5 +2709,95 @@
       "hostBusAdapter": "LSI 930-16i",
       "hardDiskDrive": "Intel S4610"
     }
+  },
+  {
+    "hardwareFactory": "huawei",
+    "hardwareModel": "E9000 CH121 V5",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "x86_64",
+    "date": "2021/07/03",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/e-series/ch121-v5-node",
+    "boardCards": [
+      {
+        "vendorID": "1000",
+        "deviceID": "0016",
+        "svID": "19E5",
+        "ssID": "D215",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "megaraid_sas",
+        "version": "31.100.01.00",
+        "type": "raid",
+        "driverDate": "2020.12.28",
+        "sha256": "4C5D1B8BFF927AAADF5D6AFC162F91CE0445A417",
+        "driverSize": "103.4K",
+        "chipVendor": "Avago",
+        "boardModel": "SR450C-M",
+        "chipModel": "3508",
+        "item": "03033EFT",
+        "downloadLink": "inbox"
+      },
+      {
+
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://e.huawei.com/cn/products/servers/e-series/ch121-v5-node",
+      "certificationTime": "2021/07/03",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "7.86(U47)",
+      "cpu": "Intel(R)Xeon®Gold 6248 CPU @ 2.5GHz ",
+      "ram": "2*32G DIMMS",
+      "portsBusTypes": "",
+      "videoAdapter": "",
+      "hostBusAdapter": "Avago 3508",
+      "hardDiskDrive": ""
+    }
+  },
+  {
+    "hardwareFactory": "huawei",
+    "hardwareModel": "X6000 XH321L V5",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "x86_64",
+    "date": "2021/07/03",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/x-series/xh321l-v5",
+    "boardCards": [
+      {
+        "vendorID": "1000",
+        "deviceID": "0017",
+        "svID": "19e5",
+        "ssID": "d213",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rh1",
+        "type": "RAID",
+        "driverDate": "2020.12.28",
+        "sha256": "67CB2F34DC66D76DE0C84BBF64688B91CE243549",
+        "driverSize": "68.4K",
+        "chipVendor": "Avago",
+        "boardModel": "SR150-M",
+        "chipModel": "3408iMR",
+        "item": "03024JNF",
+        "downloadLink": "inbox"
+      },
+      {
+
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://e.huawei.com/cn/products/servers/x-series/xh321l-v5",
+      "certificationTime": "2021/07/03",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "7.79(U47)",
+      "cpu": "Intel(R)Xeon®Gold 6240 CPU @ 2.5GHz ",
+      "ram": "2*32G DIMMS",
+      "portsBusTypes": "",
+      "videoAdapter": "",
+      "hostBusAdapter": "Avago 3408iMR",
+      "hardDiskDrive": ""
+    }
   }
 ]
