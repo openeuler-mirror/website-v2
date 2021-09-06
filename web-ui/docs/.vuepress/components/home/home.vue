@@ -8,12 +8,6 @@
                         @click="go(i18n.home.HOME_ACTIVETIES.LINK)"
                     ></div>
                 </el-carousel-item>
-                <el-carousel-item v-if="$lang === 'zh'">
-                    <div class="activities-banner" 
-                        :style="{backgroundImage: i18n.home.DEV_COMPETITION.PC_IMG}"
-                        @click="go(i18n.home.DEV_COMPETITION.LINK)"
-                    ></div>
-                </el-carousel-item>
                 <el-carousel-item>
                     <div class="carousel-video">
                         <video poster="/img/home/BannerVideo.png" loop width="100%" height="500px" id="home-video">
@@ -30,9 +24,6 @@
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
                 <swiper-slide class="carousel-item-index" v-if="$lang === 'zh'">
                     <div class="mobile-version" @click="go(i18n.home.HOME_ACTIVETIES.LINK)" :style="{backgroundImage:i18n.home.HOME_ACTIVETIES.MOBILE_IMG}"></div>
-                </swiper-slide>
-                <swiper-slide class="carousel-item-index" v-if="$lang === 'zh'">
-                    <div class="mobile-version" @click="go(i18n.home.DEV_COMPETITION.LINK)" :style="{backgroundImage:i18n.home.DEV_COMPETITION.MOBILE_IMG}"></div>
                 </swiper-slide>
                 <swiper-slide>
                     <div class="carousel-video">
@@ -395,7 +386,7 @@
                 mobileSwiperInterval: null,
                 mobilePagenationIndex: 1,
                 developerList: [],
-                bannerAmount: 3,
+                bannerAmount: 2,
                 statisticParams: {
                     type: 'openEuler'
                 },
@@ -418,7 +409,7 @@
             }
             this.developerList = this.changeArr(this.i18n.home.HOME_DEV.DEV_INFO,16);
             let lang = this.$lang;
-            this.bannerAmount = lang === 'zh' ? 3 : 1;
+            this.bannerAmount = lang === 'zh' ? 2 : 1;
         },
         beforeDestroy () {
             this.mobileSwiperInterval && clearInterval(this.mobileSwiperInterval);
