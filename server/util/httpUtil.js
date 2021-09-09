@@ -112,28 +112,21 @@ function postES(url, token, reqBody) {
     });
 }
 
-function updateES(url, token, reqBody) {
-    let options = {
-        url: url,
-        method: 'POST',
-        json: false,
-        timeout: timeOut,
-        headers: {
-            'Content-type': 'application/json',
-            'Authorization': 'Basic ' + token
-        },
-        rejectUnauthorized: false,
-        body: reqBody
-    };
-    return new Promise((resolve, reject) => {
-        request(options, function (error, response, body) {
-            if (error == null) {
-                resolve(body);
-            } else {
-                reject(error);
-            }
-        });
-    });
+function addDataToReindex(url, method, jsonBool, token, reqBody) {
+    return esHttp(url, method, jsonBool, token, reqBody);
+}
+
+function getViews(url, method, jsonBool, token, reqBody) {
+    return esHttp(url, method, jsonBool, token, reqBody);
+}
+
+
+function updateDataToES(url, method, jsonBool, token, reqBody) {
+    return esHttp(url, method, jsonBool, token, reqBody);
+}
+
+function updateViews(url, method, jsonBool, token, reqBody) {
+    return esHttp(url, method, jsonBool, token, reqBody);
 }
 
 function getSig(url) {
@@ -157,13 +150,40 @@ function getSig(url) {
     });
 }
 
+function esHttp(url, method, jsonBool, token, reqBody) {
+    let options = {
+        url: url,
+        method: method,
+        json: jsonBool,
+        timeout: timeOut,
+        headers: {
+            'Content-type': 'application/json',
+            'Authorization': 'Basic ' + token
+        },
+        rejectUnauthorized: false,
+        body: reqBody
+    };
+    return new Promise((resolve, reject) => {
+        request(options, function (error, response, body) {
+            if (error == null) {
+                resolve(body);
+            } else {
+                reject(error);
+            }
+        });
+    });
+}
+
 module.exports = {
     getUrl: getUrl,
     postUrl: postUrl,
     indexES: indexES,
     postES: postES,
-    updateES: updateES,
     getSig: getSig,
+    getViews: getViews,
+    updateDataToES: updateDataToES,
+    updateViews: updateViews,
+    addDataToReindex: addDataToReindex,
     mailError: mailError,
     sigError: sigError,
     authError: authError
