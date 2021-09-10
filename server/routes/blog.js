@@ -51,12 +51,32 @@ router.post('/visit', function (req, res) {
                 let url = ES.ES_URL + indexEs + '/_update/' + newData.hits.hits[0]._id;
                 let updateViewJson = esUtil.getUpdateViewJson();
                 httpUtil.updateViews(url, 'POST', false, esUtil.esToken, updateViewJson).then(data => {
+                    res.json({
+                        code: 200,
+                        data: 'success'
+                    });
                 }).catch(err => {
+                    console.log('[' + logUtil.getTime() + ']' + err.stack + os.EOL);
+                    res.json({
+                        code: 500,
+                        data: err.stack
+                    });
                 });
             } else {
-                let now = logUtil.getTime();
-                let meta = '[' + now + ']' + indexEs + ' get views failed';
-                console.log(meta + os.EOL + JSON.stringify(data) + os.EOL);
+                let addDataJson = esUtil.getAddDataReqJson(title, 1, 'blog');
+                let addDocUrl = ES.ES_URL + indexEs + '/_doc';
+                httpUtil.addDataToReindex(addDocUrl, 'POST', false, esUtil.esToken, addDataJson).then(data => {
+                    res.json({
+                        code: 200,
+                        data: 'success'
+                    });
+                }).catch(err => {
+                    console.log('[' + logUtil.getTime() + ']' + err.stack + os.EOL);
+                    res.json({
+                        code: 500,
+                        data: err.stack
+                    });
+                });
             }
         }).catch(ex => {
             console.log('[' + logUtil.getTime() + ']' + ex.stack + os.EOL);
