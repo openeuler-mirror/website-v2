@@ -98,6 +98,14 @@ module.exports = {
                     '^/api-mirror/': ''
                 }
             },
+            '/api-intership/': {
+                target: 'http://159.138.2.2:8080/',
+                ws: true,
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api-intership/': ''
+                }
+            },
             '/api/': {
                 target: 'https://openeuler.org/api/',
                 ws: true,

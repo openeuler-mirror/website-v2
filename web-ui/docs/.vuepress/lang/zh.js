@@ -18,4 +18,5 @@ module.exports = {
     learn: require('./lang-modules/learn').cn,
     compatibility: require('./lang-modules/compatibility').cn,
     activities: require('./lang-modules/activities').cn,
+    intership: require('./lang-modules/intership').cn
 };
