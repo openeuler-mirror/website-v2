@@ -1,4 +1,3 @@
-
 ---
 title: Open source community operation metric design exploration
 date: 2021-09-15
