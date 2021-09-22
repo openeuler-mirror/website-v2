@@ -619,8 +619,8 @@ module.exports = {
             }
         ],
         HOME_NEWVERSION: {
-            MOBILE_IMG: "url('/img/home/banner/version_en_mo.png')",
-            PC_IMG: "url('/img/home/banner/version_en_pc.png')",
+            MOBILE_IMG: "url('/img/home/banner/version_en_mo.jpg')",
+            PC_IMG: "url('/img/home/banner/version_en_pc.jpg')",
             LINK: 'https://live.huawei.com/huaweiconnect/meeting/en/9433.html'
         },
         ROOM_LEFT_IMG:[
