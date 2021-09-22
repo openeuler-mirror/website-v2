@@ -162,7 +162,6 @@ function initESData() {
     let initEnBlog = readFile.initESData('master', 'en', 'blog');
     let initDocs1 = readFile.initESData('20.09', 'zh', 'docs');
     let initDocs2 = readFile.initESData('20.09', 'en', 'docs');
-    let initDocs3 = readFile.initESData('20.09', 'ru', 'docs');
     let initDocs4 = readFile.initESData('20.03_LTS', 'zh', 'docs');
     let initDocs5 = readFile.initESData('20.03_LTS', 'en', 'docs');
     let initDocs6 = readFile.initESData('20.03_LTS_SP1', 'zh', 'docs');
@@ -171,8 +170,8 @@ function initESData() {
     let initDocs9 = readFile.initESData('21.03', 'en', 'docs');
     let initDocs10 = readFile.initESData('20.03_LTS_SP2', 'zh', 'docs');
     let initDocs11 = readFile.initESData('20.03_LTS_SP2', 'en', 'docs');
-    Promise.all([initZhNews, initEnNews, initZhBlog, initEnBlog, initDocs1, initDocs2, initDocs3, initDocs4, initDocs5
-        , initDocs6, initDocs7, initDocs8, initDocs9, initDocs10, initDocs11])
+    Promise.all([initZhNews, initEnNews, initZhBlog, initEnBlog, initDocs1, initDocs2, initDocs4, initDocs5,
+        initDocs6, initDocs7, initDocs8, initDocs9, initDocs10, initDocs11])
         .then(res => {
             console.log('-------START SUCCESS-------', os.EOL);
             updateViewsFromMysql();
