@@ -50,6 +50,11 @@ module.exports = {
             PC_IMG: "url('/img/home/banner/home_pc_banner.png')",
             LINK: 'https://www.hikunpeng.com/activities/xinchuang2021'
         },
+        HOME_NEWVERSION: {
+            MOBILE_IMG: "url('/img/home/banner/version_mo.png')",
+            PC_IMG: "url('/img/home/banner/version_pc.png')",
+            LINK: 'https://live.huawei.com/huaweiconnect/meeting/cn/9412.html'
+        },
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
             INTRO_HEAD: "开始openEuler之旅吧！",
@@ -613,6 +618,11 @@ module.exports = {
                 VIDEO_URL: "https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/StratoVirt-minisite.mp4"
             }
         ],
+        HOME_NEWVERSION: {
+            MOBILE_IMG: "url('/img/home/banner/version_en_mo.png')",
+            PC_IMG: "url('/img/home/banner/version_en_pc.png')",
+            LINK: 'https://live.huawei.com/huaweiconnect/meeting/en/9433.html'
+        },
         ROOM_LEFT_IMG:[
             {
                 IMG: '/img/home/eventImg.png',

@@ -2,7 +2,13 @@
     <div class="home">
         <div class="is-pc home-carousel" v-if="!isShowH5">
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" @change="eventChange()">
-                <el-carousel-item v-if="$lang === 'zh'">
+              <el-carousel-item v-if="$lang !== 'ru'">
+                <div class="carousel-banner"
+                     :style="{backgroundImage: i18n.home.HOME_NEWVERSION.PC_IMG}"
+                     @click="go(i18n.home.HOME_NEWVERSION.LINK)"
+                ></div>
+              </el-carousel-item>
+              <el-carousel-item v-if="$lang === 'zh'">
                     <div class="carousel-banner"
                         :style="{backgroundImage: i18n.home.HOME_ACTIVETIES.PC_IMG}"
                         @click="go(i18n.home.HOME_ACTIVETIES.LINK)"
@@ -22,6 +28,9 @@
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
+              <swiper-slide class="carousel-item-index" v-if="$lang !== 'ru'">
+                <div class="mobile-version" @click="go(i18n.home.HOME_NEWVERSION.LINK)" :style="{backgroundImage:i18n.home.HOME_NEWVERSION.MOBILE_IMG}"></div>
+              </swiper-slide>
                 <swiper-slide class="carousel-item-index" v-if="$lang === 'zh'">
                     <div class="mobile-version" @click="go(i18n.home.HOME_ACTIVETIES.LINK)" :style="{backgroundImage:i18n.home.HOME_ACTIVETIES.MOBILE_IMG}"></div>
                 </swiper-slide>
@@ -213,7 +222,7 @@
                 </div>
                 <div class="news-room">
                     <h5>{{ i18n.home.HOME_ROOMS.NEWS_NAME }}</h5>
-                    <div class="rooms" 
+                    <div class="rooms"
                             v-for="(item, index) in newsList"
                             :key="index">
                         <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
@@ -255,7 +264,7 @@
         <div class="data-round">
             <h3>{{ i18n.home.HOME_ROUND.ROUND_TITLE }}</h3>
             <div class="round-box">
-                <round class="round-item" :image="item.ROUND_IMG" :value="item.ROUND_VALUE" :description="item.ROUND_TEXT" 
+                <round class="round-item" :image="item.ROUND_IMG" :value="item.ROUND_VALUE" :description="item.ROUND_TEXT"
                     :styleParams="item.ROUND_STYLE" v-for="(item,index) in roundList"></round>
             </div>
         </div>
@@ -349,7 +358,7 @@
             .catch(data => {
                 that.$message.error(data);
             })
-        }   
+        }
     }
     export default {
         name: "home",
@@ -375,7 +384,7 @@
                 videoCtrlParams:{
                     element: '',
                     isShow: false,  //是否使用大控件
-                    barWidth: 300  
+                    barWidth: 300
                 },
                 isNowPlay: false,
                 isShowCard: false,  //是否显示移动端点击体验的卡片
@@ -386,7 +395,7 @@
                 mobileSwiperInterval: null,
                 mobilePagenationIndex: 1,
                 developerList: [],
-                bannerAmount: 2,
+                bannerAmount: 3,
                 statisticParams: {
                     type: 'openEuler'
                 },
@@ -409,7 +418,7 @@
             }
             this.developerList = this.changeArr(this.i18n.home.HOME_DEV.DEV_INFO,16);
             let lang = this.$lang;
-            this.bannerAmount = lang === 'zh' ? 2 : 1;
+            this.bannerAmount = lang === 'zh' ? 3 : 1;
         },
         beforeDestroy () {
             this.mobileSwiperInterval && clearInterval(this.mobileSwiperInterval);
@@ -422,7 +431,7 @@
         components: {
             calender,
             playcontroll,
-            Swiper, 
+            Swiper,
             SwiperSlide,
             round
         },
@@ -647,18 +656,18 @@
             }
         }
     }
-    .en-weight-family{ 
-        
+    .en-weight-family{
+
         font-weight: 400 !important;
     }
     .en-h3{
         line-height: 34px !important;
-        
+
         font-weight: 400 !important;
         color: #000000 !important;
     }
     .en-p{
-        
+
         font-weight: 400 !important;
         line-height: 32px !important;
     }
@@ -697,7 +706,7 @@
         color: #000;
         text-align: left;
         line-height: 48px;
-        
+
         margin-top: 100px;
     }
     .home-carousel .el-carousel__item span {
@@ -800,7 +809,7 @@
     }
     .activities-banner {
         width: 1120px;
-        margin: 0 auto; 
+        margin: 0 auto;
         height: 100%;
         background-size: contain;
         background-repeat: no-repeat;
@@ -818,7 +827,7 @@
             width: 120px;
             height: 36px;
             font-size: 18px;
-            
+
             margin-top: 60px;
             color: #ffffff;
             line-height: 24px;
@@ -831,7 +840,7 @@
         }
         .en-version{
             width: 120px;
-            
+
         }
     }
     .carousel-item .card-summer span {
@@ -878,13 +887,13 @@
                 text-align: left;
                 &:first-of-type{
                     font-size: 45px;
-                    
+
                     color: #1E1E1E;
                     line-height: 61px;
                 }
                 &:last-of-type{
                     font-size: 32px;
-                    
+
                     font-weight: normal;
                     color: #1E1E1E;
                     line-height: 39px;
@@ -897,7 +906,7 @@
             margin-top: 57px;
             p{
                 text-align: left;
-                
+
                 font-weight: normal;
                 color: #1E1E1E;
                 &:first-of-type{
@@ -948,7 +957,7 @@
     }
     .carousel-video img {
         width: 100%;
-        
+
     }
     .carousel-video video {
         outline: none;
@@ -1060,7 +1069,7 @@
         margin: 0 auto 40px auto;
     }
     .home-introduce .en-p{
-        
+
         font-weight: 400;
     }
     .home-introduce .en-areabox-down{
@@ -1069,7 +1078,7 @@
     }
     .home-introduce p {
         max-width: 576px;
-        
+
     }
     .home-introduce .mapArea {
         display: inline-block;
@@ -1213,7 +1222,7 @@
     }
     .snd-guidance .en-link-title{
         font-size: 12px !important;
-        
+
         font-weight: 400 !important;
         color: #000000 !important;
         line-height: 18px !important;
@@ -1240,7 +1249,7 @@
     .guide-way {
         margin-right: 20px;
         text-align: center;
-        
+
     }
     .guide-way:last-child {
         margin: 0;
@@ -1259,7 +1268,7 @@
         margin: 0 10px 0 0;
         span{
             font-size: 10px !important;
-            
+
             font-weight: normal !important;
             color: #000000 !important;
             line-height: 12px !important;
@@ -1294,7 +1303,7 @@
         color: #fff;
     }
     .en-h3-home .en-h3-home{
-        
+
         font-weight: 400 !important;
         color: #FFFFFF !important;
         line-height: 34px !important;
@@ -1445,7 +1454,7 @@
         line-height: 16px;
         color: #002fa7;
         text-decoration: none;
-        
+
         cursor: pointer;
     }
     .room-title {
@@ -1494,8 +1503,8 @@
         width: 1080px;
         margin: 60px auto 0;
     }
-    .home-developer .en-developer-p{ 
-        
+    .home-developer .en-developer-p{
+
         font-weight: 400 !important;
         line-height: 20px !important;
     }
@@ -1532,7 +1541,7 @@
         font-size: 16px;
         margin: 20px 0 10px;
         text-transform: uppercase;
-        
+
     }
     .dev-dever .dever-rank {
         font-size: 16px;
@@ -1541,7 +1550,7 @@
     }
     .dev-dever .en-rank {
         font-size: 14px !important;
-        
+
         line-height: 20px !important;
     }
     .dev-link {
@@ -1577,7 +1586,7 @@
         margin: 0 auto;
     }
     .source-contain .en-source-title{
-        
+
         font-weight: 400;
         color: #000000;
         line-height: 32px;
@@ -1763,7 +1772,7 @@
         }
         .home-carousel .el-carousel__item h3 {
             font-size: 18px;
-            
+
             text-align: center;
             margin-top: 35px;
             margin-bottom: 0;
@@ -1934,13 +1943,13 @@
         }
         .dev-dever .dever-name {
             font-size: 18px;
-            
+
             margin: 0;
         }
         .dev-dever .dever-rank {
             margin: 0;
             font-size: 14px;
-            
+
         }
         .dev-dever:nth-child(-n+4) {
             display: inline-block;
