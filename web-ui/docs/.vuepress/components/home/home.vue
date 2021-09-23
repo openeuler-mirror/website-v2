@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <div class="is-pc home-carousel" v-if="!isShowH5">
+        <div class="is-pc home-carousel" v-if="!isShowH5 && $lang !== 'ru'">
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" @change="eventChange()">
               <el-carousel-item v-if="$lang !== 'ru'">
                 <div class="carousel-banner"
@@ -8,46 +8,13 @@
                      @click="go(i18n.home.HOME_NEWVERSION.LINK)"
                 ></div>
               </el-carousel-item>
-              <el-carousel-item v-if="$lang === 'zh'">
-                    <div class="carousel-banner"
-                        :style="{backgroundImage: i18n.home.HOME_ACTIVETIES.PC_IMG}"
-                        @click="go(i18n.home.HOME_ACTIVETIES.LINK)"
-                    ></div>
-                </el-carousel-item>
-                <el-carousel-item>
-                    <div class="carousel-video">
-                        <video poster="/img/home/BannerVideo.png" loop width="100%" height="500px" id="home-video">
-                            <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler_MG%2BAnimate_1920x500_0128.mp4"  type="video/mp4">
-                        </video>
-                        <playcontroll :ctrl-obj="videoCtrlParams" ref="playctrlEle" @playStatus="checkStatus"></playcontroll>
-                        <div class="play-btn" v-if="!isNowPlay" @click="playHomeVideo()">
-                        </div>
-                    </div>
-                </el-carousel-item>
             </el-carousel>
         </div>
-        <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
+        <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5 && $lang !== 'ru'">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
               <swiper-slide class="carousel-item-index" v-if="$lang !== 'ru'">
                 <div class="mobile-version" @click="go(i18n.home.HOME_NEWVERSION.LINK)" :style="{backgroundImage:i18n.home.HOME_NEWVERSION.MOBILE_IMG}"></div>
               </swiper-slide>
-                <swiper-slide class="carousel-item-index" v-if="$lang === 'zh'">
-                    <div class="mobile-version" @click="go(i18n.home.HOME_ACTIVETIES.LINK)" :style="{backgroundImage:i18n.home.HOME_ACTIVETIES.MOBILE_IMG}"></div>
-                </swiper-slide>
-                <swiper-slide>
-                    <div class="carousel-video">
-                        <video poster="/img/home/BannerVideo.png"
-                                loop
-                                muted
-                                width="100%"
-                                height="300px"
-                                ref="video"
-                                @click="playVideo">
-                            <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler_MG%2BAnimate_1080P_20210128.mp4"  type="video/mp4">
-                        </video>
-                        <div class="mobile-btn" v-show="mobilePlayBtnDisplay" @click="playVideo"></div>
-                    </div>
-                </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
                 <li v-for="item in bannerAmount" :class="{'mobile-pagination-active': mobilePagenationIndex===item}"></li>

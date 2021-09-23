@@ -45,11 +45,6 @@ module.exports = {
                 LINK: '/interaction/news-list/'
             }
         ],
-        HOME_ACTIVETIES: {
-            MOBILE_IMG: "url('/img/home/banner/home_mobile_banner.png')",
-            PC_IMG: "url('/img/home/banner/home_pc_banner.png')",
-            LINK: 'https://www.hikunpeng.com/activities/xinchuang2021'
-        },
         HOME_NEWVERSION: {
             MOBILE_IMG: "url('/img/home/banner/version_mo.png')",
             PC_IMG: "url('/img/home/banner/version_pc.png')",
