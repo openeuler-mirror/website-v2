@@ -514,17 +514,9 @@ module.exports = {
         },
         HOME_SOURCE_EDITION:[
             {
-                LEFT_IMG_LINK: 'http://www.iscas.ac.cn/',
-                LEFT_IMG_PC: '/img/home/link/iscas.png',
-                LEFT_IMG_MOBILE: '/img/home/link/mobile-iscas.png',
-                RIGHT_IMG_LINK: 'https://www.turbolinux.com.cn/',
-                RIGHT_IMG_PC: '/img/home/link/turbo.png',
-                RIGHT_IMG_MOBILE: '/img/home/link/mobile-turbo.png'
-            },
-            {
-                LEFT_IMG_LINK: 'http://www.i-soft.com.cn/',
-                LEFT_IMG_PC: '/img/home/link/cetc.png',
-                LEFT_IMG_MOBILE: '/img/home/link/mobile-cetc.png',
+                LEFT_IMG_LINK: 'http://www.kylinsec.com.cn/',
+                LEFT_IMG_PC: '/img/home/link/xinan.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-xinan.png',
                 RIGHT_IMG_LINK: 'https://www.uniontech.com/',
                 RIGHT_IMG_PC: '/img/home/link/tongxin.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongxin.png'
@@ -533,14 +525,22 @@ module.exports = {
                 LEFT_IMG_LINK: 'https://www.kylinos.cn/',
                 LEFT_IMG_PC: '/img/home/link/qiling.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-qiling.png',
-                RIGHT_IMG_LINK: 'http://www.hoperun.com/',
-                RIGHT_IMG_PC: '/img/home/link/hopeRun.png',
-                RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeRun.png'
+                RIGHT_IMG_LINK: 'http://www.iscas.ac.cn/',
+                RIGHT_IMG_PC: '/img/home/link/iscas.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-iscas.png',
             },
             {
-                LEFT_IMG_LINK: 'http://www.kylinsec.com.cn/',
-                LEFT_IMG_PC: '/img/home/link/xinan.png',
-                LEFT_IMG_MOBILE: '/img/home/link/mobile-xinan.png',
+                LEFT_IMG_LINK: 'http://www.i-soft.com.cn/',
+                LEFT_IMG_PC: '/img/home/link/cetc.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-cetc.png',
+                RIGHT_IMG_LINK: 'https://www.turbolinux.com.cn/',
+                RIGHT_IMG_PC: '/img/home/link/turbo.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-turbo.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://www.hoperun.com/',
+                LEFT_IMG_PC: '/img/home/link/hopeRun.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-hopeRun.png',
                 RIGHT_IMG_LINK: 'http://www.tongyuanos.com/',
                 RIGHT_IMG_PC: '/img/home/link/tongYuan.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongYuan.png'
@@ -1080,17 +1080,9 @@ module.exports = {
         },
         HOME_SOURCE_EDITION:[
             {
-                LEFT_IMG_LINK: 'http://www.iscas.ac.cn/',
-                LEFT_IMG_PC: '/img/home/link/iscas.png',
-                LEFT_IMG_MOBILE: '/img/home/link/mobile-iscas.png',
-                RIGHT_IMG_LINK: 'https://www.turbolinux.com.cn/',
-                RIGHT_IMG_PC: '/img/home/link/turbo.png',
-                RIGHT_IMG_MOBILE: '/img/home/link/mobile-turbo.png'
-            },
-            {
-                LEFT_IMG_LINK: 'http://www.i-soft.com.cn/',
-                LEFT_IMG_PC: '/img/home/link/cetc.png',
-                LEFT_IMG_MOBILE: '/img/home/link/mobile-cetc.png',
+                LEFT_IMG_LINK: 'http://www.kylinsec.com.cn/',
+                LEFT_IMG_PC: '/img/home/link/xinan.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-xinan.png',
                 RIGHT_IMG_LINK: 'https://www.uniontech.com/',
                 RIGHT_IMG_PC: '/img/home/link/tongxin.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongxin.png'
@@ -1099,14 +1091,22 @@ module.exports = {
                 LEFT_IMG_LINK: 'https://www.kylinos.cn/',
                 LEFT_IMG_PC: '/img/home/link/qiling.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-qiling.png',
-                RIGHT_IMG_LINK: 'http://www.hoperun.com/',
-                RIGHT_IMG_PC: '/img/home/link/hopeRun.png',
-                RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeRun.png'
+                RIGHT_IMG_LINK: 'http://www.iscas.ac.cn/',
+                RIGHT_IMG_PC: '/img/home/link/iscas.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-iscas.png',
             },
             {
-                LEFT_IMG_LINK: 'http://www.kylinsec.com.cn/',
-                LEFT_IMG_PC: '/img/home/link/xinan.png',
-                LEFT_IMG_MOBILE: '/img/home/link/mobile-xinan.png',
+                LEFT_IMG_LINK: 'http://www.i-soft.com.cn/',
+                LEFT_IMG_PC: '/img/home/link/cetc.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-cetc.png',
+                RIGHT_IMG_LINK: 'https://www.turbolinux.com.cn/',
+                RIGHT_IMG_PC: '/img/home/link/turbo.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-turbo.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://www.hoperun.com/',
+                LEFT_IMG_PC: '/img/home/link/hopeRun.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-hopeRun.png',
                 RIGHT_IMG_LINK: 'http://www.tongyuanos.com/',
                 RIGHT_IMG_PC: '/img/home/link/tongYuan.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongYuan.png'
@@ -1642,17 +1642,9 @@ module.exports = {
         },
         HOME_SOURCE_EDITION:[
             {
-                LEFT_IMG_LINK: 'http://www.iscas.ac.cn/',
-                LEFT_IMG_PC: '/img/home/link/iscas.png',
-                LEFT_IMG_MOBILE: '/img/home/link/mobile-iscas.png',
-                RIGHT_IMG_LINK: 'https://www.turbolinux.com.cn/',
-                RIGHT_IMG_PC: '/img/home/link/turbo.png',
-                RIGHT_IMG_MOBILE: '/img/home/link/mobile-turbo.png'
-            },
-            {
-                LEFT_IMG_LINK: 'http://www.i-soft.com.cn/',
-                LEFT_IMG_PC: '/img/home/link/cetc.png',
-                LEFT_IMG_MOBILE: '/img/home/link/mobile-cetc.png',
+                LEFT_IMG_LINK: 'http://www.kylinsec.com.cn/',
+                LEFT_IMG_PC: '/img/home/link/xinan.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-xinan.png',
                 RIGHT_IMG_LINK: 'https://www.uniontech.com/',
                 RIGHT_IMG_PC: '/img/home/link/tongxin.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongxin.png'
@@ -1661,14 +1653,22 @@ module.exports = {
                 LEFT_IMG_LINK: 'https://www.kylinos.cn/',
                 LEFT_IMG_PC: '/img/home/link/qiling.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-qiling.png',
-                RIGHT_IMG_LINK: 'http://www.hoperun.com/',
-                RIGHT_IMG_PC: '/img/home/link/hopeRun.png',
-                RIGHT_IMG_MOBILE: '/img/home/link/mobile-hopeRun.png'
+                RIGHT_IMG_LINK: 'http://www.iscas.ac.cn/',
+                RIGHT_IMG_PC: '/img/home/link/iscas.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-iscas.png',
             },
             {
-                LEFT_IMG_LINK: 'http://www.kylinsec.com.cn/',
-                LEFT_IMG_PC: '/img/home/link/xinan.png',
-                LEFT_IMG_MOBILE: '/img/home/link/mobile-xinan.png',
+                LEFT_IMG_LINK: 'http://www.i-soft.com.cn/',
+                LEFT_IMG_PC: '/img/home/link/cetc.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-cetc.png',
+                RIGHT_IMG_LINK: 'https://www.turbolinux.com.cn/',
+                RIGHT_IMG_PC: '/img/home/link/turbo.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/mobile-turbo.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://www.hoperun.com/',
+                LEFT_IMG_PC: '/img/home/link/hopeRun.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-hopeRun.png',
                 RIGHT_IMG_LINK: 'http://www.tongyuanos.com/',
                 RIGHT_IMG_PC: '/img/home/link/tongYuan.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-tongYuan.png'
