@@ -266,6 +266,7 @@
             </div>
             <div class="source-publish-link publish diff-pc-mobile">
                 <h5 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_SOURCE.SOURCE_PUBLISH_TITLE }}</h5>
+              <p class="publish-rank" v-if="$lang === 'zh'">（以商业发行版首次发布时间排序）</p>
                 <div class="publish-edition" v-for="(item,index) in i18n.home.HOME_SOURCE_EDITION">
                     <a :href="item.LEFT_IMG_LINK" target="_blank">
                         <img class="pc-img" v-lazy="item.LEFT_IMG_PC" alt="">
@@ -1624,11 +1625,20 @@
             display: none;
         }
     }
-    .source-publish-link h5 {
+    html[lang="zh"] .source-publish-link h5 {
         text-align: center;
         line-height: 30px;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         color: rgba(0, 0, 0, .87);
+    }
+    .source-publish-link h5 {
+      text-align: center;
+      line-height: 30px;
+      margin-bottom: 50px;
+      color: rgba(0, 0, 0, .87);
+    }
+    .source-publish-link .publish-rank {
+      margin-bottom: 50px;
     }
     .publish-edition {
         display: flex;
@@ -1980,12 +1990,21 @@
                 display: none;
             }
         }
-        .source-publish-link h5 {
+      html[lang="zh"] .source-publish-link h5 {
             font-size: 18px;
             font-weight: 600;
             line-height: 18px;
-            margin-bottom: 0;
+            margin-bottom: 20px;
         }
+      .source-publish-link h5 {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 18px;
+        margin-bottom: 0;
+      }
+      .source-publish-link .publish-rank {
+        margin-bottom: 30px;
+      }
         html[lang="ru"] .source-publish-link h5 {
           line-height: 34px;
         }
