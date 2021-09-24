@@ -581,7 +581,10 @@ module.exports = {
             {
                 LEFT_IMG_LINK: 'https://kaiyuanshe.cn/',
                 LEFT_IMG_PC: '/img/home/link/kaiyuanshe-logo.png',
-                LEFT_IMG_MOBILE: '/img/home/link/kaiyuanshe-logo-mobile.png'
+                LEFT_IMG_MOBILE: '/img/home/link/kaiyuanshe-logo-mobile.png',
+                RIGHT_IMG_LINK: 'http://www.vulab.com.cn/',
+                RIGHT_IMG_PC: '/img/home/link/zhongke_pc.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/zhongke_mo.png',
             }
         ],
         MORE: "更多",
@@ -1146,7 +1149,10 @@ module.exports = {
             {
                 LEFT_IMG_LINK: 'https://kaiyuanshe.cn/',
                 LEFT_IMG_PC: '/img/home/link/kaiyuanshe-logo.png',
-                LEFT_IMG_MOBILE: '/img/home/link/kaiyuanshe-logo-mobile.png'
+                LEFT_IMG_MOBILE: '/img/home/link/kaiyuanshe-logo-mobile.png',
+                RIGHT_IMG_LINK: 'http://www.vulab.com.cn/',
+                RIGHT_IMG_PC: '/img/home/link/zhongke_pc.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/zhongke_mo.png',
             }
         ],
         MORE: "Read More",
@@ -1712,7 +1718,10 @@ module.exports = {
             {
                 LEFT_IMG_LINK: 'https://kaiyuanshe.cn/',
                 LEFT_IMG_PC: '/img/home/link/kaiyuanshe-logo.png',
-                LEFT_IMG_MOBILE: '/img/home/link/kaiyuanshe-logo-mobile.png'
+                LEFT_IMG_MOBILE: '/img/home/link/kaiyuanshe-logo-mobile.png',
+                RIGHT_IMG_LINK: 'http://www.vulab.com.cn/',
+                RIGHT_IMG_PC: '/img/home/link/zhongke_pc.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/zhongke_mo.png',
             }
         ],
         MORE: "Read More",
