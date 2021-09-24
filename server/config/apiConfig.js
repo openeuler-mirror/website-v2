@@ -10,7 +10,6 @@ const SIG_API = process.env.SIG_API;
 const API_USER_PASS = process.env.API_USER_PASS;
 const API_AUTH = 'Basic ' + new Buffer.from(API_USER_PASS).toString('base64');
 const STATISTICS_URL = process.env.STATISTICS_URL;
-const UPDATE_VIEWS_FROM_MYSQL = process.env.UPDATE_VIEWS_FROM_MYSQL;
 const ES_INDEX = {
     zh: 'openeuler_articles',
     en: 'openeuler_articles_en',
@@ -30,6 +29,5 @@ module.exports = {
     API_AUTH: API_AUTH,
     STATISTICS_URL: STATISTICS_URL,
     ES_INDEX,
-    ES_REINDEX,
-    UPDATE_VIEWS_FROM_MYSQL
+    ES_REINDEX
 };
