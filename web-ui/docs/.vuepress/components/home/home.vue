@@ -1,19 +1,27 @@
 <template>
     <div class="home">
-        <div class="is-pc home-carousel" v-if="!isShowH5 && $lang !== 'ru'">
+        <div class="banner-video" v-if="isMasked">
+          <div class="video-mask" @click="maskClicked"></div>
+          <div class="video-box">
+            <video width="100%" controls autoplay>
+              <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler_New_Release.mp4">
+            </video>
+          </div>
+        </div>
+        <div class="is-pc home-carousel" v-if="!isShowH5">
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" @change="eventChange()">
-              <el-carousel-item v-if="$lang !== 'ru'">
+              <el-carousel-item>
                 <div class="carousel-banner"
-                     :style="{backgroundImage: i18n.home.HOME_NEWVERSION.PC_IMG}"
-                     @click="go(i18n.home.HOME_NEWVERSION.LINK)"
+                     :style="{backgroundImage: i18n.home.HOME_NEWRELEASE.PC_IMG}"
+                     @click="videoClicked"
                 ></div>
               </el-carousel-item>
             </el-carousel>
         </div>
-        <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5 && $lang !== 'ru'">
+        <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
-              <swiper-slide class="carousel-item-index" v-if="$lang !== 'ru'">
-                <div class="mobile-version" @click="go(i18n.home.HOME_NEWVERSION.LINK)" :style="{backgroundImage:i18n.home.HOME_NEWVERSION.MOBILE_IMG}"></div>
+              <swiper-slide class="carousel-item-index">
+                <div class="mobile-version" @click="videoClicked" :style="{backgroundImage:i18n.home.HOME_NEWRELEASE.MOBILE_IMG}"></div>
               </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
@@ -358,17 +366,18 @@
                 isShowCard: false,  //是否显示移动端点击体验的卡片
                 mobilePlayBtnDisplay: true,
                 swiperOption: {
-                    loop: true
+                    loop: false
                 },
                 mobileSwiperInterval: null,
                 mobilePagenationIndex: 1,
                 developerList: [],
-                bannerAmount: 3,
+                bannerAmount: 1,
                 statisticParams: {
                     type: 'openEuler'
                 },
                 roundValueObj: {},
-                roundList: []
+                roundList: [],
+                isMasked: false
             }
         },
         mounted() {
@@ -386,7 +395,7 @@
             }
             this.developerList = this.changeArr(this.i18n.home.HOME_DEV.DEV_INFO,16);
             let lang = this.$lang;
-            this.bannerAmount = lang === 'zh' ? 3 : 1;
+            this.bannerAmount = lang === 'zh' ? 1 : 1;
         },
         beforeDestroy () {
             this.mobileSwiperInterval && clearInterval(this.mobileSwiperInterval);
@@ -404,6 +413,13 @@
             round
         },
         methods: {
+            videoClicked() {
+              this.isMasked = true
+              console.log('clicked');
+            },
+            maskClicked() {
+              this.isMasked = false
+            },
             slideChange () {
                 this.mobilePagenationIndex = this.$refs.mySwiper.$swiper.realIndex + 1;
             },
@@ -578,7 +594,7 @@
         height: 500px;
     }
     .el-carousel__button{
-        opacity: 0.2;
+        opacity: 0!important;
     }
     .room-card .el-carousel__container {
         height: 360px;
@@ -595,6 +611,38 @@
 </style>
 
 <style lang="less" scoped>
+  .home{
+    .banner-video {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 11;
+      @media screen and (max-width: 1000px){
+        z-index: 100;
+      }
+      .video-mask{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0.5;
+      }
+      .video-box {
+        width: 900px;
+        top: 50%;
+        left: 50%;
+        position: relative;
+        transform: translate(-50%, -50%);
+        @media screen and (max-width: 1000px){
+          width: 100%;
+        }
+      }
+    }
+  }
     #summit-video {
         background-color: white !important;
         margin-left: -100px;
@@ -617,10 +665,10 @@
                 width: 10px;
                 border-radius: 50%;
                 background-color: #000;
-                opacity: .2;
+                opacity: 0;
             }
             .mobile-pagination-active {
-                opacity: 1;
+                opacity: 0;
             }
         }
     }
@@ -978,7 +1026,7 @@
         }
     }
     .home-introduce {
-        padding-top: 100px;
+        padding-top: 70px;
         text-align: center;
         width: 1080px;
         margin: 0 auto;
@@ -1029,7 +1077,7 @@
         display: block;
     }
     .home-introduce h1 {
-        width: 771px;
+        width: 644px;
         height: 40px;
         background-image: url('/img/home/pc-h1.png');
         background-size: contain;
@@ -1785,8 +1833,8 @@
             width: 100%;
         }
         .home-introduce h1 {
-            width: 306px;
-            height: 65px;
+            width: 228px;
+            height: 60px;
             background-image: url('/img/home/mobile-h1.png');
         }
         .area-box .box-icon {

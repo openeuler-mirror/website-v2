@@ -15,7 +15,7 @@
       <ul class="card-vertical">
         <li class="vertical-left">
           <h3>{{i18n.brand.PICTURE_TITLE[0]}}</h3>
-          <img :src="i18n.brand.VERTICAL_LEFT_IMAGE[0].URL" alt />
+          <img src="/img/other/brand/standard-poster.png" alt />
           <!-- 三个下载按钮 -->
           <a :href="item.URL" target="_blank" download
           v-for="(item, index) in i18n.brand.VERTICAL_LEFT_IMAGE" :key="index">
@@ -24,7 +24,7 @@
         </li>
         <li class="vertical-center">
           <h3>{{i18n.brand.PICTURE_TITLE[1]}}</h3>
-          <img :src="i18n.brand.VERTICAL_CENTER_IMAGE[0].URL" alt />
+          <img src="/img/other/brand/mono-poster.png" alt />
           <a :href="item.URL" target="_blank" download
           v-for="(item, index) in i18n.brand.VERTICAL_CENTER_IMAGE" :key="index">
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">{{item.STYLE}}</el-button>
@@ -32,7 +32,7 @@
         </li>
         <li class="vertical-right">
           <h3>{{i18n.brand.PICTURE_TITLE[2]}}</h3>
-          <img :src="i18n.brand.VERTICAL_RIGHT_IMAGE[0].URL" alt />
+          <img src="/img/other/brand/black-poster.png" alt />
           <a :href="item.URL" target="_blank" download
           v-for="(item, index) in i18n.brand.VERTICAL_RIGHT_IMAGE" :key="index">
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">{{item.STYLE}}</el-button>
@@ -42,7 +42,7 @@
       <ul class="card-horizontal">
         <li class="horizontal-left">
           <h3>{{i18n.brand.PICTURE_TITLE[3]}}</h3>
-          <img :src="i18n.brand.HORIZONTAL_LEFT_IMAGE[0].URL" alt />
+          <img src="/img/other/brand/horizontal-poster.png" alt />
           <a :href="item.URL" target="_blank" download
           v-for="(item, index) in i18n.brand.HORIZONTAL_LEFT_IMAGE" :key="index">
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">{{item.STYLE}}</el-button>
@@ -50,7 +50,7 @@
         </li>
         <li class="horizontal-center">
           <h3>{{i18n.brand.PICTURE_TITLE[4]}}</h3>
-          <img :src="i18n.brand.HORIZONTAL_CENTER_IMAGE[0].URL" alt />
+          <img src="/img/other/brand/white-poster.png" alt />
           <a :href="item.URL" target="_blank" download
           v-for="(item, index) in i18n.brand.HORIZONTAL_CENTER_IMAGE" :key="index">
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">{{item.STYLE}}</el-button>
@@ -58,7 +58,7 @@
         </li>
         <li class="horizontal-right">
           <h3>{{i18n.brand.PICTURE_TITLE[5]}}</h3>
-          <img :src="i18n.brand.HORIZONTAL_RIGHT_IMAGE[0].URL" alt />
+          <img src="/img/other/brand/block-hor-poster.png" alt />
           <a :href="item.URL" target="_blank" download
           v-for="(item, index) in i18n.brand.HORIZONTAL_RIGHT_IMAGE" :key="index">
             <el-button size="medium" class="card-btn" type="primary" icon="el-icon-download">{{item.STYLE}}</el-button>
@@ -104,7 +104,7 @@ export default {
     width: 48px;
     height: 24px;
     font-size: 24px;
-    
+
     font-weight: normal;
     color: rgba(0, 0, 0, 1);
     line-height: 24px;
@@ -112,7 +112,7 @@ export default {
   .brand-word {
     width: 1120px;
     font-size: 14px;
-    
+
     font-weight: normal;
     color: rgba(0, 0, 0, 0.5);
     line-height: 32px;
@@ -120,7 +120,7 @@ export default {
     @media screen and (max-width: 1000px) {
       width: 315px;
       font-size: 14px;
-      
+
       font-weight: normal;
       color: rgba(0, 0, 0, 0.5);
       line-height: 24px;
@@ -169,7 +169,7 @@ export default {
     height: 24px;
     text-align: center;
     font-size: 24px;
-    
+
     color: rgba(0, 0, 0, 1);
     line-height: 24px;
     margin: 0 auto;
@@ -184,7 +184,7 @@ export default {
     padding-bottom: 50px;
   }
   .horizontal-center img {
-    padding-bottom: 27px;
+    padding-bottom: 50px;
   }
   .horizontal-right img {
     padding-top: 45px;
@@ -215,7 +215,7 @@ export default {
   .ppt-list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     li {
       width: 350px;
@@ -224,6 +224,9 @@ export default {
       box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
       margin-top: 30px;
+    }
+    li:first-child {
+      margin-right: 25px;
     }
   }
    @media screen and (max-width: 1000px) {

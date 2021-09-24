@@ -45,10 +45,9 @@ module.exports = {
                 LINK: '/interaction/news-list/'
             }
         ],
-        HOME_NEWVERSION: {
-            MOBILE_IMG: "url('/img/home/banner/version_mo.png')",
-            PC_IMG: "url('/img/home/banner/version_pc.png')",
-            LINK: 'https://live.huawei.com/huaweiconnect/meeting/cn/9412.html'
+        HOME_NEWRELEASE: {
+            MOBILE_IMG: "url('/img/home/banner/release_mo.png')",
+            PC_IMG: "url('/img/home/banner/release_pc.png')"
         },
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
@@ -613,10 +612,9 @@ module.exports = {
                 VIDEO_URL: "https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/StratoVirt-minisite.mp4"
             }
         ],
-        HOME_NEWVERSION: {
-            MOBILE_IMG: "url('/img/home/banner/version_en_mo.jpg')",
-            PC_IMG: "url('/img/home/banner/version_en_pc.jpg')",
-            LINK: 'https://live.huawei.com/huaweiconnect/meeting/en/9433.html'
+        HOME_NEWRELEASE: {
+            MOBILE_IMG: "url('/img/home/banner/release_mo.png')",
+            PC_IMG: "url('/img/home/banner/release_pc.png')"
         },
         ROOM_LEFT_IMG:[
             {
@@ -1179,6 +1177,10 @@ module.exports = {
                 VIDEO_URL: "https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/StratoVirt-minisite.mp4"
             }
         ],
+        HOME_NEWRELEASE: {
+            MOBILE_IMG: "url('/img/home/banner/release_mo.png')",
+            PC_IMG: "url('/img/home/banner/release_pc.png')"
+        },
         ROOM_LEFT_IMG:[
             {
                 IMG: '/img/home/eventImg.png',

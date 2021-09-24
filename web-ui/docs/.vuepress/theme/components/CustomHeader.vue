@@ -3,13 +3,13 @@
         <div class="nav-wrapper">
             <div class="nav-bar">
                 <img
-                    src="/openeuler.png"
+                    src="/openeuler-logo.png"
                     alt=""
                     class="nav-logo"
                     @click="goHome()"
                 />
                 <img
-                    src="/logo-mobile.png"
+                    src="/openeuler-logo.png"
                     alt=""
                     class="nav-logo nav-logo-mobile"
                     @click="goHome()"
@@ -80,7 +80,7 @@
                                 ></i
                             ></a>
                             <el-collapse-transition>
-                            
+
                                 <ul
                                     class="sub-menu"
                                     v-show="item.CLASS.indexOf('arrow-active') > -1 ||
@@ -116,7 +116,7 @@
                             ></i>
                             </a>
                             <el-collapse-transition>
-                            
+
                                 <ul
                                     class="sub-menu"
                                     v-show="gitteResourceFlag"
@@ -238,13 +238,13 @@
         <div :class="'cookie-legal ' + (($lang==='ru')?'cookie-legal-ru':'')" v-if="cookiesShow">
             <template v-if="$lang!=='ru'">
                 {{i18n.common.COOKIE_LEGAL_TEXT}}
-                <a :href="'/'+$lang+'/other/privacy/'">{{i18n.common.COOKIE_LEGAL_LINK_TEXT}}</a>    
+                <a :href="'/'+$lang+'/other/privacy/'">{{i18n.common.COOKIE_LEGAL_LINK_TEXT}}</a>
             </template>
             <template v-else>
                 {{i18n.common.COOKIE_LEGAL_TEXT}}
                 <a :href="'/'+$lang+'/other/privacy/'">{{i18n.common.COOKIE_LEGAL_LINK_TEXT}}</a>
                 {{i18n.common.COOKIE_LEGAL_TEXT_OTHER}}
-                <a :href="'/'+$lang+'/other/privacy/'">{{i18n.common.COOKIE_LEGAL_LINK_TEXT_OTHER}}</a>   
+                <a :href="'/'+$lang+'/other/privacy/'">{{i18n.common.COOKIE_LEGAL_LINK_TEXT_OTHER}}</a>
             </template>
             <img @click="close" src="/img/common/icon-close.png">
         </div>
@@ -289,7 +289,7 @@ export default {
             this.pcSearchFlag = false;
             this.$router.push({
                 path: this.resolvePath('/other/search/'),
-                query: { 
+                query: {
                     keyword: encodeURI(this.searchData)
                 }
             })
@@ -350,7 +350,7 @@ export default {
             currentLink = '/' + lang + currentLink.substring(3) + query;
             window.location.href = decodeURIComponent(currentLink);
         },
-        menuActiveFn(item) {    
+        menuActiveFn(item) {
             const $route = this.$route;
             let children = item.CHILDREN;
             if(item.OTHER_CHILDREN) {
@@ -413,9 +413,9 @@ export default {
         .el-input {
             width: 80%;
             margin: 9px;
-        }    
+        }
     }
-    
+
     .el-input__icon {
         display: inline-block;
         margin-top: 4px;
@@ -424,7 +424,7 @@ export default {
 }
 .nav-other li span {
     font-size: 16px;
-    
+
     font-weight: normal;
     color: #000000;
     line-height: 16px;
@@ -558,7 +558,7 @@ export default {
                     a {
                         border: none;
                         font-size: 16px;
-                        
+
                         height: 26px;
                         line-height: 26px;
                         display: inline-block;
@@ -584,7 +584,7 @@ export default {
                             height: 26px;
                             line-height: 26px;
                             font-size: 14px;
-                            
+
                             color: rgba(0, 0, 0, 0.7);
                             margin: 6px 0;
                             &:last-child {
@@ -605,7 +605,7 @@ export default {
             .nav-menu {
                 height: 100%;
                 flex: 3;
-                
+
                 color: #000;
                 font-size: 16px;
                 display: flex;
@@ -705,7 +705,7 @@ export default {
                 height: 100%;
                 font-size: 16px;
                 color: #000;
-                
+
                 display: flex;
                 justify-content: flex-end;
                 .lang {
@@ -745,7 +745,7 @@ export default {
                     &:hover {
                         ul {
                             transform: translate(-50%) scaleY(1);
-                            top: 60px;  
+                            top: 60px;
                         }
                     }
                     ul {
