@@ -8,7 +8,7 @@ const MAIL_ADD_URL = MAIL_API + 'members';
 const MAIL_USER_PASS = process.env.MAIL_USER_PASS;
 const SIG_API = process.env.SIG_API;
 const API_USER_PASS = process.env.API_USER_PASS;
-const API_AUTH = 'Basic ' + new Buffer.from(API_USER_PASS).toString('base64');
+const API_AUTH = 'Basic ' + new Buffer.from(process.env.API_USER_PASS).toString('base64');
 const STATISTICS_URL = process.env.STATISTICS_URL;
 const ES_INDEX = {
     zh: 'openeuler_articles',
