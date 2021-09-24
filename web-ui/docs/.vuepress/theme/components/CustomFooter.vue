@@ -2,7 +2,7 @@
     <div class="footer-wrapper">
         <div class="footer-content">
             <div class="footer-left">
-                <img src="/footer-logo.svg" class="footer-logo" />
+                <img src="/footer-logo2.svg" class="footer-logo" />
                 <div class="footer-mail">{{ i18n.common.FOOTER.MAIL }}</div>
             </div>
             <div class="footer-center">
@@ -60,7 +60,7 @@ export default {
         height: 328px;
     }
     .footer-content {
-        
+
         margin: 0 auto;
         height: 100%;
         width: 1120px;
