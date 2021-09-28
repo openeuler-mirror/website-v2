@@ -9,7 +9,7 @@ module.exports = {
             REPLAYER: '精彩回顾',
             LINKTIPS: '视频未上传，敬请期待！',
             LIVENOW: [
-                
+
             ],
             LIVEFORMERLY: [
                  {
@@ -511,19 +511,19 @@ module.exports = {
                                         TIME: '15:00-15:30',
                                         THEME: '基于 openEuler 的虚拟化和私有云落地实践',
                                         SPEAKER: ['仇大玉 华云数据控股集团有限公司'],
-                                        DESC: ['ARM 平台下，尤其是 openEuler 体系下，虚拟化平台性能优化以及如何快速适配最新的 SAN 设备，如何为用户提供较高性能的的 vGPU 体验成为一个较为突出问题，本次将给大家带来华云数据在虚拟化下的适配调优，以及虚拟化对外设支撑上的一些创新和实践。'] 
+                                        DESC: ['ARM 平台下，尤其是 openEuler 体系下，虚拟化平台性能优化以及如何快速适配最新的 SAN 设备，如何为用户提供较高性能的的 vGPU 体验成为一个较为突出问题，本次将给大家带来华云数据在虚拟化下的适配调优，以及虚拟化对外设支撑上的一些创新和实践。']
                                     },
                                     {
                                         TIME: '15:45-16:15',
                                         THEME: '基于 openEuler 的虚拟化性能优化',
                                         SPEAKER: ['庾志辉 深信服科技'],
-                                        DESC: ['介绍在 openEuler 系统上虚拟化性能的优化分享，包括存储、计算等性能的优化技术'] 
+                                        DESC: ['介绍在 openEuler 系统上虚拟化性能的优化分享，包括存储、计算等性能的优化技术']
                                     },
                                     {
                                         TIME: '16:15-16:45',
                                         THEME: '基于鲲鹏 + openEuler 创新云实践分享',
                                         SPEAKER: ['罗云 云宏信息科技股份有限公司'],
-                                        DESC: ['基于鲲鹏服务器和 openEuler 系统，我们研发了一款企业级服务器虚拟化和云管产品，赢得政府、金融、运营商等多个落地案例，从功能和性能上均收获了口碑，与各位同行分享'] 
+                                        DESC: ['基于鲲鹏服务器和 openEuler 系统，我们研发了一款企业级服务器虚拟化和云管产品，赢得政府、金融、运营商等多个落地案例，从功能和性能上均收获了口碑，与各位同行分享']
                                     },
                                     {}
                                 ]
@@ -889,22 +889,22 @@ module.exports = {
                             IMG: '/img/summit/home/lecturer/zhongjun.png',
                             NAME: '钟君',
                             POSITION: '华为 开源高级工程师'
-                        }, 
+                        },
                         {
                             IMG: '/img/summit/home/lecturer/zhangshuting.png',
                             NAME: '张舒婷',
                             POSITION: '华为 计算产品体验设计师'
-                        }, 
+                        },
                         {
                             IMG: '/img/summit/home/lecturer/weigang.png',
                             NAME: '魏刚',
                             POSITION: '华为 计算产品线可信安全技术专家'
-                        }, 
+                        },
                         {
                             IMG: '/img/summit/home/lecturer/yuanzhichang.png',
                             NAME: '袁志昌',
                             POSITION: 'Arm China 开源生态首席软件工程师'
-                        }, 
+                        },
                         {
                             IMG: '/img/summit/home/lecturer/chengong.png',
                             NAME: '陈功',
@@ -1446,6 +1446,11 @@ module.exports = {
         DEVDAY_2021: {
             PC_BANNER: '/img/summit/devday-2021/devday-2021-zh.png',
             H5_BANNER: '/img/summit/devday-2021/banner-h5-zh.png'
+        },
+        SUMMIT_2021: {
+            SPEACKER: '/img/summit/summit2021/call-speaker-zh.png',
+            SPEONSOR: '/img/summit/summit2021/call-sponsor-zh.png',
+            DEMO: '/img/summit/summit2021/call-demo-zh.png',
         }
     },
     en: {
@@ -1455,7 +1460,7 @@ module.exports = {
             REPLAYER: 'Wonderful Review',
             LINKTIPS: 'The video is not uploaded yet',
             LIVENOW: [
-            
+
             ],
             LIVEFORMERLY: [
                 {
@@ -1950,19 +1955,19 @@ module.exports = {
                                         TIME: '15:00-15:30',
                                         THEME: 'Implementing Virtualization and Private Cloud on openEuler',
                                         SPEAKER: ['Qiu Dayu, Huayun Data'],
-                                        DESC: ['How to optimize the virtualization platform performance and quickly adapt it to the latest SAN devices, and how to provide high-performance virtual GPUs (vGPUs) are the major issues on the ARM-based platform, especially on the openEuler OS. This topic will show you how Huayun Data optimizes and adapts the virtualization platform to the openEuler OS, and how the company innovates the virtualization platform to support peripheral devices.'] 
+                                        DESC: ['How to optimize the virtualization platform performance and quickly adapt it to the latest SAN devices, and how to provide high-performance virtual GPUs (vGPUs) are the major issues on the ARM-based platform, especially on the openEuler OS. This topic will show you how Huayun Data optimizes and adapts the virtualization platform to the openEuler OS, and how the company innovates the virtualization platform to support peripheral devices.']
                                     },
                                     {
                                         TIME: '15:45-16:15',
                                         THEME: 'Optimized Virtualization Performance Fueled by openEuler',
                                         SPEAKER: ['Qi Zhihui, Sangfor Technologies'],
-                                        DESC: ['The topic presents the technologies for optimizing virtualization performance on openEuler, including storage and computing performance.'] 
+                                        DESC: ['The topic presents the technologies for optimizing virtualization performance on openEuler, including storage and computing performance.']
                                     },
                                     {
                                         TIME: '16:15-16:45',
                                         THEME: 'Innovative Cloud Products Running on Kunpeng+openEuler',
                                         SPEAKER: ['Luo Yun, Winhong Information Technology'],
-                                        DESC: ['Winhong has developed an enterprise-grade product powered by Kunpeng-based servers and the openEuler OS. This product supercharges server virtualization and cloud management of enterprises, and has earned good reputation in a wide range of industries, including governments, finance, and carriers. Today, we would like to present this product to our peers.'] 
+                                        DESC: ['Winhong has developed an enterprise-grade product powered by Kunpeng-based servers and the openEuler OS. This product supercharges server virtualization and cloud management of enterprises, and has earned good reputation in a wide range of industries, including governments, finance, and carriers. Today, we would like to present this product to our peers.']
                                     },
                                     {}
                                 ]
@@ -2328,22 +2333,22 @@ module.exports = {
                             IMG: '/img/summit/home/lecturer/zhongjun.png',
                             NAME: 'Zhong Jun',
                             POSITION: 'Senior Open Source Engineer, Huawei'
-                        }, 
+                        },
                         {
                             IMG: '/img/summit/home/lecturer/zhangshuting.png',
                             NAME: 'Zhang Shuting',
                             POSITION: 'Computing Product Experience Designer, Huawei'
-                        }, 
+                        },
                         {
                             IMG: '/img/summit/home/lecturer/weigang.png',
                             NAME: 'Wei Gang',
                             POSITION: 'Security & Trustworthiness Technical Expert, Computing Product Line, Huawei'
-                        }, 
+                        },
                         {
                             IMG: '/img/summit/home/lecturer/yuanzhichang.png',
                             NAME: 'Yuan Zhichang',
                             POSITION: 'Chief Software Engineer of Open Source Ecosystem, Arm China'
-                        }, 
+                        },
                         {
                             IMG: '/img/summit/home/lecturer/chengong.png',
                             NAME: 'Chen Gong',
@@ -2885,6 +2890,11 @@ module.exports = {
         DEVDAY_2021: {
             PC_BANNER: '/img/summit/devday-2021/devday-2021-en.png',
             H5_BANNER: '/img/summit/devday-2021/banner-h5-en.png'
+        },
+        SUMMIT_2021: {
+            SPEACKER: '/img/summit/summit2021/call-speaker.png',
+            SPEONSOR: '/img/summit/summit2021/call-sponsor.png',
+            DEMO: '/img/summit/summit2021/call-demo.png',
         }
     },
     ru: {
@@ -2894,7 +2904,7 @@ module.exports = {
             REPLAYER: 'Отличная рецензия',
             LINKTIPS: 'The video is not uploaded yet',
             LIVENOW: [
-            
+
             ],
             LIVEFORMERLY: [
                 {
@@ -3389,19 +3399,19 @@ module.exports = {
                                         TIME: '15:00-15:30',
                                         THEME: 'Implementing Virtualization and Private Cloud on openEuler',
                                         SPEAKER: ['Qiu Dayu, Huayun Data'],
-                                        DESC: ['How to optimize the virtualization platform performance and quickly adapt it to the latest SAN devices, and how to provide high-performance virtual GPUs (vGPUs) are the major issues on the ARM-based platform, especially on the openEuler OS. This topic will show you how Huayun Data optimizes and adapts the virtualization platform to the openEuler OS, and how the company innovates the virtualization platform to support peripheral devices.'] 
+                                        DESC: ['How to optimize the virtualization platform performance and quickly adapt it to the latest SAN devices, and how to provide high-performance virtual GPUs (vGPUs) are the major issues on the ARM-based platform, especially on the openEuler OS. This topic will show you how Huayun Data optimizes and adapts the virtualization platform to the openEuler OS, and how the company innovates the virtualization platform to support peripheral devices.']
                                     },
                                     {
                                         TIME: '15:45-16:15',
                                         THEME: 'Optimized Virtualization Performance Fueled by openEuler',
                                         SPEAKER: ['Qi Zhihui, Sangfor Technologies'],
-                                        DESC: ['The topic presents the technologies for optimizing virtualization performance on openEuler, including storage and computing performance.'] 
+                                        DESC: ['The topic presents the technologies for optimizing virtualization performance on openEuler, including storage and computing performance.']
                                     },
                                     {
                                         TIME: '16:15-16:45',
                                         THEME: 'Innovative Cloud Products Running on Kunpeng+openEuler',
                                         SPEAKER: ['Luo Yun, Winhong Information Technology'],
-                                        DESC: ['Winhong has developed an enterprise-grade product powered by Kunpeng-based servers and the openEuler OS. This product supercharges server virtualization and cloud management of enterprises, and has earned good reputation in a wide range of industries, including governments, finance, and carriers. Today, we would like to present this product to our peers.'] 
+                                        DESC: ['Winhong has developed an enterprise-grade product powered by Kunpeng-based servers and the openEuler OS. This product supercharges server virtualization and cloud management of enterprises, and has earned good reputation in a wide range of industries, including governments, finance, and carriers. Today, we would like to present this product to our peers.']
                                     },
                                     {}
                                 ]
@@ -3767,22 +3777,22 @@ module.exports = {
                             IMG: '/img/summit/home/lecturer/zhongjun.png',
                             NAME: 'Zhong Jun',
                             POSITION: 'Senior Open Source Engineer, Huawei'
-                        }, 
+                        },
                         {
                             IMG: '/img/summit/home/lecturer/zhangshuting.png',
                             NAME: 'Zhang Shuting',
                             POSITION: 'Computing Product Experience Designer, Huawei'
-                        }, 
+                        },
                         {
                             IMG: '/img/summit/home/lecturer/weigang.png',
                             NAME: 'Wei Gang',
                             POSITION: 'Security & Trustworthiness Technical Expert, Computing Product Line, Huawei'
-                        }, 
+                        },
                         {
                             IMG: '/img/summit/home/lecturer/yuanzhichang.png',
                             NAME: 'Yuan Zhichang',
                             POSITION: 'Chief Software Engineer of Open Source Ecosystem, Arm China'
-                        }, 
+                        },
                         {
                             IMG: '/img/summit/home/lecturer/chengong.png',
                             NAME: 'Chen Gong',
@@ -4324,6 +4334,11 @@ module.exports = {
         DEVDAY_2021: {
             PC_BANNER: '/img/summit/devday-2021/devday-2021-en.png',
             H5_BANNER: '/img/summit/devday-2021/banner-h5-en.png'
+        },
+        SUMMIT_2021: {
+            SPEACKER: '/img/summit/summit2021/call-speaker.png',
+            SPEONSOR: '/img/summit/summit2021/call-sponsor.png',
+            DEMO: '/img/summit/summit2021/call-demo.png',
         }
     }
 };
