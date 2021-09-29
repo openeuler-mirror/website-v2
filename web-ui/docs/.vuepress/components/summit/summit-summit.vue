@@ -74,9 +74,15 @@ export default {
   height: 380px;
   width: 100%;
   margin-bottom: 50px;
-  img {
+  a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    img {
+    max-width: 1920px;
     width: 100%;
     height: 100%;
+  }
   }
 }
 .container {
