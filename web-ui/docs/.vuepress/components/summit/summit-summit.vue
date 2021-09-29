@@ -81,6 +81,7 @@ export default {
     img {
     max-width: 1920px;
     width: 100%;
+    height: 100%;
   }
   }
 }
