@@ -61,6 +61,7 @@ export default {
   }
   img {
     display: block;
+    margin: 0 auto;
   }
   @media screen and (max-width: 1000px) {
     display: block;
@@ -74,7 +75,8 @@ export default {
   width: 100%;
   margin-bottom: 50px;
   img {
-    height: 380px;
+    width: 100%;
+    height: 100%;
   }
 }
 .container {
