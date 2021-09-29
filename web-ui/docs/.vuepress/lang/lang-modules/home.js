@@ -3,7 +3,6 @@
  * */
 
 module.exports = {
-    HOME_SUMMIT:"url('/img/home/banner/summit_pc.png')",
     cn: {
         HOME_CAROUSEL_DATA: [
             {
