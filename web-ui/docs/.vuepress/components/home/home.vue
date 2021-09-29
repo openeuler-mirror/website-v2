@@ -9,11 +9,17 @@
           </div>
         </div>
         <div class="is-pc home-carousel" v-if="!isShowH5">
-            <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" @change="eventChange()">
+            <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" >
               <el-carousel-item>
                 <div class="carousel-banner"
                      :style="{backgroundImage: i18n.home.HOME_NEWRELEASE.PC_IMG}"
                      @click="videoClicked"
+                ></div>
+              </el-carousel-item>
+               <el-carousel-item>
+                <div class="carousel-banner"
+                     :style="{backgroundImage: i18n.home.HOME_NEWRELEASE.PC_SUMMIT}"
+                     @click="go('/interaction/summit-list/summit2021/')"
                 ></div>
               </el-carousel-item>
             </el-carousel>
@@ -22,6 +28,9 @@
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
               <swiper-slide class="carousel-item-index">
                 <div class="mobile-version" @click="videoClicked" :style="{backgroundImage:i18n.home.HOME_NEWRELEASE.MOBILE_IMG}"></div>
+              </swiper-slide>
+               <swiper-slide class="carousel-item-index">
+                <div class="mobile-version" @click="go('/interaction/summit-list/summit2021/')" :style="{backgroundImage:i18n.home.HOME_NEWRELEASE.MOBILE_SUMMIT}"></div>
               </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">

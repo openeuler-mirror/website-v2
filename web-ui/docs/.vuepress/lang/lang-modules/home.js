@@ -3,6 +3,7 @@
  * */
 
 module.exports = {
+    HOME_SUMMIT:"url('/img/home/banner/summit_pc.png')",
     cn: {
         HOME_CAROUSEL_DATA: [
             {
@@ -47,7 +48,9 @@ module.exports = {
         ],
         HOME_NEWRELEASE: {
             MOBILE_IMG: "url('/img/home/banner/release_mo.png')",
-            PC_IMG: "url('/img/home/banner/release_pc.png')"
+            PC_IMG: "url('/img/home/banner/release_pc.png')",
+            MOBILE_SUMMIT: "url('/img/home/banner/summit_mo.png')",
+            PC_SUMMIT: "url('/img/home/banner/summit_pc.png')",
         },
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
