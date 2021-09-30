@@ -210,16 +210,16 @@ module.exports = {
     },
     en: {
         DOWNLOAD_LIST : [
-            {
-                NAME: 'openEuler 21.09 LTS SP2',
-                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.03-LTS-SP2/',
-                DESC: 'openEuler 20.03 LTS SP2 is the patch version of openEuler 20.03 LTS,and both versions have the same lifecycle.',
-                RELEASE_DESC_URL: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP2/docs/Releasenotes/release_notes.html',
-                INSTALL_GUIDENCE_URL: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP2/docs/Installation/Installation.html',
+              {
+                NAME: 'openEuler 21.09',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-21.09/',
+                DESC: 'openEuler 21.09 is an innovative version for all scenarios. It is a new community release of Euler. It enhances server and cloud computing features, and incorporates key technologies including cloud-native CPU scheduling algorithms for hybrid service deployments and the container operating system KubeOS. The edge and embedded versions are released at the same time.',
+                RELEASE_DESC_URL: 'https://docs.openeuler.org/en/docs/21.09/docs/Releasenotes/release_notes.html',
+                INSTALL_GUIDENCE_URL: 'https://docs.openeuler.org/en/docs/21.09/docs/Installation/installation.html',
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
-                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP2/ISO/',
-                LIFE_CYCLE_URL: '/en/other/lifecycle/',
-                WEBSITE_SELECT: "/en/mirror/select/?version=20.03-LTS-SP2",
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-21.09/ISO/',
+                LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+                WEBSITE_SELECT: "/zh/mirror/select/?version=21.09",
                 MANUFACTURER: 'openEuler community',
                 PUBLISH_DATE: '2021/09',
                 LTS: true
@@ -402,15 +402,15 @@ module.exports = {
     ru: {
         DOWNLOAD_LIST : [
             {
-                NAME: 'openEuler 21.09 LTS SP2',
-                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.03-LTS-SP2/',
-                DESC: 'openEuler 20.03 LTS SP2 — это версия патча openEuler 20.03 LTS, и обе версии имеют одинаковый жизненный цикл.',
-                RELEASE_DESC_URL: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP2/docs/Releasenotes/release_notes.html',
-                INSTALL_GUIDENCE_URL: 'https://docs.openeuler.org/en/docs/20.03_LTS_SP2/docs/Installation/Installation.html',
+                NAME: 'openEuler 21.09',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-21.09/',
+                DESC: 'openEuler 21.09 is an innovative version for all scenarios. It is a new community release of Euler. It enhances server and cloud computing features, and incorporates key technologies including cloud-native CPU scheduling algorithms for hybrid service deployments and the container operating system KubeOS. The edge and embedded versions are released at the same time.',
+                RELEASE_DESC_URL: 'https://docs.openeuler.org/en/docs/21.09/docs/Releasenotes/release_notes.html',
+                INSTALL_GUIDENCE_URL: 'https://docs.openeuler.org/en/docs/21.09/docs/Installation/installation.html',
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
-                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP2/ISO/',
-                LIFE_CYCLE_URL: '/en/other/lifecycle/',
-                WEBSITE_SELECT: "/en/mirror/select/?version=20.03-LTS-SP2",
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-21.09/ISO/',
+                LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+                WEBSITE_SELECT: "/zh/mirror/select/?version=21.09",
                 MANUFACTURER: 'openEuler community',
                 PUBLISH_DATE: '2021/09',
                 LTS: true
