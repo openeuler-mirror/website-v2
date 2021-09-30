@@ -219,7 +219,7 @@
             </div>
         </div>
 
-        <div class="home-developer">
+        <div class="home-developer" v-if="false">
             <h3 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_DEV.DEV_TITLE }}</h3>
             <p :class="$lang == 'en'?'en-developer-p':''">{{ i18n.home.HOME_DEV.DEV_DESCRIPTION }}</p>
             <div class="dev-leader" v-fade v-if="developerList.length">
