@@ -18,4 +18,5 @@ module.exports = {
     learn: require('./lang-modules/learn').ru,
     compatibility: require('./lang-modules/compatibility').ru,
     activities: require('./lang-modules/activities').cn,
+    summit: require('./lang-modules/summit').ru,
 };
