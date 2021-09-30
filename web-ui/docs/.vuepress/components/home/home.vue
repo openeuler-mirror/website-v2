@@ -26,11 +26,11 @@
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
-              <swiper-slide class="carousel-item-index">
-                <div class="mobile-version" @click="videoClicked" :style="{backgroundImage:i18n.home.HOME_NEWRELEASE.MOBILE_IMG}"></div>
-              </swiper-slide>
                <swiper-slide class="carousel-item-index">
                 <div class="mobile-version" @click="go('/interaction/summit-list/summit2021/')" :style="{backgroundImage:i18n.home.HOME_NEWRELEASE.MOBILE_SUMMIT}"></div>
+              </swiper-slide>
+              <swiper-slide class="carousel-item-index">
+                <div class="mobile-version" @click="videoClicked" :style="{backgroundImage:i18n.home.HOME_NEWRELEASE.MOBILE_IMG}"></div>
               </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
@@ -425,6 +425,9 @@
             videoClicked() {
               this.isMasked = true
               console.log('clicked');
+            },
+            bannerClick(index) {
+                console.log(this.i18n.home.HOME_NEWRELEASE[index].CLICK_EVENT);
             },
             maskClicked() {
               this.isMasked = false
