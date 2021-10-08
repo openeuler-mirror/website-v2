@@ -45,12 +45,14 @@ module.exports = {
                 LINK: '/interaction/news-list/'
             }
         ],
-        HOME_NEWRELEASE: {
+        HOME_NEWRELEASE: [{
+                MOBILE_IMG: "url('/img/home/banner/summit_mo.png')",
+                PC_IMG: "url('/img/home/banner/summit_pc.png')",
+            },
+            {
                 MOBILE_IMG: "url('/img/home/banner/release_mo.png')",
                 PC_IMG: "url('/img/home/banner/release_pc.png')",
-                MOBILE_SUMMIT: "url('/img/home/banner/summit_mo.png')",
-                PC_SUMMIT: "url('/img/home/banner/summit_pc.png')",
-            },
+            }],
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
             INTRO_HEAD: "开始openEuler之旅吧！",
@@ -617,12 +619,14 @@ module.exports = {
                 VIDEO_URL: "https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/StratoVirt-minisite.mp4"
             }
         ],
-        HOME_NEWRELEASE: {
+        HOME_NEWRELEASE: [{
+            MOBILE_IMG: "url('/img/home/banner/summit_en_mo.png')",
+            PC_IMG: "url('/img/home/banner/summit_en_pc.png')",
+        },
+        {
             MOBILE_IMG: "url('/img/home/banner/release_mo.png')",
             PC_IMG: "url('/img/home/banner/release_pc.png')",
-            MOBILE_SUMMIT: "url('/img/home/banner/summit_en_mo.png')",
-            PC_SUMMIT: "url('/img/home/banner/summit_en_pc.png')",
-        },
+        }],
         ROOM_LEFT_IMG:[
             {
                 IMG: '/img/home/eventImg.png',
@@ -1187,12 +1191,14 @@ module.exports = {
                 VIDEO_URL: "https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/StratoVirt-minisite.mp4"
             }
         ],
-        HOME_NEWRELEASE: {
+        HOME_NEWRELEASE: [{
+            MOBILE_IMG: "url('/img/home/banner/summit_en_mo.png')",
+            PC_IMG: "url('/img/home/banner/summit_en_pc.png')",
+        },
+        {
             MOBILE_IMG: "url('/img/home/banner/release_mo.png')",
             PC_IMG: "url('/img/home/banner/release_pc.png')",
-            MOBILE_SUMMIT: "url('/img/home/banner/summit_mo.png')",
-            PC_SUMMIT: "url('/img/home/banner/summit_pc.png')",
-        },
+        }],
         ROOM_LEFT_IMG:[
             {
                 IMG: '/img/home/eventImg.png',
