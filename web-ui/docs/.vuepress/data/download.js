@@ -213,7 +213,7 @@ module.exports = {
               {
                 NAME: 'openEuler 21.09',
                 DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-21.09/',
-                DESC: 'openEuler 21.09 is an innovative version for all scenarios. It is a new community release of Euler. It enhances server and cloud computing features, and incorporates key technologies including cloud-native CPU scheduling algorithms for hybrid service deployments and the container operating system KubeOS. The edge and embedded versions are released at the same time.',
+                DESC: 'openEuler 21.09 is an innovative version for all scenarios, including edge and embedded devices. It enhances server and cloud computing features, and incorporates key technologies including cloud-native scheduling algorithms for hybrid service deployments and the container operating system KubeOS.',
                 RELEASE_DESC_URL: 'https://docs.openeuler.org/en/docs/21.09/docs/Releasenotes/release_notes.html',
                 INSTALL_GUIDENCE_URL: 'https://docs.openeuler.org/en/docs/21.09/docs/Installation/installation.html',
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
@@ -404,7 +404,7 @@ module.exports = {
             {
                 NAME: 'openEuler 21.09',
                 DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-21.09/',
-                DESC: 'openEuler 21.09 is an innovative version for all scenarios. It is a new community release of Euler. It enhances server and cloud computing features, and incorporates key technologies including cloud-native CPU scheduling algorithms for hybrid service deployments and the container operating system KubeOS. The edge and embedded versions are released at the same time.',
+                DESC: 'openEuler 21.09 is an innovative version for all scenarios, including edge and embedded devices. It enhances server and cloud computing features, and incorporates key technologies including cloud-native scheduling algorithms for hybrid service deployments and the container operating system KubeOS.',
                 RELEASE_DESC_URL: 'https://docs.openeuler.org/en/docs/21.09/docs/Releasenotes/release_notes.html',
                 INSTALL_GUIDENCE_URL: 'https://docs.openeuler.org/en/docs/21.09/docs/Installation/installation.html',
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
