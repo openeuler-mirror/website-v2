@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="banner">
-      <a href="https://e-campaign.huawei.com/m/mIzQFr" target="_blank">
+      <a href="https://e-campaign.huawei.com/m/FjEF3q" target="_blank">
       <img class="extend" src="/img/summit/summit2021/left-longer.png" alt="">
       <img class="main" :src="i18n.summit.SUMMIT_BANNER.PC_IMG">
       <img class="extend" src="/img/summit/summit2021/right-longer.png" alt="">
@@ -15,7 +15,7 @@
         <p class="text">{{i18n.summit.SUMMIT_INTRODUCE}}</p>
         <div class="link-wrapper">
           <a href="https://shimowendang.com/forms/X6X9jj9KPcdQwVr8/fill" target="_blank"><img src="/img/summit/summit2021/call-speaker.png"></a>
-          <a href="https://shimowendang.com/forms/X6X9jj9KPcdQwVr8/fill" target="_blank"><img src="/img/summit/summit2021/call-sponsor.png"></a>
+          <a href="https://shimowendang.com/forms/k76zTLKvumYwRdsP/fill" target="_blank"><img src="/img/summit/summit2021/call-sponsor.png"></a>
           <a href="https://shimowendang.com/forms/LjHs8JlsLSsW92kl/fill" target="_blank"><img src="/img/summit/summit2021/call-demo.png"></a>
         </div>
       </div>

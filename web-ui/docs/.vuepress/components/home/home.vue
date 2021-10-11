@@ -10,27 +10,18 @@
         </div>
         <div class="is-pc home-carousel" v-if="!isShowH5">
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" >
-              <el-carousel-item>
+              <el-carousel-item v-for="(item,index) in i18n.home.HOME_NEWRELEASE" :key="index">
                 <div class="carousel-banner"
-                     :style="{backgroundImage: i18n.home.HOME_NEWRELEASE.PC_SUMMIT}"
-                     @click="go('/interaction/summit-list/summit2021/')"
-                ></div>
-              </el-carousel-item>
-              <el-carousel-item>
-                <div class="carousel-banner"
-                     :style="{backgroundImage: i18n.home.HOME_NEWRELEASE.PC_IMG}"
-                     @click="videoClicked"
+                     :style="{backgroundImage: item.PC_IMG}"
+                     @click="bannerClick(index)"
                 ></div>
               </el-carousel-item>
             </el-carousel>
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
-               <swiper-slide class="carousel-item-index">
-                <div class="mobile-version" @click="go('/interaction/summit-list/summit2021/')" :style="{backgroundImage:i18n.home.HOME_NEWRELEASE.MOBILE_SUMMIT}"></div>
-              </swiper-slide>
-              <swiper-slide class="carousel-item-index">
-                <div class="mobile-version" @click="videoClicked" :style="{backgroundImage:i18n.home.HOME_NEWRELEASE.MOBILE_IMG}"></div>
+               <swiper-slide class="carousel-item-index" v-for="(itme,index) in i18n.home.HOME_NEWRELEASE" :key="index">
+                <div class="mobile-version" @click="bannerClick(index)" :style="{backgroundImage:itme.MOBILE_IMG}"></div>
               </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
@@ -427,7 +418,14 @@
               console.log('clicked');
             },
             bannerClick(index) {
-                console.log(this.i18n.home.HOME_NEWRELEASE[index].CLICK_EVENT);
+                switch (index) {
+                    case 0: 
+                    this.go('/interaction/summit-list/summit2021/');
+                    break;
+                    case 1:
+                    this.videoClicked()
+                    break;
+                }
             },
             maskClicked() {
               this.isMasked = false
