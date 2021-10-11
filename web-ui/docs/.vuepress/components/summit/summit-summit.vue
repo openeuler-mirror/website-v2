@@ -8,7 +8,7 @@
       </a>
     </div>
     <div class="h5-banner">
-      <a href="https://e-campaign.huawei.com/m/mIzQFr" target="_blank"><img :src="i18n.summit.SUMMIT_BANNER.MOBILE_IMG"></a>
+      <a href="https://e-campaign.huawei.com/m/FjEF3q" target="_blank"><img :src="i18n.summit.SUMMIT_BANNER.MOBILE_IMG"></a>
     </div>
     <div class="container">
       <div class="text-wrapper">
