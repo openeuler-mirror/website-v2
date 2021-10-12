@@ -14,9 +14,9 @@
       <div class="text-wrapper">
         <p class="text">{{i18n.summit.SUMMIT_INTRODUCE}}</p>
         <div class="link-wrapper">
-          <a href="https://shimowendang.com/forms/X6X9jj9KPcdQwVr8/fill" target="_blank"><img src="/img/summit/summit2021/call-speaker.png"></a>
-          <a href="https://shimowendang.com/forms/k76zTLKvumYwRdsP/fill" target="_blank"><img src="/img/summit/summit2021/call-sponsor.png"></a>
-          <a href="https://shimowendang.com/forms/LjHs8JlsLSsW92kl/fill" target="_blank"><img src="/img/summit/summit2021/call-demo.png"></a>
+          <a href="https://shimowendang.com/forms/X6X9jj9KPcdQwVr8/fill" target="_blank"><img :src="i18n.interaction.SUMMIT_2021.SPEACKER"></a>
+          <a href="https://shimowendang.com/forms/k76zTLKvumYwRdsP/fill" target="_blank"><img :src="i18n.interaction.SUMMIT_2021.SPEONSOR"></a>
+          <a href="https://shimowendang.com/forms/LjHs8JlsLSsW92kl/fill" target="_blank"><img :src="i18n.interaction.SUMMIT_2021.DEMO"></a>
         </div>
       </div>
       <div class="review-wrapper">
