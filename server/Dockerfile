@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM openeuler/node:10.21.0-20.03-lts-sp1
 
 MAINTAINER zhangxiaopan<zhangxiaopan2@huawei.com>
 
