@@ -361,25 +361,29 @@
                                 label: '7.1 计划任务管理',
                                 key: '7.1 计划任务管理',
                                 desc: '这一单元我们主要介绍计划任务管理的理论部分。',
-                                ppt_link: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/07%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86.pptx'
+                                ppt_link: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/07%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86.pptx',
+                                video_link: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E8%A7%86%E9%A2%91%E5%8F%8A%E5%AD%97%E5%B9%95%EF%BC%88%E6%9C%80%E7%BB%88%E7%89%88%EF%BC%89/%E7%AC%AC%E4%B8%83%E7%AB%A0/7.1%20%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86/7.1%20%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86.mp4'
                             },
                             {
                                 label: '7.2 at和crontab演示',
                                 key: '7.2 at和crontab演示',
                                 desc: '这一单元我们主要介绍计划任务管理的实验部分。',
-                                ppt_link: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/07%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86.pptx'
+                                ppt_link: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/07%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86.pptx',
+                                video_link: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E8%A7%86%E9%A2%91%E5%8F%8A%E5%AD%97%E5%B9%95%EF%BC%88%E6%9C%80%E7%BB%88%E7%89%88%EF%BC%89/%E7%AC%AC%E4%B8%83%E7%AB%A0/7.2%20at%E5%92%8Ccrontab%E6%BC%94%E7%A4%BA/7.2%20at%E5%92%8Ccrontab%E6%BC%94%E7%A4%BA.mp4'
                             },
                             {
                                 label: '7.3 网络管理',
                                 key: '7.3 网络管理',
                                 desc: '这一单元我们主要介绍网络管理的理论部分。',
-                                ppt_link: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/07%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86.pptx'
+                                ppt_link: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/07%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86.pptx',
+                                video_link: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E8%A7%86%E9%A2%91%E5%8F%8A%E5%AD%97%E5%B9%95%EF%BC%88%E6%9C%80%E7%BB%88%E7%89%88%EF%BC%89/%E7%AC%AC%E4%B8%83%E7%AB%A0/7.3%20%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/7.3%20%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86.mp4'
                             },
                             {
                                 label: '7.4 网络管理演示',
                                 key: '7.4 网络管理演示',
                                 desc: '这一单元我们主要介绍网络管理的实验部分。',
-                                ppt_link: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/07%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86.pptx'
+                                ppt_link: 'https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/PPT/07%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86.pptx',
+                                video_link: 'https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/%E8%A7%86%E9%A2%91%E5%8F%8A%E5%AD%97%E5%B9%95%EF%BC%88%E6%9C%80%E7%BB%88%E7%89%88%EF%BC%89/%E7%AC%AC%E4%B8%83%E7%AB%A0/7.4%20%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E6%BC%94%E7%A4%BA/7.4%20%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E6%BC%94%E7%A4%BA.mp4'
                             },
                             {
                                 label: '7.5 进程管理',
