@@ -66,6 +66,7 @@
             :class="showTab === 'nine' ? 'hideIcon' : ''"
             style="width: 100%"
             v-if="!isShowH5"
+            empty-text="敬请期待"
           >
             <el-table-column prop="icon" width="30">
               <i class="el-icon-time"></i>
@@ -76,6 +77,7 @@
             <el-table-column prop="POSITION" width="330"> </el-table-column>
           </el-table>
           <div class="mobile-table" v-if="isShowH5">
+            <div class="wait" v-if="showTab === 'nine'">敬请期待</div>
             <div
               class="item"
               v-for="(item, index) in agendaTableData"
@@ -148,7 +150,7 @@ export default {
     tabClick(tab) {
       if (tab.name === "nine") {
         this.isShowcarousel = false;
-        this.agendaTableData = this.agendaData.AFTERNOON_AGENDA_9;
+        this.agendaTableData = this.agendaData.FORENOON_AGENDA_9;
         this.isShowBtn = false;
       } else if (tab.name === "ten") {
         this.agendaTableData = this.agendaData.FORENOON_AGENDA_10;
@@ -268,9 +270,9 @@ export default {
       }
     }
     .el-tabs__item {
-      font-size: 24px;
-      font-family: FZLTCHJW--GB1-0, FZLTCHJW--GB1;
+      font-size: 22px;
       font-weight: 700;
+      font-family: FZLTCHJW--GB1-0, FZLTCHJW--GB1;
       color: rgba(0, 0, 0, 0.5);
       line-height: 28px;
       @media screen and (max-width: 1000px) {
@@ -301,7 +303,7 @@ export default {
     .title {
       width: 900px;
       position: relative;
-      margin: 0 auto;
+      margin: 0 auto 30px;
       img {
         width: 900px;
         height: 76px;
@@ -366,8 +368,8 @@ export default {
     .item:nth-child(6),
     .item:nth-child(8),
     .item:nth-child(9) {
-      p span {
-        width: 100% !important;
+      p  span {
+        width: 140px !important;
       }
     }
   }
@@ -439,5 +441,12 @@ export default {
       }
     }
   }
+}
+.wait {
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 </style>

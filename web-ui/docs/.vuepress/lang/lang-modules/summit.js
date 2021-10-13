@@ -8,7 +8,7 @@
             PC_IMG:"/img/summit/summit2021/summit2021-pc.png"
         },
         SUMMIT_INTRODUCE:"openEuler Summit 是由欧拉开源社区举办的开发者峰会。openEuler从服务器操作系统，升级为数字基础设施的操作系统，支持IT、CT、OT等数字基础设施全场景，覆盖服务器、云、边、嵌入式等各种形态的需求。伴随21.09版本的发布 openEuler 已经包含了服务器、云原生、边缘计算和嵌入式的四大应用场景。openEuler 通过开源开放，不断探索科技创新的边界，驱动物理世界与数字世界的深度融合。开发者、用户、社区贡献者、软件爱好者在 openEuler Summit 汇聚，驱动无止境的创新与拓展，闪耀数字时代星辰大海。",
-        HIGHLIGHTS:"精彩时刻",
+        HIGHLIGHTS:"精彩回顾",
         AGENDA: {
             WEB_TITLE: '/img/summit/summit2021/zh-pc-summit2021.png',
             MOBILE_TITLE: '/img/summit/summit2021/zh-mobile-summit2021.png',
@@ -50,7 +50,6 @@
                 {
                     TIME: '10:10 - 10:40',
                     THEME: 'openEuler&Friends 2.0：协作联创激发无限可能',
-                    SPEAKER: '移动苏研、中移在线、中国联通、中国电信、中国银联、招商银行、品高云',
                 },
                 {
                     TIME: '10:40 - 10:55',
@@ -64,7 +63,7 @@
                 },
                 {
                     TIME: '11:10 - 11:25',
-                    THEME: '电力新能源用户创新实践',
+                    THEME: '智能电网调度控制系统自主创新应用实践',
                     SPEAKER: '麒麟信安'
                 },
                 {
