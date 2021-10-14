@@ -365,11 +365,12 @@ export default {
         }
       }
     }
-    .item:nth-child(6),
-    .item:nth-child(8),
-    .item:nth-child(9) {
-      p  span {
-        width: 140px !important;
+    .item:nth-child(-n+9):nth-child(n+6){
+      p  span:first-of-type {
+        width: 150px;
+      }
+      p  span:last-of-type {
+        width: 0;
       }
     }
   }
