@@ -423,9 +423,15 @@
                     this.go('/interaction/summit-list/summit2021/');
                     break;
                     case 1:
-                    this.videoClicked()
+                    this.downloadWhitePaper('/whitepaper/openEuler-whitepaper-2109.pdf',2109)
                     break;
                 }
+            },
+            downloadWhitePaper(url,fileName) {
+                let aLink = document.createElement('a');
+                aLink.href=url;
+                aLink.setAttribute('download',`openEuler-whitepaper-${fileName}`);
+                aLink.click()
             },
             maskClicked() {
               this.isMasked = false

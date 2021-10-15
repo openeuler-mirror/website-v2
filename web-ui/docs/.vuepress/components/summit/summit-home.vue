@@ -581,7 +581,6 @@ html[lang="ru"] .summit-content .live-room .web-box .item-box .live-item {
         width: 100%;
         img {
             width: 280px;
-            height: 80px;
             margin: 0 auto;
             display: block;
         }
