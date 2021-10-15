@@ -171,7 +171,7 @@ export default {
     },
     objectSpanMethod({ row, column, rowIndex, columnIndex }) {
       if (this.showTab === "ten") {
-        if (rowIndex === 7 || rowIndex === 5) {
+        if (rowIndex === 7 || rowIndex === 5 ||rowIndex === 8 || rowIndex === 9) {
           if (columnIndex === 3) {
             return {
               rowspan: 1,
@@ -365,9 +365,9 @@ export default {
         }
       }
     }
-    .item:nth-child(-n+9):nth-child(n+6){
+    .item:nth-child(-n+10):nth-child(n+6){
       p  span:first-of-type {
-        width: 150px;
+        width: 180px;
       }
       p  span:last-of-type {
         width: 0;
