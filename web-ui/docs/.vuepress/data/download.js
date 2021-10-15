@@ -14,6 +14,7 @@ module.exports = {
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-21.09/ISO/',
                 LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+                WHITE_PAPER: "/whitepaper/openEuler-whitepaper-2109.pdf",
                 WEBSITE_SELECT: "/zh/mirror/select/?version=21.09",
                 MANUFACTURER: 'openEuler社区',
                 PUBLISH_DATE: '2021/09',
