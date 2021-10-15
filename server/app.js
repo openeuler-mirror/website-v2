@@ -106,52 +106,56 @@ function updateViewsFromMysql() {
     let tableDataCount = 0;
     let finishCount = 0;
     tables.forEach(table => {
-            dbUtil.query('select * from ' + table, function (err, result) {
-                if (err) {
-                    console.log(err);
-                } else if (result.length) {
-                    result.forEach(async item => {
-                        if (!item.title) {
-                            return;
-                        }
-                        tableDataCount++;
-                        let model = table === 'news_visits' ? 'news' : 'blog';
-                        let reIndex = apiConfig.ES_REINDEX[item.lang];
-                        let searchViewsJson = esUtil.getSearchViewsReqJson(model, 'one', item.title);
-                        let searchViewsUrl = ES.ES_URL + reIndex + '/_search';
-                        let searchViews = await HTTP.getViews(searchViewsUrl, 'GET', false, esUtil.esToken, searchViewsJson);
-                        let searchViewsResponse = esUtil.getSearchViewsResJson('one', searchViews);
-                        if (searchViewsResponse.length) {
-                            let updateViewsUrl = ES.ES_URL + reIndex + '/_update/' + searchViewsResponse[0].id;
-                            let json = esUtil.getUpdateViewsReqJson(item.count);
-                            HTTP.updateViews(updateViewsUrl, 'POST', false, esUtil.esToken, json)
-                                .then(res => {
-                                    let meta = '[' + logUtil.getTime() + '] update es reindex      ' + model + '     ' + item.title + '   ' + reIndex;
-                                    console.log(meta + os.EOL);
-                                    finishCount++;
-                                    if (finishCount === tableDataCount) {
-                                        console.log('-------DATA MIGRATING IS COMPLETE-------', os.EOL);
-                                    }
-                                }).catch(err => {
-                                console.log('[' + logUtil.getTime() + ']' + err.stack + os.EOL);
-                            });
-                        } else {
-                            let addDataJson = esUtil.getAddDataReqJson(item.title, item.count, model);
-                            let addDocUrl = ES.ES_URL + reIndex + '/_doc';
-                            HTTP.addDataToReindex(addDocUrl, 'POST', false, esUtil.esToken, addDataJson).then(res => {
-                                let meta = '[' + logUtil.getTime() + '] add to es reindex      ' + model + '     ' + item.title + '   ' + reIndex;
+        dbUtil.query('select * from ' + table, function (err, result) {
+            if (err) {
+                console.log(err);
+            } else if (result.length) {
+                result.forEach(async item => {
+                    if (!item.title) {
+                        return;
+                    }
+                    tableDataCount++;
+                    let model = table === 'news_visits' ? 'news' : 'blog';
+                    let reIndex = apiConfig.ES_REINDEX[item.lang];
+                    let searchViewsJson = esUtil.getSearchViewsReqJson(model, 'one', item.title);
+                    let searchViewsUrl = ES.ES_URL + reIndex + '/_search';
+                    let searchViews = await HTTP.getViews(searchViewsUrl, 'GET', false,
+                        esUtil.esToken, searchViewsJson);
+                    let searchViewsResponse = esUtil.getSearchViewsResJson('one', searchViews);
+                    if (searchViewsResponse.length) {
+                        let updateViewsUrl = ES.ES_URL + reIndex + '/_update/' + searchViewsResponse[0].id;
+                        let json = esUtil.getUpdateViewsReqJson(item.count);
+                        HTTP.updateViews(updateViewsUrl, 'POST', false, esUtil.esToken, json)
+                            .then(res => {
+                                let meta = '[' + logUtil.getTime() + '] update es reindex  ' + model + '  ' + item.title + '  ' + reIndex;
                                 console.log(meta + os.EOL);
                                 finishCount++;
                                 if (finishCount === tableDataCount) {
                                     console.log('-------DATA MIGRATING IS COMPLETE-------', os.EOL);
                                 }
-                            }).catch(err => {
+                            })
+                            .catch(err => {
                                 console.log('[' + logUtil.getTime() + ']' + err.stack + os.EOL);
                             });
-                        }
-                    });
-                }
-            });
+                    } else {
+                        let addDataJson = esUtil.getAddDataReqJson(item.title, item.count, model);
+                        let addDocUrl = ES.ES_URL + reIndex + '/_doc';
+                        HTTP.addDataToReindex(addDocUrl, 'POST', false, esUtil.esToken, addDataJson)
+                            .then(res => {
+                                let meta = '[' + logUtil.getTime() + '] add to es reindex  ' + model + '  ' + item.title + '  ' + reIndex;
+                                console.log(meta + os.EOL);
+                                finishCount++;
+                                if (finishCount === tableDataCount) {
+                                    console.log('-------DATA MIGRATING IS COMPLETE-------', os.EOL);
+                                }
+                            })
+                            .catch(err => {
+                                console.log('[' + logUtil.getTime() + ']' + err.stack + os.EOL);
+                            });
+                    }
+                });
+            }
+        });
     });
 }
 
@@ -173,8 +177,10 @@ function initESData() {
     Promise.all([initZhNews, initEnNews, initZhBlog, initEnBlog, initDocs1, initDocs2, initDocs4, initDocs5,
         initDocs6, initDocs7, initDocs8, initDocs9, initDocs10, initDocs11])
         .then(res => {
-            console.log('-------START SUCCESS-------', os.EOL);
-            updateViewsFromMysql();
+            Promise.all(readFile.openFieldData()).then(res => {
+                console.log('-------START SUCCESS-------', os.EOL);
+            });
+            // updateViewsFromMysql();
         })
         .catch(err => {
             console.log('-------START FAILED-------', os.EOL);

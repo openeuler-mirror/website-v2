@@ -147,7 +147,37 @@ function initESData(version, lang, model) {
     });
 }
 
+function openFieldData() {
+    let jsonList = {
+        'properties': {
+            'type': {
+                'type': 'text',
+                'fielddata': true
+            }
+        }
+    };
+    let promiseArr = [];
+    for (let esindexKey in apiConfig.ES_INDEX) {
+        let promise = new Promise((resolve, reject) => {
+            HTTP.openFieldData(ES.ES_URL + apiConfig.ES_INDEX[esindexKey] + '/_mapping',
+                'PUT', true, esUtil.esToken, jsonList)
+                .then(res => {
+                    let meta = '[' + logUtil.getTime() + '] ' + apiConfig.ES_INDEX[esindexKey] + ' set fielddata=true.';
+                    console.log(meta + os.EOL);
+                    resolve();
+                })
+                .catch(err => {
+                    console.log('[' + logUtil.getTime() + ']' + err.stack + os.EOL);
+                    reject();
+                });
+        });
+        promiseArr.push(promise);
+    }
+    return promiseArr;
+}
+
 module.exports = {
     insertES: insertES,
-    initESData: initESData
+    initESData: initESData,
+    openFieldData: openFieldData
 };

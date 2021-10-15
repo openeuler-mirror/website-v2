@@ -142,9 +142,8 @@ function filterContent(content) {
         if (index > 1) {
             s = s.substring(0, index - 1);
             result += s.replace('-', '').replace('[', '').replace(']', '');
-        } else if (s.indexOf('](./') > -1 && (
-            s.indexOf('.gif') > -1 || s.indexOf('.png') > -1 || s.indexOf('.jpg') > -1)) {
-        } else {
+        } else if (!(s.indexOf('](./') > -1
+            && (s.indexOf('.gif') > -1 || s.indexOf('.png') > -1 || s.indexOf('.jpg') > -1))) {
             result += s;
         }
     });
@@ -186,7 +185,7 @@ function getSearchReqJson(page, model, keyword, version) {
             'aggs': {
                 'data': {
                     'terms': {
-                        'field': 'type.keyword'
+                        'field': 'type'
                     }
                 }
             }
@@ -219,7 +218,7 @@ function getSearchReqJson(page, model, keyword, version) {
             'aggs': {
                 'data': {
                     'terms': {
-                        'field': 'type.keyword'
+                        'field': 'type'
                     }
                 }
             }
@@ -245,7 +244,7 @@ function getSearchReqJson(page, model, keyword, version) {
             'aggs': {
                 'data': {
                     'terms': {
-                        'field': 'type.keyword'
+                        'field': 'type'
                     }
                 }
             }

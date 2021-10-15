@@ -174,6 +174,10 @@ function esHttp(url, method, jsonBool, token, reqBody) {
     });
 }
 
+function openFieldData(url, method, jsonBool, token, reqBody) {
+    return esHttp(url, method, jsonBool, token, reqBody);
+}
+
 module.exports = {
     getUrl: getUrl,
     postUrl: postUrl,
@@ -184,6 +188,7 @@ module.exports = {
     updateDataToES: updateDataToES,
     updateViews: updateViews,
     addDataToReindex: addDataToReindex,
+    openFieldData: openFieldData,
     mailError: mailError,
     sigError: sigError,
     authError: authError
