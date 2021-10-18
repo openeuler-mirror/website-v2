@@ -74,7 +74,7 @@
             <el-table-column prop="TIME" width="200"> </el-table-column>
             <el-table-column prop="THEME" width="470"> </el-table-column>
             <el-table-column prop="SPEAKER" width="90"> </el-table-column>
-            <el-table-column prop="POSITION" width="330"> </el-table-column>
+            <el-table-column prop="POSITION" width="280"> </el-table-column>
           </el-table>
           <div class="mobile-table" v-if="isShowH5">
             <div class="wait" v-if="showTab === 'nine'">敬请期待</div>
