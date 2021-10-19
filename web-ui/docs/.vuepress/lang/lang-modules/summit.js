@@ -1,20 +1,20 @@
 /**
  * @file  峰会国际化配置入口
  * */
- module.exports = {
+module.exports = {
     cn: {
-        SUMMIT_BANNER:{
-            MOBILE_IMG:"/img/summit/summit2021/summit2021-mo.png",
-            PC_IMG:"/img/summit/summit2021/summit2021-pc.png"
+        SUMMIT_BANNER: {
+            MOBILE_IMG: "/img/summit/summit2021/summit2021-mo.png",
+            PC_IMG: "/img/summit/summit2021/summit2021-pc.png"
         },
-        SUMMIT_INTRODUCE:"openEuler Summit 是由欧拉开源社区举办的开发者峰会。openEuler从服务器操作系统，升级为数字基础设施的操作系统，支持IT、CT、OT等数字基础设施全场景，覆盖服务器、云、边、嵌入式等各种形态的需求。伴随21.09版本的发布 openEuler 已经包含了服务器、云原生、边缘计算和嵌入式的四大应用场景。openEuler 通过开源开放，不断探索科技创新的边界，驱动物理世界与数字世界的深度融合。开发者、用户、社区贡献者、软件爱好者在 openEuler Summit 汇聚，驱动无止境的创新与拓展，闪耀数字时代星辰大海。",
-        HIGHLIGHTS:"精彩回顾",
+        SUMMIT_INTRODUCE: "openEuler Summit 是由欧拉开源社区举办的开发者峰会。openEuler从服务器操作系统，升级为数字基础设施的操作系统，支持IT、CT、OT等数字基础设施全场景，覆盖服务器、云、边、嵌入式等各种形态的需求。伴随21.09版本的发布 openEuler 已经包含了服务器、云原生、边缘计算和嵌入式的四大应用场景。openEuler 通过开源开放，不断探索科技创新的边界，驱动物理世界与数字世界的深度融合。开发者、用户、社区贡献者、软件爱好者在 openEuler Summit 汇聚，驱动无止境的创新与拓展，闪耀数字时代星辰大海。",
+        HIGHLIGHTS: "精彩回顾",
         AGENDA: {
             WEB_TITLE: '/img/summit/summit2021/zh-pc-summit2021.png',
             MOBILE_TITLE: '/img/summit/summit2021/zh-mobile-summit2021.png',
-            DATE:['11月09日','11月10日'],
+            DATE: ['11月09日', '11月10日'],
             AFTERNOON_AGENDA_9: [
-              
+
             ],
             FORENOON_AGENDA_10: [
                 {
@@ -86,21 +86,140 @@
                 }
             ],
         },
+        CONSTRUCTION: {
+            WEB_TITLE: "/img/summit/summit2021/Co-construction/web-title.png",
+            MOBILE_TITLE: "/img/summit/summit2021/Co-construction/mobile-title.png",
+            GUIDANCE: {
+                TEXT_TITLE: "指导单位",
+                LIST: [
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/openaton.png",
+                        LINK: ""
+                    }
+                ]
+            },
+            HOST: {
+                TEXT_TITLE: "主办单位",
+                LIST: [
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/openEulerlogo.png",
+                        LINK: ""
+                    }
+                ]
+            },
+            STRATEGIC: {
+                TEXT_TITLE: "战略合作单位",
+                LIST: [
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/huawei.png",
+                        LINK: ""
+                    }
+                ]
+            },
+            CO_SPONSORED: {
+                TEXT_TITLE: "联合主办单位",
+                LIST: [
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/qilinsoft.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/qilinxinan.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/suse.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/tongxin.png",
+                        LINK: ""
+                    }
+                ]
+
+            },
+            CO_ORGANIZER: {
+                TEXT_TITLE: "协办单位",
+                LIST: [
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/phytium.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/softstone.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/puhua.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/360.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/easystack.png",
+                        LINK: ""
+                    }
+                ]
+            },
+            SUPPORT: {
+                TEXT_TITLE: "支持单位",
+                LIST: [
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/isstech.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/iiioka.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/winhong.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/nuclei.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/xsky.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/jdcloud.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/asialnfo.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/starfive.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/qingcloud.png",
+                        LINK: ""
+                    },
+                ]
+            }
+        }
     },
     en: {
-        SUMMIT_BANNER:{
-            MOBILE_IMG:"/img/summit/summit2021/summit2021-mo-en.png",
-            PC_IMG:"/img/summit/summit2021/summit2021-pc-en.png"
+        SUMMIT_BANNER: {
+            MOBILE_IMG: "/img/summit/summit2021/summit2021-mo-en.png",
+            PC_IMG: "/img/summit/summit2021/summit2021-pc-en.png"
         },
-        SUMMIT_INTRODUCE:"The openEuler Summit is an event for the global developer community and IT professionals who want to learn about openEuler open source products. openEuler has evolved from a server OS into a digital infrastructure (version: 21.09) that supports IT, CT, and OT services in server, cloud native, edge computing, and embedded scenarios. At the openEuler Summit 2021, we invite developers, users, and software enthusiasts to discuss new innovations and features of openEuler, and learn from others in the community.",
-        HIGHLIGHTS:"Highlights"
+        SUMMIT_INTRODUCE: "The openEuler Summit is an event for the global developer community and IT professionals who want to learn about openEuler open source products. openEuler has evolved from a server OS into a digital infrastructure (version: 21.09) that supports IT, CT, and OT services in server, cloud native, edge computing, and embedded scenarios. At the openEuler Summit 2021, we invite developers, users, and software enthusiasts to discuss new innovations and features of openEuler, and learn from others in the community.",
+        HIGHLIGHTS: "Highlights"
     },
-    ru:{
-        SUMMIT_BANNER:{
-            MOBILE_IMG:"/img/summit/summit2021/summit2021-mo-en.png",
-            PC_IMG:"/img/summit/summit2021/summit2021-pc-en.png"
+    ru: {
+        SUMMIT_BANNER: {
+            MOBILE_IMG: "/img/summit/summit2021/summit2021-mo-en.png",
+            PC_IMG: "/img/summit/summit2021/summit2021-pc-en.png"
         },
-        SUMMIT_INTRODUCE:"The openEuler Summit is an event for the global developer community and IT professionals who want to learn about openEuler open source products. openEuler has evolved from a server OS into a digital infrastructure (version: 21.09) that supports IT, CT, and OT services in server, cloud native, edge computing, and embedded scenarios. At the openEuler Summit 2021, we invite developers, users, and software enthusiasts to discuss new innovations and features of openEuler, and learn from others in the community.",
-        HIGHLIGHTS:"Highlights"
+        SUMMIT_INTRODUCE: "The openEuler Summit is an event for the global developer community and IT professionals who want to learn about openEuler open source products. openEuler has evolved from a server OS into a digital infrastructure (version: 21.09) that supports IT, CT, and OT services in server, cloud native, edge computing, and embedded scenarios. At the openEuler Summit 2021, we invite developers, users, and software enthusiasts to discuss new innovations and features of openEuler, and learn from others in the community.",
+        HIGHLIGHTS: "Highlights"
     }
 }
