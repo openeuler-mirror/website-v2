@@ -53,10 +53,7 @@
           </el-tabs>
         </div>
         <div
-          :class="[
-            'calendar-content',
-            showTab === 'nine' ? 'center-p' : '',
-          ]"
+          :class="['calendar-content', showTab === 'nine' ? 'center-p' : '']"
           v-show="!isShowcarousel"
         >
           <el-table
@@ -95,6 +92,90 @@
           </div>
         </div>
         <!-- <carousel v-show="isShowcarousel"></carousel> -->
+        <div class="construction">
+          <div class="construction-title">
+            <img v-lazy="construction.WEB_TITLE" alt="" v-if="!isShowH5" />
+            <img v-lazy="construction.MOBILE_TITLE" alt="" v-else />
+          </div>
+          <div class="guidance">
+            <div class="text-title">
+              {{ guidanceData.TEXT_TITLE }}
+            </div>
+            <div class="img-list">
+              <img
+                v-lazy="item.IMG"
+                alt=""
+                v-for="(item, index) in guidanceData.LIST"
+                :key="index"
+              />
+            </div>
+          </div>
+          <div class="host">
+            <div class="text-title">
+              {{ hostData.TEXT_TITLE }}
+            </div>
+            <div class="img-list">
+              <img
+                v-lazy="item.IMG"
+                alt=""
+                v-for="(item, index) in hostData.LIST"
+                :key="index"
+              />
+            </div>
+          </div>
+          <div class="stratagic">
+            <div class="text-title">
+              {{ stratagicData.TEXT_TITLE }}
+            </div>
+            <div class="img-list">
+              <img
+                v-lazy="item.IMG"
+                alt=""
+                v-for="(item, index) in stratagicData.LIST"
+                :key="index"
+              />
+            </div>
+          </div>
+          <div class="sponsored">
+            <div class="text-title">
+              {{ sponsoredData.TEXT_TITLE }}
+            </div>
+            <div class="img-list">
+              <img
+                v-lazy="item.IMG"
+                alt=""
+                v-for="(item, index) in sponsoredData.LIST"
+                :key="index"
+              />
+            </div>
+          </div>
+          <div class="organizer">
+            <div class="text-title">
+              {{ organizerData.TEXT_TITLE }}
+            </div>
+            <div class="img-list">
+              <img
+                v-lazy="item.IMG"
+                alt=""
+                v-for="(item, index) in organizerData.LIST"
+                :key="index"
+              />
+            </div>
+          </div>
+          <div class="support">
+            <div class="text-title">
+              {{ supportData.TEXT_TITLE }}
+            </div>
+            <div class="img-list">
+              <img
+                v-lazy="item.IMG"
+                alt=""
+                v-for="(item, index) in supportData.LIST"
+                :key="index"
+              />
+            </div>
+          </div>
+        </div>
       </div>
       <div class="review-wrapper">
         <div class="title">
@@ -132,11 +213,25 @@ export default {
       agendaTableData: [],
       isShowcarousel: false,
       isShowBtn: true,
+      construction: {},
+      guidanceData: {},
+      hostData: {},
+      stratagicData: {},
+      sponsoredData: {},
+      organizerData: {},
+      supportData: {},
     };
   },
   mounted() {
     this.agendaData = this.i18n.summit.AGENDA;
     this.agendaTableData = this.agendaData.FORENOON_AGENDA_10;
+    this.construction = this.i18n.summit.CONSTRUCTION;
+    this.guidanceData = this.construction.GUIDANCE;
+    this.hostData = this.construction.HOST;
+    this.stratagicData = this.construction.STRATEGIC;
+    this.sponsoredData = this.construction.CO_SPONSORED;
+    this.organizerData = this.construction.CO_ORGANIZER;
+    this.supportData = this.construction.SUPPORT;
     this.dateArr = this.agendaData.DATE;
   },
   methods: {
@@ -171,7 +266,12 @@ export default {
     },
     objectSpanMethod({ row, column, rowIndex, columnIndex }) {
       if (this.showTab === "ten") {
-        if (rowIndex === 7 || rowIndex === 5 ||rowIndex === 8 || rowIndex === 9) {
+        if (
+          rowIndex === 7 ||
+          rowIndex === 5 ||
+          rowIndex === 8 ||
+          rowIndex === 9
+        ) {
           if (columnIndex === 3) {
             return {
               rowspan: 1,
@@ -254,9 +354,75 @@ export default {
       margin-bottom: 40px;
     }
   }
+  .construction {
+    text-align: center;
+    .construction-title {
+      margin: 40px 0;
+    }
+    .text-title {
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-family: FZLTHJW--GB1-0, FZLTHJW--GB1;
+      color: #000000;
+      line-height: 46px;
+    }
+    .img-list {
+      margin-bottom: 40px;
+    }
+    .sponsored,
+    .organizer,
+    .support {
+      .img-list {
+        margin: 0 auto 40px auto;
+        width: 920px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        img {
+          width: 280px;
+          height: 80px;
+          margin: 0 40px 20px 0;
+          cursor: pointer;
+          display: block;
+          &:nth-of-type(3n) {
+            margin-right: 0;
+          }
+        }
+      }
+      @media screen and (max-width: 1000px) {
+        margin-top: 40px;
+        .img-list {
+          width: 100%;
+          flex-direction: column;
+          img {
+            margin: 10px auto 0 auto;
+            &:nth-of-type(3n) {
+              margin-right: auto;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1000px) {
+      .construction-title {
+        margin: 30px 0;
+      }
+      .text-title {
+        margin-bottom: 0;
+        font-size: 16px;
+      }
+      .img-list {
+        margin-bottom: 30px;
+        img {
+          width: 210px !important;
+          height: 60px !important;
+        }
+      }
+    }
+  }
 
   /deep/#agenda {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     .el-table {
       font-size: 18px;
       .cell {
@@ -265,8 +431,8 @@ export default {
     }
     .el-tabs__nav-scroll {
       @media screen and (max-width: 1000px) {
-       display: flex;
-       justify-content: center;
+        display: flex;
+        justify-content: center;
       }
     }
     .el-tabs__item {
@@ -317,6 +483,11 @@ export default {
       }
     }
   }
+  @media screen and (max-width: 1000px) {
+      #agenda {
+        margin-bottom: 50px;
+      }
+    }
   // 移动端峰会日程
   .mobile-table {
     font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
@@ -365,11 +536,11 @@ export default {
         }
       }
     }
-    .item:nth-child(-n+10):nth-child(n+6){
-      p  span:first-of-type {
+    .item:nth-child(-n + 10):nth-child(n + 6) {
+      p span:first-of-type {
         width: 180px;
       }
-      p  span:last-of-type {
+      p span:last-of-type {
         width: 0;
       }
     }
