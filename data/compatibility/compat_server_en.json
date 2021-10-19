@@ -2892,5 +2892,127 @@
       "hostBusAdapter": "Avago 3508",
       "hardDiskDrive": ""
     }
+  },
+  {
+    "hardwareFactory": "rcsit",
+    "hardwareModel": "TG225 B1",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "aarch64",
+    "date": "2021/10/18",
+    "friendlyLink": "http://www.rcsit.cn/webfile/enterprise/prod.htm",
+    "boardCards": [
+      {
+        "vendorID": "15b3",
+        "deviceID": "1017",
+        "svID": "15b3",
+        "ssID": "0007",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "megaraid_sas",
+        "version": "31.100.01.00",
+        "type": "raid",
+        "driverDate": "2020.12.28",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Avago",
+        "boardModel": "SR450C-M",
+        "chipModel": "3508",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "19e5",
+        "deviceID": "a222",
+        "svID": "19e5",
+        "ssID": "04cc",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "hns3",
+        "version": "1.9.38.8",
+        "type": "NIC",
+        "driverDate": "2020.12.28",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "huawei",
+        "boardModel": "TM210",
+        "chipModel": "hisi",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "http://www.rcsit.cn/webfile/enterprise/prod.htm",
+      "certificationTime": "2021/5/20",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "1.77",
+      "cpu": "Kunpeng-920",
+      "ram": "16*32G DIMMs",
+      "portsBusTypes": "NIC 1 (TM210)",
+      "videoAdapter": "1711",
+      "hostBusAdapter": "Avago 3508",
+      "hardDiskDrive": ""
+    }
+  },
+  {
+    "hardwareFactory": "rcsit",
+    "hardwareModel": "TG245 B1",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "aarch64",
+    "date": "2021/10/18",
+    "friendlyLink": "http://www.rcsit.cn/webfile/enterprise/prod.htm",
+    "boardCards": [
+      {
+        "vendorID": "15b3",
+        "deviceID": "1017",
+        "svID": "15b3",
+        "ssID": "0007",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "megaraid_sas",
+        "version": "31.100.01.00",
+        "type": "raid",
+        "driverDate": "2020.12.28",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "sas",
+        "boardModel": "SR450C-M",
+        "chipModel": "3516",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "19e5",
+        "deviceID": "a222",
+        "svID": "19e5",
+        "ssID": "04cc",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "hns3",
+        "version": "1.9.38.8",
+        "type": "NIC",
+        "driverDate": "2020.12.28",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "huawei",
+        "boardModel": "TM210",
+        "chipModel": "hisi",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "http://www.rcsit.cn/webfile/enterprise/prod.htm",
+      "certificationTime": "2021/5/20",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "3.28",
+      "cpu": "Kunpeng-920",
+      "ram": "16*32G DIMMs",
+      "portsBusTypes": "NIC 1 (TM210)",
+      "videoAdapter": "1711",
+      "hostBusAdapter": "sas 3516",
+      "hardDiskDrive": ""
+    }
   }
 ]
