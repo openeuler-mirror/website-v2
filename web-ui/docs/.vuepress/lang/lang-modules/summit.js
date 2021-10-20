@@ -50,7 +50,7 @@ module.exports = {
                 {
                     TIME: '10:10 - 10:40',
                     THEME: 'openEuler&Friends 2.0-协作联创激发无限可能',
-                    SPEAKER: '中移苏研、中移信息、中国联通、中国电信、招商银行、中科创达、品高软件、支流科技'
+                    SPEAKER: '中国移动、中国联通、中国电信、招商银行、中科创达、品高软件、支流科技'
                 },
                 {
                     TIME: '10:40 - 10:55',
@@ -64,7 +64,7 @@ module.exports = {
                 },
                 {
                     TIME: '11:10 - 11:25',
-                    THEME: '智能电网调度控制系统自主创新应用实践',
+                    THEME: '智能电网创新实践',
                     SPEAKER: '中国电科院和麒麟信安联合演讲'
                 },
                 {
@@ -191,7 +191,7 @@ module.exports = {
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/asialnfo.png",
+                        IMG: "/img/summit/summit2021/Co-construction/asiainfo.png",
                         LINK: ""
                     },
                     {
@@ -200,6 +200,14 @@ module.exports = {
                     },
                     {
                         IMG: "/img/summit/summit2021/Co-construction/qingcloud.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/bessystem.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/tianyuan.png",
                         LINK: ""
                     },
                 ]
