@@ -48,7 +48,9 @@ module.exports = {
                         LEFT_IMG: "/img/community/maillist/mail3.png"
                     },
                     RIGHT: {
-                        RIGHT_INFO: "您的邮箱收到来自一封来自邮件列表的欢迎邮件，即成功订阅该邮件列表",
+                        RIGHT_INFO: "您的邮箱收到来自一封来自邮件列表的欢迎邮件，即成功订阅该邮件列表。如需退订，请参考",
+                        DO_THIS:"此操作",
+                        LINK:"/blog/liuqi/2021-10-14-unsubscribe-mailing-list.html",
                         RIGHT_CIRCLE: "成功",
                         LEFT_IMG: "/img/community/maillist/mail4.png"
                     }
