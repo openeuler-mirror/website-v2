@@ -47,7 +47,7 @@
                                 <img :src="item.RIGHT.LEFT_IMG" alt="" />
                                 <p>
                                     <span v-if="$lang !== 'zh'" class="en-title">{{ item.RIGHT.RIGHT_CIRCLE }}<br></span>
-                                    {{ item.RIGHT.RIGHT_INFO }}
+                                    {{ item.RIGHT.RIGHT_INFO }}<span class="link-color" @click="golink('/blog/liuqi/2021-10-14-unsubscribe-mailing-list.html')">{{item.RIGHT.DO_THIS}}</span>
                                 </p>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                             <div :class="['inner-box',$lang === 'en'?'en-box' + index : '']">
                                 <img :src="item.RIGHT.LEFT_IMG" alt="" />
                                 <p>
-                                    {{ item.RIGHT.RIGHT_INFO }}
+                                    {{ item.RIGHT.RIGHT_INFO }}<span class="link-color" @click="golink('/blog/liuqi/2021-10-14-unsubscribe-mailing-list.html')" >{{item.RIGHT.DO_THIS}}</span>
                                 </p>
                             </div>
                         </div>
@@ -210,6 +210,17 @@ export default {
             });
     },
     methods: {
+        golink(path) {
+            if (path && !path.includes("http")) {
+                this.$router.push({
+                    path: this.resolvePath(path)
+                });
+            }else if(path.includes("http")){
+                window.open(path);
+            }else{
+                this.isShowCard = !this.isShowCard;
+            }
+        },
         go (name) {
             window.open('https://mailweb.openeuler.org/hyperkitty/list/' + name.toLowerCase() + '@openeuler.org/');
         },
@@ -463,6 +474,10 @@ p {
     );
     background-size: 8px 2px;
     background-repeat: repeat-x;
+}
+.link-color {
+    cursor: pointer;
+    color: #002FA7;
 }
 .mail-box {
     padding: 0;
