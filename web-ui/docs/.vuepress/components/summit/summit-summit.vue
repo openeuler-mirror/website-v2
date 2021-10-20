@@ -374,19 +374,17 @@ export default {
     .support {
       .img-list {
         margin: 0 auto 40px auto;
-        width: 920px;
+        width: 1120px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         img {
           width: 280px;
           height: 80px;
-          margin: 0 40px 20px 0;
+          // margin: 0 40px 20px 0;
+          margin-bottom: 10px;
           cursor: pointer;
           display: block;
-          &:nth-of-type(3n) {
-            margin-right: 0;
-          }
         }
       }
       @media screen and (max-width: 1000px) {
@@ -395,9 +393,9 @@ export default {
           width: 100%;
           flex-direction: column;
           img {
-            margin: 10px auto 0 auto;
-            &:nth-of-type(3n) {
-              margin-right: auto;
+            margin: 0 auto 10px auto;
+            &:last-child {
+              margin-bottom: 0;
             }
           }
         }
@@ -484,10 +482,10 @@ export default {
     }
   }
   @media screen and (max-width: 1000px) {
-      #agenda {
-        margin-bottom: 50px;
-      }
+    #agenda {
+      margin-bottom: 50px;
     }
+  }
   // 移动端峰会日程
   .mobile-table {
     font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
