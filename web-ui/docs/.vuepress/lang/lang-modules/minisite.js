@@ -225,9 +225,9 @@ module.exports = {
             ]
         },
 
-        SVIRT_BANNER_TEXT: ['StratoVirt','面向云数据中心的企业级虚拟化平台'],
+        SVIRT_BANNER_TEXT: ['StratoVirt','面向云数据中心的企业级虚拟化VMM'],
         SVIRT_BANNER_IMG: '/img/minisite/svirt/mobile-banner.png',
-        SVIRT_DESC: ['StratoVirt是面向云数据中心的企业级虚拟化平台，实现一套架构对虚拟机、容器、Serverless三种场景的统一支持。在轻量低噪、软硬协同、Rust语言级安全等方面具备关键技术竞争优势。','StratoVirt在架构设计上预留了组件化拼装的能力和接口，可以按需灵活组装高级特性直至演化到支持标准虚拟化，在特性需求、应用场景和轻快灵巧之间找到最佳的平衡点。'],
+        SVIRT_DESC: ['StratoVirt是面向云数据中心的企业级虚拟化VMM (Virtual Machine Monitor)，实现一套架构对虚拟机、容器、Serverless三种场景的统一支持。在轻量低噪、软硬协同、Rust语言级安全等方面具备关键技术竞争优势。','StratoVirt在架构设计上预留了组件化拼装的能力和接口，可以按需灵活组装高级特性直至演化到支持标准虚拟化，在特性需求、应用场景和轻快灵巧之间找到最佳的平衡点。'],
         SVIRT_IMG: '/img/minisite/svirt/pc-svirt.png',
         SVIRT_MB_IMG: '/img/minisite/svirt/mobile-svirt.png',
         SVIRT_NAV_TEXT: [

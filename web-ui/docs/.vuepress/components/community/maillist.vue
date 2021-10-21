@@ -47,7 +47,7 @@
                                 <img :src="item.RIGHT.LEFT_IMG" alt="" />
                                 <p>
                                     <span v-if="$lang !== 'zh'" class="en-title">{{ item.RIGHT.RIGHT_CIRCLE }}<br></span>
-                                    {{ item.RIGHT.RIGHT_INFO }}<span class="link-color" @click="golink('/blog/liuqi/2021-10-14-unsubscribe-mailing-list.html')">{{item.RIGHT.DO_THIS}}</span>
+                                    {{ item.RIGHT.RIGHT_INFO }}<span class="link-color" @click="golink( item.RIGHT.LINK)">{{item.RIGHT.DO_THIS}}</span>
                                 </p>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                             <div :class="['inner-box',$lang === 'en'?'en-box' + index : '']">
                                 <img :src="item.RIGHT.LEFT_IMG" alt="" />
                                 <p>
-                                    {{ item.RIGHT.RIGHT_INFO }}<span class="link-color" @click="golink('/blog/liuqi/2021-10-14-unsubscribe-mailing-list.html')" >{{item.RIGHT.DO_THIS}}</span>
+                                    {{ item.RIGHT.RIGHT_INFO }}<span class="link-color" @click="golink( item.RIGHT.LINK)" >{{item.RIGHT.DO_THIS}}</span>
                                 </p>
                             </div>
                         </div>
@@ -217,8 +217,6 @@ export default {
                 });
             }else if(path.includes("http")){
                 window.open(path);
-            }else{
-                this.isShowCard = !this.isShowCard;
             }
         },
         go (name) {

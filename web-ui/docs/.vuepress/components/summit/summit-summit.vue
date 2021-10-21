@@ -368,6 +368,11 @@ export default {
     }
     .img-list {
       margin-bottom: 40px;
+      img {
+        cursor: pointer;
+        width: 280px;
+        height: 80px;
+      }
     }
     .sponsored,
     .organizer,
@@ -379,12 +384,8 @@ export default {
         flex-wrap: wrap;
         flex-direction: row;
         img {
-          width: 280px;
-          height: 80px;
-          // margin: 0 40px 20px 0;
           margin-bottom: 10px;
-          cursor: pointer;
-          display: block;
+          // display: block;
         }
       }
       @media screen and (max-width: 1000px) {
@@ -412,8 +413,8 @@ export default {
       .img-list {
         margin-bottom: 30px;
         img {
-          width: 210px !important;
-          height: 60px !important;
+          width: 210px;
+          height: 60px;
         }
       }
     }
