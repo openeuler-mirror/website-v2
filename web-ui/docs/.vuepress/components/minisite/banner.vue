@@ -40,7 +40,6 @@ export default {
         }
     }
     #video {
-        margin-left: 410px;
         width: 223px;
         height: 224px;
     }

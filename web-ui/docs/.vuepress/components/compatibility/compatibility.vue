@@ -298,6 +298,7 @@
 
 <script>
 import commonBanner from "./../common/banner.vue";
+import axios from "axios"
 import { 
     hardwareList,
     hardwareOSOptions,
@@ -308,6 +309,7 @@ import {
     } from "../../api/compatibility";
 
 let that = null;
+
 const locationMethods = {
     // 硬件列表
     getHardwareList(params) {
@@ -389,7 +391,6 @@ export default {
         } else {
              lang = 'zh';
         }
-
         this.formData.lang = lang;
         this.initData(this.formData);
 
@@ -423,6 +424,16 @@ export default {
         })
     },
     methods: {
+        getFile() {
+            axios.get("/JSON/compatibility/compat_card_zh.json").then(res=>{
+                console.log(res.data);
+            })
+            .catch(err=>{
+                this.$message.error(err)
+                console.log(err);
+            })
+			
+        },
         initData(params) {
             if(this.tabActiveName === 'hardware') {
                 locationMethods.getHardwareList(params);
