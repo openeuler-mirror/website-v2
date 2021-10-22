@@ -236,6 +236,10 @@ export default {
     .speech-list {
         .mr-All(60px 0 0 0);
     li {
+        position: relative;
+        transition: all 0.4s;
+        height: 144px;
+        overflow: hidden;
         box-sizing: border-box;
         .mr(top,20px);
         &:first-of-type {
@@ -244,7 +248,7 @@ export default {
         .wid-and-hei(1120px,144px);
         .back-shadow-radius(rgba(255,255,255,1),0px 6px 30px 0px rgba(0,0,0,0.1),8px);
         &:hover {
-            height: 361px;
+            height: 364px;
             .list-head {
                 .back-shadow-radius(rgba(0,47,167,1),0px 6px 30px 0px rgba(0,0,0,0.1),8px 8px 0 0);
                 p {
@@ -263,6 +267,8 @@ export default {
                 }
             }
             .list-body {
+                top: 144px;
+                z-index: 0;
                 border: 2px solid #002FA7;
                 border-top: 0;
                 display: block;
@@ -272,6 +278,7 @@ export default {
         }
             .list-head {
                 position: relative;
+                z-index: 1;
                 .wid-and-hei(100%,144px);
                 padding: 38px 0 0 52px;
                 p {
@@ -323,8 +330,11 @@ export default {
                 }
             }
             .list-body {
+                position: absolute;
+                top: -145px;
+                z-index: -1;
                 padding: 24px 42px 25px 50px;
-                display: none;
+                // display: none;
                 .list-explain {
                     .mr-All(26px 96px 46px 0);
                     .wid-and-hei(600px,96px);
@@ -413,7 +423,8 @@ export default {
                     }
                 }
                 .list-body {
-                    padding: 20px;
+                    top: 160px !important;
+                    padding: 20px 18px;
                     .list-explain {
                     display: none;
                     }

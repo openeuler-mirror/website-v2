@@ -423,6 +423,9 @@ export default {
   /deep/#agenda {
     margin-bottom: 100px;
     .el-table {
+      &::before {
+        width: 95%;
+      }
       font-size: 18px;
       .cell {
         padding: 0;

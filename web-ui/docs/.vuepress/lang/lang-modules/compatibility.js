@@ -7,6 +7,9 @@ module.exports = {
         COMPATIBILITY: '兼容性列表',
         HARDWARE: '整机',
         DRIVE: '板卡',
+        SOFTWARE:'软件',
+        SOFTWARETYPE:'软件类型',
+        ADAPTIVE:'适配操作系统',
         OS: '操作系统',
         ARCHITECTURE: '架构',
         SELECT_PLACEHOLDER: '请选择',
@@ -36,6 +39,16 @@ module.exports = {
             CHIP_VENDOR: '芯片厂家',
             BOARD_MODEL: '板卡型号',
             CHIP_MODEL: '芯片型号'
+        },
+        SOFTWARE_TABLE_COLUMN: {
+            ARCHITECTURE: '架构',
+            SOFTWARETYPE: '软件类型',
+            SOFTWARENAME: '软件名称',
+            VERSION: '版本号',
+            PROPERTIES: '软件属性',
+            DOWNLOADLINK: '下载地址',
+            SYSTEM: '适配操作系统',
+            PUBLICKLICENSE: '开源协议'
         },
         HARDWARE_DETAIL: {
             TITLE_1: 'Product Information',
