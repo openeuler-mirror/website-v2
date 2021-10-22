@@ -8,6 +8,7 @@
         ></common-banner>
         <div class="compatibility-content">
             <el-tabs v-model="tabActiveName" @tab-click="handleTabClick">
+                <!-- 板卡 -->
                 <el-tab-pane :label="i18n.compatibility.DRIVE" name="drive">
                      <el-form :inline="true" :model="formData" class="compatibility-filter">
                         <el-form-item :label="i18n.compatibility.OS">
@@ -137,6 +138,7 @@
                         </li>
                     </ul>
                 </el-tab-pane>
+                <!-- 整机 -->
                 <el-tab-pane :label="i18n.compatibility.HARDWARE" name="hardware">
                     <el-form :inline="true" :model="formData" class="compatibility-filter">
                         <el-form-item :label="i18n.compatibility.OS">
@@ -273,7 +275,165 @@
                         </li>
                     </ul>
                 </el-tab-pane>
+                <!-- 软件 -->
+                <el-tab-pane :label="i18n.compatibility.SOFTWARE" name="software">
+                    <el-form :inline="true" :model="formData" class="compatibility-filter">
+                        <el-form-item :label="i18n.compatibility.ARCHITECTURE">
+                            <el-select class="pc-select" 
+                                v-model="formData.os" 
+                                @change="hardwareChange" 
+                                :placeholder="i18n.compatibility.SELECT_PLACEHOLDER">
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
+                                <el-option
+                                    v-for="(item, index) in hardwareOSOptions"
+                                    :key="index"
+                                    :value="item"
+                                ></el-option>
+                            </el-select>
+                            <el-select class="mobile-select" 
+                                v-model="formData.os" 
+                                @change="hardwareChange" 
+                                :placeholder="i18n.compatibility.ARCHITECTURE">
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
+                                <el-option
+                                    v-for="(item, index) in hardwareOSOptions"
+                                    :key="index"
+                                    :value="item"
+                                ></el-option>
+                            </el-select>
+                        </el-form-item>
+                        <el-form-item :label="i18n.compatibility.SOFTWARETYPE">
+                            <el-select class="pc-select" 
+                                v-model="formData.architecture" 
+                                @change="hardwareChange" 
+                                :placeholder="i18n.compatibility.SELECT_PLACEHOLDER">
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
+                                <el-option
+                                    v-for="(item, index) in hardwareArchitectureOptions"
+                                    :key="index"
+                                    :value="item"
+                                ></el-option>
+                            </el-select>
+                            <el-select class="mobile-select" 
+                                v-model="formData.architecture" 
+                                @change="hardwareChange" 
+                                :placeholder="i18n.compatibility.SOFTWARETYPE">
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
+                                <el-option
+                                    v-for="(item, index) in hardwareArchitectureOptions"
+                                    :key="index"
+                                    :value="item"
+                                ></el-option>
+                            </el-select>
+                        </el-form-item>
+                        <el-form-item :label="i18n.compatibility.ADAPTIVE">
+                            <el-select class="pc-select" 
+                                v-model="formData.architecture" 
+                                @change="hardwareChange" 
+                                :placeholder="i18n.compatibility.SELECT_PLACEHOLDER">
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
+                                <el-option
+                                    v-for="(item, index) in hardwareArchitectureOptions"
+                                    :key="index"
+                                    :value="item"
+                                ></el-option>
+                            </el-select>
+                            <el-select class="mobile-select" 
+                                v-model="formData.architecture" 
+                                @change="hardwareChange" 
+                                :placeholder="i18n.compatibility.ADAPTIVE">
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
+                                <el-option
+                                    v-for="(item, index) in hardwareArchitectureOptions"
+                                    :key="index"
+                                    :value="item"
+                                ></el-option>
+                            </el-select>
+                        </el-form-item>
+                        <el-form-item :label="i18n.compatibility.SEARCH_LABEL" class="search-box" v-if="!software">
+                            <el-input 
+                                v-model="formData.keyword"
+                                class="pc-search"
+                                @keyup.enter.native='hardwareChange()'
+                                :placeholder="i18n.compatibility.HARDWARE_SEARCH_PLACEHOLDER"
+                            >
+                                <i slot="suffix" class="icon-search" @click="hardwareChange()"></i>
+                            </el-input>
+                            <el-input
+                                v-model="formData.keyword"
+                                class="mobile-search"
+                                @keyup.enter.native='hardwareChange()'
+                                :placeholder="i18n.compatibility.SEARCH_LABEL"
+                            >
+                                <i slot="suffix" class="icon-search" @click="hardwareChange()"></i>
+                            </el-input>
+                        </el-form-item>
+                    </el-form>
+                    <el-table
+                        v-loading.fullscreen="tableLoading"
+                        class="table-pc"
+                        :data="softwareTableData"
+                        stripe
+                        style="width: 100%"
+                    >
+                        <el-table-column prop="architecture" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.ARCHITECTURE" width="110"></el-table-column>
+                        <el-table-column prop="driverName" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.SOFTWARETYPE" width="120"></el-table-column>
+                        <el-table-column prop="driverName" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.SOFTWARENAME" width="200"></el-table-column>
+                        <el-table-column prop="version" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.VERSION" width="110"></el-table-column>
+                        <el-table-column prop="productInformation" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.PROPERTIES" width="150"></el-table-column>
+                        <el-table-column prop="downloadLink" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.DOWNLOADLINK" width="100">
+                             <template slot-scope="scope">
+                                <a
+                                    class="table-link"
+                                    target="_blank"
+                                    :href="scope.row.downloadLink"
+                                >{{ i18n.compatibility.LINK}}</a>
+                            </template>
+                        </el-table-column>
+                        <el-table-column prop="os" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.SYSTEM" width="150"></el-table-column>
+                        <el-table-column prop="friendlyLink" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.PUBLICKLICENSE" width="180"></el-table-column>
+                    </el-table>
+                    <ul class="table-mobile" v-loading.fullscreen="tableLoading">
+                        <div class="wait">暂无数据</div>
+                        <!-- <li class="item" v-for="(item, index) in hardwareTableData" :key="index">
+                            <ul>
+                                <li>
+                                    <span>{{i18n.compatibility.HARDWARE_TABLE_COLUMN.VENDOR}}:</span>
+                                    {{item.hardwareFactory}}
+                                </li>
+                                <li>
+                                    <span>{{i18n.compatibility.HARDWARE_TABLE_COLUMN.MODEL}}:</span>
+                                    {{item.hardwareModel}}
+                                </li>
+                                <li>
+                                    <span>{{i18n.compatibility.HARDWARE_TABLE_COLUMN.OS}}:</span>
+                                    {{item.osVersion}}
+                                </li>
+                                <li>
+                                    <span>{{i18n.compatibility.HARDWARE_TABLE_COLUMN.DATE}}:</span>
+                                    {{item.date}}
+                                </li>
+                                <li>
+                                    <span>{{i18n.compatibility.HARDWARE_TABLE_COLUMN.COMPATIBILITY_CONFIGURATION}}:</span>
+                                    <a
+                                        class="table-link"
+                                        @click="go(item.id)"
+                                    >{{ i18n.compatibility.HARDWARE_TABLE_COLUMN.COMPATIBILITY_CONFIGURATION2 }}</a>
+                                </li>
+                                <li>
+                                    <span>{{i18n.compatibility.HARDWARE_TABLE_COLUMN.REFERRENCE}}:</span>
+                                    <a
+                                        class="table-link"
+                                        target="_blank"
+                                        :href="item.friendlyLink"
+                                    >{{ i18n.compatibility.LINK }}</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </el-tab-pane>
             </el-tabs>
+            <!-- 分页 -->
             <el-pagination
                 class="compatibility-pagination"
                 background
@@ -355,6 +515,7 @@ export default {
     data() {
         that = this;
         return {
+            software:false,
             tabActiveName: 'drive',
             hardwareOSOptions: [],
             hardwareArchitectureOptions: [],
@@ -369,6 +530,7 @@ export default {
                 lang:'zh'
             },
             hardwareTableData: [],
+            softwareTableData:[],
             driverTableData: [],
             tableLoading: false,
             total: 0,
@@ -383,6 +545,8 @@ export default {
     created() {},
 
     mounted() {
+        // 获取软件列表json数据
+        // this.getFile()
         let lang = '';
         if(window.location.pathname.indexOf('/en/') !== -1) {
             lang = 'en';
@@ -426,6 +590,7 @@ export default {
     methods: {
         getFile() {
             axios.get("/JSON/compatibility/compat_card_zh.json").then(res=>{
+                this.softwareTableData=res.data;
                 console.log(res.data);
             })
             .catch(err=>{
@@ -442,6 +607,7 @@ export default {
             }
         },
         handleTabClick(tab, event) {
+            this.tabActiveName === 'software'? this.software=true:this.software=false;
             let lang = '';
             if(window.location.pathname.indexOf('/en/') !== -1) {
                 lang = 'en';
@@ -490,6 +656,13 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.wait {
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
 .compatibility-content {
     width: 1120px;
     margin: 0 auto;
