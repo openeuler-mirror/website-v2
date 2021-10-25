@@ -3,7 +3,7 @@
         <common-banner
         :pc-src="'/img/compatibility/compatibility_banner.png'"
         :mobile-src="'/img/compatibility/compatibility_banner.png'"
-        :inside-name="'COMPATIBILITY'"
+        :inside-name="'SUPPORT'"
         :outside-name="i18n.compatibility.COMPATIBILITY"
         ></common-banner>
         <div class="compatibility-content">
@@ -276,7 +276,7 @@
                     </ul>
                 </el-tab-pane>
                 <!-- 软件 -->
-                <el-tab-pane :label="i18n.compatibility.SOFTWARE" name="software">
+                <!-- <el-tab-pane :label="i18n.compatibility.SOFTWARE" name="software">
                     <el-form :inline="true" :model="formData" class="compatibility-filter">
                         <el-form-item :label="i18n.compatibility.ARCHITECTURE">
                             <el-select class="pc-select" 
@@ -395,7 +395,7 @@
                     </el-table>
                     <ul class="table-mobile" v-loading.fullscreen="tableLoading">
                         <div class="wait">暂无数据</div>
-                        <!-- <li class="item" v-for="(item, index) in hardwareTableData" :key="index">
+                        <li class="item" v-for="(item, index) in hardwareTableData" :key="index">
                             <ul>
                                 <li>
                                     <span>{{i18n.compatibility.HARDWARE_TABLE_COLUMN.VENDOR}}:</span>
@@ -429,9 +429,9 @@
                                     >{{ i18n.compatibility.LINK }}</a>
                                 </li>
                             </ul>
-                        </li> -->
+                        </li>
                     </ul>
-                </el-tab-pane>
+                </el-tab-pane> -->
             </el-tabs>
             <!-- 分页 -->
             <el-pagination
