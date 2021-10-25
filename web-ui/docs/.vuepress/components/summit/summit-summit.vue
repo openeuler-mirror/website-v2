@@ -23,7 +23,7 @@
     <div class="container">
       <div class="text-wrapper">
         <p class="text">{{ i18n.summit.SUMMIT_INTRODUCE }}</p>
-        <div class="link-wrapper">
+        <!-- <div class="link-wrapper">
           <a
             href="https://shimowendang.com/forms/X6X9jj9KPcdQwVr8/fill"
             target="_blank"
@@ -39,7 +39,7 @@
             target="_blank"
             ><img :src="i18n.interaction.SUMMIT_2021.DEMO"
           /></a>
-        </div>
+        </div> -->
       </div>
       <div class="agenda" id="agenda">
         <div :class="['title', $lang === 'en' ? 'en-title' : '']">
@@ -55,7 +55,7 @@
           <el-radio-group
             v-model="showBtn"
             @change="changeTime"
-            v-show="isShowBtn"
+            v-show="showTab==='ten'"
           >
             <el-radio-button label="forenoon">{{ dateArr[2] }}</el-radio-button>
             <el-radio-button label="afternoon">{{
@@ -63,21 +63,11 @@
             }}</el-radio-button>
           </el-radio-group>
           <!-- 9号按钮 -->
-          <el-radio-group
-            v-model="showBtn"
-            @change="changeTime"
-            v-show="!isShowBtn"
-          >
-            <el-radio-button label="forenoon">{{ dateArr[2] }}</el-radio-button>
-            <el-radio-button label="afternoon">{{
-              dateArr[3]
-            }}</el-radio-button>
-          </el-radio-group>
         </div>
-        <!-- 10号上午表格 -->
+        <!-- 10号表格 -->
         <div
           :class="['calendar-content', showTab === 'nine' ? 'center-p' : '']"
-          v-show="showTab === 'ten'"
+          v-show="showTab === 'ten' && showBtn === 'forenoon'"
         >
           <el-table
             :data="agendaTableData"
@@ -96,7 +86,6 @@
             <el-table-column prop="POSITION" width="280"> </el-table-column>
           </el-table>
           <div class="mobile-table tenDay" v-if="isShowH5">
-            <div class="wait" v-if="showTab === 'ten' &&showBtn==='afternoon'">敬请期待</div>
             <div
               class="item"
               v-for="(item, index) in agendaTableData"
@@ -113,12 +102,11 @@
             </div>
           </div>
         </div>
-        <!-- 9号下午表格 -->
+        <!-- 9号表格 -->
         <div
           :class="['calendar-content', showTab === 'nine' ? 'center-p' : '']"
           v-show="showTab === 'nine'"
         >
-          <template v-if="showBtn === 'afternoon'">
             <div class="forum-title">{{ agendaData.SUB_FORUM }}</div>
             <div class="head-list">
               <div
@@ -131,7 +119,6 @@
                 {{ item }}
               </div>
             </div>
-          </template>
           <el-table
             :data="forumList"
             :show-header="false"
@@ -146,7 +133,7 @@
             </el-table-column>
             <el-table-column prop="TIME" width="200"> </el-table-column>
             <el-table-column prop="THEME" width="414"> </el-table-column>
-            <el-table-column prop="SPEAKER" width="150">
+            <el-table-column prop="SPEAKER" width="140">
               <template slot-scope="scope">
                 <p>{{ scope.row.SPEAKER }}</p>
                 <p
@@ -164,7 +151,7 @@
                   v-if="scope.$index == 1 && forumTab == 0"
                   class="specialTable"
                 >
-                  Service Director of Great China
+                  SUSE大中华区Service Director
                 </p>
               </template>
             </el-table-column>
@@ -199,7 +186,52 @@
             </div>
           </div>
         </div>
-        <!-- <carousel v-show="isShowcarousel" :agendaData="carouselObj" :sigData="sigObj"></carousel> -->
+        <carousel
+          v-show="isShowcarousel"
+          :agendaData="carouselObj"
+          :sigData="sigObj"
+        ></carousel>
+        <!-- <div class="lecturer" id="lecturer">
+          <div class="title">
+            <img v-lazy="lecturerBanner.mobile" alt="" v-if="isShowH5" />
+            <img v-lazy="lecturerBanner.web" alt="" v-else />
+          </div>
+          <div
+            class="lecturer-box"
+            v-fade
+            v-if="lecturerList.length && !isShowH5"
+          >
+            <div
+              class="item fade-in"
+              v-for="(item, index) in lecturerList"
+              :key="index"
+            >
+              <img v-lazy="item.IMG" alt="" />
+              <p>{{ item.NAME }}</p>
+              <p>{{ item.POSITION }}</p>
+            </div>
+          </div>
+          <div
+            class="lecturer-box"
+            v-fade
+            v-if="lecturerList.length && isShowH5"
+          >
+            <div
+              :class="['item', 'fade-in', index > 7 && flag ? 'hidden' : '']"
+              v-for="(item, index) in lecturerList"
+              :key="index"
+            >
+              <img v-lazy="item.IMG" alt="" />
+              <p>{{ item.NAME }}</p>
+              <p>{{ item.POSITION }}</p>
+            </div>
+          </div>
+          <div class="show-all" @click="showAll" v-if="isShowH5">
+            <p>{{ flag ? i18n.home.EXPAND : i18n.home.RETRACT }}</p>
+            <img v-if="flag" v-lazy="'/img/home/arrow.svg'" alt="" />
+            <img v-if="!flag" v-lazy="'/img/home/arrowUp.svg'" alt="" />
+          </div>
+        </div> -->
         <div class="construction">
           <div class="construction-title">
             <img v-lazy="construction.WEB_TITLE" alt="" v-if="!isShowH5" />
@@ -270,7 +302,7 @@
               />
             </div>
           </div>
-          <!-- <div class="support">
+          <div class="support">
             <div class="text-title">
               {{ supportData.TEXT_TITLE }}
             </div>
@@ -282,7 +314,7 @@
                 :key="index"
               />
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
       <div class="review-wrapper">
@@ -305,17 +337,17 @@
 </template>
 
 <script>
-// import carousel from "./carousel.vue";
+import carousel from "./carousel.vue";
 export default {
   components: {
-    // carousel,
+    carousel,
   },
   data() {
     return {
       value: "SUSE",
       agendaData: {},
       dateArr: [],
-      showTab: "ten",
+      showTab: "nine",
       showBtn: "forenoon",
       agendaData: {},
       dateArr: [],
@@ -334,10 +366,15 @@ export default {
       forumData: [],
       forumList: [],
       forumTab: 0,
+      lecturerData:{}
     };
   },
-  mounted() {
+  created() {
     this.agendaData = this.i18n.summit.AGENDA;
+    this.carouselObj = this.agendaData.AFTERNOON_AGENDA_10;
+    this.sigObj = this.agendaData.SIG_CONTENT;
+  },
+  mounted() {
     this.agendaTableData = this.agendaData.FORENOON_AGENDA_10;
     this.construction = this.i18n.summit.CONSTRUCTION;
     this.guidanceData = this.construction.GUIDANCE;
@@ -347,10 +384,11 @@ export default {
     this.organizerData = this.construction.CO_ORGANIZER;
     this.supportData = this.construction.SUPPORT;
     this.dateArr = this.agendaData.DATE;
-    this.forumData = this.agendaData.AFTERNOON_AGENDA_10;
+    this.forumData = this.agendaData.AFTERNOON_AGENDA_9;
     this.carouselObj = this.agendaData.AFTERNOON_AGENDA_10;
     this.sigObj = this.agendaData.SIG_CONTENT;
     this.forumClick(0);
+    tabClick()
   },
   methods: {
     forumClick(index) {
@@ -361,16 +399,13 @@ export default {
       const routeUrl = this.$router.resolve(this.resolvePath(url));
       window.open(routeUrl.href);
     },
-    showAll() {
-      this.flag = !this.flag;
-    },
     tabClick(tab) {
       this.showTab = tab.name;
       if (tab.name === "nine") {
         this.isShowcarousel = false;
-        this.forumList = undefined;
+        // this.forumList = undefined;
         this.isShowBtn = false;
-        this.showBtn = "forenoon";
+        this.showBtn = "afternoon";
       } else if (tab.name === "ten") {
         this.agendaTableData = this.agendaData.FORENOON_AGENDA_10;
         this.isShowcarousel = false;
@@ -389,11 +424,9 @@ export default {
         this.agendaTableData = undefined;
         this.isShowcarousel = true;
       } else if (tab === "evening") {
-      } else if (this.showTab === "nine" && tab === "forenoon") {
-        this.forumList = undefined;
       } else if (this.showTab === "nine" && tab === "afternoon") {
         this.forumClick(0);
-        this.value="SUSE"
+        this.value = "SUSE";
       } else {
         return false;
       }
@@ -402,6 +435,7 @@ export default {
       if (this.showTab === "ten" && this.showBtn === "forenoon") {
         if (
           rowIndex === 7 ||
+          rowIndex === 6 ||
           rowIndex === 5 ||
           rowIndex === 8 ||
           rowIndex === 9
@@ -416,19 +450,6 @@ export default {
       } else {
         return false;
       }
-      // console.log(row, column, rowIndex, columnIndex);
-      // if (
-      //   this.showTab === "ten" &&
-      //   this.showBtn === "afternoon" &&
-      //   this.forumTab === 0
-      // ) {
-      //   if (rowIndex === 1) {
-      //     return {
-      //       rowspan: 2,
-      //       colspan: 1,
-      //     };
-      //   }
-      // }
     },
   },
 };

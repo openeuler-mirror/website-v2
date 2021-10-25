@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <div class="sig-content" v-if="sigObj">
+        <div class="sig-content" v-if="sigObj && !summitData">
             <p class="sig-title">{{ sigObj.TITLE }}</p>
             <div class="sig-1" v-if="sigObj.SIG1_TIME">
                 <div class="time">
@@ -96,18 +96,25 @@ export default {
             sigContent: [],
             sigDesc: [],
             showSigDetail: false,
-            sig2DetailList: []
+            sig2DetailList: [],
+            summitData:false
         }
     },
     props: ['agendaData','sigData'],
-    created() {
+    mounted() {
         let agendaObj = this.i18n.interaction.SUMMIT.SUMMIT_HOME_DATA;
         agendaObj = agendaObj.AGENDA;
         this.carouselObj = this.agendaData?this.agendaData:agendaObj.AFTERNOON_AGENDA_25;
         this.sigObj = this.sigData?this.sigData:agendaObj.SIG_CONTENT;
         this.sig2DetailList = this.sigObj.SIG2_DETAIL;
+        this.isSummitData()
     },
     methods: {
+        isSummitData() {
+            if (this.carouselObj.TIME_LIST.length===9) {
+                this.summitData=true;
+            }
+        },
         handleBtn(direction) {
             this.isShowDetail = false;
             if(direction === 'left') {
@@ -164,7 +171,7 @@ export default {
     .shade-remind {
         z-index: 10;
         width: 100%;
-        height: 92%;
+        height: 95%;
         background: rgba(0, 0, 0, 0.05);
         position: absolute;
         top: 86px;
@@ -306,8 +313,32 @@ export default {
                     li {
                         margin-left: 47px;
                         .null-item {
-                            width: 260px;
-                            height: 156px;
+                            // width: 260px;
+                            // height: 156px;
+                             width: 270px;
+                            height: 150px;
+                            border-radius: 8px;
+                            overflow: hidden;
+                            margin-bottom: 36px;
+                            box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
+                            cursor: pointer;
+                            &:hover {
+                                box-shadow: 0px 6px 20px 0px rgba(0, 47, 167, 0.2);
+                            }
+                            p {
+                                font-size: 18px;
+                                color: rgba(0, 0, 0, 0.85);
+                                line-height: 30px;
+                                
+                                margin: 30px;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 3;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                                height: 90px;
+                                width: 210px;
+                            }
                         }
                         .section {
                             font-size: 20px;
