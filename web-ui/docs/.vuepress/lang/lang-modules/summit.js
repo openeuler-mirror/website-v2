@@ -12,10 +12,14 @@ module.exports = {
         AGENDA: {
             WEB_TITLE: '/img/summit/summit2021/zh-pc-summit2021.png',
             MOBILE_TITLE: '/img/summit/summit2021/zh-mobile-summit2021.png',
-            DATE: ['11月09日', '11月10日'],
+            
+            DATE: ['11月09日', '11月10日', '上午', '下午'],
+            SUB_FORUM: 'openEuler Summit 分论坛 ',
+            FORUM_HEAD: ['SUSE', '中科创达', '普华基础软件', '统信软件', '麒麟软件', '麒麟信安'],
             AFTERNOON_AGENDA_9: [
 
             ],
+            TEXT_TITLE: "openEuler Summit 分论坛 ",
             FORENOON_AGENDA_10: [
                 {
                     TIME: '09:30 - 09:35',
@@ -85,6 +89,350 @@ module.exports = {
                     POSITION: '欧拉开源社区用户委员会主席'
                 }
             ],
+            AFTERNOON_AGENDA_10: [
+                // SUSE
+                [
+                    {
+                        TIME: '14:00 - 14:10',
+                        THEME: '数硕Linux的定位与发展',
+                        SPEAKER: 'Andy',
+                        POSITION: 'SUSE Chairman of Great China'
+                    },
+                    {
+                        TIME: '14:10 - 14:20',
+                        THEME: '欧拉开源社区支持服务发布仪式',
+                        SPEAKER: 'Andy',
+                        POSITION: 'SUSE Chairman of Great China'
+                    },
+                    {
+                        TIME: '14:20 - 14:40',
+                        THEME: '欧拉开源社区支持服务',
+                        SPEAKER: '陈伟',
+                        POSITION: 'Service Director of Great China'
+                    },
+                    {
+                        TIME: '14:40 - 15:10',
+                        THEME: '数硕Linux技术展望',
+                        SPEAKER: '刘恺',
+                        POSITION: 'SUSE Euler PD Manager'
+                    },
+                    {
+                        TIME: '15:10 - 15:25',
+                        THEME: '茶歇',
+                    },
+                    {
+                        TIME: '15:25 - 15:55',
+                        THEME: 'Rancher + iSulad解决方案',
+                        SPEAKER: '江鹏',
+                        POSITION: 'Tecnical Director of Great China'
+                    },
+                    {
+                        TIME: '15:55 - 16:25',
+                        THEME: '敬请期待',
+                    },
+                    {
+                        TIME: '16:25 - 16:55',
+                        THEME: '敬请期待',
+                    },
+                    {
+                        TIME: '16:55 - 17:10',
+                        THEME: '观众互动',
+                    },
+                ],
+                // 中科达创
+                [
+                    {
+                        TIME: '13:30 - 14:00',
+                        THEME: '签到入场',
+                    },
+                    {
+                        TIME: '14:00 - 14:10',
+                        THEME: '主持人开场',
+                        SPEAKER: '刘寿永',
+                        POSITION: '中科创达首席架构师'
+                    },
+                    {
+                        TIME: '14:10 - 14:30',
+                        THEME: '云原生边缘计算平台架构与实践',
+                        SPEAKER: '王杰章',
+                        POSITION: '华为云原生高级工程师'
+                    },
+                    {
+                        TIME: '14:30 - 14:50',
+                        THEME: '浅析边缘计算中间件',
+                        SPEAKER: '徐晓晶',
+                        POSITION: '中科创达软件架构师'
+                    },
+                    {
+                        TIME: '14:50 - 15:10',
+                        THEME: 'Intel 边缘软件中心介绍',
+                        SPEAKER: '冯伟',
+                        POSITION: 'Intel边缘计算架构师'
+                    },
+                    {
+                        TIME: '15:10 - 15:20',
+                        THEME: '茶歇 & 交流',
+                    },
+                    {
+                        TIME: '15:20 - 15:40',
+                        THEME: '端侧边缘计算赋能千行百业',
+                        SPEAKER: '朱勇',
+                        POSITION: '中科创达AI技术中心负责人'
+                    },
+                    {
+                        TIME: '15:40 - 16:00',
+                        THEME: 'EdgeX加速边缘原生应用',
+                        SPEAKER: '路广',
+                        POSITION: 'VMWare中国研发总监'
+                    },
+                    {
+                        TIME: '16:00 - 16:20',
+                        THEME: '融合发展助力智能汽车产业腾飞',
+                        SPEAKER: '王文超',
+                        POSITION: '中科创达智能汽车产品总监'
+                    },
+                    {
+                        TIME: '16:20 - 16:40',
+                        THEME: '双碳背景下的边缘计算和虚拟电厂',
+                        SPEAKER: '樊小毅',
+                        POSITION: '江行智能CTO'
+                    },
+                ],
+                // 普华基础软件
+                [
+                    {
+                        TIME: '13:45 - 14:00',
+                        THEME: '暖场视频',
+                    },
+                    {
+                        TIME: '14:00 - 14:05',
+                        THEME: '主持人介绍到场嘉宾/媒体',
+                    },
+                    {
+                        TIME: '14:05 - 14:10',
+                        THEME: '敬请期待',
+                    },
+                    {
+                        TIME: '14:10 - 14:30',
+                        THEME: '开场发言',
+                        SPEAKER: '沈翔',
+                        POSITION: '普华基础软件股份有限公司基础软件事业部总经理'
+                    },
+                    {
+                        TIME: '14:30 - 14:50',
+                        THEME: '深耕基础软件根技术，普华的铸魂之道',
+                        SPEAKER: '王伶卓',
+                        POSITION: '普华基础软件股份有限公司基础软件事业部技术副总'
+                    },
+                    {
+                        TIME: '14:50 - 15:20',
+                        THEME: '基于欧拉开源操作系统软硬件新品发布',
+                        SPEAKER: '董自强',
+                        POSITION: '普华基础软件股份有限公司基础软件产品部总经理'
+                    },
+                    {
+                        TIME: '15:20 - 15:40',
+                        THEME: '茶歇 & 抽奖环节',
+                    },
+                    {
+                        TIME: '15:40 - 16:10',
+                        THEME: '聚焦行业，普华基础软件多场景应用分享',
+                        SPEAKER: '王江涛',
+                        POSITION: '普华基础软件股份有限公司高级安全专家'
+                    },
+                    {
+                        TIME: '16:10 - 16:40',
+                        THEME: '圆桌论坛：多样性算力、业务创新模式影响下，操作系统产业未来发展',
+                    },
+                    {
+                        TIME: '16:40 - 17:00',
+                        THEME: '抽奖环节',
+                    },
+                ],
+                // 统信软件
+                [
+                    {
+                        TIME: '14:00 - 14:10',
+                        THEME: '致开场词',
+                        SPEAKER: '朱建忠',
+                        POSITION: '统信软件技术有限公司 生态中心总经理'
+                    },
+                    {
+                        TIME: '14:10 - 14:40',
+                        THEME: '统信服务器e版产品介绍与规划',
+                        SPEAKER: '孟杰',
+                        POSITION: '统信软件技术有限公司 服务器OS产线总经理'
+                    },
+                    {
+                        TIME: '14:40 - 15:10',
+                        THEME: '统信服务器操作系统产品介绍与规划',
+                        SPEAKER: '张木梁',
+                        POSITION: '统信软件技术有限公司生态中心副总经理'
+                    },
+                    {
+                        TIME: '15:10 - 15:40',
+                        THEME: '敬请期待',
+                    },
+                    {
+                        TIME: '15:40 - 16:10',
+                        THEME: '敬请期待',
+                    },
+                    {
+                        TIME: '16:10 - 16:25',
+                        THEME: '共建生态、合作共赢',
+                        SPEAKER: '邓忠良',
+                        POSITION: '同方股份有限公司计算机产业本部副总经理'
+                    },
+                    {
+                        TIME: '16:25 - 16:40',
+                        THEME: '夯实国产基础，共建繁荣生态',
+                        SPEAKER: '莫良伟',
+                        POSITION: '宝德计算机软件部总监'
+                    },
+                    {
+                        TIME: '16:40 - 16:55',
+                        THEME: '基于鲲鹏生态的湖仓一体万亿级金融统一数据平台',
+                        SPEAKER: '许建辉 ',
+                        POSITION: '巨杉数据库研发副总裁及合伙人'
+                    },
+                    {
+                        TIME: '16:55 - 17:10',
+                        THEME: '信创数据交换平台最佳实践 ',
+                        SPEAKER: '臧一超 ',
+                        POSITION: '普元信息技术股份有限公司数智研究院副总经理'
+                    },
+                    {
+                        TIME: '17:10 - 17:25',
+                        THEME: '融合信创生态，打造安全高效的地理信息系统',
+                        SPEAKER: '周丹',
+                        POSITION: '中地数码科技有限公司北京副总经理'
+                    },
+                ],
+                // 麒麟软件
+                [
+                    {
+                        TIME: '14:00 - 14:10',
+                        THEME: '敬请期待',
+                    },
+                    {
+                        TIME: '14:10 - 14:20',
+                        THEME: '合作共赢，生态共生',
+                        SPEAKER: '孔金珠',
+                        POSITION: '麒麟软件有限公司高级副总经理'
+                    },
+                    {
+                        TIME: '14:20 - 14:30',
+                        THEME: '开源新时代-麒麟软件积极拥抱开源社区',
+                        SPEAKER: '侯健',
+                        POSITION: '麒麟软件有限公司 服务器研发部技术总监'
+                    },
+                    {
+                        TIME: '14:30 - 14:50',
+                        THEME: '客户分享',
+                    },
+                    {
+                        TIME: '14:50 - 15:05',
+                        THEME: '开放联合，共建软件生态',
+                        SPEAKER: '刘勇鹏',
+                        POSITION: '飞腾信息技术有限公司副总裁软件技术方案中心总经理'
+                    },
+                    {
+                        TIME: '15:05 - 15:15',
+                        THEME: '幸运抽奖 & 茶歇',
+                    },
+                    {
+                        TIME: '15:15 - 15:30',
+                        THEME: '国产数据库与操作系统的合作',
+                        SPEAKER: '宋瑞',
+                        POSITION: '人大金仓 高级副总裁'
+                    },
+                    {
+                        TIME: '15:30 - 15:45',
+                        THEME: '国产中间件创新与应用',
+                        SPEAKER: '谢耘',
+                        POSITION: '东方通首席科学家'
+                    },
+                    {
+                        TIME: '15:45 - 16:00',
+                        THEME: '同方信创的未来之路 ',
+                        SPEAKER: '王容多',
+                        POSITION: '同方计算机有限公司战略生态中心总经理&行业销售中心总经理'
+                    },
+                    {
+                        TIME: '16:00 - 16:15',
+                        THEME: '护航国产操作系统 打造安全计算环境',
+                        SPEAKER: '李栋',
+                        POSITION: '奇安信椒图事业部 副总经理'
+                    },
+                    {
+                        TIME: '16:15 - 16:30',
+                        THEME: '华云ArSDN在麒麟V10中的实践',
+                        SPEAKER: '过育红',
+                        POSITION: '华云数据计算网络部高级技术经理'
+                    }
+                ],
+                // 麒麟信安
+                [
+                    {
+                        TIME: '14:00 - 14:10',
+                        THEME: '欢迎致辞',
+                    },
+                    {
+                        TIME: '14:10 - 14:25',
+                        THEME: 'openEuler技术规划',
+                    },
+                    {
+                        TIME: '14:25 - 14:40',
+                        THEME: '根植openEuler社区构建麒麟信安操作系统',
+                        SPEAKER: '陈松政',
+                        POSITION: '麒麟信安高级副总裁'
+                    },
+                    {
+                        TIME: '14:40 - 14:50',
+                        THEME: '欢乐抽奖',
+                    },
+                    {
+                        TIME: '14:50 - 15:05',
+                        THEME: '麒麟信安操作系统的工控属性',
+                        SPEAKER: '石勇',
+                        POSITION: '麒麟信安操作系统产品总监'
+                    },
+                    {
+                        TIME: '15:05 - 15:20',
+                        THEME: '麒麟信安操作系统的云原生属性',
+                        SPEAKER: '孙利杰',
+                        POSITION: '麒麟信安操作系统、云计算产品线研发总监'
+                    },
+                    {
+                        TIME: '15:20 - 15:30',
+                        THEME: '联合实验室揭牌仪式',
+                    },
+                    {
+                        TIME: '15:30 - 15:40',
+                        THEME: '欢乐抽奖',
+                    },
+                    {
+                        TIME: '15:40 - 15:55',
+                        THEME: 'CentOS停服后国产操作系统的蓝海商机 ',
+                        SPEAKER: '任启',
+                        POSITION: '麒麟信安高级副总裁'
+                    },
+                    {
+                        TIME: '15:55 - 16:10',
+                        THEME: '麒麟信安操作系统在电力调度和航天测发控核心系统创新应用实践',
+                        SPEAKER: '王攀',
+                        POSITION: '麒麟信安副总裁'
+                    },
+                    {
+                        TIME: '16:10 - 16:30',
+                        THEME: '圆桌论坛 ',
+                    },
+                    {
+                        TIME: '16:30 - 16:40',
+                        THEME: '欢乐抽奖',
+                    },
+                ],
+            ]
         },
         CONSTRUCTION: {
             WEB_TITLE: "/img/summit/summit2021/Co-construction/web-title.png",
@@ -136,7 +484,7 @@ module.exports = {
                         LINK: ""
                     }
                 ]
-
+                
             },
             CO_ORGANIZER: {
                 TEXT_TITLE: "协办单位",
@@ -160,12 +508,7 @@ module.exports = {
                     {
                         IMG: "/img/summit/summit2021/Co-construction/easystack.png",
                         LINK: ""
-                    }
-                ]
-            },
-            SUPPORT: {
-                TEXT_TITLE: "支持单位",
-                LIST: [
+                    },
                     {
                         IMG: "/img/summit/summit2021/Co-construction/isstech.png",
                         LINK: ""
@@ -179,11 +522,19 @@ module.exports = {
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/nuclei.png",
+                        IMG: "/img/summit/summit2021/Co-construction/xsky.png",
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/xsky.png",
+                        IMG: "/img/summit/summit2021/Co-construction/tianyuan.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/bessystem.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/nuclei.png",
                         LINK: ""
                     },
                     {
@@ -203,15 +554,84 @@ module.exports = {
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/bessystem.png",
+                        IMG: "/img/summit/summit2021/Co-construction/huayun.png",
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/tianyuan.png",
+                        IMG: "/img/summit/summit2021/Co-construction/kaifazhineng.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/ascas.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/dongfangtong.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/zhongkedachuang.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/ruihe.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/langcher.png",
                         LINK: ""
                     },
                 ]
-            }
+            },
+            // SUPPORT: {
+            //     TEXT_TITLE: "支持单位",
+            //     LIST: [
+            //         {
+            //             IMG: "/img/summit/summit2021/Co-construction/isstech.png",
+            //             LINK: ""
+            //         },
+            //         {
+            //             IMG: "/img/summit/summit2021/Co-construction/iiioka.png",
+            //             LINK: ""
+            //         },
+            //         {
+            //             IMG: "/img/summit/summit2021/Co-construction/winhong.png",
+            //             LINK: ""
+            //         },
+            //         {
+            //             IMG: "/img/summit/summit2021/Co-construction/nuclei.png",
+            //             LINK: ""
+            //         },
+            //         {
+            //             IMG: "/img/summit/summit2021/Co-construction/xsky.png",
+            //             LINK: ""
+            //         },
+            //         {
+            //             IMG: "/img/summit/summit2021/Co-construction/jdcloud.png",
+            //             LINK: ""
+            //         },
+            //         {
+            //             IMG: "/img/summit/summit2021/Co-construction/asiainfo.png",
+            //             LINK: ""
+            //         },
+            //         {
+            //             IMG: "/img/summit/summit2021/Co-construction/starfive.png",
+            //             LINK: ""
+            //         },
+            //         {
+            //             IMG: "/img/summit/summit2021/Co-construction/qingcloud.png",
+            //             LINK: ""
+            //         },
+            //         {
+            //             IMG: "/img/summit/summit2021/Co-construction/bessystem.png",
+            //             LINK: ""
+            //         },
+            //         {
+            //             IMG: "/img/summit/summit2021/Co-construction/tianyuan.png",
+            //             LINK: ""
+            //         },
+            //     ]
+            // }
         }
     },
     en: {

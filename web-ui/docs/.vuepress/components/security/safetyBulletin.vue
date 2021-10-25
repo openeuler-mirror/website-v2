@@ -3,7 +3,7 @@
         <common-banner
         :pc-src="'/img/security/notice-banner.png'"
         :mobile-src="'/img/security/notice-banner.png'"
-        :inside-name="'SECURITY'"
+        :inside-name="'SUPPORT'"
         :outside-name="i18n.security.SECURITY_ADVISORIES"
         ></common-banner>
         <div class="bulltin-list-wrapper">

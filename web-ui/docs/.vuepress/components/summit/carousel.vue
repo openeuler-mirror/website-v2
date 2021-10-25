@@ -100,7 +100,7 @@ export default {
         }
     },
     props: ['agendaData','sigData'],
-    mounted() {
+    created() {
         let agendaObj = this.i18n.interaction.SUMMIT.SUMMIT_HOME_DATA;
         agendaObj = agendaObj.AGENDA;
         this.carouselObj = this.agendaData?this.agendaData:agendaObj.AFTERNOON_AGENDA_25;
