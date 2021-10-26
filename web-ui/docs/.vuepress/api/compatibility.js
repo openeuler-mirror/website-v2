@@ -261,3 +261,46 @@ export const detailAapterList = ({
 
     });
 };
+//9. 软件列表 
+export const softwareList = ({
+    keyword,
+    os,
+    architecture,
+    page,
+    pageSize,
+    lang
+}) => {
+    return new Promise((resolve, reject) => {
+        appAjax.postJson({
+            otherBaseUrl: cveApi,
+            url: '/compat_software_info?page_size=10&page_num=2',
+            type: 'post',
+            data: {
+                keyword,
+                os: os === 'all' ? '' : os,
+                architecture: architecture === 'all' ? '' : architecture,
+                pages: {
+                    page,
+                    size: pageSize
+                },
+                lang
+            },
+            success(result) {
+                let res = {
+                    totalRecords: result.result.totalCount,
+                    list: result.result.hardwareCompList
+                }
+                if (result) {
+                    resolve(res);
+                    return;
+                }
+                reject(result);
+            },
+            error(msg) {
+                reject(msg);
+            }
+
+        });
+
+    });
+}

@@ -12,10 +12,10 @@ module.exports = {
         AGENDA: {
             WEB_TITLE: '/img/summit/summit2021/zh-pc-summit2021.png',
             MOBILE_TITLE: '/img/summit/summit2021/zh-mobile-summit2021.png',
-            
+
             DATE: ['11月09日', '11月10日', '上午', '下午'],
             SUB_FORUM: 'openEuler Summit 分论坛 ',
-            FORUM_HEAD: ['SUSE', '中科创达', '普华基础软件', '统信软件', '麒麟软件', '麒麟信安'],
+            FORUM_HEAD: ['麒麟软件','麒麟信安','SUSE','统信软件','中科创达','普华基础软件'],
             AFTERNOON_AGENDA_9: [
 
             ],
@@ -90,6 +90,131 @@ module.exports = {
                 }
             ],
             AFTERNOON_AGENDA_9: [
+                // 麒麟软件
+                [
+                    {
+                        TIME: '14:00 - 14:10',
+                        THEME: '敬请期待',
+                    },
+                    {
+                        TIME: '14:10 - 14:20',
+                        THEME: '合作共赢，生态共生',
+                        SPEAKER: '孔金珠',
+                        POSITION: '麒麟软件高级副总经理'
+                    },
+                    {
+                        TIME: '14:20 - 14:30',
+                        THEME: '开源新时代-麒麟软件积极拥抱开源社区',
+                        SPEAKER: '侯健',
+                        POSITION: '麒麟软件 服务器研发部技术总监'
+                    },
+                    {
+                        TIME: '14:30 - 14:50',
+                        THEME: '客户分享',
+                    },
+                    {
+                        TIME: '14:50 - 15:05',
+                        THEME: '开放联合，共建软件生态',
+                        SPEAKER: '刘勇鹏',
+                        POSITION: '飞腾信息技术有限公司副总裁软件技术方案中心总经理'
+                    },
+                    {
+                        TIME: '15:05 - 15:15',
+                        THEME: '幸运抽奖 & 茶歇',
+                    },
+                    {
+                        TIME: '15:15 - 15:30',
+                        THEME: '国产数据库与操作系统的合作',
+                        SPEAKER: '宋瑞',
+                        POSITION: '人大金仓 高级副总裁'
+                    },
+                    {
+                        TIME: '15:30 - 15:45',
+                        THEME: '国产中间件创新与应用',
+                        SPEAKER: '谢耘',
+                        POSITION: '东方通首席科学家'
+                    },
+                    {
+                        TIME: '15:45 - 16:00',
+                        THEME: '同方信创的未来之路 ',
+                        SPEAKER: '王容多',
+                        POSITION: '同方计算机有限公司战略生态中心总经理&行业销售中心总经理'
+                    },
+                    {
+                        TIME: '16:00 - 16:15',
+                        THEME: '护航国产操作系统 打造安全计算环境',
+                        SPEAKER: '李栋',
+                        POSITION: '奇安信椒图事业部 副总经理'
+                    },
+                    {
+                        TIME: '16:15 - 16:30',
+                        THEME: '华云ArSDN在麒麟V10中的实践',
+                        SPEAKER: '过育红',
+                        POSITION: '华云数据计算网络部高级技术经理'
+                    }
+                ],
+                // 麒麟信安
+                [
+                    {
+                        TIME: '14:00 - 14:10',
+                        THEME: '欢迎致辞',
+                        SPEAKER: '麒麟信安领导、华为领导',
+                    },
+                    {
+                        TIME: '14:10 - 14:25',
+                        THEME: '敬请期待',
+                    },
+                    {
+                        TIME: '14:25 - 14:40',
+                        THEME: '根植欧拉开源社区构建麒麟信安操作系统',
+                        SPEAKER: '陈松政',
+                        POSITION: '麒麟信安高级副总裁'
+                    },
+                    {
+                        TIME: '14:40 - 14:50',
+                        THEME: '欢乐抽奖',
+                    },
+                    {
+                        TIME: '14:50 - 15:05',
+                        THEME: '麒麟信安操作系统的工控属性',
+                        SPEAKER: '石勇',
+                        POSITION: '麒麟信安操作系统产品总监'
+                    },
+                    {
+                        TIME: '15:05 - 15:20',
+                        THEME: '麒麟信安操作系统的云原生属性',
+                        SPEAKER: '孙利杰',
+                        POSITION: '麒麟信安操作系统、云计算产品线研发总监'
+                    },
+                    {
+                        TIME: '15:20 - 15:30',
+                        THEME: '联合实验室揭牌仪式',
+                    },
+                    {
+                        TIME: '15:30 - 15:40',
+                        THEME: '欢乐抽奖',
+                    },
+                    {
+                        TIME: '15:40 - 15:55',
+                        THEME: 'CentOS停服后国产操作系统的蓝海商机 ',
+                        SPEAKER: '任启',
+                        POSITION: '麒麟信安高级副总裁'
+                    },
+                    {
+                        TIME: '15:55 - 16:10',
+                        THEME: '麒麟信安操作系统在电力调度和航天测发控核心系统创新应用实践',
+                        SPEAKER: '王攀',
+                        POSITION: '麒麟信安副总裁'
+                    },
+                    {
+                        TIME: '16:10 - 16:30',
+                        THEME: '圆桌论坛 ',
+                    },
+                    {
+                        TIME: '16:30 - 16:40',
+                        THEME: '欢乐抽奖',
+                    },
+                ],
                 // SUSE
                 [
                     {
@@ -138,6 +263,65 @@ module.exports = {
                         TIME: '16:55 - 17:10',
                         THEME: '观众互动',
                         SPEAKER: '现场主持',
+                    },
+                ],
+                // 统信软件
+                [
+                    {
+                        TIME: '14:00 - 14:10',
+                        THEME: '致开场词',
+                        SPEAKER: '朱建忠',
+                        POSITION: '统信软件 生态中心总经理'
+                    },
+                    {
+                        TIME: '14:10 - 14:40',
+                        THEME: '统信服务器e版产品介绍与规划',
+                        SPEAKER: '孟杰',
+                        POSITION: '统信软件 服务器OS产线总经理'
+                    },
+                    {
+                        TIME: '14:40 - 15:10',
+                        THEME: '统信服务器操作系统产品介绍与规划',
+                        SPEAKER: '张木梁',
+                        POSITION: '统信软件生态中心副总经理'
+                    },
+                    {
+                        TIME: '15:10 - 15:40',
+                        THEME: '敬请期待',
+                    },
+                    {
+                        TIME: '15:40 - 16:10',
+                        THEME: '敬请期待',
+                    },
+                    {
+                        TIME: '16:10 - 16:25',
+                        THEME: '共建生态、合作共赢',
+                        SPEAKER: '邓忠良',
+                        POSITION: '同方股份有限公司计算机产业本部副总经理'
+                    },
+                    {
+                        TIME: '16:25 - 16:40',
+                        THEME: '夯实国产基础，共建繁荣生态',
+                        SPEAKER: '莫良伟',
+                        POSITION: '宝德计算机软件部总监'
+                    },
+                    {
+                        TIME: '16:40 - 16:55',
+                        THEME: '基于鲲鹏生态的湖仓一体万亿级金融统一数据平台',
+                        SPEAKER: '许建辉 ',
+                        POSITION: '巨杉数据库研发副总裁及合伙人'
+                    },
+                    {
+                        TIME: '16:55 - 17:10',
+                        THEME: '信创数据交换平台最佳实践 ',
+                        SPEAKER: '臧一超 ',
+                        POSITION: '普元信息技术股份有限公司数智研究院副总经理'
+                    },
+                    {
+                        TIME: '17:10 - 17:25',
+                        THEME: '融合信创生态，打造安全高效的地理信息系统',
+                        SPEAKER: '周丹',
+                        POSITION: '中地数码科技有限公司北京副总经理'
                     },
                 ],
                 // 中科达创
@@ -217,229 +401,45 @@ module.exports = {
                         TIME: '14:10 - 14:30',
                         THEME: '开场发言',
                         SPEAKER: '沈翔',
-                        POSITION: '普华基础软件股份有限公司基础软件事业部总经理'
+                        POSITION: '普华基础软件基础软件事业部总经理'
                     },
                     {
-                        TIME: '14:30 - 14:50',
-                        THEME: '深耕基础软件根技术，普华的铸魂之道',
-                        SPEAKER: '王伶卓',
-                        POSITION: '普华基础软件股份有限公司基础软件事业部技术副总'
-                    },
-                    {
-                        TIME: '14:50 - 15:20',
-                        THEME: '基于欧拉开源操作系统的软硬件新品发布',
+                        TIME: '14:30 - 15:00',
+                        THEME: '基于openEuler软硬件新品发布',
                         SPEAKER: '董自强',
-                        POSITION: '普华基础软件股份有限公司基础软件产品部总经理'
+                        POSITION: '普华基础软件基础软件产品部总经理'
                     },
                     {
-                        TIME: '15:20 - 15:40',
+                        TIME: '15：00 - 15：20',
                         THEME: '茶歇 & 抽奖环节',
                     },
                     {
-                        TIME: '15:40 - 16:10',
-                        THEME: '聚焦行业，普华基础软件多场景应用分享',
-                        SPEAKER: '王江涛',
-                        POSITION: '普华基础软件股份有限公司高级安全专家'
+                        TIME: '15:20 - 15:50',
+                        THEME: '圆桌论坛',
                     },
                     {
-                        TIME: '16:10 - 16:40',
-                        THEME: '圆桌论坛：多样性算力、业务创新模式影响下，操作系统产业未来发展',
-                    },
-                    {
-                        TIME: '16:40 - 17:00',
-                        THEME: '抽奖环节',
-                    },
-                ],
-                // 统信软件
-                [
-                    {
-                        TIME: '14:00 - 14:10',
-                        THEME: '致开场词',
-                        SPEAKER: '朱建忠',
-                        POSITION: '统信软件技术有限公司 生态中心总经理'
-                    },
-                    {
-                        TIME: '14:10 - 14:40',
-                        THEME: '统信服务器e版产品介绍与规划',
-                        SPEAKER: '孟杰',
-                        POSITION: '统信软件技术有限公司 服务器OS产线总经理'
-                    },
-                    {
-                        TIME: '14:40 - 15:10',
-                        THEME: '统信服务器操作系统产品介绍与规划',
-                        SPEAKER: '张木梁',
-                        POSITION: '统信软件技术有限公司生态中心副总经理'
-                    },
-                    {
-                        TIME: '15:10 - 15:40',
-                        THEME: '敬请期待',
-                    },
-                    {
-                        TIME: '15:40 - 16:10',
-                        THEME: '敬请期待',
-                    },
-                    {
-                        TIME: '16:10 - 16:25',
-                        THEME: '共建生态、合作共赢',
-                        SPEAKER: '邓忠良',
-                        POSITION: '同方股份有限公司计算机产业本部副总经理'
-                    },
-                    {
-                        TIME: '16:25 - 16:40',
-                        THEME: '夯实国产基础，共建繁荣生态',
-                        SPEAKER: '莫良伟',
-                        POSITION: '宝德计算机软件部总监'
-                    },
-                    {
-                        TIME: '16:40 - 16:55',
-                        THEME: '基于鲲鹏生态的湖仓一体万亿级金融统一数据平台',
-                        SPEAKER: '许建辉 ',
-                        POSITION: '巨杉数据库研发副总裁及合伙人'
-                    },
-                    {
-                        TIME: '16:55 - 17:10',
-                        THEME: '信创数据交换平台最佳实践 ',
-                        SPEAKER: '臧一超 ',
-                        POSITION: '普元信息技术股份有限公司数智研究院副总经理'
-                    },
-                    {
-                        TIME: '17:10 - 17:25',
-                        THEME: '融合信创生态，打造安全高效的地理信息系统',
-                        SPEAKER: '周丹',
-                        POSITION: '中地数码科技有限公司北京副总经理'
-                    },
-                ],
-                // 麒麟软件
-                [
-                    {
-                        TIME: '14:00 - 14:10',
-                        THEME: '敬请期待',
-                    },
-                    {
-                        TIME: '14:10 - 14:20',
-                        THEME: '合作共赢，生态共生',
-                        SPEAKER: '孔金珠',
-                        POSITION: '麒麟软件有限公司高级副总经理'
-                    },
-                    {
-                        TIME: '14:20 - 14:30',
-                        THEME: '开源新时代-麒麟软件积极拥抱开源社区',
-                        SPEAKER: '侯健',
-                        POSITION: '麒麟软件有限公司 服务器研发部技术总监'
-                    },
-                    {
-                        TIME: '14:30 - 14:50',
-                        THEME: '客户分享',
-                    },
-                    {
-                        TIME: '14:50 - 15:05',
-                        THEME: '开放联合，共建软件生态',
-                        SPEAKER: '刘勇鹏',
-                        POSITION: '飞腾信息技术有限公司副总裁软件技术方案中心总经理'
-                    },
-                    {
-                        TIME: '15:05 - 15:15',
-                        THEME: '幸运抽奖 & 茶歇',
-                    },
-                    {
-                        TIME: '15:15 - 15:30',
-                        THEME: '国产数据库与操作系统的合作',
-                        SPEAKER: '宋瑞',
-                        POSITION: '人大金仓 高级副总裁'
-                    },
-                    {
-                        TIME: '15:30 - 15:45',
-                        THEME: '国产中间件创新与应用',
-                        SPEAKER: '谢耘',
-                        POSITION: '东方通首席科学家'
-                    },
-                    {
-                        TIME: '15:45 - 16:00',
-                        THEME: '同方信创的未来之路 ',
-                        SPEAKER: '王容多',
-                        POSITION: '同方计算机有限公司战略生态中心总经理&行业销售中心总经理'
-                    },
-                    {
-                        TIME: '16:00 - 16:15',
-                        THEME: '护航国产操作系统 打造安全计算环境',
-                        SPEAKER: '李栋',
-                        POSITION: '奇安信椒图事业部 副总经理'
-                    },
-                    {
-                        TIME: '16:15 - 16:30',
-                        THEME: '华云ArSDN在麒麟V10中的实践',
-                        SPEAKER: '过育红',
-                        POSITION: '华云数据计算网络部高级技术经理'
-                    }
-                ],
-                // 麒麟信安
-                [
-                    {
-                        TIME: '14:00 - 14:10',
-                        THEME: '欢迎致辞',
-                        SPEAKER: '麒麟信安领导、华为领导',
-                    },
-                    {
-                        TIME: '14:10 - 14:25',
-                        THEME: 'openEuler技术规划',
-                    },
-                    {
-                        TIME: '14:25 - 14:40',
-                        THEME: '根植欧拉开源社区构建麒麟信安操作系统',
-                        SPEAKER: '陈松政',
-                        POSITION: '麒麟信安高级副总裁'
-                    },
-                    {
-                        TIME: '14:40 - 14:50',
-                        THEME: '欢乐抽奖',
-                    },
-                    {
-                        TIME: '14:50 - 15:05',
-                        THEME: '麒麟信安操作系统的工控属性',
-                        SPEAKER: '石勇',
-                        POSITION: '麒麟信安操作系统产品总监'
-                    },
-                    {
-                        TIME: '15:05 - 15:20',
-                        THEME: '麒麟信安操作系统的云原生属性',
-                        SPEAKER: '孙利杰',
-                        POSITION: '麒麟信安操作系统、云计算产品线研发总监'
-                    },
-                    {
-                        TIME: '15:20 - 15:30',
-                        THEME: '联合实验室揭牌仪式',
-                    },
-                    {
-                        TIME: '15:30 - 15:40',
-                        THEME: '欢乐抽奖',
-                    },
-                    {
-                        TIME: '15:40 - 15:55',
-                        THEME: 'CentOS停服后国产操作系统的蓝海商机 ',
-                        SPEAKER: '任启',
-                        POSITION: '麒麟信安高级副总裁'
-                    },
-                    {
-                        TIME: '15:55 - 16:10',
-                        THEME: '麒麟信安操作系统在电力调度和航天测发控核心系统创新应用实践',
-                        SPEAKER: '王攀',
-                        POSITION: '麒麟信安副总裁'
+                        TIME: '15:50 - 16:10',
+                        THEME: '深耕基础软件根技术，普华的铸魂之路',
+                        SPEAKER: '王伶卓',
+                        POSITION: '普华基础软件基础软件事业部技术副总'
                     },
                     {
                         TIME: '16:10 - 16:30',
-                        THEME: '圆桌论坛 ',
+                        THEME: '聚焦行业，普华基础软件多场景应用分享',
+                        SPEAKER: '王江涛',
+                        POSITION: '普华基础软件高级安全专家'
                     },
                     {
-                        TIME: '16:30 - 16:40',
-                        THEME: '欢乐抽奖',
+                        TIME: '16:30 - 16:50',
+                        THEME: '抽奖环节',
                     },
                 ],
             ],
             AFTERNOON_AGENDA_10: {
-                TIME_LIST: ['13:00-13:30','13:30-14:00','14:00-14:30','14:30-15:00','15:00-15:30','15:30-16:00','16:00-16:30','16:30-17:00','17:00-17:30','17:30-18:00'],
+                TIME_LIST: ['13:00-13:30', '13:30-14:00', '14:00-14:30', '14:30-15:00', '15:00-15:30', '15:30-16:00', '16:00-16:30', '16:30-17:00', '17:00-17:30', '17:30-18:00'],
                 CARD_LIST: [
                     {
-                        TITLE: ['Session 1','内核'],
+                        TITLE: ['Session 1', '内核'],
                         ITEM_LIST: [
                             {
                                 TIME: '13:00-13:30',
@@ -450,7 +450,7 @@ module.exports = {
                             {
                                 TIME: '13:30-14:00',
                                 THEME: '内核热升级技术的应用实践',
-                                SPEAKER: ['尹秀江 麒麟软件有限公司','何静娴 华为'],
+                                SPEAKER: ['尹秀江 麒麟软件有限公司', '何静娴 华为'],
                                 DESC: ['内核热升级是openEuler社区原生孵化的一项技术，为解决内核CVE漏洞和减少系统宕机时间提供了有利保障，本次议题主要介绍内核热升级技术及分享在麒麟系统上的实践经验']
                             },
                             {
@@ -463,7 +463,7 @@ module.exports = {
                                 TIME: '14:30-15:00',
                                 THEME: 'RISC-V Linux 异构多核架构实现与挑战',
                                 SPEAKER: ['Tan Ley Foon 赛昉'],
-                                DESC: ['一． 介绍异构多核架构','二． 介绍Linux 内核对异构多核架构的支持: Energy Awareness Scheduling (EAS) and Capacity Awareness Scheduling (CAS)','三． RISC-V架构对于异构多核架构的实现与挑战']
+                                DESC: ['一． 介绍异构多核架构', '二． 介绍Linux 内核对异构多核架构的支持: Energy Awareness Scheduling (EAS) and Capacity Awareness Scheduling (CAS)', '三． RISC-V架构对于异构多核架构的实现与挑战']
                             },
                             {
                                 TIME: '15:00-15:30',
@@ -473,13 +473,13 @@ module.exports = {
                                 TIME: '15:30-16:00',
                                 THEME: 'Bond 3+高可靠冗余通信解决方案',
                                 SPEAKER: ['秦云高 湖南麒麟信安科技股份有限公司'],
-                                DESC: ['高可靠性网络通信在国家电网、金融、航天领域的应用中至关重要。','本方案通过增强Linux内核bond 3广播模式，','1. 实现UDP零重包，网络故障时自动链路切换的可靠冗余通信。','2. 实现TCP网络故障时零延时最高可靠冗余通信。']
+                                DESC: ['高可靠性网络通信在国家电网、金融、航天领域的应用中至关重要。', '本方案通过增强Linux内核bond 3广播模式，', '1. 实现UDP零重包，网络故障时自动链路切换的可靠冗余通信。', '2. 实现TCP网络故障时零延时最高可靠冗余通信。']
                             },
                             {
                                 TIME: '16:00-16:30',
                                 THEME: '虚拟化技术在申威架构的探索与实践',
                                 SPEAKER: ['张毅 无锡先进技术研究院'],
-                                DESC: ['1. Cpu虚拟化在申威架构上的探索与实践：接轨主流，实现了申威架构下的kvm；优化了申威架构下的中断虚拟化（时钟中断、核间中断），明显提高了中断性能。','2. 内存虚拟化在申威架构上的探索与实践：设计了一种有别于x86架构实现的影子页表机制，该机制充分利用了申威架构的特点。并把它实现，内存虚拟化（影子页表）的相对开销数据优于x86。','3. IO虚拟化在申威架构上的探索与实践：设计并实现了申威架构下VFIO与IOMMU：以新的驱动方式代替设备原有驱动；实现了申威架构下二级页表映射，并且实现8k和8M的页面粒度支持；以一种新的地址方式来替代真实的物理地址以增强内存的连续性和安全性。目前支持千兆、万兆网卡的设备直通。']
+                                DESC: ['1. Cpu虚拟化在申威架构上的探索与实践：接轨主流，实现了申威架构下的kvm；优化了申威架构下的中断虚拟化（时钟中断、核间中断），明显提高了中断性能。', '2. 内存虚拟化在申威架构上的探索与实践：设计了一种有别于x86架构实现的影子页表机制，该机制充分利用了申威架构的特点。并把它实现，内存虚拟化（影子页表）的相对开销数据优于x86。', '3. IO虚拟化在申威架构上的探索与实践：设计并实现了申威架构下VFIO与IOMMU：以新的驱动方式代替设备原有驱动；实现了申威架构下二级页表映射，并且实现8k和8M的页面粒度支持；以一种新的地址方式来替代真实的物理地址以增强内存的连续性和安全性。目前支持千兆、万兆网卡的设备直通。']
                             },
                             {
                                 TIME: '16:30-17:00',
@@ -496,7 +496,7 @@ module.exports = {
                         ]
                     },
                     {
-                        TITLE: ['Session 2','云&虚拟化'],
+                        TITLE: ['Session 2', '云&虚拟化'],
                         ITEM_LIST: [
                             {
                                 TIME: '13:00-13:30',
@@ -530,7 +530,7 @@ module.exports = {
                                 TIME: '15:30-16:00',
                                 THEME: '亚信科技技术中台全面兼容欧拉生态解决方案',
                                 SPEAKER: ['薛浩 亚信科技'],
-                                DESC: ['亚信科技的技术中台，采用完整的云原生技术体系构建，历经运营商等行业的大型系统建设上云支撑的考验，已经形成了包括从多云基础设施管理、云原生IaaS的云OS产品、云原生PaaS、边缘云MEC PaaS、Devops等技术中台能力的产品体系，服务公司各个业务产品线。','云OS，通过统一的云原生架构的平台产品上实现主流公有云、第三方私有云产品，自建云原生IaaS的统一构建和云服务管理。通过k8s云原生的技术构建云OS的统一管理控制面，扩展支持多个第三方云的服务接入，同时也可以基于该控制面基础上管理Openstack和kubernetes（通过扩展kube-virt，kube-ovn等云原生虚拟化组件）来构建IaaS服务。在整个平台的底层计算基础设施兼容性结合华为的鲲鹏+欧拉操作系统实现虚拟机、存储、网络等基础设施云原生虚拟机化能力的构建和开放。','全域PaaS，包括数据中心级和边缘两套产品，通过一套云原生的架构基础设施层可以结合云OS产品，也可以直接兼容第三方云平台能力，通过PaaS中的弹性计算支持的多平面、mesos和k8s的多集群的纳管和开放服务的能力，在平面级和集群级可以兼容性结合华为的鲲鹏+欧拉操作系统实现PaaS层面向业务和应用的全栈技术服务，已完成落地并服务多运营商客户的CRM、BOSS等核心系统化的国产鲲鹏、欧拉+x86异构双平面的资源池的支撑体系中，目前还在推进结合欧拉打通和边缘MEC PaaS的协同的解决方案，同时推向垂直行业信息化领域。']
+                                DESC: ['亚信科技的技术中台，采用完整的云原生技术体系构建，历经运营商等行业的大型系统建设上云支撑的考验，已经形成了包括从多云基础设施管理、云原生IaaS的云OS产品、云原生PaaS、边缘云MEC PaaS、Devops等技术中台能力的产品体系，服务公司各个业务产品线。', '云OS，通过统一的云原生架构的平台产品上实现主流公有云、第三方私有云产品，自建云原生IaaS的统一构建和云服务管理。通过k8s云原生的技术构建云OS的统一管理控制面，扩展支持多个第三方云的服务接入，同时也可以基于该控制面基础上管理Openstack和kubernetes（通过扩展kube-virt，kube-ovn等云原生虚拟化组件）来构建IaaS服务。在整个平台的底层计算基础设施兼容性结合华为的鲲鹏+欧拉操作系统实现虚拟机、存储、网络等基础设施云原生虚拟机化能力的构建和开放。', '全域PaaS，包括数据中心级和边缘两套产品，通过一套云原生的架构基础设施层可以结合云OS产品，也可以直接兼容第三方云平台能力，通过PaaS中的弹性计算支持的多平面、mesos和k8s的多集群的纳管和开放服务的能力，在平面级和集群级可以兼容性结合华为的鲲鹏+欧拉操作系统实现PaaS层面向业务和应用的全栈技术服务，已完成落地并服务多运营商客户的CRM、BOSS等核心系统化的国产鲲鹏、欧拉+x86异构双平面的资源池的支撑体系中，目前还在推进结合欧拉打通和边缘MEC PaaS的协同的解决方案，同时推向垂直行业信息化领域。']
                             },
                             {
                                 TIME: '16:00-16:30',
@@ -559,7 +559,7 @@ module.exports = {
                         ]
                     },
                     {
-                        TITLE: ['Session 3','兼容性'],
+                        TITLE: ['Session 3', '兼容性'],
                         ITEM_LIST: [
                             {
                                 TIME: '13:00-13:30',
@@ -576,7 +576,7 @@ module.exports = {
                             {
                                 TIME: '14:00-14:30',
                                 THEME: '自主申威遇上开源欧拉，产业生态兼容的新变革',
-                                SPEAKER: ['周元超 普华基础软件股份有限公司'],
+                                SPEAKER: ['周元超 普华基础软件'],
                                 DESC: ['']
                             },
                             {
@@ -593,7 +593,7 @@ module.exports = {
                                 TIME: '15:30-16:00',
                                 THEME: 'oepkg 开放软件包服务',
                                 SPEAKER: ['纪涛 中国科学院软件研究所'],
-                                DESC: ['oepkgs 全称开放软件包服务由中国科学院软件研究所、openEuler 社区共同发起并提供支持，旨在为个人开发者、开源社区、OSV、ISV提供免费的软件包、容器镜像的构建、分发和下载服务的第三方平台。','从使用的角度为大家介绍平台的注册、构建、目标架构的支持、仓库服务、查看日志等流程。','同时为大家介绍 oepkgs 平台后续会集成的一些功能，例如签名、测试、搜索、集成合规性检查与安全检查等。']
+                                DESC: ['oepkgs 全称开放软件包服务由中国科学院软件研究所、openEuler 社区共同发起并提供支持，旨在为个人开发者、开源社区、OSV、ISV提供免费的软件包、容器镜像的构建、分发和下载服务的第三方平台。', '从使用的角度为大家介绍平台的注册、构建、目标架构的支持、仓库服务、查看日志等流程。', '同时为大家介绍 oepkgs 平台后续会集成的一些功能，例如签名、测试、搜索、集成合规性检查与安全检查等。']
                             },
                             {
                                 TIME: '16:00-16:30',
@@ -616,7 +616,7 @@ module.exports = {
                         ]
                     },
                     {
-                        TITLE: ['Session 4','安全&可靠性&运维'],
+                        TITLE: ['Session 4', '安全&可靠性&运维'],
                         ITEM_LIST: [
                             {
                                 TIME: '13:00-13:30',
@@ -646,23 +646,23 @@ module.exports = {
                                 TIME: '15:00-15:30',
                                 THEME: '茶歇',
                             },
-                            // {
-                            //     TIME: '15:30-16:00',
-                            //     THEME: '敬请期待',
-                            //     SPEAKER: ['敬请期待 蓬莱TEE'],
-                            //     DESC: ['']
-                            // },
+                            {
+                                // TIME: '15:30-16:00',
+                                // THEME: '敬请期待',
+                                // SPEAKER: ['敬请期待 蓬莱TEE'],
+                                // DESC: ['']
+                            },
                             {
                                 TIME: '16:00-16:30',
                                 THEME: 'Sec-Anti-SCA基于编译器的CPU侧信道漏洞防护技术',
-                                SPEAKER: ['胡科开 华为技术有限公司'],
+                                SPEAKER: ['胡科开/吴财军 华为技术有限公司'],
                                 DESC: ['自2018年针对处理器cache架构的幽灵和熔断安全漏洞被Google Project Zero曝光以来，新型侧信道漏洞的防护与消减就成为业界热点与难题。业界主流公司如Intel、微软、谷歌等都推出了基于编译器的软硬结合的解决方案，覆盖GCC、LLVM、Visual、C++等主流编译器，典型代表技术有Retpoline、Randpoline等。Gcc-Anti-SCA项目基于GCC编译器提供一个独立安全编译插件，主要针对ARM架构，通过静态代码扫描和模式识别的方式，自动识别源代码中的高风险代码段，并插入ARM架构下相应的安全防护指令。支持ARMv8.5侧信道防护新指令，并向前兼容ARMv8.0及更早的架构。在尽可能多的识别风险点，保证安全性的同时，持续优化，减少误报，把代码性能损失控制在极小的范围内。']
                             },
                             {
                                 TIME: '16:30-17:00',
-                                THEME: '鲲鹏安全库远程证明能力介绍',
-                                SPEAKER: ['吴财军  华为'],
-                                DESC: ['介绍当前鲲鹏操作系统中开源安全库的远程证明能力开发的最新进展，并结合SELinux和IMA能力，实现对OS系统和容器的远程证明验证。']
+                                THEME: '操作系统漏洞修复运维探讨',
+                                SPEAKER: ['韩永忠  普华'],
+                                DESC: ['对于操作系统安全漏洞已经可实现异常行业检测，漏洞的风险评估以及恶意的程序检测，发现安全隐患后需要等待上游产商给予支持。隐患无法第一时间进行修复。为了解决此问题，操作系统修复的最后一公里：在发现安全隐患后、实现自动获取补丁提交更新计划、提供回退手段形成自动化的运维手段，帮助非云端客户解决本地数据中心的操作系统安全隐患。']
                             },
                             {
                                 TIME: '17:00-17:30',
@@ -673,7 +673,7 @@ module.exports = {
                         ]
                     },
                     {
-                        TITLE: ['Session 5','分布式&多样性计算'],
+                        TITLE: ['Session 5', '分布式&多样性计算'],
                         ITEM_LIST: [
                             {
                                 TIME: '13:00-13:30',
@@ -713,7 +713,7 @@ module.exports = {
                                 TIME: '16:00-16:30',
                                 THEME: 'CirroData分布式数据库发展方向和工程实践',
                                 SPEAKER: ['董山 东方国信'],
-                                DESC: ['（1）企业级分布式架构发展方向','（2）创新技术及在华为平台的工程实践','（3）技术展望']
+                                DESC: ['（1）企业级分布式架构发展方向', '（2）创新技术及在华为平台的工程实践', '（3）技术展望']
                             },
                             {
                                 TIME: '16:30-17:00',
@@ -730,7 +730,7 @@ module.exports = {
                         ]
                     },
                     {
-                        TITLE: ['Session 6','边缘&嵌入式'],
+                        TITLE: ['Session 6', '边缘&嵌入式'],
                         ITEM_LIST: [
                             {
                                 TIME: '13:00-13:30',
@@ -764,7 +764,7 @@ module.exports = {
                                 TIME: '15:30-16:00',
                                 THEME: '推动RISC-V软件生态及openEuler在VisionFive开发板的适配',
                                 SPEAKER: ['朱潇潇 赛昉'],
-                                DESC: ['一. 介绍赛昉科技在推动RISC-V软件生态上所作的工作和取得的进展;','二. 简单介绍赛昉科技RISC-V开发板(VisionFive) 的软件和开发工具包;','三. openEuler在VisionFive开发板上的移植和适配成果;']
+                                DESC: ['一. 介绍赛昉科技在推动RISC-V软件生态上所作的工作和取得的进展;', '二. 简单介绍赛昉科技RISC-V开发板(VisionFive) 的软件和开发工具包;', '三. openEuler在VisionFive开发板上的移植和适配成果;']
                             },
                             {
                                 TIME: '16:00-16:30',
@@ -840,17 +840,13 @@ module.exports = {
                         LINK: ""
                     }
                 ]
-                
+
             },
             CO_ORGANIZER: {
                 TEXT_TITLE: "协办单位",
                 LIST: [
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/phytium.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/softstone.png",
+                        IMG: "/img/summit/summit2021/Co-construction/yidongyun.png",
                         LINK: ""
                     },
                     {
@@ -862,35 +858,28 @@ module.exports = {
                         LINK: ""
                     },
                     {
+                        IMG: "/img/summit/summit2021/Co-construction/turbolinux.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/softstone.png",
+                        LINK: ""
+                    },
+                    {
                         IMG: "/img/summit/summit2021/Co-construction/easystack.png",
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/isstech.png",
+                        IMG: "/img/summit/summit2021/Co-construction/phytium.png",
                         LINK: ""
                     },
+                ]
+            },
+            SUPPORT: {
+                TEXT_TITLE: "支持单位",
+                LIST: [
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/iiioka.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/winhong.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/xsky.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/tianyuan.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/bessystem.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/nuclei.png",
+                        IMG: "/img/summit/summit2021/Co-construction/starfive.png",
                         LINK: ""
                     },
                     {
@@ -898,31 +887,31 @@ module.exports = {
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/asiainfo.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/starfive.png",
-                        LINK: ""
-                    },
-                    {
                         IMG: "/img/summit/summit2021/Co-construction/qingcloud.png",
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/huayun.png",
+                        IMG: "/img/summit/summit2021/Co-construction/winhong.png",
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/kaifazhineng.png",
+                        IMG: "/img/summit/summit2021/Co-construction/langcher.png",
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/ascas.png",
+                        IMG: "/img/summit/summit2021/Co-construction/beilian.png",
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/dongfangtong.png",
+                        IMG: "/img/summit/summit2021/Co-construction/asiainfo.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/talkweb.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/nuclei.png",
                         LINK: ""
                     },
                     {
@@ -934,12 +923,60 @@ module.exports = {
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/langcher.png",
+                        IMG: "/img/summit/summit2021/Co-construction/huayun.png",
                         LINK: ""
                     },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/baixing.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/isstech.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/huanghe.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/kaifazhineng.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/xsky.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/ascas.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/youxi.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/kengpeng.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/dongfangtong.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/iiioka.png",
+                        LINK: ""
+                    },
+                    // {
+                    //     IMG: "/img/summit/summit2021/Co-construction/tianyuan.png",
+                    //     LINK: ""
+                    // },
+                    // {
+                    //     IMG: "/img/summit/summit2021/Co-construction/bessystem.png",
+                    //     LINK: ""
+                    // },
                 ]
             },
-            SUPPORT: {
+            FOUNDATION: {
                 TEXT_TITLE: "友好基金会",
                 LIST: [
                     {

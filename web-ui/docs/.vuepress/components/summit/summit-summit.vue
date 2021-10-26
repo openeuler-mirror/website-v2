@@ -2,17 +2,7 @@
   <div>
     <div class="banner">
       <a href="https://e-campaign.huawei.com/m/FjEF3q" target="_blank">
-        <img
-          class="extend"
-          src="/img/summit/summit2021/left-longer.png"
-          alt=""
-        />
         <img class="main" :src="i18n.summit.SUMMIT_BANNER.PC_IMG" />
-        <img
-          class="extend"
-          src="/img/summit/summit2021/right-longer.png"
-          alt=""
-        />
       </a>
     </div>
     <div class="h5-banner">
@@ -23,23 +13,6 @@
     <div class="container">
       <div class="text-wrapper">
         <p class="text">{{ i18n.summit.SUMMIT_INTRODUCE }}</p>
-        <!-- <div class="link-wrapper">
-          <a
-            href="https://shimowendang.com/forms/X6X9jj9KPcdQwVr8/fill"
-            target="_blank"
-            ><img :src="i18n.interaction.SUMMIT_2021.SPEACKER"
-          /></a>
-          <a
-            href="https://shimowendang.com/forms/k76zTLKvumYwRdsP/fill"
-            target="_blank"
-            ><img :src="i18n.interaction.SUMMIT_2021.SPEONSOR"
-          /></a>
-          <a
-            href="https://shimowendang.com/forms/LjHs8JlsLSsW92kl/fill"
-            target="_blank"
-            ><img :src="i18n.interaction.SUMMIT_2021.DEMO"
-          /></a>
-        </div> -->
       </div>
       <div class="agenda" id="agenda">
         <div :class="['title', $lang === 'en' ? 'en-title' : '']">
@@ -137,7 +110,7 @@
               <template slot-scope="scope">
                 <p>{{ scope.row.SPEAKER }}</p>
                 <p
-                  v-if="scope.$index == 1 && forumTab == 0"
+                  v-if="scope.$index == 1 && forumTab == 2"
                   class="specialTable"
                 >
                   陈伟
@@ -148,7 +121,7 @@
               <template slot-scope="scope">
                 <p>{{ scope.row.POSITION }}</p>
                 <p
-                  v-if="scope.$index == 1 && forumTab == 0"
+                  v-if="scope.$index == 1 && forumTab == 2"
                   class="specialTable"
                 >
                   SUSE大中华区Service Director
@@ -227,11 +200,6 @@
               <p>{{ item.POSITION }}</p>
             </div>
           </div>
-          <!-- <div class="show-all" @click="showAll" v-if="isShowH5">
-            <p>{{ flag ? i18n.home.EXPAND : i18n.home.RETRACT }}</p>
-            <img v-if="flag" v-lazy="'/img/home/arrow.svg'" alt="" />
-            <img v-if="!flag" v-lazy="'/img/home/arrowUp.svg'" alt="" />
-          </div> -->
         </div>
         <div class="construction">
           <div class="construction-title">
@@ -316,6 +284,19 @@
               />
             </div>
           </div>
+          <div class="foundation">
+            <div class="text-title">
+              {{ foundation.TEXT_TITLE }}
+            </div>
+            <div class="img-list">
+              <img
+                v-lazy="item.IMG"
+                alt=""
+                v-for="(item, index) in foundation.LIST"
+                :key="index"
+              />
+            </div>
+          </div>
         </div>
       </div>
       <div class="review-wrapper">
@@ -345,7 +326,7 @@ export default {
   },
   data() {
     return {
-      value: "SUSE",
+      value: "麒麟软件",
       agendaData: {},
       dateArr: [],
       showTab: "nine",
@@ -362,6 +343,7 @@ export default {
       sponsoredData: {},
       organizerData: {},
       supportData: {},
+      foundation: {},
       sigObj: {},
       carouselObj: {},
       forumData: [],
@@ -385,6 +367,7 @@ export default {
     this.sponsoredData = this.construction.CO_SPONSORED;
     this.organizerData = this.construction.CO_ORGANIZER;
     this.supportData = this.construction.SUPPORT;
+    this.foundation = this.construction.FOUNDATION;
     this.dateArr = this.agendaData.DATE;
     this.forumData = this.agendaData.AFTERNOON_AGENDA_9;
     this.carouselObj = this.agendaData.AFTERNOON_AGENDA_10;
@@ -404,7 +387,6 @@ export default {
       this.showTab = tab.name;
       if (tab.name === "nine") {
         this.isShowcarousel = false;
-        // this.forumList = undefined;
         this.isShowBtn = false;
         this.showBtn = "afternoon";
       } else if (tab.name === "ten") {
@@ -427,13 +409,13 @@ export default {
       } else if (tab === "evening") {
       } else if (this.showTab === "nine" && tab === "afternoon") {
         this.forumClick(0);
-        this.value = "SUSE";
+        // this.value = "麒麟软件";
       } else {
         return false;
       }
     },
     SpanMethod({ row, column, rowIndex, columnIndex }) {
-      if (this.showTab === "nine" && this.forumTab === 5) {
+      if (this.showTab === "nine" && this.forumTab === 1) {
         if (rowIndex === 0 && columnIndex === 3) {
           return {
             rowspan: 1,
@@ -463,7 +445,6 @@ export default {
       } else {
         return false;
       }
-      console.log(11);
       if (this.showTab === "nine" && this.forumTab === 5) {
         if (rowIndex === 0 && columnIndex === 3) {
           return {
@@ -513,12 +494,6 @@ export default {
       display: flex;
       justify-content: space-around;
     }
-    .extend {
-      display: none;
-      @media screen and (min-width: 2500px) {
-        display: block;
-      }
-    }
     .main {
       max-width: 1920px;
       width: 100%;
@@ -566,6 +541,7 @@ export default {
         height: 80px;
       }
     }
+    .foundation,
     .sponsored,
     .organizer,
     .support {
@@ -802,7 +778,7 @@ export default {
   }
   .nine {
     .select-box {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       text-align: center;
       .mobile-select {
         width: 315px;
@@ -830,8 +806,7 @@ export default {
         font-size: 12px;
         color: rgba(0, 0, 0, 0.5);
         line-height: 20px;
-
-        margin: 20px 29px 0 0;
+        margin: 0 29px 0 0;
       }
       .agenda {
         p {
@@ -938,13 +913,6 @@ export default {
       }
     }
   }
-}
-.wait {
-  padding-bottom: 20px;
-  text-align: center;
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 .lecturer {
   width: 1029px;
