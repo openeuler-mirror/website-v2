@@ -55,7 +55,7 @@
           <el-radio-group
             v-model="showBtn"
             @change="changeTime"
-            v-show="showTab==='ten'"
+            v-show="showTab === 'ten'"
           >
             <el-radio-button label="forenoon">{{ dateArr[2] }}</el-radio-button>
             <el-radio-button label="afternoon">{{
@@ -107,22 +107,22 @@
           :class="['calendar-content', showTab === 'nine' ? 'center-p' : '']"
           v-show="showTab === 'nine'"
         >
-            <div class="forum-title">{{ agendaData.SUB_FORUM }}</div>
-            <div class="head-list">
-              <div
-                class="head-item"
-                :class="{ forumActive: forumTab === index }"
-                @click="forumClick(index)"
-                v-for="(item, index) in agendaData.FORUM_HEAD"
-                :key="index"
-              >
-                {{ item }}
-              </div>
+          <div class="forum-title">{{ agendaData.SUB_FORUM }}</div>
+          <div class="head-list">
+            <div
+              class="head-item"
+              :class="{ forumActive: forumTab === index }"
+              @click="forumClick(index)"
+              v-for="(item, index) in agendaData.FORUM_HEAD"
+              :key="index"
+            >
+              {{ item }}
             </div>
+          </div>
           <el-table
             :data="forumList"
             :show-header="false"
-            :span-method="objectSpanMethod"
+            :span-method="SpanMethod"
             :class="showTab === 'nine' ? 'hideIcon' : ''"
             style="width: 100%"
             v-if="!isShowH5"
@@ -157,7 +157,7 @@
             </el-table-column>
           </el-table>
           <div class="mobile-table nine" v-if="isShowH5">
-            <div class="select-box" v-show="showBtn === 'afternoon'">
+            <div class="select-box">
               <el-select class="mobile-select" v-model="value">
                 <el-option
                   v-for="(item, index) in agendaData.FORUM_HEAD"
@@ -168,17 +168,14 @@
                 </el-option>
               </el-select>
             </div>
-            <div
-              class="wait"
-              v-if="showTab === 'nine' && showBtn === 'forenoon' && isShowH5"
-            >
-              敬请期待
-            </div>
             <div class="item" v-for="(item, index) in forumList" :key="index">
               <div class="time">{{ item.TIME }}</div>
               <div class="agenda">
                 <p>{{ item.THEME }}</p>
-                <p v-if="item.SPEAKER || item.POSITION">
+                <p
+                  v-if="item.SPEAKER || item.POSITION"
+                  :class="{ longname: value == '麒麟信安' && index == 0 }"
+                >
                   <span>{{ item.SPEAKER }}</span>
                   <span>{{ item.POSITION }}</span>
                 </p>
@@ -191,19 +188,23 @@
           :agendaData="carouselObj"
           :sigData="sigObj"
         ></carousel>
-        <!-- <div class="lecturer" id="lecturer">
+        <div class="lecturer" id="lecturer">
           <div class="title">
-            <img v-lazy="lecturerBanner.mobile" alt="" v-if="isShowH5" />
-            <img v-lazy="lecturerBanner.web" alt="" v-else />
+            <img
+              v-lazy="lecturerData.LECTURER_BANNER.mobile"
+              alt=""
+              v-if="isShowH5"
+            />
+            <img v-lazy="lecturerData.LECTURER_BANNER.web" alt="" v-else />
           </div>
           <div
             class="lecturer-box"
             v-fade
-            v-if="lecturerList.length && !isShowH5"
+            v-if="lecturerData.LECTURER_LIST.length && !isShowH5"
           >
             <div
               class="item fade-in"
-              v-for="(item, index) in lecturerList"
+              v-for="(item, index) in lecturerData.LECTURER_LIST"
               :key="index"
             >
               <img v-lazy="item.IMG" alt="" />
@@ -214,11 +215,11 @@
           <div
             class="lecturer-box"
             v-fade
-            v-if="lecturerList.length && isShowH5"
+            v-if="lecturerData.LECTURER_LIST.length && isShowH5"
           >
             <div
-              :class="['item', 'fade-in', index > 7 && flag ? 'hidden' : '']"
-              v-for="(item, index) in lecturerList"
+              :class="['item', 'fade-in']"
+              v-for="(item, index) in lecturerData.LECTURER_LIST"
               :key="index"
             >
               <img v-lazy="item.IMG" alt="" />
@@ -226,12 +227,12 @@
               <p>{{ item.POSITION }}</p>
             </div>
           </div>
-          <div class="show-all" @click="showAll" v-if="isShowH5">
+          <!-- <div class="show-all" @click="showAll" v-if="isShowH5">
             <p>{{ flag ? i18n.home.EXPAND : i18n.home.RETRACT }}</p>
             <img v-if="flag" v-lazy="'/img/home/arrow.svg'" alt="" />
             <img v-if="!flag" v-lazy="'/img/home/arrowUp.svg'" alt="" />
-          </div>
-        </div> -->
+          </div> -->
+        </div>
         <div class="construction">
           <div class="construction-title">
             <img v-lazy="construction.WEB_TITLE" alt="" v-if="!isShowH5" />
@@ -366,11 +367,12 @@ export default {
       forumData: [],
       forumList: [],
       forumTab: 0,
-      lecturerData:{}
+      lecturerData: {},
     };
   },
   created() {
     this.agendaData = this.i18n.summit.AGENDA;
+    this.lecturerData = this.i18n.summit.LECTURER;
     this.carouselObj = this.agendaData.AFTERNOON_AGENDA_10;
     this.sigObj = this.agendaData.SIG_CONTENT;
   },
@@ -388,7 +390,6 @@ export default {
     this.carouselObj = this.agendaData.AFTERNOON_AGENDA_10;
     this.sigObj = this.agendaData.SIG_CONTENT;
     this.forumClick(0);
-    tabClick()
   },
   methods: {
     forumClick(index) {
@@ -431,6 +432,18 @@ export default {
         return false;
       }
     },
+    SpanMethod({ row, column, rowIndex, columnIndex }) {
+      if (this.showTab === "nine" && this.forumTab === 5) {
+        if (rowIndex === 0 && columnIndex === 3) {
+          return {
+            rowspan: 1,
+            colspan: 2,
+          };
+        }
+      } else {
+        return false;
+      }
+    },
     objectSpanMethod({ row, column, rowIndex, columnIndex }) {
       if (this.showTab === "ten" && this.showBtn === "forenoon") {
         if (
@@ -446,6 +459,17 @@ export default {
               colspan: 2,
             };
           }
+        }
+      } else {
+        return false;
+      }
+      console.log(11);
+      if (this.showTab === "nine" && this.forumTab === 5) {
+        if (rowIndex === 0 && columnIndex === 3) {
+          return {
+            rowspan: 1,
+            colspan: 2,
+          };
         }
       } else {
         return false;
@@ -606,7 +630,7 @@ export default {
       height: 30px;
       line-height: 30px;
       text-align: center;
-      font-size: 20px;
+      font-size: 22px;
       color: rgba(0, 0, 0, 0.85);
     }
     .head-list {
@@ -686,7 +710,7 @@ export default {
     }
     .el-table_2_column_9 {
       .cell {
-        text-align: center;
+        padding-left: 40px;
       }
     }
     .is-active {
@@ -821,7 +845,7 @@ export default {
           span {
             &:first-of-type {
               margin-right: 25px;
-              width: 41px;
+              width: 48px;
               vertical-align: top;
             }
             &:first-of-type,
@@ -830,6 +854,16 @@ export default {
             }
             &:last-of-type {
               width: 139px;
+            }
+          }
+        }
+        .longname {
+          span {
+            width: 150px !important;
+          }
+          span {
+            &:last-of-type {
+              width: 0 !important;
             }
           }
         }
@@ -911,5 +945,110 @@ export default {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.lecturer {
+  width: 1029px;
+  margin: 70px auto 0;
+  .lecturer-box {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    .item {
+      width: 180px;
+      margin: 0 103px 30px 0;
+      &:nth-of-type(4n) {
+        margin-right: 0;
+      }
+      img {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+        display: block;
+      }
+      p {
+        font-size: 16px;
+
+        color: #002fa7;
+        line-height: 16px;
+        margin-top: 20px;
+        width: 180px;
+        text-align: center;
+        &:last-of-type {
+          font-size: 14px;
+
+          font-weight: 400;
+          color: #000000;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    width: 345px;
+    .lecturer-box {
+      margin-top: 20px;
+      .hidden {
+        display: none;
+      }
+      .item {
+        width: 140px;
+        margin-right: 65px;
+        &:nth-of-type(2n) {
+          margin-right: 0;
+        }
+        p {
+          width: 140px;
+        }
+      }
+    }
+    .show-all {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      p {
+        color: #002fa7;
+      }
+    }
+  }
+  @media screen and (min-width: 1000px) and (max-width: 1120px) {
+    width: 1020px;
+    .lecturer-box {
+      .item {
+        margin-right: 100px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 370px) {
+  // 适配iphone5
+  .container .text-wrapper .title img,
+  .container .text-wrapper .calendar-content img {
+    width: 280px;
+  }
+  .container .text-wrapper .party-box img {
+    width: 270px;
+  }
+  .container .lecturer {
+    width: 300px !important;
+  }
+  .container .title img {
+    width: 300px !important;
+    height: 34px !important;
+  }
+  .container .lecturer .lecturer-box .item {
+    margin-right: 20px !important;
+  }
+  .container .lecturer .lecturer-box .item:nth-of-type(2n) {
+    margin-right: 0 !important;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1120px) {
+  // 适配ipad Pro
+  .container,
+  .container .banner img {
+    width: 100% !important;
+  }
 }
 </style>
