@@ -599,6 +599,17 @@ export default {
             })
 			
         },
+        getSoftware() {
+            axios.get("http://api.compass-ci.openeuler.org:20022/compat_software_info?page_size=10&page_num=2").then(res=>{
+                console.log(res);
+            })
+            // axios.post("http://api_devss.wanxikeji.cn/api/articleList").then(res=>{
+            //     console.log(res);
+            // })
+            .catch(err=>{
+                console.log(err);
+            })
+        },
         initData(params) {
             if(this.tabActiveName === 'hardware') {
                 locationMethods.getHardwareList(params);

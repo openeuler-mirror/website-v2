@@ -601,6 +601,7 @@ export default {
                             .null-item {
                                 width: 195px;
                                 height: 90px;
+                                margin-bottom: 15px;
                                 box-shadow: none;
                             }
                             .card-item {
@@ -628,6 +629,7 @@ export default {
                 }
             }
             .time-list {
+                margin-top: 50px;
                 margin-right: -10px;
                 div {
                     font-size: 12px;
@@ -635,6 +637,7 @@ export default {
                     height: 90px;
                     line-height: 90px;
                     margin-top: 20px;
+                    margin-bottom:15px ;
                     &:first-of-type {
                         margin-top: 35px;
                     }
