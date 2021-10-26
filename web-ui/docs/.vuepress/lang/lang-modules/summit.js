@@ -436,14 +436,14 @@ module.exports = {
                 ],
             ],
             AFTERNOON_AGENDA_10: {
-                TIME_LIST: ['13:00-13:30','13:30-14:00','14:00-14:30','14:30-15:00','15:00-15:30','15:30-16:00','16:00-16:30','16:30-17:00','17:00-17:30'],
+                TIME_LIST: ['13:00-13:30','13:30-14:00','14:00-14:30','14:30-15:00','15:00-15:30','15:30-16:00','16:00-16:30','16:30-17:00','17:00-17:30','17:30-18:00'],
                 CARD_LIST: [
                     {
                         TITLE: ['Session 1','内核'],
                         ITEM_LIST: [
                             {
                                 TIME: '13:00-13:30',
-                                THEME: '网络新技术MPTCP (Multipath TCP)原理，协议和应用',
+                                THEME: '网络新技术MPTCP原理，协议和应用',
                                 SPEAKER: ['唐葛亮 SUSE Linux'],
                                 DESC: ['介绍网络新技术MPTCP(Multipath TCP)原理和协议，以及当前MPTCP upstream社区的状态，最后和大家讨论MPTCP相关应该场景。']
                             },
@@ -500,7 +500,7 @@ module.exports = {
                         ITEM_LIST: [
                             {
                                 TIME: '13:00-13:30',
-                                THEME: '不同ARM厂商的CPU互相模拟',
+                                THEME: '不同Arm厂商的CPU互相模拟',
                                 SPEAKER: ['仇大玉 华云数据控股集团有限公司'],
                                 DESC: ['在公有云或者专属云内，很多时候CPU架构是相通的但是厂商却不一样，尤其在ARM服务器中，默认都是host虚拟化模式，无法屏蔽底层硬件差异，除全软件模拟的方式，但是性能损耗严重，本次topic就如何实现屏蔽底层差异的硬件虚拟化方式下，实现不同ARM Vendor 的CPU互相模拟']
                             },
@@ -512,7 +512,7 @@ module.exports = {
                             },
                             {
                                 TIME: '14:00-14:30',
-                                THEME: '基于openEuler的云底座操作系统NestOS',
+                                THEME: '基于欧拉开源操作系统的云底座操作系统NestOS',
                                 SPEAKER: ['杜奕威 麒麟软件有限公司'],
                                 DESC: ['NestOS是在openEuler社区孵化的云底座操作系统，搭载isulad，podman，docker等主流容器基础平台，可以适应各种不同的基础设施环境，使系统具备十分便捷的集群组建能力，与OKD紧密集成。同时NestOS可以安全的进行系统升级与回滚，可用于大规模下安全的运行容器化工作负载。']
                             },
@@ -591,7 +591,7 @@ module.exports = {
                             },
                             {
                                 TIME: '15:30-16:00',
-                                THEME: 'OEPKGS 开放软件包服务',
+                                THEME: 'oepkg 开放软件包服务',
                                 SPEAKER: ['纪涛 中国科学院软件研究所'],
                                 DESC: ['oepkgs 全称开放软件包服务由中国科学院软件研究所、openEuler 社区共同发起并提供支持，旨在为个人开发者、开源社区、OSV、ISV提供免费的软件包、容器镜像的构建、分发和下载服务的第三方平台。','从使用的角度为大家介绍平台的注册、构建、目标架构的支持、仓库服务、查看日志等流程。','同时为大家介绍 oepkgs 平台后续会集成的一些功能，例如签名、测试、搜索、集成合规性检查与安全检查等。']
                             },
@@ -609,7 +609,7 @@ module.exports = {
                             },
                             {
                                 TIME: '17:00-17:30',
-                                THEME: 'osv认证',
+                                THEME: 'OSV认证',
                                 SPEAKER: ['杜开田 华为'],
                                 DESC: ['介绍osv认证方案和认证体系，如何让osv走openEuler的技术路线']
                             },
@@ -632,7 +632,7 @@ module.exports = {
                             },
                             {
                                 TIME: '14:00-14:30',
-                                THEME: 'openEuler社区原生运维平台 -- PilotGo',
+                                THEME: '欧拉开源社区原生运维平台 -- PilotGo',
                                 SPEAKER: ['杨昭 麒麟软件有限公司'],
                                 DESC: ['PilotGo是openEuler社区原生孵化的运维管理平台，提供大规模集群的主机监控告警、CVE管理、软件包安装升级管理及批量运维操作等功能，保障业务系统安全、稳定运行。同时提供插件机制，对接原有操作系统的多种运维工具，可提供无感知的运维平台切换。']
                             },
@@ -646,12 +646,12 @@ module.exports = {
                                 TIME: '15:00-15:30',
                                 THEME: '茶歇',
                             },
-                            {
-                                TIME: '15:30-16:00',
-                                THEME: '敬请期待',
-                                SPEAKER: ['敬请期待 蓬莱TEE'],
-                                DESC: ['']
-                            },
+                            // {
+                            //     TIME: '15:30-16:00',
+                            //     THEME: '敬请期待',
+                            //     SPEAKER: ['敬请期待 蓬莱TEE'],
+                            //     DESC: ['']
+                            // },
                             {
                                 TIME: '16:00-16:30',
                                 THEME: 'Sec-Anti-SCA基于编译器的CPU侧信道漏洞防护技术',
@@ -694,20 +694,20 @@ module.exports = {
                                 DESC: ['']
                             },
                             {
-                                TIME: '14:30-15:00',
-                                THEME: '编译器',
-                                SPEAKER: ['马明泽 华为'],
-                                DESC: ['']
+                                // TIME: '14:30-15:00',
+                                // THEME: '',
+                                // SPEAKER: ['马明泽 华为'],
+                                // DESC: ['']
                             },
                             {
                                 TIME: '15:00-15:30',
                                 THEME: '茶歇',
                             },
                             {
-                                TIME: '15:30-16:00',
-                                THEME: '分布式内存池',
-                                SPEAKER: ['孙博 华为'],
-                                DESC: ['']
+                                // TIME: '15:30-16:00',
+                                // THEME: '分布式内存池',
+                                // SPEAKER: ['孙博 华为'],
+                                // DESC: ['']
                             },
                             {
                                 TIME: '16:00-16:30',
@@ -722,10 +722,10 @@ module.exports = {
                                 DESC: ['芯片是骨，软件是魂。高水平应用软件是提升飞腾平台的重要手段之一，而高性能的基础算法库是编写高水平应用软件的基础。本议题围绕飞腾软件生态的发展规划，紧密结合用户需求，探讨基础算法优化过程中的经验和收获。']
                             },
                             {
-                                TIME: '17:00-17:30',
-                                THEME: '敬请期待',
-                                SPEAKER: ['敬请期待'],
-                                DESC: ['']
+                                // TIME: '17:00-18:00',
+                                // THEME: '敬请期待',
+                                // SPEAKER: ['敬请期待'],
+                                // DESC: ['']
                             },
                         ]
                     },
@@ -734,7 +734,7 @@ module.exports = {
                         ITEM_LIST: [
                             {
                                 TIME: '13:00-13:30',
-                                THEME: 'openEuler嵌入式方向的发展规划',
+                                THEME: '欧拉开源操作系统嵌入式方向的发展规划',
                                 SPEAKER: ['林子畅 华为技术有限公司'],
                                 DESC: ['介绍openEuler在嵌入式方向，与之前服务器领域的异同点，后续可能的特性、功能规划']
                             },
@@ -745,16 +745,16 @@ module.exports = {
                                 DESC: ['当前openEuler的构建系统OBS主要是面向服务器场景的，对于嵌入式场景支持并不好，例如不支持交叉编译，裁剪的力度有限等。为了使openeuler的相关成果能够延伸到嵌入式领域，我们引入了面向嵌入式场景的构建系统Yocto。本议题将分享Yocto的基本情况、如何基于Yocto构建openEuler embedded、存在的问题与挑战以及面向未来的一些思考和规划']
                             },
                             {
-                                TIME: '14:00-14:30',
-                                THEME: '敬请期待',
-                                SPEAKER: ['中科创达'],
-                                DESC: ['']
+                                // TIME: '14:00-14:30',
+                                // THEME: '敬请期待',
+                                // SPEAKER: ['中科创达'],
+                                // DESC: ['']
                             },
                             {
-                                TIME: '14:30-15:00',
-                                THEME: '敬请期待',
-                                SPEAKER: ['RT-thread'],
-                                DESC: ['']
+                                // TIME: '14:30-15:00',
+                                // THEME: '敬请期待',
+                                // SPEAKER: ['RT-thread'],
+                                // DESC: ['']
                             },
                             {
                                 TIME: '15:00-15:30',
@@ -959,14 +959,109 @@ module.exports = {
         },
         LECTURER: {
             LECTURER_BANNER: {
-                web: '/img/summit/home/lecturer/zh-pc-lecturer.png',
-                mobile: '/img/summit/home/lecturer/zh-mobile-lecturer.png'
+                web: '/img/summit/summit2021/lecturer/sperkertitle.png',
+                mobile: '/img/summit/summit2021/lecturer/sperkertitle_mo.png'
             },
             LECTURER_LIST: [
                 {
-                    IMG: '/img/summit/summit2021/lecturer/niguangnan.png',
-                    NAME: '倪光南',
-                    POSITION: '中国工程院院士'
+                    IMG: '/img/summit/summit2021/lecturer/yangtao.png',
+                    NAME: '杨涛',
+                    POSITION: '开放原子开源基金会理事长'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/jiangdayong.png',
+                    NAME: '江大勇',
+                    POSITION: '欧拉开源社区理事长'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/qiuchengfeng.png',
+                    NAME: '邱成锋',
+                    POSITION: '欧拉开源社区秘书长'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/huxinwei.png',
+                    NAME: '胡欣蔚',
+                    POSITION: '欧拉开源社区技术委员会主席'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/chenhaibo.png',
+                    NAME: '陈海波',
+                    POSITION: '开放原子开源上海交通大学教授华为操作系统首席科学家基金会理事长'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/gaowei.png',
+                    NAME: '高巍',
+                    POSITION: '欧拉开源社区用户委员会主席'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/liujingang.png',
+                    NAME: '刘金刚',
+                    POSITION: '欧拉开源社区技术委员会委员'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/jiangyongqing.png',
+                    NAME: '江永清',
+                    POSITION: 'SUSE大中华区董事长'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/qinxiaokang.png',
+                    NAME: '秦小康',
+                    POSITION: 'SUSE大中华区总裁'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/guohanjun.png',
+                    NAME: '郭寒军',
+                    POSITION: '欧拉开源社区内核 Maintainer'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/zhanglei.png',
+                    NAME: '张磊',
+                    POSITION: '统信软件 CTO'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/yeqinglong.png',
+                    NAME: '叶青龙',
+                    POSITION: '服务器操作系统项目总监 欧拉开源社区技术委员会委员'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/shiyong.png',
+                    NAME: '石勇',
+                    POSITION: '欧拉社区技术委员会委员'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/shenxiang.png',
+                    NAME: '沈翔',
+                    POSITION: '普华基础软件总经理'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/renqi.png',
+                    NAME: '任启',
+                    POSITION: '麒麟信安高级副总裁'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/zujianzhong.png',
+                    NAME: '朱建忠',
+                    POSITION: '统信软件生态中心总经理'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/lishouyong.png',
+                    NAME: '刘寿永',
+                    POSITION: ' 中科创达首席架构师'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/yixiujiang.png',
+                    NAME: '尹秀江',
+                    POSITION: '麒麟软件工程师'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/yangliu.png',
+                    NAME: '阳柳',
+                    POSITION: '飞腾资深软件架构师'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/panjianfeng.png',
+                    NAME: '潘剑锋',
+                    POSITION: '360集团副总裁首席科学家'
                 },
             ]
         }
