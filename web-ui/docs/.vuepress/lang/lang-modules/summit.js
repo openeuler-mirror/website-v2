@@ -15,7 +15,7 @@ module.exports = {
 
             DATE: ['11月09日', '11月10日', '上午', '下午'],
             SUB_FORUM: 'openEuler Summit 分论坛 ',
-            FORUM_HEAD: ['麒麟软件','麒麟信安','SUSE','统信软件','中科创达','普华基础软件'],
+            FORUM_HEAD: ['麒麟软件', '麒麟信安', 'SUSE', '统信软件', '中科创达', '普华基础软件'],
             AFTERNOON_AGENDA_9: [
 
             ],
@@ -214,6 +214,7 @@ module.exports = {
                     {
                         TIME: '16:10 - 16:30',
                         THEME: '圆桌论坛 ',
+                        SPEAKER: '合作伙伴'
                     },
                     {
                         TIME: '16:30 - 16:40',
@@ -314,7 +315,7 @@ module.exports = {
                         TIME: '16:25 - 16:40',
                         THEME: '夯实国产基础，共建繁荣生态',
                         SPEAKER: '莫良伟',
-                        POSITION: '宝德计算机软件部总监'
+                        POSITION: '宝德软件部总监'
                     },
                     {
                         TIME: '16:40 - 16:55',
@@ -326,13 +327,13 @@ module.exports = {
                         TIME: '16:55 - 17:10',
                         THEME: '信创数据交换平台最佳实践 ',
                         SPEAKER: '臧一超 ',
-                        POSITION: '普元信息技术股份有限公司数智研究院副总经理'
+                        POSITION: '普元信息数智研究院 副总经理'
                     },
                     {
                         TIME: '17:10 - 17:25',
                         THEME: '融合信创生态，打造安全高效的地理信息系统',
                         SPEAKER: '周丹',
-                        POSITION: '中地数码科技有限公司北京副总经理'
+                        POSITION: '中地数码北京副总经理'
                     },
                 ],
                 // 中科达创
@@ -756,7 +757,7 @@ module.exports = {
                                 TIME: '14:00-14:30',
                                 THEME: '推动RISC-V软件生态及openEuler在VisionFive开发板的适配',
                                 SPEAKER: ['朱潇潇 赛昉科技'],
-                                DESC: [''] 
+                                DESC: ['']
                             },
                             {
                                 // TIME: '14:30-15:00',
@@ -955,6 +956,14 @@ module.exports = {
                         LINK: ""
                     },
                     {
+                        IMG: "/img/summit/summit2021/Co-construction/tianyuan.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/bessystem.png",
+                        LINK: ""
+                    },
+                    {
                         IMG: "/img/summit/summit2021/Co-construction/ascas.png",
                         LINK: ""
                     },
@@ -1008,6 +1017,7 @@ module.exports = {
                 mobile: '/img/summit/summit2021/lecturer/sperkertitle_mo.png'
             },
             LECTURER_LIST: [
+
                 {
                     IMG: '/img/summit/summit2021/lecturer/yangtao.png',
                     NAME: '杨涛',
@@ -1017,6 +1027,11 @@ module.exports = {
                     IMG: '/img/summit/summit2021/lecturer/jiangdayong.png',
                     NAME: '江大勇',
                     POSITION: '欧拉开源社区理事长'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/wuyanjun.png',
+                    NAME: '武延军',
+                    POSITION: '欧拉开源社区副理事长'
                 },
                 {
                     IMG: '/img/summit/summit2021/lecturer/qiuchengfeng.png',
@@ -1031,7 +1046,7 @@ module.exports = {
                 {
                     IMG: '/img/summit/summit2021/lecturer/chenhaibo.png',
                     NAME: '陈海波',
-                    POSITION: '开放原子开源上海交通大学教授华为操作系统首席科学家基金会理事长'
+                    POSITION: '上海交通大学教授华为操作系统首席科学家'
                 },
                 {
                     IMG: '/img/summit/summit2021/lecturer/gaowei.png',
@@ -1039,59 +1054,35 @@ module.exports = {
                     POSITION: '欧拉开源社区用户委员会主席'
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/liujingang.png',
-                    NAME: '刘金刚',
-                    POSITION: '欧拉开源社区技术委员会委员'
-                },
-                {
-                    IMG: '/img/summit/summit2021/lecturer/jiangyongqing.png',
-                    NAME: '江永清',
-                    POSITION: 'SUSE大中华区董事长'
-                },
-                {
                     IMG: '/img/summit/summit2021/lecturer/qinxiaokang.png',
                     NAME: '秦小康',
                     POSITION: 'SUSE大中华区总裁'
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/guohanjun.png',
-                    NAME: '郭寒军',
-                    POSITION: '欧拉开源社区内核 Maintainer'
+                    IMG: '/img/summit/summit2021/lecturer/wangpan.png',
+                    NAME: '王攀',
+                    POSITION: '麒麟信安副总裁'
                 },
                 {
                     IMG: '/img/summit/summit2021/lecturer/zhanglei.png',
                     NAME: '张磊',
                     POSITION: '统信软件 CTO'
                 },
+            ],
+            PUBLISHER_BANNER: {
+                web: '/img/summit/summit2021/lecturer/publishertitle.png',
+                mobile: '/img/summit/summit2021/lecturer/publishertitle_mo.png'
+            },
+            PUBLISHER_LIST: [
                 {
-                    IMG: '/img/summit/summit2021/lecturer/yeqinglong.png',
-                    NAME: '叶青龙',
-                    POSITION: '服务器操作系统项目总监 欧拉开源社区技术委员会委员'
+                    IMG: '/img/summit/summit2021/lecturer/guohanjun.png',
+                    NAME: '郭寒军',
+                    POSITION: '欧拉开源社区内核 Maintainer'
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/shiyong.png',
-                    NAME: '石勇',
-                    POSITION: '欧拉社区技术委员会委员'
-                },
-                {
-                    IMG: '/img/summit/summit2021/lecturer/shenxiang.png',
-                    NAME: '沈翔',
-                    POSITION: '普华基础软件总经理'
-                },
-                {
-                    IMG: '/img/summit/summit2021/lecturer/renqi.png',
-                    NAME: '任启',
-                    POSITION: '麒麟信安高级副总裁'
-                },
-                {
-                    IMG: '/img/summit/summit2021/lecturer/zujianzhong.png',
-                    NAME: '朱建忠',
-                    POSITION: '统信软件生态中心总经理'
-                },
-                {
-                    IMG: '/img/summit/summit2021/lecturer/lishouyong.png',
-                    NAME: '刘寿永',
-                    POSITION: ' 中科创达首席架构师'
+                    IMG: '/img/summit/summit2021/lecturer/liyong.png',
+                    NAME: '李勇',
+                    POSITION: 'SUSE 软件工程顾问'
                 },
                 {
                     IMG: '/img/summit/summit2021/lecturer/yixiujiang.png',
@@ -1099,14 +1090,75 @@ module.exports = {
                     POSITION: '麒麟软件工程师'
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/yangliu.png',
-                    NAME: '阳柳',
-                    POSITION: '飞腾资深软件架构师'
+                    IMG: '/img/summit/summit2021/lecturer/yanshuanghai.png',
+                    NAME: '严双海',
+                    POSITION: '中移云能力中心内核研发专家'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/shenxiang.png',
+                    NAME: '沈翔',
+                    POSITION: '普华基础软件总经理'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/dukaitian.png',
+                    NAME: '杜开田',
+                    POSITION: '欧拉开源社区兼容性SIG组 Maintainer'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/yeqinglong.png',
+                    NAME: '叶青龙',
+                    POSITION: '服务器操作系统项目总监 欧拉开源社区技术委员会委员'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/liujingang.png',
+                    NAME: '刘金刚',
+                    POSITION: '欧拉开源社区技术委员会委员'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/shiyong.png',
+                    NAME: '石勇',
+                    POSITION: '欧拉社区技术委员会委员'
                 },
                 {
                     IMG: '/img/summit/summit2021/lecturer/panjianfeng.png',
                     NAME: '潘剑锋',
                     POSITION: '360集团副总裁首席科学家'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/yangliu.png',
+                    NAME: '阳柳',
+                    POSITION: '飞腾资深软件架构师'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/xiekunxun.png',
+                    NAME: '谢焜勋',
+                    POSITION: '华为嵌入式操作系统技术专家'
+                },
+                // {
+                //     IMG: '/img/summit/summit2021/lecturer/renqi.png',
+                //     NAME: '任启',
+                //     POSITION: '麒麟信安高级副总裁'
+                // },
+               
+                // {
+                //     IMG: '/img/summit/summit2021/lecturer/jiangyongqing.png',
+                //     NAME: '江永清',
+                //     POSITION: 'SUSE大中华区董事长'
+                // },
+                // {
+                //     IMG: '/img/summit/summit2021/lecturer/zujianzhong.png',
+                //     NAME: '朱建忠',
+                //     POSITION: '统信软件生态中心总经理'
+                // },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/lishouyong.png',
+                    NAME: '刘寿永',
+                    POSITION: ' 中科创达首席架构师'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/chenjingwei.png',
+                    NAME: '陈景伟',
+                    POSITION: ' 赛昉生态市场高级总监'
                 },
             ]
         }
