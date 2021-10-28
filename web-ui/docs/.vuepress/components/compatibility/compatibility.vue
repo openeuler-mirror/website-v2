@@ -376,11 +376,11 @@
                         stripe
                         style="width: 100%"
                     >
-                        <el-table-column prop="architecture" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.ARCHITECTURE" width="110"></el-table-column>
-                        <el-table-column prop="driverName" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.SOFTWARETYPE" width="120"></el-table-column>
-                        <el-table-column prop="driverName" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.SOFTWARENAME" width="200"></el-table-column>
+                        <el-table-column prop="arch" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.ARCHITECTURE" width="110"></el-table-column>
+                        <el-table-column prop="type" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.SOFTWARETYPE" width="120"></el-table-column>
+                        <el-table-column prop="softwareName" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.SOFTWARENAME" width="200"></el-table-column>
                         <el-table-column prop="version" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.VERSION" width="110"></el-table-column>
-                        <el-table-column prop="productInformation" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.PROPERTIES" width="150"></el-table-column>
+                        <el-table-column prop="property" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.PROPERTIES" width="150"></el-table-column>
                         <el-table-column prop="downloadLink" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.DOWNLOADLINK" width="100">
                              <template slot-scope="scope">
                                 <a
@@ -391,42 +391,47 @@
                             </template>
                         </el-table-column>
                         <el-table-column prop="os" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.SYSTEM" width="150"></el-table-column>
-                        <el-table-column prop="friendlyLink" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.PUBLICKLICENSE" width="180"></el-table-column>
+                        <el-table-column prop="license" :label="i18n.compatibility.SOFTWARE_TABLE_COLUMN.PUBLICKLICENSE" width="180"></el-table-column>
                     </el-table>
                     <ul class="table-mobile" v-loading.fullscreen="tableLoading">
-                        <div class="wait">暂无数据</div>
-                        <li class="item" v-for="(item, index) in hardwareTableData" :key="index">
+                        <div class="wait" v-if="!softwareTableData">暂无数据</div>
+                        <li class="item" v-for="(item, index) in softwareTableData" :key="index">
                             <ul>
                                 <li>
-                                    <span>{{i18n.compatibility.HARDWARE_TABLE_COLUMN.VENDOR}}:</span>
-                                    {{item.hardwareFactory}}
+                                    <span>{{i18n.compatibility.SOFTWARE_TABLE_COLUMN.ARCHITECTURE}}:</span>
+                                    {{item.arch}}
                                 </li>
                                 <li>
-                                    <span>{{i18n.compatibility.HARDWARE_TABLE_COLUMN.MODEL}}:</span>
-                                    {{item.hardwareModel}}
+                                    <span>{{i18n.compatibility.SOFTWARE_TABLE_COLUMN.SOFTWARETYPE}}:</span>
+                                    {{item.type}}
                                 </li>
                                 <li>
-                                    <span>{{i18n.compatibility.HARDWARE_TABLE_COLUMN.OS}}:</span>
-                                    {{item.osVersion}}
+                                    <span>{{i18n.compatibility.SOFTWARE_TABLE_COLUMN.SOFTWARENAME}}:</span>
+                                    {{item.softwareName}}
                                 </li>
                                 <li>
-                                    <span>{{i18n.compatibility.HARDWARE_TABLE_COLUMN.DATE}}:</span>
-                                    {{item.date}}
+                                    <span>{{i18n.compatibility.SOFTWARE_TABLE_COLUMN.VERSION}}:</span>
+                                    {{item.version}}
                                 </li>
                                 <li>
-                                    <span>{{i18n.compatibility.HARDWARE_TABLE_COLUMN.COMPATIBILITY_CONFIGURATION}}:</span>
-                                    <a
-                                        class="table-link"
-                                        @click="go(item.id)"
-                                    >{{ i18n.compatibility.HARDWARE_TABLE_COLUMN.COMPATIBILITY_CONFIGURATION2 }}</a>
+                                    <span>{{i18n.compatibility.SOFTWARE_TABLE_COLUMN.PROPERTIES}}:</span>
+                                    {{item.property}}
                                 </li>
                                 <li>
-                                    <span>{{i18n.compatibility.HARDWARE_TABLE_COLUMN.REFERRENCE}}:</span>
+                                    <span>{{i18n.compatibility.SOFTWARE_TABLE_COLUMN.DOWNLOADLINK}}:</span>
                                     <a
                                         class="table-link"
                                         target="_blank"
-                                        :href="item.friendlyLink"
+                                        :href="item.downloadLink"
                                     >{{ i18n.compatibility.LINK }}</a>
+                                </li>
+                                 <li>
+                                    <span>{{i18n.compatibility.SOFTWARE_TABLE_COLUMN.SYSTEM}}:</span>
+                                    {{item.os}}
+                                </li>
+                                 <li>
+                                    <span>{{i18n.compatibility.SOFTWARE_TABLE_COLUMN.PUBLICKLICENSE}}:</span>
+                                    {{item.license}}
                                 </li>
                             </ul>
                         </li>
@@ -458,7 +463,6 @@
 
 <script>
 import commonBanner from "./../common/banner.vue";
-import axios from "axios"
 import { 
     hardwareList,
     hardwareOSOptions,
@@ -466,6 +470,7 @@ import {
     driverList, 
     driverOSOptions, 
     driverArchitectureOptions,
+    softwareList
     } from "../../api/compatibility";
 
 let that = null;
@@ -509,6 +514,26 @@ const locationMethods = {
              that.tableLoading = false;
         })
     },
+    // 软件列表
+    getSoftwareList(params) {
+        that.tableLoading = true;
+        softwareList(params)
+        .then(data => {
+            that.tableLoading = false;
+            console.log(data);
+            if(data) {
+                that.total = 100;
+                that.softwareTableData = data;
+            } else {
+                that.total = 0;
+                that.softwareTableData = [];
+            }
+        })
+        .catch(err => {
+            that.$message.error(err);
+             that.tableLoading = false;
+        })
+    }
 }
 
 export default {
@@ -557,7 +582,6 @@ export default {
         }
         this.formData.lang = lang;
         this.initData(this.formData);
-
         // 下拉选项
         hardwareOSOptions({lang: lang})
         .then(data => {
@@ -565,7 +589,6 @@ export default {
                 this.hardwareOSOptions = data;
             }
         })
-
         hardwareArchitectureOptions({lang: lang})
         .then(data => {
             if(data && data.length > 0) {
@@ -588,33 +611,13 @@ export default {
         })
     },
     methods: {
-        getFile() {
-            axios.get("/JSON/compatibility/compat_card_zh.json").then(res=>{
-                this.softwareTableData=res.data;
-                console.log(res.data);
-            })
-            .catch(err=>{
-                this.$message.error(err)
-                console.log(err);
-            })
-			
-        },
-        getSoftware() {
-            axios.get("http://api.compass-ci.openeuler.org:20022/compat_software_info?page_size=10&page_num=2").then(res=>{
-                console.log(res);
-            })
-            // axios.post("http://api_devss.wanxikeji.cn/api/articleList").then(res=>{
-            //     console.log(res);
-            // })
-            .catch(err=>{
-                console.log(err);
-            })
-        },
         initData(params) {
             if(this.tabActiveName === 'hardware') {
                 locationMethods.getHardwareList(params);
             } else if(this.tabActiveName === 'drive') {
                 locationMethods.getDriverList(params);
+            } else if(this.tabActiveName=== 'software') {
+                locationMethods.getSoftwareList(params)
             }
         },
         handleTabClick(tab, event) {

@@ -147,7 +147,7 @@
                 <p>{{ item.THEME }}</p>
                 <p
                   v-if="item.SPEAKER || item.POSITION"
-                  :class="{ longname: value == '麒麟信安' && index == 0 }"
+                  :class="{ longname: value == '麒麟信安' && (index == 0 || index ==1) }"
                 >
                   <span>{{ item.SPEAKER }}</span>
                   <span>{{ item.POSITION }}</span>
@@ -416,7 +416,8 @@ export default {
     },
     SpanMethod({ row, column, rowIndex, columnIndex }) {
       if (this.showTab === "nine" && this.forumTab === 1) {
-        if (rowIndex === 0 && columnIndex === 3) {
+        if (rowIndex === 0 || rowIndex === 1) {
+          if (columnIndex === 3)
           return {
             rowspan: 1,
             colspan: 2,

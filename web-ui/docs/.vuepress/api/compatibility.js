@@ -272,10 +272,11 @@ export const softwareList = ({
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            otherBaseUrl: cveApi,
-            url: '/compat_software_info?page_size=10&page_num=2',
-            type: 'post',
+            url: `https://api.compass-ci.openeuler.org:20003/compat_software_info?page_size=2000&page_num=${page}`,
+            type: 'get',
             data: {
+                page_size:10,
+                page_num:1,
                 keyword,
                 os: os === 'all' ? '' : os,
                 architecture: architecture === 'all' ? '' : architecture,
@@ -285,13 +286,11 @@ export const softwareList = ({
                 },
                 lang
             },
+            notAuthorization:{},
             success(result) {
-                let res = {
-                    totalRecords: result.result.totalCount,
-                    list: result.result.hardwareCompList
-                }
+                console.log(result);
                 if (result) {
-                    resolve(res);
+                    resolve(result);
                     return;
                 }
                 reject(result);
