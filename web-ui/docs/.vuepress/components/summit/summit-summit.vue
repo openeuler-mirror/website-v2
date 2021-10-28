@@ -201,6 +201,46 @@
             </div>
           </div>
         </div>
+        <div class="lecturer" id="lecturer">
+          <div class="title">
+            <img
+              v-lazy="lecturerData.PUBLISHER_BANNER.mobile"
+              alt=""
+              v-if="isShowH5"
+            />
+            <img v-lazy="lecturerData.PUBLISHER_BANNER.web" alt="" v-else />
+          </div>
+          <div
+            class="lecturer-box"
+            v-fade
+            v-if="lecturerData.PUBLISHER_LIST.length && !isShowH5"
+          >
+            <div
+              class="item fade-in"
+              v-for="(item, index) in lecturerData.PUBLISHER_LIST"
+              :key="index"
+            >
+              <img v-lazy="item.IMG" alt="" />
+              <p>{{ item.NAME }}</p>
+              <p>{{ item.POSITION }}</p>
+            </div>
+          </div>
+          <div
+            class="lecturer-box"
+            v-fade
+            v-if="lecturerData.PUBLISHER_LIST.length && isShowH5"
+          >
+            <div
+              :class="['item', 'fade-in']"
+              v-for="(item, index) in lecturerData.PUBLISHER_LIST"
+              :key="index"
+            >
+              <img v-lazy="item.IMG" alt="" />
+              <p>{{ item.NAME }}</p>
+              <p>{{ item.POSITION }}</p>
+            </div>
+          </div>
+        </div>
         <div class="construction">
           <div class="construction-title">
             <img v-lazy="construction.WEB_TITLE" alt="" v-if="!isShowH5" />
