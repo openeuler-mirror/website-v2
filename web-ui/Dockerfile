@@ -13,7 +13,7 @@ RUN npm install
 
 RUN mv /home/openeuler/web/script/update-build-script.js /home/openeuler/web/node_modules/@vuepress/core/lib/node/build/index.js
 RUN mv /home/openeuler/web/script/add-worker-script.js /home/openeuler/web/node_modules/@vuepress/core/lib/node/build/worker.js
-RUN node --max_old_space_size=9216 /home/openeuler/web/node_modules/vuepress/cli.js build docs
+RUN node --openssl-legacy-provider --max_old_space_size=9216 /home/openeuler/web/node_modules/vuepress/cli.js build docs
 
 FROM swr.cn-north-4.myhuaweicloud.com/opensourceway/openeuler/nginx:1.16.1-20.03-lts-sp2
 
