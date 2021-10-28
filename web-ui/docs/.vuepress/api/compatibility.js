@@ -261,3 +261,45 @@ export const detailAapterList = ({
 
     });
 };
+//9. 软件列表 
+export const softwareList = ({
+    keyword,
+    os,
+    architecture,
+    page,
+    pageSize,
+    lang
+}) => {
+    return new Promise((resolve, reject) => {
+        appAjax.postJson({
+            url: `https://api.compass-ci.openeuler.org:20003/compat_software_info?page_size=2000&page_num=${page}`,
+            type: 'get',
+            data: {
+                page_size:10,
+                page_num:1,
+                keyword,
+                os: os === 'all' ? '' : os,
+                architecture: architecture === 'all' ? '' : architecture,
+                pages: {
+                    page,
+                    size: pageSize
+                },
+                lang
+            },
+            notAuthorization:{},
+            success(result) {
+                console.log(result);
+                if (result) {
+                    resolve(result);
+                    return;
+                }
+                reject(result);
+            },
+            error(msg) {
+                reject(msg);
+            }
+
+        });
+
+    });
+}

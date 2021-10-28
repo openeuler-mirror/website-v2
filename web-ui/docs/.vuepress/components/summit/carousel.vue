@@ -1,7 +1,7 @@
 <template>
-    <div class="agenda-carousel">
+    <div class="agenda-carousel"  :class="summitData ? 'summit2021' : ''">
         <div class="agenda-msg">
-            <div class="time-list">
+            <div class="time-list" :class="{'summit_time' :isShowH5 && summitData}">
                 <div v-for="(item,index) in carouselObj.TIME_LIST" :key="index">{{ item }}</div>
             </div>
             <div class="card-list">
@@ -34,7 +34,7 @@
                     <ul class="card-list" :style="{transform: 'translateX(' + cardPosition + 'px)'}">
                         <li v-for="(item,index) in carouselObj.CARD_LIST" :key="index">
                             <p class="section" v-for="(values,keys) in item.TITLE">{{ values }}</p>
-                            <div :class="value.THEME?'card-item':'null-item'" v-for="(value,key) in item.ITEM_LIST" :key="key" @click="showDetail(value,1)">
+                            <div :class="[value.THEME?'card-item':'null-item',{'teacard':key==4 && summitData},{'teacard_mo':key==4 && isShowH5 && summitData}] " v-for="(value,key) in item.ITEM_LIST" :key="key" @click="showDetail(value,1)">
                                 <p>{{ value.THEME }}</p>
                             </div>
                         </li>
@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <div class="sig-content" v-if="sigObj">
+        <div class="sig-content" v-if="sigObj && !summitData">
             <p class="sig-title">{{ sigObj.TITLE }}</p>
             <div class="sig-1" v-if="sigObj.SIG1_TIME">
                 <div class="time">
@@ -96,7 +96,8 @@ export default {
             sigContent: [],
             sigDesc: [],
             showSigDetail: false,
-            sig2DetailList: []
+            sig2DetailList: [],
+            summitData:false
         }
     },
     props: ['agendaData','sigData'],
@@ -106,8 +107,14 @@ export default {
         this.carouselObj = this.agendaData?this.agendaData:agendaObj.AFTERNOON_AGENDA_25;
         this.sigObj = this.sigData?this.sigData:agendaObj.SIG_CONTENT;
         this.sig2DetailList = this.sigObj.SIG2_DETAIL;
+        this.isSummitData()
     },
     methods: {
+        isSummitData() {
+            if (this.carouselObj.TIME_LIST.length===10) {
+                this.summitData=true;
+            }
+        },
         handleBtn(direction) {
             this.isShowDetail = false;
             if(direction === 'left') {
@@ -164,7 +171,7 @@ export default {
     .shade-remind {
         z-index: 10;
         width: 100%;
-        height: 92%;
+        height: 95%;
         background: rgba(0, 0, 0, 0.05);
         position: absolute;
         top: 86px;
@@ -268,7 +275,7 @@ export default {
         display: flex;
         flex-direction: row;
         .time-list {
-            margin-top: 50px;
+            margin-top: 130px;
             position: relative;
             z-index: 10;
             background-color: white;
@@ -279,6 +286,10 @@ export default {
                 line-height: 156px;
                 margin-top: 40px;
                 font-size: 18px;
+                height: 150px;
+                margin-bottom: 36px;
+                margin-top: 0;
+                line-height: 150px;
                 color: rgba(0, 0, 0, 0.5);
             }
         }
@@ -306,8 +317,32 @@ export default {
                     li {
                         margin-left: 47px;
                         .null-item {
-                            width: 260px;
-                            height: 156px;
+                            // width: 260px;
+                            // height: 156px;
+                             width: 270px;
+                            height: 150px;
+                            border-radius: 8px;
+                            overflow: hidden;
+                            margin-bottom: 36px;
+                            box-shadow: none;
+                            // cursor: pointer;
+                            // &:hover {
+                            //     box-shadow: 0px 6px 20px 0px rgba(0, 47, 167, 0.2);
+                            // }
+                            p {
+                                font-size: 18px;
+                                color: rgba(0, 0, 0, 0.85);
+                                line-height: 30px;
+                                
+                                margin: 30px;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 3;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                                height: 90px;
+                                width: 210px;
+                            }
                         }
                         .section {
                             font-size: 20px;
@@ -343,6 +378,13 @@ export default {
                                 overflow: hidden;
                                 height: 90px;
                                 width: 210px;
+                            }
+                        }
+                        .teacard {
+                            margin: 90px 0;
+                            height: 60px;
+                            p {
+                                margin: 15px;
                             }
                         }
                     }
@@ -559,6 +601,8 @@ export default {
                             .null-item {
                                 width: 195px;
                                 height: 90px;
+                                margin-bottom: 15px;
+                                box-shadow: none;
                             }
                             .card-item {
                                 &:hover {
@@ -576,11 +620,16 @@ export default {
                                     height: 54px;
                                 }
                             }
+                            .teacard_mo {
+                                height: 60px;
+                                margin: 30px 0;
+                            }
                         }
                     }
                 }
             }
             .time-list {
+                margin-top: 50px;
                 margin-right: -10px;
                 div {
                     font-size: 12px;
@@ -588,6 +637,7 @@ export default {
                     height: 90px;
                     line-height: 90px;
                     margin-top: 20px;
+                    margin-bottom:15px ;
                     &:first-of-type {
                         margin-top: 35px;
                     }
@@ -598,6 +648,12 @@ export default {
                 /deep/ .el-radio-group span {
                     font-size: 14px;
                 }   
+            }
+            .summit_time {
+                margin-top: 100px;
+                div {
+                    margin:0 0 15px 0 !important;
+                }
             }
         }
         .sig-content {
@@ -683,5 +739,8 @@ export default {
             }
         }
     }
+}
+.summit2021 {
+    margin-top: -10px;
 }
 </style>

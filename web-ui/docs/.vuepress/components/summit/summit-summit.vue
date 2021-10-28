@@ -2,17 +2,7 @@
   <div>
     <div class="banner">
       <a href="https://e-campaign.huawei.com/m/FjEF3q" target="_blank">
-        <img
-          class="extend"
-          src="/img/summit/summit2021/left-longer.png"
-          alt=""
-        />
         <img class="main" :src="i18n.summit.SUMMIT_BANNER.PC_IMG" />
-        <img
-          class="extend"
-          src="/img/summit/summit2021/right-longer.png"
-          alt=""
-        />
       </a>
     </div>
     <div class="h5-banner">
@@ -23,23 +13,6 @@
     <div class="container">
       <div class="text-wrapper">
         <p class="text">{{ i18n.summit.SUMMIT_INTRODUCE }}</p>
-        <div class="link-wrapper">
-          <a
-            href="https://shimowendang.com/forms/X6X9jj9KPcdQwVr8/fill"
-            target="_blank"
-            ><img :src="i18n.interaction.SUMMIT_2021.SPEACKER"
-          /></a>
-          <a
-            href="https://shimowendang.com/forms/k76zTLKvumYwRdsP/fill"
-            target="_blank"
-            ><img :src="i18n.interaction.SUMMIT_2021.SPEONSOR"
-          /></a>
-          <a
-            href="https://shimowendang.com/forms/LjHs8JlsLSsW92kl/fill"
-            target="_blank"
-            ><img :src="i18n.interaction.SUMMIT_2021.DEMO"
-          /></a>
-        </div>
       </div>
       <div class="agenda" id="agenda">
         <div :class="['title', $lang === 'en' ? 'en-title' : '']">
@@ -51,16 +24,28 @@
             <el-tab-pane :label="dateArr[0]" name="nine"></el-tab-pane>
             <el-tab-pane :label="dateArr[1]" name="ten"></el-tab-pane>
           </el-tabs>
+          <!-- 10号按钮 -->
+          <el-radio-group
+            v-model="showBtn"
+            @change="changeTime"
+            v-show="showTab === 'ten'"
+          >
+            <el-radio-button label="forenoon">{{ dateArr[2] }}</el-radio-button>
+            <el-radio-button label="afternoon">{{
+              dateArr[3]
+            }}</el-radio-button>
+          </el-radio-group>
+          <!-- 9号按钮 -->
         </div>
+        <!-- 10号表格 -->
         <div
           :class="['calendar-content', showTab === 'nine' ? 'center-p' : '']"
-          v-show="!isShowcarousel"
+          v-show="showTab === 'ten' && showBtn === 'forenoon'"
         >
           <el-table
             :data="agendaTableData"
             :show-header="false"
             :span-method="objectSpanMethod"
-            :class="showTab === 'nine' ? 'hideIcon' : ''"
             style="width: 100%"
             v-if="!isShowH5"
             empty-text="敬请期待"
@@ -73,8 +58,7 @@
             <el-table-column prop="SPEAKER" width="90"> </el-table-column>
             <el-table-column prop="POSITION" width="280"> </el-table-column>
           </el-table>
-          <div class="mobile-table" v-if="isShowH5">
-            <div class="wait" v-if="showTab === 'nine'">敬请期待</div>
+          <div class="mobile-table tenDay" v-if="isShowH5">
             <div
               class="item"
               v-for="(item, index) in agendaTableData"
@@ -91,7 +75,132 @@
             </div>
           </div>
         </div>
-        <!-- <carousel v-show="isShowcarousel"></carousel> -->
+        <!-- 9号表格 -->
+        <div
+          :class="['calendar-content', showTab === 'nine' ? 'center-p' : '']"
+          v-show="showTab === 'nine'"
+        >
+          <div class="forum-title">{{ agendaData.SUB_FORUM }}</div>
+          <div class="head-list">
+            <div
+              class="head-item"
+              :class="{ forumActive: forumTab === index }"
+              @click="forumClick(index)"
+              v-for="(item, index) in agendaData.FORUM_HEAD"
+              :key="index"
+            >
+              {{ item }}
+            </div>
+          </div>
+          <el-table
+            :data="forumList"
+            :show-header="false"
+            :span-method="SpanMethod"
+            :class="showTab === 'nine' ? 'hideIcon' : ''"
+            style="width: 100%"
+            v-if="!isShowH5"
+            empty-text="敬请期待"
+          >
+            <el-table-column prop="icon" width="30">
+              <i class="el-icon-time"></i>
+            </el-table-column>
+            <el-table-column prop="TIME" width="200"> </el-table-column>
+            <el-table-column prop="THEME" width="414"> </el-table-column>
+            <el-table-column prop="SPEAKER" width="140">
+              <template slot-scope="scope">
+                <p>{{ scope.row.SPEAKER }}</p>
+                <p
+                  v-if="scope.$index == 1 && forumTab == 2"
+                  class="specialTable"
+                >
+                  陈伟
+                </p>
+              </template>
+            </el-table-column>
+            <el-table-column prop="POSITION" width="300">
+              <template slot-scope="scope">
+                <p>{{ scope.row.POSITION }}</p>
+                <p
+                  v-if="scope.$index == 1 && forumTab == 2"
+                  class="specialTable"
+                >
+                  SUSE大中华区Service Director
+                </p>
+              </template>
+            </el-table-column>
+          </el-table>
+          <div class="mobile-table nine" v-if="isShowH5">
+            <div class="select-box">
+              <el-select class="mobile-select" v-model="value">
+                <el-option
+                  v-for="(item, index) in agendaData.FORUM_HEAD"
+                  :key="index"
+                  :value="item"
+                  @click.native="forumClick(index)"
+                >
+                </el-option>
+              </el-select>
+            </div>
+            <div class="item" v-for="(item, index) in forumList" :key="index">
+              <div class="time">{{ item.TIME }}</div>
+              <div class="agenda">
+                <p>{{ item.THEME }}</p>
+                <p
+                  v-if="item.SPEAKER || item.POSITION"
+                  :class="{ longname: value == '麒麟信安' && (index == 0 || index ==1) }"
+                >
+                  <span>{{ item.SPEAKER }}</span>
+                  <span>{{ item.POSITION }}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <carousel
+          v-show="isShowcarousel"
+          :agendaData="carouselObj"
+          :sigData="sigObj"
+        ></carousel>
+        <div class="lecturer" id="lecturer">
+          <div class="title">
+            <img
+              v-lazy="lecturerData.LECTURER_BANNER.mobile"
+              alt=""
+              v-if="isShowH5"
+            />
+            <img v-lazy="lecturerData.LECTURER_BANNER.web" alt="" v-else />
+          </div>
+          <div
+            class="lecturer-box"
+            v-fade
+            v-if="lecturerData.LECTURER_LIST.length && !isShowH5"
+          >
+            <div
+              class="item fade-in"
+              v-for="(item, index) in lecturerData.LECTURER_LIST"
+              :key="index"
+            >
+              <img v-lazy="item.IMG" alt="" />
+              <p>{{ item.NAME }}</p>
+              <p>{{ item.POSITION }}</p>
+            </div>
+          </div>
+          <div
+            class="lecturer-box"
+            v-fade
+            v-if="lecturerData.LECTURER_LIST.length && isShowH5"
+          >
+            <div
+              :class="['item', 'fade-in']"
+              v-for="(item, index) in lecturerData.LECTURER_LIST"
+              :key="index"
+            >
+              <img v-lazy="item.IMG" alt="" />
+              <p>{{ item.NAME }}</p>
+              <p>{{ item.POSITION }}</p>
+            </div>
+          </div>
+        </div>
         <div class="construction">
           <div class="construction-title">
             <img v-lazy="construction.WEB_TITLE" alt="" v-if="!isShowH5" />
@@ -175,6 +284,19 @@
               />
             </div>
           </div>
+          <div class="foundation">
+            <div class="text-title">
+              {{ foundation.TEXT_TITLE }}
+            </div>
+            <div class="img-list">
+              <img
+                v-lazy="item.IMG"
+                alt=""
+                v-for="(item, index) in foundation.LIST"
+                :key="index"
+              />
+            </div>
+          </div>
         </div>
       </div>
       <div class="review-wrapper">
@@ -197,16 +319,17 @@
 </template>
 
 <script>
-// import carousel from "./carousel.vue";
+import carousel from "./carousel.vue";
 export default {
   components: {
-    // carousel,
+    carousel,
   },
   data() {
     return {
+      value: "麒麟软件",
       agendaData: {},
       dateArr: [],
-      showTab: "ten",
+      showTab: "nine",
       showBtn: "forenoon",
       agendaData: {},
       dateArr: [],
@@ -220,10 +343,22 @@ export default {
       sponsoredData: {},
       organizerData: {},
       supportData: {},
+      foundation: {},
+      sigObj: {},
+      carouselObj: {},
+      forumData: [],
+      forumList: [],
+      forumTab: 0,
+      lecturerData: {},
     };
   },
-  mounted() {
+  created() {
     this.agendaData = this.i18n.summit.AGENDA;
+    this.lecturerData = this.i18n.summit.LECTURER;
+    this.carouselObj = this.agendaData.AFTERNOON_AGENDA_10;
+    this.sigObj = this.agendaData.SIG_CONTENT;
+  },
+  mounted() {
     this.agendaTableData = this.agendaData.FORENOON_AGENDA_10;
     this.construction = this.i18n.summit.CONSTRUCTION;
     this.guidanceData = this.construction.GUIDANCE;
@@ -232,42 +367,71 @@ export default {
     this.sponsoredData = this.construction.CO_SPONSORED;
     this.organizerData = this.construction.CO_ORGANIZER;
     this.supportData = this.construction.SUPPORT;
+    this.foundation = this.construction.FOUNDATION;
     this.dateArr = this.agendaData.DATE;
+    this.forumData = this.agendaData.AFTERNOON_AGENDA_9;
+    this.carouselObj = this.agendaData.AFTERNOON_AGENDA_10;
+    this.sigObj = this.agendaData.SIG_CONTENT;
+    this.forumClick(0);
   },
   methods: {
+    forumClick(index) {
+      this.forumTab = index;
+      this.forumList = this.forumData[index];
+    },
     go(url) {
       const routeUrl = this.$router.resolve(this.resolvePath(url));
       window.open(routeUrl.href);
     },
-    showAll() {
-      this.flag = !this.flag;
-    },
     tabClick(tab) {
+      this.showTab = tab.name;
       if (tab.name === "nine") {
         this.isShowcarousel = false;
-        this.agendaTableData = this.agendaData.FORENOON_AGENDA_9;
         this.isShowBtn = false;
+        this.showBtn = "afternoon";
       } else if (tab.name === "ten") {
         this.agendaTableData = this.agendaData.FORENOON_AGENDA_10;
+        this.isShowcarousel = false;
+        this.isShowBtn = true;
+        this.showBtn = "forenoon";
       } else {
         return false;
       }
     },
     changeTime(tab) {
-      if (tab === "forenoon") {
+      this.showBtn = tab;
+      if (tab === "forenoon" && this.showTab === "ten") {
         this.agendaTableData = this.agendaData.FORENOON_AGENDA_10;
         this.isShowcarousel = false;
-      } else if (tab === "afternoon") {
+      } else if (tab === "afternoon" && this.showTab === "ten") {
+        this.agendaTableData = undefined;
         this.isShowcarousel = true;
       } else if (tab === "evening") {
+      } else if (this.showTab === "nine" && tab === "afternoon") {
+        this.forumClick(0);
+        // this.value = "麒麟软件";
+      } else {
+        return false;
+      }
+    },
+    SpanMethod({ row, column, rowIndex, columnIndex }) {
+      if (this.showTab === "nine" && this.forumTab === 1) {
+        if (rowIndex === 0 || rowIndex === 1) {
+          if (columnIndex === 3)
+          return {
+            rowspan: 1,
+            colspan: 2,
+          };
+        }
       } else {
         return false;
       }
     },
     objectSpanMethod({ row, column, rowIndex, columnIndex }) {
-      if (this.showTab === "ten") {
+      if (this.showTab === "ten" && this.showBtn === "forenoon") {
         if (
           rowIndex === 7 ||
+          rowIndex === 6 ||
           rowIndex === 5 ||
           rowIndex === 8 ||
           rowIndex === 9
@@ -278,6 +442,16 @@ export default {
               colspan: 2,
             };
           }
+        }
+      } else {
+        return false;
+      }
+      if (this.showTab === "nine" && this.forumTab === 5) {
+        if (rowIndex === 0 && columnIndex === 3) {
+          return {
+            rowspan: 1,
+            colspan: 2,
+          };
         }
       } else {
         return false;
@@ -320,12 +494,6 @@ export default {
     @media screen and (min-width: 2500px) {
       display: flex;
       justify-content: space-around;
-    }
-    .extend {
-      display: none;
-      @media screen and (min-width: 2500px) {
-        display: block;
-      }
     }
     .main {
       max-width: 1920px;
@@ -374,6 +542,7 @@ export default {
         height: 80px;
       }
     }
+    .foundation,
     .sponsored,
     .organizer,
     .support {
@@ -419,10 +588,65 @@ export default {
       }
     }
   }
-
+  .calendar-content {
+    margin-top: 18px;
+  }
   /deep/#agenda {
+    @media screen and (max-width: 1000px) {
+      .el-radio-group {
+        display: block;
+        text-align: center;
+        span {
+          padding: 7px 16px;
+        }
+      }
+    }
     margin-bottom: 100px;
+    .forum-title {
+      margin: 30px 0 20px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 22px;
+      color: rgba(0, 0, 0, 0.85);
+    }
+    .head-list {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      .head-item {
+        margin-right: 20px;
+        cursor: pointer;
+        height: 70px;
+        width: 170px;
+        text-align: center;
+        line-height: 70px;
+        user-select: none;
+        box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+      @media screen and (max-width: 1000px) {
+        display: none;
+      }
+    }
+    .specialTable {
+      padding-top: 10px;
+      font-size: 18px;
+    }
+    .nameTable {
+      text-align: center;
+    }
+    .forumActive {
+      color: #ffffff;
+      background-color: #002fa7;
+    }
     .el-table {
+      &::before {
+        width: 95%;
+      }
       font-size: 18px;
       .cell {
         padding: 0;
@@ -453,10 +677,17 @@ export default {
     .el-table_1_column_5 {
       font-size: 16px;
     }
+    .el-table_2_column_8,
+    .el-table_2_column_9,
     .el-table_1_column_3,
     .el-table_1_column_4 {
       .cell {
         color: #000;
+      }
+    }
+    .el-table_2_column_9 {
+      .cell {
+        padding-left: 40px;
       }
     }
     .is-active {
@@ -488,8 +719,10 @@ export default {
     }
   }
   // 移动端峰会日程
-  .mobile-table {
+  .tenDay {
+    margin-top: 20px;
     font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
+
     .item {
       width: 100%;
       display: flex;
@@ -541,6 +774,75 @@ export default {
       }
       p span:last-of-type {
         width: 0;
+      }
+    }
+  }
+  .nine {
+    .select-box {
+      margin-bottom: 30px;
+      text-align: center;
+      .mobile-select {
+        width: 315px;
+        height: 32px;
+        color: rgba(0, 0, 0, 0.3);
+      }
+    }
+    .item {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      &:first-of-type {
+        .agenda {
+          margin: 20px 0 0 0;
+        }
+      }
+      &:last-of-type {
+        border-bottom: 0;
+      }
+      .time {
+        width: 82px;
+        height: 20px;
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.5);
+        line-height: 20px;
+        margin: 0 29px 0 0;
+      }
+      .agenda {
+        p {
+          color: #000000;
+          line-height: 20px;
+          font-size: 12px;
+          margin-bottom: 20px;
+          &:first-of-type {
+            width: 209px;
+          }
+          span {
+            &:first-of-type {
+              margin-right: 25px;
+              width: 48px;
+              vertical-align: top;
+            }
+            &:first-of-type,
+            &:last-of-type {
+              display: inline-block;
+            }
+            &:last-of-type {
+              width: 139px;
+            }
+          }
+        }
+        .longname {
+          span {
+            width: 150px !important;
+          }
+          span {
+            &:last-of-type {
+              width: 0 !important;
+            }
+          }
+        }
       }
     }
   }
@@ -613,11 +915,109 @@ export default {
     }
   }
 }
-.wait {
-  padding-bottom: 20px;
-  text-align: center;
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+.lecturer {
+  width: 1029px;
+  margin: 70px auto 0;
+  .lecturer-box {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    .item {
+      width: 180px;
+      margin: 0 103px 30px 0;
+      &:nth-of-type(4n) {
+        margin-right: 0;
+      }
+      img {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+        display: block;
+      }
+      p {
+        font-size: 16px;
+
+        color: #002fa7;
+        line-height: 16px;
+        margin-top: 20px;
+        width: 180px;
+        text-align: center;
+        &:last-of-type {
+          font-size: 14px;
+
+          font-weight: 400;
+          color: #000000;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    width: 345px;
+    .lecturer-box {
+      margin-top: 20px;
+      .hidden {
+        display: none;
+      }
+      .item {
+        width: 140px;
+        margin-right: 65px;
+        &:nth-of-type(2n) {
+          margin-right: 0;
+        }
+        p {
+          width: 140px;
+        }
+      }
+    }
+    .show-all {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      p {
+        color: #002fa7;
+      }
+    }
+  }
+  @media screen and (min-width: 1000px) and (max-width: 1120px) {
+    width: 1020px;
+    .lecturer-box {
+      .item {
+        margin-right: 100px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 370px) {
+  // 适配iphone5
+  .container .text-wrapper .title img,
+  .container .text-wrapper .calendar-content img {
+    width: 280px;
+  }
+  .container .text-wrapper .party-box img {
+    width: 270px;
+  }
+  .container .lecturer {
+    width: 300px !important;
+  }
+  .container .title img {
+    width: 300px !important;
+    height: 34px !important;
+  }
+  .container .lecturer .lecturer-box .item {
+    margin-right: 20px !important;
+  }
+  .container .lecturer .lecturer-box .item:nth-of-type(2n) {
+    margin-right: 0 !important;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1120px) {
+  // 适配ipad Pro
+  .container,
+  .container .banner img {
+    width: 100% !important;
+  }
 }
 </style>
