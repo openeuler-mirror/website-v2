@@ -3,7 +3,7 @@
         <common-banner
             :pc-src="'/img/security/cve-banner.png'"
             :mobile-src="'/img/security/cve-banner.png'"
-            :inside-name="'SECURITY'"
+            :inside-name="'SUPPORT'"
             :outside-name="'CVE'"
         ></common-banner>
         <div class="cve-list-wrapper">

@@ -3,11 +3,12 @@
         <common-banner
         :pc-src="'/img/compatibility/compatibility_banner.png'"
         :mobile-src="'/img/compatibility/compatibility_banner.png'"
-        :inside-name="'COMPATIBILITY'"
+        :inside-name="'SUPPORT'"
         :outside-name="i18n.compatibility.COMPATIBILITY"
         ></common-banner>
         <div class="compatibility-content">
             <el-tabs v-model="tabActiveName" @tab-click="handleTabClick">
+                <!-- 板卡 -->
                 <el-tab-pane :label="i18n.compatibility.DRIVE" name="drive">
                      <el-form :inline="true" :model="formData" class="compatibility-filter">
                         <el-form-item :label="i18n.compatibility.OS">
@@ -137,6 +138,7 @@
                         </li>
                     </ul>
                 </el-tab-pane>
+                <!-- 整机 -->
                 <el-tab-pane :label="i18n.compatibility.HARDWARE" name="hardware">
                     <el-form :inline="true" :model="formData" class="compatibility-filter">
                         <el-form-item :label="i18n.compatibility.OS">
@@ -436,6 +438,7 @@
                     </ul>
                 </el-tab-pane> -->
             </el-tabs>
+            <!-- 分页 -->
             <el-pagination
                 class="compatibility-pagination"
                 background
@@ -537,6 +540,7 @@ export default {
     data() {
         that = this;
         return {
+            software:false,
             tabActiveName: 'drive',
             hardwareOSOptions: [],
             hardwareArchitectureOptions: [],
@@ -551,6 +555,7 @@ export default {
                 lang:'zh'
             },
             hardwareTableData: [],
+            softwareTableData:[],
             driverTableData: [],
             tableLoading: false,
             total: 0,
@@ -565,6 +570,8 @@ export default {
     created() {},
 
     mounted() {
+        // 获取软件列表json数据
+        // this.getFile()
         let lang = '';
         if(window.location.pathname.indexOf('/en/') !== -1) {
             lang = 'en';
@@ -614,6 +621,7 @@ export default {
             }
         },
         handleTabClick(tab, event) {
+            this.tabActiveName === 'software'? this.software=true:this.software=false;
             let lang = '';
             if(window.location.pathname.indexOf('/en/') !== -1) {
                 lang = 'en';
@@ -662,6 +670,13 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.wait {
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
 .compatibility-content {
     width: 1120px;
     margin: 0 auto;

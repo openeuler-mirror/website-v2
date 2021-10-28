@@ -3,7 +3,7 @@
         <common-banner 
         :pc-src="'/img/security/report-banner.png'" 
         :mobile-src="'/img/security/report-banner.png'"
-        :inside-name="'SECURITY'"
+        :inside-name="'SUPPORT'"
         :outside-name="i18n.security.REPORTING"
         ></common-banner>
     </div>

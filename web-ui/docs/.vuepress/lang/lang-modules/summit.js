@@ -12,10 +12,14 @@ module.exports = {
         AGENDA: {
             WEB_TITLE: '/img/summit/summit2021/zh-pc-summit2021.png',
             MOBILE_TITLE: '/img/summit/summit2021/zh-mobile-summit2021.png',
-            DATE: ['11月09日', '11月10日'],
+
+            DATE: ['11月09日', '11月10日', '上午', '下午'],
+            SUB_FORUM: 'openEuler Summit 分论坛 ',
+            FORUM_HEAD: ['麒麟软件','麒麟信安','SUSE','统信软件','中科创达','普华基础软件'],
             AFTERNOON_AGENDA_9: [
 
             ],
+            TEXT_TITLE: "openEuler Summit 分论坛 ",
             FORENOON_AGENDA_10: [
                 {
                     TIME: '09:30 - 09:35',
@@ -25,56 +29,56 @@ module.exports = {
                 },
                 {
                     TIME: '09:35 - 09:40',
+                    THEME: '凝聚创新力量 逐梦数字时代星辰大海',
+                    SPEAKER: '江大勇',
+                    POSITION: '欧拉开源社区理事长'
+                },
+                {
+                    TIME: '09:40 - 09:50',
                     THEME: '欧拉开源社区理事会升级仪式',
                     SPEAKER: '邱成锋',
                     POSITION: '欧拉开源社区秘书长'
                 },
                 {
-                    TIME: '09:40 - 09:50',
-                    THEME: '开创新境-欧拉面向数字基础设施操作系统',
-                    SPEAKER: '江大勇',
-                    POSITION: '欧拉开源社区理事长'
-                },
-                {
                     TIME: '09:50 - 09:55',
-                    THEME: '欧拉开源社区技术委员会升级仪式',
+                    THEME: '欧拉开源社区技术委员会换届升级仪式',
                     SPEAKER: '武延军',
                     POSITION: '欧拉开源社区副理事长'
                 },
                 {
                     TIME: '09:55 - 10:10',
-                    THEME: '技术领导力-唯有无边界开放 才能无止境增长',
+                    THEME: '全场景构建 - 唯有无边界开放才能无止境增长',
                     SPEAKER: '胡欣蔚',
                     POSITION: '欧拉开源社区技术委员会主席'
                 },
                 {
                     TIME: '10:10 - 10:40',
                     THEME: 'openEuler&Friends 2.0-协作联创激发无限可能',
-                    SPEAKER: '中国移动、中国联通、中国电信、招商银行、中科创达、品高软件、支流科技'
+                    SPEAKER: '中国移动、中国电信、中国联通、招商银行、中科创达、品高软件、支流科技'
                 },
                 {
                     TIME: '10:40 - 10:55',
-                    THEME: '金融用户创新实践',
-                    SPEAKER: '麒麟软件',
+                    THEME: '上海证券实时交易应用操作系统迁移实践',
+                    SPEAKER: '上海证券交易所和麒麟软件联合演讲',
                 },
                 {
                     TIME: '10:55 - 11:10',
-                    THEME: '中国移动创新实践',
+                    THEME: '中国移动云原生生态创新实践',
                     SPEAKER: '中国移动和SUSE联合演讲',
                 },
                 {
                     TIME: '11:10 - 11:25',
-                    THEME: '智能电网创新实践',
+                    THEME: '国家电网调度控制系统创新实践',
                     SPEAKER: '中国电科院和麒麟信安联合演讲'
                 },
                 {
                     TIME: '11:25 - 11:40',
-                    THEME: '中国邮政创新实践',
+                    THEME: '中国邮政业务应用创新实践',
                     SPEAKER: '中国邮政和统信软件联合演讲',
                 },
                 {
                     TIME: '11:40 - 11:50',
-                    THEME: '仰望星空-操作系统前沿发展思考',
+                    THEME: '仰望星空-操作系统演讲与前沿发展思考',
                     SPEAKER: '陈海波',
                     POSITION: '上海交通大学教授 、华为操作系统首席科学家'
                 },
@@ -850,11 +854,7 @@ module.exports = {
                 TEXT_TITLE: "协办单位",
                 LIST: [
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/phytium.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/softstone.png",
+                        IMG: "/img/summit/summit2021/Co-construction/yidongyun.png",
                         LINK: ""
                     },
                     {
@@ -866,32 +866,28 @@ module.exports = {
                         LINK: ""
                     },
                     {
+                        IMG: "/img/summit/summit2021/Co-construction/turbolinux.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/softstone.png",
+                        LINK: ""
+                    },
+                    {
                         IMG: "/img/summit/summit2021/Co-construction/easystack.png",
                         LINK: ""
-                    }
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/phytium.png",
+                        LINK: ""
+                    },
                 ]
             },
             SUPPORT: {
                 TEXT_TITLE: "支持单位",
                 LIST: [
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/isstech.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/iiioka.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/winhong.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/nuclei.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/xsky.png",
+                        IMG: "/img/summit/summit2021/Co-construction/starfive.png",
                         LINK: ""
                     },
                     {
@@ -899,27 +895,220 @@ module.exports = {
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/asiainfo.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/starfive.png",
-                        LINK: ""
-                    },
-                    {
                         IMG: "/img/summit/summit2021/Co-construction/qingcloud.png",
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/bessystem.png",
+                        IMG: "/img/summit/summit2021/Co-construction/winhong.png",
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/tianyuan.png",
+                        IMG: "/img/summit/summit2021/Co-construction/langcher.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/beilian.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/asiainfo.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/talkweb.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/nuclei.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/zhongkedachuang.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/ruihe.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/huayun.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/baixing.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/isstech.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/huanghe.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/kaifazhineng.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/xsky.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/ascas.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/youxi.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/kengpeng.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/dongfangtong.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/iiioka.png",
+                        LINK: ""
+                    },
+                    // {
+                    //     IMG: "/img/summit/summit2021/Co-construction/tianyuan.png",
+                    //     LINK: ""
+                    // },
+                    // {
+                    //     IMG: "/img/summit/summit2021/Co-construction/bessystem.png",
+                    //     LINK: ""
+                    // },
+                ]
+            },
+            FOUNDATION: {
+                TEXT_TITLE: "友好基金会",
+                LIST: [
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/linux.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/openinfra.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/linaro.png",
                         LINK: ""
                     },
                 ]
             }
+        },
+        LECTURER: {
+            LECTURER_BANNER: {
+                web: '/img/summit/summit2021/lecturer/sperkertitle.png',
+                mobile: '/img/summit/summit2021/lecturer/sperkertitle_mo.png'
+            },
+            LECTURER_LIST: [
+                {
+                    IMG: '/img/summit/summit2021/lecturer/yangtao.png',
+                    NAME: '杨涛',
+                    POSITION: '开放原子开源基金会理事长'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/jiangdayong.png',
+                    NAME: '江大勇',
+                    POSITION: '欧拉开源社区理事长'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/qiuchengfeng.png',
+                    NAME: '邱成锋',
+                    POSITION: '欧拉开源社区秘书长'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/huxinwei.png',
+                    NAME: '胡欣蔚',
+                    POSITION: '欧拉开源社区技术委员会主席'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/chenhaibo.png',
+                    NAME: '陈海波',
+                    POSITION: '开放原子开源上海交通大学教授华为操作系统首席科学家基金会理事长'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/gaowei.png',
+                    NAME: '高巍',
+                    POSITION: '欧拉开源社区用户委员会主席'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/liujingang.png',
+                    NAME: '刘金刚',
+                    POSITION: '欧拉开源社区技术委员会委员'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/jiangyongqing.png',
+                    NAME: '江永清',
+                    POSITION: 'SUSE大中华区董事长'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/qinxiaokang.png',
+                    NAME: '秦小康',
+                    POSITION: 'SUSE大中华区总裁'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/guohanjun.png',
+                    NAME: '郭寒军',
+                    POSITION: '欧拉开源社区内核 Maintainer'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/zhanglei.png',
+                    NAME: '张磊',
+                    POSITION: '统信软件 CTO'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/yeqinglong.png',
+                    NAME: '叶青龙',
+                    POSITION: '服务器操作系统项目总监 欧拉开源社区技术委员会委员'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/shiyong.png',
+                    NAME: '石勇',
+                    POSITION: '欧拉社区技术委员会委员'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/shenxiang.png',
+                    NAME: '沈翔',
+                    POSITION: '普华基础软件总经理'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/renqi.png',
+                    NAME: '任启',
+                    POSITION: '麒麟信安高级副总裁'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/zujianzhong.png',
+                    NAME: '朱建忠',
+                    POSITION: '统信软件生态中心总经理'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/lishouyong.png',
+                    NAME: '刘寿永',
+                    POSITION: ' 中科创达首席架构师'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/yixiujiang.png',
+                    NAME: '尹秀江',
+                    POSITION: '麒麟软件工程师'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/yangliu.png',
+                    NAME: '阳柳',
+                    POSITION: '飞腾资深软件架构师'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/panjianfeng.png',
+                    NAME: '潘剑锋',
+                    POSITION: '360集团副总裁首席科学家'
+                },
+            ]
         }
     },
     en: {
