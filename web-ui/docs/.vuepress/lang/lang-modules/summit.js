@@ -14,12 +14,11 @@ module.exports = {
             MOBILE_TITLE: '/img/summit/summit2021/zh-mobile-summit2021.png',
 
             DATE: ['11月09日', '11月10日', '上午', '下午'],
-            SUB_FORUM: 'openEuler Summit 分论坛 ',
+            SUB_FORUM: '操作系统产业峰会生态伙伴分论坛',
             FORUM_HEAD: ['麒麟软件', '麒麟信安', 'SUSE', '统信软件', '中科创达', '普华基础软件'],
             AFTERNOON_AGENDA_9: [
 
             ],
-            TEXT_TITLE: "openEuler Summit 分论坛 ",
             FORENOON_AGENDA_10: [
                 {
                     TIME: '09:30 - 09:35',
@@ -47,7 +46,7 @@ module.exports = {
                 },
                 {
                     TIME: '09:55 - 10:10',
-                    THEME: '全场景构建 - 唯有无边界开放才能无止境增长',
+                    THEME: '全场景欧拉 - 唯有无边界开放才能无止境增长',
                     SPEAKER: '胡欣蔚',
                     POSITION: '欧拉开源社区技术委员会主席'
                 },
@@ -423,7 +422,7 @@ module.exports = {
                         POSITION: '普华基础软件产品部总经理'
                     },
                     {
-                        TIME: '15：00 - 15：20',
+                        TIME: '15:00 - 15:20',
                         THEME: '茶歇 & 抽奖环节',
                     },
                     {

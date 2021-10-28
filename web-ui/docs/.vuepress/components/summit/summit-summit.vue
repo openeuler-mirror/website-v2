@@ -80,7 +80,7 @@
           :class="['calendar-content', showTab === 'nine' ? 'center-p' : '']"
           v-show="showTab === 'nine'"
         >
-          <div class="forum-title">{{ agendaData.SUB_FORUM }}</div>
+          <div class="forum-title" :class="{'sub-title':isShowH5}">{{ agendaData.SUB_FORUM }}</div>
           <div class="head-list">
             <div
               class="head-item"
@@ -449,7 +449,6 @@ export default {
       } else if (tab === "evening") {
       } else if (this.showTab === "nine" && tab === "afternoon") {
         this.forumClick(0);
-        // this.value = "麒麟软件";
       } else {
         return false;
       }
@@ -486,16 +485,6 @@ export default {
       } else {
         return false;
       }
-      if (this.showTab === "nine" && this.forumTab === 5) {
-        if (rowIndex === 0 && columnIndex === 3) {
-          return {
-            rowspan: 1,
-            colspan: 2,
-          };
-        }
-      } else {
-        return false;
-      }
     },
   },
 };
@@ -514,6 +503,7 @@ export default {
   }
   img {
     display: block;
+    width: 375px;
     margin: 0 auto;
   }
   @media screen and (max-width: 1000px) {
@@ -643,12 +633,16 @@ export default {
     }
     margin-bottom: 100px;
     .forum-title {
-      margin: 30px 0 20px;
-      height: 30px;
+      margin: 30px auto 20px;
       line-height: 30px;
       text-align: center;
       font-size: 22px;
       color: rgba(0, 0, 0, 0.85);
+    }
+    .sub-title {
+      margin: 20px auto 20px;
+      width: 140px;
+      font-size: 16px;
     }
     .head-list {
       display: flex;
@@ -728,6 +722,7 @@ export default {
     .el-table_2_column_9 {
       .cell {
         padding-left: 40px;
+        padding-right: 20px;
       }
     }
     .is-active {
@@ -775,6 +770,7 @@ export default {
       }
       .time {
         flex-shrink: 0;
+        flex-basis: 82px;
         width: 82px;
         height: 20px;
         font-size: 12px;
@@ -842,6 +838,8 @@ export default {
         border-bottom: 0;
       }
       .time {
+         flex-shrink: 0;
+        flex-basis: 82px;
         width: 82px;
         height: 20px;
         font-size: 12px;
@@ -855,9 +853,6 @@ export default {
           line-height: 20px;
           font-size: 12px;
           margin-bottom: 20px;
-          &:first-of-type {
-            width: 209px;
-          }
           span {
             &:first-of-type {
               margin-right: 25px;
@@ -867,9 +862,6 @@ export default {
             &:first-of-type,
             &:last-of-type {
               display: inline-block;
-            }
-            &:last-of-type {
-              width: 139px;
             }
           }
         }
