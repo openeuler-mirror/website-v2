@@ -1,5 +1,10 @@
 <template>
   <div>
+    <titlenav
+      v-show="isShowNav"
+      :currentIndex="activeIndex"
+      :dataList="i18n.summit.NAV_LIST"
+    ></titlenav>
     <div class="banner">
       <a href="https://e-campaign.huawei.com/m/FjEF3q" target="_blank">
         <img class="main" :src="i18n.summit.SUMMIT_BANNER.PC_IMG" />
@@ -80,7 +85,9 @@
           :class="['calendar-content', showTab === 'nine' ? 'center-p' : '']"
           v-show="showTab === 'nine'"
         >
-          <div class="forum-title" :class="{'sub-title':isShowH5}">{{ agendaData.SUB_FORUM }}</div>
+          <div class="forum-title" :class="{ 'sub-title': isShowH5 }">
+            {{ agendaData.SUB_FORUM }}
+          </div>
           <div class="head-list">
             <div
               class="head-item"
@@ -147,7 +154,9 @@
                 <p>{{ item.THEME }}</p>
                 <p
                   v-if="item.SPEAKER || item.POSITION"
-                  :class="{ longname: value == '麒麟信安' && (index == 0 || index ==1) }"
+                  :class="{
+                    longname: value == '麒麟信安' && (index == 0 || index == 1),
+                  }"
                 >
                   <span>{{ item.SPEAKER }}</span>
                   <span>{{ item.POSITION }}</span>
@@ -201,7 +210,7 @@
             </div>
           </div>
         </div>
-        <div class="lecturer" id="lecturer">
+        <div class="lecturer" id= "publisher">
           <div class="title">
             <img
               v-lazy="lecturerData.PUBLISHER_BANNER.mobile"
@@ -231,7 +240,7 @@
             v-if="lecturerData.PUBLISHER_LIST.length && isShowH5"
           >
             <div
-              :class="['item', 'fade-in']"
+              class="item fade-in"
               v-for="(item, index) in lecturerData.PUBLISHER_LIST"
               :key="index"
             >
@@ -241,7 +250,7 @@
             </div>
           </div>
         </div>
-        <div class="construction">
+        <div class="construction" id = "construction">
           <div class="construction-title">
             <img v-lazy="construction.WEB_TITLE" alt="" v-if="!isShowH5" />
             <img v-lazy="construction.MOBILE_TITLE" alt="" v-else />
@@ -360,9 +369,11 @@
 
 <script>
 import carousel from "./carousel.vue";
+import titlenav from "./titleNav.vue";
 export default {
   components: {
     carousel,
+    titlenav,
   },
   data() {
     return {
@@ -373,6 +384,7 @@ export default {
       showBtn: "forenoon",
       agendaData: {},
       dateArr: [],
+      isShowNav: false,
       agendaTableData: [],
       isShowcarousel: false,
       isShowBtn: true,
@@ -390,6 +402,7 @@ export default {
       forumList: [],
       forumTab: 0,
       lecturerData: {},
+      activeIndex: -1,
     };
   },
   created() {
@@ -399,6 +412,7 @@ export default {
     this.sigObj = this.agendaData.SIG_CONTENT;
   },
   mounted() {
+    window.addEventListener("scroll", this.scroTop);
     this.agendaTableData = this.agendaData.FORENOON_AGENDA_10;
     this.construction = this.i18n.summit.CONSTRUCTION;
     this.guidanceData = this.construction.GUIDANCE;
@@ -414,10 +428,35 @@ export default {
     this.sigObj = this.agendaData.SIG_CONTENT;
     this.forumClick(0);
   },
+  destroyed() {
+    window.removeEventListener("scroll", this.scroTop);
+  },
   methods: {
     forumClick(index) {
       this.forumTab = index;
       this.forumList = this.forumData[index];
+    },
+    scroTop(param) {
+
+      let scrollTop =
+        document.body.scrollTop || document.documentElement.scrollTop;
+        console.log(scrollTop);
+      if (scrollTop < 500) {
+        this.isShowNav = false;
+      } else {
+        this.isShowNav = true;
+      }
+      if (scrollTop > 500 && scrollTop < 1000) {
+        this.activeIndex = 0;
+      } else if (scrollTop > 1620 && scrollTop < 2020) {
+        this.activeIndex = 1;
+      } else if (scrollTop > 2620 && scrollTop < 3520) {
+        this.activeIndex = 2;
+      } else if (scrollTop > 3720) {
+        this.activeIndex = 3;
+      } else {
+        return false;
+      }
     },
     go(url) {
       const routeUrl = this.$router.resolve(this.resolvePath(url));
@@ -457,10 +496,10 @@ export default {
       if (this.showTab === "nine" && this.forumTab === 1) {
         if (rowIndex === 0 || rowIndex === 1) {
           if (columnIndex === 3)
-          return {
-            rowspan: 1,
-            colspan: 2,
-          };
+            return {
+              rowspan: 1,
+              colspan: 2,
+            };
         }
       } else {
         return false;
@@ -838,7 +877,7 @@ export default {
         border-bottom: 0;
       }
       .time {
-         flex-shrink: 0;
+        flex-shrink: 0;
         flex-basis: 82px;
         width: 82px;
         height: 20px;
@@ -970,15 +1009,14 @@ export default {
       }
       p {
         font-size: 16px;
-
         color: #002fa7;
         line-height: 16px;
         margin-top: 20px;
         width: 180px;
         text-align: center;
         &:last-of-type {
+          word-spacing: 100vw;
           font-size: 14px;
-
           font-weight: 400;
           color: #000000;
           line-height: 20px;
