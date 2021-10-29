@@ -514,7 +514,7 @@ module.exports = {
                             },
                             {
                                 TIME: '13:30-14:00',
-                                THEME: 'Capsule：全场景统一的新一代虚拟化平台',
+                                THEME: 'Capsule：全场景统一的新一代 Hypervisor',
                                 SPEAKER: ['吴斌 华为'],
                                 DESC: ['Capsule是完全由openEuler社区控制的新型Hypervisor项目。类似KVM，Capsule充分使能不同CPU体系的硬件辅助虚拟化能力。不同的是，Capsule采用Rust语言编写以带来更大的安全性。另外，Capsule重塑了Hypervisor架构，使它既可以支持普通虚拟机(满足多种多样的企业应用)，也可以支持安全容器(满足容器化负载应用)，同时还可以支持逻辑分区(满足实时类应用)，真正做到统一各类生态，支持IT/CT/OT全场景应用。']
                             },
@@ -798,6 +798,24 @@ module.exports = {
             },
 
         },
+        NAV_LIST: [
+            {
+                key: '#agenda',
+                name: '峰会日程'
+            },
+            {
+                key: '#lecturer',
+                name: '演讲嘉宾'
+            },
+            {
+                key: '#publisher',
+                name: '出品人'
+            },
+            {
+                key: '#construction',
+                name: '共建单位'
+            }
+        ],
         CONSTRUCTION: {
             WEB_TITLE: "/img/summit/summit2021/Co-construction/web-title.png",
             MOBILE_TITLE: "/img/summit/summit2021/Co-construction/mobile-title.png",
@@ -1040,17 +1058,17 @@ module.exports = {
                 {
                     IMG: '/img/summit/summit2021/lecturer/huxinwei.png',
                     NAME: '胡欣蔚',
-                    POSITION: '欧拉开源社区技术委员会主席'
+                    POSITION: '欧拉开源社区 技术委员会主席'
                 },
                 {
                     IMG: '/img/summit/summit2021/lecturer/chenhaibo.png',
                     NAME: '陈海波',
-                    POSITION: '上海交通大学教授华为操作系统首席科学家'
+                    POSITION: '上海交通大学教授 华为操作系统首席科学家'
                 },
                 {
                     IMG: '/img/summit/summit2021/lecturer/gaowei.png',
                     NAME: '高巍',
-                    POSITION: '欧拉开源社区用户委员会主席'
+                    POSITION: '欧拉开源社区 用户委员会主席'
                 },
                 {
                     IMG: '/img/summit/summit2021/lecturer/qinxiaokang.png',
@@ -1065,7 +1083,7 @@ module.exports = {
                 {
                     IMG: '/img/summit/summit2021/lecturer/zhanglei.png',
                     NAME: '张磊',
-                    POSITION: '统信软件 CTO'
+                    POSITION: '统信软件CTO'
                 },
             ],
             PUBLISHER_BANNER: {
@@ -1081,7 +1099,7 @@ module.exports = {
                 {
                     IMG: '/img/summit/summit2021/lecturer/liyong.png',
                     NAME: '李勇',
-                    POSITION: 'SUSE 软件工程顾问'
+                    POSITION: 'SUSE软件工程顾问'
                 },
                 {
                     IMG: '/img/summit/summit2021/lecturer/yixiujiang.png',
@@ -1090,8 +1108,8 @@ module.exports = {
                 },
                 {
                     IMG: '/img/summit/summit2021/lecturer/yanshuanghai.png',
-                    NAME: '严双海',
-                    POSITION: '中移云能力中心内核研发专家'
+                    NAME: '严海双',
+                    POSITION: '中移云能力中心 内核研发专家'
                 },
                 {
                     IMG: '/img/summit/summit2021/lecturer/shenxiang.png',
@@ -1101,17 +1119,17 @@ module.exports = {
                 {
                     IMG: '/img/summit/summit2021/lecturer/dukaitian.png',
                     NAME: '杜开田',
-                    POSITION: '欧拉开源社区兼容性SIG组 Maintainer'
+                    POSITION: '欧拉开源社区 兼容性SIG组Maintainer'
                 },
                 {
                     IMG: '/img/summit/summit2021/lecturer/yeqinglong.png',
                     NAME: '叶青龙',
-                    POSITION: '服务器操作系统项目总监 欧拉开源社区技术委员会委员'
+                    POSITION: '服务器操作系统项目总监 欧拉开源社区 技术委员会委员'
                 },
                 {
                     IMG: '/img/summit/summit2021/lecturer/liujingang.png',
                     NAME: '刘金刚',
-                    POSITION: '欧拉开源社区技术委员会委员'
+                    POSITION: '欧拉开源社区 技术委员会委员'
                 },
                 {
                     IMG: '/img/summit/summit2021/lecturer/shiyong.png',
@@ -1121,7 +1139,7 @@ module.exports = {
                 {
                     IMG: '/img/summit/summit2021/lecturer/panjianfeng.png',
                     NAME: '潘剑锋',
-                    POSITION: '360集团副总裁首席科学家'
+                    POSITION: '360集团副总裁 首席科学家'
                 },
                 {
                     IMG: '/img/summit/summit2021/lecturer/yangliu.png',
@@ -1131,7 +1149,7 @@ module.exports = {
                 {
                     IMG: '/img/summit/summit2021/lecturer/xiekunxun.png',
                     NAME: '谢焜勋',
-                    POSITION: '华为嵌入式操作系统技术专家'
+                    POSITION: '华为嵌入式操作系统 技术专家'
                 },
                 // {
                 //     IMG: '/img/summit/summit2021/lecturer/renqi.png',
