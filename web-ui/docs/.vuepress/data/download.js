@@ -133,7 +133,7 @@ module.exports = {
             },
             {
                 NAME: '普华服务器操作系统v5.1',
-                DOWNLOAD_URL : 'http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso',
+                DOWNLOAD_URL : 'http://www.i-soft.com.cn/type/4/714.jhtml',
                 DESC: '暂无描述',
                 RELEASE_DESC_URL: 'http://www.i-soft.com.cn/type/4/716.jhtml',
                 INSTALL_GUIDENCE_URL: 'http://www.i-soft.com.cn/type/4/716.jhtml ',
@@ -337,7 +337,7 @@ module.exports = {
             },
             {
                 NAME: 'iSoftServerOS-Kunpeng-5.1',
-                DOWNLOAD_URL : 'http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso',
+                DOWNLOAD_URL : 'http://www.i-soft.com.cn/type/4/714.jhtml',
                 DESC: 'No description available',
                 RELEASE_DESC_URL: 'http://www.i-soft.com.cn/type/4/716.jhtml',
                 INSTALL_GUIDENCE_URL: 'http://www.i-soft.com.cn/type/4/716.jhtml ',
@@ -528,7 +528,7 @@ module.exports = {
             },
             {
                 NAME: 'iSoftServerOS-Kunpeng-5.1',
-                DOWNLOAD_URL : 'http://download.isoft-linux.com.cn/iso/server/5.x/Kunpeng/iSoftServerOS-Kunpeng-5.1-aarch64-RC-Community.iso',
+                DOWNLOAD_URL : 'http://www.i-soft.com.cn/type/4/714.jhtml',
                 DESC: 'Описание недоступно',
                 RELEASE_DESC_URL: 'http://www.i-soft.com.cn/type/4/716.jhtml',
                 INSTALL_GUIDENCE_URL: 'http://www.i-soft.com.cn/type/4/716.jhtml ',
