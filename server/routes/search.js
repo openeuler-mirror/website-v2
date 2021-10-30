@@ -199,7 +199,7 @@ function getSearchReqJson(page, model, keyword, version) {
                 'bool': {
                     'must': [{
                         'match_phrase': {
-                            'type.keyword': model
+                            'type': model
                         }
                     },
                         {
