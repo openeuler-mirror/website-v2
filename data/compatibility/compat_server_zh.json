@@ -3037,7 +3037,7 @@
         "sha256": "",
         "driverSize": "",
         "chipVendor": "Intel",
-        "boardModel": "",
+        "boardModel": "MLOM-X722",
         "chipModel": "",
         "item": "",
         "downloadLink": "inbox"
@@ -3075,7 +3075,7 @@
         "sha256": "",
         "driverSize": "",
         "chipVendor": "Broadcom",
-        "boardModel": "",
+        "boardModel": "9460-8i",
         "chipModel": "",
         "item": "",
         "downloadLink": "inbox"
@@ -3089,12 +3089,12 @@
         "os": "openEuler 20.03 LTS SP1",
         "driverName": "",
         "version": "",
-        "type": "",
+        "type": "nvme",
         "driverDate": "",
         "sha256": "",
         "driverSize": "",
         "chipVendor": "Samsung",
-        "boardModel": "",
+        "boardModel": "PM1725b-1.6T",
         "chipModel": "",
         "item": "",
         "downloadLink": "inbox"
