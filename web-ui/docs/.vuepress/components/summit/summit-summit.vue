@@ -210,7 +210,7 @@
             </div>
           </div>
         </div>
-        <div class="lecturer" id= "publisher">
+        <div class="lecturer" id="publisher">
           <div class="title">
             <img
               v-lazy="lecturerData.PUBLISHER_BANNER.mobile"
@@ -250,7 +250,7 @@
             </div>
           </div>
         </div>
-        <div class="construction" id = "construction">
+        <div class="construction" id="construction">
           <div class="construction-title">
             <img v-lazy="construction.WEB_TITLE" alt="" v-if="!isShowH5" />
             <img v-lazy="construction.MOBILE_TITLE" alt="" v-else />
@@ -439,19 +439,22 @@ export default {
     scroTop(param) {
       let scrollTop =
         document.body.scrollTop || document.documentElement.scrollTop;
-        console.log(scrollTop);
+      let value = 0;
+      if (this.showTab === "ten" && this.showBtn === "afternoon") {
+        value = 1000;
+      }
       if (scrollTop < 500) {
         this.isShowNav = false;
       } else {
         this.isShowNav = true;
       }
-      if (scrollTop > 500 && scrollTop < 1000) {
+      if (scrollTop > 500 && scrollTop < 1000 + value) {
         this.activeIndex = 0;
-      } else if (scrollTop > 1620 && scrollTop < 2020) {
+      } else if (scrollTop > 1620 + value && scrollTop < 2020 + value) {
         this.activeIndex = 1;
-      } else if (scrollTop > 2620 && scrollTop < 3520) {
+      } else if (scrollTop > 2620 + value && scrollTop < 3520 + value) {
         this.activeIndex = 2;
-      } else if (scrollTop > 3720) {
+      } else if (scrollTop > 3720 + value) {
         this.activeIndex = 3;
       } else {
         return false;
@@ -576,7 +579,7 @@ export default {
   margin-bottom: 100px;
   @media screen and (max-width: 1000px) {
     margin-bottom: 60px;
-    padding: 0 30px;
+    padding: 0 10px;
     width: 100%;
   }
   .text-wrapper {
@@ -792,6 +795,9 @@ export default {
     }
   }
   // 移动端峰会日程
+  .mobile-table {
+    padding: 0 20px;
+  }
   .tenDay {
     margin-top: 20px;
     font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
@@ -951,6 +957,7 @@ export default {
     }
   }
   .review-wrapper {
+    padding: 0 20px;
     .title {
       font-size: 26px;
       margin-bottom: 32px;
