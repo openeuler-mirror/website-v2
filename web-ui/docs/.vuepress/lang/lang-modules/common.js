@@ -14,11 +14,11 @@ module.exports = {
                 NAME: '下载',
                 CHILDREN: [
                     {
-                        NAME: '软件包',
+                        NAME: 'ISO',
                         PATH: '/download/'
                     },
                     {
-                        NAME: '镜像列表',
+                        NAME: '镜像仓列表',
                         PATH: '/mirror/list/'
                     }
                 ],

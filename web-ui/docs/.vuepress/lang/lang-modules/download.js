@@ -10,6 +10,7 @@ module.exports = {
         GET_ISO: '获取 ISO',
         LIFE_CYCLE: '生命周期',
         DOWNLOAD_BTN_NAME: '下载',
+        OUTSIDE_TITLE:'ISO',
         MANUFACTURER: '厂商',
         PUBLISH_DATE: '发行时间',
         WHITE_PAPER: '白皮书',
@@ -27,7 +28,7 @@ module.exports = {
             CONTENT: ['You are connecting from IP address: ',', which belongs to ','. We believe you are somewhere in ',' and have selected the applicable mirrors.']
         },
         MIRROR_ALL: {
-            TITLE: '镜像列表',
+            TITLE: '镜像仓列表',
             NAME: 'Mirror Name：',
             LOCATION: 'Location：',
             SPONSOR: 'Sponsor：',
@@ -46,6 +47,7 @@ module.exports = {
         GET_ISO: 'Get Iso',
         LIFE_CYCLE: 'Lifecycle',
         DOWNLOAD_BTN_NAME: 'Download',
+        OUTSIDE_TITLE:'ISO',
         MANUFACTURER: 'Manufacturer',
         WHITE_PAPER: 'White Paper',
         PUBLISH_DATE: 'Date of Release',
@@ -82,6 +84,7 @@ module.exports = {
         GET_ISO: 'Получить ISO',
         LIFE_CYCLE: 'Жизненный цикл',
         DOWNLOAD_BTN_NAME: 'Загрузить',
+        OUTSIDE_TITLE:'ISO',
         MANUFACTURER: 'Поставщик',
         WHITE_PAPER: 'информационный документ',
         PUBLISH_DATE: 'Дата выпуска релиза  ',

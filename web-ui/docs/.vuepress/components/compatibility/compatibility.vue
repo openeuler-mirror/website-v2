@@ -276,27 +276,28 @@
                     </ul>
                 </el-tab-pane>
                 <!-- 软件 -->
-                <!-- <el-tab-pane :label="i18n.compatibility.SOFTWARE" name="software">
+                <el-tab-pane :label="i18n.compatibility.SOFTWARE" name="software">
                     <el-form :inline="true" :model="formData" class="compatibility-filter">
                         <el-form-item :label="i18n.compatibility.ARCHITECTURE">
                             <el-select class="pc-select" 
-                                v-model="formData.os" 
-                                @change="hardwareChange" 
+                                v-model="formData.architecture" 
+                                style="width:150px;"
+                                @change="softwareChange" 
                                 :placeholder="i18n.compatibility.SELECT_PLACEHOLDER">
-                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value=""></el-option>
                                 <el-option
-                                    v-for="(item, index) in hardwareOSOptions"
+                                    v-for="(item, index) in softwareOptionsArch"
                                     :key="index"
                                     :value="item"
                                 ></el-option>
                             </el-select>
                             <el-select class="mobile-select" 
-                                v-model="formData.os" 
-                                @change="hardwareChange" 
+                                v-model="formData.architecture" 
+                                @change="softwareChange" 
                                 :placeholder="i18n.compatibility.ARCHITECTURE">
-                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value=""></el-option>
                                 <el-option
-                                    v-for="(item, index) in hardwareOSOptions"
+                                    v-for="(item, index) in softwareOptionsArch"
                                     :key="index"
                                     :value="item"
                                 ></el-option>
@@ -304,68 +305,70 @@
                         </el-form-item>
                         <el-form-item :label="i18n.compatibility.SOFTWARETYPE">
                             <el-select class="pc-select" 
-                                v-model="formData.architecture" 
-                                @change="hardwareChange" 
+                                style="width:180px;"
+                                v-model="formData.type" 
+                                @change="softwareChange" 
                                 :placeholder="i18n.compatibility.SELECT_PLACEHOLDER">
-                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value=""></el-option>
                                 <el-option
-                                    v-for="(item, index) in hardwareArchitectureOptions"
+                                    v-for="(item, index) in softwareOptionsType"
                                     :key="index"
                                     :value="item"
                                 ></el-option>
                             </el-select>
                             <el-select class="mobile-select" 
-                                v-model="formData.architecture" 
-                                @change="hardwareChange" 
+                                v-model="formData.type" 
+                                @change="softwareChange" 
                                 :placeholder="i18n.compatibility.SOFTWARETYPE">
-                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value=""></el-option>
                                 <el-option
-                                    v-for="(item, index) in hardwareArchitectureOptions"
+                                    v-for="(item, index) in softwareOptionsType"
                                     :key="index"
                                     :value="item"
                                 ></el-option>
                             </el-select>
                         </el-form-item>
-                        <el-form-item :label="i18n.compatibility.ADAPTIVE">
+                        <el-form-item :label="i18n.compatibility.ADAPTIVE" >
                             <el-select class="pc-select" 
-                                v-model="formData.architecture" 
-                                @change="hardwareChange" 
+                                style="width:180px;"
+                                v-model="formData.os" 
+                                @change="softwareChange" 
                                 :placeholder="i18n.compatibility.SELECT_PLACEHOLDER">
-                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value=""></el-option>
                                 <el-option
-                                    v-for="(item, index) in hardwareArchitectureOptions"
+                                    v-for="(item, index) in softwareOptionsOs"
                                     :key="index"
                                     :value="item"
                                 ></el-option>
                             </el-select>
                             <el-select class="mobile-select" 
-                                v-model="formData.architecture" 
-                                @change="hardwareChange" 
+                                v-model="formData.os" 
+                                @change="softwareChange" 
                                 :placeholder="i18n.compatibility.ADAPTIVE">
-                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value=""></el-option>
                                 <el-option
-                                    v-for="(item, index) in hardwareArchitectureOptions"
+                                    v-for="(item, index) in softwareOptionsOs"
                                     :key="index"
                                     :value="item"
                                 ></el-option>
                             </el-select>
                         </el-form-item>
-                        <el-form-item :label="i18n.compatibility.SEARCH_LABEL" class="search-box" v-if="!software">
+                        <el-form-item :label="i18n.compatibility.SEARCH_LABEL" class="search-box">
                             <el-input 
                                 v-model="formData.keyword"
                                 class="pc-search"
-                                @keyup.enter.native='hardwareChange()'
-                                :placeholder="i18n.compatibility.HARDWARE_SEARCH_PLACEHOLDER"
+                                @keyup.enter.native='softwareChange()'
+                                :placeholder="i18n.compatibility.SOFTWARE_SEARCH_PLACEHOLDER"
                             >
-                                <i slot="suffix" class="icon-search" @click="hardwareChange()"></i>
+                                <i slot="suffix" class="icon-search" @click="softwareChange()"></i>
                             </el-input>
                             <el-input
                                 v-model="formData.keyword"
                                 class="mobile-search"
-                                @keyup.enter.native='hardwareChange()'
+                                @keyup.enter.native='softwareChange()'
                                 :placeholder="i18n.compatibility.SEARCH_LABEL"
                             >
-                                <i slot="suffix" class="icon-search" @click="hardwareChange()"></i>
+                                <i slot="suffix" class="icon-search" @click="softwareChange()"></i>
                             </el-input>
                         </el-form-item>
                     </el-form>
@@ -436,7 +439,7 @@
                             </ul>
                         </li>
                     </ul>
-                </el-tab-pane> -->
+                </el-tab-pane>
             </el-tabs>
             <!-- 分页 -->
             <el-pagination
@@ -463,6 +466,7 @@
 
 <script>
 import commonBanner from "./../common/banner.vue";
+import axios from "axios"
 import { 
     hardwareList,
     hardwareOSOptions,
@@ -470,6 +474,7 @@ import {
     driverList, 
     driverOSOptions, 
     driverArchitectureOptions,
+    softwareOptions,
     softwareList
     } from "../../api/compatibility";
 
@@ -520,10 +525,9 @@ const locationMethods = {
         softwareList(params)
         .then(data => {
             that.tableLoading = false;
-            console.log(data);
             if(data) {
-                that.total = 100;
-                that.softwareTableData = data;
+                that.total = data.total;
+                that.softwareTableData = data.info;
             } else {
                 that.total = 0;
                 that.softwareTableData = [];
@@ -540,18 +544,21 @@ export default {
     data() {
         that = this;
         return {
-            software:false,
             tabActiveName: 'drive',
             hardwareOSOptions: [],
             hardwareArchitectureOptions: [],
             driverOSOptions: [],
             driverArchitectureOptions: [],
+            softwareOptionsOs:[],
+            softwareOptionsArch:[],
+            softwareOptionsType:[],
             formData: {
                 keyword: '',
                 os: '',
                 architecture: '',
                 page: 1,
                 pageSize: 10,
+                type:'',
                 lang:'zh'
             },
             hardwareTableData: [],
@@ -570,8 +577,6 @@ export default {
     created() {},
 
     mounted() {
-        // 获取软件列表json数据
-        // this.getFile()
         let lang = '';
         if(window.location.pathname.indexOf('/en/') !== -1) {
             lang = 'en';
@@ -609,6 +614,14 @@ export default {
                 this.driverArchitectureOptions = data;
             }
         })
+        softwareOptions({})
+        .then(data => {
+            this.softwareOptionsOs =data.OS;
+            this.softwareOptionsArch = data.Arch;
+            this.softwareOptionsType = data.Type.filter(value =>{
+                return value!==""
+            });
+        })
     },
     methods: {
         initData(params) {
@@ -621,7 +634,6 @@ export default {
             }
         },
         handleTabClick(tab, event) {
-            this.tabActiveName === 'software'? this.software=true:this.software=false;
             let lang = '';
             if(window.location.pathname.indexOf('/en/') !== -1) {
                 lang = 'en';
@@ -631,6 +643,7 @@ export default {
                  lang = 'zh';
             }
             this.formData = {
+                type:'',
                 keyword: '',
                 os: '',
                 architecture: '',
@@ -648,6 +661,12 @@ export default {
         hardwareChange() {
             this.formData.page = 1;
             locationMethods.getHardwareList(this.formData);
+        },
+        // 软件筛选
+        softwareChange() {
+            this.formData.page = 1;
+            console.log(this.formData);
+            locationMethods.getSoftwareList(this.formData);
         },
         // 驱动筛选
         driverChange() {
