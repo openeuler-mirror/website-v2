@@ -268,7 +268,6 @@ export const softwareList = ({
     architecture,
     page,
     type,
-    pageSize,
     lang
 }) => {
     return new Promise((resolve, reject) => {
