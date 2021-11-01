@@ -16,6 +16,7 @@ module.exports = {
         SEARCH_ALL:'全部',
         SEARCH_LABEL: "搜索",
         HARDWARE_SEARCH_PLACEHOLDER: "厂家、型号、操作系统",
+        SOFTWARE_SEARCH_PLACEHOLDER: "软件名称",
         DRIVE_SEARCH_PLACEHOLDER:'驱动名称、板卡型号',
         LINK: 'link',
         HARDWARE_TABLE_COLUMN: {

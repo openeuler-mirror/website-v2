@@ -267,28 +267,20 @@ export const softwareList = ({
     os,
     architecture,
     page,
+    type,
     pageSize,
     lang
 }) => {
     return new Promise((resolve, reject) => {
+        os = os ? `&os=${os}` : "";
+        architecture = architecture ? `&arch=${architecture}` : "";
+        type = type ? `&type=${type}` : "";
+        keyword = keyword ? `&keyword=${keyword}` :"";
         appAjax.postJson({
-            url: `https://api.compass-ci.openeuler.org:20003/compat_software_info?page_size=2000&page_num=${page}`,
+            url: `https://api.compass-ci.openeuler.org:20003/compat_software_info?page_size=10&page_num=${page}${type}${architecture}${os}${keyword}`,
             type: 'get',
-            data: {
-                page_size:10,
-                page_num:1,
-                keyword,
-                os: os === 'all' ? '' : os,
-                architecture: architecture === 'all' ? '' : architecture,
-                pages: {
-                    page,
-                    size: pageSize
-                },
-                lang
-            },
-            notAuthorization:{},
+            notAuthorization:true,
             success(result) {
-                console.log(result);
                 if (result) {
                     resolve(result);
                     return;
@@ -303,3 +295,25 @@ export const softwareList = ({
 
     });
 }
+// 10. 软件--操作系统的下拉列表
+export const softwareOptions = () => {
+    return new Promise((resolve, reject) => {
+        appAjax.postJson({
+            url: 'https://api.compass-ci.openeuler.org:20003/query_compat_software',
+            type: 'get',
+            notAuthorization:true,
+            success(result) {
+                if (result) {
+                    resolve(result);
+                    return;
+                }
+                reject(result);
+            },
+            error(msg) {
+                reject(msg);
+            }
+
+        });
+
+    });
+};
