@@ -526,7 +526,6 @@ export default {
         }
         if (this.forumTab === 3 && rowIndex === 4) {
           if (columnIndex === 3) {
-            console.log(111);
             return {
               rowspan: 1,
               colspan: 2,
