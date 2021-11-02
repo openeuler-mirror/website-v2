@@ -129,6 +129,9 @@
             <el-table-column prop="POSITION" width="300">
               <template slot-scope="scope">
                 <p>{{ scope.row.POSITION }}</p>
+                <p v-if="scope.$index == 8 && forumTab == 3">
+                  研发资深总监，首席架构师
+                </p>
                 <p
                   v-if="scope.$index == 1 && forumTab == 2"
                   class="specialTable"
@@ -156,19 +159,32 @@
                 <p>{{ item.THEME }}</p>
                 <p
                   v-if="item.SPEAKER || item.POSITION"
-                  :class="{
-                    longname: value == '麒麟信安' && (index == 0 || index == 1),
-                  }"
+                  :class="[
+                    {
+                      longname:
+                        value == '麒麟信安' && (index == 0 || index == 1),
+                    },
+                    {
+                      longname:
+                        value == '统信软件' && (index == 4),
+                    },
+                  ]"
                 >
                   <span>{{ item.SPEAKER }}</span>
-                  <span>{{ item.POSITION }}</span>
+                  <span style="vertical-align: top">{{ item.POSITION }}</span>
+                  <span v-if="forumTab === 3 && index === 8" class="special-mo"
+                    >研发资深总监<br />首席架构师</span
+                  >
+                </p>
+                <p v-if="forumTab === 2 && index === 1">
+                  <span>陈伟</span><span>SUSE大中华区Service Director</span>
                 </p>
               </div>
             </div>
           </div>
         </div>
         <carousel
-          :class="{'carousel':isShowH5}"
+          :class="{ carousel: isShowH5 }"
           v-show="isShowcarousel"
           :agendaData="carouselObj"
           :sigData="sigObj"
@@ -508,10 +524,10 @@ export default {
               colspan: 2,
             };
         }
-        if (this.forumTab === 3 && rowIndex === 4 ) {
-          if (columnIndex ===3) {
+        if (this.forumTab === 3 && rowIndex === 4) {
+          if (columnIndex === 3) {
             console.log(111);
-             return {
+            return {
               rowspan: 1,
               colspan: 2,
             };
@@ -730,6 +746,8 @@ export default {
       padding-top: 10px;
       font-size: 18px;
     }
+    .specialTabletow {
+    }
     .nameTable {
       text-align: center;
     }
@@ -924,6 +942,7 @@ export default {
             }
             &:first-of-type,
             &:last-of-type {
+              vertical-align: top;
               display: inline-block;
             }
           }
@@ -937,6 +956,9 @@ export default {
               width: 0 !important;
             }
           }
+        }
+        .special-mo {
+          padding-left: 76px;
         }
       }
     }
@@ -1057,13 +1079,13 @@ export default {
         display: none;
       }
       .item {
-        width: 140px;
-        margin-right: 65px;
+        width: 155px;
+        margin-right: 35px;
         &:nth-of-type(2n) {
           margin-right: 0;
         }
         p {
-          width: 140px;
+          width: 155px;
         }
       }
     }
