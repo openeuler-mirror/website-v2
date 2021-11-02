@@ -423,15 +423,9 @@
                     this.go('/interaction/summit-list/summit2021/');
                     break;
                     case 1:
-                    this.downloadWhitePaper('/whitepaper/openEuler-whitepaper-2109.pdf',2109)
+                    this.go('https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/pdf/openEuler%2021.09%20%E6%8A%80%E6%9C%AF%E7%99%BD%E7%9A%AE%E4%B9%A6.pdf')
                     break;
                 }
-            },
-            downloadWhitePaper(url,fileName) {
-                let aLink = document.createElement('a');
-                aLink.href=url;
-                aLink.setAttribute('download',`openEuler-whitepaper-${fileName}`);
-                aLink.click()
             },
             maskClicked() {
               this.isMasked = false

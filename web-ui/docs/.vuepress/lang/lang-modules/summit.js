@@ -8,7 +8,81 @@ module.exports = {
             PC_IMG: "/img/summit/summit2021/summit2021-pc.png"
         },
         SUMMIT_INTRODUCE: "openEuler Summit 是由欧拉开源社区举办的开发者峰会。openEuler从服务器操作系统，升级为数字基础设施的操作系统，支持IT、CT、OT等数字基础设施全场景，覆盖服务器、云、边、嵌入式等各种形态的需求。伴随21.09版本的发布 openEuler 已经包含了服务器、云原生、边缘计算和嵌入式的四大应用场景。openEuler 通过开源开放，不断探索科技创新的边界，驱动物理世界与数字世界的深度融合。开发者、用户、社区贡献者、软件爱好者在 openEuler Summit 汇聚，驱动无止境的创新与拓展，闪耀数字时代星辰大海。",
-        HIGHLIGHTS: "精彩回顾",
+        LIVETITLE: '峰会直播间',
+        PC_LIVEIMG: '/img/summit/home/zh-pc-liveroom.png',
+        MOBILE_LIVEIMG: '/img/summit/home/zh-mobile-liveroom.png',
+        SUMMITLIVE: [
+            {
+                ID: 9875,
+                THEME: '操作系统产业峰会生态伙伴分论坛-麒麟软件',
+                TIME: '14:00-16:40',
+                OPTION: '14:00-16:40 麒麟软件',
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9875?lang=zh&thirdId='
+            },
+            {
+                ID: 9876,
+                THEME: '操作系统产业峰会生态伙伴分论坛-中科创达',
+                TIME: '14:00-16:40 ',
+                OPTION: '14:00-16:40 中科创达',
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9876?lang=zh&thirdId='
+            },
+            {
+                ID: 9877,
+                THEME: '操作系统产业峰会生态伙伴分论坛-普华基础软件',
+                TIME: '14:00-16:30 ',
+                OPTION: '14:00-16:30 普华基础软件',
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9877?lang=zh&thirdId='
+            },
+            {
+                ID: 9878,
+                THEME: 'openEuler Summit 2021',
+                TIME: '9:30-11:55 ',
+                OPTION: '9:30-11:55 openEuler Summit 2021',
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9878?lang=zh&thirdId='
+            },
+            {
+                ID: 9879,
+                THEME: 'openEuler Summit 2021-内核分论坛',
+                TIME: '13:00-17:30 ',
+                OPTION: '13:00-17:30 内核分论坛',
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9879?lang=zh&thirdId='
+            },
+            {
+                ID: 9880,
+                THEME: '云&虚拟化分论坛',
+                TIME: '13:00-18:00 ',
+                OPTION: '13:00-18:00 云&虚拟化分论坛',
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9880?lang=zh&thirdId='
+            },
+            {
+                ID: 9881,
+                THEME: '兼容性分论坛',
+                TIME: '13:00-17:30 ',
+                OPTION: '13:00-17:30 兼容性分论坛',
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9881?lang=zh&thirdId='
+            },
+            {
+                ID: 9882,
+                THEME: '安全&可靠性&运维分论坛',
+                TIME: '13:00-17:30 ',
+                OPTION: '13:00-17:30 安全&可靠性&运维分论坛',
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9882?lang=zh&thirdId='
+            },
+            {
+                ID: 9883,
+                THEME: '分布式&多样性计算分论坛',
+                TIME: '13:00-17:30 ',
+                OPTION: '13:00-17:30 分布式&多样性计算分论坛',
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9883?lang=zh&thirdId='
+            },
+            {
+                ID: 9884,
+                THEME: '边缘&嵌入式分论坛',
+                TIME: '13:00-17:30 ',
+                OPTION: '13:00-17:30 边缘&嵌入式分论坛',
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9884?lang=zh&thirdId='
+            },
+        ],
         AGENDA: {
             WEB_TITLE: '/img/summit/summit2021/zh-pc-summit2021.png',
             MOBILE_TITLE: '/img/summit/summit2021/zh-mobile-summit2021.png',
@@ -217,7 +291,7 @@ module.exports = {
                     },
                     {
                         TIME: '16:30 - 16:40',
-                        THEME: '欢乐抽奖',
+                        THEME: '欢乐抽奖、结束',
                     },
                 ],
                 // SUSE
@@ -277,6 +351,10 @@ module.exports = {
                 // 统信软件
                 [
                     {
+                        TIME: '13:30-14:00',
+                        THEME: '签到入场',
+                    },
+                    {
                         TIME: '14:00 - 14:10',
                         THEME: '致开场词',
                         SPEAKER: '朱建忠',
@@ -284,55 +362,64 @@ module.exports = {
                     },
                     {
                         TIME: '14:10 - 14:40',
-                        THEME: '统信服务器e版产品介绍与规划',
+                        THEME: '打造数字时代新底座——统信服务器操作系统',
                         SPEAKER: '孟杰',
                         POSITION: '统信软件 服务器OS产线副总经理'
                     },
                     {
                         TIME: '14:40 - 15:10',
-                        THEME: '统信服务器操作系统产品介绍与规划',
+                        THEME: '打造统信UOS操作系统新生态',
                         SPEAKER: '张木梁',
-                        POSITION: '统信软件生态中心副总经理'
+                        POSITION: '统信软件 生态中心副总经理'
                     },
                     {
                         TIME: '15:10 - 15:40',
                         THEME: 'openEuler 技术分享',
-                        SPEAKER: '华为技术侧嘉宾',
-                        POSITION: '欧拉开源社区技术专家'
+                        SPEAKER: 'openEuler 技术专家',
                     },
                     {
-                        TIME: '15:40 - 16:10',
-                        THEME: '中国邮政云架构转型升级创新实践',
+                        TIME: '15:40 - 15:50',
+                        THEME: '茶歇',
                     },
                     {
-                        TIME: '16:10 - 16:25',
+                        TIME: '15:50 - 16:05',
                         THEME: '共建生态、合作共赢',
                         SPEAKER: '邓忠良',
-                        POSITION: '同方股份有限公司计算机产业本部副总经理'
+                        POSITION: '同方计算机产业本部副总经理'
                     },
                     {
-                        TIME: '16:25 - 16:40',
-                        THEME: '夯实国产基础，共建繁荣生态',
+                        TIME: '16:05 - 16:20',
+                        THEME: '数据相联，探索价值',
                         SPEAKER: '莫良伟',
                         POSITION: '宝德软件部总监'
                     },
                     {
-                        TIME: '16:40 - 16:55',
-                        THEME: '基于鲲鹏生态的湖仓一体万亿级金融统一数据平台',
-                        SPEAKER: '许建辉 ',
-                        POSITION: '巨杉数据库研发副总裁及合伙人'
+                        TIME: '16:20 - 16:35',
+                        THEME: '万亿级湖仓一体架构下的统一数据服务平台应用实践',
+                        SPEAKER: '陈元熹 ',
+                        POSITION: '巨杉数据库 研发资深总监，首席架构师'
                     },
                     {
-                        TIME: '16:55 - 17:10',
+                        TIME: '16:35 - 16:50',
+                        THEME: '协同办公系统信创实践与探索',
+                        SPEAKER: '杨竹君 ',
+                        POSITION: '泛微 政务副总经理'
+                    },
+                    {
+                        TIME: '16:50 - 17:05',
                         THEME: '信创数据交换平台最佳实践 ',
                         SPEAKER: '臧一超 ',
-                        POSITION: '普元信息数智研究院 副总经理'
+                        POSITION: '普元信息 数智研究院 副总经理'
                     },
                     {
-                        TIME: '17:10 - 17:25',
+                        TIME: '17:05 - 17:20',
                         THEME: '融合信创生态，打造安全高效的地理信息系统',
                         SPEAKER: '周丹',
                         POSITION: '中地数码北京副总经理'
+                    },
+                    {
+                        TIME: '17:20 - 17:30',
+                        THEME: '抽奖环节',
                     },
                 ],
                 // 中科达创
@@ -384,8 +471,8 @@ module.exports = {
                     {
                         TIME: '16:00 - 16:20',
                         THEME: '融合发展助力智能汽车产业腾飞',
-                        SPEAKER: '王文超',
-                        POSITION: '中科创达智能汽车产品总监'
+                        SPEAKER: '王志杰',
+                        POSITION: '中科创达智能汽车SOA产品经理'
                     },
                     {
                         TIME: '16:20 - 16:40',
@@ -396,14 +483,6 @@ module.exports = {
                 ],
                 // 普华基础软件
                 [
-                    // {
-                    //     TIME: '14: 00 - 14:10',
-                    //     THEME: '暖场视频',
-                    // },
-                    // {
-                    //     TIME: '14:00 - 14:05',
-                    //     THEME: '主持人介绍到场嘉宾/媒体',
-                    // },
                     {
                         TIME: '14:00 - 14:10',
                         THEME: '致词',
@@ -440,6 +519,10 @@ module.exports = {
                         THEME: '聚焦行业，普华基础软件多场景应用分享',
                         SPEAKER: '王江涛',
                         POSITION: '普华基础软件高级安全专家'
+                    },
+                    {
+                        TIME: '16:30 - 16:50',
+                        THEME: '欢乐抽奖、结束',
                     },
                 ],
             ],
@@ -572,7 +655,7 @@ module.exports = {
                             {
                                 TIME: '13:00-13:30',
                                 THEME: 'HPC应用基于openEuler的迁移实践',
-                                SPEAKER: ['刘军利 软通动力信息技术股份有限公司'],
+                                SPEAKER: ['李成鹏 软通动力信息技术股份有限公司'],
                                 DESC: ['随着大数据、云计算等技术的发展与广泛应用，HPC在行业中的应用也越来越广泛。本次议题将对多款HPC软件到openEuler的跨平台迁移实践进行技术分享。']
                             },
                             {
@@ -605,19 +688,19 @@ module.exports = {
                             },
                             {
                                 TIME: '16:00-16:30',
-                                THEME: 'CentOS替代进展及行业案例',
+                                THEME: 'CentOS迁移与操作系统兼容性生态建设',
                                 SPEAKER: ['高巍 麒麟软件有限公司'],
                                 DESC: ['CentOS替代工作进展、方法及行业案例']
                             },
                             {
                                 TIME: '16:30-17:00',
-                                THEME: '北向兼容性软件清单',
+                                THEME: 'openEuler 兼容性列表建设与实践',
                                 SPEAKER: ['李萍  华为'],
                                 DESC: ['北向兼容性软件清单来源，覆盖场景']
                             },
                             {
                                 TIME: '17:00-17:30',
-                                THEME: 'OSV认证',
+                                THEME: 'OSV认证体系实践与探索',
                                 SPEAKER: ['李君弋 华为'],
                                 DESC: ['介绍osv认证方案和认证体系，如何让osv走openEuler的技术路线']
                             },
@@ -647,7 +730,7 @@ module.exports = {
                             {
                                 TIME: '14:30-15:00',
                                 THEME: '从攻击者角度看Linux内核安全',
-                                SPEAKER: ['姚俊、王晓东 奇虎360'],
+                                SPEAKER: ['姚俊/王晓东 360政企安全'],
                                 DESC: ['Linux系统在服务器和个人桌面市场有着广泛的使用，作为底层系统，其安全性非常重要。一旦被攻破，商业和个人数据可能被篡改或泄露。本议题以内核中的某个漏洞为案例，除了分析漏洞根因，还会揭秘如何借助该漏洞完成漏洞利用。同时，议题将探讨如何构建更加安全的Linux系统。']
                             },
                             {
@@ -655,15 +738,15 @@ module.exports = {
                                 THEME: '茶歇',
                             },
                             {
-                                // TIME: '15:30-16:00',
-                                // THEME: '敬请期待',
-                                // SPEAKER: ['敬请期待 蓬莱TEE'],
-                                // DESC: ['']
+                                TIME: '15:30-16:00',
+                                THEME: '基于蓬莱TEE的RISC-V可信机器学习框架',
+                                SPEAKER: ['冯二虎 蓬莱TEE'],
+                                DESC: ['']
                             },
                             {
                                 TIME: '16:00-16:30',
                                 THEME: 'Sec-Anti-SCA基于编译器的CPU侧信道漏洞防护技术',
-                                SPEAKER: ['胡科开、吴财军 华为技术有限公司'],
+                                SPEAKER: ['胡科开/吴财军 华为技术有限公司'],
                                 DESC: ['自2018年针对处理器cache架构的幽灵和熔断安全漏洞被Google Project Zero曝光以来，新型侧信道漏洞的防护与消减就成为业界热点与难题。业界主流公司如Intel、微软、谷歌等都推出了基于编译器的软硬结合的解决方案，覆盖GCC、LLVM、Visual、C++等主流编译器，典型代表技术有Retpoline、Randpoline等。Gcc-Anti-SCA项目基于GCC编译器提供一个独立安全编译插件，主要针对ARM架构，通过静态代码扫描和模式识别的方式，自动识别源代码中的高风险代码段，并插入ARM架构下相应的安全防护指令。支持ARMv8.5侧信道防护新指令，并向前兼容ARMv8.0及更早的架构。在尽可能多的识别风险点，保证安全性的同时，持续优化，减少误报，把代码性能损失控制在极小的范围内。']
                             },
                             {
@@ -677,6 +760,12 @@ module.exports = {
                                 THEME: '基于认知技术的openEuler漏洞感知系统',
                                 SPEAKER: ['杨牧天 中科微澜'],
                                 DESC: ['openEuler开源操作系统作为重要的信息基础设施和生态底座，对自身安全性有很高的要求，为此，我们在openEuler中创新性的引入认知技术，构建openEuler智能化漏洞感知能力。']
+                            },
+                            {
+                                TIME: '17:30-18:00',
+                                THEME: '霄瀚全场景操作系统实践和应用',
+                                SPEAKER: ['解伟俊 拓维'],
+                                DESC: ['']
                             },
                         ]
                     },
@@ -713,7 +802,7 @@ module.exports = {
                             },
                             {
                                 TIME: '15:30-16:00',
-                                THEME: '分布式内存池',
+                                THEME: '构建openEuler的分布式式能力',
                                 SPEAKER: ['孙宏伟 华为'],
                                 DESC: ['']
                             },
@@ -733,6 +822,12 @@ module.exports = {
                                 TIME: '17:00-17:30',
                                 THEME: 'openEuler 容器 OS升级介绍',
                                 SPEAKER: ['李元戎 华为'],
+                                DESC: ['']
+                            },
+                            {
+                                TIME: '17:30-18:00',
+                                THEME: '霄瀚全场景操作系统实践和应用',
+                                SPEAKER: ['解伟俊  拓维'],
                                 DESC: ['']
                             },
                         ]
@@ -759,35 +854,29 @@ module.exports = {
                                 DESC: ['']
                             },
                             {
-                                // TIME: '14:30-15:00',
-                                // THEME: '敬请期待',
-                                // SPEAKER: ['RT-thread'],
-                                // DESC: ['']
+                                TIME: '14:30-15:00',
+                                THEME: 'RV64 异构多核处理器下实现RT-Thread和openeuler同时运行',
+                                SPEAKER: ['张海涛 RT-thread'],
+                                DESC: ['']
                             },
                             {
                                 TIME: '15:00-15:30',
                                 THEME: '茶歇',
                             },
                             {
-                                // TIME: '15:30-16:00',
-                                // THEME: '推动RISC-V软件生态及openEuler在VisionFive开发板的适配',
-                                // SPEAKER: ['朱潇潇 赛昉'],
-                                // DESC: ['一. 介绍赛昉科技在推动RISC-V软件生态上所作的工作和取得的进展;', '二. 简单介绍赛昉科技RISC-V开发板(VisionFive) 的软件和开发工具包;', '三. openEuler在VisionFive开发板上的移植和适配成果;']
-                            },
-                            {
-                                TIME: '16:00-16:30',
+                                TIME: '15:30-16:00',
                                 THEME: '云原生边缘计算平台架构与实践',
                                 SPEAKER: ['王杰章 华为'],
                                 DESC: ['现如今边缘计算的应用场景非常丰富，而且面临着诸多挑战，例如：边云通信网络质量低、边缘资源受限、边缘应用离线自治和本地故障恢复、边缘节点高度分散和资源异构。针对上述问题，我们提出了云原生边缘计算平台的架构与实践——KubeEdge，并配套边缘分布式网络组件EdgeMesh与边缘协调AI框架Sedna。']
                             },
                             {
-                                TIME: '16:30-17:00',
+                                TIME: '16:00-16:30',
                                 THEME: '云边协同在太空卫星上的实践探索',
                                 SPEAKER: ['林培峰  SUSE'],
                                 DESC: ['本议题通过实际的案例分享，探索云边协同技术如何在太空卫星上落地，如何利用云原生、DevSecOpt和边缘技术更好的在太空卫星上使用更低成本硬件，构建更安全可靠软件，实现在太空卫星上更可靠更新软件，以及更好实现AI/ML计算。']
                             },
                             {
-                                TIME: '17:00-17:30',
+                                TIME: '16:30-17:00',
                                 THEME: 'Linux实时性实践与探索',
                                 SPEAKER: ['郭皓 麒麟软件'],
                                 DESC: ['基于openeuler做的Linux实时性探索和研究，已发布Linux嵌入式操作系统demo，支持飞腾、鲲鹏、x86平台']
@@ -872,19 +961,31 @@ module.exports = {
                 TEXT_TITLE: "协办单位",
                 LIST: [
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/yidongyun.png",
+                        IMG: "/img/summit/summit2021/Co-construction/yidong.png",
                         LINK: ""
                     },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/dianxing.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/liantong.png",
+                        LINK: ""
+                    },               
                     {
                         IMG: "/img/summit/summit2021/Co-construction/puhua.png",
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/360.png",
+                        IMG: "/img/summit/summit2021/Co-construction/turbolinux.png",
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/turbolinux.png",
+                        IMG: "/img/summit/summit2021/Co-construction/phytium.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/shentai.png",
                         LINK: ""
                     },
                     {
@@ -896,80 +997,32 @@ module.exports = {
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/phytium.png",
+                        IMG: "/img/summit/summit2021/Co-construction/360.png",
                         LINK: ""
-                    },
+                    },  
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/dongfangtong.png",
+                        LINK: ""
+                    },                                 
                 ]
             },
             SUPPORT: {
                 TEXT_TITLE: "支持单位",
                 LIST: [
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/starfive.png",
-                        LINK: ""
-                    },
-                    {
                         IMG: "/img/summit/summit2021/Co-construction/jdcloud.png",
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/qingcloud.png",
+                        IMG: "/img/summit/summit2021/Co-construction/xinlang.png",
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/winhong.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/langcher.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/beilian.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/asiainfo.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/talkweb.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/nuclei.png",
+                        IMG: "/img/summit/summit2021/Co-construction/kengpeng.png",
                         LINK: ""
                     },
                     {
                         IMG: "/img/summit/summit2021/Co-construction/zhongkedachuang.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/ruihe.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/huayun.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/baixing.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/isstech.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/huanghe.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/kaifazhineng.png",
-                        LINK: ""
-                    },
-                    {
-                        IMG: "/img/summit/summit2021/Co-construction/xsky.png",
                         LINK: ""
                     },
                     {
@@ -981,7 +1034,63 @@ module.exports = {
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/ascas.png",
+                        IMG: "/img/summit/summit2021/Co-construction/qingcloud.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/starfive.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/winhong.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/asiainfo.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/nuclei.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/xsky.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/guoxing.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/iiioka.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/isstech.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/huayun.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/kaifazhineng.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/iscas.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/ruihe.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/langcher.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/xinchen.png",
                         LINK: ""
                     },
                     {
@@ -989,25 +1098,25 @@ module.exports = {
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/kengpeng.png",
+                        IMG: "/img/summit/summit2021/Co-construction/beilian.png",
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/dongfangtong.png",
+                        IMG: "/img/summit/summit2021/Co-construction/talkweb.png",
                         LINK: ""
                     },
                     {
-                        IMG: "/img/summit/summit2021/Co-construction/iiioka.png",
+                        IMG: "/img/summit/summit2021/Co-construction/shenzhou.png",
                         LINK: ""
                     },
-                    // {
-                    //     IMG: "/img/summit/summit2021/Co-construction/tianyuan.png",
-                    //     LINK: ""
-                    // },
-                    // {
-                    //     IMG: "/img/summit/summit2021/Co-construction/bessystem.png",
-                    //     LINK: ""
-                    // },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/huanghe.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/baixing.png",
+                        LINK: ""
+                    },
                 ]
             },
             FOUNDATION: {
@@ -1178,7 +1287,8 @@ module.exports = {
                     POSITION: ' 赛昉生态市场高级总监'
                 },
             ]
-        }
+        },
+        HIGHLIGHTS: "精彩回顾",
     },
     en: {
         SUMMIT_BANNER: {

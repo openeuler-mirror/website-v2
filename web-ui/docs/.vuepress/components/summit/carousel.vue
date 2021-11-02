@@ -2,7 +2,7 @@
     <div class="agenda-carousel"  :class="summitData ? 'summit2021' : ''">
         <div class="agenda-msg">
             <div class="time-list" :class="{'summit_time' :isShowH5 && summitData}">
-                <div v-for="(item,index) in carouselObj.TIME_LIST" :key="index">{{ item }}</div>
+                <div v-for="(item,index) in carouselObj.TIME_LIST" :key="index" :class="{'tea-div':summitData && index === 4}">{{ item }}</div>
             </div>
             <div class="card-list">
                 <button
@@ -292,6 +292,10 @@ export default {
                 line-height: 150px;
                 color: rgba(0, 0, 0, 0.5);
             }
+            .tea-div {
+                height: 60px;
+                line-height: 60px;
+            }
         }
         .card-list {
             position: relative;
@@ -381,10 +385,9 @@ export default {
                             }
                         }
                         .teacard {
-                            margin: 90px 0;
                             height: 60px;
                             p {
-                                margin: 15px;
+                                margin: 15px 30px;
                             }
                         }
                     }
@@ -622,7 +625,6 @@ export default {
                             }
                             .teacard_mo {
                                 height: 60px;
-                                margin: 30px 0;
                             }
                         }
                     }
