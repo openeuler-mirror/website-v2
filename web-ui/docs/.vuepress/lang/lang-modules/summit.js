@@ -356,9 +356,9 @@ module.exports = {
                     },
                     {
                         TIME: '14:00 - 14:10',
-                        THEME: '致开场词',
+                        THEME: '欢迎致辞',
                         SPEAKER: '朱建忠',
-                        POSITION: '统信软件高级副总裁'
+                        POSITION: '统信软件 高级副总裁'
                     },
                     {
                         TIME: '14:10 - 14:40',
@@ -397,7 +397,7 @@ module.exports = {
                         TIME: '16:20 - 16:35',
                         THEME: '万亿级湖仓一体架构下的统一数据服务平台应用实践',
                         SPEAKER: '陈元熹 ',
-                        POSITION: '巨杉数据库 研发资深总监，首席架构师'
+                        POSITION: '巨杉数据库'
                     },
                     {
                         TIME: '16:35 - 16:50',
@@ -802,7 +802,7 @@ module.exports = {
                             },
                             {
                                 TIME: '15:30-16:00',
-                                THEME: '构建openEuler的分布式式能力',
+                                THEME: '构建openEuler的分布式能力',
                                 SPEAKER: ['孙宏伟 华为'],
                                 DESC: ['']
                             },
@@ -1143,11 +1143,10 @@ module.exports = {
                 mobile: '/img/summit/summit2021/lecturer/sperkertitle_mo.png'
             },
             LECTURER_LIST: [
-
                 {
                     IMG: '/img/summit/summit2021/lecturer/yangtao.png',
                     NAME: '杨涛',
-                    POSITION: '开放原子开源基金会理事长'
+                    POSITION: '开放原子开源基金会 理事长'
                 },
                 {
                     IMG: '/img/summit/summit2021/lecturer/jiangdayong.png',
@@ -1243,7 +1242,7 @@ module.exports = {
                 {
                     IMG: '/img/summit/summit2021/lecturer/shiyong.png',
                     NAME: '石勇',
-                    POSITION: '欧拉社区技术委员会委员'
+                    POSITION: '欧拉开源社区 技术委员会委员'
                 },
                 {
                     IMG: '/img/summit/summit2021/lecturer/panjianfeng.png',
