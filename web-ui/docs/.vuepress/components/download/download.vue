@@ -4,7 +4,7 @@
       :pc-src="'/img/download/download-banner.png'"
       :mobile-src="'/img/download/download-banner.png'"
       :inside-name="'DOWNLOAD'"
-      outside-name="ISO"
+      :outside-name="i18n.download.OUTSIDE_TITLE"
     ></common-banner>
     <div :class="['download-list-wrapper',$lang === 'ru'?'lang-ru':'']">
       <el-form :inline="true" :model="formData" class="download-filter">

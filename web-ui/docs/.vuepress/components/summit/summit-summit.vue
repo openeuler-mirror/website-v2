@@ -19,6 +19,8 @@
       <div class="text-wrapper">
         <p class="text">{{ i18n.summit.SUMMIT_INTRODUCE }}</p>
       </div>
+      <!-- 直播模块 -->
+      <!-- <liveroom :liveData="i18n.summit.SUMMITLIVE" :isPass="true" class="devday"></liveroom> -->
       <div class="agenda" id="agenda">
         <div :class="['title', $lang === 'en' ? 'en-title' : '']">
           <img v-lazy="agendaData.WEB_TITLE" alt="" v-if="!isShowH5" />
@@ -166,6 +168,7 @@
           </div>
         </div>
         <carousel
+          :class="{'carousel':isShowH5}"
           v-show="isShowcarousel"
           :agendaData="carouselObj"
           :sigData="sigObj"
@@ -370,10 +373,12 @@
 <script>
 import carousel from "./carousel.vue";
 import titlenav from "./titleNav.vue";
+import liveroom from "./liveroom.vue";
 export default {
   components: {
     carousel,
     titlenav,
+    liveroom,
   },
   data() {
     return {
@@ -495,13 +500,22 @@ export default {
       }
     },
     SpanMethod({ row, column, rowIndex, columnIndex }) {
-      if (this.showTab === "nine" && this.forumTab === 1) {
-        if (rowIndex === 0 || rowIndex === 1) {
+      if (this.showTab === "nine") {
+        if (this.forumTab === 1 && (rowIndex === 0 || rowIndex === 1)) {
           if (columnIndex === 3)
             return {
               rowspan: 1,
               colspan: 2,
             };
+        }
+        if (this.forumTab === 3 && rowIndex === 4 ) {
+          if (columnIndex ===3) {
+            console.log(111);
+             return {
+              rowspan: 1,
+              colspan: 2,
+            };
+          }
         }
       } else {
         return false;
@@ -581,6 +595,7 @@ export default {
     margin-bottom: 60px;
     padding: 0 10px;
     width: 100%;
+    overflow: hidden;
   }
   .text-wrapper {
     margin-bottom: 50px;
@@ -588,10 +603,14 @@ export default {
     font-size: 20px;
     line-height: 40px;
     @media screen and (max-width: 1000px) {
+      padding: 0 20px;
       font-size: 14px;
       line-height: 26px;
       margin-bottom: 40px;
     }
+  }
+  .carousel {
+    padding: 0 10px;
   }
   .construction {
     text-align: center;

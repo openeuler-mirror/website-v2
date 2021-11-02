@@ -9,7 +9,7 @@ module.exports = {
         DRIVE: '板卡',
         SOFTWARE:'软件',
         SOFTWARETYPE:'软件类型',
-        ADAPTIVE:'适配操作系统',
+        ADAPTIVE:'操作系统',
         OS: '操作系统',
         ARCHITECTURE: '架构',
         SELECT_PLACEHOLDER: '请选择',
@@ -45,10 +45,10 @@ module.exports = {
             ARCHITECTURE: '架构',
             SOFTWARETYPE: '软件类型',
             SOFTWARENAME: '软件名称',
-            VERSION: '版本号',
+            VERSION: '版本',
             PROPERTIES: '软件属性',
             DOWNLOADLINK: '下载地址',
-            SYSTEM: '适配操作系统',
+            SYSTEM: '操作系统',
             PUBLICKLICENSE: '开源协议'
         },
         HARDWARE_DETAIL: {
