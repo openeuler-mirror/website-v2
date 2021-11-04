@@ -101,13 +101,13 @@ module.exports = {
                     POSITION: '开放原子开源基金会理事长'
                 },
                 {
-                    TIME: '09:35 - 09:40',
+                    TIME: '09:35 - 09:45',
                     THEME: '凝聚创新力量 逐梦数字时代星辰大海',
                     SPEAKER: '江大勇',
                     POSITION: '欧拉开源社区理事长'
                 },
                 {
-                    TIME: '09:40 - 09:50',
+                    TIME: '09:45 - 09:50',
                     THEME: '欧拉开源社区理事会升级仪式',
                     SPEAKER: '邱成锋',
                     POSITION: '欧拉开源社区秘书长'
@@ -115,8 +115,8 @@ module.exports = {
                 {
                     TIME: '09:50 - 09:55',
                     THEME: '欧拉开源社区技术委员会换届升级仪式',
-                    SPEAKER: '武延军',
-                    POSITION: '欧拉开源社区副理事长'
+                    SPEAKER: '邱成锋',
+                    POSITION: '欧拉开源社区秘书长'
                 },
                 {
                     TIME: '09:55 - 10:10',
@@ -167,66 +167,91 @@ module.exports = {
                 [
                     {
                         TIME: '14:00 - 14:10',
-                        THEME: '敬请期待',
+                        THEME: '领导致辞',
+                        SPEAKER: '华为领导'
                     },
                     {
-                        TIME: '14:10 - 14:20',
+                        TIME: '14:10 - 14:25',
                         THEME: '合作共赢，生态共生',
                         SPEAKER: '孔金珠',
-                        POSITION: '麒麟软件高级副总经理'
+                        POSITION: '麒麟软件 高级副总经理'
                     },
                     {
-                        TIME: '14:20 - 14:30',
+                        TIME: '14:25 - 14:40',
                         THEME: '开源新时代-麒麟软件积极拥抱开源社区',
                         SPEAKER: '侯健',
-                        POSITION: '麒麟软件服务器研发部技术总监'
+                        POSITION: '麒麟软件 服务器研发部技术总监'
                     },
                     {
-                        TIME: '14:30 - 14:50',
-                        THEME: '客户分享',
+                        TIME: '14:40 - 14:55',
+                        THEME: '中国联通自主操作系统实践经验分享',
+                        SPEAKER: '肖微',
+                        POSITION: '联通软研院'
                     },
                     {
-                        TIME: '14:50 - 15:05',
+                        TIME: '14:55 - 15:00',
+                        THEME: '麒麟鲲鹏联合创新实验室揭牌',
+                        SPEAKER: '刘海涛、高巍',
+                    },
+                    {
+                        TIME: '15:00 - 15:10',
+                        THEME: '北京鲲鹏联合创新中心领导致辞',
+                        SPEAKER: '刘海涛',
+                        POSITION: '北京鲲鹏联合创新中心 首席运营官'
+                    },
+                    {
+                        TIME: '15:10 - 15:15',
+                        THEME: '麒麟创客北京·鲲鹏应用创新大赛2021颁奖仪式',
+                        SPEAKER: '麒麟软件、华为领导'
+                    },
+                    {
+                        TIME: '15:15 - 15:25',
+                        THEME: '幸运抽奖 &茶歇',
+                    },
+                    {
+                        TIME: '15:25 - 15:40',
                         THEME: '开放联合，共建软件生态',
                         SPEAKER: '刘勇鹏',
-                        POSITION: '飞腾副总裁软件技术方案中心总经理'
+                        POSITION: '飞腾 副总裁、软件技术方案中心总经理'
                     },
                     {
-                        TIME: '15:05 - 15:15',
-                        THEME: '幸运抽奖 & 茶歇',
-                    },
-                    {
-                        TIME: '15:15 - 15:30',
-                        THEME: '国产数据库与操作系统的合作',
-                        SPEAKER: '宋瑞',
-                        POSITION: '人大金仓高级副总裁'
-                    },
-                    {
-                        TIME: '15:30 - 15:45',
-                        THEME: '国产中间件创新与应用',
-                        SPEAKER: '谢耘',
-                        POSITION: '东方通首席科学家'
-                    },
-                    {
-                        TIME: '15:45 - 16:00',
-                        THEME: '同方信创的未来之路 ',
-                        SPEAKER: '王容多',
-                        POSITION: '同方战略生态中心总经理&行业销售中心总经理'
-                    },
-                    {
-                        TIME: '16:00 - 16:15',
+                        TIME: '15:40 - 15:55',
                         THEME: '护航国产操作系统 打造安全计算环境',
                         SPEAKER: '李栋',
-                        POSITION: '奇安信椒图事业部 副总经理'
+                        POSITION: '奇安信 椒图事业部副总经理'
                     },
                     {
-                        TIME: '16:15 - 16:30',
-                        THEME: '华云ArSDN在麒麟V10中的实践',
-                        SPEAKER: '过育红',
-                        POSITION: '华云数据计算网络部高级技术经理'
+                        TIME: '15:55 - 16:10',
+                        THEME: '价值驱动国产基础软硬件协同发展 ',
+                        SPEAKER: '王容多',
+                        POSITION: '同方 战略生态中心总经理 / 行业销售中心总经理'
                     },
                     {
-                        TIME: '16:30 - 16:40',
+                        TIME: '16:10 - 16:25',
+                        THEME: '携手打造基础软件根技术，助力用户创造更大价值 ',
+                        SPEAKER: '肖枫',
+                        POSITION: '海量数据 总裁'
+                    },
+                    {
+                        TIME: '16:25 - 16:40',
+                        THEME: '国产数据库与操作系统的合作',
+                        SPEAKER: '宋瑞',
+                        POSITION: '人大金仓 高级副总裁'
+                    },
+                    {
+                        TIME: '16:40 - 16:55',
+                        THEME: '国产中间件创新与应用',
+                        SPEAKER: '谢耘',
+                        POSITION: '东方通 首席科学家'
+                    },
+                    {
+                        TIME: '16:55 - 17:10',
+                        THEME: '基于麒麟V10的分布式中间件新核心',
+                        SPEAKER: '成勇斌',
+                        POSITION: '金蝶天燕 副总经理'
+                    },
+                    {
+                        TIME: '17:10 - 17:20',
                         THEME: '幸运抽奖',
                     },
                 ],
@@ -306,13 +331,15 @@ module.exports = {
                         TIME: '14:10 - 14:20',
                         THEME: '欧拉开源社区支持服务发布仪式',
                         SPEAKER: '江永清',
-                        POSITION: 'SUSE大中华区董事长'
+                        POSITION: 'SUSE 大中华区董事长',
+                        SPEAKER2: '陈伟',
+                        POSITION2: 'SUSE 大中华区Service Director'
                     },
                     {
                         TIME: '14:20 - 14:40',
                         THEME: '欧拉开源社区支持服务',
                         SPEAKER: '陈伟',
-                        POSITION: 'SUSE大中华区Service Director'
+                        POSITION: 'SUSE 大中华区Service Director'
                     },
                     {
                         TIME: '14:40 - 15:10',
@@ -328,7 +355,7 @@ module.exports = {
                         TIME: '15:25 - 15:55',
                         THEME: 'Rancher + iSulad解决方案',
                         SPEAKER: '江鹏',
-                        POSITION: 'SUSE大中华区技术总监'
+                        POSITION: 'SUSE 大中华区技术总监'
                     },
                     {
                         TIME: '15:55 - 16:25',
@@ -391,13 +418,15 @@ module.exports = {
                         TIME: '16:05 - 16:20',
                         THEME: '数据相联，探索价值',
                         SPEAKER: '莫良伟',
-                        POSITION: '宝德软件部总监'
+                        POSITION: '宝德 软件部总监'
                     },
                     {
                         TIME: '16:20 - 16:35',
                         THEME: '万亿级湖仓一体架构下的统一数据服务平台应用实践',
                         SPEAKER: '陈元熹 ',
-                        POSITION: '巨杉数据库'
+                        POSITION: '巨杉数据库',
+                        POSITION2: '研发资深总监',
+                        POSITION3: '首席架构师'
                     },
                     {
                         TIME: '16:35 - 16:50',
@@ -415,7 +444,7 @@ module.exports = {
                         TIME: '17:05 - 17:20',
                         THEME: '融合信创生态，打造安全高效的地理信息系统',
                         SPEAKER: '周丹',
-                        POSITION: '中地数码北京副总经理'
+                        POSITION: '中地数码 北京副总经理'
                     },
                     {
                         TIME: '17:20 - 17:30',
@@ -666,7 +695,7 @@ module.exports = {
                             },
                             {
                                 TIME: '14:00-14:30',
-                                THEME: '自主申威遇上开源欧拉，产业生态兼容的新变革',
+                                THEME: 'SW64自主架构遇上开源欧拉，产业生态兼容的新变革',
                                 SPEAKER: ['周元超 普华基础软件'],
                                 DESC: ['']
                             },
@@ -760,12 +789,6 @@ module.exports = {
                                 THEME: '基于认知技术的openEuler漏洞感知系统',
                                 SPEAKER: ['杨牧天 中科微澜'],
                                 DESC: ['openEuler开源操作系统作为重要的信息基础设施和生态底座，对自身安全性有很高的要求，为此，我们在openEuler中创新性的引入认知技术，构建openEuler智能化漏洞感知能力。']
-                            },
-                            {
-                                TIME: '17:30-18:00',
-                                THEME: '霄瀚全场景操作系统实践和应用',
-                                SPEAKER: ['解伟俊 拓维'],
-                                DESC: ['']
                             },
                         ]
                     },
@@ -1240,6 +1263,11 @@ module.exports = {
                     POSITION: '欧拉开源社区 技术委员会委员'
                 },
                 {
+                    IMG: '/img/summit/summit2021/lecturer/caihaomin.png',
+                    NAME: '蔡灏旻',
+                    POSITION: '华为容器团队架构师'
+                },
+                {
                     IMG: '/img/summit/summit2021/lecturer/shiyong.png',
                     NAME: '石勇',
                     POSITION: '欧拉开源社区 技术委员会委员'
@@ -1259,22 +1287,6 @@ module.exports = {
                     NAME: '谢焜勋',
                     POSITION: '华为嵌入式操作系统 技术专家'
                 },
-                // {
-                //     IMG: '/img/summit/summit2021/lecturer/renqi.png',
-                //     NAME: '任启',
-                //     POSITION: '麒麟信安高级副总裁'
-                // },
-               
-                // {
-                //     IMG: '/img/summit/summit2021/lecturer/jiangyongqing.png',
-                //     NAME: '江永清',
-                //     POSITION: 'SUSE大中华区董事长'
-                // },
-                // {
-                //     IMG: '/img/summit/summit2021/lecturer/zujianzhong.png',
-                //     NAME: '朱建忠',
-                //     POSITION: '统信软件生态中心总经理'
-                // },
                 {
                     IMG: '/img/summit/summit2021/lecturer/lishouyong.png',
                     NAME: '刘寿永',

@@ -122,21 +122,21 @@
                   v-if="scope.$index == 1 && forumTab == 2"
                   class="specialTable"
                 >
-                  陈伟
+                  {{scope.row.SPEAKER2}}
                 </p>
               </template>
             </el-table-column>
-            <el-table-column prop="POSITION" width="300">
+            <el-table-column prop="POSITION" width="320">
               <template slot-scope="scope">
                 <p>{{ scope.row.POSITION }}</p>
                 <p v-if="scope.$index == 8 && forumTab == 3">
-                  研发资深总监，首席架构师
+                  {{scope.row.POSITION2}} {{scope.row.POSITION3}}
                 </p>
                 <p
                   v-if="scope.$index == 1 && forumTab == 2"
                   class="specialTable"
                 >
-                  SUSE大中华区Service Director
+                  {{scope.row.POSITION2}}
                 </p>
               </template>
             </el-table-column>
@@ -162,22 +162,25 @@
                   :class="[
                     {
                       longname:
-                        value == '麒麟信安' && (index == 0 || index == 1),
+                        forumTab == 1 && (index == 0 || index == 1),
                     },
                     {
                       longname:
-                        value == '统信软件' && (index == 4),
+                        forumTab == 3 && index == 4,
+                    },
+                    {
+                      longname:
+                        forumTab == 0 && (index == 4 || index == 6 ),
                     },
                   ]"
                 >
                   <span>{{ item.SPEAKER }}</span>
                   <span style="vertical-align: top">{{ item.POSITION }}</span>
                   <span v-if="forumTab === 3 && index === 8" class="special-mo"
-                    >研发资深总监<br />首席架构师</span
-                  >
+                    >{{ item.POSITION2 }}<br />{{ item.POSITION3 }}</span>
                 </p>
                 <p v-if="forumTab === 2 && index === 1">
-                  <span>陈伟</span><span>SUSE大中华区Service Director</span>
+                  <span>{{item.SPEAKER2}}</span><span>{{item.POSITION2}}</span>
                 </p>
               </div>
             </div>
@@ -508,7 +511,6 @@ export default {
       } else if (tab === "afternoon" && this.showTab === "ten") {
         this.agendaTableData = undefined;
         this.isShowcarousel = true;
-      } else if (tab === "evening") {
       } else if (this.showTab === "nine" && tab === "afternoon") {
         this.forumClick(0);
       } else {
@@ -525,6 +527,14 @@ export default {
             };
         }
         if (this.forumTab === 3 && rowIndex === 4) {
+          if (columnIndex === 3) {
+            return {
+              rowspan: 1,
+              colspan: 2,
+            };
+          }
+        }
+        if (this.forumTab === 0 && (rowIndex === 4 || rowIndex === 6)) {
           if (columnIndex === 3) {
             return {
               rowspan: 1,
