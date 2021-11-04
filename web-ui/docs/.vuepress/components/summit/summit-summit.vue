@@ -6,12 +6,12 @@
       :dataList="i18n.summit.NAV_LIST"
     ></titlenav>
     <div class="banner">
-      <a href="https://e-campaign.huawei.com/m/FjEF3q" target="_blank">
+      <a href="https://e-campaign.huawei.com/events2/registerPc/pcRegister.html?eventId=5482" target="_blank">
         <img class="main" :src="i18n.summit.SUMMIT_BANNER.PC_IMG" />
       </a>
     </div>
     <div class="h5-banner">
-      <a href="https://e-campaign.huawei.com/m/FjEF3q" target="_blank"
+      <a href="https://e-campaign.huawei.com/events2/registerPc/pcRegister.html?eventId=5482" target="_blank"
         ><img :src="i18n.summit.SUMMIT_BANNER.MOBILE_IMG"
       /></a>
     </div>
