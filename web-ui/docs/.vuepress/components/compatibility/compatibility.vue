@@ -276,7 +276,7 @@
                     </ul>
                 </el-tab-pane>
                 <!-- 软件 -->
-                <el-tab-pane :label="i18n.compatibility.SOFTWARE" name="software">
+                <!-- <el-tab-pane :label="i18n.compatibility.SOFTWARE" name="software">
                     <el-form :inline="true" :model="formData" class="compatibility-filter">
                         <el-form-item :label="i18n.compatibility.ARCHITECTURE">
                             <el-select class="pc-select" 
@@ -439,7 +439,7 @@
                             </ul>
                         </li>
                     </ul>
-                </el-tab-pane>
+                </el-tab-pane> -->
             </el-tabs>
             <!-- 分页 -->
             <el-pagination
