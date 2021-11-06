@@ -14,190 +14,190 @@ module.exports = {
         MOBILE_LIVEIMG: '/img/summit/home/zh-mobile-liveroom.png',
         SUMMITLIVE: {
            NINE :[
-            {
-                ID: 9874,
-                THEME: '操作系统产业峰会2021',
-                TIME: '09:30-11:30',
-                OPTION: '09:30-11:30 操作系统产业峰会2021',
-                LIVEURL: 'https://vhall.huawei.com/v2/watch/9874?lang=zh&thirdId='
-            },
-            {
-                ID: 9875,
-                THEME: '麒麟软件',
-                TIME: '14:00-17:20',
-                OPTION: '14:00-17:20 麒麟软件',
-                LIVEURL: 'https://vhall.huawei.com/v2/watch/9875?lang=zh&thirdId='
-            },
-            {
-                ID: 9898,
-                THEME: '麒麟信安',
-                TIME: '14:00-16:40',
-                OPTION: '14:00-16:40 麒麟信安',
-                LIVEURL: 'https://vhall.huawei.com/v2/watch/9898?lang=zh&thirdId='
-            },
-            {
-                ID: 9899,
-                THEME: '统信',
-                TIME: '14:00-17:30',
-                OPTION: '14:00-17:30 统信',
-                LIVEURL: 'https://vhall.huawei.com/v2/watch/9899?lang=zh&thirdId='
-            },
-            {
-                ID: 9876,
-                THEME: '中科创达',
-                TIME: '14:00-16:40',
-                OPTION: '14:00-16:40 中科创达',
-                LIVEURL: 'https://vhall.huawei.com/v2/watch/9876?lang=zh&thirdId='
-            },
-            {
-                ID: 9877,
-                THEME: '普华基础软件',
-                TIME: '14:00-16:50 ',
-                OPTION: '14:00-16:50 普华基础软件',
-                LIVEURL: 'https://vhall.huawei.com/v2/watch/9877?lang=zh&thirdId='
-            },
             // {
-            //     ID: 9862,
+            //     ID: 9874,
             //     THEME: '操作系统产业峰会2021',
             //     TIME: '09:30-11:30',
             //     OPTION: '09:30-11:30 操作系统产业峰会2021',
-            //     LIVEURL: 'https://vhall.huawei.com/fe/watch/9862?lang=zh&thirdId='
+            //     LIVEURL: 'https://vhall.huawei.com/v2/watch/9874?lang=zh&thirdId='
             // },
             // {
-            //     ID: 9863,
+            //     ID: 9875,
             //     THEME: '麒麟软件',
-            //     TIME: '14:00-16:40',
-            //     OPTION: '14:00-16:40 麒麟软件',
-            //     LIVEURL: 'https://vhall.huawei.com/fe/watch/9863?lang=zh&thirdId='
+            //     TIME: '14:00-17:20',
+            //     OPTION: '14:00-17:20 麒麟软件',
+            //     LIVEURL: 'https://vhall.huawei.com/v2/watch/9875?lang=zh&thirdId='
             // },
             // {
-            //     ID: 9900,
+            //     ID: 9898,
             //     THEME: '麒麟信安',
             //     TIME: '14:00-16:40',
             //     OPTION: '14:00-16:40 麒麟信安',
-            //     LIVEURL: 'https://vhall.huawei.com/fe/watch/9900?lang=zh&thirdId='
+            //     LIVEURL: 'https://vhall.huawei.com/v2/watch/9898?lang=zh&thirdId='
             // },
             // {
-            //     ID: 9901,
+            //     ID: 9899,
             //     THEME: '统信',
-            //     TIME: '14:00-17:00',
-            //     OPTION: '14:00-17:00 统信',
-            //     LIVEURL: 'https://vhall.huawei.com/fe/watch/9901?lang=zh&thirdId='
+            //     TIME: '14:00-17:30',
+            //     OPTION: '14:00-17:30 统信',
+            //     LIVEURL: 'https://vhall.huawei.com/v2/watch/9899?lang=zh&thirdId='
             // },
             // {
-            //     ID: 9864,
+            //     ID: 9876,
             //     THEME: '中科创达',
             //     TIME: '14:00-16:40',
             //     OPTION: '14:00-16:40 中科创达',
-            //     LIVEURL: 'https://vhall.huawei.com/fe/watch/9864?lang=zh&thirdId='
+            //     LIVEURL: 'https://vhall.huawei.com/v2/watch/9876?lang=zh&thirdId='
             // },
             // {
-            //     ID: 9865,
+            //     ID: 9877,
             //     THEME: '普华基础软件',
-            //     TIME: '14:00-16:30 ',
-            //     OPTION: '14:00-16:30 普华基础软件',
-            //     LIVEURL: 'https://vhall.huawei.com/fe/watch/9865?lang=zh&thirdId='
+            //     TIME: '14:00-16:50 ',
+            //     OPTION: '14:00-16:50 普华基础软件',
+            //     LIVEURL: 'https://vhall.huawei.com/v2/watch/9877?lang=zh&thirdId='
             // },
+            {
+                ID: 9862,
+                THEME: '操作系统产业峰会2021',
+                TIME: '09:30-11:30',
+                OPTION: '09:30-11:30 操作系统产业峰会2021',
+                LIVEURL: 'https://vhall.huawei.com/v2/watch/9862?lang=zh&thirdId='
+            },
+            {
+                ID: 9863,
+                THEME: '麒麟软件',
+                TIME: '14:00-16:40',
+                OPTION: '14:00-16:40 麒麟软件',
+                LIVEURL: 'https://vhall.huawei.com/v2/watch/9863?lang=zh&thirdId='
+            },
+            {
+                ID: 9900,
+                THEME: '麒麟信安',
+                TIME: '14:00-16:40',
+                OPTION: '14:00-16:40 麒麟信安',
+                LIVEURL: 'https://vhall.huawei.com/v2/watch/9900?lang=zh&thirdId='
+            },
+            {
+                ID: 9901,
+                THEME: '统信',
+                TIME: '14:00-17:00',
+                OPTION: '14:00-17:00 统信',
+                LIVEURL: 'https://vhall.huawei.com/v2/watch/9901?lang=zh&thirdId='
+            },
+            {
+                ID: 9864,
+                THEME: '中科创达',
+                TIME: '14:00-16:40',
+                OPTION: '14:00-16:40 中科创达',
+                LIVEURL: 'https://vhall.huawei.com/v2/watch/9864?lang=zh&thirdId='
+            },
+            {
+                ID: 9865,
+                THEME: '普华基础软件',
+                TIME: '14:00-16:30 ',
+                OPTION: '14:00-16:30 普华基础软件',
+                LIVEURL: 'https://vhall.huawei.com/v2/watch/9865?lang=zh&thirdId='
+            },
            ],
            TEN : [
-            {
-                ID: 9878,
-                THEME: 'openEuler Summit 2021',
-                TIME: '9:30-11:55 ',
-                OPTION: '9:30-11:55 openEuler Summit 2021',
-                LIVEURL: 'https://vhall.huawei.com/v2/watch/9878?lang=zh&thirdId='
-            },
-            {
-                ID: 9879,
-                THEME: '内核',
-                TIME: '13:00-17:30 ',
-                OPTION: '13:00-17:30 内核分论坛',
-                LIVEURL: 'https://vhall.huawei.com/v2/watch/9879?lang=zh&thirdId='
-            },
-            {
-                ID: 9880,
-                THEME: '云&虚拟化',
-                TIME: '13:00-18:00 ',
-                OPTION: '13:00-18:00 云&虚拟化分论坛',
-                LIVEURL: 'https://vhall.huawei.com/v2/watch/9880?lang=zh&thirdId='
-            },
-            {
-                ID: 9881,
-                THEME: '兼容性',
-                TIME: '13:00-17:30 ',
-                OPTION: '13:00-17:30 兼容性分论坛',
-                LIVEURL: 'https://vhall.huawei.com/v2/watch/9881?lang=zh&thirdId='
-            },
-            {
-                ID: 9882,
-                THEME: '安全&可靠性&运维',
-                TIME: '13:00-17:30 ',
-                OPTION: '13:00-17:30 安全&可靠性&运维分论坛',
-                LIVEURL: 'https://vhall.huawei.com/v2/watch/9882?lang=zh&thirdId='
-            },
-            {
-                ID: 9883,
-                THEME: '分布式&多样性计算',
-                TIME: '13:00-18:00 ',
-                OPTION: '13:00-18:00 分布式&多样性计算分论坛',
-                LIVEURL: 'https://vhall.huawei.com/v2/watch/9883?lang=zh&thirdId='
-            },
-            {
-                ID: 9884,
-                THEME: '边缘&嵌入式',
-                TIME: '13:00-17:00 ',
-                OPTION: '13:00-17:00 边缘&嵌入式分论坛',
-                LIVEURL: 'https://vhall.huawei.com/v2/watch/9884?lang=zh&thirdId='
-            },
             // {
-            //     ID: 9866,
+            //     ID: 9878,
             //     THEME: 'openEuler Summit 2021',
             //     TIME: '9:30-11:55 ',
             //     OPTION: '9:30-11:55 openEuler Summit 2021',
-            //     LIVEURL: 'https://vhall.huawei.com/fe/watch/9866?lang=zh&thirdId='
+            //     LIVEURL: 'https://vhall.huawei.com/v2/watch/9878?lang=zh&thirdId='
             // },
             // {
-            //     ID: 9867,
+            //     ID: 9879,
             //     THEME: '内核',
             //     TIME: '13:00-17:30 ',
             //     OPTION: '13:00-17:30 内核分论坛',
-            //     LIVEURL: 'https://vhall.huawei.com/fe/watch/9867?lang=zh&thirdId='
+            //     LIVEURL: 'https://vhall.huawei.com/v2/watch/9879?lang=zh&thirdId='
             // },
             // {
-            //     ID: 9868,
+            //     ID: 9880,
             //     THEME: '云&虚拟化',
             //     TIME: '13:00-18:00 ',
             //     OPTION: '13:00-18:00 云&虚拟化分论坛',
-            //     LIVEURL: 'https://vhall.huawei.com/fe/watch/9868?lang=zh&thirdId='
+            //     LIVEURL: 'https://vhall.huawei.com/v2/watch/9880?lang=zh&thirdId='
             // },
             // {
-            //     ID: 9869,
+            //     ID: 9881,
             //     THEME: '兼容性',
             //     TIME: '13:00-17:30 ',
             //     OPTION: '13:00-17:30 兼容性分论坛',
-            //     LIVEURL: 'https://vhall.huawei.com/fe/watch/9869?lang=zh&thirdId='
+            //     LIVEURL: 'https://vhall.huawei.com/v2/watch/9881?lang=zh&thirdId='
             // },
             // {
-            //     ID: 9870,
+            //     ID: 9882,
             //     THEME: '安全&可靠性&运维',
             //     TIME: '13:00-17:30 ',
             //     OPTION: '13:00-17:30 安全&可靠性&运维分论坛',
-            //     LIVEURL: 'https://vhall.huawei.com/fe/watch/9870?lang=zh&thirdId='
+            //     LIVEURL: 'https://vhall.huawei.com/v2/watch/9882?lang=zh&thirdId='
             // },
             // {
-            //     ID: 9871,
+            //     ID: 9883,
             //     THEME: '分布式&多样性计算',
-            //     TIME: '13:00-17:30 ',
-            //     OPTION: '13:00-17:30 分布式&多样性计算分论坛',
-            //     LIVEURL: 'https://vhall.huawei.com/fe/watch/9871?lang=zh&thirdId='
+            //     TIME: '13:00-18:00 ',
+            //     OPTION: '13:00-18:00 分布式&多样性计算分论坛',
+            //     LIVEURL: 'https://vhall.huawei.com/v2/watch/9883?lang=zh&thirdId='
             // },
             // {
-            //     ID: 9872,
+            //     ID: 9884,
             //     THEME: '边缘&嵌入式',
-            //     TIME: '13:00-17:30 ',
-            //     OPTION: '13:00-17:30 边缘&嵌入式分论坛',
-            //     LIVEURL: 'https://vhall.huawei.com/fe/watch/9872?lang=zh&thirdId='
+            //     TIME: '13:00-17:00 ',
+            //     OPTION: '13:00-17:00 边缘&嵌入式分论坛',
+            //     LIVEURL: 'https://vhall.huawei.com/v2/watch/9884?lang=zh&thirdId='
             // },
+            {
+                ID: 9866,
+                THEME: 'openEuler Summit 2021',
+                TIME: '9:30-11:55 ',
+                OPTION: '9:30-11:55 openEuler Summit 2021',
+                LIVEURL: 'https://vhall.huawei.com/v2/watch/9866?lang=zh&thirdId='
+            },
+            {
+                ID: 9867,
+                THEME: '内核',
+                TIME: '13:00-17:30 ',
+                OPTION: '13:00-17:30 内核分论坛',
+                LIVEURL: 'https://vhall.huawei.com/v2/watch/9867?lang=zh&thirdId='
+            },
+            {
+                ID: 9868,
+                THEME: '云&虚拟化',
+                TIME: '13:00-18:00 ',
+                OPTION: '13:00-18:00 云&虚拟化分论坛',
+                LIVEURL: 'https://vhall.huawei.com/v2/watch/9868?lang=zh&thirdId='
+            },
+            {
+                ID: 9869,
+                THEME: '兼容性',
+                TIME: '13:00-17:30 ',
+                OPTION: '13:00-17:30 兼容性分论坛',
+                LIVEURL: 'https://vhall.huawei.com/v2/watch/9869?lang=zh&thirdId='
+            },
+            {
+                ID: 9870,
+                THEME: '安全&可靠性&运维',
+                TIME: '13:00-17:30 ',
+                OPTION: '13:00-17:30 安全&可靠性&运维分论坛',
+                LIVEURL: 'https://vhall.huawei.com/v2/watch/9870?lang=zh&thirdId='
+            },
+            {
+                ID: 9871,
+                THEME: '分布式&多样性计算',
+                TIME: '13:00-18:00 ',
+                OPTION: '13:00-17:30 分布式&多样性计算分论坛',
+                LIVEURL: 'https://vhall.huawei.com/v2/watch/9871?lang=zh&thirdId='
+            },
+            {
+                ID: 9872,
+                THEME: '边缘&嵌入式',
+                TIME: '13:00-17:30 ',
+                OPTION: '13:00-17:30 边缘&嵌入式分论坛',
+                LIVEURL: 'https://vhall.huawei.com/v2/watch/9872?lang=zh&thirdId='
+            },
            ]
         },
         AGENDA: {
@@ -206,8 +206,53 @@ module.exports = {
             DATE: ['11月09日', '11月10日', '上午', '下午'],
             SUB_FORUM: '操作系统产业峰会生态伙伴分论坛',
             FORUM_HEAD: ['麒麟软件', '麒麟信安', 'SUSE', '统信软件', '中科创达', '普华基础软件'],
-            AFTERNOON_AGENDA_9: [
-
+            FORENOON_AGENDA_9: [
+                {
+                    TIME: '09:30 - 09:45',
+                    THEME: '开场致辞',
+                    SPEAKER: '神秘嘉宾',
+                },
+                {
+                    TIME: '09:45 - 10:00',
+                    THEME: '欧拉开源操作系统重大发布',
+                },
+                {
+                    TIME: '10:00 - 10:10',
+                    THEME: '操作系统发展展望',
+                    SPEAKER: '中国工程院院士',
+                },
+                {
+                    TIME: '10:10 - 10:20',
+                    THEME: '立跟铸魂，共建操作系统新生态',
+                    SPEAKER: '华为',
+                },
+                {
+                    TIME: '10:20 - 10:25',
+                    THEME: '操作系统产业宣誓',
+                },
+                {
+                    TIME: '10:25 - 10:55',
+                    THEME: '行业用户实践分享',
+                    SPEAKER: '运营商、金融等行业重磅嘉宾'
+                },
+                {
+                    TIME: '10:55 - 11:05',
+                    THEME: '携手欧拉开源创新，服务中国数字时代',
+                    SPEAKER: '麒麟软件',
+                },
+                {
+                    TIME: '11:05 - 11:15',
+                    THEME: '扎根开源生态，服务中国企业，帮助中国开源系统走向世界',
+                    SPEAKER: 'SUSE',
+                },
+                {
+                    TIME: '11:15 - 11:20',
+                    THEME: '欧拉生态创新中心发布',
+                },
+                {
+                    TIME: '11:20 - 11:30',
+                    THEME: '智能基座 · 欧拉人才发展加速计划发布',
+                },
             ],
             FORENOON_AGENDA_10: [
                 {
