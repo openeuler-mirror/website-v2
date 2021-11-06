@@ -123,6 +123,7 @@ export default {
           data = event.data;
         }
         if (data.height) {
+          console.log(data.height);
           this.iframeHeight = parseInt(data.height);
         }
       },
@@ -204,6 +205,9 @@ export default {
     font-size: 16px;
     line-height: 40px;
   }
+}
+.is-active {
+  color: #002fa7 !important;
 }
 .el-tabs {
   .el-tabs__nav-wrap::after {
