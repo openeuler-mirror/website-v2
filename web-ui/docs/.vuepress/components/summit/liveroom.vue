@@ -123,7 +123,9 @@ export default {
         } catch (e) {
           data = event.data;
         }
-        if (data.height) {
+        if (data.height =="auto") {
+          this.iframeHeight = 550
+        } else if(data.height){
           this.iframeHeight = parseInt(data.height);
         }
       },
