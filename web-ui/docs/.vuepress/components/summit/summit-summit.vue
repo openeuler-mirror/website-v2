@@ -20,7 +20,7 @@
         <p class="text">{{ i18n.summit.SUMMIT_INTRODUCE }}</p>
       </div>
       <!-- 直播模块 -->
-      <liveroom :liveData="i18n.summit.SUMMITLIVE" :isPass="false" class="summit-live" id="live"></liveroom>
+      <liveroom :liveData="i18n.summit.SUMMITLIVE" :isPass="false" class="devday" id="live"></liveroom>
       <div class="agenda" id="agenda">
         <div :class="['title', $lang === 'en' ? 'en-title' : '']">
           <img v-lazy="agendaData.WEB_TITLE" alt="" v-if="!isShowH5" />
@@ -569,7 +569,6 @@ export default {
   },
 };
 </script>
-
 <style lang="less" scoped>
 .h5-banner {
   display: none;
@@ -622,7 +621,7 @@ export default {
     width: 100%;
     overflow: hidden;
   }
-  .summit-live {
+  .devday {
     margin-bottom: 90px;
      @media screen and (max-width: 1000px) {
      margin-bottom: 40px;
