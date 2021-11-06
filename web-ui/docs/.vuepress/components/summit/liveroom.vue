@@ -90,7 +90,7 @@ export default {
       nowValue: "",
       roomId: null,
       userName: "",
-      iframeHeight: 560,
+      iframeHeight: 630,
       isSummit: false,
       tenData: [],
       nineData: [],
