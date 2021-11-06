@@ -1,6 +1,7 @@
 <template>
   <div>
     <titlenav
+    class="titlenav"
       v-show="isShowNav"
       :currentIndex="activeIndex"
       :dataList="i18n.summit.NAV_LIST"
@@ -43,6 +44,16 @@
             }}</el-radio-button>
           </el-radio-group>
           <!-- 9号按钮 -->
+          <el-radio-group
+            v-model="showBtn"
+            @change="changeTime"
+            v-show="showTab === 'nine'"
+          >
+            <el-radio-button label="forenoon">{{ dateArr[2] }}</el-radio-button>
+            <el-radio-button label="afternoon">{{
+              dateArr[3]
+            }}</el-radio-button>
+          </el-radio-group>
         </div>
         <!-- 10号表格 -->
         <div
@@ -82,10 +93,45 @@
             </div>
           </div>
         </div>
+        <!-- 9号上午 -->
+        <div
+          :class="['calendar-content', showTab === 'nine' ? 'center-p' : '']"
+          v-show="showTab === 'nine' && showBtn === 'forenoon'"
+        >
+          <el-table
+            :data="i18n.summit.AGENDA.FORENOON_AGENDA_9"
+            :show-header="false"
+            style="width: 100%"
+            v-if="!isShowH5"
+            empty-text="敬请期待"
+          >
+            <el-table-column prop="icon" width="30">
+              <i class="el-icon-time"></i>
+            </el-table-column>
+            <el-table-column prop="TIME" width="200"> </el-table-column>
+            <el-table-column prop="THEME" width="470"> </el-table-column>
+            <el-table-column prop="SPEAKER" width="370"> </el-table-column>
+          </el-table>
+          <div class="mobile-table nineDay" v-if="isShowH5">
+            <div
+              class="item"
+              v-for="(item, index) in i18n.summit.AGENDA.FORENOON_AGENDA_9"
+              :key="index"
+            >
+              <div class="time">{{ item.TIME }}</div>
+              <div class="agenda">
+                <p>{{ item.THEME }}</p>
+                <p v-if="item.SPEAKER || item.POSITION">
+                  <span>{{ item.SPEAKER }}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- 9号表格 -->
         <div
           :class="['calendar-content', showTab === 'nine' ? 'center-p' : '']"
-          v-show="showTab === 'nine'"
+          v-show="showTab === 'nine' && showBtn === 'afternoon'"
         >
           <div class="forum-title" :class="{ 'sub-title': isShowH5 }">
             {{ agendaData.SUB_FORUM }}
@@ -431,11 +477,13 @@ export default {
   },
   created() {
     this.agendaData = this.i18n.summit.AGENDA;
+    console.log(this.agendaData);
     this.lecturerData = this.i18n.summit.LECTURER;
     this.carouselObj = this.agendaData.AFTERNOON_AGENDA_10;
     this.sigObj = this.agendaData.SIG_CONTENT;
   },
   mounted() {
+    console.log(this.i18n.summit.AGENDA);
     window.addEventListener("scroll", this.scroTop);
     this.agendaTableData = this.agendaData.FORENOON_AGENDA_10;
     this.construction = this.i18n.summit.CONSTRUCTION;
@@ -493,7 +541,7 @@ export default {
       if (tab.name === "nine") {
         this.isShowcarousel = false;
         this.isShowBtn = false;
-        this.showBtn = "afternoon";
+        this.showBtn = "forenoon";
       } else if (tab.name === "ten") {
         this.agendaTableData = this.agendaData.FORENOON_AGENDA_10;
         this.isShowcarousel = false;
@@ -609,6 +657,11 @@ export default {
       width: 100%;
       height: 100%;
     }
+  }
+}
+.titlenav {
+   @media screen and (max-width: 1550px) {
+   display: none;
   }
 }
 .container {
@@ -760,8 +813,6 @@ export default {
       padding-top: 10px;
       font-size: 18px;
     }
-    .specialTabletow {
-    }
     .nameTable {
       text-align: center;
     }
@@ -849,7 +900,8 @@ export default {
   .mobile-table {
     padding: 0 20px;
   }
-  .tenDay {
+  .tenDay,
+  .nineDay {
     margin-top: 20px;
     font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
 
@@ -905,6 +957,13 @@ export default {
       }
       p span:last-of-type {
         width: 0;
+      }
+    }
+  }
+  .nineDay {
+     .item:nth-child(-n + 10):nth-child(n + 6) {
+      p span:first-of-type {
+        width: 180px;
       }
     }
   }
