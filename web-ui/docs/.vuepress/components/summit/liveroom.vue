@@ -116,6 +116,7 @@ export default {
     window.addEventListener(
       "message",
       (event) => {
+        console.log(event);
         let data = "";
         try {
           data = JSON.parse(event.data);
@@ -123,7 +124,6 @@ export default {
           data = event.data;
         }
         if (data.height) {
-          console.log(data.height);
           this.iframeHeight = parseInt(data.height);
         }
       },

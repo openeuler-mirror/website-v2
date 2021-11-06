@@ -19,7 +19,7 @@ module.exports = {
                 THEME: '操作系统产业峰会2021',
                 TIME: '09:30-11:30',
                 OPTION: '09:30-11:30 操作系统产业峰会2021',
-                LIVEURL: 'https://vhall.huawei.com/v2watch/9874?lang=zh&thirdId='
+                LIVEURL: 'https://vhall.huawei.com/v2/watch/9874?lang=zh&thirdId='
             },
             {
                 ID: 9875,
