@@ -8,85 +8,110 @@ module.exports = {
             PC_IMG: "/img/summit/summit2021/summit2021-pc.png"
         },
         SUMMIT_INTRODUCE: "openEuler Summit 是由欧拉开源社区举办的开发者峰会。openEuler从服务器操作系统，升级为数字基础设施的操作系统，支持IT、CT、OT等数字基础设施全场景，覆盖服务器、云、边、嵌入式等各种形态的需求。伴随21.09版本的发布 openEuler 已经包含了服务器、云原生、边缘计算和嵌入式的四大应用场景。openEuler 通过开源开放，不断探索科技创新的边界，驱动物理世界与数字世界的深度融合。开发者、用户、社区贡献者、软件爱好者在 openEuler Summit 汇聚，驱动无止境的创新与拓展，闪耀数字时代星辰大海。",
-        LIVETITLE: '峰会直播间',
+        LIVETITLE: '操作系统产业峰会生态伙伴直播间',
+        TEN_TITLE:'openEuler Summit 2021 直播间',
         PC_LIVEIMG: '/img/summit/home/zh-pc-liveroom.png',
         MOBILE_LIVEIMG: '/img/summit/home/zh-mobile-liveroom.png',
-        SUMMITLIVE: [
+        SUMMITLIVE: {
+           NINE :[
             {
-                ID: 9875,
-                THEME: '操作系统产业峰会生态伙伴分论坛-麒麟软件',
+                ID: 9862,
+                THEME: '操作系统产业峰会2021',
+                TIME: '09:30-11:30',
+                OPTION: '09:30-11:30 操作系统产业峰会2021',
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9862?lang=zh&thirdId='
+            },
+            {
+                ID: 9863,
+                THEME: '麒麟软件',
                 TIME: '14:00-16:40',
                 OPTION: '14:00-16:40 麒麟软件',
-                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9875?lang=zh&thirdId='
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9863?lang=zh&thirdId='
             },
             {
-                ID: 9876,
-                THEME: '操作系统产业峰会生态伙伴分论坛-中科创达',
-                TIME: '14:00-16:40 ',
+                ID: 9900,
+                THEME: '麒麟信安',
+                TIME: '14:00-16:40',
+                OPTION: '14:00-16:40 麒麟信安',
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9900?lang=zh&thirdId='
+            },
+            {
+                ID: 9901,
+                THEME: '统信',
+                TIME: '14:00-17:00',
+                OPTION: '14:00-17:00 统信',
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9901?lang=zh&thirdId='
+            },
+            {
+                ID: 9864,
+                THEME: '中科创达',
+                TIME: '14:00-16:40',
                 OPTION: '14:00-16:40 中科创达',
-                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9876?lang=zh&thirdId='
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9864?lang=zh&thirdId='
             },
             {
-                ID: 9877,
-                THEME: '操作系统产业峰会生态伙伴分论坛-普华基础软件',
+                ID: 9865,
+                THEME: '普华基础软件',
                 TIME: '14:00-16:30 ',
                 OPTION: '14:00-16:30 普华基础软件',
-                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9877?lang=zh&thirdId='
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9865?lang=zh&thirdId='
             },
+           ],
+           TEN : [
             {
-                ID: 9878,
+                ID: 9866,
                 THEME: 'openEuler Summit 2021',
                 TIME: '9:30-11:55 ',
                 OPTION: '9:30-11:55 openEuler Summit 2021',
-                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9878?lang=zh&thirdId='
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9866?lang=zh&thirdId='
             },
             {
-                ID: 9879,
-                THEME: 'openEuler Summit 2021-内核分论坛',
+                ID: 9867,
+                THEME: '内核',
                 TIME: '13:00-17:30 ',
                 OPTION: '13:00-17:30 内核分论坛',
-                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9879?lang=zh&thirdId='
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9867?lang=zh&thirdId='
             },
             {
-                ID: 9880,
-                THEME: '云&虚拟化分论坛',
+                ID: 9868,
+                THEME: '云&虚拟化',
                 TIME: '13:00-18:00 ',
                 OPTION: '13:00-18:00 云&虚拟化分论坛',
-                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9880?lang=zh&thirdId='
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9868?lang=zh&thirdId='
             },
             {
-                ID: 9881,
-                THEME: '兼容性分论坛',
+                ID: 9869,
+                THEME: '兼容性',
                 TIME: '13:00-17:30 ',
                 OPTION: '13:00-17:30 兼容性分论坛',
-                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9881?lang=zh&thirdId='
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9869?lang=zh&thirdId='
             },
             {
-                ID: 9882,
-                THEME: '安全&可靠性&运维分论坛',
+                ID: 9870,
+                THEME: '安全&可靠性&运维',
                 TIME: '13:00-17:30 ',
                 OPTION: '13:00-17:30 安全&可靠性&运维分论坛',
-                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9882?lang=zh&thirdId='
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9870?lang=zh&thirdId='
             },
             {
-                ID: 9883,
-                THEME: '分布式&多样性计算分论坛',
+                ID: 9871,
+                THEME: '分布式&多样性计算',
                 TIME: '13:00-17:30 ',
                 OPTION: '13:00-17:30 分布式&多样性计算分论坛',
-                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9883?lang=zh&thirdId='
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9871?lang=zh&thirdId='
             },
             {
-                ID: 9884,
-                THEME: '边缘&嵌入式分论坛',
+                ID: 9872,
+                THEME: '边缘&嵌入式',
                 TIME: '13:00-17:30 ',
                 OPTION: '13:00-17:30 边缘&嵌入式分论坛',
-                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9884?lang=zh&thirdId='
+                LIVEURL: 'https://vhall.huawei.com/fe/embed/watch/9872?lang=zh&thirdId='
             },
-        ],
+           ]
+        },
         AGENDA: {
             WEB_TITLE: '/img/summit/summit2021/zh-pc-summit2021.png',
             MOBILE_TITLE: '/img/summit/summit2021/zh-mobile-summit2021.png',
-
             DATE: ['11月09日', '11月10日', '上午', '下午'],
             SUB_FORUM: '操作系统产业峰会生态伙伴分论坛',
             FORUM_HEAD: ['麒麟软件', '麒麟信安', 'SUSE', '统信软件', '中科创达', '普华基础软件'],
@@ -911,6 +936,10 @@ module.exports = {
 
         },
         NAV_LIST: [
+            {
+                key: '#live',
+                name: '现场直播'
+            },
             {
                 key: '#agenda',
                 name: '峰会日程'

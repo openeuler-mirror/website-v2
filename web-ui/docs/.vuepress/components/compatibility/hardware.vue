@@ -70,7 +70,7 @@
                            </div>
                        </div>
                     </div>
-                    <div class="content-item">
+                    <!-- <div class="content-item">
                        <div class="left">{{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].ID}}</div>
                        <div class="right">
                            <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].TITLE}}</div>
@@ -82,17 +82,17 @@
                                {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].DESCRIPTION_2}}
                            </div>
                        </div>
-                    </div>
+                    </div> -->
                     <div class="content-item">
-                       <div class="left">{{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].ID}}</div>
+                       <div class="left">{{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].ID}}</div>
                        <div class="right">
-                           <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].TITLE}}</div>
+                           <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].TITLE}}</div>
                            <div class="item-content">
-                                {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].DESCRIPTION_1}}
+                                {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].DESCRIPTION_1}}
                                <a @click="to">
-                                   {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].A_TEXT}}
+                                   {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].A_TEXT}}
                                </a>
-                               {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].DESCRIPTION_2}}
+                               {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].DESCRIPTION_2}}
                            </div>
                        </div>
                     </div>
