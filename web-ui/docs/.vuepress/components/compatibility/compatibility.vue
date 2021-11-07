@@ -526,7 +526,17 @@ const locationMethods = {
             that.tableLoading = false;
             if(data) {
                 that.total = data.total;
-                that.softwareTableData = data.info;
+                let oldArray =data.info;
+                let targetArray = ['A','a', 'b','B', 'C','c','D', 'd','E', 'e','F', 'f','G', 'g','H', 'h','I', 'i', 'J','j', 'K','k', 'L','l', 'M','m', 'N','n', 'O','o', 'P','p','Q', 'q', 'R','r','S','s', 'T','t', 'U','u', 'V','v', 'W','w', 'X','x', 'Y','y', 'Z','z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+                let newArray=[];
+                for(let i=0;i<targetArray.length;i++){
+                    for(let j=0;j<oldArray.length;j++){
+                       if(oldArray[j].softwareName[0]==targetArray[i]){
+                           newArray.push(oldArray[j])
+                       }
+                    }
+                };
+                that.softwareTableData =newArray
             } else {
                 that.total = 0;
                 that.softwareTableData = [];

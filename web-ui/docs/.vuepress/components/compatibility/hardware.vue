@@ -22,7 +22,7 @@
                            <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].TITLE}}</div>
                            <div class="item-content">
                                 {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].DESCRIPTION_1}}
-                               <a :href="'mailto:' + i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].A_TEXT">
+                               <a :href="i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].A_TEXT">
                                    {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].A_TEXT}}
                                </a>
                                {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].DESCRIPTION_2}}
@@ -35,7 +35,7 @@
                            <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].TITLE}}</div>
                            <div class="item-content">
                                 {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].DESCRIPTION_1}}
-                               <a href="/openEuler-compatibility.pdf" download="openEuler兼容性策略介绍.pdf" >
+                               <a href="https://gitee.com/openeuler/compass-ci" >
                                    {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].A_TEXT}}
                                </a>
                            </div>
@@ -54,7 +54,7 @@
                            </div>
                        </div>
                     </div>
-                    <div class="content-item">
+                    <!-- <div class="content-item">
                        <div class="left">{{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].ID}}</div>
                        <div class="right">
                            <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].TITLE}}</div>
@@ -69,7 +69,7 @@
                                </a>
                            </div>
                        </div>
-                    </div>
+                    </div> -->
                     <!-- <div class="content-item">
                        <div class="left">{{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].ID}}</div>
                        <div class="right">
@@ -84,15 +84,15 @@
                        </div>
                     </div> -->
                     <div class="content-item">
-                       <div class="left">{{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].ID}}</div>
+                       <div class="left">{{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].ID}}</div>
                        <div class="right">
-                           <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].TITLE}}</div>
+                           <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].TITLE}}</div>
                            <div class="item-content">
-                                {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].DESCRIPTION_1}}
+                                {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].DESCRIPTION_1}}
                                <a @click="to">
-                                   {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].A_TEXT}}
+                                   {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].A_TEXT}}
                                </a>
-                               {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].DESCRIPTION_2}}
+                               {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].DESCRIPTION_2}}
                            </div>
                        </div>
                     </div>

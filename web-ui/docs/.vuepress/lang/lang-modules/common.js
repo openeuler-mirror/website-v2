@@ -172,7 +172,8 @@ module.exports = {
                     {
                         NAME: '兼容性列表',
                         PATH: '/compatibility/'
-                    }
+                    },
+                   
                 ],
                 CLASS: []
             }
@@ -195,6 +196,9 @@ module.exports = {
             }
         ],
         FOOTER: {
+            ATOM_TEXT:'',
+            ATOM_PC:'/zh-atom-pc.png',
+            ATOM_MO:'/zh-atom-mo.png',
             MAIL: 'contact@openeuler.io',
             COPY_RIGHT: '版权所有 © 2021 openEuler 保留一切权利',
             RIGHT_LIST: [{
@@ -390,7 +394,8 @@ module.exports = {
                     {
                         NAME: 'Compatibility List',
                         PATH: '/compatibility/'
-                    }
+                    },
+                  
                 ],
                 CLASS: []
             }
@@ -413,6 +418,9 @@ module.exports = {
             }
         ],
         FOOTER: {
+            ATOM_TEXT:'',
+            ATOM_PC:'/en-atom-pc.png',
+            ATOM_MO:'/en-atom-mo.png',
             MAIL: 'contact@openeuler.io',
             COPY_RIGHT: 'Copyright © 2021 openEuler. All rights reserved.',
             RIGHT_LIST: [{
@@ -588,7 +596,7 @@ module.exports = {
                     {
                         NAME: 'Список совместимости',
                         PATH: '/compatibility/'
-                    }
+                    },
                 ],
                 CLASS: []
             }
@@ -611,6 +619,9 @@ module.exports = {
             }
         ],
         FOOTER: {
+            ATOM_TEXT:'',
+            ATOM_PC:'/ru-atom-pc.png',
+            ATOM_MO:'/ru-atom-mo.png',
             MAIL: 'contact@openeuler.io',
             COPY_RIGHT: 'Авторские права © openEuler 2021. Все права защищены.',
             RIGHT_LIST: [{

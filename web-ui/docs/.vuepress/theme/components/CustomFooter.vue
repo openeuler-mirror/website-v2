@@ -1,5 +1,14 @@
 <template>
     <div class="footer-wrapper">
+        <!-- <div class="atom">
+            <img :src="i18n.common.FOOTER.ATOM_PC" alt="" class="atom-pc">
+            <img :src="i18n.common.FOOTER.ATOM_MO" alt="" class="atom-mo">
+        </div> -->
+        <div class="qrcode" v-show="qrShow">
+            <!-- <img src="/img/other/questionnaire/close.png" alt=""> -->
+            <div class="close" @click="closeQr">×</div>
+            <a @click="goFooterUrl('/other/questionnaire')"><img src="/img/other/questionnaire/qrcode.png" alt=""></a>
+        </div>
         <div class="footer-content">
             <div class="footer-left">
                 <img src="/footer-logo2.svg" class="footer-logo" />
@@ -30,6 +39,7 @@
 export default {
     data() {
         return {
+            qrShow:true,
             i18n: this.i18n || {
                 common: {
                     FOOTER: {}
@@ -38,10 +48,15 @@ export default {
         };
     },
     methods: {
+        closeQr() {
+            this.qrShow=false;
+        },
         goFooterUrl(url) {
+            console.log();
             if (url.includes('https')) {
                 window.open(url)
             } else {
+                console.log(this.$router);
                 this.$router.push({
                     path: this.resolvePath(url)
                 });
@@ -54,13 +69,59 @@ export default {
 
 <style lang="less" scoped>
 .footer-wrapper {
-    height: 176px;
-    background-color: #111;
+    height: 175px;
+    background-color: #000;
     @media screen and (max-width: 1000px) {
         height: 328px;
     }
+    .atom {
+        // width: 1000px;
+        height: 332px;
+        text-align: center;
+        overflow: hidden;
+        img {
+            width: 1920px;
+            height: 100%;
+        }
+    }
+    .qrcode {
+        position: fixed;
+        cursor: pointer;
+        left: 76px;
+        bottom: 230px;
+        width: 188px;
+        height: 188px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        z-index: 999;
+    }
+@media screen and (max-width: 1000px) {
+    .qrcode {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+    .close {
+        position: absolute;
+        font-size: 30px;
+        line-height: 1;
+        color: #3165f3;
+        text-align: center;
+        top: -14px;
+        right: -15px;
+        height: 28px;
+        width: 28px;
+        background-color:#ADC1FA;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    .close:hover {
+        color: #fff;
+        background-color: #EB3941;
+    }
     .footer-content {
-
         margin: 0 auto;
         height: 100%;
         width: 1120px;
