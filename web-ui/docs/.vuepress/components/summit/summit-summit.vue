@@ -526,8 +526,10 @@ export default {
         this.activeIndex = 1;
       } else if (scrollTop > 2620 + value && scrollTop < 3520 + value) {
         this.activeIndex = 2;
-      } else if (scrollTop > 3720 + value) {
+      } else if (scrollTop > 3720 + value && scrollTop < 4300 + value) {
         this.activeIndex = 3;
+      } else  if (scrollTop > 4300){
+        this.activeIndex = 4;
       } else {
         return false;
       }

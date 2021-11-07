@@ -19,4 +19,5 @@ module.exports = {
     compatibility: require('./lang-modules/compatibility').cn,
     activities: require('./lang-modules/activities').cn,
     summit: require('./lang-modules/summit').cn,
+    questionnaire: require('./lang-modules/questionnaire').cn,
 };
