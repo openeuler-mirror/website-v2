@@ -119,6 +119,7 @@ export default {
     }
   }
   .rule {
+    margin-bottom: 170px;
     .rule-title {
       margin-bottom: 20px;
       text-align: center;
