@@ -69,7 +69,11 @@
       <p v-else>{{ i18n.summit.TEN_TITLE }}</p>
       <div class="item-box">
         <div
-          :class="['live-item', roomId === index ? 'activeRoom' : '',{'summit-item':isSummit&&currentTime=='nine'}]"
+          :class="[
+            'live-item',
+            roomId === index ? 'activeRoom' : '',
+            { 'summit-item': isSummit && currentTime == 'nine' },
+          ]"
           v-for="(item, index) in renderData"
           @click="tabLiveRoom(item.LIVEURL, index)"
           :key="index"
@@ -123,9 +127,9 @@ export default {
         } catch (e) {
           data = event.data;
         }
-        if (data.height =="auto") {
-          this.iframeHeight = 550
-        } else if(data.height){
+        if (data.height == "auto") {
+          this.iframeHeight = 550;
+        } else if (data.height) {
           this.iframeHeight = parseInt(data.height);
         }
       },
@@ -134,13 +138,13 @@ export default {
   },
   methods: {
     tabClick() {
-        if(this.currentTime=="nine") {
-            this.renderData=this.liveData.NINE;
-            this.showIframe()
-        } else {
-            this.renderData=this.liveData.TEN;
-            this.showIframe()
-        }
+      if (this.currentTime == "nine") {
+        this.renderData = this.liveData.NINE;
+        this.showIframe();
+      } else {
+        this.renderData = this.liveData.TEN;
+        this.showIframe();
+      }
       console.log(this.currentTime);
     },
     showIframe(id) {
@@ -214,6 +218,12 @@ export default {
 .el-tabs {
   .el-tabs__nav-wrap::after {
     display: none !important;
+  }
+  .el-tabs__nav-scroll {
+    @media screen and (max-width: 1000px) {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 .live-room {
