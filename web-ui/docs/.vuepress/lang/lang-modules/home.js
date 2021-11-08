@@ -46,8 +46,8 @@ module.exports = {
             }
         ],
         HOME_NEWRELEASE: [{
-                MOBILE_IMG: "url('https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler-summit-2021/images/%E6%AC%A7%E6%8B%89-375x300-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
-                PC_IMG: "url('https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler-summit-2021/images/1920x500%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
+                MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-summit-2021/images/%E6%AC%A7%E6%8B%89-375x300-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
+                PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-summit-2021/images/1920x500%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
             },
             {
                 MOBILE_IMG: "url('/img/home/banner/21.09_white_paper_mo.png')",

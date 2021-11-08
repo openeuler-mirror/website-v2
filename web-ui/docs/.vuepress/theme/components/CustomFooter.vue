@@ -89,7 +89,7 @@ export default {
     }
   }
   .qrcode {
-    position: absolute;
+    position: fixed;
     cursor: pointer;
     left: 76px;
     bottom: 230px;
@@ -105,7 +105,6 @@ export default {
   }
   @media screen and (max-width: 1000px) {
     .qrcode {
-      position: fixed;
       left: 50%;
       top: 50%;
       transform: translateX(-45%) translateY(-50%) scale(0.8);
