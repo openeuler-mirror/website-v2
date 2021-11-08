@@ -1,221 +1,227 @@
 <template>
-    <div class="footer-wrapper">
-        <!-- <div class="atom">
+  <div class="footer-wrapper">
+    <!-- <div class="atom">
             <img :src="i18n.common.FOOTER.ATOM_PC" alt="" class="atom-pc">
             <img :src="i18n.common.FOOTER.ATOM_MO" alt="" class="atom-mo">
         </div> -->
-        <div class="qrcode" v-show="qrShow">
-            <div class="close" @click="closeQr"></div>
-            <a @click="goFooterUrl('/other/questionnaire')"  ><img src="/img/other/questionnaire/qrcode.png" alt=""></a>
-        </div>
-        <div class="footer-content">
-            <div class="footer-left">
-                <img src="/footer-logo2.svg" class="footer-logo" />
-                <div class="footer-mail">{{ i18n.common.FOOTER.MAIL }}</div>
-            </div>
-            <div class="footer-center">
-                <ul class="right-list">
-                    <li
-                        v-for="(item, index) in i18n.common.FOOTER.RIGHT_LIST"
-                        :key="index"
-                    >
-                        <a @click="goFooterUrl(item.URL)">{{ item.NAME }}</a>
-                    </li>
-                </ul>
-                <p class="footer-copyright">
-                    {{ i18n.common.FOOTER.COPY_RIGHT }}
-                </p>
-            </div>
-            <div class="footer-right">
-                <img src="/qrcode.png" class="footer-qrcode" />
-                <div class="qrcode-desc">{{ i18n.common.FOOTER.QR_CODE }}</div>
-            </div>
-        </div>
+    <div class="qrcode" v-show="qrShow">
+      <div class="close" @click="closeQr"></div>
+      <img
+        @click="goFooterUrl('/other/questionnaire')"
+        src="/img/other/questionnaire/qrcode.png"
+        alt=""
+      />
     </div>
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="/footer-logo2.svg" class="footer-logo" />
+        <div class="footer-mail">{{ i18n.common.FOOTER.MAIL }}</div>
+      </div>
+      <div class="footer-center">
+        <ul class="right-list">
+          <li
+            v-for="(item, index) in i18n.common.FOOTER.RIGHT_LIST"
+            :key="index"
+          >
+            <a @click="goFooterUrl(item.URL)">{{ item.NAME }}</a>
+          </li>
+        </ul>
+        <p class="footer-copyright">
+          {{ i18n.common.FOOTER.COPY_RIGHT }}
+        </p>
+      </div>
+      <div class="footer-right">
+        <img src="/qrcode.png" class="footer-qrcode" />
+        <div class="qrcode-desc">{{ i18n.common.FOOTER.QR_CODE }}</div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-    data() {
-        return {
-            qrShow:true,
-            i18n: this.i18n || {
-                common: {
-                    FOOTER: {}
-                }
-            }
-        };
-    },
-    methods: {
-        closeQr() {
-            this.qrShow=false;
+  data() {
+    return {
+      qrShow: true,
+      i18n: this.i18n || {
+        common: {
+          FOOTER: {},
         },
-        goFooterUrl(url) {
-            console.log();
-            if (url.includes('https')) {
-                window.open(url)
-            } else {
-                console.log(this.$router);
-                this.$router.push({
-                    path: this.resolvePath(url)
-                });
-            }
-        }
+      },
+    };
+  },
+  methods: {
+    closeQr() {
+      this.qrShow = false;
     },
-    components: {}
+    goFooterUrl(url) {
+      url=='/other/questionnaire' ? this.closeQr():''
+      if (url.includes("https")) {
+        window.open(url);
+      } else {
+        console.log(this.$router);
+        this.$router.push({
+          path: this.resolvePath(url),
+        });
+      }
+    },
+  },
+  components: {},
 };
 </script>
 
 <style lang="less" scoped>
 .footer-wrapper {
-    position: relative;
-    height: 175px;
-    background-color: #000;
+  position: relative;
+  height: 175px;
+  background-color: #000;
+  @media screen and (max-width: 1000px) {
+    height: 328px;
+  }
+  .atom {
+    // width: 1000px;
+    height: 332px;
+    text-align: center;
+    overflow: hidden;
+    img {
+      width: 1920px;
+      height: 100%;
+    }
+  }
+  .qrcode {
+    position: absolute;
+    cursor: pointer;
+    left: 76px;
+    bottom: 230px;
+    width: 188px;
+    height: 188px;
+    img {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-tap-highlight-color: transparent;
+      width: 100%;
+      height: 100%;
+    }
+    z-index: 999;
+  }
+  @media screen and (max-width: 1000px) {
+    .qrcode {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-45%) translateY(-50%) scale(0.8);
+    }
+  }
+  .close {
+    position: absolute;
+    top: -5px;
+    right: -4px;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .footer-content {
+    margin: 0 auto;
+    height: 100%;
+    width: 1120px;
+    display: flex;
+    justify-content: space-between;
     @media screen and (max-width: 1000px) {
-        height: 328px;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      justify-content: space-evenly;
     }
-    .atom {
-        // width: 1000px;
-        height: 332px;
-        text-align: center;
-        overflow: hidden;
-        img {
-            width: 1920px;
-            height: 100%;
-        }
-    }
-    .qrcode {
-        display: none;
-        position: absolute;
-        cursor: pointer;
-        left: 76px;
-        bottom: 230px;
-        width: 188px;
-        height: 188px;
-        img {
-            width: 100%;
-            height: 100%;
-        }
-        z-index: 999;
-    }
-@media screen and (max-width: 1000px) {
-    .qrcode {
-        left: 50%;
-        top:-500%;
-        transform: translateX(-45%) scale(0.8);
-    }
-}
-    .close {
-        position: absolute;
-        top: -5px;
-        right: -4px;
-        height: 28px;
-        width: 28px;
-        border-radius: 50%;
-        z-index: 1;
-    }
-    .footer-content {
-        margin: 0 auto;
-        height: 100%;
-        width: 1120px;
-        display: flex;
-        justify-content: space-between;
+    .footer-left {
+      @media screen and (max-width: 1000px) {
+        height: unset;
+        font-size: 14px;
+        align-items: center;
+      }
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: baseline;
+      font-size: 16px;
+      .footer-mail {
+        color: #fff;
+        margin-top: 17px;
         @media screen and (max-width: 1000px) {
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            justify-content: space-evenly;
+          margin-top: 10px;
         }
-        .footer-left {
-            @media screen and (max-width: 1000px) {
-                height: unset;
-                font-size: 14px;
-                align-items: center;
-            }
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: baseline;
-            font-size: 16px;
-            .footer-mail {
-                color: #fff;
-                margin-top: 17px;
-                @media screen and (max-width: 1000px) {
-                    margin-top: 10px;
-                }
-            }
-        }
-        .footer-center {
-            @media screen and (max-width: 1000px) {
-                align-items: unset;
-                height: unset;
-                order: 1;
-            }
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-end;
-            .footer-copyright {
-                width: 100%;
-                text-align: center;
-                color: #fff;
-                margin-top: 21px;
-                font-size: 12px;
-                @media screen and (max-width: 1000px) {
-                    margin-top: 16px;
-                }
-            }
-            .right-list {
-                margin: 0 auto;
-                display: flex;
-                align-items: flex-end;
-                font-size: 14px;
-                li {
-                    padding: 0 15px;
-                    a {
-                        color: #fff;
-                        text-decoration: none;
-                        cursor: pointer;
-                    }
-                }
-                li:nth-child(2) {
-                    padding: 0 16px;
-                    border-left: 1px solid #fff;
-                    border-right: 1px solid #fff;
-                }
-                li:nth-child(3) {
-                    padding: 0 16px;
-                    border-right: 1px solid #fff;
-                }
-            }
-        }
-        .footer-right {
-            @media screen and (max-width: 1000px) {
-                height: unset;
-            }
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-size: 12px;
-            .footer-qrcode {
-                width: 78px;
-                height: 78px;
-            }
-            .qrcode-desc {
-                color: #fff;
-                margin-top: 17px;
-                text-align: center;
-            }
-        }
+      }
     }
+    .footer-center {
+      @media screen and (max-width: 1000px) {
+        align-items: unset;
+        height: unset;
+        order: 1;
+      }
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      .footer-copyright {
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        margin-top: 21px;
+        font-size: 12px;
+        @media screen and (max-width: 1000px) {
+          margin-top: 16px;
+        }
+      }
+      .right-list {
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-end;
+        font-size: 14px;
+        li {
+          padding: 0 15px;
+          a {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+          }
+        }
+        li:nth-child(2) {
+          padding: 0 16px;
+          border-left: 1px solid #fff;
+          border-right: 1px solid #fff;
+        }
+        li:nth-child(3) {
+          padding: 0 16px;
+          border-right: 1px solid #fff;
+        }
+      }
+    }
+    .footer-right {
+      @media screen and (max-width: 1000px) {
+        height: unset;
+      }
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      .footer-qrcode {
+        width: 78px;
+        height: 78px;
+      }
+      .qrcode-desc {
+        color: #fff;
+        margin-top: 17px;
+        text-align: center;
+      }
+    }
+  }
 }
 @media screen and (min-width: 1000px) and (max-width: 1120px) {
-    .footer-content {
-        width: 100% !important;
-    }
+  .footer-content {
+    width: 100% !important;
+  }
 }
 </style>

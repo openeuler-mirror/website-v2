@@ -4,8 +4,8 @@
 module.exports = {
     cn: {
         SUMMIT_BANNER: {
-            MOBILE_IMG: "/img/summit/summit2021/summit2021-mo.png",
-            PC_IMG: "/img/summit/summit2021/summit2021-pc.png"
+            MOBILE_IMG: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler-summit-2021/images/%E6%AC%A7%E6%8B%89-375x300-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%A6%96%E9%A1%B5.png",
+            PC_IMG: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/openEuler-summit-2021/images/1920x380%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png"
         },
         SUMMIT_INTRODUCE: "openEuler Summit 是由欧拉开源社区举办的开发者峰会。openEuler从服务器操作系统，升级为数字基础设施的操作系统，支持IT、CT、OT等数字基础设施全场景，覆盖服务器、云、边、嵌入式等各种形态的需求。伴随21.09版本的发布 openEuler 已经包含了服务器、云原生、边缘计算和嵌入式的四大应用场景。openEuler 通过开源开放，不断探索科技创新的边界，驱动物理世界与数字世界的深度融合。开发者、用户、社区贡献者、软件爱好者在 openEuler Summit 汇聚，驱动无止境的创新与拓展，闪耀数字时代星辰大海。",
         LIVETITLE: '操作系统产业峰会生态伙伴直播间',

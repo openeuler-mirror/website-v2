@@ -120,7 +120,6 @@ export default {
     window.addEventListener(
       "message",
       (event) => {
-        console.log(event);
         let data = "";
         try {
           data = JSON.parse(event.data);
