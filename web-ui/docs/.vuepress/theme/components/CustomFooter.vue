@@ -92,7 +92,7 @@ export default {
     position: fixed;
     cursor: pointer;
     left: 76px;
-    bottom: 230px;
+    bottom: 100px;
     width: 188px;
     height: 188px;
     img {

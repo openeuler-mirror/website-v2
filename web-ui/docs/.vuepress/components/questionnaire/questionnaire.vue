@@ -3,7 +3,7 @@
     <div class="questionnaire">
       <a
         class="joinsoon"
-        href="https://huaweicompute.wjx.cn/wjx/checkstatus.aspx?activity=135542942&returnurl=%2fvm%2fOS0Ja5G.aspx%3fudsid%3d318969&s=2"
+        href="https://huaweicompute.wjx.cn/vm/OS0Ja5G.aspx?udsid=318969"
       ></a>
       <img
         src="/img/other/questionnaire/questionnaire.png"
@@ -149,13 +149,13 @@ export default {
       justify-content: center;
       li {
         margin-bottom: 30px;
-        width: 300px;
-        height: 315px;
+        width: 315px;
+        height: 300px;
       }
       li:first-of-type {
         margin-bottom: 30px;
-        width: 300px;
-        height: 315px;
+        width: 315px;
+        height: 300px;
       }
     }
     .rule {
