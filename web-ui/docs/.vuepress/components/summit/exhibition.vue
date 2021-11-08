@@ -131,10 +131,148 @@ export default {
         background-color:black ;
     }
     a:nth-of-type(1) {
-        width: 40px;
-        height: 60px;
-        top: 261px;
-        left: 179px;
+        width: 131px;
+        height: 26px;
+        top: 2px;
+        left: 128px;
+    }
+    a:nth-of-type(2) {
+        width: 80px;
+        height: 28px;
+        top: 0;
+        left: 337px;
+    }
+    a:nth-of-type(3) {
+        width: 80px;
+        height: 28px;
+        top: 0;
+        left: 469px;
+    }
+    a:nth-of-type(4) {
+        width: 80px;
+        height: 28px;
+        top: 0;
+        left: 601px;
+    }
+    a:nth-of-type(5) {
+         width: 80px;
+        height: 28px;
+        top: 0;
+        left: 733px;
+    }
+    a:nth-of-type(6) {
+        width: 80px;
+        height: 28px;
+        top: 0;
+        left: 862px;
+    }
+    a:nth-of-type(7) {
+        width: 80px;
+        height: 28px;
+        top: 158px;
+        left: 128px;
+    }
+    a:nth-of-type(8) {
+        width: 80px;
+        height: 28px;
+        top: 161px;
+        left: 272px;
+    }
+    a:nth-of-type(9) {
+        width: 80px;
+        height: 28px;
+        top: 149px;
+        left: 459px;
+    }
+    a:nth-of-type(10) {
+        width: 80px;
+        height: 28px;
+        top: 147px;
+        left: 592px;
+    }
+    a:nth-of-type(11) {
+        width: 134px;
+        height: 28px;
+        top: 129px;
+        left: 717px;
+    }
+    a:nth-of-type(13) {
+        width: 134px;
+        height: 28px;
+        top: 149px;
+        left: 884px;
+    }
+    a:nth-of-type(10) {
+        width: 80px;
+        height: 28px;
+        top: 147px;
+        left: 592px;
+    }
+    a:nth-of-type(10) {
+        width: 80px;
+        height: 28px;
+        top: 147px;
+        left: 592px;
+    }
+    a:nth-of-type(10) {
+        width: 80px;
+        height: 28px;
+        top: 147px;
+        left: 592px;
+    }
+    a:nth-of-type(10) {
+        width: 80px;
+        height: 28px;
+        top: 147px;
+        left: 592px;
+    }
+    a:nth-of-type(10) {
+        width: 80px;
+        height: 28px;
+        top: 147px;
+        left: 592px;
+    }
+    a:nth-of-type(10) {
+        width: 80px;
+        height: 28px;
+        top: 147px;
+        left: 592px;
+    }
+    a:nth-of-type(10) {
+        width: 80px;
+        height: 28px;
+        top: 147px;
+        left: 592px;
+    }
+    a:nth-of-type(10) {
+        width: 80px;
+        height: 28px;
+        top: 147px;
+        left: 592px;
+    }
+    a:nth-of-type(10) {
+        width: 80px;
+        height: 28px;
+        top: 147px;
+        left: 592px;
+    }
+    a:nth-of-type(10) {
+        width: 80px;
+        height: 28px;
+        top: 147px;
+        left: 592px;
+    }
+    a:nth-of-type(10) {
+        width: 80px;
+        height: 28px;
+        top: 147px;
+        left: 592px;
+    }
+    a:nth-of-type(10) {
+        width: 80px;
+        height: 28px;
+        top: 147px;
+        left: 592px;
     }
   }
 }
