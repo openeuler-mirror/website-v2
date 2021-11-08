@@ -238,6 +238,7 @@
           :agendaData="carouselObj"
           :sigData="sigObj"
         ></carousel>
+        <!-- <exhibition></exhibition> -->
         <div class="lecturer" id="lecturer">
           <div class="title">
             <img
@@ -439,11 +440,13 @@
 import carousel from "./carousel.vue";
 import titlenav from "./titleNav.vue";
 import liveroom from "./liveroom.vue";
+import exhibition from "./exhibition.vue"
 export default {
   components: {
     carousel,
     titlenav,
     liveroom,
+    exhibition
   },
   data() {
     return {
