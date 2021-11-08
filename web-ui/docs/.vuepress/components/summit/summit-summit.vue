@@ -238,7 +238,7 @@
           :agendaData="carouselObj"
           :sigData="sigObj"
         ></carousel>
-        <!-- <exhibition></exhibition> -->
+        <exhibition id="exhibition"></exhibition>
         <div class="lecturer" id="lecturer">
           <div class="title">
             <img
@@ -525,16 +525,18 @@ export default {
       }
       if (scrollTop > 500 && scrollTop < 1000 + value) {
         this.activeIndex = 0;
-      } else if (scrollTop > 1620 + value && scrollTop < 2020 + value) {
+      } else if (scrollTop > 1620 + value && scrollTop < 2120 + value) {
         this.activeIndex = 1;
-      } else if (scrollTop > 2620 + value && scrollTop < 3520 + value) {
+      } else if (scrollTop > 2620 + value && scrollTop < 3020 + value) {
         this.activeIndex = 2;
-      } else if (scrollTop > 3720 + value && scrollTop < 4300 + value) {
+      } else if (scrollTop > 3220 + value && scrollTop < 4000 + value) {
         this.activeIndex = 3;
-      } else  if (scrollTop > 4300){
+      } else  if (scrollTop > 4300 +value && scrollTop <5000 +value){
         this.activeIndex = 4;
+      } else  if (scrollTop>5400 +value){
+       this.activeIndex = 5
       } else {
-        return false;
+         return false;
       }
     },
     go(url) {
