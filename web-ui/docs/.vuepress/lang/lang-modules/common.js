@@ -196,9 +196,9 @@ module.exports = {
             }
         ],
         FOOTER: {
-            ATOM_TEXT:'',
-            ATOM_PC:'/zh-atom-pc.png',
-            ATOM_MO:'/zh-atom-mo.png',
+            ATOM_TEXT:'openEuler 是由开放原子开源基金会（OpenAtom Foundation）孵化及运营的开源项目',
+            ATOM_PC:'/atom-pc.png',
+            ATOM_MO:'/atom-mo.png',
             MAIL: 'contact@openeuler.io',
             COPY_RIGHT: '版权所有 © 2021 openEuler 保留一切权利',
             RIGHT_LIST: [{
@@ -418,9 +418,9 @@ module.exports = {
             }
         ],
         FOOTER: {
-            ATOM_TEXT:'',
-            ATOM_PC:'/en-atom-pc.png',
-            ATOM_MO:'/en-atom-mo.png',
+            ATOM_TEXT:'openEuler is an open source project incubated and operated by the OpenAtom Foundation.',
+            ATOM_PC:'/atom-pc.png',
+            ATOM_MO:'/atom-mo.png',
             MAIL: 'contact@openeuler.io',
             COPY_RIGHT: 'Copyright © 2021 openEuler. All rights reserved.',
             RIGHT_LIST: [{
@@ -619,9 +619,9 @@ module.exports = {
             }
         ],
         FOOTER: {
-            ATOM_TEXT:'',
-            ATOM_PC:'/ru-atom-pc.png',
-            ATOM_MO:'/ru-atom-mo.png',
+            ATOM_TEXT:'openEuler - это проект с открытым исходным кодом, созданный и управляемый фондом OpenAtom.',
+            ATOM_PC:'/atom-pc.png',
+            ATOM_MO:'/atom-mo.png',
             MAIL: 'contact@openeuler.io',
             COPY_RIGHT: 'Авторские права © openEuler 2021. Все права защищены.',
             RIGHT_LIST: [{

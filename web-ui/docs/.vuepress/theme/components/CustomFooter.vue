@@ -1,9 +1,5 @@
 <template>
   <div class="footer-wrapper">
-    <!-- <div class="atom">
-            <img :src="i18n.common.FOOTER.ATOM_PC" alt="" class="atom-pc">
-            <img :src="i18n.common.FOOTER.ATOM_MO" alt="" class="atom-mo">
-        </div> -->
     <div class="qrcode" v-show="qrShow">
       <div class="close" @click="closeQr"></div>
       <img
@@ -11,6 +7,16 @@
         src="/img/other/questionnaire/qrcode.png"
         alt=""
       />
+    </div>
+    <div class="atom">
+      <p>{{ i18n.common.FOOTER.ATOM_TEXT }}</p>
+      <img
+        :src="i18n.common.FOOTER.ATOM_PC"
+        alt=""
+        class="atom-pc"
+        v-if="!isShowH5"
+      />
+      <img :src="i18n.common.FOOTER.ATOM_MO" alt="" class="atom-mo" v-else />
     </div>
     <div class="footer-content">
       <div class="footer-left">
@@ -55,7 +61,7 @@ export default {
       this.qrShow = false;
     },
     goFooterUrl(url) {
-      url=='/other/questionnaire' ? this.closeQr():''
+      url == "/other/questionnaire" ? this.closeQr() : "";
       if (url.includes("https")) {
         window.open(url);
       } else {
@@ -73,19 +79,37 @@ export default {
 <style lang="less" scoped>
 .footer-wrapper {
   position: relative;
-  height: 175px;
+  height: 530px;
   background-color: #000;
   @media screen and (max-width: 1000px) {
-    height: 328px;
+    height: 508px;
   }
   .atom {
-    // width: 1000px;
     height: 332px;
     text-align: center;
     overflow: hidden;
     img {
-      width: 1920px;
-      height: 100%;
+      width: 380px;
+      height: 81px;
+    }
+    p {
+      margin: 88px 0 50px 0;
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .atom {
+      padding: 0 50px;
+      height: 180px;
+      img {
+        width: 191px;
+        height: 41px;
+      }
+      p {
+        font-size: 12px;
+        margin: 40px 0 20px 0;
+      }
     }
   }
   .qrcode {
@@ -121,11 +145,12 @@ export default {
   }
   .footer-content {
     margin: 0 auto;
-    height: 100%;
+    height: 200px;
     width: 1120px;
     display: flex;
     justify-content: space-between;
     @media screen and (max-width: 1000px) {
+     height: 328px;
       flex-direction: column;
       align-items: center;
       width: 100%;

@@ -1080,6 +1080,10 @@ module.exports = {
                 name: '峰会日程'
             },
             {
+                key: '#exhibition',
+                name: '线上展厅'
+            },
+            {
                 key: '#lecturer',
                 name: '演讲嘉宾'
             },
