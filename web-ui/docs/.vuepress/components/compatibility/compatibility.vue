@@ -452,11 +452,19 @@
                 :total="total"
                 :hide-on-single-page="pageValue"
             ></el-pagination>
-            <div class="bottomBanner">
+            <div class="bottomBanner" v-show="tabActiveName!=='software'">
                 <div class="bottomBanner-content">
                     {{i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT}}
                     <a @click="goToHareware()" class="bottom-link">
                         {{i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE}}.
+                    </a>
+                </div>
+            </div>
+            <div class="bottomBanner" v-show="tabActiveName==='software'">
+                <div class="bottomBanner-content">
+                    {{i18n.compatibility.SOFTWARE_OEC_DETAIL.TEXT}}
+                    <a @click="goToSoftware()" class="bottom-link">
+                        {{i18n.compatibility.SOFTWARE_OEC_DETAIL.TITLE}}.
                     </a>
                 </div>
             </div>
@@ -553,6 +561,7 @@ export default {
     data() {
         that = this;
         return {
+            isSoft:false,
             tabActiveName: 'drive',
             hardwareOSOptions: [],
             hardwareArchitectureOptions: [],
@@ -643,6 +652,7 @@ export default {
             }
         },
         handleTabClick(tab, event) {
+            console.log(this.tabActiveName==='software');
             let lang = '';
             if(window.location.pathname.indexOf('/en/') !== -1) {
                 lang = 'en';
@@ -691,6 +701,11 @@ export default {
         goToHareware () {
             this.$router.push({
                 path: this.resolvePath('/compatibility/hardware/')
+            })
+        },
+        goToSoftware () {
+            this.$router.push({
+                path: this.resolvePath('/compatibility/software/')
             })
         }
     }

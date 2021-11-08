@@ -3,96 +3,97 @@
         <div class="banner">
             <div class="breadcrumb" @click="to">{{i18n.compatibility.COMPATIBILITY}} \</div>
             <div class="banner-title">
-                {{i18n.compatibility.HARDWARE_OEC_DETAIL.TITLE}}
+                {{i18n.compatibility.SOFTWARE_OEC_DETAIL.TITLE}}
             </div>
         </div>
         <div class="hardware-content">
             <div class="hardware-content-top">
-                <div class="title">{{i18n.compatibility.HARDWARE_OEC_DETAIL.DISCRIPTION_TITLE}}</div>
+                <div class="title">{{i18n.compatibility.SOFTWARE_OEC_DETAIL.DISCRIPTION_TITLE}}</div>
                 <div class="content">
-                    {{i18n.compatibility.HARDWARE_OEC_DETAIL.DISCRIPTION_CONTENT}}
+                    {{i18n.compatibility.SOFTWARE_OEC_DETAIL.DISCRIPTION_CONTENT}}
                 </div>
             </div>
             <div class="hardware-content-middle">
-                <div class="title">{{i18n.compatibility.HARDWARE_OEC_DETAIL.PROCESS_TITLE}}</div>
+                <div class="title">{{i18n.compatibility.SOFTWARE_OEC_DETAIL.PROCESS_TITLE}}</div>
                 <div class="content">
                     <div class="content-item">
-                       <div class="left">{{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].ID}}</div>
+                       <div class="left">{{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[0].ID}}</div>
                        <div class="right">
-                           <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].TITLE}}</div>
+                           <div class="item-title"> {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[0].TITLE}}</div>
                            <div class="item-content">
-                                {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].DESCRIPTION_1}}
-                               <a :href="'mailto:' + i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].A_TEXT">
-                                   {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].A_TEXT}}
+                                {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[0].DESCRIPTION_1}}
+                               <a :href="i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[0].A_TEXT">
+                                   {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[0].A_TEXT}}
                                </a>
-                               {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].DESCRIPTION_2}}
+                               {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[0].DESCRIPTION_2}}
                            </div>
                        </div>
                     </div>
                     <div class="content-item">
-                       <div class="left">{{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].ID}}</div>
+                       <div class="left">{{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[1].ID}}</div>
                        <div class="right">
-                           <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].TITLE}}</div>
+                           <div class="item-title"> {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[1].TITLE}}</div>
                            <div class="item-content">
-                                {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].DESCRIPTION_1}}
-                               <a href="/openEuler-compatibility.pdf" download="openEuler兼容性策略介绍.pdf" >
-                                   {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].A_TEXT}}
+                                {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[1].DESCRIPTION_1}}
+                               <a href="https://gitee.com/openeuler/compass-ci" >
+                                   {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[1].A_TEXT}}
                                </a>
+                               {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[1].DESCRIPTION_2}}
                            </div>
                        </div>
                     </div>
                     <div class="content-item">
-                       <div class="left">{{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[2].ID}}</div>
+                       <div class="left">{{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[2].ID}}</div>
                        <div class="right">
-                           <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[2].TITLE}}</div>
+                           <div class="item-title"> {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[2].TITLE}}</div>
                            <div class="item-content">
-                                {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[2].DESCRIPTION_1}}
-                               <a target="_blank" :href="i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[2].A_TEXT">
-                                   {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[2].A_TEXT}}
+                                {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[2].DESCRIPTION_1}}
+                               <a target="_blank" :href="i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[2].A_TEXT">
+                                   {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[2].A_TEXT}}
                                </a>
-                               {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[2].DESCRIPTION_2}}
+                               {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[2].DESCRIPTION_2}}
                            </div>
                        </div>
                     </div>
-                    <div class="content-item">
-                       <div class="left">{{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].ID}}</div>
+                    <!-- <div class="content-item">
+                       <div class="left">{{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[3].ID}}</div>
                        <div class="right">
-                           <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].TITLE}}</div>
+                           <div class="item-title"> {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[3].TITLE}}</div>
                            <div class="item-content">
-                                {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].DESCRIPTION_1}}
+                                {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[3].DESCRIPTION_1}}
                                <a target="_blank" href="https://gitee.com/src-openeuler/oec-hardware/releases">
-                                   {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].A_TEXT}}
+                                   {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[3].A_TEXT}}
                                </a>
-                               {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].DESCRIPTION_2}}
+                               {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[3].DESCRIPTION_2}}
                                 <a href="/openEuler硬件兼容性测试工具使用指南.pdf" download="openEuler硬件兼容性测试工具使用指南.pdf">
-                                   {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].A_TEXT_2}}
+                                   {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[3].A_TEXT_2}}
                                </a>
                            </div>
                        </div>
-                    </div>
-                    <div class="content-item">
-                       <div class="left">{{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].ID}}</div>
+                    </div> -->
+                    <!-- <div class="content-item">
+                       <div class="left">{{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[4].ID}}</div>
                        <div class="right">
-                           <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].TITLE}}</div>
+                           <div class="item-title"> {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[4].TITLE}}</div>
                            <div class="item-content">
-                                {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].DESCRIPTION_1}}
-                               <a :href="'mailto:' + i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].A_TEXT">
-                                   {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].A_TEXT}}
+                                {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[4].DESCRIPTION_1}}
+                               <a :href="'mailto:' + i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[4].A_TEXT">
+                                   {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[4].A_TEXT}}
                                </a>
-                               {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].DESCRIPTION_2}}
+                               {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[4].DESCRIPTION_2}}
                            </div>
                        </div>
-                    </div>
+                    </div> -->
                     <div class="content-item">
-                       <div class="left">{{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].ID}}</div>
+                       <div class="left">{{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[3].ID}}</div>
                        <div class="right">
-                           <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].TITLE}}</div>
+                           <div class="item-title"> {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[3].TITLE}}</div>
                            <div class="item-content">
-                                {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].DESCRIPTION_1}}
+                                {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[3].DESCRIPTION_1}}
                                <a @click="to">
-                                   {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].A_TEXT}}
+                                   {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[3].A_TEXT}}
                                </a>
-                               {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].DESCRIPTION_2}}
+                               {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[3].DESCRIPTION_2}}
                            </div>
                        </div>
                     </div>
