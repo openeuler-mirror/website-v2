@@ -1,18 +1,23 @@
 <template>
   <div>
     <titlenav
-    class="titlenav"
+      class="titlenav"
       v-show="isShowNav"
       :currentIndex="activeIndex"
       :dataList="i18n.summit.NAV_LIST"
     ></titlenav>
     <div class="banner">
-      <a href="https://e-campaign.huawei.com/events2/registerPc/pcRegister.html?eventId=5482" target="_blank">
+      <a
+        href="https://e-campaign.huawei.com/events2/registerPc/pcRegister.html?eventId=5482"
+        target="_blank"
+      >
         <img class="main" :src="i18n.summit.SUMMIT_BANNER.PC_IMG" />
       </a>
     </div>
     <div class="h5-banner">
-      <a href="https://e-campaign.huawei.com/events2/registerPc/pcRegister.html?eventId=5482" target="_blank"
+      <a
+        href="https://e-campaign.huawei.com/events2/registerPc/pcRegister.html?eventId=5482"
+        target="_blank"
         ><img :src="i18n.summit.SUMMIT_BANNER.MOBILE_IMG"
       /></a>
     </div>
@@ -21,7 +26,12 @@
         <p class="text">{{ i18n.summit.SUMMIT_INTRODUCE }}</p>
       </div>
       <!-- 直播模块 -->
-      <liveroom :liveData="i18n.summit.SUMMITLIVE" :isPass="false" class="summit-live" id="live"></liveroom>
+      <liveroom
+        :liveData="i18n.summit.SUMMITLIVE"
+        :isPass="false"
+        class="summit-live"
+        id="live"
+      ></liveroom>
       <div class="agenda" id="agenda">
         <div :class="['title', $lang === 'en' ? 'en-title' : '']">
           <img v-lazy="agendaData.WEB_TITLE" alt="" v-if="!isShowH5" />
@@ -168,7 +178,7 @@
                   v-if="scope.$index == 1 && forumTab == 2"
                   class="specialTable"
                 >
-                  {{scope.row.SPEAKER2}}
+                  {{ scope.row.SPEAKER2 }}
                 </p>
               </template>
             </el-table-column>
@@ -176,13 +186,13 @@
               <template slot-scope="scope">
                 <p>{{ scope.row.POSITION }}</p>
                 <p v-if="scope.$index == 8 && forumTab == 3">
-                  {{scope.row.POSITION2}} {{scope.row.POSITION3}}
+                  {{ scope.row.POSITION2 }} {{ scope.row.POSITION3 }}
                 </p>
                 <p
                   v-if="scope.$index == 1 && forumTab == 2"
                   class="specialTable"
                 >
-                  {{scope.row.POSITION2}}
+                  {{ scope.row.POSITION2 }}
                 </p>
               </template>
             </el-table-column>
@@ -207,26 +217,25 @@
                   v-if="item.SPEAKER || item.POSITION"
                   :class="[
                     {
-                      longname:
-                        forumTab == 1 && (index == 0 || index == 1),
+                      longname: forumTab == 1 && (index == 0 || index == 1),
                     },
                     {
-                      longname:
-                        forumTab == 3 && index == 4,
+                      longname: forumTab == 3 && index == 4,
                     },
                     {
-                      longname:
-                        forumTab == 0 && (index == 4 || index == 6 ),
+                      longname: forumTab == 0 && (index == 4 || index == 6),
                     },
                   ]"
                 >
                   <span>{{ item.SPEAKER }}</span>
                   <span style="vertical-align: top">{{ item.POSITION }}</span>
                   <span v-if="forumTab === 3 && index === 8" class="special-mo"
-                    >{{ item.POSITION2 }}<br />{{ item.POSITION3 }}</span>
+                    >{{ item.POSITION2 }}<br />{{ item.POSITION3 }}</span
+                  >
                 </p>
                 <p v-if="forumTab === 2 && index === 1">
-                  <span>{{item.SPEAKER2}}</span><span>{{item.POSITION2}}</span>
+                  <span>{{ item.SPEAKER2 }}</span
+                  ><span>{{ item.POSITION2 }}</span>
                 </p>
               </div>
             </div>
@@ -238,7 +247,14 @@
           :agendaData="carouselObj"
           :sigData="sigObj"
         ></carousel>
-        <exhibition id="exhibition"></exhibition>
+        <div class="exhibition-title">
+          <img src="/img/summit/summit2021/exhirition-title.png" alt="" v-if="!isShowH5" />
+          <img src="/img/summit/summit2021/exhirition-title-mo.png" alt="" v-else>
+        </div>
+        <exhibition
+          id="exhibition"
+          :class="{ 'mobile-exhibition': isShowH5 }"
+        ></exhibition>
         <div class="lecturer" id="lecturer">
           <div class="title">
             <img
@@ -440,20 +456,20 @@
 import carousel from "./carousel.vue";
 import titlenav from "./titleNav.vue";
 import liveroom from "./liveroom.vue";
-import exhibition from "./exhibition.vue"
+import exhibition from "./exhibition.vue";
 export default {
   components: {
     carousel,
     titlenav,
     liveroom,
-    exhibition
+    exhibition,
   },
   data() {
     return {
       value: "麒麟软件",
       agendaData: {},
       dateArr: [],
-      showTab: "nine",
+      showTab: "ten",
       showBtn: "forenoon",
       agendaData: {},
       dateArr: [],
@@ -480,13 +496,11 @@ export default {
   },
   created() {
     this.agendaData = this.i18n.summit.AGENDA;
-    console.log(this.agendaData);
     this.lecturerData = this.i18n.summit.LECTURER;
     this.carouselObj = this.agendaData.AFTERNOON_AGENDA_10;
     this.sigObj = this.agendaData.SIG_CONTENT;
   },
   mounted() {
-    console.log(this.i18n.summit.AGENDA);
     window.addEventListener("scroll", this.scroTop);
     this.agendaTableData = this.agendaData.FORENOON_AGENDA_10;
     this.construction = this.i18n.summit.CONSTRUCTION;
@@ -516,27 +530,27 @@ export default {
         document.body.scrollTop || document.documentElement.scrollTop;
       let value = 0;
       if (this.showTab === "ten" && this.showBtn === "afternoon") {
-        value = 1000;
+        value = 1400;
       }
-      if (scrollTop < 500) {
+      if (scrollTop < 500 || scrollTop > 7200 + value) {
         this.isShowNav = false;
       } else {
         this.isShowNav = true;
       }
-      if (scrollTop > 500 && scrollTop < 1000 + value) {
+      if (scrollTop > 500 && scrollTop < 1000) {
         this.activeIndex = 0;
-      } else if (scrollTop > 1620 + value && scrollTop < 2120 + value) {
+      } else if (scrollTop > 1620 && scrollTop < 2120 + value) {
         this.activeIndex = 1;
       } else if (scrollTop > 2620 + value && scrollTop < 3020 + value) {
         this.activeIndex = 2;
       } else if (scrollTop > 3220 + value && scrollTop < 4000 + value) {
         this.activeIndex = 3;
-      } else  if (scrollTop > 4300 +value && scrollTop <5000 +value){
+      } else if (scrollTop > 4300 + value && scrollTop < 5000 + value) {
         this.activeIndex = 4;
-      } else  if (scrollTop>5400 +value){
-       this.activeIndex = 5
+      } else if (scrollTop > 5400 + value && scrollTop < 7200 + value) {
+        this.activeIndex = 5;
       } else {
-         return false;
+        return false;
       }
     },
     go(url) {
@@ -667,9 +681,13 @@ export default {
   }
 }
 .titlenav {
-   @media screen and (max-width: 1550px) {
-   display: none;
+  @media screen and (max-width: 1550px) {
+    display: none;
   }
+}
+.mobile-exhibition {
+  width: 365px;
+  overflow-x: scroll;
 }
 .container {
   width: 1120px;
@@ -679,13 +697,33 @@ export default {
     margin-bottom: 60px;
     padding: 0 10px;
     width: 100%;
-    overflow: hidden;
+  }
+   .exhibition-title {
+    text-align: center;
+    font-size: 24px;
+    line-height: 34px;
+    margin-top: 70px;
+    margin-bottom: 40px !important;
+    img {
+    display: block;
+    width: 900px;
+    margin: 0 auto;
+  }
+    @media screen and (max-width: 1000px) {
+    margin-top: 40px;
+    width: 355px;
+    text-align: center;
+    img {
+      width: 100%;
+      height: 38px;
+    }
+  }
   }
   .summit-live {
     margin-bottom: 90px;
-     @media screen and (max-width: 1000px) {
-     margin-bottom: 40px;
-  }
+    @media screen and (max-width: 1000px) {
+      margin-bottom: 40px;
+    }
   }
   .text-wrapper {
     margin-bottom: 50px;
@@ -968,7 +1006,7 @@ export default {
     }
   }
   .nineDay {
-     .item:nth-child(-n + 10):nth-child(n + 6) {
+    .item:nth-child(-n + 10):nth-child(n + 6) {
       p span:first-of-type {
         width: 180px;
       }

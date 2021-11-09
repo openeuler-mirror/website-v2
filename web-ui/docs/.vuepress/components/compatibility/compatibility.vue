@@ -652,7 +652,6 @@ export default {
             }
         },
         handleTabClick(tab, event) {
-            console.log(this.tabActiveName==='software');
             let lang = '';
             if(window.location.pathname.indexOf('/en/') !== -1) {
                 lang = 'en';

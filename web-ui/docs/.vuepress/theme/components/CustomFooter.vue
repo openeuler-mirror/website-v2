@@ -130,7 +130,7 @@ export default {
   @media screen and (max-width: 1000px) {
     .qrcode {
       left: 50%;
-      top: 50%;
+      top: 70%;
       transform: translateX(-45%) translateY(-50%) scale(0.8);
     }
   }
