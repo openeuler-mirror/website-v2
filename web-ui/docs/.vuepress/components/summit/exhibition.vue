@@ -97,6 +97,7 @@ export default {
   methods: {
     videoClicked() {
       this.isMasked = true;
+      console.log("clicked");
     },
     maskClicked() {
       this.isMasked = false;
