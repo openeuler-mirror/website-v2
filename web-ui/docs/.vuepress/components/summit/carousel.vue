@@ -139,11 +139,6 @@ export default {
         },
         showDetail(item,which) {
             if(item.THEME && which === 1){
-                if (this.summitData && !this.isShowH5) {
-                    document.documentElement.scrollTop = 2800
-                } else if (this.summitData && this.isShowH5) {
-                    document.documentElement.scrollTop = 1600
-                }
                 this.detailMsg = {};
                 this.isShowDetail = true;
                 this.detailMsg = item;
