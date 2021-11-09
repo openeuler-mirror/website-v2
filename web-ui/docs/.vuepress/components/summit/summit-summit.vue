@@ -238,7 +238,7 @@
           :agendaData="carouselObj"
           :sigData="sigObj"
         ></carousel>
-        <exhibition id="exhibition"></exhibition>
+        <exhibition id="exhibition" v-if="!isShowH5"></exhibition>
         <div class="lecturer" id="lecturer">
           <div class="title">
             <img
