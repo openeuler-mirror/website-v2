@@ -99,7 +99,7 @@ export default {
       tenData: [],
       nineData: [],
       renderData: [],
-      currentTime: "nine",
+      currentTime: "ten",
     };
   },
   props: ["liveData", "isPass"],

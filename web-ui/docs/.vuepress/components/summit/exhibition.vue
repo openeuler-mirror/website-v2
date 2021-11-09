@@ -1,8 +1,8 @@
 <template>
   <div class="exhibition">
-    <div class="title">
+    <!-- <div class="exhibition-title">
       <img src="/img/summit/summit2021/exhirition-title.png" alt="" />
-    </div>
+    </div> -->
     <div class="container">
       <a
         @click.stop="mapClick(item, $event, index)"
@@ -97,7 +97,6 @@ export default {
   methods: {
     videoClicked() {
       this.isMasked = true;
-      console.log("clicked");
     },
     maskClicked() {
       this.isMasked = false;
@@ -161,15 +160,29 @@ export default {
       }
     }
   }
-  .title {
+  .exhibition-title {
     text-align: center;
     font-size: 24px;
     line-height: 34px;
     margin-top: 40px;
     margin-bottom: 40px !important;
+    img {
+    display: block;
+    width: 900px;
+    margin: 0 auto;
+  }
+    @media screen and (max-width: 1000px) {
+    width: 355px;
+    text-align: center;
+    img {
+      width: 100%;
+      height: 38px;
+    }
+  }
   }
   .container {
     position: relative;
+    width: 1120px;
     img {
       width: 100%;
     }
@@ -183,6 +196,8 @@ export default {
     a {
       position: absolute;
       cursor: pointer;
+      outline: none;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
     a:nth-of-type(1) {
       width: 131px;
