@@ -106,7 +106,7 @@ export default {
   created() {
     if (this.liveData.TEN) {
       this.isSummit = true;
-      this.renderData = this.liveData.NINE;
+      this.renderData = this.liveData.TEN;
     } else {
       this.renderData = this.liveData;
     }
