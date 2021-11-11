@@ -582,7 +582,7 @@
                 let temp = arr;
                 temp.forEach(item => {
                     if(item.ROUND_KEY === 'businessosv') {
-                        item.ROUND_VALUE = 9;
+                        item.ROUND_VALUE = 10;
                     }else{
                         item.ROUND_VALUE = that.roundValueObj[item.ROUND_KEY];
                     }
