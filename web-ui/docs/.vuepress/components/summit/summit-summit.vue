@@ -586,6 +586,7 @@ export default {
         return false;
       }
     },
+    // 9号表格合并函数
     SpanMethod({ row, column, rowIndex, columnIndex }) {
       if (this.showTab === "nine") {
         if (this.forumTab === 1 && (rowIndex === 0 || rowIndex === 1)) {
@@ -615,6 +616,7 @@ export default {
         return false;
       }
     },
+    // 10号表格合并函数
     objectSpanMethod({ row, column, rowIndex, columnIndex }) {
       if (this.showTab === "ten" && this.showBtn === "forenoon") {
         if (
@@ -686,7 +688,6 @@ export default {
   }
 }
 .mobile-exhibition {
-  width: 365px;
   overflow-x: scroll;
 }
 .container {
@@ -702,8 +703,7 @@ export default {
     text-align: center;
     font-size: 24px;
     line-height: 34px;
-    margin-top: 70px;
-    margin-bottom: 40px !important;
+    margin: 70px 0 40px 0;
     img {
     display: block;
     width: 900px;
@@ -711,10 +711,8 @@ export default {
   }
     @media screen and (max-width: 1000px) {
     margin-top: 40px;
-    width: 355px;
-    text-align: center;
     img {
-      width: 100%;
+      width: 355px;
       height: 38px;
     }
   }
@@ -811,6 +809,7 @@ export default {
   }
   /deep/#agenda {
     @media screen and (max-width: 1000px) {
+      overflow: hidden;
       .el-radio-group {
         display: block;
         text-align: center;
@@ -844,6 +843,7 @@ export default {
         text-align: center;
         line-height: 70px;
         user-select: none;
+        transition: all .3s;
         box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
         &:last-child {
@@ -949,7 +949,6 @@ export default {
   .nineDay {
     margin-top: 20px;
     font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
-
     .item {
       width: 100%;
       display: flex;

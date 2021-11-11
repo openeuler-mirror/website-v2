@@ -18,7 +18,7 @@ module.exports = {
                 WEBSITE_SELECT: "/zh/mirror/select/?version=21.09",
                 MANUFACTURER: 'openEuler社区',
                 PUBLISH_DATE: '2021/09',
-                LTS: true
+                LTS: false
             },
             {
                 NAME: 'openEuler 20.03 LTS SP2',
@@ -224,7 +224,7 @@ module.exports = {
                 WEBSITE_SELECT: "/zh/mirror/select/?version=21.09",
                 MANUFACTURER: 'openEuler community',
                 PUBLISH_DATE: '2021/09',
-                LTS: true
+                LTS: false
             },
             {
                 NAME: 'openEuler 20.03 LTS SP2',
@@ -416,7 +416,7 @@ module.exports = {
                 WEBSITE_SELECT: "/zh/mirror/select/?version=21.09",
                 MANUFACTURER: 'openEuler community',
                 PUBLISH_DATE: '2021/09',
-                LTS: true
+                LTS: false
             },
             {
                 NAME: 'openEuler 20.03 LTS SP2',
