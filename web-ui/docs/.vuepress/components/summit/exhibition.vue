@@ -121,7 +121,6 @@ export default {
 </script>
 <style lang="less" scpoed>
 .exhibition {
-  width: 1120px;
   margin: 70px auto 0;
   .boxMask {
     position: fixed;
