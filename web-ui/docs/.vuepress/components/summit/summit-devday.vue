@@ -178,7 +178,7 @@ export default {
             navList: [
                 {
                     key: '#liveroom',
-                    name: '现场直播'
+                    name: '精彩回顾'
                 },
                 {
                     key: '#agenda',
@@ -1057,7 +1057,6 @@ export default {
         margin-bottom: 0;
     }
 }
-
 </style>
 <style lang="less" scoped>
 .container {

@@ -168,6 +168,7 @@ module.exports = {
         SEARCH_ALL:'ALL',
         SEARCH_LABEL: "Search",
         HARDWARE_SEARCH_PLACEHOLDER:'Vendor or Model or OS',
+        SOFTWARE_SEARCH_PLACEHOLDER: "软件名称",
         DRIVE_SEARCH_PLACEHOLDER:'Driver Name or Card Model',
         LINK: 'link',
         HARDWARE_TABLE_COLUMN: {
@@ -178,6 +179,16 @@ module.exports = {
             COMPATIBILITY_CONFIGURATION: 'Compatibility Configuration',
             COMPATIBILITY_CONFIGURATION2: 'Compatibility Configuration',
             REFERRENCE: 'Reference'
+        },
+        SOFTWARE_TABLE_COLUMN: {
+            ARCHITECTURE: '架构',
+            SOFTWARETYPE: '软件类型',
+            SOFTWARENAME: '软件名称',
+            VERSION: '版本',
+            PROPERTIES: '软件属性',
+            DOWNLOADLINK: '下载地址',
+            SYSTEM: '操作系统',
+            PUBLICKLICENSE: '开源协议'
         },
         DRIVE_TABLE_COLUMN: {
             ARCHITECTURE: 'Architecture',
@@ -222,6 +233,37 @@ module.exports = {
                 DRIVE_BOARD_MODEL: 'Board Model',
                 DRIVE_CHIP_MODEL: 'Chip Model'
             }
+        },
+        SOFTWARE_OEC_DETAIL: {
+            TEXT:'关于软件兼容性测试，openEuler提供了完整的测试流程和工具，详见',
+            TITLE: 'openEuler 软件兼容性测试整体介绍',
+            DISCRIPTION_TITLE: '简介',
+            DISCRIPTION_CONTENT: 'openEuler提供了一系列的工具、文档和操作流程帮助用户测试openEuler与软件的兼容性。如果您需要对某款软件展开兼容性测试，可参考下文进行。',
+            PROCESS_TITLE:'兼容性测试流程',
+            ITEM_ARR: [{
+                ID:'01',
+                TITLE:'创建issue',
+                DESCRIPTION_1:'您需要在openEuler社区（',
+                A_TEXT:'https://gitee.com/openeuler/oec-application',
+                DESCRIPTION_2:'）的oec-application项目下创建issue，将所需认证的软件信息在issue中明确。openEuler团队会及时了解issue信息，并给出建议。'
+            },{
+                ID:'02',
+                TITLE:'兼容性测试',
+                DESCRIPTION_1:'完成issue创建后，即可开展兼容性测试。openEuler团队提供了',
+                A_TEXT:'自动化测试平台 compass-ci',
+                DESCRIPTION_2:'以及使用指南，根据使用指南自助完成兼容性测试。'
+            },{
+                ID:'03',
+                TITLE:'提交结果审核',
+                DESCRIPTION_1:'完成兼容性测试并通过后，需要您把测试结果更新到issue中。issue中需要给出 group_id。',
+            },
+            {
+                ID:'04',
+                TITLE:'结果发布',
+                DESCRIPTION_1:'openEuler团队会针对提交结果进行审核，如果通过，会将软件添加到',
+                A_TEXT:'兼容性列表',
+                DESCRIPTION_2:'中。'
+            }]
         },
         HARDWARE_OEC_DETAIL: {
             TEXT:'openEuler provides a complete process and tools for hardware compatibility test. For details, see the ',
@@ -277,6 +319,7 @@ module.exports = {
         SELECT_PLACEHOLDER: 'Select',
         SEARCH_ALL:'ALL',
         SEARCH_LABEL: "Search",
+        SOFTWARE_SEARCH_PLACEHOLDER: "软件名称",
         HARDWARE_SEARCH_PLACEHOLDER:'Vendor or Model or OS',
         DRIVE_SEARCH_PLACEHOLDER:'Driver Name or Card Model',
         LINK: 'link',
@@ -288,6 +331,16 @@ module.exports = {
             COMPATIBILITY_CONFIGURATION: 'Compatibility Configuration',
             COMPATIBILITY_CONFIGURATION2: 'Compatibility Configuration',
             REFERRENCE: 'Reference'
+        },
+        SOFTWARE_TABLE_COLUMN: {
+            ARCHITECTURE: '架构',
+            SOFTWARETYPE: '软件类型',
+            SOFTWARENAME: '软件名称',
+            VERSION: '版本',
+            PROPERTIES: '软件属性',
+            DOWNLOADLINK: '下载地址',
+            SYSTEM: '操作系统',
+            PUBLICKLICENSE: '开源协议'
         },
         DRIVE_TABLE_COLUMN: {
             ARCHITECTURE: 'Architecture',
@@ -332,6 +385,37 @@ module.exports = {
                 DRIVE_BOARD_MODEL: 'Board Model',
                 DRIVE_CHIP_MODEL: 'Chip Model'
             }
+        },
+        SOFTWARE_OEC_DETAIL: {
+            TEXT:'关于软件兼容性测试，openEuler提供了完整的测试流程和工具，详见',
+            TITLE: 'openEuler 软件兼容性测试整体介绍',
+            DISCRIPTION_TITLE: '简介',
+            DISCRIPTION_CONTENT: 'openEuler提供了一系列的工具、文档和操作流程帮助用户测试openEuler与软件的兼容性。如果您需要对某款软件展开兼容性测试，可参考下文进行。',
+            PROCESS_TITLE:'兼容性测试流程',
+            ITEM_ARR: [{
+                ID:'01',
+                TITLE:'创建issue',
+                DESCRIPTION_1:'您需要在openEuler社区（',
+                A_TEXT:'https://gitee.com/openeuler/oec-application',
+                DESCRIPTION_2:'）的oec-application项目下创建issue，将所需认证的软件信息在issue中明确。openEuler团队会及时了解issue信息，并给出建议。'
+            },{
+                ID:'02',
+                TITLE:'兼容性测试',
+                DESCRIPTION_1:'完成issue创建后，即可开展兼容性测试。openEuler团队提供了',
+                A_TEXT:'自动化测试平台 compass-ci',
+                DESCRIPTION_2:'以及使用指南，根据使用指南自助完成兼容性测试。'
+            },{
+                ID:'03',
+                TITLE:'提交结果审核',
+                DESCRIPTION_1:'完成兼容性测试并通过后，需要您把测试结果更新到issue中。issue中需要给出 group_id。',
+            },
+            {
+                ID:'04',
+                TITLE:'结果发布',
+                DESCRIPTION_1:'openEuler团队会针对提交结果进行审核，如果通过，会将软件添加到',
+                A_TEXT:'兼容性列表',
+                DESCRIPTION_2:'中。'
+            }]
         },
         HARDWARE_OEC_DETAIL: {
             TEXT:'openEuler provides a complete process and tools for hardware compatibility test. For details, see the ',

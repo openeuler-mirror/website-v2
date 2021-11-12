@@ -1,8 +1,5 @@
 <template>
   <div class="exhibition">
-    <!-- <div class="exhibition-title">
-      <img src="/img/summit/summit2021/exhirition-title.png" alt="" />
-    </div> -->
     <div class="container">
       <a
         @click.stop="mapClick(item, $event, index)"
@@ -158,26 +155,6 @@ export default {
         width: 100%;
       }
     }
-  }
-  .exhibition-title {
-    text-align: center;
-    font-size: 24px;
-    line-height: 34px;
-    margin-top: 40px;
-    margin-bottom: 40px !important;
-    img {
-    display: block;
-    width: 900px;
-    margin: 0 auto;
-  }
-    @media screen and (max-width: 1000px) {
-    width: 355px;
-    text-align: center;
-    img {
-      width: 100%;
-      height: 38px;
-    }
-  }
   }
   .container {
     position: relative;

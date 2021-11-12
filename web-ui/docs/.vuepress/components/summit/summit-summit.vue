@@ -8,16 +8,14 @@
     ></titlenav>
     <div class="banner">
       <a
-        href="https://e-campaign.huawei.com/events2/registerPc/pcRegister.html?eventId=5482"
-        target="_blank"
+        href="#live"
       >
         <img class="main" :src="i18n.summit.SUMMIT_BANNER.PC_IMG" />
       </a>
     </div>
     <div class="h5-banner">
       <a
-        href="https://e-campaign.huawei.com/events2/registerPc/pcRegister.html?eventId=5482"
-        target="_blank"
+        href="#live"
         ><img :src="i18n.summit.SUMMIT_BANNER.MOBILE_IMG"
       /></a>
     </div>
@@ -243,7 +241,7 @@
         </div>
         <carousel
           :class="{ carousel: isShowH5 }"
-          v-show="isShowcarousel"
+          v-if="isShowcarousel"
           :agendaData="carouselObj"
           :sigData="sigObj"
         ></carousel>
@@ -467,8 +465,6 @@ export default {
   data() {
     return {
       value: "麒麟软件",
-      agendaData: {},
-      dateArr: [],
       showTab: "ten",
       showBtn: "forenoon",
       agendaData: {},
@@ -560,12 +556,11 @@ export default {
     tabClick(tab) {
       this.showTab = tab.name;
       if (tab.name === "nine") {
-        this.isShowcarousel = false;
         this.isShowBtn = false;
+        this.isShowcarousel = false;
         this.showBtn = "forenoon";
       } else if (tab.name === "ten") {
         this.agendaTableData = this.agendaData.FORENOON_AGENDA_10;
-        this.isShowcarousel = false;
         this.isShowBtn = true;
         this.showBtn = "forenoon";
       } else {
@@ -575,10 +570,9 @@ export default {
     changeTime(tab) {
       this.showBtn = tab;
       if (tab === "forenoon" && this.showTab === "ten") {
-        this.agendaTableData = this.agendaData.FORENOON_AGENDA_10;
         this.isShowcarousel = false;
+        this.agendaTableData = this.agendaData.FORENOON_AGENDA_10;
       } else if (tab === "afternoon" && this.showTab === "ten") {
-        this.agendaTableData = undefined;
         this.isShowcarousel = true;
       } else if (this.showTab === "nine" && tab === "afternoon") {
         this.forumClick(0);
