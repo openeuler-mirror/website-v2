@@ -99,14 +99,14 @@ export default {
       tenData: [],
       nineData: [],
       renderData: [],
-      currentTime: "ten",
+      currentTime: "nine",
     };
   },
   props: ["liveData", "isPass"],
   created() {
     if (this.liveData.TEN) {
       this.isSummit = true;
-      this.renderData = this.liveData.TEN;
+      this.renderData = this.liveData.NINE;
     } else {
       this.renderData = this.liveData;
     }
@@ -144,7 +144,6 @@ export default {
         this.renderData = this.liveData.TEN;
         this.showIframe();
       }
-      console.log(this.currentTime);
     },
     showIframe(id) {
       if (id) {
@@ -173,7 +172,6 @@ export default {
     },
     tabLiveRoom(src, index) {
       let indexType = typeof index;
-      console.log(src);
       if (indexType === "number") {
         this.nowLiveSrc = src + this.userName;
         this.roomId = index;
