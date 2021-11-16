@@ -166,7 +166,7 @@
                     <el-carousel indicator-position="none" :autoplay="false" arrow="never" ref="newsroomCard" class="room-card">
                         <el-carousel-item v-for="(item,index) in i18n.home.ROOM_LEFT_IMG" :key="index">
                             <a class="room-img active card-hover">
-                                <img v-lazy="item.IMG" @click="go(item.LINK)" alt="">
+                                <img v-lazy="item.IMG" @click="newWindow(item.LINK)" alt="">
                             </a>
                         </el-carousel-item>
                     </el-carousel>
@@ -443,6 +443,9 @@
                 }else{
                     this.isShowCard = !this.isShowCard;
                 }
+            },
+            newWindow(url) {
+                window.open(this.resolvePath(url))
             },
             goInstall(path) {
                 if (path.includes("http") || path.includes("https")) {
