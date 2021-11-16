@@ -51,7 +51,6 @@ export default {
   },
   methods: {
     goFooterUrl(url) {
-      console.log();
       if (url.includes("https")) {
         window.open(url);
       } else {
@@ -61,7 +60,7 @@ export default {
         });
       }
     },
-  },
+  }
 };
 </script>
 <style lang="less" scoped>

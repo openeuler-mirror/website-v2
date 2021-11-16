@@ -10,7 +10,7 @@
         <titlenav v-show="isShowNav" :currentIndex="activeIndex" :dataList="navList"></titlenav>
         <div class="text-wrapper">
             <p class="text">openEuler Developer Day 2021 是由 openEuler 社区发起，面向社区开发者的一场技术盛会。旨在推动 openEuler 社区在多样性计算、云原生全栈、全场景协同等技术发展方向的持续探索和创新。本次大会以开放工作会议以及小组讨论等形式，让开发者找到关注的技术小组、快速融入社区、围绕下一版本发布，热点技术方向，用户核心需求，展开面对面的头脑风暴。每一个开发者都是 openEuler 社区的一颗星，一滴水，最终点点滴滴汇聚成科技创新的星辰大海。</p>
-            <liveroom :liveData="liveList" :isPass="false" class="devday"></liveroom>
+            <liveroom :liveData="liveList" :isPass="true" class="devday"></liveroom>
             <div id="agenda">
                 <div class="title">
                     <img v-lazy="'/img/summit/devday-2021/agenda/agenda-h5.png'" alt="" v-if="isShowH5" />
