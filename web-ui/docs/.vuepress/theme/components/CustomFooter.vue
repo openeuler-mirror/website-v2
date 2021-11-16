@@ -3,7 +3,7 @@
     <div class="qrcode" v-show="qrShow">
       <div class="close" @click="closeQr"></div>
       <img
-        @click="goFooterUrl('/other/questionnaire')"
+        @click="newWindow('/other/questionnaire')"
         src="/img/other/questionnaire/qrcode.png"
         alt=""
       />
@@ -60,10 +60,11 @@ export default {
     closeQr() {
       this.qrShow = false;
     },
+    newWindow(url) {
+      window.open(this.resolvePath(url))
+    },
     goFooterUrl(url) {
-      url == "/other/questionnaire" ? this.closeQr() : "";
       if (url.includes("https")) {
-        window.open(url);
       } else {
         console.log(this.$router);
         this.$router.push({
@@ -72,7 +73,9 @@ export default {
       }
     },
   },
-  components: {},
+  mounted() {
+    window.location.href.includes("questionnaire") ? this.closeQr() :''
+  }
 };
 </script>
 
@@ -80,7 +83,7 @@ export default {
 .footer-wrapper {
   position: relative;
   height: 530px;
-  background-color: #000;
+  background-color: #111;
   @media screen and (max-width: 1000px) {
     height: 508px;
   }
