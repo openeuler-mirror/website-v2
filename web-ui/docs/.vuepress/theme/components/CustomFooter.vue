@@ -65,8 +65,8 @@ export default {
     },
     goFooterUrl(url) {
       if (url.includes("https")) {
+        window.open(url)
       } else {
-        console.log(this.$router);
         this.$router.push({
           path: this.resolvePath(url),
         });
