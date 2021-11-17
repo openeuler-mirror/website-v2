@@ -27,7 +27,7 @@ module.exports = {
                 VIDEO_URL: "https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/StratoVirt-minisite.mp4"
             }
         ],
-        ROOM_LEFT_IMG:[
+        ROOM_LEFT_IMG: [
             {
                 IMG: '/img/activities/pc_home_bottom_banner.png',
                 LINK: '/activities/'
@@ -45,14 +45,23 @@ module.exports = {
                 LINK: '/interaction/news-list/'
             }
         ],
-        HOME_NEWRELEASE: [{
+        HOME_NEWRELEASE: [
+            {
+                MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/%E6%AC%A7%E6%8B%89%E4%BA%BA%E6%89%8D%E5%8F%91%E5%B1%95_mob.png')",
+                PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/%E6%AC%A7%E6%8B%89%E4%BA%BA%E6%89%8D%E5%8F%91%E5%B1%95_web.png')",
+                LINK:'/news/20211117-openeuler.html'
+            },
+            {
                 MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-summit-2021/images/%E6%AC%A7%E6%8B%89-375x300-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
                 PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-summit-2021/images/1920x500%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
+                LINK: "/interaction/summit-list/summit2021/"
             },
             {
                 MOBILE_IMG: "url('/img/home/banner/21.09_white_paper_mo.png')",
                 PC_IMG: "url('/img/home/banner/21.09_white_paper_pc.png')",
-            }],
+                LINK: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/pdf/openEuler%2021.09%20%E6%8A%80%E6%9C%AF%E7%99%BD%E7%9A%AE%E4%B9%A6.pdf"
+            }
+        ],
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
             INTRO_HEAD: "开始openEuler之旅吧！",
@@ -103,22 +112,22 @@ module.exports = {
                     {
                         TITLE: "树莓派",
                         IMG: "/img/home/areaPai.png",
-                        LINK:"https://gitee.com/openeuler/raspberrypi"
+                        LINK: "https://gitee.com/openeuler/raspberrypi"
                     },
                     {
                         TITLE: "硬件",
                         IMG: "/img/home/areaHardware.svg",
-                        LINK:"/zh/docs/20.03_LTS/docs/Installation/installation.html"
+                        LINK: "/zh/docs/20.03_LTS/docs/Installation/installation.html"
                     },
                     {
                         TITLE: "虚拟机",
                         IMG: "/img/home/areaVirtual.svg",
-                        LINK:"/zh/docs/20.03_LTS/docs/Virtualization/virtualization.html"
+                        LINK: "/zh/docs/20.03_LTS/docs/Virtualization/virtualization.html"
                     },
                     {
                         TITLE: "ECS",
                         IMG: "/img/home/areaECS.svg",
-                        LINK:"https://huaweicloud.com/product/ecs.html"
+                        LINK: "https://huaweicloud.com/product/ecs.html"
                     }
                 ]
             }
@@ -503,7 +512,7 @@ module.exports = {
                 DES: "如果缺乏测试设备，可以尝试",
                 APPLY: "在此申请。",
                 SPONSOR: "感谢鹏城实验室赞助",
-                SPONSORLINK:'https://dw.pcl.ac.cn/'
+                SPONSORLINK: 'https://dw.pcl.ac.cn/'
             },
             SOURCE_MAIL: {
                 TITLE: "邮件订阅",
@@ -515,7 +524,7 @@ module.exports = {
             SOURCE_PUBLISH_TITLE: "发布 openEuler 商业发行版的厂商",
             SOURCE_LINK_TITLE: "友情链接",
         },
-        HOME_SOURCE_EDITION:[
+        HOME_SOURCE_EDITION: [
             {
                 LEFT_IMG_LINK: 'http://www.kylinsec.com.cn/',
                 LEFT_IMG_PC: '/img/home/link/xinan.png',
@@ -557,7 +566,7 @@ module.exports = {
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-suse.png'
             }
         ],
-        FRIENDSHIP_LINK_LIST:[
+        FRIENDSHIP_LINK_LIST: [
             {
                 LEFT_IMG_LINK: 'http://www.mulanos.cn/',
                 LEFT_IMG_PC: '/img/home/link/mulan.png',
@@ -619,15 +628,19 @@ module.exports = {
                 VIDEO_URL: "https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/StratoVirt-minisite.mp4"
             }
         ],
-        HOME_NEWRELEASE: [{
-            MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-summit-2021/images/%E6%AC%A7%E6%8B%89-375x300-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
-            PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-summit-2021/images/1920x500%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
-        },
-        {
-            MOBILE_IMG: "url('/img/home/banner/21.09_white_paper_mo.png')",
-            PC_IMG: "url('/img/home/banner/21.09_white_paper_pc.png')",
-        }],
-        ROOM_LEFT_IMG:[
+        HOME_NEWRELEASE: [
+            {
+                MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-summit-2021/images/%E6%AC%A7%E6%8B%89-375x300-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
+                PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-summit-2021/images/1920x500%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
+                LINK: "/interaction/summit-list/summit2021/"
+            },
+            {
+                MOBILE_IMG: "url('/img/home/banner/21.09_white_paper_mo.png')",
+                PC_IMG: "url('/img/home/banner/21.09_white_paper_pc.png')",
+                LINK: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/pdf/openEuler%2021.09%20%E6%8A%80%E6%9C%AF%E7%99%BD%E7%9A%AE%E4%B9%A6.pdf"
+            }
+    ],
+        ROOM_LEFT_IMG: [
             {
                 IMG: '/img/home/eventImg.png',
                 LINK: 'https://www.oschina.net/2020-openeuler/'
@@ -692,22 +705,22 @@ module.exports = {
                     {
                         TITLE: "Raspberry Pi",
                         IMG: "/img/home/areaPai.png",
-                        LINK:"https://gitee.com/openeuler/raspberrypi"
+                        LINK: "https://gitee.com/openeuler/raspberrypi"
                     },
                     {
                         TITLE: "Hardware",
                         IMG: "/img/home/areaHardware.svg",
-                        LINK:"/en/docs/20.03_LTS/docs/Installation/Installation.html"
+                        LINK: "/en/docs/20.03_LTS/docs/Installation/Installation.html"
                     },
                     {
                         TITLE: "VM",
                         IMG: "/img/home/areaVirtual.svg",
-                        LINK:"/en/docs/20.03_LTS/docs/Virtualization/virtualization.html"
+                        LINK: "/en/docs/20.03_LTS/docs/Virtualization/virtualization.html"
                     },
                     {
                         TITLE: "ECS",
                         IMG: "/img/home/areaECS.svg",
-                        LINK:"https://huaweicloud.com/product/ecs.html"
+                        LINK: "https://huaweicloud.com/product/ecs.html"
                     }
                 ]
             }
@@ -1075,7 +1088,7 @@ module.exports = {
                 DES: "If test devices are not available, you can",
                 APPLY: "apply for resources here.",
                 SPONSOR: "Thanks for the sponsorship of Peng Cheng Laboratory.",
-                SPONSORLINK:'https://dw.pcl.ac.cn/'
+                SPONSORLINK: 'https://dw.pcl.ac.cn/'
             },
             SOURCE_MAIL: {
                 TITLE: "E-mail Subscription",
@@ -1087,7 +1100,7 @@ module.exports = {
             SOURCE_PUBLISH_TITLE: "Vendors with openEuler-based Commercial Editions",
             SOURCE_LINK_TITLE: "Reference Links",
         },
-        HOME_SOURCE_EDITION:[
+        HOME_SOURCE_EDITION: [
             {
                 LEFT_IMG_LINK: 'http://www.kylinsec.com.cn/',
                 LEFT_IMG_PC: '/img/home/link/xinan.png',
@@ -1129,7 +1142,7 @@ module.exports = {
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-suse.png'
             }
         ],
-        FRIENDSHIP_LINK_LIST:[
+        FRIENDSHIP_LINK_LIST: [
             {
                 LEFT_IMG_LINK: 'http://www.mulanos.cn/',
                 LEFT_IMG_PC: '/img/home/link/mulan.png',
@@ -1191,15 +1204,19 @@ module.exports = {
                 VIDEO_URL: "https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/StratoVirt-minisite.mp4"
             }
         ],
-        HOME_NEWRELEASE: [{
-            MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-summit-2021/images/%E6%AC%A7%E6%8B%89-375x300-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
-            PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-summit-2021/images/1920x500%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
-        },
-        {
-            MOBILE_IMG: "url('/img/home/banner/21.09_white_paper_mo.png')",
-            PC_IMG: "url('/img/home/banner/21.09_white_paper_pc.png')",
-        }],
-        ROOM_LEFT_IMG:[
+        HOME_NEWRELEASE: [
+            {
+                MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-summit-2021/images/%E6%AC%A7%E6%8B%89-375x300-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
+                PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-summit-2021/images/1920x500%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
+                LINK: "/interaction/summit-list/summit2021/"
+            },
+            {
+                MOBILE_IMG: "url('/img/home/banner/21.09_white_paper_mo.png')",
+                PC_IMG: "url('/img/home/banner/21.09_white_paper_pc.png')",
+                LINK: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/pdf/openEuler%2021.09%20%E6%8A%80%E6%9C%AF%E7%99%BD%E7%9A%AE%E4%B9%A6.pdf"
+            }
+        ],
+        ROOM_LEFT_IMG: [
             {
                 IMG: '/img/home/eventImg.png',
                 LINK: 'https://www.oschina.net/2020-openeuler/'
@@ -1265,22 +1282,22 @@ module.exports = {
                     {
                         TITLE: "Raspberry Pi",
                         IMG: "/img/home/areaPai.png",
-                        LINK:"https://gitee.com/openeuler/raspberrypi"
+                        LINK: "https://gitee.com/openeuler/raspberrypi"
                     },
                     {
                         TITLE: "Hardware",
                         IMG: "/img/home/areaHardware.svg",
-                        LINK:"/en/docs/20.03_LTS/docs/Installation/Installation.html"
+                        LINK: "/en/docs/20.03_LTS/docs/Installation/Installation.html"
                     },
                     {
                         TITLE: "VM",
                         IMG: "/img/home/areaVirtual.svg",
-                        LINK:"/en/docs/20.03_LTS/docs/Virtualization/virtualization.html"
+                        LINK: "/en/docs/20.03_LTS/docs/Virtualization/virtualization.html"
                     },
                     {
                         TITLE: "ECS",
                         IMG: "/img/home/areaECS.svg",
-                        LINK:"https://huaweicloud.com/product/ecs.html"
+                        LINK: "https://huaweicloud.com/product/ecs.html"
                     }
                 ]
             }
@@ -1648,7 +1665,7 @@ module.exports = {
                 DES: "Если нет тестовых устройств, вы можете подать",
                 APPLY: "здесь заявку на их получение.",
                 SPONSOR: "Благодарим лабораторию Peng Cheng Laboratory за спонсорскую поддержку.",
-                SPONSORLINK:'https://dw.pcl.ac.cn/'
+                SPONSORLINK: 'https://dw.pcl.ac.cn/'
             },
             SOURCE_MAIL: {
                 TITLE: "Подписка по электронной почте",
@@ -1660,7 +1677,7 @@ module.exports = {
             SOURCE_PUBLISH_TITLE: "Поставщики с коммерческими версиями на базе openEuler",
             SOURCE_LINK_TITLE: "Ссылки",
         },
-        HOME_SOURCE_EDITION:[
+        HOME_SOURCE_EDITION: [
             {
                 LEFT_IMG_LINK: 'http://www.kylinsec.com.cn/',
                 LEFT_IMG_PC: '/img/home/link/xinan.png',
@@ -1702,7 +1719,7 @@ module.exports = {
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-suse.png'
             }
         ],
-        FRIENDSHIP_LINK_LIST:[
+        FRIENDSHIP_LINK_LIST: [
             {
                 LEFT_IMG_LINK: 'http://www.mulanos.cn/',
                 LEFT_IMG_PC: '/img/home/link/mulan.png',
