@@ -521,7 +521,7 @@ export default {
       this.forumTab = index;
       this.forumList = this.forumData[index];
     },
-    scroTop(param) {
+    scroTop() {
       let scrollTop =
         document.body.scrollTop || document.documentElement.scrollTop;
       let value = 0;

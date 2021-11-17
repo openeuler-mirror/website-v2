@@ -55,35 +55,6 @@
                            </div>
                        </div>
                     </div>
-                    <!-- <div class="content-item">
-                       <div class="left">{{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[3].ID}}</div>
-                       <div class="right">
-                           <div class="item-title"> {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[3].TITLE}}</div>
-                           <div class="item-content">
-                                {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[3].DESCRIPTION_1}}
-                               <a target="_blank" href="https://gitee.com/src-openeuler/oec-hardware/releases">
-                                   {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[3].A_TEXT}}
-                               </a>
-                               {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[3].DESCRIPTION_2}}
-                                <a href="/openEuler硬件兼容性测试工具使用指南.pdf" download="openEuler硬件兼容性测试工具使用指南.pdf">
-                                   {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[3].A_TEXT_2}}
-                               </a>
-                           </div>
-                       </div>
-                    </div> -->
-                    <!-- <div class="content-item">
-                       <div class="left">{{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[4].ID}}</div>
-                       <div class="right">
-                           <div class="item-title"> {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[4].TITLE}}</div>
-                           <div class="item-content">
-                                {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[4].DESCRIPTION_1}}
-                               <a :href="'mailto:' + i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[4].A_TEXT">
-                                   {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[4].A_TEXT}}
-                               </a>
-                               {{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[4].DESCRIPTION_2}}
-                           </div>
-                       </div>
-                    </div> -->
                     <div class="content-item">
                        <div class="left">{{i18n.compatibility.SOFTWARE_OEC_DETAIL.ITEM_ARR[3].ID}}</div>
                        <div class="right">
