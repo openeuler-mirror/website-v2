@@ -15,7 +15,7 @@ summary: "凝心聚力，众智行远，培养百万欧拉人才，共筑数字�
 
 <div class="markdown">
 
-<div align='center'><font size='14'>欧拉人才发展加速计划简介</font></div>
+<div align='center'><font size='14'>## 欧拉人才发展加速计划简介</font></div>
 
 </div>
 
