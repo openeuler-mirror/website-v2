@@ -262,7 +262,7 @@ EOF
 \`\`\`
 到这里，我们就运行了一个安全容器，你就可以像操作一个普通容器一样操作这个安全容器了。
 
-[1]:	https://openeuler.org/zh/docs/20.09/docs/Installation/installation.html
+[1]:	https://www.openeuler.org/zh/docs/20.09/docs/Installation/installation.html
 [2]:	https://gitee.com/openeuler/stratovirt
 [3]:	https://www.rust-lang.org/tools/install
-[4]:	https://openeuler.org/zh/docs/20.09/docs/Container/iSula%E5%AE%B9%E5%99%A8%E5%BC%95%E6%93%8E.html
+[4]:	https://www.openeuler.org/zh/docs/20.09/docs/Container/iSula%E5%AE%B9%E5%99%A8%E5%BC%95%E6%93%8E.html

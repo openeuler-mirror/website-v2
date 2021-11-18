@@ -2,7 +2,7 @@
 
 ### Brief Introduction
 
-Website is openEuler community contents management system base on [Vuepress](https://www.vuepress.cn/) framework, [default Theme for Vuepress](https://www.vuepress.cn/theme/default-theme-config.html) theme, which publish on https://openeuler.org. Now we are under developing. you are welcome to join us.
+Website is openEuler community contents management system base on [Vuepress](https://www.vuepress.cn/) framework, [default Theme for Vuepress](https://www.vuepress.cn/theme/default-theme-config.html) theme, which publish on https://www.openeuler.org. Now we are under developing. you are welcome to join us.
 
 ### directory structure
 docs  

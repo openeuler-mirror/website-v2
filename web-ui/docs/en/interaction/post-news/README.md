@@ -14,7 +14,7 @@ title: "Guidance to Post a News"
 
 2. 在Gitee个人设置中设置主邮箱地址，在此https://gitee.com/profile/emails。
 
-3. 签署贡献者协议，https://openeuler.org/zh/other/cla。
+3. 签署贡献者协议，https://www.openeuler.org/zh/other/cla。
 
 4. 参考http://git.mydoc.io/?t=180692准备你的git环境
 

@@ -14,7 +14,7 @@ title: "Guidance to Post a Blog"
 
 2. Set your primary mail box in gitee settings <https://gitee.com/profile/emails>.
 
-3. Sign your CLA in <https://openeuler.org/en/other/cla>.
+3. Sign your CLA in <https://www.openeuler.org/en/other/cla>.
 
 4. Prepare your git environment refering to <http://git.mydoc.io/?t=180692>.
 

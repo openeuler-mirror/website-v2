@@ -24,7 +24,7 @@ summary: 制作openEuler镜像
 
 openEuler：
 
-每日构建https://openeuler.org/zh/download/
+每日构建https://www.openeuler.org/zh/download/
 
 如图下载好了需要用到的iso。
 

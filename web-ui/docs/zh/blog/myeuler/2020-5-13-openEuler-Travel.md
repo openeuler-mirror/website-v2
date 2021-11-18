@@ -17,20 +17,20 @@ openEuler社区已经建立起来了，也有不少合作伙伴, OSV, ISV等参�
 
 ## openEuler社区概要
 
-openEuler的主站点是https://openeuler.org/
+openEuler的主站点是https://www.openeuler.org/
 
 <img src="./2020-05-13-openEuler-travel-01.png" >
 
 
 主站点主要是提供一些入口，对于工程师来说，最重要的应该是<font color="red"><b>下载链接</b></font>：
 
-https://openeuler.org/zh/releases.html
+https://www.openeuler.org/zh/releases.html
 
 <img src="./2020-05-13-openEuler-travel-02.png" >
 
 除了下载以外，对工程师来说，真正的<font color="red"><b>社区开始之旅的起点</b></font>：
 
-https://openeuler.org/zh/developer.html
+https://www.openeuler.org/zh/developer.html
 
 这个链接给大家做了一个简要的引导，但是不幸的是，对于一个新人来说，信息量依然非常大，可能有些摸不到头脑。下面，就让我带着大家一步步的化繁为简的做一次openEuler参与之旅吧。
 
@@ -74,7 +74,7 @@ https://opensource.org/licenses/alphabetical
 
 在具体讨论这四类参与方法之前，我先给出三个网址链接。
 
-1. https://openeuler.org/
+1. https://www.openeuler.org/
 
 2. https://gitee.com/openeuler/
 

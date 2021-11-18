@@ -14,7 +14,7 @@ summary: openEuler开源社区开发流程，介绍如何使用git提交PR。
 一、环境准备
 
 1. 注册码云账号，地址：<https://gitee.com>
-2. 加入openEuler社区，地址：https://openeuler.org/zh/
+2. 加入openEuler社区，地址：https://www.openeuler.org/zh/
 3. 安装git
 
 > 3.1 windows安装：https://git-scm.com/download/win

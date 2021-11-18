@@ -12,7 +12,7 @@ summary: openEuler 社区参与暑期 2020 的 102 个任务具体分析。
 
 ## openEuler 社区 [暑期 2020](https://isrc.iscas.ac.cn/summer2020) 任务详解分类
 
-[openEuler](https://openeuler.org) 社区在 [暑期 2020](https://isrc.iscas.ac.cn/summer2020) 活动中共发布了 [102](https://gitee.com/openeuler/marketing/blob/master/events/summer2020/tasks.md) 个任务，涵盖了 Linux 、容器、云计算和编程语言等多个技术栈。参与暑期 2020 活动的同学可以通过阅读本文的深度解析，找到感兴趣和符合自身技术栈的任务，这样可以在申请任务的过程中提高成功率。同时，openEuler 社区在 June 7th, 2020 、June 8th, 2020 和 June 9th, 2020 三天点晚间 19:00 ~ 20:00 间在[ Bilibili ](https://live.bilibili.com/22290444) 进行直播，由相关任务的社区 Maintainer 为大家更为详细的讲解技术点、具体要求等，现场回答同学们的问题。
+[openEuler](https://www.openeuler.org) 社区在 [暑期 2020](https://isrc.iscas.ac.cn/summer2020) 活动中共发布了 [102](https://gitee.com/openeuler/marketing/blob/master/events/summer2020/tasks.md) 个任务，涵盖了 Linux 、容器、云计算和编程语言等多个技术栈。参与暑期 2020 活动的同学可以通过阅读本文的深度解析，找到感兴趣和符合自身技术栈的任务，这样可以在申请任务的过程中提高成功率。同时，openEuler 社区在 June 7th, 2020 、June 8th, 2020 和 June 9th, 2020 三天点晚间 19:00 ~ 20:00 间在[ Bilibili ](https://live.bilibili.com/22290444) 进行直播，由相关任务的社区 Maintainer 为大家更为详细的讲解技术点、具体要求等，现场回答同学们的问题。
 
 更多问题可以和本文作者 邮件/Twitter/Telegram 联系：
 
@@ -24,11 +24,11 @@ summary: openEuler 社区参与暑期 2020 的 102 个任务具体分析。
 
 - 任务是必须在 aarch64 架构上完成么？
 
-    在任务的要求中写明需要在 aarch64 架构下完成的，都需要在 [openEuler](https://openeuler.org) 的 aarch64 架构上验证通过才可以；没有写此要求的任务，由申请者和任务导师协商，以协商结果为准。
+    在任务的要求中写明需要在 aarch64 架构下完成的，都需要在 [openEuler](https://www.openeuler.org) 的 aarch64 架构上验证通过才可以；没有写此要求的任务，由申请者和任务导师协商，以协商结果为准。
 
 - 在哪里找到 aarch64 的环境？
 
-    可以在树莓派上进行开发，相关内容请参考 https://openeuler.org/zh/blog/2020/05/25/2020-05-25-raspberrypi-userguide.html 。华为公司为针对 aarch64 架构的任务赞助华为公有云的鲲鹏计算资源，可使用 openEuler 的镜像用于完成任务开发。在学生申请任务成功后，会由活动组织方统一发放。
+    可以在树莓派上进行开发，相关内容请参考 https://www.openeuler.org/zh/blog/2020/05/25/2020-05-25-raspberrypi-userguide.html 。华为公司为针对 aarch64 架构的任务赞助华为公有云的鲲鹏计算资源，可使用 openEuler 的镜像用于完成任务开发。在学生申请任务成功后，会由活动组织方统一发放。
 
 - 任务验收标准不清晰？
 
@@ -94,13 +94,13 @@ June 17th, 2020 20:00 ~ 21:00 openEuler 社区之旅参与介绍
 
 1. [No.88 - 移植 openEuler 至 RK3399 平台](https://gitee.com/openeuler/marketing/issues/I1IJ4B) 团体项目 - **建议申请此任务的团队需要有一定的 Linux 操作系统实战能力，掌握 Linux 内核及硬件驱动相关知识，熟悉掌握操作系统引导与启动机制。**
 
-    [openEuler](https://openeuler.org) 社区致力于把 [openEuler](https://openeuler.org) 发行版移植到多种设备上，目前已经能在 [Raspberry Pi](https://www.raspberrypi.org) 4B Model 上顺利运行。这次团体任务的目标是把 [openEuler](https://openeuler.org) 20.03 LTS 版本移植到瑞芯微推出的 RK3399 芯片上运行，社区建议参与此任务团队在 Firefly 出品的 [4GB 内存/16GB 闪存](https://item.jd.com/23958924426.html) 版本的开发板进行移植任务。
+    [openEuler](https://www.openeuler.org) 社区致力于把 [openEuler](https://www.openeuler.org) 发行版移植到多种设备上，目前已经能在 [Raspberry Pi](https://www.raspberrypi.org) 4B Model 上顺利运行。这次团体任务的目标是把 [openEuler](https://www.openeuler.org) 20.03 LTS 版本移植到瑞芯微推出的 RK3399 芯片上运行，社区建议参与此任务团队在 Firefly 出品的 [4GB 内存/16GB 闪存](https://item.jd.com/23958924426.html) 版本的开发板进行移植任务。
     
     任务地址 https://gitee.com/openeuler/marketing/issues/I1IJ4B
 
 2. Raspberry Pi 树莓派相关任务 -  **建议申请此任务的同学需要有一定的 Linux 操作系统实战能力，掌握 Linux DNF/RPM 管理方案，熟悉 Linux 桌面系统的同学申请此类任务**
 
-    [openEuler](https://openeuler.org) 社区致力于把 [openEuler](https://openeuler.org) 发行版移植到多种设备上，目前已经能在 [Raspberry Pi](https://www.raspberrypi.org) 4B Model 上顺利运行。为了让  [openEuler](https://openeuler.org) 项目更好的运行在树莓派上， [openEuler](https://openeuler.org) 社区 [Raspberry Pi SIG](https://gitee.com/openeuler/community/tree/master/sig/sig-RaspberryPi) 的 Maintainer 方亚芬([yafen@iscas.ac.cn](mailto:yafen@iscas.ac.cn)) 发起了 3 个优化运行效果的任务。
+    [openEuler](https://www.openeuler.org) 社区致力于把 [openEuler](https://www.openeuler.org) 发行版移植到多种设备上，目前已经能在 [Raspberry Pi](https://www.raspberrypi.org) 4B Model 上顺利运行。为了让  [openEuler](https://www.openeuler.org) 项目更好的运行在树莓派上， [openEuler](https://www.openeuler.org) 社区 [Raspberry Pi SIG](https://gitee.com/openeuler/community/tree/master/sig/sig-RaspberryPi) 的 Maintainer 方亚芬([yafen@iscas.ac.cn](mailto:yafen@iscas.ac.cn)) 发起了 3 个优化运行效果的任务。
 
     - [No.2 - 精简 openEuler 的树莓派 4B 镜像体积小于 500 MiB](https://gitee.com/openeuler/marketing/issues/I1H8H9) 任务地址 https://gitee.com/openeuler/marketing/issues/I1H8H9
     - [No.1 - 为 openEuler 添加 Xfce 桌面环境并能够运行在树莓派 4B 上](https://gitee.com/openeuler/marketing/issues/I1H8G3) 任务地址 https://gitee.com/openeuler/marketing/issues/I1H8G3
@@ -108,7 +108,7 @@ June 17th, 2020 20:00 ~ 21:00 openEuler 社区之旅参与介绍
 
 3. Linux 桌面相关任务 - **建议申请此任务的同学掌握 Linux DNF/RPM 管理方案，熟悉 Linux 桌面系统的同学申请此类任务**
 
-    由于历史原因，目前 [openEuler](https://openeuler.org) 还没有正式提供桌面环境，所以在这次活动中 [sig-UKUI](https://gitee.com/openeuler/community/tree/master/sig/sig-UKUI) 的 Maintainer [douyan@kylinos.cn](mailto:douyan@kylinos.cn) 和 [jianfengli@ubuntukylin.com](mailto:jianfengli@ubuntukylin.com) 发起了移植 [UKUI](https://www.ukui.org) 到 [openEuler](https://openeuler.org) 的任务。在 [No.1](https://gitee.com/openeuler/marketing/issues/I1H8G3) 任务则是把轻量级桌面系统 [Xfce](https://www.xfce.org) 移植到 [openEuler](https://openeuler.org) 系统中。
+    由于历史原因，目前 [openEuler](https://www.openeuler.org) 还没有正式提供桌面环境，所以在这次活动中 [sig-UKUI](https://gitee.com/openeuler/community/tree/master/sig/sig-UKUI) 的 Maintainer [douyan@kylinos.cn](mailto:douyan@kylinos.cn) 和 [jianfengli@ubuntukylin.com](mailto:jianfengli@ubuntukylin.com) 发起了移植 [UKUI](https://www.ukui.org) 到 [openEuler](https://www.openeuler.org) 的任务。在 [No.1](https://gitee.com/openeuler/marketing/issues/I1H8G3) 任务则是把轻量级桌面系统 [Xfce](https://www.xfce.org) 移植到 [openEuler](https://www.openeuler.org) 系统中。
 
     [UKUI](https://www.ukui.org) 是麒麟软件桌面研发团队开发的基于 Linux 发行版的轻量级桌面环境，其设计紧贴普通用户需求，特别是针对有一定 Windows 系统使用习惯的用户，减少其使用 Linux 系统的学习成本。2019年，麒麟软件全面启动 UKUI 3.0 的设计和研发工作，全新的 UKUI 3.0 使用 QT 开发，秉承 “友好易用，简单轻松” 的设计理念，将为用户提供更愉快的交互体验。
 
@@ -116,7 +116,7 @@ June 17th, 2020 20:00 ~ 21:00 openEuler 社区之旅参与介绍
 
 4. Linux 容器引擎相关任务 - **建议熟悉 Linux 容器引擎技术实现(如 Docker )的同学申请此类任务**
 
-    [openEuler](https://openeuler.org) 在兼容主流的容器引擎同时，孵化自己的容器引擎项目 [iSula](https://gitee.com/openeuler/iSulad)，它在支持 Docker 镜像的同时支持 OCI 格式的镜像和规范。 [iSulad SIG](https://gitee.com/openeuler/community/tree/master/sig/iSulad) 的 Maintainers 为同学带来了多个任务。更多 [iSula](https://gitee.com/openeuler/iSulad) 的任务请访问它的官方[文档](https://openeuler.org/zh/docs/20.03_LTS/docs/Container/container.html)
+    [openEuler](https://www.openeuler.org) 在兼容主流的容器引擎同时，孵化自己的容器引擎项目 [iSula](https://gitee.com/openeuler/iSulad)，它在支持 Docker 镜像的同时支持 OCI 格式的镜像和规范。 [iSulad SIG](https://gitee.com/openeuler/community/tree/master/sig/iSulad) 的 Maintainers 为同学带来了多个任务。更多 [iSula](https://gitee.com/openeuler/iSulad) 的任务请访问它的官方[文档](https://www.openeuler.org/zh/docs/20.03_LTS/docs/Container/container.html)
 
     Linux 容器相关知识可以参考：
 
@@ -137,7 +137,7 @@ June 17th, 2020 20:00 ~ 21:00 openEuler 社区之旅参与介绍
 
 5. Kubernetes 相关任务 - **建议熟悉 Kubernetes 编排调度技术的同学申请此类任务**
 
-    [openEuler](https://openeuler.org) 当然不会缺席当前业界最热的开源项目 [Kubernetes](https://kubernetes.io) ，多个 SIG 组的 Maintainer 推出了相关的任务，从相对简单的集成任务到有一定难度的开发任务。[Kubernetes](https://kubernetes.io) 的资料很多，这里就不一一列举。
+    [openEuler](https://www.openeuler.org) 当然不会缺席当前业界最热的开源项目 [Kubernetes](https://kubernetes.io) ，多个 SIG 组的 Maintainer 推出了相关的任务，从相对简单的集成任务到有一定难度的开发任务。[Kubernetes](https://kubernetes.io) 的资料很多，这里就不一一列举。
 
     相关资料：
 
@@ -172,7 +172,7 @@ June 17th, 2020 20:00 ~ 21:00 openEuler 社区之旅参与介绍
 
 7. Golang 相关任务 -  **建议熟悉 Golang 语言、对 aarch64 架构和算法有一定程度了解等的同学申请此类任务**
 
-    [Golang](https://golang.org) 随着容器技术和 [Kubernetes](https://kubernetes.io) 的逐渐被开发者接受。[openEuler](https://openeuler.org) 社区提出的 [Golang](https://golang.org) 大多是基于 ARM64 的优化任务。需要对 ARM 的指令集和 Golang 语言编译器等有一定的了解才能顺利完成任务
+    [Golang](https://golang.org) 随着容器技术和 [Kubernetes](https://kubernetes.io) 的逐渐被开发者接受。[openEuler](https://www.openeuler.org) 社区提出的 [Golang](https://golang.org) 大多是基于 ARM64 的优化任务。需要对 ARM 的指令集和 Golang 语言编译器等有一定的了解才能顺利完成任务
 
     相关资料：
 
@@ -214,7 +214,7 @@ June 17th, 2020 20:00 ~ 21:00 openEuler 社区之旅参与介绍
 
 9. 存储相关任务 - **建议熟悉 Linux 存储知识的同学申请此类任务**
 
-    [FUSE] 是用户态的文件系统，目前业界都在探索把存储前置到用户态，提升效率和管控的能力。[openEuler](https://openeuler.org) 提出的存储业务大部分都跟此方向相关。
+    [FUSE] 是用户态的文件系统，目前业界都在探索把存储前置到用户态，提升效率和管控的能力。[openEuler](https://www.openeuler.org) 提出的存储业务大部分都跟此方向相关。
 
     相关资料：
 
@@ -237,7 +237,7 @@ June 17th, 2020 20:00 ~ 21:00 openEuler 社区之旅参与介绍
 
 10. ARM64 相关任务 - **建议熟悉 aarch64 架构，算法有一定能力的同学申请此类任务**
 
-    [openEuler](https://openeuler.org) 提出的 ARM64 相关任务都是优化类型，此部分参考资料参见第 7 类 [Golang](https://golang.org) 的相关资料。
+    [openEuler](https://www.openeuler.org) 提出的 ARM64 相关任务都是优化类型，此部分参考资料参见第 7 类 [Golang](https://golang.org) 的相关资料。
 
     任务列表：
 
@@ -253,7 +253,7 @@ June 17th, 2020 20:00 ~ 21:00 openEuler 社区之旅参与介绍
 
 11. RISC-V 相关任务 - **建议熟悉 RISC-V 架构的同学申请此类任务**
 
-    [RISC-V](https://riscv.org) 是一种是一个基于精简指令集(RISC)原则的开源指令集架构(ISA)，[openEuler](https://openeuler.org) 的 [RISC-V](https://gitee.com/openeuler/community/tree/master/sig/sig-RISC-V) SIG 的 Maintainer 正在致力于移植工作。
+    [RISC-V](https://riscv.org) 是一种是一个基于精简指令集(RISC)原则的开源指令集架构(ISA)，[openEuler](https://www.openeuler.org) 的 [RISC-V](https://gitee.com/openeuler/community/tree/master/sig/sig-RISC-V) SIG 的 Maintainer 正在致力于移植工作。
 
     相关资料:
 

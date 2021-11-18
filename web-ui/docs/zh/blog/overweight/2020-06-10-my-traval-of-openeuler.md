@@ -21,11 +21,11 @@ openEuler是一个开源、免费的Linux发行版平台，将通过开放的社
 
 
 
-**openEuler的官方网站： https://openeuler.org/**
+**openEuler的官方网站： https://www.openeuler.org/**
 
 **repo 下载地址： https://repo.openeuler.org**
 
-**文档手册：https://openeuler.org/zh/docs/20.03_LTS/docs/Releasenotes/release_notes.html**
+**文档手册：https://www.openeuler.org/zh/docs/20.03_LTS/docs/Releasenotes/release_notes.html**
 
 ![image-20200521203551777](./openEuler-traval.assets/image-20200521203551777.png)
 
@@ -174,7 +174,7 @@ SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来�
 |           | ![image-20200506154538225](./openEuler-traval.assets/image-20200506154538225.png) | 规范：《软件包升级选型规范》 --待输出--                      |
 |           | ![image-20200506154610817](./openEuler-traval.assets/image-20200506154610817.png) | 指导：[《软件包打包规范》](https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md) |
 |           | ![image-20200506154459319](./openEuler-traval.assets/image-20200506154459319.png) | 规范：[《软件包打包规范》](https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md)<br />指导：《如何提交PR、发起检视及合入验证》  --待输出-- |
-|           | ![image-20200506154518672](./openEuler-traval.assets/image-20200506154518672.png) | 规范：[《openEuler漏洞处理流程》](https://gitee.com/openeuler/security-committee/blob/master/security-process.md)<br />规范：[《openEuler漏洞严重性评估》](https://gitee.com/openeuler/security-committee/blob/master/security-evaluation.md)<br />指导：[《如何申请CVE、漏洞上报》](https://openeuler.org/zh/security.html) |
+|           | ![image-20200506154518672](./openEuler-traval.assets/image-20200506154518672.png) | 规范：[《openEuler漏洞处理流程》](https://gitee.com/openeuler/security-committee/blob/master/security-process.md)<br />规范：[《openEuler漏洞严重性评估》](https://gitee.com/openeuler/security-committee/blob/master/security-evaluation.md)<br />指导：[《如何申请CVE、漏洞上报》](https://www.openeuler.org/zh/security.html) |
 |           | ![image-20200506154813993](./openEuler-traval.assets/image-20200506154813993.png) | 规范：《openEuler软件包随版本发布规范》 --待输出--<br />指导：《如何将软件包加入openEuler发布版本》--待输出-- |
 |           | ![image-20200506154918752](./openEuler-traval.assets/image-20200506154918752.png) | 规范：[《安全漏洞处理和发布流程》](https://gitee.com/openeuler/security-committee/blob/master/security-process.md) |
 | 退出      |                                                              |                                                              |
@@ -182,11 +182,11 @@ SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来�
 
 ## 如果参与openEuler社区贡献？
 
-第一步，开源并不意味者随心所欲，**签署CLA**：[“贡献者许可协议”](https://openeuler.org/zh/cla.html)是第一步，阅读并遵守openEuler社区的[行为守则](https://gitee.com/openeuler/community/blob/master/code-of-conduct.md)；
+第一步，开源并不意味者随心所欲，**签署CLA**：[“贡献者许可协议”](https://www.openeuler.org/zh/cla.html)是第一步，阅读并遵守openEuler社区的[行为守则](https://gitee.com/openeuler/community/blob/master/code-of-conduct.md)；
 
-第二步，从了解、安装、使用、测试openEuler开始，**积极反馈问题和建议**，相关的[文档和手册](https://openeuler.org/zh/docs/20.03_LTS/docs/Releasenotes/release_notes.html)，以及相关的[资讯](https://openeuler.org/zh/blog.html)可以帮助你更加深入的了解openEuler。
+第二步，从了解、安装、使用、测试openEuler开始，**积极反馈问题和建议**，相关的[文档和手册](https://www.openeuler.org/zh/docs/20.03_LTS/docs/Releasenotes/release_notes.html)，以及相关的[资讯](https://www.openeuler.org/zh/blog.html)可以帮助你更加深入的了解openEuler。
 
-第三步，开发者熟悉社区的开发流程后——[《贡献者指南》](https://openeuler.org/zh/developer.html)，可以基于自己感兴趣的项目和软件，在码云上openEuler对应的项目提交自己的贡献。
+第三步，开发者熟悉社区的开发流程后——[《贡献者指南》](https://www.openeuler.org/zh/developer.html)，可以基于自己感兴趣的项目和软件，在码云上openEuler对应的项目提交自己的贡献。
 
 ## 了解gitee工作流
 
@@ -405,7 +405,7 @@ stateDiagram
 
 ## openEuler OBS使用
 
-这两片文章帮助你了解obs的基本使用。[如何使用 openEuler OBS - （一）介绍](https://openeuler.org/zh/blog/2020/03/26/2020-03-26-how-to-OBS.html)  和[如何使用 openEuler OBS - （二）与gitee的联动](https://openeuler.org/zh/blog/2020/03/26/2020-03-26-OBS-with-Git.html)
+这两片文章帮助你了解obs的基本使用。[如何使用 openEuler OBS - （一）介绍](https://www.openeuler.org/zh/blog/2020/03/26/2020-03-26-how-to-OBS.html)  和[如何使用 openEuler OBS - （二）与gitee的联动](https://www.openeuler.org/zh/blog/2020/03/26/2020-03-26-OBS-with-Git.html)
 
 ### 什么是obs？
 
