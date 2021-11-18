@@ -108,13 +108,11 @@
                 </div>
             </div>
         </div>
-
         <div class="home-active" :style="{ backgroundImage:'url('+activeImg+')' }">
             <h3 :class="$lang == 'en'?'en-h3-home':''">{{ i18n.home.HOME_ACTIVE.ACTIVE_TITLE }}</h3>
             <p :class="$lang == 'en'?'en-weight-family':''">{{ i18n.home.HOME_ACTIVE.ACTIVE_DESCRIPTION }}</p>
         </div>
-
-        <div class="home-calendar" v-if="calenderData.length">
+        <div class="home-calendar" id="meeting" v-if="calenderData.length">
             <calender :table-data="calenderData" />
         </div>
 
@@ -380,7 +378,6 @@
             }
         },
         mounted() {
-            this.goMeeting()
             this.videoCtrlParams.element = document.getElementById('home-video');
             remoteMethods.meetingList();
             remoteMethods.statisticsList();
@@ -414,7 +411,7 @@
         },
         methods: {
             goMeeting() {
-                window.location.search.slice(1) == 'meeting=true' ? document.documentElement.scrollTop = 1500 : ''
+                window.location.hash == '#meeting' ? document.documentElement.scrollTop = 1500 : ''
             },
             videoClicked() {
               this.isMasked = true

@@ -45,7 +45,7 @@ title: "Contribution"
 
 您可以了解并参与丰富多彩的社区活动：
 
-- [Meeting](/zh/?meeting=true)：查看官网首页SIG公开例会日程安排，可参与你感兴趣的会议
+- [Meeting](/zh/#meeting)：查看官网首页SIG公开例会日程安排，可参与你感兴趣的会议
 - [Meetups](https://www.openeuler.org/en/interaction/salon-list/)
 - [直播](https://www.openeuler.org/en/interaction/live-list/)
 - [峰会](https://www.openeuler.org/en/interaction/summit-list/summit2021/)
@@ -124,7 +124,7 @@ openEuler是一个开放的社区，我们希望所有参与社区的人都能�
 ##### 8.参与非代码类贡献  
 如果您的兴趣不在编写代码方面，可以在[ 非代码贡献指南 ](https://gitee.com/openeuler/community/blob/master/zh/contributors/non-code-contributions.md)中找到感兴趣的工作。  
 ##### 9.社区安全问题披露  
-[安全处理流程](https://gitee.com/openeuler/community/blob/master/zh/security-committee/security-process.md)——简要描述了处理安全问题的过程。  
+[安全处理流程](https://gitee.com/openeuler/security-committee/blob/master/%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B.jpg)——简要描述了处理安全问题的过程。  
 [安全披露信息](https://gitee.com/openeuler/security-committee/blob/master/security-disclosure.md)——如果您希望报告安全漏洞，请参考此页面。  
 
 ## 4. 和社区一起成长
