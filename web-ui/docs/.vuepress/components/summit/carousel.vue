@@ -2,7 +2,7 @@
     <div class="agenda-carousel"  :class="summitData ? 'summit2021' : ''">
         <div class="agenda-msg">
             <div class="time-list" :class="{'summit_time' :isShowH5 && summitData}">
-                <div :id="index== 2 ? 'goCenter':''" v-for="(item,index) in carouselObj.TIME_LIST" :key="index" :class="{'tea-div':summitData && index === 4}">{{ item }}</div>
+                <div :id="index== 1 && !summitData? 'goCenter':''" v-for="(item,index) in carouselObj.TIME_LIST" :key="index" :class="{'tea-div':summitData && index === 4}">{{ item }}</div>
             </div>
             <div class="card-list">
                 <button
@@ -34,9 +34,9 @@
                     <ul class="card-list" :style="{transform: 'translateX(' + cardPosition + 'px)'}">
                         <li v-for="(item,index) in carouselObj.CARD_LIST" :key="index" >
                             <p class="section" v-for="(values,keys) in item.TITLE" :key="values">{{ values }}</p>
-                            <div :class="[value.THEME?'card-item':'null-item',{'teacard':key==4 && summitData},{'teacard_mo':key==4 && isShowH5 && summitData}] " v-for="(value,key) in item.ITEM_LIST" :key="key" @click="showDetail(value,1)">
+                            <a href="#goCenter" :class="[value.THEME?'card-item':'null-item',{'teacard':key==4 && summitData},{'teacard_mo':key==4 && isShowH5 && summitData}] " v-for="(value,key) in item.ITEM_LIST" :key="key" @click="showDetail(value,1)">
                                 <p>{{ value.THEME }}</p>
-                            </div>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -138,7 +138,7 @@ export default {
             }
         },
         showDetail(item,which) {
-            location.href="#goCenter"
+            this.summitData ? this.goCenter():'';
             if(item.THEME && which === 1){
                 this.detailMsg = {};
                 this.isShowDetail = true;
@@ -152,6 +152,9 @@ export default {
                 return false;
             }
 
+        },
+        goCenter() {
+            this.isShowH5 ? document.documentElement.scrollTop = 1900 : document.documentElement.scrollTop = 2800
         },
         hideDetail(which) {
             if(which === '1') {
@@ -360,6 +363,8 @@ export default {
                             }
                         }
                         .card-item {
+                            display: inline-block;
+                            text-decoration: none;
                             width: 270px;
                             height: 150px;
                             border-radius: 8px;
