@@ -10,7 +10,8 @@
             <a
                 v-for="(item,index) in i18n.community.CONTRIBUTION.LINK_LIST"
                 :key="index"
-                @click="go(item)"
+                :href="item"
+                target="_blank"
             ></a>
             <a :href="'/'+$lang+'/community/contribution/detail.html'">{{ i18n.community.CONTRIBUTION.LOOK_DESC }}</a>
             <a download="trail-chess.pdf" :href="i18n.community.CONTRIBUTION.DOWLOAD_PDF_URL">{{ i18n.community.CONTRIBUTION.PRINT_MAP }}</a>

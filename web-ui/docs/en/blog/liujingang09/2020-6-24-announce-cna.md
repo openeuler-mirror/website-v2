@@ -17,7 +17,7 @@ The openEuler community attaches great importance to the community version secur
 The security committee of openEuler community is responsible for building community security engineering and improving vulnerability response capabilities. We hope that security experts and enthusiasts who are interested in openEuler can join our hands to enhance the openEuler community security.
 
 #### Vulnerability management policy：
-                 https://openeuler.org/en/security.html
+                 https://www.openeuler.org/en/security.html
 #### What is CVE?
 + CVE is an international, community-based effort that maintains a community-driven, open data registry of vulnerabilities. 
 + The CVE IDs assigned through the registry enable program stakeholders to rapidly discover and correlate vulnerability information used to protect systems against attacks. 

@@ -43,6 +43,7 @@ openEuler-Advisor核心模块在advisors目录下，主要提供软件包上游�
 <div align='center'>
 
 ![](./advisors-compose.png)
+
 </div>
 
 - simple_update_robot: 用于src-openeuler仓库内软件包的自动升级工作，能够自动fork软件仓，下载要升级的源码包，修改spec文件（自动匹配上游社区已合入的补丁），本地obs编译，自动创建PR（包含差异分析报告）及issue等；  
@@ -50,6 +51,7 @@ openEuler-Advisor核心模块在advisors目录下，主要提供软件包上游�
 <div align='center'>
 
 ![](./auto-upgrade.png)
+
 </div>
 
 - oa_upgradable: 用于查询软件包上游发布信息及版本推荐等，能够获取软件包当前社区有效的release tags，并通过版本推荐算法，推荐出软件包的最新版本和维护版本，如果需要，可判断当前软件包版本是否需要升级，并创建相关issue； 

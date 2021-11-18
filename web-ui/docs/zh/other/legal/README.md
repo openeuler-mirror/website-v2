@@ -15,7 +15,7 @@ title: "法律声明"
 
 ## 规则及openEuler网站访问条件
 
-openEuler网站指由openEuler社区运营的网站，域名为<https://openeuler.org>。以下规则适用于所有访问openEuler网站的用户或浏览者，openEuler社区保留根据国家法律法规及市场行情等变化修改这些规则的权利。访问openEuler网站的权利由openEuler社区根据下列条款授予。如果您不同意下列任何条款、请停止使用本网址。如果您使用<https://openeuler.org>服务，您的使用行为将被视为对本声明全部内容的认可。对于违反这些规则的行为，openEuler社区有权采取法律和公平的补救措施。
+openEuler网站指由openEuler社区运营的网站，域名为<https://www.openeuler.org>。以下规则适用于所有访问openEuler网站的用户或浏览者，openEuler社区保留根据国家法律法规及市场行情等变化修改这些规则的权利。访问openEuler网站的权利由openEuler社区根据下列条款授予。如果您不同意下列任何条款、请停止使用本网址。如果您使用<https://www.openeuler.org>服务，您的使用行为将被视为对本声明全部内容的认可。对于违反这些规则的行为，openEuler社区有权采取法律和公平的补救措施。
 
 ## 不承诺责任声明
 
@@ -25,10 +25,10 @@ openEuler网站所载的材料和信息，包括但不限于文本、图片、�
 openEuler社区可以在没有任何通知或提示的情况下随时对openEuler网站上的内容进行修改，为了得到最新版本的信息，请您定时访问openEuler网站。
 openEuler社区在openEuler网站上所提及的非openEuler产品或服务仅仅是为了提供相关信息，并不构成对这些产品、服务的认可或推荐。
 openEuler社区并不就网址上提供的任何产品、服务或信息做出任何声明、保证或认可。 
-鉴于<https://openeuler.org>提供的部分服务属于电子公告牌（BBS）服务，
-<https://openeuler.org>上关于其会员或其会员发布的相关信息（包括但不限于用户名称、公司名称、 联系人及联络信息，相关图片、视讯等）的信息均是由会员自行提供，
+鉴于<https://www.openeuler.org>提供的部分服务属于电子公告牌（BBS）服务，
+<https://www.openeuler.org>上关于其会员或其会员发布的相关信息（包括但不限于用户名称、公司名称、 联系人及联络信息，相关图片、视讯等）的信息均是由会员自行提供，
 会员依法应对其提供的任何信息承担全部责任。 
-任何企业或个人认为<https://openeuler.org>网页内容（包括但不限于<https://openeuler.org>会员发布的商品信息）可能涉嫌侵犯其合法权益，应该及时向openEuler社区<contact@openeuler.io>提出书面权利通知，并提供身份证明、权属证明、具体链接（URL）及详细侵权情况证明。
+任何企业或个人认为<https://www.openeuler.org>网页内容（包括但不限于<https://www.openeuler.org>会员发布的商品信息）可能涉嫌侵犯其合法权益，应该及时向openEuler社区<contact@openeuler.io>提出书面权利通知，并提供身份证明、权属证明、具体链接（URL）及详细侵权情况证明。
 openEuler社区在收到上述法律文件后，将会依法尽快移除相关涉嫌侵权的内容。
 
 ## 著作权说明

@@ -209,7 +209,6 @@
                 </div>
             </div>
         </div>
-
         <div class="home-developer" v-if="false">
             <h3 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_DEV.DEV_TITLE }}</h3>
             <p :class="$lang == 'en'?'en-developer-p':''">{{ i18n.home.HOME_DEV.DEV_DESCRIPTION }}</p>
@@ -381,7 +380,7 @@
             }
         },
         mounted() {
-            console.log(this.i18n.home.HOME_NEWRELEASE);
+            this.goMeeting()
             this.videoCtrlParams.element = document.getElementById('home-video');
             remoteMethods.meetingList();
             remoteMethods.statisticsList();
@@ -414,23 +413,13 @@
             round
         },
         methods: {
+            goMeeting() {
+                window.location.search.slice(1) == 'meeting=true' ? document.documentElement.scrollTop = 1500 : ''
+            },
             videoClicked() {
               this.isMasked = true
               console.log('clicked');
             },
-            // bannerClick(index) {
-            //     switch (index) {
-            //         case 0:
-            //         this.go('/news/20211117-openeuler.html');
-            //         break;
-            //         case 1: 
-            //         this.go('/interaction/summit-list/summit2021/');
-            //         break;
-            //         case 2:
-            //         this.go('https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/pdf/openEuler%2021.09%20%E6%8A%80%E6%9C%AF%E7%99%BD%E7%9A%AE%E4%B9%A6.pdf')
-            //         break;
-            //     }
-            // },
             maskClicked() {
               this.isMasked = false
             },

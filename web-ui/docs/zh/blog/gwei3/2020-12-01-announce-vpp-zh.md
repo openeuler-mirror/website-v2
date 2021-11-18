@@ -41,7 +41,7 @@ https://openeulersrc.vulbox.com/
 
 #### 漏洞管理策略
 openEuler非常重视社区版本的安全性，制定了一套完整的漏洞管理策略，快速的响应和处理openEuler相关的安全问题。
-https://openeuler.org/zh/security/vulnerability-reporting/
+https://www.openeuler.org/zh/security/vulnerability-reporting/
 
 #### 严正声明
 1.在漏洞未修复前，请您避免任何公开和传播。我们承诺：对每一份报告，都会有专门的安全人员进行评审、跟进并及时反馈最新的处理结果，并且我们会按照“漏洞奖励方案”对您的付出表示感谢。未经openEuler书面许可，如您以任何形式公开已提交的漏洞，我们将扣除已确认奖励，并保留追究您违约或侵权行为的权利。

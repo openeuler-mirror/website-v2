@@ -25,7 +25,7 @@ RPM软件包管理器（RPM）是在Red Hat Enterprise Linux，CentOS和Fedora�
 
 openEuler是一款开源操作系统。当前openEuler内核源于Linux，支持鲲鹏及其它多种处理器，能够充分释放计算芯片的潜能，是由全球开源贡献者构建的高效、稳定、安全的开源操作系统，适用于数据库、大数据、云计算、人工智能等应用场景。同时，openEuler是一个面向全球的操作系统开源社区，通过社区合作，打造创新平台，构建支持多处理器架构、统一和开放的操作系统，推动软硬件应用生态繁荣发展。
 
-进入openeuler官网<https://openeuler.org/en/download/>选择所需版本进行下载，这里选择openEuler 20.03 LTS，openEuler 20.03 LTS版的生命周期为四年，是一种标准发行版，可以满足开放方案的要求
+进入openeuler官网<https://www.openeuler.org/en/download/>选择所需版本进行下载，这里选择openEuler 20.03 LTS，openEuler 20.03 LTS版的生命周期为四年，是一种标准发行版，可以满足开放方案的要求
 
 <img src="./image/1.1.png" alt="image-openEuler-version">
 
@@ -294,11 +294,11 @@ gpgkey=http://repo.openeuler.org/openEuler-20.03-LTS/OS/$basearch/RPM-GPG-KEY-op
 
 #### 安装要求
 
-在树莓派环境上安装 openEuler 操作系统，则树莓派需要满足如下的硬件兼容性和最小硬件要求：树莓派版本3B、3B+、4B，内存：为了获得更好的应用体验，建议至少 4GB，硬盘：为了获得更好的应用体验，建议至少8GB，树莓派官网https://www.raspberrypi.org/，openEuler社区网站https://openeuler.org/en/download/
+在树莓派环境上安装 openEuler 操作系统，则树莓派需要满足如下的硬件兼容性和最小硬件要求：树莓派版本3B、3B+、4B，内存：为了获得更好的应用体验，建议至少 4GB，硬盘：为了获得更好的应用体验，建议至少8GB，树莓派官网https://www.raspberrypi.org/，openEuler社区网站https://www.openeuler.org/en/download/
 
 #### 获取安装源
 
-获取openEuler 发布的树莓派镜像及其校验文件，登陆openEuler社区网站https://openeuler.org/en/download/，单击卡片 openEuler 20.03 LTS SP1 上的“download”按钮
+获取openEuler 发布的树莓派镜像及其校验文件，登陆openEuler社区网站https://www.openeuler.org/en/download/，单击卡片 openEuler 20.03 LTS SP1 上的“download”按钮
 
 <img src="./image/2.1.png" alt= "image-get iso">
 

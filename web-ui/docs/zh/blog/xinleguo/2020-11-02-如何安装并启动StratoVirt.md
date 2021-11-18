@@ -28,7 +28,7 @@ StratoVirt 作为虚拟化平台，实现了一套架构统一支持虚拟机，
 
 ## 安装 StratoVirt
 
-这里提供了两种方式安装 StratoVirt。如果你只想要使用 StratoVirt 运行一台虚拟机，小编推荐组件安装的方式。你只需要按照软硬件要求，安装 [openEuler 20.09](https://openeuler.org/zh/docs/20.09/docs/Installation/installation.html) 及更高版本，并且配置好 openEuler yum 源。那么就可以直接使用 yum 命令安装啦。
+这里提供了两种方式安装 StratoVirt。如果你只想要使用 StratoVirt 运行一台虚拟机，小编推荐组件安装的方式。你只需要按照软硬件要求，安装 [openEuler 20.09](https://www.openeuler.org/zh/docs/20.09/docs/Installation/installation.html) 及更高版本，并且配置好 openEuler yum 源。那么就可以直接使用 yum 命令安装啦。
 
 如果你有很强的好奇心，希望深入了解我们的 StratoVirt。那太好了，编译安装的方式更适合你。作为开源项目，我们的 StratoVirt 源码放在[码云](https://gitee.com/openeuler/stratovirt)平台上。 你可以下载我们的源码，了解它的架构，甚至对其做一些代码修改。
 
@@ -141,7 +141,7 @@ EOF
 
 ## StratoVirt对接iSulad并运行安全容器
 
-iSulad是一种容器引擎，具有轻、灵、巧、快的特点。你可以点击[这里](https://openeuler.org/zh/docs/20.09/docs/Container/iSula%E5%AE%B9%E5%99%A8%E5%BC%95%E6%93%8E.html)了解详情。那什么是安全容器呢？简单来说，安全容器使用虚拟化层进行容器间的隔离，使同一主机上的不同容器间具有更强的隔离性。
+iSulad是一种容器引擎，具有轻、灵、巧、快的特点。你可以点击[这里](https://www.openeuler.org/zh/docs/20.09/docs/Container/iSula%E5%AE%B9%E5%99%A8%E5%BC%95%E6%93%8E.html)了解详情。那什么是安全容器呢？简单来说，安全容器使用虚拟化层进行容器间的隔离，使同一主机上的不同容器间具有更强的隔离性。
 
 安全容器的架构如下图所示：
 

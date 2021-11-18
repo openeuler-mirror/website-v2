@@ -16,7 +16,7 @@ openEuler非常重视社区版本的安全性，制定了一套完整的漏洞�
 openEuler安全委员会一直致力于提升社区安全和隐私保护能力，欢迎关注openEuler的安全专家和爱好者加入openEuler安全委员会，与我们一起构建openEuler社区安全。
 
 #### openEuler漏洞管理策略：
-https://openeuler.org/zh/security.html
+https://www.openeuler.org/zh/security.html
 
 ### 关于CVE
 全称是 Common Vulnerabilities & Exposures  通用漏洞披露，建立于 1999年9月。 CVE是一个漏洞字典表，每个漏洞都拥有一个唯一的CVE编码。用户可以通过唯一的CVE编码在漏洞数据库或安全工具中快速的找到漏洞影响范围和修补信息，以便快速的确认系统受漏洞影响情况和获取解决方案。

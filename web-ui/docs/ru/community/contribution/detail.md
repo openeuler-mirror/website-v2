@@ -15,21 +15,21 @@ title: "Contribution"
 您可以通过以下四种方式体验openEuler操作系统：
 
 - [公有云](https://huaweicloud.com/product/ecs.html)
-- [虚拟机](/ru/docs/20.03_LTS/docs/Virtualization/virtualization.html)
-- [硬件](/ru/docs/20.03_LTS/docs/Installation/installation.html)
+- [虚拟机](https://www.openeuler.org/ru/docs/20.03_LTS/docs/Virtualization/virtualization.html)
+- [硬件](https://www.openeuler.org/ru/docs/20.03_LTS/docs/Installation/installation.html)
 - [树莓派](https://gitee.com/openeuler/raspberrypi)
 
 ### 1.2 体验原创开源项目
 
 您可以体验openEuler社区里的以下原创开源项目：
 
-- [StratoVirt](/ru/other/projects/stratovirt/)：面向云数据中心的企业级虚拟化平台
-- [A-Tune](/ru/other/projects/atune/)：一款基于AI开发的智能优化引擎
-- [iSula](/ru/other/projects/isula/)：轻量级容器解决方案
-- [secGear](https://gitee.com/openeuler/secGear)：面向计算产业的机密计算安全应用开发套件
-- [PkgShip](https://gitee.com/openeuler/pkgship)：管理OS软件包依赖关系，提供依赖和被依赖关系完整图谱的查询工具
-- [BishengJDK ](https://gitee.com/openeuler/bishengjdk-8): OpenJDK定制版Huawei JDK的开源版本，是一个高性能、可用于生产环境的OpenJDK发行版
-- [Compass-CI ](https://gitee.com/openeuler/compass-ci): 可持续集成的开源软件平台, 构建一个开放、完整的测试系统
+- [StratoVirt](https://www.openeuler.org/ru/other/projects/stratovirt/)：面向云数据中心的企业级虚拟化平台
+- [A-Tune](https://www.openeuler.org/ru/other/projects/atune/)：一款基于AI开发的智能优化引擎
+- [iSula](https://www.openeuler.org/ru/other/projects/isula/)：轻量级容器解决方案
+- [secGear](https://www.openeuler.org/ru/other/projects/secgear/)：面向计算产业的机密计算安全应用开发套件
+- [PkgShip](https://pkgmanage.openeuler.org/)：管理OS软件包依赖关系，提供依赖和被依赖关系完整图谱的查询工具
+- [BishengJDK ](https://www.openeuler.org/ru/other/projects/bishengjdk/): OpenJDK定制版Huawei JDK的开源版本，是一个高性能、可用于生产环境的OpenJDK发行版
+- [Compass-CI ](https://compass-ci.openeuler.org/): 可持续集成的开源软件平台, 构建一个开放、完整的测试系统
 
 ## 2. 签署CLA
 
@@ -45,31 +45,31 @@ title: "Contribution"
 
 您可以了解并参与丰富多彩的社区活动：
 
-- [Meeting](https://openeuler.org/ru/)：查看官网首页SIG公开例会日程安排，可参与你感兴趣的会议
-- [Meetups](/ru/interaction/salon-list)
-- [直播](/ru/interaction/live-list/)
-- [峰会](/ru/interaction/summit-list/)
+- [Meeting](/zh/?meeting=true)：查看官网首页SIG公开例会日程安排，可参与你感兴趣的会议
+- [Meetups](https://www.openeuler.org/ru/interaction/salon-list/)
+- [直播](https://www.openeuler.org/ru/interaction/live-list/)
+- [峰会](https://www.openeuler.org/ru/interaction/summit-list/summit2021/)
 
 ### 3.2 找到您想参与的SIG
 #### 3.2.1 了解SIG并找到您感兴趣的SIG
 SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来组织，以便于更好的管理和改善工作流程。因此参与社区事务正确的起始姿势是先找到您感兴趣的SIG， SIG组均是开放的，欢迎任何人来参与。  
-目前openEuler社区已有70+ SIG组，可查看 [openEuler SIG 列表](/ru/sig/sig-list/) 找到您感兴趣的SIG。  
+目前openEuler社区已有70+ SIG组，可查看 [openEuler SIG 列表](https://www.openeuler.org/ru/sig/sig-list/) 找到您感兴趣的SIG。  
 如果定位不到您感兴趣的SIG，您可以向[community@openeuler.org](mailto:community@openeuler.org)发求助邮件。建议您在邮件列表内用“【开发过程疑问】”作为标题，在内容中写出你寻找的SIG或项目的特征，我们会为您提供帮助。
 
 #### 3.2.2 成立新的SIG
 
-如果在已有的SIG组列表里面没有找到您感兴趣的SIG，而您对某个方向有浓厚的兴趣，希望在openEuler社区成立一个新的相关SIG进行维护和发展，那您可以参考 [申请新SIG流程指南](/ru/sig/sig-guidance/) 来申请创建新的SIG.
+如果在已有的SIG组列表里面没有找到您感兴趣的SIG，而您对某个方向有浓厚的兴趣，希望在openEuler社区成立一个新的相关SIG进行维护和发展，那您可以参考 [申请新SIG流程指南](https://www.openeuler.org/ru/sig/sig-guidance/) 来申请创建新的SIG.
 
 ### 3.3 参与社区贡献
 
-在签署了[CLA协议](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=)、找到了你想参与的[SIG组](/ru/sig/sig-list/)之后，就可以开始你的社区贡献之旅啦！社区贡献的方式有很多种，每一种贡献都将受到社区的欢迎和重视。  
+在签署了[CLA协议](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=)、找到了你想参与的[SIG组](https://www.openeuler.org/ru/sig/sig-list/)之后，就可以开始你的社区贡献之旅啦！社区贡献的方式有很多种，每一种贡献都将受到社区的欢迎和重视。  
 ##### 1.提交Issue/处理issue任务  
 
 - 找到Issue列表：  
   在您感兴趣的SIG项目Gitee主页内，点击“Issues”，您可以找到其Issue列表（如[Community团队的Issue列表](https://gitee.com/openeuler/community/issues))
 - 提交Issue  
   如果您准备向社区上报Bug或者提交需求，或者为openEuler社区贡献自己的意见或建议，请在openEuler社区对应的仓库上提交Issue。  
-  提交Issue请参考 [Issue提交指南](https://gitee.com/openeuler/community/blob/master/zh/contributors/issue-submit.md)。为了吸引更广泛的注意，您也可以把Issue的链接附在邮件内，通过[邮件列表](/ru/community/mailing-list/)发送给所有人。
+  提交Issue请参考 [Issue提交指南](https://gitee.com/openeuler/community/blob/master/zh/contributors/issue-submit.md)。为了吸引更广泛的注意，您也可以把Issue的链接附在邮件内，通过[邮件列表](https://www.openeuler.org/ru/community/mailing-list/)发送给所有人。
 - 参与Issue内的讨论  
   每个Issue下面可能已经有参与者们的交流和讨论，如果您感兴趣，也可以在评论框中发表自己的意见。
 - 找到愿意处理的Issue  
@@ -104,7 +104,7 @@ SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来�
 - 方式二：在openEuler社区中开发，在openEuler中集成  
   直接在https://gitee.com/openeuler中建立原创项目，类似将项目“托管”到openEuler社区，比如现在社区中的iSula和A-Tune就是这样的模式。  
   如果你有了一个很棒的idea想要在openEuler社区里实现，那么他可以依照下面的过程来深度参与到openEuler中。  
-  1.在[TC委员会的例会](/ru/sig/sig-list/sig-detail.html?id=21&name=TC&mail=dev%40openeuler.org)中申请一个开源项目；  
+  1.在[TC委员会的例会](https://www.openeuler.org/ru/sig/sig-list/sig-detail.html?id=21&name=TC&mail=dev%40openeuler.org)中申请一个开源项目；  
   2.如果TC委员会认为这是一个很好的idea，并且认为值得去推进，那么我们会在[https://gitee.com/openeuler](https://gitee.com/openeuler)中建立一个repo；  
   3.这个项目在openeuler中持续开发和孵化，直到项目逐渐成熟，那么就可以在src-openeuler中建立一个仓，为该项目提供相关的spec文件，制作成为一个rpm；  
   4.最终这个原创的开源项目会随着openEuler的发布版本走遍全世界，为世界人民所使用。
@@ -125,7 +125,7 @@ openEuler是一个开放的社区，我们希望所有参与社区的人都能�
 如果您的兴趣不在编写代码方面，可以在[ 非代码贡献指南 ](https://gitee.com/openeuler/community/blob/master/zh/contributors/non-code-contributions.md)中找到感兴趣的工作。  
 ##### 9.社区安全问题披露  
 [安全处理流程](https://gitee.com/openeuler/community/blob/master/zh/security-committee/security-process.md)——简要描述了处理安全问题的过程。  
-[安全披露信息](https://gitee.com/openeuler/community/blob/master/zh/security-committee/security-disclosure.md)——如果您希望报告安全漏洞，请参考此页面。  
+[安全披露信息](https://gitee.com/openeuler/security-committee/blob/master/security-disclosure.md)——如果您希望报告安全漏洞，请参考此页面。  
 
 ## 4. 和社区一起成长
 ### 4.1 社区角色说明
@@ -135,6 +135,6 @@ openEuler是一个开放的社区，我们希望所有参与社区的人都能�
 ### 4.2 技术委员会
 
 openEuler技术委员会（Technical Committee，简称TC）是openEuler社区的技术决策机构，负责社区技术决策和技术资源的协调。  
-详情请查看 [openEuler技术委员会介绍](/ru/sig/sig-list/sig-detail.html?id=21&name=TC&mail=dev%40openeuler.org)
+详情请查看 [openEuler技术委员会介绍](https://www.openeuler.org/ru/sig/sig-list/sig-detail.html?id=21&name=TC&mail=dev%40openeuler.org)
 
 </div>
