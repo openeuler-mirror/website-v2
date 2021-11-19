@@ -22,7 +22,7 @@
                            <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].TITLE}}</div>
                            <div class="item-content">
                                 {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].DESCRIPTION_1}}
-                               <a :href="'mailto:' + i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].A_TEXT">
+                               <a :href="i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].A_TEXT" target="_blank">
                                    {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].A_TEXT}}
                                </a>
                                {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[0].DESCRIPTION_2}}
@@ -35,9 +35,17 @@
                            <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].TITLE}}</div>
                            <div class="item-content">
                                 {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].DESCRIPTION_1}}
-                               <a href="/openEuler-compatibility.pdf" download="openEuler兼容性策略介绍.pdf" >
+                               <a :href="'mailto:' + i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].A_TEXT">
                                    {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].A_TEXT}}
                                </a>
+                               {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].DESCRIPTION_2}}
+                               <p>{{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].DESCRIPTION_3}}
+                                    <a :href="i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].A_TEXT2" target="_blank">
+                                   {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].A_TEXT2}}
+                               </a>
+                               。
+                               </p>
+                              
                            </div>
                        </div>
                     </div>
@@ -47,10 +55,9 @@
                            <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[2].TITLE}}</div>
                            <div class="item-content">
                                 {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[2].DESCRIPTION_1}}
-                               <a target="_blank" :href="i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[2].A_TEXT">
+                               <a href="/openEuler-compatibility.pdf" download="openEuler兼容性策略介绍.pdf" >
                                    {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[2].A_TEXT}}
                                </a>
-                               {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[2].DESCRIPTION_2}}
                            </div>
                        </div>
                     </div>
@@ -60,13 +67,10 @@
                            <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].TITLE}}</div>
                            <div class="item-content">
                                 {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].DESCRIPTION_1}}
-                               <a target="_blank" href="https://gitee.com/src-openeuler/oec-hardware/releases">
+                               <a target="_blank" :href="i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].A_TEXT">
                                    {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].A_TEXT}}
                                </a>
                                {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].DESCRIPTION_2}}
-                                <a href="/openEuler硬件兼容性测试工具使用指南.pdf" download="openEuler硬件兼容性测试工具使用指南.pdf">
-                                   {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[3].A_TEXT_2}}
-                               </a>
                            </div>
                        </div>
                     </div>
@@ -76,10 +80,13 @@
                            <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].TITLE}}</div>
                            <div class="item-content">
                                 {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].DESCRIPTION_1}}
-                               <a :href="'mailto:' + i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].A_TEXT">
+                               <a target="_blank" href="https://gitee.com/src-openeuler/oec-hardware/releases">
                                    {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].A_TEXT}}
                                </a>
                                {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].DESCRIPTION_2}}
+                                <a href="/openEuler硬件兼容性测试工具使用指南.pdf" download="openEuler硬件兼容性测试工具使用指南.pdf">
+                                   {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[4].A_TEXT_2}}
+                               </a>
                            </div>
                        </div>
                     </div>
@@ -89,10 +96,27 @@
                            <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].TITLE}}</div>
                            <div class="item-content">
                                 {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].DESCRIPTION_1}}
-                               <a @click="to">
+                               <a :href="i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].A_TEXT2" target="_blank">
+                                   {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].A_TEXT2}}
+                               </a>
+                               {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].DESCRIPTION_3}}
+                               <a :href="'mailto:' + i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].A_TEXT">
                                    {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].A_TEXT}}
                                </a>
                                {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].DESCRIPTION_2}}
+                           </div>
+                       </div>
+                    </div>
+                    <div class="content-item" v-if="i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[6]">
+                       <div class="left">{{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[6].ID}}</div>
+                       <div class="right">
+                           <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[6].TITLE}}</div>
+                           <div class="item-content">
+                                {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[6].DESCRIPTION_1}}
+                               <a @click="to">
+                                   {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[6].A_TEXT}}
+                               </a>
+                               {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[6].DESCRIPTION_2}}
                            </div>
                        </div>
                     </div>
