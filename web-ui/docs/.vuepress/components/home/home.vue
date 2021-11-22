@@ -21,7 +21,7 @@
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
                <swiper-slide class="carousel-item-index" v-for="(itme,index) in i18n.home.HOME_NEWRELEASE" :key="index">
-                <div class="mobile-version" @click="bannerClick(index)" :style="{backgroundImage:itme.MOBILE_IMG}"></div>
+                <div class="mobile-version" @click="go(itme.LINK)" :style="{backgroundImage:itme.MOBILE_IMG}"></div>
               </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">

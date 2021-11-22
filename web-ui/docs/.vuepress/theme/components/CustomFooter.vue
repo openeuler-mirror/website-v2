@@ -88,7 +88,7 @@ export default {
     height: 508px;
   }
   .atom {
-    height: 332px;
+    height: 330px;
     text-align: center;
     overflow: hidden;
     img {
