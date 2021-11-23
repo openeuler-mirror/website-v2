@@ -2,11 +2,11 @@
     <div class="title-nav">
         <div class="box-line">
                 <img class="gif" v-lazy="'/img/summit/home/nav.gif'" alt="" />
-                <img class="line" v-lazy="'/img/summit/home/line.png'" alt="" />
+                <img class="line" :class="{'internship-line':internship}" v-lazy="'/img/summit/home/line.png'" alt="" />
         </div>
-        <div class="nav-text">
+        <div class="nav-text" :class="{'internship-nav':internship}">
             <ul>
-                <li v-for="(item,index) in dataList" :class="index === currentIndex?'active':''">
+                <li v-for="(item,index) in dataList" :class="index === currentIndex?'active':''" :key="index">
                     <a :href="item.key">
                         <div><div class="inside"></div></div>
                         <div>{{ item.name }}</div>
@@ -24,7 +24,7 @@ export default {
             
         }
     },
-    props:['currentIndex','dataList'],
+    props:['currentIndex','dataList','internship'],
     mounted () {
         
     },
@@ -42,7 +42,6 @@ export default {
     right: 70px;
     z-index: 1000;
     display: block;
-    
     .box-line {
         width: 70px;
         margin-left: -26px;
@@ -59,6 +58,10 @@ export default {
             height: 441px;
             margin: 0 auto;
         }
+         .internship-line {
+            height:470px;
+        }
+       
     }
     .nav-text {
         position: relative;
@@ -107,6 +110,9 @@ export default {
         ul li>a{
             text-decoration: none;
         }
+    }
+    .internship-nav {
+        margin-top: -425px;
     }
     @media screen and (max-width: 1120px) {
         display: none;
