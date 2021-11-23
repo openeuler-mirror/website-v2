@@ -81,6 +81,13 @@ module.exports = {
                     '^/api-mirror': ''
                 }
             },
+            '/api-rank': {
+                target: 'https://api.openeuler.org/osi-task-manager/',
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api-rank': ''
+                }
+            },
             '/api/': {
                 target: 'https://openeuler.org/api/',
                 ws: true,

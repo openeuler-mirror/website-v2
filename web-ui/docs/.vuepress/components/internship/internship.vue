@@ -4,141 +4,377 @@
       v-show="isShowNav"
       :currentIndex="activeIndex"
       :dataList="navList"
+      :internship="true"
     ></titlenav>
     <div class="internship-banner">
-      <a href="#task"></a>
+      <a href="#task">
+        <img
+          src="/img/internship/internship-banner.png"
+          alt=""
+          v-if="!isShowH5"
+        />
+        <img
+          src="/img/internship/internship-banner-mo.png"
+          alt=""
+          v-if="isShowH5"
+        />
+      </a>
     </div>
     <div class="internship-list">
-      <div class="intership-introduce" id="introduce">
-        <p></p>
-      </div>
-      <div class="step" id="step">
-        <div class="step-title"><img src="" alt="" /></div>
-        <div class="step-content">
-          <div class="step-nav" v-if="!isShowH5">
+      <div class="warper">
+        <div class="intership-introduce" id="introduce">
+          <p>
+            openEuler开源实习是中国科学院软件所和openEuler社区共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力。
+            由openEuler社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可活动相应积分，积分累计达规定量后，可获得实习证书和实习工资
+          </p>
+        </div>
+        <div class="step" id="step">
+          <div class="step-title title">
+            <img src="/img/internship/step-title.png" alt="" />
+          </div>
+          <div class="step-content">
+            <div class="step-nav" v-if="!isShowH5">
+              <div
+                class="step-bar"
+                ref="stepBar"
+                :class="{ stepActive: index == stepActive }"
+                v-for="(item, index) in step.stepNav"
+                :style="`background:url(${item.IMG}) no-repeat;`"
+                :key="item.IMG"
+                @click="stepChange(index, $event)"
+              ></div>
+            </div>
+            <div class="step-body">
+              <div class="step-text" v-show="stepActive === 0 || isShowH5">
+                <img
+                  class="number"
+                  v-if="isShowH5"
+                  src="/img/internship/1.png"
+                  alt=""
+                />
+                <h4>申请实习</h4>
+                <div class="main-text">
+                  <p v-for="item in step.stepOne.pText" :key="item">
+                    {{ item }}
+                  </p>
+                  <div class="attention">
+                    <p>
+                      将以上3份材料发送至开源实习官方邮箱
+                      <a href="mailto:intern@openeuler.io"
+                        >intern@openeuler.io</a
+                      >。发送后等待审核，组织方将以邮件反馈审核结果，审核通过后，签订劳务协议，用所分配的账号开始实习。
+                    </p>
+                    <a
+                      href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/01%20%E5%AE%9E%E4%B9%A0%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E6%A8%A1%E6%9D%BF.rar"
+                      download
+                      class="download"
+                      >申请材料模板下载</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="step-text" v-show="stepActive === 1 || isShowH5">
+                <img
+                  class="number"
+                  v-if="isShowH5"
+                  src="/img/internship/2.png"
+                  alt=""
+                />
+                <h4>领取任务</h4>
+                <div class="main-text">
+                  <p>（1）在Gitee查看任务，找到你想做的任务issue。</p>
+                  <p>
+                    （2）在任务issue下方评论区输入
+                    <span class="blue">/intern-assign命令</span
+                    >，认领该任务，然后发送邮件给任务导师请求审核。邮件需包括你的简历和该任务的开发方案。
+                  </p>
+                  <p>
+                    （3）导师收到邮件后对申请人进行评审，在该任务issue评论下通过输入命令反馈结果，<span
+                      class="blue"
+                      >/intern-approve</span
+                    >
+                    代表审核通过，学生成功领取任务,可以开始进行任务处理；<span
+                      class="blue specialSpan"
+                      >/intern-unapprove</span
+                    >
+                    代表领取失败，该学生可再去领取其他任务。
+                  </p>
+                  <p>
+                    （4）如果领取后无法完成，可通过在issue下输入<span
+                      class="blue"
+                      >/intern-unassign</span
+                    >放弃任务。<span class="orange"
+                      >放弃超过3次，账号被限制一个月不能领取任务。</span
+                    >
+                  </p>
+                  <div class="attention black">
+                    <div class="attention-title">注意</div>
+                    <p>
+                      每个任务只能有一个人认领，每人一次最多只能有2个认领中的任务。
+                    </p>
+                    <p>
+                      输入<span class="blue">/intern-assign命令</span
+                      >后两周内没有发简历和方案给导师的，认领自动失效，任务被释放。
+                    </p>
+                    <a
+                      href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/02%20%E4%BB%BB%E5%8A%A1%E8%AE%A4%E9%A2%86%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF.rar"
+                      download
+                      class="download"
+                      >任务认领邮件模板下载</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="step-text" v-show="stepActive === 2 || isShowH5">
+                <img
+                  class="number"
+                  v-if="isShowH5"
+                  src="/img/internship/3.png"
+                  alt=""
+                />
+                <h4>提交任务</h4>
+                <div class="main-text">
+                  <p>
+                    （1）任务处理完成后，提交pr，并在pr描述里添加<span
+                      class="blue"
+                    >
+                      #issue编号</span
+                    >（务必添加，否则无法积分）；
+                  </p>
+                  <p>
+                    （2）提交pr后在任务issue评论区输入<span class="blue"
+                      >/intern-completed 命令</span
+                    >，表示当前任务已提交，然后等待审核。
+                  </p>
+                  <p>
+                    （3）跟进导师和相关SIG
+                    maintainer审核PR，PR被合入则获得积分，issue自动关闭。
+                  </p>
+                  <div class="attention black">
+                    <div class="attention-title">注意</div>
+                    <p>
+                      导师有不通过任务成果的权利，如学生提交的PR离实际所需太远，或未按时提交PR，可选择输入<span
+                        class="blue"
+                        >命令/intern-fail</span
+                      >，不通过该任务，则无积分。
+                    </p>
+                  </div>
+                  <div class="flow-chart">
+                    <img
+                      v-if="!isShowH5"
+                      src="/img/internship/step-3.png"
+                      alt=""
+                    />
+                    <img v-else src="/img/internship/step-3-mo.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="step-text" v-show="stepActive === 3 || isShowH5">
+                <img
+                  class="number"
+                  v-if="isShowH5"
+                  src="/img/internship/4.png"
+                  alt=""
+                />
+                <div class="main-text">
+                  <h4>工资与证书发放</h4>
+                  <p>
+                    （1）在实习合同里约定的6个月期限内，学生可凭积分获得实习工资。
+                  </p>
+                  <div class="attention">
+                    <p v-for="item in step.stepFour.pText" :key="item">
+                      {{ item }}
+                    </p>
+                  </div>
+                  <p>
+                    （2）证书申请：在实习有效期6个月内满60分即可开具实习证书，如需开具实习证书，发送邮件给实习官方邮箱<a
+                      class="blue"
+                      href="mailto:intern@openeuler.io"
+                      >intern@openeuler.io </a
+                    >提出申请。
+                  </p>
+                  <div class="attention black">
+                    <div class="attention-title">注意</div>
+                    <p>证书开具后视为实习结束，不再计算实习工资。</p>
+                    <a
+                      href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/03%20%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E5%92%8C%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF.rar"
+                      download
+                      class="download"
+                      >证书申请材料和邮件模板下载</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="task">
+          <div class="task-title title">
+            <img src="/img/internship/task-title.png" alt="" />
+          </div>
+          <p class="task-introduce">
+            SIG（Special Interest
+            Group）是openEuler社区的组织形式，找到你感兴趣的SIG，查看相关实习任务。
+          </p>
+          <div class="item-box">
+            <div class="item" v-for="(item, index) in task" :key="index">
+              <a :href="item.NAME_LINK" class="item-name" target="_blank">{{
+                item.NAME
+              }}</a>
+              <div class="item-intriduce">
+                {{ item.INTRODUCE }}
+              </div>
+              <div class="button-box">
+                <button @click="go(item.TASK)" class="button-left">
+                  实习任务
+                </button>
+                <button @click="go(item.GITEE)" class="button-right">
+                  SIG详情<img src="/img/internship/arrow.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="integral">
+          <div class="integral-title title">
+            <img src="/img/internship/integral-title.png" alt="" />
+          </div>
+          <div class="integral-content">
+            <h3>{{ integral.reward.head }}</h3>
             <div
-              class="step-bar"
-              :class="{ stepActive: index == stepActive }"
-              v-for="(item, index) in step.stepNav"
-              :key="index"
-              @click="stepChange(index)"
+              v-for="item in integral.reward.text"
+              :key="item"
+              class="circular"
             >
-              <img :src="item.IMG" alt="" />
-              <p>{{ item.TEXT }}</p>
+              <p>{{ item }}</p>
             </div>
-          </div>
-          <div class="step-body" >
-            <div class="step-text" v-if="stepActive === 0 || isShowH5">
-              <h4>申请实习</h4>
-              <p></p>
-              <div class="attention">
-                <div class="attention-title">注意</div>
-                <p></p>
-              </div>
-            </div>
-            <div class="step-text" v-if="stepActive === 1 || isShowH5">
-              <h4>领取任务</h4>
-              <p></p>
-              <div class="attention">
-                <div class="attention-title">注意</div>
-              </div>
-            </div>
-            <div class="step-text" v-if="stepActive === 2 || isShowH5">
-              <h4>提交任务</h4>
-              <p></p>
-              <div class="attention">
-                <div class="attention-title">注意</div>
-              </div>
-            </div>
-            <div class="step-text" v-if="stepActive === 3 || isShowH5">
-              <h4>工资与证书发放</h4>
-              <p></p>
-              <div class="attention">
-                <div class="attention-title">注意</div>
-              </div>
+            <h4>{{ integral.honor.head }}</h4>
+            <div v-for="item in integral.honor.text" :key="item" class="star">
+              <img src="/img/internship/star.png" alt="" />
+              <p>{{ item }}</p>
             </div>
           </div>
         </div>
-      </div>
-      <div id="task">
-        <p class="task-introduce"></p>
-        <div class="item-box">
-          <div class="item" v-for="(item, index) in 10" :key="index">
-            <div class="item-name">sig-QA</div>
-            <div class="item-intriduce">
-              致力于持续提升openEuler社区开发行版本质量
+        <div id="rank">
+          <div class="rank-title">
+            <img v-if="!isShowH5" src="/img/internship/rank-title.png" alt="" />
+            <img v-else src="/img/internship/rank-title-mo.png" alt="" />
+          </div>
+          <div class="rank-content" ref="rankContent">
+            <div class="rank-box">
+              <div class="rank-top">
+                <div class="top-item" v-for="(item, index) in 3" :key="index">
+                  <div class="gitee-name">Gitee-Name</div>
+                  <div class="score">7777<span>积分</span></div>
+                  <div
+                    class="rank-box"
+                    :class="[
+                      { second: index === 0 },
+                      { first: index === 1 },
+                      { third: index === 2 },
+                    ]"
+                  >
+                    <span v-if="index === 0">第二名</span>
+                    <span v-if="index === 1">第一名</span>
+                    <span v-if="index === 2">第三名</span>
+                  </div>
+                </div>
+              </div>
+              <div class="rank-last">
+                <div
+                  class="rank-item"
+                  v-for="(item, index) in renderData"
+                  :key="index"
+                >
+                  <div class="rank-left">
+                    <div class="rank-class">0{{ index + 1 }}</div>
+                    <div class="gitee-name">haml-707</div>
+                  </div>
+                  <div class="rank-right">
+                    <div class="score">77777</div>
+                    <span>积分</span>
+                  </div>
+                </div>
+              </div>
+              <div class="view-all">
+                <a @click="extend()"
+                v-if="!isExent"
+                  >查看全部
+                  <div>
+                    <img
+                      src="/img/internship/right.svg"
+                      alt=""
+                    /></div
+                ></a>
+                <a @click="extend()"
+                v-else
+                  >收起全部
+                  <div>
+                    <img
+                      class='arrow'
+                      src="/img/internship/right.svg"
+                      alt=""
+                    /></div
+                ></a>
+              </div>
             </div>
-            <div class="button-box">
-              <button class="button-left">实习任务</button>
-              <button class="button-right">Gittee主页 →</button>
-            </div>
           </div>
-        </div>
-      </div>
-      <div id="integral">
-        <div class="integral-title">
-          <img src="" alt="" />
-        </div>
-        <div class="integral-content">
-          <h3>{{ integral.reward.head }}</h3>
-          <div v-for="item in integral.reward.text" :key="item">
-            <p><span>·</span> {{ item }}</p>
-          </div>
-          <h4>{{ integral.honor.head }}</h4>
-          <div v-for="item in integral.honor.text" :key="item">
-            <p><span>·</span> {{ item }}</p>
-          </div>
-        </div>
-      </div>
-      <div id="rank">
-        <div class="rank-title"><img src="" alt="" /></div>
-        <div class="rank-content">
-          <div class="rank-top"></div>
-          <div class="rank-item" v-for="(item, index) in 9" :key="index">
-            <div class="rank-class">0{{ index + 1 }}</div>
-            <div class="gitee-name">haml-707</div>
-            <div class="score">77777</div>
-            <div>积分</div>
-          </div>
-          <div class="view-all">查看全部 ></div>
         </div>
       </div>
       <div id="rule">
-        <div class="rule-title"><img src="" alt="" /></div>
-        <div class="rule-content">
-          <div class="rule-item" v-for="(item, index) in ruleData" :key="index">
-            <div class="question">{{ item.question }}</div>
-            <div class="answer">{{ item.answer }}</div>
-          </div>
+        <div class="rule-title title">
+          <img src="/img/internship/rule-title.png" alt="" />
         </div>
-        <div class="more-question">
-          更多问题，请移步<a href="">本贴</a>评论区提问。
+        <div class="rule-content">
+          <div class="warper">
+            <div
+              class="rule-item"
+              v-for="(item, index) in ruleData"
+              :key="index"
+            >
+              <div class="question">{{ item.question }}</div>
+              <div class="answer">{{ item.answer }}</div>
+            </div>
+            <div class="more-question">
+              更多问题，请移步<a
+                href="https://gitee.com/openeuler-competition/opensource-internship/issues/I4AJIR?from=project-issue"
+                target="_blank"
+                >本贴</a
+              >评论区提问。
+            </div>
+          </div>
         </div>
       </div>
       <div id="partner">
-        <div class="partner-title">
-          <img src="" alt="" />
-        </div>
-        <div class="img-list">
-          <img
-            v-lazy="item.IMG"
-            alt=""
-            v-for="(item, index) in partnerData"
-            :key="index"
-          />
+        <div class="warper">
+          <div class="partner-title title">
+            <img src="/img/internship/partner-title.png" alt="" />
+          </div>
+          <div class="img-list">
+            <img
+              v-lazy="item.IMG"
+              alt=""
+              v-for="(item, index) in partnerData"
+              :key="index"
+            />
+          </div>
         </div>
       </div>
       <div id="help">
-        <div class="help-title">
-          <img src="" alt="" />
+        <div class="help-title title">
+          <img src="/img/internship/help-title.png" alt="" />
         </div>
         <div class="help-content">
           <div class="help-left">
-            <p>联系邮箱: <a href="">intern@openeuler.io</a></p>
-            <p></p>
+            <p>
+              联系邮箱:
+              <a href="mailto:intern@openeuler.io">intern@openeuler.io</a>
+            </p>
+            <p>扫码加入“开源实习”学生QQ群，更多问题群内咨询。</p>
+            <p>群号：458603235</p>
           </div>
           <div class="help-right">
-            <img src="" alt="" />
+            <img src="/img/internship/qrCode.png" alt="" />
           </div>
         </div>
       </div>
@@ -147,16 +383,22 @@
 </template>
 
 <script>
+import axios from "axios";
 import titlenav from "../summit/titleNav.vue";
+import { getRank,getToken,getRankDetail } from "../../api/internship";
 export default {
   components: {
     titlenav,
   },
   data() {
     return {
+      renderData: 6,
+      isExent: false,
       stepActive: 0,
-      isShowNav: true,
+      isShowNav: false,
       activeIndex: 0,
+      rankTop: [],
+      rankLast: [],
       navList: [
         {
           key: "#introduce",
@@ -190,57 +432,174 @@ export default {
       step: {
         stepNav: [
           {
-            IMG: "/img/internship/step_1.png",
+            IMG: "/img/internship/step_1active.png",
             TEXT: "申请实习",
           },
           {
-            IMG: "/img/internship/step_1.png",
+            IMG: "/img/internship/step_2.png",
             TEXT: "领取任务",
           },
           {
-            IMG: "/img/internship/step_1.png",
+            IMG: "/img/internship/step_3.png",
             TEXT: "提交任务",
           },
           {
-            IMG: "/img/internship/step_1.png",
+            IMG: "/img/internship/step_4.png",
             TEXT: "工资与证书发放",
           },
         ],
         stepOne: {
-          pText: [],
+          pText: [
+            "（1）填写报名资料表。",
+            "（2）完成实习测试任务并提供PR链接。",
+            "（3）提供学生证扫描件或其他学生身份证明材料。",
+          ],
         },
         stepTow: {
-          pText: [],
+          pText: [
+            "（1）在Gitee查看任务，找到你想做的任务issue。",
+            "（2）在任务issue下方评论区输入",
+          ],
         },
         stepThree: {
           pText: [],
         },
         stepFour: {
-          pText: [],
+          pText: [
+            "满20分可获得工资总计1000元；",
+            "满40分可获得工资总计2500元；",
+            "满60分可获得工资总计4000元；",
+            "满80分可获得工资总计6000元；",
+            "满100分可获得工资总计8000元；",
+            "每个月月初结算上一个月的积分，在月底发放上个月满足相应积分条件的实习工资。",
+          ],
         },
       },
-      task:[
-          {
-              NAME:'sig-QA',
-              INTRODUCE:'',
-              TASK:'',
-              GITEE:''
-          },
+      task: [
+        {
+          NAME: "Infrastructure",
+          NAME_LINK:
+            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=10&name=Infrastructure",
+          INTRODUCE: "主要负责openEuler社区的系统功能开发、维护",
+          TASK: "",
+          GITEE:
+            "https://gitee.com/openeuler/community/tree/master/sig/Infrastructure",
+        },
+        {
+          NAME: "sig-QA",
+          NAME_LINK:
+            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=41&name=sig-QA",
+          INTRODUCE: "致力于持续提升openEuler社区发行版本质量",
+          TASK: "https://gitee.com/organizations/src-openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590164%2C125219718&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project",
+          GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-QA",
+        },
+        {
+          NAME: "sig-openstack",
+          NAME_LINK:
+            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=59&name=sig-openstack",
+          INTRODUCE:
+            "在openEuler之上提供原生的OpenStack，构建开放可靠的云计算技术栈",
+          TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590186&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project",
+          GITEE: "https://gitee.com/openeuler/openstack",
+        },
+        {
+          NAME: "A-tune",
+          NAME_LINK:
+            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=1&name=A-Tune",
+          INTRODUCE: "基于openEuler开发的自动化、智能化性能调优引擎",
+          TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590194&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project",
+          GITEE: "https://gitee.com/openeuler/community/tree/master/sig/A-Tune",
+        },
+        {
+          NAME: "sig-UKUI",
+          NAME_LINK:
+            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=46&name=sig-UKUI",
+          INTRODUCE:
+            "负责在openEuler上提供UKUI桌面环境，及相关软件包的规划、维护和升级",
+          TASK: "",
+          GITEE:
+            "https://gitee.com/openeuler/community/tree/master/sig/sig-UKUI",
+        },
+        {
+          NAME: "sig-HA",
+          NAME_LINK:
+            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=35&name=sig-Ha",
+          INTRODUCE:
+            "致力于HA软件在openEuler社区中的应用与推广，提升业务的高可用",
+          TASK: "",
+          GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-Ha",
+        },
+        {
+          NAME: "sig-ops",
+          NAME_LINK:
+            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=83&name=sig-ops",
+          INTRODUCE:
+            "致力于运维工具的移植与开发，提升openEuler操作系统的运维能力",
+          TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590323&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project",
+          GITEE:
+            "https://gitee.com/openeuler/community/tree/master/sig/sig-ops",
+        },
+        {
+          NAME: "Cloud Native",
+          NAME_LINK:
+            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=85&name=sig-CloudNative",
+          INTRODUCE:
+            "提供便捷、易用的云原生基础设施，提供简单、高效的云原生应用开发托管环境，共建云原生生态",
+          TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590352&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project",
+          GITEE:
+            "https://gitee.com/openeuler/community/tree/master/sig/sig-CloudNative",
+        },
+        {
+          NAME: "G11N",
+          NAME_LINK:
+            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=98&name=G11N",
+          INTRODUCE: "致力于openEuler的国际化和本地化",
+          TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590388&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project=",
+          GITEE: "https://gitee.com/openeuler/community/tree/master/sig/G11N",
+        },
       ],
       integral: {
         reward: {
           head: "积分与奖励",
-          text: ["1312", "2"],
+          text: [
+            "实习有效期6个月内满20分以上，可获得不同级别的实习工资。",
+            "一年内累计积分满150分，获得openEuler社区高校“开源之星”荣誉。",
+          ],
         },
         honor: {
-          head: "“开源之星” 荣誉权益",
-          text: ["13122", "2321", "3321"],
+          head: "“开源之星”荣誉权益：",
+          text: [
+            "获得openEuler社区颁发的“开源之星”徽章。",
+            "将作为高校贡献者在openEuler官网长期展示，获得社区官方渠道的宣传报道。",
+            "获得一次受邀参与openEuler年度峰会的机会（包行程住宿）。",
+          ],
         },
       },
       ruleData: [
         {
-          question: "哪些人可以报名",
-          answer: "A:开源实习面向全国范围内全日制/非。。。",
+          question: "1、哪些人可以报名？",
+          answer:
+            "A：开源实习面向全国范围内全日制/非全日制在校学生招募，无专业年级限制，欢迎感兴趣的同学踊跃报名。",
+        },
+        {
+          question: "2、实习证书有公司盖章吗？",
+          answer:
+            "A：开源实习的证书与正式实习证书一样，将加盖公章。将由“中国科学院软件所-人力资源处”盖章。",
+        },
+        {
+          question: "3、实习有效期6个月是如何计算的？",
+          answer:
+            "A：在申请实习时需签署实习劳务合同，实习有效期即劳务合同上填写的实习有效期，为6个月期限，6个月期限内未满60积分则不能获得证书。线上实习时间管理相对自由，可根据自身情况安排时间，可提前结束实习。",
+        },
+        {
+          question: "4、超过了6个月或者完成了100积分还能继续在社区做任务吗？",
+          answer:
+            "A：可以，但积分不能再用于领取证书和奖金，一年内累计到150积分可获得openEuler社区高校“开源之星”荣誉。 ",
+        },
+        {
+          question: "5、任务领取成功后，完成时间有限制吗？",
+          answer:
+            "A：有，在导师输入/approve 命令通过认领后，2分、5分的任务需在一周内提交成果，10分的任务需在2周内提交成果，提交成果以提交PR并在issue评论下输入了/intern-completed命令为准，否则任务将被程序释放给其他人认领，当前认领人不能再承担该任务。20及以上分值的任务需在issue上标注的期望完成时间内完成，否则导师有权利释放任务。",
         },
       ],
       partnerData: [
@@ -249,181 +608,891 @@ export default {
           LINK: "",
         },
         {
-          IMG: "/img/internship/qilinsoft.png",
+          IMG: "/img/internship/tongxin.png",
           LINK: "",
         },
         {
-          IMG: "/img/internship/qilinsoft.png",
+          IMG: "/img/internship/kylinsec.png",
           LINK: "",
         },
         {
-          IMG: "/img/internship/qilinsoft.png",
+          IMG: "/img/internship/mindSpore.png",
           LINK: "",
         },
         {
-          IMG: "/img/internship/qilinsoft.png",
+          IMG: "/img/internship/openEuler.png",
           LINK: "",
         },
         {
-          IMG: "/img/internship/qilinsoft.png",
+          IMG: "/img/internship/openGauss.png",
           LINK: "",
         },
         {
-          IMG: "/img/internship/qilinsoft.png",
-          LINK: "",
-        },
-        {
-          IMG: "/img/internship/qilinsoft.png",
+          IMG: "/img/internship/openLooKeng.png",
           LINK: "",
         },
       ],
     };
   },
   methods: {
-    stepChange(index) {
+    // tast() {
+    //   axios.get('/api-rank/intern/points/lists?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjg2NjY1NDAsImlhdCI6MTYyODA2MTc0MCwiaXNzIjoiMTI3LjAuMC4xIiwic3ViIjoidXNlciB0b2tlbiJ9.odlznwL_dYF_h63F6Tc5-PPQD5kfOvfd81ZqwwbqxCQ&currentPage=1&pageSize=10').then(res=>{
+    //     console.log(res);
+    //   })
+    // },
+    extend() {
+      if (this.isExent) {
+        this.renderData = 6;
+        window.location.href = "#rank";
+      } else {
+        this.renderData = 20;
+      }
+      this.isExent = !this.isExent;
+    },
+    stepChange(index, e) {
+      for (let i = 0; i < this.$refs.stepBar.length; i++) {
+        this.$refs.stepBar[i].style = `background:url(/img/internship/step_${
+          i + 1
+        }.png`;
+      }
+      e.target.style = `background:url(/img/internship/step_${
+        index + 1
+      }active.png)`;
       this.stepActive = index;
     },
+    go(path) {
+      if (path && !path.includes("http")) {
+        this.$router.push({
+          path: this.resolvePath(path),
+        });
+      } else if (path.includes("http")) {
+        window.open(path);
+      } else {
+        return false;
+      }
+    },
+    scroTop() {
+      let scrollTop =
+        document.body.scrollTop || document.documentElement.scrollTop;
+        let value = 0;
+      if (this.isExent) {
+        value = 1400;
+      }
+      if (scrollTop < 270 || scrollTop > 7200) {
+        this.isShowNav = false;
+      } else {
+        this.isShowNav = true;
+      }
+      if (scrollTop > 200 && scrollTop < 441) {
+        this.activeIndex = 0;
+      } else if (scrollTop > 450 && scrollTop < 1100) {
+        this.activeIndex = 1;
+      } else if (scrollTop > 1100 && scrollTop < 1700) {
+        this.activeIndex = 2;
+      } else if (scrollTop > 1700 && scrollTop < 2800) {
+        this.activeIndex = 3;
+      } else if (scrollTop > 2800 && scrollTop < 3550) {
+        this.activeIndex = 4;
+      } else if (scrollTop > 3550 && scrollTop < 4170) {
+        this.activeIndex = 5;
+      } else if (scrollTop > 4170) {
+        this.activeIndex = 6;
+      } else {
+        return false;
+      }
+    },
+  },
+  mounted() {
+    // this.tast()
+    getToken()
+      .then((data) => {
+        return getRankDetail({
+                token:data.loginData.token,
+                currentPage:1,
+                pageSize:10,
+                userId:data.loginData.userId
+        })
+        // let info = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // this.rankLast = info.splice(3);
+        // this.rankTop = info;
+        // this.rankTop.splice(
+        //   0,
+        //   1,
+        //   ...this.rankTop.splice(1, 1, this.rankTop[0])
+        // );
+      })
+      .then(res =>{
+        console.log(res);
+      })
+     
+    window.addEventListener("scroll", this.scroTop);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.scroTop);
   },
 };
 </script>
 <style lang="less" scoped>
+a {
+  font-size: 14px;
+  color: #002fa7;
+  text-decoration: none;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 .internship {
-  width: 1120px;
+  max-width: 1920px;
   margin: 0 auto;
   padding-bottom: 200px;
   @media screen and (max-width: 1000px) {
     width: 100%;
     padding-bottom: 80px;
   }
-  .internship-banner a {
-    cursor: pointer;
-    display: inline-block;
+  .internship-banner {
+    height: 380px;
+    text-align: center;
+    img {
+      cursor: pointer;
+      width: 100%;
+    }
+    @media screen and (max-width: 1000px) {
+      height: 300px;
+      img {
+        max-width: 375px;
+      }
+    }
+  }
+  .banner-center {
     width: 1120px;
     height: 380px;
-    margin-bottom: 60px;
-    background: url("/img/activities/pc/banner_all.png") no-repeat;
-    background-size: 100% 100%;
-    @media screen and (max-width: 1000px) {
+    font-size: 40px;
+    margin: 0 auto;
+    p:nth-child(1) {
+      padding: 66px 0 30px 0;
+    }
+  }
+  .warper {
+    width: 1120px;
+    margin: 0 auto;
+    @media (max-width: 1000px) {
       width: 100%;
-      height: 300px;
-      margin-bottom: 20px;
-      background: url("/img/activities/mobile/banner.png") no-repeat;
-      background-size: 100% 100%;
+      padding: 0 30px;
     }
   }
   .internship-list {
+    .intership-introduce {
+      p {
+        padding-top: 60px;
+        font-size: 20px;
+        line-height: 40px;
+        @media (max-width: 1000px) {
+          padding-top: 20px;
+          font-size: 16px;
+        }
+      }
+    }
+    .title {
+      text-align: center;
+      padding: 106px 0 13px 0;
+      img {
+        width: 180px;
+      }
+      @media (max-width: 1000px) {
+        padding: 30px 0 !important;
+        img {
+          width: 113px;
+          height: 34px;
+        }
+      }
+    }
     #step {
+      .step-title {
+        text-align: center;
+        padding: 60px 0 70px 0;
+        @media (max-width: 1000px) {
+          padding: 30px 0;
+        }
+      }
       .step-content {
+        border-radius: 8px 8px 8px 8px;
+        background-color: rgb(93, 200, 255);
         .step-nav {
           display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
           .step-bar {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            img {
-              width: 280px;
-            }
+            cursor: pointer;
+            width: 280px;
+            height: 160px;
+            background-size: 100% 100% !important;
           }
           .stepActive {
-            img {
-              margin-top: -20px;
-              height: 206px;
-            }
+            margin-top: -20px;
+            height: 180px;
           }
         }
         .step-body {
-          padding: 30px;
-          height: 500px;
+          margin-top: -1px;
+          padding: 32px 30px 37px;
+          height: 392px;
+          background: url(/img/internship/step-background.png) no-repeat;
+          background-size: 100%;
+          @media (max-width: 1000px) {
+            padding: 0;
+          }
+          h4 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: normal;
+            color: #000000;
+            line-height: 24px;
+          }
+          p {
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.5);
+            line-height: 24px;
+            @media (max-width: 1000px) {
+              font-size: 12px;
+            }
+          }
+          .specialSpan {
+            padding-left: 10px;
+          }
+          .blue {
+            color: #2e9afe;
+          }
+          .orange {
+            color: #ff7c56;
+          }
+          .attention {
+            margin: 10px 14px 0 35px;
+            .attention-title {
+              font-size: 14px;
+              color: #000000;
+              line-height: 24px;
+            }
+
+            .download {
+              display: block;
+              margin-top: 10px;
+            }
+          }
+          .black {
+            p {
+              position: relative;
+              padding-left: 12px;
+            }
+            p::before {
+              position: absolute;
+              top: 10px;
+              left: 0;
+              content: "";
+              height: 4px;
+              width: 4px;
+              background: rgba(0, 0, 0, 0.5);
+              border-radius: 50%;
+            }
+          }
+          .flow-chart {
+            margin-top: 8px;
+            padding-left: 35px;
+            img {
+              width: 960px;
+            }
+          }
+        }
+        @media (max-width: 1000px) {
+          background: none;
+          .step-body {
+            background: none;
+            height: 100%;
+            font-size: 12px;
+            .step-text:nth-child(2) {
+              .download {
+                padding-bottom: 44px;
+              }
+            }
+            .step-text:nth-child(4) {
+              margin-bottom: 0;
+            }
+            .step-text {
+              position: relative;
+              margin-bottom: 20px;
+              padding: 50px 5px 5px;
+              background-color: #2e9afe;
+              border-radius: 8px;
+              .main-text {
+                padding: 10px;
+                border-radius: 8px;
+                background-color: #eaf5fe;
+                .download {
+                  margin-top: 6px;
+                  font-size: 12px;
+                }
+              }
+              .number {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 60px;
+              }
+              h4 {
+                position: absolute;
+                top: 12px;
+                left: 60px;
+                font-size: 16px;
+                color: #fff;
+              }
+              p {
+                line-height: 22px;
+              }
+              .attention {
+                margin: 6px 0 0 30px;
+              }
+            }
+            .flow-chart {
+              padding: 0;
+              text-align: center;
+              img {
+                width: 268px;
+              }
+            }
+          }
         }
       }
     }
     #task {
       .task-introduce {
+        margin-bottom: 30px;
         text-align: center;
+        font-size: 20px;
+        line-height: 40px;
       }
       .item-box {
         display: flex;
         flex-wrap: wrap;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.5);
         .item {
-          padding: 10px;
-          margin:0 30px 20px 0;
+          margin: 0 25px 25px 0;
+          padding: 24px 20px;
           background-color: #fff;
           color: rgba(0, 0, 0, 0.5);
-
+          box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+          transition: 0.3s;
           .item-name {
             cursor: pointer;
             color: #002fa7;
             font-size: 16px;
           }
           .item-intriduce {
-            height: 100px;
-            width: 180px;
-            padding-top: 15px;
-            font-size: 12px;
+            padding-top: 8px;
+            height: 94px;
+            width: 221px;
+            font-size: 14px;
+            line-height: 22px;
           }
           .button-box {
+            display: flex;
             .button-left,
             .button-right {
               margin: 0;
-              padding: 10px;
+              padding: 8px 12px;
               cursor: pointer;
               color: #fff;
               outline: none;
-              border: 1px solid transparent;
+              border: none;
               background-color: #002fa7;
             }
             .button-right {
+              display: flex;
+              margin-left: 24px;
+              align-content: center;
               color: #002fa7;
               background-color: #fff;
+              line-height: 24px;
+              img {
+                margin-left: 6px;
+                width: 24px;
+              }
             }
+          }
+        }
+        .item:nth-child(4n) {
+          margin-right: 0;
+        }
+        .item:last-child {
+          margin-bottom: 0;
+        }
+        .item:hover {
+          box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.3);
+          transform: translateY(-3px);
+        }
+      }
+      @media (max-width: 1000px) {
+        .task-introduce {
+          text-align: left;
+          font-size: 16px;
+        }
+        .item-box {
+          flex-direction: column;
+          align-content: center;
+          justify-content: center;
+          .item:nth-child(n) {
+            width: 310px;
+            margin: 0 0 25px 0;
+            .item-intriduce {
+              width: 275px;
+            }
+          }
+          .item:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+    #integral {
+      .integral-title {
+        padding: 67px 0 50px 0;
+      }
+      .integral-content {
+        padding: 26px 15px;
+        height: 239px;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.5);
+        line-height: 24px;
+        background: url(/img/internship/integral-background.png) no-repeat;
+        background-size: 100%;
+        h3,
+        h4 {
+          margin-bottom: 10px;
+          font-size: 18px;
+          color: #000000;
+        }
+        h4 {
+          margin-top: 10px;
+          font-size: 14px;
+        }
+        p {
+          position: relative;
+          padding-left: 12px;
+        }
+        .circular {
+          p::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #2e9afe;
+          }
+        }
+        .star {
+          position: relative;
+          img {
+            position: absolute;
+            left: 0;
+            top: 8px;
+            height: 8px;
+          }
+        }
+      }
+      @media (max-width: 1000px) {
+        .integral-content {
+          padding-bottom: 41px;
+          height: 100%;
+          background: url(/img/internship/integral-background-mo.png) no-repeat;
+          background-size: 100%;
+          h3,
+          h4 {
+            margin-bottom: 6px;
+            font-size: 16px;
+            color: #000000;
+          }
+          h4 {
+            margin-top: 8px;
+            margin-bottom: 0;
+            font-size: 12px;
           }
         }
       }
     }
     #rank {
+      padding-top: 30px;
       .rank-title {
+        position: relative;
+        height: 80px;
+        text-align: center;
+        img {
+          width: 374px;
+        }
+      }
+      .rank-title::before {
+        position: absolute;
+        content: "积分排行";
+        width: 374px;
+        color: #fff;
+        text-align: center;
+        font-size: 28px;
+        line-height: 80px;
       }
       .rank-content {
+        box-sizing: content-box;
+        border: 5px solid #ff7c56;
+        border-top: 16px solid #ff7c56;
+        background-color: #fff2ee;
+        padding: 30px 290px 25px;
+        transition: all 0.5s;
         .rank-top {
-        }
-        .rank-item {
           display: flex;
-          justify-content: space-between;
-          padding: 15px 0;
-          margin-bottom: 10px;
-          border-bottom: 1px dashed salmon;
-          .rank-class {
-            font-size: 24px;
-            color: salmon;
+          justify-content: center;
+          .top-item {
+            display: flex;
+            justify-content: end;
+            flex-direction: column;
+            text-align: center;
+            .gitee-name {
+              font-size: 14px;
+              color: rgba(0, 0, 0, 0.5);
+              line-height: 16px;
+            }
+            .score {
+              margin: 10px 0 20px;
+              font-size: 18px;
+              color: #ff644e;
+              line-height: 16px;
+              span {
+                padding-left: 10px;
+                font-size: 14px;
+                color: rgba(0, 0, 0, 0.5);
+              }
+            }
+            .rank-box {
+              width: 170px;
+              font-size: 24px;
+              color: #ffffff;
+              line-height: 24px;
+            }
+            .second {
+              height: 66px;
+              line-height: 66px;
+              background: #5dc8ff;
+              border: 1px solid #a4e1ff;
+            }
+            .first {
+              height: 104px;
+              line-height: 104px;
+              background: #ff7c56;
+              border: 1px solid #a4e1ff;
+            }
+            .third {
+              height: 48px;
+              line-height: 48px;
+              background: #2e9afe;
+              border: 1px solid #a4e1ff;
+            }
+          }
+        }
+        .rank-last {
+          .rank-item:nth-of-type(1) {
+            margin-top: 30px;
+            border-top: 1px dashed #ff7c56;
+          }
+          .rank-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px 0;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #ff7c56;
+            .rank-left,
+            .rank-right {
+              display: flex;
+              align-items: center;
+              .rank-class {
+                font-size: 24px;
+                color: #ff7c56;
+              }
+              .gitee-name {
+                padding-left: 20px;
+                font-size: 14px;
+                color: rgba(0, 0, 0, 0.5);
+                line-height: 16px;
+              }
+            }
+            .rank-right {
+              .score {
+                font-size: 18px;
+                color: #ff644e;
+                line-height: 16px;
+              }
+              span {
+                padding-left: 30px;
+                font-family: FZLTHJW--GB1-0, FZLTHJW--GB1;
+                font-size: 14px;
+                color: rgba(0, 0, 0, 0.5);
+                line-height: 16px;
+              }
+            }
           }
         }
         .view-all {
-          cursor: pointer;
-          text-align: center;
+          padding-top: 15px;
+          font-size: 14px;
           color: #002fa7;
+          a {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            div {
+              display: flex;
+              justify-content: center;
+              padding-left: 9px;
+              img {
+                transform: rotate(90deg);
+                transition: 0.3s;
+              }
+              .arrow {
+                transform: rotate(-90deg);
+              }
+            }
+          }
+        }
+      }
+      @media (max-width: 1000px) {
+        .rank-title {
+          height: 48px;
+          img {
+            width: 109px;
+          }
+        }
+        .rank-title::before {
+          content: "";
+        }
+        .rank-content {
+          border-radius: 8px;
+          padding: 36px 15px 26px;
+          height: 100%;
+          .rank-box {
+            // border-radius: 8px;
+          }
+          .rank-top {
+            .top-item {
+              .gitee-name {
+                font-size: 12px;
+                color: rgba(0, 0, 0, 0.5);
+              }
+              .score {
+                margin: 10px 0;
+                font-size: 14px;
+                span {
+                  font-size: 12px;
+                }
+              }
+              .rank-box {
+                width: 92px;
+                font-size: 16px;
+                line-height: 24px;
+              }
+              .second {
+                height: 60px;
+                line-height: 60px;
+              }
+              .first {
+                height: 85px;
+                line-height: 85px;
+              }
+              .third {
+                height: 40px;
+                line-height: 40px;
+              }
+            }
+          }
+          .rank-last {
+            .rank-item:nth-of-type(1) {
+              margin-top: 20px;
+            }
+            .rank-item {
+              padding: 14px 0;
+              margin: 0;
+              border-bottom: 1px dashed #ff7c56;
+              .rank-left,
+              .rank-right {
+                .rank-class {
+                  font-size: 16px;
+                }
+                .gitee-name {
+                  padding-left: 10px;
+                  font-size: 12px;
+                }
+              }
+              .rank-right {
+                .score {
+                  font-size: 14px;
+                }
+                span {
+                  padding-left: 6px;
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+          .view-all {
+            padding-top: 20px;
+          }
+        }
+      }
+    }
+    #rule {
+      .rule-title {
+        padding: 60px 0 50px 0;
+        img {
+          width: 250px;
+        }
+      }
+      .rule-content {
+        padding: 32px 0 20px 0;
+        height: 488px;
+        background: url(/img/internship/rule-background.png) no-repeat;
+        background-size: 100% 488px;
+        .question {
+          margin-bottom: 10px;
+          font-size: 18px;
+          color: #000000;
+          line-height: 24px;
+        }
+        .answer {
+          margin-bottom: 10px;
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.5);
+          line-height: 24px;
+        }
+        .more-question {
+          padding-top: 25px;
+          font-size: 14px;
+        }
+      }
+    }
+    @media (max-width: 1000px) {
+      #rule {
+        padding: 0 30px;
+        .rule-title {
+          img {
+            width: 155px;
+          }
+        }
+        .rule-content {
+          padding: 26px 15px;
+          height: 100%;
+          background: url(/img/internship/rule-background-mo.png) no-repeat;
+          background-size: 100% 100%;
+          .warper {
+            padding: 0;
+          }
+          .question {
+            margin-bottom: 6px;
+            font-size: 16px;
+            line-height: 22px;
+          }
+          .answer {
+            margin-bottom: 6px;
+            font-size: 12px;
+            line-height: 22px;
+          }
+          .more-question {
+            padding-top: 6px;
+            font-size: 12px;
+            a {
+              font-size: 12px;
+            }
+          }
         }
       }
     }
     #partner {
+      .partner-title {
+        padding: 60px 0 50px 0;
+      }
       .img-list {
-        margin-bottom: 40px;
+        display: flex;
+        flex-wrap: wrap;
         img {
           cursor: pointer;
-          width: 280px;
-          height: 80px;
+          margin: 0 24px 40px 0;
+          width: 260px;
+          height: 60px;
+        }
+        img:nth-of-type(4n) {
+          margin-right: 0;
+        }
+        img:nth-of-type(n + 5) {
+          margin-bottom: 0;
+        }
+      }
+      @media (max-width: 1000px) {
+        .img-list {
+          margin-bottom: 0;
+          img {
+            margin: 0 30px 20px 0;
+            width: 142px;
+            height: 33px;
+          }
+          img:nth-of-type(2n) {
+            margin: 0 0 20px 0;
+          }
+          img:last-child {
+            margin-bottom: 0;
+          }
         }
       }
     }
     #help {
+      .help-title {
+        padding: 60px 0 50px 0;
+      }
       .help-content {
         display: flex;
         justify-content: center;
         .help-left {
-          padding-right: 40px;
+          padding-right: 57px;
+          p {
+            font-size: 20px;
+            color: #000000;
+            // font-family: PingFangSC-Regular, PingFang SC;
+            line-height: 40px;
+            margin-bottom: 10px;
+            a {
+              font-size: 20px;
+            }
+          }
+        }
+        .help-right {
+          img {
+            width: 170px;
+          }
+        }
+      }
+      @media (max-width: 1000px) {
+        .help-content {
+          padding: 0 30px;
+          flex-direction: column;
+          .help-left {
+            padding-right: 57px;
+            p {
+              font-size: 16px;
+              color: #000000;
+              // font-family: PingFangSC-Regular, PingFang SC;
+              line-height: 30px;
+              margin-bottom: 10px;
+              a {
+                font-size: 20px;
+              }
+            }
+          }
+          .help-right {
+            text-align: center;
+            img {
+              width: 170px;
+            }
+          }
         }
       }
     }

@@ -7,134 +7,139 @@ title: "Contribution"
 
 <div class="markdown">
 
-欢迎来到openEuler！
+Welcome to openEuler!
 
-## 1. 体验openEuler
-### 1.1 体验openEuler操作系统 
+## 1. Experience openEuler
+### 1.1 Experience the openEuler OS
 
-您可以通过以下四种方式体验openEuler操作系统：
+Experience the openEuler OS in any of the following ways:
 
-- [公有云](https://huaweicloud.com/product/ecs.html)
-- [虚拟机](https://www.openeuler.org/en/docs/20.03_LTS/docs/Virtualization/virtualization.html)
-- [硬件](https://www.openeuler.org/en/docs/20.03_LTS/docs/Installation/installation.html)
-- [树莓派](https://gitee.com/openeuler/raspberrypi)
+- [Public cloud](https://huaweicloud.com/intl/en-us/product/ecs.html)
+- [Virtual machine](https://docs.openeuler.org/en/docs/20.03_LTS/docs/Virtualization/virtualization.html)
+- [Hardware](https://docs.openeuler.org/en/docs/20.03_LTS/docs/Installation/Installation.html)
+- [Raspberry Pi](https://gitee.com/openeuler/raspberrypi/blob/master/README.en.md)
 
-### 1.2 体验原创开源项目
+### 1.2 Experience Original Open Source Projects
 
-您可以体验openEuler社区里的以下原创开源项目：
+Experience a range of original open source projects in the openEuler community.
 
-- [StratoVirt](https://www.openeuler.org/en/other/projects/stratovirt/)：面向云数据中心的企业级虚拟化平台
-- [A-Tune](https://www.openeuler.org/en/other/projects/atune/)：一款基于AI开发的智能优化引擎
-- [iSula](https://www.openeuler.org/en/other/projects/isula/)：轻量级容器解决方案
-- [secGear](https://www.openeuler.org/en/other/projects/secgear/)：面向计算产业的机密计算安全应用开发套件
-- [PkgShip](https://pkgmanage.openeuler.org/)：管理OS软件包依赖关系，提供依赖和被依赖关系完整图谱的查询工具
-- [BishengJDK ](https://www.openeuler.org/en/other/projects/bishengjdk/): OpenJDK定制版Huawei JDK的开源版本，是一个高性能、可用于生产环境的OpenJDK发行版
-- [Compass-CI ](https://compass-ci.openeuler.org/): 可持续集成的开源软件平台, 构建一个开放、完整的测试系统
+- [StratoVirt](https://www.openeuler.org/en/other/projects/stratovirt/)：An enterprise-grade virtualization platform intended for cloud data centers.
+- [A-Tune](https://www.openeuler.org/en/other/projects/atune/)：An AI-based intelligent tuning engine.
+- [iSula](https://www.openeuler.org/en/other/projects/isula/)： A lightweight container solution.
+- [secGear](https://www.openeuler.org/en/other/projects/secgear/)：A confidential computing security application development suite for the computing industry.
+- [PkgShip](https://pkgmanage.openeuler.org/)：A query tool that manages OS software package dependencies and provides detailed dependency graphs.
+- [BishengJDK ](https://www.openeuler.org/en/other/projects/bishengjdk/):The open source version of Huawei JDK that is developed on the OpenJDK framework. It is a high-performance OpenJDK release that can be used in production environments.
+- [Compass-CI ](https://compass-ci.openeuler.org/): An open source software platform for sustainable integration, building an open and complete test system.
 
-## 2. 签署CLA
+## 2. Sign the CLA
 
-在参与社区贡献前，您需要签署openEuler社区贡献者许可协议（CLA）。  
-根据您的参与身份，选择签署个人CLA、员工CLA或企业CLA，请点击[这里](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=)签署
+Sign the openEuler community Contributor License Agreement (CLA) before starting community contributions.
+Choose an individual CLA, employee CLA, or corporation CLA based on your participation status (click [here](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=))
 
-- 个人CLA：以个人身份参与社区，请签署个人CLA
-- 企业CLA: 以企业身份参与社区，请签署企业CLA
-- 员工CLA: 以企业员工的身份参与社区，请签署员工CLA
+- Individual CLA: Join the community as an individual.
+- Corporation CLA: Join the community as a corporation.
+- Employee CLA: Join the community as an enterprise employee.
 
-## 3. 参与openEuler社区
-### 3.1 参与社区活动
+## 3. Join the openEuler Community
+### 3.1 Participate in Community Activities
 
-您可以了解并参与丰富多彩的社区活动：
+Learn about and participate in a variety of community activities.
 
-- [Meeting](/zh/#meeting)：查看官网首页SIG公开例会日程安排，可参与你感兴趣的会议
+- [Meeting](https://www.openeuler.org/en/#meeting)：View the public meeting schedule of Special Interest Groups (SIGs) on the openEuler homepage and join the meetings you are interested in.
 - [Meetups](https://www.openeuler.org/en/interaction/salon-list/)
-- [直播](https://www.openeuler.org/en/interaction/live-list/)
-- [峰会](https://www.openeuler.org/en/interaction/summit-list/summit2021/)
+- [Live](https://www.openeuler.org/en/interaction/live-list/)
+- [Summit](https://www.openeuler.org/en/interaction/summit-list/summit2021/)
 
-### 3.2 找到您想参与的SIG
-#### 3.2.1 了解SIG并找到您感兴趣的SIG
-SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来组织，以便于更好的管理和改善工作流程。因此参与社区事务正确的起始姿势是先找到您感兴趣的SIG， SIG组均是开放的，欢迎任何人来参与。  
-目前openEuler社区已有70+ SIG组，可查看 [openEuler SIG 列表](https://www.openeuler.org/en/sig/sig-list/) 找到您感兴趣的SIG。  
-如果定位不到您感兴趣的SIG，您可以向[community@openeuler.org](mailto:community@openeuler.org)发求助邮件。建议您在邮件列表内用“【开发过程疑问】”作为标题，在内容中写出你寻找的SIG或项目的特征，我们会为您提供帮助。
+### 3.2 Find the SIGs to Participate In
+#### 3.2.1 Learn About SIGs and Find the SIGs You Are Interested In
+The openEuler community is organized into SIGs to better manage the work processes. SIGs are open to anyone, and finding your perfect SIG is the first step to contributing to community affairs.
+Currently, the openEuler community has more than 70 SIGs. View the openEuler [SIG list](https://www.openeuler.org/en/sig/sig-list/) to find the SIG you want to join.
+If you cannot find the SIG that you are interested in, send an email to [community@openeuler.org](mailto:community@openeuler.org) It is recommended that you use "[Development Process Issue]" as the heading of the mail and describe the SIGs or projects you are looking for.
 
-#### 3.2.2 成立新的SIG
+#### 3.2.2 Start a New SIG
 
-如果在已有的SIG组列表里面没有找到您感兴趣的SIG，而您对某个方向有浓厚的兴趣，希望在openEuler社区成立一个新的相关SIG进行维护和发展，那您可以参考 [申请新SIG流程指南](https://www.openeuler.org/en/sig/sig-guidance/) 来申请创建新的SIG.
+If you fail to find the SIGs you are interested in and want to start a new SIG for maintenance and development in the openEuler community, refer to [Application Process](https://www.openeuler.org/en/sig/sig-guidance/).
 
-### 3.3 参与社区贡献
+### 3.3 Engage in Community Contributions
 
-在签署了[CLA协议](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=)、找到了你想参与的[SIG组](https://www.openeuler.org/en/sig/sig-list/)之后，就可以开始你的社区贡献之旅啦！社区贡献的方式有很多种，每一种贡献都将受到社区的欢迎和重视。  
-##### 1.提交Issue/处理issue任务  
+Once you sign the [CLA](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=) and join a [SIG](https://www.openeuler.org/en/sig/sig-list/) you can start your contribution journey. Any contribution, big or small, are welcomed and valued by the community.
+##### 1.Submit and Address Issues
 
-- 找到Issue列表：  
-  在您感兴趣的SIG项目Gitee主页内，点击“Issues”，您可以找到其Issue列表（如[Community团队的Issue列表](https://gitee.com/openeuler/community/issues))
-- 提交Issue  
-  如果您准备向社区上报Bug或者提交需求，或者为openEuler社区贡献自己的意见或建议，请在openEuler社区对应的仓库上提交Issue。  
-  提交Issue请参考 [Issue提交指南](https://gitee.com/openeuler/community/blob/master/zh/contributors/issue-submit.md)。为了吸引更广泛的注意，您也可以把Issue的链接附在邮件内，通过[邮件列表](https://www.openeuler.org/en/community/mailing-list/)发送给所有人。
-- 参与Issue内的讨论  
-  每个Issue下面可能已经有参与者们的交流和讨论，如果您感兴趣，也可以在评论框中发表自己的意见。
-- 找到愿意处理的Issue  
-  如果您愿意处理其中的一个issue，可以将它分配给自己。只需要在评论框内输入 /assign或 /assign @yourself，机器人就会将问题分配给您，您的名字将显示在负责人列表里。
+- Find the issue list.
+  On the Gitee homepage of the SIG project you are interested in, click Issues（for example, the issues of the [Community](https://gitee.com/openeuler/community/issues) team)
+- Submit an issue.  
+  If you want to report bugs, submit requests, or contribute your comments or suggestions to the openEuler community, submit an issue in the corresponding repository of the openEuler community.  
+  For details about how to submit an issue, see the [Issue Submission Guide](https://gitee.com/openeuler/community/blob/master/zh/contributors/issue-submit.md). To attract more attention, you can also attach the issue link in an email and send it to everyone through the [Mailing Lists](https://www.openeuler.org/en/community/mailing-list/).
+- Participate in the discussion on an issue.  
+  There are discussions among participants under each issue. If you are interested in an issue, you can also post your comments in the comment box.
+- Find the issues that you want to address.  
+  If you want to work on one of those issues, you can assign it to yourself. Type /assign or /assign @your_account_name in the comment box. The system will assign the issue to you and your name will appear in the owner list.
 
-##### 2.贡献编码  
+##### 2.Contribute Code  
 
-- 准备openEuler的开发环境  
-  如果您想参与编码贡献，需要准备openEuler的开发环境，请参考[开发环境准备](https://gitee.com/openeuler/community/blob/master/zh/contributors/prepare-environment.md)。
-- 了解SIG和项目内的开发注意事项  
-  每个SIG内的项目使用的编码语言、开发环境、编码约定等都可能存在差异的。如果您想了解并参与到编码类贡献，可以先找到该项目给开发者提供的贡献者指南——这个指南一般是在该SIG的首页地址内，以CONTRIBUTING.md文件的形式提供，或者就直接在该项目的README.md内。
-- 下载代码和拉分支  
-  如果要参与代码贡献，您还需要了解如何在Gitee下载代码，通过PR合入代码等。openEuler使用Gitee代码托管平台，想了解具体的指导，请参考[Gitee Workflow Guide](https://gitee.com/openeuler/community/blob/master/zh/contributors/Gitee-workflow.md)。该托管平台的使用方法类似GitHub，如果您以前使用过GitHub，本节的内容您可以大致了解甚至跳过。
-- 修改、构建和本地验证  
-  在本地分支上完成修改后，进行构建和本地验证，请参考[构建软件包](https://gitee.com/openeuler/community/blob/master/zh/contributors/package-install.md)。
-- 提交一个Pull-Request  
-  当你提交一个PR的时候，就意味您已经开始给社区贡献代码了。请参考 openEuler社区PR提交指导。  
-  为了使您的提交更容易被接受，您需要：  
-	- 遵循SIG组的编码约定，如果有的话  
-	- 准备完善的提交信息  
-	- 如果一次提交的代码量较大，建议将大型的内容分解成一系列逻辑上较小的内容，分别进行提交会更便于检视者理解您的想法  
-	- 使用适当的SIG组和监视者标签去标记PR：社区机器人会发送给您消息，以方便您更好的完成整个PR的过程  
+- Prepare the openEuler development environment.  
+  Prepare an openEuler development environment before contributing code. For details, see [Preparing the Development Environment](https://gitee.com/openeuler/community/blob/master/en/contributors/prepare-environment.md).
+- Understand the development precautions of the SIG and the project.  
+  The coding languages, development environments, and coding conventions used by projects of each SIG may vary. If you want to learn about and contribute code, find the project's contributor guide for developers – which is generally available as a CONTRIBUTING.md file on the SIG's homepage, or just in README.md of the project.
+- Download code and pull a branch.  
+  Before contributing code, learn how to download code from Gitee and merge code through pull requests (PRs). openEuler code is hosted on the Gitee platform. For details, see [Gitee Workflow](https://gitee.com/openeuler/community/blob/master/zh/contributors/Gitee-workflow.md). Gitee is similar to GitHub. If you have used GitHub before, skip this section.
+- Perform modification, building, and local validation. 
+  After the modification is complete on the local branch, build and verify the local branch by referring to [Software Package Building](https://gitee.com/openeuler/community/blob/master/en/contributors/package-install.md).
+- Create a PR.  
+  Creating a PR means that you are contributing code to the community. For details, see [Creating a Pull Request.](https://gitee.com/openeuler/community/blob/master/en/contributors/pull-requests.md) 
+  To make your PR easier to be accepted, you need to:  
+	- Follow the coding conventions (if any) of the SIG.  
+	- Write good commit messages.  
+	- If you want to commit a large amount of code at a time, it is recommended that you divide the code into a series of smaller pieces, which will make it easier for reviewers to understand your ideas. 
+	- Mark the PR with appropriate SIG and monitor tags. The CI Bot will walk you through the PR process.  
 
-  注意：如果您的PR请求没有引起足够的关注，可以在SIG的邮件列表或dev@openeuler.org求助。
+   Note: If your PR does not attract enough attention, you can ask for help through the SIG mailing list or 
+     [dev@openeuler.org](mailto:dev@openeuler.org).
 
-##### 3.贡献软件包  
-如果你发现openEuler缺失了一个软件包，可以帮openEuler把这个软件包补上。实际上贡献软件包的过程就是帮助openEuler提供更丰富功能的过程。希望随着大家的参与，openEuler能够成为一个“无所不有”的软件生态系统。openEuler支持在gitee新增软件包的同时自动在obs的openEuler:Fctory上创建同名仓库。这样在向已创建的gitee仓库提交代码时，会自动对代码编译进行检测。具体流程可参考 [如何新增软件包](https://gitee.com/openeuler/community/blob/master/zh/contributors/create-package.md)。  
-##### 4.贡献原创开源项目  
-如果你想将自己原创的开源项目贡献到openEuler社区，成为openEuler发行版本中的一份子，那么可参考以下两种方式：  
-- 方式一：在其它社区开发，集成到openEuler中  
-  假定你已经在github，gitlab或者gitee上拥有了自己的项目，那么只需要按照以上提到的 [如何新增软件包](https://gitee.com/openeuler/community/blob/master/zh/contributors/create-package.md) 那样，将软件加入到src-openeuler这个repo仓就可以了。
-- 方式二：在openEuler社区中开发，在openEuler中集成  
-  直接在https://gitee.com/openeuler中建立原创项目，类似将项目“托管”到openEuler社区，比如现在社区中的iSula和A-Tune就是这样的模式。  
-  如果你有了一个很棒的idea想要在openEuler社区里实现，那么他可以依照下面的过程来深度参与到openEuler中。  
-  1.在[TC委员会的例会](https://www.openeuler.org/en/sig/sig-list/sig-detail.html?id=21&name=TC&mail=dev%40openeuler.org)中申请一个开源项目；  
-  2.如果TC委员会认为这是一个很好的idea，并且认为值得去推进，那么我们会在[https://gitee.com/openeuler](https://gitee.com/openeuler)中建立一个repo；  
-  3.这个项目在openeuler中持续开发和孵化，直到项目逐渐成熟，那么就可以在src-openeuler中建立一个仓，为该项目提供相关的spec文件，制作成为一个rpm；  
-  4.最终这个原创的开源项目会随着openEuler的发布版本走遍全世界，为世界人民所使用。
+##### 3.Contribute a Package  
+If you find that openEuler is missing any software package, you can contribute the software package to the openEuler community. Contributing software packages enhances openEuler functionalities, making openEuler a software ecosystem with anything you need. When a software package is added to openEuler on Gitee, a repository with the same name will be created in openEuler:Factory of OBS. When code is committed to the created Gitee repository, the code compilation is automatically checked. For details, see [Adding a New Software Package](https://gitee.com/openeuler/community/blob/master/zh/contributors/create-package.md).  
+##### 4.Contribute Original Open Source Projects  
+If you want to contribute your original open source project to the openEuler community and make it a part of the openEuler release, you can use either of the following methods:  
+- Method 1: Develop a project in another community and integrate it into openEuler. 
+  Assuming that you already have your own projects on GitHub, GitLab, or Gitee, simply add the software to the src-openeuler repository by referring to [Adding a New Software Package](https://gitee.com/openeuler/community/blob/master/en/contributors/create-package.md).
+- Method 2: Develop and integrate a project in openEuler.  
+  Creating original projects directly at [https://gitee.com/openeuler](https://gitee.com/openeuler) is similar to "hosting" projects to the openEuler community, such as iSula and A-Tune.
+  If you have a great idea that you want to implement in the openEuler community, follow the procedure below to get deeply involved in the openEuler community.  
+  1.Apply for an open source project in [regular meetings of the Technical Committee (TC)](https://www.openeuler.org/en/sig/sig-list/sig-detail.html?id=21&name=TC&mail=dev%40openeuler.org).  
+  2.If the TC evaluates that it is a good idea and deserves to be promoted, you can set up a repository at [https://gitee.com/openeuler](https://gitee.com/openeuler).  
+  3.The project will be continuously developed and incubated in openEuler until it matures. Then create a repository in src-openeuler to provide relevant spec files for the project and create an RPM file.  
+  4.Eventually, your original open source project will be used by people around the world with openEuler releases.
 
-##### 5.检视代码  
-openEuler是一个开放的社区，我们希望所有参与社区的人都能成为活跃的检视者。当成为SIG组的committer或maintainer角色时，便拥有审核代码的责任与权利。  
-强烈建议本着[行为准则](https://gitee.com/openeuler/community/blob/master/code-of-conduct.md)，超越自我，相互尊重和促进协作。[《补丁审核的柔和艺术》](https://sage.thesharps.us/2014/09/01/the-gentle-art-of-patch-review/)一文中提出了一系列检视的重点，说明代码检视的活动也希望能够促进新的贡献者积极参与，而不会使贡献者一开始就被细微的错误淹没，所以检视的时候，可以重点关注包括：  
-&nbsp;&nbsp;1.贡献背后的想法是否合理  
-&nbsp;&nbsp;2.贡献的架构是否正确  
-&nbsp;&nbsp;3.贡献是否完善  
+##### 5.Review Code
+openEuler is an open community and everyone involved is expected to be active reviewers. When you are a committer or maintainer of a SIG, you have the responsibility and permission to review code. 
+Everyone in the community is encouraged to pursue excellence and promote collaboration on the ground of the [Code of Conduct](https://gitee.com/openeuler/community/blob/master/code-of-conduct.md) and mutual respect.[ The Gentle Art Of Patch Review ](https://sage.thesharps.us/2014/09/01/the-gentle-art-of-patch-review/) lists a series of review highlights. Code review activities are expected to promote the active participation of new contributors without causing the contributors to be overwhelmed by minor errors at the beginning. Therefore, during the review, focus on the following:
 
-##### 6.测试  
-测试——是所有贡献者的责任，对于社区版本来说，[sig-qa](https://gitee.com/openeuler/QA)组是负责测试活动的社区官方组织。如果您希望在自己的基础架构上开展测试活动，可以参考：[社区测试体系介绍](https://gitee.com/openeuler/QA/blob/master/%E7%A4%BE%E5%8C%BA%E6%B5%8B%E8%AF%95%E4%BD%93%E7%B3%BB%E4%BB%8B%E7%BB%8D.md) 。  
-为了成功发行一个社区版本，需要完成多种测试活动。不同的测试活动，测试代码的位置也有所不同，成功运行测试所需的环境的细节也会有差异，有关的信息可以参考：[社区开发者测试贡献指南](https://gitee.com/openeuler/QA/blob/master/%E7%A4%BE%E5%8C%BA%E5%BC%80%E5%8F%91%E8%80%85%E6%B5%8B%E8%AF%95%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97.md)。  
-##### 7.选择社区组件打包  
-您也可以参与社区组件打包，请参考 [如何打包](https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md)。  
-##### 8.参与非代码类贡献  
-如果您的兴趣不在编写代码方面，可以在[ 非代码贡献指南 ](https://gitee.com/openeuler/community/blob/master/zh/contributors/non-code-contributions.md)中找到感兴趣的工作。  
-##### 9.社区安全问题披露  
-[安全处理流程](https://gitee.com/openeuler/security-committee/blob/master/%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B.jpg)——简要描述了处理安全问题的过程。  
-[安全披露信息](https://gitee.com/openeuler/security-committee/blob/master/security-disclosure.md)——如果您希望报告安全漏洞，请参考此页面。  
+&nbsp;&nbsp;1.Whether the idea behind the contribution is reasonable. 
 
-## 4. 和社区一起成长
-### 4.1 社区角色说明
+&nbsp;&nbsp;2.Whether the contribution architecture is correct.
 
-社区不同角色对应不同的责任与权利，每种角色都是社区不可或缺的一部分，您可以通过积极贡献不断积累经验和影响力，并获得角色上的成长。更详细角色说明与责任权利描述请查看 [角色说明](https://gitee.com/openeuler/community/blob/master/community-membership_cn.md)。  
+&nbsp;&nbsp;3.Whether the contribution is complete.  
 
-### 4.2 技术委员会
+##### 6.Test 
+Testing is the responsibility of all contributors. For the community version, [sig-qa group](https://gitee.com/openeuler/QA) is the official community organization responsible for testing activities. If you want to test on your own infrastructure, refer to [Introduction to the Community Test System](https://gitee.com/openeuler/QA/blob/master/%E7%A4%BE%E5%8C%BA%E6%B5%8B%E8%AF%95%E4%BD%93%E7%B3%BB%E4%BB%8B%E7%BB%8D.md) . 
+To successfully release a community version, you need to complete multiple test activities. The location of the test code varies according to the test activity, so do the details of the environment required for successful test running. For details, see [Test Contribution Guide for Community Developers](https://gitee.com/openeuler/QA/blob/master/%E7%A4%BE%E5%8C%BA%E5%BC%80%E5%8F%91%E8%80%85%E6%B5%8B%E8%AF%95%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97.md).  
+##### 7.Package Community Components 
+You can also participate in community component packaging. For details, see [openEuler Packaging Guide](https://gitee.com/openeuler/community/blob/master/en/contributors/packaging.md).
+##### 8.Participate in Non-Code Contributions
+If your interest is not in writing code, you can find work of interest in the [ Non-Code Contributions](https://gitee.com/openeuler/community/blob/master/en/contributors/non-code-contributions.md).  
+##### 9.Community Security Issues  
+[Security Issue Handling Process](https://gitee.com/openeuler/security-committee/blob/master/%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B.jpg) briefly describes the process of handling security issues.  
+[Security Disclosure](https://gitee.com/openeuler/security-committee/blob/master/security-disclosure.md) describes how to report a security vulnerability. 
 
-openEuler技术委员会（Technical Committee，简称TC）是openEuler社区的技术决策机构，负责社区技术决策和技术资源的协调。  
-详情请查看 [openEuler技术委员会介绍](https://www.openeuler.org/en/sig/sig-list/sig-detail.html?id=21&name=TC&mail=dev%40openeuler.org)
+## 4. Grow with the Community
+### 4.1 Community Roles
+
+Everyone in the community plays an important part. Roles differ in terms of responsibilities and permissions. Grow, accumulate experience, and gain influence by contributing to the community. For details about roles, responsibilities, and permissions, see [Community Member](https://gitee.com/openeuler/community/blob/master/community-membership.md).
+
+### 4.2 Technical Committee
+
+The openEuler Technical Committee (TC) is the technical decision-making body of the openEuler community. It is responsible for technical decision-making and coordination of technical resources in the openEuler community.  
+<br/>
+For details, see the introduction to the [openEuler Technical Committee](https://www.openeuler.org/en/sig/sig-list/sig-detail.html?id=21&name=TC&mail=dev%40openeuler.org).
 
 </div>
