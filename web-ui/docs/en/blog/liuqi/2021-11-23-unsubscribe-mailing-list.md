@@ -16,7 +16,9 @@ unsubscribe from openEuler mailing lists. Here we provide two methods:
 
 ### 1. Unsubscribe through email
 
-There are two scenarios for sending an email to unsubscribe.
+There are two scenarios for sending an email to unsubscribe. In an email with an unsubscription guide footer, you can 
+click the unsubscription icon in the email footer to edit and send an unsubscription email. The other is to send an email
+to `**-leave@openeuler.org` for unsubscription. The following describes how to unsubscribe from test@openeuler.org (already subscribed).
 
 - 
   Some emails contain the footer of unsubscription instructions. You can click test-leave@openeuler.org to edit and send 
@@ -27,7 +29,7 @@ There are two scenarios for sending an email to unsubscribe.
   Later, you will receive an email from test-bounces informing you of the unsubscription success.
   <img src='./2021-11-23-unsubscribe-mailing-list-03.png' width=750 alt='unsubscription succeeded'>
 -
-  You can also send an email to tc-leave@openeuler.org (already subscribed) using your subscription mailbox. 
+  You can also send an email to tc-leave@openeuler.org using your subscription mailbox. 
   There are no special requirements on the email title and content.
   <img src='./2021-11-23-unsubscribe-mailing-list-02.png' width=750 alt='send unsubscription email'>
   
@@ -39,7 +41,7 @@ There are two scenarios for sending an email to unsubscribe.
 If you are a registered user of the openEuler mailing list (the registration interface is not available currently), log in to
 the Postorius UI, go to the mailing list to be unsubscribed from and click **Unsubscribe**.
 
-<img src='./2021-11-23-unsubscribe-mailing-list-01.png' width=750 alt='unsubscribe on postorius UI'>
+<img src='./2021-11-23-unsubscribe-mailing-list-01.png' alt='unsubscribe on postorius UI'>
 
 ### More
 Visit [**Mailweb List FAQ**](https://osinfra.cn/faq/mailinglist.html) for more questions about the community mailing
