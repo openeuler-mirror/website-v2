@@ -3311,5 +3311,66 @@
       "hostBusAdapter": "UN-RAID-P460-B4-F",
       "hardDiskDrive": ""
     }
+  },
+  {
+    "hardwareFactory": "宝德",
+    "hardwareModel": "Phyyium S2500/64C",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "aarch64",
+    "date": "2021/9/23",
+    "friendlyLink": "http://www.powerleader.com.cn/",
+    "boardCards": [
+      {
+        "vendorID": "1000",
+        "deviceID": "005d",
+        "svID": "1000",
+        "ssID": "9361",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "ngbe",
+        "version": "1.1.1",
+        "type": "NIC",
+        "driverDate": "2017.3.7",
+        "sha256": "ac37d6b171b42b628a3f1ac8a9b0fe708239b5f3471f1acdf6d1cb8ae04afeda",
+        "driverSize": "0.34M",
+        "chipVendor": "WangXun",
+        "boardModel": "SFI/SFP+",
+        "chipModel": "WX1860AL4",
+        "item": "",
+        "downloadLink": "https://www.net-swift.com/c/tech.html?filter%5Btype%5D=1&page=2"
+      },
+	  {
+        "vendorID": "1000",
+        "deviceID": "005d",
+        "svID": "1000",
+        "ssID": "9361",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "MR9361-8i",
+        "version": "1.1.4-130",
+        "type": "RAID",
+        "driverDate": "",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Avago",
+        "boardModel": "SAS-3",
+        "chipModel": "3108",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "http://www.powerleader.com.cn/",
+      "certificationTime": "2021/9/23",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "1.7",
+      "cpu": "S2500/64C",
+      "ram": "16*16G DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "ASPEED",
+      "hostBusAdapter": "AVAGO MegaRAID SAS 9361-8i",
+      "hardDiskDrive": ""
+    }
   }
 ]
