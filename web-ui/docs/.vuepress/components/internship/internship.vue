@@ -1,6 +1,7 @@
 <template>
   <div class="internship">
     <titlenav
+     class="titlenav"
       v-show="isShowNav"
       :currentIndex="activeIndex"
       :dataList="navList"
@@ -24,7 +25,7 @@
       <div class="warper">
         <div class="intership-introduce" id="introduce">
           <p>
-            openEuler开源实习是中国科学院软件所和openEuler社区共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力。
+            openEuler开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力。
             由openEuler社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可活动相应积分，积分累计达规定量后，可获得实习证书和实习工资。
           </p>
         </div>
@@ -91,8 +92,8 @@
                   <p>（1）在Gitee查看任务，找到你想做的任务issue。</p>
                   <p>
                     （2）在任务issue下方评论区输入
-                    <span class="blue">/intern-assign命令</span
-                    >，认领该任务，然后发送邮件给任务导师请求审核。邮件需包括你的简历和该任务的开发方案。
+                    <span class="blue">/intern-assign</span
+                    > 命令，认领该任务，然后发送邮件给任务导师请求审核。邮件需包括你的简历和该任务的开发方案。
                   </p>
                   <p>
                     （3）导师收到邮件后对申请人进行评审，在该任务issue评论下通过输入命令反馈结果，<span
@@ -109,7 +110,7 @@
                     （4）如果领取后无法完成，可通过在issue下输入<span
                       class="blue"
                       >/intern-unassign</span
-                    >放弃任务。<span class="orange"
+                    > 放弃任务。<span class="orange"
                       >放弃超过3次，账号被限制一个月不能领取任务。</span
                     >
                   </p>
@@ -119,8 +120,8 @@
                       每个任务只能有一个人认领，每人一次最多只能有2个认领中的任务。
                     </p>
                     <p>
-                      输入<span class="blue">/intern-assign命令</span
-                      >后两周内没有发简历和方案给导师的，认领自动失效，任务被释放。
+                      输入<span class="blue">/intern-assign</span
+                      > 命令后两周内没有发简历和方案给导师的，认领自动失效，任务被释放。
                     </p>
                     <a
                       href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/02%20%E4%BB%BB%E5%8A%A1%E8%AE%A4%E9%A2%86%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF.rar"
@@ -148,9 +149,9 @@
                     >（务必添加，否则无法积分）；
                   </p>
                   <p>
-                    （2）提交pr后在任务issue评论区输入<span class="blue"
-                      >/intern-completed 命令</span
-                    >，表示当前任务已提交，然后等待审核。
+                    （2）提交pr后在任务issue评论区输入 <span class="blue"
+                      >/intern-completed </span
+                    >命令，表示当前任务已提交，然后等待审核。
                   </p>
                   <p>
                     （3）跟进导师和相关SIG
@@ -159,9 +160,9 @@
                   <div class="attention black">
                     <div class="attention-title">注意</div>
                     <p>
-                      导师有不通过任务成果的权利，如学生提交的PR离实际所需太远，或未按时提交PR，可选择输入<span
+                      导师有不通过任务成果的权利，如学生提交的PR离实际所需太远，或未按时提交PR，可选择输入命令 <span
                         class="blue"
-                        >命令/intern-fail</span
+                        >/intern-fail</span
                       >，不通过该任务，则无积分。
                     </p>
                   </div>
@@ -393,7 +394,6 @@
 </template>
 
 <script>
-import axios from "axios";
 import titlenav from "../summit/titleNav.vue";
 import { getRank, getToken, getRankDetail } from "../../api/internship";
 export default {
@@ -585,27 +585,26 @@ export default {
             "A：开源实习面向全国范围内全日制/非全日制在校学生招募，无专业年级限制，欢迎感兴趣的同学踊跃报名。",
         },
         {
-          question: "2、实习证书有公司盖章吗？",
-          answer:
-            "A：开源实习的证书与正式实习证书一样，将加盖公章。将由“中国科学院软件所-人力资源处”盖章。",
-        },
-        {
-          question: "3、实习有效期6个月是如何计算的？",
+          question: "2、实习有效期6个月是如何计算的？",
           answer:
             "A：在申请实习时需签署实习劳务合同，实习有效期即劳务合同上填写的实习有效期，为6个月期限，6个月期限内未满60积分则不能获得证书。线上实习时间管理相对自由，可根据自身情况安排时间，可提前结束实习。",
         },
         {
-          question: "4、超过了6个月或者完成了100积分还能继续在社区做任务吗？",
+          question: "3、超过了6个月或者完成了100积分还能继续在社区做任务吗？",
           answer:
             "A：可以，但积分不能再用于领取证书和奖金，一年内累计到150积分可获得openEuler社区高校“开源之星”荣誉。 ",
         },
         {
-          question: "5、任务领取成功后，完成时间有限制吗？",
+          question: "4、任务领取成功后，完成时间有限制吗？",
           answer:
             "A：有，在导师输入/approve 命令通过认领后，2分、5分的任务需在一周内提交成果，10分的任务需在2周内提交成果，提交成果以提交PR并在issue评论下输入了/intern-completed命令为准，否则任务将被程序释放给其他人认领，当前认领人不能再承担该任务。20及以上分值的任务需在issue上标注的期望完成时间内完成，否则导师有权利释放任务。",
         },
       ],
       partnerData: [
+        {
+          IMG: "/img/internship/iscas.jpg",
+          LINK: "",
+        },
         {
           IMG: "/img/internship/qilinsoft.png",
           LINK: "",
@@ -1169,7 +1168,7 @@ a {
           justify-content: center;
           .top-item {
             display: flex;
-            justify-content: end;
+            justify-content: flex-end;
             flex-direction: column;
             text-align: center;
             .gitee-name {
