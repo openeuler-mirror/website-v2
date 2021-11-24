@@ -25,7 +25,7 @@
         <div class="intership-introduce" id="introduce">
           <p>
             openEuler开源实习是中国科学院软件所和openEuler社区共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力。
-            由openEuler社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可活动相应积分，积分累计达规定量后，可获得实习证书和实习工资
+            由openEuler社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可活动相应积分，积分累计达规定量后，可获得实习证书和实习工资。
           </p>
         </div>
         <div class="step" id="step">
@@ -54,9 +54,15 @@
                 />
                 <h4>申请实习</h4>
                 <div class="main-text">
-                  <p v-for="item in step.stepOne.pText" :key="item">
-                    {{ item }}
+                  <p>（1）填写报名资料表。</p>
+                  <p>
+                    （2）完成<a
+                      href="https://gitee.com/openeuler-competition/opensource-internship/issues/I4A68T?from=project-issue"
+                      target="_blank"
+                      >实习测试任务</a
+                    >并提供PR链接。
                   </p>
+                  <p>（3）提供学生证扫描件或其他学生身份证明材料。</p>
                   <div class="attention">
                     <p>
                       将以上3份材料发送至开源实习官方邮箱
@@ -239,83 +245,85 @@
           <div class="integral-title title">
             <img src="/img/internship/integral-title.png" alt="" />
           </div>
-          <div class="integral-content">
-            <h3>{{ integral.reward.head }}</h3>
-            <div
-              v-for="item in integral.reward.text"
-              :key="item"
-              class="circular"
-            >
-              <p>{{ item }}</p>
-            </div>
-            <h4>{{ integral.honor.head }}</h4>
-            <div v-for="item in integral.honor.text" :key="item" class="star">
-              <img src="/img/internship/star.png" alt="" />
-              <p>{{ item }}</p>
+          <div class="integral-border">
+            <div class="integral-content">
+              <h3>{{ integral.reward.head }}</h3>
+              <div
+                v-for="item in integral.reward.text"
+                :key="item"
+                class="circular"
+              >
+                <p>{{ item }}</p>
+              </div>
+              <h4>{{ integral.honor.head }}</h4>
+              <div v-for="item in integral.honor.text" :key="item" class="star">
+                <img src="/img/internship/star.png" alt="" />
+                <p>{{ item }}</p>
+              </div>
             </div>
           </div>
         </div>
         <div id="rank">
-          <div class="rank-title">
+          <div class="rank-title" @click="showRank">
             <img v-if="!isShowH5" src="/img/internship/rank-title.png" alt="" />
             <img v-else src="/img/internship/rank-title-mo.png" alt="" />
           </div>
-          <div class="rank-content" ref="rankContent">
-            <div class="rank-box">
-              <div class="rank-top">
-                <div class="top-item" v-for="(item, index) in 3" :key="index">
-                  <div class="gitee-name">Gitee-Name</div>
-                  <div class="score">7777<span>积分</span></div>
+          <div class="rank-border">
+            <div class="rank-content" ref="rankContent">
+              <div class="rank-box">
+                <div class="rank-top">
+                  <div class="top-item" v-for="(item, index) in 3" :key="index">
+                    <div class="gitee-name">{{ item.GiteeId }}</div>
+                    <div class="score" v-if="false">
+                      {{ item.integralValue }}<span>积分</span>
+                    </div>
+                    <div
+                      class="rank-box"
+                      :class="[
+                        { second: index === 0 },
+                        { first: index === 1 },
+                        { third: index === 2 },
+                      ]"
+                    >
+                      <span v-if="index === 0">第二名</span>
+                      <span v-if="index === 1">第一名</span>
+                      <span v-if="index === 2">第三名</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="rank-last">
                   <div
-                    class="rank-box"
-                    :class="[
-                      { second: index === 0 },
-                      { first: index === 1 },
-                      { third: index === 2 },
-                    ]"
+                    class="rank-item"
+                    v-for="(item, index) in 0"
+                    :key="index"
                   >
-                    <span v-if="index === 0">第二名</span>
-                    <span v-if="index === 1">第一名</span>
-                    <span v-if="index === 2">第三名</span>
+                    <div class="rank-left">
+                      <div class="rank-class">0{{ index + 1 }}</div>
+                      <div class="gitee-name">haml-707</div>
+                    </div>
+                    <div class="rank-right">
+                      <div class="score">77777</div>
+                      <span>积分</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="rank-last">
-                <div
-                  class="rank-item"
-                  v-for="(item, index) in renderData"
-                  :key="index"
-                >
-                  <div class="rank-left">
-                    <div class="rank-class">0{{ index + 1 }}</div>
-                    <div class="gitee-name">haml-707</div>
-                  </div>
-                  <div class="rank-right">
-                    <div class="score">77777</div>
-                    <span>积分</span>
-                  </div>
+                <div class="dash"></div>
+                <div class="view-all" v-if="false">
+                  <a @click="extend()" v-if="!isExent"
+                    >查看全部
+                    <div>
+                      <img src="/img/internship/right.svg" alt="" /></div
+                  ></a>
+                  <a @click="extend()" v-else
+                    >收起全部
+                    <div>
+                      <img
+                        class="arrow"
+                        src="/img/internship/right.svg"
+                        alt=""
+                      /></div
+                  ></a>
                 </div>
-              </div>
-              <div class="view-all">
-                <a @click="extend()"
-                v-if="!isExent"
-                  >查看全部
-                  <div>
-                    <img
-                      src="/img/internship/right.svg"
-                      alt=""
-                    /></div
-                ></a>
-                <a @click="extend()"
-                v-else
-                  >收起全部
-                  <div>
-                    <img
-                      class='arrow'
-                      src="/img/internship/right.svg"
-                      alt=""
-                    /></div
-                ></a>
               </div>
             </div>
           </div>
@@ -325,22 +333,24 @@
         <div class="rule-title title">
           <img src="/img/internship/rule-title.png" alt="" />
         </div>
-        <div class="rule-content">
-          <div class="warper">
-            <div
-              class="rule-item"
-              v-for="(item, index) in ruleData"
-              :key="index"
-            >
-              <div class="question">{{ item.question }}</div>
-              <div class="answer">{{ item.answer }}</div>
-            </div>
-            <div class="more-question">
-              更多问题，请移步<a
-                href="https://gitee.com/openeuler-competition/opensource-internship/issues/I4AJIR?from=project-issue"
-                target="_blank"
-                >本贴</a
-              >评论区提问。
+        <div class="rule-border">
+          <div class="rule-content">
+            <div class="warper">
+              <div
+                class="rule-item"
+                v-for="(item, index) in ruleData"
+                :key="index"
+              >
+                <div class="question">{{ item.question }}</div>
+                <div class="answer">{{ item.answer }}</div>
+              </div>
+              <div class="more-question">
+                更多问题，请移步<a
+                  href="https://gitee.com/openeuler-competition/opensource-internship/issues/I4AJIR?from=project-issue"
+                  target="_blank"
+                  >本贴</a
+                >评论区提问。
+              </div>
             </div>
           </div>
         </div>
@@ -385,7 +395,7 @@
 <script>
 import axios from "axios";
 import titlenav from "../summit/titleNav.vue";
-import { getRank,getToken,getRankDetail } from "../../api/internship";
+import { getRank, getToken, getRankDetail } from "../../api/internship";
 export default {
   components: {
     titlenav,
@@ -448,13 +458,6 @@ export default {
             TEXT: "工资与证书发放",
           },
         ],
-        stepOne: {
-          pText: [
-            "（1）填写报名资料表。",
-            "（2）完成实习测试任务并提供PR链接。",
-            "（3）提供学生证扫描件或其他学生身份证明材料。",
-          ],
-        },
         stepTow: {
           pText: [
             "（1）在Gitee查看任务，找到你想做的任务issue。",
@@ -635,11 +638,6 @@ export default {
     };
   },
   methods: {
-    // tast() {
-    //   axios.get('/api-rank/intern/points/lists?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjg2NjY1NDAsImlhdCI6MTYyODA2MTc0MCwiaXNzIjoiMTI3LjAuMC4xIiwic3ViIjoidXNlciB0b2tlbiJ9.odlznwL_dYF_h63F6Tc5-PPQD5kfOvfd81ZqwwbqxCQ&currentPage=1&pageSize=10').then(res=>{
-    //     console.log(res);
-    //   })
-    // },
     extend() {
       if (this.isExent) {
         this.renderData = 6;
@@ -674,7 +672,7 @@ export default {
     scroTop() {
       let scrollTop =
         document.body.scrollTop || document.documentElement.scrollTop;
-        let value = 0;
+      let value = 0;
       if (this.isExent) {
         value = 1400;
       }
@@ -693,38 +691,49 @@ export default {
         this.activeIndex = 3;
       } else if (scrollTop > 2800 && scrollTop < 3550) {
         this.activeIndex = 4;
-      } else if (scrollTop > 3550 && scrollTop < 4170) {
+      } else if (scrollTop > 3550 && scrollTop < 3800) {
+        //4170
         this.activeIndex = 5;
-      } else if (scrollTop > 4170) {
+      } else if (scrollTop > 3800) {
         this.activeIndex = 6;
       } else {
         return false;
       }
     },
-  },
-  mounted() {
-    // this.tast()
-    getToken()
-      .then((data) => {
-        return getRankDetail({
-                token:data.loginData.token,
-                currentPage:1,
-                pageSize:10,
-                userId:data.loginData.userId
+    showRank() {
+      getToken()
+        .then((data) => {
+          return getRank({
+            token: data.loginData.token,
+            currentPage: 1,
+            pageSize: 10,
+            userId: data.loginData.userId,
+          });
         })
-        // let info = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-        // this.rankLast = info.splice(3);
-        // this.rankTop = info;
-        // this.rankTop.splice(
-        //   0,
-        //   1,
-        //   ...this.rankTop.splice(1, 1, this.rankTop[0])
-        // );
-      })
-      .then(res =>{
-        console.log(res);
-      })
-     
+        .catch((err) => {
+          console.log(err);
+        })
+        .then((res) => {
+          console.log(res);
+          if (res.UserPoints) {
+            let info = res.UserPoints;
+            info.sort((a, b) => {
+              return a.integralValue - b.integralValue;
+            });
+            console.log(info);
+            this.rankLast = info.splice(3);
+            this.rankTop = info;
+            this.rankTop.splice(
+              0,
+              1,
+              ...this.rankTop.splice(1, 1, this.rankTop[0])
+            );
+          }
+        });
+    },
+  },
+  created() {},
+  mounted() {
     window.addEventListener("scroll", this.scroTop);
   },
   destroyed() {
@@ -1052,6 +1061,7 @@ a {
       .integral-title {
         padding: 67px 0 50px 0;
       }
+
       .integral-content {
         padding: 26px 15px;
         height: 239px;
@@ -1097,11 +1107,18 @@ a {
         }
       }
       @media (max-width: 1000px) {
+        .integral-border {
+          border: 5px solid #5877ff;
+          border-top: 16px solid #5877ff;
+          border-radius: 8px;
+          background-color: #5877ff;
+        }
         .integral-content {
           padding-bottom: 41px;
           height: 100%;
-          background: url(/img/internship/integral-background-mo.png) no-repeat;
-          background-size: 100%;
+          background: none;
+          border-radius: 8px;
+          background-color: #eef1ff;
           h3,
           h4 {
             margin-bottom: 6px;
@@ -1123,6 +1140,7 @@ a {
         height: 80px;
         text-align: center;
         img {
+          border-radius: 8px 8px 0 0;
           width: 374px;
         }
       }
@@ -1135,12 +1153,16 @@ a {
         font-size: 28px;
         line-height: 80px;
       }
-      .rank-content {
-        box-sizing: content-box;
+      .rank-border {
+        border-radius: 8px;
         border: 5px solid #ff7c56;
         border-top: 16px solid #ff7c56;
+        background-color: #ff7c56;
+      }
+      .rank-content {
+        border-radius: 8px;
+        padding: 83px 290px 25px;
         background-color: #fff2ee;
-        padding: 30px 290px 25px;
         transition: all 0.5s;
         .rank-top {
           display: flex;
@@ -1179,10 +1201,20 @@ a {
               border: 1px solid #a4e1ff;
             }
             .first {
+              position: relative;
               height: 104px;
               line-height: 104px;
               background: #ff7c56;
               border: 1px solid #a4e1ff;
+            }
+            .first::after {
+              position: absolute;
+              top: -81px;
+              left: 50%;
+              width: 100%;
+              color: #000000;
+              transform: translateX(-50%);
+              content: "虚位以待";
             }
             .third {
               height: 48px;
@@ -1234,6 +1266,11 @@ a {
             }
           }
         }
+        .dash {
+          padding-top: 50px;
+          margin-bottom: 20px;
+          border-bottom: 1px dashed #ff7c56;
+        }
         .view-all {
           padding-top: 15px;
           font-size: 14px;
@@ -1269,10 +1306,10 @@ a {
         }
         .rank-content {
           border-radius: 8px;
-          padding: 36px 15px 26px;
+          padding: 46px 15px 10px;
           height: 100%;
-          .rank-box {
-            // border-radius: 8px;
+          .dash {
+            padding-top: 30px;
           }
           .rank-top {
             .top-item {
@@ -1299,6 +1336,9 @@ a {
               .first {
                 height: 85px;
                 line-height: 85px;
+              }
+              .first::after {
+                top: -60px;
               }
               .third {
                 height: 40px;
@@ -1379,11 +1419,18 @@ a {
             width: 155px;
           }
         }
+        .rule-border {
+          border-radius: 8px;
+          border: 5px solid #5dc8ff;
+          border-top: 16px solid #5dc8ff;
+          background-color: #5dc8ff;
+        }
         .rule-content {
+          border-radius: 8px;
           padding: 26px 15px;
           height: 100%;
-          background: url(/img/internship/rule-background-mo.png) no-repeat;
-          background-size: 100% 100%;
+          background: none;
+          background-color: #eff9ff;
           .warper {
             padding: 0;
           }
