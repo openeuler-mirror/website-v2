@@ -3,7 +3,7 @@
     <div class="position"></div>
     <div class="container">
       <img v-if="!isShowH5" :src="i18n.community.CONTRIBUTION.BACKGROUND_IMG" />
-      <img v-else :src="i18n.community.CONTRIBUTION.BACKGROUND_IMG_H5" />
+      <img v-else :src="i18n.community.CONTRIBUTION.BACKGROUND_IMG_H5" :class="{ 'enTop': ($lang == 'en') }" />
       <a
         v-for="(item, index) in i18n.community.CONTRIBUTION.LINK_LIST"
         :key="index"
@@ -63,7 +63,13 @@ export default {
   img {
     width: 1120px;
     @media screen and (max-width: 1000px) {
+      padding-top: 20px;
       width: 375px;
+    }
+  }
+  .enTop {
+     @media screen and (max-width: 1000px) {
+       padding: 0;
     }
   }
   a {
@@ -156,7 +162,7 @@ export default {
     top: 514px;
     left: 253px;
     @media screen and (max-width: 1000px) {
-      top: 447px;
+      top: 475px;
       left: 186px;
     }
   }

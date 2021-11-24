@@ -388,9 +388,9 @@ module.exports = {
             LOOK_DESC: 'View Details',
             PRINT_MAP: 'Download',
             LINK_LIST: [
-                'https://huaweicloud.com/product/ecs.html',
-                'https://docs.openeuler.org/zh/docs/20.03_LTS/docs/Virtualization/virtualization.html',
-                'https://docs.openeuler.org/zh/docs/20.03_LTS/docs/Installation/installation.html',
+                'https://huaweicloud.com/intl/en-us/product/ecs.html',
+                'https://docs.openeuler.org/en/docs/20.03_LTS/docs/Virtualization/virtualization.html',
+                'https://docs.openeuler.org/en/docs/20.03_LTS/docs/Installation/Installation.html',
                 'https://gitee.com/openeuler/raspberrypi',
                 '/en/other/projects/stratovirt/',
                 '/en/other/projects/atune/',
@@ -415,8 +415,8 @@ module.exports = {
                 '/en/community/contribution/detail.html#_4-贡献原创开源项目',
                 '/en/community/contribution/detail.html#_5-检视代码',
                 'https://gitee.com/openeuler/QA/blob/master/%E7%A4%BE%E5%8C%BA%E6%B5%8B%E8%AF%95%E4%BD%93%E7%B3%BB%E4%BB%8B%E7%BB%8D.md',
-                'https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md',
-                'https://gitee.com/openeuler/community/blob/master/zh/contributors/non-code-contributions.md',
+                'https://gitee.com/openeuler/community/blob/master/en/contributors/packaging.md',
+                'https://gitee.com/openeuler/community/blob/master/en/contributors/non-code-contributions.md',
                 'https://gitee.com/openeuler/security-committee/blob/master/security-disclosure.md',
                 'https://gitee.com/openeuler/community/blob/master/community-membership_cn.md',
                 '/en/sig/sig-list/sig-detail.html?id=21&name=TC&mail=dev%40openeuler.org'

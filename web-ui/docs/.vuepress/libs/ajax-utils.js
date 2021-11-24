@@ -34,7 +34,6 @@ let postJson = params => {
     let ajaxParams = {};
     // success方法重载
     ajaxParams['success'] = function (d) {
-        console.log(d);
         const data = typeof d.data == "string" ? JSON.parse(d.data) : d.data;
         if(data){
             params.success(data);

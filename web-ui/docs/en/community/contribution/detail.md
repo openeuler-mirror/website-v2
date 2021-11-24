@@ -27,9 +27,9 @@ Experience a range of original open source projects in the openEuler community.
 - [A-Tune](https://www.openeuler.org/en/other/projects/atune/)：An AI-based intelligent tuning engine.
 - [iSula](https://www.openeuler.org/en/other/projects/isula/)： A lightweight container solution.
 - [secGear](https://www.openeuler.org/en/other/projects/secgear/)：A confidential computing security application development suite for the computing industry.
-- [PkgShip](https://pkgmanage.openeuler.org/)：A query tool that manages OS software package dependencies and provides detailed dependency graphs.
-- [BishengJDK ](https://www.openeuler.org/en/other/projects/bishengjdk/):The open source version of Huawei JDK that is developed on the OpenJDK framework. It is a high-performance OpenJDK release that can be used in production environments.
-- [Compass-CI ](https://compass-ci.openeuler.org/): An open source software platform for sustainable integration, building an open and complete test system.
+- [pkgship](https://pkgmanage.openeuler.org/)：A query tool that manages OS software package dependencies and provides detailed dependency graphs.
+- [BiSheng JDK](https://www.openeuler.org/en/other/projects/bishengjdk/):The open source version of Huawei JDK that is developed on the OpenJDK framework. It is a high-performance OpenJDK release that can be used in production environments.
+- [Compass-CI](https://compass-ci.openeuler.org/): An open source software platform for sustainable integration, building an open and complete test system.
 
 ## 2. Sign the CLA
 
@@ -66,10 +66,10 @@ Once you sign the [CLA](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=
 ##### 1.Submit and Address Issues
 
 - Find the issue list.
-  On the Gitee homepage of the SIG project you are interested in, click Issues（for example, the issues of the [Community](https://gitee.com/openeuler/community/issues) team)
+  On the Gitee homepage of the SIG project you are interested in, click Issues（for example, the issues of the [Community](https://gitee.com/openeuler/community/issues)) project.
 - Submit an issue.  
   If you want to report bugs, submit requests, or contribute your comments or suggestions to the openEuler community, submit an issue in the corresponding repository of the openEuler community.  
-  For details about how to submit an issue, see the [Issue Submission Guide](https://gitee.com/openeuler/community/blob/master/zh/contributors/issue-submit.md). To attract more attention, you can also attach the issue link in an email and send it to everyone through the [Mailing Lists](https://www.openeuler.org/en/community/mailing-list/).
+  For details about how to submit an issue, see the [Issue Submission Guide](https://gitee.com/openeuler/community/blob/master/en/contributors/issue-submit.md). To attract more attention, you can also attach the issue link in an email and send it to everyone through the [Mailing Lists](https://www.openeuler.org/en/community/mailing-list/).
 - Participate in the discussion on an issue.  
   There are discussions among participants under each issue. If you are interested in an issue, you can also post your comments in the comment box.
 - Find the issues that you want to address.  
@@ -82,7 +82,7 @@ Once you sign the [CLA](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=
 - Understand the development precautions of the SIG and the project.  
   The coding languages, development environments, and coding conventions used by projects of each SIG may vary. If you want to learn about and contribute code, find the project's contributor guide for developers – which is generally available as a CONTRIBUTING.md file on the SIG's homepage, or just in README.md of the project.
 - Download code and pull a branch.  
-  Before contributing code, learn how to download code from Gitee and merge code through pull requests (PRs). openEuler code is hosted on the Gitee platform. For details, see [Gitee Workflow](https://gitee.com/openeuler/community/blob/master/zh/contributors/Gitee-workflow.md). Gitee is similar to GitHub. If you have used GitHub before, skip this section.
+  Before contributing code, learn how to download code from Gitee and merge code through pull requests (PRs). openEuler code is hosted on the Gitee platform. For details, see [Gitee Workflow](https://gitee.com/openeuler/community/blob/master/en/contributors/Gitee-workflow.md). Gitee is similar to GitHub. If you have used GitHub before, skip this section.
 - Perform modification, building, and local validation. 
   After the modification is complete on the local branch, build and verify the local branch by referring to [Software Package Building](https://gitee.com/openeuler/community/blob/master/en/contributors/package-install.md).
 - Create a PR.  
@@ -134,7 +134,7 @@ If your interest is not in writing code, you can find work of interest in the [ 
 ## 4. Grow with the Community
 ### 4.1 Community Roles
 
-Everyone in the community plays an important part. Roles differ in terms of responsibilities and permissions. Grow, accumulate experience, and gain influence by contributing to the community. For details about roles, responsibilities, and permissions, see [Community Member](https://gitee.com/openeuler/community/blob/master/community-membership.md).
+Everyone in the community plays an important part. Roles differ in terms of responsibilities and permissions. Grow, accumulate experience, and gain influence by contributing to the community. For details about roles, responsibilities, and permissions, see [Community Membership](https://gitee.com/openeuler/community/blob/master/community-membership.md).
 
 ### 4.2 Technical Committee
 

@@ -114,7 +114,7 @@ export default {
     .internship-nav {
         margin-top: -425px;
     }
-    @media screen and (max-width: 1120px) {
+    @media screen and (max-width: 1540px) {
         display: none;
     }
 }
