@@ -1,7 +1,7 @@
 <template>
   <div class="internship">
     <titlenav
-     class="titlenav"
+      class="titlenav"
       v-show="isShowNav"
       :currentIndex="activeIndex"
       :dataList="navList"
@@ -26,7 +26,7 @@
         <div class="intership-introduce" id="introduce">
           <p>
             openEuler开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力。
-            由openEuler社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可活动相应积分，积分累计达规定量后，可获得实习证书和实习工资。
+            由openEuler社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可获得相应积分，积分累计达规定量后，可获得实习证书和实习工资。
           </p>
         </div>
         <div class="step" id="step">
@@ -37,13 +37,14 @@
             <div class="step-nav" v-if="!isShowH5">
               <div
                 class="step-bar"
-                ref="stepBar"
                 :class="{ stepActive: index == stepActive }"
                 v-for="(item, index) in step.stepNav"
                 :style="`background:url(${item.IMG}) no-repeat;`"
                 :key="item.IMG"
-                @click="stepChange(index, $event)"
-              ></div>
+                @click="stepChange(index)"
+              >
+                <img :src="item.ACTIVE" alt="" />
+              </div>
             </div>
             <div class="step-body">
               <div class="step-text" v-show="stepActive === 0 || isShowH5">
@@ -92,8 +93,8 @@
                   <p>（1）在Gitee查看任务，找到你想做的任务issue。</p>
                   <p>
                     （2）在任务issue下方评论区输入
-                    <span class="blue">/intern-assign</span
-                    > 命令，认领该任务，然后发送邮件给任务导师请求审核。邮件需包括你的简历和该任务的开发方案。
+                    <span class="blue">/intern-assign</span>
+                    命令，认领该任务，然后发送邮件给任务导师请求审核。邮件需包括你的简历和该任务的开发方案。
                   </p>
                   <p>
                     （3）导师收到邮件后对申请人进行评审，在该任务issue评论下通过输入命令反馈结果，<span
@@ -110,7 +111,8 @@
                     （4）如果领取后无法完成，可通过在issue下输入<span
                       class="blue"
                       >/intern-unassign</span
-                    > 放弃任务。<span class="orange"
+                    >
+                    放弃任务。<span class="orange"
                       >放弃超过3次，账号被限制一个月不能领取任务。</span
                     >
                   </p>
@@ -120,8 +122,8 @@
                       每个任务只能有一个人认领，每人一次最多只能有2个认领中的任务。
                     </p>
                     <p>
-                      输入<span class="blue">/intern-assign</span
-                      > 命令后两周内没有发简历和方案给导师的，认领自动失效，任务被释放。
+                      输入<span class="blue">/intern-assign</span>
+                      命令后两周内没有发简历和方案给导师的，认领自动失效，任务被释放。
                     </p>
                     <a
                       href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/02%20%E4%BB%BB%E5%8A%A1%E8%AE%A4%E9%A2%86%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF.rar"
@@ -149,8 +151,8 @@
                     >（务必添加，否则无法积分）；
                   </p>
                   <p>
-                    （2）提交pr后在任务issue评论区输入 <span class="blue"
-                      >/intern-completed </span
+                    （2）提交pr后在任务issue评论区输入
+                    <span class="blue">/intern-completed </span
                     >命令，表示当前任务已提交，然后等待审核。
                   </p>
                   <p>
@@ -160,9 +162,8 @@
                   <div class="attention black">
                     <div class="attention-title">注意</div>
                     <p>
-                      导师有不通过任务成果的权利，如学生提交的PR离实际所需太远，或未按时提交PR，可选择输入命令 <span
-                        class="blue"
-                        >/intern-fail</span
+                      导师有不通过任务成果的权利，如学生提交的PR离实际所需太远，或未按时提交PR，可选择输入命令
+                      <span class="blue">/intern-fail</span
                       >，不通过该任务，则无积分。
                     </p>
                   </div>
@@ -188,7 +189,7 @@
                   <p>
                     （1）在实习合同里约定的6个月期限内，学生可凭积分获得实习工资。
                   </p>
-                  <div class="attention">
+                  <div class="attention firstAttention">
                     <p v-for="item in step.stepFour.pText" :key="item">
                       {{ item }}
                     </p>
@@ -202,7 +203,9 @@
                   </p>
                   <div class="attention black">
                     <div class="attention-title">注意</div>
-                    <p>证书开具后视为实习结束，不再计算实习工资。</p>
+                    <p v-for="item in step.stepFour.attentionText" :key="item">
+                      {{ item }}
+                    </p>
                     <a
                       href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/03%20%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E5%92%8C%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF.rar"
                       download
@@ -442,19 +445,23 @@ export default {
       step: {
         stepNav: [
           {
-            IMG: "/img/internship/step_1active.png",
+            IMG: "/img/internship/step_1.png",
+            ACTIVE: "/img/internship/step_1active.png",
             TEXT: "申请实习",
           },
           {
             IMG: "/img/internship/step_2.png",
+            ACTIVE: "/img/internship/step_2active.png",
             TEXT: "领取任务",
           },
           {
             IMG: "/img/internship/step_3.png",
+            ACTIVE: "/img/internship/step_3active.png",
             TEXT: "提交任务",
           },
           {
             IMG: "/img/internship/step_4.png",
+            ACTIVE: "/img/internship/step_4active.png",
             TEXT: "工资与证书发放",
           },
         ],
@@ -474,7 +481,11 @@ export default {
             "满60分可获得工资总计4000元；",
             "满80分可获得工资总计6000元；",
             "满100分可获得工资总计8000元；",
-            "每个月月初结算上一个月的积分，在月底发放上个月满足相应积分条件的实习工资。",
+          ],
+          attentionText: [
+            "以上工资金额为总计金额，每月月初按上月积分结算一次应发工资，在月底发放到实习生账户。应发工资为达到相应积分标准的总计工资金额减去已结算金额。",
+            "总计100分为工资结算上限。超过100分不再计算工资，可选择结束实习，或继续贡献社区，满150分可获得“开源之星”荣誉。",
+            "证书开具后视为实习结束，不再计算实习工资。",
           ],
         },
       },
@@ -485,8 +496,7 @@ export default {
             "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=10&name=Kernel",
           INTRODUCE: "openEuler社区维护的Linux 内核",
           TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590412&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project",
-          GITEE:
-            "https://gitee.com/openeuler/community/tree/master/sig/Kernel",
+          GITEE: "https://gitee.com/openeuler/community/tree/master/sig/Kernel",
         },
         {
           NAME: "sig-QA",
@@ -514,23 +524,14 @@ export default {
           GITEE: "https://gitee.com/openeuler/community/tree/master/sig/A-Tune",
         },
         {
-          NAME: "sig-UKUI",
+          NAME: "sig-KIRAN-DESKTOP",
           NAME_LINK:
-            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=46&name=sig-UKUI",
+            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=37&name=sig-KIRAN-DESKTOP&mail=dev%40openeuler.org",
           INTRODUCE:
-            "负责在openEuler上提供UKUI桌面环境，及相关软件包的规划、维护和升级",
-          TASK: "",
+            "麒麟信安自主研发，致力于为用户提供更加美观，高效和易用的Linux桌面操作系统",
+          TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590528&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project=",
           GITEE:
-            "https://gitee.com/openeuler/community/tree/master/sig/sig-UKUI",
-        },
-        {
-          NAME: "sig-HA",
-          NAME_LINK:
-            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=35&name=sig-Ha",
-          INTRODUCE:
-            "致力于HA软件在openEuler社区中的应用与推广，提升业务的高可用",
-          TASK: "",
-          GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-Ha",
+            "https://gitee.com/openeuler/community/tree/master/sig/sig-KIRAN-DESKTOP",
         },
         {
           NAME: "sig-ops",
@@ -560,9 +561,17 @@ export default {
           TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590388&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project=",
           GITEE: "https://gitee.com/openeuler/community/tree/master/sig/G11N",
         },
+         {
+          NAME: "其他",
+          // NAME_LINK:
+          //   "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=35&name=sig-Ha",
+          INTRODUCE:
+            "一些暂不属于任何SIG的任务",
+          TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=125884711&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&sort=&state=open&target_project= ",
+          // GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-Ha",
+        },
         {
           INTRODUCE: "更多SIG任务，敬请期待",
-         
         },
       ],
       integral: {
@@ -650,15 +659,7 @@ export default {
       }
       this.isExent = !this.isExent;
     },
-    stepChange(index, e) {
-      for (let i = 0; i < this.$refs.stepBar.length; i++) {
-        this.$refs.stepBar[i].style = `background:url(/img/internship/step_${
-          i + 1
-        }.png`;
-      }
-      e.target.style = `background:url(/img/internship/step_${
-        index + 1
-      }active.png)`;
+    stepChange(index) {
       this.stepActive = index;
     },
     go(path) {
@@ -835,10 +836,17 @@ a {
             width: 280px;
             height: 160px;
             background-size: 100% 100% !important;
+            img {
+              display: none;
+              width: 100%;
+              margin-top: -20px;
+              height: 180px;
+            }
           }
           .stepActive {
-            margin-top: -20px;
-            height: 180px;
+            img {
+              display: block;
+            }
           }
         }
         .step-body {
@@ -884,12 +892,15 @@ a {
               color: #000000;
               line-height: 24px;
             }
-
+            
             .download {
               display: block;
               margin-top: 10px;
             }
           }
+          .firstAttention {
+              margin-top: 0;
+            }
           .black {
             p {
               position: relative;
@@ -1033,8 +1044,14 @@ a {
         .item:nth-child(4n) {
           margin-right: 0;
         }
-        .item:nth-child( n + 9 ) {
+        .item:nth-child(n + 9) {
           margin-bottom: 0;
+          .button-box {
+            height: 40px;
+          }
+          .button-right {
+            display: none;
+          }
         }
         .item:last-child {
           margin: 0;
@@ -1052,7 +1069,6 @@ a {
             font-size: 20px;
             color: #000000;
           }
-
         }
         .item:hover {
           box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.3);
