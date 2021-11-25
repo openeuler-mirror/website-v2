@@ -382,7 +382,7 @@
               <a href="mailto:intern@openeuler.io">intern@openeuler.io</a>
             </p>
             <p>扫码加入“开源实习”学生QQ群，更多问题群内咨询。</p>
-            <p>群号：458603235</p>
+            <p>群号：526089131</p>
           </div>
           <div class="help-right">
             <img src="/img/internship/qrCode.png" alt="" />
@@ -480,13 +480,13 @@ export default {
       },
       task: [
         {
-          NAME: "Infrastructure",
+          NAME: "Kernel",
           NAME_LINK:
-            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=10&name=Infrastructure",
-          INTRODUCE: "主要负责openEuler社区的系统功能开发、维护",
-          TASK: "",
+            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=10&name=Kernel",
+          INTRODUCE: "openEuler社区维护的Linux 内核",
+          TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590412&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project",
           GITEE:
-            "https://gitee.com/openeuler/community/tree/master/sig/Infrastructure",
+            "https://gitee.com/openeuler/community/tree/master/sig/Kernel",
         },
         {
           NAME: "sig-QA",
@@ -560,6 +560,10 @@ export default {
           TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590388&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project=",
           GITEE: "https://gitee.com/openeuler/community/tree/master/sig/G11N",
         },
+        {
+          INTRODUCE: "更多SIG任务，敬请期待",
+         
+        },
       ],
       integral: {
         reward: {
@@ -602,7 +606,7 @@ export default {
       ],
       partnerData: [
         {
-          IMG: "/img/internship/iscas.jpg",
+          IMG: "/img/internship/iscas.png",
           LINK: "",
         },
         {
@@ -859,6 +863,9 @@ a {
             line-height: 24px;
             @media (max-width: 1000px) {
               font-size: 12px;
+              a {
+                font-size: 12px;
+              }
             }
           }
           .specialSpan {
@@ -1026,8 +1033,26 @@ a {
         .item:nth-child(4n) {
           margin-right: 0;
         }
-        .item:last-child {
+        .item:nth-child( n + 9 ) {
           margin-bottom: 0;
+        }
+        .item:last-child {
+          margin: 0;
+          height: 200px;
+          width: 833px;
+          .button-box {
+            display: none;
+          }
+          .item-intriduce {
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            line-height: 152px;
+            text-align: center;
+            font-size: 20px;
+            color: #000000;
+          }
+
         }
         .item:hover {
           box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.3);
@@ -1052,6 +1077,9 @@ a {
           }
           .item:last-child {
             margin: 0;
+            .item-intriduce {
+              font-size: 16px;
+            }
           }
         }
       }
