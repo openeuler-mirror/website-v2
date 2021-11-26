@@ -47,6 +47,11 @@ module.exports = {
         ],
         HOME_NEWRELEASE: [
             {
+                MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/xinchuang_mo.png')",
+                PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/xinchuang.png')",
+                LINK:'https://live.bilibili.com/22290444?spm_id_from=333.999.0.0'
+            },
+            {
                 MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/%E6%AC%A7%E6%8B%89%E4%BA%BA%E6%89%8D%E5%8F%91%E5%B1%95_mob.png')",
                 PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/%E6%AC%A7%E6%8B%89%E4%BA%BA%E6%89%8D%E5%8F%91%E5%B1%95_web.png')",
                 LINK:'/news/20211117-openeuler.html'
