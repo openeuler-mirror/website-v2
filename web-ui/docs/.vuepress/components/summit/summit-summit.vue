@@ -654,6 +654,11 @@ export default {
     display: block;
   }
 }
+.el-table_3_column_13 {
+  p {
+    padding-left: 20px;
+  }
+}
 .banner {
   @media screen and (max-width: 1000px) {
     display: none;
