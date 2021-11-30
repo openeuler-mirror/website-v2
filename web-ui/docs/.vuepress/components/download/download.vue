@@ -46,7 +46,7 @@
         </li>
       </ul>
       <ul :class="[lang ==='zh' ? 'download-list' : 'download-list-en',$lang === 'ru'?'download-list-ru':'']">
-        <li class="download-item" v-for="(item, index) in downloadList" :key="index">
+        <li class="download-item" :class="{'ru-item':$lang=='ru'&&!isShowH5}" v-for="(item, index) in downloadList" :key="index">
           <h3 class="title" :title="item.NAME">{{ item.NAME }}</h3>
           <el-button
             size="medium"
@@ -518,6 +518,9 @@ export default {
           }
         }
       }
+      .ru-item {
+        height: 325px;
+      }
     }
    .download-list {
       padding-top: 30px;
@@ -562,7 +565,6 @@ export default {
           width: 74px;
           height: 24px;
           font-size: 12px;
-          
           font-weight: normal;
           color: rgba(255, 255, 255, 1);
           line-height: 23px;
