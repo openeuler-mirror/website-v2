@@ -25,8 +25,7 @@
       <div class="warper">
         <div class="intership-introduce" id="introduce">
           <p>
-            openEuler开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力。
-            由openEuler社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可获得相应积分，积分累计达规定量后，可获得实习证书和实习工资。
+            {{ introduce }}
           </p>
         </div>
         <div class="step" id="step">
@@ -54,29 +53,27 @@
                   src="/img/internship/1.png"
                   alt=""
                 />
-                <h4>申请实习</h4>
+                <h4>{{ step.stepONE.TITLE }}</h4>
                 <div class="main-text">
-                  <p>（1）填写报名资料表。</p>
+                  <p>{{ step.stepONE.TEXT1 }}</p>
                   <p>
-                    （2）完成<a
+                    {{ step.stepONE.TEXT2
+                    }}<a
                       href="https://gitee.com/openeuler-competition/opensource-internship/issues/I4A68T?from=project-issue"
                       target="_blank"
-                      >实习测试任务</a
-                    >并提供PR链接。
+                      >{{step.stepONE.LINK1 }}</a
+                    >{{ step.stepONE.TEXT3 }}
                   </p>
-                  <p>（3）提供学生证扫描件或其他学生身份证明材料。</p>
+                  <p>{{ step.stepONE.TEXT4 }}</p>
                   <div class="attention">
                     <p>
-                      将以上3份材料发送至开源实习官方邮箱
-                      <a href="mailto:intern@openeuler.io"
-                        >intern@openeuler.io</a
-                      >。发送后等待审核，组织方将以邮件反馈审核结果，审核通过后，签订劳务协议，用所分配的账号开始实习。
+                      {{ step.stepONE.ATTENTION1 }}<a href="mailto:intern@openeuler.io">intern@openeuler.io</a>{{ step.stepONE.ATTENTION2 }}
                     </p>
                     <a
                       href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/01%20%E5%AE%9E%E4%B9%A0%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E6%A8%A1%E6%9D%BF.rar"
                       download
                       class="download"
-                      >申请材料模板下载</a
+                      >{{ step.stepONE.DONWLOAD }}</a
                     >
                   </div>
                 </div>
@@ -88,48 +85,45 @@
                   src="/img/internship/2.png"
                   alt=""
                 />
-                <h4>领取任务</h4>
+                <h4>{{ step.stepTow.TITLE }}</h4>
                 <div class="main-text">
-                  <p>（1）在Gitee查看任务，找到你想做的任务issue。</p>
+                  <p>{{ step.stepTow.pText[0] }}</p>
                   <p>
-                    （2）在任务issue下方评论区输入
-                    <span class="blue">/intern-assign</span>
-                    命令，认领该任务，然后发送邮件给任务导师请求审核。邮件需包括你的简历和该任务的开发方案。
+                    {{ step.stepTow.pText[1] }}
+                    <span class="blue">{{ step.stepTow.pText[2] }}</span>
+                    {{ step.stepTow.pText[3] }}
                   </p>
                   <p>
-                    （3）导师收到邮件后对申请人进行评审，在该任务issue评论下通过输入命令反馈结果，<span
-                      class="blue"
-                      >/intern-approve</span
-                    >
-                    代表审核通过，学生成功领取任务,可以开始进行任务处理；<span
-                      class="blue specialSpan"
-                      >/intern-unapprove</span
-                    >
-                    代表领取失败，该学生可再去领取其他任务。
+                    {{ step.stepTow.pText[4] }}
+                    <span class="blue">{{ step.stepTow.pText[5] }}</span>
+                    {{ step.stepTow.pText[6]
+                    }}<span class="blue">{{ step.stepTow.pText[7] }}</span>
+                    {{ step.stepTow.pText[8] }}
                   </p>
                   <p>
-                    （4）如果领取后无法完成，可通过在issue下输入<span
-                      class="blue"
-                      >/intern-unassign</span
-                    >
-                    放弃任务。<span class="orange"
-                      >放弃超过3次，账号被限制一个月不能领取任务。</span
-                    >
+                    {{ step.stepTow.pText[9]
+                    }}<span class="blue">{{ step.stepTow.pText[10] }}</span>
+                    {{ step.stepTow.pText[11] }}
+                    <span class="orange">{{ step.stepTow.pText[12] }}</span>
                   </p>
                   <div class="attention black">
-                    <div class="attention-title">注意</div>
+                    <div class="attention-title">{{ step.ATTENTION }}</div>
                     <p>
-                      每个任务只能有一个人认领，每人一次最多只能有2个认领中的任务。
+                      {{ step.stepTow.ATTENTION_TEXT[0] }}
                     </p>
                     <p>
-                      输入<span class="blue">/intern-assign</span>
-                      命令后两周内没有发简历和方案给导师的，认领自动失效，任务被释放。
+                      {{ step.stepTow.ATTENTION_TEXT[1] }}
+                      <span class="blue">
+                        {{ step.stepTow.ATTENTION_TEXT[2] }}</span
+                      >
+                      {{ step.stepTow.ATTENTION_TEXT[3] }}
                     </p>
                     <a
                       href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/02%20%E4%BB%BB%E5%8A%A1%E8%AE%A4%E9%A2%86%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF.rar"
                       download
                       class="download"
-                      >任务认领邮件模板下载</a
+                    >
+                      {{ step.stepTow.DONWLOAD }}</a
                     >
                   </div>
                 </div>
@@ -141,30 +135,29 @@
                   src="/img/internship/3.png"
                   alt=""
                 />
-                <h4>提交任务</h4>
+                <h4>{{ step.stepThree.TITLE }}</h4>
                 <div class="main-text">
                   <p>
-                    （1）任务处理完成后，提交pr，并在pr描述里添加<span
-                      class="blue"
-                    >
-                      #issue编号</span
-                    >（务必添加，否则无法积分）；
+                    {{ step.stepThree.pText[0] }}
+                    <span class="blue"> {{ step.stepThree.pText[1] }}</span
+                    >{{ step.stepThree.pText[2] }}
                   </p>
                   <p>
-                    （2）提交pr后在任务issue评论区输入
-                    <span class="blue">/intern-completed </span
-                    >命令，表示当前任务已提交，然后等待审核。
+                    {{ step.stepThree.pText[3] }}
+                    <span class="blue">{{ step.stepThree.pText[4] }}</span
+                    > {{ step.stepThree.pText[5] }}
                   </p>
                   <p>
-                    （3）跟进导师和相关SIG
-                    maintainer审核PR，PR被合入则获得积分，issue自动关闭。
+                    {{ step.stepThree.pText[6] }}
                   </p>
                   <div class="attention black">
-                    <div class="attention-title">注意</div>
+                    <div class="attention-title">{{ step.ATTENTION }}</div>
                     <p>
-                      导师有不通过任务成果的权利，如学生提交的PR离实际所需太远，或未按时提交PR，可选择输入命令
-                      <span class="blue">/intern-fail</span
-                      >，不通过该任务，则无积分。
+                      {{ step.stepThree.ATTENTION_TEXT[0] }}
+                      <span class="blue">{{
+                        step.stepThree.ATTENTION_TEXT[1]
+                      }}</span
+                      >{{ step.stepThree.ATTENTION_TEXT[2] }}
                     </p>
                   </div>
                   <div class="flow-chart">
@@ -185,9 +178,9 @@
                   alt=""
                 />
                 <div class="main-text">
-                  <h4>工资与证书发放</h4>
+                  <h4>{{ step.stepFour.TITLE }}</h4>
                   <p>
-                    （1）在实习合同里约定的6个月期限内，学生可凭积分获得实习工资。
+                    {{ step.stepFour.pText1[0] }}
                   </p>
                   <div class="attention firstAttention">
                     <p v-for="item in step.stepFour.pText" :key="item">
@@ -195,22 +188,22 @@
                     </p>
                   </div>
                   <p>
-                    （2）证书申请：在实习有效期6个月内满60分即可开具实习证书，如需开具实习证书，发送邮件给实习官方邮箱<a
-                      class="blue"
-                      href="mailto:intern@openeuler.io"
-                      >intern@openeuler.io </a
-                    >提出申请。
+                    {{ step.stepFour.pText1[1]
+                    }}<a class="blue" href="mailto:intern@openeuler.io">{{
+                      step.stepFour.pText1[2]
+                    }}</a
+                    >{{ step.stepFour.pText1[3] }}
                   </p>
                   <div class="attention black">
-                    <div class="attention-title">注意</div>
-                    <p v-for="item in step.stepFour.attentionText" :key="item">
+                    <div class="attention-title">{{ step.ATTENTION }}</div>
+                    <p v-for="item in step.stepFour.ATTENTION_TEXT" :key="item">
                       {{ item }}
                     </p>
                     <a
                       href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/03%20%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E5%92%8C%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF.rar"
                       download
                       class="download"
-                      >证书申请材料和邮件模板下载</a
+                      >{{ step.stepFour.DONWLOAD }}</a
                     >
                   </div>
                 </div>
@@ -223,11 +216,14 @@
             <img src="/img/internship/task-title.png" alt="" />
           </div>
           <p class="task-introduce">
-            SIG（Special Interest
-            Group）是openEuler社区的组织形式，找到你感兴趣的SIG，查看相关实习任务。
+            {{ task.INTRODUCE }}
           </p>
           <div class="item-box">
-            <div class="item" v-for="(item, index) in task" :key="index">
+            <div
+              class="item"
+              v-for="(item, index) in task.TASK_ITEM"
+              :key="index"
+            >
               <a :href="item.NAME_LINK" class="item-name" target="_blank">{{
                 item.NAME
               }}</a>
@@ -236,10 +232,10 @@
               </div>
               <div class="button-box">
                 <button @click="go(item.TASK)" class="button-left">
-                  实习任务
+                  {{ task.INTERNSHIP_TASK }}
                 </button>
                 <button @click="go(item.GITEE)" class="button-right">
-                  SIG详情<img src="/img/internship/arrow.png" alt="" />
+                  {{ task.SIG_DETAIL }}<img src="/img/internship/arrow.png" alt="" />
                 </button>
               </div>
             </div>
@@ -279,7 +275,7 @@
                   <div class="top-item" v-for="(item, index) in 3" :key="index">
                     <div class="gitee-name">{{ item.GiteeId }}</div>
                     <div class="score" v-if="false">
-                      {{ item.integralValue }}<span>积分</span>
+                      {{ item.integralValue }}<span>{{rank.SCORE}}</span>
                     </div>
                     <div
                       class="rank-box"
@@ -289,37 +285,37 @@
                         { third: index === 2 },
                       ]"
                     >
-                      <span v-if="index === 0">第二名</span>
-                      <span v-if="index === 1">第一名</span>
-                      <span v-if="index === 2">第三名</span>
+                      <span v-if="index === 0">{{rank.SECOND}}</span>
+                      <span v-if="index === 1">{{rank.FIRST}}</span>
+                      <span v-if="index === 2">{{rank.THIRD}}</span>
                     </div>
                   </div>
                 </div>
                 <div class="rank-last">
                   <div
                     class="rank-item"
-                    v-for="(item, index) in 0"
+                    v-for="(item, index) in renderData"
                     :key="index"
                   >
                     <div class="rank-left">
-                      <div class="rank-class">0{{ index + 1 }}</div>
+                      <div class="rank-class">{{ item.rank }}</div>
                       <div class="gitee-name">haml-707</div>
                     </div>
                     <div class="rank-right">
-                      <div class="score">77777</div>
-                      <span>积分</span>
+                      <div class="score">{{ item.integralValue }}</div>
+                      <span>{{rank.SCORE}}</span>
                     </div>
                   </div>
                 </div>
                 <div class="dash"></div>
                 <div class="view-all" v-if="false">
                   <a @click="extend()" v-if="!isExent"
-                    >查看全部
+                    >{{rank.VIEW_ALL}}
                     <div>
                       <img src="/img/internship/right.svg" alt="" /></div
                   ></a>
                   <a @click="extend()" v-else
-                    >收起全部
+                    >{{rank.PACK_UP}}
                     <div>
                       <img
                         class="arrow"
@@ -342,18 +338,19 @@
             <div class="warper">
               <div
                 class="rule-item"
-                v-for="(item, index) in ruleData"
+                v-for="(item, index) in rule.RULE_DATA"
                 :key="index"
               >
                 <div class="question">{{ item.question }}</div>
                 <div class="answer">{{ item.answer }}</div>
               </div>
-              <div class="more-question">
-                更多问题，请移步<a
+              <div class="more-question orange">
+                {{rule.MORE[0]}}<a
+                  class="this-post "
                   href="https://gitee.com/openeuler-competition/opensource-internship/issues/I4AJIR?from=project-issue"
                   target="_blank"
-                  >本贴</a
-                >评论区提问。
+                  >{{rule.MORE[1]}}</a
+                >{{rule.MORE[2]}}
               </div>
             </div>
           </div>
@@ -381,11 +378,11 @@
         <div class="help-content">
           <div class="help-left">
             <p>
-              联系邮箱:
-              <a href="mailto:intern@openeuler.io">intern@openeuler.io</a>
+              {{help[0]}}
+              <a href="mailto:intern@openeuler.io">{{help[1]}}</a>
             </p>
-            <p>扫码加入“开源实习”学生QQ群，更多问题群内咨询。</p>
-            <p>群号：526089131</p>
+            <p>{{help[2]}}</p>
+            <p>{{help[3]}}</p>
           </div>
           <div class="help-right">
             <img src="/img/internship/qrCode.png" alt="" />
@@ -405,8 +402,9 @@ export default {
   },
   data() {
     return {
-      renderData: 6,
+      renderData: [],
       isExent: false,
+      rankInfo:[],
       stepActive: 0,
       isShowNav: false,
       activeIndex: 0,
@@ -442,6 +440,8 @@ export default {
           name: "帮助咨询",
         },
       ],
+      introduce:
+        " openEuler开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力。由openEuler社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可获得相应积分，积分累计达规定量后，可获得实习证书和实习工资。",
       step: {
         stepNav: [
           {
@@ -465,16 +465,69 @@ export default {
             TEXT: "工资与证书发放",
           },
         ],
+        stepONE: {
+          TITLE: "申请实习",
+          TEXT1: "（1）填写报名资料表。",
+          TEXT2: "（2）完成",
+          LINK1: "实习测试任务",
+          TEXT3: "并提供PR链接。",
+          TEXT4: "（3）提供学生证扫描件或其他学生身份证明材料。",
+          ATTENTION1: "将以上3份材料发送至开源实习官方邮箱",
+          ATTENTION2:
+            "。发送后等待审核，组织方将以邮件反馈审核结果，审核通过后，签订劳务协议，用所分配的账号开始实习。",
+          DONWLOAD: "申请材料模板下载",
+        },
+        ATTENTION: "注意",
         stepTow: {
+          TITLE: "领取任务",
           pText: [
             "（1）在Gitee查看任务，找到你想做的任务issue。",
             "（2）在任务issue下方评论区输入",
+            "/intern-assign",
+            "命令，认领该任务，然后发送邮件给任务导师请求审核。邮件需包括你的简历和该任务的开发方案。",
+            "（3）导师收到邮件后对申请人进行评审，在该任务issue评论下通过输入命令反馈结果，",
+            "/intern-approve",
+            "代表审核通过，学生成功领取任务,可以开始进行任务处理；",
+            "/intern-unapprove",
+            "代表领取失败，该学生可再去领取其他任务。",
+            "（4）如果领取后无法完成，可通过在issue下输入",
+            "/intern-unassign",
+            "放弃任务。",
+            "放弃超过3次，账号被限制一个月不能领取任务。",
           ],
+          ATTENTION_TEXT: [
+            "每个任务只能有一个人认领，每人一次最多只能有2个认领中的任务。",
+            "输入",
+            "/intern-assign",
+            "命令后两周内没有发简历和方案给导师的，认领自动失效，任务被释放。",
+          ],
+          DONWLOAD: "任务认领邮件模板下载",
         },
         stepThree: {
-          pText: [],
+          TITLE: "提交任务",
+          pText: [
+            "（1）任务处理完成后，提交pr，并在pr描述里添加",
+            "#issue编号",
+            "（务必添加，否则无法积分）；",
+            "（2）提交pr后在任务issue评论区输入",
+            "/intern-completed",
+            "命令，表示当前任务已提交，然后等待审核。",
+            "（3）跟进导师和相关SIG maintainer审核PR，PR被合入则获得积分，issue自动关闭。",
+          ],
+          ATTENTION_TEXT: [
+            "导师有不通过任务成果的权利，如学生提交的PR离实际所需太远，或未按时提交PR，可选择输入命令",
+            "/intern-fail",
+            "，不通过该任务，则无积分。",
+          ],
         },
         stepFour: {
+          TITLE: "工资与证书发放",
+          pText1: [
+            "（1）在实习合同里约定的6个月期限内，学生可凭积分获得实习工资。",
+            "（2）证书申请：在实习有效期6个月内满60分即可开具实习证书，如需开具实习证书，发送邮件给实习官方邮箱",
+            "intern@openeuler.io",
+            "提出申请。",
+          ],
           pText: [
             "满20分可获得工资总计1000元；",
             "满40分可获得工资总计2500元；",
@@ -482,95 +535,104 @@ export default {
             "满80分可获得工资总计6000元；",
             "满100分可获得工资总计8000元；",
           ],
-          attentionText: [
+          ATTENTION_TEXT: [
             "以上工资金额为总计金额，每月月初按上月积分结算一次应发工资，在月底发放到实习生账户。应发工资为达到相应积分标准的总计工资金额减去已结算金额。",
             "总计100分为工资结算上限。超过100分不再计算工资，可选择结束实习，或继续贡献社区，满150分可获得“开源之星”荣誉。",
             "证书开具后视为实习结束，不再计算实习工资。",
           ],
+          DONWLOAD: "证书申请材料和邮件模板下载",
         },
       },
-      task: [
-        {
-          NAME: "Kernel",
-          NAME_LINK:
-            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=10&name=Kernel",
-          INTRODUCE: "openEuler社区维护的Linux 内核",
-          TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590412&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true",
-          GITEE: "https://gitee.com/openeuler/community/tree/master/sig/Kernel",
-        },
-        {
-          NAME: "sig-QA",
-          NAME_LINK:
-            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=41&name=sig-QA",
-          INTRODUCE: "致力于持续提升openEuler社区发行版本质量",
-          TASK: "https://gitee.com/organizations/src-openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590164%2C125219718&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true",
-          GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-QA",
-        },
-        {
-          NAME: "sig-openstack",
-          NAME_LINK:
-            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=59&name=sig-openstack",
-          INTRODUCE:
-            "在openEuler之上提供原生的OpenStack，构建开放可靠的云计算技术栈",
-          TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590186&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true",
-          GITEE: "https://gitee.com/openeuler/openstack",
-        },
-        {
-          NAME: "A-tune",
-          NAME_LINK:
-            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=1&name=A-Tune",
-          INTRODUCE: "基于openEuler开发的自动化、智能化性能调优引擎",
-          TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590194&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true",
-          GITEE: "https://gitee.com/openeuler/community/tree/master/sig/A-Tune",
-        },
-        {
-          NAME: "sig-KIRAN-DESKTOP",
-          NAME_LINK:
-            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=37&name=sig-KIRAN-DESKTOP&mail=dev%40openeuler.org",
-          INTRODUCE:
-            "麒麟信安自主研发，致力于为用户提供更加美观，高效和易用的Linux桌面操作系统",
-          TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590528&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true=",
-          GITEE:
-            "https://gitee.com/openeuler/community/tree/master/sig/sig-KIRAN-DESKTOP",
-        },
-        {
-          NAME: "sig-ops",
-          NAME_LINK:
-            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=83&name=sig-ops",
-          INTRODUCE:
-            "致力于运维工具的移植与开发，提升openEuler操作系统的运维能力",
-          TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590323&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true",
-          GITEE:
-            "https://gitee.com/openeuler/community/tree/master/sig/sig-ops",
-        },
-        {
-          NAME: "Cloud Native",
-          NAME_LINK:
-            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=85&name=sig-CloudNative",
-          INTRODUCE:
-            "提供便捷、易用的云原生基础设施，提供简单、高效的云原生应用开发托管环境，共建云原生生态",
-          TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590352&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true",
-          GITEE:
-            "https://gitee.com/openeuler/community/tree/master/sig/sig-CloudNative",
-        },
-        {
-          NAME: "G11N",
-          NAME_LINK:
-            "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=98&name=G11N",
-          INTRODUCE: "致力于openEuler的国际化和本地化",
-          TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590388&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true",
-          GITEE: "https://gitee.com/openeuler/community/tree/master/sig/G11N",
-        },
-         {
-          NAME: "其他",
-          INTRODUCE:
-            "一些暂不属于任何SIG的任务",
-          TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=125884711&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&sort=&state=open&target_project&skip_mobile=true",
-        },
-        {
-          INTRODUCE: "更多SIG任务，敬请期待",
-        },
-      ],
+      task: {
+        INTRODUCE:
+          "SIG（Special Interest Group）是openEuler社区的组织形式，找到你感兴趣的SIG，查看相关实习任务。",
+        TASK_ITEM: [
+          {
+            NAME: "Kernel",
+            NAME_LINK:
+              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=10&name=Kernel",
+            INTRODUCE: "openEuler社区维护的Linux 内核",
+            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590412&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true",
+            GITEE:
+              "https://gitee.com/openeuler/community/tree/master/sig/Kernel",
+          },
+          {
+            NAME: "sig-QA",
+            NAME_LINK:
+              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=41&name=sig-QA",
+            INTRODUCE: "致力于持续提升openEuler社区发行版本质量",
+            TASK: "https://gitee.com/organizations/src-openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590164%2C125219718&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true",
+            GITEE:
+              "https://gitee.com/openeuler/community/tree/master/sig/sig-QA",
+          },
+          {
+            NAME: "sig-openstack",
+            NAME_LINK:
+              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=59&name=sig-openstack",
+            INTRODUCE:
+              "在openEuler之上提供原生的OpenStack，构建开放可靠的云计算技术栈",
+            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590186&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true",
+            GITEE: "https://gitee.com/openeuler/openstack",
+          },
+          {
+            NAME: "A-tune",
+            NAME_LINK:
+              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=1&name=A-Tune",
+            INTRODUCE: "基于openEuler开发的自动化、智能化性能调优引擎",
+            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590194&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true",
+            GITEE:
+              "https://gitee.com/openeuler/community/tree/master/sig/A-Tune",
+          },
+          {
+            NAME: "sig-KIRAN-DESKTOP",
+            NAME_LINK:
+              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=37&name=sig-KIRAN-DESKTOP&mail=dev%40openeuler.org",
+            INTRODUCE:
+              "麒麟信安自主研发，致力于为用户提供更加美观，高效和易用的Linux桌面操作系统",
+            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590528&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true=",
+            GITEE:
+              "https://gitee.com/openeuler/community/tree/master/sig/sig-KIRAN-DESKTOP",
+          },
+          {
+            NAME: "sig-ops",
+            NAME_LINK:
+              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=83&name=sig-ops",
+            INTRODUCE:
+              "致力于运维工具的移植与开发，提升openEuler操作系统的运维能力",
+            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590323&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true",
+            GITEE:
+              "https://gitee.com/openeuler/community/tree/master/sig/sig-ops",
+          },
+          {
+            NAME: "Cloud Native",
+            NAME_LINK:
+              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=85&name=sig-CloudNative",
+            INTRODUCE:
+              "提供便捷、易用的云原生基础设施，提供简单、高效的云原生应用开发托管环境，共建云原生生态",
+            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590352&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true",
+            GITEE:
+              "https://gitee.com/openeuler/community/tree/master/sig/sig-CloudNative",
+          },
+          {
+            NAME: "G11N",
+            NAME_LINK:
+              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=98&name=G11N",
+            INTRODUCE: "致力于openEuler的国际化和本地化",
+            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590388&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true",
+            GITEE: "https://gitee.com/openeuler/community/tree/master/sig/G11N",
+          },
+          {
+            NAME: "其他",
+            INTRODUCE: "一些暂不属于任何SIG的任务",
+            TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=125884711&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&sort=&state=open&target_project&skip_mobile=true",
+          },
+          {
+            INTRODUCE: "更多SIG任务，敬请期待",
+          },
+        ],
+        INTERNSHIP_TASK:"实习任务",
+        SIG_DETAIL:"SIG详情"
+      },
       integral: {
         reward: {
           head: "积分与奖励",
@@ -588,28 +650,43 @@ export default {
           ],
         },
       },
-      ruleData: [
-        {
-          question: "1、哪些人可以报名？",
-          answer:
-            "A：开源实习面向全国范围内全日制/非全日制在校学生招募，无专业年级限制，欢迎感兴趣的同学踊跃报名。",
-        },
-        {
-          question: "2、实习有效期6个月是如何计算的？",
-          answer:
-            "A：在申请实习时需签署实习劳务合同，实习有效期即劳务合同上填写的实习有效期，为6个月期限，6个月期限内未满60积分则不能获得证书。线上实习时间管理相对自由，可根据自身情况安排时间，可提前结束实习。",
-        },
-        {
-          question: "3、超过了6个月或者完成了100积分还能继续在社区做任务吗？",
-          answer:
-            "A：可以，但积分不能再用于领取证书和奖金，一年内累计到150积分可获得openEuler社区高校“开源之星”荣誉。 ",
-        },
-        {
-          question: "4、任务领取成功后，完成时间有限制吗？",
-          answer:
-            "A：有，在导师输入/approve 命令通过认领后，2分、5分的任务需在一周内提交成果，10分的任务需在2周内提交成果，提交成果以提交PR并在issue评论下输入了/intern-completed命令为准，否则任务将被程序释放给其他人认领，当前认领人不能再承担该任务。20及以上分值的任务需在issue上标注的期望完成时间内完成，否则导师有权利释放任务。",
-        },
-      ],
+      rule:{
+        RULE_DATA: [
+          {
+            question: "1、哪些人可以报名？",
+            answer:
+              "A：开源实习面向全国范围内全日制/非全日制在校学生招募，无专业年级限制，欢迎感兴趣的同学踊跃报名。",
+          },
+          {
+            question: "2、实习有效期6个月是如何计算的？",
+            answer:
+              "A：在申请实习时需签署实习劳务合同，实习有效期即劳务合同上填写的实习有效期，为6个月期限，6个月期限内未满60积分则不能获得证书。线上实习时间管理相对自由，可根据自身情况安排时间，可提前结束实习。",
+          },
+          {
+            question: "3、超过了6个月或者完成了100积分还能继续在社区做任务吗？",
+            answer:
+              "A：可以，但积分不能再用于领取证书和奖金，一年内累计到150积分可获得openEuler社区高校“开源之星”荣誉。 ",
+          },
+          {
+            question: "4、任务领取成功后，完成时间有限制吗？",
+            answer:
+              "A：有，在导师输入/approve 命令通过认领后，2分、5分的任务需在一周内提交成果，10分的任务需在2周内提交成果，提交成果以提交PR并在issue评论下输入了/intern-completed命令为准，否则任务将被程序释放给其他人认领，当前认领人不能再承担该任务。20及以上分值的任务需在issue上标注的期望完成时间内完成，否则导师有权利释放任务。",
+          },
+        ],
+        MORE:[
+          "更多问题，请移步",
+          "本帖",
+          "评论区提问。"
+        ]
+      },
+      rank:{
+        FIRST:'第一名',
+        SECOND:'第二名',
+        THIRD:'第三名',
+        SCORE:'积分',
+        VIEW_ALL:'查看全部',
+        PACK_UP:'收起全部'
+      },
       partnerData: [
         {
           IMG: "/img/internship/iscas.png",
@@ -644,20 +721,37 @@ export default {
           LINK: "",
         },
       ],
+      help:[
+        "联系邮箱:",
+        "intern@openeuler.io",
+        "扫码加入“开源实习”学生QQ群，更多问题群内咨询。",
+        "群号：526089131"
+      ]
     };
   },
   methods: {
     extend() {
       if (this.isExent) {
-        this.renderData = 6;
+        this.renderData = this.rankInfo.slice(3,10);
         window.location.href = "#rank";
       } else {
-        this.renderData = 20;
+        this.renderData = this.rankInfo.slice(3);
       }
       this.isExent = !this.isExent;
     },
     stepChange(index) {
       this.stepActive = index;
+      var count = 0
+      var arr = []
+
+      for (var i = 97; i < 123; i++) {undefined
+
+arr[count] = String.fromCharCode(i)
+
+count++
+
+}
+console.log(arr);
     },
     go(path) {
       if (path && !path.includes("http")) {
@@ -715,15 +809,18 @@ export default {
           console.log(err);
         })
         .then((res) => {
-          console.log(res);
           if (res.UserPoints) {
             let info = res.UserPoints;
             info.sort((a, b) => {
-              return a.integralValue - b.integralValue;
+              return b.integralValue - a.integralValue;
             });
-            console.log(info);
-            this.rankLast = info.splice(3);
-            this.rankTop = info;
+            info.forEach((item,index) => {
+              index < 9 ? item["rank"] = `0${index+1}` :item["rank"] = index+1
+            })
+            this.rankInfo = info;
+            this.renderData = info.slice(3,10);
+            this.rankTop = info.slice(0,3);
+            // 改变一二名数组顺序
             this.rankTop.splice(
               0,
               1,
@@ -889,15 +986,15 @@ a {
               color: #000000;
               line-height: 24px;
             }
-            
+
             .download {
               display: block;
               margin-top: 10px;
             }
           }
           .firstAttention {
-              margin-top: 0;
-            }
+            margin-top: 0;
+          }
           .black {
             p {
               position: relative;
@@ -1011,6 +1108,11 @@ a {
             width: 221px;
             font-size: 14px;
             line-height: 22px;
+            overflow: hidden;
+			      text-overflow: ellipsis;
+			      display: -webkit-box;
+			      -webkit-line-clamp: 3;
+			      -webkit-box-orient: vertical;
           }
           .button-box {
             display: flex;
@@ -1448,6 +1550,10 @@ a {
         .more-question {
           padding-top: 25px;
           font-size: 14px;
+          color: #ff7c56;
+          .this-post {
+            font-size: 16px;
+          }
         }
       }
     }
@@ -1487,8 +1593,8 @@ a {
           .more-question {
             padding-top: 6px;
             font-size: 12px;
-            a {
-              font-size: 12px;
+            .this-post {
+              font-size: 14px;
             }
           }
         }

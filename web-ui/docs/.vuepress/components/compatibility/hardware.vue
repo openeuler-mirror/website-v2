@@ -43,7 +43,6 @@
                                     <a :href="i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].A_TEXT2" target="_blank">
                                    {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[1].A_TEXT2}}
                                </a>
-                               。
                                </p>
                               
                            </div>
