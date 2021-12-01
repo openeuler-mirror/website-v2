@@ -24,24 +24,24 @@ to `**-leave@openeuler.org` for unsubscription. The following describes how to u
   Some emails contain the footer of unsubscription instructions. You can click test-leave@openeuler.org to edit and send 
   unsubscription emails. There are no special requirements on the email title and content.
 
-  <img src='./2021-11-23-unsubscribe-mailing-list-05.png' width=750 alt='unsubscription through email footer'>
+  <img src='./2021-10-14-unsubscribe-mailing-list-05.png' width=750 alt='unsubscription through email footer'>
 
   Later, you will receive an email from test-bounces informing you of the unsubscription success.
-  <img src='./2021-11-23-unsubscribe-mailing-list-03.png' width=750 alt='unsubscription succeeded'>
+  <img src='./2021-10-14-unsubscribe-mailing-list-03.png' width=750 alt='unsubscription succeeded'>
 -
   You can also send an email to tc-leave@openeuler.org using your subscription mailbox. 
   There are no special requirements on the email title and content.
-  <img src='./2021-11-23-unsubscribe-mailing-list-02.png' width=750 alt='send unsubscription email'>
+  <img src='./2021-10-14-unsubscribe-mailing-list-02.png' width=750 alt='send unsubscription email'>
   
   Later, you will receive an email from tc-bounces informing you of the unsubscription success.
-  <img src='./2021-11-23-unsubscribe-mailing-list-04.png' width=750 alt='unsubscription succeeded'>
+  <img src='./2021-10-14-unsubscribe-mailing-list-04.png' width=750 alt='unsubscription succeeded'>
 
 
 ### 2. Unsubscribe on Web UI
 If you are a registered user of the openEuler mailing list (the registration interface is not available currently), log in to
 the Postorius UI, go to the mailing list to be unsubscribed from and click **Unsubscribe**.
 
-<img src='./2021-11-23-unsubscribe-mailing-list-01.png' alt='unsubscribe on postorius UI'>
+<img src='./2021-10-14-unsubscribe-mailing-list-01.png' alt='unsubscribe on postorius UI'>
 
 ### More
 Visit [**Mailweb List FAQ**](https://osinfra.cn/faq/mailinglist.html) for more questions about the community mailing
