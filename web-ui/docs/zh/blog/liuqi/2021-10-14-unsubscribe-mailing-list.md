@@ -19,24 +19,24 @@ summary: 本博客介绍了两种退订openEuler邮件列表的方式
 
 -
   部分邮件带有退订指引的页脚，点击页脚的`test-leave@openeuler.org`即可编辑发送退订邮件, 邮件的标题和内容不限
-  <img src='./2021-11-23-unsubscribe-mailing-list-05.png' width=750 alt='通过邮件页脚退订'>
+  <img src='./2021-10-14-unsubscribe-mailing-list-05.png' width=750 alt='通过邮件页脚退订'>
   
   随后，你会收到一封test-bounces发送的退订成功告知邮件
-  <img src='./2021-11-23-unsubscribe-mailing-list-03.png' width=750 alt='退订成功'>
+  <img src='./2021-10-14-unsubscribe-mailing-list-03.png' width=750 alt='退订成功'>
 
 -
   你也可以使用订阅邮箱给test-leave@openeuler.org发送一封邮件，标题和内容不限
-  <img src='./2021-11-23-unsubscribe-mailing-list-02.png' width=750 alt='发送退订邮件'>
+  <img src='./2021-10-14-unsubscribe-mailing-list-02.png' width=750 alt='发送退订邮件'>
 
   随后，你会收到一封test-bounces发送的退订成功告知邮件
-  <img src='./2021-11-23-unsubscribe-mailing-list-04.png' width=750 alt='退订成功'>
+  <img src='./2021-10-14-unsubscribe-mailing-list-04.png' width=750 alt='退订成功'>
 
 
 ### 二、用户界面退订
 如果你已是openEuler邮件列表的注册用户（当前注册接口未开放），可直接登录[**postorius**](https://mailweb.openeuler.org/postorius/lists/)，
 进入需要退订的邮件列表，点击**Unsubscribe**即可
 
-<img src='./2021-11-23-unsubscribe-mailing-list-01.png' alt='Web UI退订'>
+<img src='./2021-10-14-unsubscribe-mailing-list-01.png' alt='Web UI退订'>
 
 ### 更多
 更多社区邮件列表相关问题可参考[**Mailweb List FAQ**](https://osinfra.cn/faq/mailinglist.html)
