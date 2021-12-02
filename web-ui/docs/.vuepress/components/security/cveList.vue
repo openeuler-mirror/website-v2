@@ -70,13 +70,13 @@
             >
                 <el-table-column prop="cveId" label="CVE" width="145">
                     <template slot-scope="scope">
-                        <a class="table-link" @click="go(scope.row.cveId)">{{
+                        <a class="table-link" @click="go(scope.row.cveId,scope.row.packageName)">{{
                             scope.row.cveId
                         }}</a>
                     </template>
                 </el-table-column>
                 <el-table-column
-                    width="420"
+                    width="330"
                     prop="summary"
                     :label="i18n.security.SYNOPSIS"
                 ></el-table-column>
@@ -97,12 +97,17 @@
                 ></el-table-column>
                 <el-table-column
                     width="120"
+                    prop="packageName"
+                    :label="i18n.security.PACKAGE_NAME"
+                ></el-table-column>
+                <el-table-column
+                    width="90"
                     prop="status"
                     :label="i18n.security.STATUS"
                 ></el-table-column>
                 <el-table-column :label="i18n.security.OPERATION">
                     <template slot-scope="scope">
-                        <a class="table-link" @click="go(scope.row.cveId)">{{
+                        <a class="table-link" @click="go(scope.row.cveId,scope.row.packageName)">{{
                             i18n.security.DETAIL
                         }}</a>
                     </template>
@@ -117,7 +122,7 @@
                     <ul>
                         <li>
                             <span>CVE:</span>
-                            <a class="table-link" @click="go(item.cveId)">{{
+                            <a class="table-link" @click="go(item.cveId,item.packageName)">{{
                                 item.cveId
                             }}</a>
                         </li>
@@ -157,13 +162,17 @@
                             <span>{{ i18n.security.MODIFIED_TIME }}:</span>
                             {{ item.updateTime }}
                         </li>
+                         <li>
+                            <span>{{ i18n.security.PACKAGE_NAME }}:</span>
+                            {{ item.packageName }}
+                        </li>
                         <li>
                             <span>{{ i18n.security.STATUS }}:</span>
                             {{ item.status }}
                         </li>
                         <li>
                             <span>{{ i18n.security.OPERATION }}:</span>
-                            <a class="table-link" @click="go(item.cveId)">{{
+                            <a class="table-link" @click="go(item.cveId,item.packageName)">{{
                                 i18n.security.DETAIL
                             }}</a>
                         </li>
@@ -238,10 +247,10 @@ export default {
         initData(flag) {
             locationMethods.getCveList(flag);
         },
-        go(id) {
+        go(id,packageName) {
             this.$router.push({
                 path: this.resolvePath("/security/cve/detail.html"),
-                query: { id }
+                query: { id ,packageName }
             });
         }
     },
