@@ -4,7 +4,7 @@ date: "2021-12-01"
 tags: 
     - summit
     - 2021
-banner: "img/banners/summit-2021.png"
+banner: "img/banners/summit-2021.jpg"
 author: "leikeke"
 summary: "11月10日，openEuler Summit 2021在北京如期举行。"
 ---
