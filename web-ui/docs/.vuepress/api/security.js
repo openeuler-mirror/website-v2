@@ -113,15 +113,17 @@ export const securityDetail = ({
 };
 
 export const cveDetail = ({
-    cveId
+    cveId,
+    packageName
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
             otherBaseUrl: cveApi,
-            url: '/cve-security-notice-server/cvedatabase/getByCveId',
+            url: '/cve-security-notice-server/cvedatabase/getByCveIdAndPackageName',
             type: 'get',
             params: {
-                cveId
+                cveId,
+                packageName
             },
             success(result) {
                 if (result) {
@@ -140,15 +142,17 @@ export const cveDetail = ({
 };
 
 export const getAffectedProduct = ({
-    cveId
+    cveId,
+    affectedComponent
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
             otherBaseUrl: cveApi,
-            url: '/cve-security-notice-server/securitynotice/getByCveId',
+            url: '/cve-security-notice-server/securitynotice/byCveIdAndAffectedComponent',
             type: 'get',
             params: {
-                cveId
+                cveId,
+                affectedComponent
             },
             success(result) {
                 if (result) {
@@ -167,15 +171,18 @@ export const getAffectedProduct = ({
 };
 
 export const getPackage = ({
-    cveId
+    cveId,
+    packageName
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
             otherBaseUrl: cveApi,
-            url: '/cve-security-notice-server/cvedatabase/getPackageByCveId',
+            url: '/cve-security-notice-server/cvedatabase/getCVEProductPackageList',
             type: 'get',
             params: {
-                cveId
+                cveId,
+                packageName
+
             },
             success(result) {
                 if (result) {

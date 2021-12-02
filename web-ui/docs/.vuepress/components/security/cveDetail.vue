@@ -150,7 +150,8 @@ const locationMethods = {
   getCveDetail () {
     that.loading = true;
     cveDetail({
-      cveId: that.$route.query.id
+      cveId: that.$route.query.id,
+      packageName:that.$route.query.packageName
     })
       .then(data => {
         that.loading = false;
@@ -166,13 +167,13 @@ const locationMethods = {
   },
   getAffectedProduct () {
     getAffectedProduct({
-      cveId: that.$route.query.id
+      cveId: that.$route.query.id,
+      affectedComponent:that.$route.query.packageName
     })
       .then(data => {
         if (data) {
           that.packageList = data;
         }
-
       })
       .catch(data => {
         that.$message.error(data);
@@ -180,7 +181,8 @@ const locationMethods = {
   },
   getPackage () {
     getPackage({
-      cveId: that.$route.query.id
+      cveId: that.$route.query.id,
+      packageName:that.$route.query.packageName
     })
       .then(data => {
         if (data) {
