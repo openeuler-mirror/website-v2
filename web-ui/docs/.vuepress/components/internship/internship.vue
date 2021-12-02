@@ -561,7 +561,7 @@ export default {
             NAME_LINK:
               "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=41&name=sig-QA",
             INTRODUCE: "致力于持续提升openEuler社区发行版本质量",
-            TASK: "https://gitee.com/organizations/src-openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590164%2C125219718&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true",
+            TASK: "https://gitee.com/organizations/src-openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590164&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true",
             GITEE:
               "https://gitee.com/openeuler/community/tree/master/sig/sig-QA",
           },
@@ -589,7 +589,7 @@ export default {
               "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=37&name=sig-KIRAN-DESKTOP&mail=dev%40openeuler.org",
             INTRODUCE:
               "麒麟信安自主研发，致力于为用户提供更加美观，高效和易用的Linux桌面操作系统",
-            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590528&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true=",
+            TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590528&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&sort=&state=open&target_project&skip_mobile=true=",
             GITEE:
               "https://gitee.com/openeuler/community/tree/master/sig/sig-KIRAN-DESKTOP",
           },
