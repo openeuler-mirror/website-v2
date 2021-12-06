@@ -58,7 +58,7 @@ module.exports = {
         SCORE: '评分',
         PRODUCT: '产品',
         STATUS: '状态',
-        PACKAGE_NAME:'包名',
+        PACKAGE_NAME:'包',
     },
     en: {
         OVERVIEW: 'Overview',
@@ -115,7 +115,7 @@ module.exports = {
         SCORE: 'Score',
         PRODUCT: 'Product',
         STATUS: 'Status',
-        PACKAGE_NAME:'packageName',
+        PACKAGE_NAME:'packages',
     },
     ru: {
         OVERVIEW: 'Краткое описание',
@@ -173,6 +173,6 @@ module.exports = {
         SCORE: 'Score',
         PRODUCT: 'Product',
         STATUS: 'Status',
-        PACKAGE_NAME:'packageName',
+        PACKAGE_NAME:'packages',
     }
 };
