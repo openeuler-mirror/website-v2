@@ -96,12 +96,12 @@
                     :label="i18n.security.MODIFIED_TIME"
                 ></el-table-column>
                 <el-table-column
-                    width="120"
+                    width="90"
                     prop="packageName"
                     :label="i18n.security.PACKAGE_NAME"
                 ></el-table-column>
                 <el-table-column
-                    width="90"
+                    width="120"
                     prop="status"
                     :label="i18n.security.STATUS"
                 ></el-table-column>
