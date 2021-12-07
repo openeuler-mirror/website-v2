@@ -3372,5 +3372,66 @@
       "hostBusAdapter": "AVAGO MegaRAID SAS 9361-8i",
       "hardDiskDrive": ""
     }
+  },
+  {
+    "hardwareFactory": "百信",
+    "hardwareModel": "Hengshan TS02F-F30",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "aarch64",
+    "date": "2021/11/17",
+    "friendlyLink": "http://www.100trust.cn/productsshow-74-7-2.html",
+    "boardCards": [
+      {
+        "vendorID": "19e5",
+        "deviceID": "a221",
+        "svID": "19e5",
+        "ssID": "04cc",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "hns3",
+        "version": "1.9.40.24",
+        "type": "NIC",
+        "driverDate": "2020.12.28",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "huawei",
+        "boardModel": "TM210",
+        "chipModel": "hisi",
+        "item": "",
+        "downloadLink": "http://www.100trust.cn/productsshow-74-7-2.html"
+      },
+	  {
+        "vendorID": "1000",
+        "deviceID": "0016",
+        "svID": "19e5",
+        "ssID": "d215",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "megaraid_sas",
+        "version": "31.100.01.00",
+        "type": "RAID",
+        "driverDate": "2020.12.28",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Avago",
+        "boardModel": "SR450C-M 2G",
+        "chipModel": "3508",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "http://www.powerleader.com.cn/",
+      "certificationTime": "2021/12/07",
+      "commitID": "I4INBB",
+      "motherBoardRevision": "",
+      "biosUefi": "2.7",
+      "cpu": "Kunpeng-920",
+      "ram": "16*32G DIMMs",
+      "portsBusTypes": "TM210",
+      "videoAdapter": "171",
+      "hostBusAdapter": "Avago 3508",
+      "hardDiskDrive": ""
+    }
   }
 ]
