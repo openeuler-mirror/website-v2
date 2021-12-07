@@ -186,7 +186,7 @@ let remoteMethods = {
             .then((data) => {
                 that.description = data.description || "";
                 that.memberList = JSON.parse(data.owners);
-                that.memberCurLen = that.memberList.length - 1;
+                that.memberCurLen = that.memberList.length;
                 if (that.isShowH5 && that.memberList.length > 4) {
                     that.memberCurLen = 4;
                 }
