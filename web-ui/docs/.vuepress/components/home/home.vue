@@ -3,7 +3,7 @@
         <div class="banner-video" v-if="isMasked">
           <div class="video-mask" @click="maskClicked"></div>
           <div class="video-box">
-            <video width="100%" controls autoplay>
+            <video width="100%" ref="centerVideo" controls autoplay>
               <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/openEuler%E9%9D%A2%E5%90%91%E6%95%B0%E5%AD%97%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E7%9A%84%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F_Banner.mp4">
             </video>
           </div>
@@ -22,9 +22,10 @@
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
                <swiper-slide class="carousel-item-index">
-                 <video width="100%" ref="bannerVideo" autoplay="autoplay" @click="videoClicked" preload="" loop="loop" muted="muted" >
-                  <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/openEuler%E9%9D%A2%E5%90%91%E6%95%B0%E5%AD%97%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E7%9A%84%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F_Banner.mp4">
-              </video>
+                <div class="video-banner">
+                    <img class="bg-banner" src="/img/home/banner/video_banner_mo.png" alt="">
+                    <img class="open-video" @click="videoClicked" src="/img/home/banner/open_video.png" alt="">
+                </div>
               </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
@@ -417,14 +418,19 @@
         },
         methods: {
             voiceClick() {
-                this.isMuted = !this.isMuted;
-                this.isMuted ? this.$refs.bannerVideo.volume = 0 :  this.$refs.bannerVideo.volume = 1;
+                if (!this.isShowH5) {
+                    this.isMuted = !this.isMuted;
+                    this.isMuted ? this.$refs.bannerVideo.volume = 0 :  this.$refs.bannerVideo.volume = 1;
+                }
             },
             videoClicked() {
-              this.isMasked = true
+              this.isMasked = true;
+               this.$nextTick(() => {
+                  this.$refs.centerVideo.play();
+                })
             },
             maskClicked() {
-              this.isMasked = false
+              this.isMasked = false;
             },
             slideChange () {
                 this.mobilePagenationIndex = this.$refs.mySwiper.$swiper.realIndex + 1;
@@ -635,6 +641,9 @@
             right: 50px;
             bottom: 50px;
             z-index: 1;
+            .voice {
+                width: 36px;
+            }
         }
     }
     .banner-video {
@@ -1829,21 +1838,24 @@
             margin-bottom: 0;
         }
         .carousel-item-index {
-            display: flex;
-            align-items: center;
-            background: black;
-            video {
-                min-height: 140px;
-                object-fit: cover;
-                filter: contrast(80%) brightness(50%);
-            }
-        }
-        .carousel-item-index img {
-            width: 260px;
-            height: 200px;
-            margin: 0;
-            display: block;
-            margin: 0 auto;
+           .video-banner {
+               position: relative;
+               text-align: center;
+               .bg-banner {
+                   max-width: 375px;
+                   max-height: 300px;
+               }
+               .open-video {
+                   position: absolute;
+                   overflow: hidden;
+                   border-radius: 50%;
+                   width: 56px;
+                   top: 50%;
+                   left: 50%;
+                   animation: breathe 1200ms infinite alternate;
+                   transform: translate(-50%,-50%);
+               }
+           }
         }
         .carousel-item-index .mobile-version{
             width: 100%;
@@ -2101,4 +2113,13 @@
             text-align: center;
         }
     }
+    @keyframes breathe {
+    0% {
+        box-shadow: 0 1px 2px rgba(6, 34, 107, 0.4), 0 1px 1px rgba(6, 34, 107, 0.4) inset;
+    }
+
+    100% {
+        box-shadow: 0 1px 40px rgb(13, 62, 185), 0 1px 20px rgba(4, 51, 168, 0.8) inset;
+    }
+}
 </style>
