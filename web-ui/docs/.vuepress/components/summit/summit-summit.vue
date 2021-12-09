@@ -465,7 +465,7 @@ export default {
   data() {
     return {
       value: "麒麟软件",
-      showTab: "nine",
+      showTab: "ten",
       showBtn: "forenoon",
       agendaData: {},
       dateArr: [],
