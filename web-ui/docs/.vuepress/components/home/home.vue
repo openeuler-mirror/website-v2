@@ -10,7 +10,7 @@
         </div>
         <div class="is-pc home-carousel" v-if="!isShowH5">
             <div class="video-banner">
-              <video width="100%" :class="{'is-cover':isMuted}" height="500" ref="bannerVideo"  autoplay="autoplay" preload="" loop="loop"  >
+              <video width="100%"  height="500" ref="bannerVideo"  autoplay="autoplay" preload="" loop="loop"  >
                   <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/openEuler%E9%9D%A2%E5%90%91%E6%95%B0%E5%AD%97%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E7%9A%84%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F_Banner.mp4">
               </video>
               <div class="voice-box" @click="voiceClick">
@@ -24,7 +24,7 @@
                <swiper-slide class="carousel-item-index">
                 <div class="video-banner">
                     <img class="bg-banner" src="/img/home/banner/video_banner_mo.png" alt="">
-                    <img class="open-video" @click="videoClicked" src="/img/home/banner/open_video.png" alt="">
+                    <img v-show="!isMasked" class="open-video" @click="videoClicked" src="/img/home/banner/open_video.png" alt="">
                 </div>
               </swiper-slide>
             </swiper>
@@ -642,7 +642,7 @@
             bottom: 50px;
             z-index: 1;
             .voice {
-                width: 36px;
+                width: 28px;
             }
         }
     }
@@ -680,9 +680,6 @@
     #summit-video {
         background-color: white !important;
         margin-left: -100px;
-    }
-    .mobile-swiper {
-        height: 300px;
     }
     .mobile-home-carousel {
         position: relative;
@@ -1842,15 +1839,14 @@
                position: relative;
                text-align: center;
                .bg-banner {
-                   max-width: 375px;
-                   max-height: 300px;
+                   width: 100%;
                }
                .open-video {
                    position: absolute;
                    overflow: hidden;
                    border-radius: 50%;
                    width: 56px;
-                   top: 50%;
+                   top:50%;
                    left: 50%;
                    animation: breathe 1200ms infinite alternate;
                    transform: translate(-50%,-50%);
@@ -2115,11 +2111,10 @@
     }
     @keyframes breathe {
     0% {
-        box-shadow: 0 1px 2px rgba(6, 34, 107, 0.4), 0 1px 1px rgba(6, 34, 107, 0.4) inset;
+        box-shadow: 0 1px 1px #fff, 0 1px 1px #fff inset;
     }
-
     100% {
-        box-shadow: 0 1px 40px rgb(13, 62, 185), 0 1px 20px rgba(4, 51, 168, 0.8) inset;
+        box-shadow: 0 1px 40px #fff, 0 1px 20px #fff inset;
     }
 }
 </style>
