@@ -14,9 +14,7 @@
             <div class="summit-explain">
                 <p :class="$lang === 'en'?'font-regular':''" v-for="(item,index) in i18n.interaction.SUMMIT.SUMMITCONTENT">{{ item }}</p>
             </div>
-
             <liveroom :liveData="i18n.interaction.SUMMIT.SUMMITLIVE" :isPass="true"></liveroom>
-
             <div class="summit-message">
                 <div class="agenda" id="agenda">
                     <div :class="['title',$lang === 'en'?'en-title':'']">
