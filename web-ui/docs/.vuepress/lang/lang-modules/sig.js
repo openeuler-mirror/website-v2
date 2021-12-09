@@ -307,6 +307,13 @@ module.exports = {
             IRC: 'Канал IRC',
             MANAGER: 'Администраторы'
         },
+        SIG_DESCRIPTION: {
+            P1: 'The openEuler community is organized based on Special Interest Groups (SIGs) to better manage and improve the work processes.',
+            P2: 'SIGs are open to everyone.',
+            LI1: 'Each SIG comprises one or more projects on Gitee, and each project has repositories that store SIG deliverables. Registering with an SIG enables you to submit, discuss, and resolve issues with other members, as well as participate in reviews in an SIG repository.',
+            LI2: 'An SIG is established for one or more specific technical topics. Core members of an SIG can manage each group, and members can contribute to the quality and the output of deliverables for the openEuler community.',
+            LI3: 'In the README.md file on the project Gitee page, you can find project SIG information, members, and contact information. You can join specific SIGs by mailing the listed email addresses. Also, you can attend public meetings, join discussions or forums, or participate in other activities listed in the corresponding README.md file.'
+        },
         SIG_DETAIL: {
             VIDEO: 'Video',
             NEWS: 'News',

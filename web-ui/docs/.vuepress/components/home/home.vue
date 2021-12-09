@@ -4,24 +4,27 @@
           <div class="video-mask" @click="maskClicked"></div>
           <div class="video-box">
             <video width="100%" controls autoplay>
-              <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler_New_Release.mp4">
+              <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/openEuler%E9%9D%A2%E5%90%91%E6%95%B0%E5%AD%97%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E7%9A%84%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F_Banner.mp4">
             </video>
           </div>
         </div>
         <div class="is-pc home-carousel" v-if="!isShowH5">
-            <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" >
-              <el-carousel-item v-for="(item,index) in i18n.home.HOME_NEWRELEASE" :key="index">
-                <div class="carousel-banner"
-                     :style="{backgroundImage: item.PC_IMG}"
-                     @click="go(item.LINK)"
-                ></div>
-              </el-carousel-item>
-            </el-carousel>
+            <div class="video-banner">
+              <video width="100%" :class="{'is-cover':isMuted}" height="500" ref="bannerVideo"  autoplay="autoplay" preload="" loop="loop"  >
+                  <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/openEuler%E9%9D%A2%E5%90%91%E6%95%B0%E5%AD%97%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E7%9A%84%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F_Banner.mp4">
+              </video>
+              <div class="voice-box" @click="voiceClick">
+                   <img class="voice" v-show="!isMuted" src="/img/home/openVoice.svg" alt="" >
+                   <img class="voice" v-show="isMuted" src="/img/home/closeVoice.svg" alt="" >
+              </div>
+            </div>
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
-               <swiper-slide class="carousel-item-index" v-for="(itme,index) in i18n.home.HOME_NEWRELEASE" :key="index">
-                <div class="mobile-version" @click="go(itme.LINK)" :style="{backgroundImage:itme.MOBILE_IMG}"></div>
+               <swiper-slide class="carousel-item-index">
+                 <video width="100%" ref="bannerVideo" autoplay="autoplay" @click="videoClicked" preload="" loop="loop" muted="muted" >
+                  <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/openEuler%E9%9D%A2%E5%90%91%E6%95%B0%E5%AD%97%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E7%9A%84%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F_Banner.mp4">
+              </video>
               </swiper-slide>
             </swiper>
             <ul class="mobile-pagination">
@@ -338,6 +341,7 @@
         data() {
             that = this;
             return {
+                isMuted:false,
                 info: 'aaa',
                 flag: true,
                 height: "380px",
@@ -378,6 +382,7 @@
             }
         },
         mounted() {
+            this.voiceClick()
             window.location.hash=='#meeting' ? window.location.href="#meeting": ''
             this.videoCtrlParams.element = document.getElementById('home-video');
             remoteMethods.meetingList();
@@ -411,9 +416,12 @@
             round
         },
         methods: {
+            voiceClick() {
+                this.isMuted = !this.isMuted;
+                this.isMuted ? this.$refs.bannerVideo.volume = 0 :  this.$refs.bannerVideo.volume = 1;
+            },
             videoClicked() {
               this.isMasked = true
-              console.log('clicked');
             },
             maskClicked() {
               this.isMasked = false
@@ -613,6 +621,22 @@
 
 <style lang="less" scoped>
   .home{
+    .video-banner {
+        position: relative;
+         video {
+            object-fit: cover;
+        }
+        .is-cover {
+            filter: contrast(80%) brightness(50%);
+        }
+        .voice-box {
+            position: absolute;
+            cursor: pointer;
+            right: 50px;
+            bottom: 50px;
+            z-index: 1;
+        }
+    }
     .banner-video {
       position: fixed;
       top: 0px;
@@ -1794,6 +1818,7 @@
             vertical-align: middle;
         }
         .home-carousel {
+           
             margin: 0 -15px;
         }
         .home-carousel .el-carousel__item h3 {
@@ -1802,6 +1827,16 @@
             text-align: center;
             margin-top: 35px;
             margin-bottom: 0;
+        }
+        .carousel-item-index {
+            display: flex;
+            align-items: center;
+            background: black;
+            video {
+                min-height: 140px;
+                object-fit: cover;
+                filter: contrast(80%) brightness(50%);
+            }
         }
         .carousel-item-index img {
             width: 260px;
