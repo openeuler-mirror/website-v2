@@ -1,5 +1,5 @@
 <template>
-  <div class="internship">
+  <!-- <div class="internship">
     <titlenav
       class="titlenav"
       v-show="isShowNav"
@@ -390,6 +390,11 @@
         </div>
       </div>
     </div>
+  </div> -->
+  <div class="closeInternship">
+    <p>系统维护中，开放时间请等待群内消息通知。</p>
+    <p>开源实习群号：526089131</p>
+    <img src="/img/internship/qrCode.png" alt="" />
   </div>
 </template>
 
@@ -404,7 +409,7 @@ export default {
     return {
       renderData: [],
       isExent: false,
-      rankInfo:[],
+      rankInfo: [],
       stepActive: 0,
       isShowNav: false,
       activeIndex: 0,
@@ -630,8 +635,8 @@ export default {
             INTRODUCE: "更多SIG任务，敬请期待",
           },
         ],
-        INTERNSHIP_TASK:"实习任务",
-        SIG_DETAIL:"SIG详情"
+        INTERNSHIP_TASK: "实习任务",
+        SIG_DETAIL: "SIG详情",
       },
       integral: {
         reward: {
@@ -650,7 +655,7 @@ export default {
           ],
         },
       },
-      rule:{
+      rule: {
         RULE_DATA: [
           {
             question: "1、哪些人可以报名？",
@@ -673,19 +678,15 @@ export default {
               "A：有，在导师输入/approve 命令通过认领后，2分、5分的任务需在一周内提交成果，10分的任务需在2周内提交成果，提交成果以提交PR并在issue评论下输入了/intern-completed命令为准，否则任务将被程序释放给其他人认领，当前认领人不能再承担该任务。20及以上分值的任务需在issue上标注的期望完成时间内完成，否则导师有权利释放任务。",
           },
         ],
-        MORE:[
-          "更多问题，请移步",
-          "本帖",
-          "评论区提问。"
-        ]
+        MORE: ["更多问题，请移步", "本帖", "评论区提问。"],
       },
-      rank:{
-        FIRST:'第一名',
-        SECOND:'第二名',
-        THIRD:'第三名',
-        SCORE:'积分',
-        VIEW_ALL:'查看全部',
-        PACK_UP:'收起全部'
+      rank: {
+        FIRST: "第一名",
+        SECOND: "第二名",
+        THIRD: "第三名",
+        SCORE: "积分",
+        VIEW_ALL: "查看全部",
+        PACK_UP: "收起全部",
       },
       partnerData: [
         {
@@ -721,18 +722,18 @@ export default {
           LINK: "",
         },
       ],
-      help:[
+      help: [
         "联系邮箱:",
         "intern@openeuler.io",
         "扫码加入“开源实习”学生QQ群，更多问题群内咨询。",
-        "群号：526089131"
-      ]
+        "群号：526089131",
+      ],
     };
   },
   methods: {
     extend() {
       if (this.isExent) {
-        this.renderData = this.rankInfo.slice(3,10);
+        this.renderData = this.rankInfo.slice(3, 10);
         window.location.href = "#rank";
       } else {
         this.renderData = this.rankInfo.slice(3);
@@ -741,17 +742,17 @@ export default {
     },
     stepChange(index) {
       this.stepActive = index;
-      var count = 0
-      var arr = []
+      var count = 0;
+      var arr = [];
 
-      for (var i = 97; i < 123; i++) {undefined
+      for (var i = 97; i < 123; i++) {
+        undefined;
 
-arr[count] = String.fromCharCode(i)
+        arr[count] = String.fromCharCode(i);
 
-count++
-
-}
-console.log(arr);
+        count++;
+      }
+      console.log(arr);
     },
     go(path) {
       if (path && !path.includes("http")) {
@@ -814,12 +815,14 @@ console.log(arr);
             info.sort((a, b) => {
               return b.integralValue - a.integralValue;
             });
-            info.forEach((item,index) => {
-              index < 9 ? item["rank"] = `0${index+1}` :item["rank"] = index+1
-            })
+            info.forEach((item, index) => {
+              index < 9
+                ? (item["rank"] = `0${index + 1}`)
+                : (item["rank"] = index + 1);
+            });
             this.rankInfo = info;
-            this.renderData = info.slice(3,10);
-            this.rankTop = info.slice(0,3);
+            this.renderData = info.slice(3, 10);
+            this.rankTop = info.slice(0, 3);
             // 改变一二名数组顺序
             this.rankTop.splice(
               0,
@@ -840,6 +843,21 @@ console.log(arr);
 };
 </script>
 <style lang="less" scoped>
+.closeInternship {
+  padding-top: 150px;
+  text-align: center;
+  font-size: 24px;
+  p {
+    padding-bottom: 20px;
+  }
+  img {
+    width: 170px;
+  }
+   @media screen and (max-width: 1000px) {
+    padding: 70px 20px 0;
+    font-size: 16px;
+  }
+}
 a {
   font-size: 14px;
   color: #002fa7;
@@ -1109,10 +1127,10 @@ a {
             font-size: 14px;
             line-height: 22px;
             overflow: hidden;
-			      text-overflow: ellipsis;
-			      display: -webkit-box;
-			      -webkit-line-clamp: 3;
-			      -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
           }
           .button-box {
             display: flex;
