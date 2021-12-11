@@ -74,7 +74,6 @@ const locationMethods = {
                 data.packageName = data.packageName.replace(/\n/g, '');
                 that.detailData = data;
             }
-
         })
         .catch(data => {
             that.$message.error(data);
@@ -115,9 +114,10 @@ export default {
             })
         },
         go (id) {
+            let packageName = this.detailData.affectedComponent
             this.$router.push({
                 path: this.resolvePath('/security/cve/detail.html'),
-                query: {id}
+                query: {id ,packageName}
             })
         }
     }
