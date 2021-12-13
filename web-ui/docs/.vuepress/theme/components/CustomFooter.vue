@@ -1,13 +1,5 @@
 <template>
   <div class="footer-wrapper">
-    <div class="qrcode" v-show="qrShow">
-      <div class="close" @click="closeQr"></div>
-      <img
-        @click="newWindow('/other/questionnaire')"
-        src="/img/other/questionnaire/qrcode.png"
-        alt=""
-      />
-    </div>
     <div class="atom">
       <p>{{ i18n.common.FOOTER.ATOM_TEXT }}</p>
       <img
@@ -48,7 +40,6 @@
 export default {
   data() {
     return {
-      qrShow: true,
       i18n: this.i18n || {
         common: {
           FOOTER: {},
@@ -57,9 +48,6 @@ export default {
     };
   },
   methods: {
-    closeQr() {
-      this.qrShow = false;
-    },
     newWindow(url) {
       window.open(this.resolvePath(url))
     },
@@ -114,37 +102,6 @@ export default {
         margin: 40px 0 20px 0;
       }
     }
-  }
-  .qrcode {
-    position: fixed;
-    cursor: pointer;
-    left: 76px;
-    bottom: 100px;
-    width: 188px;
-    height: 188px;
-    img {
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-      -webkit-tap-highlight-color: transparent;
-      width: 100%;
-      height: 100%;
-    }
-    z-index: 999;
-  }
-  @media screen and (max-width: 1000px) {
-    .qrcode {
-      left: 50%;
-      top: 70%;
-      transform: translateX(-45%) translateY(-50%) scale(0.8);
-    }
-  }
-  .close {
-    position: absolute;
-    top: -5px;
-    right: -4px;
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    z-index: 1;
   }
   .footer-content {
     margin: 0 auto;
