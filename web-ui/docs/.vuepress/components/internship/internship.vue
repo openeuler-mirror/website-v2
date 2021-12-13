@@ -1,5 +1,5 @@
 <template>
-  <!-- <div class="internship">
+  <div class="internship">
     <titlenav
       class="titlenav"
       v-show="isShowNav"
@@ -390,12 +390,12 @@
         </div>
       </div>
     </div>
-  </div> -->
-  <div class="closeInternship">
+  </div>
+  <!-- <div class="closeInternship">
     <p>系统维护中，开放时间请等待群内消息通知。</p>
     <p>开源实习群号：526089131</p>
     <img src="/img/internship/qrCode.png" alt="" />
-  </div>
+  </div> -->
 </template>
 
 <script>
