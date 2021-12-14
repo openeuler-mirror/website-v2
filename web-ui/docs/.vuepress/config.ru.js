@@ -66,7 +66,7 @@ module.exports = {
                 }
             },
             '/api-cve/': {
-                target: 'https://openeuler.org/api-cve/',
+                target: 'https://www.openeuler.org/api-cve/',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {
@@ -89,7 +89,7 @@ module.exports = {
                 }
             },
             '/api/': {
-                target: 'https://openeuler.org/api/',
+                target: 'https://www.openeuler.org/api/',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {
