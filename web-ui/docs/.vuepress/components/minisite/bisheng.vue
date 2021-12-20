@@ -11,9 +11,9 @@
                 <p v-for="(item,index) in i18n.minisite.BISHENG_DESC" :key="index">{{ item }}</p>
             </div>
             <div class="link-box">
-                <div v-for="(item,index) in linkList" :key="index" @click="showTip(index)">
+                <div v-for="(item,index) in linkList" :key="index" @click="linkGo(item.LINK_LIST,index)">
                     <img :src="item.IMG" alt="" />
-                    <div class="tip" :class="item.STATUS?'show':''" @click.stop>
+                    <div class="tip" v-if="index < 2">
                         <div class="d3"></div>
                         <a :href="value.LINK" v-for="(value,key) in item.LINK_LIST" :key="key" target="_blank">{{ value.TEXT }}</a>
                     </div>
@@ -61,8 +61,9 @@ export default {
         go(url) {
             window.open(url);
         },
-        showTip (index) {
-            this.linkList[index].STATUS = !this.linkList[index].STATUS;
+        linkGo(link,index) {
+            if (index==2 || index ==3)
+            window.open(link)
         }
     },
     components: {
@@ -240,6 +241,9 @@ export default {
     &>div {
         position: relative;
     }
+    &>div:hover .tip {
+        display: block;
+    }
     img {
         width: 196px;
         height: 157px;
@@ -281,9 +285,12 @@ export default {
                 margin-bottom: 0;
             }
         }
+        a:hover {
+            color: #002FA7;
+        }
     }
-    .show {
-        display: block !important;
+    .hidden {
+        display: none !important;
     }
     
     @media screen and (max-width: 1120px) {

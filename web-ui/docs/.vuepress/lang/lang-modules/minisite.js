@@ -371,28 +371,14 @@ module.exports = {
             {
                 IMG:'/img/minisite/bisheng/meeting.png',
                 LINK_LIST: [
-                    {
-                        TEXT: '毕昇JDK8',
-                        LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234'
-                    },
-                    {
-                        TEXT: '毕昇JDK11',
-                        LINK: 'https://gitee.com/openeuler/bishengjdk-11/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234'
-                    }
+                   'https://gitee.com/openeuler/bishengjdk-8/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234'
                 ],
                 STATUS: false
             },
             {
                 IMG:'/img/minisite/bisheng/roadmap.png',
                 LINK_LIST: [
-                    {
-                        TEXT: '毕昇JDK8',
-                        LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/项目路标?sort_id=4182245'
-                    },
-                    {
-                        TEXT: '毕昇JDK11',
-                        LINK: 'https://gitee.com/openeuler/bishengjdk-11/wikis/项目路标?sort_id=4182245'
-                    }
+                    'https://gitee.com/openeuler/bishengjdk-8/wikis/%E9%A1%B9%E7%9B%AE%E8%B7%AF%E6%A0%87?sort_id=4182245'
                 ],
                 STATUS: false
             }
@@ -470,15 +456,15 @@ module.exports = {
             LINK_LIST: [
                 {
                     TEXT: '毕昇JDK（鲲鹏社区） ',
-                    LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=JDK'
+                    LINK: 'https://www.hikunpeng.com/developer/devkit/compiler/jdk'
                 },
                 {
                     TEXT: '毕昇编译器（鲲鹏社区）',
-                    LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=bisheng'
+                    LINK: 'https://www.hikunpeng.com/developer/devkit/compiler/bisheng'
                 },
                 {
-                    TEXT: '毕昇鲲鹏GCC（鲲鹏社区）',
-                    LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=hgcc'
+                    TEXT: 'GCC for openEuler（鲲鹏社区）',
+                    LINK: 'https://www.hikunpeng.com/developer/devkit/compiler/gcc'
                 }
             ]
         },
@@ -914,28 +900,14 @@ module.exports = {
             {
                 IMG:'/img/minisite/bisheng/meeting.png',
                 LINK_LIST: [
-                    {
-                        TEXT: 'Bisheng JDK 8',
-                        LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234'
-                    },
-                    {
-                        TEXT: 'Bisheng JDK 11',
-                        LINK: 'https://gitee.com/openeuler/bishengjdk-11/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234'
-                    }
+                   'https://gitee.com/openeuler/bishengjdk-8/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234'
                 ],
                 STATUS: false
             },
             {
                 IMG:'/img/minisite/bisheng/roadmap.png',
                 LINK_LIST: [
-                    {
-                        TEXT: 'Bisheng JDK 8',
-                        LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/项目路标?sort_id=4182245'
-                    },
-                    {
-                        TEXT: 'Bisheng JDK 11',
-                        LINK: 'https://gitee.com/openeuler/bishengjdk-11/wikis/项目路标?sort_id=4182245'
-                    }
+                    'https://gitee.com/openeuler/bishengjdk-8/wikis/%E9%A1%B9%E7%9B%AE%E8%B7%AF%E6%A0%87?sort_id=4182245'
                 ],
                 STATUS: false
             }
@@ -1013,15 +985,15 @@ module.exports = {
             LINK_LIST: [
                 {
                     TEXT: 'Bisheng JDK (Kunpeng Community) ',
-                    LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=JDK'
+                    LINK: 'https://www.hikunpeng.com/developer/devkit/compiler/jdk'
                 },
                 {
                     TEXT: 'Bisheng Compiler (Kunpeng Community)',
-                    LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=bisheng'
+                    LINK: 'https://www.hikunpeng.com/developer/devkit/compiler/bisheng'
                 },
                 {
-                    TEXT: 'Kunpeng GCC (Kunpeng Community)',
-                    LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=hgcc'
+                    TEXT: 'GCC for openEuler (Kunpeng Community)',
+                    LINK: 'https://www.hikunpeng.com/developer/devkit/compiler/gcc'
                 }
             ]
         },
@@ -1457,28 +1429,14 @@ module.exports = {
             {
                 IMG:'/img/minisite/bisheng/meeting.png',
                 LINK_LIST: [
-                    {
-                        TEXT: 'Bisheng JDK 8',
-                        LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234'
-                    },
-                    {
-                        TEXT: 'Bisheng JDK 11',
-                        LINK: 'https://gitee.com/openeuler/bishengjdk-11/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234'
-                    }
+                   'https://gitee.com/openeuler/bishengjdk-8/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234'
                 ],
                 STATUS: false
             },
             {
                 IMG:'/img/minisite/bisheng/roadmap.png',
                 LINK_LIST: [
-                    {
-                        TEXT: 'Bisheng JDK 8',
-                        LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/项目路标?sort_id=4182245'
-                    },
-                    {
-                        TEXT: 'Bisheng JDK 11',
-                        LINK: 'https://gitee.com/openeuler/bishengjdk-11/wikis/项目路标?sort_id=4182245'
-                    }
+                    'https://gitee.com/openeuler/bishengjdk-8/wikis/%E9%A1%B9%E7%9B%AE%E8%B7%AF%E6%A0%87?sort_id=4182245'
                 ],
                 STATUS: false
             }
@@ -1556,15 +1514,15 @@ module.exports = {
             LINK_LIST: [
                 {
                     TEXT: 'Bisheng JDK (Kunpeng Community) ',
-                    LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=JDK'
+                    LINK: 'https://www.hikunpeng.com/developer/devkit/compiler/jdk'
                 },
                 {
                     TEXT: 'Bisheng Compiler (Kunpeng Community)',
-                    LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=bisheng'
+                    LINK: 'https://www.hikunpeng.com/developer/devkit/compiler/bisheng'
                 },
                 {
-                    TEXT: 'Kunpeng GCC (Kunpeng Community)',
-                    LINK: 'https://kunpeng.huawei.com/#/developer/devkit/compiler?data=hgcc'
+                    TEXT: 'GCC for openEuler (Kunpeng Community)',
+                    LINK: 'https://www.hikunpeng.com/developer/devkit/compiler/gcc'
                 }
             ]
         },
