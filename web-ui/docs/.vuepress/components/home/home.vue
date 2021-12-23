@@ -34,80 +34,31 @@
         </div>
         <div class="home-introduce">
             <h1></h1>
-            <h3 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_INTRODUCE.INTRO_HEAD }}</h3>
-            <p :class="$lang == 'en'?'en-p':''">{{ i18n.home.HOME_INTRODUCE.INTRO_DESCRIPTION }}</p>
-            <div class="is-pc mapArea" :class="$lang === 'ru'?'lang-ru':''" v-if="!isShowH5">
-                <div :class="['area-box map-flow','in-pc',$lang == 'en' && index == 3?'en-areabox-down':'']" v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP" :key="index">
-                    <a v-if="(index !== 3)" @click="go(item.LINK.includes('/docs/')?$site.themeConfig.docsUrl+item.OTHER_LINK:item.LINK)" target="_blank">
-                        <div class="box-icon">{{ item.NAME }}</div>
-                        <p :class="$lang == 'en'?'en-areabox-p':''">{{ item.TITLE }}</p>
-                        <img v-lazy="item.IMG" alt="">
-                        <img :src="item.GIF" alt="" :class="[$lang == 'en'?'en-areabox-gif':'']">
-                    </a>
-                    <a class="down" v-if="(index === 3)" @click="go(item.LINK.includes('/docs/')?$site.themeConfig.docsUrl+item.OTHER_LINK:item.LINK)" target="_blank">
-                        <img v-lazy="item.IMG" alt="">
-                        <img :src="item.GIF" alt="" class="is-hidden">
-                        <div class="box-icon">{{ item.NAME }}</div>
-                        <p :class="$lang == 'en'?'en-areabox-p':''">{{ item.TITLE }}</p>
-                    </a>
-                </div>
-                <div class="area-box bottom in-pc" @click="clickDownload">
-                    <a class="down">
-                        <img v-lazy="'/img/home/step2.png'" alt="">
-                        <img :src="'/img/home/step-move-2.gif'" alt="" class="is-hidden">
-                        <div class="box-icon">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.NAME }}</div>
-                        <p :class="$lang == 'en'?'en-areabox-p':''">{{ i18n.home.HOME_INTRODUCE.INTRO_MAP_SND.TITLE }}</p>
-                    </a>
-                    <div class="snd-guidance" :class="$lang == 'en'?'en-snd-guidance':''">
-                        <div class="d3"></div>
-                        <p :class="$lang == 'en'?'en-link-title':''">{{ i18n.home.HOME_INTRODUCE.INTRO_GUIDE.INFO }}</p>
-                        <div class="d3-guide">
-                            <div
-                                    class="guide-way"
-                                    :class="$lang == 'en'?'en-guide-way':''"
-                                    v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_GUIDE.GUIDE_WAY"
-                                    :key="index">
-                                <a @click="goInstall(item.LINK.includes('/docs/')?$site.themeConfig.docsUrl+item.LINK:item.LINK)" target="_blank">
-                                    <img v-lazy="item.IMG" alt="">
-                                    <span>{{ item.TITLE }}</span>
-                                </a>
-                            </div>
-                        </div>
+            <h3 class="open-begin" :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_INTRODUCE.INTRO_HEAD }}</h3>
+            <div class="playground" >
+                  <div class="right-text" v-if="isShowH5">
+                    <div class="first-code">
+                        <img src="/img/home/firstCode-mob.png" alt="">
+                    </div>
+                    <div class="letsPlay">
+                        <img src="/img/home/letsPlay.png" alt="">
                     </div>
                 </div>
-            </div>
-            <div class="map-rode">
-                <img class="is-pc rode-left" v-lazy="'/img/home/rodeLeft.svg'" alt="">
-                <img class="is-pc plane-left" v-lazy="'/img/home/planeLeft.svg'" alt="">
-                <img class="is-pc rode-middle" v-lazy="'/img/home/rodeMiddle.svg'" alt="">
-                <img class="is-pc plane-middle" v-lazy="'/img/home/planeMiddle.svg'" alt="">
-                <img class="is-pc rode-right" v-lazy="'/img/home/rodeRight.svg'" alt="">
-                <img class="is-pc plane-right" v-lazy="'/img/home/planeRight.svg'" alt="">
-            </div>
-            <div class="is-h5 mapArea" v-if="isShowH5">
-                <div
-                    class="area-box"
-                    v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_MAP"
-                    :key="index"
-                    >
-                        <div class="box-icon" @touchstart="go(item.LINK.includes('/docs/')?$site.themeConfig.docsUrl+item.LINK:item.LINK)">{{ item.NAME }}</div>
-                        <p @touchstart="go(item.LINK.includes('/docs/')?$site.themeConfig.docsUrl+item.OTHER_LINK:item.LINK)" :class="$lang === 'en'?'lang-en':''">{{ item.TITLE }}</p>
-                        <img v-lazy="item.IMG" alt=""/>
+                <div class="left-code">
+                    <div class="first">➜ /<span v-if="textBlock" class="first-span" :class="{'typing':textBlock}">sudo yum -y update</span></div>
+                    <div class="block1" :class="{'fast-hide':textBlock}">Last metadata expiration check: 0:02:16 ago </div>
+                    <div class="block2" :class="{'fast-hide':textBlock}">on Wed Dec 22 09:00:02 2021.</div>
+                    <div class="block3" :class="{'fast-hide':textBlock}">Dependencies resolved.</div>
+                    <div class="block4" :class="{'fast-hide':textBlock}">Nothing to do.</div>
+                    <div class="block5" :class="{'fast-hide':textBlock}">Complete!</div>
+                    <div class="typing last block6" :class="{'fast-hide':textBlock}">➜ / </div>
                 </div>
-                <div :class="['snd-guidance','location',isShowCard?'is-show':'',$lang == 'en'?'en-snd-guidance':'']">
-                    <div class="d3"></div>
-                    <p :class="$lang == 'en'?'en-link-title':''">{{ i18n.home.HOME_INTRODUCE.INTRO_GUIDE.INFO }}</p>
-                    <div class="d3-guide">
-                        <div
-                            class="guide-way"
-                            :class="$lang == 'en'?'en-guide-way':''"
-                            v-for="(item, index) in i18n.home.HOME_INTRODUCE.INTRO_GUIDE.GUIDE_WAY"
-                            :key="index">
-                                <a :href="item.LINK.includes('/docs/')?$site.themeConfig.docsUrl+item.LINK:item.LINK">
-                                    <img v-lazy="item.IMG" alt="">
-                                    <span>{{ item.TITLE }}</span>
-                                </a>
-                        </div>
+                <div class="right-text" v-if="!isShowH5">
+                    <div class="first-code">
+                        <img src="/img/home/firstCode-pc.png" alt="">
+                    </div>
+                    <div class="letsPlay" @click="go('https://playground.osinfra.cn/')">
+                        <img src="/img/home/letsPlay.png" alt="">
                     </div>
                 </div>
             </div>
@@ -342,6 +293,7 @@
         data() {
             that = this;
             return {
+                textBlock:false,
                 isMuted:false,
                 info: 'aaa',
                 flag: true,
@@ -383,6 +335,7 @@
             }
         },
         mounted() {
+            window.addEventListener("scroll", this.scroTop);
             this.voiceClick()
             window.location.hash=='#meeting' ? window.location.href="#meeting": ''
             this.videoCtrlParams.element = document.getElementById('home-video');
@@ -402,6 +355,7 @@
             this.bannerAmount = lang === 'zh' ? 1 : 1;
         },
         beforeDestroy () {
+            window.removeEventListener("scroll", this.scroTop);
             this.mobileSwiperInterval && clearInterval(this.mobileSwiperInterval);
         },
         computed: {
@@ -417,6 +371,15 @@
             round
         },
         methods: {
+            scroTop() {
+              let scrollTop =
+                document.body.scrollTop || document.documentElement.scrollTop;
+                if (this.isShowH5) {
+                    scrollTop > 50 && scrollTop < 900 ? this.textBlock=true :this.textBlock=false
+                } else {
+                    scrollTop > 130 && scrollTop < 770 ? this.textBlock=true :this.textBlock=false
+                }
+            },
             voiceClick() {
                 if (!this.isShowH5) {
                     this.isMuted = !this.isMuted;
@@ -732,6 +695,9 @@
         color: #0b162b;
         text-align: center;
         margin-bottom: 20px;
+    }
+    .home .open-begin {
+        margin-bottom: 40px;
     }
     .word-hover{
         &:hover{
@@ -1061,6 +1027,159 @@
         text-align: center;
         width: 1080px;
         margin: 0 auto;
+        .playground {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 40px;
+            padding: 0 48px 0 57px;
+            width: 1000px;
+            height: 340px;
+            background-color: #1E2633;
+            background-image: url(/img/home/bgCode-pc.png);
+            background-size: 100%;
+            border-radius: 24px 0 0 0;
+            box-shadow: 0 0 25px #488ce9;
+            .left-code {
+                padding: 14px 0 31px 30px;
+                width: 524px;
+                height: 227px;
+                text-align: left;
+                font-size: 16px;
+                font-family: ZapfDingbatsITC;
+                color: #D0F2FF;
+                line-height: 26px;
+                background: rgba(11, 22, 45, 0.55);
+                box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.5);
+                border-radius: 8px;
+                border: 2px solid #022EA6;
+                .first {
+                    display: flex;
+                    align-items: center;
+                }
+                .first-span {
+                      position: relative;
+                      padding-left: 4px;
+                  }
+                  .typing {
+                    position: relative;
+                    display: inline-block;
+                    visibility: hidden;
+                    width: 19ch;
+                    animation: typing 1s forwards steps(19);
+                    white-space: nowrap;
+                    overflow: hidden;
+                    }
+                    .typing::before,
+                    .first-span::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        transform: translateY(-50%);
+                        width: 10px;
+                        height: 16px;
+                        animation: blink 1s infinite steps(1);
+                    }
+                    .first-span::before {
+                        animation: blink 1s 1 steps(2) backwards;
+                    } 
+                    .fast-hide {
+                        visibility: hidden;
+                        animation: block 0.1s forwards;
+                    }
+                    .block1 {
+                        animation-delay: 1s;
+                    }
+                    .block2 {
+                        animation-delay: 1.1s;
+                    }
+                    .block3 {
+                        animation-delay: 1.2s;
+                    }
+                    .block4 {
+                        animation-delay: 1.3s;
+                    }
+                    .block5 {
+                        animation-delay: 1.4s;
+                    }
+                    .block6 {
+                        width: 5ch;
+                        animation-delay: 1.5s;
+                    }
+                    @keyframes block {
+                        to {
+                            visibility:visible;
+                        }
+                    }
+            }
+            .right-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 300px;
+                height: 227px;
+                img {
+                    width: 100%;
+                }
+                .first-code {
+                    width: 100%;
+                }
+                .letsPlay {
+                    cursor: pointer;
+                    width: 248px;
+                }
+            }
+           @media screen and (max-width: 1000px) {
+           flex-direction: column;
+            justify-content: start;
+            margin: 0;
+            padding: 42px 18px 55px;
+            width: 100%;
+            height: 451px;
+            background-image: url(/img/home/bgCode-mob.png);
+            background-size: 100%,100%;
+            box-shadow: 0 0 15px #488ce9;
+            background-repeat: no-repeat;
+            .left-code {
+                margin-top: 25px;
+                padding: 18px 10px 15px;
+                width: 100%;
+                height: 200px;
+                font-size: 14px;
+                font-family: ZapfDingbatsITC;
+                line-height: 22px;
+                }
+            .right-text {
+                height: 156px;
+                .first-code {
+                    text-align: center;
+                    img {
+                    width: 235px;
+                    }
+                }
+                .letsPlay {
+                    width: 100%;
+                    img {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+         @keyframes typing {
+                    from {
+                        width: 0
+                    }
+                    to {
+                        visibility: visible;
+                    }
+                }
+        @keyframes blink {
+            50% {
+                background: #FF9933;
+                }
+            }
+        }
     }
     .map-rode {
         width: 1080px;
@@ -1337,7 +1456,7 @@
         width: 100%;
         height: 220px;
         text-align: center;
-        margin-top: 120px;
+        margin-top: 50px;
         background-color: rgba(1, 0, 87, .85);
         background-repeat: repeat-x;
         background-size:contain;
@@ -1804,7 +1923,7 @@
             margin-top: 35px;
             font-size: 20px;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 32px;
         }
         .home p {
             font-size: 16px;
