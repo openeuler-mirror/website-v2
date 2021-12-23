@@ -564,6 +564,11 @@ module.exports = {
                 RIGHT_IMG_LINK: 'https://www.suse.com/',
                 RIGHT_IMG_PC: '/img/home/link/suse.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-suse.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://www.nfs-china.com/index.html',
+                LEFT_IMG_PC: '/img/home/link/zhongkefangde.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-zhongkefangde.png',
             }
         ],
         FRIENDSHIP_LINK_LIST: [
@@ -1140,6 +1145,11 @@ module.exports = {
                 RIGHT_IMG_LINK: 'https://www.suse.com/',
                 RIGHT_IMG_PC: '/img/home/link/suse.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-suse.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://www.nfs-china.com/index.html',
+                LEFT_IMG_PC: '/img/home/link/zhongkefangde.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-zhongkefangde.png',
             }
         ],
         FRIENDSHIP_LINK_LIST: [
@@ -1717,6 +1727,11 @@ module.exports = {
                 RIGHT_IMG_LINK: 'https://www.suse.com/',
                 RIGHT_IMG_PC: '/img/home/link/suse.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/mobile-suse.png'
+            },
+            {
+                LEFT_IMG_LINK: 'http://www.nfs-china.com/index.html',
+                LEFT_IMG_PC: '/img/home/link/zhongkefangde.png',
+                LEFT_IMG_MOBILE: '/img/home/link/mobile-zhongkefangde.png',
             }
         ],
         FRIENDSHIP_LINK_LIST: [
