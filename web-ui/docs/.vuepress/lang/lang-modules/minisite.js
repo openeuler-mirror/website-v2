@@ -444,7 +444,7 @@ module.exports = {
                     LINK: [
                         {
                             TEXT: '毕昇JDK历史版本',
-                            LINK: 'https://mirrors.huaweicloud.com/kunpeng/archive/compiler/bisheng_jdk/'
+                            LINK: 'https://www.hikunpeng.com/zh/developer/devkit/compiler/jdk'
                         },
                     ]
                 }
@@ -973,7 +973,7 @@ module.exports = {
                     LINK: [
                         {
                             TEXT: 'Earlier Versions',
-                            LINK: 'https://mirrors.huaweicloud.com/kunpeng/archive/compiler/bisheng_jdk/'
+                            LINK: 'https://www.hikunpeng.com/zh/developer/devkit/compiler/jdk'
                         },
                     ]
                 }
@@ -1502,7 +1502,7 @@ module.exports = {
                     LINK: [
                         {
                             TEXT: 'Earlier Versions',
-                            LINK: 'https://mirrors.huaweicloud.com/kunpeng/archive/compiler/bisheng_jdk/'
+                            LINK: 'https://www.hikunpeng.com/zh/developer/devkit/compiler/jdk'
                         },
                     ]
                 }
