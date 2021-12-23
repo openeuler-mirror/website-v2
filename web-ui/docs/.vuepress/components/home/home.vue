@@ -40,18 +40,20 @@
                     <div class="first-code">
                         <img src="/img/home/firstCode-mob.png" alt="">
                     </div>
-                    <div class="letsPlay">
+                    <div class="letsPlay" @click="go('https://playground.osinfra.cn/')" >
                         <img src="/img/home/letsPlay.png" alt="">
                     </div>
                 </div>
                 <div class="left-code">
                     <div class="first">➜ /<span v-if="textBlock" class="first-span" :class="{'typing':textBlock}">sudo yum -y update</span></div>
-                    <div class="block1" :class="{'fast-hide':textBlock}">Last metadata expiration check: 0:02:16 ago </div>
-                    <div class="block2" :class="{'fast-hide':textBlock}">on Wed Dec 22 09:00:02 2021.</div>
-                    <div class="block3" :class="{'fast-hide':textBlock}">Dependencies resolved.</div>
-                    <div class="block4" :class="{'fast-hide':textBlock}">Nothing to do.</div>
-                    <div class="block5" :class="{'fast-hide':textBlock}">Complete!</div>
-                    <div class="typing last block6" :class="{'fast-hide':textBlock}">➜ / </div>
+                    <div v-show="textBlock">
+                        <div class="block1" :class="{'fast-hide':textBlock}">Last metadata expiration check: 0:02:16 ago </div>
+                        <div class="block2" :class="{'fast-hide':textBlock}">on Wed Dec 22 09:00:02 2021.</div>
+                        <div class="block3" :class="{'fast-hide':textBlock}">Dependencies resolved.</div>
+                        <div class="block4" :class="{'fast-hide':textBlock}">Nothing to do.</div>
+                        <div class="block5" :class="{'fast-hide':textBlock}">Complete!</div>
+                        <div class="typing last block6" :class="{'fast-hide':textBlock}">➜ / </div>
+                    </div>
                 </div>
                 <div class="right-text" v-if="!isShowH5">
                     <div class="first-code">
@@ -375,9 +377,9 @@
               let scrollTop =
                 document.body.scrollTop || document.documentElement.scrollTop;
                 if (this.isShowH5) {
-                    scrollTop > 50 && scrollTop < 900 ? this.textBlock=true :this.textBlock=false
+                    scrollTop > 70 && scrollTop < 900 ? this.textBlock=true :this.textBlock=false
                 } else {
-                    scrollTop > 130 && scrollTop < 770 ? this.textBlock=true :this.textBlock=false
+                    scrollTop > 130 && scrollTop < 970 ? this.textBlock=true :this.textBlock=false
                 }
             },
             voiceClick() {
@@ -1059,14 +1061,14 @@
                 }
                 .first-span {
                       position: relative;
-                      padding-left: 4px;
+                      margin-left: 4px;
                   }
                   .typing {
                     position: relative;
                     display: inline-block;
                     visibility: hidden;
                     width: 19ch;
-                    animation: typing 1s forwards steps(19);
+                    animation: typing 3s forwards steps(19);
                     white-space: nowrap;
                     overflow: hidden;
                     }
@@ -1082,30 +1084,31 @@
                         animation: blink 1s infinite steps(1);
                     }
                     .first-span::before {
-                        animation: blink 1s 1 steps(2) backwards;
+                        // right: -10px;
+                        animation: blink 0.5s 6  steps(1);
                     } 
                     .fast-hide {
                         visibility: hidden;
-                        animation: block 0.1s forwards;
+                        animation: block 0.3s forwards;
                     }
                     .block1 {
-                        animation-delay: 1s;
+                        animation-delay: 3s;
                     }
                     .block2 {
-                        animation-delay: 1.1s;
+                        animation-delay: 3.3s;
                     }
                     .block3 {
-                        animation-delay: 1.2s;
+                        animation-delay: 3.6s;
                     }
                     .block4 {
-                        animation-delay: 1.3s;
+                        animation-delay: 3.9s;
                     }
                     .block5 {
-                        animation-delay: 1.4s;
+                        animation-delay: 4.2s;
                     }
                     .block6 {
                         width: 5ch;
-                        animation-delay: 1.5s;
+                        animation-delay: 4.5s;
                     }
                     @keyframes block {
                         to {
