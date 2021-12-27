@@ -47,12 +47,7 @@
                 <div class="left-code">
                     <div class="first">➜ /<span v-if="textBlock" class="first-span" :class="{'typing':textBlock}">sudo yum -y update</span></div>
                     <div v-show="textBlock">
-                        <div class="block1" :class="{'fast-hide':textBlock}">Last metadata expiration check: 0:02:16 ago </div>
-                        <div class="block2" :class="{'fast-hide':textBlock}">on Wed Dec 22 09:00:02 2021.</div>
-                        <div class="block3" :class="{'fast-hide':textBlock}">Dependencies resolved.</div>
-                        <div class="block4" :class="{'fast-hide':textBlock}">Nothing to do.</div>
-                        <div class="block5" :class="{'fast-hide':textBlock}">Complete!</div>
-                        <div class="typing last block6" :class="{'fast-hide':textBlock}">➜ / </div>
+                        <div :class="[`block${index+1}`,{'fast-hide':textBlock},{'typing last':index == codingData.length-1}]" v-for="(item,index) in codingData" :key="item">{{item}}</div>
                     </div>
                 </div>
                 <div class="right-text" v-if="!isShowH5">
@@ -295,6 +290,14 @@
         data() {
             that = this;
             return {
+                codingData:[
+                    'Last metadata expiration check: 0:02:16 ago ',
+                    'on Wed Dec 22 09:00:02 2021.',
+                    'Dependencies resolved.',
+                    'Nothing to do.',
+                    'Complete!',
+                    '➜ / '
+                ],
                 textBlock:false,
                 isMuted:false,
                 info: 'aaa',
@@ -551,11 +554,7 @@
             addValue(arr) {
                 let temp = arr;
                 temp.forEach(item => {
-                    if(item.ROUND_KEY === 'businessosv') {
-                        item.ROUND_VALUE = 11;
-                    }else{
                         item.ROUND_VALUE = that.roundValueObj[item.ROUND_KEY];
-                    }
                 });
                 return temp;
             }

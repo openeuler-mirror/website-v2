@@ -36,7 +36,6 @@ export const getRank = ({
     currentPage
 }) => {
     return new Promise((resolve, reject) => {
-        console.log(token,pageSize);
         appAjax.postJson({
             otherBaseUrl: rankApi,
             url: `/intern/points/lists`,
@@ -44,7 +43,7 @@ export const getRank = ({
             params: {
                 token:token,
                 currentPage:1,
-                pageSize:10,
+                pageSize,
             },
             
             success(result) {
