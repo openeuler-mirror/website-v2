@@ -338,6 +338,18 @@ export default {
         background-color: rgba(0, 0, 0, 0.05);
       }
     }
+     .affect-list {
+      .item:nth-of-type(n+1) {
+        ul {
+          min-height: 60px;
+          line-height: 20px;
+          height: fit-content;
+           @media (max-width: 1000px) {
+             line-height: inherit;
+          }
+        }
+      }
+    }
     .metrics-list {
       @media (max-width: 1000px) {
         margin-bottom: 30px;

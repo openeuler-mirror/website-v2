@@ -147,12 +147,11 @@
             <h3 class="text-head dark-red">参与方式</h3>
             <p>
               以
-              <span>【我为openEuler】</span
+              <span class="blue">【我为openEuler 代言】</span
               >为主题录制一段不少于30秒的视频。视频内容可以介绍自己在openEuler开源社区的身份；在openEuler开源社区做过什么事；对openEuler未来的期望……
             </p>
             <p>
-              完成即可获得openEuler 定制卫衣+openEuler 定制电脑包，或openEuler
-              DIY积木工卡套+openEuler 定制电脑包。注：礼品随机发放。
+              完成即可获得openEuler 定制卫衣+openEuler 定制电脑包。注：礼品随机发放。
             </p>
             <p>
               【我为openEuler
@@ -232,7 +231,7 @@ export default {
         {
           icon: "/img/activities/year2022/osv.png",
           text: "商用OSV",
-          num: "10",
+          num: "11",
           puls: "家",
         },
         {
@@ -272,7 +271,7 @@ export default {
           title: "兑换方式：",
           content: [
             "请于2022年1月13日前（含13日）把视频发送至openEuler小助手微信（vx:openeuler123)，为避免微信压缩画质，建议通过压缩文件进行传输。小助手查收后登记个人收货地址，我们将在活动结束后1-10个工作日内为您寄出。",
-            "注：奖品仅限300份，先到先得哦",
+            "注：奖品仅限80份，先到先得哦",
           ],
         },
       ],
@@ -302,7 +301,7 @@ export default {
       TweenLite.set("img", { xPercent: "-50%", yPercent: "-50%" });
       var container = document.getElementById("container"),
         w = 1120,
-        h = 756;
+        h = 700;
       for (let i = 0; i < 100; i++) {
         var Div = document.createElement("div");
         TweenLite.set(Div, {
@@ -560,7 +559,7 @@ export default {
       }
     }
     .letter {
-      animation: letter 1s forwards;
+      animation: letter 1s forwards ease-in-out;
     }
   }
   .part-tow {
@@ -710,16 +709,7 @@ export default {
     }
     .part-tow {
       margin-top: 40px;
-      // overflow: hidden;
-      .point {
-        .left-point {
-          width: 130px;
-          height: fit-content;
-          // top: -30px;
-          left: 0;
-          object-fit: cover;
-        }
-      }
+   
       .title {
         margin-bottom: 20px;
         img {

@@ -1,5 +1,5 @@
 <template>
-  <!-- <div class="internship">
+  <div class="internship">
     <titlenav
       class="titlenav"
       v-show="isShowNav"
@@ -264,7 +264,7 @@
           </div>
         </div>
         <div id="rank">
-          <div class="rank-title" @click="showRank">
+          <div class="rank-title">
             <img v-if="!isShowH5" src="/img/internship/rank-title.png" alt="" />
             <img v-else src="/img/internship/rank-title-mo.png" alt="" />
           </div>
@@ -272,9 +272,9 @@
             <div class="rank-content" ref="rankContent">
               <div class="rank-box">
                 <div class="rank-top">
-                  <div class="top-item" v-for="(item, index) in 3" :key="index">
+                  <div class="top-item" v-for="(item, index) in rankTop" :key="index">
                     <div class="gitee-name">{{ item.GiteeId }}</div>
-                    <div class="score" v-if="false">
+                    <div class="score" >
                       {{ item.integralValue }}<span>{{rank.SCORE}}</span>
                     </div>
                     <div
@@ -299,7 +299,7 @@
                   >
                     <div class="rank-left">
                       <div class="rank-class">{{ item.rank }}</div>
-                      <div class="gitee-name">haml-707</div>
+                      <div class="gitee-name">{{ item.GiteeId }}</div>
                     </div>
                     <div class="rank-right">
                       <div class="score">{{ item.integralValue }}</div>
@@ -307,8 +307,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="dash"></div>
-                <div class="view-all" v-if="false">
+                <!-- <div class="dash"></div> -->
+                <div class="view-all" v-if="showAll">
                   <a @click="extend()" v-if="!isExent"
                     >{{rank.VIEW_ALL}}
                     <div>
@@ -390,12 +390,12 @@
         </div>
       </div>
     </div>
-  </div> -->
-  <div class="closeInternship">
+  </div>
+  <!-- <div class="closeInternship">
     <p>系统维护中，开放时间请等待群内消息通知。</p>
     <p>开源实习群号：526089131</p>
     <img src="/img/internship/qrCode.png" alt="" />
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -408,6 +408,7 @@ export default {
   data() {
     return {
       renderData: [],
+      showAll:false,
       isExent: false,
       rankInfo: [],
       stepActive: 0,
@@ -446,7 +447,7 @@ export default {
         },
       ],
       introduce:
-        " openEuler开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力。由openEuler社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可获得相应积分，积分累计达规定量后，可获得实习证书和实习工资。",
+        " openEuler开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力。由openEuler社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可获得相应积分，积分累计达规定量后，可获得实习证明和实习工资。",
       step: {
         stepNav: [
           {
@@ -467,17 +468,17 @@ export default {
           {
             IMG: "/img/internship/step_4.png",
             ACTIVE: "/img/internship/step_4active.png",
-            TEXT: "工资与证书发放",
+            TEXT: "工资与实习证明",
           },
         ],
         stepONE: {
           TITLE: "申请实习",
-          TEXT1: "（1）填写报名资料表。",
+          TEXT1: "（1）阅读并签署活动声明。",
           TEXT2: "（2）完成",
           LINK1: "实习测试任务",
           TEXT3: "并提供PR链接。",
-          TEXT4: "（3）提供学生证扫描件或其他学生身份证明材料。",
-          ATTENTION1: "将以上3份材料发送至开源实习官方邮箱",
+          TEXT4: "（3）填写报名资料表。",
+          ATTENTION1: "将以上申请材料按照模板填写后发送至开源实习官方邮箱",
           ATTENTION2:
             "。发送后等待审核，组织方将以邮件反馈审核结果，审核通过后，签订劳务协议，用所分配的账号开始实习。",
           DONWLOAD: "申请材料模板下载",
@@ -526,10 +527,10 @@ export default {
           ],
         },
         stepFour: {
-          TITLE: "工资与证书发放",
+          TITLE: "工资与实习证明",
           pText1: [
             "（1）在实习合同里约定的6个月期限内，学生可凭积分获得实习工资。",
-            "（2）证书申请：在实习有效期6个月内满60分即可开具实习证书，如需开具实习证书，发送邮件给实习官方邮箱",
+            "（2）证明申请：在实习有效期6个月内满60分即可开具实习证明，如需开具实习证明，发送邮件给实习官方邮箱",
             "intern@openeuler.io",
             "提出申请。",
           ],
@@ -543,9 +544,9 @@ export default {
           ATTENTION_TEXT: [
             "以上工资金额为总计金额，每月月初按上月积分结算一次应发工资，在月底发放到实习生账户。应发工资为达到相应积分标准的总计工资金额减去已结算金额。",
             "总计100分为工资结算上限。超过100分不再计算工资，可选择结束实习，或继续贡献社区，满150分可获得“开源之星”荣誉。",
-            "证书开具后视为实习结束，不再计算实习工资。",
+            "证明开具后视为实习结束，不再计算实习工资。",
           ],
-          DONWLOAD: "证书申请材料和邮件模板下载",
+          DONWLOAD: "证明申请材料和邮件模板下载",
         },
       },
       task: {
@@ -660,22 +661,17 @@ export default {
           {
             question: "1、哪些人可以报名？",
             answer:
-              "A：开源实习面向全国范围内全日制/非全日制在校学生招募，无专业年级限制，欢迎感兴趣的同学踊跃报名。",
+              "A：开源实习面向全国范围内年满18周岁的全日制/非全日制在校学生招募，无专业年级限制，欢迎感兴趣的同学踊跃报名。",
           },
           {
             question: "2、实习有效期6个月是如何计算的？",
             answer:
-              "A：在申请实习时需签署实习劳务合同，实习有效期即劳务合同上填写的实习有效期，为6个月期限，6个月期限内未满60积分则不能获得证书。线上实习时间管理相对自由，可根据自身情况安排时间，可提前结束实习。",
+              "A：在申请实习时需签署实习劳务合同，实习有效期即劳务合同上填写的实习有效期，为6个月期限，6个月期限内未满60积分则不能获得证明。线上实习时间管理相对自由，可根据自身情况安排时间，可提前结束实习。",
           },
           {
             question: "3、超过了6个月或者完成了100积分还能继续在社区做任务吗？",
             answer:
-              "A：可以，但积分不能再用于领取证书和奖金，一年内累计到150积分可获得openEuler社区高校“开源之星”荣誉。 ",
-          },
-          {
-            question: "4、任务领取成功后，完成时间有限制吗？",
-            answer:
-              "A：有，在导师输入/approve 命令通过认领后，2分、5分的任务需在一周内提交成果，10分的任务需在2周内提交成果，提交成果以提交PR并在issue评论下输入了/intern-completed命令为准，否则任务将被程序释放给其他人认领，当前认领人不能再承担该任务。20及以上分值的任务需在issue上标注的期望完成时间内完成，否则导师有权利释放任务。",
+              "A：可以，但积分不能再用于领取证明和奖金，一年内累计到150积分可获得openEuler社区高校“开源之星”荣誉。 ",
           },
         ],
         MORE: ["更多问题，请移步", "本帖", "评论区提问。"],
@@ -721,6 +717,10 @@ export default {
           IMG: "/img/internship/openLooKeng.png",
           LINK: "",
         },
+        {
+          IMG: "/img/internship/gitee.png",
+          LINK: "",
+        },
       ],
       help: [
         "联系邮箱:",
@@ -742,17 +742,6 @@ export default {
     },
     stepChange(index) {
       this.stepActive = index;
-      var count = 0;
-      var arr = [];
-
-      for (var i = 97; i < 123; i++) {
-        undefined;
-
-        arr[count] = String.fromCharCode(i);
-
-        count++;
-      }
-      console.log(arr);
     },
     go(path) {
       if (path && !path.includes("http")) {
@@ -802,7 +791,7 @@ export default {
           return getRank({
             token: data.loginData.token,
             currentPage: 1,
-            pageSize: 10,
+            pageSize: 100,
             userId: data.loginData.userId,
           });
         })
@@ -811,7 +800,8 @@ export default {
         })
         .then((res) => {
           if (res.UserPoints) {
-            let info = res.UserPoints;
+            let info = res.UserPoints;         
+            info.length > 10 ? this.showAll = true: '';
             info.sort((a, b) => {
               return b.integralValue - a.integralValue;
             });
@@ -830,11 +820,15 @@ export default {
               ...this.rankTop.splice(1, 1, this.rankTop[0])
             );
           }
-        });
+        })
+        .catch(err =>{
+          console.log(err);
+        })
     },
   },
   created() {},
   mounted() {
+    this.showRank()
     window.addEventListener("scroll", this.scroTop);
   },
   destroyed() {
@@ -1321,7 +1315,7 @@ a {
       }
       .rank-content {
         border-radius: 8px;
-        padding: 83px 290px 25px;
+        padding: 30px 290px 25px;
         background-color: #fff2ee;
         transition: all 0.5s;
         .rank-top {
@@ -1367,15 +1361,15 @@ a {
               background: #ff7c56;
               border: 1px solid #a4e1ff;
             }
-            .first::after {
-              position: absolute;
-              top: -81px;
-              left: 50%;
-              width: 100%;
-              color: #000000;
-              transform: translateX(-50%);
-              content: "虚位以待";
-            }
+            // .first::after {
+            //   position: absolute;
+            //   top: -81px;
+            //   left: 50%;
+            //   width: 100%;
+            //   color: #000000;
+            //   transform: translateX(-50%);
+            //   content: "虚位以待";
+            // }
             .third {
               height: 48px;
               line-height: 48px;
@@ -1466,7 +1460,7 @@ a {
         }
         .rank-content {
           border-radius: 8px;
-          padding: 46px 15px 10px;
+          padding: 26px 15px 10px;
           height: 100%;
           .dash {
             padding-top: 30px;
