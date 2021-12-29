@@ -5,9 +5,8 @@
         videoUrl="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/A-Tune.mp4"></minibanner>
         <div class="atune-center">
             <minidesc :isOther="true" :descArr="i18n.minisite.MIGRATION_DESC"></minidesc>
-            <miniimg :dataList="i18n.minisite.ATUNE_LINK" :mailAddress="i18n.minisite.ATUNE_MAIL"></miniimg>
-            <miniframe :outsideStr="i18n.minisite.ATUNE_FRAMEWORK.TITLE_OUTSIDE" :insideStr="i18n.minisite.ATUNE_FRAMEWORK.TITLE_INSIDE"
-            :descList="i18n.minisite.ATUNE_FRAMEWORK.DESC_LIST" :frameImg="i18n.minisite.ATUNE_FRAMEWORK.FRAMEWORK_IMG" id="framework"></miniframe>
+            <miniframe :outsideStr="i18n.minisite.MIGRATION_FRAMEWORK.TITLE_OUTSIDE" :insideStr="i18n.minisite.MIGRATION_FRAMEWORK.TITLE_INSIDE"
+            :descList="i18n.minisite.MIGRATION_FRAMEWORK.DESC_LIST" :frameImg="i18n.minisite.MIGRATION_FRAMEWORK.FRAMEWORK_IMG" id="framework"></miniframe>
         </div>
         <div class="document" id="document">
             <p class="title">{{ i18n.minisite.ATUNE_DOCUMENT.TITLE_OUTSIDE }}<span>{{ i18n.minisite.ATUNE_DOCUMENT.TITLE_INSIDE }}</span></p>

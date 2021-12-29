@@ -6,6 +6,18 @@ module.exports = {
     cn: {
         MIGRATION_BANNER_TEXT: ['迁移指南','适配 openEuler 操作系统易如反掌'],
         MIGRATION_DESC: ['openEuler是一款开源操作系统。当前openEuler内核源于Linux，支持鲲鹏及其它多种处理器，能够充分释放计算芯片的潜能，是由全球开源贡献者构建的高效、稳定、安全的开源操作系统，适用于数据库、大数据、云计算、人工智能等应用场景。'],
+        MIGRATION_FRAMEWORK: {
+            TITLE_OUTSIDE: '架构',
+            TITLE_INSIDE: 'ARCHITECTURE',
+            DESC_LIST: [
+                'A-Tune主要包括在线时静态调优和离线时动态调优两大核心能力，整体架构包括智能决策、系统画像和交互系统三层。',
+                '智能决策层：包含感知和决策两个子系统，分别完成对应用的智能感知和对系统的调优决策。',
+                '系统画像层：主要包括自动特征工程和两层分类模型，自动特征工程用于业务特征的自动选择，两层分类模型用于业务模型的学习和分类。',
+                '交互系统层：用于各类系统资源的监控和配置，调优策略执行在本层进行。',
+                '优化模型库：包含10大类20+款应用场景的优化配置'
+            ],
+            FRAMEWORK_IMG: '/img/minisite/migration/frame.svg'
+        },
         ATUNE_BANNER_TEXT: ['A-Tune','一款基于AI开发的智能优化引擎'],
         ATUNE_BANNER_IMG: '/img/minisite/atune/mobile-banner.png',
         ATUNE_DESC: ['A-Tune是一款基于openEuler开发的，自动化、智能化性能调优引擎。它利用人工智能技术，对运行在操作系统上的业务建立精准模型，动态感知业务特征并推理出具体应用，根据业务负载情况动态调节并给出最佳的参数配置组合，从而使业务处于最佳运行状态。'],
