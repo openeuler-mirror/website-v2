@@ -30,7 +30,7 @@ summary: Just about everything you'll need to  migrate the lok 2.1.3
 cat /etc/os-release
 ```
 
-![系统信息](https://images.gitee.com/uploads/images/2021/0322/113838_bccd0727_7919994.png "系统信息")
+<img src="./image/lok-1.png">
 
 ### 兼容性检查
 
@@ -56,7 +56,7 @@ x2openEuler scan iok-2.1.3-6.el7.x86_64.rpm
 
 > 仓库地址：https://gitee.com/openeuler/oec-application
 
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0324/161603_5b559f56_7919994.png "issue")
+<img src="./image/lok-2.png">
 
 - 持续追踪issue至缺失的依赖包被引入openEuler 20.03 LTS SP1 的YUM repo中
 

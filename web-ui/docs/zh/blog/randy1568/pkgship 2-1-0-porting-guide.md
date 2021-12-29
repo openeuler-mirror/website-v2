@@ -25,8 +25,6 @@ summary: Just about everything you'll need to  migrate the pkgship 2.1.0
 ```shell
 cat /etc/os-release
 ```
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0402/155416_1222a64f_2255020.png "1428073uzqhgwoscpt0pld.png")
-
 ## 兼容性检查
 
 > 使用x2openEuler对工具目录中的pkgship-2.1.0 RPM包进行分析

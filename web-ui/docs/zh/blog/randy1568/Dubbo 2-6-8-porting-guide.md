@@ -219,13 +219,12 @@ mvn install
 
   /home/Dubbo/dubbo-dubbo-2.6.8/pom.xml文件552行后增加如下内容：
 
-
-![image-20210320170933770.png](https://i.loli.net/2021/03/22/IUjrRmCuaWHyhXO.png)
+<img src="./image/Dubbo-1.png">
 
 
 若显示 **BUILD SUCCESS**，则Dubbo 2.6.8编译成功。
 
-![image-20210320171020803.png](https://i.loli.net/2021/03/22/V3nItJo51yYMzfr.png)
+<img src="./image/Dubbo-2.png">
 
 
 

@@ -36,7 +36,7 @@ Kernel | 3.10.0 x86_64
 ## 检查当前版本系统信息
 cat /etc/os-release
 
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0402/154347_c5ca10a0_8039520.png "屏幕截图.png")
+<img src="./image/hardware-4.png">
 # x2openEuler软件运行和配置信息采集
 ## 环境信息采集：
     1、安装x2openEuler工具的rpm包

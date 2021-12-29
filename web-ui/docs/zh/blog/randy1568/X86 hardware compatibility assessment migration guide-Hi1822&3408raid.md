@@ -39,7 +39,8 @@ Kernel | 3.10.0  x86_64
 检查当前系统版本信息
 cat /etc/os-release
 
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0402/154036_43bae790_8039520.png "屏幕截图.png")
+<img src="./image/hardware-1.png">
+
 # x2openEuler软件运行和配置信息采集
 
 ## 环境信息采集步骤
@@ -65,10 +66,10 @@ cat /etc/os-release
 从南向板卡兼容性清单网站(https://gitee.com/openeuler/website-v2/tree/feature-compatibility/data/compatibility), 可以查找Hi1822和3408raid卡适配openEuler 20.03 LTS SP1系统，信息如下。
 
 ## Hi1822网卡适配信息
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0402/154134_c1c4317a_8039520.png "屏幕截图.png")
+<img src="./image/hardware-2.png">
 
 ## 3408 raid卡适配信息
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0402/154153_c4f1817e_8039520.png "屏幕截图.png")
+<img src="./image/hardware-3.png">
 
 通过VID、DID、SVID、SSID四元组值可确定唯一一种板卡。从上面的截图可以看到，南向兼容性清单网站可以查询到Hi822卡和3408raid板卡，并且各板卡的四元组信息和采集到的板卡四元组信息相同，以此得出Hi1822板卡和3408raid从centos上迁移到openEuler 20.03 LTS SP1成功。
 

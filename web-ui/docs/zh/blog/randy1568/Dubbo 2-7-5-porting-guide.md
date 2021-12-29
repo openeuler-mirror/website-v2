@@ -219,7 +219,7 @@ mkdir /home/Dubbo && cd /home/Dubbo && wget https://github.com/apache/dubbo/arch
 
    `vim /home/Dubbo/dubbo-dubbo-2.7.5/dubbo-remoting/dubbo-remoting-netty/src/test/java/org/apache/dubbo/remoting/transport/netty/NettyClientTest.java `
 
-   ![点击放大](https://support.huaweicloud.com/prtg-dubbo-kunpengwebs/zh-cn_image_0295461117.png)
+   <img src="./image/Dubbo-3.png">
 
      
 
@@ -231,7 +231,7 @@ mkdir /home/Dubbo && cd /home/Dubbo && wget https://github.com/apache/dubbo/arch
 
    
 
-![image-20210320175656448.png](https://i.loli.net/2021/03/22/e2jm3JP1tRhyBAr.png)
+<img src="./image/Dubbo-4.png">
 
 若显示 **BUILD SUCCESS**，则dubbo-remoting-netty模块编译成功。
 
@@ -253,7 +253,7 @@ mkdir /home/Dubbo && cd /home/Dubbo && wget https://github.com/apache/dubbo/arch
 cd /home/Dubbo/dubbo-dubbo-2.7.5/dubbo-rpc/dubbo-rpc-redis/ && mvn install
 ```
 
-![点击放大](https://support.huaweicloud.com/prtg-dubbo-kunpengwebs/zh-cn_image_0243270846.png)
+<img src="./image/Dubbo-5.png">
 
 若显示 **BUILD SUCCESS**，则dubbo-rpc-redis模块编译成功。
 
@@ -291,7 +291,7 @@ wget https://mirrors.huaweicloud.com/kunpeng/maven/io/etcd/jetcd-launcher/0.3.0/
 cd /home/Dubbo/dubbo-dubbo-2.7.5/dubbo-remoting/dubbo-remoting-etcd3/ && mvn install
 ```
 
-![image-20210320181615929.png](https://i.loli.net/2021/03/22/9soPgG1art2KuOD.png)
+<img src="./image/Dubbo-6.png">
 
 若显示 **BUILD SUCCESS**，则dubbo-remoting-etcd3模块编译成功。
 
@@ -312,7 +312,7 @@ wget https://releases.hashicorp.com/consul/1.1.0/consul_1.1.0_linux_arm64.zip &&
 
 然后再重新编译
 
-![image-20210320182808171.png](https://i.loli.net/2021/03/22/MX9xIpDm14WTGoE.png)
+<img src="./image/Dubbo-7.png">
 
 若显示 **BUILD SUCCESS**，则dubbo- registry-consul模块编译成功。
 
@@ -350,7 +350,7 @@ wget https://releases.hashicorp.com/consul/1.1.0/consul_1.1.0_linux_arm64.zip &&
 
         
 
-        ![点击放大](https://support.huaweicloud.com/prtg-dubbo-kunpengwebs/zh-cn_image_0295461118.png)
+        <img src="./image/Dubbo-8.png">
 
       - 在第206行添加代码。
 
@@ -370,7 +370,7 @@ wget https://releases.hashicorp.com/consul/1.1.0/consul_1.1.0_linux_arm64.zip &&
 
         
 
-        ![点击放大](https://support.huaweicloud.com/prtg-dubbo-kunpengwebs/zh-cn_image_0295461119.png)
+        <img src="./image/Dubbo-9.png">
 
    
 
@@ -394,7 +394,7 @@ wget https://releases.hashicorp.com/consul/1.1.0/consul_1.1.0_linux_arm64.zip &&
 
         
 
-        ![点击放大](https://support.huaweicloud.com/prtg-dubbo-kunpengwebs/zh-cn_image_0295461120.png)
+        <img src="./image/Dubbo-10.png">
 
       - 在第110行添加代码。
 
@@ -414,7 +414,7 @@ wget https://releases.hashicorp.com/consul/1.1.0/consul_1.1.0_linux_arm64.zip &&
 
         
 
-        ![点击放大](https://support.huaweicloud.com/prtg-dubbo-kunpengwebs/zh-cn_image_0295461121.png)
+        <img src="./image/Dubbo-11.png">
 
 
 
@@ -428,11 +428,11 @@ wget https://releases.hashicorp.com/consul/1.1.0/consul_1.1.0_linux_arm64.zip &&
 </configuration>
 ```
 
-![image-20210320170933770.png](https://i.loli.net/2021/03/22/IUjrRmCuaWHyhXO.png)
+<img src="./image/Dubbo-12.png">
 
  
 
-![image-20210320192235495.png](https://i.loli.net/2021/03/22/rU2QuhksDyYAWRj.png)
+<img src="./image/Dubbo-13.png">
 
 若显示 **BUILD SUCCESS**，则Dubbo 2.7.5编译成功。
 
