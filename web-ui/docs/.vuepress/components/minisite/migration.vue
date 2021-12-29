@@ -10,15 +10,7 @@
         </div>
         <div class="document" id="document">
             <p class="title">{{ i18n.minisite.ATUNE_DOCUMENT.TITLE_OUTSIDE }}<span>{{ i18n.minisite.ATUNE_DOCUMENT.TITLE_INSIDE }}</span></p>
-            <div class="doc-list">
-                <div class="item" v-for="(item,index) in i18n.minisite.ATUNE_DOCUMENT.DOCS_LIST" :key="index" @click="go(item.LINK)">
-                    <img :src="item.IMG" alt="" />
-                    <div>
-                        <p>{{ item.TITLE }}</p>
-                        <p>{{ item.DESC }}</p>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 </template>
