@@ -4,7 +4,7 @@
         <minibanner :themeArr="i18n.minisite.MIGRATION_BANNER_TEXT" :mobileImg="i18n.minisite.ATUNE_BANNER_IMG" 
         videoUrl="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/A-Tune.mp4"></minibanner>
         <div class="atune-center">
-            <minidesc :isOther="true" :descArr="i18n.minisite.ATUNE_DESC"></minidesc>
+            <minidesc :isOther="true" :descArr="i18n.minisite.MIGRATION_DESC"></minidesc>
             <miniimg :dataList="i18n.minisite.ATUNE_LINK" :mailAddress="i18n.minisite.ATUNE_MAIL"></miniimg>
             <miniframe :outsideStr="i18n.minisite.ATUNE_FRAMEWORK.TITLE_OUTSIDE" :insideStr="i18n.minisite.ATUNE_FRAMEWORK.TITLE_INSIDE"
             :descList="i18n.minisite.ATUNE_FRAMEWORK.DESC_LIST" :frameImg="i18n.minisite.ATUNE_FRAMEWORK.FRAMEWORK_IMG" id="framework"></miniframe>
