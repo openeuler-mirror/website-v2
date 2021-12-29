@@ -441,10 +441,17 @@ html[lang="ru"] .A-Tune .atune-center .tune-desc {
 .bisheng .reference {
     padding-top: 124px;
     .link-list {
+
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: baseline;
+
         .item {
             cursor: pointer;
             width: 410px;
-            padding: 16px 0;
+            padding: 25px 0;
             background: #FFFFFF;
             box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
