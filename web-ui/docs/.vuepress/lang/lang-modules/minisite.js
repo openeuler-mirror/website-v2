@@ -18,7 +18,7 @@ module.exports = {
                 '* 芯片层 - 提供多种类型的驱动，提供硬件设备的访问和管理，支持硬件设备的访问和管理',
                 '* 工具链 - 提供开源项目中开发使用到的多种效率提升的工具'
             ],
-            FRAMEWORK_IMG: '/img/minisite/migration/frame.svg'
+            FRAMEWORK_IMG: '/img/minisite/migration/framework.png'
         },
         MIGRATION_REFERENCE: {
             TITLE_OUTSIDE: '迁移文档',
