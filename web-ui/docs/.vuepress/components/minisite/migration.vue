@@ -10,8 +10,18 @@
         </div>
         <div class="document" id="document">
             <p class="title">{{ i18n.minisite.ATUNE_DOCUMENT.TITLE_OUTSIDE }}<span>{{ i18n.minisite.ATUNE_DOCUMENT.TITLE_INSIDE }}</span></p>
-
         </div>
+        
+        <div class="reference">
+            <p class="title">{{ i18n.minisite.BISHENG_REFERENCE.TITLE_OUTSIDE }}<span>{{ i18n.minisite.BISHENG_REFERENCE.TITLE_INSIDE }}</span></p>
+            <div class="h5-link" v-if="isShowH5">
+                <a :href="item.LINK" v-for="(item,index) in i18n.minisite.BISHENG_REFERENCE.LINK_LIST" :key="index" target="__blank">{{ item.TEXT }}</a>
+            </div>
+            <div class="link-list list" v-else>
+                <div class="item" v-for="(item,index) in i18n.minisite.BISHENG_REFERENCE.LINK_LIST" :key="index" @click="go(item.LINK)">{{ item.TEXT }}</div>
+            </div>
+        </div>
+
     </div>
 </template>
 <script>
@@ -202,6 +212,46 @@ html[lang="ru"] .A-Tune .atune-center .tune-desc {
                             margin-top: 10px;
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+.A-Tune .reference {
+    padding-top: 124px;
+    .link-list {
+        .item {
+            cursor: pointer;
+            width: 410px;
+            padding: 16px 0;
+            background: #FFFFFF;
+            box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            font-size: 18px;
+            color: #000000;
+            text-align: center;
+            line-height: 28px;
+            &:hover {
+                color: #FFFFFF;
+                background: #002FA7;
+            }
+        }
+    }
+    @media screen and (max-width: 1120px) {
+        padding-top: 57px;
+        .h5-link {
+            margin-top: 37px;
+            a {
+                display: block;
+                color: #002FA7;
+                text-align: center;
+                margin-bottom: 30px;
+                text-decoration: none;
+                font-size: 16px;
+                line-height: 30px;
+                &:last-of-type {
+                    margin-bottom: 0;
                 }
             }
         }
