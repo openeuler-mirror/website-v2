@@ -9,14 +9,11 @@
                 <miniframe :outsideStr="i18n.minisite.MIGRATION_FRAMEWORK.TITLE_OUTSIDE" :insideStr="i18n.minisite.MIGRATION_FRAMEWORK.TITLE_INSIDE"
                 :descList="i18n.minisite.MIGRATION_FRAMEWORK.DESC_LIST" :frameImg="i18n.minisite.MIGRATION_FRAMEWORK.FRAMEWORK_IMG" id="framework"></miniframe>
             </div>
-
-            <div class="document" id="document">
-                <p class="title">{{ i18n.minisite.ATUNE_DOCUMENT.TITLE_OUTSIDE }}<span>{{ i18n.minisite.ATUNE_DOCUMENT.TITLE_INSIDE }}</span></p>
-            </div>
         </div>
 
         <div class="bisheng">
             <div class="reference">
+                <p class="title">{{ i18n.minisite.MIGRATION_REFERENCE.TITLE_OUTSIDE }}<span>{{ i18n.minisite.MIGRATION_REFERENCE.TITLE_INSIDE }}</span></p>
                 <div class="h5-link" v-if="isShowH5">
                     <a :href="item.LINK" v-for="(item,index) in i18n.minisite.MIGRATION_REFERENCE.LINK_LIST" :key="index" target="__blank">{{ item.TEXT }}</a>
                 </div>
