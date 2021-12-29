@@ -26,75 +26,75 @@ module.exports = {
             LINK_LIST: [
                 {
                     TEXT: 'Apache 2.4.39 移植指南',
-                    LINK: 'https://openeuler.org/zh/blog/randy1568/Apache%202-4-39-porting-guide.html'
+                    LINK: 'https://www.openeuler.org/zh/blog/randy1568/Apache%202-4-39-porting-guide.html'
                 },
                 {
                     TEXT: 'Dubbo 2.6.8 移植指南',
-                    LINK: 'https://openeuler.org/zh/blog/randy1568/Dubbo%202-6-8-porting-guide.html'
+                    LINK: 'https://www.openeuler.org/zh/blog/randy1568/Dubbo%202-6-8-porting-guide.html'
                 },
                 {
                     TEXT: 'Dubbo 2.7.5 移植指南',
-                    LINK: 'http://openeuler.org/zh/blog/randy1568/Dubbo%202-7-5-porting-guide.html'
+                    LINK: 'http://www.openeuler.org/zh/blog/randy1568/Dubbo%202-7-5-porting-guide.html'
                 },
                 {
                     TEXT: 'HAProxy 1.9.0 移植指南',
-                    LINK: 'http://openeuler.org/zh/blog/randy1568/HAProxy%201-9-0-porting-guide.html'
+                    LINK: 'http://www.openeuler.org/zh/blog/randy1568/HAProxy%201-9-0-porting-guide.html'
                 },
                 {
                     TEXT: 'Lighttpd 1.4.53 移植指南',
-                    LINK: 'http://openeuler.org/zh/blog/randy1568/Lighttpd%201-4-53-porting-guide.html'
+                    LINK: 'http://www.openeuler.org/zh/blog/randy1568/Lighttpd%201-4-53-porting-guide.html'
                 },
                 {
                     TEXT: 'Iok 2.1.3 移植指南',
-                    LINK: 'http://openeuler.org/zh/blog/randy1568/Iok%202.1.3-porting-guide.html'
+                    LINK: 'http://www.openeuler.org/zh/blog/randy1568/Iok%202.1.3-porting-guide.html'
                 },
                 {
                     TEXT: 'Memcached 1.5.12 移植指南',
-                    LINK: 'http://openeuler.org/zh/blog/randy1568/Memcached%201-5-12-porting-guide%EF%BC%89.html'
+                    LINK: 'http://www.openeuler.org/zh/blog/randy1568/Memcached%201-5-12-porting-guide%EF%BC%89.html'
                 },
                 {
                     TEXT: 'Nginx 1.14.2 移植指南',
-                    LINK: 'http://openeuler.org/zh/blog/randy1568/Nginx%201-14-2-porting-guide.html'
+                    LINK: 'http://www.openeuler.org/zh/blog/randy1568/Nginx%201-14-2-porting-guide.html'
                 },
                 {
                     TEXT: 'MySQL 5.7.23 移植案例',
-                    LINK: 'http://openeuler.org/zh/blog/randy1568/MySQL%205-7-23-porting-guide.html'
+                    LINK: 'http://www.openeuler.org/zh/blog/randy1568/MySQL%205-7-23-porting-guide.html'
                 },
                 {
                     TEXT: 'Tengine 2.2.2 移植案例',
-                    LINK: 'http://openeuler.org/zh/blog/randy1568/Tengine%202.2.2-porting-guide.html'
+                    LINK: 'http://www.openeuler.org/zh/blog/randy1568/Tengine%202.2.2-porting-guide.html'
                 },
                 {
                     TEXT: 'Squid 4.8 移植案例',
-                    LINK: 'http://openeuler.org/zh/blog/randy1568/Squid%204.8-porting-guide.html'
+                    LINK: 'http://www.openeuler.org/zh/blog/randy1568/Squid%204.8-porting-guide.html'
                 },
                 {
                     TEXT: 'Varnish 6.2.0 移植指南',
-                    LINK: 'http://openeuler.org/zh/blog/randy1568/Varnish%206-2-0-porting-guide.html'
+                    LINK: 'http://www.openeuler.org/zh/blog/randy1568/Varnish%206-2-0-porting-guide.html'
                 },
                 {
                     TEXT: 'X86硬件兼容性评估迁移指导(3008raid) ',
-                    LINK: 'http://openeuler.org/zh/blog/randy1568/X86%20hardware%20compatibility%20assessment%20migration%20guide-3008raid.html'
+                    LINK: 'http://www.openeuler.org/zh/blog/randy1568/X86%20hardware%20compatibility%20assessment%20migration%20guide-3008raid.html'
                 },
                 {
                     TEXT: 'X86硬件兼容性移迁指南(Hi1822&3408raid)',
-                    LINK: 'http://openeuler.org/zh/blog/randy1568/X86%20hardware%20compatibility%20assessment%20migration%20guide-Hi1822&3408raid.html'
+                    LINK: 'http://www.openeuler.org/zh/blog/randy1568/X86%20hardware%20compatibility%20assessment%20migration%20guide-Hi1822&3408raid.html'
                 },
                 {
                     TEXT: 'flask 1.1.2 移植案例',
-                    LINK: 'http://openeuler.org/zh/blog/randy1568/flask%201-1-2-porting-guide.html'
+                    LINK: 'http://www.openeuler.org/zh/blog/randy1568/flask%201-1-2-porting-guide.html'
                 },
                 {
                     TEXT: 'enca1.19 移植案例',
-                    LINK: 'http://openeuler.org/zh/blog/randy1568/enca1-19-porting-guide.html'
+                    LINK: 'http://www.openeuler.org/zh/blog/randy1568/enca1-19-porting-guide.html'
                 },
                 {
                     TEXT: 'tornado 4.2.1 移植案例',
-                    LINK: 'http://openeuler.org/zh/blog/randy1568/tornado%204-2-1-porting-guide.html'
+                    LINK: 'http://www.openeuler.org/zh/blog/randy1568/tornado%204-2-1-porting-guide.html'
                 },
                 {
                     TEXT: 'pkgship 2.1.0 移植指南',
-                    LINK: 'http://openeuler.org/zh/blog/randy1568/pkgship%202-1-0-porting-guide.html'
+                    LINK: 'http://www.openeuler.org/zh/blog/randy1568/pkgship%202-1-0-porting-guide.html'
                 }
             ]
         },
