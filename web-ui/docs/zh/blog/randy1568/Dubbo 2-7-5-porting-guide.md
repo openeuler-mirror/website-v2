@@ -1,14 +1,14 @@
-```
+---
 title: Dubbo 2.7.5 Porting Guide（openEuler 20.03 LTS SP1）
 date: 2021-12-29
 tags: 
     - Dubbo
     - Porting Guide
-sig: sig-兼容性
+sig: sig-Compatibility-Infra
 archives: 2021-12
 author: randy1568
 summary: Just about everything you'll need to  migrate the Dubbo 2.7.5 
-```
+---
 
 # Dubbo 2.7.5 移植指南（openEuler-20.03 LTS-SP2)
 
@@ -230,6 +230,7 @@ mkdir /home/Dubbo && cd /home/Dubbo && wget https://github.com/apache/dubbo/arch
    ```
 
    
+
 ![image-20210320175656448.png](https://i.loli.net/2021/03/22/e2jm3JP1tRhyBAr.png)
 
 若显示 **BUILD SUCCESS**，则dubbo-remoting-netty模块编译成功。

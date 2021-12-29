@@ -1,21 +1,22 @@
-```
+---
 title: X86 hardware compatibility evaluation Porting Guide（Hi1822&3408raid）（openEuler 20.03 LTS SP1）
 date: 2021-12-29
 tags: 
     - X86 hardware compatibility evaluation 
     - Hi1822&3408raid
     - Porting Guide
-sig: sig-兼容性
+sig: sig-Compatibility-Infra
 archives: 2021-12
 author: randy1568
 summary: Just about everything you'll need to  evaluate the compatibility of X86 hardware（Hi1822&3408raid）
-```
+---
 
 # X86硬件兼容性移迁指南(Hi1822&3408raid)(openEuler 20.03 LTS SP1)
 
 # 介绍
 Hi1822网卡是华为生产的一款网卡。
 3408raid卡是华为生产的一款raid卡。
+
 # 环境要求
 ## 硬件要求
 硬件要求如下表所示

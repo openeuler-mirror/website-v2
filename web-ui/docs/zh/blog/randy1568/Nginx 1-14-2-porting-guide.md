@@ -1,14 +1,14 @@
-```
+---
 title: Nginx 1.14.2 Porting Guide（openEuler 20.03 LTS SP1）
 date: 2021-12-29
 tags: 
     - Nginx
     - Porting Guide
-sig: sig-兼容性
+sig: sig-Compatibility-Infra
 archives: 2021-12
 author: randy1568
 summary: Just about everything you'll need to  migrate the Nginx 1.14.2 
-```
+---
 
 # Nginx 1.14.2 移植指南（openEuler 20.03 LTS SP1）
 
@@ -52,14 +52,14 @@ Nginx是一款轻量级的Web服务器/反向代理服务器及电子邮件（IM
 如果组网环境处于外网受限情况下，服务器yum命令无法通过外界获取依赖包时，可参考本节内容进行本地源配置。
 1. 将操作系统镜像文件openEuler-20.03-LTS-everything-aarch64-dvd.iso文件拷贝到每台服务器的“/root”目录下。
 2. 镜像文件挂载。
-  a. 将“/root”目录下的openEuler操作系统对应iso文件挂载到“/mnt”目录下。
-  ```mount /root/openEuler-20.03-LTS-SP1-everything-aarch64-dvd.iso /mnt```
+    a. 将“/root”目录下的openEuler操作系统对应iso文件挂载到“/mnt”目录下。
+    ```mount /root/openEuler-20.03-LTS-SP1-everything-aarch64-dvd.iso /mnt```
     说明：
     该操作单次生效，重启后失效。若需要配置开机启动自动挂载镜像（可选），可参考下面步骤。
     1. 打开fstab文件。
-      ```vi /etc/fstab```
+        ```vi /etc/fstab```
     2. 编辑fstab文件，在文件末尾添加如下信息：
-      ```/root/openEuler-20.03-LTS-SP1-everything-aarch64-dvd.iso /mnt iso9660 loop 0 0```
+        ```/root/openEuler-20.03-LTS-SP1-everything-aarch64-dvd.iso /mnt iso9660 loop 0 0```
     3. 保存并退出fstab文件。
 3. 添加本地源文件。
     a. 进入“/etc/yum.repos.d”目录。
@@ -370,8 +370,8 @@ http {
            a. 删除原文件nginx。
            ```rm -rf /etc/init.d/nginx```
            b. 新建nginx文件。
-	   ```vi /etc/init.d/nginx```
-	   c. 添加如下内容后，保存并退
+	         ```vi /etc/init.d/nginx```
+	         c. 添加如下内容后，保存并退
 ```
 	   #!/bin/bash
 	   # chkconfig: 2345 10 90
@@ -413,6 +413,7 @@ root        9466    1352  0 18:23 ttyAMA0  00:00:00 grep --color=auto nginx
    - 通过脚本命令关闭。
       ```/usr/local/nginx/sbin/nginx -s quit```
    - 使用结束进程命令。
+
     ```pkill nginx```
 
 ```

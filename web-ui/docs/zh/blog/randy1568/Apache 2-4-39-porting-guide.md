@@ -1,14 +1,14 @@
-```
+---
 title: Apache 2.4.39 Porting Guide（openEuler 20.03 LTS SP1）
 date: 2021-12-29
 tags: 
     - Apache
     - Porting Guide
-sig: sig-兼容性
+sig: sig-Compatibility-Infra
 archives: 2021-12
 author: randy1568
 summary: Just about everything you'll need to  migrate the Apache 2.4.39
-```
+---
 
 # Apache 2.4.39 移植指南（openEuler 20.03 LTS SP1）
 

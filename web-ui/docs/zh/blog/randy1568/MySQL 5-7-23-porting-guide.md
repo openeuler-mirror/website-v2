@@ -1,14 +1,14 @@
-```
+---
 title: MySQL 5.7.23 Porting Case（openEuler 20.03 LTS SP1）
 date: 2021-12-29
 tags: 
     - MySQL
     - Porting Case
-sig: sig-兼容性
+sig: sig-Compatibility-Infra
 archives: 2021-12
 author: randy1568
 summary: Just about everything of the MySQL 5.7.23 porting case
-```
+---
 
 # MySQL 5.7.23 移植案例（openEuler 20.03 LTS SP1）
 
