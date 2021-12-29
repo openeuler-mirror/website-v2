@@ -9,18 +9,30 @@
           </div>
         </div>
         <div class="is-pc home-carousel" v-if="!isShowH5">
-            <div class="video-banner">
-              <video width="100%"  height="500" ref="bannerVideo"  autoplay="autoplay" preload="" loop="loop"  >
-                  <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/openEuler%E9%9D%A2%E5%90%91%E6%95%B0%E5%AD%97%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E7%9A%84%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F_Banner.mp4">
-              </video>
-              <div class="voice-box" @click="voiceClick">
-                   <img class="voice" v-show="!isMuted" src="/img/home/openVoice.svg" alt="" >
-                   <img class="voice" v-show="isMuted" src="/img/home/closeVoice.svg" alt="" >
-              </div>
-            </div>
+             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" >
+              <el-carousel-item >
+                     <div class="carousel-banner" id="container"   @click="go('/activities/happynewyear2022/')">
+                         <img src="../../public/img/home/banner/newyear-banner.png" alt="">
+                     </div>
+              </el-carousel-item>
+              <el-carousel-item >
+                <div class="video-banner">
+                     <video width="100%"  height="500" ref="bannerVideo" poster="../../public/img/home/banner/video-banner.png"  preload=""  id="home-video" >
+                         <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/openEuler%E9%9D%A2%E5%90%91%E6%95%B0%E5%AD%97%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E7%9A%84%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F_Banner.mp4">
+                     </video>
+                    <playcontroll :ctrl-obj="videoCtrlParams" ref="playctrlEle" @playStatus="checkStatus"></playcontroll>
+                </div>
+              </el-carousel-item>
+            </el-carousel>
+           
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
+               <swiper-slide class="carousel-item-index">
+                <div class="carousel-banner" id="container"   @click="go('/activities/happynewyear2022/')">
+                    <img src="../../public/img/home/banner/newyear-banner-mob.png" alt="">
+                </div>
+              </swiper-slide>
                <swiper-slide class="carousel-item-index">
                 <div class="video-banner">
                     <img class="bg-banner" src="/img/home/banner/video_banner_mo.png" alt="">
@@ -253,15 +265,16 @@
 </template>
 
 <script>
-    import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
-    import 'swiper/css/swiper.css';
-    import { meetingList, statisticsList } from "../../api/home";
-    import dayjs from "dayjs";
-    import calender from "./calender";
-    import playcontroll from './../controll/videoctrl';
-    import round from './../round/round';
-    let that = null;
-    let remoteMethods = {
+import { TweenLite, TweenMax, Linear, Sine } from "gsap";
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
+import 'swiper/css/swiper.css';
+import { meetingList, statisticsList } from "../../api/home";
+import dayjs from "dayjs";
+import calender from "./calender";
+import playcontroll from './../controll/videoctrl';
+import round from './../round/round';
+let that = null;
+let remoteMethods = {
         meetingList () {
             meetingList()
             .then(data => {
@@ -318,8 +331,8 @@
                 autoPlay: true,
                 videoCtrlParams:{
                     element: '',
-                    isShow: false,  //是否使用大控件
-                    barWidth: 300
+                    isShow: true,  //是否使用大控件
+                    barWidth: null
                 },
                 isNowPlay: false,
                 isShowCard: false,  //是否显示移动端点击体验的卡片
@@ -341,7 +354,8 @@
         },
         mounted() {
             window.addEventListener("scroll", this.scroTop);
-            this.voiceClick()
+            window.addEventListener("resize",this.reSize);
+            this.fall();
             window.location.hash=='#meeting' ? window.location.href="#meeting": ''
             this.videoCtrlParams.element = document.getElementById('home-video');
             remoteMethods.meetingList();
@@ -376,6 +390,55 @@
             round
         },
         methods: {
+            reSize() {
+                this.videoCtrlParams.barWidth = window.innerWidth - 180;
+            },
+            fall() {
+              let a = null;
+              TweenLite.set("#container", { perspective: 600 ,backgroundImage: '/img/home/banner/newyear-banner.png'});
+              TweenLite.set("img", { xPercent: "-50%", yPercent: "-50%" });
+              var container = document.getElementById("container"),
+               w = window.innerWidth , h = window.innerHeight;
+              for (let i = 0; i < 80; i++) {
+                var Div = document.createElement("div");
+                TweenLite.set(Div, {
+                  attr: { class: "dot" },
+                  x: R(0, w),
+                  y: R(-200, -150),
+                  z: R(-200, 200),
+                });
+                container.appendChild(Div);
+                animm(Div);
+                a = Math.floor(Math.random() * 10 + 1);
+                Div.style.backgroundImage = `url(/img/activities/year2022/icon${a}.png)`;
+              }
+              function animm(elm) {
+                TweenMax.to(elm, R(6, 15), {
+                  y: h + 100,
+                  ease: Linear.easeNone,
+                  repeat: -1,
+                  delay: -15,
+                });
+                TweenMax.to(elm, R(4, 8), {
+                  x: "+=100",
+                  rotationZ: R(0, 180),
+                  repeat: -1,
+                  yoyo: true,
+                  ease: Sine.easeInOut,
+                });
+                TweenMax.to(elm, R(2, 8), {
+                  rotationX: R(0, 360),
+                  rotationY: R(0, 360),
+                  repeat: -1,
+                  yoyo: true,
+                  ease: Sine.easeInOut,
+                  delay: -5,
+                });
+              }
+              function R(min, max) {
+                return min + Math.random() * (max - min);
+              }
+            },
             scroTop() {
               let scrollTop =
                 document.body.scrollTop || document.documentElement.scrollTop;
@@ -558,10 +621,24 @@
                 });
                 return temp;
             }
+        },
+        created() {
+            this.reSize();
         }
     }
 </script>
-
+<style>
+.dot {
+  position: absolute;
+  top: 0;
+  width: 13px;
+  height: 12px;
+  background-size: 100% 100%;
+}
+#container {
+    overflow: hidden;
+}
+</style>
 <style lang="less">
     .home-banner .el-carousel__button {
         height: 10px;
@@ -591,8 +668,14 @@
 
 <style lang="less" scoped>
   .home{
+      .big-controll {
+          bottom: 5px;
+      }
     .video-banner {
         position: relative;
+        .playControll {
+            display: block;
+        }
          video {
             object-fit: cover;
         }
@@ -998,11 +1081,20 @@
         height: 100%;
         cursor: pointer;
         position: relative;
+        text-align: center;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
+        img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
         @media screen and (max-width: 1000px) {
             background-size: 100% 100%;
+            img {
+                height: fit-content;
+            }
         }
     }
     .home-banner .summmit-banner{
