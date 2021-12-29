@@ -5,7 +5,7 @@
 module.exports = {
     cn: {
         MIGRATION_BANNER_TEXT: ['迁移指南','适配 openEuler 操作系统易如反掌'],
-        MIGRATION_DESC: ['2020年12月8日，红帽官方宣布CentOS社区版8系列和7系列分别于2021年年底和2024年底停止服务，CentOS 未来将会从 RedHat Enterprise Linux(RHEL) 复制版本的 CentOS Linux 转向 CentOS Stream， 详见CentOS公告，CentOS Stream作为redhat创新版本存在，使用CentOS的企业用户面临CentOS 停服带来的维护响应、CVE漏洞更新、新硬件支持等问题，基于CentOS的衍生商业版本面临同样的问题，企业一方面面临选型竞争力领先、稳定、可靠、可持续演进的OS；另一方面，需要考虑如何将运行在CentOS的软件、硬件快速迁移到新的OS上。'],
+        MIGRATION_DESC: ['2020 年底，红帽宣布 CentOS 社区版 8 系列和 7 系列分别于 2021 年年底和 2024 年底停止服务，使用 CentOS 的企业用户面临 CentOS 停服带来的维护响应、CVE 漏洞更新、新硬件支持等一系列问题，基于 CentOS 的衍生版本也无法解决同样的问题。 企业一方面面临选型竞争力领先、稳定、可靠、可持续演进的操作系统，同时需要考虑如何将运行在 CentOS 的软件、硬件快速迁移到新 OS 上。 openEuler 成为了解决这些难题的最佳选择。'],
         MIGRATION_FRAMEWORK: {
             TITLE_OUTSIDE: '架构',
             TITLE_INSIDE: 'ARCHITECTURE',
@@ -25,16 +25,76 @@ module.exports = {
             TITLE_INSIDE: 'DOCUMENTATION',
             LINK_LIST: [
                 {
-                    TEXT: '毕昇JDK（鲲鹏社区） ',
-                    LINK: 'https://www.hikunpeng.com/developer/devkit/compiler/jdk'
+                    TEXT: 'Apache 2.4.39 移植指南',
+                    LINK: 'https://openeuler.org/zh/blog/randy1568/Apache%202-4-39-porting-guide.html'
                 },
                 {
-                    TEXT: '毕昇编译器（鲲鹏社区）',
-                    LINK: 'https://www.hikunpeng.com/developer/devkit/compiler/bisheng'
+                    TEXT: 'Dubbo 2.6.8 移植指南',
+                    LINK: 'https://openeuler.org/zh/blog/randy1568/Dubbo%202-6-8-porting-guide.html'
                 },
                 {
-                    TEXT: 'GCC for openEuler（鲲鹏社区）',
-                    LINK: 'https://www.hikunpeng.com/developer/devkit/compiler/gcc'
+                    TEXT: 'Dubbo 2.7.5 移植指南',
+                    LINK: 'http://openeuler.org/zh/blog/randy1568/Dubbo%202-7-5-porting-guide.html'
+                },
+                {
+                    TEXT: 'HAProxy 1.9.0 移植指南',
+                    LINK: 'http://openeuler.org/zh/blog/randy1568/HAProxy%201-9-0-porting-guide.html'
+                },
+                {
+                    TEXT: 'Lighttpd 1.4.53 移植指南',
+                    LINK: 'http://openeuler.org/zh/blog/randy1568/Lighttpd%201-4-53-porting-guide.html'
+                },
+                {
+                    TEXT: 'Iok 2.1.3 移植指南',
+                    LINK: 'http://openeuler.org/zh/blog/randy1568/Iok%202.1.3-porting-guide.html'
+                },
+                {
+                    TEXT: 'Memcached 1.5.12 移植指南',
+                    LINK: 'http://openeuler.org/zh/blog/randy1568/Memcached%201-5-12-porting-guide%EF%BC%89.html'
+                },
+                {
+                    TEXT: 'Nginx 1.14.2 移植指南',
+                    LINK: 'http://openeuler.org/zh/blog/randy1568/Nginx%201-14-2-porting-guide.html'
+                },
+                {
+                    TEXT: 'MySQL 5.7.23 移植案例',
+                    LINK: 'http://openeuler.org/zh/blog/randy1568/MySQL%205-7-23-porting-guide.html'
+                },
+                {
+                    TEXT: 'Tengine 2.2.2 移植案例',
+                    LINK: 'http://openeuler.org/zh/blog/randy1568/Tengine%202.2.2-porting-guide.html'
+                },
+                {
+                    TEXT: 'Squid 4.8 移植案例',
+                    LINK: 'http://openeuler.org/zh/blog/randy1568/Squid%204.8-porting-guide.html'
+                },
+                {
+                    TEXT: 'Varnish 6.2.0 移植指南',
+                    LINK: 'http://openeuler.org/zh/blog/randy1568/Varnish%206-2-0-porting-guide.html'
+                },
+                {
+                    TEXT: 'X86硬件兼容性评估迁移指导(3008raid) ',
+                    LINK: 'http://openeuler.org/zh/blog/randy1568/X86%20hardware%20compatibility%20assessment%20migration%20guide-3008raid.html'
+                },
+                {
+                    TEXT: 'X86硬件兼容性移迁指南(Hi1822&3408raid)',
+                    LINK: 'http://openeuler.org/zh/blog/randy1568/X86%20hardware%20compatibility%20assessment%20migration%20guide-Hi1822&3408raid.html'
+                },
+                {
+                    TEXT: 'flask 1.1.2 移植案例',
+                    LINK: 'http://openeuler.org/zh/blog/randy1568/flask%201-1-2-porting-guide.html'
+                },
+                {
+                    TEXT: 'enca1.19 移植案例',
+                    LINK: 'http://openeuler.org/zh/blog/randy1568/enca1-19-porting-guide.html'
+                },
+                {
+                    TEXT: 'tornado 4.2.1 移植案例',
+                    LINK: 'http://openeuler.org/zh/blog/randy1568/tornado%204-2-1-porting-guide.html'
+                },
+                {
+                    TEXT: 'pkgship 2.1.0 移植指南',
+                    LINK: 'http://openeuler.org/zh/blog/randy1568/pkgship%202-1-0-porting-guide.html'
                 }
             ]
         },
