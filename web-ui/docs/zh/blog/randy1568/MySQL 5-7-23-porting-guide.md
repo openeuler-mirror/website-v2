@@ -128,11 +128,11 @@ systemctl status mysqld
 ```
 cat /var/log/mysqld.log | grep password
 ```
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0402/153434_7ba70fbe_8039520.png "屏幕截图.png")
+<img src="./image/Mysql-1.png">
 
 ### 键入初始化密码查看版本
 ```
 mysql -uroot -pCbDSc+hAd46q
 ```
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0402/153449_0926c924_8039520.png "屏幕截图.png")
+<img src="./image/Mysql-2.png">
 

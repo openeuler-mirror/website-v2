@@ -52,7 +52,7 @@ HAProxy是一个使用C语言编写的自由及开放源代码软件，其提供
 cat /etc/os-release
 ```
 
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0402/155548_146d6bbf_8039319.jpeg "115848hpfrho9aazwpsb5w.jpg")
+<img src="./image/HAProxy-1.jpeg">
 
 安装openEuler操作系统，请参考https://openeuler.org/zh/docs/20.03_LTS_SP1/docs/Installation/installation.html     
 说明：
@@ -73,7 +73,7 @@ cat /etc/os-release
    rpm -ivh haproxy-1.9.0-1.el7.aarch64.rpm
    ```
 
-   ![输入图片说明](https://images.gitee.com/uploads/images/2021/0402/155714_4858fc98_8039319.png "1134486exbyuwp7wjdmxww.png")
+   <img src="./image/HAProxy-2.png">
 
 3. 查看安装目录
 
@@ -81,7 +81,7 @@ cat /etc/os-release
    ls /usr/local/haproxy
    ```
 
-   ![输入图片说明](https://images.gitee.com/uploads/images/2021/0402/155803_35ae8c6b_8039319.png "113508w1prwy87m8ry4vey.png")
+   <img src="./image/HAProxy-3.png">
 
 ## 运行和验证
 

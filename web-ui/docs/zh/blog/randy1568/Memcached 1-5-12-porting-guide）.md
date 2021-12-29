@@ -51,7 +51,7 @@ Memcached的官方链接：https://memcached.org/
 cat /etc/os-release
 ```
 
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0402/155121_668269e1_8039319.jpeg "115848hpfrho9aazwpsb5w.jpg")
+<img src="./image/Memcached-1.jpeg">
 
 安装openEuler操作系统，请参考https://openeuler.org/zh/docs/20.03_LTS_SP1/docs/Installation/installation.html      
 说明：
@@ -176,7 +176,7 @@ cat /etc/os-release
   stats
   ```
 
-  ![输入图片说明](https://images.gitee.com/uploads/images/2021/0402/155233_aa731702_8039319.jpeg "微信图片_20210402155214.jpg")
+  <img src="./image/Memcached-2.jpeg">
 
 常用的stats命令如[下表](https://support.huaweicloud.com/prtg-kunpengwebs/kunpengmemcached_02_0006.html#kunpengmemcached_02_0006__table1896316817714)所示。
 
