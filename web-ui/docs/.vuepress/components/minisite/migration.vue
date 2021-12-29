@@ -219,28 +219,6 @@ html[lang="ru"] .A-Tune .atune-center .tune-desc {
     }
 }
 
-.bisheng .framework-box .framework img {
-    width: 1016px;
-    height: 650px;
-}
-.bisheng .document .title span {
-    left: 41.7%;
-}
-@media screen and (max-width: 1120px) {
-    .bisheng .framework-box .framework img {
-        width: 305px;
-        height: 195px;
-        margin-bottom: 40px;
-    }
-    .bisheng .document .title span {
-        left: 36%;
-    }
-    .bisheng .document .docs-list>div:last-of-type {
-        margin-bottom: 0;
-    }
-}
-</style>
-<style lang="less" scoped>
 .bisheng {
     padding-bottom: 200px;
     @media screen and (max-width: 1120px) {
