@@ -2,5 +2,5 @@
 title: "Migration"
 ---
 <ClientOnly>
-  <minisite-aTune/>
+  <minisite-migration/>
 </ClientOnly>
