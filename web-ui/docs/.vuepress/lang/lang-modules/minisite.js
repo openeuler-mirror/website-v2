@@ -4,6 +4,7 @@
 
 module.exports = {
     cn: {
+        MIGRATION_BANNER_TEXT: ['迁移指南','适配 openEuler 操作系统易如反掌'],
         ATUNE_BANNER_TEXT: ['A-Tune','一款基于AI开发的智能优化引擎'],
         ATUNE_BANNER_IMG: '/img/minisite/atune/mobile-banner.png',
         ATUNE_DESC: ['A-Tune是一款基于openEuler开发的，自动化、智能化性能调优引擎。它利用人工智能技术，对运行在操作系统上的业务建立精准模型，动态感知业务特征并推理出具体应用，根据业务负载情况动态调节并给出最佳的参数配置组合，从而使业务处于最佳运行状态。'],

@@ -1,7 +1,7 @@
 <template>
     <div class="A-Tune">
         <titlenav v-show="isShowNav" :currentIndex="activeIndex" :dataList="i18n.minisite.NAV_TEXT"></titlenav>
-        <minibanner :themeArr="i18n.minisite.ATUNE_BANNER_TEXT" :mobileImg="i18n.minisite.ATUNE_BANNER_IMG" 
+        <minibanner :themeArr="i18n.minisite.MIGRATION_BANNER_TEXT" :mobileImg="i18n.minisite.ATUNE_BANNER_IMG" 
         videoUrl="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/A-Tune.mp4"></minibanner>
         <div class="atune-center">
             <minidesc :isOther="true" :descArr="i18n.minisite.ATUNE_DESC"></minidesc>
