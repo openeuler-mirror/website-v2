@@ -21,6 +21,8 @@ module.exports = {
             FRAMEWORK_IMG: '/img/minisite/migration/frame.svg'
         },
         MIGRATION_REFERENCE: {
+            TITLE_OUTSIDE: '迁移文档',
+            TITLE_INSIDE: 'DOCUMENTATION',
             LINK_LIST: [
                 {
                     TEXT: '毕昇JDK（鲲鹏社区） ',
