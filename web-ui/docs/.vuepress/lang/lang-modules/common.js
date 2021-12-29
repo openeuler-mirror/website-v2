@@ -175,7 +175,7 @@ module.exports = {
                     },
                     {
                         NAME: '迁移指南',
-                        PATH: '/migration/'
+                        PATH: '/other/migration/'
                     }
                    
                 ],
