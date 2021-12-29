@@ -173,6 +173,10 @@ module.exports = {
                         NAME: '兼容性列表',
                         PATH: '/compatibility/'
                     },
+                    {
+                        NAME: '迁移指南',
+                        PATH: '/migration/'
+                    }
                    
                 ],
                 CLASS: []
