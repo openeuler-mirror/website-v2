@@ -1,14 +1,14 @@
-```
+---
 title: Varnish 6.2.0 Porting Guide（openEuler 20.03 LTS SP1）
 date: 2021-12-29
 tags: 
     - Varnish
     - Porting Guide
-sig: sig-兼容性
+sig: sig-Compatibility-Infra
 archives: 2021-12
 author: randy1568
 summary: Just about everything you'll need to  migrate the Varnish 6.2.0
-```
+---
 
 # Varnish 6.2.0 移植指南（openEuler 20.03 LTS SP1）
 
@@ -50,14 +50,14 @@ Varnish是一款高性能且开源的反向代理服务器和HTTP加速器，与
   如果组网环境处于外网受限情况下，服务器yum命令无法通过外界获取依赖包时，可参考本节内容进行本地源配置。
 1. 将操作系统镜像文件openEuler-20.03-LTS-SP1-everything-aarch64-dvd.iso文件拷贝到每台服务器的“/root”目录下。
 2. 镜像文件挂载。
-  a. 将“/root”目录下的openEuler操作系统对应iso文件挂载到“/mnt”目录下。
-  ```mount /root/openEuler-20.03-LTS-SP1-everything-aarch64-dvd.iso /mnt```
+    a. 将“/root”目录下的openEuler操作系统对应iso文件挂载到“/mnt”目录下。
+    ```mount /root/openEuler-20.03-LTS-SP1-everything-aarch64-dvd.iso /mnt```
     说明：
     该操作单次生效，重启后失效。若需要配置开机启动自动挂载镜像（可选），可参考下面步骤。
     1. 打开fstab文件。
-      ```vi /etc/fstab```
+        ```vi /etc/fstab```
     2. 编辑fstab文件，在文件末尾添加如下信息：
-      ```/root/openEuler-20.03-LTS-SP1-everything-aarch64-dvd.iso /mnt iso9660 loop 0 0```
+        ```/root/openEuler-20.03-LTS-SP1-everything-aarch64-dvd.iso /mnt iso9660 loop 0 0```
     3. 保存并退出fstab文件。
 3. 添加本地源文件。
     a. 进入“/etc/yum.repos.d”目录。
@@ -206,17 +206,17 @@ Varnish启动参数说明见表 Varnish启动参数说明。
        This page is used to test the proper operation of the Apache HTTP server after it has been installed. If you can read this page, it means that the Apache HTTP server installed at this site is working properly.
       </div>
       <hr>
-
+   
       <div class="content-columns">
        <div class="content-column-left">
         <h2>If you are a member of the general public:</h2>
-
+   
         The fact that you are seeing this page indicates that the website you just visited is either experiencing problems, or is undergoing routine maintenance.
-
+   
         If you would like to let the administrators of this website know that you've seen this page instead of the page you expected, you should send them e-mail. In general, mail sent to the name "webmaster" and directed to the website's domain should reach the appropriate person.
-
+   
         For example, if you experienced problems while visiting www.example.com, you should send e-mail to "webmaster@example.com".
-
+   
         For information on openEuler Linux, please visit the <a href="#" class="white">openEuler, Inc. website</a>. The ation for openEuler Linux is <a href="#" class="white">available on the openEuler, Inc. website</a>.
     
    ...

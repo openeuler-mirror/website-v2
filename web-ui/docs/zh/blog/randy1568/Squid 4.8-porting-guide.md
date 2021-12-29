@@ -1,14 +1,14 @@
-```
+---
 title: Squid 4.8 Porting Case（openEuler 20.03 LTS SP1）
 date: 2021-12-29
 tags: 
     - Squid
     - Porting Case
-sig: sig-兼容性
+sig: sig-Compatibility-Infra
 archives: 2021-12
 author: randy1568
 summary: Just about everything of the Squid 4.8 Porting Case
-```
+---
 
 # Squid 4.8 移植案例（openEuler 20.03 LTS SP1）
 
