@@ -1,5 +1,5 @@
 ---
-title: HAProxy 1.9.0 Porting Guide（openEuler 20.03 LTS SP1）
+title: HAProxy 1.9.0 移植指南（openEuler 20.03 LTS SP1）
 date: 2021-12-29
 tags: 
     - HAProxy

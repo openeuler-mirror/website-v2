@@ -1,5 +1,5 @@
 ---
-title: flask 1.1.2 Porting Case（openEuler 20.03 LTS SP1）
+title: flask 1.1.2 移植指南（openEuler 20.03 LTS SP1）
 date: 2021-12-29
 tags: 
     - flask
@@ -10,7 +10,7 @@ author: randy1568
 summary: Just about everything of the flask 1.1.2 Porting Case
 ---
 
-# flask 1.1.2 移植案例（openEuler 20.03 LTS SP1）
+# flask 1.1.2 移植指南（openEuler 20.03 LTS SP1）
 
 
 
