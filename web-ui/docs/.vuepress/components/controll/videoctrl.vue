@@ -41,7 +41,14 @@ export default {
             }else{
                 this.ctrlObj.element.muted=true;
             }
-        }
+        },
+        ctrlObj:{
+            handler(newValue, oldValue) {
+            this.barValue = newValue.barWidth;         //父组件updateTime对象改变会触发此函数
+　　　　},
+　　　　deep: true
+    }
+
     },
     mounted() {
         this.barValue = this.ctrlObj.barWidth;

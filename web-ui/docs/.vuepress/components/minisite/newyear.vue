@@ -302,7 +302,7 @@ export default {
       var container = document.getElementById("container"),
         w = 1120,
         h = 700;
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < 80; i++) {
         var Div = document.createElement("div");
         TweenLite.set(Div, {
           attr: { class: "dot" },
