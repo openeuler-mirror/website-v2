@@ -5,7 +5,7 @@
 module.exports = {
     cn: {
         MIGRATION_BANNER_TEXT: ['迁移指南','适配 openEuler 操作系统易如反掌'],
-        MIGRATION_DESC: ['openEuler是一款开源操作系统。当前openEuler内核源于Linux，支持鲲鹏及其它多种处理器，能够充分释放计算芯片的潜能，是由全球开源贡献者构建的高效、稳定、安全的开源操作系统，适用于数据库、大数据、云计算、人工智能等应用场景。'],
+        MIGRATION_DESC: ['2020年12月8日，红帽官方宣布CentOS社区版8系列和7系列分别于2021年年底和2024年底停止服务，CentOS 未来将会从 RedHat Enterprise Linux(RHEL) 复制版本的 CentOS Linux 转向 CentOS Stream， 详见CentOS公告，CentOS Stream作为redhat创新版本存在，使用CentOS的企业用户面临CentOS 停服带来的维护响应、CVE漏洞更新、新硬件支持等问题，基于CentOS的衍生商业版本面临同样的问题，企业一方面面临选型竞争力领先、稳定、可靠、可持续演进的OS；另一方面，需要考虑如何将运行在CentOS的软件、硬件快速迁移到新的OS上。'],
         MIGRATION_FRAMEWORK: {
             TITLE_OUTSIDE: '架构',
             TITLE_INSIDE: 'ARCHITECTURE',
