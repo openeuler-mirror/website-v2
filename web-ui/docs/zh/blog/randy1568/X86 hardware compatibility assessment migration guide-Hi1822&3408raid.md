@@ -1,5 +1,5 @@
 ---
-title: X86 hardware compatibility evaluation Porting Guide（Hi1822&3408raid）（openEuler 20.03 LTS SP1）
+title: X86硬件兼容性移迁指南（Hi1822&3408raid）（openEuler 20.03 LTS SP1）
 date: 2021-12-29
 tags: 
     - X86 hardware compatibility evaluation 

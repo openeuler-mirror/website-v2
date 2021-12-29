@@ -1,5 +1,5 @@
 ---
-title: Tengine 2.2.2 Porting Case（openEuler 20.03 LTS SP1）
+title: Tengine 2.2.2 移植指南（openEuler 20.03 LTS SP1）
 date: 2021-12-29
 tags: 
     - Tengine
@@ -10,7 +10,7 @@ author: randy1568
 summary: Just about everything of the tengine 2.2.2 porting case
 ---
 
-# Tengine 2.2.2 移植案例
+# Tengine 2.2.2 移植指南
 
 # 介绍
 

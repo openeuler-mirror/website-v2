@@ -1,5 +1,5 @@
 ---
-title: Lighttpd 1.4.53 Porting Guide（openEuler 20.03 LTS SP1）
+title: Lighttpd 1.4.53 移植指南（openEuler 20.03 LTS SP1）
 date: 2021-12-29
 tags: 
     - Lighttpd

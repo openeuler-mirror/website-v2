@@ -1,5 +1,5 @@
 ---
-title: enca 1.19 Porting Guide（openEuler 20.03 LTS SP1）
+title: enca 1.19 移植指南 （openEuler 20.03 LTS SP1）
 date: 2021-12-29
 tags: 
     - enca
@@ -10,7 +10,7 @@ author: randy1568
 summary: Just about everything you'll need to  migrate the enca 1.19
 ---
 
-# enca1.19 移植案例 (openEuler 20.03 LTS SP1)
+# enca 1.19 移植指南 (openEuler 20.03 LTS SP1)
 
 # 介绍
 

@@ -1,5 +1,5 @@
 ---
-title: tornado 4.2.1 Porting Case（openEuler 20.03 LTS SP1）
+title: tornado 4.2.1 移植指南（openEuler 20.03 LTS SP1）
 date: 2021-12-29
 tags: 
     - tornado
@@ -10,7 +10,7 @@ author: randy1568
 summary: Just about everything of the tornado 4.2.1 porting case
 ---
 
-# tornado 4.2.1 移植案例（openEuler 20.03 LTS SP1）
+# tornado 4.2.1 移植指南（openEuler 20.03 LTS SP1）
 
 # 介绍
 

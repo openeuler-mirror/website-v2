@@ -1,5 +1,5 @@
 ---
-title: Dubbo 2.7.5 Porting Guide（openEuler 20.03 LTS SP1）
+title: Dubbo 2.7.5 移植指南（openEuler 20.03 LTS SP1）
 date: 2021-12-29
 tags: 
     - Dubbo
