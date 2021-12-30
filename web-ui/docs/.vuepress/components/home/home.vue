@@ -11,8 +11,10 @@
         <div class="is-pc home-carousel" v-if="!isShowH5">
              <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" >
               <el-carousel-item >
-                     <div class="carousel-banner" id="container"   @click="go('/activities/happynewyear2022/')">
-                         <img src="../../public/img/home/banner/newyear-banner.png" alt="">
+                     <div class="carousel-banner" id="container"    @click="go('/activities/happynewyear2022/')">
+                        <!-- <img class="extend1" src="/img/home/banner/loop1.png" alt="">
+                        <img class="extend2" src="/img/home/banner/loop2.png" alt=""> -->
+                        <img src="../../public/img/home/banner/newyear-banner.png" alt="">
                      </div>
               </el-carousel-item>
               <el-carousel-item >
@@ -21,6 +23,7 @@
                          <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/openEuler%E9%9D%A2%E5%90%91%E6%95%B0%E5%AD%97%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E7%9A%84%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F_Banner.mp4">
                      </video>
                     <playcontroll :ctrl-obj="videoCtrlParams" ref="playctrlEle" @playStatus="checkStatus"></playcontroll>
+                    <img v-show="!isNowPlay" class="open-video" @click="playHomeVideo()" src="/img/home/banner/open_video.png" alt="">
                 </div>
               </el-carousel-item>
             </el-carousel>
@@ -390,6 +393,7 @@ let remoteMethods = {
             round
         },
         methods: {
+           
             reSize() {
                 this.videoCtrlParams.barWidth = window.innerWidth - 180;
             },
@@ -673,11 +677,21 @@ let remoteMethods = {
       }
     .video-banner {
         position: relative;
+        .open-video {
+           position: absolute;
+           overflow: hidden;
+           border-radius: 50%;
+           width: 70px;
+           top:50%;
+           left: 50%;
+           animation: breathe 1200ms infinite alternate;
+           transform: translate(-50%,-50%);
+        }
         .playControll {
             display: block;
         }
          video {
-            object-fit: cover;
+             object-fit: cover;
         }
         .is-cover {
             filter: contrast(80%) brightness(50%);
@@ -1085,10 +1099,25 @@ let remoteMethods = {
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
+        .extend1 {
+            display: none;
+        }
+        .extend2 {
+            display: none;
+        }
         img {
             width: 100%;
             height: 500px;
             object-fit: cover;
+        }
+        @media screen and (min-width: 1920px) {
+            .extend1 {
+                display: inline-block;
+                object-fit: none;
+            }
+            .extend2 {
+                display: inline-block;
+            }
         }
         @media screen and (max-width: 1000px) {
             background-size: 100% 100%;
