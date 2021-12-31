@@ -1,5 +1,9 @@
 <template>
   <div class="footer-wrapper">
+    <div class="qr-code" :class="{'none':close}">
+      <img @click="goFooterUrl('https://www.openeuler.org/2021summary/')" src="/img/common/newyear-qr.png" alt="">
+      <img class="close" @click="closeQR()" src="../../public/img/common/icon-close.png" alt="">
+    </div>
     <div class="atom">
       <p>{{ i18n.common.FOOTER.ATOM_TEXT }}</p>
       <img
@@ -40,6 +44,7 @@
 export default {
   data() {
     return {
+      close:false,
       i18n: this.i18n || {
         common: {
           FOOTER: {},
@@ -50,6 +55,9 @@ export default {
   methods: {
     newWindow(url) {
       window.open(this.resolvePath(url))
+    },
+    closeQR() {
+      this.close = true;
     },
     goFooterUrl(url) {
       if (url.includes("https")) {
@@ -62,12 +70,36 @@ export default {
     },
   },
   mounted() {
-    window.location.href.includes("questionnaire") ? this.closeQr() :''
   }
 };
 </script>
 
 <style lang="less" scoped>
+.qr-code {
+  position: fixed;
+  cursor: pointer;
+  width: 130px;
+  left: 100px;
+  bottom: 160px;
+  z-index: 99;
+  img {
+    width: 100%;
+  }
+  .close {
+    position: absolute;
+    top: -11px;
+    right: -11px;
+    width: 23px;
+  }
+   @media screen and (max-width: 1000px) {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 80px;
+  }
+}
+.none {
+  display: none;
+}
 .footer-wrapper {
   position: relative;
   height: 530px;

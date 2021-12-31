@@ -11,6 +11,13 @@
         <div class="is-pc home-carousel" v-if="!isShowH5">
              <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" >
               <el-carousel-item >
+                     <div class="carousel-banner"  @click="go('https://www.openeuler.org/2021summary/')">
+                        <!-- <img class="extend1" src="/img/home/banner/loop1.png" alt="">
+                        <img class="extend2" src="/img/home/banner/loop2.png" alt=""> -->
+                        <img src="../../public/img/home/banner/openEuler.png" alt="">
+                     </div>
+              </el-carousel-item>
+              <el-carousel-item >
                      <div class="carousel-banner" id="container"    @click="go('/activities/happynewyear2022/')">
                         <!-- <img class="extend1" src="/img/home/banner/loop1.png" alt="">
                         <img class="extend2" src="/img/home/banner/loop2.png" alt=""> -->
@@ -31,6 +38,11 @@
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
+               <swiper-slide class="carousel-item-index">
+                <div class="carousel-banner"   @click="go('https://www.openeuler.org/2021summary/')">
+                    <img src="../../public/img/home/banner/openEuler_mo.png" alt="">
+                </div>
+              </swiper-slide>
                <swiper-slide class="carousel-item-index">
                 <div class="carousel-banner" id="container"   @click="go('/activities/happynewyear2022/')">
                     <img src="../../public/img/home/banner/newyear-banner-mob.png" alt="">
