@@ -35,7 +35,7 @@
         <p class="fade fade-time-0">亲爱的开发者们：</p>
         <p class="fade fade-time-1">
           你们好！我想每一个用心爱过我的人都记得：2019年12月31日，openEuler
-          社区正式宣布开源。在大家共同的建设和努力下，我正在不断成长：
+          社区正式宣布开源。在大家共同的建设和努力下，我正在不断成长，截至2021年12月31日12:00
         </p>
         <div class="icon-box">
           <div class="icon-top fade fade-time-2">
@@ -205,7 +205,7 @@ export default {
         {
           icon: "/img/activities/year2022/user.png",
           text: "社区用户",
-          num: "320000",
+          num: "370,000",
           puls: "+",
         },
         {
@@ -217,7 +217,7 @@ export default {
         {
           icon: "/img/activities/year2022/contribution.png",
           text: "社区贡献者",
-          num: "7900",
+          num: "8000",
           puls: "+",
         },
       ],

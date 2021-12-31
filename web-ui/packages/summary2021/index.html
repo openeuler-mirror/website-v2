@@ -8,10 +8,26 @@
     <title>openEuler2021年度报告</title>
 </head>
 <link rel="stylesheet" href="./css/common.css">
-<link rel="shortcut icon" href="./images/图3/logo.png" type="image/x-icon">
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 <script src="./js/swiper.js"></script>
 <script src="./js/axios.js"></script>
 <link rel="stylesheet" href="./css/pc.css">
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        // 百度统计
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ab8d86daab9a8e98cf8faa239aefcd3c";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+
+        // 谷歌统计
+        var hm1 = document.createElement("script");
+        hm1.src = "https://www.googletagmanager.com/gtag/js?id=UA-181761489-1";
+        var s1 = document.getElementsByTagName("script")[0];
+        s1.parentNode.insertBefore(hm1, s1);
+    })();
+</script>
 <style>
     html,
     body,
@@ -200,6 +216,11 @@
         font-size: 18px;
         padding: 10px 0;
         font-weight: 700;
+    }
+
+    .page-five .user-name {
+        padding-top: 5px;
+        font-size: 16px;
     }
 
     .geometry img {
@@ -434,13 +455,15 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 20px 0;
+        padding: 20px 10px 0;
         color: black;
         height: 100%;
         font-size: 14px;
     }
 
     .body p {
+        opacity: 0;
+        animation: textMove 1s 2s ease-in forwards;
         padding-bottom: 5px;
     }
 
@@ -680,9 +703,9 @@
 
     .page-five {
         /* position: relative; */
-        padding: 0 50px;
+        padding: 120px 50px 0;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
     }
 
     .green-color {
@@ -742,7 +765,7 @@
     .bg-five .person2 {
         top: 25px;
         left: 25px;
-        width: 150px;
+        width: 130px;
         /* animation: girl1 2s; */
 
         animation: dash-line 2s;
@@ -752,7 +775,7 @@
     .bg-five .person3 {
         top: 70px;
         right: 25px;
-        width: 110px;
+        width: 90px;
         animation: dash-line2 2s;
     }
 
@@ -760,14 +783,14 @@
         bottom: 75px;
         left: 30px;
         width: 160px;
-        animation: dash-line2 2s;
+        animation: dash-line 2s;
     }
 
     .bg-five .withe-logo {
         bottom: 25px;
         left: 30px;
         width: 120px;
-        animation: cloud4 2s ease-in;
+        animation: cloud4 2s es;
 
         /* animation: girl1 2s; */
     }
@@ -777,12 +800,16 @@
         right: 20px;
         width: 120px;
         font-size: 12px;
-        transform: scale(0.8);
-        animation: dash-line 2s;
+        /* transform: scale(0.8); */
+        animation: qrcode 2s;
+
+        /* animation: dash-line 2s; */
     }
+
     .qr-code p {
         /* padding-top: 10px; */
     }
+
     .noContribution .qr-code {
         padding-top: 20px;
     }
@@ -793,10 +820,10 @@
     }
 
     .bg-five .tip {
-        bottom: 160px;
+        bottom: 170px;
         right: 20px;
         width: 120px;
-        transform: scale(0.8);
+        /* transform: scale(0.8); */
         transition: none;
     }
 
@@ -1228,6 +1255,13 @@
 
     }
 
+    @keyframes qrcode {
+        from {
+            transform: translate(300px, 300px) rotate(360deg);
+        }
+
+    }
+
     @keyframes dash-line2 {
         from {
             transform: translate(300px, -300px) rotate(999deg);
@@ -1312,17 +1346,41 @@
             transform: translate(5px, 10px);
         }
     }
+
     @keyframes textMove {
-        from {
-            transform: translateX(300px);
+        to {
+            opacity: 1;
         }
-        /* to {
-            transform: translate();
-        } */
+    }
+
+    .bgm-open {
+        position: absolute;
+        width: 20px;
+        top: 15px;
+        right: 15px;
+        z-index: 999;
+    }
+
+    .bgm-open img {
+        width: 100%;
+    }
+
+    .run-bgm {
+        animation: runBgm 4s infinite;
+    }
+
+    @keyframes runBgm {
+        to {
+            transform: rotate(360deg);
+        }
     }
 </style>
 
 <body>
+    <audio id="bgm" src="./bgm/openEuler_BGM_2021.mp3" autoplay preload loop></audio>
+    <div class="bgm-open">
+        <img class="closebgm" src="./images/close.svg" alt="">
+    </div>
     <div class="pc-box">
         <div class="contribution none">
             <div class="container box-one">
@@ -1428,7 +1486,7 @@
                                 <p class="fade fade-time-4">提交了<span class="yellow-color">9999</span>个issue，</p>
                                 <p class="fade fade-time-5">提交了<span class="yellow-color">9999</span>条评论，</p>
                                 <p class="fade fade-time-6">贡献了<span class="yellow-color">9999</span>行代码，</p>
-                                <p class="fade fade-time-7">加入了<span class="yellow-color">9999</span>个sig组，</p>
+                                <p class="fade fade-time-7">参与了<span class="yellow-color">9999</span>个sig组，</p>
                                 <p class="fade fade-time-8">点亮了<span class="yellow-color">9999</span>个仓库，</p>
                                 <p class="fade fade-time-9">参与了<span class="yellow-color">12</span>次会议，</p>
                                 <p>在这一年里，</p>
@@ -1665,7 +1723,7 @@
                 <p class="fade fade-time-4">提交了<span class="yellow-color">9999</span>个issue，</p>
                 <p class="fade fade-time-5">提交了<span class="yellow-color">9999</span>条评论，</p>
                 <p class="fade fade-time-6">贡献了<span class="yellow-color">9999</span>行代码，</p>
-                <p class="fade fade-time-7">加入了<span class="yellow-color">9999</span>个sig组，</p>
+                <p class="fade fade-time-7">参与了<span class="yellow-color">9999</span>个sig组，</p>
                 <p class="fade fade-time-8">点亮了<span class="yellow-color">9999</span>个仓库，</p>
                 <p class="fade fade-time-9">参与了<span class="yellow-color">12</span>次会议，</p>
             </div>
@@ -1721,23 +1779,32 @@
         </div> -->
     </div>
     <script>
+     
+        let bgm = document.querySelector("#bgm");
+        let bgmOpen = document.querySelector(".bgm-open");
+        bgm.addEventListener('pause', function() {
+            bgmOpen.classList.remove('run-bgm');
+        })
+        bgmOpen.addEventListener("touchstart", function () {
+            console.log(bgm.paused);
+            bgm.paused ?   bgm.play() : bgm.pause()
+            bgmOpen.classList.add('run-bgm');
+        })
         // 获取数据
-        axios.get('/oauth2/userinfo').then(res => {
-            return getData(res.data.user)
+        axios.get('/2021summary/oauth2/userinfo').then(res => {
+            getData(res.data.user)
         })
             .catch(err => {
-                // document.querySelector('.no-contribution .user-name').innerHTML = '';
-                // let data = {};
-                // data['contribution'] = 'none';
-                // intaPc(data)
-                // intaSwiper(data)
-                // console.log(err);
+                document.querySelector('.no-contribution .user-name').innerHTML = '';
+                let data = {};
+                data['contribution'] = 'none';
+                intaPc(data)
+                intaSwiper(data)
+                console.log(err);
             })
-        getData('georgecao')
         function getData(user) {
             let data = []
-            axios.get(`https://omapi.osinfra.cn/query/newYear/2022?community=openeuler&user=georgecao`).then(res => {
-                console.log(res);
+            axios.get(`https://omapi.osinfra.cn/query/newYear/2022?community=openeuler&user=${user}`).then(res => {
                 if (res.data.data[0]) {
                     data = res.data.data[0];
                     let percentage = parseFloat(data.beat_percentage) * 100;
@@ -1753,7 +1820,7 @@
                     } else if (70 < percentage) {
                         rank = 5
                     }
-                    data.total_time_of_exist_before == 1? data.total_time_of_exist_before='一':data.total_time_of_exist_before='两';
+                    data.total_time_of_exist_before == 1 ? data.total_time_of_exist_before = '一' : data.total_time_of_exist_before = '两';
                     data['user_name'] = user;
                     data['percentage'] = percentage;
                     data['rank'] = rank;
@@ -1794,10 +1861,7 @@
             for (let i = 0; i < front.length; i++) {
                 front[i].addEventListener('click', function () {
                     if (data.first_time_of_enter_before) {
-                        back[i], innerHTML = null;
-                        switch (i) {
-                            case 0:
-                                back[0].innerHTML = `
+                        back[0].innerHTML = `
                                 <div class="contents">
                                     <div class="page page-one">
                                         <div class="text-box">
@@ -1832,9 +1896,7 @@
                                         </div>
                                     </div>
                                 </div> `
-                                break;
-                            case 1:
-                                back[1].innerHTML = `
+                        back[1].innerHTML = `
                             <div class="contents">
                                 <div class="page page-three">
                                     <div class="text-box">
@@ -1872,9 +1934,7 @@
                                     <div class="yellow-ball"><img src="./images/图3/黄色圆.png" alt=""></div>
                                  </div>
                             </div>`
-                                break;
-                            case 2:
-                                back[2].innerHTML = `
+                        back[2].innerHTML = `
                             <div class="contents">
                                 <div class="page page-five">
                                     <div class="bg-five">
@@ -1888,7 +1948,7 @@
                                         <p class="fade fade-time-4">提交了<span class="yellow-color">${data.issue_num}</span>个issue，</p>
                                         <p class="fade fade-time-5">提交了<span class="yellow-color">${data.comment_num}</span>条评论，</p>
                                         <p class="fade fade-time-6">贡献了<span class="yellow-color">${data.code_lines}</span>行代码，</p>
-                                        <p class="fade fade-time-7">加入了<span class="yellow-color">${data.sig_num}</span>个sig组，</p>
+                                        <p class="fade fade-time-7">参与了<span class="yellow-color">${data.sig_num}</span>个sig组，</p>
                                         <p class="fade fade-time-8">点亮了<span class="yellow-color">${data.star_num}</span>个仓库，</p>
                                         <p>在这一年里，</p>
                                         <p>你的贡献度击败了社区<span class="yellow-color">${data.percentage}%</span>开发者。</p>
@@ -1898,9 +1958,7 @@
                                     </div>
                                 </div>
                             </div>`
-                                break;
-                            case 3:
-                                back[3].innerHTML = `
+                        back[3].innerHTML = `
                             <div class="contents">
                                 <div class="page page-six">
                                     <div class="main">
@@ -1929,15 +1987,19 @@
                                     </div>
                                 </div>
                             </div>`
-                                break;
-                        }
-                    } 
-                    this.style = "transform:rotateY(-180deg)";
-                    back[i].style = "transform:rotateY(0deg)";
+
+                    }
+                    for (let j = 0; j < front.length; j++) {
+                        front[j].style = "transform:rotateY(-180deg)";
+                        back[j].style = "transform:rotateY(0deg)";
+                    }
                 })
                 back[i].addEventListener('click', function () {
-                    this.style = "transform:rotateY(180deg)";
-                    front[i].style = "transform:rotateY(0deg)";
+                    for (let z = 0; z < back.length; z++) {
+                        back[z].style = "transform:rotateY(180deg)";
+                        front[z].style = "transform:rotateY(0deg)";
+                    }
+
                 })
             }
         }
@@ -2126,7 +2188,7 @@
                 <p class="fade fade-time-4">提交了<span class="yellow-color">${data.issue_num}</span>个issue，</p>
                 <p class="fade fade-time-5">提交了<span class="yellow-color">${data.comment_num}</span>条评论，</p>
                 <p class="fade fade-time-6">贡献了<span class="yellow-color">${data.code_lines}</span>行代码，</p>
-                <p class="fade fade-time-7">加入了<span class="yellow-color">${data.sig_num}</span>个sig组，</p>
+                <p class="fade fade-time-7">参与了<span class="yellow-color">${data.sig_num}</span>个sig组，</p>
                 <p class="fade fade-time-8">点亮了<span class="yellow-color">${data.star_num}</span>个仓库，</p>
             </div>
         </div>`
@@ -2144,6 +2206,7 @@
                 <div class="tip"><img src="./images/图5/记得截图分享朋友圈对话.png" alt=""></div>
             </div>
             <div class="text-box">
+                <p class="user-name pinkColor">${data.user_name}</p>
                 <p>在这一年里，</p>
                 <p>你的贡献度击败了社区<span class="yellow-color">${data.percentage}%</span>开发者。</p>
             </div>

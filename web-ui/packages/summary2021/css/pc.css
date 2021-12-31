@@ -77,6 +77,12 @@ body {
 .no-contribution .qr-code {
     padding-top: 50px;
 }
+.noContribution .qr-code img {
+    border: 1px solid black;
+}
+.no-contribution .qr-code  img{
+    border: 1px solid black;
+}
 .no-contribution .qr-code p {
     padding-top: 20px;
 }
@@ -98,7 +104,9 @@ body {
     background-image:  url(../images/4吉.jpg);
 }
 
-
+.pc-box .euler-title2 {
+    padding: 10px 0;
+}
 .contents{
     width: 100%;
     height: 100%;
