@@ -506,7 +506,7 @@
 
     .fade {
         opacity: 0;
-        animation: fade 2s cubic-bezier(.26, .45, 1, .56) forwards;
+        animation: fade 1s ease-in-out forwards;
     }
 
     .fade-time-1 {
@@ -514,43 +514,43 @@
     }
 
     .fade-time-2 {
-        animation-delay: 3s;
+        animation-delay: 2s;
     }
 
     .fade-time-3 {
-        animation-delay: 5s;
+        animation-delay: 3s;
     }
 
     .fade-time-4 {
-        animation-delay: 7s;
+        animation-delay: 4s;
     }
 
     .fade-time-5 {
-        animation-delay: 9s;
+        animation-delay: 5s;
     }
 
     .fade-time-6 {
-        animation-delay: 11s;
+        animation-delay: 6s;
     }
 
     .fade-time-7 {
-        animation-delay: 13s;
+        animation-delay: 7s;
     }
 
     .fade-time-8 {
-        animation-delay: 15s;
+        animation-delay: 8s;
     }
 
     .fade-time-9 {
-        animation-delay: 17s;
+        animation-delay: 9s;
     }
 
     .fade-time-10 {
-        animation-delay: 19s;
+        animation-delay: 10s;
     }
 
     .fade-time-11 {
-        animation-delay: 21s;
+        animation-delay: 11s;
     }
 
     /* page4  */
@@ -567,7 +567,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding-bottom: 70px;
+        padding-bottom: 110px;
         /* max-width: 375px; */
     }
 
@@ -743,14 +743,17 @@
         top: 25px;
         left: 25px;
         width: 150px;
-        animation: girl1 2s;
+        /* animation: girl1 2s; */
+
+        animation: dash-line 2s;
+
     }
 
     .bg-five .person3 {
         top: 70px;
         right: 25px;
         width: 110px;
-        animation: boy 2s;
+        animation: dash-line2 2s;
     }
 
     .bg-five .bottom-item {
@@ -764,7 +767,9 @@
         bottom: 25px;
         left: 30px;
         width: 120px;
-        animation: girl1 2s;
+        animation: cloud4 2s ease-in;
+
+        /* animation: girl1 2s; */
     }
 
     .qr-code {
@@ -772,9 +777,12 @@
         right: 20px;
         width: 120px;
         font-size: 12px;
+        transform: scale(0.8);
         animation: dash-line 2s;
     }
-
+    .qr-code p {
+        /* padding-top: 10px; */
+    }
     .noContribution .qr-code {
         padding-top: 20px;
     }
@@ -788,7 +796,8 @@
         bottom: 160px;
         right: 20px;
         width: 120px;
-        animation: cloud4 2s;
+        transform: scale(0.8);
+        transition: none;
     }
 
     .bg-five div:nth-child(7) {
@@ -1303,6 +1312,14 @@
             transform: translate(5px, 10px);
         }
     }
+    @keyframes textMove {
+        from {
+            transform: translateX(300px);
+        }
+        /* to {
+            transform: translate();
+        } */
+    }
 </style>
 
 <body>
@@ -1314,16 +1331,16 @@
                 </div>
                 <div class="back">
                     <div class="contents">
-                        <div class="page page-one">
+                        <!-- <div class="page page-one">
                             <div class="text-box">
                                 <p class="euler-title">openEuler两周岁</p>
                                 <p class="euler-title2">遇见开源世界的自己</p>
                                 <p class="euler-title2">Dear <span class="pinkColor">John</span></p>
                                 <p class="one-text">openEuler 今天两周岁了！</p>
                                 <p class="one-text">在这两年的时光里，openEuler在惊喜地成长：</p>
-                                <p class="one-text">社区用户 <span class="yellow-color">320,000+</span>；</p>
+                                <p class="one-text">社区用户 <span class="yellow-color">370,000+</span>；</p>
                                 <p class="one-text">软件包<span class="yellow-color">8600+</span>；</p>
-                                <p class="one-text">社区贡献者<span class="yellow-color">7900+</span>；</p>
+                                <p class="one-text">社区贡献者<span class="yellow-color">8000+</span>；</p>
                                 <p class="one-text">商用OSV<span class="yellow-color">11家</span>；</p>
                                 <p class="one-text">企业成员<span class="yellow-color">300+家</span></p>
                                 <p class="one-text">······</p>
@@ -1345,7 +1362,7 @@
                                 <div class="desk">
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -1355,7 +1372,7 @@
                 </div>
                 <div class="back">
                     <div class="contents">
-                        <div class="page page-three">
+                        <!-- <div class="page page-three">
                             <div class="text-box">
                                 <div class="head">
                                     <div class="bule"></div>
@@ -1389,7 +1406,7 @@
                                 <img src="./images/图3/底部组建.png" alt="">
                             </div>
                             <div class="yellow-ball"><img src="./images/图3/黄色圆.png" alt=""></div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -1399,7 +1416,7 @@
                 </div>
                 <div class="back">
                     <div class="contents">
-                        <div class="page page-five">
+                        <!-- <div class="page page-five">
                             <div class="bg-five">
                                 <img src="./images/图4/地球1.png" alt="">
                                 <img src="./images/图4/地球2.png" alt="">
@@ -1421,7 +1438,7 @@
                                 <p class="pink-color">百炼成师</p>
                                 <img class="honor" src="./images/3大.jpg" alt="">
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -1431,7 +1448,7 @@
                 </div>
                 <div class="back">
                     <div class="contents">
-                        <div class="page page-six">
+                        <!-- <div class="page page-six">
                             <div class="main">
                                 <div class="six-logo"><img src="./images/图6/logo.png" alt=""></div>
                                 <div class="text-box ">
@@ -1456,7 +1473,7 @@
                                 <div class="file"><img src="./images/图6/文件夹.png" alt=""></div>
                                 <div class="paper"><img src="./images/图6/白纸.png" alt=""></div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -1476,9 +1493,9 @@
                                 <p class="user-name pinkColor">${data.user_login}</p>
                                 <p class="one-text">openEuler 今天两周岁了！</p>
                                 <p class="one-text">在这两年的时光里，openEuler在惊喜地成长：</p>
-                                <p class="one-text">社区用户 <span class="yellow-color">320,000+</span>；</p>
+                                <p class="one-text">社区用户 <span class="yellow-color">370,000+</span>；</p>
                                 <p class="one-text">软件包<span class="yellow-color">8600+</span>；</p>
-                                <p class="one-text">社区贡献者<span class="yellow-color">7900+</span>；</p>
+                                <p class="one-text">社区贡献者<span class="yellow-color">8000+</span>；</p>
                                 <p class="one-text">商用OSV<span class="yellow-color">11家</span>；</p>
                                 <p class="one-text">企业成员<span class="yellow-color">300+家</span></p>
                                 <p class="one-text">······</p>
@@ -1709,17 +1726,18 @@
             return getData(res.data.user)
         })
             .catch(err => {
-                document.querySelector('.no-contribution .user-name').innerHTML = '';
-                let data = {};
-                data['contribution'] = 'none';
-                intaPc(data)
-                intaSwiper(data)
-                console.log(err);
+                // document.querySelector('.no-contribution .user-name').innerHTML = '';
+                // let data = {};
+                // data['contribution'] = 'none';
+                // intaPc(data)
+                // intaSwiper(data)
+                // console.log(err);
             })
-        // getData('user1')
+        getData('georgecao')
         function getData(user) {
             let data = []
-            axios.get(`https://omapi.osinfra.cn/query/newYear/2022?community=openeuler&user=4${user}`).then(res => {
+            axios.get(`https://omapi.osinfra.cn/query/newYear/2022?community=openeuler&user=georgecao`).then(res => {
+                console.log(res);
                 if (res.data.data[0]) {
                     data = res.data.data[0];
                     let percentage = parseFloat(data.beat_percentage) * 100;
@@ -1735,6 +1753,7 @@
                     } else if (70 < percentage) {
                         rank = 5
                     }
+                    data.total_time_of_exist_before == 1? data.total_time_of_exist_before='一':data.total_time_of_exist_before='两';
                     data['user_name'] = user;
                     data['percentage'] = percentage;
                     data['rank'] = rank;
@@ -1774,7 +1793,7 @@
             data.contribution == 'yes' ? Contribution() : document.querySelector('.no-contribution .user-name').innerHTML = data.user_name
             for (let i = 0; i < front.length; i++) {
                 front[i].addEventListener('click', function () {
-                    if (data.first_time_of_enter) {
+                    if (data.first_time_of_enter_before) {
                         back[i], innerHTML = null;
                         switch (i) {
                             case 0:
@@ -1787,9 +1806,9 @@
                                             <p class="euler-title2">Dear <span class="pinkColor">${data.user_name}</span></p>
                                             <p class="one-text">openEuler 今天两周岁了！</p>
                                             <p class="one-text">在这两年的时光里，openEuler在惊喜地成长：</p>
-                                            <p class="one-text">社区用户 <span class="yellow-color">320,000+</span>；</p>
+                                            <p class="one-text">社区用户 <span class="yellow-color">370,000+</span>；</p>
                                             <p class="one-text">软件包<span class="yellow-color">8600+</span>；</p>
-                                            <p class="one-text">社区贡献者<span class="yellow-color">7900+</span>；</p>
+                                            <p class="one-text">社区贡献者<span class="yellow-color">8000+</span>；</p>
                                             <p class="one-text">商用OSV<span class="yellow-color">11家</span>；</p>
                                             <p class="one-text">企业成员<span class="yellow-color">300+家</span></p>
                                             <p class="one-text">······</p>
@@ -1825,8 +1844,8 @@
                                             <div class="pink"></div>
                                         </div>
                                         <div class="body">
-                                            <p class=" fade-time-1 ">我们在一起${data.total_time_of_existz}天了！</p>
-                                            <p class=" fade-time-2 themeColor">${timeChange(data.first_time_of_enter)}，</p>
+                                            <p class=" fade-time-1 ">我们在一起${data.total_time_of_exist_before}年了！</p>
+                                            <p class=" fade-time-2 themeColor">${timeChange(data.first_time_of_enter_before)}，</p>
                                             <p class=" fade-time-3 ">你第一次走进我的世界</p>
                                             <p class=" fade-time-4 themeColor ${timeChange(data.first_time_of_contact)}">${timeChange(data.first_time_of_contact)}，</p>
                                             <p class=" fade-time-5 ${timeChange(data.first_time_of_contact)}">你与社区中的<span class="pinkColor">${data.first_user_login_of_contact}</span>第一次建立链接;</p>
@@ -1938,9 +1957,9 @@
                 <p class="user-name pinkColor">${data.user_name}</p>
                 <p class="one-text">openEuler 今天两周岁了！</p>
                 <p class="one-text">在这两年的时光里，openEuler在惊喜地成长：</p>
-                <p class="one-text">社区用户 <span class="yellow-color">320,000+</span>；</p>
+                <p class="one-text">社区用户 <span class="yellow-color">370,000+</span>；</p>
                 <p class="one-text">软件包<span class="yellow-color">8600+</span>；</p>
-                <p class="one-text">社区贡献者<span class="yellow-color">7900+</span>；</p>
+                <p class="one-text">社区贡献者<span class="yellow-color">8000+</span>；</p>
                 <p class="one-text">商用OSV<span class="yellow-color">11家</span>；</p>
                 <p class="one-text">企业成员<span class="yellow-color">300+家</span></p>
                 <p class="one-text">······</p>
@@ -2007,9 +2026,9 @@
                 <p class="user-name pinkColor">${data.user_name}</p>
                 <p class="one-text">openEuler 今天两周岁了！</p>
                 <p class="one-text">在这两年的时光里，openEuler在惊喜地成长：</p>
-                <p class="one-text">社区用户 <span class="yellow-color">320,000+</span>；</p>
+                <p class="one-text">社区用户 <span class="yellow-color">370,000+</span>；</p>
                 <p class="one-text">软件包<span class="yellow-color">8600+</span>；</p>
-                <p class="one-text">社区贡献者<span class="yellow-color">7900+</span>；</p>
+                <p class="one-text">社区贡献者<span class="yellow-color">8000+</span>；</p>
                 <p class="one-text">商用OSV<span class="yellow-color">11家</span>；</p>
                 <p class="one-text">企业成员<span class="yellow-color">300+家</span></p>
                 <p class="one-text">······</p>
@@ -2062,8 +2081,8 @@
                     <div class="pink"></div>
                 </div>
                 <div class="body">
-                    <p class="fade-time-1 ">我们在一起${data.total_time_of_existz}天了！</p>
-                    <p class="fade-time-2 themeColor">${timeChange(data.first_time_of_enter)}，</p>
+                    <p class="fade-time-1 ">我们在一起${data.total_time_of_exist_before}年了！</p>
+                    <p class="fade-time-2 themeColor">${timeChange(data.first_time_of_enter_before)}，</p>
                     <p class="fade-time-3 ">你第一次走进我的世界</p>
                     <p class="fade-time-4 themeColor ${timeChange(data.first_time_of_contact)}">${timeChange(data.first_time_of_contact)}，</p>
                     <p class="fade-time-5 ${timeChange(data.first_time_of_contact)}">你与社区中的<span class="pinkColor">${data.first_user_login_of_contact}</span>第一次建立链接;</p>
@@ -2161,7 +2180,7 @@
             </div>
         </div>`
             }]
-            data.first_time_of_enter ? intaData = list : intaData = noContribution;
+            data.first_time_of_enter_before ? intaData = list : intaData = noContribution;
             let container = document.querySelector('#outer-container');
             swiper = new Swiper({
                 container: container,
