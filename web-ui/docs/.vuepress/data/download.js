@@ -6,6 +6,20 @@ module.exports = {
     cn: {
         DOWNLOAD_LIST : [
             {
+                NAME: 'openEuler 20.03 LTS SP3',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.03-LTS-SP3/',
+                DESC: 'openEuler 20.03 LTS SP3 是openEuler 20.03 LTS的补丁版本，生命周期与LTS版本相同',
+                RELEASE_DESC_URL: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP3/docs/Releasenotes/release_notes.html',
+                INSTALL_GUIDENCE_URL: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP3/docs/Installation/installation.html',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-20.03-LTS-SP3/ISO/',
+                LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+                WEBSITE_SELECT: "/zh/mirror/select/?version=20.03-LTS-SP3",
+                MANUFACTURER: 'openEuler社区',
+                PUBLISH_DATE: '2021/12',
+                LTS: true
+            },
+            {
                 NAME: 'openEuler 21.09',
                 DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-21.09/',
                 DESC: 'openEuler 21.09创新版是欧拉全新发布后的第一个社区版本，实现了全场景支持。增强服务器和云计算的特性，发布面向云原生的业务混部CPU调度算法、容器化操作系统KubeOS等关键技术；同时发布边缘和嵌入式版本。',
