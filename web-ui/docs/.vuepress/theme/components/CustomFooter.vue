@@ -78,7 +78,7 @@ export default {
 .qr-code {
   position: fixed;
   cursor: pointer;
-  width: 130px;
+  width: 210px;
   left: 100px;
   bottom: 160px;
   z-index: 99;
@@ -87,13 +87,13 @@ export default {
   }
   .close {
     position: absolute;
-    top: -11px;
-    right: -11px;
-    width: 23px;
+    top: -10px;
+    right: -10px;
+    width: 30px;
   }
    @media screen and (max-width: 1000px) {
-    left: 50%;
-    transform: translateX(-50%);
+    left: 30px;
+    width: 140px;
     bottom: 80px;
   }
 }
