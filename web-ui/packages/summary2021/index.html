@@ -20,12 +20,6 @@
         hm.src = "https://hm.baidu.com/hm.js?ab8d86daab9a8e98cf8faa239aefcd3c";
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
-
-        // 谷歌统计
-        var hm1 = document.createElement("script");
-        hm1.src = "https://www.googletagmanager.com/gtag/js?id=UA-181761489-1";
-        var s1 = document.getElementsByTagName("script")[0];
-        s1.parentNode.insertBefore(hm1, s1);
     })();
 </script>
 <style>
@@ -34,6 +28,7 @@
     #outer-container {
         overflow: hidden;
         width: 100%;
+        margin: 0 auto;
         height: 100%;
         text-align: center;
         font-size: 14px;
@@ -222,7 +217,14 @@
         padding-top: 5px;
         font-size: 16px;
     }
-
+    .page-five p{
+        opacity: 0;
+        animation: textMove 2s  ease-in forwards;
+    }
+    .page-four p {
+        opacity: 0;
+        animation: textMove 2s  ease-in forwards;
+    }
     .geometry img {
         width: 100%;
     }
@@ -590,7 +592,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding-bottom: 110px;
+        padding-bottom: 130px;
         /* max-width: 375px; */
     }
 
@@ -636,7 +638,7 @@
     .curtains {
         top: 50px;
         left: 50%;
-        width: 100px;
+        width: 130px;
         transform: translateX(-50%);
     }
 
@@ -648,7 +650,7 @@
     .girl {
         top: 80px;
         right: 50%;
-        width: 65px;
+        width: 80px;
         z-index: 2;
     }
 
@@ -1779,15 +1781,15 @@
         </div> -->
     </div>
     <script>
-     
+
         let bgm = document.querySelector("#bgm");
         let bgmOpen = document.querySelector(".bgm-open");
-        bgm.addEventListener('pause', function() {
+        bgm.addEventListener('pause', function () {
             bgmOpen.classList.remove('run-bgm');
         })
         bgmOpen.addEventListener("touchstart", function () {
             console.log(bgm.paused);
-            bgm.paused ?   bgm.play() : bgm.pause()
+            bgm.paused ? bgm.play() : bgm.pause()
             bgmOpen.classList.add('run-bgm');
         })
         // 获取数据
@@ -1852,6 +1854,13 @@
             }
 
         }
+        function isZero(num) {
+            if (num == '0') {
+                return 'none'
+            } else {
+                return num
+            }
+        }
         // getData()
         // pc端事件
         function intaPc(data) {
@@ -1911,12 +1920,12 @@
                                             <p class=" fade-time-3 ">你第一次走进我的世界</p>
                                             <p class=" fade-time-4 themeColor ${timeChange(data.first_time_of_contact)}">${timeChange(data.first_time_of_contact)}，</p>
                                             <p class=" fade-time-5 ${timeChange(data.first_time_of_contact)}">你与社区中的<span class="pinkColor">${data.first_user_login_of_contact}</span>第一次建立链接;</p>
-                                            <p class=" fade-time-6 themeColor ${timeChange(data.first_time_of_contact)}">${timeChange(data.first_time_of_comment_other)},</p>
-                                            <p class=" fade-time-7 ${timeChange(data.first_time_of_contact)}">你第一次在社区中评论了<span class="pinkColor">${data.first_user_login_of_comment}</span>；</p>
-                                            <p class=" fade-time-8 themeColor ${timeChange(data.first_time_of_contact)}">${timeChange(data.first_time_of_be_comment)}，</p>
-                                            <p class=" fade-time-9 ${timeChange(data.first_time_of_contact)}"><span class="pinkColor">${data.first_user_login_of_be_comment}</span>第一个给了你温暖的评论；</p>
+                                            <p class=" fade-time-6 themeColor ${timeChange(data.first_time_of_comment_other)}">${timeChange(data.first_time_of_comment_other)},</p>
+                                            <p class=" fade-time-7 ${timeChange(data.first_user_login_of_comment)}">你第一次在社区中评论了<span class="pinkColor">${data.first_user_login_of_comment}</span>；</p>
+                                            <p class=" fade-time-8 themeColor ${timeChange(data.first_time_of_be_comment)}">${timeChange(data.first_time_of_be_comment)}，</p>
+                                            <p class=" fade-time-9 ${timeChange(data.first_user_login_of_be_comment)}"><span class="pinkColor">${data.first_user_login_of_be_comment}</span>第一个给了你温暖的评论；</p>
                                             <p class=" fade-time-10 ${timeChange(data.first_time_of_contact)}">初来乍到,<span class="pinkColor">${data.first_user_login_of_contact}</span>第一个解决了你的问题；</p>
-                                            <p class=" fade-time-11 ${timeChange(data.first_time_of_contact)}">回忆满满,你与<span class="pinkColor">${data.user_login_with_most_contact}</span>联系最多</p>
+                                            <p class=" fade-time-11 ${timeChange(data.user_login_with_most_contact)}">回忆满满,你与<span class="pinkColor">${data.user_login_with_most_contact}</span>联系最多</p>
                                         </div>
                                     
                                         <div class="three-bg">
@@ -1942,14 +1951,14 @@
                                         <img src="./images/图4/地球2.png" alt="">
                                     </div>
                                     <div class="text-box">
-                                        <p class="fade fade-time-1">回望2021，我快速成长</p>
-                                        <p class="fade fade-time-2">而你在这一年中</p>
-                                        <p class="fade fade-time-3">提交了<span class="yellow-color">${data.pr_num}</span>个pr，</p>
-                                        <p class="fade fade-time-4">提交了<span class="yellow-color">${data.issue_num}</span>个issue，</p>
-                                        <p class="fade fade-time-5">提交了<span class="yellow-color">${data.comment_num}</span>条评论，</p>
-                                        <p class="fade fade-time-6">贡献了<span class="yellow-color">${data.code_lines}</span>行代码，</p>
-                                        <p class="fade fade-time-7">参与了<span class="yellow-color">${data.sig_num}</span>个sig组，</p>
-                                        <p class="fade fade-time-8">点亮了<span class="yellow-color">${data.star_num}</span>个仓库，</p>
+                                        <p class="fade-time-1">回望2021，我快速成长</p>
+                                        <p class="fade-time-2">而你在这一年中</p>
+                                        <p class="${isZero(data.pr_num)} fade-time-3">提交了<span class="yellow-color">${data.pr_num}</span>个pr，</p>
+                                        <p class=" ${isZero(data.issue_num)} fade-time-4">提交了<span class="yellow-color">${data.issue_num}</span>个issue，</p>
+                                        <p class=" ${isZero(data.comment_num)} fade-time-5">提交了<span class="yellow-color">${data.comment_num}</span>条评论，</p>
+                                        <p class="${isZero(data.code_lines)} fade-time-6">贡献了<span class="yellow-color">${data.code_lines}</span>行代码，</p>
+                                        <p class=" ${isZero(data.sig_num)} fade-time-7">参与了<span class="yellow-color">${data.sig_num}</span>个sig组，</p>
+                                        <p class="${isZero(data.star_num)} fade-time-8">点亮了<span class="yellow-color">${data.star_num}</span>个仓库，</p>
                                         <p>在这一年里，</p>
                                         <p>你的贡献度击败了社区<span class="yellow-color">${data.percentage}%</span>开发者。</p>
                                     </div>
@@ -2147,13 +2156,13 @@
                     <p class="fade-time-2 themeColor">${timeChange(data.first_time_of_enter_before)}，</p>
                     <p class="fade-time-3 ">你第一次走进我的世界</p>
                     <p class="fade-time-4 themeColor ${timeChange(data.first_time_of_contact)}">${timeChange(data.first_time_of_contact)}，</p>
-                    <p class="fade-time-5 ${timeChange(data.first_time_of_contact)}">你与社区中的<span class="pinkColor">${data.first_user_login_of_contact}</span>第一次建立链接;</p>
-                    <p class="fade-time-6 themeColor ${timeChange(data.first_time_of_contact)}">${timeChange(data.first_time_of_comment_other)},</p>
-                    <p class="fade-time-7 ${timeChange(data.first_time_of_contact)}">你第一次在社区中评论了<span class="pinkColor">${data.first_user_login_of_comment}</span>；</p>
-                    <p class="fade-time-8 themeColor ${timeChange(data.first_time_of_contact)}">${timeChange(data.first_time_of_be_comment)}，</p>
-                    <p class="fade-time-9 ${timeChange(data.first_time_of_contact)}"><span class="pinkColor">${data.first_user_login_of_be_comment}</span>第一个给了你温暖的评论；</p>
-                    <p class="fade-time-10 ${timeChange(data.first_time_of_contact)}">初来乍到,<span class="pinkColor">${data.first_user_login_of_contact}</span>第一个解决了你的问题；</p>
-                    <p class="fade-time-11 ${timeChange(data.first_time_of_contact)}">回忆满满,你与<span class="pinkColor">${data.user_login_with_most_contact}</span>联系最多</p>
+                    <p class=" fade-time-5 ${timeChange(data.first_user_login_of_contact)}">你与社区中的<span class="pinkColor">${data.first_user_login_of_contact}</span>第一次建立链接;</p>
+                    <p class=" fade-time-6 themeColor ${timeChange(data.first_time_of_comment_other)}">${timeChange(data.first_time_of_comment_other)},</p>
+                    <p class="fade-time-7 ${timeChange(data.first_user_login_of_comment)}">你第一次在社区中评论了<span class="pinkColor">${data.first_user_login_of_comment}</span>；</p>
+                    <p class="fade-time-8 themeColor ${timeChange(data.first_time_of_be_comment)}">${timeChange(data.first_time_of_be_comment)}，</p>
+                    <p class="fade-time-9 ${timeChange(data.first_user_login_of_be_comment)}"><span class="pinkColor">${data.first_user_login_of_be_comment}</span>第一个给了你温暖的评论；</p>
+                    <p class="fade-time-10 ${timeChange(data.first_user_login_of_contact)}">初来乍到,<span class="pinkColor">${data.first_user_login_of_contact}</span>第一个解决了你的问题；</p>
+                    <p class="fade-time-11 ${timeChange(data.user_login_with_most_contact)}">回忆满满,你与<span class="pinkColor">${data.user_login_with_most_contact}</span>联系最多</p>
                 </div>
                
                 <div class="three-bg">
@@ -2182,14 +2191,15 @@
                 <div class="green2"><img src="./images/图4/绿色三角.png" alt=""></div>
             </div>
             <div class="text-box">
-                <p class="fade fade-time-1">回望2021，我快速成长</p>
-                <p class="fade fade-time-2">而你在这一年中</p>
-                <p class="fade fade-time-3">提交了<span class="yellow-color">${data.pr_num}</span>个pr，</p>
-                <p class="fade fade-time-4">提交了<span class="yellow-color">${data.issue_num}</span>个issue，</p>
-                <p class="fade fade-time-5">提交了<span class="yellow-color">${data.comment_num}</span>条评论，</p>
-                <p class="fade fade-time-6">贡献了<span class="yellow-color">${data.code_lines}</span>行代码，</p>
-                <p class="fade fade-time-7">参与了<span class="yellow-color">${data.sig_num}</span>个sig组，</p>
-                <p class="fade fade-time-8">点亮了<span class="yellow-color">${data.star_num}</span>个仓库，</p>
+                <p class="fade-time-1">回望2021，我快速成长</p>
+                <p class="fade-time-2">而你在这一年中</p>
+                <p class="${isZero(data.pr_num)} fade-time-3">提交了<span class="yellow-color">${data.pr_num}</span>个pr，</p>
+                <p class=" ${isZero(data.issue_num)} fade-time-4">提交了<span class="yellow-color">${data.issue_num}</span>个issue，</p>
+                <p class=" ${isZero(data.comment_num)} fade-time-5">提交了<span class="yellow-color">${data.comment_num}</span>条评论，</p>
+                <p class="${isZero(data.code_lines)} fade-time-6">贡献了<span class="yellow-color">${data.code_lines}</span>行代码，</p>
+                <p class=" ${isZero(data.sig_num)} fade-time-7">参与了<span class="yellow-color">${data.sig_num}</span>个sig组，</p>
+                <p class="${isZero(data.star_num)} fade-time-8">点亮了<span class="yellow-color">${data.star_num}</span>个仓库，</p>
+
             </div>
         </div>`
             }, {
