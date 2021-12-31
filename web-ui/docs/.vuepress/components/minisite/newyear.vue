@@ -148,7 +148,7 @@
             <p>
               以
               <span class="blue">【我为openEuler 代言】</span
-              >为主题录制一段不少于30秒的视频。视频内容可以介绍自己在openEuler开源社区的身份；在openEuler开源社区做过什么事；对openEuler未来的期望……
+              >为主题录制一段不少于30秒的视频。视频内容可以介绍自己在openEuler社区的身份；在openEuler社区做过什么事；对openEuler社区未来的期望……
             </p>
             <p>
               完成即可获得openEuler 定制卫衣+openEuler 定制电脑包。注：礼品随机发放。
@@ -244,7 +244,7 @@ export default {
       activityOne: [
         {
           title: "活动对象：",
-          content: ["openEuler 社区开发者"],
+          content: ["openEuler 社区的朋友们"],
         },
         {
           title: "活动时间：",
