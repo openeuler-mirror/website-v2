@@ -3314,7 +3314,7 @@
   },
   {
     "hardwareFactory": "宝德",
-    "hardwareModel": "Phyyium S2500/64C",
+    "hardwareModel": "PR214F3",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "aarch64",
     "date": "2021/9/23",
@@ -3398,7 +3398,7 @@
         "boardModel": "TM210",
         "chipModel": "hisi",
         "item": "",
-        "downloadLink": "http://www.100trust.cn/productsshow-74-7-2.html"
+        "downloadLink": "inbox"
       },
 	  {
         "vendorID": "1000",
@@ -3421,7 +3421,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "http://www.powerleader.com.cn/",
+      "productInformation": "http://www.100trust.cn/productsshow-74-7-2.html"",
       "certificationTime": "2021/12/07",
       "commitID": "I4INBB",
       "motherBoardRevision": "",
