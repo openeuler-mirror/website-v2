@@ -9,7 +9,7 @@
           </div>
         </div>
         <div class="is-pc home-carousel" v-if="!isShowH5">
-             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="500000" >
+             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" >
               <el-carousel-item >
                      <div class="carousel-banner"  >
                          <div class="extend1 extend"></div>
@@ -370,7 +370,7 @@ let remoteMethods = {
         mounted() {
             window.addEventListener("scroll", this.scroTop);
             window.addEventListener("resize",this.reSize);
-            // this.fall();
+            this.fall();
             window.location.hash=='#meeting' ? window.location.href="#meeting": ''
             this.videoCtrlParams.element = document.getElementById('home-video');
             remoteMethods.meetingList();
@@ -381,7 +381,7 @@ let remoteMethods = {
                 this.$nextTick(() => {
                     this.mobileSwiperInterval = setInterval(() => {
                         this.swiper.slideNext();
-                    }, 500000);
+                    }, 5000);
                 })
             }
             this.developerList = this.changeArr(this.i18n.home.HOME_DEV.DEV_INFO,16);

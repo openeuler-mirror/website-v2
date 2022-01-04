@@ -52,7 +52,6 @@ export default {
         }
         img {
             width: 1117px;
-            height: 610px;
             margin: 0 auto 50px auto;
             display: block;
         }
@@ -83,7 +82,6 @@ export default {
             }
             img {
                 width: 330px;
-                height: 180px;
                 margin: 0 auto;
             }
         }

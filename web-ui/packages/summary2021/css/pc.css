@@ -93,6 +93,9 @@ body {
 .pc-box .euler-title2 {
     padding: 10px 0;
 }
+.pc-box .euler-title3 {
+    padding: 0 0 10px;
+}
 .contents{
     width: 100%;
     height: 100%;
