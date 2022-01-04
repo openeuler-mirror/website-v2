@@ -9,22 +9,24 @@
           </div>
         </div>
         <div class="is-pc home-carousel" v-if="!isShowH5">
-             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" >
+             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="500000" >
               <el-carousel-item >
                      <div class="carousel-banner"  >
-                        <img src="../../public/img/home/banner/openEuler.png" alt="">
+                         <div class="extend1 extend"></div>
+                         <div class="center-img"></div>
+                        <div class="extend2 extend"></div>
                      </div>
               </el-carousel-item>
               <el-carousel-item >
                      <div class="carousel-banner" id="container"    @click="go('/activities/happynewyear2022/')">
-                        <!-- <img class="extend1" src="/img/home/banner/loop1.png" alt="">
-                        <img class="extend2" src="/img/home/banner/loop2.png" alt=""> -->
-                        <img src="../../public/img/home/banner/newyear-banner.png" alt="">
+                        <div class="extend3 extend" ></div>
+                        <div class="newyear"></div>
+                        <div class="extend4 extend"></div>
                      </div>
               </el-carousel-item>
               <el-carousel-item >
-                <div class="video-banner">
-                     <video width="100%"  height="500" ref="bannerVideo" poster="../../public/img/home/banner/video-banner.png"  preload=""  id="home-video" >
+                <div class="video-banner carousel-banner">
+                     <video  height="500" loop ref="bannerVideo" poster="/img/home/banner/video-banner.png"  preload=""  id="home-video" >
                          <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/openEuler%E9%9D%A2%E5%90%91%E6%95%B0%E5%AD%97%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E7%9A%84%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F_Banner.mp4">
                      </video>
                     <playcontroll :ctrl-obj="videoCtrlParams" ref="playctrlEle" @playStatus="checkStatus"></playcontroll>
@@ -38,12 +40,12 @@
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
                <swiper-slide class="carousel-item-index">
                 <div class="carousel-banner" >
-                    <img src="../../public/img/home/banner/openEuler_mo.png" alt="">
+                    <img src="/img/home/banner/openEuler_mo.png" alt="">
                 </div>
               </swiper-slide>
                <swiper-slide class="carousel-item-index">
                 <div class="carousel-banner" id="container"   @click="go('/activities/happynewyear2022/')">
-                    <img src="../../public/img/home/banner/newyear-banner-mob.png" alt="">
+                    <img src="/img/home/banner/newyear-banner-mob.png" alt="">
                 </div>
               </swiper-slide>
                <swiper-slide class="carousel-item-index">
@@ -368,7 +370,7 @@ let remoteMethods = {
         mounted() {
             window.addEventListener("scroll", this.scroTop);
             window.addEventListener("resize",this.reSize);
-            this.fall();
+            // this.fall();
             window.location.hash=='#meeting' ? window.location.href="#meeting": ''
             this.videoCtrlParams.element = document.getElementById('home-video');
             remoteMethods.meetingList();
@@ -379,7 +381,7 @@ let remoteMethods = {
                 this.$nextTick(() => {
                     this.mobileSwiperInterval = setInterval(() => {
                         this.swiper.slideNext();
-                    }, 5000);
+                    }, 500000);
                 })
             }
             this.developerList = this.changeArr(this.i18n.home.HOME_DEV.DEV_INFO,16);
@@ -405,7 +407,9 @@ let remoteMethods = {
         methods: {
            
             reSize() {
-                this.videoCtrlParams.barWidth = window.innerWidth - 180;
+                let w = window.innerWidth
+                w > 1920 ? w = 1920 :'';
+                this.videoCtrlParams.barWidth = w - 180;
             },
             fall() {
               let a = null;
@@ -682,11 +686,12 @@ let remoteMethods = {
 
 <style lang="less" scoped>
   .home{
-      .big-controll {
-          bottom: 5px;
-      }
     .video-banner {
         position: relative;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background:black;
         .open-video {
            position: absolute;
            overflow: hidden;
@@ -698,10 +703,14 @@ let remoteMethods = {
            transform: translate(-50%,-50%);
         }
         .playControll {
-            display: block;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%) ;
+            max-width: 1920px;
         }
          video {
-             object-fit: cover;
+             max-width: 1920px;
+            //  object-fit: cover;
         }
         .is-cover {
             filter: contrast(80%) brightness(50%);
@@ -1101,38 +1110,62 @@ let remoteMethods = {
         border-radius: 50%;
     }
     .home-banner .carousel-banner {
+        position: relative;
+        cursor: pointer;
+        display: flex;
         width: 100%;
         height: 100%;
-        cursor: pointer;
-        position: relative;
         text-align: center;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        .extend1 {
+        .extend {
             display: none;
+            background-size: 700px 500px;
+            background-repeat: repeat-x;
+            background-attachment: local;
+        }
+        .extend1 {
+            background-image: url("/img/home/banner/openEuler_left.png");
+        }
+        .center-img {
+            flex: 222;
+            max-width: 1920px;
+            background-image: url("/img/home/banner/openEuler.png");
         }
         .extend2 {
-            display: none;
+            background-image: url("/img/home/banner/openEuler_right.png");
+        }
+        .newyear {
+            flex: 99;
+            max-width: 1920px;
+            background-image: url("/img/home/banner/newyear-banner.png");
+        }
+        .extend3 {
+            background-size: 1400px 500px;
+            background-image: url("/img/home/banner/loop.png");
+        }
+        .extend4 {
+            background-size: 1400px 500px;
+            background-image: url("/img/home/banner/loop.png");
         }
         img {
             width: 100%;
-            height: 500px;
-            object-fit: cover;
         }
         @media screen and (min-width: 1920px) {
-            .extend1 {
+            .extend {
                 display: inline-block;
-                object-fit: none;
+                flex: 1;
             }
-            .extend2 {
-                display: inline-block;
+            .extend1,
+            .extend3 {
+                background-position-x: right;
             }
         }
         @media screen and (max-width: 1000px) {
             background-size: 100% 100%;
             img {
-                height: fit-content;
+                height: 100%;
             }
         }
     }
