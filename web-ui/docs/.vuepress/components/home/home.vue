@@ -2124,7 +2124,8 @@ let remoteMethods = {
                position: relative;
                text-align: center;
                .bg-banner {
-                   width: 100%;
+                   width: 100% !important;
+                   height: 100%;
                }
                .open-video {
                    position: absolute;
