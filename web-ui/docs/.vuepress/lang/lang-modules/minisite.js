@@ -138,7 +138,7 @@ module.exports = {
                 'https://www.ithome.com/0/573/057.html'
             ]
         },
-        DIRECT_CONTENT: '社区版本相关迁移问题， 请在兼容性sig 提交相关问题跟进。',
+        DIRECT_CONTENT: '社区版本相关迁移问题， 请在兼容性sig 提交相关问题跟进。（https://gitee.com/openeuler/oec-application/issues）',
         ATUNE_BANNER_TEXT: ['A-Tune','一款基于AI开发的智能优化引擎'],
         ATUNE_BANNER_IMG: '/img/minisite/svirt/mobile-banner.png',
         ATUNE_DESC: ['A-Tune是一款基于openEuler开发的，自动化、智能化性能调优引擎。它利用人工智能技术，对运行在操作系统上的业务建立精准模型，动态感知业务特征并推理出具体应用，根据业务负载情况动态调节并给出最佳的参数配置组合，从而使业务处于最佳运行状态。'],
