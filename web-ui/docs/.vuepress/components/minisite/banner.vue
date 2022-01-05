@@ -15,7 +15,7 @@
 
 <script>
 export default {
-    props: ['themeArr','mobileImg','videoUrl']
+    props: ['themeArr','mobileImg','videoUrl', 'isShowH5']
 
 }
 </script>
@@ -38,6 +38,10 @@ export default {
                 margin: 34px 0 40px 0;
             }
         }
+    }
+    img {
+        width: 266px;
+        height: 216px;
     }
     #video {
         width: 223px;

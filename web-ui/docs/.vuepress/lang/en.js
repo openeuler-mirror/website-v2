@@ -15,6 +15,7 @@ module.exports = {
     brand: require('./lang-modules/brand').en,
     search: require('./lang-modules/search').en,
     minisite: require('./lang-modules/minisite').en,
+    scheme: require('./lang-modules/scheme').en,
     learn: require('./lang-modules/learn').en,
     compatibility: require('./lang-modules/compatibility').en,
     summit: require('./lang-modules/summit').en,

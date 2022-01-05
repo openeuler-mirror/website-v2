@@ -9,7 +9,7 @@
       <minibanner
         :themeArr="i18n.minisite.MIGRATION_BANNER_TEXT"
         :mobileImg="i18n.minisite.ATUNE_BANNER_IMG"
-        videoUrl="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/A-Tune.mp4"
+        :isShowH5 = true
       ></minibanner>
       <div class="atune-center">
         <div class="other-desc">
@@ -17,23 +17,37 @@
             <p v-for="(item, index) in i18n.minisite.MIGRATION_DESC" :key="index">{{ item }}</p>
           </div>
         </div>
-        <miniframe
-          :outsideStr="i18n.minisite.MIGRATION_FRAMEWORK.TITLE_OUTSIDE"
-          :insideStr="i18n.minisite.MIGRATION_FRAMEWORK.TITLE_INSIDE"
-          :descList="i18n.minisite.MIGRATION_FRAMEWORK.DESC_LIST"
-          :frameImg="i18n.minisite.MIGRATION_FRAMEWORK.FRAMEWORK_IMG"
+
+        <div v-for="(item,index) in i18n.minisite.MIGRATION_LISTCONTENT" :key="index" class="list-content">
+          <contentlist
+          :outsideStr="item.TITLE_OUTSIDE"
+          :insideStr="item.TITLE_INSIDE"
+          :subtitle="item.SUBTITLE"
+          :listTitle="item.LISTTITLE"
+          :descList="item.CONTENT"
+          :frameImg="item.FRAMEWORK_IMG"
           id="framework"
-        ></miniframe>
+          ></contentlist>
+        </div>
+
+        <scheme :scheme="i18n.scheme.SCHEME" id="scheme"></scheme>
       </div>
     </div>
 
     <div class="bisheng">
       <div class="reference">
-        <p class="title">
-          {{ i18n.minisite.MIGRATION_REFERENCE.TITLE_OUTSIDE
-          }}<span>{{ i18n.minisite.MIGRATION_REFERENCE.TITLE_INSIDE }}</span>
-        </p>
-        <div class="h5-link" v-if="isShowH5">
+        <div class="menu-title">
+            <div 
+              v-for="(item,index) in i18n.minisite.MIGRATION_REFERENCE.MENU_LIST" 
+              :key="index"
+              :class="index === menuIndex? 'active':''"
+              @click="checkMeun(index)">
+                <p>{{item}}</p>
+                <p class="title-border"></p>
+            </div>
+        </div>
+        <div v-if="menuIndex === 0">
+          <div class="h5-link" v-if="isShowH5">
           <a
             :href="item.LINK"
             v-for="(item, index) in i18n.minisite.MIGRATION_REFERENCE.LINK_LIST"
@@ -41,17 +55,32 @@
             target="__blank"
             >{{ item.TEXT }}</a
           >
-        </div>
-        <div class="link-list list" v-else>
-          <div
-            class="item"
-            v-for="(item, index) in i18n.minisite.MIGRATION_REFERENCE.LINK_LIST"
-            :key="index"
-            @click="go(item.LINK)"
-          >
-            {{ item.TEXT }}
+          </div>
+          <div class="link-list list" v-else>
+            <div
+              class="item"
+              v-for="(item, index) in i18n.minisite.MIGRATION_REFERENCE.LINK_LIST"
+              :key="index"
+              @click="go(item.LINK)"
+            >
+              {{ item.TEXT }}
+            </div>
           </div>
         </div>
+
+        <div v-else-if="menuIndex === 1" class="move-content">
+          <p>{{i18n.minisite.MOVE_CONTENT.DESCRIBE}}</p>
+          <img :src="i18n.minisite.MOVE_CONTENT.IMG" >
+          <p>{{i18n.minisite.MOVE_CONTENT.SUBTITLE}}</p>
+          <p v-for="(item,index) in i18n.minisite.MOVE_CONTENT.LINK_LIST" :key="index">
+            <a :href="item">{{item}}</a>
+          </p>
+        </div>
+
+        <div v-else class="move-content">
+          <p>{{i18n.minisite.DIRECT_CONTENT}}</p>
+        </div>
+        
       </div>
     </div>
   </div>
@@ -62,10 +91,13 @@ import minibanner from "./banner.vue";
 import miniimg from "./imglink.vue";
 import minidesc from "./description.vue";
 import miniframe from "./framework.vue";
+import contentlist from "./content.vue";
+import scheme from "./scheme.vue";
 export default {
   data() {
     return {
       activeIndex: -1,
+      menuIndex: 0,
       isShowNav: false,
     };
   },
@@ -96,6 +128,9 @@ export default {
         return false;
       }
     },
+    checkMeun(num) {
+      this.menuIndex = num;
+    }
   },
   destroyed() {
     window.removeEventListener("scroll", this.atuneScroll);
@@ -106,6 +141,8 @@ export default {
     miniimg,
     minidesc,
     miniframe,
+    contentlist,
+    scheme
   },
 };
 </script>
@@ -307,6 +344,7 @@ html[lang="ru"] .A-Tune .atune-center .tune-desc {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 44px;
   & > div {
     width: 1120px;
   }
@@ -316,6 +354,7 @@ html[lang="ru"] .A-Tune .atune-center .tune-desc {
     font-size: 18px;
   }
 }
+
 @media screen and (max-width: 1120px) {
   width: 315px;
   .content {
@@ -352,7 +391,7 @@ html[lang="ru"] .A-Tune .atune-center .tune-desc {
   display: flex;
   justify-content: space-between;
   .text {
-    p {
+    h1 {
       color: #000000;
       font-size: 24px;
       line-height: 48px;
@@ -525,6 +564,34 @@ html[lang="ru"] .A-Tune .atune-center .tune-desc {
 
 .bisheng .reference {
   padding-top: 124px;
+  .menu-title {
+    display: flex;
+    width: 1120px;
+    margin: auto;
+    justify-content: center;
+    div {
+      display: inline-block;
+      height: 48px;
+      font-size: 20px;
+      color: rgba(0,0,0,0.50);
+      letter-spacing: 0;
+      text-align: justify;
+      line-height: 48px;
+      font-weight: 400;
+      margin-left: 40px;
+      cursor: pointer;
+    }
+    .active {
+      font-size: 20px;
+      color: #000000;
+      .title-border {
+        width: 54px;
+        height: 4px ;
+        background: #002FA7;
+      }
+    }
+    
+  }
   .link-list {
     flex-wrap: wrap;
     align-content: space-between;
@@ -550,8 +617,26 @@ html[lang="ru"] .A-Tune .atune-center .tune-desc {
       }
     }
   }
+
+  .move-content {
+    width: 1120px;
+    margin: 30px auto 0;
+    p {
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.7);
+      letter-spacing: 0;
+      line-height: 32px;
+    }
+  }
   @media screen and (max-width: 1120px) {
     padding-top: 57px;
+    .menu-title {
+      width: 100%;
+      justify-content: space-around;
+      div {
+        margin: 0;
+      }
+    }
     .h5-link {
       margin-top: 37px;
       a {
