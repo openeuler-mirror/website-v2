@@ -15,6 +15,7 @@ module.exports = {
     brand: require('./lang-modules/brand').cn,
     search: require('./lang-modules/search').cn,
     minisite: require('./lang-modules/minisite').cn,
+    scheme: require('./lang-modules/scheme').cn,
     learn: require('./lang-modules/learn').cn,
     compatibility: require('./lang-modules/compatibility').cn,
     activities: require('./lang-modules/activities').cn,
