@@ -52,7 +52,7 @@ module.exports = {
             TITLE_INSIDE: 'DOCUMENTATION',
             MENU_LIST: [
                 '移植案例',
-                '迁移案例',
+                '用户案例',
                 '搬迁实施指导'
             ],
             LINK_LIST: [
