@@ -78,7 +78,7 @@
         </div>
 
         <div v-else class="move-content">
-          <p><a :href="i18n.minisite.DIRECT_URL">{{i18n.minisite.DIRECT_CONTENT}}</a></p>
+          <p>{{i18n.minisite.DIRECT_CONTENT}}</p>
         </div>
         
       </div>
