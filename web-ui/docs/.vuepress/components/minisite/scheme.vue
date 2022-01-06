@@ -109,7 +109,7 @@
             <div class="img-box">
                <img class="img" :src="scheme.SEVEN_TUNING_IMG" alt="" />
            </div>
-           <p class="content">{{scheme.SEVEN_P2}} </p>
+           <p class="content">详见项目<a href="{{scheme.SEVEN_P2_URL}}">链接</a>，{{scheme.SEVEN_P2}} </p>
         </div>
        
     </div>
