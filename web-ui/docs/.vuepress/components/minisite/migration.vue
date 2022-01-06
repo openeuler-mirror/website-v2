@@ -78,7 +78,7 @@
         </div>
 
         <div v-else class="move-content">
-          <p>{{i18n.minisite.DIRECT_CONTENT}}</p>
+          <p>社区版本相关迁移问题， 请在<a :href="i18n.minisite.DIRECT_CONTENT">兼容性 SIG</a>提交相关问题跟进。</p>
         </div>
         
       </div>
