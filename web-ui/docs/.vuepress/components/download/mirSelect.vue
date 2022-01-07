@@ -91,9 +91,8 @@
     </div>
 </template>
 <script>
-import axios from 'axios';
 import commonBanner from "./../common/banner.vue";
-import { loadBMap } from '../../api/mirror';
+import { loadBMap,selectMirror } from '../../api/mirror';
 import baiduMapCom from "./map.vue";
 export default {
     name: 'mirSelect',
@@ -120,26 +119,24 @@ export default {
     mounted() {
         loadBMap("E8fzNbGP929RhtOZQGNsSKYO")
 	   	.then(() => {
-            axios.get(`https://api.openeuler.org/mirrors/openEuler-${this.version}/ISO/`,{
-                'Authorization': 'Basic b3BlbmV1bGVyc2VydmVyOm9wZW5ldWxlcnNlcnZlckAxMjM0'
-            }).then((res)=>{
-            this.area = res.data.ClientInfo.Country;
-            this.ipAndAsn.push(res.data.IP);
-            if(res.data.ClientInfo.ASName) {
-                let asn = res.data.ClientInfo.ASName + ' (ASN' + res.data.ClientInfo.ASNum + ')';
+            selectMirror({version:this.version}).then((res)=>{
+            this.area = res.ClientInfo.Country;
+            this.ipAndAsn.push(res.IP);
+            if(res.ClientInfo.ASName) {
+                let asn = res.ClientInfo.ASName + ' (ASN' + res.ClientInfo.ASNum + ')';
                 this.ipAndAsn.push(asn);
-            }else if(res.data.ClientInfo.ASNum){
-                let asn = 'ASN' + res.data.ClientInfo.ASNum;
+            }else if(res.ClientInfo.ASNum){
+                let asn = 'ASN' + res.ClientInfo.ASNum;
                 this.ipAndAsn.push(asn);
             }else {
                 return
             }
             let center = [];
             let data = [];
-            center.push(res.data.ClientInfo.Longitude);
-            center.push(res.data.ClientInfo.Latitude);
-            data = this.compare(res.data.MirrorList);
-            this.versionPath = res.data.FileInfo.Path.slice(1);
+            center.push(res.ClientInfo.Longitude);
+            center.push(res.ClientInfo.Latitude);
+            data = this.compare(res.MirrorList);
+            this.versionPath = res.FileInfo.Path.slice(1);
             if(data.length && center.length) {
                 this.mapData['data'] = data;
                 this.mapData['center'] = center;

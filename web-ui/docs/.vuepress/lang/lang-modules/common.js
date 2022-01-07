@@ -35,6 +35,10 @@ module.exports = {
                     {
                         NAME: '慕课',
                         PATH: '/learn/mooc/'
+                    },
+                    {
+                        NAME: '实习',
+                        PATH: '/internship/'
                     }
                 ],
                 CLASS: []
