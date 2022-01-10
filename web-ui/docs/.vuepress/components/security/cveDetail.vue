@@ -300,14 +300,13 @@ export default {
         }
       }
       .item > ul {
-        height: 60px;
         display: flex;
+        min-height: 60px;
         justify-content: space-between;
         align-items: center;
         font-size: 14px;
         color: rgba(0, 0, 0, 0.85);
         margin: 0 30px;
-
         li:first-child {
           font-size: 16px;
           color: #000;
@@ -333,6 +332,11 @@ export default {
             display: none;
           }
         }
+      }
+      .item > ul::after {
+        content:'';
+        min-height:inherit;
+        font-size:0;
       }
       .item:nth-child(odd) {
         background-color: rgba(0, 0, 0, 0.05);

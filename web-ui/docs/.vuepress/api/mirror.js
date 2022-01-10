@@ -42,3 +42,23 @@
         document.head.appendChild(script)
     })
 }
+// 镜像选择
+export const selectMirror = ({version}) => {
+    return new Promise((resolve,reject) => {
+        appAjax.postJson({
+            otherBaseUrl: mirrorApi,
+            url: `openEuler-${version}/ISO/`,
+            type: 'get',
+            success(result) {
+                if(result) {
+                    resolve(result);
+                    return;
+                }
+                reject(result);
+            },
+            error(msg) {
+                reject(msg);
+            }
+        })
+    });
+ };
