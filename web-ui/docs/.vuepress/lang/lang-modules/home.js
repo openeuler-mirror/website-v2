@@ -29,20 +29,16 @@ module.exports = {
         ],
         ROOM_LEFT_IMG: [
             {
+                IMG: '/img/activities/internship.png',
+                LINK: '/internship/'
+            },
+            {
+                IMG: '/img/activities/summit2021.png',
+                LINK: '/interaction/summit-list/summit2021/'
+            },
+            {
                 IMG: '/img/activities/pc_home_bottom_banner.png',
                 LINK: '/activities/'
-            },
-            {
-                IMG: '/img/home/eventImg.png',
-                LINK: 'https://www.oschina.net/2020-openeuler/'
-            },
-            {
-                IMG: '/img/home/blogImg.png',
-                LINK: '/interaction/blog-list/'
-            },
-            {
-                IMG: '/img/home/newsImg.png',
-                LINK: '/interaction/news-list/'
             }
         ],
         HOME_NEWRELEASE: [

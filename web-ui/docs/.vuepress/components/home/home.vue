@@ -119,7 +119,7 @@
                             <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
                             <span>|</span>
                             <span>{{ item.frontmatter.author }}</span>
-                            <p><router-link class="word-hover" :to="item.path">{{ item.frontmatter.summary }}</router-link></p>
+                            <p><router-link class="word-hover" :to="item.path">{{ item.frontmatter.title }}</router-link></p>
                         </div>
                         <span><a @click="go('/interaction/blog-list/')">{{ i18n.home.MORE }}</a></span>
                     </div>
@@ -140,12 +140,12 @@
             </div>
             <div class="is-pc room-left" v-if="!isShowH5">
                 <template>
-                    <el-carousel indicator-position="none" :autoplay="false" arrow="never" ref="newsroomCard" class="room-card">
-                        <el-carousel-item v-for="(item,index) in i18n.home.ROOM_LEFT_IMG" :key="index">
-                            <a class="room-img active card-hover">
+                     <el-carousel :interval="5000" arrow="never"    ref="newsroomCard" class="room-card">
+                      <el-carousel-item v-for="(item,index) in i18n.home.ROOM_LEFT_IMG" :key="index">
+                         <a class="room-img active card-hover">
                                 <img v-lazy="item.IMG" @click="newWindow(item.LINK)" alt="">
                             </a>
-                        </el-carousel-item>
+                      </el-carousel-item>
                     </el-carousel>
                 </template>
 
@@ -168,7 +168,7 @@
                         <span>{{ resolvePostDate(item.frontmatter.date) }}</span>
                         <span>|</span>
                         <span>{{ item.frontmatter.author }}</span>
-                        <p><router-link class="word-hover" :to="item.path">{{ item.frontmatter.summary }}</router-link></p>
+                        <p><router-link class="word-hover" :to="item.path">{{ item.frontmatter.title }}</router-link></p>
                     </div>
                     <span><a class="room-more" @click="go('/interaction/blog-list/')">{{ i18n.home.MORE }}</a></span>
                 </div>
@@ -603,7 +603,6 @@ let remoteMethods = {
             },
             vueToggle(index) {
                 this.currentRoom = index;
-                this.$refs.newsroomCard.setActiveItem(index);
             },
             eventChange(){
                 this.$refs.playctrlEle.isPlay = false;
@@ -667,13 +666,16 @@ let remoteMethods = {
     .el-carousel__container {
         height: 500px;
     }
-    .el-carousel__button{
+    .home-carousel .el-carousel__button{
         opacity: 0!important;
     }
     .room-card .el-carousel__container {
         height: 360px;
     }
-
+    .room-card .el-carousel__button {
+        background-color: #002FA7;
+        border-radius:1px;
+    }
     @media screen and (max-width: 1000px) {
         .el-carousel__container {
             height: 369px;
@@ -1806,19 +1808,21 @@ let remoteMethods = {
         color: #333;
         border-bottom: 2px solid #002fa7;
         border-radius: 2px;
+
     }
     .room-img {
         width: 420px;
         left: 52px;
         top: 75px;
-        box-shadow: 0 6px 30px 0px rgba(0, 0, 0, .1);
         position: absolute;
         z-index: -1;
         cursor: pointer;
+        box-shadow: 0 6px 30px 0px rgba(0, 0, 0, .1);
+
     }
     .room-img img {
-        width: 420px;
-        height: 260px;
+        display: block;
+       width: 100%;
     }
     .room-box a {
         color: #000;
