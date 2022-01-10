@@ -36,9 +36,9 @@ module.exports = {
 
             ONE_P3:'注：其中（1），（2）主要面向开发人员移植适配，是新增、扩容、原地替换三种场景迁移的前提，（3）主要面向交付人员迁移实施，支持扩容、原地替换场景。',
 
-            TITLE_TWO: 'openEuler Devkit 迁移综合方案概述',
+            TITLE_TWO: 'openEuler DevKit 迁移综合方案概述',
 
-           TWO_P1: 'openEuler devkit 面向迁移全流程提供完整工具链及方案，支撑OS迁移平稳、简单、高效，从基础兼容性、兼容性评估、移植适配、搬迁实施四个方面开展；',
+           TWO_P1: 'openEuler DevKit 面向迁移全流程提供完整工具链及方案，支撑OS迁移平稳、简单、高效，从基础兼容性、兼容性评估、移植适配、搬迁实施四个方面开展；',
 
             TWO_SCHEME_IMG: '/img/minisite/scheme/scheme.png',
 
@@ -58,7 +58,7 @@ module.exports = {
 
             TITLE_THREE_ONE: 'OS基础兼容性介绍',
 
-            THREE_ONE_P1: '关于操作系统兼容性，一般可以分为4个方面：1) 应用程序， 2)与硬件兼容性，3) 虚拟化平台 4) 容器平台 宿主与容器。',
+            THREE_ONE_P1: '关于操作系统兼容性，一般可以分为4个方面：1) 应用程序， 2)硬件兼容性，3) 虚拟化平台 4) 容器平台',
 
             THREE_ONE_LIST:[
 
@@ -144,7 +144,7 @@ module.exports = {
 
             TITLE_FIVE: '移植适配',
 
-            FIVE_P1:'关于应用适配，一般包括四个部分：1）应用移植适配，2）OS引包，3）硬件适配；4）配置适配',
+            FIVE_P1:'关于应用适配，一般包括四个部分：1）应用移植适配，2）OS引包，3）硬件适配，4）配置适配',
 
             TITLE_FIVE_ONE: '应用移植适配',
 
@@ -234,7 +234,7 @@ module.exports = {
 
             TITLE_TWO: 'openEuler迁移综合方案概述 ',
 
-            TWO_P1: 'openEuler devkit提供跨OS迁移整体解决方案，从基础兼容性、兼容性评估、移植适配、搬迁实施四个方面开展；',
+            TWO_P1: 'openEuler DevKit提供跨OS迁移整体解决方案，从基础兼容性、兼容性评估、移植适配、搬迁实施四个方面开展；',
 
             TWO_SCHEME_IMG: '/img/minisite/scheme/scheme.png',
 
