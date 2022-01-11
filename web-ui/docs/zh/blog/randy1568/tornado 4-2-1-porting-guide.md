@@ -54,31 +54,56 @@ Tornado是一个Python Web框架和异步网络库，最初由FriendFeed开发�
 wget http://mirror.centos.org/centos/7/os/x86_64/Packages/python-tornado-4.2.1-5.el7.x86_64.rpm
 ```
 
-## 获取工具 x2openEuler
+#### 下载工具
 
 ```
-xxx
+wget https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/noarch/x2openEuler-1.0-1.noarch.rpm
+
+用户指南：
+https://gitee.com/openeuler/docs/blob/stable2-20.03_LTS_SP1/docs/zh/docs/thirdparty_migration/x2openEuleruseguide.md
 ```
 
-## 配置工具
+#### 部署工具
 
 ```
-   rpm -ivh x2openEuler-1.0-1.noarch.rpm
-   su x2openEuler
-   cd 
-   x2openEuler redis-db -init       
-   x2openEuler使用rpm安装完成后会在/opt/x2openEuler目录下带有source_centos7.6-openEuler20.03-LTS-SP1.tar.gz这个默认资源包
-   需要支持centos8.2到openEuler20.03-LTS-SP1的评估，则需获取对应的静态资源包导入，如对应的资源包为source_centos8.2-openEuler20.03-LTS-SP1.tar.gz，导入此                
-   包命令：`x2openEuler init source_centos8.2-openEuler20.03-LTS-SP1.tar.gz`,视情况选择对应的资源包
+rpm -ivh x2openEuler-1.0-1.noarch.rpm
 ```
 
-## 运行x2openEuler工具
+> 注意：安装rpm时需要使用root用户，且目前需要网络（用于下载安装依赖）
+> 注意：根据提示安装依赖包如bzip2-devel等
 
 ```
-x2openEuler scan /root/python-tornado-4.2.1-5.el7.x86_64.rpm
+su x2openEuler
+x2openEuler redis-db -init
 ```
 
-## 查看结果
+> 依次录入redis数据库的ip:127.0.0.1
+> 端口：6379
+> 数据库索引号（0-16）：0
+> 密码（工具会对密码加密处理）：如果redis密码没有设置或者为空时，直接回车即可
+
+```
+x2openEuler init source_centos7.6-openEuler20.03-LTS-SP1.tar.gz
+```
+
+> 备注：x2openEuler使用rpm安装完成后会在/opt/x2openEuler目录下带有source_centos7.6-openEuler20.03-LTS-SP1.tar.gz这个默认资源包
+> 需要支持centos8.2到openEuler20.03-LTS-SP1的评估，则需获取对应的静态资源包导入，如对应的资源包为source_centos8.2-openEuler20.03-LTS-SP1.tar.gz，导入此包命令：`x2openEuler init source_centos8.2-openEuler20.03-LTS-SP1.tar.gz`，请示情况选择对应的资源包
+
+#### 扫描软件
+
+```
+x2openEuler scan python-tornado-4.2.1-5.el7.x86_64.rpm
+注意要分析的移植文件需要有能够让x2openEuler用户可以读取的权限
+扫描完成后会在/opt/x2openEuler/output目录生成html格式的报告
+```
+
+## 查看评估结果
+
+软件兼容性评估报告分三块内容展示软件兼容性，分别是依赖包兼容性、C/C++接口兼容性、java接口兼容性，依赖包兼容性反映了软件包安装过程中的直接依赖，非100%表明无法正确安装；接口兼容性反映的是单个软件运行过程中对其他软件包、动态库或系统接口的调用变化，非100%表明在某个功能调用时可能会触发异常，未调用到时可能表现正常；部分结果建议人工复核，最终软件包使用建优先级建议 openEuler已移植包>openEuler上人工重编译包>centos软件包。
+
+<img src="./image/tornado-1.png">
+
+结果：通过报告可知外部接口兼容性100%，依赖包兼容性人工复核后通过，经评估tornado4.2.1软件包在openEuler 20.03 LTS SP1系统上兼容，可安装此软件包至openEuler 20.03 LTS SP1系统进行验证。
 
 # 安装tornado
 
