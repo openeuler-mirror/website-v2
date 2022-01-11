@@ -55,12 +55,6 @@ MySQL 是一款安全、跨平台、高效的，并与 PHP、Java 等主流编�
 | mysql5-server         | 5.7.21 |
 | mysql5-test           | 5.7.21 |
 
-> 网络要求：
->
-> 迁移目标服务器和当前mysql集群的节点需在同一个网络环境内，并可以访问外部网或本次有openEuler sp1镜像仓库源，支持操作系统仓库配置。
-
-
-
 ## 3.软件兼容性评估
 
 openEuler社区提供了 [x2openEuler 工具](https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/noarch/) ，针对已经编译好的二进制程序，进行主要完成软件包、接口级评估，明确应用软件是否需要移植适配，是否有依赖的软件包待引入；同时评估软件调用的接口原型在两个系统中是否有差异。
@@ -153,11 +147,9 @@ https://repo.openeuler.org/openEuler-20.03-LTS-SP1/everything/x86_64/Packages/me
 
 #### 5.1安装mysql并配置密码
 
-> 迁移目标服务器都需要安装mysql。例如分别在openEuler B5-0 机器及 B5-4机器安装， 目前openEuler sp1系统已提供以下安装包 。
-
 **1）安装mariadb及mysql相关服务。**
 
-yum install –y mysql5 mysql5-common mysql5-devel mysql5-embedded mysql5-embedded-devel mysql5-errmsg mysql5-libs mysql5-server mysql5-test
+rpm -ivh mysql5-5.7.21-3.oe1.x86_64.rpm mariadb-common-10.3.9-9.oe1.x86_64.rpm mysql5-common-5.7.21-3.oe1.x86_64.rpm mysql5-server-5.7.21-3.oe1.x86_64.rpm mecab-0.996-2.oe1.x86_64.rpm mysql5-errmsg-5.7.21-3.oe1.x86_64.rpm
 
 **2） 启动mysql。**
 
