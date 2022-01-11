@@ -10,7 +10,7 @@ author: xielihao
 summary: Just about everything of the MySQL 5.7.21 migrate case
 ---
 
-# MySQL 5.7.21 搬迁指南（openEuler 20.03 LTS SP1）
+# MySQL 5.7.21 移植指南（openEuler 20.03 LTS SP1）
 
 
 ## 1.简要介绍
@@ -27,6 +27,7 @@ MySQL 是一款安全、跨平台、高效的，并与 PHP、Java 等主流编�
 
 ## 2.案例环境
 
+服务器
 | 项目     | 说明              |
 | -------- | ----------------- |
 | 服务器   | TaiShan 200服务器 |
@@ -37,13 +38,13 @@ MySQL 是一款安全、跨平台、高效的，并与 PHP、Java 等主流编�
 |          | TM280             |
 | 磁盘容量 | 500GB以上         |
 
-
+OS
 | 软件 | 版本                | 备注                |
 | ---- | ------------------- | ------------------- |
 | OS   | Centos 7.6.1810     | 当前mysql集群服务器 |
 | OS   | openEuler 20.03 SP1 | 迁移目标服务器      |
 
-
+软件包
 | 软件                  | 版本   |
 | --------------------- | ------ |
 | mysql5                | 5.7.21 |
