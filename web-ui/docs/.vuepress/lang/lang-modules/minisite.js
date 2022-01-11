@@ -57,6 +57,10 @@ module.exports = {
             ],
             LINK_LIST: [
                 {
+                    TEXT: 'MySQL 5.7.21 移植案例',
+                    LINK: 'https://www.openeuler.org/zh/blog/randy1568/MySQL%205-7-21-migrate-guide.html'
+                },
+                {
                     TEXT: 'Apache 2.4.39 移植指南',
                     LINK: 'https://www.openeuler.org/zh/blog/randy1568/Apache%202-4-39-porting-guide.html'
                 },
@@ -89,10 +93,6 @@ module.exports = {
                     LINK: 'https://www.openeuler.org/zh/blog/randy1568/Nginx%201-14-2-porting-guide.html'
                 },
                 {
-                    TEXT: 'MySQL 5.7.23 移植案例',
-                    LINK: 'https://www.openeuler.org/zh/blog/randy1568/MySQL%205-7-23-porting-guide.html'
-                },
-                {
                     TEXT: 'Tengine 2.2.2 移植案例',
                     LINK: 'https://www.openeuler.org/zh/blog/randy1568/Tengine%202.2.2-porting-guide.html'
                 },
@@ -105,12 +105,8 @@ module.exports = {
                     LINK: 'https://www.openeuler.org/zh/blog/randy1568/Varnish%206-2-0-porting-guide.html'
                 },
                 {
-                    TEXT: 'X86硬件兼容性评估迁移指导(3008raid) ',
-                    LINK: 'https://www.openeuler.org/zh/blog/randy1568/X86%20hardware%20compatibility%20assessment%20migration%20guide-3008raid.html'
-                },
-                {
-                    TEXT: 'X86硬件兼容性移迁指南(Hi1822&3408raid)',
-                    LINK: 'https://www.openeuler.org/zh/blog/randy1568/X86%20hardware%20compatibility%20assessment%20migration%20guide-Hi1822&3408raid.html'
+                    TEXT: 'X86硬件兼容性移迁指南',
+                    LINK: 'https://www.openeuler.org/zh/blog/randy1568/X86%20hardware%20compatibility%20assessment%20migration%20guide.html'
                 },
                 {
                     TEXT: 'flask 1.1.2 移植案例',
