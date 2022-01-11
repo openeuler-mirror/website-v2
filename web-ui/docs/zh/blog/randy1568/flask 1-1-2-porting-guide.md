@@ -105,7 +105,7 @@ x2openEuler scan python36-flask-1.1.2-4.el7.noarch.rpm
 
 结果：通过报告可知外部接口兼容性100%，依赖包兼容性人工复核后确认缺失，由于该软件包属于python包，建议使用pip3方式安装依赖及python-flask对应版本。
 
-##安装flask
+## 安装flask
 
 ### rpm安装
 
