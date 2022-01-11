@@ -14,7 +14,7 @@ summary: Just about everything you'll need to  migrate the enca 1.19
 
 # 介绍
 
-##简要介绍
+## 简要介绍
 
 enca是一个实用的编码转换工具。本案例使用x86_64架构虚拟机，通过评估工具x2openEuler评估enca1.19软件移植到openEuler操作系统的兼容性，并根据评估结果完成软件移植。
 
