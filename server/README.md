@@ -83,56 +83,56 @@ node v12.18.3+
 
     > npm install cheerio
 
-3. 启动服务
+3. 配置环境变量
+
+   调用后端接口用户名与密码
+
+   export API_USER_PASS=xxxxxx:xxxxxx
+
+   调用邮件列表接口用户名与密码
+
+   export MAIL_USER_PASS=xxxxxx:xxxxxx
+
+   SIG组列表URL
+
+   export SIG_API=http://xxx.xxx.xxx.xxx/groups/
+
+   ES服务url
+
+   export ES_URL=https://xxx.xxx.xxx:port/
+
+   调用ES接口用户名与密码
+
+   export ES_USER_PASS=admin:openeuler
+
+   数据库名称
+
+   export MYSQL_DATABASE=xxx
+
+   数据库密码
+
+   export MYSQL_PWD=xxx
+
+   数据库安装地址
+     
+   export MYSQL_URL=xxx.xxx.xxx.xxx
+
+4. 启动服务
 
   > npm run start
 
   > npm run dev
 
-4. 服务器发布
+5. 服务器发布
 
-   1. 配置环境变量
-
-      调用后端接口用户名与密码
-
-      export API_USER_PASS=xxxxxx:xxxxxx
-
-      调用邮件列表接口用户名与密码
-
-      export MAIL_USER_PASS=xxxxxx:xxxxxx
-
-      SIG组列表URL
-
-      export SIG_API=http://xxx.xxx.xxx.xxx/groups/
-
-      ES服务url
-
-      export ES_URL=https://xxx.xxx.xxx:port/
-
-      调用ES接口用户名与密码
-
-      export ES_USER_PASS=admin:openeuler
-
-      数据库名称
-
-      export MYSQL_DATABASE=xxx
-
-      数据库密码
-
-      export MYSQL_PWD=xxx
-
-      数据库安装地址
-     
-      export MYSQL_URL=xxx.xxx.xxx.xxx
-
-   2. 进入项目目录
+   1. 进入项目目录
 
       cd /home/openeuler/website-v2/server
 
-   3. 构建docker镜像
+   2. 构建docker镜像
 
       docker build -t openeulerserver .
 
-   4. 启动docker容器
+   3. 启动docker容器
 
       docker run -e API_USER_PASS -e MAIL_USER_PASS -e SIG_API -e ES_URL -e ES_USER_PASS -e MYSQL_DATABASE -e MYSQL_PWD -e MYSQL_URL -p 8090:8090 -d openeulerserver
