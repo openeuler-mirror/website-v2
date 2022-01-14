@@ -307,7 +307,6 @@
                     </div>
                   </div>
                 </div>
-                <!-- <div class="dash"></div> -->
                 <div class="view-all" v-if="showAll">
                   <a @click="extend()" v-if="!isExent"
                     >{{rank.VIEW_ALL}}
@@ -391,11 +390,6 @@
       </div>
     </div>
   </div>
-  <!-- <div class="closeInternship">
-    <p>系统维护中，开放时间请等待群内消息通知。</p>
-    <p>开源实习群号：526089131</p>
-    <img src="/img/internship/qrCode.png" alt="" />
-  </div> -->
 </template>
 
 <script>
@@ -628,8 +622,24 @@ export default {
             GITEE: "https://gitee.com/openeuler/community/tree/master/sig/G11N",
           },
           {
+            NAME: "sig-UKUI",
+            NAME_LINK:
+              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=46&name=sig-UKUI",
+            INTRODUCE: "负责在openEuler上提供UKUI桌面环境，及相关软件包的规划、维护和升级",
+            TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590230&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&sort=&state=open&target_project&skip_mobile=true",
+            GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-UKUI",
+          },
+          {
+            NAME: "sig-OSCourse",
+            NAME_LINK:
+              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=95&name=sig-OSCourse",
+            INTRODUCE: "操作系统课程兴趣组",
+            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=141433910&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&sort=default&state=open&target_project&skip_mobile=true",
+            GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-OSCourse",
+          },
+          {
             NAME: "其他",
-            INTRODUCE: "一些暂不属于任何SIG的任务",
+            INTRODUCE: "一些暂不属于任何SIG的任务，如Rust、存储等等",
             TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=125884711&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&sort=&state=open&target_project&skip_mobile=true",
           },
           {
@@ -1155,19 +1165,8 @@ a {
         .item:nth-child(4n) {
           margin-right: 0;
         }
-        .item:nth-child(n + 9) {
-          margin-bottom: 0;
-          .button-box {
-            height: 40px;
-          }
-          .button-right {
-            display: none;
-          }
-        }
         .item:last-child {
-          margin: 0;
-          height: 200px;
-          width: 833px;
+          min-width: 260px;
           .button-box {
             display: none;
           }

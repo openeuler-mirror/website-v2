@@ -4,13 +4,13 @@
            <h1 class="one-h">{{scheme.TITLE}}</h1>
            <h2 class="two-h">{{scheme.TITLE_ONE}}</h2>
            <p class="content">{{scheme.ONE_P1}}</p>
-           <p class="content" v-for="(item,index) in scheme.ONE_QUESTION" :key="index">{{item}}</p>
+           <p class="content" v-for="(item) in scheme.ONE_QUESTION" :key="item">{{item}}</p>
            <div class="margin30"></div>
            <p class="content">{{scheme.ONE_P2}}</p>
            <div class="img-box">
                <img class="img" :src="scheme.ONE_PROCESS_IMG" alt="" />
            </div>
-           <p class="content" v-for="(item,index) in scheme.ONE_ANSWER" :key="index">{{item}}</p>
+           <p class="content" v-for="(item) in scheme.ONE_ANSWER" :key="item">{{item}}</p>
            <p class="content">{{scheme.ONE_P3}}</p>
            <div class="margin30"></div>
 
@@ -19,18 +19,18 @@
            <div class="img-box">
                 <img class="img" :src="scheme.TWO_SCHEME_IMG" alt="" />
            </div>
-           <p class="content" v-for="(item,index) in scheme.TWO_SCHEME" :key="index">{{item}}</p>
+           <p class="content" v-for="(item) in scheme.TWO_SCHEME" :key="item">{{item}}</p>
            
  
            <h2 class="two-h">{{scheme.TITLE_THREE}} </h2>
            <h3 class="three-h">{{scheme.TITLE_THREE_ONE}}</h3>
            <p class="content">{{scheme.THREE_ONE_P1}}</p>
-           <div v-for="(item,index) in scheme.THREE_ONE_LIST" :key="index">
+           <div v-for="(item) in scheme.THREE_ONE_LIST" :key="item.title">
               <p class="content">{{item.title}} </p>
-              <p class="content" v-for="(content,ind) in item.content" :key="ind">{{content}} </p>
+              <p class="content" v-for="(content) in item.content" :key="content">{{content}} </p>
            </div>            
             <p class="content">{{scheme.THREE_ONE_P2}}</p>
-            <ul class="scheme-ul" v-for="(item,index) in scheme.THREE_ONE_GROUP" :key="index">
+            <ul class="scheme-ul" v-for="(item) in scheme.THREE_ONE_GROUP" :key="item">
                 <li>{{item}}</li>
             </ul>
             <p class="content">{{scheme.THREE_ONE_P3}}</p>
