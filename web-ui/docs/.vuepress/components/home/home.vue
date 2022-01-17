@@ -20,7 +20,7 @@
               <el-carousel-item >
                      <div class="carousel-banner" id="container"    @click="go('/activities/happynewyear2022/')">
                         <div class="extend3 extend" ></div>
-                        <div class="newyear"></div>
+                        <div class="newyear center-img"></div>
                         <div class="extend4 extend"></div>
                      </div>
               </el-carousel-item>
@@ -1131,16 +1131,15 @@ let remoteMethods = {
             background-image: url("/img/home/banner/openEuler_left.png");
         }
         .center-img {
-            flex: 222;
+            flex: 999;
             max-width: 1920px;
+            background-position: center center;
             background-image: url("/img/home/banner/openEuler.png");
         }
         .extend2 {
             background-image: url("/img/home/banner/openEuler_right.png");
         }
         .newyear {
-            flex: 99;
-            max-width: 1920px;
             background-image: url("/img/home/banner/newyear-banner.png");
         }
         .extend3 {
