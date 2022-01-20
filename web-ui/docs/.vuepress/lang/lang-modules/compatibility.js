@@ -91,8 +91,8 @@ module.exports = {
             ITEM_ARR: [
             {
                 ID:'01',
-                TITLE:'申请加入openEuler企业',
-                DESCRIPTION_1:'您需要在Gitee平台申请加入openEuler企业，成为组织成员。申请地址：',
+                TITLE:'申请加入openEuler社区',
+                DESCRIPTION_1:'您需要在Gitee平台申请加入openEuler社区，成为组织成员。申请地址：',
                 A_TEXT:'https://github.com/GeorgeCao-hw/georgedoc/blob/master/openEuler-Infra-FAQ.md',
                 DESCRIPTION_2:'。'
             },
@@ -126,9 +126,9 @@ module.exports = {
             }, {
                 ID:'06',
                 TITLE:'提交结果审核',
-                DESCRIPTION_1:'完成兼容性测试并通过后，需要您把测试日志和适配环境信息（',
-                A_TEXT2:'https://gitee.com/src-openeuler/oec-hardware/releases',
-                DESCRIPTION_3: '）更新到issue中。并且按照使用指南将对应测试结果发送给公共邮箱：您需要向公共邮箱（',
+                DESCRIPTION_1:'完成兼容性测试并通过后，需要您把测试结果更新到issue中。并且按照使用指南将对应测试结果发送给公共邮箱：您需要向公共邮箱（',
+                A_TEXT2:'',
+                DESCRIPTION_3: '',
                 A_TEXT:'oecompatibility@openeuler.org',
                 DESCRIPTION_2:'）发送兼容性结果审核申请，邮件标题需要注明“xxx硬件兼容性测试结果信息”（其中xxx为社区issue ID）。'
             }, {
