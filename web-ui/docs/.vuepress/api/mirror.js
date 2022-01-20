@@ -44,10 +44,13 @@
 }
 // 镜像选择
 export const selectMirror = ({version}) => {
+    let env = window.location.host;
+    let url = null;
+    env.includes('openeuler') ? url = `https://api.openeuler.org/mirrors/openEuler-${version}/ISO/`:url =`/openEuler-${version}/ISO/`
     return new Promise((resolve,reject) => {
         appAjax.postJson({
             otherBaseUrl: mirrorApi,
-            url: `openEuler-${version}/ISO/`,
+            url: url,
             type: 'get',
             success(result) {
                 if(result) {

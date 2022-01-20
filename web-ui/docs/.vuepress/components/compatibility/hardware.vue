@@ -95,9 +95,6 @@
                            <div class="item-title"> {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].TITLE}}</div>
                            <div class="item-content">
                                 {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].DESCRIPTION_1}}
-                               <a :href="i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].A_TEXT2" target="_blank">
-                                   {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].A_TEXT2}}
-                               </a>
                                {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].DESCRIPTION_3}}
                                <a :href="'mailto:' + i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].A_TEXT">
                                    {{i18n.compatibility.HARDWARE_OEC_DETAIL.ITEM_ARR[5].A_TEXT}}
