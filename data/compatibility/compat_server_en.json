@@ -236,12 +236,12 @@
     }
   },
   {
-    "hardwareFactory": "Huawei",
+    "hardwareFactory": "xfusion",
     "hardwareModel": "Fusionserver 2288H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86",
     "date": "2020/12/21",
-    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/2288h-v5",
+    "friendlyLink": "support.xfusion.com",
     "boardCards": [
       {
         "vendorID": "19e5",
@@ -264,7 +264,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/2288h-v5",
+      "productInformation": "support.xfusion.com",
       "certificationTime": "2020/12/21",
       "commitID": "",
       "motherBoardRevision": "",
@@ -278,12 +278,12 @@
     }
   },
   {
-    "hardwareFactory": "Huawei",
+    "hardwareFactory": "xfusion",
     "hardwareModel": "Fusionserver 2288H V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86",
     "date": "2020/12/21",
-    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/2288h-v5",
+    "friendlyLink": "support.xfusion.com",
     "boardCards": [
       {
         "vendorID": "19e5",
@@ -306,7 +306,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/2288h-v5",
+      "productInformation": "support.xfusion.com",
       "certificationTime": "2020/12/21",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1162,12 +1162,12 @@
     }
   },
   {
-    "hardwareFactory": "Huawei",
+    "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 1288H V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86",
     "date": "2021/02/04",
-    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/1288h-v5",
+    "friendlyLink": "support.xfusion.com",
     "boardCards": [
       {
         "vendorID": "8086",
@@ -1209,7 +1209,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/1288h-v5",
+      "productInformation": "support.xfusion.com",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1223,12 +1223,12 @@
     }
   },
   {
-    "hardwareFactory": "Huawei",
+    "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 2288C V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86",
     "date": "2020/11/16",
-    "friendlyLink": "",
+    "friendlyLink": "support.xfusion.com",
     "boardCards": [
       {
         "vendorID": "",
@@ -1251,7 +1251,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "",
+      "productInformation": "support.xfusion.com",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1265,12 +1265,12 @@
     }
   },
   {
-    "hardwareFactory": "Huawei",
+    "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 2288H V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86",
     "date": "2020/11/16",
-    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/2288h-v5",
+    "friendlyLink": "support.xfusion.com",
     "boardCards": [
       {
         "vendorID": "",
@@ -1293,7 +1293,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/2288h-v5",
+      "productInformation": "support.xfusion.com",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1307,12 +1307,12 @@
     }
   },
   {
-    "hardwareFactory": "Huawei",
+    "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 2488H V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86",
     "date": "2021/01/18",
-    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/2488h-v5",
+    "friendlyLink": "support.xfusion.com",
     "boardCards": [
       {
         "vendorID": "",
@@ -1335,7 +1335,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/2488h-v5",
+      "productInformation": "support.xfusion.com",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1349,12 +1349,12 @@
     }
   },
   {
-    "hardwareFactory": "Huawei",
+    "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 2488H V6",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86",
     "date": "2020/11/26",
-    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/2488h-v6",
+    "friendlyLink": "support.xfusion.com",
     "boardCards": [
       {
         "vendorID": "",
@@ -1377,7 +1377,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/2488h-v6",
+      "productInformation": "support.xfusion.com",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1391,12 +1391,12 @@
     }
   },
   {
-    "hardwareFactory": "Huawei",
+    "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 5288 V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86",
     "date": "2021/02/04",
-    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/5288-v5",
+    "friendlyLink": "support.xfusion.com",
     "boardCards": [
       {
         "vendorID": "",
@@ -1419,7 +1419,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/5288-v5",
+      "productInformation": "support.xfusion.com",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1433,12 +1433,12 @@
     }
   },
   {
-    "hardwareFactory": "Huawei",
+    "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 5885H V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86",
     "date": "2021/02/04",
-    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/5885h-v5",
+    "friendlyLink": "support.xfusion.com",
     "boardCards": [
       {
         "vendorID": "",
@@ -1461,7 +1461,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/5885h-v5",
+      "productInformation": "support.xfusion.com",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1475,12 +1475,12 @@
     }
   },
   {
-    "hardwareFactory": "Huawei",
+    "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 1288H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86",
     "date": "2021/03/03",
-    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/1288h-v5",
+    "friendlyLink": "support.xfusion.com",
     "boardCards": [
       {
         "vendorID": "8086",
@@ -1522,7 +1522,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/1288h-v5",
+      "productInformation": "support.xfusion.com",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1536,12 +1536,12 @@
     }
   },
   {
-    "hardwareFactory": "Huawei",
+    "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 2288C V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86",
     "date": "2021/03/03",
-    "friendlyLink": "",
+    "friendlyLink": "support.xfusion.com",
     "boardCards": [
       {
         "vendorID": "",
@@ -1564,7 +1564,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "",
+      "productInformation": "support.xfusion.com",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1578,12 +1578,12 @@
     }
   },
   {
-    "hardwareFactory": "Huawei",
+    "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 2288H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86",
     "date": "2021/03/03",
-    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/2288h-v5",
+    "friendlyLink": "support.xfusion.com",
     "boardCards": [
       {
         "vendorID": "",
@@ -1606,7 +1606,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/2288h-v5",
+      "productInformation": "support.xfusion.com",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1620,12 +1620,12 @@
     }
   },
   {
-    "hardwareFactory": "Huawei",
+    "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 2488H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86",
     "date": "2021/02/04",
-    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/2488h-v5",
+    "friendlyLink": "support.xfusion.com",
     "boardCards": [
       {
         "vendorID": "",
@@ -1648,7 +1648,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/2488h-v5",
+      "productInformation": "support.xfusion.com",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1662,12 +1662,12 @@
     }
   },
   {
-    "hardwareFactory": "Huawei",
+    "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 5288 V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86",
     "date": "2021/03/03",
-    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/5288-v5",
+    "friendlyLink": "support.xfusion.com",
     "boardCards": [
       {
         "vendorID": "",
@@ -1690,7 +1690,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/5288-v5",
+      "productInformation": "support.xfusion.com",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1704,12 +1704,12 @@
     }
   },
   {
-    "hardwareFactory": "Huawei",
+    "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 5885H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86",
     "date": "2021/01/29",
-    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/5885h-v5",
+    "friendlyLink": "support.xfusion.com",
     "boardCards": [
       {
         "vendorID": "",
@@ -1732,7 +1732,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/5885h-v5",
+      "productInformation": "support.xfusion.com",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -2711,12 +2711,12 @@
     }
   },
   {
-    "hardwareFactory": "huawei",
+    "hardwareFactory": "xfusion",
     "hardwareModel": "E9000 CH121 V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86_64",
     "date": "2021/07/03",
-    "friendlyLink": "https://e.huawei.com/cn/products/servers/e-series/ch121-v5-node",
+    "friendlyLink": "support.xfusion.com",
     "boardCards": [
      {
         "vendorID": "19e5",
@@ -2758,7 +2758,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "https://e.huawei.com/cn/products/servers/e-series/ch121-v5-node",
+      "productInformation": "support.xfusion.com",
       "certificationTime": "2021/07/03",
       "commitID": "",
       "motherBoardRevision": "1.10",
@@ -3421,7 +3421,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "http://www.100trust.cn/productsshow-74-7-2.html"",
+      "productInformation": "http://www.100trust.cn/productsshow-74-7-2.html",
       "certificationTime": "2021/12/07",
       "commitID": "I4INBB",
       "motherBoardRevision": "",
