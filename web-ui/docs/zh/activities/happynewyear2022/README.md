@@ -8,5 +8,5 @@ title: "happynewyear2022"
       :inside-name="'HAPPY NEW YEAR'"
       outside-name="openEuler of Our Own"
   ></common-banner>
-  <minisite-newyear/>
+  <activities-newyear/>
 </ClientOnly>

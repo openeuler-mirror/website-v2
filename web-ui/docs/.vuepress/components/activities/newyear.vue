@@ -67,9 +67,6 @@
           我对我们的相遇心怀感恩，对你们的付出铭记于心。因此在我两岁生日的时刻，我们诚心推出
           “<span class="dark-red"> openEuler of Our Own </span>” 系列新年活动，诚挚希望您收下我精心准备的礼物，期望在未来你我可以并肩继续坚定走下去。
         </p>
-        <!-- <p class="fade fade-time-6">
-          
-        </p> -->
         <p class="fade fade-time-6">openEuler 社区</p>
       </div>
     </div>
