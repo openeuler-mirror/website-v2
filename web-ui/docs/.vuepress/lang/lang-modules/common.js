@@ -208,7 +208,7 @@ module.exports = {
             ATOM_PC:'/atom-pc.png',
             ATOM_MO:'/atom-mo.png',
             MAIL: 'contact@openeuler.io',
-            COPY_RIGHT: '版权所有 © 2021 openEuler 保留一切权利',
+            COPY_RIGHT: '版权所有 © 2022 openEuler 保留一切权利',
             RIGHT_LIST: [{
                     NAME: '品牌',
                     URL: '/other/brand/'
@@ -430,7 +430,7 @@ module.exports = {
             ATOM_PC:'/atom-pc.png',
             ATOM_MO:'/atom-mo.png',
             MAIL: 'contact@openeuler.io',
-            COPY_RIGHT: 'Copyright © 2021 openEuler. All rights reserved.',
+            COPY_RIGHT: 'Copyright © 2022 openEuler. All rights reserved.',
             RIGHT_LIST: [{
                     NAME: 'Trademark',
                     URL: '/other/brand/'
@@ -631,7 +631,7 @@ module.exports = {
             ATOM_PC:'/atom-pc.png',
             ATOM_MO:'/atom-mo.png',
             MAIL: 'contact@openeuler.io',
-            COPY_RIGHT: 'Авторские права © openEuler 2021. Все права защищены.',
+            COPY_RIGHT: 'Авторские права © openEuler 2022. Все права защищены.',
             RIGHT_LIST: [{
                     NAME: 'Товарный знак',
                     URL: '/other/brand/'
