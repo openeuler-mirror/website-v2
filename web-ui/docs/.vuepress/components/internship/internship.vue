@@ -547,7 +547,7 @@ export default {
       },
       task: {
         INTRODUCE:
-          "SIG（Special Interest Group）是openEuler社区的组织形式，找到你感兴趣的SIG，查看相关实习任务。",
+          "SIG（Special Interest Group）是openEuler社区的组织形式，找到你感兴趣的SIG，点击下列“实习任务”到Gitee查看相关SIG的任务（需先保持Gitee在登陆状态）。",
         TASK_ITEM: [
           {
             NAME: "Kernel",
@@ -1109,7 +1109,6 @@ a {
     #task {
       .task-introduce {
         margin-bottom: 30px;
-        text-align: center;
         font-size: 20px;
         line-height: 40px;
       }
