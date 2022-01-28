@@ -26,7 +26,7 @@
               </el-carousel-item>
               <el-carousel-item >
                 <div class="video-banner carousel-banner">
-                     <video  height="500" loop ref="bannerVideo" poster="/img/home/banner/video-banner.png"  preload=""  id="home-video" >
+                     <video @click="eventChange"  height="500" loop ref="bannerVideo" poster="/img/home/banner/video-banner.png"  preload=""  id="home-video" >
                          <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/openEuler%E9%9D%A2%E5%90%91%E6%95%B0%E5%AD%97%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E7%9A%84%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F_Banner.mp4">
                      </video>
                     <playcontroll :ctrl-obj="videoCtrlParams" ref="playctrlEle" @playStatus="checkStatus"></playcontroll>
@@ -712,7 +712,6 @@ let remoteMethods = {
         }
          video {
              max-width: 1920px;
-            //  object-fit: cover;
         }
         .is-cover {
             filter: contrast(80%) brightness(50%);
@@ -1123,12 +1122,12 @@ let remoteMethods = {
         background-position: center center;
         .extend {
             display: none;
-            background-size: 700px 500px;
+            background-size: 50px 500px;
             background-repeat: repeat-x;
             background-attachment: local;
         }
         .extend1 {
-            background-image: url("/img/home/banner/openEuler_left.png");
+            background-image: url("/img/home/banner/openEuler_extend.png");
         }
         .center-img {
             flex: 999;
@@ -1137,16 +1136,12 @@ let remoteMethods = {
             background-image: url("/img/home/banner/openEuler.png");
         }
         .extend2 {
-            background-image: url("/img/home/banner/openEuler_right.png");
+            background-image: url("/img/home/banner/openEuler_extend.png");
         }
         .newyear {
             background-image: url("/img/home/banner/newyear-banner.png");
         }
-        .extend3 {
-            background-size: 1400px 500px;
-            background-image: url("/img/home/banner/loop.png");
-        }
-        .extend4 {
+        .extend3,.extend4 {
             background-size: 1400px 500px;
             background-image: url("/img/home/banner/loop.png");
         }
