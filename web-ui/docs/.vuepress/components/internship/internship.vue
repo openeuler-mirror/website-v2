@@ -149,7 +149,7 @@
                     > {{ step.stepThree.pText[5] }}
                   </p>
                   <p>
-                    {{ step.stepThree.pText[6] }}
+                    {{ step.stepThree.pText[6] }} <span class="blue"> {{ step.stepThree.pText[7] }} </span> {{ step.stepThree.pText[8] }}
                   </p>
                   <div class="attention black">
                     <div class="attention-title">{{ step.ATTENTION }}</div>
@@ -508,13 +508,15 @@ export default {
         stepThree: {
           TITLE: "提交任务",
           pText: [
-            "（1）任务处理完成后，提交pr，并在pr描述里添加",
-            "#issue编号",
-            "（务必添加，否则无法积分）；",
+            "（1）任务处理完成后，提交pr，在pr描述里添加 ",
+            "#issue",
+            " 编号;",
             "（2）提交pr后在任务issue评论区输入",
             "/intern-completed",
             "命令，表示当前任务已提交，然后等待审核。",
-            "（3）跟进导师和相关SIG maintainer审核PR，PR被合入则获得积分，issue自动关闭。",
+            "（3）跟进导师和相关SIG maintainer审核PR，PR被合入后，导师确认任务完成即在issue下输入",
+            "/intern-done",
+            "命令，issue关闭，学生获得积分。"
           ],
           ATTENTION_TEXT: [
             "导师有不通过任务成果的权利，如学生提交的PR离实际所需太远，或未按时提交PR，可选择输入命令",
@@ -591,7 +593,7 @@ export default {
               "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=37&name=sig-KIRAN-DESKTOP&mail=dev%40openeuler.org",
             INTRODUCE:
               "麒麟信安自主研发，致力于为用户提供更加美观，高效和易用的Linux桌面操作系统",
-            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590388&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=124590528&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
+            TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590528&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
             GITEE:
               "https://gitee.com/openeuler/community/tree/master/sig/sig-KIRAN-DESKTOP",
           },
@@ -628,7 +630,7 @@ export default {
             NAME_LINK:
               "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=46&name=sig-UKUI",
             INTRODUCE: "负责在openEuler上提供UKUI桌面环境，及相关软件包的规划、维护和升级",
-            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590352&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=124590230&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
+            TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590230&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
             GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-UKUI",
           },
           {
@@ -638,6 +640,14 @@ export default {
             INTRODUCE: "操作系统课程兴趣组",
             TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590352&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=141433910&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
             GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-OSCourse",
+          },
+          {
+            NAME: "sig-DDE",
+            NAME_LINK:
+              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=95&name=sig-DDE",
+            INTRODUCE: "深度科技自主开发的美观易用、极简操作的桌面环境",
+            TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590403&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
+            GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-DDE",
           },
           {
             NAME: "其他",
@@ -1170,7 +1180,8 @@ a {
           margin-right: 0;
         }
         .item:last-child {
-          min-width: 260px;
+          margin: 0;
+          width: 100%;
           .button-box {
             display: none;
           }
