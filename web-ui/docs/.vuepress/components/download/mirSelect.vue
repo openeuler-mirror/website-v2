@@ -85,9 +85,9 @@
                 </el-table-column>
             </el-table>
         </div>
-        <baiduMapCom v-if="!isShowH5 && mapData['data'].length" :mapData="mapData['data']" :versionPath="versionPath" :centerPoint="mapData['center']">
+        <!-- <baiduMapCom v-if="!isShowH5 && mapData['data'].length" :mapData="mapData['data']" :versionPath="versionPath" :centerPoint="mapData['center']">
 
-        </baiduMapCom>
+        </baiduMapCom> -->
     </div>
 </template>
 <script>
