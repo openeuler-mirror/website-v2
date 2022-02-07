@@ -1057,6 +1057,9 @@ a {
         }
         @media (max-width: 1000px) {
           background: none;
+          p::before {
+            display: none;
+          }
           .step-body {
             background: none;
             height: 100%;
@@ -1666,7 +1669,6 @@ a {
           p {
             font-size: 20px;
             color: #000000;
-            // font-family: PingFangSC-Regular, PingFang SC;
             line-height: 40px;
             margin-bottom: 10px;
             a {
@@ -1689,7 +1691,6 @@ a {
             p {
               font-size: 16px;
               color: #000000;
-              // font-family: PingFangSC-Regular, PingFang SC;
               line-height: 30px;
               margin-bottom: 10px;
               a {
