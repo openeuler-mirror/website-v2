@@ -1,9 +1,5 @@
 <template>
   <div class="footer-wrapper">
-    <div class="qr-code" :class="{'none':close}">
-      <img @click="goFooterUrl('https://www.openeuler.org/2021summary/')" src="/img/common/newyear-qr.png" alt="">
-      <img class="close" @click="closeQR()" src="../../public/img/common/icon-close.png" alt="">
-    </div>
     <div class="atom">
       <p>{{ i18n.common.FOOTER.ATOM_TEXT }}</p>
       <img
