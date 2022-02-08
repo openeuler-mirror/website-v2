@@ -43,7 +43,7 @@ wget http://mirror.centos.org/centos/7/os/x86_64/Packages/iok-2.1.3-6.el7.x86_64
 #### 下载工具
 
 ```
-wget https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/noarch/x2openEuler-1.0-1.noarch.rpm
+wget https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/stable/contrib/x2openEuler/noarch/Packages/x2openEuler-1.0-1.noarch.rpm
 
 用户指南：
 https://gitee.com/openeuler/docs/blob/stable2-20.03_LTS_SP1/docs/zh/docs/thirdparty_migration/x2openEuleruseguide.md

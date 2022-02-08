@@ -44,13 +44,13 @@ cat /etc/os-release
 
 # x2openEuler软件运行和硬件兼容性评估
 
-openEuler社区提供了 [x2openEuler 工具](https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/noarch/) ，具有硬件评估、软件评估、系统配置评估的功能，其中硬件评估针对centos系统上正常运行的板卡在openEuler上兼容性，工具采集板卡信息生成html报告，直观快捷展示硬件的兼容性。
+openEuler社区提供了 [x2openEuler 工具](https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/stable/contrib/x2openEuler/noarch/Packages/) ，具有硬件评估、软件评估、系统配置评估的功能，其中硬件评估针对centos系统上正常运行的板卡在openEuler上兼容性，工具采集板卡信息生成html报告，直观快捷展示硬件的兼容性。
 
 ## 下载x2openEuler工具
 
 ```
 cd /opt/
-wget https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/noarch/x2openEuler-1.0-1.noarch.rpm
+wget https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/stable/contrib/x2openEuler/noarch/Packages/x2openEuler-1.0-1.noarch.rpm
 
 用户指南：
 https://gitee.com/openeuler/docs/blob/stable2-20.03_LTS_SP1/docs/zh/docs/thirdparty_migration/x2openEuleruseguide.md
