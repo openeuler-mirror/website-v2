@@ -93,9 +93,9 @@
             <!-- 用于复制RSNC的值 -->
             <input type="text" id="useCopy" />
         </div>
-        <!-- <baiduMapCom v-if="!isShowH5 && mapData.length" :mapData="mapData">
+        <baiduMapCom v-if="!isShowH5 && mapData.length" :mapData="mapData">
 
-        </baiduMapCom> -->
+        </baiduMapCom>
     </div>
 </template>
 <script>
