@@ -7,13 +7,8 @@ import locale from 'element-ui/lib/locale';
 import'./public/style/markdown.less';
 import directive from './libs/directive';
 import VueLazyload from 'vue-lazyload';
-window.global = (() => {
-        if (typeof self !== 'undefined') { return self; }
-        if (typeof window !== 'undefined') { return window; }
-        if (typeof global !== 'undefined') { return global; }
-        if (typeof globalThis !== 'undefined') { return globalThis; }
-        throw new Error('unable to locate global object');
-})();
+
+
 export default ({
     Vue,
     siteData,
@@ -25,6 +20,13 @@ export default ({
         attempt: 1
     });
     if(!isServer){
+        window.global = (() => {
+                if (typeof self !== 'undefined') { return self; }
+                if (typeof window !== 'undefined') { return window; }
+                if (typeof global !== 'undefined') { return global; }
+                if (typeof globalThis !== 'undefined') { return globalThis; }
+                throw new Error('unable to locate global object');
+        })();
         let $lang = '';
         if(window.location.href.includes('/en/')) {
             $lang = 'en';
