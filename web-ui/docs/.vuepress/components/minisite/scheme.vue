@@ -60,14 +60,14 @@
             <h3 class="three-h">{{scheme.TITLE_FOUR_ONE}}</h3>
             <p class="content">
                  {{scheme.FOUR_ONE_P1}}
-                <a class="scheme-a" target="_Blank" href="https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/noarch/">{{scheme.FOUR_ONE_A1}}</a>
+                <a class="scheme-a" target="_Blank" href="https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/stable/contrib/x2openEuler/noarch/Packages/">{{scheme.FOUR_ONE_A1}}</a>
                 {{scheme.FOUR_ONE_P2}}
             </p>
             <p class="content"> {{scheme.FOUR_ONE_P3}}</p>
             <h3 class="three-h">{{scheme.TITLE_FOUR_TWO}}</h3>
             <p class="content">
                 {{scheme.FOUR_ONE_P1}}
-                <a class="scheme-a" target="_Blank" href="https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/noarch/">{{scheme.FOUR_ONE_A1}}</a>
+                <a class="scheme-a" target="_Blank" href="https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/stable/contrib/x2openEuler/noarch/Packages/">{{scheme.FOUR_ONE_A1}}</a>
                 {{scheme.FOUR_TWO_P2}}
             </p>
             <h3 class="three-h"> {{scheme.TITLE_FOUR_THREE}}</h3>
@@ -78,7 +78,7 @@
             <h3 class="three-h">{{scheme.TITLE_FIVE_ONE}}</h3>
             <p class="content">
                 {{scheme.FIVE_ONE_P1}}
-                <a class="scheme-a" target="_Blank" href="https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/noarch/">{{scheme.FOUR_ONE_A1}}</a>
+                <a class="scheme-a" target="_Blank" href="https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/stable/contrib/x2openEuler/noarch/Packages/">{{scheme.FOUR_ONE_A1}}</a>
                 {{scheme.FIVE_ONE_P2}}
             </p>
             <h3 class="three-h">{{scheme.TITLE_FIVE_TWO}}</h3>
@@ -92,7 +92,7 @@
             <h3 class="three-h">{{scheme.TITLE_FIVE_FOUR}}</h3>
             <p class="content">
                 {{scheme.FIVE_FOUR_P1}}
-                <a class="scheme-a" target="_Blank" href="https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/extras-tgz/noarch/">{{scheme.FOUR_ONE_A1}}</a>
+                <a class="scheme-a" target="_Blank" href="https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/stable/contrib/x2openEuler/noarch/Packages/">{{scheme.FOUR_ONE_A1}}</a>
                 {{scheme.FIVE_FOUR_P2}}
             </p>
  
