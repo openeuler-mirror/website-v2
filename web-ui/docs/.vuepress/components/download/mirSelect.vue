@@ -85,15 +85,16 @@
                 </el-table-column>
             </el-table>
         </div>
-        <!-- <baiduMapCom v-if="!isShowH5 && mapData['data'].length" :mapData="mapData['data']" :versionPath="versionPath" :centerPoint="mapData['center']">
+        <baiduMapCom v-if="!isShowH5 && mapData['data'].length" :mapData="mapData['data']" :versionPath="versionPath" :centerPoint="mapData['center']">
 
-        </baiduMapCom> -->
+        </baiduMapCom>
     </div>
 </template>
 <script>
 import commonBanner from "./../common/banner.vue";
 import { loadBMap,selectMirror } from '../../api/mirror';
 import baiduMapCom from "./map.vue";
+
 export default {
     name: 'mirSelect',
     data() {
