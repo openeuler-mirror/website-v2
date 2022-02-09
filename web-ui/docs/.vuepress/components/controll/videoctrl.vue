@@ -44,7 +44,7 @@ export default {
         },
         ctrlObj:{
             handler(newValue, oldValue) {
-            this.barValue = newValue.barWidth;         //父组件updateTime对象改变会触发此函数
+            this.barValue = newValue.barWidth;         
 　　　　},
 　　　　deep: true
     }
