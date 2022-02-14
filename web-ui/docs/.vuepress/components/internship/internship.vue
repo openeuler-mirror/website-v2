@@ -67,7 +67,7 @@
                   <p>{{ step.stepONE.TEXT4 }}</p>
                   <div class="attention">
                     <p>
-                      {{ step.stepONE.ATTENTION1 }}<a href="mailto:intern@openeuler.io">intern@openeuler.io</a>{{ step.stepONE.ATTENTION2 }}
+                      {{ step.stepONE.ATTENTION1 }}<a href="mailto:intern@openeuler.sh">intern@openeuler.sh</a>{{ step.stepONE.ATTENTION2 }}<span class="orange">{{ step.stepONE.TIP }}</span>
                     </p>
                     <a
                       href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/01%20%E5%AE%9E%E4%B9%A0%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E6%A8%A1%E6%9D%BF.rar"
@@ -76,7 +76,7 @@
                       >{{ step.stepONE.DONWLOAD }}</a
                     >
                   </div>
-                  <p class="orange suspend">{{ step.stepONE.SUSPEND }}</p>
+                  
                 </div>
               </div>
               <div class="step-text" v-show="stepActive === 1 || isShowH5">
@@ -190,7 +190,7 @@
                   </div>
                   <p>
                     {{ step.stepFour.pText1[1]
-                    }}<a class="blue" href="mailto:intern@openeuler.io">{{
+                    }}<a class="blue" href="mailto:intern@openeuler.sh">{{
                       step.stepFour.pText1[2]
                     }}</a
                     >{{ step.stepFour.pText1[3] }}
@@ -379,7 +379,7 @@
           <div class="help-left">
             <p>
               {{help[0]}}
-              <a href="mailto:intern@openeuler.io">{{help[1]}}</a>
+              <a href="mailto:intern@openeuler.sh">{{help[1]}}</a>
             </p>
             <p>{{help[2]}}</p>
             <p>{{help[3]}}</p>
@@ -395,7 +395,7 @@
 
 <script>
 import titlenav from "../summit/titleNav.vue";
-import { getRank, getToken, getRankDetail } from "../../api/internship";
+import { getRank, getToken } from "../../api/internship";
 export default {
   components: {
     titlenav,
@@ -477,7 +477,7 @@ export default {
           ATTENTION2:
             "。发送后等待审核，组织方将以邮件反馈审核结果，审核通过后，签订劳务协议，用所分配的账号开始实习。",
           DONWLOAD: "申请材料模板下载",
-          SUSPEND:"第一阶段名额已满，暂停报名，请加开源实习QQ群（扫本页底部群二维码加入），等待再次开放报名通知（预计2月15日之后）。"
+          TIP:"（注：组织方会根据所提交的资料对报名学生进行一定的审核筛选）"
         },
         ATTENTION: "注意",
         stepTow: {
@@ -529,7 +529,7 @@ export default {
           pText1: [
             "（1）在实习合同里约定的6个月期限内，学生可凭积分获得实习工资。",
             "（2）证明申请：在实习有效期6个月内满60分即可开具实习证明，如需开具实习证明，发送邮件给实习官方邮箱",
-            "intern@openeuler.io",
+            "intern@openeuler.sh",
             "提出申请。",
           ],
           pText: [
@@ -746,7 +746,7 @@ export default {
       ],
       help: [
         "联系邮箱:",
-        "intern@openeuler.io",
+        "intern@openeuler.sh",
         "扫码加入“开源实习”学生QQ群，更多问题群内咨询。",
         "群号：526089131",
       ],
@@ -794,14 +794,14 @@ export default {
         this.activeIndex = 1;
       } else if (scrollTop > 1100 && scrollTop < 1700) {
         this.activeIndex = 2;
-      } else if (scrollTop > 1700 && scrollTop < 2800) {
+      } else if (scrollTop > 1700 && scrollTop < 3400) {
         this.activeIndex = 3;
-      } else if (scrollTop > 2800 && scrollTop < 3550) {
+      } else if (scrollTop > 3400 && scrollTop < 4500) {
         this.activeIndex = 4;
-      } else if (scrollTop > 3550 && scrollTop < 3800) {
+      } else if (scrollTop > 4500 && scrollTop < 4900) {
         //4170
         this.activeIndex = 5;
-      } else if (scrollTop > 3800) {
+      } else if (scrollTop > 4600) {
         this.activeIndex = 6;
       } else {
         return false;
