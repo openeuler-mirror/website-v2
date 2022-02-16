@@ -11,13 +11,6 @@
         <div class="is-pc home-carousel" v-if="!isShowH5">
              <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" >
               <el-carousel-item >
-                     <div class="carousel-banner"  >
-                         <div class="extend1 extend"></div>
-                         <div class="center-img"></div>
-                        <div class="extend1 extend"></div>
-                     </div>
-              </el-carousel-item>
-              <el-carousel-item >
                      <div class="carousel-banner" id="container"    @click="go('/activities/happynewyear2022/')">
                         <div class="extend3 extend" ></div>
                         <div class="newyear center-img"></div>
@@ -28,11 +21,6 @@
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
-               <swiper-slide class="carousel-item-index">
-                <div class="carousel-banner" >
-                    <img src="/img/home/banner/openEuler_mo.png" alt="">
-                </div>
-              </swiper-slide>
                <swiper-slide class="carousel-item-index">
                 <div class="carousel-banner" id="container"   @click="go('/activities/happynewyear2022/')">
                     <img src="/img/home/banner/newyear-banner-mob.png" alt="">
@@ -1054,9 +1042,6 @@ let remoteMethods = {
             display: none;
             background-repeat: repeat-x;
         }
-        .extend1 {
-            background-image: url("/img/home/banner/openEuler_extend.png");
-        }
         .center-img {
             flex: 999;
             max-width: 1920px;
@@ -1080,7 +1065,6 @@ let remoteMethods = {
                 display: inline-block;
                 flex: 1;
             }
-            .extend1,
             .extend3 {
                 background-position-x: right;
             }
@@ -1170,31 +1154,21 @@ let remoteMethods = {
                         animation: blink 1s infinite steps(1);
                     }
                     .first-span::before {
-                        // right: -10px;
                         animation: blink 0.5s 6  steps(1);
                     } 
                     .fast-hide {
                         visibility: hidden;
                         animation: block 0.3s forwards;
                     }
-                    .block1 {
-                        animation-delay: 3s;
+                    .block(@i) when(@i >=0) {
+                        .block@{i} {
+                          animation-delay: @i * 0.3 + 3s;
+                        }
+                        .block((@i - 1));
                     }
-                    .block2 {
-                        animation-delay: 3.3s;
-                    }
-                    .block3 {
-                        animation-delay: 3.6s;
-                    }
-                    .block4 {
-                        animation-delay: 3.9s;
-                    }
-                    .block5 {
-                        animation-delay: 4.2s;
-                    }
+                    .block(6);
                     .block6 {
                         width: 5ch;
-                        animation-delay: 4.5s;
                     }
                     @keyframes block {
                         to {
