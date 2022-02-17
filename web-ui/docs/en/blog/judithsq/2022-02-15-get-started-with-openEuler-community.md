@@ -16,7 +16,7 @@ summary: This blog provides information you need to get started with the openEul
 
 
 # openEuler community
-openEuler is an open source Linux distribution based on CentOS and designed for digital infrastructure. It offers huge improvements in performance and useful tools, such as A-Tune, an AI-based system tuning software, and iSulad, a lightweight container runtime daemon for IoT and cloud infrastructure.
+openEuler is an open source, free Linux distribution. It offers huge improvements in performance and useful tools, such as A-Tune, an AI-based system tuning software, and iSulad, a lightweight container runtime daemon for IoT and cloud infrastructure.
 
 Our community is the core behind the development of openEuler. Until now, 95 SIGs, comprising 8,000 contributors who have helped develop the OS for 400 thousand users. In addition, 11 OS vendors have released commercial editions based on openEuler. We want to leverage SIGs to drive our innovations.
 # opeEuler website
