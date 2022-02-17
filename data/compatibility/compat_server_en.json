@@ -239,7 +239,7 @@
     "hardwareFactory": "xfusion",
     "hardwareModel": "Fusionserver 2288H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
-    "architecture": "x86",
+    "architecture": "x86_64",
     "date": "2020/12/21",
     "friendlyLink": "support.xfusion.com",
     "boardCards": [
@@ -281,7 +281,7 @@
     "hardwareFactory": "xfusion",
     "hardwareModel": "Fusionserver 2288H V5",
     "osVersion": "openEuler 20.03 LTS",
-    "architecture": "x86",
+    "architecture": "x86_64",
     "date": "2020/12/21",
     "friendlyLink": "support.xfusion.com",
     "boardCards": [
@@ -1165,7 +1165,7 @@
     "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 1288H V5",
     "osVersion": "openEuler 20.03 LTS",
-    "architecture": "x86",
+    "architecture": "x86_64",
     "date": "2021/02/04",
     "friendlyLink": "support.xfusion.com",
     "boardCards": [
@@ -1226,7 +1226,7 @@
     "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 2288C V5",
     "osVersion": "openEuler 20.03 LTS",
-    "architecture": "x86",
+    "architecture": "x86_64",
     "date": "2020/11/16",
     "friendlyLink": "support.xfusion.com",
     "boardCards": [
@@ -1268,7 +1268,7 @@
     "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 2288H V5",
     "osVersion": "openEuler 20.03 LTS",
-    "architecture": "x86",
+    "architecture": "x86_64",
     "date": "2020/11/16",
     "friendlyLink": "support.xfusion.com",
     "boardCards": [
@@ -1310,7 +1310,7 @@
     "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 2488H V5",
     "osVersion": "openEuler 20.03 LTS",
-    "architecture": "x86",
+    "architecture": "x86_64",
     "date": "2021/01/18",
     "friendlyLink": "support.xfusion.com",
     "boardCards": [
@@ -1352,7 +1352,7 @@
     "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 2488H V6",
     "osVersion": "openEuler 20.03 LTS",
-    "architecture": "x86",
+    "architecture": "x86_64",
     "date": "2020/11/26",
     "friendlyLink": "support.xfusion.com",
     "boardCards": [
@@ -1394,7 +1394,7 @@
     "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 5288 V5",
     "osVersion": "openEuler 20.03 LTS",
-    "architecture": "x86",
+    "architecture": "x86_64",
     "date": "2021/02/04",
     "friendlyLink": "support.xfusion.com",
     "boardCards": [
@@ -1436,7 +1436,7 @@
     "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 5885H V5",
     "osVersion": "openEuler 20.03 LTS",
-    "architecture": "x86",
+    "architecture": "x86_64",
     "date": "2021/02/04",
     "friendlyLink": "support.xfusion.com",
     "boardCards": [
@@ -1478,7 +1478,7 @@
     "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 1288H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
-    "architecture": "x86",
+    "architecture": "x86_64",
     "date": "2021/03/03",
     "friendlyLink": "support.xfusion.com",
     "boardCards": [
@@ -1539,7 +1539,7 @@
     "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 2288C V5",
     "osVersion": "openEuler 20.03 LTS SP1",
-    "architecture": "x86",
+    "architecture": "x86_64",
     "date": "2021/03/03",
     "friendlyLink": "support.xfusion.com",
     "boardCards": [
@@ -1581,7 +1581,7 @@
     "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 2288H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
-    "architecture": "x86",
+    "architecture": "x86_64",
     "date": "2021/03/03",
     "friendlyLink": "support.xfusion.com",
     "boardCards": [
@@ -1623,7 +1623,7 @@
     "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 2488H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
-    "architecture": "x86",
+    "architecture": "x86_64",
     "date": "2021/02/04",
     "friendlyLink": "support.xfusion.com",
     "boardCards": [
@@ -1665,7 +1665,7 @@
     "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 5288 V5",
     "osVersion": "openEuler 20.03 LTS SP1",
-    "architecture": "x86",
+    "architecture": "x86_64",
     "date": "2021/03/03",
     "friendlyLink": "support.xfusion.com",
     "boardCards": [
@@ -1707,7 +1707,7 @@
     "hardwareFactory": "xfusion",
     "hardwareModel": "FusionServer 5885H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
-    "architecture": "x86",
+    "architecture": "x86_64",
     "date": "2021/01/29",
     "friendlyLink": "support.xfusion.com",
     "boardCards": [
