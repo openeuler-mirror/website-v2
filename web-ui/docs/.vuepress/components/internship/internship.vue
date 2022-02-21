@@ -650,6 +650,22 @@ export default {
             GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-DDE",
           },
           {
+            NAME: "Infrastructure",
+            NAME_LINK:
+              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=95&name=Infrastructure",
+            INTRODUCE: "主要负责openEuler社区的基础设施功能开发、维护",
+            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=124590142&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
+            GITEE: "https://gitee.com/openeuler/community/tree/master/sig/Infrastructure",
+          },
+          {
+            NAME_LINK:
+              "https://openlookeng.io",
+            NAME: "openLooKeng",
+            INTRODUCE: "一款超强易用的数据虚拟化引擎，让大数据更简单",
+            TASK: "https://gitee.com/openlookeng-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openlookeng-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=newest&state=open&target_project&skip_mobile=true",
+            GITEE: "https://openlookeng.io",
+          },
+          {
             NAME: "其他",
             INTRODUCE: "一些暂不属于任何SIG的任务，如Rust、存储等等",
             TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=125884711&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&sort=&state=open&target_project&skip_mobile=true",
@@ -1183,8 +1199,9 @@ a {
           margin-right: 0;
         }
         .item:last-child {
-          margin: 0;
-          width: 100%;
+          margin: 0 0 25px 0;
+          flex: 1;
+          height: 203px;
           .button-box {
             display: none;
           }
