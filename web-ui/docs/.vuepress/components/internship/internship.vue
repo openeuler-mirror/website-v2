@@ -236,7 +236,8 @@
                   {{ task.INTERNSHIP_TASK }}
                 </button>
                 <button @click="go(item.GITEE)" class="button-right">
-                  {{ task.SIG_DETAIL }}<img src="/img/internship/arrow.png" alt="" />
+                  <span>{{ item.NAME == 'openLooKeng' ? officialWeb:task.SIG_DETAIL }}</span>
+                  <img src="/img/internship/arrow.png" alt="" />
                 </button>
               </div>
             </div>
@@ -714,6 +715,7 @@ export default {
         ],
         MORE: ["更多问题，请移步", "本帖", "评论区提问。"],
       },
+      officialWeb:'官网详情',
       rank: {
         FIRST: "第一名",
         SECOND: "第二名",
