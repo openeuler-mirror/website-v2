@@ -17,6 +17,15 @@
                         <div class="extend4 extend"></div>
                      </div>
               </el-carousel-item>
+               <el-carousel-item >
+                <div class="video-banner carousel-banner">
+                     <video @click="eventChange"  height="500" loop ref="bannerVideo" poster="/img/home/banner/video-banner.png"  preload=""  id="home-video" >
+                         <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/openEuler%E9%9D%A2%E5%90%91%E6%95%B0%E5%AD%97%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E7%9A%84%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F_Banner.mp4">
+                     </video>
+                    <playcontroll :ctrl-obj="videoCtrlParams" ref="playctrlEle" @playStatus="checkStatus"></playcontroll>
+                    <img v-show="!isNowPlay" class="open-video" @click="playHomeVideo()" src="/img/home/banner/open_video.png" alt="">
+                </div>
+              </el-carousel-item>
             </el-carousel>
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
@@ -24,6 +33,12 @@
                <swiper-slide class="carousel-item-index">
                 <div class="carousel-banner" id="container"   @click="go('/activities/happynewyear2022/')">
                     <img src="/img/home/banner/newyear-banner-mob.png" alt="">
+                </div>
+              </swiper-slide>
+                <swiper-slide class="carousel-item-index">
+                <div class="video-banner">
+                    <img class="bg-banner" src="/img/home/banner/video_banner_mo.png" alt="">
+                    <img v-show="!isMasked" class="open-video" @click="videoClicked" src="/img/home/banner/open_video.png" alt="">
                 </div>
               </swiper-slide>
             </swiper>
@@ -256,6 +271,7 @@ import { TweenLite, TweenMax, Linear, Sine } from "gsap";
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
 import 'swiper/css/swiper.css';
 import { meetingList, statisticsList } from "../../api/home";
+import playcontroll from './../controll/videoctrl';
 import dayjs from "dayjs";
 import calender from "./calender";
 import round from './../round/round';
@@ -337,6 +353,7 @@ let remoteMethods = {
             }
         },
         mounted() {
+            window.addEventListener("resize",this.reSize);
             window.addEventListener("scroll", this.scroTop);
             this.fall();
             window.location.hash=='#meeting' ? window.location.href="#meeting": ''
@@ -369,9 +386,15 @@ let remoteMethods = {
             calender,
             Swiper,
             SwiperSlide,
+            playcontroll,
             round
         },
         methods: {
+             reSize() {
+                let w = window.innerWidth
+                w > 1920 ? w = 1920 :'';
+                this.videoCtrlParams.barWidth = w - 180;
+            },
             fall() {
               let a = null;
               TweenLite.set("#container", { perspective: 600 ,backgroundImage: '/img/home/banner/newyear-banner.png'});
@@ -600,6 +623,9 @@ let remoteMethods = {
                 return temp;
             }
         },
+          created() {
+            this.reSize();
+        }
     }
 </script>
 <style>
@@ -646,6 +672,45 @@ let remoteMethods = {
 
 <style lang="less" scoped>
   .home{
+    .video-banner {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background:black;
+        .open-video {
+           position: absolute;
+           overflow: hidden;
+           border-radius: 50%;
+           width: 70px;
+           top:50%;
+           left: 50%;
+           animation: breathe 1200ms infinite alternate;
+           transform: translate(-50%,-50%);
+        }
+        .playControll {
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%) ;
+            max-width: 1920px;
+        }
+         video {
+             max-width: 1920px;
+        }
+        .is-cover {
+            filter: contrast(80%) brightness(50%);
+        }
+        .voice-box {
+            position: absolute;
+            cursor: pointer;
+            right: 50px;
+            bottom: 50px;
+            z-index: 1;
+            .voice {
+                width: 28px;
+            }
+        }
+    }
     .banner-video {
       position: fixed;
       top: 0px;
@@ -1045,8 +1110,8 @@ let remoteMethods = {
         .center-img {
             flex: 999;
             max-width: 1920px;
-            background-size: 100% auto;
-            background-repeat: no-repeat;
+            // background-size: 100% auto;
+            // background-repeat: no-repeat;
             background-position: center center;
             background-image: url("/img/home/banner/openEuler.png");
         }
@@ -2017,6 +2082,26 @@ let remoteMethods = {
             text-align: center;
             margin-top: 35px;
             margin-bottom: 0;
+        }
+        .carousel-item-index {
+           .video-banner {
+               position: relative;
+               text-align: center;
+               .bg-banner {
+                   width: 100% !important;
+                   height: 100%;
+               }
+               .open-video {
+                   position: absolute;
+                   overflow: hidden;
+                   border-radius: 50%;
+                   width: 56px;
+                   top:50%;
+                   left: 50%;
+                   animation: breathe 1200ms infinite alternate;
+                   transform: translate(-50%,-50%);
+               }
+           }
         }
         .carousel-item-index .mobile-version{
             width: 100%;
