@@ -216,30 +216,38 @@
           <div class="task-title title">
             <img src="/img/internship/task-title.png" alt="" />
           </div>
-          <p class="task-introduce">
-            {{ task.INTRODUCE }}
-          </p>
-          <div class="item-box">
-            <div
-              class="item"
-              v-for="(item, index) in task.TASK_ITEM"
-              :key="index"
-            >
-              <a :href="item.NAME_LINK" class="item-name" target="_blank">{{
-                item.NAME
-              }}</a>
-              <div class="item-intriduce">
-                {{ item.INTRODUCE }}
-              </div>
-              <div class="button-box">
-                <button @click="go(item.TASK)" class="button-left">
-                  {{ task.INTERNSHIP_TASK }}
-                </button>
-                <button @click="go(item.GITEE)" class="button-right">
-                  <span>{{ item.NAME == 'openLooKeng' ? officialWeb:task.SIG_DETAIL }}</span>
-                  <img src="/img/internship/arrow.png" alt="" />
-                </button>
-              </div>
+          <div class="tabbar">
+            <el-tabs v-model="community" @tab-click="tabClick">
+              <el-tab-pane label="openEuler" name="openEuler"></el-tab-pane>
+              <el-tab-pane label="openLooKeng" name="openLooKeng"></el-tab-pane>
+            </el-tabs>
+          </div>
+          <div class="taks-body">
+            <p class="task-introduce" v-show="community == 'openEuler'">
+              {{ task.INTRODUCE }}
+            </p>
+            <div class="item-box">
+             <div
+               class="item"
+               v-for="(item, index) in communityTask"
+               :key="index"
+             >
+               <a :href="item.NAME_LINK" class="item-name" target="_blank">{{
+                 item.NAME
+               }}</a>
+               <div class="item-intriduce">
+                 {{ item.INTRODUCE }}
+               </div>
+               <div class="button-box">
+                 <button @click="go(item.TASK)" class="button-left">
+                   {{ task.INTERNSHIP_TASK }}
+                 </button>
+                 <button @click="go(item.GITEE)" class="button-right">
+                   <span>{{ item.NAME == 'openLooKeng' ? officialWeb:task.SIG_DETAIL }}</span>
+                   <img src="/img/internship/arrow.png" alt="" />
+                 </button>
+               </div>
+             </div>
             </div>
           </div>
         </div>
@@ -404,6 +412,7 @@ export default {
   data() {
     return {
       renderData: [],
+      community:'openEuler',
       showAll:false,
       isExent: false,
       rankInfo: [],
@@ -412,6 +421,7 @@ export default {
       activeIndex: 0,
       rankTop: [],
       rankLast: [],
+      communityTask:[],
       navList: [
         {
           key: "#introduce",
@@ -551,7 +561,7 @@ export default {
       task: {
         INTRODUCE:
           "SIG（Special Interest Group）是openEuler社区的组织形式，找到你感兴趣的SIG，点击下列“实习任务”到Gitee查看相关SIG的任务（需先保持Gitee在登陆状态）。",
-        TASK_ITEM: [
+        EULER_TASK_ITEM: [
           {
             NAME: "Kernel",
             NAME_LINK:
@@ -659,6 +669,16 @@ export default {
             GITEE: "https://gitee.com/openeuler/community/tree/master/sig/Infrastructure",
           },
           {
+            NAME: "其他",
+            INTRODUCE: "一些暂不属于任何SIG的任务，如Rust、存储等等",
+            TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=125884711&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&sort=&state=open&target_project&skip_mobile=true",
+          },
+          {
+            INTRODUCE: "更多SIG任务，敬请期待",
+          },
+        ],
+        LOOKENG_TASK_ITEM:[
+           {
             NAME_LINK:
               "https://openlookeng.io",
             NAME: "openLooKeng",
@@ -667,12 +687,7 @@ export default {
             GITEE: "https://openlookeng.io",
           },
           {
-            NAME: "其他",
-            INTRODUCE: "一些暂不属于任何SIG的任务，如Rust、存储等等",
-            TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=125884711&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&sort=&state=open&target_project&skip_mobile=true",
-          },
-          {
-            INTRODUCE: "更多SIG任务，敬请期待",
+            INTRODUCE: "更多任务，敬请期待",
           },
         ],
         INTERNSHIP_TASK: "实习任务",
@@ -771,6 +786,15 @@ export default {
     };
   },
   methods: {
+    tabClick() {
+      if(this.community == 'openEuler') {
+        this.communityTask = this.task.EULER_TASK_ITEM
+      } else if (this.community == 'openLooKeng') {
+        this.communityTask = this.task.LOOKENG_TASK_ITEM
+      } else {
+        return false
+      }
+    },
     extend() {
       if (this.isExent) {
         this.renderData = this.rankInfo.slice(3, 10);
@@ -868,6 +892,7 @@ export default {
   },
   created() {},
   mounted() {
+    this.tabClick()
     this.showRank()
     window.addEventListener("scroll", this.scroTop);
   },
@@ -877,6 +902,36 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+/deep/.tabbar {
+   .el-tabs__nav-wrap::after {
+    display: none;
+  }
+  .el-tabs__nav-scroll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .el-tabs__item {
+    height: 60px;
+    line-height: 60px;
+    font-size: 28px;
+     @media screen and (max-width: 1000px) {
+        height: 20px;
+        line-height: 0;
+        font-size: 16px;
+        .el-tabs__active-bar {
+          height: 1px;
+        }
+    }
+  }
+  @media screen and (max-width: 1000px) {
+        .el-tabs__active-bar {
+          height: 1px;
+        }
+    }
+
+}
+
 .closeInternship {
   padding-top: 150px;
   text-align: center;
@@ -1139,13 +1194,13 @@ a {
     }
     #task {
       .task-introduce {
-        margin-bottom: 30px;
         font-size: 20px;
         line-height: 40px;
       }
       .item-box {
         display: flex;
         flex-wrap: wrap;
+        margin-top: 30px;
         .item {
           margin: 0 25px 25px 0;
           padding: 24px 20px;
@@ -1153,7 +1208,7 @@ a {
           color: rgba(0, 0, 0, 0.5);
           box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.1);
           border-radius: 8px;
-          transition: 0.3s;
+          transition:  box-shadow 0.1s;
           .item-name {
             cursor: pointer;
             color: #002fa7;

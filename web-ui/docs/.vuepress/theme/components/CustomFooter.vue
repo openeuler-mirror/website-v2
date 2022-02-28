@@ -207,6 +207,10 @@ export default {
           padding: 0 16px;
           border-right: 1px solid #fff;
         }
+        li:nth-child(4) {
+          padding: 0 16px;
+          border-right: 1px solid #fff;
+        }
       }
     }
     .footer-right {
