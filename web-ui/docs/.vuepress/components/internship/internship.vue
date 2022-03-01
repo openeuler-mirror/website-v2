@@ -671,6 +671,22 @@ export default {
             GITEE: "https://gitee.com/openeuler/community/tree/master/sig/Infrastructure",
           },
           {
+            NAME: "sig-OS-Builder",
+            NAME_LINK:
+              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=95&name=sig-OS-Builder",
+            INTRODUCE: "维护openEuler业务软件包,提供更加方便的ISO构建/换标方案,提供更好的安装与升级方案",
+            TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=145511845&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
+            GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-OS-Builder",
+          },
+          {
+            NAME: "sig-CICD",
+            NAME_LINK:
+              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=95&name=sig-OS-Builder",
+            INTRODUCE: "致力于为开发者提供针对上游开源软件（来自Github、Gitee、Gitlab等托管平台）的测试服务、登录服务、故障辅助定界服务和基于历史数据的分析服务于一体的测试系统",
+            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590412&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=146173410&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
+            GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-CICD",
+          },
+          {
             NAME: "其他",
             INTRODUCE: "一些暂不属于任何SIG的任务，如Rust、存储等等",
             TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=125884711&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&sort=&state=open&target_project&skip_mobile=true",
@@ -1218,7 +1234,8 @@ a {
           }
           .item-intriduce {
             padding-top: 8px;
-            height: 94px;
+            margin-bottom: 20px;
+            height: 70px;
             width: 221px;
             font-size: 14px;
             line-height: 22px;
