@@ -229,6 +229,8 @@
             <div class="item-box">
              <div
                class="item"
+               :class="[{ 'last-child':community == 'openEuler' && index +1 == communityTask.length },
+               {'lookeng':community == 'openLooKeng'}]"
                v-for="(item, index) in communityTask"
                :key="index"
              >
@@ -685,9 +687,6 @@ export default {
             INTRODUCE: "一款超强易用的数据虚拟化引擎，让大数据更简单",
             TASK: "https://gitee.com/openlookeng-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openlookeng-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=newest&state=open&target_project&skip_mobile=true",
             GITEE: "https://openlookeng.io",
-          },
-          {
-            INTRODUCE: "更多任务，敬请期待",
           },
         ],
         INTERNSHIP_TASK: "实习任务",
@@ -1212,7 +1211,10 @@ a {
           .item-name {
             cursor: pointer;
             color: #002fa7;
-            font-size: 16px;
+            font-size: 20px;
+              @media (max-width: 1000px) {
+              font-size: 16px;
+           }
           }
           .item-intriduce {
             padding-top: 8px;
@@ -1255,7 +1257,7 @@ a {
         .item:nth-child(4n) {
           margin-right: 0;
         }
-        .item:last-child {
+        .last-child {
           margin: 0 0 25px 0;
           flex: 1;
           height: 203px;
@@ -1272,9 +1274,36 @@ a {
             color: #000000;
           }
         }
+        .lookeng {
+          flex: 1;
+          margin: 0 0 25px 0;
+          height: 203px;
+          background-size: 120%;
+          background-position: center;
+          background-image: url(/img/internship/lookeng_bg.png);
+           @media (max-width: 1000px) {
+              background-image: none;
+           }
+          .item-name {
+            font-size: 20px;
+              @media (max-width: 1000px) {
+              font-size: 16px;
+           }
+          }
+          .item-intriduce {
+            padding: 10px 0 0 0 ;
+            width: 100%;
+            text-align: left;
+            font-size: 14px;
+          }
+        }
         .item:hover {
           box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.3);
           transform: translateY(-2px);
+        }
+        .lookeng:hover {
+          transform: none;
+          box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.2);
         }
       }
       @media (max-width: 1000px) {
@@ -1293,7 +1322,7 @@ a {
               width: 275px;
             }
           }
-          .item:last-child {
+          .last-child {
             margin: 0;
             .item-intriduce {
               font-size: 16px;
