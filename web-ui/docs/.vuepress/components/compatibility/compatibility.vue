@@ -140,6 +140,7 @@
                 </el-tab-pane>
                 <!-- 整机 -->
                 <el-tab-pane :label="i18n.compatibility.HARDWARE" name="hardware">
+                    <!-- 筛选行 -->
                     <el-form :inline="true" :model="formData" class="compatibility-filter">
                         <el-form-item :label="i18n.compatibility.OS">
                             <el-select class="pc-select" 
@@ -208,6 +209,7 @@
                             </el-input>
                         </el-form-item>
                     </el-form>
+                    <!-- 表格 -->
                     <el-table
                         v-loading.fullscreen="tableLoading"
                         class="table-pc"
@@ -215,11 +217,13 @@
                         stripe
                         style="width: 100%"
                     >
+                        <el-table-column prop="architecture" :label="i18n.compatibility.ARCHITECTURE" width="90"></el-table-column>
                         <el-table-column prop="hardwareFactory" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.VENDOR" width="110"></el-table-column>
-                        <el-table-column prop="hardwareModel" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.MODEL" width="230"></el-table-column>
-                        <el-table-column prop="osVersion" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.OS" width="240"></el-table-column>
-                        <el-table-column prop="date" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.DATE" width="190"></el-table-column>
-                        <el-table-column prop="productInformation" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.COMPATIBILITY_CONFIGURATION" width="230">
+                        <el-table-column prop="hardwareModel" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.MODEL" width="160"></el-table-column>
+                        <el-table-column prop="cpu" label="CPU" width="150"></el-table-column>
+                        <el-table-column prop="osVersion" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.OS" width="190"></el-table-column>
+                        <el-table-column prop="date" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.DATE" width="110"></el-table-column>
+                        <el-table-column prop="productInformation" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.COMPATIBILITY_CONFIGURATION" width="220">
                             <template slot-scope="scope">
                                 <a
                                     class="table-link"
@@ -227,7 +231,7 @@
                                 >{{ i18n.compatibility.HARDWARE_TABLE_COLUMN.COMPATIBILITY_CONFIGURATION2}}</a>
                             </template>
                         </el-table-column>
-                        <el-table-column prop="friendlyLink" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.REFERRENCE" width="120">
+                        <el-table-column prop="friendlyLink" :label="i18n.compatibility.HARDWARE_TABLE_COLUMN.REFERRENCE" width="90">
                             <template slot-scope="scope">
                                 <a
                                     class="table-link"
@@ -241,12 +245,20 @@
                         <li class="item" v-for="(item, index) in hardwareTableData" :key="index">
                             <ul>
                                 <li>
+                                    <span>{{i18n.compatibility.ARCHITECTURE}}:</span>
+                                    {{item.architecture}}
+                                </li>
+                                <li>
                                     <span>{{i18n.compatibility.HARDWARE_TABLE_COLUMN.VENDOR}}:</span>
                                     {{item.hardwareFactory}}
                                 </li>
                                 <li>
                                     <span>{{i18n.compatibility.HARDWARE_TABLE_COLUMN.MODEL}}:</span>
                                     {{item.hardwareModel}}
+                                </li>
+                                <li>
+                                    <span>CPU:</span>
+                                    {{item.cpu}}
                                 </li>
                                 <li>
                                     <span>{{i18n.compatibility.HARDWARE_TABLE_COLUMN.OS}}:</span>
@@ -798,6 +810,9 @@ export default {
             .icon-search{
                 cursor: pointer;
             } 
+        }
+        .pc-search {
+            width: 230px;
         }
         .mobile-select,
         .mobile-search {
