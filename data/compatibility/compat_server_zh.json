@@ -236,12 +236,12 @@
     }
   },
   {
-    "hardwareFactory": "超聚变",
+    "hardwareFactory": "华为",
     "hardwareModel": "Fusionserver 2288H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86_64",
     "date": "2020/12/21",
-    "friendlyLink": "support.xfusion.com",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/2288h-v5",
     "boardCards": [
       {
         "vendorID": "19e5",
@@ -264,7 +264,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "support.xfusion.com",
+      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/2288h-v5",
       "certificationTime": "2020/12/21",
       "commitID": "",
       "motherBoardRevision": "",
@@ -278,12 +278,12 @@
     }
   },
   {
-    "hardwareFactory": "超聚变",
+    "hardwareFactory": "华为",
     "hardwareModel": "Fusionserver 2288H V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86_64",
     "date": "2020/12/21",
-    "friendlyLink": "support.xfusion.com",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/2288h-v5",
     "boardCards": [
       {
         "vendorID": "19e5",
@@ -306,7 +306,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "support.xfusion.com",
+      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/2288h-v5",
       "certificationTime": "2020/12/21",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1162,12 +1162,12 @@
     }
   },
   {
-    "hardwareFactory": "超聚变",
+    "hardwareFactory": "华为",
     "hardwareModel": "FusionServer 1288H V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86_64",
     "date": "2021/02/04",
-    "friendlyLink": "support.xfusion.com",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/1288h-v5",
     "boardCards": [
       {
         "vendorID": "8086",
@@ -1209,7 +1209,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "support.xfusion.com",
+      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/1288h-v5",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1223,12 +1223,12 @@
     }
   },
   {
-    "hardwareFactory": "超聚变",
+    "hardwareFactory": "华为",
     "hardwareModel": "FusionServer 2288C V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86_64",
     "date": "2020/11/16",
-    "friendlyLink": "support.xfusion.com",
+    "friendlyLink": "",
     "boardCards": [
       {
         "vendorID": "",
@@ -1251,7 +1251,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "support.xfusion.com",
+      "productInformation": "",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1265,12 +1265,12 @@
     }
   },
   {
-    "hardwareFactory": "超聚变",
+    "hardwareFactory": "华为",
     "hardwareModel": "FusionServer 2288H V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86_64",
     "date": "2020/11/16",
-    "friendlyLink": "support.xfusion.com",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/2288h-v5",
     "boardCards": [
       {
         "vendorID": "",
@@ -1293,7 +1293,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "support.xfusion.com",
+      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/2288h-v5",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1307,12 +1307,12 @@
     }
   },
   {
-    "hardwareFactory": "超聚变",
+    "hardwareFactory": "华为",
     "hardwareModel": "FusionServer 2488H V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86_64",
     "date": "2021/01/18",
-    "friendlyLink": "support.xfusion.com",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/2488h-v5",
     "boardCards": [
       {
         "vendorID": "",
@@ -1335,7 +1335,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "support.xfusion.com",
+      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/2488h-v5",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1349,12 +1349,12 @@
     }
   },
   {
-    "hardwareFactory": "超聚变",
+    "hardwareFactory": "华为",
     "hardwareModel": "FusionServer 2488H V6",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86_64",
     "date": "2020/11/26",
-    "friendlyLink": "support.xfusion.com",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/2488h-v6",
     "boardCards": [
       {
         "vendorID": "",
@@ -1377,7 +1377,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "support.xfusion.com",
+      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/2488h-v6",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1391,12 +1391,12 @@
     }
   },
   {
-    "hardwareFactory": "超聚变",
+    "hardwareFactory": "华为",
     "hardwareModel": "FusionServer 5288 V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86_64",
     "date": "2021/02/04",
-    "friendlyLink": "support.xfusion.com",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/5288-v5",
     "boardCards": [
       {
         "vendorID": "",
@@ -1419,7 +1419,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "support.xfusion.com",
+      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/5288-v5",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1433,12 +1433,12 @@
     }
   },
   {
-    "hardwareFactory": "超聚变",
+    "hardwareFactory": "华为",
     "hardwareModel": "FusionServer 5885H V5",
     "osVersion": "openEuler 20.03 LTS",
     "architecture": "x86_64",
     "date": "2021/02/04",
-    "friendlyLink": "support.xfusion.com",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/5885h-v5",
     "boardCards": [
       {
         "vendorID": "",
@@ -1461,7 +1461,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "support.xfusion.com",
+      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/5885h-v5",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1475,12 +1475,12 @@
     }
   },
   {
-    "hardwareFactory": "超聚变",
+    "hardwareFactory": "华为",
     "hardwareModel": "FusionServer 1288H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86_64",
     "date": "2021/03/03",
-    "friendlyLink": "support.xfusion.com",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/1288h-v5",
     "boardCards": [
       {
         "vendorID": "8086",
@@ -1522,7 +1522,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "support.xfusion.com",
+      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/1288h-v5",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1536,12 +1536,12 @@
     }
   },
   {
-    "hardwareFactory": "超聚变",
+    "hardwareFactory": "华为",
     "hardwareModel": "FusionServer 2288C V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86_64",
     "date": "2021/03/03",
-    "friendlyLink": "support.xfusion.com",
+    "friendlyLink": "",
     "boardCards": [
       {
         "vendorID": "",
@@ -1564,7 +1564,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "support.xfusion.com",
+      "productInformation": "",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1578,12 +1578,12 @@
     }
   },
   {
-    "hardwareFactory": "超聚变",
+    "hardwareFactory": "华为",
     "hardwareModel": "FusionServer 2288H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86_64",
     "date": "2021/03/03",
-    "friendlyLink": "support.xfusion.com",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/2288h-v5",
     "boardCards": [
       {
         "vendorID": "",
@@ -1606,7 +1606,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "support.xfusion.com",
+      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/2288h-v5",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1620,12 +1620,12 @@
     }
   },
   {
-    "hardwareFactory": "超聚变",
+    "hardwareFactory": "华为",
     "hardwareModel": "FusionServer 2488H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86_64",
     "date": "2021/02/04",
-    "friendlyLink": "support.xfusion.com",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/2488h-v5",
     "boardCards": [
       {
         "vendorID": "",
@@ -1648,7 +1648,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "support.xfusion.com",
+      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/2488h-v5",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1662,12 +1662,12 @@
     }
   },
   {
-    "hardwareFactory": "超聚变",
+    "hardwareFactory": "华为",
     "hardwareModel": "FusionServer 5288 V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86_64",
     "date": "2021/03/03",
-    "friendlyLink": "support.xfusion.com",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/5288-v5",
     "boardCards": [
       {
         "vendorID": "",
@@ -1690,7 +1690,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "support.xfusion.com",
+      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/5288-v5",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -1704,12 +1704,12 @@
     }
   },
   {
-    "hardwareFactory": "超聚变",
+    "hardwareFactory": "华为",
     "hardwareModel": "FusionServer 5885H V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86_64",
     "date": "2021/01/29",
-    "friendlyLink": "support.xfusion.com",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/rh-series/5885h-v5",
     "boardCards": [
       {
         "vendorID": "",
@@ -1732,7 +1732,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "support.xfusion.com",
+      "productInformation": "https://e.huawei.com/cn/products/servers/rh-series/5885h-v5",
       "certificationTime": "",
       "commitID": "",
       "motherBoardRevision": "",
@@ -2711,12 +2711,12 @@
     }
   },
   {
-    "hardwareFactory": "超聚变",
+    "hardwareFactory": "华为",
     "hardwareModel": "E9000 CH121 V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86_64",
     "date": "2021/07/03",
-    "friendlyLink": "support.xfusion.com",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/e-series/ch121-v5-node",
     "boardCards": [
      {
         "vendorID": "19e5",
@@ -2758,7 +2758,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "support.xfusion.com",
+      "productInformation": "https://e.huawei.com/cn/products/servers/e-series/ch121-v5-node",
       "certificationTime": "2021/07/03",
       "commitID": "",
       "motherBoardRevision": "1.10",
@@ -2772,12 +2772,12 @@
     }
   },
   {
-    "hardwareFactory": "超聚变",
+    "hardwareFactory": "华为",
     "hardwareModel": "X6000 XH321L V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86_64",
     "date": "2021/07/03",
-    "friendlyLink": "support.xfusion.com",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/x-series/xh321l-v5",
     "boardCards": [
       {
         "vendorID": "1000",
@@ -2819,7 +2819,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "support.xfusion.com",
+      "productInformation": "https://e.huawei.com/cn/products/servers/x-series/xh321l-v5",
       "certificationTime": "2021/07/03",
       "commitID": "",
       "motherBoardRevision": "",
@@ -3428,10 +3428,291 @@
       "biosUefi": "2.7",
       "cpu": "Kunpeng-920",
       "ram": "16*32G DIMMs",
-      "ram": "16*32G DIMMs",
       "portsBusTypes": "TM210",
       "videoAdapter": "171",
       "hostBusAdapter": "Avago 3508",
+      "hardDiskDrive": ""
+    }
+  },
+  {
+    "hardwareFactory": "新华三",
+    "hardwareModel": "H3C UniServer R4650 G5",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "x86_64",
+    "date": "2021/11/18",
+    "friendlyLink": "https://www.h3c.com/cn/Products___Technology/Products/NewServer/Catalog/H3CIndustrial/RackServer/Fourway_Server/R4950G5/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1563",
+        "svID": "193d",
+        "ssID": "1008",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP1",
+        "driverName": "ixgbe",
+        "version": "5.1.0-k",
+        "type": "NIC",
+        "driverDate": "2020.12.23",
+        "sha256": "67:CB:2F:34:DC:66:D7:6D:E0:C8:4B:BF:64:68:8B:91:CE:24:35:49",
+        "driverSize": "718k",
+        "chipVendor": "Intel",
+        "boardModel": "H3C",
+        "chipModel": "Intel I350",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.h3c.com/cn/Products___Technology/Products/NewServer/Catalog/H3CIndustrial/RackServer/Fourway_Server/R4950G5/",
+      "certificationTime": "2021/11/18",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "5.37",
+      "cpu": "AMD EPYC 7H12 64-Core Processor",
+      "ram": "32*32G RDIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "",
+      "hostBusAdapter": "RAID-LSI-9361-8i(2G)-1-X",
+      "hardDiskDrive": ""
+    }
+  },
+  {
+    "hardwareFactory": "新华三",
+    "hardwareModel": "H3C UniServer R4300 G5",
+    "osVersion": "openEuler 20.03 LTS SP3",
+    "architecture": "x86_64",
+    "date": "2022/2/18",
+    "friendlyLink": "http://www.h3c.com/cn/Products_And_Solution/Server/H3C/Products/RackServer/Products_Series/Application_Optimization_Storage/R4300_G5/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "193d",
+        "ssID": "1005",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "igb",
+        "version": "5.4.0-k",
+        "type": "NIC",
+        "driverDate": "",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Intel",
+        "boardModel": "",
+        "chipModel": "Intel I350",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+	  {
+        "vendorID": "8086",
+        "deviceID": "1572",
+        "svID": "8086",
+        "ssID": "0068",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "i40e",
+        "version": "2.15.9",
+        "type": "NIC",
+        "driverDate": "",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Intel",
+        "boardModel": "",
+        "chipModel": "",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+	  {
+        "vendorID": "15b3",
+        "deviceID": "1015",
+        "svID": "193d",
+        "ssID": "100a",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "mlx5_core",
+        "version": "5.0-0",
+        "type": "NIC",
+        "driverDate": "",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Mellanox",
+        "boardModel": "",
+        "chipModel": "ConnetX-4 LX",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+	  {
+        "vendorID": "9005",
+        "deviceID": "028f",
+        "svID": "193d",
+        "ssID": "c460",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "smartpqi",
+        "version": "2.1.12-055",
+        "type": "RAID",
+        "driverDate": "",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "PMC",
+        "boardModel": "",
+        "chipModel": "",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "http://www.h3c.com/cn/Products_And_Solution/Server/H3C/Products/RackServer/Products_Series/Application_Optimization_Storage/R4300_G5/",
+      "certificationTime": "2022/2/17",
+      "commitID": "I4DSMT",
+      "motherBoardRevision": "",
+      "biosUefi": "5.34",
+      "cpu": "Intel(R) Xeon(R) Platinum 8380 CPU @ 2.30GHz",
+      "ram": "3*32G RDIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "",
+      "hostBusAdapter": "RAID-P460-M2",
+      "hardDiskDrive": ""
+    }
+  },
+  {
+    "hardwareFactory": "新华三",
+    "hardwareModel": "H3C UniServer R6900 G5",
+    "osVersion": "openEuler 20.03 LTS SP3",
+    "architecture": "x86_64",
+    "date": "2022/2/18",
+    "friendlyLink": "https://www.h3c.com/cn/Products___Technology/Products/NewServer/Catalog/H3CIndustrial/RackServer/Fourway_Server/R6900G5/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "193d",
+        "ssID": "1005",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "igb",
+        "version": "5.4.0-k",
+        "type": "NIC",
+        "driverDate": "",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Intel",
+        "boardModel": "",
+        "chipModel": "Intel I350",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+	  {
+        "vendorID": "14e4",
+        "deviceID": "168e",
+        "svID": "14e4",
+        "ssID": "5006",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "bnx2x",
+        "version": "1.712.30-0",
+        "type": "NIC",
+        "driverDate": "",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Qlogic",
+        "boardModel": "",
+        "chipModel": "BCM57810",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+	  {
+        "vendorID": "15b3",
+        "deviceID": "1015",
+        "svID": "193d",
+        "ssID": "100a",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "mlx5_core",
+        "version": "5.0-0",
+        "type": "NIC",
+        "driverDate": "",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Mellanox",
+        "boardModel": "",
+        "chipModel": "ConnetX-4 LX",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+	  {
+        "vendorID": "1000",
+        "deviceID": "005d",
+        "svID": "1000",
+        "ssID": "9361",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "megaraid_sas",
+        "version": "07.706.03.00-rc1",
+        "type": "RAID",
+        "driverDate": "",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "LSI",
+        "boardModel": "",
+        "chipModel": "",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.h3c.com/cn/Products___Technology/Products/NewServer/Catalog/H3CIndustrial/RackServer/Fourway_Server/R6900G5/",
+      "certificationTime": "2022/2/17",
+      "commitID": "I4TMGU",
+      "motherBoardRevision": "",
+      "biosUefi": "5.35",
+      "cpu": "Intel(R) Xeon(R) Gold 6348H CPU @ 2.30GHz",
+      "ram": "4*32G RDIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "",
+      "hostBusAdapter": "RAID-LSI-9361-8i(2G)-1-X",
+      "hardDiskDrive": ""
+    }
+  },
+  {
+    "hardwareFactory": "新华三",
+    "hardwareModel": "H3C UniServer R4960 G3",
+    "osVersion": "openEuler 20.03 LTS SP3",
+    "architecture": "aarch64",
+    "date": "2022/03/02",
+    "friendlyLink": "https://www.h3c.com/cn/Products_And_Solution/Server/H3C/Products/RackServer/Products_Series/Dualway_Server/R4960/",
+    "boardCards": [
+      {
+        "vendorID": "19e5",
+        "deviceID": "a222",
+        "svID": "19e5",
+        "ssID": "0000",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "hns3",
+        "version": "1.10.0.6",
+        "type": "NIC",
+        "driverDate": "2020.12.21",
+        "sha256": "2E:EC:80:BC:58:F5:9D:BB:75:51:CA:37:7B:29:97:E2:F4:C0:1C:C4",
+        "driverSize": "164K",
+        "chipVendor": "Huawei",
+        "boardModel": "TM212",
+        "chipModel": "hisi",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.h3c.com/cn/Products_And_Solution/Server/H3C/Products/RackServer/Products_Series/Dualway_Server/R4960/",
+      "certificationTime": "2022/03/02",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "6.22",
+      "cpu": "Kunpeng-920",
+      "ram": "32*32G DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "Hi1710",
+      "hostBusAdapter": "MegaRAID 9460-16i",
       "hardDiskDrive": ""
     }
   }
