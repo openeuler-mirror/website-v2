@@ -3715,5 +3715,173 @@
       "hostBusAdapter": "MegaRAID 9460-16i",
       "hardDiskDrive": ""
     }
+  },
+  {
+    "hardwareFactory": "华为",
+    "hardwareModel": "TaiShan 200 (Model 2280)",
+    "osVersion": "openEuler 20.03 LTS SP3",
+    "architecture": "aarch64",
+    "date": "2021/12/13",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/taishan-server/taishan-2280",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "10fb",
+        "svID": "ffff",
+        "ssID": "ffff",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "ixgbe",
+        "version": "5.1.0-k",
+        "type": "NIC",
+        "driverDate": "2021/12/24",
+        "sha256": "217AC5B1E97B6BCCDBFE73C5BCCFC375408CECEF",
+        "driverSize": "630K",
+        "chipVendor": "Intel",
+        "boardModel": "SP310",
+        "chipModel": "82599",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://e.huawei.com/cn/products/servers/taishan-server/taishan-2280",
+      "certificationTime": "2021/12/13",
+      "commitID": "",
+      "motherBoardRevision": "BC82AMDD",
+      "biosUefi": "1.08",
+      "cpu": "Kunpeng-920",
+      "ram": "16*16G RDIMMs",
+      "portsBusTypes": "8 PCI Express X8",
+      "videoAdapter": "Hi1822",
+      "hostBusAdapter": "",
+      "hardDiskDrive": ""
+    }
+  },
+  {
+    "hardwareFactory": "华为",
+    "hardwareModel": "TaiShan 200 (Model 2280)",
+    "osVersion": "openEuler 22.03 LTS",
+    "architecture": "aarch64",
+    "date": "2022/03/01",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/taishan-server/taishan-2280",
+    "boardCards": [
+      {
+        "vendorID": "15b3",
+        "deviceID": "1015",
+        "svID": "15b3",
+        "ssID": "0004",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "mlx5_core",
+        "version": "5.0-0",
+        "type": "NIC",
+        "driverDate": "2022/03/01",
+        "sha256": "7CB01C12F2BC9C554FFB08CC1B2A56D3A30E7F4A",
+        "driverSize": "1.7M",
+        "chipVendor": "Mellanox",
+        "boardModel": "MCX4121A-XCAT",
+        "chipModel": "cx4",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://e.huawei.com/cn/products/servers/taishan-server/taishan-2280",
+      "certificationTime": "2022/03/01",
+      "commitID": "",
+      "motherBoardRevision": "BC82AMDD",
+      "biosUefi": "1.79(U75)",
+      "cpu": "Kunpeng-920",
+      "ram": "16*32G RDIMMs",
+      "portsBusTypes": "8 PCI Express X8",
+      "videoAdapter": "Huawei Technologies Co., Ltd. Hi171x Series",
+      "hostBusAdapter": "Huawei Technologies Co., Ltd. HiSilicon SAS 3.0 HBA (rev 21)",
+      "hardDiskDrive": "ATA ST8000NM0055-1RM SNA5"
+    }
+  },
+  {
+    "hardwareFactory": "华为",
+    "hardwareModel": "2288H V5",
+    "osVersion": "openEuler 22.03 LTS",
+    "architecture": "x86_64",
+    "date": "2022/02/26",
+    "friendlyLink": "",
+    "boardCards": [
+      {
+        "vendorID": "15b3",
+        "deviceID": "1015",
+        "svID": "15b3",
+        "ssID": "0004",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "mlx5_core",
+        "version": "5.0-0",
+        "type": "NIC",
+        "driverDate": "2022/02/26",
+        "sha256": "217AC5B1E97B6BCCDBFE73C5BCCFC375408CECEF",
+        "driverSize": "2.3M",
+        "chipVendor": "Mellanox",
+        "boardModel": "MCX4121A-XCAT",
+        "chipModel": "cx4",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "",
+      "certificationTime": "2022/2/26",
+      "commitID": "",
+      "motherBoardRevision": "BC11SPSCD",
+      "biosUefi": "8.08 (U47)",
+      "cpu": "Intel(R) Xeon(R) Gold 6266C CPU @ 3.00GHz",
+      "ram": "12*32G RDIMMs",
+      "portsBusTypes": "x8 PCI Express 3 x8",
+      "videoAdapter": "Huawei Technologies Co., Ltd. Hi171x Series",
+      "hostBusAdapter": "Intel Corporation C620 Series Chipset Family SPI Controller",
+      "hardDiskDrive": "ATA MTFDDAK480TDC-1A M030"
+    }
+  },
+  {
+    "hardwareFactory": "华为",
+    "hardwareModel": "2288H V5",
+    "osVersion": "openEuler 20.03 LTS SP3",
+    "architecture": "x86_64",
+    "date": "2021/12/16",
+    "friendlyLink": "",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "10fb",
+        "svID": "ffff",
+        "ssID": "ffff",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "ixgbe",
+        "version": "5.1.0-k",
+        "type": "NIC",
+        "driverDate": "2021/12/24",
+        "sha256": "217AC5B1E97B6BCCDBFE73C5BCCFC375408CECEF",
+        "driverSize": "630K",
+        "chipVendor": "Intel",
+        "boardModel": "SP310",
+        "chipModel": "82599",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "",
+      "certificationTime": "2021/12/16",
+      "commitID": "",
+      "motherBoardRevision": "BC11SPSCD",
+      "biosUefi": "7.0",
+      "cpu": "intel",
+      "ram": "16*32G RDIMMs",
+      "portsBusTypes": "8 PCI Express X8",
+      "videoAdapter": "Huawei Technologies Co., Ltd.Hi1710",
+      "hostBusAdapter": "",
+      "hardDiskDrive": ""
+    }
   }
 ]
