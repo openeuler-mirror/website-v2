@@ -3883,5 +3883,89 @@
       "hostBusAdapter": "",
       "hardDiskDrive": ""
     }
+  },
+  {
+    "hardwareFactory": "云豹智能",
+    "hardwareModel": "ALPS-V1.0-R4007-F9001-01",
+    "osVersion": "openEuler 20.03 LTS SP3",
+    "architecture": "x86_64",
+    "date": "2022/03/08",
+    "friendlyLink": "https://www.jaguarmicro.com/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1892",
+        "svID": "8086",
+        "ssID": "0000",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "ice",
+        "version": "1.6.7",
+        "type": "NIC",
+        "driverDate": "2020/12/23",
+        "sha256": "799B0EE19AC63A0F4A60F165D1EBEAA95E75C497",
+        "driverSize": "36M",
+        "chipVendor": "Intel",
+        "boardModel": "E810",
+        "chipModel": "columbiaville",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.jaguarmicro.com/",
+      "certificationTime": "2022/03/08",
+      "commitID": "",
+      "motherBoardRevision": "1.0",
+      "biosUefi": "ALPS_BIOS.1.00.02",
+      "cpu": "Intel Atom(R) P5322 processor",
+      "ram": "2*8G Samsung",
+      "portsBusTypes": "32-bit PCI Express x1",
+      "videoAdapter": "ASPEED Technology, Inc. Device 2402",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "ATA AF2MA31DTDLT240A"
+    }
+  },
+  {
+    "hardwareFactory": "新华三",
+    "hardwareModel": "H3C UniServer R4950 G5",
+    "osVersion": "openEuler 20.03 LTS SP1",
+    "architecture": "x86_64",
+    "date": "2021/11/18",
+    "friendlyLink": "https://www.h3c.com/cn/Service/Document_Software/Document_Center/Server/Catalog/Rack_server/R4950_G5/?CHID=452884&v=612",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1563",
+        "svID": "193D",
+        "ssID": "1008",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "ixgbe",
+        "version": "5.1.0-k",
+        "type": "NIC",
+        "driverDate": "2020/12/23",
+        "sha256": "67CB2F34DC66D76DE0C84BBF64688B91CE243549",
+        "driverSize": "718k",
+        "chipVendor": "Intel",
+        "boardModel": "H3C",
+        "chipModel": "Intel I350",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.h3c.com/cn/Service/Document_Software/Document_Center/Server/Catalog/Rack_server/R4950_G5/?CHID=452884&v=612",
+      "certificationTime": "2021/11/18",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "5.37",
+      "cpu": "AMD EPYC 7H12 64-Core Processor",
+      "ram": "32*32G RDIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "",
+      "hostBusAdapter": "RAID-LSI-9361-8i(2G)-1-X",
+      "hardDiskDrive": ""
+    }
   }
 ]
