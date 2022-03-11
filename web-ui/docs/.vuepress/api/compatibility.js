@@ -11,6 +11,7 @@ export const hardwareList = ({
     os,
     architecture,
     page,
+    cpu,
     pageSize,
     lang
 }) => {
@@ -22,6 +23,7 @@ export const hardwareList = ({
             data: {
                 keyword,
                 os: os === 'all' ? '' : os,
+                cpu: cpu === 'all' ? '' : cpu,
                 architecture: architecture === 'all' ? '' : architecture,
                 pages: {
                     page,
@@ -206,6 +208,7 @@ export const hardwareArchitectureOptions = ({
     });
 };
 
+
 // 7. 详情页查询
 export const detailList = ({
     id
@@ -304,6 +307,33 @@ export const softwareOptions = () => {
             success(result) {
                 if (result) {
                     resolve(result);
+                    return;
+                }
+                reject(result);
+            },
+            error(msg) {
+                reject(msg);
+            }
+
+        });
+
+    });
+};
+//11. 硬件cpu 下拉选项获取
+export const hardwareCpuOptions = ({
+    lang
+}) => {
+    return new Promise((resolve, reject) => {
+        appAjax.postJson({
+            otherBaseUrl: cveApi,
+            url: '/cve-security-notice-server/hardwarecomp/getCpu',
+            type: 'get',
+            params: {
+                lang: lang
+            },
+            success(result) {
+                if (result) {
+                    resolve(result.result);
                     return;
                 }
                 reject(result);

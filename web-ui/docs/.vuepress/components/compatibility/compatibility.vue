@@ -190,6 +190,30 @@
                                 ></el-option>
                             </el-select>
                         </el-form-item>
+                        <el-form-item label="CPU">
+                            <el-select class="pc-select" 
+                                v-model="formData.cpu" 
+                                @change="hardwareChange" 
+                                :placeholder="i18n.compatibility.SELECT_PLACEHOLDER">
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
+                                <el-option
+                                    v-for="(item, index) in hardwareCpuOptions"
+                                    :key="index"
+                                    :value="item"
+                                ></el-option>
+                            </el-select>
+                            <el-select class="mobile-select" 
+                                v-model="formData.cpu" 
+                                @change="hardwareChange" 
+                                placeholder="CPU">
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
+                                <el-option
+                                    v-for="(item, index) in hardwareCpuOptions"
+                                    :key="index"
+                                    :value="item"
+                                ></el-option>
+                            </el-select>
+                        </el-form-item>
                         <el-form-item :label="i18n.compatibility.SEARCH_LABEL" class="search-box">
                             <el-input 
                                 v-model="formData.keyword"
@@ -490,6 +514,7 @@ import {
     hardwareList,
     hardwareOSOptions,
     hardwareArchitectureOptions,
+    hardwareCpuOptions,
     driverList, 
     driverOSOptions, 
     driverArchitectureOptions,
@@ -576,6 +601,7 @@ export default {
             tabActiveName: 'drive',
             hardwareOSOptions: [],
             hardwareArchitectureOptions: [],
+            hardwareCpuOptions:[],
             driverOSOptions: [],
             driverArchitectureOptions: [],
             softwareOptionsOs:[],
@@ -584,6 +610,7 @@ export default {
             formData: {
                 keyword: '',
                 os: '',
+                cpu:'',
                 architecture: '',
                 page: 1,
                 pageSize: 10,
@@ -630,7 +657,12 @@ export default {
                 this.hardwareArchitectureOptions = data;
             }
         })
-
+        hardwareCpuOptions({lang: lang})
+        .then(data=>{
+            if (data && data.length > 0) {
+                this.hardwareCpuOptions = data;
+            }
+        })
         driverOSOptions({lang: lang})
         .then(data => {
             if(data && data.length > 0) {
@@ -706,7 +738,6 @@ export default {
         // 软件筛选
         softwareChange() {
             this.formData.page = 1;
-            console.log(this.formData);
             locationMethods.getSoftwareList(this.formData);
         },
         // 驱动筛选
@@ -802,7 +833,7 @@ export default {
         }
         .pc-select,
         .pc-search {
-            width: 217px;
+            width: 180px;
             height: 32px;
             @media (max-width: 1000px) {
                 display: none;

@@ -285,7 +285,7 @@
               <div class="rank-box">
                 <div class="rank-top">
                   <div class="top-item" v-for="(item, index) in rankTop" :key="index">
-                    <div class="gitee-name">{{ item.GiteeId }}</div>
+                    <a class="gitee-name" target="_blank" :href="item.giteeRoom">{{ item.GiteeId }}</a>
                     <div class="score" >
                       {{ item.integralValue }}<span>{{rank.SCORE}}</span>
                     </div>
@@ -311,7 +311,7 @@
                   >
                     <div class="rank-left">
                       <div class="rank-class">{{ item.rank }}</div>
-                      <div class="gitee-name">{{ item.GiteeId }}</div>
+                      <a :href="item.giteeRoom" target="_blank" class="gitee-name">{{ item.GiteeId }}</a>
                     </div>
                     <div class="rank-right">
                       <div class="score">{{ item.integralValue }}</div>
@@ -879,16 +879,18 @@ export default {
         })
         .then((res) => {
           if (res.UserPoints) {
-            let info = res.UserPoints;         
+            let info = res.UserPoints;   
             info.length > 10 ? this.showAll = true: '';
             info.sort((a, b) => {
               return b.integralValue - a.integralValue;
             });
             info.forEach((item, index) => {
+              item['giteeRoom'] = `https://gitee.com/${item.GiteeId}`
               index < 9
                 ? (item["rank"] = `0${index + 1}`)
                 : (item["rank"] = index + 1);
             });
+            
             this.rankInfo = info;
             this.renderData = info.slice(3, 10);
             this.rankTop = info.slice(0, 3);
@@ -1468,6 +1470,9 @@ a {
               color: rgba(0, 0, 0, 0.5);
               line-height: 16px;
             }
+            .gitee-name:hover {
+              color: #002fa7;
+            }
             .score {
               margin: 10px 0 20px;
               font-size: 18px;
@@ -1530,6 +1535,9 @@ a {
                 font-size: 14px;
                 color: rgba(0, 0, 0, 0.5);
                 line-height: 16px;
+              }
+              .gitee-name:hover {
+                color: #002fa7;
               }
             }
             .rank-right {
