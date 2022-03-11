@@ -599,6 +599,11 @@ module.exports = {
                 RIGHT_IMG_LINK: 'http://www.vulab.com.cn/',
                 RIGHT_IMG_PC: '/img/home/link/zhongke_pc.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/zhongke_mo.png',
+            },
+            {
+                LEFT_IMG_LINK: 'https://www.authing.cn/',
+                LEFT_IMG_PC: '/img/home/link/Authing_pc.png',
+                LEFT_IMG_MOBILE: '/img/home/link/Authing_mo.png',
             }
         ],
         MORE: "更多",
