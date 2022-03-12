@@ -3967,5 +3967,26 @@
       "hostBusAdapter": "RAID-LSI-9361-8i(2G)-1-X",
       "hardDiskDrive": ""
     }
+  },
+  {
+    "hardwareFactory": "Supermicro",
+    "hardwareModel": "Supermicro AS-4124GS-TNR",
+    "osVersion": "openEuler 22.03 LTS",
+    "architecture": "x86_64",
+    "date": "2022/02/28",
+    "friendlyLink": "https://www.supermicro.org.cn/zh_tw/Aplus/system/4U/4124/AS-4124GS-TNR.cfm",
+    "compatibilityConfiguration": {
+      "productInformation": "Advanced Micro Devices, Inc.",
+      "certificationTime": "2022/02/28",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "2.2",
+      "cpu": "AMD EPYC 7513 32-Core Processor",
+      "ram": "16*32G DDR4",
+      "portsBusTypes": "",
+      "videoAdapter": "",
+      "hostBusAdapter": "",
+      "hardDiskDrive": ""
+    }
   }
 ]
