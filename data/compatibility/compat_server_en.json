@@ -3687,48 +3687,6 @@
     }
   },
   {
-    "hardwareFactory": "Jaguar Microsystems",
-    "hardwareModel": "ALPS-V1.0-R4007-F9001-01",
-    "osVersion": "openEuler 20.03 LTS SP3",
-    "architecture": "x86_64",
-    "date": "2022/03/08",
-    "friendlyLink": "https://www.jaguarmicro.com/",
-    "boardCards": [
-      {
-        "vendorID": "8086",
-        "deviceID": "1892",
-        "svID": "8086",
-        "ssID": "0000",
-        "architecture": "x86_64",
-        "os": "openEuler 20.03 LTS SP3",
-        "driverName": "ice",
-        "version": "1.6.7",
-        "type": "NIC",
-        "driverDate": "2020/12/23",
-        "sha256": "799B0EE19AC63A0F4A60F165D1EBEAA95E75C497",
-        "driverSize": "36M",
-        "chipVendor": "Intel",
-        "boardModel": "E810",
-        "chipModel": "columbiaville",
-        "item": "",
-        "downloadLink": "inbox"
-      }
-    ],
-    "compatibilityConfiguration": {
-      "productInformation": "https://www.jaguarmicro.com/",
-      "certificationTime": "2022/03/08",
-      "commitID": "",
-      "motherBoardRevision": "1.0",
-      "biosUefi": "ALPS_BIOS.1.00.02",
-      "cpu": "Intel Atom(R) P5322 processor",
-      "ram": "2*8G Samsung",
-      "portsBusTypes": "32-bit PCI Express x1",
-      "videoAdapter": "ASPEED Technology, Inc. Device 2402",
-      "hostBusAdapter": "",
-      "hardDiskDrive": "ATA AF2MA31DTDLT240A"
-    }
-  },
-  {
     "hardwareFactory": "New H3C Technologies Co., Ltd.",
     "hardwareModel": "H3C UniServer R4950 G5",
     "osVersion": "openEuler 20.03 LTS SP1",
