@@ -10,20 +10,16 @@
         </div>
         <div class="is-pc home-carousel" v-if="!isShowH5">
              <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" >
-              <el-carousel-item >
-                     <div class="carousel-banner" id="container"    @click="go('/activities/happynewyear2022/')">
-                        <div class="extend3 extend" ></div>
-                        <div class="newyear center-img"></div>
-                        <div class="extend4 extend"></div>
-                     </div>
+              <el-carousel-item v-for=" item in i18n.home.HOME_NEWRELEASE" :key="item.PC_IMG" >
+                    <div class="carousel-banner" :style="{backgroundImage: item.PC_IMG}"   @click="go(item.LINK)">
+                    </div>
               </el-carousel-item>
             </el-carousel>
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
                <swiper-slide class="carousel-item-index">
-                <div class="carousel-banner" id="container"   @click="go('/activities/happynewyear2022/')">
-                    <img src="/img/home/banner/newyear-banner-mob.png" alt="">
+                <div class="mobile-version" v-for="item in i18n.home.HOME_NEWRELEASE" :key="item.IMG" :style="{backgroundImage: item.MOBILE_IMG}"  @click="go(item.LINK)">
                 </div>
               </swiper-slide>
             </swiper>
@@ -252,7 +248,6 @@
 </template>
 
 <script>
-import { TweenLite, TweenMax, Linear, Sine } from "gsap";
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
 import 'swiper/css/swiper.css';
 import { meetingList, statisticsList } from "../../api/home";
@@ -338,7 +333,6 @@ let remoteMethods = {
         },
         mounted() {
             window.addEventListener("scroll", this.scroTop);
-            this.fall();
             window.location.hash=='#meeting' ? window.location.href="#meeting": ''
             this.videoCtrlParams.element = document.getElementById('home-video');
             remoteMethods.meetingList();
@@ -372,52 +366,6 @@ let remoteMethods = {
             round
         },
         methods: {
-            fall() {
-              let a = null;
-              TweenLite.set("#container", { perspective: 600 ,backgroundImage: '/img/home/banner/newyear-banner.png'});
-              TweenLite.set("img", { xPercent: "-50%", yPercent: "-50%" });
-              var container = document.getElementById("container"),
-               w = window.innerWidth , h = window.innerHeight;
-              for (let i = 0; i < 80; i++) {
-                var Div = document.createElement("div");
-                TweenLite.set(Div, {
-                  attr: { class: "dot" },
-                  x: R(0, w),
-                  y: R(-200, -150),
-                  z: R(-200, 200),
-                });
-                container.appendChild(Div);
-                animm(Div);
-                a = Math.floor(Math.random() * 10 + 1);
-                Div.style.backgroundImage = `url(/img/activities/year2022/icon${a}.png)`;
-              }
-              function animm(elm) {
-                TweenMax.to(elm, R(6, 15), {
-                  y: h + 100,
-                  ease: Linear.easeNone,
-                  repeat: -1,
-                  delay: -15,
-                });
-                TweenMax.to(elm, R(4, 8), {
-                  x: "+=100",
-                  rotationZ: R(0, 180),
-                  repeat: -1,
-                  yoyo: true,
-                  ease: Sine.easeInOut,
-                });
-                TweenMax.to(elm, R(2, 8), {
-                  rotationX: R(0, 360),
-                  rotationY: R(0, 360),
-                  repeat: -1,
-                  yoyo: true,
-                  ease: Sine.easeInOut,
-                  delay: -5,
-                });
-              }
-              function R(min, max) {
-                return min + Math.random() * (max - min);
-              }
-            },
             scroTop() {
               let scrollTop =
                 document.body.scrollTop || document.documentElement.scrollTop;
@@ -1035,7 +983,7 @@ let remoteMethods = {
         width: 100%;
         height: 100%;
         text-align: center;
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
         .extend {
@@ -2008,7 +1956,6 @@ let remoteMethods = {
             vertical-align: middle;
         }
         .home-carousel {
-           
             margin: 0 -15px;
         }
         .home-carousel .el-carousel__item h3 {
@@ -2023,7 +1970,7 @@ let remoteMethods = {
             height: 300px;
             background-position: center center;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: contain;
         }
         .home-carousel .el-carousel__item span {
             display: inline-block;

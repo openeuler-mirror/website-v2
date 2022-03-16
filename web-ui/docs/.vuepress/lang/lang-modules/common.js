@@ -64,7 +64,7 @@ module.exports = {
                     },
                     {
                         NAME: '峰会',
-                        PATH: '/interaction/summit-list/summit2021/'
+                        PATH: '/interaction/summit-list/devday2022/'
                     }
                 ],
                 OTHER_CHILDREN: [
@@ -181,7 +181,6 @@ module.exports = {
                         NAME: '迁移指南',
                         PATH: '/other/migration/'
                     }
-                   
                 ],
                 CLASS: []
             }
@@ -294,7 +293,7 @@ module.exports = {
                     },
                     {
                         NAME: 'Summit',
-                        PATH: '/interaction/summit-list/summit2021/'
+                        PATH: '/interaction/summit-list/devday2022/'
                     }
                 ],
                 OTHER_CHILDREN: [
@@ -407,7 +406,6 @@ module.exports = {
                         NAME: 'Compatibility List',
                         PATH: '/compatibility/'
                     },
-                  
                 ],
                 CLASS: []
             }
@@ -518,7 +516,7 @@ module.exports = {
                     },
                     {
                         NAME: 'Саммит',
-                        PATH: '/interaction/summit-list/summit2021/'
+                        PATH: '/interaction/summit-list/devday2022/'
                     }
                 ],
                 OTHER_CHILDREN: [
