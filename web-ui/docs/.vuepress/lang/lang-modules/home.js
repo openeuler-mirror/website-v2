@@ -43,20 +43,10 @@ module.exports = {
         ],
         HOME_NEWRELEASE: [
             {
-                MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/%E6%AC%A7%E6%8B%89%E4%BA%BA%E6%89%8D%E5%8F%91%E5%B1%95_mob.png')",
-                PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/%E6%AC%A7%E6%8B%89%E4%BA%BA%E6%89%8D%E5%8F%91%E5%B1%95_web.png')",
-                LINK:'/news/20211117-openeuler.html'
+                MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_mo.png')",
+                PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_pc.png')",
+                LINK:'/interaction/summit-list/devday2022/'
             },
-            {
-                MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-summit-2021/images/%E6%AC%A7%E6%8B%89-375x300-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
-                PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-summit-2021/images/1920x500%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
-                LINK: "/interaction/summit-list/summit2021/"
-            },
-            {
-                MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/WhitePaper_zh_mo.png')",
-                PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/WhitePaper_zh.png')",
-                LINK: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/pdf/openEuler%2021.09%20%E6%8A%80%E6%9C%AF%E7%99%BD%E7%9A%AE%E4%B9%A6.pdf"
-            }
         ],
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
@@ -636,15 +626,10 @@ module.exports = {
         ],
         HOME_NEWRELEASE: [
             {
-                MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-summit-2021/images/%E6%AC%A7%E6%8B%89-375x300-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
-                PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-summit-2021/images/1920x500%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
-                LINK: "/interaction/summit-list/summit2021/"
+                MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_mo.png')",
+                PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_pc.png')",
+                LINK:'/interaction/summit-list/devday2022/'
             },
-            {
-                MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/WhitePaper_en_mo.png')",
-                PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/WhitePaper_en.png')",
-                LINK: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/pdf/openEuler%2021.09%20%E6%8A%80%E6%9C%AF%E7%99%BD%E7%9A%AE%E4%B9%A6-en.pdf"
-            }
     ],
         ROOM_LEFT_IMG: [
             {
@@ -1185,6 +1170,11 @@ module.exports = {
                 RIGHT_IMG_LINK: 'http://www.vulab.com.cn/',
                 RIGHT_IMG_PC: '/img/home/link/zhongke_pc.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/zhongke_mo.png',
+            },
+            {
+                LEFT_IMG_LINK: 'https://www.authing.cn/',
+                LEFT_IMG_PC: '/img/home/link/Authing_pc.png',
+                LEFT_IMG_MOBILE: '/img/home/link/Authing_mo.png',
             }
         ],
         MORE: "Read More",
@@ -1217,15 +1207,10 @@ module.exports = {
         ],
         HOME_NEWRELEASE: [
             {
-                MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-summit-2021/images/%E6%AC%A7%E6%8B%89-375x300-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
-                PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-summit-2021/images/1920x500%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png')",
-                LINK: "/interaction/summit-list/summit2021/"
+                MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_mo.png')",
+                PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_pc.png')",
+                LINK:'/interaction/summit-list/devday2022/'
             },
-            {
-                MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/WhitePaper_ru_mo.png')",
-                PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/WhitePaper_ru.png')",
-                LINK: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/pdf/openEuler%2021.09%20%E6%8A%80%E6%9C%AF%E7%99%BD%E7%9A%AE%E4%B9%A6-ru.pdf"
-            }
         ],
         ROOM_LEFT_IMG: [
             {
@@ -1767,6 +1752,11 @@ module.exports = {
                 RIGHT_IMG_LINK: 'http://www.vulab.com.cn/',
                 RIGHT_IMG_PC: '/img/home/link/zhongke_pc.png',
                 RIGHT_IMG_MOBILE: '/img/home/link/zhongke_mo.png',
+            },
+            {
+                LEFT_IMG_LINK: 'https://www.authing.cn/',
+                LEFT_IMG_PC: '/img/home/link/Authing_pc.png',
+                LEFT_IMG_MOBILE: '/img/home/link/Authing_mo.png',
             }
         ],
         MORE: "Read More",

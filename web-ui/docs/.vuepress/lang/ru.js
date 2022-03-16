@@ -20,4 +20,5 @@ module.exports = {
     compatibility: require('./lang-modules/compatibility').ru,
     activities: require('./lang-modules/activities').cn,
     summit: require('./lang-modules/summit').ru,
+    devday2022: require('./lang-modules/devday2022').ru,
 };

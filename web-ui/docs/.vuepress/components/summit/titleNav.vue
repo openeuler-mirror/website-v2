@@ -21,15 +21,12 @@
 export default {
     data () {
         return {
-            
         }
     },
     props:['currentIndex','dataList','internship'],
     mounted () {
-        
     },
     methods: {
-        
     }
 }
 </script>
@@ -61,7 +58,6 @@ export default {
          .internship-line {
             height:470px;
         }
-       
     }
     .nav-text {
         position: relative;

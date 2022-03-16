@@ -514,7 +514,6 @@ export default {
                     NAME: 'Mauro Carvalho  Chehab',
                     POSITION: 'Linux 社区 Maintainer'
                 },
-                
                 {
                     IMG: '/img/summit/devday-2021/lecturer/tuguoyi.png',
                     NAME: '涂国义',
@@ -1187,18 +1186,15 @@ export default {
                     font-size: 12px;
                     color: rgba(0, 0, 0, 0.5);
                     line-height: 20px;
-                    
                     margin: 20px 29px 0 0;
                 }
                 .agenda {
                     p {
-                        
                         color: #000000;
                         line-height: 20px;
                         font-size: 12px;
                         margin-bottom: 20px;
                         &:first-of-type {
-                            
                             width: 209px;
                         }
                         span {

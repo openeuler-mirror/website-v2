@@ -21,4 +21,5 @@ module.exports = {
     activities: require('./lang-modules/activities').cn,
     summit: require('./lang-modules/summit').cn,
     questionnaire: require('./lang-modules/questionnaire').cn,
+    devday2022: require('./lang-modules/devday2022').cn,
 };

@@ -191,7 +191,7 @@ export default {
         align-items: flex-end;
         font-size: 14px;
         li {
-          padding: 0 15px;
+          padding: 0 4px;
           a {
             color: #fff;
             text-decoration: none;
@@ -199,7 +199,7 @@ export default {
           }
         }
         li:nth-child(2) {
-          padding: 0 16px;
+          padding: 0 10px;
           border-left: 1px solid #fff;
           border-right: 1px solid #fff;
         }
