@@ -6,7 +6,7 @@
             </a>
         </div>
         <div class="h5-banner">
-            <a href>
+            <a :href="i18n.devday2022.SUMMIT_BANNER.LINK" target="_balnk">
                 <img :src="i18n.devday2022.SUMMIT_BANNER.MOBILE_IMG" />
             </a>
         </div>
@@ -24,6 +24,55 @@
                 >
                     <img :src="item.IMG" alt />
                 </a>
+            </div>
+            <div class="agenda">
+                <div class="title">
+                    <img class="pc" :src="i18n.devday2022.AGENDA.TITLE_IMG_PC" alt />
+                    <img class="mo" :src="i18n.devday2022.AGENDA.TITLE_IMG_MO" alt />
+                </div>
+                <div class="agenda-data">
+                    <div class="data-item">
+                        <div class="agenda-title">{{ i18n.devday2022.AGENDA.AGENDA_DATA_13.TITLE }}</div>
+                        <div class="schedule">
+                            <div
+                                class="schedule-detail agenda-title"
+                                v-for="item in i18n.devday2022.AGENDA.AGENDA_DATA_13.SCHEDULE"
+                                :key="item"
+                            >{{ item }}</div>
+                        </div>
+                    </div>
+                    <div class="data-item">
+                        <div class="agenda-title">{{ i18n.devday2022.AGENDA.AGENDA_DATA_14.TITLE }}</div>
+                        <div class="schedule1">
+                            <div
+                                class="schedule-detail1"
+                                v-for="item in i18n.devday2022.AGENDA.AGENDA_DATA_14.SCHEDULE"
+                                :key="item"
+                            >{{ item }}</div>
+                        </div>
+                    </div>
+                    <div class="data-item">
+                        <div class="agenda-title">{{ i18n.devday2022.AGENDA.AGENDA_DATA_15.TITLE }}</div>
+                        <div class="schedule2">
+                            <div
+                                class="schedule-detail2"
+                                v-for="item in i18n.devday2022.AGENDA.AGENDA_DATA_15.SCHEDULE"
+                                :key="item"
+                            >
+                                <div
+                                    class="first"
+                                    v-for="item2 in item.FIRST"
+                                    :key="item2"
+                                >{{ item2 }}</div>
+                                <div
+                                    class="seconed"
+                                    v-for="(item2, index2) in item.SECOND"
+                                    :key="index2"
+                                >{{ item2 }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="review-wrapper">
                 <div class="title">
@@ -142,6 +191,108 @@ export default {
             }
             .call-item:last-child {
                 margin: 0;
+            }
+        }
+    }
+    .agenda {
+        .title {
+            cursor: pointer;
+            margin-bottom: 15px;
+            text-align: center;
+            .pc {
+                @media screen and (max-width: 1000px) {
+                    display: none;
+                }
+            }
+            .mo {
+                display: none;
+                @media screen and (max-width: 1000px) {
+                    display: inline-block;
+                }
+            }
+        }
+        .agenda-data {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 32px;
+            @media screen and (max-width: 1000px) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .data-item {
+                width: 360px;
+                .agenda-title {
+                    cursor: pointer;
+                    padding: 15px 30px;
+                    margin-bottom: 16px;
+                    text-align: center;
+                    color: white;
+                    background-color: #002fa7;
+                    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+                    border-radius: 4px;
+                    @media screen and (max-width: 1000px) {
+                        margin-bottom: 10px;
+                    }
+                }
+                @media screen and (max-width: 1000px) {
+                    width: 315px;
+                    font-size: 12px;
+                }
+                .schedule {
+                    .schedule-detail {
+                        color: #000;
+                        background-color: white;
+                    }
+                    @media screen and (max-width: 1000px) {
+                        margin-bottom: 30px;
+                    }
+                }
+                .schedule1 {
+                    text-align: center;
+                    height: 319px;
+                    padding: 15px 30px;
+                    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+                    border-radius: 4px;
+                    @media screen and (max-width: 1000px) {
+                        height: 175px;
+                    }
+                    .schedule-detail1 {
+                        cursor: pointer;
+                        text-align: center;
+                        padding-bottom: 8px;
+                    }
+                    .schedule-detail1:nth-child(2) {
+                        padding-bottom: 20px;
+                    }
+                    @media screen and (max-width: 1000px) {
+                        margin-bottom: 30px;
+                    }
+                }
+                .schedule2 {
+                    text-align: center;
+                    height: 319px;
+                    @media screen and (max-width: 1000px) {
+                        height: 220px;
+                    }
+                    .schedule-detail2 {
+                        cursor: pointer;
+                        text-align: center;
+                        padding: 15px 30px;
+                        margin-bottom: 16px;
+                        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+                        border-radius: 4px;
+                    }
+                    .schedule-detail2:nth-child(2) {
+                        height: 234px;
+                        @media screen and (max-width: 1000px) {
+                            .seconed {
+                                margin-bottom: 5px;
+                            }
+                            height: 150px;
+                        }
+                    }
+                }
             }
         }
     }
