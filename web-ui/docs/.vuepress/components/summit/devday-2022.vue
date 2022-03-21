@@ -46,8 +46,8 @@
                         <div class="schedule1">
                             <div
                                 class="schedule-detail1"
-                                v-for="item in i18n.devday2022.AGENDA.AGENDA_DATA_14.SCHEDULE"
-                                :key="item"
+                                v-for="(item,index) in i18n.devday2022.AGENDA.AGENDA_DATA_14.SCHEDULE"
+                                :key="index"
                             >{{ item }}</div>
                         </div>
                     </div>
@@ -56,13 +56,13 @@
                         <div class="schedule2">
                             <div
                                 class="schedule-detail2"
-                                v-for="item in i18n.devday2022.AGENDA.AGENDA_DATA_15.SCHEDULE"
-                                :key="item"
+                                v-for="(item,index) in i18n.devday2022.AGENDA.AGENDA_DATA_15.SCHEDULE"
+                                :key="index"
                             >
                                 <div
                                     class="first"
-                                    v-for="item2 in item.FIRST"
-                                    :key="item2"
+                                    v-for="(item2,index2) in item.FIRST"
+                                    :key="index2"
                                 >{{ item2 }}</div>
                                 <div
                                     class="seconed"
@@ -255,7 +255,7 @@ export default {
                     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
                     border-radius: 4px;
                     @media screen and (max-width: 1000px) {
-                        height: 175px;
+                        height: 100%;
                     }
                     .schedule-detail1 {
                         cursor: pointer;
@@ -273,7 +273,7 @@ export default {
                     text-align: center;
                     height: 319px;
                     @media screen and (max-width: 1000px) {
-                        height: 220px;
+                        height: 100%;
                     }
                     .schedule-detail2 {
                         cursor: pointer;
@@ -282,14 +282,28 @@ export default {
                         margin-bottom: 16px;
                         box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
                         border-radius: 4px;
+                        .first {
+                            padding-bottom: 8px;
+                        }
+                        .first:nth-child(2) {
+                            padding: 0;
+                        }
+                        .seconed {
+                            padding-bottom: 8px;
+                        }
+                        @media screen and (max-width: 1000px) {
+                            margin-bottom: 10px;
+                        }
                     }
                     .schedule-detail2:nth-child(2) {
-                        height: 234px;
+                        height: 226px;
+                        margin: 0;
                         @media screen and (max-width: 1000px) {
                             .seconed {
+                                padding: 0;
                                 margin-bottom: 5px;
                             }
-                            height: 150px;
+                            height: 100%;
                         }
                     }
                 }

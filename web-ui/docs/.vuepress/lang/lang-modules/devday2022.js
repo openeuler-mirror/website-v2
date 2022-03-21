@@ -1,7 +1,7 @@
 module.exports = {
     cn: {
         SUMMIT_BANNER: {
-            MOBILE_IMG: "https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/devday_banner_mo.png",
+            MOBILE_IMG: "/img/summit/devday-2022/devday_banner_mo.png",
             PC_IMG: "https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/devday_banner_pc.png",
             LINK: "https://e-campaign.huawei.com/m/uMNFji"
         },
