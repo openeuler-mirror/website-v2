@@ -10,6 +10,10 @@ module.exports = {
             LINK: "https://shimo.im/forms/7DO3Fg79JSAfaflt/fill"
         },
         {
+            IMG: "/img/summit/devday-2022/SIG1.png",
+            LINK: "https://shimo.im/forms/o0SfA0pfVmMlXEfi/fill"
+        },
+        {
             IMG: "/img/summit/devday-2022/CALLFORSPENSOR.png",
             LINK: "https://shimo.im/forms/sspw0eU78rE9ra79/fill"
         },
