@@ -3798,24 +3798,5 @@
       "chipModel": "Hi1812E V100",
       "item": "03032YRF",
       "downloadLink": "inbox"
-  },
-  {
-    "vendorID": "9001",
-    "deviceID": "1001",
-    "svID": "9001",
-    "ssID": "0001",
-    "architecture": "x86_64",
-    "os": "openEuler 20.03 LTS SP3",
-    "driverName": "pci",
-    "version": "3.0",
-    "type": "DPU",
-    "driverDate": "2020.12.03",
-    "sha256": "",
-    "driverSize": "",
-    "chipVendor": "JaguarMicro",
-    "boardModel": "F10B108-612A000",
-    "chipModel": "ALPS",
-    "item": "",
-    "downloadLink": "inbox"
   }
 ]
