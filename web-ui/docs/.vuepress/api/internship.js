@@ -45,7 +45,6 @@ export const getRank = ({
                 currentPage:1,
                 pageSize,
             },
-            
             success(result) {
                 if (result) {
                     resolve(result);
