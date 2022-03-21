@@ -2718,7 +2718,7 @@
     "date": "2021/07/03",
     "friendlyLink": "https://e.huawei.com/cn/products/servers/e-series/ch121-v5-node",
     "boardCards": [
-     {
+      {
         "vendorID": "19e5",
         "deviceID": "a221",
         "svID": "19e5",
@@ -2737,7 +2737,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-	  {
+      {
         "vendorID": "1000",
         "deviceID": "0016",
         "svID": "19E5",
@@ -2798,7 +2798,7 @@
         "item": "03024JNF",
         "downloadLink": "inbox"
       },
-	  {
+      {
         "vendorID": "19e5",
         "deviceID": "a221",
         "svID": "19e5",
@@ -3061,7 +3061,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-	  {
+      {
         "vendorID": "1000",
         "deviceID": "0016",
         "svID": "1000",
@@ -3080,7 +3080,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-	  {
+      {
         "vendorID": "144d",
         "deviceID": "a822",
         "svID": "144d",
@@ -3160,7 +3160,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-	  {
+      {
         "vendorID": "15b3",
         "deviceID": "1015",
         "svID": "193d",
@@ -3179,7 +3179,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-	  {
+      {
         "vendorID": "1000",
         "deviceID": "005d",
         "svID": "1000",
@@ -3259,7 +3259,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-	  {
+      {
         "vendorID": "9005",
         "deviceID": "028f",
         "svID": "193d",
@@ -3278,7 +3278,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-	  {
+      {
         "vendorID": "10df",
         "deviceID": "e300",
         "svID": "10df",
@@ -3339,7 +3339,7 @@
         "item": "",
         "downloadLink": "https://www.net-swift.com/c/tech.html?filter%5Btype%5D=1&page=2"
       },
-	  {
+      {
         "vendorID": "1000",
         "deviceID": "005d",
         "svID": "1000",
@@ -3400,7 +3400,7 @@
         "item": "",
         "downloadLink": "inbox"
       },
-	  {
+      {
         "vendorID": "1000",
         "deviceID": "0016",
         "svID": "19e5",
@@ -3790,5 +3790,66 @@
       "hostBusAdapter": "",
       "hardDiskDrive": ""
     }
+  },
+  {
+    "hardwareFactory": "Huawei",
+    "hardwareModel": "S902X20",
+    "osVersion": "openEuler 22.03 LTS",
+    "architecture": "aarch64",
+    "date": "2022/03/17",
+    "friendlyLink": "",
+    "compatibilityConfiguration": {
+      "productInformation": "S902X20",
+      "certificationTime": "2022/03/17",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "0.18(U6330)",
+      "cpu": "Phytium S2500",
+      "ram": "8*32G DDR4",
+      "portsBusTypes": "",
+      "videoAdapter": "",
+      "hostBusAdapter": "Broadcom / LSI MegasRAID Tri-Mode SAS3408",
+      "hardDiskDrive": ""
+    },
+    "boardCards": [
+      {
+        "vendorID": "1000",
+        "deviceID": "0017",
+        "svID": "1000",
+        "ssID": "9440",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "driverDate": "2022/03/11",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Avago",
+        "boardModel": "SAS 9440-8i",
+        "chipModel": "SAS3408iMR",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "19e5",
+        "ssID": "d112",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "igb",
+        "version": "5.10.0-60.9.0.40.oe1.aarch64",
+        "type": "NIC",
+        "driverDate": "2022/03/11",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Mellanox",
+        "boardModel": "SP210",
+        "chipModel": "I350",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ]
   }
 ]

@@ -3988,5 +3988,66 @@
       "hostBusAdapter": "",
       "hardDiskDrive": ""
     }
+  },
+  {
+    "hardwareFactory": "华为",
+    "hardwareModel": "S902X20",
+    "osVersion": "openEuler 22.03 LTS",
+    "architecture": "aarch64",
+    "date": "2022/03/17",
+    "friendlyLink": "",
+    "compatibilityConfiguration": {
+      "productInformation": "S902X20",
+      "certificationTime": "2022/03/17",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "0.18(U6330)",
+      "cpu": "Phytium S2500",
+      "ram": "8*32G DDR4",
+      "portsBusTypes": "",
+      "videoAdapter": "",
+      "hostBusAdapter": "Broadcom / LSI MegasRAID Tri-Mode SAS3408",
+      "hardDiskDrive": ""
+    },
+    "boardCards": [
+      {
+        "vendorID": "1000",
+        "deviceID": "0017",
+        "svID": "1000",
+        "ssID": "9440",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "RAID",
+        "driverDate": "2022/03/11",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Avago",
+        "boardModel": "SAS 9440-8i",
+        "chipModel": "SAS3408iMR",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "19e5",
+        "ssID": "d112",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "igb",
+        "version": "5.10.0-60.9.0.40.oe1.aarch64",
+        "type": "NIC",
+        "driverDate": "2022/03/11",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Mellanox",
+        "boardModel": "SP210",
+        "chipModel": "I350",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ]
   }
 ]
