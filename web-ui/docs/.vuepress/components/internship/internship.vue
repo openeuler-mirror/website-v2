@@ -220,6 +220,7 @@
             <el-tabs v-model="community" @tab-click="tabClick">
               <el-tab-pane label="openEuler" name="openEuler"></el-tab-pane>
               <el-tab-pane label="openLooKeng" name="openLooKeng"></el-tab-pane>
+              <el-tab-pane label="openGauss" name="openGauss"></el-tab-pane>
             </el-tabs>
           </div>
           <div class="taks-body">
@@ -230,7 +231,7 @@
              <div
                class="item"
                :class="[{ 'last-child':community == 'openEuler' && index +1 == communityTask.length },
-               {'lookeng':community == 'openLooKeng'}]"
+               {'lookeng':community == 'openLooKeng' ||community == 'openGauss'}]"
                v-for="(item, index) in communityTask"
                :key="index"
              >
@@ -245,7 +246,7 @@
                    {{ task.INTERNSHIP_TASK }}
                  </button>
                  <button @click="go(item.GITEE)" class="button-right">
-                   <span>{{ item.NAME == 'openLooKeng' ? officialWeb:task.SIG_DETAIL }}</span>
+                   <span>{{ item.NAME == 'openLooKeng' || item.NAME == 'openGauss' ? officialWeb:task.SIG_DETAIL }}</span>
                    <img src="/img/internship/arrow.png" alt="" />
                  </button>
                </div>
@@ -705,6 +706,16 @@ export default {
             GITEE: "https://openlookeng.io",
           },
         ],
+        OPENGAUSS_TASK_ITEM:[
+           {
+            NAME_LINK:
+              "https://opengauss.org/",
+            NAME: "openGauss",
+            INTRODUCE: "一款高性能、高安全、高可靠的企业级开源关系型数据库",
+            TASK: "https://gitee.com/opengauss/opensource-intership/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openlookeng-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=newest&state=open&target_project&skip_mobile=true",
+            GITEE: "https://opengauss.org/",
+          },
+        ],
         INTERNSHIP_TASK: "实习任务",
         SIG_DETAIL: "SIG详情",
       },
@@ -807,7 +818,7 @@ export default {
       } else if (this.community == 'openLooKeng') {
         this.communityTask = this.task.LOOKENG_TASK_ITEM
       } else {
-        return false
+        this.communityTask = this.task.OPENGAUSS_TASK_ITEM
       }
     },
     extend() {
@@ -879,7 +890,7 @@ export default {
         })
         .then((res) => {
           if (res.UserPoints) {
-            let info = res.UserPoints;   
+            let info = res.UserPoints;
             info.length > 10 ? this.showAll = true: '';
             info.sort((a, b) => {
               return b.integralValue - a.integralValue;
@@ -890,7 +901,6 @@ export default {
                 ? (item["rank"] = `0${index + 1}`)
                 : (item["rank"] = index + 1);
             });
-            
             this.rankInfo = info;
             this.renderData = info.slice(3, 10);
             this.rankTop = info.slice(0, 3);

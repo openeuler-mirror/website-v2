@@ -1,7 +1,7 @@
 <template>
     <div class="developer-2022">
         <div class="banner">
-            <a href>
+            <a :href="i18n.devday2022.SUMMIT_BANNER.LINK" target="_blank">
                 <img class="main" :src="i18n.devday2022.SUMMIT_BANNER.PC_IMG" />
             </a>
         </div>
@@ -131,7 +131,7 @@ export default {
     }
     .call-for-list {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         margin-bottom: 50px;
         @media screen and (max-width: 1000px) {
             align-items: center;
