@@ -32,7 +32,7 @@ module.exports = {
                 ]
             },
             AGENDA_DATA_14:{
-                TITLE:"4月15日 周五（线上直播）",
+                TITLE:"4月14日 周四（线上直播）",
                 SCHEDULE:[
                     "09:00-18:00",
                     "SIG组22.09版本规划工作会议",
