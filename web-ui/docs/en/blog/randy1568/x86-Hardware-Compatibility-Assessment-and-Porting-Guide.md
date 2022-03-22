@@ -13,6 +13,7 @@ summary: Just about everything you need to evaluate the compatibility of x86 har
 
 # x86 Hardware Compatibility Assessment and Porting Guide (openEuler 20.03 LTS SP1)
 
+
 # Environment
 
 ## Hardware
