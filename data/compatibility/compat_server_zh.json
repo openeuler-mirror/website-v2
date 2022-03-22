@@ -3928,7 +3928,7 @@
   },
   {
     "hardwareFactory": "云豹智能",
-    "hardwareModel": "ALPS V1.0 F10B108-612A000",
+    "hardwareModel": "ALPS V1.0",
     "osVersion": "openEuler 20.03 LTS SP3",
     "architecture": "x86_64",
     "date": "2022/03/18",
@@ -4308,5 +4308,47 @@
         "downloadLink": "inbox"
       }
     ]
+  },
+  {
+    "hardwareFactory": "宁畅",
+    "hardwareModel": "X620 G40",
+    "osVersion": "openEuler 22.03 LTS",
+    "architecture": "x86_64",
+    "date": "2022/03/15",
+    "friendlyLink": "https://www.nettrix.com.cn/product/1553.html",
+    "boardCards": [
+      {
+        "vendorID": "19e5",
+        "deviceID": "1822",
+        "svID": "19e5",
+        "ssID": "d136",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "hinic",
+        "version": "2.3.2.17",
+        "type": "NIC",
+        "driverDate": "2022/02/23",
+        "sha256": "786168A9BBCCED6CA396F0E77D839A1F2622B59B",
+        "driverSize": "1.1M",
+        "chipVendor": "huawei",
+        "boardModel": "SP580",
+        "chipModel": "hi1822",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.nettrix.com.cn/product/1553.html",
+      "certificationTime": "2022/03/15",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "0PYH001029",
+      "cpu": "Intel(R) Xeon(R) Gold 6346 CPU @ 3.10GHz",
+      "ram": "2*32G RDIMMs",
+      "portsBusTypes": "x16 PCI Express 3",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family",
+      "hostBusAdapter": "Intel Corporation C620 Series Chipset Family SPI Controller",
+      "hardDiskDrive": "ATA SAMSUNG MZ7LH480 904Q"
+    }
   }
 ]
