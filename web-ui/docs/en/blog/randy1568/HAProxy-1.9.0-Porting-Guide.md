@@ -67,7 +67,7 @@ The RPM packages in the mirror site are compiled and packaged using open-source 
 
 The following describes how to download the RPM package to the local PC and then upload it to the server.
 
-2. Install HAProxy.
+1. Install HAProxy.
 
    ```bash
    rpm -ivh haproxy-1.9.0-1.el7.aarch64.rpm
@@ -75,7 +75,7 @@ The following describes how to download the RPM package to the local PC and then
 
    <img src="./image/HAProxy-2.png">
 
-3. View the installation directory.
+2. View the installation directory.
 
    ```bash
    ls /usr/local/haproxy
