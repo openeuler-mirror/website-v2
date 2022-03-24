@@ -193,6 +193,7 @@ export default {
         margin-bottom: 50px;
         .call-item {
             display: flex;
+            cursor: pointer;
             flex-direction: column;
             .add-sig {
                 margin-top: 4px;
