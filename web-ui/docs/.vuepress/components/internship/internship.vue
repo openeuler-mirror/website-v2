@@ -392,6 +392,10 @@
         </div>
       </div>
     </div>
+     <div class="qq-code" v-show="show ">
+            <img class="close" @click="close()" src="/img/internship/close.png" alt="">
+            <img src="/img/internship/qq-code.png" alt="">
+      </div>
   </div>
 </template>
 
@@ -405,6 +409,7 @@ export default {
   data() {
     return {
       renderData: [],
+      show:true,
       community: 'openEuler',
       showAll: false,
       isExent: false,
@@ -420,6 +425,9 @@ export default {
     };
   },
   methods: {
+    close() {
+        this.show = false
+    },
     tabClick() {
       if (this.community == 'openEuler') {
         this.communityTask = this.TASK.EULER_TASK_ITEM
@@ -540,6 +548,26 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+.qq-code {
+  position: fixed;
+  width: 150px;
+  right: 50px;
+  bottom: 70px;
+  display: none;
+  img {
+    width: 100%;
+  }
+  .close {
+    cursor: pointer;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 20px;
+  }
+   @media screen and (max-width: 1000px) {
+     display: block;
+   }
+}
 /deep/.tabbar {
   .el-tabs__nav-wrap::after {
     display: none;
@@ -1003,6 +1031,10 @@ a {
         padding: 67px 0 50px 0;
         img {
           width: 270px;
+          @media (max-width: 1000px) {
+            width: 155px;
+            height: 34px;
+          }
         }
       }
       .integral-border {
