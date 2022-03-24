@@ -16,13 +16,19 @@
             </div>
             <div class="call-for-list">
                 <a
-                    :href="item.LINK"
                     target="_blank"
                     class="call-item"
-                    v-for="item in i18n.devday2022.COLLECT_LIST"
+                    v-for="(item, index) in i18n.devday2022.COLLECT_LIST"
                     :key="item.IMG"
                 >
-                    <img :src="item.IMG" alt />
+                    <img @click="goInstall(item.LINK)" :src="item.IMG" alt />
+                    <img
+                        class="add-sig"
+                        @click="goInstall('https://shimo.im/docs/16q8Mdw26mI2N8k7/read')"
+                        v-if="index === 1"
+                        src="/img/summit/devday-2022/SIG2.png"
+                        alt
+                    />
                 </a>
             </div>
             <div class="agenda">
@@ -108,9 +114,12 @@ export default {
     mounted() {
     },
     methods: {
-        go(url) {
-            const routeUrl = this.$router.resolve(this.resolvePath(url));
-            window.open(routeUrl.href);
+        goInstall(path) {
+            if (path.includes("http") || path.includes("https")) {
+                window.open(path);
+            } else {
+                this.$router.push(path);
+            }
         },
     }
 };
@@ -182,6 +191,13 @@ export default {
         display: flex;
         justify-content: space-around;
         margin-bottom: 50px;
+        .call-item {
+            display: flex;
+            flex-direction: column;
+            .add-sig {
+                margin-top: 4px;
+            }
+        }
         @media screen and (max-width: 1000px) {
             align-items: center;
             flex-direction: column;

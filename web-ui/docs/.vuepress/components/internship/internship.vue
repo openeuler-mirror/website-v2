@@ -76,7 +76,6 @@
                       >{{ step.stepONE.DONWLOAD }}</a
                     >
                   </div>
-                  
                 </div>
               </div>
               <div class="step-text" v-show="stepActive === 1 || isShowH5">
