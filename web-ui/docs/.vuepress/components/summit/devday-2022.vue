@@ -121,6 +121,10 @@ export default {
                 this.$router.push(path);
             }
         },
+            go(url) {
+            const routeUrl = this.$router.resolve(this.resolvePath(url));
+            window.open(routeUrl.href);
+        }
     }
 };
 </script>
@@ -192,8 +196,8 @@ export default {
         justify-content: space-around;
         margin-bottom: 50px;
         .call-item {
-            display: flex;
             cursor: pointer;
+            display: flex;
             flex-direction: column;
             .add-sig {
                 margin-top: 4px;

@@ -4,207 +4,197 @@
       class="titlenav"
       v-show="isShowNav"
       :currentIndex="activeIndex"
-      :dataList="navList"
+      :dataList="i18n.learn.NAV_LIST"
       :internship="true"
     ></titlenav>
     <div class="internship-banner">
       <a href="#task">
-        <img
-          src="/img/internship/internship-banner.png"
-          alt=""
-          v-if="!isShowH5"
-        />
-        <img
-          src="/img/internship/internship-banner-mo.png"
-          alt=""
-          v-if="isShowH5"
-        />
+        <img class="banner-pc" src="/img/internship/internship-banner.png" alt />
+        <img class="banner-mo" src="/img/internship/internship-banner-mo.png" alt />
       </a>
     </div>
     <div class="internship-list">
       <div class="warper">
         <div class="intership-introduce" id="introduce">
-          <p>
-            {{ introduce }}
-          </p>
+          <p>{{ i18n.learn.INTRODUCE }}</p>
         </div>
         <div class="step" id="step">
           <div class="step-title title">
-            <img src="/img/internship/step-title.png" alt="" />
+            <img :src="STEP.TITLE" alt />
           </div>
           <div class="step-content">
-            <div class="step-nav" v-if="!isShowH5">
+            <div class="step-nav">
               <div
                 class="step-bar"
                 :class="{ stepActive: index == stepActive }"
-                v-for="(item, index) in step.stepNav"
+                v-for="(item, index) in STEP.STEPNAV"
                 :style="`background:url(${item.IMG}) no-repeat;`"
                 :key="item.IMG"
                 @click="stepChange(index)"
               >
-                <img :src="item.ACTIVE" alt="" />
+                <img :src="item.ACTIVE" alt />
               </div>
             </div>
-            <div class="step-body">
-              <div class="step-text" v-show="stepActive === 0 || isShowH5">
-                <img
-                  class="number"
-                  v-if="isShowH5"
-                  src="/img/internship/1.png"
-                  alt=""
-                />
-                <h4>{{ step.stepONE.TITLE }}</h4>
+            <div class="step-body" :class="{ 'step-body-en': $lang === 'en' }">
+              <div class="step-text" v-show="stepActive === 0">
+                <img class="number" src="/img/internship/1.png" alt />
+                <h4>{{ STEP.STEP_ONE.TITLE }}</h4>
                 <div class="main-text">
-                  <p>{{ step.stepONE.TEXT1 }}</p>
+                  <p>{{ STEP.STEP_ONE.TEXT1 }}</p>
                   <p>
-                    {{ step.stepONE.TEXT2
-                    }}<a
+                    {{
+                      STEP.STEP_ONE.TEXT2
+                    }}
+                    <a
                       href="https://gitee.com/openeuler-competition/opensource-internship/issues/I4A68T?from=project-issue"
                       target="_blank"
-                      >{{step.stepONE.LINK1 }}</a
-                    >{{ step.stepONE.TEXT3 }}
+                    >{{ STEP.STEP_ONE.LINK1 }}</a>
+                    {{ STEP.STEP_ONE.TEXT3 }}
                   </p>
-                  <p>{{ step.stepONE.TEXT4 }}</p>
+                  <p>{{ STEP.STEP_ONE.TEXT4 }}</p>
                   <div class="attention">
                     <p>
-                      {{ step.stepONE.ATTENTION1 }}<a href="mailto:intern@openeuler.sh">intern@openeuler.sh</a>{{ step.stepONE.ATTENTION2 }}<span class="orange">{{ step.stepONE.TIP }}</span>
+                      {{ STEP.STEP_ONE.ATTENTION1 }}
+                      <a
+                        href="mailto:intern@openeuler.sh"
+                      >intern@openeuler.sh</a>
+                      {{ STEP.STEP_ONE.ATTENTION2 }}
+                      <span
+                        class="orange"
+                      >{{ STEP.STEP_ONE.TIP }}</span>
                     </p>
                     <a
                       href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/01%20%E5%AE%9E%E4%B9%A0%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E6%A8%A1%E6%9D%BF.rar"
                       download
                       class="download"
-                      >{{ step.stepONE.DONWLOAD }}</a
-                    >
+                    >{{ STEP.STEP_ONE.DONWLOAD }}</a>
                   </div>
                 </div>
               </div>
-              <div class="step-text" v-show="stepActive === 1 || isShowH5">
-                <img
-                  class="number"
-                  v-if="isShowH5"
-                  src="/img/internship/2.png"
-                  alt=""
-                />
-                <h4>{{ step.stepTow.TITLE }}</h4>
+              <div class="step-text" v-show="stepActive === 1">
+                <img class="number" src="/img/internship/2.png" alt />
+                <h4>{{ STEP.STEP_TOW.TITLE }}</h4>
                 <div class="main-text">
-                  <p>{{ step.stepTow.pText[0] }}</p>
+                  <p>{{ STEP.STEP_TOW.P_TEXT[0] }}</p>
                   <p>
-                    {{ step.stepTow.pText[1] }}
-                    <span class="blue">{{ step.stepTow.pText[2] }}</span>
-                    {{ step.stepTow.pText[3] }}
+                    {{ STEP.STEP_TOW.P_TEXT[1] }}
+                    <span class="blue">{{ STEP.STEP_TOW.P_TEXT[2] }}</span>
+                    {{ STEP.STEP_TOW.P_TEXT[3] }}
                   </p>
                   <p>
-                    {{ step.stepTow.pText[4] }}
-                    <span class="blue">{{ step.stepTow.pText[5] }}</span>
-                    {{ step.stepTow.pText[6]
-                    }}<span class="blue">{{ step.stepTow.pText[7] }}</span>
-                    {{ step.stepTow.pText[8] }}
+                    {{ STEP.STEP_TOW.P_TEXT[4] }}
+                    <span class="blue">{{ STEP.STEP_TOW.P_TEXT[5] }}</span>
+                    {{
+                      STEP.STEP_TOW.P_TEXT[6]
+                    }}
+                    <span
+                      class="blue"
+                    >{{ STEP.STEP_TOW.P_TEXT[7] }}</span>
+                    {{ STEP.STEP_TOW.P_TEXT[8] }}
                   </p>
                   <p>
-                    {{ step.stepTow.pText[9]
-                    }}<span class="blue">{{ step.stepTow.pText[10] }}</span>
-                    {{ step.stepTow.pText[11] }}
-                    <span class="orange">{{ step.stepTow.pText[12] }}</span>
+                    {{
+                      STEP.STEP_TOW.P_TEXT[9]
+                    }}
+                    <span
+                      class="blue"
+                    >{{ STEP.STEP_TOW.P_TEXT[10] }}</span>
+                    {{ STEP.STEP_TOW.P_TEXT[11] }}
+                    <span
+                      class="orange"
+                    >{{ STEP.STEP_TOW.P_TEXT[12] }}</span>
                   </p>
                   <div class="attention black">
-                    <div class="attention-title">{{ step.ATTENTION }}</div>
+                    <div class="attention-title">{{ STEP.ATTENTION }}</div>
+                    <p>{{ STEP.STEP_TOW.ATTENTION_TEXT[0] }}</p>
                     <p>
-                      {{ step.stepTow.ATTENTION_TEXT[0] }}
-                    </p>
-                    <p>
-                      {{ step.stepTow.ATTENTION_TEXT[1] }}
-                      <span class="blue">
-                        {{ step.stepTow.ATTENTION_TEXT[2] }}</span
-                      >
-                      {{ step.stepTow.ATTENTION_TEXT[3] }}
+                      {{ STEP.STEP_TOW.ATTENTION_TEXT[1] }}
+                      <span
+                        class="blue"
+                      >{{ STEP.STEP_TOW.ATTENTION_TEXT[2] }}</span>
+                      {{ STEP.STEP_TOW.ATTENTION_TEXT[3] }}
                     </p>
                     <a
                       href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/02%20%E4%BB%BB%E5%8A%A1%E8%AE%A4%E9%A2%86%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF.rar"
                       download
                       class="download"
-                    >
-                      {{ step.stepTow.DONWLOAD }}</a
-                    >
+                    >{{ STEP.STEP_TOW.DONWLOAD }}</a>
                   </div>
                 </div>
               </div>
-              <div class="step-text" v-show="stepActive === 2 || isShowH5">
-                <img
-                  class="number"
-                  v-if="isShowH5"
-                  src="/img/internship/3.png"
-                  alt=""
-                />
-                <h4>{{ step.stepThree.TITLE }}</h4>
+              <div class="step-text" v-show="stepActive === 2">
+                <img class="number" src="/img/internship/3.png" alt />
+                <h4>{{ STEP.STEP_ThREE.TITLE }}</h4>
                 <div class="main-text">
                   <p>
-                    {{ step.stepThree.pText[0] }}
-                    <span class="blue"> {{ step.stepThree.pText[1] }}</span
-                    >{{ step.stepThree.pText[2] }}
+                    {{ STEP.STEP_ThREE.P_TEXT[0] }}
+                    <span
+                      class="blue"
+                    >{{ STEP.STEP_ThREE.P_TEXT[1] }}</span>
+                    {{ STEP.STEP_ThREE.P_TEXT[2] }}
                   </p>
                   <p>
-                    {{ step.stepThree.pText[3] }}
-                    <span class="blue">{{ step.stepThree.pText[4] }}</span
-                    > {{ step.stepThree.pText[5] }}
+                    {{ STEP.STEP_ThREE.P_TEXT[3] }}
+                    <span
+                      class="blue"
+                    >{{ STEP.STEP_ThREE.P_TEXT[4] }}</span>
+                    {{ STEP.STEP_ThREE.P_TEXT[5] }}
                   </p>
                   <p>
-                    {{ step.stepThree.pText[6] }} <span class="blue"> {{ step.stepThree.pText[7] }} </span> {{ step.stepThree.pText[8] }}
+                    {{ STEP.STEP_ThREE.P_TEXT[6] }}
+                    <span
+                      class="blue"
+                    >{{ STEP.STEP_ThREE.P_TEXT[7] }}</span>
+                    {{ STEP.STEP_ThREE.P_TEXT[8] }}
                   </p>
                   <div class="attention black">
-                    <div class="attention-title">{{ step.ATTENTION }}</div>
+                    <div class="attention-title">{{ STEP.ATTENTION }}</div>
                     <p>
-                      {{ step.stepThree.ATTENTION_TEXT[0] }}
-                      <span class="blue">{{
-                        step.stepThree.ATTENTION_TEXT[1]
-                      }}</span
-                      >{{ step.stepThree.ATTENTION_TEXT[2] }}
+                      {{ STEP.STEP_ThREE.ATTENTION_TEXT[0] }}
+                      <span class="blue">
+                        {{
+                          STEP.STEP_ThREE.ATTENTION_TEXT[1]
+                        }}
+                      </span>
+                      {{ STEP.STEP_ThREE.ATTENTION_TEXT[2] }}
                     </p>
                   </div>
                   <div class="flow-chart">
-                    <img
-                      v-if="!isShowH5"
-                      src="/img/internship/step-3.png"
-                      alt=""
-                    />
-                    <img v-else src="/img/internship/step-3-mo.png" alt="" />
+                    <img class="chart-pc" src="/img/internship/step-3.png" alt />
+                    <img class="chart-mo" src="/img/internship/step-3-mo.png" alt />
                   </div>
                 </div>
               </div>
-              <div class="step-text" v-show="stepActive === 3 || isShowH5">
-                <img
-                  class="number"
-                  v-if="isShowH5"
-                  src="/img/internship/4.png"
-                  alt=""
-                />
+              <div class="step-text" v-show="stepActive === 3">
+                <img class="number" src="/img/internship/4.png" alt />
                 <div class="main-text">
-                  <h4>{{ step.stepFour.TITLE }}</h4>
-                  <p>
-                    {{ step.stepFour.pText1[0] }}
-                  </p>
+                  <h4>{{ STEP.STEP_FOUR.TITLE }}</h4>
+                  <p>{{ STEP.STEP_FOUR.P_TEXT1[0] }}</p>
                   <div class="attention firstAttention">
-                    <p v-for="item in step.stepFour.pText" :key="item">
-                      {{ item }}
-                    </p>
+                    <p v-for="item in STEP.STEP_FOUR.P_TEXT" :key="item">{{ item }}</p>
                   </div>
                   <p>
-                    {{ step.stepFour.pText1[1]
-                    }}<a class="blue" href="mailto:intern@openeuler.sh">{{
-                      step.stepFour.pText1[2]
-                    }}</a
-                    >{{ step.stepFour.pText1[3] }}
+                    {{
+                      STEP.STEP_FOUR.P_TEXT1[1]
+                    }}
+                    <a
+                      class="blue"
+                      href="mailto:intern@openeuler.sh"
+                    >
+                      {{
+                        STEP.STEP_FOUR.P_TEXT1[2]
+                      }}
+                    </a>
+                    {{ STEP.STEP_FOUR.P_TEXT1[3] }}
                   </p>
                   <div class="attention black">
-                    <div class="attention-title">{{ step.ATTENTION }}</div>
-                    <p v-for="item in step.stepFour.ATTENTION_TEXT" :key="item">
-                      {{ item }}
-                    </p>
+                    <div class="attention-title">{{ STEP.ATTENTION }}</div>
+                    <p v-for="item in STEP.STEP_FOUR.ATTENTION_TEXT" :key="item">{{ item }}</p>
                     <a
                       href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/03%20%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E5%92%8C%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF.rar"
                       download
                       class="download"
-                      >{{ step.stepFour.DONWLOAD }}</a
-                    >
+                    >{{ STEP.STEP_FOUR.DONWLOAD }}</a>
                   </div>
                 </div>
               </div>
@@ -213,7 +203,7 @@
         </div>
         <div id="task">
           <div class="task-title title">
-            <img src="/img/internship/task-title.png" alt="" />
+            <img :src="TASK.TITLE" alt />
           </div>
           <div class="tabbar">
             <el-tabs v-model="community" @tab-click="tabClick">
@@ -223,62 +213,63 @@
             </el-tabs>
           </div>
           <div class="taks-body">
-            <p class="task-introduce" v-show="community == 'openEuler'">
-              {{ task.INTRODUCE }}
-            </p>
+            <p class="task-introduce" v-show="community == 'openEuler'">{{ TASK.INTRODUCE }}</p>
             <div class="item-box">
-             <div
-               class="item"
-               :class="[{ 'last-child':community == 'openEuler' && index +1 == communityTask.length },
-               {'lookeng':community == 'openLooKeng' ||community == 'openGauss'}]"
-               v-for="(item, index) in communityTask"
-               :key="index"
-             >
-               <a :href="item.NAME_LINK" class="item-name" target="_blank">{{
-                 item.NAME
-               }}</a>
-               <div class="item-intriduce">
-                 {{ item.INTRODUCE }}
-               </div>
-               <div class="button-box">
-                 <button @click="go(item.TASK)" class="button-left">
-                   {{ task.INTERNSHIP_TASK }}
-                 </button>
-                 <button @click="go(item.GITEE)" class="button-right">
-                   <span>{{ item.NAME == 'openLooKeng' || item.NAME == 'openGauss' ? officialWeb:task.SIG_DETAIL }}</span>
-                   <img src="/img/internship/arrow.png" alt="" />
-                 </button>
-               </div>
-             </div>
+              <div
+                class="item"
+                :class="[{ 'last-child': community == 'openEuler' && index + 1 == communityTask.length },
+                { 'lookeng': community == 'openLooKeng' || community == 'openGauss' }]"
+                v-for="(item, index) in communityTask"
+                :key="index"
+              >
+                <a :href="item.NAME_LINK" class="item-name" target="_blank">
+                  {{
+                    item.NAME
+                  }}
+                </a>
+                <div class="item-intriduce">{{ item.INTRODUCE }}</div>
+                <div class="button-box">
+                  <button @click="go(item.TASK)" class="button-left">{{ TASK.INTERNSHIP_TASK }}</button>
+                  <button @click="go(item.GITEE)" class="button-right">
+                    <span>{{ item.NAME == 'openLooKeng' || item.NAME == 'openGauss' ? i18n.learn.OFFICAL_WEB : TASK.SIG_DETAIL }}</span>
+                    <img src="/img/internship/arrow.png" alt />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div id="integral">
           <div class="integral-title title">
-            <img src="/img/internship/integral-title.png" alt="" />
+            <img :src="i18n.learn.INTEGRAL.TITLE" alt />
           </div>
           <div class="integral-border">
             <div class="integral-content">
-              <h3>{{ integral.reward.head }}</h3>
               <div
-                v-for="item in integral.reward.text"
-                :key="item"
-                class="circular"
+                class="integral-item"
+                v-for="(item,index) in i18n.learn.INTEGRAL.INTEGRAL_DATA"
+                :class="{'circular':index!==3}"
+                :key="item.HEAD"
               >
-                <p>{{ item }}</p>
-              </div>
-              <h4>{{ integral.honor.head }}</h4>
-              <div v-for="item in integral.honor.text" :key="item" class="star">
-                <img src="/img/internship/star.png" alt="" />
-                <p>{{ item }}</p>
+                <h3>{{ item.HEAD }}</h3>
+                <div v-for="(item1,index1) in item.TEXT" :key="item1" class="star">
+                  <img v-if="index === 3" src="/img/internship/star.png" alt />
+                  <p>
+                    <slot v-if="index === 1 && index1 ===2">
+                      <a  href="/doc/实习报告模板.docx" title="下载报告模板">{{item1}}</a>
+                    </slot>
+                    <span v-else>{{ item1 }}</span>
+                  </p>
+                </div>
+                <div class="supplement">{{ item.SUPPLEMENT }}</div>
               </div>
             </div>
           </div>
         </div>
         <div id="rank">
           <div class="rank-title">
-            <img v-if="!isShowH5" src="/img/internship/rank-title.png" alt="" />
-            <img v-else src="/img/internship/rank-title-mo.png" alt="" />
+            <img v-if="!isShowH5" src="/img/internship/rank-title.png" alt />
+            <img v-else src="/img/internship/rank-title-mo.png" alt />
           </div>
           <div class="rank-border">
             <div class="rank-content" ref="rankContent">
@@ -286,8 +277,9 @@
                 <div class="rank-top">
                   <div class="top-item" v-for="(item, index) in rankTop" :key="index">
                     <a class="gitee-name" target="_blank" :href="item.giteeRoom">{{ item.GiteeId }}</a>
-                    <div class="score" >
-                      {{ item.integralValue }}<span>{{rank.SCORE}}</span>
+                    <div class="score">
+                      {{ item.integralValue }}
+                      <span>{{ i18n.learn.RANK.SCORE }}</span>
                     </div>
                     <div
                       class="rank-box"
@@ -297,43 +289,41 @@
                         { third: index === 2 },
                       ]"
                     >
-                      <span v-if="index === 0">{{rank.SECOND}}</span>
-                      <span v-if="index === 1">{{rank.FIRST}}</span>
-                      <span v-if="index === 2">{{rank.THIRD}}</span>
+                      <span v-if="index === 0">{{ i18n.learn.RANK.SECOND }}</span>
+                      <span v-if="index === 1">{{ i18n.learn.RANK.FIRST }}</span>
+                      <span v-if="index === 2">{{ i18n.learn.RANK.THIRD }}</span>
                     </div>
                   </div>
                 </div>
                 <div class="rank-last">
-                  <div
-                    class="rank-item"
-                    v-for="(item, index) in renderData"
-                    :key="index"
-                  >
+                  <div class="rank-item" v-for="(item, index) in renderData" :key="index">
                     <div class="rank-left">
                       <div class="rank-class">{{ item.rank }}</div>
-                      <a :href="item.giteeRoom" target="_blank" class="gitee-name">{{ item.GiteeId }}</a>
+                      <a
+                        :href="item.giteeRoom"
+                        target="_blank"
+                        class="gitee-name"
+                      >{{ item.GiteeId }}</a>
                     </div>
                     <div class="rank-right">
                       <div class="score">{{ item.integralValue }}</div>
-                      <span>{{rank.SCORE}}</span>
+                      <span>{{ i18n.learn.RANK.SCORE }}</span>
                     </div>
                   </div>
                 </div>
                 <div class="view-all" v-if="showAll">
-                  <a @click="extend()" v-if="!isExent"
-                    >{{rank.VIEW_ALL}}
+                  <a @click="extend()" v-if="!isExent">
+                    {{ i18n.learn.RANK.VIEW_ALL }}
                     <div>
-                      <img src="/img/internship/right.svg" alt="" /></div
-                  ></a>
-                  <a @click="extend()" v-else
-                    >{{rank.PACK_UP}}
+                      <img src="/img/internship/right.svg" alt />
+                    </div>
+                  </a>
+                  <a @click="extend()" v-else>
+                    {{ i18n.learn.RANK.PACK_UP }}
                     <div>
-                      <img
-                        class="arrow"
-                        src="/img/internship/right.svg"
-                        alt=""
-                      /></div
-                  ></a>
+                      <img class="arrow" src="/img/internship/right.svg" alt />
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -342,26 +332,27 @@
       </div>
       <div id="rule">
         <div class="rule-title title">
-          <img src="/img/internship/rule-title.png" alt="" />
+          <img :src="i18n.learn.RULE.TITLE" alt />
         </div>
         <div class="rule-border">
           <div class="rule-content">
             <div class="warper">
               <div
                 class="rule-item"
-                v-for="(item, index) in rule.RULE_DATA"
+                v-for="(item, index) in i18n.learn.RULE.RULE_DATA"
                 :key="index"
               >
-                <div class="question">{{ item.question }}</div>
-                <div class="answer">{{ item.answer }}</div>
+                <div class="question">{{ item.QUESTION }}</div>
+                <div class="answer">{{ item.ANSWER }}</div>
               </div>
               <div class="more-question orange">
-                {{rule.MORE[0]}}<a
-                  class="this-post "
+                {{ i18n.learn.RULE.MORE[0] }}
+                <a
+                  class="this-post"
                   href="https://gitee.com/openeuler-competition/opensource-internship/issues/I4AJIR?from=project-issue"
                   target="_blank"
-                  >{{rule.MORE[1]}}</a
-                >{{rule.MORE[2]}}
+                >{{ i18n.learn.RULE.MORE[1] }}</a>
+                {{ i18n.learn.RULE.MORE[2] }}
               </div>
             </div>
           </div>
@@ -370,13 +361,13 @@
       <div id="partner">
         <div class="warper">
           <div class="partner-title title">
-            <img src="/img/internship/partner-title.png" alt="" />
+            <img :src="i18n.learn.PARTNER_TITLE" alt />
           </div>
           <div class="img-list">
             <img
               v-lazy="item.IMG"
-              alt=""
-              v-for="(item, index) in partnerData"
+              alt
+              v-for="(item, index) in i18n.learn.PARTNER_DATA"
               :key="index"
             />
           </div>
@@ -384,19 +375,19 @@
       </div>
       <div id="help">
         <div class="help-title title">
-          <img src="/img/internship/help-title.png" alt="" />
+          <img :src="i18n.learn.HELP_TITLE" alt />
         </div>
         <div class="help-content">
           <div class="help-left">
             <p>
-              {{help[0]}}
-              <a href="mailto:intern@openeuler.sh">{{help[1]}}</a>
+              {{ i18n.learn.HELP[0] }}
+              <a href="mailto:intern@openeuler.sh">{{ i18n.learn.HELP[1] }}</a>
             </p>
-            <p>{{help[2]}}</p>
-            <p>{{help[3]}}</p>
+            <p>{{ i18n.learn.HELP[2] }}</p>
+            <p>{{ i18n.learn.HELP[3] }}</p>
           </div>
           <div class="help-right">
-            <img src="/img/internship/qrCode.png" alt="" />
+            <img src="/img/internship/qrCode.png" alt />
           </div>
         </div>
       </div>
@@ -414,8 +405,8 @@ export default {
   data() {
     return {
       renderData: [],
-      community:'openEuler',
-      showAll:false,
+      community: 'openEuler',
+      showAll: false,
       isExent: false,
       rankInfo: [],
       stepActive: 0,
@@ -423,401 +414,19 @@ export default {
       activeIndex: 0,
       rankTop: [],
       rankLast: [],
-      communityTask:[],
-      navList: [
-        {
-          key: "#introduce",
-          name: "活动介绍",
-        },
-        {
-          key: "#step",
-          name: "申请步骤",
-        },
-        {
-          key: "#task",
-          name: "实习任务",
-        },
-        {
-          key: "#integral ",
-          name: "积分展示",
-        },
-        {
-          key: "#rule",
-          name: "实习规则",
-        },
-        {
-          key: "#partner",
-          name: "合作伙伴",
-        },
-        {
-          key: "#help",
-          name: "帮助咨询",
-        },
-      ],
-      introduce:
-        " openEuler开源实习是openEuler社区和社区合作单位共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力。由openEuler社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可获得相应积分，积分累计达规定量后，可获得实习证明和实习工资。",
-      step: {
-        stepNav: [
-          {
-            IMG: "/img/internship/step_1.png",
-            ACTIVE: "/img/internship/step_1active.png",
-            TEXT: "申请实习",
-          },
-          {
-            IMG: "/img/internship/step_2.png",
-            ACTIVE: "/img/internship/step_2active.png",
-            TEXT: "领取任务",
-          },
-          {
-            IMG: "/img/internship/step_3.png",
-            ACTIVE: "/img/internship/step_3active.png",
-            TEXT: "提交任务",
-          },
-          {
-            IMG: "/img/internship/step_4.png",
-            ACTIVE: "/img/internship/step_4active.png",
-            TEXT: "工资与实习证明",
-          },
-        ],
-        stepONE: {
-          TITLE: "申请实习",
-          TEXT1: "（1）阅读并签署活动声明。(见申请材料模板里)",
-          TEXT2: "（2）完成",
-          LINK1: "实习测试任务",
-          TEXT3: "并提供PR链接。",
-          TEXT4: "（3）填写报名资料表。",
-          ATTENTION1: "将以上申请材料按照模板填写后发送至开源实习官方邮箱",
-          ATTENTION2:
-            "。发送后等待审核，组织方将以邮件反馈审核结果，审核通过后，签订劳务协议，用所分配的账号开始实习。",
-          DONWLOAD: "申请材料模板下载",
-          TIP:"（注：组织方会根据所提交的资料对报名学生进行一定的审核筛选）"
-        },
-        ATTENTION: "注意",
-        stepTow: {
-          TITLE: "领取任务",
-          pText: [
-            "（1）在Gitee查看任务，找到你想做的任务issue。",
-            "（2）在任务issue下方评论区输入",
-            "/intern-assign",
-            "命令，认领该任务，然后发送邮件给任务导师请求审核。邮件需包括你的简历和该任务的开发方案。",
-            "（3）导师收到邮件后对申请人进行评审，在该任务issue评论下通过输入命令反馈结果，",
-            "/intern-approve",
-            "代表审核通过，学生成功领取任务,可以开始进行任务处理；",
-            "/intern-unapprove",
-            "代表领取失败，该学生可再去领取其他任务。",
-            "（4）如果领取后无法完成，可通过在issue下输入",
-            "/intern-unassign",
-            "放弃任务。",
-            "放弃超过3次，账号被限制一个月不能领取任务。",
-          ],
-          ATTENTION_TEXT: [
-            "每个任务只能有一个人认领，每人一次最多只能有2个认领中的任务。",
-            "输入",
-            "/intern-assign",
-            "命令后两周内没有发简历和方案给导师的，认领自动失效，任务被释放。",
-          ],
-          DONWLOAD: "任务认领邮件模板下载",
-        },
-        stepThree: {
-          TITLE: "提交任务",
-          pText: [
-            "（1）任务处理完成后，提交pr，在pr描述里添加 ",
-            "#issue",
-            " 编号;",
-            "（2）提交pr后在任务issue评论区输入",
-            "/intern-completed",
-            "命令，表示当前任务已提交，然后等待审核。",
-            "（3）跟进导师和相关SIG maintainer审核PR，PR被合入后，导师确认任务完成即在issue下输入",
-            "/intern-done",
-            "命令，issue关闭，学生获得积分。"
-          ],
-          ATTENTION_TEXT: [
-            "导师有不通过任务成果的权利，如学生提交的PR离实际所需太远，或未按时提交PR，可选择输入命令",
-            "/intern-fail",
-            "，不通过该任务，则无积分。",
-          ],
-        },
-        stepFour: {
-          TITLE: "工资与实习证明",
-          pText1: [
-            "（1）在实习合同里约定的6个月期限内，学生可凭积分获得实习工资。",
-            "（2）证明申请：在实习有效期6个月内满60分即可开具实习证明，如需开具实习证明，发送邮件给实习官方邮箱",
-            "intern@openeuler.sh",
-            "提出申请。",
-          ],
-          pText: [
-            "满20分可获得工资总计1000元；",
-            "满40分可获得工资总计2500元；",
-            "满60分可获得工资总计4000元；",
-            "满80分可获得工资总计6000元；",
-            "满100分可获得工资总计8000元；",
-          ],
-          ATTENTION_TEXT: [
-            "以上工资金额为总计金额，每月月初按上月积分结算一次应发工资，在月底发放到实习生账户。应发工资为达到相应积分标准的总计工资金额减去已结算金额。",
-            "总计100分为工资结算上限。超过100分不再计算工资，可选择结束实习，或继续贡献社区，满150分可获得“开源之星”荣誉。",
-            "证明开具后视为实习结束，不再计算实习工资。",
-          ],
-          DONWLOAD: "证明申请材料和邮件模板下载",
-        },
-      },
-      task: {
-        INTRODUCE:
-          "SIG（Special Interest Group）是openEuler社区的组织形式，找到你感兴趣的SIG，点击下列“实习任务”到Gitee查看相关SIG的任务（需先保持Gitee在登陆状态）。",
-        EULER_TASK_ITEM: [
-          {
-            NAME: "Kernel",
-            NAME_LINK:
-              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=10&name=Kernel",
-            INTRODUCE: "openEuler社区维护的Linux 内核",
-            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590412&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=124590412&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
-            GITEE:
-              "https://gitee.com/openeuler/community/tree/master/sig/Kernel",
-          },
-          {
-            NAME: "sig-QA",
-            NAME_LINK:
-              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=41&name=sig-QA",
-            INTRODUCE: "致力于持续提升openEuler社区发行版本质量",
-            TASK: "https://gitee.com/organizations/src-openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590164&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=124590164&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
-            GITEE:
-              "https://gitee.com/openeuler/community/tree/master/sig/sig-QA",
-          },
-          {
-            NAME: "sig-openstack",
-            NAME_LINK:
-              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=59&name=sig-openstack",
-            INTRODUCE:
-              "在openEuler之上提供原生的OpenStack，构建开放可靠的云计算技术栈",
-            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590186&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=124590186&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
-            GITEE: "https://gitee.com/openeuler/openstack",
-          },
-          {
-            NAME: "A-tune",
-            NAME_LINK:
-              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=1&name=A-Tune",
-            INTRODUCE: "基于openEuler开发的自动化、智能化性能调优引擎",
-            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590388&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=124590194&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
-            GITEE:
-              "https://gitee.com/openeuler/community/tree/master/sig/A-Tune",
-          },
-          {
-            NAME: "sig-KIRAN-DESKTOP",
-            NAME_LINK:
-              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=37&name=sig-KIRAN-DESKTOP&mail=dev%40openeuler.org",
-            INTRODUCE:
-              "麒麟信安自主研发，致力于为用户提供更加美观，高效和易用的Linux桌面操作系统",
-            TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590528&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
-            GITEE:
-              "https://gitee.com/openeuler/community/tree/master/sig/sig-KIRAN-DESKTOP",
-          },
-          {
-            NAME: "sig-ops",
-            NAME_LINK:
-              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=83&name=sig-ops",
-            INTRODUCE:
-              "致力于运维工具的移植与开发，提升openEuler操作系统的运维能力",
-            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590388&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=124590323&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
-            GITEE:
-              "https://gitee.com/openeuler/community/tree/master/sig/sig-ops",
-          },
-          {
-            NAME: "Cloud Native",
-            NAME_LINK:
-              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=85&name=sig-CloudNative",
-            INTRODUCE:
-              "提供便捷、易用的云原生基础设施，提供简单、高效的云原生应用开发托管环境，共建云原生生态",
-            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590352&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=124590352&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
-            GITEE:
-              "https://gitee.com/openeuler/community/tree/master/sig/sig-CloudNative",
-          },
-          {
-            NAME: "G11N",
-            NAME_LINK:
-              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=98&name=G11N",
-            INTRODUCE: "致力于openEuler的国际化和本地化",
-            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590352&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=124590388&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
-            GITEE: "https://gitee.com/openeuler/community/tree/master/sig/G11N",
-          },
-          {
-            NAME: "sig-UKUI",
-            NAME_LINK:
-              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=46&name=sig-UKUI",
-            INTRODUCE: "负责在openEuler上提供UKUI桌面环境，及相关软件包的规划、维护和升级",
-            TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590230&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
-            GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-UKUI",
-          },
-          {
-            NAME: "sig-OSCourse",
-            NAME_LINK:
-              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=95&name=sig-OSCourse",
-            INTRODUCE: "操作系统课程兴趣组",
-            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590352&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=141433910&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
-            GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-OSCourse",
-          },
-          {
-            NAME: "sig-DDE",
-            NAME_LINK:
-              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=95&name=sig-DDE",
-            INTRODUCE: "深度科技自主开发的美观易用、极简操作的桌面环境",
-            TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590403&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
-            GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-DDE",
-          },
-          {
-            NAME: "Infrastructure",
-            NAME_LINK:
-              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=95&name=Infrastructure",
-            INTRODUCE: "主要负责openEuler社区的基础设施功能开发、维护",
-            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=124590142&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
-            GITEE: "https://gitee.com/openeuler/community/tree/master/sig/Infrastructure",
-          },
-          {
-            NAME: "sig-OS-Builder",
-            NAME_LINK:
-              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=95&name=sig-OS-Builder",
-            INTRODUCE: "维护openEuler业务软件包,提供更加方便的ISO构建/换标方案,提供更好的安装与升级方案",
-            TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=145511845&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
-            GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-OS-Builder",
-          },
-          {
-            NAME: "sig-CICD",
-            NAME_LINK:
-              "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=95&name=sig-OS-Builder",
-            INTRODUCE: "致力于为开发者提供针对上游开源软件（来自Github、Gitee、Gitlab等托管平台）的测试服务、登录服务、故障辅助定界服务和基于历史数据的分析服务于一体的测试系统",
-            TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590412&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=146173410&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
-            GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-CICD",
-          },
-          {
-            NAME: "其他",
-            INTRODUCE: "一些暂不属于任何SIG的任务，如Rust、存储等等",
-            TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=125884711&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&sort=&state=open&target_project&skip_mobile=true",
-          },
-          {
-            INTRODUCE: "更多SIG任务，敬请期待",
-          },
-        ],
-        LOOKENG_TASK_ITEM:[
-           {
-            NAME_LINK:
-              "https://openlookeng.io",
-            NAME: "openLooKeng",
-            INTRODUCE: "一款超强易用的数据虚拟化引擎，让大数据更简单",
-            TASK: "https://gitee.com/openlookeng-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openlookeng-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=newest&state=open&target_project&skip_mobile=true",
-            GITEE: "https://openlookeng.io",
-          },
-        ],
-        OPENGAUSS_TASK_ITEM:[
-           {
-            NAME_LINK:
-              "https://opengauss.org/",
-            NAME: "openGauss",
-            INTRODUCE: "一款高性能、高安全、高可靠的企业级开源关系型数据库",
-            TASK: "https://gitee.com/opengauss/opensource-intership/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openlookeng-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=newest&state=open&target_project&skip_mobile=true",
-            GITEE: "https://opengauss.org/",
-          },
-        ],
-        INTERNSHIP_TASK: "实习任务",
-        SIG_DETAIL: "SIG详情",
-      },
-      integral: {
-        reward: {
-          head: "积分与奖励",
-          text: [
-            "实习有效期6个月内满20分以上，可获得不同级别的实习工资。",
-            "一年内累计积分满150分，获得openEuler社区高校“开源之星”荣誉。",
-          ],
-        },
-        honor: {
-          head: "“开源之星”荣誉权益：",
-          text: [
-            "获得openEuler社区颁发的“开源之星”徽章。",
-            "将作为高校贡献者在openEuler官网长期展示，获得社区官方渠道的宣传报道。",
-            "获得一次受邀参与openEuler年度峰会的机会（包行程住宿）。",
-          ],
-        },
-      },
-      rule: {
-        RULE_DATA: [
-          {
-            question: "1、哪些人可以报名？",
-            answer:
-              "A：开源实习面向全国范围内年满18周岁的全日制/非全日制在校学生招募，无专业年级限制，欢迎感兴趣的同学踊跃报名。",
-          },
-          {
-            question: "2、实习有效期6个月是如何计算的？",
-            answer:
-              "A：在申请实习时需签署实习劳务合同，实习有效期即劳务合同上填写的实习有效期，为6个月期限，6个月期限内未满60积分则不能获得实习证明。线上实习时间管理相对自由，可根据自身情况安排时间，可提前结束实习。",
-          },
-          {
-            question: "3、超过了6个月或者完成了100积分还能继续在社区做任务吗？",
-            answer:
-              "A：可以，但积分不能再用于领取证明和奖金，一年内累计到150积分可获得openEuler社区高校“开源之星”荣誉。 ",
-          },
-        ],
-        MORE: ["更多问题，请移步", "本帖", "评论区提问。"],
-      },
-      officialWeb:'官网详情',
-      rank: {
-        FIRST: "第一名",
-        SECOND: "第二名",
-        THIRD: "第三名",
-        SCORE: "积分",
-        VIEW_ALL: "查看全部",
-        PACK_UP: "收起全部",
-      },
-      partnerData: [
-        {
-          IMG: "/img/internship/iscas.png",
-          LINK: "",
-        },
-        {
-          IMG: "/img/internship/qilinsoft.png",
-          LINK: "",
-        },
-        {
-          IMG: "/img/internship/tongxin.png",
-          LINK: "",
-        },
-        {
-          IMG: "/img/internship/kylinsec.png",
-          LINK: "",
-        },
-        {
-          IMG: "/img/internship/mindSpore.png",
-          LINK: "",
-        },
-        {
-          IMG: "/img/internship/openEuler.png",
-          LINK: "",
-        },
-        {
-          IMG: "/img/internship/openGauss.png",
-          LINK: "",
-        },
-        {
-          IMG: "/img/internship/openLooKeng.png",
-          LINK: "",
-        },
-        {
-          IMG: "/img/internship/gitee.png",
-          LINK: "",
-        },
-      ],
-      help: [
-        "联系邮箱:",
-        "intern@openeuler.sh",
-        "扫码加入“开源实习”学生QQ群，更多问题群内咨询。",
-        "群号：526089131",
-      ],
+      communityTask: [],
+      STEP: {},
+      TASK: {}
     };
   },
   methods: {
     tabClick() {
-      if(this.community == 'openEuler') {
-        this.communityTask = this.task.EULER_TASK_ITEM
+      if (this.community == 'openEuler') {
+        this.communityTask = this.TASK.EULER_TASK_ITEM
       } else if (this.community == 'openLooKeng') {
-        this.communityTask = this.task.LOOKENG_TASK_ITEM
+        this.communityTask = this.TASK.LOOKENG_TASK_ITEM
       } else {
-        this.communityTask = this.task.OPENGAUSS_TASK_ITEM
+        this.communityTask = this.TASK.OPENGAUSS_TASK_ITEM
       }
     },
     extend() {
@@ -890,7 +499,7 @@ export default {
         .then((res) => {
           if (res.UserPoints) {
             let info = res.UserPoints;
-            info.length > 10 ? this.showAll = true: '';
+            info.length > 10 ? this.showAll = true : '';
             info.sort((a, b) => {
               return b.integralValue - a.integralValue;
             });
@@ -911,12 +520,15 @@ export default {
             );
           }
         })
-        .catch(err =>{
+        .catch(err => {
           console.log(err);
         })
     },
   },
-  created() {},
+  created() {
+    this.STEP = this.i18n.learn.STEP;
+    this.TASK = this.i18n.learn.TASK;
+  },
   mounted() {
     this.tabClick()
     this.showRank()
@@ -929,7 +541,7 @@ export default {
 </script>
 <style lang="less" scoped>
 /deep/.tabbar {
-   .el-tabs__nav-wrap::after {
+  .el-tabs__nav-wrap::after {
     display: none;
   }
   .el-tabs__nav-scroll {
@@ -941,21 +553,20 @@ export default {
     height: 60px;
     line-height: 60px;
     font-size: 28px;
-     @media screen and (max-width: 1000px) {
-        height: 20px;
-        line-height: 0;
-        font-size: 16px;
-        .el-tabs__active-bar {
-          height: 1px;
-        }
+    @media screen and (max-width: 1000px) {
+      height: 20px;
+      line-height: 0;
+      font-size: 16px;
+      .el-tabs__active-bar {
+        height: 1px;
+      }
     }
   }
   @media screen and (max-width: 1000px) {
-        .el-tabs__active-bar {
-          height: 1px;
-        }
+    .el-tabs__active-bar {
+      height: 1px;
     }
-
+  }
 }
 
 .closeInternship {
@@ -968,7 +579,7 @@ export default {
   img {
     width: 170px;
   }
-   @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1000px) {
     padding: 70px 20px 0;
     font-size: 16px;
   }
@@ -989,14 +600,24 @@ a {
     padding-bottom: 80px;
   }
   .internship-banner {
+    display: flex;
+    justify-content: center;
     height: 380px;
-    text-align: center;
+    .banner-mo {
+      display: none;
+    }
     img {
       cursor: pointer;
       width: 100%;
     }
     @media screen and (max-width: 1000px) {
       height: 300px;
+      .banner-pc {
+        display: none;
+      }
+      .banner-mo {
+        display: block;
+      }
       img {
         max-width: 375px;
       }
@@ -1058,6 +679,9 @@ a {
         background-color: rgb(93, 200, 255);
         .step-nav {
           display: flex;
+          @media (max-width: 1000px) {
+            display: none;
+          }
           .step-bar {
             cursor: pointer;
             width: 280px;
@@ -1081,7 +705,10 @@ a {
           padding: 32px 30px 37px;
           height: 392px;
           background: url(/img/internship/step-background.png) no-repeat;
-          background-size: 100%;
+          background-size: 100% 100%;
+          .number {
+            display: none;
+          }
           .suspend {
             padding: 10px 0 0 10px;
           }
@@ -1149,10 +776,16 @@ a {
           .flow-chart {
             margin-top: 8px;
             padding-left: 35px;
+            .chart-mo {
+              display: none;
+            }
             img {
               width: 960px;
             }
           }
+        }
+        .step-body-en {
+          height: 485px;
         }
         @media (max-width: 1000px) {
           background: none;
@@ -1172,6 +805,7 @@ a {
               margin-bottom: 0;
             }
             .step-text {
+              display: block !important;
               position: relative;
               margin-bottom: 20px;
               padding: 50px 5px 5px;
@@ -1186,9 +820,9 @@ a {
                   font-size: 12px;
                 }
               }
-             
               .number {
                 position: absolute;
+                display: block;
                 top: 0;
                 left: 0;
                 width: 60px;
@@ -1210,7 +844,11 @@ a {
             .flow-chart {
               padding: 0;
               text-align: center;
-              img {
+              .chart-pc {
+                display: none;
+              }
+              .chart-mo {
+                display: inline-block;
                 width: 268px;
               }
             }
@@ -1234,14 +872,14 @@ a {
           color: rgba(0, 0, 0, 0.5);
           box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.1);
           border-radius: 8px;
-          transition:  box-shadow 0.1s;
+          transition: box-shadow 0.1s;
           .item-name {
             cursor: pointer;
             color: #002fa7;
             font-size: 20px;
-              @media (max-width: 1000px) {
+            @media (max-width: 1000px) {
               font-size: 16px;
-           }
+            }
           }
           .item-intriduce {
             padding-top: 8px;
@@ -1275,6 +913,7 @@ a {
               color: #002fa7;
               background-color: #fff;
               line-height: 24px;
+              transition: all 3s;
               img {
                 margin-left: 6px;
                 width: 24px;
@@ -1309,17 +948,17 @@ a {
           background-size: 120%;
           background-position: center;
           background-image: url(/img/internship/lookeng_bg.png);
-           @media (max-width: 1000px) {
-              background-image: none;
-           }
+          @media (max-width: 1000px) {
+            background-image: none;
+          }
           .item-name {
             font-size: 20px;
-              @media (max-width: 1000px) {
+            @media (max-width: 1000px) {
               font-size: 16px;
-           }
+            }
           }
           .item-intriduce {
-            padding: 10px 0 0 0 ;
+            padding: 10px 0 0 0;
             width: 100%;
             text-align: left;
             font-size: 14px;
@@ -1362,49 +1001,60 @@ a {
     #integral {
       .integral-title {
         padding: 67px 0 50px 0;
+        img {
+          width: 270px;
+        }
       }
-
-      .integral-content {
-        padding: 26px 15px;
-        height: 239px;
-        font-size: 14px;
-        color: rgba(0, 0, 0, 0.5);
-        line-height: 24px;
-        background: url(/img/internship/integral-background.png) no-repeat;
-        background-size: 100%;
-        h3,
-        h4 {
-          margin-bottom: 10px;
-          font-size: 18px;
-          color: #000000;
-        }
-        h4 {
-          margin-top: 10px;
+      .integral-border {
+        border: 5px solid #5877ff;
+        border-top: 16px solid #5877ff;
+        border-radius: 8px;
+        background-color: #5877ff;
+        .integral-content {
+          padding: 5px 15px 10px;
           font-size: 14px;
-        }
-        p {
-          position: relative;
-          padding-left: 12px;
-        }
-        .circular {
-          p::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 10px;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            background-color: #2e9afe;
+          color: rgba(0, 0, 0, 0.5);
+          border-radius: 8px;
+          background-color: #eef1ff;
+          line-height: 24px;
+          h3,
+          h4 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #000000;
           }
-        }
-        .star {
-          position: relative;
-          img {
-            position: absolute;
-            left: 0;
-            top: 8px;
-            height: 8px;
+          h4 {
+            margin-top: 10px;
+            font-size: 14px;
+          }
+          p {
+            position: relative;
+            padding-left: 12px;
+          }
+          .circular {
+            p::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 10px;
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+              background-color: #2e9afe;
+            }
+          }
+          .star {
+            position: relative;
+            img {
+              position: absolute;
+              left: 0;
+              top: 8px;
+              height: 8px;
+            }
+          }
+          .download-color {
+            cursor: pointer;
+            color: #002fa7;
           }
         }
       }

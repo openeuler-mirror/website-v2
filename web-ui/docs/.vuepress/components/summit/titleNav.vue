@@ -1,5 +1,5 @@
 <template>
-    <div class="title-nav">
+    <div class="title-nav" :class="{'internship':internship}">
         <div class="box-line">
                 <img class="gif" v-lazy="'/img/summit/home/nav.gif'" alt="" />
                 <img class="line" :class="{'internship-line':internship}" v-lazy="'/img/summit/home/line.png'" alt="" />
@@ -14,6 +14,10 @@
                 </li>
             </ul>
         </div>
+        <div class="qq-code" v-show="show && internship">
+            <img class="close" @click="close()" src="/img/internship/close.png" alt="">
+            <img src="/img/internship/qq-code.png" alt="">
+        </div>
     </div>
 </template>
 
@@ -21,12 +25,16 @@
 export default {
     data () {
         return {
+            show:true
         }
     },
     props:['currentIndex','dataList','internship'],
     mounted () {
     },
     methods: {
+        close() {
+            this.show = false
+        }
     }
 }
 </script>
@@ -39,6 +47,7 @@ export default {
     right: 70px;
     z-index: 1000;
     display: block;
+
     .box-line {
         width: 70px;
         margin-left: -26px;
@@ -107,11 +116,28 @@ export default {
             text-decoration: none;
         }
     }
+    .qq-code {
+        position: absolute;
+        width: 170px;
+        .close {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 20px;
+        }
+        img {
+            width: 100%;
+        }
+    }
     .internship-nav {
         margin-top: -425px;
     }
     @media screen and (max-width: 1540px) {
         display: none;
     }
+}
+.internship {
+    top:70px;
+    right: 100px;
 }
 </style>
