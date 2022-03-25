@@ -113,6 +113,10 @@ module.exports = {
                     {
                         NAME: '角色说明',
                         PATH: '/sig/role-description/'
+                    },
+                    {
+                        NAME: '会议指南',
+                        PATH: '/sig/meeting-guide/'
                     }
                 ],
                 CLASS: []
