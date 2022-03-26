@@ -24,10 +24,9 @@
                     <img @click="goInstall(item.LINK)" :src="item.IMG" alt />
                     <img
                         class="add-sig"
-                        @click="goInstall('https://shimo.im/docs/16q8Mdw26mI2N8k7/read')"
+                        @click="go('/sig/meeting-guide/')"
                         v-if="index === 1"
                         src="/img/summit/devday-2022/SIG2.png"
-                        alt
                     />
                 </a>
             </div>
