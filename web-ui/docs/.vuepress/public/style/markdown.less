@@ -36,16 +36,20 @@
         margin-top: 40px;
     }
     div[class*="language-"]{
+        margin-bottom: 16px;
         background:rgba(225,230,238,0.3);
         border:1px solid rgba(151,151,151,1);
         border-radius: 0;
+        @media (max-width: 1000px) {
+            margin-bottom: 8px;
+        }
         pre{
             padding: 1em;
             margin: .5em 0;
             overflow: auto;
             code{
                 color:rgba(0,0,0,0.5);
-            }             
+            }
         }
     }
     h2 {
@@ -130,7 +134,7 @@
         width: 100%;
         font-size: 14px;
         table-layout: fixed;
-        word-break: break-all;
+        word-break: break-word;
         tr {
             height: 60px;
             color: rgba(0, 0, 0, .5);
