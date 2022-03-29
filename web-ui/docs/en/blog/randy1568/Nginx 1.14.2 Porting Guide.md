@@ -53,7 +53,9 @@ Configure the local source if the server cannot obtain dependencies from the Int
 
 1. Copy the OS image file **openEuler-20.03-LTS-everything-aarch64-dvd.iso** to the **/root** directory on each server.
 2. Mount the image file. Mount the openEuler .iso file in the **/root** directory to the **/mnt** directory.
+
     ```mount /root/openEuler-20.03-LTS-SP1-everything-aarch64-dvd.iso /mnt```
+
     NOTE:
     This operation takes effect only once and becomes invalid after the OS is restarted. (Optional) To configure automatic image mounting on boot, perform the following steps:
 
@@ -65,10 +67,14 @@ Configure the local source if the server cannot obtain dependencies from the Int
 
     (3) Save and then exit the **fstab** file.
 3. Add a local source file.
-    (1) Go to the **/etc/yum.repos.d** directory.  
+
+    (1) Go to the **/etc/yum.repos.d** directory. 
+ 
     ```cd /etc/yum.repos.d```
+
     NOTE:
     It is recommended that you move the *.repo file in this directory to any other backup directory.
+
     (2) Create a **local.repo** file.
 
     ​	a. Open the **local.repo** file.  
@@ -107,7 +113,9 @@ yum -y install gcc gcc-c++ make libtool zlib zlib-devel pcre pcre-devel pcre2-de
 This document uses the source code for compilation and installation. You will also need to obtain the Nginx source code.
 
 Run the following commands to download the Nginx source code:
+
 ``` cd /home```
+
 ```wget https://nginx.org/download/nginx-1.14.2.tar.gz --no-check-certificate```
 
 NOTE:
@@ -131,6 +139,7 @@ export no_proxy=127.0.0.1,.huawei.com,localhost,local,.local
 ```env```
 5. Verify whether the proxy function is configured successfully.  
 ```curl www.baidu.com```
+
 If Baidu, for example, can be parsed, the configuration is successful.
 
 # Compiling and Installing Nginx
@@ -146,11 +155,15 @@ NOTE:
 - **--prefix=*PATH*** specifies the Nginx installation directory. The default installation directory is **/usr/local/nginx**.
 - **with-http_stub_status_module** does not need to be configured because this module affects the performance of Nginx.
 4. Compile and install Nginx.  
+
 ```make -j96 &amp;&amp; make -j96 install```
+
    NOTE:
    In the command, -j96 leverages the multi-core feature of the CPUs to accelerate compilation.
    You can run the **lscpu** command to query the number of CPU cores.
+
 5. Check the installation directory.  
+
 ```ls /usr/local/nginx```
 
 
@@ -159,6 +172,7 @@ NOTE:
 1. Go to the **/usr/local/nginx directory** and generate a key in the directory.  
 ```cd /usr/local/nginx```
 ```openssl genrsa -des3 -out server_2048.key 2048```
+
 Enter a password twice. The **server_2048.key** file is generated.
 ```
 [root@localhost nginx]# openssl genrsa -des3 -out server_2048.key 2048
@@ -377,10 +391,13 @@ http {
    - Start the Nginx service. You need to add Nginx to the service list, and then start the service using a command.
 
      (1) Modify the **/etc/init.d/nginx** file.
+
      	a. Delete the original **nginx** file.  
      ```rm -rf /etc/init.d/nginx```
+
      	b. Create a new **nginx** file.  
       ```vi /etc/init.d/nginx```
+
      	c. Add the following content to the file, and then save the file and exit.
 ```
 	   #!/bin/bash
@@ -426,8 +443,10 @@ root        9466    1352  0 18:23 ttyAMA0  00:00:00 grep --color=auto nginx
    NOTE:
    You can run any of the following commands to disable Nginx. Do not run the commands when the service is running.
    - Stop the Nginx service.
+
       ```service nginx stop```
    - Stop Nginx by running a script.
+
       ```/usr/local/nginx/sbin/nginx -s quit```
    - Stop the Nginx process.
 
