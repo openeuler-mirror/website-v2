@@ -48,8 +48,7 @@ openEuler | 20.03 SP1 AArch64
 Kernel | 4.19
 
 Note:
-
-    When installing the OS for the first time, select "Server with GUI" instead of "Minimal Install". This will bypass the need to manually install lots of software packages.
+When installing the OS for the first time, select "Server with GUI" instead of "Minimal Install". This will bypass the need to manually install lots of software packages.
 
 # Configuring the Compilation Environment
 
