@@ -723,9 +723,14 @@ let remoteMethods = {
         height: 713px;
          .statistics {
             display: flex;
+            display: none;
             padding: 50px 0;
             justify-content: center;
             align-items: center;
+             @media screen and (max-width: 1000px){
+                padding: 20px 0;
+                font-size: 12px;
+            }
             a {
                 cursor: pointer;
                 padding-right: 5px;
