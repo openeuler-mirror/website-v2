@@ -374,6 +374,11 @@ export default {
     .el-table .cell {
         text-align: left;
     }
+    .el-table__row td:nth-child(2) {
+        .cell {
+            text-align: justify;
+        }
+    }
 }
 </style>
 <style lang="less" scoped>

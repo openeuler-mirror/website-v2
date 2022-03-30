@@ -124,6 +124,8 @@ module.exports = {
         },
         HOME_ROUND: {
             ROUND_TITLE: '我们正在不断成长',
+            VIEW_DETAIL:'查看详情',
+            VIEW_DETAIL_LINK:'https://datastat.openeuler.org/zh/overview',
             ROUND_LIST: [
                 {
                     ROUND_VALUE: '',
@@ -722,6 +724,8 @@ module.exports = {
         },
         HOME_ROUND: {
             ROUND_TITLE: 'We Are Thriving',
+            VIEW_DETAIL:'View details',
+            VIEW_DETAIL_LINK:'https://datastat.openeuler.org/en/overview',
             ROUND_LIST: [
                 {
                     ROUND_VALUE: '',
@@ -1304,6 +1308,8 @@ module.exports = {
         },
         HOME_ROUND: {
             ROUND_TITLE: 'Мы процветаем',
+            VIEW_DETAIL:'View details',
+            VIEW_DETAIL_LINK:'https://datastat.openeuler.org/en/overview',
             ROUND_LIST: [
                 {
                     ROUND_VALUE: '',

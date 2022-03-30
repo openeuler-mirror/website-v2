@@ -16,6 +16,19 @@ This legal notice contains legal policies for the openEuler community. These pol
 ## Terms and Conditions for Accessing the openEuler Community Website
 
 <https://www.openeuler.org> is operated by openEuler community. The following rules apply to all visitors to this website. openEuler community may, without notice to you and at any time, revise these terms according to laws, regulations, and market changes. The right to access this website is granted by openEuler community according to the terms specified in this Notice. If you do not agree to these terms, please do not use this website. By accessing, browsing, or using this website and the services provided herein, you acknowledge that you agree with all contents of this Notice. In the event of any violation of these terms and conditions, openEuler community reserves the right to seek all remedies available by law and in equity against such violations.
+## Protection of Personal Information
+
+The openEuler community respects personal information of any individual who accesses this website. When you visit this website, you may be asked to provide basic personal information (such as your name, email address, and contact information). You can choose whether to provide such information. The personal information you provide will be kept confidential in accordance with the applicable laws of the People's Republic of China (PRC). The information will not be provided or disclosed to any third party in any way, except in any of the following cases:
+
+(1) Sharing with your explicit consent. After notifying you of the third party's name, contact information, processing purpose, processing method, and personal information type, and obtaining your explicit consent, the openEuler community will share the information within the scope of your authorization to the third party.
+
+(2) Sharing under legal circumstances. Your personal information is required to be shared according to applicable laws and regulations, legal procedures, litigation/arbitration, government's compulsory orders, and regulatory requirements.
+
+(3) To the extent required or permitted by law, it is necessary to provide your personal information to third parties to protect your or the public's interests, property, or security from being damaged.
+
+(4) To protect national security or public security of the PRC, or the legitimate rights and interests of you and other individuals, it is necessary to share your personal information.
+
+(5) Your personal information is made public by yourself or has been legally made public.
 
 ## General Disclaimer
 
@@ -58,6 +71,10 @@ Access to any other website linked to on this website is at the user's own risk 
 completeness, adequacy, and reliability of any information, data, opinion, picture, advice, or statement on these websites. 
 openEuler community provides these links merely as a convenience and the inclusion of such links does not imply an endorsement, 
 recommendation, promotion, or advertisement.
+
+## Website Updates and Changes
+
+The contents on this website are provided for your convenience only. The openEuler community has the right to change or update the contents on this website at any time without notifying you or any third party. You acknowledge and accept the above changes or updates. You are advised to visit this website regularly to obtain information about updates or changes in a timely manner.
 
 ## Applicable Law and Dispute Resolution
 

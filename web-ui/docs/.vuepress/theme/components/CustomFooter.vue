@@ -188,28 +188,21 @@ export default {
       .right-list {
         margin: 0 auto;
         display: flex;
-        align-items: flex-end;
+        flex-wrap: wrap;
+        justify-content: center;
+        // align-items: flex-end;
         font-size: 14px;
         li {
-          padding: 0 4px;
+          padding: 0 10px;
+           border-left: 1px solid #fff;
           a {
             color: #fff;
             text-decoration: none;
             cursor: pointer;
           }
         }
-        li:nth-child(2) {
-          padding: 0 10px;
-          border-left: 1px solid #fff;
-          border-right: 1px solid #fff;
-        }
-        li:nth-child(3) {
-          padding: 0 16px;
-          border-right: 1px solid #fff;
-        }
-        li:nth-child(4) {
-          padding: 0 16px;
-          border-right: 1px solid #fff;
+        li:first-child {
+          border-left: none;
         }
       }
     }

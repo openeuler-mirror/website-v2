@@ -186,6 +186,9 @@
                 <round class="round-item" :image="item.ROUND_IMG" :value="item.ROUND_VALUE" :description="item.ROUND_TEXT"
                     :styleParams="item.ROUND_STYLE" v-for="(item,index) in roundList"></round>
             </div>
+            <div class="statistics">
+                <a target="_blank" :href="i18n.home.HOME_ROUND.VIEW_DETAIL_LINK">{{ i18n.home.HOME_ROUND.VIEW_DETAIL }}</a> <img src="/img/common/right.svg" alt="">
+            </div>
         </div>
 
         <div class="home-source">
@@ -718,6 +721,18 @@ let remoteMethods = {
         width: 1120px;
         margin: 120px auto;
         height: 713px;
+         .statistics {
+            display: flex;
+            padding: 50px 0;
+            justify-content: center;
+            align-items: center;
+            a {
+                cursor: pointer;
+                padding-right: 5px;
+                text-decoration: none;
+                color: #002FA7;
+            }
+        }
         .round-box{
             width: 1033px;
             margin: 90px auto 0 auto;

@@ -19,6 +19,8 @@ The openEuler Community understands the importance of your privacy and fully res
 (b) **Service Optimization**. To continuously understand the operating status of the openEuler Community and provide better services for you, we will deploy a third-party plugin in this program. The third-party plugin will collect and record information on your browser, computer, and mobile device, including but not limited to your <u>**IP address, access source, number of visits to the community, stay duration, access timestamp, browser type, and server type and version**</u>, etc. This will form the basis of our analysis, which helps us to better understand the openEuler Community operation.<br>
 (c) **Contributor License Agreement Signing**. When you participate in code contribution through the Contributor License Agreement ("CLA") signing system (click [<u>here</u>](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=) to learn more), you need to submit your relevant personal data to the CLA signing system. We will obtain such personal data to verify whether you have signed the CLA, and to conduct relevant statistical analysis to understand how the community is operating.
 
+We may also collect your personal information from third parties, including other platforms or communities, within the scope of your authorization and consent, or obtain your personal information from other legal and public channels. We promise to process your personal information in strict accordance with applicable laws and regulations. Please read the privacy policies and user agreements of the third parties carefully. If your personal information provided by a third party is required when you use the openEuler community, but you refuse to allow the third party to collect, use, transfer, or share your personal information when the third party provides services, you may not be able to use related services of the openEuler community. For example, when you use an authorized third-party account to log in to the openEuler community, we will obtain your personal information from the third party with your consent.
+
 ## 2.How We Use Cookies and Similar Technologies
 
 (a) To ensure our website works properly, we may at times place cookies on your computer or mobile device. A cookie is a small data file placed on your computer or mobile device when you access a website. The content of a cookie can be retrieved or read only by the server that creates the cookie. Cookies serve different purposes. For example, they help us understand how the website is used, help you efficiently browse pages, remember your preferences, and improve your browsing experience.<br>
@@ -71,6 +73,6 @@ We may update or modify this Statement from time to time according to changes of
 If you want to contact us or exercise your rights, please contact us at <contact@openeuler.io>.
 
 
-Last updated: June, 2021
+Last updated: March, 2022
 
 </div>
