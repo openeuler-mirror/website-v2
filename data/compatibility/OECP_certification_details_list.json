@@ -1,14 +1,14 @@
 [
 	{
-		"os_version":"麒麟V10测试数据",
-		"osv_name": "Kylin",
+		"os_version":"OSV操作系统V10测试数据",
+		"osv_name": "测试厂家",
 		"total_result": "pass",
 		"type": "服务器",
 		"date": "2022/3/17",
 		"arch": "aarch64",
 		"details": "详细信息",
-		"friendly_link": "www.kylin.com",
-		"os_download_link": "https://www.kylinos.cn/scheme/server/1.html",
+		"friendly_link": "www.test.com",
+		"os_download_link": "https://www.test.com/download",
 		"checksum": "a89e2f27ee12ecd01ed4a774f81fe5c1",
 		"base_openeuler_version": "openEuler 20.03 LTS-SP1",
 		"tools_result": [
