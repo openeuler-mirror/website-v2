@@ -268,8 +268,8 @@
         </div>
         <div id="rank">
           <div class="rank-title">
-            <img v-if="!isShowH5" src="/img/internship/rank-title.png" alt />
-            <img v-else src="/img/internship/rank-title-mo.png" alt />
+            <img class="web" src="/img/internship/rank-title.png" alt />
+            <img class="mobile" src="/img/internship/rank-title-mo.png" alt />
           </div>
           <div class="rank-border">
             <div class="rank-content" ref="rankContent">
@@ -1127,6 +1127,9 @@ a {
           border-radius: 8px 8px 0 0;
           width: 374px;
         }
+        .mobile {
+          display: none;
+        }
       }
       .rank-title::before {
         position: absolute;
@@ -1280,6 +1283,12 @@ a {
           height: 48px;
           img {
             width: 109px;
+          }
+          .web {
+            display: none;
+          }
+          .mobile {
+            display: inline-block;
           }
         }
         .rank-title::before {
