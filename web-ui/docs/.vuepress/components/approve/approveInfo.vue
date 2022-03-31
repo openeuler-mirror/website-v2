@@ -1,7 +1,7 @@
 <template>
   <div class="approveInfo-box">
     <div class="banner">
-      <div class="breadcrumb">{{ i18n.approve.TITLE }} \</div>
+      <div class="breadcrumb" @click="toApprove">{{ i18n.approve.TITLE }} \</div>
       <div class="banner-title">
         {{ i18n.approve.SUBTITLE_REPORT }}
       </div>
@@ -10,50 +10,34 @@
       <div class="title">{{ i18n.approve.ASSESS_LIST.ASSESS_INFO }}</div>
       <div class="content">
         <div class="content-box">
-          <p>
-            <span class="label">{{ i18n.approve.ASSESS_LIST.OSV }}</span>
-            <span class="content-item">
-                {{reportData.osv_name}}
-            </span>
-          </p>
-          <p>
-            <span class="label">{{
-              i18n.approve.ASSESS_LIST.ARCHITECTURE
-            }}</span>
-            <span class="content-item">
-                {{reportData.arch}}
-            </span>
-          </p>
-          <p>
-            <span class="label">{{
-              i18n.approve.ASSESS_LIST.PUBLISH_ADDRESS
-            }}</span>
-            <a class="link-item" :href="reportData.os_download_link">
-                {{reportData.os_download_link}}
-            </a>
-          </p>
-          <p>
-            <span class="label">{{ i18n.approve.ASSESS_LIST.CHECKSUM }}</span>
-            <span class="content-item">
-                {{reportData.checksum}}
-            </span>
-          </p>
-          <p>
-            <span class="label">{{
-              i18n.approve.ASSESS_LIST.OPENEULER_EDITION
-            }}</span>
-            <span class="content-item">
-                {{reportData.base_openeuler_version}}
-            </span>
-          </p>
+          <div class="content-name">
+              <p>{{ i18n.approve.ASSESS_LIST.OSV }}</p>
+              <p>{{i18n.approve.ASSESS_LIST.ARCHITECTURE}}</p>
+              <p>{{i18n.approve.ASSESS_LIST.PUBLISH_ADDRESS}}</p>
+              <p>{{i18n.approve.ASSESS_LIST.CHECKSUM}}</p>
+              <p>{{i18n.approve.ASSESS_LIST.OPENEULER_EDITION}}</p>
+          </div>
+          <div class="content-text">
+              <p>{{reportData.os_version}}</p>
+              <p>{{reportData.arch}}</p>
+              <p>
+                  <a class="link-item" :href="reportData.os_download_link">
+                    {{reportData.os_download_link}}
+                  </a>
+              </p>
+              <p>{{reportData.checksum}}</p>
+              <p>{{reportData.base_openeuler_version}}</p>
+          </div>
         </div>
         <div class="claim-box">
           <div class="top">
-            <div class="title-claim">
+            <div class="title-claim" v-if="reportData.total_result == 'pass'">
               <img src="/img/approve/adopt.png" alt="" />
-              <!-- <img src="/img/approve/fail.png" alt=""> -->
               <div class="claim-text">{{ i18n.approve.ADOPT }}</div>
-              <!-- <div class="claim-text">{{i18n.approve.FAIL}}</div> -->
+            </div>
+            <div class="title-claim" v-else >
+              <img src="/img/approve/fail.png" alt="">
+              <div class="claim-text">{{i18n.approve.FAIL}}</div>
             </div>
             <div class="subtitle-claim">
               {{ i18n.approve.ASSESS_LIST.COMPATIBLE }}
@@ -85,7 +69,18 @@
             prop="result"
             :label="i18n.approve.TOOL_LIST.CONCLUSION"
             width=""
-          ></el-table-column>
+          >
+            <template slot-scope="scope">
+              <div v-if="scope.row.result == 'pass'" class="table-result">
+                <img src="/img/approve/adopt.png" alt="">
+                <span>{{ i18n.approve.ADOPT }}</span>
+              </div>
+              <div v-else  class="table-result">
+                <img src="/img/approve/fail.png" alt="">
+                <span>{{ i18n.approve.FAIL }}</span>
+              </div>
+            </template>
+          </el-table-column>
         </el-table>
       </div>
       <div>
@@ -121,7 +116,18 @@
             prop="result"
             :label="i18n.approve.TOOL_LIST.CONCLUSION"
             width=""
-          ></el-table-column>
+          >
+            <template slot-scope="scope">
+              <div v-if="scope.row.result == 'pass'" class="table-result">
+                <img src="/img/approve/adopt.png" alt="">
+                <span>{{ i18n.approve.ADOPT }}</span>
+              </div>
+              <div v-else  class="table-result">
+                <img src="/img/approve/fail.png" alt="">
+                <span>{{ i18n.approve.FAIL }}</span>
+              </div>
+            </template>
+          </el-table-column>
         </el-table>
       </div>
     </div>
@@ -227,6 +233,14 @@ export default {
       total: 1,
     };
   },
+  methods:{
+    //跳转osv认证列表页
+    toApprove() {
+      this.$router.push({
+        path: this.resolvePath("/approve/"),
+      });
+    },
+  },
   mounted() {
     locationMethods.getApproveInfo(10204);
   },
@@ -301,7 +315,15 @@ export default {
     .content {
       display: flex;
       .content-box {
-        width: 52%;
+        display: flex;
+        .content-name {
+            width: 180px;
+        }
+        .link-item {
+          color: #002fa7;
+          text-decoration: none;
+          cursor: pointer;
+        }
         p {
           font-size: 14px;
           line-height: 20px;
@@ -317,7 +339,6 @@ export default {
         }
       }
       .claim-box {
-        width: 48%;
         .top {
           position: absolute;
           top: 99px;
@@ -371,6 +392,13 @@ export default {
       color: #000000;
       font-weight: 600;
     }
+  }
+}
+.table-result {
+  img{
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
   }
 }
 /deep/ .el-table thead {
