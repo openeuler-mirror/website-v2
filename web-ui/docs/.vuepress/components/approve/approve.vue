@@ -6,112 +6,15 @@
       :inside-name="'SUPPORT'"
       :outside-name="i18n.approve.TITLE"
     ></common-banner>
-    <div class="approve-head">
-      <div class="title">{{ i18n.approve.SUMMARY.TITLE }}</div>
-      <div class="content">
-        {{ i18n.approve.SUMMARY.CONTENT }}
+    <div class="approve-desc">
+      <div>
+        <p>{{ i18n.approve.SUMMARY.CONTENT }}</p>
       </div>
     </div>
+
     <div class="approve-content">
-      <div class="approve-middle">
-        <div class="title">{{ i18n.approve.STEP_TITLE }}</div>
-        <div class="content-item">
-          <div class="left">{{ i18n.approve.STEP_CONTENT[0].ID }}</div>
-          <div class="right">
-            <div class="item-title">
-              {{ i18n.approve.STEP_CONTENT[0].TITLE }}
-            </div>
-            <div class="item-content">
-              {{ i18n.approve.STEP_CONTENT[0].TEXT_1 }}
-              <a :href="i18n.approve.STEP_CONTENT[0].LINK_1" target="_blank">
-                {{ i18n.approve.STEP_CONTENT[0].LINK_1 }} </a
-              >。
-            </div>
-          </div>
-        </div>
-        <div class="content-item">
-          <div class="left">{{ i18n.approve.STEP_CONTENT[1].ID }}</div>
-          <div class="right">
-            <div class="item-title">
-              {{ i18n.approve.STEP_CONTENT[1].TITLE }}
-            </div>
-            <div class="item-content">
-              {{ i18n.approve.STEP_CONTENT[1].TEXT_1 }}
-              <a :href="i18n.approve.STEP_CONTENT[1].LINK_1" target="_blank">
-                {{ i18n.approve.STEP_CONTENT[1].LINK_1 }} </a
-              >。
-            </div>
-          </div>
-        </div>
-        <div class="content-item">
-          <div class="left">{{ i18n.approve.STEP_CONTENT[2].ID }}</div>
-          <div class="right">
-            <div class="item-title">
-              {{ i18n.approve.STEP_CONTENT[2].TITLE }}
-            </div>
-            <div class="item-content">
-              {{ i18n.approve.STEP_CONTENT[2].TEXT_1 }}
-              <a :href="'mailto:' + i18n.approve.STEP_CONTENT[2].LINK_1">
-                {{ i18n.approve.STEP_CONTENT[2].LINK_1 }}
-              </a>
-              {{ i18n.approve.STEP_CONTENT[2].TEXT_2 }}
-              <p>
-                {{ i18n.approve.STEP_CONTENT[2].TEXT_3 }}
-                <a :href="i18n.approve.STEP_CONTENT[2].LINK_2" target="_blank">
-                  {{ i18n.approve.STEP_CONTENT[2].LINK_2 }}
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="content-item">
-          <div class="left">{{ i18n.approve.STEP_CONTENT[3].ID }}</div>
-          <div class="right">
-            <div class="item-title">
-              {{ i18n.approve.STEP_CONTENT[3].TITLE }}
-            </div>
-            <div class="item-content">
-              {{ i18n.approve.STEP_CONTENT[3].TEXT_1 }}
-              <a :href="i18n.approve.STEP_CONTENT[3].LINK_1" target="_blank">
-                {{ i18n.approve.STEP_CONTENT[3].LINK_1 }}
-              </a>
-              {{ i18n.approve.STEP_CONTENT[3].TEXT_2 }}
-            </div>
-          </div>
-        </div>
-        <div class="content-item">
-          <div class="left">{{ i18n.approve.STEP_CONTENT[4].ID }}</div>
-          <div class="right">
-            <div class="item-title">
-              {{ i18n.approve.STEP_CONTENT[4].TITLE }}
-            </div>
-            <div class="item-content">
-              {{ i18n.approve.STEP_CONTENT[4].TEXT_1 }}
-              <a :href="i18n.approve.STEP_CONTENT[4].LINK_1" target="_blank">
-                {{ i18n.approve.STEP_CONTENT[4].LINK_TEXT }}
-              </a>
-              {{ i18n.approve.STEP_CONTENT[4].TEXT_2 }}
-            </div>
-          </div>
-        </div>
-        <div class="content-item">
-          <div class="left">{{ i18n.approve.STEP_CONTENT[5].ID }}</div>
-          <div class="right">
-            <div class="item-title">
-              {{ i18n.approve.STEP_CONTENT[5].TITLE }}
-            </div>
-            <div class="item-content">
-              {{ i18n.approve.STEP_CONTENT[5].TEXT_1 }}
-              <a @click="toCompatibility">
-                {{ i18n.approve.STEP_CONTENT[5].LINK_1 }}
-              </a>
-              {{ i18n.approve.STEP_CONTENT[5].TEXT_2 }}
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="approve-table">
-        <p>{{ i18n.approve.TABLE_TITLE }}</p>
+        <p class="table-title">{{ i18n.approve.TABLE_TITLE }}</p>
         <el-form :inline="true" :model="formData" class="approve-filter">
           <el-form-item :label="i18n.approve.SELECT_COMPANY">
             <el-select
@@ -138,7 +41,7 @@
               :placeholder="i18n.approve.SELECT_COMPANY"
             >
               <el-option
-                :label="i18n.approve.SEARCH_ALL"
+                :label="i18n.approve.SELECT_ALL"
                 value="all"
               ></el-option>
               <el-option
@@ -263,9 +166,12 @@
             width="200"
           >
             <template slot-scope="scope">
-              <a class="table-link" :href="scope.row.friendlyLink" target="_blank">{{
-                scope.row.friendlyLink
-              }}</a>
+              <a
+                class="table-link"
+                :href="scope.row.friendlyLink"
+                target="_blank"
+                >{{ scope.row.friendlyLink }}</a
+              >
             </template>
           </el-table-column>
         </el-table>
@@ -325,7 +231,12 @@
           :hide-on-single-page="true"
         ></el-pagination>
 
-        <div class="spacing_box"></div>
+        <div class="bottomBanner">
+          <span>{{ i18n.approve.TO_STEP.TEXT_1 }}</span>
+          <a @click="toStep">
+            {{ i18n.approve.TO_STEP.LINK_1 }} </a
+          >。
+        </div>
       </div>
     </div>
   </div>
@@ -337,26 +248,26 @@ import { osvList, getOsName, getType } from "../../api/approve";
 let that = null;
 
 const locationMethods = {
-    getOsvList (flag) {
-        that.tableLoading = true;
-        that.formData.page = flag;
-        osvList(that.formData)
-        .then(data => {
-            that.tableLoading = false;
-            if (data.totalRecords) {
-                that.total = data.totalRecords;
-                that.tableData = data.list;
-            } else {
-            that.total = 0;
-            that.tableData = [];
-            }
-        })
-        .catch(data => {
-            that.$message.error(data);
-            that.tableLoading = false;
-        });
-    }
-}
+  getOsvList(flag) {
+    that.tableLoading = true;
+    that.formData.page = flag;
+    osvList(that.formData)
+      .then((data) => {
+        that.tableLoading = false;
+        if (data.totalRecords) {
+          that.total = data.totalRecords;
+          that.tableData = data.list;
+        } else {
+          that.total = 0;
+          that.tableData = [];
+        }
+      })
+      .catch((data) => {
+        that.$message.error(data);
+        that.tableLoading = false;
+      });
+  },
+};
 export default {
   data() {
     that = this;
@@ -368,7 +279,7 @@ export default {
         type: "",
         keyword: "",
         page: 1,
-        pageSize: 10
+        pageSize: 10,
       },
       tableLoading: false,
       tableData: [
@@ -376,12 +287,13 @@ export default {
           arch: "X86_64",
           osvName: "统信",
           osVersion: "uniontechos-server-20-1020e-amd64",
-          osDownloadLink: "https://cdimage-download.chinauos.com/uniontechos-server-20-1020e-amd64.iso",
+          osDownloadLink:
+            "https://cdimage-download.chinauos.com/uniontechos-server-20-1020e-amd64.iso",
           type: "服务器",
           date: "2022/3/17",
           details: "",
           friendlyLink: "https://www.uniontech.com/",
-        }
+        },
       ],
     };
   },
@@ -401,20 +313,18 @@ export default {
 
     //跳转至报告页
     go(data) {
-        this.$router.push({
-                path: this.resolvePath('/approve/approve-info/'),
-                query: { id: data}
-            })
+      this.$router.push({
+        path: this.resolvePath("/approve/approve-info/"),
+        query: { id: data },
+      });
     },
 
-    //跳转至兼容性列表页
-    toCompatibility() {
-        this.$router.push({
-            path: this.resolvePath('/compatibility/')
-        })
+    //跳转至步骤页
+    toStep() {
+      this.$router.push({
+        path: this.resolvePath("/approve/approve-step"),
+      });
     },
-
-    
   },
   created() {
     // getOsName().then(res=>{
@@ -430,63 +340,41 @@ export default {
 
 <style lang="less" scoped>
 .approve-box {
-  .approve-head {
-    width: 1120px;
-    margin: 0 auto;
-    .title {
-      font-size: 24px;
-      color: #000;
-      margin-bottom: 20px;
-      line-height: 34px;
+  .approve-desc {
+    width: 100%;
+    background-image: url("/img/minisite/atune/desc-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 84px;
+    & > div {
+      width: 1120px;
     }
-    .content {
-      font-size: 16px;
-      line-height: 26px;
-      color: rgba(0, 0, 0, 0.5);
+    p {
+      color: #ffffff;
+      line-height: 48px;
+      font-size: 18px;
     }
   }
   .approve-content {
     width: 1120px;
-    margin: 0 auto;
-  }
-  .approve-middle {
-    margin: 40px 0;
-    .title {
+    margin: 0 auto 200px;
+    .table-title {
       font-size: 24px;
-      color: #000;
-      margin-bottom: 20px;
-      line-height: 34px;
     }
-    .content-item {
-      display: flex;
-      padding: 30px;
-      align-items: center;
-      justify-content: left;
-      .left {
-        font-size: 48px;
-        color: #002fa7;
-        padding-right: 30px;
-      }
-      .right {
-        padding-left: 30px;
-        border-left: 1px solid rgba(0, 0, 0, 0.15);
-        .item-title {
-          color: rgba(0, 0, 0, 1);
-          font-size: 20px;
-          line-height: 30px;
-          margin-bottom: 10px;
-        }
-        .item-content {
-          font-size: 16px;
-          line-height: 26px;
-          color: rgba(0, 0, 0, 0.5);
-          a{
-            text-decoration: none;
-            color: #002fa7;
-            cursor: pointer;
-            }
-        }
-      }
+  }
+
+  .bottomBanner {
+    margin-top: 40px;
+    font-size: 18px;
+    a {
+      color: #002fa7;
+      text-decoration: none;
+      cursor: pointer;
     }
   }
 
@@ -629,19 +517,15 @@ export default {
 
 @media (max-width: 1000px) {
   .approve-box {
-    .approve-head {
-      width: 100%;
-      padding-left: 30px;
-      padding-right: 30px;
-      .title {
-        width: 100%;
-        font-size: 24px;
-        margin: 40px 0 30px 0;
-      }
-      .content {
-        font-size: 16px;
-        line-height: 26px;
-        color: rgba(0, 0, 0, 0.5);
+    .approve-desc {
+      height: 370px;
+      background-image: url("/img/minisite/atune/desc-mobile.png");
+      p {
+        width: 315px;
+        margin: 0 auto;
+        line-height: 30px;
+        font-size: 14px;
+        text-align: left;
       }
     }
     .approve-content {
@@ -651,35 +535,6 @@ export default {
       margin-bottom: 80px;
       font-size: 14px;
       line-height: 24px;
-    }
-    .approve-middle {
-      .title {
-        font-size: 14px;
-        line-height: 24px;
-        font-weight: 400;
-      }
-      .content-item {
-        padding: 15px 0;
-        .left {
-          font-size: 36px;
-          padding-right: 15px;
-        }
-        .right {
-          padding-left: 15px;
-          border-left: 1px solid rgba(0, 0, 0, 0.15);
-          .item-title {
-            color: rgba(0, 0, 0, 1);
-            font-size: 14px;
-            line-height: 24px;
-            margin-bottom: 10px;
-          }
-          .item-content {
-            font-size: 14px;
-            line-height: 24px;
-            color: rgba(0, 0, 0, 0.5);
-          }
-        }
-      }
     }
   }
 }

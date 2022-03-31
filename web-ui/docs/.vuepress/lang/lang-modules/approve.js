@@ -7,8 +7,13 @@
         TITLE: 'OSV认证列表',
         SUMMARY: {
             TITLE: 'OSV认证简介',
-            CONTENT: '工具聚焦openEuler内核和基础包，检测伙伴二次发行版生态核心特性不丢失，关键配置不更改 结合社区选包策略及软件包等级策略，检查L1、L2软件包版本、打包方式、接口一致性，KABI白名单，架构特性（如鲲鹏/X86特性）使能，性能优化配置，牵引实现扩展仓库openEuler系共享、共用，主流行业应用在openEuler系不同的OSV生态复用度95%。新增认证标准链接'
+            CONTENT: '工具聚焦openEuler内核和基础包，检测伙伴二次发行版生态核心特性不丢失，关键配置不更改 结合社区选包策略及软件包等级策略，检查L1、L2软件包版本、打包方式、接口一致性，KABI白名单，架构特性（如鲲鹏/X86特性）使能，性能优化配置，牵引实现扩展仓库openEuler系共享、共用，主流行业应用在openEuler系不同的OSV生态复用度95%。'
         },
+        TO_STEP:{
+            TEXT_1:'关于OSV认证，openEuler提供了完整的测试流程和工具，详见',
+            LINK_1:' openEuler OSV认证整体介绍'
+        },
+        STEP_HEAD: 'openEuler OSV认证整体介绍',
         STEP_TITLE: 'OSV认证步骤',
         STEP_CONTENT: [
                 {
@@ -21,7 +26,7 @@
                     ID:'02',
                     TITLE:'了解OSV认证策略',
                     TEXT_1:'开展OSV认证之前，您需要了解OSV认证策略，认证标准，以及使用OSV认证工具进行自验证。地址如下：',
-                    LINK_1:'https://gitee.com/xielihao/oecp-lite'
+                    LINK_1:'https://gitee.com/openeuler/oecp'
                 },
                 {
                     ID:'03',
@@ -50,9 +55,7 @@
                 {
                     ID:'06',
                     TITLE:'OSV认证结果发布',
-                    TEXT_1:'openEuler团队会针对提交结果进行审核，如果通过，会将OSV认证结果添加到 ',
-                    LINK_1:'兼容性列表',
-                    TEXT_2:' 中。',
+                    TEXT_1:'openEuler团队会针对提交结果进行审核，如果通过，会将OSV认证结果添加到OSV认证列表中。',
                 },
         ],
         TABLE_TITLE: 'OSV认证结果',
