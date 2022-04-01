@@ -4228,7 +4228,7 @@
     }
   },
   {
-    "hardwareFactory": "Supermicro",
+    "hardwareFactory": "超微",
     "hardwareModel": "Supermicro AS-4124GS-TNR",
     "osVersion": "openEuler 22.03 LTS",
     "architecture": "x86_64",
@@ -4431,7 +4431,6 @@
       "hardDiskDrive": ""
     }
   },
-  ,
   {
     "hardwareFactory": "O.D.M",
     "hardwareModel": "O.D.MT1SMFT-E4",
