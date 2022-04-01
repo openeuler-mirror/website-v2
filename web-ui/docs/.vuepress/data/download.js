@@ -6,6 +6,24 @@ module.exports = {
     cn: {
         DOWNLOAD_LIST : [
             {
+                NAME: 'openEuler 22.03 LTS',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-22.03-LTS/',
+                DESC: 'openEuler 22.03-LTS 是基于5.10内核构建，实现了服务器、云、边缘和嵌入式的全场景支持',
+                RELEASE_DESC_URL: 'https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Releasenotes/release_notes.html',
+                INSTALL_GUIDENCE_URL: 'https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Installation/installation.html',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-22.03-LTS/ISO/',
+                LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+                WEBSITE_SELECT: "/zh/mirror/select/?version=22.03-LTS",
+                SERVER_IMAGE:'https://repo.openeuler.org/openEuler-22.03-LTS/ISO/',
+                CLOUD_IMAGE:'https://repo.openeuler.org/openEuler-22.03-LTS/virtual_machine_img/',
+                EDGE_IMAGE:'https://repo.openeuler.org/openEuler-22.03-LTS/edge_img/',
+                EMBEDDEN_IMAGE:'https://repo.openeuler.org/openEuler-22.03-LTS/embedded_img/',
+                MANUFACTURER: 'openEuler社区',
+                PUBLISH_DATE: '2022/03',
+                LTS: true
+            },
+            {
                 NAME: 'openEuler 20.03 LTS SP3',
                 DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.03-LTS-SP3/',
                 DESC: 'openEuler 20.03 LTS SP3 是openEuler 20.03 LTS的补丁版本，生命周期与LTS版本相同',
@@ -226,6 +244,24 @@ module.exports = {
     en: {
         DOWNLOAD_LIST : [
             {
+                NAME: 'openEuler 22.03 LTS',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-22.03-LTS/',
+                DESC: 'openEuler 22.03-LTS is based on the 5.10 kernel and supports all scenarios of server, cloud, edge and embedded',
+                RELEASE_DESC_URL: 'https://docs.openeuler.org/en/docs/22.03_LTS/docs/Releasenotes/release_notes.html',
+                INSTALL_GUIDENCE_URL: 'https://docs.openeuler.org/en/docs/22.03_LTS/docs/Installation/installation.html',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-22.03-LTS/ISO/',
+                LIFE_CYCLE_URL: '/en/other/lifecycle/',
+                WEBSITE_SELECT: "/en/mirror/select/?version=22.03-LTS",
+                SERVER_IMAGE:'https://repo.openeuler.org/openEuler-22.03-LTS/ISO/',
+                CLOUD_IMAGE:'https://repo.openeuler.org/openEuler-22.03-LTS/virtual_machine_img/',
+                EDGE_IMAGE:'https://repo.openeuler.org/openEuler-22.03-LTS/edge_img/',
+                EMBEDDEN_IMAGE:'https://repo.openeuler.org/openEuler-22.03-LTS/embedded_img/',
+                MANUFACTURER: 'openEuler community',
+                PUBLISH_DATE: '2022/03',
+                LTS: true
+            },
+            {
                 NAME: 'openEuler 20.03 LTS SP3',
                 DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-20.03-LTS-SP3/',
                 DESC: 'openEuler 20.03 LTS SP3 is the patch version of openEuler 20.03 LTS, and both versions have the same lifecycle.',
@@ -431,6 +467,24 @@ module.exports = {
     },
     ru: {
         DOWNLOAD_LIST : [
+            {
+                NAME: 'openEuler 22.03 LTS',
+                DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-22.03-LTS/',
+                DESC: 'openEuler 22.03-LTS is based on the 5.10 kernel and supports all scenarios of server, cloud, edge and embedded',
+                RELEASE_DESC_URL: 'https://docs.openeuler.org/en/docs/22.03_LTS/docs/Releasenotes/release_notes.html',
+                INSTALL_GUIDENCE_URL: 'https://docs.openeuler.org/en/docs/22.03_LTS/docs/Installation/installation.html',
+                SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+                GET_ISO_URL: 'https://repo.openeuler.org/openEuler-22.03-LTS/ISO/',
+                LIFE_CYCLE_URL: '/en/other/lifecycle/',
+                WEBSITE_SELECT: "/en/mirror/select/?version=22.03-LTS",
+                SERVER_IMAGE:'https://repo.openeuler.org/openEuler-22.03-LTS/ISO/',
+                CLOUD_IMAGE:'https://repo.openeuler.org/openEuler-22.03-LTS/virtual_machine_img/',
+                EDGE_IMAGE:'https://repo.openeuler.org/openEuler-22.03-LTS/edge_img/',
+                EMBEDDEN_IMAGE:'https://repo.openeuler.org/openEuler-22.03-LTS/embedded_img/',
+                MANUFACTURER: 'openEuler community',
+                PUBLISH_DATE: '2022/03',
+                LTS: true
+            },
             {
                 NAME: 'openEuler 21.09',
                 DOWNLOAD_URL : 'https://repo.openeuler.org/openEuler-21.09/',
