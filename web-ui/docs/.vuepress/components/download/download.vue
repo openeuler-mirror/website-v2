@@ -66,7 +66,7 @@
                     }}
                     </a>
                 </li>
-                <li v-if="item.GET_ISO_URL?true:false">
+                <li v-if="item.GET_ISO_URL&&!item.SERVER_IMAGE?true:false">
                     <img src="/img/download/release.svg" alt />
                     <a target="_blank" :href="item.GET_ISO_URL">
                     {{
@@ -102,6 +102,34 @@
                       target="_blank"
                       :href="item.WEBSITE_SELECT"
                   >{{ i18n.download.WEBSITE_SELECT }}</a>
+                </li>
+                 <li v-if="item.SERVER_IMAGE">
+                  <img src="/img/download/release.svg" alt />
+                  <a
+                      target="_blank"
+                      :href="item.SERVER_IMAGE"
+                  >{{ i18n.download.SERVER_IMAGE }}</a>
+                </li>
+                 <li v-if="item.CLOUD_IMAGE">
+                  <img src="/img/download/release.svg" alt />
+                  <a
+                      target="_blank"
+                      :href="item.CLOUD_IMAGE"
+                  >{{ i18n.download.CLOUD_IMAGE }}</a>
+                </li>
+                 <li v-if="item.EDGE_IMAGE">
+                  <img src="/img/download/release.svg" alt />
+                  <a
+                      target="_blank"
+                      :href="item.EDGE_IMAGE"
+                  >{{ i18n.download.EDGE_IMAGE }}</a>
+                </li>
+                 <li v-if="item.EMBEDDEN_IMAGE">
+                  <img src="/img/download/release.svg" alt />
+                  <a
+                      target="_blank"
+                      :href="item.EMBEDDEN_IMAGE"
+                  >{{ i18n.download.EMBEDDEN_IMAGE }}</a>
                 </li>
             </ul>
           </div>
@@ -390,7 +418,7 @@ export default {
       .download-item {
         width: 348px;
         margin: 0 25px 30px 0;
-        height: 280px;
+        height: 320px;
         box-sizing: border-box;
         box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
         border-radius: 8px;
@@ -533,7 +561,7 @@ export default {
       .download-item {
         width: 350px;
         margin: 0 25px 30px 0;
-        height: 290px;
+        height: 320px;
         box-sizing: border-box;
         box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
         border-radius: 8px;
@@ -620,7 +648,7 @@ export default {
                 width: 106px;
               margin-bottom: 16px;
               @media screen and (max-width: 1000px) {
-                  width: 68px;
+                  width: 70px;
                   margin-bottom: 20px;
                   &:last-of-type {
                     margin-bottom: 30px;

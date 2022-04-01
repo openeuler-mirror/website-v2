@@ -182,10 +182,10 @@ module.exports = {
                         NAME: 'CVE',
                         PATH: '/security/cve/'
                     },
-                    {
-                        NAME: 'OSV认证列表',
-                        PATH: '/approve/'
-                    },
+                    // {
+                    //     NAME: 'OSV认证列表',
+                    //     PATH: '/approve/'
+                    // },
                     {
                         NAME: '兼容性列表',
                         PATH: '/compatibility/'
