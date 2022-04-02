@@ -33,14 +33,14 @@ module.exports = {
             AGENDA_DATA_14: {
                 MO_TITLE: "SIG 组开放工作会议",
                 TIME_TITLE: [{
-                    ZH:'上午',
-                    EN:'morning'
+                    ZH: '上午',
+                    EN: 'morning'
                 }, {
-                    ZH:'下午',
-                    EN:'afternoon'
+                    ZH: '下午',
+                    EN: 'afternoon'
                 }, {
-                    ZH:'晚上',
-                    EN:'night'
+                    ZH: '晚上',
+                    EN: 'night'
                 }],
                 TITLE: ['09:00 - 10:00', '10:00 - 11:00', '11:00 - 12:00'],
                 TITLE_AFTERNOON: ['14:00 - 15:00', '15:00 - 16:00', '16:00 - 17:00', '17:00 - 18:00'],
@@ -241,17 +241,17 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-HPC",
                             TIME: "14:00 - 15:00",
-                            ZOOM_LINK:"https://us06web.zoom.us/j/83778708775?pwd=YjN4RGxGd2FYaG5NSllVMGU3V0Iwdz09",
+                            ZOOM_LINK: "https://us06web.zoom.us/j/83778708775?pwd=YjN4RGxGd2FYaG5NSllVMGU3V0Iwdz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-hpc-22.09-planning"
                         }, {
                             TEXT: "DB",
                             TIME: "15:00 - 16:00",
-                            ZOOM_LINK:"https://us06web.zoom.us/j/82020564057?pwd=bU5aL3ZmNDMwbkU0Sjd3UXg3MXRmdz09",
+                            ZOOM_LINK: "https://us06web.zoom.us/j/82020564057?pwd=bU5aL3ZmNDMwbkU0Sjd3UXg3MXRmdz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-DB-22.09-planning"
                         }, {
                             TEXT: "A-Tune",
                             TIME: "16:00 - 18:00",
-                            ZOOM_LINK:"https://us06web.zoom.us/j/83887950610?pwd=NlpORmZ6enZJQ05ycGlUMkVNZnh4Zz09",
+                            ZOOM_LINK: "https://us06web.zoom.us/j/83887950610?pwd=NlpORmZ6enZJQ05ycGlUMkVNZnh4Zz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-A-Tune-22.09-planning"
                         }]
                     },
@@ -263,18 +263,18 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "Networking",
                             TIME: "14:00 - 15:00",
-                            ZOOM_LINK:"https://us06web.zoom.us/j/84601840570?pwd=TXJZQ3k1ZWJJV3lBck9rOW1DaVdNQT09",
+                            ZOOM_LINK: "https://us06web.zoom.us/j/84601840570?pwd=TXJZQ3k1ZWJJV3lBck9rOW1DaVdNQT09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Networking-22.09-planning"
                         },
                         {
                             TEXT: "sig-Edge",
                             TIME: "15:00 - 16:00",
-                            ZOOM_LINK:"https://us06web.zoom.us/j/86155898147?pwd=L2orQkhkZTJkMjE0VnZpaFpkVnNXZz09",
+                            ZOOM_LINK: "https://us06web.zoom.us/j/86155898147?pwd=L2orQkhkZTJkMjE0VnZpaFpkVnNXZz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Edge-22.09-planning"
                         }, {
                             TEXT: "sig-high-performance-network",
                             TIME: "16:00 - 18:00",
-                            ZOOM_LINK:"https://us06web.zoom.us/j/82389423390?pwd=QlR2ZDB5Q25zNjFZUjQ1eEJxWjhJdz09",
+                            ZOOM_LINK: "https://us06web.zoom.us/j/82389423390?pwd=QlR2ZDB5Q25zNjFZUjQ1eEJxWjhJdz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-high-performance-networking-22.09-planning"
                         }]
                     },
@@ -286,12 +286,12 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-security-facility security-committee",
                             TIME: "14:00 - 16:00",
-                            ZOOM_LINK:"https://us06web.zoom.us/j/85092891389?pwd=eUNvQ1oyVWIzaWx4aTZtdDBoL0FnQT09",
+                            ZOOM_LINK: "https://us06web.zoom.us/j/85092891389?pwd=eUNvQ1oyVWIzaWx4aTZtdDBoL0FnQT09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-security-facility_and_sc-22.09-planning"
                         }, {
                             TEXT: "sig-Compatibility-Infra devkit",
                             TIME: "16:00 - 18:00",
-                            ZOOM_LINK:"https://us06web.zoom.us/j/84427536352?pwd=cUg5M2V4Y2JhRFVSekd3NjZEOU1Tdz09",
+                            ZOOM_LINK: "https://us06web.zoom.us/j/84427536352?pwd=cUg5M2V4Y2JhRFVSekd3NjZEOU1Tdz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Compatibility-Infra"
                         }]
                     },
@@ -303,23 +303,23 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-QA GNOME",
                             TIME: "14:00 - 16:00",
-                            ZOOM_LINK:"https://us06web.zoom.us/j/83618992238?pwd=RVRXS3ZtN3JPblBsbzE0eWp0ZVhvZz09",
+                            ZOOM_LINK: "https://us06web.zoom.us/j/83618992238?pwd=RVRXS3ZtN3JPblBsbzE0eWp0ZVhvZz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-QA-22.09-planning"
                         },
                         {
                             TEXT: "Sig HA",
                             TIME: "14:00 - 15:00",
-                            ZOOM_LINK:"https://us06web.zoom.us/j/86779884731?pwd=V2JXNTFBWmpwZGU0bXM2b2Jhdjl6UT09",
+                            ZOOM_LINK: "https://us06web.zoom.us/j/86779884731?pwd=V2JXNTFBWmpwZGU0bXM2b2Jhdjl6UT09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-HA-22.09-planning"
                         }, {
                             TEXT: "sig-reproducible-builds",
                             TIME: "16:00 - 17:00",
-                            ZOOM_LINK:"https://us06web.zoom.us/j/89429958765?pwd=OWpUUmRYbEJZOFU4bGlCNFA5Ujk5Zz09",
+                            ZOOM_LINK: "https://us06web.zoom.us/j/89429958765?pwd=OWpUUmRYbEJZOFU4bGlCNFA5Ujk5Zz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-reproducible-builds-22.09-planning"
                         }, {
                             TEXT: "sig-compliance",
                             TIME: "17:00 - 18:00",
-                            ZOOM_LINK:"https://us06web.zoom.us/j/84091252968?pwd=MXd1Z2R0dTZPV09wc2xOc1d6YnBxdz09",
+                            ZOOM_LINK: "https://us06web.zoom.us/j/84091252968?pwd=MXd1Z2R0dTZPV09wc2xOc1d6YnBxdz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-compliance-22.09-planing"
                         }]
                     },
@@ -331,17 +331,17 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-OpenDesign",
                             TIME: "14:00 - 15:00",
-                            ZOOM_LINK:"https://us06web.zoom.us/j/85064314358?pwd=UTZPVUNUU251S1FlQTZPZFRCVkdOQT09",
+                            ZOOM_LINK: "https://us06web.zoom.us/j/85064314358?pwd=UTZPVUNUU251S1FlQTZPZFRCVkdOQT09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OpenDesign-22.09-planning"
                         }, {
                             TEXT: "Doc G11N",
                             TIME: "15:00 - 17:00",
-                            ZOOM_LINK:"https://us06web.zoom.us/j/87805627521?pwd=ZzNjWUpYdzNId2p5dUdHVld5QVl2Zz09",
+                            ZOOM_LINK: "https://us06web.zoom.us/j/87805627521?pwd=ZzNjWUpYdzNId2p5dUdHVld5QVl2Zz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Doc-G11N-planning"
                         }, {
                             TEXT: "sig-Migration",
                             TIME: "17:00 - 18:00",
-                            ZOOM_LINK:"https://us06web.zoom.us/j/81510825922?pwd=dWNrTzRMM0JWL0NQOU5DdHkzUHJSZz09",
+                            ZOOM_LINK: "https://us06web.zoom.us/j/81510825922?pwd=dWNrTzRMM0JWL0NQOU5DdHkzUHJSZz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Migration-planning"
                         }]
                     },
@@ -355,7 +355,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "SIG-OKD",
                             TIME: "19:00 - 21:00",
-                            ZOOM_LINK:"https://us06web.zoom.us/j/83542269449?pwd=cjVKTENZaXdNWFJSRUJtUTkreUpKUT09",
+                            ZOOM_LINK: "https://us06web.zoom.us/j/83542269449?pwd=cjVKTENZaXdNWFJSRUJtUTkreUpKUT09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OKD-22.09-planning"
                         }]
                     },
@@ -367,7 +367,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "Storage",
                             TIME: "19:00 - 21:00",
-                            ZOOM_LINK:"https://us06web.zoom.us/j/82614532862?pwd=Nm5CS0FNeEdvRERsdjdFcnZTcERiQT09",
+                            ZOOM_LINK: "https://us06web.zoom.us/j/82614532862?pwd=Nm5CS0FNeEdvRERsdjdFcnZTcERiQT09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Storage-22.09-planning"
                         }]
                     },
@@ -379,7 +379,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-Java",
                             TIME: "19:00 - 20:00",
-                            ZOOM_LINK:"https://us06web.zoom.us/j/83080908770?pwd=QlVZTHNZRDZ2elZuZU5qTnNubHBEZz09",
+                            ZOOM_LINK: "https://us06web.zoom.us/j/83080908770?pwd=QlVZTHNZRDZ2elZuZU5qTnNubHBEZz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Java-22.09-planning"
                         }]
                     },
@@ -520,6 +520,358 @@ module.exports = {
                     },
                 ]
             }
+        },
+        CONSTRUCTION: {
+            WEB_TITLE: "/img/summit/summit2021/Co-construction/web-title.png",
+            MOBILE_TITLE: "/img/summit/summit2021/Co-construction/mobile-title.png",
+            HOST: {
+                TEXT_TITLE: "主办方",
+                LIST: [
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/openaton.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/openEulerlogo.png",
+                        LINK: ""
+                    }
+                ]
+            },
+            UNION: {
+                TEXT_TITLE: "联办单位",
+                LIST: [
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/huawei.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/qilinsoft.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/suse.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/tongxin.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/qilinxinan.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/puhua.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/intel.png",
+                        LINK: ""
+                    },
+                ]
+            },
+            CO_ORGANIZER: {
+                TEXT_TITLE: "协办单位",
+                LIST: [
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/softstone.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/turbolinux.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/zhongkedachuang.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/iscas.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/phytium.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/dongfangtong.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/fusion.png",
+                        LINK: ""
+                    },
+                ]
+            },
+            SUPPORT: {
+                TEXT_TITLE: "支持单位",
+                LIST: [
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/jdcloud.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/xinlang.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/kengpeng.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/zhongkedachuang.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/tianyuan.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/bessystem.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/qingcloud.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/starfive.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/winhong.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/asiainfo.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/nuclei.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/xsky.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/guoxing.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/iiioka.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/isstech.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/huayun.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/kaifazhineng.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/iscas.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/ruihe.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/langcher.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/xinchen.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/youxi.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/beilian.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/talkweb.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/shenzhou.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/huanghe.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/baixing.png",
+                        LINK: ""
+                    },
+                ]
+            },
+            FOUNDATION: {
+                TEXT_TITLE: "友好基金会",
+                LIST: [
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/linux.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/openinfra.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/linaro.png",
+                        LINK: ""
+                    },
+                ]
+            }
+        },
+        LECTURER: {
+            LECTURER_BANNER: {
+                web: '/img/summit/summit2021/lecturer/sperkertitle.png',
+                mobile: '/img/summit/summit2021/lecturer/sperkertitle_mo.png'
+            },
+            LECTURER_LIST: [
+                {
+                    IMG: '/img/summit/summit2021/lecturer/yangtao.png',
+                    NAME: '杨涛',
+                    POSITION: '开放原子开源基金会 理事长'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/jiangdayong.png',
+                    NAME: '江大勇',
+                    POSITION: '欧拉开源社区理事长'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/wuyanjun.png',
+                    NAME: '武延军',
+                    POSITION: '欧拉开源社区副理事长'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/qiuchengfeng.png',
+                    NAME: '邱成锋',
+                    POSITION: '欧拉开源社区秘书长'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/huxinwei.png',
+                    NAME: '胡欣蔚',
+                    POSITION: '欧拉开源社区 技术委员会主席'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/chenhaibo.png',
+                    NAME: '陈海波',
+                    POSITION: '上海交通大学教授 华为操作系统首席科学家'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/gaowei.png',
+                    NAME: '高巍',
+                    POSITION: '欧拉开源社区 用户委员会主席'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/qinxiaokang.png',
+                    NAME: '秦小康',
+                    POSITION: 'SUSE大中华区总裁'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/wangpan.png',
+                    NAME: '王攀',
+                    POSITION: '麒麟信安副总裁'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/zhanglei.png',
+                    NAME: '张磊',
+                    POSITION: '统信软件CTO'
+                },
+            ],
+            PUBLISHER_BANNER: {
+                web: '/img/summit/summit2021/lecturer/publishertitle.png',
+                mobile: '/img/summit/summit2021/lecturer/publishertitle_mo.png'
+            },
+            PUBLISHER_LIST: [
+                {
+                    IMG: '/img/summit/summit2021/lecturer/guohanjun.png',
+                    NAME: '郭寒军',
+                    POSITION: '欧拉开源社区内核 Maintainer'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/liyong.png',
+                    NAME: '李勇',
+                    POSITION: 'SUSE软件工程顾问'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/yixiujiang.png',
+                    NAME: '尹秀江',
+                    POSITION: '麒麟软件工程师'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/yanshuanghai.png',
+                    NAME: '严海双',
+                    POSITION: '中移云能力中心 内核研发专家'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/shenxiang.png',
+                    NAME: '沈翔',
+                    POSITION: '普华基础软件总经理'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/dukaitian.png',
+                    NAME: '杜开田',
+                    POSITION: '欧拉开源社区 兼容性SIG组Maintainer'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/yeqinglong.png',
+                    NAME: '叶青龙',
+                    POSITION: '服务器操作系统项目总监 欧拉开源社区 技术委员会委员'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/liujingang.png',
+                    NAME: '刘金刚',
+                    POSITION: '欧拉开源社区 技术委员会委员'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/caihaomin.png',
+                    NAME: '蔡灏旻',
+                    POSITION: '华为容器团队架构师'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/shiyong.png',
+                    NAME: '石勇',
+                    POSITION: '欧拉开源社区 技术委员会委员'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/panjianfeng.png',
+                    NAME: '潘剑锋',
+                    POSITION: '360集团副总裁 首席科学家'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/yangliu.png',
+                    NAME: '阳柳',
+                    POSITION: '飞腾资深软件架构师'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/xiekunxun.png',
+                    NAME: '谢焜勋',
+                    POSITION: '华为嵌入式操作系统 技术专家'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/lishouyong.png',
+                    NAME: '刘寿永',
+                    POSITION: ' 中科创达首席架构师'
+                },
+                {
+                    IMG: '/img/summit/summit2021/lecturer/chenjingwei.png',
+                    NAME: '陈景伟',
+                    POSITION: ' 赛昉生态市场高级总监'
+                },
+            ]
         },
         FOOTER: [
             { SUMMIT: 'openEuler Summit 2021', LINK: '/interaction/summit-list/summit2021/' },

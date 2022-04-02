@@ -64,18 +64,6 @@
             <div class="second-day" v-if="agendaTab === 1">
               <div class="time-box-second">
                 <el-tabs v-model="showTab" @tab-click="zoneTabClick">
-                  <!-- <el-tab-pane
-                    name="morning"
-                    :label="agendaData.AGENDA_DATA_14.TIME_TITLE[0].ZH"
-                  ></el-tab-pane>
-                  <el-tab-pane
-                    name="afternoon"
-                    :label="agendaData.AGENDA_DATA_14.TIME_TITLE[1].ZH"
-                  ></el-tab-pane>
-                  <el-tab-pane
-                    name="night"
-                    :label="agendaData.AGENDA_DATA_14.TIME_TITLE[2].ZH"
-                  ></el-tab-pane> -->
                   <el-tab-pane
                     v-for="(item, index) in agendaData.AGENDA_DATA_14
                       .TIME_TITLE"
@@ -274,12 +262,24 @@
                     </div>
                     <div
                       class="mo-render-detail"
-                      v-for="item2 in item.SCHEDULE_CARD"
+                      v-for="(item2, index2) in item.SCHEDULE_CARD"
                       :key="item2.TEXT"
                     >
                       <div class="mo-detail-left">
-                        <p class="mo-detail-text">{{ item2.TEXT }}</p>
-                        <p class="mo-detail-time">{{ item2.TIEM }}</p>
+                        <slot
+                          v-if="tabIndex === 0 && index === 7 && index2 !== 2"
+                        >
+                          <p class="mo-detail-text">{{ item2.THE_TEXT }}</p>
+                          <p class="mo-detail-time">
+                            {{ item2.THE_TIME }}
+                          </p>
+                        </slot>
+                        <p class="mo-detail-text" v-if="!item2.THE_TIME">
+                          {{ item2.TEXT }}
+                        </p>
+                        <p class="mo-detail-time" v-if="!item2.THE_TIME">
+                          {{ item2.TIME }}
+                        </p>
                       </div>
                       <div class="mo-detail-right card-right">
                         <div
@@ -327,6 +327,51 @@
           </div>
         </div>
       </div>
+      <div class="construction" id="construction">
+        <div class="construction-title">
+          <img class="web" v-lazy="construction.WEB_TITLE" alt="" />
+          <img class="mobile" v-lazy="construction.MOBILE_TITLE" alt="" />
+        </div>
+        <div class="guidance">
+          <div class="text-title">
+            {{ construction.HOST.TEXT_TITLE }}
+          </div>
+          <div class="img-list">
+            <img
+              v-lazy="item.IMG"
+              alt=""
+              v-for="(item, index) in construction.HOST.LIST"
+              :key="index"
+            />
+          </div>
+        </div>
+        <div class="host">
+          <div class="text-title">
+            {{ construction.UNION.TEXT_TITLE }}
+          </div>
+          <div class="img-list">
+            <img
+              v-lazy="item.IMG"
+              alt=""
+              v-for="(item, index) in construction.UNION.LIST"
+              :key="index"
+            />
+          </div>
+        </div>
+        <div class="host">
+          <div class="text-title">
+            {{ construction.CO_ORGANIZER.TEXT_TITLE }}
+          </div>
+          <div class="img-list">
+            <img
+              v-lazy="item.IMG"
+              alt=""
+              v-for="(item, index) in construction.CO_ORGANIZER.LIST"
+              :key="index"
+            />
+          </div>
+        </div>
+      </div>
       <div class="review-wrapper">
         <div class="title">
           <span>{{ i18n.summit.HIGHLIGHTS }}</span>
@@ -356,15 +401,15 @@ export default {
       agendaTab: 0,
       agendaData: [],
       secondDayData: [],
+      construction: [],
     };
   },
-  mounted() {
-    // this.zoneTabClick()
-  },
+  mounted() {},
   created() {
     this.i18nData = this.i18n.devday2022;
     this.agendaData = this.i18nData.AGENDA;
     this.secondDayData = this.agendaData.AGENDA_DATA_14.SCHEDULE;
+    this.construction = this.i18n.devday2022.CONSTRUCTION;
   },
   methods: {
     tabClick(index) {
@@ -396,6 +441,17 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+.web {
+  @media screen and (max-width: 1120px) {
+    display: none;
+  }
+}
+.mobile {
+  display: none;
+  @media screen and (max-width: 1120px) {
+    display: inline-block;
+  }
+}
 .h5-banner {
   display: none;
   margin-bottom: 40px;
@@ -411,12 +467,12 @@ export default {
     width: 375px;
     margin: 0 auto;
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1120px) {
     display: block;
   }
 }
 .banner {
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1120px) {
     display: none;
   }
   height: 380px;
@@ -441,7 +497,7 @@ export default {
   width: 1120px;
   margin: 0 auto;
   margin-bottom: 100px;
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1120px) {
     margin-bottom: 60px;
     padding: 0 10px;
     width: 100%;
@@ -451,7 +507,7 @@ export default {
     color: #000;
     font-size: 20px;
     line-height: 40px;
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1120px) {
       padding: 0 20px;
       font-size: 14px;
       line-height: 26px;
@@ -470,7 +526,7 @@ export default {
         margin-top: 4px;
       }
     }
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1120px) {
       align-items: center;
       flex-direction: column;
       justify-content: center;
@@ -492,13 +548,13 @@ export default {
       margin-bottom: 40px;
       text-align: center;
       .pc {
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 1120px) {
           display: none;
         }
       }
       .mo {
         display: none;
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 1120px) {
           display: inline-block;
         }
       }
@@ -635,21 +691,21 @@ export default {
         }
         .second-day {
           .time-box-second {
-            .is-active {
-              color: #002fa7;
-            }
             .el-tabs__nav-wrap::after {
               display: none;
             }
             .el-tabs__item {
               font-size: 20px;
               font-family: FZLTCHJW--GB1-0, FZLTCHJW--GB1;
-              color: #002fa7;
+              color: rgba(0, 0, 0, 0.5);
               line-height: 24px;
-              @media screen and (max-width: 1000px) {
+              @media screen and (max-width: 1120px) {
                 font-size: 16px;
                 line-height: 40px;
               }
+            }
+            .is-active {
+              color: #002fa7;
             }
             .el-tabs__active-bar {
               height: 3px;
@@ -677,7 +733,7 @@ export default {
             display: flex;
             margin-top: 15px;
             .second-left {
-              @media screen and (max-width: 1000px) {
+              @media screen and (max-width: 1120px) {
                 display: none;
               }
               .left-item {
@@ -707,7 +763,7 @@ export default {
               }
             }
             .second-right {
-              @media screen and (max-width: 1000px) {
+              @media screen and (max-width: 1120px) {
                 display: none;
               }
               margin-left: 30px;
@@ -721,10 +777,14 @@ export default {
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                  width: 282px;
+                  margin-right: 16px;
+                  width: 100%;
                   height: 48px;
                   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
                   border-radius: 8px;
+                }
+                .right-title-item:last-child {
+                  margin: 0;
                 }
               }
               .right-card-box {
@@ -737,7 +797,7 @@ export default {
                     align-items: center;
                     justify-content: space-between;
                     line-height: 30px;
-                    margin-right: 12px;
+                    margin-right: 16px;
                     padding: 17px 0 17px 24px;
                     height: 94px;
                     word-spacing: 100vw;
@@ -781,7 +841,7 @@ export default {
                   .right-card {
                     margin: 0;
                     flex: none;
-                    width: 576px;
+                    width: 575px;
                     height: 40px;
                     word-spacing: normal;
                     .card-right {
@@ -805,8 +865,8 @@ export default {
                     margin-bottom: 14px;
                   }
                   .right-card:first-child {
-                    margin-right: 12px;
-                    width: 282px;
+                    margin-right: 16px;
+                    width: 279px;
                     height: 94px;
                     float: left;
 
@@ -827,10 +887,6 @@ export default {
                       }
                     }
                   }
-                  // .right-card:nth-child(2) {
-                  //   width: 208px;
-                  //   float: left;
-                  // }
                 }
                 .special-card {
                   position: relative;
@@ -891,8 +947,8 @@ export default {
                     // margin-right: 12px;
                   }
                   .right-card:nth-child(1) {
-                    width: 429px;
-                    margin-right: 12px;
+                    width: 432px;
+                    margin-right: 16px;
                     margin-bottom: 12px;
                   }
                   // .right-card:nth-child(4) {
@@ -915,7 +971,7 @@ export default {
                 .right-card-column {
                   .double {
                     flex: none;
-                    width: 429px;
+                    width: 432px;
                   }
                   .onepart {
                     flex: none;
@@ -927,14 +983,14 @@ export default {
             .night {
               .right-title {
                 .right-title-item {
-                  width: 429px;
+                  width: 432px;
                 }
               }
               .right-card-box {
                 .right-card-column {
                   .onepart {
                     flex: none;
-                    width: 429px;
+                    width: 432px;
                   }
                 }
               }
@@ -981,7 +1037,7 @@ export default {
                   background-repeat: no-repeat;
                   background-image: url(/img/summit/devday-2022/agenda/mo_sig.png);
                   h4:first-child {
-                    margin-bottom: 10px;
+                    margin-bottom: 3px;
                   }
                 }
                 .mo-render-detail {
@@ -1023,7 +1079,14 @@ export default {
                     }
                   }
                   .mo-detail-text {
+                    word-spacing: normal;
                     line-height: 20px;
+                  }
+                  .mo-detail-time {
+                    color: #555;
+                    word-spacing: normal;
+                  }
+                  .mo-detail-left {
                   }
                 }
               }
@@ -1083,6 +1146,71 @@ export default {
       }
     }
   }
+  .construction {
+    text-align: center;
+    .construction-title {
+      margin: 40px 0;
+    }
+    .text-title {
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-family: FZLTHJW--GB1-0, FZLTHJW--GB1;
+      color: #000000;
+      line-height: 46px;
+    }
+    .img-list {
+      margin: 0 auto 40px auto;
+      width: 1120px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      flex-direction: row;
+      margin-bottom: 40px;
+      img {
+        cursor: pointer;
+        width: 280px;
+        height: 80px;
+      }
+      @media screen and (max-width: 1120px) {
+        margin-top: 40px;
+        width: 100%;
+        flex-direction: column;
+        img {
+          margin: 0 auto 10px auto;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .guidance {
+      .img-list {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    @media screen and (max-width: 1120px) {
+      .construction-title {
+        margin: 30px 0;
+        img {
+          width: 335px;
+          height: 38px;
+        }
+      }
+      .text-title {
+        margin-bottom: 0;
+        font-size: 16px;
+      }
+      .img-list {
+        margin-bottom: 30px;
+        img {
+          width: 210px;
+          height: 60px;
+        }
+      }
+    }
+  }
   .review-wrapper {
     @media screen and (max-width: 1120px) {
       padding: 0 20px;
@@ -1090,17 +1218,17 @@ export default {
     .title {
       font-size: 26px;
       margin-bottom: 32px;
-      @media screen and (max-width: 1000px) {
+      @media screen and (max-width: 1120px) {
         margin-bottom: 10px;
       }
       span {
         vertical-align: middle;
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 1120px) {
           font-size: 16px;
         }
       }
       img {
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 1120px) {
           display: none;
         }
         width: 28px;
@@ -1114,7 +1242,7 @@ export default {
       line-height: 24px;
       margin-bottom: 24px;
       cursor: pointer;
-      @media screen and (max-width: 1000px) {
+      @media screen and (max-width: 1120px) {
         margin-bottom: 12px;
         font-size: 14px;
       }
