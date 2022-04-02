@@ -190,7 +190,13 @@
                             @click="goInstall(item2.ZOOM_LINK)"
                           >
                             <img
-                              src="/img/summit/devday-2022/agenda/dialogue.svg"
+                              class="icon-none"
+                              src="/img/summit/devday-2022/agenda/dialogue.png"
+                              alt=""
+                            />
+                            <img
+                              class="icon-active"
+                              src="/img/summit/devday-2022/agenda/dialogue_active.png"
                               alt=""
                             />
                           </div>
@@ -199,7 +205,13 @@
                             @click="goInstall(item2.ETHERPAD)"
                           >
                             <img
+                              class="icon-none"
                               src="/img/summit/devday-2022/agenda/etherpad.png"
+                              alt=""
+                            />
+                            <img
+                              class="icon-active"
+                              src="/img/summit/devday-2022/agenda/etherpad_active.png"
                               alt=""
                             />
                           </div>
@@ -237,8 +249,14 @@
                             class="dialogue"
                             @click="goInstall(item2.ZOOM_LINK)"
                           >
+                              <img
+                              class="icon-none"
+                              src="/img/summit/devday-2022/agenda/dialogue.png"
+                              alt=""
+                            />
                             <img
-                              src="/img/summit/devday-2022/agenda/dialogue.svg"
+                              class="icon-active"
+                              src="/img/summit/devday-2022/agenda/dialogue_active.png"
                               alt=""
                             />
                           </div>
@@ -247,7 +265,13 @@
                             @click="goInstall(item2.ETHERPAD)"
                           >
                             <img
+                              class="icon-none"
                               src="/img/summit/devday-2022/agenda/etherpad.png"
+                              alt=""
+                            />
+                            <img
+                              class="icon-active"
+                              src="/img/summit/devday-2022/agenda/etherpad_active.png"
                               alt=""
                             />
                           </div>
@@ -300,19 +324,31 @@
                           class="mo-right-top dialogue"
                           @click="goInstall(item2.ZOOM_LINK)"
                         >
-                          <img
-                            src="/img/summit/devday-2022/agenda/dialogue.png"
-                            alt=""
-                          />
+                           <img
+                              class="icon-none"
+                              src="/img/summit/devday-2022/agenda/dialogue.png"
+                              alt=""
+                            />
+                            <img
+                              class="icon-active"
+                              src="/img/summit/devday-2022/agenda/dialogue_active.png"
+                              alt=""
+                            />
                         </div>
                         <div
                           class="mo-right-botton etherpad"
                           @click="goInstall(item2.ETHERPAD)"
                         >
-                          <img
-                            src="/img/summit/devday-2022/agenda/etherpad.png"
-                            alt=""
-                          />
+                           <img
+                              class="icon-none"
+                              src="/img/summit/devday-2022/agenda/etherpad.png"
+                              alt=""
+                            />
+                            <img
+                              class="icon-active"
+                              src="/img/summit/devday-2022/agenda/etherpad_active.png"
+                              alt=""
+                            />
                         </div>
                       </div>
                     </div>
@@ -1090,6 +1126,9 @@ export default {
                       img {
                         width: 12px;
                       }
+                      .icon-none {
+                        display: none;
+                      }
                     }
                     .etherpad {
                       margin-top: 2px;
@@ -1098,6 +1137,12 @@ export default {
                     .dialogue:hover,
                     .etherpad:hover {
                       background-color: #002fa7;
+                      .icon-none {
+                        display: block;
+                      }
+                      .icon-active {
+                        display: none;
+                      }
                     }
                   }
                   .mo-detail-text {
