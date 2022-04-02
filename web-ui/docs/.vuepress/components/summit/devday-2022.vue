@@ -118,19 +118,33 @@
                         <div class="card-right">
                           <div
                             class="dialogue"
+                            title="会议链接"
                             @click="goInstall(item2.ZOOM_LINK)"
                           >
                             <img
-                              src="/img/summit/devday-2022/agenda/dialogue.svg"
+                              class="icon-none"
+                              src="/img/summit/devday-2022/agenda/dialogue.png"
+                              alt=""
+                            />
+                            <img
+                              class="icon-active"
+                              src="/img/summit/devday-2022/agenda/dialogue_active.png"
                               alt=""
                             />
                           </div>
                           <div
                             class="etherpad"
                             @click="goInstall(item2.ETHERPAD)"
+                            title="Etherpad"
                           >
                             <img
+                              class="icon-none"
                               src="/img/summit/devday-2022/agenda/etherpad.png"
+                              alt=""
+                            />
+                            <img
+                              class="icon-active"
+                              src="/img/summit/devday-2022/agenda/etherpad_active.png"
                               alt=""
                             />
                           </div>
@@ -681,9 +695,9 @@ export default {
             .schedule-item:first-child {
               margin-left: 22px;
             }
-            .schedule-item:hover {
-              box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.2);
-            }
+            // .schedule-item:hover {
+            //   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.2);
+            // }
           }
         }
         .agenda-item:last-child {
@@ -815,6 +829,9 @@ export default {
                         color: #002fa7;
                         background: rgb(229, 234, 246);
                         border-radius: 0px 8px 0px 0px;
+                        .icon-none {
+                          display: none;
+                        }
                       }
                       .etherpad {
                         margin-top: 2px;
@@ -823,6 +840,12 @@ export default {
                       .dialogue:hover,
                       .etherpad:hover {
                         background-color: #002fa7;
+                        .icon-none {
+                          display: block;
+                        }
+                        .icon-active {
+                          display: none;
+                        }
                       }
                     }
                   }
