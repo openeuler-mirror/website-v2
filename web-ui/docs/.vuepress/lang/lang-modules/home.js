@@ -43,9 +43,9 @@ module.exports = {
         ],
         HOME_NEWRELEASE: [
             {
-                MOBILE_IMG: "url('/img/summit/devday-2022/home_devday_mo.png')",
+                MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_mo.png')",
                 PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_pc.png')",
-                LINK:'/interaction/summit-list/devday2022/'
+                LINK: '/interaction/summit-list/devday2022/'
             },
         ],
         HOME_INTRODUCE: {
@@ -124,8 +124,8 @@ module.exports = {
         },
         HOME_ROUND: {
             ROUND_TITLE: '我们正在不断成长',
-            VIEW_DETAIL:'查看详情',
-            VIEW_DETAIL_LINK:'https://datastat.openeuler.org/zh/overview',
+            VIEW_DETAIL: '查看详情',
+            VIEW_DETAIL_LINK: 'https://datastat.openeuler.org/zh/overview',
             ROUND_LIST: [
                 {
                     ROUND_VALUE: '',
@@ -596,6 +596,9 @@ module.exports = {
                 LEFT_IMG_LINK: 'https://www.authing.cn/',
                 LEFT_IMG_PC: '/img/home/link/Authing_pc.png',
                 LEFT_IMG_MOBILE: '/img/home/link/Authing_mo.png',
+                // RIGHT_IMG_LINK: 'https://www.xfusion.com/cn/',
+                // RIGHT_IMG_PC: '/img/home/link/xfusion.png',
+                // RIGHT_IMG_MOBILE: '/img/home/link/xfusion_mobile.png',
             }
         ],
         MORE: "更多",
@@ -630,9 +633,9 @@ module.exports = {
             {
                 MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_mo.png')",
                 PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_pc.png')",
-                LINK:'/interaction/summit-list/devday2022/'
+                LINK: '/interaction/summit-list/devday2022/'
             },
-    ],
+        ],
         ROOM_LEFT_IMG: [
             {
                 IMG: '/img/home/eventImg.png',
@@ -724,8 +727,8 @@ module.exports = {
         },
         HOME_ROUND: {
             ROUND_TITLE: 'We Are Thriving',
-            VIEW_DETAIL:'View details',
-            VIEW_DETAIL_LINK:'https://datastat.openeuler.org/en/overview',
+            VIEW_DETAIL: 'View details',
+            VIEW_DETAIL_LINK: 'https://datastat.openeuler.org/en/overview',
             ROUND_LIST: [
                 {
                     ROUND_VALUE: '',
@@ -1179,6 +1182,9 @@ module.exports = {
                 LEFT_IMG_LINK: 'https://www.authing.cn/',
                 LEFT_IMG_PC: '/img/home/link/Authing_pc.png',
                 LEFT_IMG_MOBILE: '/img/home/link/Authing_mo.png',
+                // RIGHT_IMG_LINK: 'https://www.xfusion.com/cn/',
+                // RIGHT_IMG_PC: '/img/home/link/xfusion.png',
+                // RIGHT_IMG_MOBILE: '/img/home/link/xfusion_mobile.png',
             }
         ],
         MORE: "Read More",
@@ -1213,7 +1219,7 @@ module.exports = {
             {
                 MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_mo.png')",
                 PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_pc.png')",
-                LINK:'/interaction/summit-list/devday2022/'
+                LINK: '/interaction/summit-list/devday2022/'
             },
         ],
         ROOM_LEFT_IMG: [
@@ -1308,8 +1314,8 @@ module.exports = {
         },
         HOME_ROUND: {
             ROUND_TITLE: 'Мы процветаем',
-            VIEW_DETAIL:'View details',
-            VIEW_DETAIL_LINK:'https://datastat.openeuler.org/en/overview',
+            VIEW_DETAIL: 'View details',
+            VIEW_DETAIL_LINK: 'https://datastat.openeuler.org/en/overview',
             ROUND_LIST: [
                 {
                     ROUND_VALUE: '',
@@ -1763,6 +1769,9 @@ module.exports = {
                 LEFT_IMG_LINK: 'https://www.authing.cn/',
                 LEFT_IMG_PC: '/img/home/link/Authing_pc.png',
                 LEFT_IMG_MOBILE: '/img/home/link/Authing_mo.png',
+                // RIGHT_IMG_LINK: 'https://www.xfusion.com/cn/',
+                // RIGHT_IMG_PC: '/img/home/link/xfusion.png',
+                // RIGHT_IMG_MOBILE: '/img/home/link/xfusion_mobile.png',
             }
         ],
         MORE: "Read More",

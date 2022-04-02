@@ -53,7 +53,7 @@ module.exports = {
                         },
                         SCHEDULE_CARD: [{
                             TEXT: "高校开发者专场 sig-OSCourse",
-                            TIME: "09：00 - 12：00",
+                            TIME: "09:00 - 12:00",
                             ZOOM_LINK: "https://us06web.zoom.us/webinar/register/WN_d8dBvmSJSXKVUPVAH-0qWQ",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OSCourse-22.09-planning"
                         }]
@@ -61,11 +61,11 @@ module.exports = {
                     {
                         TITLE: {
                             ZH: "云计算 & 云原生",
-                            EN: "Cloud Comp"
+                            EN: "Cloud Computing & Cloud Native"
                         },
                         SCHEDULE_CARD: [{
                             TEXT: "OpenStack DPU",
-                            TIME: "09：00 - 12：00",
+                            TIME: "09:00 - 12:00",
                             ZOOM_LINK: "https://us06web.zoom.us/j/84084650733?pwd=cXpJYjMvckxnS0pEd0h2eVhrbXc1QT09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-openstack-22.09-planning"
                         }]
@@ -77,7 +77,7 @@ module.exports = {
                         },
                         SCHEDULE_CARD: [{
                             TEXT: "sig-Industrial-Control",
-                            TIME: "09：00 - 10：00",
+                            TIME: "09:00 - 10:00",
                             ZOOM_LINK: "https://us06web.zoom.us/j/84877496685?pwd=N1BrME5ybFJLcXNsNDJEbzh2UjFVQT09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Industrial-Control-22.09-planning"
                         }, {
@@ -87,7 +87,7 @@ module.exports = {
                             ETHERPAD: "https://etherpad.openeuler.org/p/openEuler2209-sig-AccLib-ODD"
                         }, {
                             TEXT: "sig-embedded yocto",
-                            TIME: "11：00 - 12：00",
+                            TIME: "11:00 - 12:00",
                             ZOOM_LINK: "https://us06web.zoom.us/j/85810034120?pwd=WlBWbTdMNm9pNURLNVowbDRQUjRyUT09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-embedded-22.09-planning"
                         }]
@@ -99,12 +99,12 @@ module.exports = {
                         },
                         SCHEDULE_CARD: [{
                             TEXT: "sig-AI-BigData",
-                            TIME: "09：00 - 11：00",
+                            TIME: "09:00 - 11:00",
                             ZOOM_LINK: "https://us06web.zoom.us/j/84477792162?pwd=WWJrZFgyZHdiREFqd3pFY2J6Tkkxdz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-AI-BigData-22.09-planning"
                         }, {
                             TEXT: "sig-OPS",
-                            TIME: "11：00 - 12：00",
+                            TIME: "11:00 - 12:00",
                             ZOOM_LINK: "https://us06web.zoom.us/j/89259320118?pwd=aVRvM2gyNEQvTjVKTTlQQThud0N4UT09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OPS-22.09-planning"
                         }]
@@ -116,7 +116,7 @@ module.exports = {
                         },
                         SCHEDULE_CARD: [{
                             TEXT: "sig-ceph",
-                            TIME: "09：00 - 12：00",
+                            TIME: "09:00 - 12:00",
                             ZOOM_LINK: "https://us06web.zoom.us/j/84104066825?pwd=bmlmUFgrVjQ3dVlrL05FUCtRNkRNUT09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Ceph-22.09-planning"
                         }]
@@ -128,12 +128,12 @@ module.exports = {
                         },
                         SCHEDULE_CARD: [{
                             TEXT: "Infrastructure sig-Gatekeeper",
-                            TIME: "09：00 - 11：00",
+                            TIME: "09:00 - 11:00",
                             ZOOM_LINK: "https://us06web.zoom.us/j/85390779511?pwd=UEdTZFNucHBrTW9YZVU2NTFwL0pkZz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Infrastructure-22.09-planning"
                         }, {
                             TEXT: "sig-OS-Builder",
-                            TIME: "11：00 - 12：00",
+                            TIME: "11:00 - 12:00",
                             ZOOM_LINK: "https://us06web.zoom.us/j/81024622080?pwd=eUZLTWtEU0xFTzdaVFF5K3Z3aFhYZz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OS-Builder-22.09-planning"
                         }]
@@ -145,12 +145,12 @@ module.exports = {
                         },
                         SCHEDULE_CARD: [{
                             TEXT: "Release",
-                            TIME: "09：00 - 11：00",
+                            TIME: "09:00 - 11:00",
                             ZOOM_LINK: "https://us06web.zoom.us/j/81086933976?pwd=WE01QThBV3B6RHZUZi94U2VVcTFPdz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-release-22.09-planning"
                         }, {
                             TEXT: "Compiler",
-                            TIME: "11：00 - 12：00",
+                            TIME: "11:00 - 12:00",
                             ZOOM_LINK: "https://us06web.zoom.us/j/88158736802?pwd=YVdvc2VUUmpNMGRkZXV1WXpqc280Zz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Compiler-22.09-planning"
                         }]
@@ -167,14 +167,14 @@ module.exports = {
                             ZOOM_LINK: "https://us06web.zoom.us/j/85641837636?pwd=eXB3VTVDQytOVFZlWitrNkVmbTNGZz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-UKUI-planning"
                         }, {
-                            TEXT: "sig-CICD 09：30-11：00",
+                            TEXT: "sig-CICD 09:30-11:00",
                             THE_TEXT: "sig-CICD",
-                            THE_TIME: "09：30 - 11：00",
+                            THE_TIME: "09:30 - 11:00",
                             ZOOM_LINK: "https://us06web.zoom.us/j/84141641538?pwd=ck1WbzZRVXpqcEQ5aWhrbHo2L1NSdz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-CICD-planning"
                         }, {
                             TEXT: "Application System-tools",
-                            TIME: "11：00 - 12：00",
+                            TIME: "11:00 - 12:00",
                             ZOOM_LINK: "https://us06web.zoom.us/j/84275719073?pwd=ZDdjS2VQMjQ0VW9RZ1ErNlI3VW5kdz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-application-systemtools-planning"
                         }]
@@ -196,7 +196,7 @@ module.exports = {
                     {
                         TITLE: {
                             ZH: "云计算 & 云原生",
-                            EN: "Cloud Comp"
+                            EN: "Cloud Computing & Cloud Native"
                         },
                         SCHEDULE_CARD: [{
                             TEXT: "sig-CloudNative iSula golang",
@@ -350,7 +350,7 @@ module.exports = {
                     {
                         TITLE: {
                             ZH: "云计算 & 云原生",
-                            EN: "Cloud Comp"
+                            EN: "Cloud Computing & Cloud Native"
                         },
                         SCHEDULE_CARD: [{
                             TEXT: "SIG-OKD",
@@ -395,7 +395,7 @@ module.exports = {
                         },
                         {
                             ZH: "云计算 & 云原生",
-                            EN: "Cloud Comp"
+                            EN: "Cloud Computing & Cloud Native"
                         },
                         {
                             ZH: "硬件使能",
@@ -432,7 +432,7 @@ module.exports = {
                         },
                         {
                             ZH: "云计算 & 云原生",
-                            EN: "Cloud Comp"
+                            EN: "Cloud Computing & Cloud Native"
                         },
                         {
                             ZH: "硬件使能",
@@ -465,7 +465,7 @@ module.exports = {
                         },
                         {
                             ZH: "云计算 & 云原生",
-                            EN: "Cloud Comp"
+                            EN: "Cloud Computing & Cloud Native"
                         },
                         {
                             ZH: "存储 & 网络",

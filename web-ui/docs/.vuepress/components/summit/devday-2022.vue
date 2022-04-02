@@ -283,17 +283,17 @@
                         <slot
                           v-if="tabIndex === 0 && index === 7 && index2 !== 2"
                         >
-                          <p class="mo-detail-text">{{ item2.THE_TEXT }}</p>
-                          <p class="mo-detail-time">
+                          <div class="mo-detail-text">{{ item2.THE_TEXT }}</div>
+                          <div class="mo-detail-time">
                             {{ item2.THE_TIME }}
-                          </p>
+                          </div>
                         </slot>
-                        <p class="mo-detail-text" v-if="!item2.THE_TIME">
+                        <div class="mo-detail-text" v-if="!item2.THE_TIME">
                           {{ item2.TEXT }}
-                        </p>
-                        <p class="mo-detail-time" v-if="!item2.THE_TIME">
+                        </div>
+                        <div class="mo-detail-time" v-if="!item2.THE_TIME">
                           {{ item2.TIME }}
-                        </p>
+                        </div>
                       </div>
                       <div class="mo-detail-right card-right">
                         <div
@@ -765,7 +765,7 @@ export default {
                 background-size: cover;
                 background-image: url(/img/summit/devday-2022/agenda/second_sig.png);
                 .second-en {
-                  font-size: 16px;
+                  font-size: 14px;
                   margin-top: 10px;
                 }
               }
@@ -1072,7 +1072,6 @@ export default {
                   padding: 11px 0 11px 24px;
                   width: 100%;
                   height: 70px;
-                  word-spacing: 100vw;
                   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
                   border-radius: 8px;
                   .mo-detail-right {
