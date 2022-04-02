@@ -1,11 +1,11 @@
 ---
 title: Руководство по портированию базы данных MySQL 5.7.21 (openEuler 20.03 LTS SP1) 
-date: 05.01.2022. 
+date: 2022.01.05 
 tags: 
     - MySQL
     - Пример портирования
 sig: sig-Compatibility-Infra
-archives: 01.2022
+archives: 2022.01
 author: xielihao
 summary: принципы и примеры портирования базы данных MySQL 5.7.21
 ---
