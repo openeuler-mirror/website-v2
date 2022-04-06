@@ -35,7 +35,7 @@
                     <div class="first-code">
                         <img src="/img/home/firstCode-mob.png" alt="">
                     </div>
-                    <div class="letsPlay" @click="go('https://playground.osinfra.cn/')" >
+                    <div class="letsPlay" @click="go('https://moocstudio.openeuler.sh/')" >
                         <img src="/img/home/letsPlay.png" alt="">
                     </div>
                 </div>
