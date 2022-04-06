@@ -1135,7 +1135,7 @@ module.exports = {
                 {
                     IMG: '/img/summit/devday-2022/lecturer/wangjiangtao.png',
                     NAME: '王江涛',
-                    POSITION: ['普华基础软件资深技术专家']
+                    POSITION: ['普华基础软件','资深技术专家']
                 },
                 {
                     IMG: '/img/summit/devday-2022/lecturer/wangyueliang.png',

@@ -334,7 +334,7 @@
         <div
           class="lecturer-box"
           v-fade
-          v-if="lecturerData.LECTURER_LIST.length && !isShowH5"
+          v-if="lecturerData.LECTURER_LIST.length"
         >
           <div
             class="item fade-in"
@@ -344,21 +344,6 @@
             <img v-lazy="item.IMG" alt="" />
             <p>{{ item.NAME }}</p>
             <p v-for="item2 in item.POSITION" :key="item2">{{ item2 }}</p>
-          </div>
-        </div>
-        <div
-          class="lecturer-box"
-          v-fade
-          v-if="lecturerData.LECTURER_LIST.length && isShowH5"
-        >
-          <div
-            :class="['item', 'fade-in']"
-            v-for="(item, index) in lecturerData.LECTURER_LIST"
-            :key="index"
-          >
-            <img v-lazy="item.IMG" alt="" />
-            <p>{{ item.NAME }}</p>
-            <p>{{ item.POSITION }}</p>
           </div>
         </div>
       </div>
@@ -707,6 +692,7 @@ export default {
               text-align: center;
               box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
               border-radius: 8px;
+                  transition: all 0.2s;
               &:hover {
                 box-shadow: 0px 6px 20px 0px rgba(0, 47, 167, 0.2);
               }
@@ -824,6 +810,7 @@ export default {
                   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
                   border-radius: 8px;
                   background-color: #fff;
+                  transition: all 0.2s;
                   &:hover {
                     box-shadow: 0px 6px 20px 0px rgba(0, 47, 167, 0.2);
                   }
@@ -848,6 +835,7 @@ export default {
                     word-spacing: 100vw;
                     box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
                     border-radius: 8px;
+                    transition: all 0.2s;
                     &:hover {
                       box-shadow: 0px 6px 20px 0px rgba(0, 47, 167, 0.2);
                     }

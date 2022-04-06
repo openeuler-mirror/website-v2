@@ -378,6 +378,7 @@ export default {
               background-image: url(/img/summit/devday-2022/agenda/thild-title.png);
             }
             .card-item {
+              cursor: pointer;
               display: block;
               text-decoration: none;
               padding: 16px;
@@ -387,7 +388,7 @@ export default {
               overflow: hidden;
               margin-bottom: 16px;
               box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
-              cursor: pointer;
+              transition: all 0.2s;
               &:hover {
                 box-shadow: 0px 6px 20px 0px rgba(0, 47, 167, 0.2);
               }
