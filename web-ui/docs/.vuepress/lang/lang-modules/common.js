@@ -237,10 +237,6 @@ module.exports = {
                     NAME: '服务状态',
                     URL: 'https://status.openeuler.org/'
                 },
-                // {
-                //     NAME: '2021 年报',
-                //     URL: 'https://www.openeuler.org/2021-annual-report-of-openeuler.pdf'
-                // }
             ],
             QR_CODE: '扫码关注公众号'
         },
