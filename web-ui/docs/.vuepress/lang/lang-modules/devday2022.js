@@ -20,6 +20,7 @@ module.exports = {
         ],
         SUMMIT_INTRODUCE: "openEuler Developer Day 2022 （简称 ODD 2022）是开放原子开源基金会的 openEuler 社区发起的开发者大会。旨在推动 openEuler 在服务器、云计算、边缘计算和嵌入式四大场景的技术探索和创新。本次 ODD 2022 正式发布 openEuler 22.03 全场景长周期版本，展示社区伙伴联合创新成果，分享多行业使用 openEuler 规模部署的商业案例，举办社区治理机构的线上工作会议。openEuler 始终与开发者在一起，开创新境，共创未来。",
         AGENDA: {
+            CONFERENCE_LINK: "会议链接",
             TITLE_IMG_PC: "/img/summit/devday-2022/zh-pc-devday2022.png",
             TITLE_IMG_MO: "/img/summit/devday-2022/zh-mobile-devday2022.png",
             AGENDA_DATA_TITLE: ['13', '14', '15'],
@@ -481,6 +482,13 @@ module.exports = {
             },
             AGENDA_DATA_15: {
                 TITLE: "4月15日 周五（线上直播）",
+                TIME_TITLE: [{
+                    ZH: '上午',
+                    EN: 'morning'
+                }, {
+                    ZH: '下午',
+                    EN: 'afternoon'
+                },],
                 SCHEDULE: [
                     {
                         TIME: "10:00 - 10:03",
@@ -518,7 +526,291 @@ module.exports = {
                         TIME: "11:58 - 12:00",
                         TEXT: "社区展望：志当存高远 欧拉向未来"
                     },
-                ]
+                ],
+                SCHEDULE_AFTERNOON: {
+                    TIME_LIST: ['上半场', '14:00 - 14:15', '14:15 - 14:30', '14:30 - 14:45', '14:45 - 15:00', '15:00 - 15:15', '15:15 - 15:30'],
+                    CARD_LIST: [
+                        {
+                            TITLE: ['内核分论坛'],
+                            ITEM_LIST: [
+                                {
+                                    TIME: '14:00 - 14:15',
+                                    THEME: '轻量级内存异常检测工具— KFence',
+                                    SPEAKER: ['刘云 麒麟软件'],
+                                    DESC: ['KFENCE，克服了KASAN等工具需要占用大量内存且影响运行时性能的缺点，是一个有效地运行时内存访问错误检测工具。']
+                                },
+                                {
+                                    TIME: '14:15-14:30',
+                                    THEME: 'User Interrupts - 用户中断',
+                                    SPEAKER: ['孙运营 Intel'],
+                                    DESC: ['用户中断，是一种可以直接向用户空间发送中断的新的硬件特性。如今，几乎所有跨越权限边界的通信都是通过内核进行的，而用户中断提供了一种可以避免通过内核的通信方式，可以在提供低延迟通信的同时降低CPU使用率。']
+                                },
+                                {
+                                    TIME: '14:30-14:45',
+                                    THEME: '工程实践分享 | 企业级 Linux 内核维护',
+                                    SPEAKER: ['江国庆 SUSE'],
+                                    DESC: ['企业发行版的 Linux 内核维护是一个非常大的长期挑战。在整个产品生命周期内，技术团队可能会需要移植数万个代码补丁来确保高质量的内核运作。因此，如何高效的移植、管理和维护补丁，解决它们之间的冲突，是工程师们关心的技术难题。本次演讲中，SUSE 资深内核技术专家江国庆将介绍 SUSE 企业级内核是如何从开源内核演进而来，以及 SUSE 是如何采用相关工具对内核补丁进行维护，并以 SUSE Euler 内核为例来展示相关的工程实践。']
+                                },
+                                {
+                                    TIME: '14:45-15:00',
+                                    THEME: '使用 Arm SVE 向量指令为高性能计算库加速',
+                                    SPEAKER: ['徐国栋 Linaro Ltd.'],
+                                    DESC: ['面向高性能计算（HPC）领域，Arm 推出了 SVE （Scalable Vector Extenstion），至今演进有 SVE2， SME (armv9)。本演讲介绍SVE 演进，工具链支持，软件适配状况。最后结合在ISA-L， XXHash 的编码，讲解SVE的优势，同时介绍开发技术要点。']
+                                },
+                                {
+                                    TIME: '15:00-15:15',
+                                    THEME: '可编程内核调度框架',
+                                    SPEAKER: ['陈辉 华为'],
+                                    DESC: ['不同领域的业务模型不同，对性能的需求（时延、吞吐、功耗）不同，所需的调度策略也不同。业界存在很多优秀的调度策略，这些调度策略针对某一类场景而设计，难以多场景共享；目前ebpf技术兴起，可编程调度框架，基于ebpf技术打造一套调度框架，致力于让开发人员简单、高效的定制调度策略，降低验证和部署成本。']
+                                },
+                            ]
+                        },
+                        {
+                            TITLE: ['多样性计算分论坛'],
+                            ITEM_LIST: [
+                                {
+                                    TIME: '14:00-14:15',
+                                    THEME: 'Accelerating openEuler ecosystem with heterogeneous computing',
+                                    SPEAKER: ['田俊 Intel'],
+                                    DESC: ["Based on Intel's recently technologies of heterogeneous connection standards, new hardware accelerators, new platforms and software frameworks to support various different platforms, this presentation will discuss the industry's direction of data center centralized heterogeneous computing and the technologies to enable the openEuler OS framework to support heterogeneous ecosystems."]
+                                },
+                                {
+                                    TIME: '14:15-14:30',
+                                    THEME: '多样性算力的未来与当前产业责任',
+                                    SPEAKER: ['姚嘉伟 普华基础软件'],
+                                    DESC: ['根植于多架构平台的同源操作系统，在提供标准化底层模块的前提下，不断演进优化多样性的系统架构平台与产业生态，进一步完善一致性的评测工具与指标体系，深入筑牢多样性算力服务体系基础平台，为下一代信息化变革赋予新动能。']
+                                },
+                                {
+                                    TIME: '14:30-14:45',
+                                    THEME: 'openEuler 在RISC-V的生态建设和展望',
+                                    SPEAKER: ['吴伟 中科院软件所'],
+                                    DESC: ['介绍软件所在openEuler RISC-V 所做的软件包移植，维护，构建和在RISC-V 国际基金会的相关工作，以及展望。']
+                                },
+                            ]
+                        },
+                        {
+                            TITLE: ['云原生&虚拟化分论坛'],
+                            ITEM_LIST: [
+                                {
+                                    TIME: '14:00-14:15',
+                                    THEME: '虚拟化场景下内存故障处理优化和实践',
+                                    SPEAKER: ['罗飞 紫光云'],
+                                    DESC: ['介绍紫光云和新华三集团在使用open Euler实现虚拟化场景下内存优化的工作实践']
+                                },
+                                {
+                                    TIME: '14:15-14:30',
+                                    THEME: '鲲鹏加速器虚拟化热迁移',
+                                    SPEAKER: ['刘龙芳 华为'],
+                                    DESC: ['1. 社区虚拟化热迁移的协议与近期热点', '2. 鲲鹏加速器的支持热迁移的硬件方案', '3. 鲲鹏加速器的热迁移的软件方案']
+                                },
+                                {
+                                    TIME: '14:30-14:45',
+                                    THEME: 'capsule-高安全，高性能的下一代虚拟化内核平台',
+                                    SPEAKER: ['张波，野震宇 华为'],
+                                    DESC: ['虚拟化通过复用与共享硬件资源来达到节省成本与使用灵活的目的，但同时牺牲了部分安全与性能。为达成更高安全与性能。华为欧拉虚拟化在stratovirt替代qemu的同时，capsule.替代kvm，均基于rust语言，杜绝绝大多数内存漏洞，同时capsule支持分区能力，快速部署全隔离虚拟机，达到接近物理机的时延与抖动，满足确定性诉求。']
+                                },
+                                {
+                                    TIME: '14:45-15:00',
+                                    THEME: '欧拉生态蓬勃发展，NestOS扬帆起航',
+                                    SPEAKER: ['王悦良 麒麟软件'],
+                                    DESC: ['基于openEuler生态的云底座操作系统NestOS正式发布，本议题将分享其主要特性针对性解决支撑云上业务时常见的各类痛点，openEuler sig-OKD基于NestOS对其具体应用场景进行的探索，同时也将分享NestOS未来发展规划以及如何与openEuler生态进行组合创新，共同激发openEuler社区创新活力。']
+                                },
+                            ]
+                        },
+                        {
+                            TITLE: ['边缘&嵌入式分论坛'],
+                            ITEM_LIST: [
+                                {
+                                    TIME: '14:00-14:15',
+                                    THEME: '在openEuler Embedded上进行多OS混合部署',
+                                    SPEAKER: ['任慰 华为'],
+                                    DESC: ['现在随着硬件技术的快速发展，片上系统的集成度越来越高，同时集成多核、异构多核已经很常见，这就带了在软件上同时部署多个OS的需求。openEuler Embedded的混合部署框架就是为了解决这一问题而推出的，目的是通过一套框架实现Linux和其他OS的便捷地混合部署，依托硬件上的多核能力使得Linux和实时操作系统有效互补，从而达到全系统兼具Linux的富生态和实时操作系统的高实时。']
+                                },
+                                {
+                                    TIME: '14:15-14:30',
+                                    THEME: '基于OpenEuler在嵌入式和实时性方面的思考与实践',
+                                    SPEAKER: ['郭皓 麒麟软件'],
+                                    DESC: ['介绍基于OpenEuler的GearOS系统现状，分享Xenomai编程经验', '介绍基于openEuler的Preempt_RT现状及使用方法，分享Preempt_RT相关技术经验']
+                                },
+                                {
+                                    TIME: '14:30-14:45',
+                                    THEME: '基于openEuler的EdgeX设备接入与控制',
+                                    SPEAKER: ['贺朝阳 中科创达'],
+                                    DESC: ['详细介绍基于openEuler运行EdgeX的过程；以ESP32芯片为例，结合EdgeX的架构，介绍南桥设备利用蓝牙、AP、mDNS、MQTT等技术自动接入openEuler上的EdgeX，继而以实际落地方案为例，介绍设备接入后利用EdgeX的Rules Engine和API等进行边缘侧和云端控制。']
+                                },
+                                {
+                                    TIME: '14:45-15:00',
+                                    THEME: 'openEuler Embedded基于yocto的演进',
+                                    SPEAKER: ['李思敏 华为'],
+                                    DESC: ['1. openEuler Embedded 的总体架构；', '2. openEuler Embedded 的开发实践；', '3. openEuler Embedded 的未来演进。']
+                                },
+                                {
+                                    TIME: '15:00-15:15',
+                                    THEME: 'openEuler上支持分布式软总线的进展与展望',
+                                    SPEAKER: ['谢焜勋 华为'],
+                                    DESC: ['介绍在openEuler嵌入式版本上，对openHarmony分布式软总线进行移植和支持的工作进展和下一步计划。']
+                                },
+                                {
+                                    TIME: '15:15-15:30',
+                                    THEME: 'zypher RTOS进展及中国社区推广',
+                                    SPEAKER: ['王洪波 Intel'],
+                                    DESC: ['Zypher是在Linux基金会下开源的实时操作系统，它旨在成为这个物联网时代里，专门用于资源受限的中小型设备上最好的开源软件平台，同时强调安全设计。除了介绍Zypher这个项目，重点会介绍一下最新的开发进展，以及新成立的SIG-Zypher如何帮助进行中国社区的推广和应用。']
+                                },
+                            ]
+                        },
+                    ]
+                },
+                SCHEDULE_AFTERNOON_LAST: {
+                    TIME_LIST: ['下半场', '15:15 - 15:30', '15:45 - 16:00', '16:00 - 16:15', '16:15 - 16:30', '16:30 - 16:45', '16:45 - 17:00', '17:00 - 17:15'],
+                    CARD_LIST: [
+                        {
+                            TITLE: ['大数据存储分论坛'],
+                            ITEM_LIST: [
+                                {
+                                    TIME: '15:15-15:30',
+                                    THEME: '缓存策略对CEPH性能的影响',
+                                    SPEAKER: ['池信泽 XSKY'],
+                                    DESC: ['主要是介绍CEPH RADOS架构下各级缓存策略对性能的影响']
+                                },
+                                {
+                                    TIME: '15:30-15:45',
+                                    THEME: '基于UADK加速器提升Ceph与大数据应用性能',
+                                    SPEAKER: ['戴志威 华为'],
+                                    DESC: ['数据存储中的加密、压缩对CPU算力提出了更高的要求。UADK是鲲鹏CPU上基于SVA的用户态加速开发套件，支持加密、压缩的计算加速和卸载。介绍Ceph数据体系和压缩特性，以及UADK在Ceph和大数据应用上的适配进展，性能表现。']
+                                },
+                                {
+                                    TIME: '15:45-16:00',
+                                    THEME: 'Arm SVE 向量指令为⾼性能计算库加速',
+                                    SPEAKER: ['徐国栋，庄浩坚 Linaro'],
+                                    DESC: ['⾯向⾼性能计算（ HPC ）领域， Arm 推出了 SVE （ Scalable Vector Extenstion ），⾄今演进有 SVE2 ，SME (armv9)。本演讲介绍 SVE 演进，⼯具链⽀持，软件适配状况。最后结合在 ISA-L ， XXHash 的编码，讲解SVE 的优势，同时介绍开发技术要点。']
+                                },
+                                {
+                                    TIME: '16:00-16:15',
+                                    THEME: '大数据+Ceph存算分离、算子下推提升计算存储效率',
+                                    SPEAKER: ['吴启庆 华为'],
+                                    DESC: ['大数据+Ceph采用数据直通和算子下推方案，实现存算分离，提升计算存储效率，性能和存储率优于HDFS存储，成为数据湖实现的解决方案之一。']
+                                },
+                                {
+                                    TIME: '16:15-16:30',
+                                    THEME: 'Arm64开源HPC文件系统状态与进展',
+                                    SPEAKER: ['刘新良 Linaro'],
+                                    DESC: ['当前主流开源HPC文件系统Lustre和BeeGFS在Arm64平台上的状态与进展。例如使能过程中碰到的困难和问题，bugfix，CI搭建，性能测试与调优等相关工作进展，以及后续工作计划。']
+                                },
+                            ]
+                        },
+                        {
+                            TITLE: ['开源雨林分论坛'],
+                            ITEM_LIST: [
+                                {
+                                    TIME: '14:45-15:00',
+                                    THEME: '开源雨林赋能企业开源',
+                                    SPEAKER: ['马全一 华为'],
+                                    DESC: ['']
+                                },
+                                {
+                                    TIME: '15:00-15:30',
+                                    THEME: '安全合规在openEuler上的实践',
+                                    SPEAKER: ['高琨 华为'],
+                                    DESC: ['']
+                                },
+                                {
+                                    TIME: '15:30-16:00',
+                                    THEME: '开源雨林赋能课程介绍',
+                                    SPEAKER: ['李自 华为'],
+                                    DESC: ['']
+                                },
+                            ]
+                        },
+                        {
+                            TITLE: ['安全分论坛'],
+                            ITEM_LIST: [
+                                {
+                                    TIME: '15:00-15:15',
+                                    THEME: '开源社区安全成熟度模型及实践',
+                                    SPEAKER: ['徐海云 Software Improvement Group'],
+                                    DESC: ['与常规软件开发相比，开源社区的开发模式有着自己的独特性。度量open欧拉的安全性需要结合开源社区软件开发以及基于Linux的操作系统开发维护的特性，建立适用于open欧拉社区的安全成熟度模型。演讲者将介绍针对开源社区制定的安全成熟度模型，并分享近期的模型应用实践与经验。']
+                                },
+                                {
+                                    TIME: '15:15-15:30',
+                                    THEME: '畅谈Intel SGX 原理及应用场景探索',
+                                    SPEAKER: ['杜凡 Intel'],
+                                    DESC: ['在用户数据隐私日益重要的今天，如何保证用户数据在使用过程中的机密性和完整性成为一项重要又有挑战的问题。Intel SGX 技术致力于提供应用程序层面的细粒度的硬件TEE功能，为保护云上用户数据提供强有力的支持。该主题抛砖引玉，讲解机密计算领域中SGX技术原理，以及相应的应用场景探索。']
+                                },
+                                {
+                                    TIME: '15:30-15:45',
+                                    THEME: ' 机密计算应用实践',
+                                    SPEAKER: ['顾嘉辉 华为'],
+                                    DESC: ['数据作为关键生产要素背景下，数据安全成为业务合规和数据资产价值发挥的关键技术。secGear作为机密计算开发框架，使能多种硬件机密计算能力，支撑多种上层应用。本议题介绍secGear的技术特点，以及在数据库、AI等领域的应用实践探索。']
+                                },
+                                {
+                                    TIME: '15:45-16:00',
+                                    THEME: '基于SBOM的开源软件供应链安全解决方案',
+                                    SPEAKER: ['刘波 华为'],
+                                    DESC: ['1、行业背景：软件产品的“不透明”传递性依赖层次深，导致整个软件供应链的网络安全治理难度越来越大；', '2、SBOM能做什么：基于行业标准透明的数据底座、结合软件成分分析、漏洞管理等集成，实现漏洞分钟级感知、排查与修复', '3、SBOM格式洞察分析：CycloneDX、SPDX、SWID', '4、SBOM解决方案整体设计：从SBOM数据采集与存储、到License、Copyright、漏洞感知消费、到开源合规履行义务报告生成', '5、OpenEuler 关键问题： 部分高阶语言包管理传递性依赖未识别', '6 、OpenEuler SBOM落地方案与计划']
+                                },
+                                {
+                                    TIME: '16:00-16:15',
+                                    THEME: ' 基于openEuler的安全加固定制方案和实践',
+                                    SPEAKER: ['唐杰 麒麟信安'],
+                                    DESC: ['操作系统安全性和易用性是个矛盾体，为了增加系统安全性，openEuler和OSV商业版本都做了相应的安全增强，如强制访问控制、完整性控制、多因子验证、关键系统部件加固等，但增加了管理员和用户的维护难度，因此设计了一套系统安全加固方案来满足易操作、高效率和可定制的问题。管理员可以使用图形工具一键完成一系列加固功能。方案采用了并发的方式提高加固执行的效率，并可根据用户需要快速重新定制加固方案。另外，使用非对称加密技术来避免加固方案被篡改，保障加固方案的权威性。']
+                                },
+                                {
+                                    TIME: '16:15-16:30',
+                                    THEME: ' 操作系统安全漏洞及早感知和快速响应',
+                                    SPEAKER: ['曹文渊 统信软件'],
+                                    DESC: ['在安全风险持续增长的今天，针对不同的操作系统，如何去感知互联网上层出不穷的各种漏洞、如何去判断这些漏洞是否影响我们的操作系统，从而更好的保护我们的操作系统免受攻击，已经成为了安全工作中的重要一环。']
+                                },
+                            ]
+                        },
+                        {
+                            TITLE: ['Devkit 工具集分论坛			'],
+                            ITEM_LIST: [
+                                {
+                                    TIME: '15:30-15:45',
+                                    THEME: 'openEuler商业版自动化测试工具',
+                                    SPEAKER: ['刘佐 麒麟信安'],
+                                    DESC: ['LTF是一款使用Shell编写的轻量级自动化测试框架，该工具目前主要应用openEuler商业版本以及第三方测试中。目前开源的测试用例涵盖了：性能测试、命令测试、开发环境测试、文件系统测试、GJB命令测试、语言测试等。框架提供的API让我们可以方便、快捷的编写测试脚本。']
+                                },
+                                {
+                                    TIME: '15:45-16:00',
+                                    THEME: '基于鲲鹏Devkit的HPC迁移调优实践',
+                                    SPEAKER: ['李成鹏 软通动力'],
+                                    DESC: ['软通动力作为华为ITS领域战略合作伙伴，积极拥抱鲲鹏生态战略，并在多个领域取得阶段进展，自2021年加入鲲鹏众智计划以来累计成功交付加速库、HPC迁移调优等多个领域的项目，本次分享主要是给伙伴介绍我们通过使用鲲鹏Devkit工具集完成HPC开源组件从X86平台到鲲鹏+openEuler平台的迁移调优实践，Devkit迁移调优工具助力我们高效完成软件迁移并且软件性能提升明显。']
+                                },
+                                {
+                                    TIME: '16:00-16:15',
+                                    THEME: '应对CentOS停服，UYi（有易）数字化转型方案',
+                                    SPEAKER: ['薛智鑫 统信软件'],
+                                    DESC: ['UYi(有易)是一款服务器系统迁移软件, 帮助用户从CentOS系列平台平滑迁移到统信服务器操作系统V20，在保证新的操作系统正常稳定运行的同时，也要保证业务在其上的正常运行。']
+                                },
+                                {
+                                    TIME: '16:15-16:30',
+                                    THEME: 'PilotGo运维管理平台介绍',
+                                    SPEAKER: ['杨昭 麒麟软件'],
+                                    DESC: ['PilotGo运维管理平台在社区孵化已有一段时间，即将发布1.0版本，本次会介绍PilotGo软件的基本情况。']
+                                },
+                                {
+                                    TIME: '16:30-16:45',
+                                    THEME: 'x2openEuler',
+                                    SPEAKER: ['王执 华为'],
+                                    DESC: ['介绍OS迁移中，对软件，硬件，配置兼容性评估功能介绍']
+                                },
+                                {
+                                    TIME: '16:45-17:00',
+                                    THEME: 'OECP工具的介绍与使用',
+                                    SPEAKER: ['朱泽旭 华为'],
+                                    DESC: ['OECP是一个OS差异比较工具，用于支撑OSV认证开展，OSV工具从接口，文件，依赖等多维度，比较OS之间的差异项，用于支撑OS兼容性分析。']
+                                },
+                                {
+                                    TIME: '17:00-17:15',
+                                    THEME: 'openEuler镜像构建及裁剪',
+                                    SPEAKER: ['zhuchunyi 华为'],
+                                    DESC: ['openEuler iso构建、iso裁剪、镜像的文件级裁剪工具介绍。']
+                                },
+                            ]
+                        },
+                    ]
+                },
             }
         },
         CONSTRUCTION: {

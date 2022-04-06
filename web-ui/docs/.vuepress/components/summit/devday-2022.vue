@@ -63,7 +63,7 @@
             </div>
             <div class="second-day" v-if="agendaTab === 1">
               <div class="time-box-second">
-                <el-tabs v-model="showTab" @tab-click="zoneTabClick">
+                <el-tabs v-model="showTabSecond" @tab-click="zoneTabClick">
                   <el-tab-pane
                     v-for="(item, index) in agendaData.AGENDA_DATA_14
                       .TIME_TITLE"
@@ -118,36 +118,14 @@
                         <div class="card-right">
                           <div
                             class="dialogue"
-                            title="会议链接"
+                            :title="agendaData.CONFERENCE_LINK"
                             @click="goInstall(item2.ZOOM_LINK)"
-                          >
-                            <img
-                              class="icon-none"
-                              src="/img/summit/devday-2022/agenda/dialogue.png"
-                              alt=""
-                            />
-                            <img
-                              class="icon-active"
-                              src="/img/summit/devday-2022/agenda/dialogue_active.png"
-                              alt=""
-                            />
-                          </div>
+                          ></div>
                           <div
                             class="etherpad"
                             @click="goInstall(item2.ETHERPAD)"
                             title="Etherpad"
-                          >
-                            <img
-                              class="icon-none"
-                              src="/img/summit/devday-2022/agenda/etherpad.png"
-                              alt=""
-                            />
-                            <img
-                              class="icon-active"
-                              src="/img/summit/devday-2022/agenda/etherpad_active.png"
-                              alt=""
-                            />
-                          </div>
+                          ></div>
                         </div>
                       </div>
                     </div>
@@ -187,34 +165,14 @@
                         <div class="card-right">
                           <div
                             class="dialogue"
+                            :title="agendaData.CONFERENCE_LINK"
                             @click="goInstall(item2.ZOOM_LINK)"
-                          >
-                            <img
-                              class="icon-none"
-                              src="/img/summit/devday-2022/agenda/dialogue.png"
-                              alt=""
-                            />
-                            <img
-                              class="icon-active"
-                              src="/img/summit/devday-2022/agenda/dialogue_active.png"
-                              alt=""
-                            />
-                          </div>
+                          ></div>
                           <div
                             class="etherpad"
+                            title="Etherpad"
                             @click="goInstall(item2.ETHERPAD)"
-                          >
-                            <img
-                              class="icon-none"
-                              src="/img/summit/devday-2022/agenda/etherpad.png"
-                              alt=""
-                            />
-                            <img
-                              class="icon-active"
-                              src="/img/summit/devday-2022/agenda/etherpad_active.png"
-                              alt=""
-                            />
-                          </div>
+                          ></div>
                         </div>
                       </div>
                     </div>
@@ -247,34 +205,14 @@
                         <div class="card-right">
                           <div
                             class="dialogue"
+                            :title="agendaData.CONFERENCE_LINK"
                             @click="goInstall(item2.ZOOM_LINK)"
-                          >
-                              <img
-                              class="icon-none"
-                              src="/img/summit/devday-2022/agenda/dialogue.png"
-                              alt=""
-                            />
-                            <img
-                              class="icon-active"
-                              src="/img/summit/devday-2022/agenda/dialogue_active.png"
-                              alt=""
-                            />
-                          </div>
+                          ></div>
                           <div
+                            title="Etherpad"
                             class="etherpad"
                             @click="goInstall(item2.ETHERPAD)"
-                          >
-                            <img
-                              class="icon-none"
-                              src="/img/summit/devday-2022/agenda/etherpad.png"
-                              alt=""
-                            />
-                            <img
-                              class="icon-active"
-                              src="/img/summit/devday-2022/agenda/etherpad_active.png"
-                              alt=""
-                            />
-                          </div>
+                          ></div>
                         </div>
                       </div>
                     </div>
@@ -323,33 +261,11 @@
                         <div
                           class="mo-right-top dialogue"
                           @click="goInstall(item2.ZOOM_LINK)"
-                        >
-                           <img
-                              class="icon-none"
-                              src="/img/summit/devday-2022/agenda/dialogue.png"
-                              alt=""
-                            />
-                            <img
-                              class="icon-active"
-                              src="/img/summit/devday-2022/agenda/dialogue_active.png"
-                              alt=""
-                            />
-                        </div>
+                        ></div>
                         <div
                           class="mo-right-botton etherpad"
                           @click="goInstall(item2.ETHERPAD)"
-                        >
-                           <img
-                              class="icon-none"
-                              src="/img/summit/devday-2022/agenda/etherpad.png"
-                              alt=""
-                            />
-                            <img
-                              class="icon-active"
-                              src="/img/summit/devday-2022/agenda/etherpad_active.png"
-                              alt=""
-                            />
-                        </div>
+                        ></div>
                       </div>
                     </div>
                   </div>
@@ -358,19 +274,46 @@
             </div>
             <div class="third-day" v-if="agendaTab === 2">
               <div class="third-body">
+                <div class="time-box-second">
+                  <el-tabs v-model="showTabThird" @tab-click="zoneTabClick">
+                    <el-tab-pane
+                      v-for="(item, index) in agendaData.AGENDA_DATA_15
+                        .TIME_TITLE"
+                      :key="index"
+                      :label="item.ZH"
+                      :name="item.EN"
+                    ></el-tab-pane>
+                  </el-tabs>
+                </div>
                 <div
-                  class="third-item"
-                  v-for="(item, index) in agendaData.AGENDA_DATA_15.SCHEDULE"
-                  :style="{
-                    backgroundImage:
-                      'url(/img/summit/devday-2022/agenda/third-' +
-                      index +
-                      '.png)',
-                  }"
-                  :key="item.TIEM"
+                  class="third-body-morning"
+                  v-if="showTabThird === 'morning'"
                 >
-                  <div class="third-left">{{ item.TIME }}</div>
-                  <div class="third-right">{{ item.TEXT }}</div>
+                  <div
+                    class="third-item"
+                    v-for="(item, index) in agendaData.AGENDA_DATA_15.SCHEDULE"
+                    :style="{
+                      backgroundImage:
+                        'url(/img/summit/devday-2022/agenda/third-' +
+                        index +
+                        '.png)',
+                    }"
+                    :key="item.TIEM"
+                  >
+                    <div class="third-left">{{ item.TIME }}</div>
+                    <div class="third-right">{{ item.TEXT }}</div>
+                  </div>
+                </div>
+                <div class="third-body-afternoon" v-else>
+                  <carousel
+                    :agendaData="agendaData.AGENDA_DATA_15.SCHEDULE_AFTERNOON"
+                  ></carousel>
+                  <carousel
+                    class="lastday-last"
+                    :agendaData="
+                      agendaData.AGENDA_DATA_15.SCHEDULE_AFTERNOON_LAST
+                    "
+                  ></carousel>
                 </div>
               </div>
             </div>
@@ -441,12 +384,16 @@
 </template>
 
 <script>
+import carousel from './carousel-2022.vue';
 export default {
-  components: {},
+  components: {
+    carousel,
+  },
   data() {
     return {
       i18nData: {},
-      showTab: 'morning',
+      showTabSecond: 'morning',
+      showTabThird: 'morning',
       tabIndex: 0,
       agendaTab: 0,
       agendaData: [],
@@ -464,6 +411,15 @@ export default {
   methods: {
     tabClick(index) {
       this.agendaTab = index;
+    },
+    scrollStatic() {
+      let header = this.$refs.header.$el;
+      let headerTop = header.offsetTop;
+      window.onscroll = () => {
+        if (document.documentElement.scrollTop > headerTop)
+          header.style.position = 'fixed';
+        else header.style.position = 'static';
+      };
     },
     zoneTabClick(event) {
       this.tabIndex = parseInt(event.index);
@@ -500,6 +456,11 @@ export default {
   display: none;
   @media screen and (max-width: 1120px) {
     display: inline-block;
+  }
+}
+.lastday-last {
+  @media screen and (max-width:1120px) {
+    display: none;
   }
 }
 .h5-banner {
@@ -562,30 +523,6 @@ export default {
       font-size: 14px;
       line-height: 26px;
       margin-bottom: 40px;
-    }
-  }
-  .call-for-list {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 50px;
-    .call-item {
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      .add-sig {
-        margin-top: 4px;
-      }
-    }
-    @media screen and (max-width: 1120px) {
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-      .call-item {
-        margin-bottom: 30px;
-      }
-      .call-item:last-child {
-        margin: 0;
-      }
     }
   }
   /deep/.agenda {
@@ -702,7 +639,7 @@ export default {
           justify-content: space-between;
           margin-bottom: 20px;
           .detail-time {
-            cursor: pointer;
+            // cursor: pointer;
             padding: 25px 20px;
             display: flex;
             align-items: center;
@@ -718,7 +655,7 @@ export default {
             display: flex;
             width: 100%;
             .schedule-item {
-              cursor: pointer;
+              // cursor: pointer;
               transition: all 0.3s;
               padding: 20px 0;
               margin-left: 24px;
@@ -726,6 +663,9 @@ export default {
               text-align: center;
               box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
               border-radius: 8px;
+              &:hover {
+                box-shadow: 0px 6px 20px 0px rgba(0, 47, 167, 0.2);
+              }
             }
 
             .schedule-item:first-child {
@@ -739,33 +679,33 @@ export default {
         .agenda-item:last-child {
           margin: 0;
         }
-        .second-day {
-          .time-box-second {
-            .el-tabs__nav-wrap::after {
-              display: none;
-            }
-            .el-tabs__item {
-              font-size: 20px;
-              font-family: FZLTCHJW--GB1-0, FZLTCHJW--GB1;
-              color: rgba(0, 0, 0, 0.5);
-              line-height: 24px;
-              @media screen and (max-width: 1120px) {
-                font-size: 16px;
-                line-height: 40px;
-              }
-            }
-            .is-active {
-              color: #002fa7;
-            }
-            .el-tabs__active-bar {
-              height: 3px;
-              border-radius: 3px;
-            }
-            .el-tabs__nav-scroll {
-              display: flex;
-              justify-content: center;
+        .time-box-second {
+          .el-tabs__nav-wrap::after {
+            display: none;
+          }
+          .el-tabs__item {
+            font-size: 20px;
+            font-family: FZLTCHJW--GB1-0, FZLTCHJW--GB1;
+            color: rgba(0, 0, 0, 0.5);
+            line-height: 24px;
+            @media screen and (max-width: 1120px) {
+              font-size: 16px;
+              line-height: 40px;
             }
           }
+          .is-active {
+            color: #002fa7;
+          }
+          .el-tabs__active-bar {
+            height: 3px;
+            border-radius: 3px;
+          }
+          .el-tabs__nav-scroll {
+            display: flex;
+            justify-content: center;
+          }
+        }
+        .second-day {
           .live-item::after {
             position: absolute;
             top: 0;
@@ -788,7 +728,7 @@ export default {
               }
               .left-item {
                 position: relative;
-                cursor: pointer;
+                // cursor: pointer;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -819,11 +759,16 @@ export default {
               margin-left: 30px;
               flex: 1;
               .right-title {
+                position: sticky;
+                top: 61px;
+                left: 0;
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 20px;
+                background-color: #fff;
+                z-index: 10;
                 .right-title-item {
-                  cursor: pointer;
+                  // cursor: pointer;
                   display: flex;
                   align-items: center;
                   justify-content: center;
@@ -832,6 +777,10 @@ export default {
                   height: 48px;
                   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
                   border-radius: 8px;
+                  background-color: #fff;
+                  &:hover {
+                    box-shadow: 0px 6px 20px 0px rgba(0, 47, 167, 0.2);
+                  }
                 }
                 .right-title-item:last-child {
                   margin: 0;
@@ -853,6 +802,9 @@ export default {
                     word-spacing: 100vw;
                     box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
                     border-radius: 8px;
+                    &:hover {
+                      box-shadow: 0px 6px 20px 0px rgba(0, 47, 167, 0.2);
+                    }
                     .card-right {
                       display: flex;
                       flex-direction: column;
@@ -863,25 +815,24 @@ export default {
                         width: 60px;
                         height: 46px;
                         color: #002fa7;
-                        background: rgb(229, 234, 246);
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-image: url(/img/summit/devday-2022/agenda/dialogue_active.png);
+                        background-color: rgb(229, 234, 246);
                         border-radius: 0px 8px 0px 0px;
-                        .icon-none {
-                          display: none;
-                        }
                       }
                       .etherpad {
                         margin-top: 2px;
+                        background-image: url(/img/summit/devday-2022/agenda/etherpad_active.png);
                         border-radius: 0px 0px 8px 0px;
                       }
                       .dialogue:hover,
                       .etherpad:hover {
+                        background-image: url(/img/summit/devday-2022/agenda/dialogue.png);
                         background-color: #002fa7;
-                        .icon-none {
-                          display: block;
-                        }
-                        .icon-active {
-                          display: none;
-                        }
+                      }
+                      .etherpad:hover {
+                        background-image: url(/img/summit/devday-2022/agenda/etherpad.png);
                       }
                     }
                   }
@@ -954,7 +905,7 @@ export default {
                   height: 94px;
                   .right-card {
                     flex: none;
-                    width: 208px;
+                    width: 203px;
                     height: 40px;
                     .card-right {
                       display: flex;
@@ -977,7 +928,7 @@ export default {
                     margin-bottom: 14px;
                   }
                   .right-card:nth-child(n + 3) {
-                    width: 208px;
+                    width: 203px;
                     height: 94px;
                     float: left;
 
@@ -1000,19 +951,15 @@ export default {
                   }
                   .right-card:nth-child(1),
                   .right-card:nth-child(2) {
-                    width: 208px;
+                    width: 203px;
                     float: left;
                     word-spacing: normal;
-                    // margin-right: 12px;
                   }
                   .right-card:nth-child(1) {
-                    width: 432px;
+                    width: 427px;
                     margin-right: 16px;
                     margin-bottom: 12px;
                   }
-                  // .right-card:nth-child(4) {
-                  //   margin-right: 12px;
-                  // }
                   .right-card:nth-child(2) {
                     position: absolute;
                     bottom: 0;
@@ -1021,20 +968,15 @@ export default {
               }
             }
             .afternoon {
-              .right-title {
-                .right-title-item {
-                  width: 208px;
-                }
-              }
               .right-card-box {
                 .right-card-column {
                   .double {
                     flex: none;
-                    width: 432px;
+                    width: 427px;
                   }
                   .onepart {
                     flex: none;
-                    width: 208px;
+                    width: 203px;
                   }
                 }
               }
@@ -1042,14 +984,14 @@ export default {
             .night {
               .right-title {
                 .right-title-item {
-                  width: 432px;
+                  width: 427px;
                 }
               }
               .right-card-box {
                 .right-card-column {
                   .onepart {
                     flex: none;
-                    width: 432px;
+                    width: 427px;
                   }
                 }
               }
@@ -1074,7 +1016,6 @@ export default {
                 justify-content: center;
                 flex-direction: column;
                 font-size: 12px;
-                // width: 315px;
                 .mo-render-card {
                   display: flex;
                   flex-direction: column;
@@ -1121,28 +1062,25 @@ export default {
                       width: 40px;
                       height: 34px;
                       color: #002fa7;
-                      background: rgb(229, 234, 246);
+                      background-position: center center;
+                      background-repeat: no-repeat;
+                      background-size: 12px;
+                      background-image: url(/img/summit/devday-2022/agenda/dialogue_active.png);
+                      background-color: rgb(229, 234, 246);
                       border-radius: 0px 8px 0px 0px;
-                      img {
-                        width: 12px;
-                      }
-                      .icon-none {
-                        display: none;
-                      }
                     }
                     .etherpad {
                       margin-top: 2px;
+                      background-image: url(/img/summit/devday-2022/agenda/etherpad_active.png);
                       border-radius: 0px 0px 8px 0px;
                     }
                     .dialogue:hover,
                     .etherpad:hover {
                       background-color: #002fa7;
-                      .icon-none {
-                        display: block;
-                      }
-                      .icon-active {
-                        display: none;
-                      }
+                      background-image: url(/img/summit/devday-2022/agenda/dialogue.png);
+                    }
+                    .etherpad:hover {
+                      background-image: url(/img/summit/devday-2022/agenda/etherpad.png);
                     }
                   }
                   .mo-detail-text {
@@ -1153,8 +1091,6 @@ export default {
                     color: #555;
                     word-spacing: normal;
                   }
-                  .mo-detail-left {
-                  }
                 }
               }
             }
@@ -1164,7 +1100,7 @@ export default {
           .third-item {
             display: flex;
             align-items: center;
-            cursor: pointer;
+            // cursor: pointer;
             padding: 25px 32px;
             color: #fff;
             margin-bottom: 20px;
@@ -1179,6 +1115,9 @@ export default {
           @media screen and (max-width: 1120px) {
             .third-body {
               font-size: 12px;
+              .third-body-morning {
+                margin-top: 14px;
+              }
               .third-item {
                 padding: 0;
                 height: initial;
