@@ -1033,133 +1033,253 @@ module.exports = {
             },
             LECTURER_LIST: [
                 {
-                    IMG: '/img/summit/summit2021/lecturer/yangtao.png',
-                    NAME: '杨涛',
-                    POSITION: '开放原子开源基金会 理事长'
+                    IMG: '/img/summit/devday-2022/lecturer/caowenyuan.png',
+                    NAME: '曹文渊',
+                    POSITION: ['统信软件研发工程师']
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/jiangdayong.png',
-                    NAME: '江大勇',
-                    POSITION: '欧拉开源社区理事长'
+                    IMG: '/img/summit/devday-2022/lecturer/chenqiang.png',
+                    NAME: '陈强',
+                    POSITION: ['华为大数据技术专家']
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/wuyanjun.png',
-                    NAME: '武延军',
-                    POSITION: '欧拉开源社区副理事长'
+                    IMG: '/img/summit/devday-2022/lecturer/chixinze.png',
+                    NAME: '池信泽',
+                    POSITION: ['ceph-sig maintainer']
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/qiuchengfeng.png',
-                    NAME: '邱成锋',
-                    POSITION: '欧拉开源社区秘书长'
+                    IMG: '/img/summit/devday-2022/lecturer/daizhiwei.png',
+                    NAME: '戴志威',
+                    POSITION: ['华为存储技术专家']
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/huxinwei.png',
-                    NAME: '胡欣蔚',
-                    POSITION: '欧拉开源社区 技术委员会主席'
+                    IMG: '/img/summit/devday-2022/lecturer/dufan.png',
+                    NAME: '杜凡',
+                    POSITION: ['Intel Cloud Architect']
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/chenhaibo.png',
-                    NAME: '陈海波',
-                    POSITION: '上海交通大学教授 华为操作系统首席科学家'
+                    IMG: '/img/summit/devday-2022/lecturer/gujiahui.png',
+                    NAME: '顾嘉辉',
+                    POSITION: ['华为基础软件','安全技术专家']
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/gaowei.png',
-                    NAME: '高巍',
-                    POSITION: '欧拉开源社区 用户委员会主席'
+                    IMG: '/img/summit/devday-2022/lecturer/guohao.png',
+                    NAME: '郭皓',
+                    POSITION: ['麒麟软件内核专家']
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/qinxiaokang.png',
-                    NAME: '秦小康',
-                    POSITION: 'SUSE大中华区总裁'
+                    IMG: '/img/summit/devday-2022/lecturer/hechaoyang.png',
+                    NAME: '贺朝阳',
+                    POSITION: ['中科创达','创达边缘计算工程师']
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/wangpan.png',
-                    NAME: '王攀',
-                    POSITION: '麒麟信安副总裁'
+                    IMG: '/img/summit/devday-2022/lecturer/jiangguoqing.png',
+                    NAME: '江国庆',
+                    POSITION: ['SUSE资深内核技术专家']
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/zhanglei.png',
-                    NAME: '张磊',
-                    POSITION: '统信软件CTO'
+                    IMG: '/img/summit/devday-2022/lecturer/lichengpeng.png',
+                    NAME: '李成鹏',
+                    POSITION: ['软通鲲鹏生态技术专家']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/liubo.png',
+                    NAME: '刘波',
+                    POSITION: ['华为开源社区','工具链总架构师']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/liuxinliang.png',
+                    NAME: '刘新良',
+                    POSITION: [' Linaro资深技术专家']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/liuyun.png',
+                    NAME: '刘云',
+                    POSITION: ['麒麟软件资深内核专家']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/liuzuo.png',
+                    NAME: '刘佐',
+                    POSITION: ['麒麟信安测试工程师']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/luofei.png',
+                    NAME: '罗飞',
+                    POSITION: ['虚拟化资深工程师']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/renwei.png',
+                    NAME: '任慰',
+                    POSITION: ['华为操作系统技术专家']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/tangjie.png',
+                    NAME: '唐杰',
+                    POSITION: ['麒麟信安','操作系统组件开发经理']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/tianjun.png',
+                    NAME: '田俊',
+                    POSITION: ['Intel Arch SIG负责人']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/tongjiawei.png',
+                    NAME: '童嘉伟',
+                    POSITION: ['安恒信息','大数据信创产品总监']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/wanghongbo.png',
+                    NAME: '王洪波',
+                    POSITION: ['英特尔亚太研发有限公司','软件开发经理']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/wangjiangtao.png',
+                    NAME: '王江涛',
+                    POSITION: ['普华基础软件资深技术专家']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/wangyueliang.png',
+                    NAME: '王悦良',
+                    POSITION: ['麒麟软件开源工程师']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/wangzhi.png',
+                    NAME: '王执',
+                    POSITION: ['华为欧拉Devkit','系统工程师']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/wuqiqing.png',
+                    NAME: '吴启庆',
+                    POSITION: ['华为存储系统架构师']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/wuwei.png',
+                    NAME: '吴伟',
+                    POSITION: ['中科院软件所','PLCT实验室创始人']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/xiekunxun.png',
+                    NAME: '谢焜勋',
+                    POSITION: ['华为操作系统技术专家']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/xuguodong.png',
+                    NAME: '徐国栋',
+                    POSITION: ['Linaro资深技术专家']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/xuhaiyun.png',
+                    NAME: '徐海云',
+                    POSITION: ['SIG CSO']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/xuzhixing.png',
+                    NAME: '薛智鑫',
+                    POSITION: ['统信软件研发工程师']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/yangzhao.png',
+                    NAME: '杨昭',
+                    POSITION: ['华为操作系统技术专家']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/yaojiawei.png',
+                    NAME: '姚嘉伟',
+                    POSITION: ['普华基础软件','资深系统架构师']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/zuchunyi.png',
+                    NAME: '朱春意',
+                    POSITION: ['OS-Builder、BaseService','sig maintainer']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/zuzexu.png',
+                    NAME: '朱泽旭',
+                    POSITION: [' openEuler兼容性工具','开发工程师']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/zhuanghaojian.png',
+                    NAME: '庄浩坚',
+                    POSITION: ['Linaro资深技术专家']
                 },
             ],
             PUBLISHER_BANNER: {
-                web: '/img/summit/summit2021/lecturer/publishertitle.png',
-                mobile: '/img/summit/summit2021/lecturer/publishertitle_mo.png'
+                web: '/img/summit/devday-2022/lecturer/publishertitle.png',
+                mobile: '/img/summit/devday-2022/lecturer/publishertitle_mo.png'
             },
             PUBLISHER_LIST: [
                 {
-                    IMG: '/img/summit/summit2021/lecturer/guohanjun.png',
+                    IMG: '/img/summit/devday-2022/lecturer/guohanjun.png',
                     NAME: '郭寒军',
                     POSITION: '欧拉开源社区内核 Maintainer'
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/liyong.png',
+                    IMG: '/img/summit/devday-2022/lecturer/liyong.png',
                     NAME: '李勇',
                     POSITION: 'SUSE软件工程顾问'
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/yixiujiang.png',
+                    IMG: '/img/summit/devday-2022/lecturer/yixiujiang.png',
                     NAME: '尹秀江',
                     POSITION: '麒麟软件工程师'
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/yanshuanghai.png',
+                    IMG: '/img/summit/devday-2022/lecturer/yanshuanghai.png',
                     NAME: '严海双',
                     POSITION: '中移云能力中心 内核研发专家'
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/shenxiang.png',
+                    IMG: '/img/summit/devday-2022/lecturer/shenxiang.png',
                     NAME: '沈翔',
                     POSITION: '普华基础软件总经理'
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/dukaitian.png',
+                    IMG: '/img/summit/devday-2022/lecturer/dukaitian.png',
                     NAME: '杜开田',
                     POSITION: '欧拉开源社区 兼容性SIG组Maintainer'
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/yeqinglong.png',
+                    IMG: '/img/summit/devday-2022/lecturer/yeqinglong.png',
                     NAME: '叶青龙',
                     POSITION: '服务器操作系统项目总监 欧拉开源社区 技术委员会委员'
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/liujingang.png',
+                    IMG: '/img/summit/devday-2022/lecturer/liujingang.png',
                     NAME: '刘金刚',
                     POSITION: '欧拉开源社区 技术委员会委员'
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/caihaomin.png',
+                    IMG: '/img/summit/devday-2022/lecturer/caihaomin.png',
                     NAME: '蔡灏旻',
                     POSITION: '华为容器团队架构师'
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/shiyong.png',
+                    IMG: '/img/summit/devday-2022/lecturer/shiyong.png',
                     NAME: '石勇',
                     POSITION: '欧拉开源社区 技术委员会委员'
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/panjianfeng.png',
+                    IMG: '/img/summit/devday-2022/lecturer/panjianfeng.png',
                     NAME: '潘剑锋',
                     POSITION: '360集团副总裁 首席科学家'
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/yangliu.png',
+                    IMG: '/img/summit/devday-2022/lecturer/yangliu.png',
                     NAME: '阳柳',
                     POSITION: '飞腾资深软件架构师'
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/xiekunxun.png',
+                    IMG: '/img/summit/devday-2022/lecturer/xiekunxun.png',
                     NAME: '谢焜勋',
                     POSITION: '华为嵌入式操作系统 技术专家'
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/lishouyong.png',
+                    IMG: '/img/summit/devday-2022/lecturer/lishouyong.png',
                     NAME: '刘寿永',
                     POSITION: ' 中科创达首席架构师'
                 },
                 {
-                    IMG: '/img/summit/summit2021/lecturer/chenjingwei.png',
+                    IMG: '/img/summit/devday-2022/lecturer/chenjingwei.png',
                     NAME: '陈景伟',
                     POSITION: ' 赛昉生态市场高级总监'
                 },
