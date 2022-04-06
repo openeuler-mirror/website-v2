@@ -374,6 +374,7 @@ export default {
               height: 48px;
               box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
               border-radius: 8px;
+              background-size: cover;
               background-image: url(/img/summit/devday-2022/agenda/thild-title.png);
             }
             .card-item {
@@ -398,7 +399,7 @@ export default {
                 color: #000000d9;
                 text-overflow: ellipsis;
                 display: -webkit-box;
-                -webkit-line-clamp: 3;
+                -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
               }

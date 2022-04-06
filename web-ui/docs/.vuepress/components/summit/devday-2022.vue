@@ -77,11 +77,13 @@
                 <div class="second-left">
                   <div
                     class="left-item"
+                    @click="index === 0 && go('/sig/meeting-guide/')"
                     :class="{ 'live-item': index === 1 && tabIndex !== 2 }"
                     v-for="(item, index) in agendaData.AGENDA_DATA_14
                       .COLUMN_TITLE[tabIndex].TIME"
                     :key="item.ZH"
                   >
+                    <slot v-if="index === 0"> </slot>
                     <p>{{ item.ZH }}</p>
                     <p class="second-en">{{ item.EN }}</p>
                   </div>
@@ -320,6 +322,46 @@
           </div>
         </div>
       </div>
+      <div class="lecturer" id="lecturer">
+        <div class="title">
+          <img
+          class="mo"
+            v-lazy="lecturerData.LECTURER_BANNER.mobile"
+            alt=""
+          />
+          <img class="pc" v-lazy="lecturerData.LECTURER_BANNER.web" alt="" />
+        </div>
+        <div
+          class="lecturer-box"
+          v-fade
+          v-if="lecturerData.LECTURER_LIST.length && !isShowH5"
+        >
+          <div
+            class="item fade-in"
+            v-for="(item, index) in lecturerData.LECTURER_LIST"
+            :key="index"
+          >
+            <img v-lazy="item.IMG" alt="" />
+            <p>{{ item.NAME }}</p>
+            <p v-for="item2 in item.POSITION" :key="item2">{{ item2 }}</p>
+          </div>
+        </div>
+        <div
+          class="lecturer-box"
+          v-fade
+          v-if="lecturerData.LECTURER_LIST.length && isShowH5"
+        >
+          <div
+            :class="['item', 'fade-in']"
+            v-for="(item, index) in lecturerData.LECTURER_LIST"
+            :key="index"
+          >
+            <img v-lazy="item.IMG" alt="" />
+            <p>{{ item.NAME }}</p>
+            <p>{{ item.POSITION }}</p>
+          </div>
+        </div>
+      </div>
       <div class="construction" id="construction">
         <div class="construction-title">
           <img class="web" v-lazy="construction.WEB_TITLE" alt="" />
@@ -399,6 +441,7 @@ export default {
       agendaData: [],
       secondDayData: [],
       construction: [],
+      lecturerData: [],
     };
   },
   mounted() {},
@@ -406,20 +449,12 @@ export default {
     this.i18nData = this.i18n.devday2022;
     this.agendaData = this.i18nData.AGENDA;
     this.secondDayData = this.agendaData.AGENDA_DATA_14.SCHEDULE;
-    this.construction = this.i18n.devday2022.CONSTRUCTION;
+    this.construction = this.i18nData.CONSTRUCTION;
+    this.lecturerData = this.i18nData.LECTURER;
   },
   methods: {
     tabClick(index) {
       this.agendaTab = index;
-    },
-    scrollStatic() {
-      let header = this.$refs.header.$el;
-      let headerTop = header.offsetTop;
-      window.onscroll = () => {
-        if (document.documentElement.scrollTop > headerTop)
-          header.style.position = 'fixed';
-        else header.style.position = 'static';
-      };
     },
     zoneTabClick(event) {
       this.tabIndex = parseInt(event.index);
@@ -432,7 +467,6 @@ export default {
       }
     },
     goInstall(path) {
-      console.log(path);
       if (path.includes('http') || path.includes('https')) {
         window.open(path);
       } else {
@@ -459,7 +493,7 @@ export default {
   }
 }
 .lastday-last {
-  @media screen and (max-width:1120px) {
+  @media screen and (max-width: 1120px) {
     display: none;
   }
 }
@@ -525,27 +559,36 @@ export default {
       margin-bottom: 40px;
     }
   }
+  .title {
+    cursor: pointer;
+    margin-bottom: 40px;
+    text-align: center;
+    img {
+      width: 900px;
+      height: 76px;
+       @media screen and (max-width: 1120px) {
+         width: 335px;
+         height: 38px;
+      }
+    }
+    .pc {
+      @media screen and (max-width: 1120px) {
+        display: none;
+      }
+    }
+    .mo {
+      display: none;
+      @media screen and (max-width: 1120px) {
+        display: inline-block;
+      }
+    }
+  }
   /deep/.agenda {
     margin-bottom: 62px;
     @media screen and (max-width: 1120px) {
       margin-bottom: 40px;
     }
-    .title {
-      cursor: pointer;
-      margin-bottom: 40px;
-      text-align: center;
-      .pc {
-        @media screen and (max-width: 1120px) {
-          display: none;
-        }
-      }
-      .mo {
-        display: none;
-        @media screen and (max-width: 1120px) {
-          display: inline-block;
-        }
-      }
-    }
+
     .agenda-data {
       .time-box {
         display: flex;
@@ -616,6 +659,7 @@ export default {
                 width: 315px;
                 margin-bottom: 16px;
                 padding: 14px 0;
+                font-size: 12px;
                 border-radius: 8px;
                 background-size: cover;
                 background-image: url(/img/summit/devday-2022/agenda/mo_sig.png) !important;
@@ -747,9 +791,11 @@ export default {
               }
 
               .left-item:first-child {
+                cursor: pointer;
                 flex-direction: row;
                 height: 48px;
                 background-image: url(/img/summit/devday-2022/agenda/second_title.png);
+                // background-image: none;
               }
             }
             .second-right {
@@ -1152,6 +1198,83 @@ export default {
       }
     }
   }
+  .lecturer {
+    width: 1029px;
+    margin: 70px auto 0;
+    .lecturer-box {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      .item {
+        width: 180px;
+        margin: 0 103px 30px 0;
+        &:nth-of-type(4n) {
+          margin-right: 0;
+        }
+        img {
+          width: 120px;
+          height: 120px;
+          margin: 0 auto;
+          display: block;
+        }
+        p {
+          font-size: 14px;
+          color: #000;
+          line-height: 16px;
+          margin-top: 8px;
+          width: 180px;
+          text-align: center;
+          &:first-of-type {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #002fa7;
+            line-height: 20px;
+          }
+          &:last-of-type {
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1000px) {
+      width: 345px;
+      .lecturer-box {
+        margin-top: 20px;
+        .hidden {
+          display: none;
+        }
+        .item {
+          width: 155px;
+          margin-right: 35px;
+          &:nth-of-type(2n) {
+            margin-right: 0;
+          }
+          p {
+            width: 155px;
+          }
+        }
+      }
+      .show-all {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        p {
+          color: #002fa7;
+        }
+      }
+    }
+    @media screen and (min-width: 1000px) and (max-width: 1120px) {
+      width: 1020px;
+      .lecturer-box {
+        .item {
+          margin-right: 100px;
+        }
+      }
+    }
+  }
   .construction {
     text-align: center;
     .construction-title {
@@ -1222,6 +1345,7 @@ export default {
       padding: 0 20px;
     }
     .title {
+      text-align: left;
       font-size: 26px;
       margin-bottom: 32px;
       @media screen and (max-width: 1120px) {
