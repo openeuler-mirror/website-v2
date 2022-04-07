@@ -10,10 +10,17 @@
         </div>
         <div class="is-pc home-carousel" v-if="!isShowH5">
              <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" >
-              <el-carousel-item v-for=" item in i18n.home.HOME_NEWRELEASE" :key="item.PC_IMG" >
+              <el-carousel-item >
+                <div class="video-banner carousel-banner" @click="go('/interaction/summit-list/devday2022/')">
+                     <video  muted playsinline="true" autoplay="autoplay"  height="500" loop ref="bannerVideo" poster="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_pc.png"  preload=""  id="home-video" >
+                         <source type="video/mp4" src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/OpenEuler Developer Day 2022（1920-500）.mp4">
+                     </video>
+                </div>
+              </el-carousel-item>
+              <!-- <el-carousel-item v-for=" item in i18n.home.HOME_NEWRELEASE" :key="item.PC_IMG" >
                     <div class="carousel-banner" :style="{backgroundImage: item.PC_IMG}"   @click="go(item.LINK)">
                     </div>
-              </el-carousel-item>
+              </el-carousel-item> -->
             </el-carousel>
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
@@ -996,12 +1003,21 @@ let remoteMethods = {
         background-color: #000;
         border-radius: 50%;
     }
+
+    .video-banner {
+        video {
+            max-width: 1920px;
+            object-fit: cover;
+        }
+    }
     .home-banner .carousel-banner {
         position: relative;
         cursor: pointer;
         display: flex;
         width: 100%;
         height: 100%;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         background-size: contain;
         background-repeat: no-repeat;
