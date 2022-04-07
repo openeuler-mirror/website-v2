@@ -83,7 +83,19 @@
                       .COLUMN_TITLE[tabIndex].TIME"
                     :key="item.ZH"
                   >
-                    <slot v-if="index === 0"> </slot>
+                    <slot v-if="index === 0">
+                      <!-- <div class="move-star"></div>
+                      <div class="move-star move-star2"></div>
+                      <div class="move-star move-star3"></div>
+                      <div class="move-star move-star4"></div> -->
+                      <div class="stars" ref="starsRef">
+                        <div
+                          class="star"
+                          v-for="(item, index) in starsCount"
+                          :key="index"
+                        ></div>
+                      </div>
+                    </slot>
                     <p>{{ item.ZH }}</p>
                     <p class="second-en">{{ item.EN }}</p>
                   </div>
@@ -324,11 +336,7 @@
       </div>
       <div class="lecturer" id="lecturer">
         <div class="title">
-          <img
-          class="mo"
-            v-lazy="lecturerData.LECTURER_BANNER.mobile"
-            alt=""
-          />
+          <img class="mo" v-lazy="lecturerData.LECTURER_BANNER.mobile" alt="" />
           <img class="pc" v-lazy="lecturerData.LECTURER_BANNER.web" alt="" />
         </div>
         <div
@@ -421,6 +429,8 @@ export default {
       i18nData: {},
       showTabSecond: 'morning',
       showTabThird: 'morning',
+      // 星星数量
+      starsCount: 100,
       tabIndex: 0,
       agendaTab: 0,
       agendaData: [],
@@ -430,6 +440,7 @@ export default {
     };
   },
   mounted() {},
+
   created() {
     this.i18nData = this.i18n.devday2022;
     this.agendaData = this.i18nData.AGENDA;
@@ -440,6 +451,7 @@ export default {
   methods: {
     tabClick(index) {
       this.agendaTab = index;
+      index === 1 ? this.getStars() : '';
     },
     zoneTabClick(event) {
       this.tabIndex = parseInt(event.index);
@@ -450,6 +462,23 @@ export default {
       } else {
         this.secondDayData = this.agendaData.AGENDA_DATA_14.SCHEDULE_NIGHT;
       }
+    },
+    getStars() {
+      this.$nextTick(() => {
+        let distance = 10;
+        let starNodes = Array.from(this.$refs.starsRef[0].children);
+        console.log(starNodes);
+        starNodes.forEach((item) => {
+          let speed = 0.2 + Math.random() * 1;
+          let thisDistance = distance + Math.random() * 200;
+          item.style.transformOrigin = `0 0 ${thisDistance}px`;
+          item.style.transform = `
+        translate3d(0,0,-${thisDistance}px)
+        rotateY(${Math.random() * 360}deg)
+        rotateX(${Math.random() * 50}deg)
+        scale(${speed},${speed})`;
+        });
+      });
     },
     goInstall(path) {
       if (path.includes('http') || path.includes('https')) {
@@ -481,6 +510,72 @@ export default {
   @media screen and (max-width: 1120px) {
     display: none;
   }
+}
+
+@keyframes rotate {
+  0% {
+    transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);
+  }
+  100% {
+    transform: perspective(400px) rotateZ(20deg) rotateX(-40deg)
+      rotateY(-360deg);
+  }
+}
+.stars {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  transform: perspective(500px);
+  transform-style: preserve-3d;
+  position: absolute;
+  perspective-origin: 50% 100%;
+  animation: rotate 40s infinite linear;
+  bottom: 0;
+}
+
+// .move-star {
+//   position: absolute;
+//   top: -19px;
+//   width: 40px;
+//   height: 19px;
+//   background-image: url('http://s3.music.126.net/nact/s/client/images/year2017/common/meteor.png?33473f44f2a23569b98a62ef73002828');
+//   background-size: cover;
+//   -webkit-animation: meteor 4s ease-in infinite;
+//   animation: meteor 3s ease-in infinite;
+// }
+// .move-star2 {
+//   top: -50px;
+//   left: -40px;
+// }
+// .move-star3 {
+//   top: -80px;
+//   left: -100px;
+// }
+// .move-star4 {
+//   top: -120px;
+//   left: -140px;
+// }
+
+@keyframes meteor {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+  40% {
+  }
+  100% {
+    -webkit-transform: translate(400px, 190px);
+    transform: translate(350px, 190px);
+  }
+}
+.star {
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  backface-visibility: hidden;
 }
 .h5-banner {
   display: none;
@@ -551,9 +646,9 @@ export default {
     img {
       width: 900px;
       height: 76px;
-       @media screen and (max-width: 1120px) {
-         width: 335px;
-         height: 38px;
+      @media screen and (max-width: 1120px) {
+        width: 335px;
+        height: 38px;
       }
     }
     .pc {
@@ -692,7 +787,7 @@ export default {
               text-align: center;
               box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
               border-radius: 8px;
-                  transition: all 0.2s;
+              transition: all 0.2s;
               &:hover {
                 box-shadow: 0px 6px 20px 0px rgba(0, 47, 167, 0.2);
               }
