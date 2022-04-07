@@ -605,12 +605,18 @@ module.exports = {
                                 },
                                 {
                                     TIME: '14:30-14:45',
-                                    THEME: 'capsule-高安全，高性能的下一代虚拟化内核平台',
+                                    THEME: 'Capsule - 高安全 & 全场景的下一代Hypervisor',
                                     SPEAKER: ['张波，野震宇 华为'],
                                     DESC: ['虚拟化通过复用与共享硬件资源来达到节省成本与使用灵活的目的，但同时牺牲了部分安全与性能。为达成更高安全与性能。华为欧拉虚拟化在stratovirt替代qemu的同时，capsule.替代kvm，均基于rust语言，杜绝绝大多数内存漏洞，同时capsule支持分区能力，快速部署全隔离虚拟机，达到接近物理机的时延与抖动，满足确定性诉求。']
                                 },
                                 {
                                     TIME: '14:45-15:00',
+                                    THEME: '以openEuler为基础构建高性能同源异构一云多芯云平台',
+                                    SPEAKER: ['王江涛 普华基础软件'],
+                                    DESC: ['以基础软件厂商为视角介绍国产架构服务器的引入为行业领域信息化建设带来的冲击，介绍如何使用NUMA、RDM、SR-IOV技术减少宿主机资源开销，接近裸机部署效果。通过基于openEuler申威版、ARM版、X86版构建的异构虚拟化成功案例']
+                                },
+                                {
+                                    TIME: '15:00-15:15',
                                     THEME: '欧拉生态蓬勃发展，NestOS扬帆起航',
                                     SPEAKER: ['王悦良 麒麟软件'],
                                     DESC: ['基于openEuler生态的云底座操作系统NestOS正式发布，本议题将分享其主要特性针对性解决支撑云上业务时常见的各类痛点，openEuler sig-OKD基于NestOS对其具体应用场景进行的探索，同时也将分享NestOS未来发展规划以及如何与openEuler生态进行组合创新，共同激发openEuler社区创新活力。']
@@ -652,9 +658,9 @@ module.exports = {
                                 },
                                 {
                                     TIME: '15:15-15:30',
-                                    THEME: 'zypher RTOS进展及中国社区推广',
+                                    THEME: 'Zephyr RTOS进展及中国社区推广',
                                     SPEAKER: ['王洪波 Intel'],
-                                    DESC: ['Zypher是在Linux基金会下开源的实时操作系统，它旨在成为这个物联网时代里，专门用于资源受限的中小型设备上最好的开源软件平台，同时强调安全设计。除了介绍Zypher这个项目，重点会介绍一下最新的开发进展，以及新成立的SIG-Zypher如何帮助进行中国社区的推广和应用。']
+                                    DESC: ['Zephyr是在Linux基金会下开源的实时操作系统，它旨在成为这个物联网时代里，专门用于资源受限的中小型设备上最好的开源软件平台，同时强调安全设计。除了介绍Zephyr这个项目，重点会介绍一下最新的开发进展，以及新成立的SIG-Zephyr如何帮助进行中国社区的推广和应用。']
                                 },
                             ]
                         },
@@ -686,15 +692,27 @@ module.exports = {
                                 },
                                 {
                                     TIME: '16:00-16:15',
-                                    THEME: '大数据+Ceph存算分离、算子下推提升计算存储效率',
-                                    SPEAKER: ['吴启庆 华为'],
-                                    DESC: ['大数据+Ceph采用数据直通和算子下推方案，实现存算分离，提升计算存储效率，性能和存储率优于HDFS存储，成为数据湖实现的解决方案之一。']
+                                    THEME: 'Spark SQL引擎Native Codegen',
+                                    SPEAKER: ['陈强 华为'],
+                                    DESC: ['采用SparkSQL Native Codegen框架，重新实现Spark SQL执行层，基于列式内存布局实现向量化，使用LLVM动态优化生成代码提升Spark SQL的性能']
                                 },
                                 {
                                     TIME: '16:15-16:30',
                                     THEME: 'Arm64开源HPC文件系统状态与进展',
                                     SPEAKER: ['刘新良 Linaro'],
                                     DESC: ['当前主流开源HPC文件系统Lustre和BeeGFS在Arm64平台上的状态与进展。例如使能过程中碰到的困难和问题，bugfix，CI搭建，性能测试与调优等相关工作进展，以及后续工作计划。']
+                                },
+                                {
+                                    TIME: '16:30-16:45',
+                                    THEME: 'AiLPHA大数据智能安全平台基于鲲鹏Validated的金融解决方案',
+                                    SPEAKER: ['童嘉伟 安恒信息'],
+                                    DESC: ['针对金融行业日益复杂网络安全形势，安恒信息与华为鲲鹏携手共赢，在产品适配层面达成高度合作，AiLPHA大数据智能安全平台采用业界领先的大数据分析技术架构，以“数据驱动安全分析，构建智能自适应安全运营中心”为产品理念，为金融用户提供全局安全态势感知能力、为金融业务不间断稳定运行提供安全保障，为金融用户提供信息系统安全决策支撑，为金融用户提供一套完整的安全解决方案，助力安全中国，助推数字经济。']
+                                },
+                                {
+                                    TIME: '16:45-17:00',
+                                    THEME: '大数据+Ceph存算分离、算子下推提升计算存储效率',
+                                    SPEAKER: ['吴启庆 华为'],
+                                    DESC: ['大数据+Ceph采用数据直通和算子下推方案，实现存算分离，提升计算存储效率，性能和存储率优于HDFS存储，成为数据湖实现的解决方案之一。']
                                 },
                             ]
                         },
@@ -797,15 +815,16 @@ module.exports = {
                                 },
                                 {
                                     TIME: '16:45-17:00',
-                                    THEME: 'OECP工具的介绍与使用',
+                                    THEME: '操作系统之间的差异比较及兼容性分析工具',
                                     SPEAKER: ['朱泽旭 华为'],
-                                    DESC: ['OECP是一个OS差异比较工具，用于支撑OSV认证开展，OSV工具从接口，文件，依赖等多维度，比较OS之间的差异项，用于支撑OS兼容性分析。']
+                                    DESC: ['OECP工具主要有以下2个功能：', '1.检测2个ISO（基于RPM）的软件包，软件包内文件，库文件接口（C/C++）,内核KABI的变化差异，根据这些差异可以分析2个OS之间的兼容性，为软件移植提供了重要参考'
+                                        , '2.OECP还可以检测同一个软件（RPM包）在不同版本下的变化以及差异，判断软件包的文件，接口等变化，可以分析得出软件不同版本之间的兼容性']
                                 },
                                 {
                                     TIME: '17:00-17:15',
-                                    THEME: 'openEuler镜像构建及裁剪',
-                                    SPEAKER: ['zhuchunyi 华为'],
-                                    DESC: ['openEuler iso构建、iso裁剪、镜像的文件级裁剪工具介绍。']
+                                    THEME: 'openEuler构建及镜像裁剪工具介绍',
+                                    SPEAKER: ['朱春意 华为'],
+                                    DESC: ['openEuler iso构建、iso裁剪、镜像的文件级裁剪工具介绍']
                                 },
                             ]
                         },
@@ -1038,6 +1057,11 @@ module.exports = {
                     POSITION: ['统信软件研发工程师']
                 },
                 {
+                    IMG: '/img/summit/devday-2022/lecturer/chenhui.png',
+                    NAME: '陈辉',
+                    POSITION: ['华为调度架构师']
+                },
+                {
                     IMG: '/img/summit/devday-2022/lecturer/chenqiang.png',
                     NAME: '陈强',
                     POSITION: ['华为大数据技术专家']
@@ -1058,9 +1082,14 @@ module.exports = {
                     POSITION: ['Intel Cloud Architect']
                 },
                 {
+                    IMG: '/img/summit/devday-2022/lecturer/gaokun.png',
+                    NAME: '高琨',
+                    POSITION: ['华为工程师']
+                },
+                {
                     IMG: '/img/summit/devday-2022/lecturer/gujiahui.png',
                     NAME: '顾嘉辉',
-                    POSITION: ['华为基础软件','安全技术专家']
+                    POSITION: ['华为基础软件', '安全技术专家']
                 },
                 {
                     IMG: '/img/summit/devday-2022/lecturer/guohao.png',
@@ -1070,7 +1099,7 @@ module.exports = {
                 {
                     IMG: '/img/summit/devday-2022/lecturer/hechaoyang.png',
                     NAME: '贺朝阳',
-                    POSITION: ['中科创达','创达边缘计算工程师']
+                    POSITION: ['中科创达', '创达边缘计算工程师']
                 },
                 {
                     IMG: '/img/summit/devday-2022/lecturer/jiangguoqing.png',
@@ -1083,9 +1112,24 @@ module.exports = {
                     POSITION: ['软通鲲鹏生态技术专家']
                 },
                 {
+                    IMG: '/img/summit/devday-2022/lecturer/lisiming.png',
+                    NAME: '李思敏',
+                    POSITION: ['华为技术有限公司工程师']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/lizi.png',
+                    NAME: '李自',
+                    POSITION: ['华为']
+                },
+                {
                     IMG: '/img/summit/devday-2022/lecturer/liubo.png',
                     NAME: '刘波',
-                    POSITION: ['华为开源社区','工具链总架构师']
+                    POSITION: ['华为开源社区', '工具链总架构师']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/liulongfang.png',
+                    NAME: '刘龙芳',
+                    POSITION: [' 华为内核技术工程师']
                 },
                 {
                     IMG: '/img/summit/devday-2022/lecturer/liuxinliang.png',
@@ -1108,6 +1152,11 @@ module.exports = {
                     POSITION: ['虚拟化资深工程师']
                 },
                 {
+                    IMG: '/img/summit/devday-2022/lecturer/maquanyi.png',
+                    NAME: '马全一',
+                    POSITION: ['华为']
+                },
+                {
                     IMG: '/img/summit/devday-2022/lecturer/renwei.png',
                     NAME: '任慰',
                     POSITION: ['华为操作系统技术专家']
@@ -1115,7 +1164,7 @@ module.exports = {
                 {
                     IMG: '/img/summit/devday-2022/lecturer/tangjie.png',
                     NAME: '唐杰',
-                    POSITION: ['麒麟信安','操作系统组件开发经理']
+                    POSITION: ['麒麟信安', '操作系统组件开发经理']
                 },
                 {
                     IMG: '/img/summit/devday-2022/lecturer/tianjun.png',
@@ -1125,17 +1174,17 @@ module.exports = {
                 {
                     IMG: '/img/summit/devday-2022/lecturer/tongjiawei.png',
                     NAME: '童嘉伟',
-                    POSITION: ['安恒信息','大数据信创产品总监']
+                    POSITION: ['安恒信息', '大数据信创产品总监']
                 },
                 {
                     IMG: '/img/summit/devday-2022/lecturer/wanghongbo.png',
                     NAME: '王洪波',
-                    POSITION: ['英特尔亚太研发有限公司','软件开发经理']
+                    POSITION: ['英特尔亚太研发有限公司', '软件开发经理']
                 },
                 {
                     IMG: '/img/summit/devday-2022/lecturer/wangjiangtao.png',
                     NAME: '王江涛',
-                    POSITION: ['普华基础软件','资深技术专家']
+                    POSITION: ['普华基础软件', '资深技术专家']
                 },
                 {
                     IMG: '/img/summit/devday-2022/lecturer/wangyueliang.png',
@@ -1145,7 +1194,7 @@ module.exports = {
                 {
                     IMG: '/img/summit/devday-2022/lecturer/wangzhi.png',
                     NAME: '王执',
-                    POSITION: ['华为欧拉Devkit','系统工程师']
+                    POSITION: ['华为欧拉Devkit', '系统工程师']
                 },
                 {
                     IMG: '/img/summit/devday-2022/lecturer/wuqiqing.png',
@@ -1155,7 +1204,7 @@ module.exports = {
                 {
                     IMG: '/img/summit/devday-2022/lecturer/wuwei.png',
                     NAME: '吴伟',
-                    POSITION: ['中科院软件所','PLCT实验室创始人']
+                    POSITION: ['中科院软件所', 'PLCT实验室创始人']
                 },
                 {
                     IMG: '/img/summit/devday-2022/lecturer/xiekunxun.png',
@@ -1180,22 +1229,32 @@ module.exports = {
                 {
                     IMG: '/img/summit/devday-2022/lecturer/yangzhao.png',
                     NAME: '杨昭',
-                    POSITION: ['华为操作系统技术专家']
+                    POSITION: ['麒麟软件高级软件工程师']
                 },
                 {
                     IMG: '/img/summit/devday-2022/lecturer/yaojiawei.png',
                     NAME: '姚嘉伟',
-                    POSITION: ['普华基础软件','资深系统架构师']
+                    POSITION: ['普华基础软件', '资深系统架构师']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/yezhenyu.png',
+                    NAME: '野震宇',
+                    POSITION: ['华为虚拟化领域工程师']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/zhangbo.png',
+                    NAME: '张波',
+                    POSITION: ['华为虚拟化领域工程师']
                 },
                 {
                     IMG: '/img/summit/devday-2022/lecturer/zuchunyi.png',
                     NAME: '朱春意',
-                    POSITION: ['OS-Builder、BaseService','sig maintainer']
+                    POSITION: ['OS-Builder、BaseService', 'sig maintainer']
                 },
                 {
                     IMG: '/img/summit/devday-2022/lecturer/zuzexu.png',
                     NAME: '朱泽旭',
-                    POSITION: [' openEuler兼容性工具','开发工程师']
+                    POSITION: [' openEuler兼容性工具', '开发工程师']
                 },
                 {
                     IMG: '/img/summit/devday-2022/lecturer/zhuanghaojian.png',
