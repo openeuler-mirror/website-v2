@@ -190,7 +190,8 @@ mkdir /home/Dubbo && cd /home/Dubbo && wget https://github.com/apache/dubbo/arch
    cd /home/Dubbo/dubbo-dubbo-2.7.5/dubbo-remoting/dubbo-remoting-netty && mvn install
    ```
 
-<img src="./image/Dubbo-4.png">
+<img src="./image/Dubbo-4.png">  
+
 Если на экране появится сообщение **BUILD SUCCESS**, значит модуль dubbo-remoting-netty скомпилирован.
 
 
@@ -209,7 +210,8 @@ mkdir /home/Dubbo && cd /home/Dubbo && wget https://github.com/apache/dubbo/arch
 cd /home/Dubbo/dubbo-dubbo-2.7.5/dubbo-rpc/dubbo-rpc-redis/ && mvn install
 ```
 
-<img src="./image/Dubbo-5.png">
+<img src="./image/Dubbo-5.png">  
+
 Если на экране появится сообщение **BUILD SUCCESS**, значит модуль dubbo-rpc-redis скомпилирован.
 
 ### Компиляция модуля dubbo-remoting-etcd3
@@ -244,7 +246,8 @@ wget https://mirrors.huaweicloud.com/kunpeng/maven/io/etcd/jetcd-launcher/0.3.0/
 cd /home/Dubbo/dubbo-dubbo-2.7.5/dubbo-remoting/dubbo-remoting-etcd3/ && mvn install
 ```
 
-<img src="./image/Dubbo-6.png">
+<img src="./image/Dubbo-6.png">  
+
 Если на экране появится сообщение **BUILD SUCCESS**, значит модуль dubbo-remoting- etcd3 скомпилирован.
 
 ### Компиляция модуля dubbo-registry-consul
@@ -262,7 +265,8 @@ wget https://releases.hashicorp.com/consul/1.1.0/consul_1.1.0_linux_arm64.zip &&
 
 Затем повторно скомпилируйте модуль.
 
-<img src="./image/Dubbo-7.png">
+<img src="./image/Dubbo-7.png">  
+
 Если на экране появится сообщение **BUILD SUCCESS**, значит модуль dubbo-registry-consul скомпилирован.
 
 ### Изменение остальных конфигурационных файлов
@@ -355,7 +359,8 @@ wget https://releases.hashicorp.com/consul/1.1.0/consul_1.1.0_linux_arm64.zip &&
 ```
 
 <img src="./image/Dubbo-12.png">
-<img src="./image/Dubbo-13.png">
+<img src="./image/Dubbo-13.png">  
+
 Если на экране появится сообщение **BUILD SUCCESS**, значит Dubbo 2.7.5 скомпилирован.
 
 Созданный после компиляции пакет **dubbo-2.7.5.jar** сохраняется в каталоге **dubbo-all/target**.

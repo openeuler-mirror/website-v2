@@ -181,10 +181,12 @@ mvn install
 
 ### Компиляция Dubbo 2.6.8
 
-В конец строки 552 файла **/home/Dubbo/dubbo-dubbo-2.6.8/pom.xml** добавьте следующее содержание:
+В конец строки 552 файла **/home/Dubbo/dubbo-dubbo-2.6.8/pom.xml** добавьте следующее содержание:  
 
-<img src="./image/Dubbo-1.png">
+<img src="./image/Dubbo-1.png">  
+
 Если на экране появится сообщение **BUILD SUCCESS**, значит Dubbo 2.6.8 скомпилирован.
 
-<img src="./image/Dubbo-2.png">
+<img src="./image/Dubbo-2.png">  
+
 Созданный после компиляции пакет **dubbo-2.6.8.jar** сохраняется в каталоге **all/target**.

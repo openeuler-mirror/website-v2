@@ -30,7 +30,8 @@ summary: Принципы портирования iok 2.1.3
 cat /etc/os-release
 ```
 
-<img src="./image/lok-1.png">
+<img src="./image/lok-1.png">  
+
 ### Проверка совместимости
 
 #### Загрузите iok-2.1.3 SRPM.
