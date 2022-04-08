@@ -289,7 +289,6 @@ export default {
   }
   .agenda-msg {
     display: flex;
-    align-items: center;
     flex-direction: row;
     .time-list {
       @media screen and (max-width: 1120px) {
@@ -433,6 +432,7 @@ export default {
       }
     }
     @media screen and (max-width: 1120px) {
+    align-items: center;
       p::after {
         display: none;
       }

@@ -467,7 +467,6 @@ export default {
       this.$nextTick(() => {
         let distance = 10;
         let starNodes = Array.from(this.$refs.starsRef[0].children);
-        console.log(starNodes);
         starNodes.forEach((item) => {
           let speed = 0.2 + Math.random() * 1;
           let thisDistance = distance + Math.random() * 200;
