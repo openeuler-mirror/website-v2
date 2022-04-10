@@ -1,5 +1,11 @@
 <template>
   <div class="developer-2022">
+    <titlenav
+      v-show="showNav"
+      class="titlenav"
+      :currentIndex="activeIndex"
+      :dataList="i18n.devday2022.NAV_LIST"
+    ></titlenav>
     <div class="banner">
       <a :href="i18nData.SUMMIT_BANNER.LINK" target="_blank">
         <img class="main" :src="i18nData.SUMMIT_BANNER.PC_IMG" />
@@ -14,7 +20,13 @@
       <div class="text-wrapper">
         <p class="text">{{ i18nData.SUMMIT_INTRODUCE }}</p>
       </div>
-      <div class="agenda">
+      <liveroom
+        :liveData="i18n.devday2022.LIVEDATA"
+        :isPass="false"
+        class="live-room do-jump"
+        id="liveroom"
+      ></liveroom>
+      <div class="agenda do-jump" id="agenda">
         <div class="title">
           <img class="pc" :src="i18nData.AGENDA.TITLE_IMG_PC" alt />
           <img class="mo" :src="i18nData.AGENDA.TITLE_IMG_MO" alt />
@@ -84,10 +96,6 @@
                     :key="item.ZH"
                   >
                     <slot v-if="index === 0">
-                      <!-- <div class="move-star"></div>
-                      <div class="move-star move-star2"></div>
-                      <div class="move-star move-star3"></div>
-                      <div class="move-star move-star4"></div> -->
                       <div class="stars" ref="starsRef">
                         <div
                           class="star"
@@ -104,7 +112,8 @@
                   <div class="right-title">
                     <div
                       class="right-title-item"
-                      v-for="item in agendaData.AGENDA_DATA_14.TITLE"
+                      :class="{ 'active-bg': activeBackground === index }"
+                      v-for="(item, index) in timeTitle"
                       :key="item"
                     >
                       {{ item }}
@@ -149,7 +158,8 @@
                   <div class="right-title">
                     <div
                       class="right-title-item"
-                      v-for="item in agendaData.AGENDA_DATA_14.TITLE_AFTERNOON"
+                      v-for="(item, index) in timeTitle"
+                      :class="{ 'active-bg1': activeBackground === index }"
                       :key="item"
                     >
                       {{ item }}
@@ -196,7 +206,8 @@
                   <div class="right-title">
                     <div
                       class="right-title-item"
-                      v-for="item in agendaData.AGENDA_DATA_14.TITLE_NIGHT"
+                      v-for="(item, index) in timeTitle"
+                      :class="{ 'active-bg2': activeBackground === index }"
                       :key="item"
                     >
                       {{ item }}
@@ -334,7 +345,7 @@
           </div>
         </div>
       </div>
-      <div class="lecturer" id="lecturer">
+      <div class="lecturer do-jump" id="lecturer">
         <div class="title">
           <img class="mo" v-lazy="lecturerData.LECTURER_BANNER.mobile" alt="" />
           <img class="pc" v-lazy="lecturerData.LECTURER_BANNER.web" alt="" />
@@ -355,7 +366,7 @@
           </div>
         </div>
       </div>
-      <div class="construction" id="construction">
+      <div class="construction do-jump" id="construction-unit">
         <div class="construction-title">
           <img class="web" v-lazy="construction.WEB_TITLE" alt="" />
           <img class="mobile" v-lazy="construction.MOBILE_TITLE" alt="" />
@@ -420,9 +431,14 @@
 
 <script>
 import carousel from './carousel-2022.vue';
+import liveroom from './liveroom.vue';
+import titlenav from './titleNav.vue';
+
 export default {
   components: {
     carousel,
+    liveroom,
+    titlenav,
   },
   data() {
     return {
@@ -437,9 +453,15 @@ export default {
       secondDayData: [],
       construction: [],
       lecturerData: [],
+      activeIndex: -1,
+      activeBackground: -1,
+      timeTitle: [],
+      showNav: false,
     };
   },
-  mounted() {},
+  mounted() {
+    window.addEventListener('scroll', this.scrollTop);
+  },
 
   created() {
     this.i18nData = this.i18n.devday2022;
@@ -447,21 +469,64 @@ export default {
     this.secondDayData = this.agendaData.AGENDA_DATA_14.SCHEDULE;
     this.construction = this.i18nData.CONSTRUCTION;
     this.lecturerData = this.i18nData.LECTURER;
+    this.timeTitle = this.agendaData.AGENDA_DATA_14.TITLE;
+    this.isTimeOn()
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.scrollTop);
   },
   methods: {
+    getDate(time) {
+      let currentDate = parseInt(new Date().getTime() / 1000 / 60);
+      let date = parseInt(new Date(time).getTime() / 1000 / 60);
+      return date - currentDate + 60;
+    },
     tabClick(index) {
       this.agendaTab = index;
       index === 1 ? this.getStars() : '';
     },
+    scrollTop() {
+      let scrollTop =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      if (scrollTop > 240) {
+        this.showNav = true;
+      } else {
+        this.showNav = false;
+      }
+      const jump = document.querySelectorAll('.do-jump');
+      let topArr = [];
+      for (let i = 0; i < jump.length; i++) {
+        topArr.push(jump[i].offsetTop + jump[i].clientHeight);
+      }
+      for (let i = 0; i < topArr.length; i++) {
+        if (scrollTop <= topArr[i] - 100) {
+          this.activeIndex = i;
+          break;
+        }
+      }
+    },
     zoneTabClick(event) {
       this.tabIndex = parseInt(event.index);
+      this.activeBackground = -1;
       if (this.tabIndex === 0) {
         this.secondDayData = this.agendaData.AGENDA_DATA_14.SCHEDULE;
+        this.timeTitle = this.agendaData.AGENDA_DATA_14.TITLE;
       } else if (this.tabIndex === 1) {
         this.secondDayData = this.agendaData.AGENDA_DATA_14.SCHEDULE_AFTERNOON;
+        this.timeTitle = this.agendaData.AGENDA_DATA_14.TITLE_AFTERNOON;
       } else {
         this.secondDayData = this.agendaData.AGENDA_DATA_14.SCHEDULE_NIGHT;
+        this.timeTitle = this.agendaData.AGENDA_DATA_14.TITLE_NIGHT;
       }
+      this.isTimeOn()
+    },
+    isTimeOn() {
+      this.timeTitle.forEach((item, index) => {
+        this.getDate(`2022-4-10-${item.split(' ')[0]}`) >= 0 &&
+        this.getDate(`2022-4-10-${item.split(' ')[0]}`) < 60
+          ? (this.activeBackground = index)
+          : '';
+      });
     },
     getStars() {
       this.$nextTick(() => {
@@ -627,7 +692,6 @@ export default {
     width: 100%;
   }
   .text-wrapper {
-    margin-bottom: 50px;
     color: #000;
     font-size: 20px;
     line-height: 40px;
@@ -662,9 +726,15 @@ export default {
       }
     }
   }
+  .live-room {
+    @media screen and (max-width: 1000px) {
+      margin-bottom: 40px;
+    }
+  }
   /deep/.agenda {
-    margin-bottom: 62px;
+    padding-top: 90px;
     @media screen and (max-width: 1120px) {
+      padding: 0;
       margin-bottom: 40px;
     }
 
@@ -795,9 +865,6 @@ export default {
             .schedule-item:first-child {
               margin-left: 22px;
             }
-            // .schedule-item:hover {
-            //   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.2);
-            // }
           }
         }
         .agenda-item:last-child {
@@ -894,7 +961,6 @@ export default {
                 background-color: #fff;
                 z-index: 10;
                 .right-title-item {
-                  // cursor: pointer;
                   display: flex;
                   align-items: center;
                   justify-content: center;
@@ -905,12 +971,26 @@ export default {
                   border-radius: 8px;
                   background-color: #fff;
                   transition: all 0.2s;
+                  background-repeat: no-repeat;
+                  background-size: 100% 100%;
                   &:hover {
                     box-shadow: 0px 6px 20px 0px rgba(0, 47, 167, 0.2);
                   }
                 }
                 .right-title-item:last-child {
                   margin: 0;
+                }
+                .active-bg {
+                  color: #fff;
+                  background-image: url(/img/summit/devday-2022/agenda/moring_time.png);
+                }
+                .active-bg1 {
+                  color: #fff;
+                  background-image: url(/img/summit/devday-2022/agenda/afternoon_time.png);
+                }
+                .active-bg {
+                  color: #fff;
+                  background-image: url(/img/summit/devday-2022/agenda/night_time.png);
                 }
               }
               .right-card-box {
@@ -1282,7 +1362,8 @@ export default {
   }
   .lecturer {
     width: 1029px;
-    margin: 70px auto 0;
+    margin: 0 auto;
+    padding-top: 90px;
     .lecturer-box {
       margin-top: 40px;
       display: flex;
@@ -1323,6 +1404,7 @@ export default {
     }
     @media screen and (max-width: 1000px) {
       width: 345px;
+      padding: 0;
       .lecturer-box {
         margin-top: 20px;
         .hidden {
@@ -1360,7 +1442,7 @@ export default {
   .construction {
     text-align: center;
     .construction-title {
-      margin: 40px 0;
+      padding: 50px 0 40px;
     }
     .text-title {
       margin-bottom: 10px;
@@ -1403,6 +1485,7 @@ export default {
     }
     @media screen and (max-width: 1120px) {
       .construction-title {
+        padding: 0;
         margin: 30px 0;
         img {
           width: 335px;

@@ -210,6 +210,7 @@
               <el-tab-pane label="openEuler" name="openEuler"></el-tab-pane>
               <el-tab-pane label="openLooKeng" name="openLooKeng"></el-tab-pane>
               <el-tab-pane label="openGauss" name="openGauss"></el-tab-pane>
+              <el-tab-pane label="MindSpore" name="MindSpore"></el-tab-pane>
             </el-tabs>
           </div>
           <div class="taks-body">
@@ -218,7 +219,7 @@
               <div
                 class="item"
                 :class="[{ 'last-child': community == 'openEuler' && index + 1 == communityTask.length },
-                { 'lookeng': community == 'openLooKeng' || community == 'openGauss' }]"
+                { 'lookeng': community == 'openLooKeng' || community == 'openGauss' || community == 'MindSpore' }]"
                 v-for="(item, index) in communityTask"
                 :key="index"
               >
@@ -227,11 +228,13 @@
                     item.NAME
                   }}
                 </a>
-                <div class="item-intriduce">{{ item.INTRODUCE }}</div>
-                <div class="button-box">
+                <div class="item-intriduce">{{ item.INTRODUCE }}
+                  <p class="waiting" v-if="community == 'MindSpore'">实习任务筹备中，敬请期待……</p>
+                </div>
+                <div class="button-box" v-if="community!=='MindSpore'">
                   <button @click="go(item.TASK)" class="button-left">{{ TASK.INTERNSHIP_TASK }}</button>
                   <button @click="go(item.GITEE)" class="button-right">
-                    <span>{{ item.NAME == 'openLooKeng' || item.NAME == 'openGauss' ? i18n.learn.OFFICAL_WEB : TASK.SIG_DETAIL }}</span>
+                    <span>{{ item.NAME == 'openLooKeng' || item.NAME == 'openGauss' || item.NAME == 'MindSpore'? i18n.learn.OFFICAL_WEB : TASK.SIG_DETAIL }}</span>
                     <img src="/img/internship/arrow.png" alt />
                   </button>
                 </div>
@@ -433,6 +436,8 @@ export default {
         this.communityTask = this.TASK.EULER_TASK_ITEM
       } else if (this.community == 'openLooKeng') {
         this.communityTask = this.TASK.LOOKENG_TASK_ITEM
+      } else if (this.community === 'MindSpore') {
+        this.communityTask = this.TASK.MindSpore_TASK_ITEM
       } else {
         this.communityTask = this.TASK.OPENGAUSS_TASK_ITEM
       }
@@ -921,6 +926,17 @@ a {
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
+            .waiting {
+              margin-top: 14px;
+              font-size: 20px;
+              color: #000000;
+              text-align: center;
+              @media screen and (max-width:1120px) {
+                font-size: 14px;
+                text-align: left;
+                color: #000000;
+              }
+            }
           }
           .button-box {
             display: flex;

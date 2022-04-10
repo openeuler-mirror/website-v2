@@ -27,6 +27,7 @@
       <div class="time-list">
         <div
           class="time-item"
+          :class="{ 'active-bg': activeBackground === index }"
           v-for="(item, index) in carouselObj.TIME_LIST"
           :key="index"
         >
@@ -123,15 +124,31 @@ export default {
       sig2DetailList: [],
       summitData: false,
       isTransform: false,
+      activeBackground: -1,
     };
   },
   props: ['agendaData', 'sigData'],
   created() {
+    this.getDate();
     let agendaObj = this.i18n.interaction.SUMMIT.SUMMIT_HOME_DATA;
     agendaObj = agendaObj.AGENDA;
     this.carouselObj = this.agendaData;
+    this.isTimeOn()
   },
   methods: {
+    getDate(time) {
+      let currentDate = parseInt(new Date().getTime() / 1000 / 60);
+      let date = parseInt(new Date(time).getTime() / 1000 / 60);
+      return date - currentDate + 15;
+    },
+    isTimeOn() {
+      this.carouselObj.TIME_LIST.forEach((item, index) => {
+        this.getDate(`2022-4-11-${item.split(' ')[0]}`) >= 0 &&
+        this.getDate(`2022-4-11-${item.split(' ')[0]}`) < 15
+          ? (this.activeBackground = index)
+          : '';
+      });
+    },
     showDetail(item, which) {
       if (item.THEME && which === 1) {
         this.detailMsg = {};
@@ -306,6 +323,7 @@ export default {
         font-size: 20px;
         color: #00000080;
         margin-bottom: 16px;
+        background-size: cover;
         box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
       }
@@ -316,6 +334,10 @@ export default {
         margin-bottom: 30px;
         height: 48px;
         line-height: 48px;
+      }
+      .active-bg {
+        color: #fff;
+        background-image: url(/img/summit/devday-2022/agenda/thild-time.png);
       }
       .tea-div {
         height: 60px;
@@ -421,18 +443,18 @@ export default {
             display: flex;
             align-items: flex-start;
             width: 100%;
-            height: 1828px;
+            height: 1938px;
             transition: all 0.3s;
           }
           .is-transform {
-            height: 2062px;
+            height: 100%;
             transform: translate(-100%);
           }
         }
       }
     }
     @media screen and (max-width: 1120px) {
-    align-items: center;
+      align-items: center;
       p::after {
         display: none;
       }
@@ -490,6 +512,7 @@ export default {
   .agenda-msg-mo {
     display: none;
     @media screen and (max-width: 1120px) {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -506,8 +529,10 @@ export default {
         }
         .btn {
           cursor: pointer;
+          padding: 5px;
           width: 8px;
           height: 16px;
+          box-sizing: content-box;
         }
         .isShow {
           opacity: 0;
