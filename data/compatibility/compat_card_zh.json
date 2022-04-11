@@ -4445,4 +4445,23 @@
     "item": "03032YRF",
     "downloadLink": "inbox"
   }
+  {
+    "vendorID": "10df",
+    "deviceID": "e300",
+    "svID": "10df",
+    "ssID": "e310",
+    "architecture": "x86_64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "lpfc",
+    "version": "0:12.0.0.6",
+    "type": "FC",
+    "driverDate": "2022.03.28",
+    "sha256": "255B66EA9B8B8A85E2567C436D0706F2B2D1EAF9",
+    "driverSize": "1.7M",
+    "chipVendor": "Emulex",
+    "boardModel": "LPe31002",
+    "chipModel": "XE501",
+    "item": "06030463",
+    "downloadLink": "inbox"
+  }
 ]
