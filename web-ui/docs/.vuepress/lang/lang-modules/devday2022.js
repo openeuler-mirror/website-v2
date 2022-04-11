@@ -248,15 +248,13 @@ module.exports = {
                             EN: "Migration"
                         },
                         SCHEDULE_CARD: [{
-                            TEXT: "sig-UKUI 9:00-09:30",
-                            THE_TEXT: "sig-UKUI",
-                            THE_TIME: "9:00 - 09:30",
+                            TEXT: "sig-UKUI",
+                            TIME: "9:00 - 09:30",
                             ZOOM_LINK: "https://us06web.zoom.us/j/85641837636?pwd=eXB3VTVDQytOVFZlWitrNkVmbTNGZz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-UKUI-planning"
                         }, {
-                            TEXT: "sig-CICD 09:30-11:00",
-                            THE_TEXT: "sig-CICD",
-                            THE_TIME: "09:30 - 11:00",
+                            TEXT: "sig-CICD",
+                            TIME: "09:30 - 11:00",
                             ZOOM_LINK: "https://us06web.zoom.us/j/84141641538?pwd=ck1WbzZRVXpqcEQ5aWhrbHo2L1NSdz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-CICD-planning"
                         }, {
