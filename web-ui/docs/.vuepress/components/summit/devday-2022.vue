@@ -96,6 +96,11 @@
                     :key="item.ZH"
                   >
                     <slot v-if="index === 0">
+                      <div class="move-star"></div>
+                      <div class="move-star move-star2"></div>
+                      <div class="move-star move-star3"></div>
+                      <div class="move-star move-star4"></div>
+                      <div class="move-star move-star5"></div>
                       <div class="stars" ref="starsRef">
                         <div
                           class="star"
@@ -133,6 +138,8 @@
                           { double: index === 3 && index2 === 0 },
                           { double: index === 5 && index2 === 0 },
                           { double: index === 6 && index2 === 0 },
+                          { half: index === 7 && index2 === 0 },
+                          { 'one-part': index === 7 && index2 === 2 },
                         ]"
                         v-for="(item2, index2) in item.SCHEDULE_CARD"
                         :key="index2"
@@ -141,14 +148,18 @@
                         <div class="card-right">
                           <div
                             class="dialogue"
-                            :title="agendaData.CONFERENCE_LINK"
                             @click="goInstall(item2.ZOOM_LINK)"
-                          ></div>
+                          >
+                            <div class="tip">
+                              {{ agendaData.CONFERENCE_LINK }}
+                            </div>
+                          </div>
                           <div
                             class="etherpad"
                             @click="goInstall(item2.ETHERPAD)"
-                            title="Etherpad"
-                          ></div>
+                          >
+                            <div class="tip">Etherpad</div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -189,14 +200,18 @@
                         <div class="card-right">
                           <div
                             class="dialogue"
-                            :title="agendaData.CONFERENCE_LINK"
                             @click="goInstall(item2.ZOOM_LINK)"
-                          ></div>
+                          >
+                            <div class="tip">
+                              {{ agendaData.CONFERENCE_LINK }}
+                            </div>
+                          </div>
                           <div
                             class="etherpad"
-                            title="Etherpad"
                             @click="goInstall(item2.ETHERPAD)"
-                          ></div>
+                          >
+                            <div class="tip">Etherpad</div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -230,14 +245,18 @@
                         <div class="card-right">
                           <div
                             class="dialogue"
-                            :title="agendaData.CONFERENCE_LINK"
                             @click="goInstall(item2.ZOOM_LINK)"
-                          ></div>
+                          >
+                            <div class="tip">
+                              {{ agendaData.CONFERENCE_LINK }}
+                            </div>
+                          </div>
                           <div
-                            title="Etherpad"
                             class="etherpad"
                             @click="goInstall(item2.ETHERPAD)"
-                          ></div>
+                          >
+                            <div class="tip">Etherpad</div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -263,22 +282,14 @@
                     </div>
                     <div
                       class="mo-render-detail"
-                      v-for="(item2, index2) in item.SCHEDULE_CARD"
+                      v-for="item2 in item.SCHEDULE_CARD"
                       :key="item2.TEXT"
                     >
                       <div class="mo-detail-left">
-                        <slot
-                          v-if="tabIndex === 0 && index === 7 && index2 !== 2"
-                        >
-                          <div class="mo-detail-text">{{ item2.THE_TEXT }}</div>
-                          <div class="mo-detail-time">
-                            {{ item2.THE_TIME }}
-                          </div>
-                        </slot>
-                        <div class="mo-detail-text" v-if="!item2.THE_TIME">
+                        <div class="mo-detail-text">
                           {{ item2.TEXT }}
                         </div>
-                        <div class="mo-detail-time" v-if="!item2.THE_TIME">
+                        <div class="mo-detail-time">
                           {{ item2.TIME }}
                         </div>
                       </div>
@@ -446,7 +457,7 @@ export default {
       showTabSecond: 'morning',
       showTabThird: 'morning',
       // 星星数量
-      starsCount: 100,
+      starsCount: 200,
       tabIndex: 0,
       agendaTab: 0,
       agendaData: [],
@@ -470,7 +481,7 @@ export default {
     this.construction = this.i18nData.CONSTRUCTION;
     this.lecturerData = this.i18nData.LECTURER;
     this.timeTitle = this.agendaData.AGENDA_DATA_14.TITLE;
-    this.isTimeOn()
+    this.isTimeOn();
   },
   destroyed() {
     window.removeEventListener('scroll', this.scrollTop);
@@ -518,12 +529,12 @@ export default {
         this.secondDayData = this.agendaData.AGENDA_DATA_14.SCHEDULE_NIGHT;
         this.timeTitle = this.agendaData.AGENDA_DATA_14.TITLE_NIGHT;
       }
-      this.isTimeOn()
+      this.isTimeOn();
     },
     isTimeOn() {
       this.timeTitle.forEach((item, index) => {
-        this.getDate(`2022-4-10-${item.split(' ')[0]}`) >= 0 &&
-        this.getDate(`2022-4-10-${item.split(' ')[0]}`) < 60
+        this.getDate(`2022-4-11-${item.split(' ')[0]}`) >= 0 &&
+        this.getDate(`2022-4-11-${item.split(' ')[0]}`) < 60
           ? (this.activeBackground = index)
           : '';
       });
@@ -586,39 +597,54 @@ export default {
   }
 }
 .stars {
-  position: relative;
-  width: 50px;
-  height: 50px;
+  position: absolute;
   transform: perspective(500px);
   transform-style: preserve-3d;
-  position: absolute;
   perspective-origin: 50% 100%;
-  animation: rotate 40s infinite linear;
+  animation: rotate 50s infinite linear;
   bottom: 0;
 }
 
-// .move-star {
-//   position: absolute;
-//   top: -19px;
-//   width: 40px;
-//   height: 19px;
-//   background-image: url('http://s3.music.126.net/nact/s/client/images/year2017/common/meteor.png?33473f44f2a23569b98a62ef73002828');
-//   background-size: cover;
-//   -webkit-animation: meteor 4s ease-in infinite;
-//   animation: meteor 3s ease-in infinite;
-// }
-// .move-star2 {
-//   top: -50px;
-//   left: -40px;
-// }
-// .move-star3 {
-//   top: -80px;
-//   left: -100px;
-// }
-// .move-star4 {
-//   top: -120px;
-//   left: -140px;
-// }
+.third-body-morning .stars {
+  position: absolute;
+  top: 20%;
+  right: 50%;
+  animation: rotate 100s infinite linear;
+  .star {
+    border-radius: 50%;
+    background-color: #fff;
+  }
+}
+
+.move-star {
+  position: absolute;
+  top: -19px;
+  width: 30px;
+  height: 19px;
+  background-image: url(/img/summit/devday-2022/agenda/meteor.png);
+  background-size: cover;
+  animation: meteor 3s infinite;
+}
+.move-star2 {
+  top: -50px;
+  left: -40px;
+  animation: meteor 3s 1s ease-in infinite;
+}
+.move-star3 {
+  top: -80px;
+  left: -100px;
+  animation: meteor 3s 2s ease-in infinite;
+}
+.move-star4 {
+  top: -160px;
+  left: -300px;
+  animation: meteor 3s 3s ease-in infinite;
+}
+.move-star5 {
+  top: -100px;
+  left: -100px;
+  animation: meteor 3s 4s ease-in infinite;
+}
 
 @keyframes meteor {
   0% {
@@ -1018,6 +1044,7 @@ export default {
                       flex-direction: column;
                       .dialogue,
                       .etherpad {
+                        position: relative;
                         cursor: pointer;
                         padding: 11px 18px;
                         width: 60px;
@@ -1028,6 +1055,35 @@ export default {
                         background-image: url(/img/summit/devday-2022/agenda/dialogue_active.png);
                         background-color: rgb(229, 234, 246);
                         border-radius: 0px 8px 0px 0px;
+                        .tip {
+                          position: absolute;
+                          display: none;
+                          top: -7px;
+                          right: -50%;
+                          padding: 8px 10px;
+                          color: #777777;
+                          text-align: left;
+                          font-size: 12px;
+                          background-color: white;
+                          transform: translateY(-100%);
+                          border: 1px solid #002fa7;
+                          border-radius: 3px;
+                          z-index: 999;
+                        }
+                      }
+                      .tip::before,
+                      .tip::after {
+                        content: ' ';
+                        border-top: 6px solid #002fa7;
+                        border-left: 6px solid transparent;
+                        border-right: 6px solid transparent;
+                        position: absolute;
+                        bottom: -6px;
+                        left: 20px;
+                      }
+                      .tip::after {
+                        border-top: 6px solid white;
+                        bottom: -5px;
                       }
                       .etherpad {
                         margin-top: 2px;
@@ -1038,6 +1094,9 @@ export default {
                       .etherpad:hover {
                         background-image: url(/img/summit/devday-2022/agenda/dialogue.png);
                         background-color: #002fa7;
+                        .tip {
+                          display: block;
+                        }
                       }
                       .etherpad:hover {
                         background-image: url(/img/summit/devday-2022/agenda/etherpad.png);
@@ -1047,6 +1106,14 @@ export default {
                   .double {
                     flex: none;
                     width: 576px;
+                  }
+                  .half {
+                    flex: none;
+                    width: 139px;
+                  }
+                  .one-part {
+                    flex: none;
+                    width: 278px;
                   }
                   .right-card:last-child {
                     margin-right: 0;
@@ -1305,19 +1372,22 @@ export default {
           }
         }
         .third-day {
-          .third-item {
-            display: flex;
-            align-items: center;
-            // cursor: pointer;
-            padding: 25px 32px;
-            color: #fff;
-            margin-bottom: 20px;
-            height: 70px;
-            box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            background-size: cover;
-            .third-right {
-              margin-left: 170px;
+          .third-body-morning {
+            position: relative;
+            overflow: hidden;
+            .third-item {
+              display: flex;
+              align-items: center;
+              padding: 25px 32px;
+              color: #fff;
+              margin-bottom: 20px;
+              height: 70px;
+              box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
+              border-radius: 8px;
+              background-size: cover;
+              .third-right {
+                margin-left: 170px;
+              }
             }
           }
           @media screen and (max-width: 1120px) {

@@ -9,8 +9,16 @@
     ></titlenav>
     <div class="internship-banner">
       <a href="#task">
-        <img class="banner-pc" src="/img/internship/internship-banner.png" alt />
-        <img class="banner-mo" src="/img/internship/internship-banner-mo.png" alt />
+        <img
+          class="banner-pc"
+          src="/img/internship/internship-banner.png"
+          alt
+        />
+        <img
+          class="banner-mo"
+          src="/img/internship/internship-banner-mo.png"
+          alt
+        />
       </a>
     </div>
     <div class="internship-list">
@@ -42,32 +50,30 @@
                 <div class="main-text">
                   <p>{{ STEP.STEP_ONE.TEXT1 }}</p>
                   <p>
-                    {{
-                      STEP.STEP_ONE.TEXT2
-                    }}
+                    {{ STEP.STEP_ONE.TEXT2 }}
                     <a
                       href="https://gitee.com/openeuler-competition/opensource-internship/issues/I4A68T?from=project-issue"
                       target="_blank"
-                    >{{ STEP.STEP_ONE.LINK1 }}</a>
+                      >{{ STEP.STEP_ONE.LINK1 }}</a
+                    >
                     {{ STEP.STEP_ONE.TEXT3 }}
                   </p>
                   <p>{{ STEP.STEP_ONE.TEXT4 }}</p>
                   <div class="attention">
                     <p>
                       {{ STEP.STEP_ONE.ATTENTION1 }}
-                      <a
-                        href="mailto:intern@openeuler.sh"
-                      >intern@openeuler.sh</a>
+                      <a href="mailto:intern@openeuler.sh"
+                        >intern@openeuler.sh</a
+                      >
                       {{ STEP.STEP_ONE.ATTENTION2 }}
-                      <span
-                        class="orange"
-                      >{{ STEP.STEP_ONE.TIP }}</span>
+                      <span class="orange">{{ STEP.STEP_ONE.TIP }}</span>
                     </p>
                     <a
                       href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/01%20%E5%AE%9E%E4%B9%A0%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E6%A8%A1%E6%9D%BF.rar"
                       download
                       class="download"
-                    >{{ STEP.STEP_ONE.DONWLOAD }}</a>
+                      >{{ STEP.STEP_ONE.DONWLOAD }}</a
+                    >
                   </div>
                 </div>
               </div>
@@ -84,41 +90,32 @@
                   <p>
                     {{ STEP.STEP_TOW.P_TEXT[4] }}
                     <span class="blue">{{ STEP.STEP_TOW.P_TEXT[5] }}</span>
-                    {{
-                      STEP.STEP_TOW.P_TEXT[6]
-                    }}
-                    <span
-                      class="blue"
-                    >{{ STEP.STEP_TOW.P_TEXT[7] }}</span>
+                    {{ STEP.STEP_TOW.P_TEXT[6] }}
+                    <span class="blue">{{ STEP.STEP_TOW.P_TEXT[7] }}</span>
                     {{ STEP.STEP_TOW.P_TEXT[8] }}
                   </p>
                   <p>
-                    {{
-                      STEP.STEP_TOW.P_TEXT[9]
-                    }}
-                    <span
-                      class="blue"
-                    >{{ STEP.STEP_TOW.P_TEXT[10] }}</span>
+                    {{ STEP.STEP_TOW.P_TEXT[9] }}
+                    <span class="blue">{{ STEP.STEP_TOW.P_TEXT[10] }}</span>
                     {{ STEP.STEP_TOW.P_TEXT[11] }}
-                    <span
-                      class="orange"
-                    >{{ STEP.STEP_TOW.P_TEXT[12] }}</span>
+                    <span class="orange">{{ STEP.STEP_TOW.P_TEXT[12] }}</span>
                   </p>
                   <div class="attention black">
                     <div class="attention-title">{{ STEP.ATTENTION }}</div>
                     <p>{{ STEP.STEP_TOW.ATTENTION_TEXT[0] }}</p>
                     <p>
                       {{ STEP.STEP_TOW.ATTENTION_TEXT[1] }}
-                      <span
-                        class="blue"
-                      >{{ STEP.STEP_TOW.ATTENTION_TEXT[2] }}</span>
+                      <span class="blue">{{
+                        STEP.STEP_TOW.ATTENTION_TEXT[2]
+                      }}</span>
                       {{ STEP.STEP_TOW.ATTENTION_TEXT[3] }}
                     </p>
                     <a
                       href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/02%20%E4%BB%BB%E5%8A%A1%E8%AE%A4%E9%A2%86%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF.rar"
                       download
                       class="download"
-                    >{{ STEP.STEP_TOW.DONWLOAD }}</a>
+                      >{{ STEP.STEP_TOW.DONWLOAD }}</a
+                    >
                   </div>
                 </div>
               </div>
@@ -128,23 +125,17 @@
                 <div class="main-text">
                   <p>
                     {{ STEP.STEP_ThREE.P_TEXT[0] }}
-                    <span
-                      class="blue"
-                    >{{ STEP.STEP_ThREE.P_TEXT[1] }}</span>
+                    <span class="blue">{{ STEP.STEP_ThREE.P_TEXT[1] }}</span>
                     {{ STEP.STEP_ThREE.P_TEXT[2] }}
                   </p>
                   <p>
                     {{ STEP.STEP_ThREE.P_TEXT[3] }}
-                    <span
-                      class="blue"
-                    >{{ STEP.STEP_ThREE.P_TEXT[4] }}</span>
+                    <span class="blue">{{ STEP.STEP_ThREE.P_TEXT[4] }}</span>
                     {{ STEP.STEP_ThREE.P_TEXT[5] }}
                   </p>
                   <p>
                     {{ STEP.STEP_ThREE.P_TEXT[6] }}
-                    <span
-                      class="blue"
-                    >{{ STEP.STEP_ThREE.P_TEXT[7] }}</span>
+                    <span class="blue">{{ STEP.STEP_ThREE.P_TEXT[7] }}</span>
                     {{ STEP.STEP_ThREE.P_TEXT[8] }}
                   </p>
                   <div class="attention black">
@@ -152,16 +143,22 @@
                     <p>
                       {{ STEP.STEP_ThREE.ATTENTION_TEXT[0] }}
                       <span class="blue">
-                        {{
-                          STEP.STEP_ThREE.ATTENTION_TEXT[1]
-                        }}
+                        {{ STEP.STEP_ThREE.ATTENTION_TEXT[1] }}
                       </span>
                       {{ STEP.STEP_ThREE.ATTENTION_TEXT[2] }}
                     </p>
                   </div>
                   <div class="flow-chart">
-                    <img class="chart-pc" src="/img/internship/step-3.png" alt />
-                    <img class="chart-mo" src="/img/internship/step-3-mo.png" alt />
+                    <img
+                      class="chart-pc"
+                      src="/img/internship/step-3.png"
+                      alt
+                    />
+                    <img
+                      class="chart-mo"
+                      src="/img/internship/step-3-mo.png"
+                      alt
+                    />
                   </div>
                 </div>
               </div>
@@ -171,30 +168,31 @@
                   <h4>{{ STEP.STEP_FOUR.TITLE }}</h4>
                   <p>{{ STEP.STEP_FOUR.P_TEXT1[0] }}</p>
                   <div class="attention firstAttention">
-                    <p v-for="item in STEP.STEP_FOUR.P_TEXT" :key="item">{{ item }}</p>
+                    <p v-for="item in STEP.STEP_FOUR.P_TEXT" :key="item">
+                      {{ item }}
+                    </p>
                   </div>
                   <p>
-                    {{
-                      STEP.STEP_FOUR.P_TEXT1[1]
-                    }}
-                    <a
-                      class="blue"
-                      href="mailto:intern@openeuler.sh"
-                    >
-                      {{
-                        STEP.STEP_FOUR.P_TEXT1[2]
-                      }}
+                    {{ STEP.STEP_FOUR.P_TEXT1[1] }}
+                    <a class="blue" href="mailto:intern@openeuler.sh">
+                      {{ STEP.STEP_FOUR.P_TEXT1[2] }}
                     </a>
                     {{ STEP.STEP_FOUR.P_TEXT1[3] }}
                   </p>
                   <div class="attention black">
                     <div class="attention-title">{{ STEP.ATTENTION }}</div>
-                    <p v-for="item in STEP.STEP_FOUR.ATTENTION_TEXT" :key="item">{{ item }}</p>
+                    <p
+                      v-for="item in STEP.STEP_FOUR.ATTENTION_TEXT"
+                      :key="item"
+                    >
+                      {{ item }}
+                    </p>
                     <a
                       href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/03%20%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E5%92%8C%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF.rar"
                       download
                       class="download"
-                    >{{ STEP.STEP_FOUR.DONWLOAD }}</a>
+                      >{{ STEP.STEP_FOUR.DONWLOAD }}</a
+                    >
                   </div>
                 </div>
               </div>
@@ -214,27 +212,47 @@
             </el-tabs>
           </div>
           <div class="taks-body">
-            <p class="task-introduce" v-show="community == 'openEuler'">{{ TASK.INTRODUCE }}</p>
+            <p class="task-introduce" v-show="community == 'openEuler'">
+              {{ TASK.INTRODUCE }}
+            </p>
             <div class="item-box">
               <div
                 class="item"
-                :class="[{ 'last-child': community == 'openEuler' && index + 1 == communityTask.length },
-                { 'lookeng': community == 'openLooKeng' || community == 'openGauss' || community == 'MindSpore' }]"
+                :class="[
+                  {
+                    'last-child':
+                      community == 'openEuler' &&
+                      index + 1 == communityTask.length,
+                  },
+                  { 'other-community': community !== 'openEuler' },
+                ]"
                 v-for="(item, index) in communityTask"
                 :key="index"
               >
                 <a :href="item.NAME_LINK" class="item-name" target="_blank">
-                  {{
-                    item.NAME
-                  }}
+                  {{ item.NAME }}
                 </a>
-                <div class="item-intriduce">{{ item.INTRODUCE }}
-                  <p class="waiting" v-if="community == 'MindSpore'">实习任务筹备中，敬请期待……</p>
+                <div
+                  class="item-intriduce"
+                  :class="{ mindspore: community === 'MindSpore' }"
+                >
+                  {{ item.INTRODUCE }}
+                  <p class="waiting" v-if="community == 'MindSpore'">
+                    实习任务筹备中，敬请期待……
+                  </p>
                 </div>
-                <div class="button-box" v-if="community!=='MindSpore'">
-                  <button @click="go(item.TASK)" class="button-left">{{ TASK.INTERNSHIP_TASK }}</button>
+                <div class="button-box" v-if="community !== 'MindSpore'">
+                  <button @click="go(item.TASK)" class="button-left">
+                    {{ TASK.INTERNSHIP_TASK }}
+                  </button>
                   <button @click="go(item.GITEE)" class="button-right">
-                    <span>{{ item.NAME == 'openLooKeng' || item.NAME == 'openGauss' || item.NAME == 'MindSpore'? i18n.learn.OFFICAL_WEB : TASK.SIG_DETAIL }}</span>
+                    <span>{{
+                      item.NAME == 'openLooKeng' ||
+                      item.NAME == 'openGauss' ||
+                      item.NAME == 'MindSpore'
+                        ? i18n.learn.OFFICAL_WEB
+                        : TASK.SIG_DETAIL
+                    }}</span>
                     <img src="/img/internship/arrow.png" alt />
                   </button>
                 </div>
@@ -250,16 +268,22 @@
             <div class="integral-content">
               <div
                 class="integral-item"
-                v-for="(item,index) in i18n.learn.INTEGRAL.INTEGRAL_DATA"
-                :class="{'circular':index!==3}"
+                v-for="(item, index) in i18n.learn.INTEGRAL.INTEGRAL_DATA"
+                :class="{ circular: index !== 3 }"
                 :key="item.HEAD"
               >
                 <h3>{{ item.HEAD }}</h3>
-                <div v-for="(item1,index1) in item.TEXT" :key="item1" class="star">
+                <div
+                  v-for="(item1, index1) in item.TEXT"
+                  :key="item1"
+                  class="star"
+                >
                   <img v-if="index === 3" src="/img/internship/star.png" alt />
                   <p>
-                    <slot v-if="index === 1 && index1 ===2">
-                      <a  href="/doc/实习报告模板.docx" title="下载报告模板">{{item1}}</a>
+                    <slot v-if="index === 1 && index1 === 2">
+                      <a href="/doc/实习报告模板.docx" title="下载报告模板">{{
+                        item1
+                      }}</a>
                     </slot>
                     <span v-else>{{ item1 }}</span>
                   </p>
@@ -278,8 +302,17 @@
             <div class="rank-content" ref="rankContent">
               <div class="rank-box">
                 <div class="rank-top">
-                  <div class="top-item" v-for="(item, index) in rankTop" :key="index">
-                    <a class="gitee-name" target="_blank" :href="item.giteeRoom">{{ item.GiteeId }}</a>
+                  <div
+                    class="top-item"
+                    v-for="(item, index) in rankTop"
+                    :key="index"
+                  >
+                    <a
+                      class="gitee-name"
+                      target="_blank"
+                      :href="item.giteeRoom"
+                      >{{ item.GiteeId }}</a
+                    >
                     <div class="score">
                       {{ item.integralValue }}
                       <span>{{ i18n.learn.RANK.SCORE }}</span>
@@ -292,21 +325,32 @@
                         { third: index === 2 },
                       ]"
                     >
-                      <span v-if="index === 0">{{ i18n.learn.RANK.SECOND }}</span>
-                      <span v-if="index === 1">{{ i18n.learn.RANK.FIRST }}</span>
-                      <span v-if="index === 2">{{ i18n.learn.RANK.THIRD }}</span>
+                      <span v-if="index === 0">{{
+                        i18n.learn.RANK.SECOND
+                      }}</span>
+                      <span v-if="index === 1">{{
+                        i18n.learn.RANK.FIRST
+                      }}</span>
+                      <span v-if="index === 2">{{
+                        i18n.learn.RANK.THIRD
+                      }}</span>
                     </div>
                   </div>
                 </div>
                 <div class="rank-last">
-                  <div class="rank-item" v-for="(item, index) in renderData" :key="index">
+                  <div
+                    class="rank-item"
+                    v-for="(item, index) in renderData"
+                    :key="index"
+                  >
                     <div class="rank-left">
                       <div class="rank-class">{{ item.rank }}</div>
                       <a
                         :href="item.giteeRoom"
                         target="_blank"
                         class="gitee-name"
-                      >{{ item.GiteeId }}</a>
+                        >{{ item.GiteeId }}</a
+                      >
                     </div>
                     <div class="rank-right">
                       <div class="score">{{ item.integralValue }}</div>
@@ -354,7 +398,8 @@
                   class="this-post"
                   href="https://gitee.com/openeuler-competition/opensource-internship/issues/I4AJIR?from=project-issue"
                   target="_blank"
-                >{{ i18n.learn.RULE.MORE[1] }}</a>
+                  >{{ i18n.learn.RULE.MORE[1] }}</a
+                >
                 {{ i18n.learn.RULE.MORE[2] }}
               </div>
             </div>
@@ -395,16 +440,21 @@
         </div>
       </div>
     </div>
-     <div class="qq-code" v-show="show ">
-            <img class="close" @click="close()" src="/img/internship/close.png" alt="">
-            <img src="/img/internship/qq-code.png" alt="">
-      </div>
+    <div class="qq-code" v-show="show">
+      <img
+        class="close"
+        @click="close()"
+        src="/img/internship/close.png"
+        alt=""
+      />
+      <img src="/img/internship/qq-code.png" alt="" />
+    </div>
   </div>
 </template>
 
 <script>
-import titlenav from "../summit/titleNav.vue";
-import { getRank, getToken } from "../../api/internship";
+import titlenav from '../summit/titleNav.vue';
+import { getRank, getToken } from '../../api/internship';
 export default {
   components: {
     titlenav,
@@ -412,7 +462,7 @@ export default {
   data() {
     return {
       renderData: [],
-      show:true,
+      show: true,
       community: 'openEuler',
       showAll: false,
       isExent: false,
@@ -424,28 +474,28 @@ export default {
       rankLast: [],
       communityTask: [],
       STEP: {},
-      TASK: {}
+      TASK: {},
     };
   },
   methods: {
     close() {
-        this.show = false
+      this.show = false;
     },
     tabClick() {
       if (this.community == 'openEuler') {
-        this.communityTask = this.TASK.EULER_TASK_ITEM
+        this.communityTask = this.TASK.EULER_TASK_ITEM;
       } else if (this.community == 'openLooKeng') {
-        this.communityTask = this.TASK.LOOKENG_TASK_ITEM
+        this.communityTask = this.TASK.LOOKENG_TASK_ITEM;
       } else if (this.community === 'MindSpore') {
-        this.communityTask = this.TASK.MindSpore_TASK_ITEM
+        this.communityTask = this.TASK.MindSpore_TASK_ITEM;
       } else {
-        this.communityTask = this.TASK.OPENGAUSS_TASK_ITEM
+        this.communityTask = this.TASK.OPENGAUSS_TASK_ITEM;
       }
     },
     extend() {
       if (this.isExent) {
         this.renderData = this.rankInfo.slice(3, 10);
-        window.location.href = "#rank";
+        window.location.href = '#rank';
       } else {
         this.renderData = this.rankInfo.slice(3);
       }
@@ -455,11 +505,11 @@ export default {
       this.stepActive = index;
     },
     go(path) {
-      if (path && !path.includes("http")) {
+      if (path && !path.includes('http')) {
         this.$router.push({
           path: this.resolvePath(path),
         });
-      } else if (path.includes("http")) {
+      } else if (path.includes('http')) {
         window.open(path);
       } else {
         return false;
@@ -512,15 +562,15 @@ export default {
         .then((res) => {
           if (res.UserPoints) {
             let info = res.UserPoints;
-            info.length > 10 ? this.showAll = true : '';
+            info.length > 10 ? (this.showAll = true) : '';
             info.sort((a, b) => {
               return b.integralValue - a.integralValue;
             });
             info.forEach((item, index) => {
-              item['giteeRoom'] = `https://gitee.com/${item.GiteeId}`
+              item['giteeRoom'] = `https://gitee.com/${item.GiteeId}`;
               index < 9
-                ? (item["rank"] = `0${index + 1}`)
-                : (item["rank"] = index + 1);
+                ? (item['rank'] = `0${index + 1}`)
+                : (item['rank'] = index + 1);
             });
             this.rankInfo = info;
             this.renderData = info.slice(3, 10);
@@ -533,9 +583,9 @@ export default {
             );
           }
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(err);
-        })
+        });
     },
   },
   created() {
@@ -543,12 +593,12 @@ export default {
     this.TASK = this.i18n.learn.TASK;
   },
   mounted() {
-    this.tabClick()
-    this.showRank()
-    window.addEventListener("scroll", this.scroTop);
+    this.tabClick();
+    this.showRank();
+    window.addEventListener('scroll', this.scroTop);
   },
   destroyed() {
-    window.removeEventListener("scroll", this.scroTop);
+    window.removeEventListener('scroll', this.scroTop);
   },
 };
 </script>
@@ -569,18 +619,28 @@ export default {
     right: -20px;
     width: 20px;
   }
-   @media screen and (max-width: 1000px) {
-     display: block;
-   }
+  @media screen and (max-width: 1000px) {
+    display: block;
+  }
 }
 /deep/.tabbar {
   .el-tabs__nav-wrap::after {
     display: none;
   }
+  @media screen and (max-width: 1000px) {
+    .el-tabs__nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
   .el-tabs__nav-scroll {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 1000px) {
+      display: block;
+    }
   }
   .el-tabs__item {
     height: 60px;
@@ -799,7 +859,7 @@ a {
               position: absolute;
               top: 10px;
               left: 0;
-              content: "";
+              content: '';
               height: 4px;
               width: 4px;
               background: rgba(0, 0, 0, 0.5);
@@ -905,7 +965,7 @@ a {
           color: rgba(0, 0, 0, 0.5);
           box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.1);
           border-radius: 8px;
-          transition: box-shadow 0.1s;
+          transition: box-shadow 1s;
           .item-name {
             cursor: pointer;
             color: #002fa7;
@@ -928,13 +988,11 @@ a {
             -webkit-box-orient: vertical;
             .waiting {
               margin-top: 14px;
-              font-size: 20px;
-              color: #000000;
+              font-size: 18px;
               text-align: center;
-              @media screen and (max-width:1120px) {
+              @media screen and (max-width: 1120px) {
                 font-size: 14px;
                 text-align: left;
-                color: #000000;
               }
             }
           }
@@ -948,7 +1006,11 @@ a {
               color: #fff;
               outline: none;
               border: none;
+              transition: all 0.2s;
               background-color: #002fa7;
+            }
+            .button-left:hover {
+              background-color: #0c41c9;
             }
             .button-right {
               display: flex;
@@ -957,10 +1019,18 @@ a {
               color: #002fa7;
               background-color: #fff;
               line-height: 24px;
-              transition: all 3s;
+              transition: all 0.2s;
+              border: 1px solid transparent;
+              &:hover {
+                border: 1px solid #002fa7;
+                img {
+                  transform: translateX(5px);
+                }
+              }
               img {
                 margin-left: 6px;
                 width: 24px;
+                transition: all 0.3s;
               }
             }
           }
@@ -985,13 +1055,14 @@ a {
             color: #000000;
           }
         }
-        .lookeng {
+        .other-community {
           flex: 1;
           margin: 0 0 25px 0;
           height: 203px;
+          text-align: center;
           background-size: 120%;
           background-position: center;
-          background-image: url(/img/internship/lookeng_bg.png);
+          background-image: url(/img/internship/other-community-bg.png);
           @media (max-width: 1000px) {
             background-image: none;
           }
@@ -1002,19 +1073,26 @@ a {
             }
           }
           .item-intriduce {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             padding: 10px 0 0 0;
             width: 100%;
-            text-align: left;
-            font-size: 14px;
+            font-size: 18px;
+            @media (max-width: 1000px) {
+              font-size: 14px;
+            }
+          }
+          .mindspore {
+            height: 100px;
+          }
+          .button-box {
+            justify-content: center;
           }
         }
         .item:hover {
           box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.3);
-          transform: translateY(-2px);
-        }
-        .lookeng:hover {
-          transform: none;
-          box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.2);
         }
       }
       @media (max-width: 1000px) {
@@ -1081,7 +1159,7 @@ a {
           }
           .circular {
             p::before {
-              content: "";
+              content: '';
               position: absolute;
               left: 0;
               top: 10px;
@@ -1149,7 +1227,7 @@ a {
       }
       .rank-title::before {
         position: absolute;
-        content: "积分排行";
+        content: '积分排行';
         width: 374px;
         color: #fff;
         text-align: center;
@@ -1308,7 +1386,7 @@ a {
           }
         }
         .rank-title::before {
-          content: "";
+          content: '';
         }
         .rank-content {
           border-radius: 8px;

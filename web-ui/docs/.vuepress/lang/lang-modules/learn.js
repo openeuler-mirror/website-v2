@@ -382,12 +382,12 @@ module.exports = {
                     SUPPLEMENT:"满足以上3条，公开答辩获得评委打分80分以上后，发放优秀实习生证书。",
                 },
                 {
-                    HEAD: "4、开源之星",
+                    HEAD: "4、开源之星（仅针对openEuler与openGauss社区）",
                     TEXT: [
-                        "积分满150分。",
-                        "满120分并在openEuler（或openGauss、openLooKeng）公众号发布3篇以上实习项目相关文章及参与过一次实习直播主讲。",
+                        "2022年内独在openEuler社区（或openGauss社区）积分满150分。",
+                        "2022年内独在openEuler社区（或openGauss社区）满120分并在openEuler（或openGauss）公众号发布3篇以上实习项目相关文章及参与过一次实习直播主讲。",
                     ],
-                    SUPPLEMENT:"满足以上一条可获得“开源之星”荣誉徽章，在openEuler官网展示，并获得参与2022年度实习优秀贡献者评选资格，评选上将获得奖金10000元。",
+                    SUPPLEMENT:"满足以上一条可获得“开源之星”荣誉徽章，在openEuler（openGauss）官网展示，并获得参与2022年度实习优秀贡献者评选资格，评选上将获得奖金10000元。",
                 },
             ]
         },
