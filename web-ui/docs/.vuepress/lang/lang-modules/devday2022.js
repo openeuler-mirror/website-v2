@@ -18,6 +18,92 @@ module.exports = {
             LINK: "https://shimo.im/forms/sspw0eU78rE9ra79/fill"
         },
         ],
+        NAV_LIST: [
+            {
+                key: '#liveroom',
+                name: '现场直播'
+            },
+            {
+                key: '#agenda',
+                name: '峰会日程'
+            },
+            {
+                key: '#lecturer',
+                name: '演讲嘉宾'
+            },
+            {
+                key: '#construction-unit',
+                name: '共建单位'
+            }
+        ],
+        LIVEDATA: {
+            RENDERDATA: [
+                {
+                    ID: 10383,
+                    THEME: 'openEuler Developer Day 2022',
+                    TIME: '9:00-12:00',
+                    OPTION: '9:00-12:00 openEuler Developer Day 2022',
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10383?lang=zh&thirdId='
+                },
+                {
+                    ID: 10384,
+                    THEME: '内核',
+                    TIME: '14:00-15:30',
+                    OPTION: '14:00-15:30 内核',
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10384?lang=zh&thirdId='
+                },
+                {
+                    ID: 10390,
+                    THEME: '多样性计算',
+                    TIME: '15:30-17:00',
+                    OPTION: '15:30-17:00 多样性计算',
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10390?lang=zh&thirdId='
+                },
+                {
+                    ID: 10385,
+                    THEME: '云原生&虚拟化',
+                    TIME: '14:00-15:30',
+                    OPTION: '14:00-15:30 云原生&虚拟化',
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10385?lang=zh&thirdId='
+                },
+                {
+                    ID: 10389,
+                    THEME: '边缘&嵌入式',
+                    TIME: '14:00-15:30',
+                    OPTION: '14:00-15:30 边缘&嵌入式',
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10389?lang=zh&thirdId='
+                },
+                {
+                    ID: 10391,
+                    THEME: '大数据存储',
+                    TIME: '15:30-17:00',
+                    OPTION: '15:30-17:00 大数据存储',
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10391?lang=zh&thirdId='
+                },
+                {
+                    ID: 10388,
+                    THEME: '开源雨林',
+                    TIME: '15:30-17:00',
+                    OPTION: '15:30-17:00 开源雨林',
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10388?lang=zh&thirdId='
+                },
+                {
+                    ID: 10386,
+                    THEME: '安全分论坛',
+                    TIME: '14:00-15:30',
+                    OPTION: '14:00-15:30 安全',
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10386?lang=zh&thirdId='
+                },
+                {
+                    ID: 10387,
+                    THEME: 'Devkit 工具集',
+                    TIME: '15:30-17:00',
+                    OPTION: '15:30-17:00 Devkit 工具集',
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10387?lang=zh&thirdId='
+                },
+            ],
+            LIVETITLE: "openEuler Developer Day 2022直播间"
+        },
         SUMMIT_INTRODUCE: "openEuler Developer Day 2022 （简称 ODD 2022）是开放原子开源基金会的 openEuler 社区发起的开发者大会。旨在推动 openEuler 在服务器、云计算、边缘计算和嵌入式四大场景的技术探索和创新。本次 ODD 2022 正式发布 openEuler 22.03 全场景长周期版本，展示社区伙伴联合创新成果，分享多行业使用 openEuler 规模部署的商业案例，举办社区治理机构的线上工作会议。openEuler 始终与开发者在一起，开创新境，共创未来。",
         AGENDA: {
             CONFERENCE_LINK: "会议链接",

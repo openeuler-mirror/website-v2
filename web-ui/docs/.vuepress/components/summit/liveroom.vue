@@ -9,13 +9,21 @@
         />
         <img v-lazy="'/img/summit/home/zh-pc-liveroom.png'" alt="" v-else />
       </div>
-      <div class="will" v-else>
+      <div class="current" v-if="isSummit">
         <img
           v-lazy="'/img/summit/devday-2021/h5-liveroom.png'"
           alt=""
           v-if="isShowH5"
         />
         <img v-lazy="'/img/summit/devday-2021/pc-liveroom.png'" alt="" v-else />
+      </div>
+      <div class="current" v-if="isDeveloper">
+        <img
+          v-lazy="'/img/summit/devday-2022/h5-liveroom.png'"
+          alt=""
+          v-if="isShowH5"
+        />
+        <img v-lazy="'/img/summit/devday-2022/pc-liveroom.png'" alt="" v-else />
       </div>
     </div>
     <div class="time-box" id="time-box" v-if="isSummit">
@@ -51,10 +59,14 @@
       mozallowfullscreen="true"
     ></iframe>
     <div class="web-box" v-if="!isShowH5 && !isSummit">
-      <p>{{ i18n.interaction.SUMMIT.LIVETITLE }}</p>
+      <p>{{ liveData.LIVETITLE }}</p>
       <div class="item-box">
         <div
-          :class="['live-item', roomId === index ? 'activeRoom' : '']"
+          :class="[
+            'live-item',
+            roomId === index ? 'active-room' : '',
+            { 'developer-item': isDeveloper },
+          ]"
           v-for="(item, index) in renderData"
           @click="tabLiveRoom(item.LIVEURL, index)"
           :key="index"
@@ -71,7 +83,7 @@
         <div
           :class="[
             'live-item',
-            roomId === index ? 'activeRoom' : '',
+            roomId === index ? 'active-room' : '',
             { 'summit-item': isSummit && currentTime == 'nine' },
           ]"
           v-for="(item, index) in renderData"
@@ -90,26 +102,28 @@
 export default {
   data() {
     return {
-      nowLiveSrc: "",
-      nowValue: "",
+      nowLiveSrc: '',
+      nowValue: '',
       roomId: null,
-      userName: "",
+      userName: '',
       iframeHeight: 630,
       isSummit: false,
+      isDeveloper: false,
       tenData: [],
       nineData: [],
       renderData: [],
-      currentTime: "ten",
+      currentTime: 'ten',
     };
   },
-  props: ["liveData", "isPass"],
+  props: ['liveData', 'isPass'],
   created() {
     if (this.liveData.TEN) {
       this.isSummit = true;
       this.renderData = this.liveData.TEN;
     } else {
-      this.renderData = this.liveData;
+      this.renderData = this.liveData.RENDERDATA;
     }
+    !this.isSummit && !this.isPass ? (this.isDeveloper = true) : '';
     let digit = Math.round(Math.random() * 10);
     digit > 3 ? digit : (digit = 3);
     this.creatUserId(digit);
@@ -118,15 +132,15 @@ export default {
     let liveId = this.$route.query.liveid;
     this.showIframe(liveId);
     window.addEventListener(
-      "message",
+      'message',
       (event) => {
-        let data = "";
+        let data = '';
         try {
           data = JSON.parse(event.data);
         } catch (e) {
           data = event.data;
         }
-        if (data.height == "auto") {
+        if (data.height == 'auto') {
           this.iframeHeight = 550;
         } else if (data.height) {
           this.iframeHeight = parseInt(data.height);
@@ -137,7 +151,7 @@ export default {
   },
   methods: {
     tabClick() {
-      if (this.currentTime == "nine") {
+      if (this.currentTime == 'nine') {
         this.renderData = this.liveData.NINE;
         this.showIframe();
       } else {
@@ -148,22 +162,22 @@ export default {
     showIframe(id) {
       if (id) {
         this.renderData.forEach((item, index, arr) => {
-          if (parseInt(item["ID"]) === parseInt(id)) {
-            this.nowLiveSrc = item["LIVEURL"] + this.userName;
-            this.nowValue = item["OPTION"];
+          if (parseInt(item['ID']) === parseInt(id)) {
+            this.nowLiveSrc = item['LIVEURL'] + this.userName;
+            this.nowValue = item['OPTION'];
             this.roomId = index;
           }
         });
       } else {
-        this.nowLiveSrc = this.renderData[0]["LIVEURL"] + this.userName;
-        this.nowValue = this.renderData[0]["OPTION"];
+        this.nowLiveSrc = this.renderData[0]['LIVEURL'] + this.userName;
+        this.nowValue = this.renderData[0]['OPTION'];
         this.roomId = 0;
       }
     },
     creatUserId(num) {
-      let returnId = "";
+      let returnId = '';
       let charStr =
-        "0123456789@#$%&~ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        '0123456789@#$%&~ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
       for (var i = 0; i < num; i++) {
         var index = Math.round(Math.random() * (charStr.length - 1));
         returnId += charStr.substring(index, index + 1);
@@ -172,7 +186,7 @@ export default {
     },
     tabLiveRoom(src, index) {
       let indexType = typeof index;
-      if (indexType === "number") {
+      if (indexType === 'number') {
         this.nowLiveSrc = src + this.userName;
         this.roomId = index;
       } else {
@@ -185,7 +199,6 @@ export default {
 <style>
 .live-room .live-choose {
   width: 100%;
-  margin-top: 30px;
 }
 .live-room .live-choose .el-input {
   width: 100%;
@@ -225,9 +238,9 @@ export default {
 }
 .live-room {
   width: 1120px;
-  margin: 40px auto 0 auto;
+  margin: 0 auto 0 auto;
   .title {
-    margin: 100px 0 50px 0;
+    padding: 90px 0 50px 0;
     img {
       display: block;
       margin: 0 auto;
@@ -236,6 +249,7 @@ export default {
     }
     @media screen and (max-width: 1000px) {
       margin: 40px 0 30px 0;
+      padding: 0;
       img {
         width: 335px;
         height: 38px;
@@ -244,7 +258,7 @@ export default {
   }
   #livePage {
     width: 1120px;
-    margin: 40px auto 0 auto;
+    margin: 0 auto 0 auto;
     display: block;
     border: none;
     @media screen and (max-width: 1000px) {
@@ -268,38 +282,50 @@ export default {
       justify-content: space-between;
       .live-item {
         width: 178px;
-        padding: 10px;
+        padding: 18px 0;
         cursor: pointer;
         background: #ffffff;
-        transition: all .3s cubic-bezier(.645,.045,.355,1);
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
         box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
         &:first-of-type {
           width: 100%;
           margin: 0 0 30px 0;
         }
-        &:last-of-type {
-          margin-right: 0;
-        }
         p {
-          margin-top: 10px;
           color: #002fa7;
           text-align: center;
           font-size: 18px;
           line-height: 18px;
           &:last-of-type {
-            margin-top: 20px;
+            margin-top: 16px;
+            font-size: 16px;
           }
         }
       }
       .summit-item {
         width: 216px;
       }
-      .activeRoom {
+      .developer-item {
+        transition: none;
+        width: 130px;
+         &:hover {
+              transition: all 0.3s;
+              box-shadow: 0px 6px 20px 0px rgba(0, 47, 167, 0.2);
+        }
+      }
+      .active-room {
         background-color: #002fa7;
         p {
           color: #ffffff;
         }
+      }
+      .active-room.developer-item {
+        background-size: cover;
+        background-image: url(/img/summit/devday-2022/live-bg.png);
+      }
+      .active-room.developer-item:first-child {
+        background-image: url(/img/summit/devday-2022/live-bg-long.png);
       }
     }
   }

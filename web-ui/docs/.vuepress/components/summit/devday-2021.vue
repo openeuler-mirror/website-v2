@@ -17,7 +17,7 @@
                     <img v-lazy="'/img/summit/devday-2021/agenda/agenda-web.png'" alt="" v-else />
                 </div>
                 <div class="time-box">
-                    <el-radio-group v-model="currentTime"> 
+                    <el-radio-group v-model="currentTime">
                         <el-radio-button label="forenoon">上午</el-radio-button>
                         <el-radio-button label="afternoon">下午</el-radio-button>
                         <el-radio-button label="evening">晚上</el-radio-button>
@@ -128,8 +128,9 @@ import liveroom from './liveroom.vue';
 export default {
     data() {
         return {
-            liveList: [
-                {
+            liveList: {
+               RENDERDATA:[
+                    {
                     ID: 8765,
                     THEME: 'openEuler developer day 2021',
                     TIME: '9:10 - 12:00',
@@ -171,7 +172,9 @@ export default {
                     OPTION: '13:30 - 15:30 多样性算力',
                     LIVEURL: 'https://vhall.huawei.com/v2/watch/8770?lang=zh&thirdId='
                 }
-            ],
+               ],
+               LIVETITLE: "峰会直播间"
+            },
             isShowNav: false,
             activeIndex: 0,
             otherSrc: '',

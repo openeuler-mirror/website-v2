@@ -287,6 +287,14 @@ module.exports = {
                     GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-CICD",
                 },
                 {
+                    NAME: "sig-HPC",
+                    NAME_LINK:
+                        "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=95&name=sig-HPC",
+                    INTRODUCE: "建立HPC领域的高校、企业与工程师的交流圈，打造HPC快速部署调优平台，让HPC流行起来！",
+                    TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=125219718&single_label_text=&state=&target_project&skip_mobile=true",
+                    GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-HPC",
+                },
+                {
                     NAME: "其他",
                     INTRODUCE: "一些暂不属于任何SIG的任务，如Rust、存储等等",
                     TASK: "https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=125884711&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&sort=&state=open&target_project&skip_mobile=true",
@@ -313,6 +321,16 @@ module.exports = {
                     INTRODUCE: "一款高性能、高安全、高可靠的企业级开源关系型数据库",
                     TASK: "https://gitee.com/opengauss/opensource-intership/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openlookeng-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=newest&state=open&target_project&skip_mobile=true",
                     GITEE: "https://opengauss.org/",
+                },
+            ],
+            MindSpore_TASK_ITEM: [
+                {
+                    NAME_LINK:
+                        "https://www.mindspore.cn/",
+                    NAME: "MindSpore",
+                    INTRODUCE: "华为自研全场景AI框架",
+                    // TASK: "https://gitee.com/opengauss/opensource-intership/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openlookeng-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=newest&state=open&target_project&skip_mobile=true",
+                    // GITEE: "https://opengauss.org/",
                 },
             ],
             INTERNSHIP_TASK: "实习任务",

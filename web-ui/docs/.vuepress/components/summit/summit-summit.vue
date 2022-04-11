@@ -455,6 +455,7 @@ import carousel from "./carousel.vue";
 import titlenav from "./titleNav.vue";
 import liveroom from "./liveroom.vue";
 import exhibition from "./exhibition.vue";
+
 export default {
   components: {
     carousel,
@@ -789,6 +790,9 @@ export default {
     @media screen and (max-width: 1000px) {
       .construction-title {
         margin: 30px 0;
+        img {
+        width: 335px;
+        }
       }
       .text-title {
         margin-bottom: 0;
@@ -892,7 +896,9 @@ export default {
     }
     .el-table_1_column_1,
     .el-table_1_column_2,
-    .el-table_1_column_5 {
+    .el-table_1_column_5,
+    .el-table_2_column_7,
+    .el-table_3_column_11 {
       color: rgba(0, 0, 0, 0.5);
     }
     .el-table_1_column_5 {
@@ -901,6 +907,7 @@ export default {
     .el-table_2_column_8,
     .el-table_2_column_9,
     .el-table_1_column_3,
+    .el-table_3_column_12,
     .el-table_1_column_4 {
       .cell {
         color: #000;
