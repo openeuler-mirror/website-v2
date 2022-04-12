@@ -89,7 +89,7 @@
                 <div class="second-left">
                   <div
                     class="left-item"
-                    @click="index === 0 && go('/sig/meeting-guide/')"
+                    @click="index === 0 && go('/sig/meeting-guide/'),index === 1 && tabIndex!==2 && goInstall('http://live.bilibili.com/22290444')"
                     :class="{ 'live-item': index === 1 && tabIndex !== 2 }"
                     v-for="(item, index) in agendaData.AGENDA_DATA_14
                       .COLUMN_TITLE[tabIndex].TIME"
@@ -150,15 +150,13 @@
                             class="dialogue"
                             @click="goInstall(item2.ZOOM_LINK)"
                           >
-                            <div class="tip">
-                              {{ agendaData.CONFERENCE_LINK }}
-                            </div>
+                            {{ agendaData.AGENDA_DATA_14.RIGHT_TEXT[0] }}
                           </div>
                           <div
                             class="etherpad"
                             @click="goInstall(item2.ETHERPAD)"
                           >
-                            <div class="tip">Etherpad</div>
+                            {{ agendaData.AGENDA_DATA_14.RIGHT_TEXT[1] }}
                           </div>
                         </div>
                       </div>
@@ -202,15 +200,13 @@
                             class="dialogue"
                             @click="goInstall(item2.ZOOM_LINK)"
                           >
-                            <div class="tip">
-                              {{ agendaData.CONFERENCE_LINK }}
-                            </div>
+                            {{ agendaData.AGENDA_DATA_14.RIGHT_TEXT[0] }}
                           </div>
                           <div
                             class="etherpad"
                             @click="goInstall(item2.ETHERPAD)"
                           >
-                            <div class="tip">Etherpad</div>
+                            {{ agendaData.AGENDA_DATA_14.RIGHT_TEXT[1] }}
                           </div>
                         </div>
                       </div>
@@ -247,15 +243,13 @@
                             class="dialogue"
                             @click="goInstall(item2.ZOOM_LINK)"
                           >
-                            <div class="tip">
-                              {{ agendaData.CONFERENCE_LINK }}
-                            </div>
+                            {{ agendaData.AGENDA_DATA_14.RIGHT_TEXT[0] }}
                           </div>
                           <div
                             class="etherpad"
                             @click="goInstall(item2.ETHERPAD)"
                           >
-                            <div class="tip">Etherpad</div>
+                            {{ agendaData.AGENDA_DATA_14.RIGHT_TEXT[1] }}
                           </div>
                         </div>
                       </div>
@@ -275,6 +269,7 @@
                   >
                     <div
                       class="mo-render-title"
+                      @click="tabIndex!==2 && index === 0 && goInstall('http://live.bilibili.com/22290444')"
                       :class="{ 'live-item': index === 0 && tabIndex !== 2 }"
                     >
                       <h4>{{ item.TITLE.ZH }}</h4>
@@ -297,11 +292,15 @@
                         <div
                           class="mo-right-top dialogue"
                           @click="goInstall(item2.ZOOM_LINK)"
-                        ></div>
+                        >
+                          {{ agendaData.AGENDA_DATA_14.RIGHT_TEXT[0] }}
+                        </div>
                         <div
                           class="mo-right-botton etherpad"
                           @click="goInstall(item2.ETHERPAD)"
-                        ></div>
+                        >
+                          {{ agendaData.AGENDA_DATA_14.RIGHT_TEXT[1] }}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -457,7 +456,7 @@ export default {
       showTabSecond: 'morning',
       showTabThird: 'morning',
       // 星星数量
-      starsCount: 200,
+      starsCount: 150,
       tabIndex: 0,
       agendaTab: 0,
       agendaData: [],
@@ -533,8 +532,8 @@ export default {
     },
     isTimeOn() {
       this.timeTitle.forEach((item, index) => {
-        this.getDate(`2022-4-11-${item.split(' ')[0]}`) >= 0 &&
-        this.getDate(`2022-4-11-${item.split(' ')[0]}`) < 60
+        this.getDate(`2022-4-14-${item.split(' ')[0]}`) >= 0 &&
+        this.getDate(`2022-4-15-${item.split(' ')[0]}`) < 60
           ? (this.activeBackground = index)
           : '';
       });
@@ -923,6 +922,9 @@ export default {
           }
         }
         .second-day {
+          .live-item {
+            cursor: pointer;
+          }
           .live-item::after {
             position: absolute;
             top: 0;
@@ -1044,62 +1046,26 @@ export default {
                       flex-direction: column;
                       .dialogue,
                       .etherpad {
-                        position: relative;
                         cursor: pointer;
-                        padding: 11px 18px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         width: 60px;
                         height: 46px;
+                        font-size: 14px;
                         color: #002fa7;
-                        background-position: center center;
-                        background-repeat: no-repeat;
-                        background-image: url(/img/summit/devday-2022/agenda/dialogue_active.png);
                         background-color: rgb(229, 234, 246);
                         border-radius: 0px 8px 0px 0px;
-                        .tip {
-                          position: absolute;
-                          display: none;
-                          top: -7px;
-                          right: -50%;
-                          padding: 8px 10px;
-                          color: #777777;
-                          text-align: left;
-                          font-size: 12px;
-                          background-color: white;
-                          transform: translateY(-100%);
-                          border: 1px solid #002fa7;
-                          border-radius: 3px;
-                          z-index: 999;
-                        }
+                        transition: all 0.2s;
                       }
-                      .tip::before,
-                      .tip::after {
-                        content: ' ';
-                        border-top: 6px solid #002fa7;
-                        border-left: 6px solid transparent;
-                        border-right: 6px solid transparent;
-                        position: absolute;
-                        bottom: -6px;
-                        left: 20px;
-                      }
-                      .tip::after {
-                        border-top: 6px solid white;
-                        bottom: -5px;
-                      }
-                      .etherpad {
+                       .etherpad {
                         margin-top: 2px;
-                        background-image: url(/img/summit/devday-2022/agenda/etherpad_active.png);
                         border-radius: 0px 0px 8px 0px;
                       }
                       .dialogue:hover,
                       .etherpad:hover {
-                        background-image: url(/img/summit/devday-2022/agenda/dialogue.png);
+                        color: #fff;
                         background-color: #002fa7;
-                        .tip {
-                          display: block;
-                        }
-                      }
-                      .etherpad:hover {
-                        background-image: url(/img/summit/devday-2022/agenda/etherpad.png);
                       }
                     }
                   }
@@ -1332,30 +1298,19 @@ export default {
                     line-height: 20px;
                     .dialogue,
                     .etherpad {
-                      cursor: pointer;
-                      padding: 11px 14px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
                       width: 40px;
                       height: 34px;
                       color: #002fa7;
-                      background-position: center center;
-                      background-repeat: no-repeat;
-                      background-size: 12px;
-                      background-image: url(/img/summit/devday-2022/agenda/dialogue_active.png);
+                      font-size: 10px;
                       background-color: rgb(229, 234, 246);
                       border-radius: 0px 8px 0px 0px;
                     }
                     .etherpad {
                       margin-top: 2px;
-                      background-image: url(/img/summit/devday-2022/agenda/etherpad_active.png);
                       border-radius: 0px 0px 8px 0px;
-                    }
-                    .dialogue:hover,
-                    .etherpad:hover {
-                      background-color: #002fa7;
-                      background-image: url(/img/summit/devday-2022/agenda/dialogue.png);
-                    }
-                    .etherpad:hover {
-                      background-image: url(/img/summit/devday-2022/agenda/etherpad.png);
                     }
                   }
                   .mo-detail-text {

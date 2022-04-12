@@ -272,7 +272,14 @@
                 :class="{ circular: index !== 3 }"
                 :key="item.HEAD"
               >
-                <h3>{{ item.HEAD }}</h3>
+                <h3>
+                  {{ item.HEAD }}
+                  <slot v-if="index === 3"
+                    ><span class="supplement-gauss">{{
+                      i18n.learn.INTEGRAL.SUPPLEMENT_GAUSS
+                    }}</span></slot
+                  >
+                </h3>
                 <div
                   v-for="(item1, index1) in item.TEXT"
                   :key="item1"
@@ -992,7 +999,6 @@ a {
               text-align: center;
               @media screen and (max-width: 1120px) {
                 font-size: 14px;
-                text-align: left;
               }
             }
           }
@@ -1126,7 +1132,7 @@ a {
         img {
           width: 270px;
           @media (max-width: 1000px) {
-            width: 155px;
+            width: 160px;
             height: 34px;
           }
         }
@@ -1148,6 +1154,9 @@ a {
             margin: 10px 0;
             font-size: 18px;
             color: #000000;
+            .supplement-gauss {
+              font-size: 14px;
+            }
           }
           h4 {
             margin-top: 10px;
