@@ -456,7 +456,7 @@ export default {
       showTabSecond: 'morning',
       showTabThird: 'morning',
       // 星星数量
-      starsCount: 150,
+      starsCount: 120,
       tabIndex: 0,
       agendaTab: 0,
       agendaData: [],

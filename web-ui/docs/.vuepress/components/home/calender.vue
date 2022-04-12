@@ -622,6 +622,7 @@ button {
     float: left;
 }
 .meetDetail img {
+    overflow: hidden;
     width: 40px;
     height: 40px;
     border-radius: 100%;

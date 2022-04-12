@@ -105,6 +105,7 @@ export default {
     justify-content: start;
   }
   .meetDetail img{
+    overflow: hidden;
     flex-shrink: 0;
     width: 40px;
     height: 40px;
