@@ -51,7 +51,7 @@
                 v-for="(item, index) in agendaData.AGENDA_DATA_13.SCHEDULE"
                 :key="item.TIME"
               >
-                <div class="detail-time" :class="{ 'first-time': index === 0 }">
+                <div class="detail-time">
                   {{ item.TIME }}
                 </div>
                 <div class="agenda-detail">
@@ -283,7 +283,7 @@
                     >
                       <div class="mo-detail-left">
                         <div class="mo-detail-text">
-                          {{ item2.TEXT }}
+                          {{ item2.TEXT.replace('、',' ') }}
                         </div>
                         <div class="mo-detail-time">
                           {{ item2.TIME }}
@@ -854,9 +854,6 @@ export default {
         font-size: 18px;
         .first-day {
           .detail-time {
-            background-image: url(/img/summit/devday-2022/agenda/first_time1.png);
-          }
-          .first-time {
             background-image: url(/img/summit/devday-2022/agenda/first_time0.png);
           }
           @media screen and (max-width: 1120px) {
@@ -1067,7 +1064,7 @@ export default {
                     justify-content: space-between;
                     line-height: 30px;
                     margin-right: 16px;
-                    padding: 17px 0 17px 24px;
+                    padding: 17px 0 17px 17px;
                     height: 94px;
                     word-spacing: 100vw;
                     box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
@@ -1454,6 +1451,7 @@ export default {
                       margin: 0;
                       line-height: 24px;
                       .speak-name {
+                        margin-right:24px;
                         width: 40px;
                       }
                     }

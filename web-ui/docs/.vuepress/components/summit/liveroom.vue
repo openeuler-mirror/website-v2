@@ -59,7 +59,7 @@
       mozallowfullscreen="true"
     ></iframe>
     <div class="web-box" v-if="!isShowH5 && !isSummit">
-      <p>{{ liveData.LIVETITLE }}</p>
+      <p v-if="!isDeveloper">{{ liveData.LIVETITLE }}</p>
       <div class="item-box">
         <div
           :class="[
@@ -308,7 +308,12 @@ export default {
       }
       .developer-item {
         transition: none;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 130px;
+        height:96px;
         &:hover {
           transition: all 0.3s;
           box-shadow: 0px 6px 20px 0px rgba(0, 47, 167, 0.2);
@@ -324,6 +329,8 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top:30px;
+        margin-bottom:12px;
         height: 66px;
         p:nth-child(2) {
           display: none;
