@@ -309,15 +309,24 @@ export default {
       .developer-item {
         transition: none;
         width: 130px;
-         &:hover {
-              transition: all 0.3s;
-              box-shadow: 0px 6px 20px 0px rgba(0, 47, 167, 0.2);
+        &:hover {
+          transition: all 0.3s;
+          box-shadow: 0px 6px 20px 0px rgba(0, 47, 167, 0.2);
         }
       }
       .active-room {
         background-color: #002fa7;
         p {
           color: #ffffff;
+        }
+      }
+      .developer-item:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 66px;
+        p:nth-child(2) {
+          display: none;
         }
       }
       .active-room.developer-item {

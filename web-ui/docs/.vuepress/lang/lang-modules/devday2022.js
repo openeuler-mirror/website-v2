@@ -41,8 +41,8 @@ module.exports = {
                 {
                     ID: 10392                    ,
                     THEME: 'openEuler Developer Day 2022',
-                    TIME: '9:00-12:00',
-                    OPTION: '9:00-12:00 openEuler Developer Day 2022',
+                    // TIME: '10:00-12:00',
+                    OPTION: 'openEuler Developer Day 2022',
                     LIVEURL: 'https://vhall.huawei.com/v2/watch/10392?lang=zh&thirdId='
                 },
                 {
@@ -113,7 +113,8 @@ module.exports = {
             AGENDA_DATA_13: {
                 TITLE: "4月13日",
                 SCHEDULE: [
-                    { TIME: '14:00 - 15:30', SCHEDULE_LIST: ['理事会工作会议', '技术委员会工作会议', '用户委员会工作会议', '品牌委员会工作会议'] },
+                    { TIME: '10:00 - 12:00', SCHEDULE_LIST: ['技术委员会工作会议'] },
+                    { TIME: '16:00 - 17:30', SCHEDULE_LIST: ['用户委员会工作会议','品牌委员会工作会议','理事会工作会议'] },
                     { TIME: '15:30 - 17:30', SCHEDULE_LIST: ['用户圆桌'] }
                 ]
             },
@@ -577,41 +578,188 @@ module.exports = {
                 SCHEDULE: [
                     {
                         TIME: "10:00 - 10:03",
-                        TEXT: "开放原子开源基金会致辞"
+                        TEXT: "开幕致辞",
+                        SPEAKER:[
+                            {
+                                NAME:'孙文龙',
+                                POSITION:'开放原子开源基金会秘书长',
+                            }
+                        ]
                     },
                     {
                         TIME: "10:03 - 10:06",
-                        TEXT: "院士致辞"
+                        TEXT: "院士致辞",
+                        SPEAKER:[
+                            {
+                                NAME:'倪光南',
+                                POSITION:'中国工程院院士',
+                            }
+                        ]
                     },
                     {
                         TIME: "10:06 - 10:15",
-                        TEXT: "社区进展总结：一起创未来 欧拉更精彩"
+                        TEXT: "一起创未来 欧拉更精彩",
+                        SPEAKER:[
+                            {
+                                NAME:'江大勇',
+                                POSITION:'openEuler社区理事长',
+                            }
+                        ]
                     },
                     {
                         TIME: "10:15 - 10:30",
-                        TEXT: "openEuler 22.03 LTS 版本新特性解读"
+                        TEXT: "openEuler 22.03 LTS 版本新特性解读",
+                        SPEAKER:[
+                            {
+                                NAME:'胡欣蔚',
+                                POSITION:'openEuler社区技术委员会主席',
+                            }
+                        ]
                     },
                     {
                         TIME: "10:30 - 10:34",
-                        TEXT: "openEuler商业发行版发布计划及欧拉技术认证颁发仪式"
+                        TEXT: "openEuler商业发行版发布计划及欧拉技术认证颁发仪式",
+                        SPEAKER:[
+                            {
+                                NAME:'邱成锋',
+                                POSITION:'openEuler社区秘书长',
+                            }
+                        ]
                     },
                     {
-                        TIME: "10:34 - 11:22",
-                        TEXT: "联合创新：运营商、金融、能源行业案例分享"
+                        TIME: "10:34 - 10:42",
+                        TEXT: "携手openEuler ，共筑天翼云数字底座 ",
+                        SPEAKER:[
+                            {
+                                NAME:'广小明',
+                                POSITION:'中国电信天翼云CTO',
+                            }
+                        ]
                     },
                     {
-                        TIME: "11:22 - 11:40",
-                        TEXT: "圆桌会议：如何构建支持多样性计算的OS生态"
+                        TIME: "10:42 - 10:50",
+                        TEXT: "基于openEuler全栈创新，赋能数智新在线",
+                        SPEAKER:[
+                            {
+                                NAME:'李康',
+                                POSITION:'中国移动在线营销服务中心副总经理',
+                            }
+                        ]
                     },
                     {
-                        TIME: "11:40 - 11:58",
-                        TEXT: "圆桌会议：凡是未来 皆有可期-社区运作版本规划"
+                        TIME: "10:50 - 10:58",
+                        TEXT: "openEuler+CULinux 打造联通云新一代基础设施",
+                        SPEAKER:[
+                            {
+                                NAME:'钟忻',
+                                POSITION:'联通云CTO',
+                            }
+                        ]
                     },
                     {
-                        TIME: "11:58 - 12:00",
-                        TEXT: "社区展望：志当存高远 欧拉向未来"
+                        TIME: "10:58 - 11:06",
+                        TEXT: "云原生时代中信银行开源技术实践",
+                        SPEAKER:[
+                            {
+                                NAME:'周海鹏 ',
+                                POSITION:'中信IT首席架构师',
+                            }
+                        ]
+                    },
+                    {
+                        TIME: "11:06 - 11:14",
+                        TEXT: "数字赋能 守正创新 - 上交所技术基于欧拉的应用实践",
+                        SPEAKER:[
+                            {
+                                NAME:'刘凯',
+                                POSITION:'上交所技术公司下一代交易研发部副总经理',
+                            }
+                        ]
+                    },
+                    {
+                        TIME: "11:14 - 11:32",
+                        TEXT: "圆桌会议：如何构建支持多样性计算的OS生态",
+                        SPEAKER:[
+                            {
+                                NAME:'武延军',
+                                POSITION:'openEuler社区副理事长',
+                            },
+                            {
+                                NAME:'堵俊平',
+                                POSITION:'华为计算开源总经理',
+                            },
+                            {
+                                NAME:'杨继国',
+                                POSITION:'Intel开源技术中心总监',
+                            },
+                            {
+                                NAME:'李铭',
+                                POSITION:'英伟达亚太区生态伙伴发展总监',
+                            },
+                            {
+                                NAME:'唐丹',
+                                POSITION:'北京开源芯片研究院副院长',
+                            },
+                            {
+                                NAME:'姜振华',
+                                POSITION:'超聚变操作系统业务总经理',
+                            },
+                            {
+                                NAME:'焦旭坡',
+                                POSITION:'新华三集团操作系统开发部部长',
+                            },
+                        ]
+                    },
+                    {
+                        TIME: "11:32 - 11:50",
+                        TEXT: "圆桌会议：凡是未来 皆有可期-社区运作版本规划",
+                        SPEAKER:[
+                            {
+                                NAME:'熊伟',
+                                POSITION:'openEuler社区技术委员会委员',
+                            },
+                            {
+                                NAME:'谢秀奇',
+                                POSITION:'Kernel',
+                            },
+                            {
+                                NAME:'席静',
+                                POSITION:'sig-RISC-V',
+                            },
+                            {
+                                NAME:'田俊',
+                                POSITION:'sig-Intel-Arch',
+                            },
+                            {
+                                NAME:'金小贤',
+                                POSITION:'sig-AI',
+                            },
+                            {
+                                NAME:'陈硕',
+                                POSITION:'sig-openstack',
+                            },
+                            {
+                                NAME:'曹志',
+                                POSITION:'Infrastructure',
+                            },
+                            {
+                                NAME:'马文',
+                                POSITION:'sig-embedded/sig-Yocto',
+                            },
+                        ]
+                    },
+                    {
+                        TIME: "11:50 - 11:55",
+                        TEXT: "展望致辞：欧拉社区志高远 开源汇智向未来",
+                        SPEAKER:[
+                            {
+                                NAME:'韩乃平',
+                                POSITION:'openEuler社区副理事长',
+                            }
+                        ]
                     },
                 ],
+                HOST:['主持人：','嘉宾：'],
                 SCHEDULE_AFTERNOON: {
                     TIME_LIST: ['上半场', '14:00 - 14:15', '14:15 - 14:30', '14:30 - 14:45', '14:45 - 15:00', '15:00 - 15:15', '15:15 - 15:30'],
                     CARD_LIST: [
@@ -995,6 +1143,10 @@ module.exports = {
                     },
                     {
                         IMG: "/img/summit/summit2021/Co-construction/fusion.png",
+                        LINK: ""
+                    },
+                    {
+                        IMG: "/img/summit/summit2021/Co-construction/yunhe.png",
                         LINK: ""
                     },
                 ]
