@@ -286,7 +286,7 @@ module.exports = {
                             EN: "Cloud Computing & Cloud Native"
                         },
                         SCHEDULE_CARD: [{
-                            TEXT: "sig-CloudNative iSula golang",
+                            TEXT: "sig-CloudNative iSula、golang",
                             TIME: "14:00 - 16:00",
                             ZOOM_LINK: "https://us06web.zoom.us/j/81433480743?pwd=VnNUMzFkbm1zODR2a2VpZ3JvWjdmQT09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-CloudNative-22.09-planning"
