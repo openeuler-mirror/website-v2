@@ -4,6 +4,7 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 /web-ui/node_modules
+/web-ui/docs/.vuepress/dist
 /web-ui/package-lock.json
 /server/node_modules
 /server/package-lock.json

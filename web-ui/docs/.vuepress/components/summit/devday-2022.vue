@@ -51,15 +51,7 @@
                 v-for="(item, index) in agendaData.AGENDA_DATA_13.SCHEDULE"
                 :key="item.TIME"
               >
-                <div
-                  class="detail-time"
-                  :style="{
-                    backgroundImage:
-                      'url(/img/summit/devday-2022/agenda/first_time' +
-                      index +
-                      '.png)',
-                  }"
-                >
+                <div class="detail-time" :class="{ 'first-time': index === 0 }">
                   {{ item.TIME }}
                 </div>
                 <div class="agenda-detail">
@@ -89,7 +81,12 @@
                 <div class="second-left">
                   <div
                     class="left-item"
-                    @click="index === 0 && go('/sig/meeting-guide/'),index === 1 && tabIndex!==2 && goInstall('http://live.bilibili.com/22290444')"
+                    @click="
+                      index === 0 && go('/sig/meeting-guide/'),
+                        index === 1 &&
+                          tabIndex !== 2 &&
+                          goInstall('http://live.bilibili.com/22290444')
+                    "
                     :class="{ 'live-item': index === 1 && tabIndex !== 2 }"
                     v-for="(item, index) in agendaData.AGENDA_DATA_14
                       .COLUMN_TITLE[tabIndex].TIME"
@@ -269,7 +266,11 @@
                   >
                     <div
                       class="mo-render-title"
-                      @click="tabIndex!==2 && index === 0 && goInstall('http://live.bilibili.com/22290444')"
+                      @click="
+                        tabIndex !== 2 &&
+                          index === 0 &&
+                          goInstall('http://live.bilibili.com/22290444')
+                      "
                       :class="{ 'live-item': index === 0 && tabIndex !== 2 }"
                     >
                       <h4>{{ item.TITLE.ZH }}</h4>
@@ -336,7 +337,35 @@
                     :key="item.TIEM"
                   >
                     <div class="third-left">{{ item.TIME }}</div>
-                    <div class="third-right">{{ item.TEXT }}</div>
+                    <div class="third-right">
+                      <div class="schedule-text">{{ item.TEXT }}</div>
+                      <div class="speak">
+                        <div
+                          class="host-guest"
+                          v-if="index === 10 || index === 11"
+                        >
+                          <div
+                            class="host-item"
+                            v-for="value in agendaData.AGENDA_DATA_15.HOST"
+                            :key="value"
+                          >
+                            {{ value }}
+                          </div>
+                        </div>
+                        <div class="item-box">
+                          <div
+                            class="speak-item"
+                            v-for="item2 in item.SPEAKER"
+                            :key="item2.NAME"
+                          >
+                            <div class="speak-name">{{ item2.NAME }}</div>
+                            <div class="speak-position">
+                              {{ item2.POSITION }}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="third-body-afternoon" v-else>
@@ -824,6 +853,12 @@ export default {
       .agenda-body {
         font-size: 18px;
         .first-day {
+          .detail-time {
+            background-image: url(/img/summit/devday-2022/agenda/first_time1.png);
+          }
+          .first-time {
+            background-image: url(/img/summit/devday-2022/agenda/first_time0.png);
+          }
           @media screen and (max-width: 1120px) {
             .agenda-item {
               align-items: center;
@@ -1058,7 +1093,7 @@ export default {
                         border-radius: 0px 8px 0px 0px;
                         transition: all 0.2s;
                       }
-                       .etherpad {
+                      .etherpad {
                         margin-top: 2px;
                         border-radius: 0px 0px 8px 0px;
                       }
@@ -1333,15 +1368,37 @@ export default {
             .third-item {
               display: flex;
               align-items: center;
-              padding: 25px 32px;
+              padding: 24px 32px;
               color: #fff;
-              margin-bottom: 20px;
-              height: 70px;
+              margin-bottom: 30px;
               box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
               border-radius: 8px;
               background-size: cover;
               .third-right {
-                margin-left: 170px;
+                margin-left: 237px;
+                .schedule-text {
+                  margin-bottom: 20px;
+                }
+                .speak {
+                  display: flex;
+                  .host-guest {
+                    .host-item:nth-child(1) {
+                      margin-bottom: 16px;
+                    }
+                  }
+                  font-size: 16px;
+                  .speak-item {
+                    display: flex;
+                    margin-bottom: 16px;
+                    .speak-name {
+                      width: 55px;
+                      margin-right: 30px;
+                    }
+                  }
+                  .speak-item:last-of-type {
+                    margin: 0;
+                  }
+                }
               }
             }
           }
@@ -1377,6 +1434,30 @@ export default {
                   color: rgba(0, 0, 0, 0.85);
                   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
                   border-radius: 8px;
+                  .schedule-text {
+                    margin: 0;
+                    line-height: 24px;
+                  }
+                  .speak {
+                    color: #555555;
+                    font-size: 12px;
+                    .host-guest {
+                      .host-item {
+                        margin-bottom: 0;
+                        line-height: 24px;
+                      }
+                      .host-item:nth-child(1) {
+                        margin-bottom: 0;
+                      }
+                    }
+                    .speak-item {
+                      margin: 0;
+                      line-height: 24px;
+                      .speak-name {
+                        width: 40px;
+                      }
+                    }
+                  }
                 }
               }
             }
