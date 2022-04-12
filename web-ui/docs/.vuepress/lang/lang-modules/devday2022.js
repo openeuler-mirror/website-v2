@@ -608,7 +608,7 @@ module.exports = {
                     },
                     {
                         TIME: "10:15 - 10:30",
-                        TEXT: "openEuler 22.03 LTS 版本新特性解读",
+                        TEXT: "openEuler 22.03 LTS：新征程，再出发",
                         SPEAKER:[
                             {
                                 NAME:'胡欣蔚',
