@@ -143,8 +143,8 @@ export default {
     },
     isTimeOn() {
       this.carouselObj.TIME_LIST.forEach((item, index) => {
-        this.getDate(`2022-4-11-${item.split(' ')[0]}`) >= 0 &&
-        this.getDate(`2022-4-11-${item.split(' ')[0]}`) < 15
+        this.getDate(`2022-4-15-${item.split(' ')[0]}`) >= 0 &&
+        this.getDate(`2022-4-15-${item.split(' ')[0]}`) < 15
           ? (this.activeBackground = index)
           : '';
       });
@@ -368,11 +368,12 @@ export default {
           li {
             margin-right: 16px;
             .null-item {
-              width: 270px;
-              height: 150px;
+              display: block;
+              width: 218px;
+              height: 92px;
               border-radius: 8px;
               overflow: hidden;
-              margin-bottom: 36px;
+              margin-bottom: 16px;
               box-shadow: none;
               p {
                 font-size: 18px;
@@ -383,6 +384,9 @@ export default {
                 -webkit-line-clamp: 3;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
+              }
+              @media screen and (max-width:1120px) {
+                display: none;
               }
             }
             .section {
@@ -443,7 +447,7 @@ export default {
             display: flex;
             align-items: flex-start;
             width: 100%;
-            height: 1938px;
+            height: 1852px;
             transition: all 0.3s;
           }
           .is-transform {

@@ -39,67 +39,67 @@ module.exports = {
         LIVEDATA: {
             RENDERDATA: [
                 {
-                    ID: 10383,
+                    ID: 10392                    ,
                     THEME: 'openEuler Developer Day 2022',
                     TIME: '9:00-12:00',
                     OPTION: '9:00-12:00 openEuler Developer Day 2022',
-                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10383?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10392?lang=zh&thirdId='
                 },
                 {
-                    ID: 10384,
+                    ID: 10393,
                     THEME: '内核',
                     TIME: '14:00-15:30',
                     OPTION: '14:00-15:30 内核',
-                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10384?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10393?lang=zh&thirdId='
                 },
                 {
-                    ID: 10390,
+                    ID: 10399,
                     THEME: '多样性计算',
                     TIME: '15:30-17:00',
                     OPTION: '15:30-17:00 多样性计算',
-                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10390?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10399?lang=zh&thirdId='
                 },
                 {
-                    ID: 10385,
+                    ID: 10394,
                     THEME: '云原生&虚拟化',
                     TIME: '14:00-15:30',
                     OPTION: '14:00-15:30 云原生&虚拟化',
-                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10385?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10394?lang=zh&thirdId='
                 },
                 {
-                    ID: 10389,
+                    ID: 10398,
                     THEME: '边缘&嵌入式',
                     TIME: '14:00-15:30',
                     OPTION: '14:00-15:30 边缘&嵌入式',
-                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10389?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10398?lang=zh&thirdId='
                 },
                 {
-                    ID: 10391,
+                    ID: 10400,
                     THEME: '大数据存储',
                     TIME: '15:30-17:00',
                     OPTION: '15:30-17:00 大数据存储',
-                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10391?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10400?lang=zh&thirdId='
                 },
                 {
-                    ID: 10388,
+                    ID: 10397,
                     THEME: '开源雨林',
                     TIME: '15:30-17:00',
                     OPTION: '15:30-17:00 开源雨林',
-                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10388?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10397?lang=zh&thirdId='
                 },
                 {
-                    ID: 10386,
+                    ID: 10395,
                     THEME: '安全分论坛',
                     TIME: '14:00-15:30',
                     OPTION: '14:00-15:30 安全',
-                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10386?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10395?lang=zh&thirdId='
                 },
                 {
-                    ID: 10387,
+                    ID: 10396,
                     THEME: 'Devkit 工具集',
                     TIME: '15:30-17:00',
                     OPTION: '15:30-17:00 Devkit 工具集',
-                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10387?lang=zh&thirdId='
+                    LIVEURL: 'https://vhall.huawei.com/v2/watch/10396?lang=zh&thirdId='
                 },
             ],
             LIVETITLE: "openEuler Developer Day 2022直播间"
@@ -132,6 +132,7 @@ module.exports = {
                 TITLE: ['09:00 - 10:00', '10:00 - 11:00', '11:00 - 12:00'],
                 TITLE_AFTERNOON: ['14:00 - 15:00', '15:00 - 16:00', '16:00 - 17:00', '17:00 - 18:00'],
                 TITLE_NIGHT: ['19:00 - 20:00', '20:00 - 21:00'],
+                RIGHT_TEXT:['参会','笔记'],
                 SCHEDULE: [
                     {
                         TITLE: {
@@ -169,12 +170,12 @@ module.exports = {
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Industrial-Control-22.09-planning"
                         }, {
                             TEXT: "sig-AccLib",
-                            TIME: "11:00 - 12:00",
+                            TIME: "10:00 - 12:00",
                             ZOOM_LINK: "https://us06web.zoom.us/j/82166003143?pwd=UjV5cDkra0xqYXJXazdyMGxiRTIwdz09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/openEuler2209-sig-AccLib-ODD"
                         }, {
                             TEXT: "sig-embedded yocto",
-                            TIME: "11:00 - 12:00",
+                            TIME: "10:00 - 12:00",
                             ZOOM_LINK: "https://us06web.zoom.us/j/85810034120?pwd=WlBWbTdMNm9pNURLNVowbDRQUjRyUT09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-embedded-22.09-planning"
                         }]
@@ -302,7 +303,7 @@ module.exports = {
                         },
                         SCHEDULE_CARD: [{
                             TEXT: "sig-Intel-Arch",
-                            TIME: "17:00 - 18:00",
+                            TIME: "14:00 - 16:00",
                             ZOOM_LINK: "https://us06web.zoom.us/j/83148209249?pwd=U1IrRUtabDNicVVLaVltS0hGR1JoQT09",
                             ETHERPAD: "https://etherpad.openeuler.org/p/intel-arch-sig-odd"
                         }, {
@@ -636,10 +637,10 @@ module.exports = {
                                     DESC: ['企业发行版的 Linux 内核维护是一个非常大的长期挑战。在整个产品生命周期内，技术团队可能会需要移植数万个代码补丁来确保高质量的内核运作。因此，如何高效的移植、管理和维护补丁，解决它们之间的冲突，是工程师们关心的技术难题。本次演讲中，SUSE 资深内核技术专家江国庆将介绍 SUSE 企业级内核是如何从开源内核演进而来，以及 SUSE 是如何采用相关工具对内核补丁进行维护，并以 SUSE Euler 内核为例来展示相关的工程实践。']
                                 },
                                 {
-                                    TIME: '14:45-15:00',
-                                    THEME: '使用 Arm SVE 向量指令为高性能计算库加速',
-                                    SPEAKER: ['徐国栋 Linaro Ltd.'],
-                                    DESC: ['面向高性能计算（HPC）领域，Arm 推出了 SVE （Scalable Vector Extenstion），至今演进有 SVE2， SME (armv9)。本演讲介绍SVE 演进，工具链支持，软件适配状况。最后结合在ISA-L， XXHash 的编码，讲解SVE的优势，同时介绍开发技术要点。']
+                                    // TIME: '14:45-15:00',
+                                    // THEME: '使用 Arm SVE 向量指令为高性能计算库加速',
+                                    // SPEAKER: ['徐国栋 Linaro Ltd.'],
+                                    // DESC: ['面向高性能计算（HPC）领域，Arm 推出了 SVE （Scalable Vector Extenstion），至今演进有 SVE2， SME (armv9)。本演讲介绍SVE 演进，工具链支持，软件适配状况。最后结合在ISA-L， XXHash 的编码，讲解SVE的优势，同时介绍开发技术要点。']
                                 },
                                 {
                                     TIME: '15:00-15:15',
@@ -893,7 +894,7 @@ module.exports = {
                                 },
                                 {
                                     TIME: '16:30-16:45',
-                                    THEME: 'x2openEuler',
+                                    THEME: 'openEuler兼容性评估工具介绍',
                                     SPEAKER: ['王执 华为'],
                                     DESC: ['介绍OS迁移中，对软件，硬件，配置兼容性评估功能介绍']
                                 },
