@@ -1201,7 +1201,7 @@ export default {
                     margin-bottom: 14px;
                   }
                   .right-card:nth-child(n + 3) {
-                    width: 203px;
+                    width: 205px;
                     height: 94px;
                     float: left;
 
@@ -1224,7 +1224,7 @@ export default {
                   }
                   .right-card:nth-child(1),
                   .right-card:nth-child(2) {
-                    width: 203px;
+                    width: 205px;
                     float: left;
                     word-spacing: normal;
                   }
@@ -1249,7 +1249,7 @@ export default {
                   }
                   .onepart {
                     flex: none;
-                    width: 203px;
+                    width: 205px;
                   }
                 }
               }
