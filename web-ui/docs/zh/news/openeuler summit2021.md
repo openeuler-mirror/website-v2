@@ -1,7 +1,7 @@
 ---
 title: "盘点 | openEuler Summit 2021精彩时刻"
 date: "2021-12-01"
-tags: 
+tags:
     - summit
     - 2021
 banner: "img/banners/summit-2021.jpg"
@@ -13,13 +13,13 @@ summary: "11月10日，openEuler Summit 2021在北京如期举行。"
   <news-newsHeader />
 </ClientOnly>
 
-<div class="markdown">
+<div class="markdown summit-news">
 
 关于11月10日， openEuler Summit 2021在北京举行。本次峰会是欧拉捐赠之后的首次峰会，也是社区一年一度的盛事。</br>
 
 欧拉开源社区的开发者们共同见证了欧拉（openEuler）开源社区的重大进展，其中包括：**欧拉开源社区理事会升级、欧拉开源社区技术委员会换届升级、“开源雨林”企业开源赋能计划迎来新伙伴等。</br>
 
-### 操作系统成为数字变革的关键力量 
+### 操作系统成为数字变革的关键力量
 </br>
 
 随着全球数字化进程的加快，对数字基础设施提出了新的挑战，操作系统作为数字基础设施的根技术已经成为数字变革的关键力量。</br>
@@ -289,3 +289,9 @@ SUSE大中华区董事长 江永清
 openEuler Summit 2021由开放原子开源基金会指导，欧拉开源社区联合麒麟软件、麒麟信安、SUSE、统信软件共同主办。本次大会齐聚产业界代表，共议产业政策、商业验证、技术创新、生态共建等话题，推动操作系统产业发展，加速开源社区建设，以技术创新助力产业实现新增长。
 
 </div>
+
+<style>
+  .summit-news img{
+      margin:20px 0;
+  }
+</style>

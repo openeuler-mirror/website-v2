@@ -388,7 +388,7 @@ export default {
         .sticky-title {
           position: sticky;
           margin: 0 10px;
-          z-index: 999;
+          z-index: 10;
           top: 66px;
           left: 0;
           display: flex;
