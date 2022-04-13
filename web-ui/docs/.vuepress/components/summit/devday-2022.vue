@@ -493,7 +493,7 @@ export default {
       // 星星数量
       starsCount: 120,
       tabIndex: 0,
-      agendaTab: 0,
+      agendaTab: 1,
       agendaData: [],
       secondDayData: [],
       construction: [],
@@ -873,7 +873,9 @@ export default {
                 padding: 14px 0;
                 font-size: 12px;
                 border-radius: 8px;
-                background-size: cover;
+                overflow: hidden;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
                 background-image: url(/img/summit/devday-2022/agenda/mo_sig.png) !important;
               }
               .agenda-detail {

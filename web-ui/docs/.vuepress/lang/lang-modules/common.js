@@ -96,11 +96,11 @@ module.exports = {
                         NAME: '个人认证',
                         PATH: '/community/certification-services/'
                     },
-                    // {
-                    //     NAME: '社区统计',
-                    //     PATH: 'https://datastat.openeuler.org/zh/overview',
-                    //     IS_OPEN_MINISITE_WINDOW: 1
-                    // }
+                    {
+                        NAME: '贡献看板',
+                        PATH: 'https://datastat.openeuler.org/zh/overview',
+                        IS_OPEN_MINISITE_WINDOW: 1
+                    }
                 ],
                 CLASS: []
             },
@@ -334,11 +334,11 @@ module.exports = {
                         NAME: 'Certification',
                         PATH: '/community/certification-services/'
                     },
-                    // {
-                    //     NAME: 'Statistics',
-                    //     PATH: 'https://datastat.openeuler.org/en/overview',
-                    //     IS_OPEN_MINISITE_WINDOW: 1
-                    // }
+                    {
+                        NAME: 'Statistics',
+                        PATH: 'https://datastat.openeuler.org/en/overview',
+                        IS_OPEN_MINISITE_WINDOW: 1
+                    }
                 ],
                 CLASS: []
             },

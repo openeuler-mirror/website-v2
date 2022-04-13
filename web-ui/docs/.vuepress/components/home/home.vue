@@ -730,7 +730,6 @@ let remoteMethods = {
         height: 713px;
          .statistics {
             display: flex;
-            display: none;
             padding: 50px 0;
             justify-content: center;
             align-items: center;
