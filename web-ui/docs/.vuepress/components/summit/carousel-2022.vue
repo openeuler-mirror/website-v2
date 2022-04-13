@@ -61,15 +61,40 @@
           </div>
         </div>
         <div class="card-box">
+          <div
+            class="sticky-title section"
+            v-if="carouselObj.TIME_LIST.length > 10"
+          >
+            <div
+              class="title-item"
+              v-for="(item, index) in i18n.devday2022.AGENDA.AGENDA_DATA_15
+                .STICKY_TITLE"
+              :key="index"
+            >
+              {{ item }}
+            </div>
+          </div>
           <div class="transform-box" :class="{ 'is-transform': isTransform }">
             <ul class="card-list">
-              <!-- 上半场 -->
               <li v-for="(item, index) in carouselObj.CARD_LIST" :key="index">
-                <p class="section" v-for="values in item.TITLE" :key="values">
-                  {{ values }}
-                </p>
+                <div v-if="carouselObj.TIME_LIST.length < 10">
+                  <p class="section" v-for="values in item.TITLE" :key="values">
+                    {{ values }}
+                  </p>
+                </div>
                 <a
-                  :class="[value.THEME ? 'card-item' : 'null-item']"
+                  :class="[
+                    value.THEME ? 'card-item' : 'null-item',
+                    {
+                      'double-card':
+                        (index === 1 &&
+                          key === 1 &&
+                          carouselObj.TIME_LIST.length > 10) ||
+                        (index === 1 &&
+                          key === 2 &&
+                          carouselObj.TIME_LIST.length > 10),
+                    },
+                  ]"
                   v-for="(value, key) in item.ITEM_LIST"
                   :key="key"
                   @click="showDetail(value, 1)"
@@ -80,7 +105,6 @@
               </li>
             </ul>
             <ul class="card-list devday-last">
-              <!-- 下半场 -->
               <li
                 v-for="(item, index) in i18n.devday2022.AGENDA.AGENDA_DATA_15
                   .SCHEDULE_AFTERNOON_LAST.CARD_LIST"
@@ -133,7 +157,7 @@ export default {
     let agendaObj = this.i18n.interaction.SUMMIT.SUMMIT_HOME_DATA;
     agendaObj = agendaObj.AGENDA;
     this.carouselObj = this.agendaData;
-    this.isTimeOn()
+    this.isTimeOn();
   },
   methods: {
     getDate(time) {
@@ -357,8 +381,36 @@ export default {
       }
       .card-box {
         width: 100%;
-        overflow: hidden;
         padding-left: 30px;
+        @media screen and (max-width:1120px) {
+          overflow: hidden;
+        }
+        .sticky-title {
+          position: sticky;
+          margin: 0 10px;
+          z-index: 999;
+          top: 66px;
+          left: 0;
+          display: flex;
+          .title-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            font-size: 20px;
+            color: #ffffff;
+            width: 218px;
+            margin-right: 16px;
+            height: 48px;
+            box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            background-size: cover;
+            background-image: url(/img/summit/devday-2022/agenda/thild-title.png);
+          }
+          .title-item:last-child {
+            margin: 0;
+          }
+        }
         .card-list {
           display: flex;
           margin: 0 10px;
@@ -385,7 +437,7 @@ export default {
                 -webkit-box-orient: vertical;
                 overflow: hidden;
               }
-              @media screen and (max-width:1120px) {
+              @media screen and (max-width: 1120px) {
                 display: none;
               }
             }
@@ -404,7 +456,9 @@ export default {
             }
             .card-item {
               cursor: pointer;
-              display: block;
+              display: flex;
+              justify-content: center;
+              align-items: center;
               text-decoration: none;
               padding: 16px;
               width: 218px;
@@ -432,6 +486,9 @@ export default {
               .mo-time {
                 display: none;
               }
+            }
+            .double-card {
+              height: 200px;
             }
           }
         }
@@ -491,11 +548,13 @@ export default {
                 margin-bottom: 16px;
               }
               .card-item {
+                display: block;
                 width: 100%;
                 height: fit-content;
                 padding: 11px 12px;
                 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
                 p {
+                  text-align: left;
                   font-size: 12px;
                   line-height: 24px;
                 }

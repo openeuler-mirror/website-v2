@@ -41,29 +41,28 @@ module.exports = {
                 {
                     ID: 10392                    ,
                     THEME: 'openEuler Developer Day 2022',
-                    // TIME: '10:00-12:00',
                     OPTION: 'openEuler Developer Day 2022',
                     LIVEURL: 'https://vhall.huawei.com/v2/watch/10392?lang=zh&thirdId='
                 },
                 {
                     ID: 10393,
                     THEME: '内核',
-                    TIME: '14:00-15:30',
-                    OPTION: '14:00-15:30 内核',
+                    TIME: '14:00-15:15',
+                    OPTION: '14:00-15:15 内核',
                     LIVEURL: 'https://vhall.huawei.com/v2/watch/10393?lang=zh&thirdId='
                 },
                 {
                     ID: 10399,
                     THEME: '多样性计算',
-                    TIME: '15:30-17:00',
-                    OPTION: '15:30-17:00 多样性计算',
+                    TIME: '14:00-14:45',
+                    OPTION: '14:00-14:45 多样性计算',
                     LIVEURL: 'https://vhall.huawei.com/v2/watch/10399?lang=zh&thirdId='
                 },
                 {
                     ID: 10394,
                     THEME: '云原生&虚拟化',
-                    TIME: '14:00-15:30',
-                    OPTION: '14:00-15:30 云原生&虚拟化',
+                    TIME: '14:00-15:15',
+                    OPTION: '114:00-15:15 云原生&虚拟化',
                     LIVEURL: 'https://vhall.huawei.com/v2/watch/10394?lang=zh&thirdId='
                 },
                 {
@@ -76,29 +75,29 @@ module.exports = {
                 {
                     ID: 10400,
                     THEME: '大数据存储',
-                    TIME: '15:30-17:00',
-                    OPTION: '15:30-17:00 大数据存储',
+                    TIME: '15:15-17:00',
+                    OPTION: '15:15-17:00 大数据存储',
                     LIVEURL: 'https://vhall.huawei.com/v2/watch/10400?lang=zh&thirdId='
                 },
                 {
                     ID: 10397,
                     THEME: '开源雨林',
-                    TIME: '15:30-17:00',
-                    OPTION: '15:30-17:00 开源雨林',
+                    TIME: '14:45-16:00',
+                    OPTION: '14:45-16:00 开源雨林',
                     LIVEURL: 'https://vhall.huawei.com/v2/watch/10397?lang=zh&thirdId='
                 },
                 {
                     ID: 10395,
                     THEME: '安全分论坛',
-                    TIME: '14:00-15:30',
-                    OPTION: '14:00-15:30 安全',
+                    TIME: '15:00-16:30',
+                    OPTION: '15:00-16:30 安全',
                     LIVEURL: 'https://vhall.huawei.com/v2/watch/10395?lang=zh&thirdId='
                 },
                 {
                     ID: 10396,
                     THEME: 'Devkit 工具集',
-                    TIME: '15:30-17:00',
-                    OPTION: '15:30-17:00 Devkit 工具集',
+                    TIME: '15:30-17:15',
+                    OPTION: '15:30-17:15 Devkit 工具集',
                     LIVEURL: 'https://vhall.huawei.com/v2/watch/10396?lang=zh&thirdId='
                 },
             ],
@@ -113,8 +112,7 @@ module.exports = {
             AGENDA_DATA_13: {
                 TITLE: "4月13日",
                 SCHEDULE: [
-                    { TIME: '10:00 - 12:00', SCHEDULE_LIST: ['技术委员会工作会议'] },
-                    { TIME: '16:00 - 17:30', SCHEDULE_LIST: ['用户委员会工作会议','品牌委员会工作会议','理事会工作会议'] },
+                    { TIME: '16:00 - 17:30', SCHEDULE_LIST: ['用户委员会工作会议','技术委员会工作会议','品牌委员会工作会议','理事会工作会议'] },
                     { TIME: '15:30 - 17:30', SCHEDULE_LIST: ['用户圆桌'] }
                 ]
             },
@@ -632,7 +630,7 @@ module.exports = {
                         SPEAKER:[
                             {
                                 NAME:'广小明',
-                                POSITION:'中国电信天翼云CTO',
+                                POSITION:'天翼云科技有限公司 副总经理 兼首席技术官'
                             }
                         ]
                     },
@@ -662,13 +660,13 @@ module.exports = {
                         SPEAKER:[
                             {
                                 NAME:'周海鹏 ',
-                                POSITION:'中信IT首席架构师',
+                                POSITION:'中信IT资深架构师',
                             }
                         ]
                     },
                     {
                         TIME: "11:06 - 11:14",
-                        TEXT: "数字赋能 守正创新 - 上交所技术基于欧拉的应用实践",
+                        TEXT: "数字赋能 守正创新 - 上交所技术基于欧拉的原生应用实践",
                         SPEAKER:[
                             {
                                 NAME:'刘凯',
@@ -760,6 +758,7 @@ module.exports = {
                     },
                 ],
                 HOST:['主持人：','嘉宾：'],
+                STICKY_TITLE:['大数据存储分论坛','开源雨林分论坛','安全分论坛','Devkit 工具集分论坛'],
                 SCHEDULE_AFTERNOON: {
                     TIME_LIST: ['上半场', '14:00 - 14:15', '14:15 - 14:30', '14:30 - 14:45', '14:45 - 15:00', '15:00 - 15:15', '15:15 - 15:30'],
                     CARD_LIST: [
@@ -900,11 +899,13 @@ module.exports = {
                     ]
                 },
                 SCHEDULE_AFTERNOON_LAST: {
-                    TIME_LIST: ['下半场', '15:15 - 15:30', '15:45 - 16:00', '16:00 - 16:15', '16:15 - 16:30', '16:30 - 16:45', '16:45 - 17:00', '17:00 - 17:15'],
+                    TIME_LIST: ['下半场', '14:45 - 15:00','15:00 - 15:15','15:15 - 15:30','15:30 - 15:45', '15:45 - 16:00', '16:00 - 16:15', '16:15 - 16:30', '16:30 - 16:45', '16:45 - 17:00', '17:00 - 17:15'],
                     CARD_LIST: [
                         {
                             TITLE: ['大数据存储分论坛'],
                             ITEM_LIST: [
+                                {},
+                                {},
                                 {
                                     TIME: '15:15-15:30',
                                     THEME: '缓存策略对CEPH性能的影响',
@@ -975,6 +976,7 @@ module.exports = {
                         {
                             TITLE: ['安全分论坛'],
                             ITEM_LIST: [
+                                {},
                                 {
                                     TIME: '15:00-15:15',
                                     THEME: '开源社区安全成熟度模型及实践',
@@ -1014,8 +1016,11 @@ module.exports = {
                             ]
                         },
                         {
-                            TITLE: ['Devkit 工具集分论坛			'],
+                            TITLE: ['Devkit 工具集分论坛'],
                             ITEM_LIST: [
+                                {},
+                                {},
+                                {},
                                 {
                                     TIME: '15:30-15:45',
                                     THEME: 'openEuler商业版自动化测试工具',
@@ -1289,6 +1294,71 @@ module.exports = {
             },
             LECTURER_LIST: [
                 {
+                    IMG: '/img/summit/devday-2022/lecturer/liguangnan.png',
+                    NAME: '倪光南',
+                    POSITION: ['中国工程院院士']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/sunwenlong.png',
+                    NAME: '孙文龙',
+                    POSITION: ['开放原子开源基金会秘书长']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/jiangdayong.png',
+                    NAME: '江大勇',
+                    POSITION: ['openEuler社区理事长']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/wuyanjun.png',
+                    NAME: '武延军',
+                    POSITION: ['openEuler社区副理事长']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/hannaiping.png',
+                    NAME: '韩乃平',
+                    POSITION: ['openEuler社区副理事长']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/huxinwei.png',
+                    NAME: '胡欣蔚',
+                    POSITION: ['openEuler社区','技术委员会主席']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/qiuchenfen.png',
+                    NAME: '邱成锋',
+                    POSITION: ['openEuler社区秘书长']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/guangxiaoming.png',
+                    NAME: '广小明',
+                    POSITION: ['天翼云科技有限公司','副总经理兼首席技术官']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/likang.png',
+                    NAME: '李康',
+                    POSITION: ['中国移动','在线营销服务中心副总经理']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/zhongxing.png',
+                    NAME: '钟忻',
+                    POSITION: ['联通云CTO']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/zhouhaipeng.png',
+                    NAME: '周海鹏',
+                    POSITION: ['中信IT资深架构师']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/liukai.png',
+                    NAME: '刘凯',
+                    POSITION: ['上交所技术公司','下一代交易研发部副总经理']
+                },
+                {
+                    IMG: '/img/summit/devday-2022/lecturer/xiongwei.png',
+                    NAME: '熊伟',
+                    POSITION: ['openEuler社区','技术委员会委员']
+                },
+                {
                     IMG: '/img/summit/devday-2022/lecturer/caowenyuan.png',
                     NAME: '曹文渊',
                     POSITION: ['统信软件研发工程师']
@@ -1498,6 +1568,9 @@ module.exports = {
                     NAME: '庄浩坚',
                     POSITION: ['Linaro资深技术专家']
                 },
+            ],
+            GUEST_LIST:[
+               
             ],
             PUBLISHER_BANNER: {
                 web: '/img/summit/devday-2022/lecturer/publishertitle.png',

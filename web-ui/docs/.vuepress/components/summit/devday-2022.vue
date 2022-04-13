@@ -83,9 +83,12 @@
                     class="left-item"
                     @click="
                       index === 0 && go('/sig/meeting-guide/'),
-                        index === 1 &&
-                          tabIndex !== 2 &&
-                          goInstall('http://live.bilibili.com/22290444')
+                        (index === 1 &&
+                          tabIndex === 0 &&
+                          goInstall('http://live.bilibili.com/22290444')) ||
+                          (index === 1 &&
+                            tabIndex === 1 &&
+                            goInstall('http://live.bilibili.com/22290444'))
                     "
                     :class="{ 'live-item': index === 1 && tabIndex !== 2 }"
                     v-for="(item, index) in agendaData.AGENDA_DATA_14
@@ -267,9 +270,12 @@
                     <div
                       class="mo-render-title"
                       @click="
-                        tabIndex !== 2 &&
+                        (tabIndex === 0 &&
                           index === 0 &&
-                          goInstall('http://live.bilibili.com/22290444')
+                          goInstall('http://live.bilibili.com/22290444')) ||
+                          (tabIndex === 1 &&
+                            index === 0 &&
+                            goInstall('http://live.bilibili.com/22290444'))
                       "
                       :class="{ 'live-item': index === 0 && tabIndex !== 2 }"
                     >
@@ -283,7 +289,7 @@
                     >
                       <div class="mo-detail-left">
                         <div class="mo-detail-text">
-                          {{ item2.TEXT.replace('、',' ') }}
+                          {{ item2.TEXT.replace('、', ' ') }}
                         </div>
                         <div class="mo-detail-time">
                           {{ item2.TIME }}
@@ -1451,7 +1457,7 @@ export default {
                       margin: 0;
                       line-height: 24px;
                       .speak-name {
-                        margin-right:24px;
+                        margin-right: 24px;
                         width: 40px;
                       }
                     }
