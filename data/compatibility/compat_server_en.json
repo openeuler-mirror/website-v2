@@ -4120,7 +4120,7 @@
       "commitID": "I4DSMT",
       "motherBoardRevision": "",
       "biosUefi": "5.30",
-      "cpu": "cascade",
+      "cpu": "icelake",
       "ram": "7*16G RDIMMs",
       "portsBusTypes": "",
       "videoAdapter": "",
