@@ -734,7 +734,7 @@ module.exports = {
                     ROUND_VALUE: '',
                     ROUND_KEY: 'contributors',
                     ROUND_IMG: '/img/round/contributer.png',
-                    ROUND_TEXT: 'Contributors',
+                    ROUND_TEXT: 'Contributor',
                     ROUND_STYLE: {
                         backcolor: 'blue'
                     }
@@ -743,7 +743,7 @@ module.exports = {
                     ROUND_VALUE: '',
                     ROUND_KEY: 'repos',
                     ROUND_IMG: '/img/round/software.png',
-                    ROUND_TEXT: 'Software Products',
+                    ROUND_TEXT: 'Repository',
                     ROUND_STYLE: {
                         backcolor: 'pink'
                     }
@@ -752,7 +752,7 @@ module.exports = {
                     ROUND_VALUE: '',
                     ROUND_KEY: 'sigs',
                     ROUND_IMG: '/img/round/sig.png',
-                    ROUND_TEXT: 'SIGs',
+                    ROUND_TEXT: 'SIG',
                     ROUND_STYLE: {
                         backcolor: 'yellow'
                     }
@@ -761,7 +761,7 @@ module.exports = {
                     ROUND_VALUE: '',
                     ROUND_KEY: 'users',
                     ROUND_IMG: '/img/round/user.png',
-                    ROUND_TEXT: 'Users',
+                    ROUND_TEXT: 'User',
                     ROUND_STYLE: {
                         backcolor: 'yellow'
                     }
@@ -770,7 +770,7 @@ module.exports = {
                     ROUND_VALUE: '',
                     ROUND_KEY: 'businessosv',
                     ROUND_IMG: '/img/round/osv.png',
-                    ROUND_TEXT: 'OS vendors',
+                    ROUND_TEXT: 'OS Vendor',
                     ROUND_STYLE: {
                         backcolor: 'blue'
                     }

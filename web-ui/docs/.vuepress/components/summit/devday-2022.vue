@@ -48,7 +48,7 @@
             <div class="first-day" v-if="agendaTab === 0">
               <div
                 class="agenda-item"
-                v-for="(item, index) in agendaData.AGENDA_DATA_13.SCHEDULE"
+                v-for="item in agendaData.AGENDA_DATA_13.SCHEDULE"
                 :key="item.TIME"
               >
                 <div class="detail-time">
