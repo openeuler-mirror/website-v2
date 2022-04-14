@@ -5,10 +5,10 @@
 module.exports = {
     cn: {
         RELEASE_DESC: '发行说明',
-        SERVER_IMAGE:'服务器版本',
-        CLOUD_IMAGE:'云版本',
-        EDGE_IMAGE:'边缘版本',
-        EMBEDDEN_IMAGE:'嵌入式版本',
+        SERVER_IMAGE:'服务器镜像',
+        CLOUD_IMAGE:'云镜像',
+        EDGE_IMAGE:'边缘镜像',
+        EMBEDDEN_IMAGE:'嵌入式镜像',
         INSTALL_GUIDENCE: '安装指南',
         SEEK_HELP: '提问求助',
         GET_ISO: '获取 ISO',
