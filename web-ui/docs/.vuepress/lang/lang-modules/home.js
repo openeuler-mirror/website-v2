@@ -138,7 +138,7 @@ module.exports = {
                 },
                 {
                     ROUND_VALUE: '',
-                    ROUND_KEY: 'modulenums',
+                    ROUND_KEY: 'repos',
                     ROUND_IMG: '/img/round/software.png',
                     ROUND_TEXT: '社区软件',
                     ROUND_STYLE: {
@@ -741,7 +741,7 @@ module.exports = {
                 },
                 {
                     ROUND_VALUE: '',
-                    ROUND_KEY: 'modulenums',
+                    ROUND_KEY: 'repos',
                     ROUND_IMG: '/img/round/software.png',
                     ROUND_TEXT: 'Software Products',
                     ROUND_STYLE: {
@@ -1328,7 +1328,7 @@ module.exports = {
                 },
                 {
                     ROUND_VALUE: '',
-                    ROUND_KEY: 'modulenums',
+                    ROUND_KEY: 'repos',
                     ROUND_IMG: '/img/round/software.png',
                     ROUND_TEXT: 'программных продуктов',
                     ROUND_STYLE: {
