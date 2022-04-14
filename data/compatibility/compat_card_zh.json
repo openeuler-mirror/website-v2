@@ -4478,7 +4478,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "TI",
-    "type_1": "PCI-E密码卡 SJK1823",
+    "boardModel": "PCI-E密码卡 SJK1823",
     "chipModel": "XIO2001",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4497,7 +4497,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "TI",
-    "type_1": "Mini PCI-E密码卡 SJK1407",
+    "boardModel": "Mini PCI-E密码卡 SJK1407",
     "chipModel": "XIO2001",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4516,7 +4516,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "PLX",
-    "type_1": "PCI-E密码卡 SJK1521-G",
+    "boardModel": "PCI-E密码卡 SJK1521-G",
     "chipModel": "PEX8311",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4535,7 +4535,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "PLX",
-    "type_1": "PCI-E密码卡 SJK1238-A",
+    "boardModel": "PCI-E密码卡 SJK1238-A",
     "chipModel": "PEX8311",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4554,7 +4554,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "多次方",
-    "type_1": "PCI-E密码卡 SJK1828",
+    "boardModel": "PCI-E密码卡 SJK1828",
     "chipModel": "XS100",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4573,7 +4573,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "多次方",
-    "type_1": "PCI-E密码卡 SJK1828-G",
+    "boardModel": "PCI-E密码卡 SJK1828-G",
     "chipModel": "XS100",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4592,7 +4592,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "Xilinx",
-    "type_1": "PCI-E密码卡 SJK1727",
+    "boardModel": "PCI-E密码卡 SJK1727",
     "chipModel": "XC7K325T",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4611,7 +4611,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "Xilinx",
-    "type_1": "PCI-E密码卡 SJK1727-G",
+    "boardModel": "PCI-E密码卡 SJK1727-G",
     "chipModel": "XC7K325T",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4630,7 +4630,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "Xilinx",
-    "type_1": "PCI-E密码卡 SJK1926",
+    "boardModel": "PCI-E密码卡 SJK1926",
     "chipModel": "XC7K325T",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4649,7 +4649,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "Xilinx",
-    "type_1": "PCI-E密码卡 SJK1927",
+    "boardModel": "PCI-E密码卡 SJK1927",
     "chipModel": "XC7K325T",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4668,7 +4668,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "Xilinx",
-    "type_1": "PCI-E密码卡 SJK1967-G",
+    "boardModel": "PCI-E密码卡 SJK1967-G",
     "chipModel": "XC7K325T",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4687,7 +4687,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "Xilinx",
-    "type_1": "PCI-E密码卡 SJK1975-G",
+    "boardModel": "PCI-E密码卡 SJK1975-G",
     "chipModel": "XC7K325T",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4706,7 +4706,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "Xilinx",
-    "type_1": "Mini PCI-E密码卡 SJK19140",
+    "boardModel": "Mini PCI-E密码卡 SJK19140",
     "chipModel": "XC7Z015",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4725,7 +4725,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "宏思",
-    "type_1": "Mini PCI-E密码卡 SJK19140 V2.0",
+    "boardModel": "Mini PCI-E密码卡 SJK19140 V2.0",
     "chipModel": "HSC321U",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4744,7 +4744,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "宏思",
-    "type_1": "Mini PCI-E密码卡 SJK19140 V2.1",
+    "boardModel": "Mini PCI-E密码卡 SJK19140 V2.1",
     "chipModel": "HSC321U",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4763,7 +4763,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "宏思",
-    "type_1": "Mini PCI-E密码卡 SC54-D1",
+    "boardModel": "Mini PCI-E密码卡 SC54-D1",
     "chipModel": "HSC321U",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4782,7 +4782,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "Xilinx",
-    "type_1": "三未信安密码卡 SC48-A1",
+    "boardModel": "三未信安密码卡 SC48-A1",
     "chipModel": "XC7K325T",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4801,7 +4801,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "Xilinx",
-    "type_1": "PCI-E密码卡 SC60",
+    "boardModel": "PCI-E密码卡 SC60",
     "chipModel": "XCKU15P",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4820,7 +4820,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "多次方",
-    "type_1": "Mini PCI-E密码卡 SJK1407 V2.0",
+    "boardModel": "Mini PCI-E密码卡 SJK1407 V2.0",
     "chipModel": "XS100",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4839,7 +4839,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "多次方",
-    "type_1": "PCI-E密码卡 SJK1727 V2.0",
+    "boardModel": "PCI-E密码卡 SJK1727 V2.0",
     "chipModel": "XS100",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
@@ -4858,7 +4858,7 @@
     "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
     "driverSize": "92K",
     "chipVendor": "多次方",
-    "type_1": "PCI-E密码卡 SJK1828 V2.0",
+    "boardModel": "PCI-E密码卡 SJK1828 V2.0",
     "chipModel": "XS100",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
