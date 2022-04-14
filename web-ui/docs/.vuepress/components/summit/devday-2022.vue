@@ -501,7 +501,7 @@ export default {
       // 星星数量
       starsCount: 120,
       tabIndex: 0,
-      agendaTab: 1,
+      agendaTab: 2,
       agendaData: [],
       secondDayData: [],
       construction: [],
