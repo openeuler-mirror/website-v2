@@ -502,9 +502,11 @@ export default {
       activeBackground: -1,
       timeTitle: [],
       showNav: false,
+      interval: null,
     };
   },
   mounted() {
+    this.tabAutoChange()
     window.addEventListener('scroll', this.scrollTop);
   },
 
@@ -551,7 +553,7 @@ export default {
       }
     },
     zoneTabClick(event) {
-      this.tabIndex = parseInt(event.index);
+      event ? (this.tabIndex = parseInt(event.index)) : '';
       this.activeBackground = -1;
       if (this.tabIndex === 0) {
         this.secondDayData = this.agendaData.AGENDA_DATA_14.SCHEDULE;
@@ -568,10 +570,40 @@ export default {
     isTimeOn() {
       this.timeTitle.forEach((item, index) => {
         this.getDate(`2022-4-14-${item.split(' ')[0]}`) >= 0 &&
-        this.getDate(`2022-4-15-${item.split(' ')[0]}`) < 60
+        this.getDate(`2022-4-14-${item.split(' ')[0]}`) < 60
           ? (this.activeBackground = index)
           : '';
       });
+    },
+    tabAutoChange() {
+      let time = new Date().getTime();
+      if (
+        time > new Date('2022-4-14-12:00').getTime() &&
+        time < new Date('2022-4-14-18:00')
+      ) {
+        this.agendaTab = 1;
+        this.tabIndex = 1;
+        this.showTabSecond = 'afternoon';
+      } else if (
+        time > new Date('2022-4-14-18:00').getTime() &&
+        time < new Date('2022-4-14-21:00')
+      ) {
+        this.agendaTab = 1;
+        this.tabIndex = 2;
+        this.showTabSecond = 'night';
+      } else if (
+        time > new Date('2022-4-14-21:00').getTime() &&
+        time < new Date('2022-4-15-12:00')
+      ) {
+        this.agendaTab = 2;
+        this.tabIndex = 0;
+        this.showTabThird = 'morning';
+      } else if (time > new Date('2022-4-15-12:00').getTime()) {
+        this.agendaTab = 2;
+        this.tabIndex = 1;
+        this.showTabThird = 'afternoon';
+      }
+      this.zoneTabClick();
     },
     getStars() {
       this.$nextTick(() => {
