@@ -506,7 +506,9 @@ export default {
     };
   },
   mounted() {
-    this.tabAutoChange()
+    this.$nextTick(() => {
+      this.tabAutoChange();
+    });
     window.addEventListener('scroll', this.scrollTop);
   },
 
