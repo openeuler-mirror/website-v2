@@ -131,7 +131,7 @@ module.exports = {
                     ROUND_VALUE: '',
                     ROUND_KEY: 'contributors',
                     ROUND_IMG: '/img/round/contributer.png',
-                    ROUND_TEXT: '社区贡献者',
+                    ROUND_TEXT: '贡献者',
                     ROUND_STYLE: {
                         backcolor: 'blue'
                     }
@@ -140,7 +140,7 @@ module.exports = {
                     ROUND_VALUE: '',
                     ROUND_KEY: 'repos',
                     ROUND_IMG: '/img/round/software.png',
-                    ROUND_TEXT: '社区软件',
+                    ROUND_TEXT: '代码仓库',
                     ROUND_STYLE: {
                         backcolor: 'pink'
                     }
@@ -149,7 +149,7 @@ module.exports = {
                     ROUND_VALUE: '',
                     ROUND_KEY: 'sigs',
                     ROUND_IMG: '/img/round/sig.png',
-                    ROUND_TEXT: 'SIG组',
+                    ROUND_TEXT: '特别兴趣小组',
                     ROUND_STYLE: {
                         backcolor: 'yellow'
                     }

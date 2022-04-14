@@ -331,6 +331,14 @@
                   class="third-body-morning"
                   v-if="showTabThird === 'morning'"
                 >
+                  <div class="star-box">
+                    <div
+                      class="move-star"
+                      v-for="(item, index) in 20"
+                      :class="`move-star${index}`"
+                      :key="item"
+                    ></div>
+                  </div>
                   <div
                     class="third-item"
                     v-for="(item, index) in agendaData.AGENDA_DATA_15.SCHEDULE"
@@ -714,6 +722,110 @@ export default {
   animation: meteor 3s 4s ease-in infinite;
 }
 
+.star-box {
+  .move-star {
+    top: -50px;
+    left: -40px;
+    width: 40px;
+    height: 25px;
+    animation: meteor2 5s 1s ease-in infinite;
+    img {
+      width: 100%;
+    }
+  }
+  .move-star1 {
+    top: -500px;
+    left: -400px;
+    animation: meteor2 5s 2s ease-in infinite;
+  }
+  .move-star2 {
+    top: 40px;
+    left: -100px;
+    animation: meteor2 5s 3s ease-in infinite;
+  }
+  .move-star3 {
+    top: 300px;
+    left: -40px;
+    animation: meteor2 5s 4s ease-in infinite;
+  }
+  .move-star4 {
+    top: 700px;
+    left: -100px;
+    animation: meteor2 5s 5s ease-in infinite;
+  }
+  .move-star5 {
+    top:750px;
+    left: -200px;
+  }
+  .move-star6 {
+    top:880px;
+    left: -450px;
+  }
+  .move-star7 {
+    top:712px;
+    left: -500px;
+  }
+  .move-star8 {
+    top:288px;
+    left: -510px;
+  }
+  .move-star9 {
+    top:700px;
+    left: -150px;
+  }
+  .move-star10 {
+    top:670px;
+    left: -50px;
+  }
+  .move-star11 {
+    top:999px;
+    left: -50px;
+  }
+  .move-star12 {
+    top:1300px;
+    left: -500px;
+  }
+  .move-star13 {
+    top:1100px;
+    left: -100px;
+  }
+  .move-star14 {
+    top:1400px;
+    left: -230px;
+  }
+  .move-star15 {
+    top:170px;
+    left: -500px;
+  }
+  .move-star16 {
+    top:2000px;
+    left: -200px;
+  }
+  .move-star17 {
+    top:1450px;
+    left: -80px;
+  }
+  .move-star18 {
+    top:1700px;
+    left: -300px;
+  }
+  .move-star19 {
+    top:1900px;
+    left: -200px;
+  }
+  .move-star20 {
+    top:1800px;
+    left: -200px;
+  }
+  .move-star(@i) when(@i >=0) {
+    .move-star@{i} {
+      animation-delay: @i * 0.5 + 1s;
+    }
+    .move-star((@i - 1));
+  }
+  .move-star(20);
+}
+
 @keyframes meteor {
   0% {
     -webkit-transform: translate(0px, 0px);
@@ -726,6 +838,20 @@ export default {
     transform: translate(350px, 190px);
   }
 }
+
+@keyframes meteor2 {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+  40% {
+  }
+  100% {
+    -webkit-transform: translate(1900px, 1000px);
+    transform: translate(1900px, 1000px);
+  }
+}
+
 .star {
   width: 2px;
   height: 2px;
