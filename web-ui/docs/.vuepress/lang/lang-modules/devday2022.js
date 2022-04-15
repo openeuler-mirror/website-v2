@@ -62,7 +62,7 @@ module.exports = {
                     ID: 10394,
                     THEME: '云原生&虚拟化',
                     TIME: '14:00-15:15',
-                    OPTION: '114:00-15:15 云原生&虚拟化',
+                    OPTION: '14:00-15:15 云原生&虚拟化',
                     LIVEURL: 'https://vhall.huawei.com/v2/watch/10394?lang=zh&thirdId='
                 },
                 {
@@ -1724,7 +1724,7 @@ module.exports = {
                     ID: 10394,
                     THEME: '云原生&虚拟化',
                     TIME: '14:00-15:15',
-                    OPTION: '114:00-15:15 云原生&虚拟化',
+                    OPTION: '14:00-15:15 云原生&虚拟化',
                     LIVEURL: 'https://vhall.huawei.com/v2/watch/10394?lang=zh&thirdId='
                 },
                 {
@@ -3386,7 +3386,7 @@ module.exports = {
                     ID: 10394,
                     THEME: '云原生&虚拟化',
                     TIME: '14:00-15:15',
-                    OPTION: '114:00-15:15 云原生&虚拟化',
+                    OPTION: '14:00-15:15 云原生&虚拟化',
                     LIVEURL: 'https://vhall.huawei.com/v2/watch/10394?lang=zh&thirdId='
                 },
                 {

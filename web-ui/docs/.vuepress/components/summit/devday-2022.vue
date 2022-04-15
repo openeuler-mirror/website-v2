@@ -497,10 +497,10 @@ export default {
     return {
       i18nData: {},
       showTabSecond: 'morning',
-      showTabThird: 'morning',
+      showTabThird: 'afternoon',
       // 星星数量
       starsCount: 120,
-      tabIndex: 0,
+      tabIndex: 1,
       agendaTab: 2,
       agendaData: [],
       secondDayData: [],
