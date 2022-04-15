@@ -4493,8 +4493,8 @@
     ]
   },
   {
-    "hardwareFactory": "曙光",
-    "hardwareModel": "H620-G30A",
+    "hardwareFactory": "中科可控",
+    "hardwareModel": "R6230HA",
     "osVersion": "openEuler 22.03 LTS",
     "architecture": "x86_64",
     "date": "2022/03/23",
@@ -4521,7 +4521,7 @@
       }
     ],
     "compatibilityConfiguration": {
-      "productInformation": "Sugon-H620-G30A-1.0",
+      "productInformation": "R6230HA",
       "certificationTime": "2022/03/23",
       "commitID": "",
       "motherBoardRevision": "",
