@@ -4441,7 +4441,7 @@
     "driverSize": "92K",
     "chipVendor": "TI",
     "boardModel": "PCI-E密码卡 SJK1823",
-    "chipModel": "XIO2001",
+    "chipModel": "DSP",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
   },
@@ -4460,7 +4460,7 @@
     "driverSize": "92K",
     "chipVendor": "TI",
     "boardModel": "Mini PCI-E密码卡 SJK1407",
-    "chipModel": "XIO2001",
+    "chipModel": "DSP ",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
   },
@@ -4555,7 +4555,7 @@
     "driverSize": "92K",
     "chipVendor": "Xilinx",
     "boardModel": "PCI-E密码卡 SJK1727",
-    "chipModel": "XC7K325T",
+    "chipModel": "FPGA",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
   },
@@ -4574,7 +4574,7 @@
     "driverSize": "92K",
     "chipVendor": "Xilinx",
     "boardModel": "PCI-E密码卡 SJK1727-G",
-    "chipModel": "XC7K325T",
+    "chipModel": "FPGA",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
   },
@@ -4593,7 +4593,7 @@
     "driverSize": "92K",
     "chipVendor": "Xilinx",
     "boardModel": "PCI-E密码卡 SJK1926",
-    "chipModel": "XC7K325T",
+    "chipModel": "FPGA",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
   },
@@ -4612,7 +4612,7 @@
     "driverSize": "92K",
     "chipVendor": "Xilinx",
     "boardModel": "PCI-E密码卡 SJK1927",
-    "chipModel": "XC7K325T",
+    "chipModel": "FPGA",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
   },
@@ -4631,7 +4631,7 @@
     "driverSize": "92K",
     "chipVendor": "Xilinx",
     "boardModel": "PCI-E密码卡 SJK1967-G",
-    "chipModel": "XC7K325T",
+    "chipModel": "FPGA",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
   },
@@ -4650,7 +4650,7 @@
     "driverSize": "92K",
     "chipVendor": "Xilinx",
     "boardModel": "PCI-E密码卡 SJK1975-G",
-    "chipModel": "XC7K325T",
+    "chipModel": "FPGA",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
   },
@@ -4669,7 +4669,7 @@
     "driverSize": "92K",
     "chipVendor": "Xilinx",
     "boardModel": "Mini PCI-E密码卡 SJK19140",
-    "chipModel": "XC7Z015",
+    "chipModel": "FPGA",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
   },
@@ -4680,17 +4680,17 @@
     "ssID": "0700",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP3",
-    "driverName": "swcsm",
-    "version": "3.03",
+    "driverName": "",
+    "version": "",
     "type": "密码卡",
     "date": "2022.04.02",
-    "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
-    "driverSize": "92K",
-    "chipVendor": "宏思",
+    "sha256": "",
+    "driverSize": "",
+    "chipVendor": "Renasas",
     "boardModel": "Mini PCI-E密码卡 SJK19140 V2.0",
-    "chipModel": "HSC321U",
+    "chipModel": "UPD720",
     "item": "",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
+    "downloadLink": ""
   },
   {
     "vendorID": "1246",
@@ -4699,17 +4699,17 @@
     "ssID": "0700",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP3",
-    "driverName": "swcsm",
-    "version": "3.03",
+    "driverName": "",
+    "version": "",
     "type": "密码卡",
     "date": "2022.04.02",
-    "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
-    "driverSize": "92K",
-    "chipVendor": "宏思",
+    "sha256": "",
+    "driverSize": "",
+    "chipVendor": "Renasas",
     "boardModel": "Mini PCI-E密码卡 SJK19140 V2.1",
-    "chipModel": "HSC321U",
+    "chipModel": "UPD720",
     "item": "",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
+    "downloadLink": ""
   },
   {
     "vendorID": "1246",
@@ -4718,17 +4718,17 @@
     "ssID": "0700",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP3",
-    "driverName": "swcsm",
-    "version": "3.03",
+    "driverName": "",
+    "version": "",
     "type": "密码卡",
     "date": "2022.04.02",
-    "sha256": "0f43faab984ba474c151e86c9e6e4e82035e6090df30ece9cd1bac3a88100231",
-    "driverSize": "92K",
-    "chipVendor": "宏思",
+    "sha256": "",
+    "driverSize": "",
+    "chipVendor": "Renasas",
     "boardModel": "Mini PCI-E密码卡 SC54-D1",
-    "chipModel": "HSC321U",
+    "chipModel": "UPD720",
     "item": "",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
+    "downloadLink": ""
   },
   {
     "vendorID": "ee10",
@@ -4745,7 +4745,7 @@
     "driverSize": "92K",
     "chipVendor": "Xilinx",
     "boardModel": "三未信安密码卡 SC48-A1",
-    "chipModel": "XC7K325T",
+    "chipModel": "FPGA",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
   },
@@ -4764,7 +4764,7 @@
     "driverSize": "92K",
     "chipVendor": "Xilinx",
     "boardModel": "PCI-E密码卡 SC60",
-    "chipModel": "XCKU15P",
+    "chipModel": "FPGA",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
   },
@@ -4824,7 +4824,7 @@
     "chipModel": "XS100",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
-  },
+  }, 
   {
     "vendorID": "15b3",
     "deviceID": "1017",
