@@ -21,7 +21,7 @@ module.exports = {
         NAV_LIST: [
             {
                 key: '#liveroom',
-                name: '现场直播'
+                name: '精彩回顾'
             },
             {
                 key: '#agenda',
@@ -1683,7 +1683,7 @@ module.exports = {
         NAV_LIST: [
             {
                 key: '#liveroom',
-                name: '现场直播'
+                name: '精彩回顾'
             },
             {
                 key: '#agenda',
@@ -3345,7 +3345,7 @@ module.exports = {
         NAV_LIST: [
             {
                 key: '#liveroom',
-                name: '现场直播'
+                name: '精彩回顾'
             },
             {
                 key: '#agenda',
