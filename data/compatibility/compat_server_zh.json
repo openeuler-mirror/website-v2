@@ -4498,7 +4498,7 @@
     "osVersion": "openEuler 22.03 LTS",
     "architecture": "x86_64",
     "date": "2022/03/23",
-    "friendlyLink": "",
+    "friendlyLink": "http://www.cancon.com.cn",
     "boardCards": [
       {
         "vendorID": "8086",
@@ -4526,7 +4526,7 @@
       "commitID": "",
       "motherBoardRevision": "",
       "biosUefi": "0BH1001010",
-      "cpu": "Hygon 1",
+      "cpu": "Hygon 2",
       "ram": "16*32G RDIMMs",
       "portsBusTypes": "x16 PCI Express",
       "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family",
@@ -4582,7 +4582,7 @@
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86_64",
     "date": "2022/04/08",
-    "friendlyLink": "www.cancon.com.cn",
+    "friendlyLink": "http://www.cancon.com.cn",
     "boardCards": [
       {
         "vendorID": "8680",
