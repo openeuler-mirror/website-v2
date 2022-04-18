@@ -130,7 +130,7 @@
                                 <a
                                     class="table-link"
                                     target="_blank"
-                                    :href="scope.row.friendlyLink"
+                                    @click="goInstall(scope.row.friendlyLink)"
                                 >{{ i18n.compatibility.LINK}}</a>
                             </template>
                         </el-table-column>
@@ -174,7 +174,7 @@
                                     <a
                                         class="table-link"
                                         target="_blank"
-                                        :href="item.friendlyLink"
+                                        @click="goInstall(item.friendlyLink)"
                                     >{{ i18n.compatibility.LINK }}</a>
                                 </li>
                             </ul>
@@ -765,7 +765,14 @@ export default {
             this.$router.push({
                 path: this.resolvePath('/compatibility/software/')
             })
-        }
+        },
+         goInstall(path) {
+             if (path.includes('http') || path.includes('https')) {
+                window.open(path);
+                } else if (path) {
+                window.open('http://' + path);
+            }
+        },
     }
 };
 </script>
