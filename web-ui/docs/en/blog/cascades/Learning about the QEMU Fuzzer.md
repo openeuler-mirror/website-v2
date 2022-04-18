@@ -1,5 +1,5 @@
 ---
-title: [Open Source Promotion Plan] Learning about the QEMU Fuzzer
+title: "[Open Source Promotion Plan] Learning about the QEMU Fuzzer"
 date: 2021-08-15
 tags: 
     - Qemu 
