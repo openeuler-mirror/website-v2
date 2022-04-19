@@ -19,11 +19,11 @@
       </div>
       <div class="current" v-if="isDeveloper">
         <img
-          v-lazy="'/img/summit/devday-2021/h5-liveroom.png'"
+          v-lazy="'/img/summit/devday-2022/h5-liveroom.png'"
           alt=""
           v-if="isShowH5"
         />
-        <img v-lazy="'/img/summit/devday-2021/pc-liveroom.png'" alt="" v-else />
+        <img v-lazy="'/img/summit/devday-2022/pc-liveroom.png'" alt="" v-else />
       </div>
     </div>
     <div class="time-box" id="time-box" v-if="isSummit">

@@ -21,9 +21,9 @@ Programming language: C
 
 Brief description: a web server, reverse proxy server, or mail (IMAP/POP3) proxy server
 ## Recommended Version
-Nginx 1.14.2  
-  >NOTE:
-  >This document applies to Nginx 1.14.2. However, you can refer to this document when porting other Nginx versions.
+Nginx 1.14.2
+  NOTE:
+  This document applies to Nginx 1.14.2. However, you can refer to this document when porting other Nginx versions.
 
 
 # Environment Requirements  
@@ -120,7 +120,7 @@ Run the following commands to download the Nginx source code:
 
 NOTE:
 You can also download the source code using a local browser and upload it to the **/home** directory on the server.
-Download address: [https://nginx.org/download/nginx-1.14.2.tar.gz](https://nginx.org/download/nginx-1.14.2.tar.gz)
+Download address: https://nginx.org/download/nginx-1.14.2.tar.gz
 
 NOTE:
 If you need to configure a proxy to access the Internet, perform the following operations.
@@ -221,7 +221,7 @@ A challenge password []:
 An optional company name []:
 ```
 
-Enter the password set in 1. Set **Country Name** to **CN**, for example, and leave other parameters blank.  
+Enter the password set in 1. Set **Country Name** to **CN**, for example, and leave other parameters blank.
 3. Rewrite the key.  
 ```openssl rsa -in server_2048.key -out server_2048.key```
 ```
