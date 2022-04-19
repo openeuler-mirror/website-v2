@@ -8,137 +8,7 @@
         ></common-banner>
         <div class="compatibility-content">
             <el-tabs v-model="tabActiveName" @tab-click="handleTabClick">
-                <!-- 板卡 -->
-                <el-tab-pane :label="i18n.compatibility.DRIVE" name="drive">
-                     <el-form :inline="true" :model="formData" class="compatibility-filter">
-                        <el-form-item :label="i18n.compatibility.OS">
-                            <el-select class="pc-select" 
-                                v-model="formData.os" 
-                                @change="driverChange" 
-                                :placeholder="i18n.compatibility.SELECT_PLACEHOLDER">
-                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
-                                <el-option
-                                    v-for="(item, index) in driverOSOptions"
-                                    :key="index"
-                                    :value="item"
-                                ></el-option>
-                            </el-select>
-                            <el-select class="mobile-select" 
-                                v-model="formData.os" 
-                                @change="driverChange" 
-                                :placeholder="i18n.compatibility.OS">
-                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
-                                <el-option
-                                    v-for="(item, index) in driverOSOptions"
-                                    :key="index"
-                                    :value="item"
-                                ></el-option>
-                            </el-select>
-                        </el-form-item>
-                        <el-form-item :label="i18n.compatibility.ARCHITECTURE">
-                            <el-select class="pc-select" 
-                                v-model="formData.architecture" 
-                                @change="driverChange" 
-                                :placeholder="i18n.compatibility.SELECT_PLACEHOLDER">
-                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
-                                <el-option
-                                    v-for="(item, index) in driverArchitectureOptions"
-                                    :key="index"
-                                    :value="item"
-                                ></el-option>
-                            </el-select>
-                            <el-select class="mobile-select" 
-                                v-model="formData.architecture" 
-                                @change="driverChange" 
-                                :placeholder="i18n.compatibility.ARCHITECTURE">
-                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
-                                <el-option
-                                    v-for="(item, index) in driverArchitectureOptions"
-                                    :key="index"
-                                    :value="item"
-                                ></el-option>
-                            </el-select>
-                        </el-form-item>
-                        <el-form-item :label="i18n.compatibility.SEARCH_LABEL" class="search-box">
-                            <el-input 
-                                v-model="formData.keyword" 
-                                class="pc-search"
-                                @keyup.enter.native='driverChange()'
-                                :placeholder="i18n.compatibility.DRIVE_SEARCH_PLACEHOLDER"
-                            >
-                                <i slot="suffix" class="icon-search" @click="driverChange()"></i>
-                            </el-input>
-                            <el-input 
-                                v-model="formData.keyword" 
-                                class="mobile-search"
-                                @keyup.enter.native='driverChange()'
-                                :placeholder="i18n.compatibility.SEARCH_LABEL"
-                            >
-                                <i slot="suffix" class="icon-search" @click="driverChange()"></i>
-                            </el-input>
-                        </el-form-item>
-                    </el-form>
-                    <el-table
-                        v-loading.fullscreen="tableLoading"
-                        class="table-pc"
-                        :data="driverTableData"
-                        stripe
-                        style="width: 100%"
-                    >
-                        <el-table-column prop="architecture" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.ARCHITECTURE" width="110"></el-table-column>
-                        <el-table-column prop="driverName" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_NAME" width="115"></el-table-column>
-                        <el-table-column prop="os" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_OS" width="190"></el-table-column>
-                        <el-table-column prop="version" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.VERSION"  width="115"></el-table-column>
-                        <el-table-column prop="type" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.TYPE" width="85" ></el-table-column>
-                        <el-table-column prop="driverDate" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_DATE" width="115"></el-table-column>
-                        <el-table-column prop="chipVendor" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.CHIP_VENDOR" width="115"></el-table-column>
-                        <el-table-column prop="boardModel" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.BOARD_MODEL" width="160"></el-table-column>
-                        <el-table-column prop="chipModel" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.CHIP_MODEL" width="115"></el-table-column>
-                    </el-table>
-                    <ul class="table-mobile" v-loading.fullscreen="tableLoading">
-                        <li class="item" v-for="(item, index) in driverTableData" :key="index">
-                            <ul>
-                                <li>
-                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.ARCHITECTURE}}:</span>
-                                    {{item.architecture}}
-                                </li>
-                                <li>
-                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_NAME}}:</span>
-                                    {{item.driverName}}
-                                </li>
-                                <li>
-                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_OS}}:</span>
-                                    {{item.os}}
-                                </li>
-                                <li>
-                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.VERSION}}:</span>
-                                    {{item.version}}
-                                </li>
-                                <li>
-                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.TYPE}}:</span>
-                                    {{item.type}}
-                                </li>
-                                <li>
-                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_DATE}}:</span>
-                                    {{item.driverDate}}
-                                </li>
-                                <li>
-                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.CHIP_VENDOR}}:</span>
-                                    {{item.chipVendor}}
-                                </li>
-                                <li>
-                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.BOARD_MODEL}}:</span>
-                                    {{item.boardModel}}
-                                </li>
-                                <li>
-                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.CHIP_MODEL}}:</span>
-                                    {{item.chipModel}}
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </el-tab-pane>
-                <!-- 整机 -->
+              <!-- 整机 -->
                 <el-tab-pane :label="i18n.compatibility.HARDWARE" name="hardware">
                     <!-- 筛选行 -->
                     <el-form :inline="true" :model="formData" class="compatibility-filter">
@@ -227,7 +97,7 @@
                                 v-model="formData.keyword"
                                 class="mobile-search"
                                 @keyup.enter.native='hardwareChange()'
-                                :placeholder="i18n.compatibility.SEARCH_LABEL"
+                                :placeholder="i18n.compatibility.HARDWARE_SEARCH_PLACEHOLDER"
                             >
                                 <i slot="suffix" class="icon-search" @click="hardwareChange()"></i>
                             </el-input>
@@ -260,7 +130,7 @@
                                 <a
                                     class="table-link"
                                     target="_blank"
-                                    :href="scope.row.friendlyLink"
+                                    @click="goInstall(scope.row.friendlyLink)"
                                 >{{ i18n.compatibility.LINK}}</a>
                             </template>
                         </el-table-column>
@@ -304,8 +174,139 @@
                                     <a
                                         class="table-link"
                                         target="_blank"
-                                        :href="item.friendlyLink"
+                                        @click="goInstall(item.friendlyLink)"
                                     >{{ i18n.compatibility.LINK }}</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </el-tab-pane>
+                <!-- 板卡 -->
+                <el-tab-pane :label="i18n.compatibility.DRIVE" name="drive">
+                     <el-form :inline="true" :model="formData" class="compatibility-filter">
+                        <el-form-item :label="i18n.compatibility.OS">
+                            <el-select class="pc-select" 
+                                v-model="formData.os" 
+                                @change="driverChange" 
+                                :placeholder="i18n.compatibility.SELECT_PLACEHOLDER">
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
+                                <el-option
+                                    v-for="(item, index) in driverOSOptions"
+                                    :key="index"
+                                    :value="item"
+                                ></el-option>
+                            </el-select>
+                            <el-select class="mobile-select" 
+                                v-model="formData.os" 
+                                @change="driverChange" 
+                                :placeholder="i18n.compatibility.OS">
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
+                                <el-option
+                                    v-for="(item, index) in driverOSOptions"
+                                    :key="index"
+                                    :value="item"
+                                ></el-option>
+                            </el-select>
+                        </el-form-item>
+                        <el-form-item :label="i18n.compatibility.ARCHITECTURE">
+                            <el-select class="pc-select" 
+                                v-model="formData.architecture" 
+                                @change="driverChange" 
+                                :placeholder="i18n.compatibility.SELECT_PLACEHOLDER">
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
+                                <el-option
+                                    v-for="(item, index) in driverArchitectureOptions"
+                                    :key="index"
+                                    :value="item"
+                                ></el-option>
+                            </el-select>
+                            <el-select class="mobile-select" 
+                                v-model="formData.architecture" 
+                                @change="driverChange" 
+                                :placeholder="i18n.compatibility.ARCHITECTURE">
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value="all"></el-option>
+                                <el-option
+                                    v-for="(item, index) in driverArchitectureOptions"
+                                    :key="index"
+                                    :value="item"
+                                ></el-option>
+                            </el-select>
+                        </el-form-item>
+                        <el-form-item :label="i18n.compatibility.SEARCH_LABEL" class="search-box">
+                            <el-input 
+                                v-model="formData.keyword" 
+                                class="pc-search"
+                                :class="{'pc-search-en':$lang !== 'zh'}"
+                                @keyup.enter.native='driverChange()'
+                                :placeholder="i18n.compatibility.DRIVE_SEARCH_PLACEHOLDER"
+                            >
+                                <i slot="suffix" class="icon-search" @click="driverChange()"></i>
+                            </el-input>
+                            <el-input 
+                                v-model="formData.keyword" 
+                                class="mobile-search"
+                                @keyup.enter.native='driverChange()'
+                                :placeholder="i18n.compatibility.DRIVE_SEARCH_PLACEHOLDER"
+                            >
+                                <i slot="suffix" class="icon-search" @click="driverChange()"></i>
+                            </el-input>
+                        </el-form-item>
+                    </el-form>
+                    <el-table
+                        v-loading.fullscreen="tableLoading"
+                        class="table-pc"
+                        :data="driverTableData"
+                        stripe
+                        style="width: 100%"
+                    >
+                        <el-table-column prop="architecture" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.ARCHITECTURE" width="110"></el-table-column>
+                        <el-table-column prop="driverName" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_NAME" width="115"></el-table-column>
+                        <el-table-column prop="os" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_OS" width="190"></el-table-column>
+                        <el-table-column prop="version" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.VERSION"  width="115"></el-table-column>
+                        <el-table-column prop="type" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.TYPE" width="85" ></el-table-column>
+                        <el-table-column prop="driverDate" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_DATE" width="115"></el-table-column>
+                        <el-table-column prop="chipVendor" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.CHIP_VENDOR" width="115"></el-table-column>
+                        <el-table-column prop="boardModel" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.BOARD_MODEL" width="160"></el-table-column>
+                        <el-table-column prop="chipModel" :label="i18n.compatibility.DRIVE_TABLE_COLUMN.CHIP_MODEL" width="115"></el-table-column>
+                    </el-table>
+                    <ul class="table-mobile" v-loading.fullscreen="tableLoading">
+                        <li class="item" v-for="(item, index) in driverTableData" :key="index">
+                            <ul>
+                                <li>
+                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.ARCHITECTURE}}:</span>
+                                    {{item.architecture}}
+                                </li>
+                                <li>
+                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_NAME}}:</span>
+                                    {{item.driverName}}
+                                </li>
+                                <li>
+                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_OS}}:</span>
+                                    {{item.os}}
+                                </li>
+                                <li>
+                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.VERSION}}:</span>
+                                    {{item.version}}
+                                </li>
+                                <li>
+                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.TYPE}}:</span>
+                                    {{item.type}}
+                                </li>
+                                <li>
+                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.DRIVE_DATE}}:</span>
+                                    {{item.driverDate}}
+                                </li>
+                                <li>
+                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.CHIP_VENDOR}}:</span>
+                                    {{item.chipVendor}}
+                                </li>
+                                <li>
+                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.BOARD_MODEL}}:</span>
+                                    {{item.boardModel}}
+                                </li>
+                                <li>
+                                    <span>{{i18n.compatibility.DRIVE_TABLE_COLUMN.CHIP_MODEL}}:</span>
+                                    {{item.chipModel}}
                                 </li>
                             </ul>
                         </li>
@@ -525,7 +526,7 @@ import {
 let that = null;
 
 const locationMethods = {
-    // 硬件列表
+    // 整机列表
     getHardwareList(params) {
         that.tableLoading = true;
         hardwareList(params)
@@ -533,7 +534,9 @@ const locationMethods = {
             that.tableLoading = false;
             if(data.totalRecords) {
                 that.total = data.totalRecords;
-                that.hardwareTableData = data.list;
+                that.hardwareTableData = data.list.sort((a,b) => {
+                    return new Date(b.date).getTime() - new Date(a.date).getTime()
+                });
             } else {
                 that.total = 0;
                 that.hardwareTableData = [];
@@ -544,7 +547,7 @@ const locationMethods = {
              that.tableLoading = false;
         })
     },
-    // 驱动列表
+    // 板块列表
     getDriverList(params) {
         that.tableLoading = true;
         driverList(params)
@@ -552,7 +555,9 @@ const locationMethods = {
             that.tableLoading = false;
             if(data.totalRecords) {
                 that.total = data.totalRecords;
-                that.driverTableData = data.list;
+                 that.driverTableData = data.list.sort((a,b) => {
+                    return new Date(b.driverDate).getTime() - new Date(a.driverDate).getTime()
+                });
             } else {
                 that.total = 0;
                 that.driverTableData = [];
@@ -598,7 +603,7 @@ export default {
         that = this;
         return {
             isSoft:false,
-            tabActiveName: 'drive',
+            tabActiveName: 'hardware',
             hardwareOSOptions: [],
             hardwareArchitectureOptions: [],
             hardwareCpuOptions:[],
@@ -760,7 +765,14 @@ export default {
             this.$router.push({
                 path: this.resolvePath('/compatibility/software/')
             })
-        }
+        },
+         goInstall(path) {
+             if (path.includes('http') || path.includes('https')) {
+                window.open(path);
+                } else if (path) {
+                window.open('http://' + path);
+            }
+        },
     }
 };
 </script>
@@ -781,6 +793,12 @@ export default {
         width: 100%;
         padding: 0 30px;
         margin-bottom: 80px;
+    }
+    /deep/ .el-tabs__nav-scroll {
+        @media screen and (max-width:1120px) {
+            display: flex;
+            justify-content: center;
+        }
     }
     /deep/ .el-tabs__item {
         font-size: 24px;
@@ -833,7 +851,7 @@ export default {
         }
         .pc-select,
         .pc-search {
-            width: 180px;
+            width: 170px;
             height: 32px;
             @media (max-width: 1000px) {
                 display: none;
@@ -843,7 +861,10 @@ export default {
             } 
         }
         .pc-search {
-            width: 230px;
+            width: 250px;
+        }
+        .pc-search-en {
+            width:315px;
         }
         .mobile-select,
         .mobile-search {
