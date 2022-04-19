@@ -59,7 +59,7 @@ module.exports = {
           LINKS: [
             {
               NAME: "软件获取",
-              LINK: "https://marketplace.visualstudio.com/items?itemName=x2openEuler.x2openEuler",
+              LINK: "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/",
             },
           ],
         },
