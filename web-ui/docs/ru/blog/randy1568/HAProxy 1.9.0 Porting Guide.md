@@ -53,8 +53,7 @@ HAProxy 1.9.0
 cat /etc/os-release
 ```
 
-<img src="./image/HAProxy-1.jpeg">  
-
+<img src="./image/HAProxy-1.jpeg">
 Подробную информацию об установке ОС openEuler см. в документе https://docs.openeuler.org/en/docs/20.03\_LTS\_SP1/docs/Installation/Installation.html.  
 
 Примечание.
@@ -71,7 +70,7 @@ cat /etc/os-release
 
 Далее описана процедура загрузки пакета RPM на локальный ПК с последующей выгрузкой его на сервер.
 
-1. Установите HAProxy.
+2. Установите HAProxy.
    
    ```bash
    rpm -ivh haproxy-1.9.0-1.el7.aarch64.rpm
@@ -79,7 +78,7 @@ cat /etc/os-release
    
    <img src="./image/HAProxy-2.png">
 
-2. Просмотрите инсталляционный каталог.
+3. Просмотрите инсталляционный каталог.
    
    ```bash
    ls /usr/local/haproxy

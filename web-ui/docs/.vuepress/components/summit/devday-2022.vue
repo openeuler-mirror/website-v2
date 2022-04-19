@@ -7,12 +7,12 @@
       :dataList="i18n.devday2022.NAV_LIST"
     ></titlenav>
     <div class="banner">
-      <a href="#liveroom">
+      <a :href="i18nData.SUMMIT_BANNER.LINK" target="_blank">
         <img class="main" :src="i18nData.SUMMIT_BANNER.PC_IMG" />
       </a>
     </div>
     <div class="h5-banner">
-      <a href="#liveroom">
+      <a :href="i18nData.SUMMIT_BANNER.LINK" target="_balnk">
         <img :src="i18nData.SUMMIT_BANNER.MOBILE_IMG" />
       </a>
     </div>
@@ -497,10 +497,10 @@ export default {
     return {
       i18nData: {},
       showTabSecond: 'morning',
-      showTabThird: 'morning',
+      showTabThird: 'afternoon',
       // 星星数量
       starsCount: 120,
-      tabIndex: 0,
+      tabIndex: 1,
       agendaTab: 2,
       agendaData: [],
       secondDayData: [],
@@ -514,6 +514,9 @@ export default {
     };
   },
   mounted() {
+    this.$nextTick(() => {
+      this.tabAutoChange();
+    });
     window.addEventListener('scroll', this.scrollTop);
   },
 

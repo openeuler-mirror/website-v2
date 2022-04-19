@@ -61,12 +61,27 @@
           </div>
         </div>
         <div class="card-box">
+          <div
+            class="sticky-title section"
+            v-if="carouselObj.TIME_LIST.length > 10"
+          >
+            <div
+              class="title-item"
+              v-for="(item, index) in i18n.devday2022.AGENDA.AGENDA_DATA_15
+                .STICKY_TITLE"
+              :key="index"
+            >
+              {{ item }}
+            </div>
+          </div>
           <div class="transform-box" :class="{ 'is-transform': isTransform }">
             <ul class="card-list">
               <li v-for="(item, index) in carouselObj.CARD_LIST" :key="index">
-                <p class="section" v-for="values in item.TITLE" :key="values">
-                  {{ values }}
-                </p>
+                <div v-if="carouselObj.TIME_LIST.length < 10">
+                  <p class="section" v-for="values in item.TITLE" :key="values">
+                    {{ values }}
+                  </p>
+                </div>
                 <a
                   :class="[
                     value.THEME ? 'card-item' : 'null-item',
@@ -367,8 +382,34 @@ export default {
       .card-box {
         width: 100%;
         padding-left: 30px;
-        @media screen and (max-width: 1120px) {
+        @media screen and (max-width:1120px) {
           overflow: hidden;
+        }
+        .sticky-title {
+          position: sticky;
+          margin: 0 10px;
+          z-index: 10;
+          top: 66px;
+          left: 0;
+          display: flex;
+          .title-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            font-size: 20px;
+            color: #ffffff;
+            width: 218px;
+            margin-right: 16px;
+            height: 48px;
+            box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            background-size: cover;
+            background-image: url(/img/summit/devday-2022/agenda/thild-title.png);
+          }
+          .title-item:last-child {
+            margin: 0;
+          }
         }
         .card-list {
           display: flex;
