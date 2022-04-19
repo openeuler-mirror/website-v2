@@ -4,62 +4,75 @@
       <titlenav
         v-show="isShowNav"
         :currentIndex="activeIndex"
+        :currentSubIndex="currentSubIndex"
         :dataList="i18n.minisite.NAV_TEXT"
       ></titlenav>
       <minibanner
         :themeArr="i18n.minisite.MIGRATION_BANNER_TEXT"
         :mobileImg="i18n.minisite.ATUNE_BANNER_IMG"
-        :isShowH5 = true
+        :isShowH5="true"
       ></minibanner>
       <div class="atune-center">
         <div class="other-desc">
           <div>
-            <p v-for="(item, index) in i18n.minisite.MIGRATION_DESC" :key="index">{{ item }}</p>
+            <p
+              v-for="(item, index) in i18n.minisite.MIGRATION_DESC"
+              :key="index"
+            >
+              {{ item }}
+            </p>
           </div>
         </div>
-
-        <div v-for="(item,index) in i18n.minisite.MIGRATION_LISTCONTENT" :key="index" class="list-content">
-          <contentlist
-          :outsideStr="item.TITLE_OUTSIDE"
-          :insideStr="item.TITLE_INSIDE"
-          :subtitle="item.SUBTITLE"
-          :listTitle="item.LISTTITLE"
-          :descList="item.CONTENT"
-          :frameImg="item.FRAMEWORK_IMG"
+        <SourceDownload />
+        <div
+          v-for="(item, index) in i18n.minisite.MIGRATION_LISTCONTENT"
+          :key="index"
+          class="list-content"
           id="framework"
+        >
+          <contentlist
+            :outsideStr="item.TITLE_OUTSIDE"
+            :insideStr="item.TITLE_INSIDE"
+            :subtitle="item.SUBTITLE"
+            :listTitle="item.LISTTITLE"
+            :descList="item.CONTENT"
+            :frameImg="item.FRAMEWORK_IMG"
           ></contentlist>
         </div>
 
-        <scheme :scheme="i18n.scheme.SCHEME" id="scheme"></scheme>
+        <scheme :scheme="i18n.scheme.SCHEME" id="document"></scheme>
       </div>
     </div>
 
-    <div class="bisheng">
+    <div class="bisheng" id="caseGuidance">
       <div class="reference">
         <div class="menu-title">
-            <div 
-              v-for="(item,index) in i18n.minisite.MIGRATION_REFERENCE.MENU_LIST" 
-              :key="index"
-              :class="index === menuIndex? 'active':''"
-              @click="checkMeun(index)">
-                <p>{{item}}</p>
-                <p class="title-border"></p>
-            </div>
+          <div
+            v-for="(item, index) in i18n.minisite.MIGRATION_REFERENCE.MENU_LIST"
+            :key="index"
+            :class="index === menuIndex ? 'active' : ''"
+            @click="checkMeun(index)"
+          >
+            <p>{{ item }}</p>
+            <p class="title-border"></p>
+          </div>
         </div>
         <div v-if="menuIndex === 0">
           <div class="h5-link" v-if="isShowH5">
-          <a
-            :href="item.LINK"
-            v-for="(item, index) in i18n.minisite.MIGRATION_REFERENCE.LINK_LIST"
-            :key="index"
-            target="__blank"
-            >{{ item.TEXT }}</a
-          >
+            <a
+              :href="item.LINK"
+              v-for="(item, index) in i18n.minisite.MIGRATION_REFERENCE
+                .LINK_LIST"
+              :key="index"
+              target="__blank"
+              >{{ item.TEXT }}</a
+            >
           </div>
           <div class="link-list list" v-else>
             <div
               class="item"
-              v-for="(item, index) in i18n.minisite.MIGRATION_REFERENCE.LINK_LIST"
+              v-for="(item, index) in i18n.minisite.MIGRATION_REFERENCE
+                .LINK_LIST"
               :key="index"
               @click="go(item.LINK)"
             >
@@ -69,18 +82,24 @@
         </div>
 
         <div v-else-if="menuIndex === 1" class="move-content">
-          <p>{{i18n.minisite.MOVE_CONTENT.DESCRIBE}}</p>
-          <img :src="i18n.minisite.MOVE_CONTENT.IMG" >
-          <p>{{i18n.minisite.MOVE_CONTENT.SUBTITLE}}</p>
-          <p v-for="(item,index) in i18n.minisite.MOVE_CONTENT.LINK_LIST" :key="index">
-            <a :href="item">{{item}}</a>
+          <p>{{ i18n.minisite.MOVE_CONTENT.DESCRIBE }}</p>
+          <img :src="i18n.minisite.MOVE_CONTENT.IMG" />
+          <p>{{ i18n.minisite.MOVE_CONTENT.SUBTITLE }}</p>
+          <p
+            v-for="(item, index) in i18n.minisite.MOVE_CONTENT.LINK_LIST"
+            :key="index"
+          >
+            <a :href="item">{{ item }}</a>
           </p>
         </div>
 
         <div v-else class="move-content">
-          <p>社区版本相关迁移问题， 请在<a :href="i18n.minisite.DIRECT_CONTENT">兼容性 SIG</a>提交相关问题跟进。</p>
+          <p>
+            社区版本相关迁移问题， 请在<a :href="i18n.minisite.DIRECT_CONTENT"
+              >兼容性 SIG</a
+            >提交相关问题跟进。
+          </p>
         </div>
-        
       </div>
     </div>
   </div>
@@ -93,10 +112,13 @@ import minidesc from "./description.vue";
 import miniframe from "./framework.vue";
 import contentlist from "./content.vue";
 import scheme from "./scheme.vue";
+import SourceDownload from "./SourceDownload.vue";
+
 export default {
   data() {
     return {
       activeIndex: -1,
+      currentSubIndex: -1,
       menuIndex: 0,
       isShowNav: false,
     };
@@ -120,17 +142,48 @@ export default {
       } else {
         this.isShowNav = true;
       }
-      if (scrollTop > 800 && scrollTop < 1800) {
+      const sd = document.getElementById("sourceDownload").offsetTop - 200;
+      const fw = document.getElementById("framework").offsetTop - 200;
+      const dt = document.getElementById("document").offsetTop - 200;
+      const cd = document.getElementById("caseGuidance").offsetTop - 200;
+      // console.log(scrollTop, sd, fw, dt);
+
+      if (scrollTop > sd && scrollTop < fw) {
         this.activeIndex = 0;
-      } else if (scrollTop > 1800) {
+        this.currentSubIndex = -1;
+      } else if (scrollTop > fw && scrollTop < dt) {
         this.activeIndex = 1;
+        this.currentSubIndex = -1;
+      } else if (scrollTop > dt && scrollTop < cd) {
+        this.activeIndex = 2;
+        const arr = ["one", "two", "three", "four", "five", "six", "seven"];
+        arr.forEach((i, index) => {
+          const one = document.getElementById(`h2-title-${i}`).offsetTop - 100;
+          let two = 0;
+          try {
+            two =
+              document.getElementById(`h2-title-${arr[index + 1]}`).offsetTop -
+              100;
+          } catch (error) {
+            if (index === 6 && scrollTop > one) {
+              this.currentSubIndex = 6;
+            }
+          }
+          if (scrollTop > one && scrollTop < two) {
+            this.currentSubIndex = index;
+          }
+        });
+      } else if (scrollTop > cd) {
+        this.currentSubIndex = -1;
+        this.activeIndex = 3;
       } else {
+        this.currentSubIndex = -1;
         return false;
       }
     },
     checkMeun(num) {
       this.menuIndex = num;
-    }
+    },
   },
   destroyed() {
     window.removeEventListener("scroll", this.atuneScroll);
@@ -142,7 +195,8 @@ export default {
     minidesc,
     miniframe,
     contentlist,
-    scheme
+    scheme,
+    SourceDownload,
   },
 };
 </script>
@@ -344,7 +398,7 @@ html[lang="ru"] .A-Tune .atune-center .tune-desc {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 44px;
+  // margin-bottom: 44px;
   & > div {
     width: 1120px;
   }
@@ -573,7 +627,7 @@ html[lang="ru"] .A-Tune .atune-center .tune-desc {
       display: inline-block;
       height: 48px;
       font-size: 20px;
-      color: rgba(0,0,0,0.50);
+      color: rgba(0, 0, 0, 0.5);
       letter-spacing: 0;
       text-align: justify;
       line-height: 48px;
@@ -586,11 +640,10 @@ html[lang="ru"] .A-Tune .atune-center .tune-desc {
       color: #000000;
       .title-border {
         width: 54px;
-        height: 4px ;
-        background: #002FA7;
+        height: 4px;
+        background: #002fa7;
       }
     }
-    
   }
   .link-list {
     flex-wrap: wrap;
@@ -611,9 +664,10 @@ html[lang="ru"] .A-Tune .atune-center .tune-desc {
       color: #000000;
       text-align: center;
       line-height: 28px;
+      transition: background-color 0.3s;
       &:hover {
         color: #ffffff;
-        background: #002fa7;
+        background-color: #002fa7;
       }
     }
   }
