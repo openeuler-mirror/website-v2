@@ -14,7 +14,7 @@ module.exports = {
                 SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
                 GET_ISO_URL: 'https://repo.openeuler.org/openEuler-22.03-LTS/ISO/',
                 LIFE_CYCLE_URL: '/zh/other/lifecycle/',
-                WHITE_PAPER: "https://openeuler-website.obs.ap-southeast-1.myhuaweicloud.com/pdf/openEuler-whitepaper-2203.pdf",
+                WHITE_PAPER: "/whitepaper/openEuler-whitepaper-2203.pdf",
                 WEBSITE_SELECT: "/zh/mirror/select/?version=22.03-LTS",
                 SERVER_IMAGE:'https://repo.openeuler.org/openEuler-22.03-LTS/ISO/',
                 CLOUD_IMAGE:'https://repo.openeuler.org/openEuler-22.03-LTS/virtual_machine_img/',
