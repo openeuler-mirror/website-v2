@@ -122,9 +122,6 @@ module.exports = {
                                 NAME: 'sig-DyscheOS'
                             },
                             {
-                                NAME: 'kae'
-                            },
-                            {
                                 NAME: 'sig-REDF'
                             }
                         ]
@@ -436,9 +433,6 @@ module.exports = {
                             },
                             {
                                 NAME: 'sig-DyscheOS'
-                            },
-                            {
-                                NAME: 'kae'
                             },
                             {
                                 NAME: 'sig-REDF'
@@ -753,9 +747,6 @@ module.exports = {
                             },
                             {
                                 NAME: 'sig-DyscheOS'
-                            },
-                            {
-                                NAME: 'kae'
                             },
                             {
                                 NAME: 'sig-REDF'

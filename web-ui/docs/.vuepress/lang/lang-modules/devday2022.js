@@ -131,7 +131,7 @@ module.exports = {
                 TITLE: ['09:00 - 10:00', '10:00 - 11:00', '11:00 - 12:00'],
                 TITLE_AFTERNOON: ['14:00 - 15:00', '15:00 - 16:00', '16:00 - 17:00', '17:00 - 18:00'],
                 TITLE_NIGHT: ['19:00 - 20:00', '20:00 - 21:00'],
-                RIGHT_TEXT: ['参会', '笔记'],
+                RIGHT_TEXT: ['回看', '笔记'],
                 SCHEDULE: [
                     {
                         TITLE: {
@@ -141,7 +141,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "高校开发者专场 sig-OSCourse",
                             TIME: "09:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/webinar/register/WN_d8dBvmSJSXKVUPVAH-0qWQ",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1V3411T7Rq?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OSCourse-22.09-planning"
                         }]
                     },
@@ -153,7 +153,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "OpenStack DPU",
                             TIME: "09:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84084650733?pwd=cXpJYjMvckxnS0pEd0h2eVhrbXc1QT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1SY4y1h7cM?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-openstack-22.09-planning"
                         }]
                     },
@@ -165,17 +165,17 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-Industrial-Control",
                             TIME: "09:00 - 10:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84877496685?pwd=N1BrME5ybFJLcXNsNDJEbzh2UjFVQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1uZ4y1m7rz?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Industrial-Control-22.09-planning"
                         }, {
                             TEXT: "sig-AccLib",
                             TIME: "10:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/82166003143?pwd=UjV5cDkra0xqYXJXazdyMGxiRTIwdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1v44y137ZH?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/openEuler2209-sig-AccLib-ODD"
                         }, {
-                            TEXT: "sig-embedded yocto",
+                            TEXT: "sig-Embedded Yocto",
                             TIME: "10:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/85810034120?pwd=WlBWbTdMNm9pNURLNVowbDRQUjRyUT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1K94y1o7WL?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-embedded-22.09-planning"
                         }]
                     },
@@ -187,12 +187,12 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-AI-BigData",
                             TIME: "09:00 - 11:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84477792162?pwd=WWJrZFgyZHdiREFqd3pFY2J6Tkkxdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1X44y137XX?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-AI-BigData-22.09-planning"
                         }, {
                             TEXT: "sig-OPS",
                             TIME: "11:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/89259320118?pwd=aVRvM2gyNEQvTjVKTTlQQThud0N4UT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1dZ4y127Ux?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OPS-22.09-planning"
                         }]
                     },
@@ -204,7 +204,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-ceph",
                             TIME: "09:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84104066825?pwd=bmlmUFgrVjQ3dVlrL05FUCtRNkRNUT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1y94y1d7Gj?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Ceph-22.09-planning"
                         }]
                     },
@@ -216,12 +216,12 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "Infrastructure sig-Gatekeeper",
                             TIME: "09:00 - 11:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/85390779511?pwd=UEdTZFNucHBrTW9YZVU2NTFwL0pkZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1kF411g7TJ?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Infrastructure-22.09-planning"
                         }, {
                             TEXT: "sig-OS-Builder",
                             TIME: "11:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/81024622080?pwd=eUZLTWtEU0xFTzdaVFF5K3Z3aFhYZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV12T4y1h7dB?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OS-Builder-22.09-planning"
                         }]
                     },
@@ -233,12 +233,12 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "Release",
                             TIME: "09:00 - 11:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/81086933976?pwd=WE01QThBV3B6RHZUZi94U2VVcTFPdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1bF411g7Lk?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-release-22.09-planning"
                         }, {
                             TEXT: "Compiler",
                             TIME: "11:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/88158736802?pwd=YVdvc2VUUmpNMGRkZXV1WXpqc280Zz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1dY4y1e76P?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Compiler-22.09-planning"
                         }]
                     },
@@ -250,17 +250,17 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-UKUI",
                             TIME: "9:00 - 09:30",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/85641837636?pwd=eXB3VTVDQytOVFZlWitrNkVmbTNGZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1N94y1o7cx?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-UKUI-planning"
                         }, {
                             TEXT: "sig-CICD",
                             TIME: "09:30 - 11:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84141641538?pwd=ck1WbzZRVXpqcEQ5aWhrbHo2L1NSdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1t34y1v7Lo?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-CICD-planning"
                         }, {
                             TEXT: "Application System-tools",
                             TIME: "11:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84275719073?pwd=ZDdjS2VQMjQ0VW9RZ1ErNlI3VW5kdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1U94y1d743?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-application-systemtools-planning"
                         }]
                     },
@@ -274,7 +274,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "Kernel",
                             TIME: "14:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/webinar/register/WN_nxtHqu_VSbOuWhiP16e-Bw",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1wL4y1L7T3?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-kernel-22.09-planning"
                         }]
                     },
@@ -286,12 +286,12 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-CloudNative iSula、golang",
                             TIME: "14:00 - 16:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/81433480743?pwd=VnNUMzFkbm1zODR2a2VpZ3JvWjdmQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1TB4y1U7ba?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-CloudNative-22.09-planning"
                         }, {
                             TEXT: "Virt ovirt",
                             TIME: "16:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/88487011162?pwd=czFzUEtRWmNCK2p5UUI2STlEeDRDdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1fS4y1w72V?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Virt-22.09-planning"
                         }]
                     },
@@ -303,17 +303,17 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-Intel-Arch",
                             TIME: "14:00 - 16:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83148209249?pwd=U1IrRUtabDNicVVLaVltS0hGR1JoQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV14F411g7oj?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/intel-arch-sig-odd"
                         }, {
                             TEXT: "sig-sw-arch",
                             TIME: "16:00 - 17:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83123847599?pwd=U3A4dGlDemxzVXUwaG5TbStmLzZQQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1aB4y1U7Kp?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-sw-arch-planning"
                         }, {
                             TEXT: "sig-ROS",
                             TIME: "17:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/85187691830?pwd=MzlZUk9TUWExTWVLY0gzMmxaRFdZUT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1cu411y7oS?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-ROS-22.09-planning"
                         }
                         ]
@@ -326,17 +326,17 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-HPC",
                             TIME: "14:00 - 15:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83778708775?pwd=YjN4RGxGd2FYaG5NSllVMGU3V0Iwdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1ku411C7ya?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-hpc-22.09-planning"
                         }, {
                             TEXT: "DB",
                             TIME: "15:00 - 16:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/82020564057?pwd=bU5aL3ZmNDMwbkU0Sjd3UXg3MXRmdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1EZ4y1m72F?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-DB-22.09-planning"
                         }, {
                             TEXT: "A-Tune",
                             TIME: "16:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83887950610?pwd=NlpORmZ6enZJQ05ycGlUMkVNZnh4Zz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1YS4y1Y7YE?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-A-Tune-22.09-planning"
                         }]
                     },
@@ -348,18 +348,18 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "Networking",
                             TIME: "14:00 - 15:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84601840570?pwd=TXJZQ3k1ZWJJV3lBck9rOW1DaVdNQT09",
-                            ETHERPAD: "https://etherpad.openeuler.org/p/sig-Networking-22.09-planning"
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1ET4y1e7qe?spm_id_from=333.999.0.0",
+                            ETHERPAD: "https://etherpad.openeuler.org/p/Networking-plan-3.30"
                         },
                         {
                             TEXT: "sig-Edge",
                             TIME: "15:00 - 16:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/86155898147?pwd=L2orQkhkZTJkMjE0VnZpaFpkVnNXZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1q5411273v?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Edge-22.09-planning"
                         }, {
                             TEXT: "sig-high-performance-network",
                             TIME: "16:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/82389423390?pwd=QlR2ZDB5Q25zNjFZUjQ1eEJxWjhJdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1o44y1V7ao?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-high-performance-networking-22.09-planning"
                         }]
                     },
@@ -371,12 +371,12 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-security-facility security-committee",
                             TIME: "14:00 - 16:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/85092891389?pwd=eUNvQ1oyVWIzaWx4aTZtdDBoL0FnQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1C34y1v7Zr?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-security-facility_and_sc-22.09-planning"
                         }, {
                             TEXT: "sig-Compatibility-Infra devkit",
                             TIME: "16:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84427536352?pwd=cUg5M2V4Y2JhRFVSekd3NjZEOU1Tdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV19u411C7fL?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Compatibility-Infra"
                         }]
                     },
@@ -388,23 +388,23 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-QA GNOME",
                             TIME: "14:00 - 16:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83618992238?pwd=RVRXS3ZtN3JPblBsbzE0eWp0ZVhvZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1HZ4y1m71Q?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-QA-22.09-planning"
                         },
                         {
-                            TEXT: "Sig HA",
+                            TEXT: "sig HA",
                             TIME: "14:00 - 15:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/86779884731?pwd=V2JXNTFBWmpwZGU0bXM2b2Jhdjl6UT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1Nr4y1H7N5?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-HA-22.09-planning"
                         }, {
                             TEXT: "sig-reproducible-builds",
                             TIME: "16:00 - 17:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/89429958765?pwd=OWpUUmRYbEJZOFU4bGlCNFA5Ujk5Zz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1qi4y1U79W?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-reproducible-builds-22.09-planning"
                         }, {
                             TEXT: "sig-compliance",
                             TIME: "17:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84091252968?pwd=MXd1Z2R0dTZPV09wc2xOc1d6YnBxdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1oY4y1e7T6?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-compliance-22.09-planing"
                         }]
                     },
@@ -416,17 +416,17 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-OpenDesign",
                             TIME: "14:00 - 15:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/85064314358?pwd=UTZPVUNUU251S1FlQTZPZFRCVkdOQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1s3411n75L?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OpenDesign-22.09-planning"
                         }, {
                             TEXT: "Doc G11N",
                             TIME: "15:00 - 17:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/87805627521?pwd=ZzNjWUpYdzNId2p5dUdHVld5QVl2Zz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1ua411v7Vy?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Doc-G11N-planning"
                         }, {
                             TEXT: "sig-Migration",
                             TIME: "17:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/81510825922?pwd=dWNrTzRMM0JWL0NQOU5DdHkzUHJSZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1oT4y1Y7ep?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Migration-planning"
                         }]
                     },
@@ -438,9 +438,9 @@ module.exports = {
                             EN: "Cloud Computing & Cloud Native"
                         },
                         SCHEDULE_CARD: [{
-                            TEXT: "SIG-OKD",
+                            TEXT: "sig-OKD",
                             TIME: "19:00 - 21:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83542269449?pwd=cjVKTENZaXdNWFJSRUJtUTkreUpKUT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1RB4y1m79Z?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OKD-22.09-planning"
                         }]
                     },
@@ -452,7 +452,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "Storage",
                             TIME: "19:00 - 21:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/82614532862?pwd=Nm5CS0FNeEdvRERsdjdFcnZTcERiQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1Gr4y1H7Mv?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Storage-22.09-planning"
                         }]
                     },
@@ -464,7 +464,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-Java",
                             TIME: "19:00 - 20:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83080908770?pwd=QlVZTHNZRDZ2elZuZU5qTnNubHBEZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1oY411j7PY?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Java-22.09-planning"
                         }]
                     },
@@ -1793,7 +1793,7 @@ module.exports = {
                 TITLE: ['09:00 - 10:00', '10:00 - 11:00', '11:00 - 12:00'],
                 TITLE_AFTERNOON: ['14:00 - 15:00', '15:00 - 16:00', '16:00 - 17:00', '17:00 - 18:00'],
                 TITLE_NIGHT: ['19:00 - 20:00', '20:00 - 21:00'],
-                RIGHT_TEXT: ['参会', '笔记'],
+                RIGHT_TEXT: ['回看', '笔记'],
                 SCHEDULE: [
                     {
                         TITLE: {
@@ -1803,7 +1803,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "高校开发者专场 sig-OSCourse",
                             TIME: "09:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/webinar/register/WN_d8dBvmSJSXKVUPVAH-0qWQ",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1V3411T7Rq?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OSCourse-22.09-planning"
                         }]
                     },
@@ -1815,7 +1815,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "OpenStack DPU",
                             TIME: "09:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84084650733?pwd=cXpJYjMvckxnS0pEd0h2eVhrbXc1QT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1SY4y1h7cM?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-openstack-22.09-planning"
                         }]
                     },
@@ -1827,17 +1827,17 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-Industrial-Control",
                             TIME: "09:00 - 10:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84877496685?pwd=N1BrME5ybFJLcXNsNDJEbzh2UjFVQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1uZ4y1m7rz?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Industrial-Control-22.09-planning"
                         }, {
                             TEXT: "sig-AccLib",
                             TIME: "10:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/82166003143?pwd=UjV5cDkra0xqYXJXazdyMGxiRTIwdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1v44y137ZH?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/openEuler2209-sig-AccLib-ODD"
                         }, {
-                            TEXT: "sig-embedded yocto",
+                            TEXT: "sig-Embedded Yocto",
                             TIME: "10:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/85810034120?pwd=WlBWbTdMNm9pNURLNVowbDRQUjRyUT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1K94y1o7WL?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-embedded-22.09-planning"
                         }]
                     },
@@ -1849,12 +1849,12 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-AI-BigData",
                             TIME: "09:00 - 11:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84477792162?pwd=WWJrZFgyZHdiREFqd3pFY2J6Tkkxdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1X44y137XX?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-AI-BigData-22.09-planning"
                         }, {
                             TEXT: "sig-OPS",
                             TIME: "11:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/89259320118?pwd=aVRvM2gyNEQvTjVKTTlQQThud0N4UT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1dZ4y127Ux?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OPS-22.09-planning"
                         }]
                     },
@@ -1866,7 +1866,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-ceph",
                             TIME: "09:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84104066825?pwd=bmlmUFgrVjQ3dVlrL05FUCtRNkRNUT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1y94y1d7Gj?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Ceph-22.09-planning"
                         }]
                     },
@@ -1878,12 +1878,12 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "Infrastructure sig-Gatekeeper",
                             TIME: "09:00 - 11:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/85390779511?pwd=UEdTZFNucHBrTW9YZVU2NTFwL0pkZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1kF411g7TJ?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Infrastructure-22.09-planning"
                         }, {
                             TEXT: "sig-OS-Builder",
                             TIME: "11:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/81024622080?pwd=eUZLTWtEU0xFTzdaVFF5K3Z3aFhYZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV12T4y1h7dB?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OS-Builder-22.09-planning"
                         }]
                     },
@@ -1895,12 +1895,12 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "Release",
                             TIME: "09:00 - 11:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/81086933976?pwd=WE01QThBV3B6RHZUZi94U2VVcTFPdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1bF411g7Lk?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-release-22.09-planning"
                         }, {
                             TEXT: "Compiler",
                             TIME: "11:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/88158736802?pwd=YVdvc2VUUmpNMGRkZXV1WXpqc280Zz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1dY4y1e76P?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Compiler-22.09-planning"
                         }]
                     },
@@ -1912,17 +1912,17 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-UKUI",
                             TIME: "9:00 - 09:30",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/85641837636?pwd=eXB3VTVDQytOVFZlWitrNkVmbTNGZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1N94y1o7cx?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-UKUI-planning"
                         }, {
                             TEXT: "sig-CICD",
                             TIME: "09:30 - 11:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84141641538?pwd=ck1WbzZRVXpqcEQ5aWhrbHo2L1NSdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1t34y1v7Lo?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-CICD-planning"
                         }, {
                             TEXT: "Application System-tools",
                             TIME: "11:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84275719073?pwd=ZDdjS2VQMjQ0VW9RZ1ErNlI3VW5kdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1U94y1d743?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-application-systemtools-planning"
                         }]
                     },
@@ -1936,7 +1936,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "Kernel",
                             TIME: "14:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/webinar/register/WN_nxtHqu_VSbOuWhiP16e-Bw",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1wL4y1L7T3?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-kernel-22.09-planning"
                         }]
                     },
@@ -1948,12 +1948,12 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-CloudNative iSula、golang",
                             TIME: "14:00 - 16:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/81433480743?pwd=VnNUMzFkbm1zODR2a2VpZ3JvWjdmQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1TB4y1U7ba?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-CloudNative-22.09-planning"
                         }, {
                             TEXT: "Virt ovirt",
                             TIME: "16:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/88487011162?pwd=czFzUEtRWmNCK2p5UUI2STlEeDRDdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1fS4y1w72V?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Virt-22.09-planning"
                         }]
                     },
@@ -1965,17 +1965,17 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-Intel-Arch",
                             TIME: "14:00 - 16:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83148209249?pwd=U1IrRUtabDNicVVLaVltS0hGR1JoQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV14F411g7oj?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/intel-arch-sig-odd"
                         }, {
                             TEXT: "sig-sw-arch",
                             TIME: "16:00 - 17:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83123847599?pwd=U3A4dGlDemxzVXUwaG5TbStmLzZQQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1aB4y1U7Kp?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-sw-arch-planning"
                         }, {
                             TEXT: "sig-ROS",
                             TIME: "17:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/85187691830?pwd=MzlZUk9TUWExTWVLY0gzMmxaRFdZUT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1cu411y7oS?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-ROS-22.09-planning"
                         }
                         ]
@@ -1988,17 +1988,17 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-HPC",
                             TIME: "14:00 - 15:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83778708775?pwd=YjN4RGxGd2FYaG5NSllVMGU3V0Iwdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1ku411C7ya?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-hpc-22.09-planning"
                         }, {
                             TEXT: "DB",
                             TIME: "15:00 - 16:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/82020564057?pwd=bU5aL3ZmNDMwbkU0Sjd3UXg3MXRmdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1EZ4y1m72F?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-DB-22.09-planning"
                         }, {
                             TEXT: "A-Tune",
                             TIME: "16:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83887950610?pwd=NlpORmZ6enZJQ05ycGlUMkVNZnh4Zz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1YS4y1Y7YE?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-A-Tune-22.09-planning"
                         }]
                     },
@@ -2010,18 +2010,18 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "Networking",
                             TIME: "14:00 - 15:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84601840570?pwd=TXJZQ3k1ZWJJV3lBck9rOW1DaVdNQT09",
-                            ETHERPAD: "https://etherpad.openeuler.org/p/sig-Networking-22.09-planning"
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1ET4y1e7qe?spm_id_from=333.999.0.0",
+                            ETHERPAD: "https://etherpad.openeuler.org/p/Networking-plan-3.30"
                         },
                         {
                             TEXT: "sig-Edge",
                             TIME: "15:00 - 16:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/86155898147?pwd=L2orQkhkZTJkMjE0VnZpaFpkVnNXZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1q5411273v?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Edge-22.09-planning"
                         }, {
                             TEXT: "sig-high-performance-network",
                             TIME: "16:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/82389423390?pwd=QlR2ZDB5Q25zNjFZUjQ1eEJxWjhJdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1o44y1V7ao?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-high-performance-networking-22.09-planning"
                         }]
                     },
@@ -2033,12 +2033,12 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-security-facility security-committee",
                             TIME: "14:00 - 16:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/85092891389?pwd=eUNvQ1oyVWIzaWx4aTZtdDBoL0FnQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1C34y1v7Zr?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-security-facility_and_sc-22.09-planning"
                         }, {
                             TEXT: "sig-Compatibility-Infra devkit",
                             TIME: "16:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84427536352?pwd=cUg5M2V4Y2JhRFVSekd3NjZEOU1Tdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV19u411C7fL?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Compatibility-Infra"
                         }]
                     },
@@ -2050,23 +2050,23 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-QA GNOME",
                             TIME: "14:00 - 16:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83618992238?pwd=RVRXS3ZtN3JPblBsbzE0eWp0ZVhvZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1HZ4y1m71Q?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-QA-22.09-planning"
                         },
                         {
-                            TEXT: "Sig HA",
+                            TEXT: "sig HA",
                             TIME: "14:00 - 15:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/86779884731?pwd=V2JXNTFBWmpwZGU0bXM2b2Jhdjl6UT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1Nr4y1H7N5?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-HA-22.09-planning"
                         }, {
                             TEXT: "sig-reproducible-builds",
                             TIME: "16:00 - 17:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/89429958765?pwd=OWpUUmRYbEJZOFU4bGlCNFA5Ujk5Zz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1qi4y1U79W?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-reproducible-builds-22.09-planning"
                         }, {
                             TEXT: "sig-compliance",
                             TIME: "17:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84091252968?pwd=MXd1Z2R0dTZPV09wc2xOc1d6YnBxdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1oY4y1e7T6?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-compliance-22.09-planing"
                         }]
                     },
@@ -2078,17 +2078,17 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-OpenDesign",
                             TIME: "14:00 - 15:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/85064314358?pwd=UTZPVUNUU251S1FlQTZPZFRCVkdOQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1s3411n75L?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OpenDesign-22.09-planning"
                         }, {
                             TEXT: "Doc G11N",
                             TIME: "15:00 - 17:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/87805627521?pwd=ZzNjWUpYdzNId2p5dUdHVld5QVl2Zz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1ua411v7Vy?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Doc-G11N-planning"
                         }, {
                             TEXT: "sig-Migration",
                             TIME: "17:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/81510825922?pwd=dWNrTzRMM0JWL0NQOU5DdHkzUHJSZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1oT4y1Y7ep?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Migration-planning"
                         }]
                     },
@@ -2100,9 +2100,9 @@ module.exports = {
                             EN: "Cloud Computing & Cloud Native"
                         },
                         SCHEDULE_CARD: [{
-                            TEXT: "SIG-OKD",
+                            TEXT: "sig-OKD",
                             TIME: "19:00 - 21:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83542269449?pwd=cjVKTENZaXdNWFJSRUJtUTkreUpKUT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1RB4y1m79Z?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OKD-22.09-planning"
                         }]
                     },
@@ -2114,7 +2114,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "Storage",
                             TIME: "19:00 - 21:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/82614532862?pwd=Nm5CS0FNeEdvRERsdjdFcnZTcERiQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1Gr4y1H7Mv?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Storage-22.09-planning"
                         }]
                     },
@@ -2126,7 +2126,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-Java",
                             TIME: "19:00 - 20:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83080908770?pwd=QlVZTHNZRDZ2elZuZU5qTnNubHBEZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1oY411j7PY?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Java-22.09-planning"
                         }]
                     },
@@ -3455,7 +3455,7 @@ module.exports = {
                 TITLE: ['09:00 - 10:00', '10:00 - 11:00', '11:00 - 12:00'],
                 TITLE_AFTERNOON: ['14:00 - 15:00', '15:00 - 16:00', '16:00 - 17:00', '17:00 - 18:00'],
                 TITLE_NIGHT: ['19:00 - 20:00', '20:00 - 21:00'],
-                RIGHT_TEXT: ['参会', '笔记'],
+                RIGHT_TEXT: ['回看', '笔记'],
                 SCHEDULE: [
                     {
                         TITLE: {
@@ -3465,7 +3465,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "高校开发者专场 sig-OSCourse",
                             TIME: "09:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/webinar/register/WN_d8dBvmSJSXKVUPVAH-0qWQ",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1V3411T7Rq?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OSCourse-22.09-planning"
                         }]
                     },
@@ -3477,7 +3477,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "OpenStack DPU",
                             TIME: "09:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84084650733?pwd=cXpJYjMvckxnS0pEd0h2eVhrbXc1QT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1SY4y1h7cM?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-openstack-22.09-planning"
                         }]
                     },
@@ -3489,17 +3489,17 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-Industrial-Control",
                             TIME: "09:00 - 10:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84877496685?pwd=N1BrME5ybFJLcXNsNDJEbzh2UjFVQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1uZ4y1m7rz?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Industrial-Control-22.09-planning"
                         }, {
                             TEXT: "sig-AccLib",
                             TIME: "10:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/82166003143?pwd=UjV5cDkra0xqYXJXazdyMGxiRTIwdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1v44y137ZH?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/openEuler2209-sig-AccLib-ODD"
                         }, {
-                            TEXT: "sig-embedded yocto",
+                            TEXT: "sig-Embedded Yocto",
                             TIME: "10:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/85810034120?pwd=WlBWbTdMNm9pNURLNVowbDRQUjRyUT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1K94y1o7WL?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-embedded-22.09-planning"
                         }]
                     },
@@ -3511,12 +3511,12 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-AI-BigData",
                             TIME: "09:00 - 11:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84477792162?pwd=WWJrZFgyZHdiREFqd3pFY2J6Tkkxdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1X44y137XX?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-AI-BigData-22.09-planning"
                         }, {
                             TEXT: "sig-OPS",
                             TIME: "11:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/89259320118?pwd=aVRvM2gyNEQvTjVKTTlQQThud0N4UT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1dZ4y127Ux?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OPS-22.09-planning"
                         }]
                     },
@@ -3528,7 +3528,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-ceph",
                             TIME: "09:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84104066825?pwd=bmlmUFgrVjQ3dVlrL05FUCtRNkRNUT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1y94y1d7Gj?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Ceph-22.09-planning"
                         }]
                     },
@@ -3540,12 +3540,12 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "Infrastructure sig-Gatekeeper",
                             TIME: "09:00 - 11:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/85390779511?pwd=UEdTZFNucHBrTW9YZVU2NTFwL0pkZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1kF411g7TJ?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Infrastructure-22.09-planning"
                         }, {
                             TEXT: "sig-OS-Builder",
                             TIME: "11:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/81024622080?pwd=eUZLTWtEU0xFTzdaVFF5K3Z3aFhYZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV12T4y1h7dB?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OS-Builder-22.09-planning"
                         }]
                     },
@@ -3557,12 +3557,12 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "Release",
                             TIME: "09:00 - 11:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/81086933976?pwd=WE01QThBV3B6RHZUZi94U2VVcTFPdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1bF411g7Lk?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-release-22.09-planning"
                         }, {
                             TEXT: "Compiler",
                             TIME: "11:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/88158736802?pwd=YVdvc2VUUmpNMGRkZXV1WXpqc280Zz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1dY4y1e76P?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Compiler-22.09-planning"
                         }]
                     },
@@ -3574,17 +3574,17 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-UKUI",
                             TIME: "9:00 - 09:30",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/85641837636?pwd=eXB3VTVDQytOVFZlWitrNkVmbTNGZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1N94y1o7cx?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-UKUI-planning"
                         }, {
                             TEXT: "sig-CICD",
                             TIME: "09:30 - 11:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84141641538?pwd=ck1WbzZRVXpqcEQ5aWhrbHo2L1NSdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1t34y1v7Lo?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-CICD-planning"
                         }, {
                             TEXT: "Application System-tools",
                             TIME: "11:00 - 12:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84275719073?pwd=ZDdjS2VQMjQ0VW9RZ1ErNlI3VW5kdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1U94y1d743?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-application-systemtools-planning"
                         }]
                     },
@@ -3598,7 +3598,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "Kernel",
                             TIME: "14:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/webinar/register/WN_nxtHqu_VSbOuWhiP16e-Bw",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1wL4y1L7T3?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-kernel-22.09-planning"
                         }]
                     },
@@ -3610,12 +3610,12 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-CloudNative iSula、golang",
                             TIME: "14:00 - 16:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/81433480743?pwd=VnNUMzFkbm1zODR2a2VpZ3JvWjdmQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1TB4y1U7ba?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-CloudNative-22.09-planning"
                         }, {
                             TEXT: "Virt ovirt",
                             TIME: "16:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/88487011162?pwd=czFzUEtRWmNCK2p5UUI2STlEeDRDdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1fS4y1w72V?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Virt-22.09-planning"
                         }]
                     },
@@ -3627,17 +3627,17 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-Intel-Arch",
                             TIME: "14:00 - 16:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83148209249?pwd=U1IrRUtabDNicVVLaVltS0hGR1JoQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV14F411g7oj?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/intel-arch-sig-odd"
                         }, {
                             TEXT: "sig-sw-arch",
                             TIME: "16:00 - 17:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83123847599?pwd=U3A4dGlDemxzVXUwaG5TbStmLzZQQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1aB4y1U7Kp?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-sw-arch-planning"
                         }, {
                             TEXT: "sig-ROS",
                             TIME: "17:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/85187691830?pwd=MzlZUk9TUWExTWVLY0gzMmxaRFdZUT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1cu411y7oS?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-ROS-22.09-planning"
                         }
                         ]
@@ -3650,17 +3650,17 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-HPC",
                             TIME: "14:00 - 15:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83778708775?pwd=YjN4RGxGd2FYaG5NSllVMGU3V0Iwdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1ku411C7ya?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-hpc-22.09-planning"
                         }, {
                             TEXT: "DB",
                             TIME: "15:00 - 16:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/82020564057?pwd=bU5aL3ZmNDMwbkU0Sjd3UXg3MXRmdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1EZ4y1m72F?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-DB-22.09-planning"
                         }, {
                             TEXT: "A-Tune",
                             TIME: "16:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83887950610?pwd=NlpORmZ6enZJQ05ycGlUMkVNZnh4Zz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1YS4y1Y7YE?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-A-Tune-22.09-planning"
                         }]
                     },
@@ -3672,18 +3672,18 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "Networking",
                             TIME: "14:00 - 15:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84601840570?pwd=TXJZQ3k1ZWJJV3lBck9rOW1DaVdNQT09",
-                            ETHERPAD: "https://etherpad.openeuler.org/p/sig-Networking-22.09-planning"
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1ET4y1e7qe?spm_id_from=333.999.0.0",
+                            ETHERPAD: "https://etherpad.openeuler.org/p/Networking-plan-3.30"
                         },
                         {
                             TEXT: "sig-Edge",
                             TIME: "15:00 - 16:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/86155898147?pwd=L2orQkhkZTJkMjE0VnZpaFpkVnNXZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1q5411273v?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Edge-22.09-planning"
                         }, {
                             TEXT: "sig-high-performance-network",
                             TIME: "16:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/82389423390?pwd=QlR2ZDB5Q25zNjFZUjQ1eEJxWjhJdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1o44y1V7ao?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-high-performance-networking-22.09-planning"
                         }]
                     },
@@ -3695,12 +3695,12 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-security-facility security-committee",
                             TIME: "14:00 - 16:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/85092891389?pwd=eUNvQ1oyVWIzaWx4aTZtdDBoL0FnQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1C34y1v7Zr?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-security-facility_and_sc-22.09-planning"
                         }, {
                             TEXT: "sig-Compatibility-Infra devkit",
                             TIME: "16:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84427536352?pwd=cUg5M2V4Y2JhRFVSekd3NjZEOU1Tdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV19u411C7fL?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Compatibility-Infra"
                         }]
                     },
@@ -3712,23 +3712,23 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-QA GNOME",
                             TIME: "14:00 - 16:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83618992238?pwd=RVRXS3ZtN3JPblBsbzE0eWp0ZVhvZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1HZ4y1m71Q?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-QA-22.09-planning"
                         },
                         {
-                            TEXT: "Sig HA",
+                            TEXT: "sig HA",
                             TIME: "14:00 - 15:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/86779884731?pwd=V2JXNTFBWmpwZGU0bXM2b2Jhdjl6UT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1Nr4y1H7N5?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-HA-22.09-planning"
                         }, {
                             TEXT: "sig-reproducible-builds",
                             TIME: "16:00 - 17:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/89429958765?pwd=OWpUUmRYbEJZOFU4bGlCNFA5Ujk5Zz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1qi4y1U79W?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-reproducible-builds-22.09-planning"
                         }, {
                             TEXT: "sig-compliance",
                             TIME: "17:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/84091252968?pwd=MXd1Z2R0dTZPV09wc2xOc1d6YnBxdz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1oY4y1e7T6?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-compliance-22.09-planing"
                         }]
                     },
@@ -3740,17 +3740,17 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-OpenDesign",
                             TIME: "14:00 - 15:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/85064314358?pwd=UTZPVUNUU251S1FlQTZPZFRCVkdOQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1s3411n75L?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OpenDesign-22.09-planning"
                         }, {
                             TEXT: "Doc G11N",
                             TIME: "15:00 - 17:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/87805627521?pwd=ZzNjWUpYdzNId2p5dUdHVld5QVl2Zz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1ua411v7Vy?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Doc-G11N-planning"
                         }, {
                             TEXT: "sig-Migration",
                             TIME: "17:00 - 18:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/81510825922?pwd=dWNrTzRMM0JWL0NQOU5DdHkzUHJSZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1oT4y1Y7ep?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Migration-planning"
                         }]
                     },
@@ -3762,9 +3762,9 @@ module.exports = {
                             EN: "Cloud Computing & Cloud Native"
                         },
                         SCHEDULE_CARD: [{
-                            TEXT: "SIG-OKD",
+                            TEXT: "sig-OKD",
                             TIME: "19:00 - 21:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83542269449?pwd=cjVKTENZaXdNWFJSRUJtUTkreUpKUT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1RB4y1m79Z?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-OKD-22.09-planning"
                         }]
                     },
@@ -3776,7 +3776,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "Storage",
                             TIME: "19:00 - 21:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/82614532862?pwd=Nm5CS0FNeEdvRERsdjdFcnZTcERiQT09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1Gr4y1H7Mv?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Storage-22.09-planning"
                         }]
                     },
@@ -3788,7 +3788,7 @@ module.exports = {
                         SCHEDULE_CARD: [{
                             TEXT: "sig-Java",
                             TIME: "19:00 - 20:00",
-                            ZOOM_LINK: "https://us06web.zoom.us/j/83080908770?pwd=QlVZTHNZRDZ2elZuZU5qTnNubHBEZz09",
+                            ZOOM_LINK: "https://www.bilibili.com/video/BV1oY411j7PY?spm_id_from=333.999.0.0",
                             ETHERPAD: "https://etherpad.openeuler.org/p/sig-Java-22.09-planning"
                         }]
                     },
