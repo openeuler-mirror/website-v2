@@ -81,16 +81,7 @@
                 <div class="second-left">
                   <div
                     class="left-item"
-                    @click="
-                      index === 0 && go('/sig/meeting-guide/'),
-                        (index === 1 &&
-                          tabIndex === 0 &&
-                          goInstall('http://live.bilibili.com/22290444')) ||
-                          (index === 1 &&
-                            tabIndex === 1 &&
-                            goInstall('http://live.bilibili.com/22290444'))
-                    "
-                    :class="{ 'live-item': index === 1 && tabIndex !== 2 }"
+                    @click="index === 0 && go('/sig/meeting-guide/')"
                     v-for="(item, index) in agendaData.AGENDA_DATA_14
                       .COLUMN_TITLE[tabIndex].TIME"
                     :key="item.ZH"
@@ -269,15 +260,6 @@
                   >
                     <div
                       class="mo-render-title"
-                      @click="
-                        (tabIndex === 0 &&
-                          index === 0 &&
-                          goInstall('http://live.bilibili.com/22290444')) ||
-                          (tabIndex === 1 &&
-                            index === 0 &&
-                            goInstall('http://live.bilibili.com/22290444'))
-                      "
-                      :class="{ 'live-item': index === 0 && tabIndex !== 2 }"
                     >
                       <h4>{{ item.TITLE.ZH }}</h4>
                       <h4>{{ item.TITLE.EN }}</h4>
@@ -751,67 +733,67 @@ export default {
     animation: meteor2 5s 5s ease-in infinite;
   }
   .move-star5 {
-    top:750px;
+    top: 750px;
     left: -200px;
   }
   .move-star6 {
-    top:880px;
+    top: 880px;
     left: -450px;
   }
   .move-star7 {
-    top:712px;
+    top: 712px;
     left: -500px;
   }
   .move-star8 {
-    top:288px;
+    top: 288px;
     left: -510px;
   }
   .move-star9 {
-    top:700px;
+    top: 700px;
     left: -150px;
   }
   .move-star10 {
-    top:670px;
+    top: 670px;
     left: -50px;
   }
   .move-star11 {
-    top:999px;
+    top: 999px;
     left: -50px;
   }
   .move-star12 {
-    top:1300px;
+    top: 1300px;
     left: -500px;
   }
   .move-star13 {
-    top:1100px;
+    top: 1100px;
     left: -100px;
   }
   .move-star14 {
-    top:1400px;
+    top: 1400px;
     left: -230px;
   }
   .move-star15 {
-    top:170px;
+    top: 170px;
     left: -500px;
   }
   .move-star16 {
-    top:2000px;
+    top: 2000px;
     left: -200px;
   }
   .move-star17 {
-    top:1450px;
+    top: 1450px;
     left: -80px;
   }
   .move-star18 {
-    top:1700px;
+    top: 1700px;
     left: -300px;
   }
   .move-star19 {
-    top:1900px;
+    top: 1900px;
     left: -200px;
   }
   .move-star20 {
-    top:1800px;
+    top: 1800px;
     left: -200px;
   }
   .move-star(@i) when(@i >=0) {
