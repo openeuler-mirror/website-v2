@@ -5033,5 +5033,24 @@
     "chipModel": "LPe16002B-M6",
     "item": "02311CYX",
     "downloadLink": "inbox"
-  }  
+  }, 
+  {
+    "vendorID": "19e5",
+    "deviceID": "1822",
+    "svID": "19e5",
+    "ssID": "d136",
+    "architecture": "x86_64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "hinic",
+    "version": "2.3.2.18",
+    "type": "NIC",
+    "date": "2022.04.20",
+    "sha256": "255B66EA9B8B8A85E2567C436D0706F2B2D1EAF9",
+    "driverSize": "947KB",
+    "chipVendor": "Huawei",
+    "boardModel": "SP580",
+    "chipModel": "Hi1822",
+    "item": "02312QRP",
+    "downloadLink": "inbox"
+  }
 ]
