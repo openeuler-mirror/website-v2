@@ -5052,5 +5052,24 @@
     "chipModel": "Hi1822",
     "item": "02312QRP",
     "downloadLink": "inbox"
+  }, 
+  {
+    "vendorID": "1077",
+    "deviceID": "2532",
+    "svID": "1077",
+    "ssID": "015c",
+    "architecture": "x86_64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "qla2xxx",
+    "version": "10.00.00.08-k",
+    "type": "FC",
+    "date": "2022.04.21",
+    "sha256": "255B66EA9B8B8A85E2567C436D0706F2B2D1EAF9",
+    "driverSize": "1.7M",
+    "chipVendor": "QLogic",
+    "boardModel": "QLE2560",
+    "chipModel": "ISP2532",
+    "item": "06030221",
+    "downloadLink": "inbox"
   }
 ]
