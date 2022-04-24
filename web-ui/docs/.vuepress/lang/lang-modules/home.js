@@ -557,6 +557,9 @@ module.exports = {
                 LEFT_IMG_LINK: 'http://www.nfs-china.com/index.html',
                 LEFT_IMG_PC: '/img/home/link/zhongkefangde.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-zhongkefangde.png',
+                RIGHT_IMG_LINK: 'https://www.xfusion.com/cn/',
+                RIGHT_IMG_PC: '/img/home/link/xfusion.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/xfusion_mobile.png',
             }
         ],
         FRIENDSHIP_LINK_LIST: [
@@ -596,9 +599,6 @@ module.exports = {
                 LEFT_IMG_LINK: 'https://www.authing.cn/',
                 LEFT_IMG_PC: '/img/home/link/Authing_pc.png',
                 LEFT_IMG_MOBILE: '/img/home/link/Authing_mo.png',
-                // RIGHT_IMG_LINK: 'https://www.xfusion.com/cn/',
-                // RIGHT_IMG_PC: '/img/home/link/xfusion.png',
-                // RIGHT_IMG_MOBILE: '/img/home/link/xfusion_mobile.png',
             }
         ],
         MORE: "更多",
@@ -1143,7 +1143,10 @@ module.exports = {
                 LEFT_IMG_LINK: 'http://www.nfs-china.com/index.html',
                 LEFT_IMG_PC: '/img/home/link/zhongkefangde.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-zhongkefangde.png',
-            }
+                RIGHT_IMG_LINK: 'https://www.xfusion.com/cn/',
+                RIGHT_IMG_PC: '/img/home/link/xfusion.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/xfusion_mobile.png',
+            },
         ],
         FRIENDSHIP_LINK_LIST: [
             {
@@ -1182,9 +1185,6 @@ module.exports = {
                 LEFT_IMG_LINK: 'https://www.authing.cn/',
                 LEFT_IMG_PC: '/img/home/link/Authing_pc.png',
                 LEFT_IMG_MOBILE: '/img/home/link/Authing_mo.png',
-                // RIGHT_IMG_LINK: 'https://www.xfusion.com/cn/',
-                // RIGHT_IMG_PC: '/img/home/link/xfusion.png',
-                // RIGHT_IMG_MOBILE: '/img/home/link/xfusion_mobile.png',
             }
         ],
         MORE: "Read More",
@@ -1730,6 +1730,9 @@ module.exports = {
                 LEFT_IMG_LINK: 'http://www.nfs-china.com/index.html',
                 LEFT_IMG_PC: '/img/home/link/zhongkefangde.png',
                 LEFT_IMG_MOBILE: '/img/home/link/mobile-zhongkefangde.png',
+                RIGHT_IMG_LINK: 'https://www.xfusion.com/cn/',
+                RIGHT_IMG_PC: '/img/home/link/xfusion.png',
+                RIGHT_IMG_MOBILE: '/img/home/link/xfusion_mobile.png',
             }
         ],
         FRIENDSHIP_LINK_LIST: [
@@ -1769,9 +1772,6 @@ module.exports = {
                 LEFT_IMG_LINK: 'https://www.authing.cn/',
                 LEFT_IMG_PC: '/img/home/link/Authing_pc.png',
                 LEFT_IMG_MOBILE: '/img/home/link/Authing_mo.png',
-                // RIGHT_IMG_LINK: 'https://www.xfusion.com/cn/',
-                // RIGHT_IMG_PC: '/img/home/link/xfusion.png',
-                // RIGHT_IMG_MOBILE: '/img/home/link/xfusion_mobile.png',
             }
         ],
         MORE: "Read More",
