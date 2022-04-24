@@ -1,5 +1,5 @@
 ---
-title: [Open Source Promotion Plan] Learning About libFuzzer
+title: "[Open Source Promotion Plan] Learning About libFuzzer"
 date: 2021-08-14
 tags: 
     - Fuzzing
