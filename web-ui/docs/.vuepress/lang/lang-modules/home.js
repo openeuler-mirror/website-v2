@@ -638,10 +638,6 @@ module.exports = {
         ],
         ROOM_LEFT_IMG: [
             {
-                IMG: '/img/home/eventImg.png',
-                LINK: 'https://www.oschina.net/2020-openeuler/'
-            },
-            {
                 IMG: '/img/home/blogImg.png',
                 LINK: '/interaction/blog-list/'
             },

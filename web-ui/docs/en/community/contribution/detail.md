@@ -97,7 +97,7 @@ Once you sign the [CLA](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=
      [dev@openeuler.org](mailto:dev@openeuler.org).
 
 ##### 3.Contribute a Package  
-If you find that openEuler is missing any software package, you can contribute the software package to the openEuler community. Contributing software packages enhances openEuler functionalities, making openEuler a software ecosystem with anything you need. When a software package is added to openEuler on Gitee, a repository with the same name will be created in openEuler:Factory of OBS. When code is committed to the created Gitee repository, the code compilation is automatically checked. For details, see [Adding a New Software Package](https://gitee.com/openeuler/community/blob/master/zh/contributors/create-package.md).  
+If you find that openEuler is missing any software package, you can contribute the software package to the openEuler community. Contributing software packages enhances openEuler functionalities, making openEuler a software ecosystem with anything you need. When a software package is added to openEuler on Gitee, a repository with the same name will be created in openEuler:Factory of OBS. When code is committed to the created Gitee repository, the code compilation is automatically checked. For details, see [Adding a New Software Package](https://gitee.com/openeuler/community/blob/master/en/contributors/create-package.md).  
 ##### 4.Contribute Original Open Source Projects  
 If you want to contribute your original open source project to the openEuler community and make it a part of the openEuler release, you can use either of the following methods:  
 - Method 1: Develop a project in another community and integrate it into openEuler. 
