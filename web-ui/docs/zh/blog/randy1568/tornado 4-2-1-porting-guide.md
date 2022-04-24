@@ -54,19 +54,16 @@ Tornado是一个Python Web框架和异步网络库，最初由FriendFeed开发�
 wget http://mirror.centos.org/centos/7/os/x86_64/Packages/python-tornado-4.2.1-5.el7.x86_64.rpm
 ```
 
-#### 下载工具
+#### 下载x2openEuler工具
 
 ```
-wget https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/stable/contrib/x2openEuler/noarch/Packages/x2openEuler-1.0-1.noarch.rpm
-
-用户指南：
-https://gitee.com/openeuler/docs/blob/stable2-20.03_LTS_SP1/docs/zh/docs/thirdparty_migration/x2openEuleruseguide.md
+下载指引：https://www.openeuler.org/zh/other/migration/
 ```
 
 #### 部署工具
 
 ```
-rpm -ivh x2openEuler-1.0-1.noarch.rpm
+rpm -ivh x2openEuler-2.0.0-1.x86_64.rpm
 ```
 
 > 注意：安装rpm时需要使用root用户，且目前需要网络（用于下载安装依赖）

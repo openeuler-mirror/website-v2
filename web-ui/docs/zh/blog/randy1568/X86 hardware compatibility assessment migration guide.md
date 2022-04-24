@@ -49,18 +49,14 @@ openEuler社区提供了 [x2openEuler 工具](https://repo.oepkgs.net/openEuler/
 ## 下载x2openEuler工具
 
 ```
-cd /opt/
-wget https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/stable/contrib/x2openEuler/noarch/Packages/x2openEuler-1.0-1.noarch.rpm
-
-用户指南：
-https://gitee.com/openeuler/docs/blob/stable2-20.03_LTS_SP1/docs/zh/docs/thirdparty_migration/x2openEuleruseguide.md
+工具指引：https://www.openeuler.org/zh/other/migration/
 ```
 
 ## 部署工具
 
 ```
 cd /opt/
-rpm -ivh x2openEuler-1.0-1.noarch.rpm
+rpm -ivh x2openEuler-2.0.0-1.x86_64.rpm
 ```
 
 > 注意：安装rpm时需要使用root用户，且目前需要网络（用于下载安装依赖）
