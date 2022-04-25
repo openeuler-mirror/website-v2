@@ -5071,5 +5071,24 @@
     "chipModel": "ISP2532",
     "item": "06030221",
     "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "10df",
+    "deviceID": "e200",
+    "svID": "10df",
+    "ssID": "e280",
+    "architecture": "x86_64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "lpfc",
+    "version": "0:12.0.0.6",
+    "type": "FC",
+    "date": "2022.04.24",
+    "sha256": "255B66EA9B8B8A85E2567C436D0706F2B2D1EAF9",
+    "driverSize": "1.7M",
+    "chipVendor": "Emulex",
+    "boardModel": "LPe16002",
+    "chipModel": "XE201",
+    "item": "06030276",
+    "downloadLink": "inbox"
   }
 ]
