@@ -1,72 +1,87 @@
 [
 	{
 		"os_version":"OSV操作系统V10测试数据",
-		"osv_name": "测试厂家",
+		"osv_name": "",
+		"total_result": "",
+		"type": "",
+		"date": "",
+		"arch": "",
+		"details": "",
+		"friendly_link": "",
+		"os_download_link": "",
+		"checksum": "",
+		"base_openeuler_version": "",
+		"tools_result": [],
+		"platform_result":[]
+	},
+	{
+		"os_version":"FusionOS-22_22.0.1_x86-64",
+		"osv_name": "超聚变数字技术有限公司",
 		"total_result": "pass",
 		"type": "服务器",
-		"date": "2022/3/17",
-		"arch": "aarch64",
+		"date": "2022/4/22",
+		"arch": "x86_64",
 		"details": "详细信息",
-		"friendly_link": "www.test.com",
-		"os_download_link": "https://www.test.com/download",
-		"checksum": "a89e2f27ee12ecd01ed4a774f81fe5c1",
-		"base_openeuler_version": "openEuler 20.03 LTS-SP1",
+		"friendly_link": "https://www.xfusion.com/cn/",
+		"os_download_link": "https://www.xfusion.com/cn/",
+		"checksum": "42cc85780e5a3e53cb9c33eb8e69e827",
+		"base_openeuler_version": "openEuler 20.03 LTS SP3",
 		"tools_result": [
 			{
 				"name": "core_pkg",
-				"percent": "100%",
+				"percent": "NA",
 				"result": "pass"
 			},
 			{
 				"name": "soft_pkg",
-				"percent": "100%",
+				"percent": "NA",
 				"result": "pass"
 			},
 			{
 				"name": "KABI",
-				"percent": "100%",
+				"percent": "NA",
 				"result": "pass"
 			},
 			{
 				"name": "ABI",
-				"percent": "100%",
+				"percent": "NA",
 				"result": "pass"
 			},
 			{
 				"name": "service_config",
-				"percent": "100%",
+				"percent": "NA",
 				"result": "pass"
 			},
 			{
 				"name": "soft_config",
-				"percent": "90%",
+				"percent": "NA",
 				"result": "pass"
-			},	
+			},
 			{
 				"name": "kernel_config",
-				"percent": "100%",
+				"percent": "NA",
 				"result": "pass"
-			}			
+			}		
 		],
 		"platform_result":[
 			{
 				"name": "repo",
-				"percent": "100%",
+				"percent": "NA",
 				"result": "pass"
 			},
 			{
 				"name": "base_test",
-				"percent": "100%",
+				"percent": "NA",
 				"result": "pass"
 			},
 			{
 				"name": "performance_test",
-				"percent": "100%",
+				"percent": "NA",
 				"result": "pass"
 			},
 			{
 				"name": "running_config",
-				"percent": "100%",
+				"percent": "NA",
 				"result": "pass"
 			}		
 		]
