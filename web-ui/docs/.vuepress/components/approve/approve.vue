@@ -23,6 +23,7 @@
               style="width: 150px"
               @change="initData(1)"
               :placeholder="i18n.approve.SELECT_PLACEHOLDER"
+              :disabled=true
             >
               <el-option
                 :label="i18n.approve.SELECT_ALL"
@@ -39,6 +40,7 @@
               v-model="formData.osv_name"
               @change="initData(1)"
               :placeholder="i18n.approve.SELECT_COMPANY"
+              :disabled=true
             >
               <el-option
                 :label="i18n.approve.SELECT_ALL"
@@ -58,6 +60,7 @@
               v-model="formData.type"
               @change="initData(1)"
               :placeholder="i18n.approve.SELECT_PLACEHOLDER"
+              :disabled=true
             >
               <el-option
                 :label="i18n.approve.SELECT_ALL"
@@ -74,6 +77,7 @@
               v-model="formData.type"
               @change="initData(1)"
               :placeholder="i18n.approve.SELECT_TYPE"
+              :disabled=true
             >
               <el-option
                 :label="i18n.approve.SELECT_ALL"
@@ -92,6 +96,7 @@
               class="pc-search"
               @keyup.enter.native="initData(1)"
               :placeholder="i18n.approve.SEARCH_PLACEHOLDER"
+              :disabled=true
             >
               <i slot="suffix" class="icon-search" @click="initData(1)"></i>
             </el-input>
@@ -100,6 +105,7 @@
               class="mobile-search"
               @keyup.enter.native="initData(1)"
               :placeholder="i18n.approve.SEARCH_PLACEHOLDER"
+              :disabled=true
             >
               <i slot="suffix" class="icon-search" @click="initData(1)"></i>
             </el-input>
