@@ -7,7 +7,7 @@
         TITLE: 'OSV技术测评列表',
         SUMMARY: {
             TITLE: 'OSV技术测评简介',
-            CONTENT: '工具聚焦openEuler内核和基础包，检测伙伴二次发行版生态核心特性不丢失，关键配置不更改 结合社区选包策略及软件包等级策略，检查L1、L2软件包版本、打包方式、接口一致性，KABI白名单，架构特性（如鲲鹏/X86特性）使能，性能优化配置，牵引实现扩展仓库openEuler系共享、共用，主流行业应用在openEuler系不同的OSV生态复用度95%。'
+            CONTENT: '工具聚焦openEuler内核和基础包，检测伙伴二次发行版生态核心特性不丢失，关键配置不更改 结合社区选包策略及软件包等级策略，检查L1、L2软件包版本、打包方式、接口一致性，KABI白名单，架构特性（如arm/X86特性）使能，性能优化配置，牵引实现扩展仓库openEuler系共享、共用，主流行业应用在openEuler系不同的OSV生态复用度。'
         },
         TO_STEP:{
             TEXT_1:'关于OSV技术测评，openEuler提供了完整的测试流程和工具，详见',
@@ -97,8 +97,8 @@
         },
         PLATFORM_DESCRIBE:{
             REPO:'EPOL仓/软件所仓库在OSV版本上安装成功比例',
-            BASE:'基础性能测试结果',
-            PERFORMANCE:'社区AT用例运行结果',
+            BASE:'社区AT用例运行结果',
+            PERFORMANCE:'基础性能测试结果',
             RUNNING:'OSV版本运行时默认配置一致性'
         },
         TOOL_DESCRIBE:{
