@@ -53,22 +53,21 @@
           <el-table-column
             prop="naskName"
             :label="i18n.approve.TOOL_LIST.TEST_ITEM"
-            width="250"
           ></el-table-column>
           <el-table-column
             prop="describe"
             :label="i18n.approve.TOOL_LIST.DETECTION_DESC"
-            width="550"
+            width="700"
           ></el-table-column>
-          <el-table-column
+          <!-- <el-table-column
             prop="percent"
             :label="i18n.approve.TOOL_LIST.TEST_RESULT"
             width="178"
-          ></el-table-column>
+          ></el-table-column> -->
           <el-table-column
             prop="result"
             :label="i18n.approve.TOOL_LIST.CONCLUSION"
-            width=""
+            width="150"
           >
             <template slot-scope="scope">
               <div v-if="scope.row.result == 'pass'" class="table-result">
@@ -100,22 +99,21 @@
           <el-table-column
             prop="naskName"
             :label="i18n.approve.TOOL_LIST.TEST_ITEM"
-            width="250"
           ></el-table-column>
           <el-table-column
             prop="describe"
             :label="i18n.approve.TOOL_LIST.DETECTION_DESC"
-            width="550"
+            width="700"
           ></el-table-column>
-          <el-table-column
+          <!-- <el-table-column
             prop="percent"
             :label="i18n.approve.TOOL_LIST.TEST_RESULT"
             width="178"
-          ></el-table-column>
+          ></el-table-column> -->
           <el-table-column
             prop="result"
             :label="i18n.approve.TOOL_LIST.CONCLUSION"
-            width=""
+            width="150"
           >
             <template slot-scope="scope">
               <div v-if="scope.row.result == 'pass'" class="table-result">

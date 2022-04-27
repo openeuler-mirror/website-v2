@@ -110,7 +110,6 @@
 
 export default {
   data() {
-    that = this;
     return {
 
     };
