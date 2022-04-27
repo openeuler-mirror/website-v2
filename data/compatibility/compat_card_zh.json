@@ -525,9 +525,9 @@
     "date": "2021.07.29",
     "sha256": "67CB2F34DC66D76DE0C84BBF64688B91CE243549",
     "driverSize": "3.4MB",
-    "chipVendor": "Broadcom/Emulex",
+    "chipVendor": "Emulex",
     "boardModel": "LPe12000",
-    "chipModel": "IOC540",
+    "chipModel": "LPE12000-AP/LPE12002-AP",
     "item": "06030216",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/drivers/source/Packages/elx-lpfc-dd-openEuler20-12.8.340.17-ds-1.x86_64.tgz"
   },
@@ -2406,9 +2406,9 @@
       "date": "2021.05.18",
       "sha256": "",
       "driverSize": "912KB",
-      "chipVendor": "Broadcom/Emulex",
+      "chipVendor": "Emulex",
       "boardModel": "LPe12000",
-      "chipModel": "PE12000-AP/LPE12002-AP",
+      "chipModel": "LPE12000-AP/LPE12002-AP",
       "item": "06030216",
       "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/drivers/source/Packages/elx-lpfc-dd-openEuler20-12.8.340.17-ds-1.aarch64.tgz"
     },
@@ -3776,7 +3776,7 @@
       "driverSize": "15M",
       "chipVendor": "Emulex",
       "boardModel": "LPe16002B-M6",
-      "chipModel": "LPe16002B-M6",
+      "chipModel": "XE201",
       "item": "02311CYX",
       "downloadLink": "inbox"
   },
@@ -3814,7 +3814,7 @@
     "driverSize": "2M",
     "chipVendor": "Emulex",
     "boardModel": "LPe16002B-M6",
-    "chipModel": "LPe16002B-M6",
+    "chipModel": "XE201",
     "item": "02311CYX",
     "downloadLink": "inbox"
   },
@@ -4232,7 +4232,7 @@
     "driverSize": "2.2MB",
     "chipVendor": "Emulex",
     "boardModel": "LPe16002B-M6",
-    "chipModel": "LPe16002B-M6",
+    "chipModel": "XE201",
     "item": "02311CYX",
     "downloadLink": "inbox"
   },
@@ -5030,7 +5030,7 @@
     "driverSize": "1.7M",
     "chipVendor": "Emulex",
     "boardModel": "LPe16002B-M6",
-    "chipModel": "LPe16002B-M6",
+    "chipModel": "XE201",
     "item": "02311CYX",
     "downloadLink": "inbox"
   },
@@ -5146,6 +5146,25 @@
     "boardModel": "SP130IT",
     "chipModel": "LSI SAS3008",
     "item": "03023QGH",
+    "downloadLink": "inbox"
+  }, 
+  {
+    "vendorID": "10df",
+    "deviceID": "e300",
+    "svID": "10df",
+    "ssID": "e300",
+    "architecture": "x86_64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "lpfc",
+    "version": "0:12.0.0.6",
+    "type": "FC",
+    "date": "2022.04.26",
+    "sha256": "255B66EA9B8B8A85E2567C436D0706F2B2D1EAF9",
+    "driverSize": "1.7M",
+    "chipVendor": "Emulex",
+    "boardModel": "LPe32002-AP",
+    "chipModel": "XE201",
+    "item": "06030393",
     "downloadLink": "inbox"
   }
 ]
