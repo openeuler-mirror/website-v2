@@ -21,7 +21,7 @@
               <p>{{reportData.os_version}}</p>
               <p>{{reportData.arch}}</p>
               <p>
-                  <a class="link-item" :href="reportData.os_download_link">
+                  <a class="link-item" :href="reportData.os_download_link" target="_blank">
                     {{reportData.os_download_link}}
                   </a>
               </p>
@@ -135,7 +135,7 @@
 </template>
 
 <script>
-import { getApproveReport } from "../../api/approve";
+import { getApproveReport, osvData } from "../../api/approve";
 
 let that = null;
 const locationMethods = {
@@ -155,82 +155,11 @@ export default {
   data() {
     that = this;
     return {
-      reportData: {
-        os_version: "uniontechos-server-20-1020e-amd64",
-        osv_name: "统信",
-        total_result: "pass",
-        type: "服务器",
-        date: "2022/3/17",
-        arch: "x86_64",
-        details: "详细信息",
-        friendly_link: "https://www.uniontech.com/",
-        os_download_link:
-          "https://cdimage-download.chinauos.com/uniontechos-server-20-1020e-amd64.iso",
-        checksum: "8281ed83b678c2d39b05d206e72e5a6c",
-        base_openeuler_version: "openEuler 20.03 LTS-SP1",
-        tools_result: [
-          {
-            name: "core_pkg",
-            percent: "100%",
-            result: "pass",
-          },
-          {
-            name: "soft_pkg",
-            percent: "98%",
-            result: "pass",
-          },
-          {
-            name: "KABI",
-            percent: "100%",
-            result: "pass",
-          },
-          {
-            name: "ABI",
-            percent: "98%",
-            result: "pass",
-          },
-          {
-            name: "service_config",
-            percent: "96%",
-            result: "pass",
-          },
-          {
-            name: "soft_config",
-            percent: "98%",
-            result: "pass",
-          },
-          {
-            name: "kernel_config",
-            percent: "98.5%",
-            result: "pass",
-          },
-        ],
-        platform_result: [
-          {
-            name: "repo",
-            percent: "94%",
-            result: "pass",
-          },
-          {
-            name: "base_test",
-            percent: "100%",
-            result: "pass",
-          },
-          {
-            name: "performance_test",
-            percent: "96%",
-            result: "pass",
-          },
-          {
-            name: "running_config",
-            percent: "91%",
-            result: "pass",
-          },
-        ],
-      },
+      reportData: {},
       tableData: [],
       detailList: [],
       total: 1,
+      version: ''
     };
   },
   methods:{
@@ -242,10 +171,8 @@ export default {
     },
   },
   mounted() {
-    locationMethods.getApproveInfo(10204);
-  },
-  created() {
-      this.reportData.platform_result.map(ele=>{
+    // locationMethods.getApproveInfo(10204);
+    this.reportData.platform_result.map(ele=>{
           switch(ele.name){
               case 'repo': ele.describe = this.i18n.approve.PLATFORM_DESCRIBE.REPO;
                            ele.naskName = this.i18n.approve.PLATFORM_NAME.REPO;break;
@@ -275,6 +202,14 @@ export default {
                                     ele.naskName = this.i18n.approve.TOOL_NAME.KARNEL_CONFIG; break;
           }
       });
+  },
+  created() {
+      let version = this.$route.query.version;
+      osvData.forEach(item=>{
+        if(item.os_version == version) {
+          this.reportData = item;
+        }
+      })
   }
 };
 </script>
