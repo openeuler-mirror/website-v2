@@ -418,7 +418,7 @@ module.exports = {
                 'https://gitee.com/openeuler/community/blob/master/en/contributors/packaging.md',
                 'https://gitee.com/openeuler/community/blob/master/en/contributors/non-code-contributions.md',
                 'https://gitee.com/openeuler/security-committee/blob/master/security-disclosure.md',
-                'https://gitee.com/openeuler/community/blob/master/community-membership_cn.md',
+                'https://gitee.com/openeuler/community/blob/master/community-membership.md',
                 '/en/sig/sig-list/sig-detail.html?id=21&name=TC&mail=dev%40openeuler.org'
             ]
         },
@@ -657,7 +657,7 @@ module.exports = {
                 'https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md',
                 'https://gitee.com/openeuler/community/blob/master/zh/contributors/non-code-contributions.md',
                 'https://gitee.com/openeuler/security-committee/blob/master/security-disclosure.md',
-                'https://gitee.com/openeuler/community/blob/master/community-membership_cn.md',
+                'https://gitee.com/openeuler/community/blob/master/community-membership.md',
                 '/ru/sig/sig-list/sig-detail.html?id=21&name=TC&mail=dev%40openeuler.org'
             ]
         },

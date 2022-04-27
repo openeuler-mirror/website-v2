@@ -368,7 +368,7 @@ module.exports = {
                     TEXT: [
                         "实习有效期6个月内积分满60分",
                         "至少找一位导师写实习评语",
-                        "提交实习报告",
+                        "开源实习报告模板",
                     ],
                     SUPPLEMENT:"满足以上3条，实习评语与实习报告经评审合格后发放实习证明。",
                 },
@@ -390,6 +390,11 @@ module.exports = {
                     SUPPLEMENT:"满足以上一条可获得“开源之星”荣誉徽章，在openEuler（openGauss）官网展示，并获得参与2022年度实习优秀贡献者评选资格，评选上将获得奖金10000元。",
                 },
             ],
+            INTERNSHIP_COMMENT:{
+                TEXT:'实习评语',
+                LINK:'/doc/导师实习评语.txt',
+                TITLE:'下载实习评语'
+            },
             SUPPLEMENT_GAUSS:"（仅针对openEuler与openGauss社区）"
         },
         RULE: {

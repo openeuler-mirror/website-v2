@@ -288,11 +288,15 @@
                   <img v-if="index === 3" src="/img/internship/star.png" alt />
                   <p>
                     <slot v-if="index === 1 && index1 === 2">
-                      <a href="/doc/实习报告模板.docx" title="下载报告模板">{{
+                      <a href="/doc/开源实习报告模板.docx" title="下载报告模板">{{
                         item1
                       }}</a>
                     </slot>
-                    <span v-else>{{ item1 }}</span>
+                    <span v-else>{{ item1 }} <a  v-if="index === 1 && index1 === 1"
+                    download
+                    :title="i18n.learn.INTEGRAL.INTERNSHIP_COMMENT.TITLE"
+                    :href="i18n.learn.INTEGRAL.INTERNSHIP_COMMENT.LINK"
+                    >{{i18n.learn.INTEGRAL.INTERNSHIP_COMMENT.TEXT}}</a> </span>
                   </p>
                 </div>
                 <div class="supplement">{{ item.SUPPLEMENT }}</div>
