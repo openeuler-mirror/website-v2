@@ -34,13 +34,13 @@ Click the links to view real-time access control building logs.
 
 ### 1.2.3 Access Control Check Results  
 
-<center><b>Basic check items<b></center>
+<center><b>Basic check items<b></center>  
 
-<img src="./2022-03-21-ci_guild-03.png">  
+<img src="./2022-03-21-ci_guild-03.png">    
 
-<center><b>Interface change check items<b></center>
+<center><b>Interface change check items<b></center>  
 
-<img src="./2022-03-21-ci_guild-04.png">  
+<img src="./2022-03-21-ci_guild-04.png">    
 
 Table 1 lists the six basic check items of the access control system. Interface change check items are separately displayed because there are many sub-items.  
 
