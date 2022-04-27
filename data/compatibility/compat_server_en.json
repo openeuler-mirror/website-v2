@@ -3918,7 +3918,7 @@
       "commitID": "",
       "motherBoardRevision": "1.0",
       "biosUefi": "ALPS_BIOS.2.00.01",
-      "cpu": "Atom",
+      "cpu": "Avoton",
       "ram": "2*8G Samsung",
       "portsBusTypes": "32-bit PCI Express x1",
       "videoAdapter": "ASPEED Technology, Inc. Device 2402",
