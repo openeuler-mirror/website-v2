@@ -34,13 +34,13 @@ Click the links to view real-time access control building logs.
 
 ### 1.2.3 Access Control Check Results  
 
-<center><b>Basic check items<b></center>  
+<b>Basic check items<b>
 
 
 <img src="./2022-03-21-ci_guild-03.png">    
 
 
-<center><b>Interface change check items<b></center>  
+<b>Interface change check items<b>
 
 
 <img src="./2022-03-21-ci_guild-04.png">    
