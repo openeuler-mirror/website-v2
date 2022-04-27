@@ -19,7 +19,7 @@
           <el-form-item :label="i18n.approve.SELECT_COMPANY">
             <el-select
               class="pc-select"
-              v-model="formData.osvName"
+              v-model="formData.osv_name"
               style="width: 150px"
               @change="initData(1)"
               :placeholder="i18n.approve.SELECT_PLACEHOLDER"
@@ -36,7 +36,7 @@
             </el-select>
             <el-select
               class="mobile-select"
-              v-model="formData.osvName"
+              v-model="formData.osv_name"
               @change="initData(1)"
               :placeholder="i18n.approve.SELECT_COMPANY"
             >
@@ -119,23 +119,23 @@
             width="90"
           ></el-table-column>
           <el-table-column
-            prop="osvName"
+            prop="osv_name"
             :label="i18n.approve.TABLE_COLUMN.COMPANY"
             width="110"
           ></el-table-column>
           <el-table-column
-            prop="osVersion"
+            prop="os_version"
             :label="i18n.approve.TABLE_COLUMN.VERSION"
             width="160"
           ></el-table-column>
           <el-table-column
-            prop="osDownloadLink"
+            prop="os_download_link"
             :label="i18n.approve.TABLE_COLUMN.DOWNLOAD"
             width="220"
           >
             <template slot-scope="scope">
-              <a class="table-link" :href="scope.row.osDownloadLink">{{
-                scope.row.osDownloadLink
+              <a class="table-link" :href="scope.row.os_download_link">{{
+                scope.row.os_download_link
               }}</a>
             </template>
           </el-table-column>
@@ -155,22 +155,22 @@
             width="120"
           >
             <template slot-scope="scope">
-              <a class="table-link" @click="go(scope.row.details)">{{
-                i18n.approve.TABLE_COLUMN.REPORT
+              <a class="table-link" @click="go(scope.row.os_version)">{{
+                scope.row.details
               }}</a>
             </template>
           </el-table-column>
           <el-table-column
-            prop="friendlyLink"
+            prop="friendly_link"
             :label="i18n.approve.TABLE_COLUMN.LINK"
             width="200"
           >
             <template slot-scope="scope">
               <a
                 class="table-link"
-                :href="scope.row.friendlyLink"
+                :href="scope.row.friendly_link"
                 target="_blank"
-                >{{ scope.row.friendlyLink }}</a
+                >{{ scope.row.friendly_link }}</a
               >
             </template>
           </el-table-column>
@@ -184,16 +184,16 @@
               </li>
               <li>
                 <span>{{ i18n.approve.TABLE_COLUMN.COMPANY }}:</span>
-                {{ item.osvName }}
+                {{ item.osv_name }}
               </li>
               <li>
                 <span>{{ i18n.approve.TABLE_COLUMN.VERSION }}:</span>
-                {{ item.osVersion }}
+                {{ item.os_version }}
               </li>
               <li>
                 <span>{{ i18n.approve.TABLE_COLUMN.DOWNLOAD }}:</span>
-                <a :href="item.osDownloadLink" class="table-link">
-                  {{ item.osDownloadLink }}
+                <a :href="item.os_download_link" class="table-link">
+                  {{ item.os_download_link }}
                 </a>
               </li>
               <li>
@@ -206,14 +206,14 @@
               </li>
               <li>
                 <span>{{ i18n.approve.TABLE_COLUMN.DETAILS }}:</span>
-                <a class="table-link" @click="go(item.details)">{{
-                  i18n.approve.TABLE_COLUMN.REPORT
+                <a class="table-link" @click="go(item.os_version)">{{
+                  item.details
                 }}</a>
               </li>
               <li>
                 <span>{{ i18n.approve.TABLE_COLUMN.LINK }}:</span>
-                <a :href="item.friendlyLink" class="table-link" target="_blank">
-                  {{ item.friendlyLink }}
+                <a :href="item.friendly_link" class="table-link" target="_blank">
+                  {{ item.friendly_link }}
                 </a>
               </li>
             </ul>
@@ -244,7 +244,7 @@
 
 <script>
 import commonBanner from "./../common/banner.vue";
-import { osvList, getOsName, getType } from "../../api/approve";
+import { osvList, getOsName, getType, osvData } from "../../api/approve";
 let that = null;
 
 const locationMethods = {
@@ -275,26 +275,14 @@ export default {
       osNameOptions: [],
       typeOptions: [],
       formData: {
-        osvName: "",
+        osv_name: "",
         type: "",
         keyword: "",
         page: 1,
         pageSize: 10,
       },
       tableLoading: false,
-      tableData: [
-        {
-          arch: "X86_64",
-          osvName: "统信",
-          osVersion: "uniontechos-server-20-1020e-amd64",
-          osDownloadLink:
-            "https://cdimage-download.chinauos.com/uniontechos-server-20-1020e-amd64.iso",
-          type: "服务器",
-          date: "2022/3/17",
-          details: "",
-          friendlyLink: "https://www.uniontech.com/",
-        },
-      ],
+      tableData: [],
     };
   },
   components: {
@@ -312,10 +300,10 @@ export default {
     },
 
     //跳转至报告页
-    go(data) {
+    go(version) {
       this.$router.push({
         path: this.resolvePath("/approve/approve-info/"),
-        query: { id: data },
+        query:{version},
       });
     },
 
@@ -334,6 +322,7 @@ export default {
     //   this.typeOptions = [...res]
     // });
     // this.initData(1);
+    this.tableData = osvData;
   },
 };
 </script>
