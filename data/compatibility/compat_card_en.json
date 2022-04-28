@@ -3434,7 +3434,7 @@
     "driverSize": "171K",
     "chipVendor": "Huawei",
     "boardModel": "TM280",
-    "chipModel": "DS290DF810",
+    "chipModel": "hisi_eth",
     "item": "",
     "downloadLink": "inbox"
   },
@@ -4120,25 +4120,6 @@
     "boardModel": "SR150-M",
     "chipModel": "3408iMR",
     "item": "03033FAT ",
-    "downloadLink": "inbox"
-  },
-  {
-    "vendorID": "1000",
-    "deviceID": "005d",
-    "svID": "19e5",
-    "ssID": "d207",
-    "architecture": "aarch64",
-    "os": "openEuler 22.03 LTS",
-    "driverName": "megaraid_sas",
-    "version": "07.714.04.00-rc1",
-    "type": "RAID",
-    "date": "2022.03.03",
-    "sha256": "47560B938AF29493141D36D0E2AE8D113A6174E9",
-    "driverSize": "3282KB",
-    "chipVendor": "Avago",
-    "boardModel": "SR430C-M",
-    "chipModel": "3108",
-    "item": "02311PCJ",
     "downloadLink": "inbox"
   },
   {
@@ -5124,7 +5105,7 @@
     "sha256": "30D4762CAC0820BC75647F2178E8E25960C5CED8",
     "driverSize": "552KB",
     "chipVendor": "Avago",
-    "boardModel": "SP130IT",
+    "boardModel": "SR130IT",
     "chipModel": "LSI SAS3008",
     "item": "03023QGH",
     "downloadLink": "inbox"
@@ -5143,7 +5124,7 @@
     "sha256": "255B66EA9B8B8A85E2567C436D0706F2B2D1EAF9",
     "driverSize": "538KB",
     "chipVendor": "Avago",
-    "boardModel": "SP130IT",
+    "boardModel": "SR130IT",
     "chipModel": "LSI SAS3008",
     "item": "03023QGH",
     "downloadLink": "inbox"
