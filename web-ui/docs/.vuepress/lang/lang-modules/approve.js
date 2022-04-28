@@ -7,7 +7,7 @@
         TITLE: 'OSV技术测评列表',
         SUMMARY: {
             TITLE: 'OSV技术测评简介',
-            CONTENT: '工具聚焦openEuler内核和基础包，检测伙伴二次发行版生态核心特性不丢失，关键配置不更改 结合社区选包策略及软件包等级策略，检查L1、L2软件包版本、打包方式、接口一致性，KABI白名单，架构特性（如arm/X86特性）使能，性能优化配置，牵引实现扩展仓库openEuler系共享、共用，主流行业应用在openEuler系不同的OSV生态复用度。'
+            CONTENT: '工具聚焦openEuler内核和基础包，检测伙伴二次发行版生态核心特性不丢失，关键配置不更改 结合社区选包策略及软件包等级策略，检查L1、L2软件包版本、打包方式、接口一致性，KABI白名单，架构特性（如ARM/X86特性）使能，性能优化配置，牵引实现扩展仓库openEuler系共享、共用，主流行业应用在openEuler系不同的OSV生态复用度。'
         },
         TO_STEP:{
             TEXT_1:'关于OSV技术测评，openEuler提供了完整的测试流程和工具，详见',
@@ -106,7 +106,7 @@
             SOFT_PKG:'L1/L2 软件包一致性比例',
             KABI:'OSV内核KABI接口白名单与openEuler内核KABI接口白名单一致性比例',
             ABI:'OSV软件包ABI接口与openEuler软件包ABI一致性比例',
-            SERVICE:'OSV软件包Service文件与openEuler软件包Service文件一致性比例 - 悬浮态',
+            SERVICE:'OSV软件包Service文件与openEuler软件包Service文件一致性比例',
             SOFT_CONFIG:'OSV软件包配置文件与openEuler软件包配置文件一致性比例',
             KARNEL_CONFIG:'OSV的内核配置与openEuler一致性比例'
         },
