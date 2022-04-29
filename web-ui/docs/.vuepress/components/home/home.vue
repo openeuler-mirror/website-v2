@@ -10,6 +10,10 @@
         </div>
         <div class="is-pc home-carousel" v-if="!isShowH5">
              <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" >
+               <el-carousel-item >
+                    <div class="carousel-banner" style="backgroundImage: url('/img/activities/pc/summit.png')"   @click="go('/activities/')">
+                    </div>
+              </el-carousel-item>
               <el-carousel-item >
                 <div class="video-banner carousel-banner" @click="go('/interaction/summit-list/devday2022/')">
                      <video  muted playsinline="true" autoplay="autoplay"  height="500" loop ref="bannerVideo" poster="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_pc.png"  preload=""  id="home-video" >
@@ -17,14 +21,14 @@
                      </video>
                 </div>
               </el-carousel-item>
-              <!-- <el-carousel-item v-for=" item in i18n.home.HOME_NEWRELEASE" :key="item.PC_IMG" >
-                    <div class="carousel-banner" :style="{backgroundImage: item.PC_IMG}"   @click="go(item.LINK)">
-                    </div>
-              </el-carousel-item> -->
             </el-carousel>
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
+               <swiper-slide class="carousel-item-index">
+                 <div class="mobile-version"  style="backgroundImage: url('/img/activities/mobile/banner.png')"  @click="go('/activities/')">
+                </div>
+              </swiper-slide>
                <swiper-slide class="carousel-item-index">
                 <div class="mobile-version" v-for="item in i18n.home.HOME_NEWRELEASE" :key="item.IMG" :style="{backgroundImage: item.MOBILE_IMG}"  @click="go(item.LINK)">
                 </div>
@@ -1006,14 +1010,14 @@ let remoteMethods = {
     .video-banner {
         video {
             max-width: 1920px;
-            object-fit: cover;
+            width: 100%;
         }
     }
     .home-banner .carousel-banner {
         position: relative;
         cursor: pointer;
         display: flex;
-        width: 100%;
+        max-width: 1920px;
         height: 100%;
         align-items: center;
         justify-content: center;
