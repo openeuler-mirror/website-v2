@@ -42,6 +42,7 @@ module.exports = {
             }
         ],
         HOME_NEWRELEASE: [
+          
             {
                 MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_mo.png')",
                 PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_pc.png')",

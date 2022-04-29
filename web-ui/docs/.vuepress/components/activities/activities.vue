@@ -1,12 +1,15 @@
 <template>
   	<div class="activities-content">
 		<div class="activities-banner">
-			<a @click="goTitle(1)"></a>
+			<a @click="goTitle(1)">
+				<img class="web" src="/img/activities/pc/banner_all.png" alt="">
+				<img class="mobile" src="/img/activities/mobile/banner.png" alt="">
+			</a>
 		</div>
 		 <div class="activities-title-nav" v-show="isShowNav">
             <div class="box-line">
                 <img class="gif" v-lazy="'/img/summit/home/nav.gif'" alt="" />
-                <img class="line" v-lazy="'/img/minisite/atune/atune-line.png'" alt="" />
+                <img class="line" v-lazy="'/img/activities/line.png'" alt="" />
             </div>
             <div class="nav-text">
                 <ul>
@@ -23,8 +26,8 @@
 			<div class="activities-introduce">
 				<p class="description">{{i18n.activities.DESCRIPTION_1}}</p>
 				<p class="description">{{i18n.activities.DESCRIPTION_2}}</p>
-				<br>
-				<p class="description">{{i18n.activities.DESCRIPTION_3}}</p>
+				<!-- <br> -->
+				<p class="description">{{i18n.activities.DESCRIPTION_3}}<span class="red">{{i18n.activities.DESCRIPTION_5}}</span>{{i18n.activities.DESCRIPTION_6}}</p>
 				<div class="title">{{i18n.activities.STEP_TITLE}}</div>
 				<div class="step-content">
 					<div class="left">
@@ -71,6 +74,8 @@
 									<p class="step-text">{{i18n.activities.STEP_4.CONTENT}}</p>
 									<p class="step-title">{{i18n.activities.STEP_4.TITLE}}</p>
 									<p class="step-text">{{i18n.activities.STEP_4.TIME}}</p>
+									<p class="step-title">{{i18n.activities.STEP_4.TITLE1}}</p>
+									<p class="step-text">{{i18n.activities.STEP_4.TIME1}}</p>
 								</div>
 							</div>
 							<div class="right-bottom-right">
@@ -475,8 +480,21 @@ export default {
 </style>
 
 <style lang="less" scoped>
+.red {
+	color:red;
+}
+.web {
+  @media screen and (max-width: 1120px) {
+    display: none;
+  }
+}
+.mobile {
+  display: none;
+  @media screen and (max-width: 1120px) {
+    display: inline-block;
+  }
+}
 .activities-content {
-	width: 1120px;
   	margin: 0 auto;
 	padding-bottom: 200px;
 	color: #000;
@@ -485,25 +503,41 @@ export default {
 		padding-bottom: 80px;
   	}
 	.activities-list-wrapper {
+		margin: 0 auto;
+		width: 1120px;
 		@media screen and (max-width: 1000px) {
+  	  		width: 100%;
   	  		padding: 0 30px;
   		}
 	}
-	.activities-banner a{
-		cursor: pointer;
-		display: inline-block;
-		width: 1120px;
+	.activities-banner {
 		height: 380px;
 		margin-bottom: 60px;
-		background: url('/img/activities/pc/banner_all.png') no-repeat;
-		background-size: 100% 100%;
 		@media screen and (max-width: 1000px) {
 			width: 100%;
 			height: 300px;
 			margin-bottom: 20px;
-			background: url('/img/activities/mobile/banner.png') no-repeat;
-			background-size: 100% 100%;
+			background-position:center;
   		}
+		a {
+			cursor: pointer;
+			display: block;
+			max-width: 1920px;
+			overflow: hidden;
+			width:100%;
+			img {
+				width: 100%;
+			}
+			@media screen and (max-width: 1120px) {
+			width: 100%;
+			height: 300px;
+			margin-bottom: 20px;
+			text-align: center;
+			img {
+				max-width: 375px;
+			}
+			}
+		}
 	}
 	.activities-title-nav {
     	position: fixed;
@@ -512,7 +546,7 @@ export default {
     	right: 70px;
     	z-index: 1000;
     	display: block;
-		@media screen and (max-width: 1000px) {
+		@media screen and (max-width: 1520px) {
 			display: none;
   		}
     	.box-line {

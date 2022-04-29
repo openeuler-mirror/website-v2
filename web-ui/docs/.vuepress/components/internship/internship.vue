@@ -23,10 +23,10 @@
     </div>
     <div class="internship-list">
       <div class="warper">
-        <div class="intership-introduce" id="introduce">
+        <div class="intership-introduce do-jump" id="introduce">
           <p>{{ i18n.learn.INTRODUCE }}</p>
         </div>
-        <div class="step" id="step">
+        <div class="step do-jump" id="step">
           <div class="step-title title">
             <img :src="STEP.TITLE" alt />
           </div>
@@ -199,7 +199,7 @@
             </div>
           </div>
         </div>
-        <div id="task">
+        <div id="task" class="do-jump">
           <div class="task-title title">
             <img :src="TASK.TITLE" alt />
           </div>
@@ -260,7 +260,7 @@
             </div>
           </div>
         </div>
-        <div id="integral">
+        <div id="integral" class="do-jump">
           <div class="integral-title title">
             <img :src="i18n.learn.INTEGRAL.TITLE" alt />
           </div>
@@ -388,7 +388,7 @@
           </div>
         </div>
       </div>
-      <div id="rule">
+      <div id="rule" class="do-jump">
         <div class="rule-title title">
           <img :src="i18n.learn.RULE.TITLE" alt />
         </div>
@@ -417,7 +417,7 @@
           </div>
         </div>
       </div>
-      <div id="partner">
+      <div id="partner" class="do-jump">
         <div class="warper">
           <div class="partner-title title">
             <img :src="i18n.learn.PARTNER_TITLE" alt />
@@ -432,7 +432,7 @@
           </div>
         </div>
       </div>
-      <div id="help">
+      <div id="help" class="do-jump">
         <div class="help-title title">
           <img :src="i18n.learn.HELP_TITLE" alt />
         </div>
@@ -526,35 +526,24 @@ export default {
         return false;
       }
     },
-    scroTop() {
+     scrollTop() {
       let scrollTop =
         document.body.scrollTop || document.documentElement.scrollTop;
-      let value = 0;
-      if (this.isExent) {
-        value = 1400;
-      }
-      if (scrollTop < 270 || scrollTop > 7200) {
-        this.isShowNav = false;
-      } else {
+      if (scrollTop > 240) {
         this.isShowNav = true;
-      }
-      if (scrollTop > 200 && scrollTop < 441) {
-        this.activeIndex = 0;
-      } else if (scrollTop > 450 && scrollTop < 1100) {
-        this.activeIndex = 1;
-      } else if (scrollTop > 1100 && scrollTop < 1700) {
-        this.activeIndex = 2;
-      } else if (scrollTop > 1700 && scrollTop < 3400) {
-        this.activeIndex = 3;
-      } else if (scrollTop > 3400 && scrollTop < 4500) {
-        this.activeIndex = 4;
-      } else if (scrollTop > 4500 && scrollTop < 4900) {
-        //4170
-        this.activeIndex = 5;
-      } else if (scrollTop > 4600) {
-        this.activeIndex = 6;
       } else {
-        return false;
+        this.isShowNav = false;
+      }
+      const jump = document.querySelectorAll('.do-jump');
+      let topArr = [];
+      for (let i = 0; i < jump.length; i++) {
+        topArr.push(jump[i].offsetTop + jump[i].clientHeight);
+      }
+      for (let i = 0; i < topArr.length; i++) {
+        if (scrollTop <= topArr[i] - 100) {
+          this.activeIndex = i;
+          break;
+        }
       }
     },
     showRank() {
@@ -606,10 +595,10 @@ export default {
   mounted() {
     this.tabClick();
     this.showRank();
-    window.addEventListener('scroll', this.scroTop);
+    window.addEventListener('scroll', this.scrollTop);
   },
   destroyed() {
-    window.removeEventListener('scroll', this.scroTop);
+    window.removeEventListener('scroll', this.scrollTop);
   },
 };
 </script>
