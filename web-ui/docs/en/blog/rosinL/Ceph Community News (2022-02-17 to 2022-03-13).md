@@ -12,7 +12,7 @@ summary: Ceph Community News
 ---
 # Ceph Community News (2022-02-17 to 2022-03-13)
 ## Cephalocon 2022 Postponed to July 11-13
-Cephalocon 2022 has been rescheduled to July 11-13th. The schedule is now available at [Cephalocon 2022 sched](https://ceph2022.sched.com/).
+Cephalocon 2022 has been rescheduled to July 11-13. The schedule is now available at [Cephalocon 2022 sched](https://ceph2022.sched.com/).
 ## [Ceph Octopus v15.2.16](https://ceph.com/en/news/blog/2022/v15-2-16-octopus-released/) Released
 Notable Changes
 - Fix in the read lease logic to prevent PGs from going into WAIT state after OSD restart.
