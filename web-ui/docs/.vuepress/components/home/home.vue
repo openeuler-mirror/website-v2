@@ -639,6 +639,7 @@ let remoteMethods = {
       }
     }
   }
+
     #summit-video {
         background-color: white !important;
         margin-left: -100px;
@@ -993,6 +994,11 @@ let remoteMethods = {
     .el-carousel__container {
         height: 680px;
     }
+
+    .el-carousel__item {
+        display: flex;
+        justify-content: center;
+    }
     .el-carousel__item h3 {
         color: #475669;
         font-size: 18px;
@@ -1018,10 +1024,10 @@ let remoteMethods = {
         cursor: pointer;
         display: flex;
         max-width: 1920px;
+        width: 100%;
         height: 100%;
         align-items: center;
         justify-content: center;
-        text-align: center;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
@@ -1999,7 +2005,6 @@ let remoteMethods = {
         }
         .home-carousel .el-carousel__item h3 {
             font-size: 18px;
-
             text-align: center;
             margin-top: 35px;
             margin-bottom: 0;

@@ -511,13 +511,14 @@ export default {
   		}
 	}
 	.activities-banner {
+		display: flex;
+		justify-content: center;
 		height: 380px;
 		margin-bottom: 60px;
 		@media screen and (max-width: 1000px) {
 			width: 100%;
 			height: 300px;
 			margin-bottom: 20px;
-			background-position:center;
   		}
 		a {
 			cursor: pointer;
@@ -619,7 +620,7 @@ export default {
 			font-weight: 400;
 			@media screen and (max-width: 1000px) {
 				font-size: 16px;
-				line-height: 26px;
+				line-height: 35px;
   			}
 		}
 		.title {
