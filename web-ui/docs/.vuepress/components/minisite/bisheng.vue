@@ -13,7 +13,8 @@
             <div class="link-box">
                 <div v-for="(item,index) in linkList" :key="index" @click="linkGo(item.LINK_LIST,index)">
                     <img :src="item.IMG" alt="" />
-                    <div class="tip" v-if="index < 2">
+                    <div class="box-text">{{ item.TITLE }}</div>
+                    <div class="tip" v-if="index < 3">
                         <div class="d3"></div>
                         <a :href="value.LINK" v-for="(value,key) in item.LINK_LIST" :key="key" target="_blank">{{ value.TEXT }}</a>
                     </div>
@@ -62,7 +63,7 @@ export default {
             window.open(url);
         },
         linkGo(link,index) {
-            if (index==2 || index ==3)
+            if ( index ==3)
             window.open(link)
         }
     },
@@ -238,8 +239,22 @@ export default {
     justify-content: space-between;
     width: 1120px;
     margin: 50px auto;
+    .box-text {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        line-height: 20px;
+        color: #002FA7;
+        bottom: 25px;
+        font-size: 16px;
+    }
     &>div {
         position: relative;
+    }
+    &>div:nth-child(2n) {
+        .box-text {
+            color: #FEB32A;
+        }
     }
     &>div:hover .tip {
         display: block;

@@ -1,5 +1,5 @@
 ---
-title: "Bisheng JDK"
+title: "BiSheng JDK"
 ---
 <ClientOnly>
   <minisite-bisheng/>
