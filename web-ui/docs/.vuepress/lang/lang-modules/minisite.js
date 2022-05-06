@@ -594,12 +594,16 @@ module.exports = {
         IMG: "/img/minisite/bisheng/zh-speker.png",
         LINK_LIST: [
           {
-            TEXT: "毕昇JDK8",
+            TEXT: "毕昇JDK 8",
             LINK: "https://gitee.com/openeuler/bishengjdk-8",
           },
           {
-            TEXT: "毕昇JDK11",
+            TEXT: "毕昇JDK 11",
             LINK: "https://gitee.com/openeuler/bishengjdk-11",
+          },
+          {
+            TEXT: "毕昇JDK 17",
+            LINK: "https://gitee.com/openeuler/bishengjdk-17",
           },
         ],
         STATUS: false,
@@ -608,12 +612,16 @@ module.exports = {
         IMG: "/img/minisite/bisheng/zh-sponsor.png",
         LINK_LIST: [
           {
-            TEXT: "毕昇JDK8",
+            TEXT: "毕昇JDK 8",
             LINK: "https://gitee.com/openeuler/bishengjdk-8/issues",
           },
           {
-            TEXT: "毕昇JDK11",
+            TEXT: "毕昇JDK 11",
             LINK: "https://gitee.com/openeuler/bishengjdk-11/issues",
+          },
+          {
+            TEXT: "毕昇JDK 17",
+            LINK: "https://gitee.com/openeuler/bishengjdk-17/issues",
           },
         ],
         STATUS: false,
@@ -641,15 +649,15 @@ module.exports = {
       },
       {
         THEME: "支持Java版本: ",
-        BODY: "目前毕昇JDK支持8和11两个LTS版本。",
+        BODY: "目前毕昇JDK支持8、11、17三个LTS版本。",
       },
       {
         THEME: "支持架构: ",
-        BODY: "支持Linux/AArch64架构。",
+        BODY: "支持Linux/AArch64、Linux/x86_64架构。",
       },
       {
         THEME: "支持操作系统: ",
-        BODY: "目前仅支持Linux版本，对操作系统的要求是AArch64上glibc版本不低于2.17，基本覆盖所有主流操作系统，发布前经过稳定性验证的操作系统有openEuler 全系列操作系统和CentOS 7.6。",
+        BODY: "目前仅支持Linux版本，对操作系统的要求glibc版本不低于2.17，基本覆盖所有主流操作系统，发布前经过稳定性验证的操作系统有openEuler 全系列操作系统和CentOS 7.6",
       },
     ],
     BISHENG_FRAMEWORK: {
@@ -675,6 +683,10 @@ module.exports = {
             {
               TEXT: "毕昇JDK 11",
               LINK: "https://gitee.com/openeuler/bishengjdk-11/wikis/Home",
+            },
+            {
+              TEXT: "毕昇JDK 17",
+              LINK: "https://gitee.com/openeuler/bishengjdk-17/wikis/Home",
             },
           ],
         },
@@ -1167,6 +1179,10 @@ module.exports = {
             TEXT: "Bisheng JDK 11",
             LINK: "https://gitee.com/openeuler/bishengjdk-11",
           },
+          {
+            TEXT: "Bisheng JDK 17",
+            LINK: "https://gitee.com/openeuler/bishengjdk-17",
+          },
         ],
         STATUS: false,
       },
@@ -1180,6 +1196,10 @@ module.exports = {
           {
             TEXT: "Bisheng JDK 11",
             LINK: "https://gitee.com/openeuler/bishengjdk-11/issues",
+          },
+          {
+            TEXT: "Bisheng JDK 17",
+            LINK: "https://gitee.com/openeuler/bishengjdk-17/issues",
           },
         ],
         STATUS: false,
@@ -1241,6 +1261,10 @@ module.exports = {
             {
               TEXT: "Bisheng JDK 11",
               LINK: "https://gitee.com/openeuler/bishengjdk-11/wikis/Home",
+            },
+            {
+              TEXT: "Bisheng JDK 17",
+              LINK: "https://gitee.com/openeuler/bishengjdk-17/wikis/Home",
             },
           ],
         },
@@ -1733,6 +1757,10 @@ module.exports = {
             TEXT: "Bisheng JDK 11",
             LINK: "https://gitee.com/openeuler/bishengjdk-11",
           },
+          {
+            TEXT: "Bisheng JDK 17",
+            LINK: "https://gitee.com/openeuler/bishengjdk-17",
+          },
         ],
         STATUS: false,
       },
@@ -1746,6 +1774,10 @@ module.exports = {
           {
             TEXT: "Bisheng JDK 11",
             LINK: "https://gitee.com/openeuler/bishengjdk-11/issues",
+          },
+          {
+            TEXT: "Bisheng JDK 17",
+            LINK: "https://gitee.com/openeuler/bishengjdk-17/issues",
           },
         ],
         STATUS: false,
@@ -1807,6 +1839,10 @@ module.exports = {
             {
               TEXT: "Bisheng JDK 11",
               LINK: "https://gitee.com/openeuler/bishengjdk-11/wikis/Home",
+            },
+            {
+              TEXT: "Bisheng JDK 17",
+              LINK: "https://gitee.com/openeuler/bishengjdk-17/wikis/Home",
             },
           ],
         },
