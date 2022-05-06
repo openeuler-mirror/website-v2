@@ -28,7 +28,7 @@ summary: openEuler 社区SIG组成员管理方案细节。
 | Committer| ✔️ |✔️  | ✔️ [部分仓库] | ❌ |
 | Contributor| ✔️ |✔️ |❌ |❌  |
 | Developer| ❌ | ✔️ | ❌ |  ❌|
-| Repo-admin| ✔️ | ✔️ | ✔️ [部分仓库] | ✔️[部分仓库]  |
+| Repo_Admin| ✔️ | ✔️ | ✔️ [部分仓库] | ✔️[部分仓库]  |
 
 ## 成员管理方案
 
@@ -50,7 +50,7 @@ sig-info.yaml 文件为yaml格式承载，包含如下基本元素：
 |--|--|--|
 | name | 字符串 | SIG组名称 ,必填|
 | description | 字符串 | SIG组描述信息，必填 |
-| created_on| 字符串 | SIG组创建时间，必填 |
+| created_on| 字符串 | SIG组创建时间，选填 |
 | mailing_list | 字符串 | SIG组讨论邮件列表地址，选填 |
 | meeting_url | 字符串 | SIG例会纪要URL，选填 |
 | mentors | 列表 | SIG组当前导师名单，选填 |
