@@ -57,12 +57,12 @@ module.exports = {
         FILTER_TITLE: '选择任务',
         FILTER: {
             LABEL_1: '技术方向',
-            LABEL_2: '技术标签',
+            LABEL_2: '技术语言',
             LABEL_3: '难度',
-            DIFFICULTY_OPTIONS: ['高', '中', '低']
+            DIFFICULTY_OPTIONS: ['基础', '进阶']
         },
         ACTIVITIES_LIST: require('././../../data/activities/zh.json'),
-        ACTIVETIES_LIST_LABLE_1: '方向',
-        ACTIVETIES_LIST_LABLE_2: '标签'
+        ACTIVETIES_LIST_LABLE_1: '技术方向',
+        ACTIVETIES_LIST_LABLE_2: '技术语言'
     }
 };

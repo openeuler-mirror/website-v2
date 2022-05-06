@@ -142,11 +142,11 @@
                         ></el-option>
                     </el-select>
       		  	</el-form-item>
-      		  	<el-form-item class="video-btn-pc">
+      		  	<!-- <el-form-item class="video-btn-pc">
 					<a target="_blank" href="https://www.bilibili.com/video/BV13v411V7KV">
 						<img src="/img/activities/video_btn.png" />
 					</a>
-      		  	</el-form-item>
+      		  	</el-form-item> -->
       		</el-form>
 			<ul class="filter-tags">
         		<li v-for="(item, index) in filterTags" 
@@ -160,11 +160,11 @@
      		    	<span @click="delTag(item)">×</span>
      		  	</li>
      		</ul>
-			 <div class="video-btn-mobile">
+			 <!-- <div class="video-btn-mobile">
 				<a target="_blank" href="https://www.bilibili.com/video/BV13v411V7KV">
 					<img src="/img/activities/video_btn.png" />
 				</a>
-      		</div>
+      		</div> -->
       		<div class="activities-list" v-if="filterList.length > 0">
 				<a class="activities-list-item" 
 					target="_blank"
@@ -172,12 +172,11 @@
 					:key="index"
 					:href="item.LINK">
 					<div class="activities-list-item-title">{{item.NAME}}</div>
-					<div class="activities-list-item-field"><span class="lable">方向：</span>{{item.TECHNOLOGY_FIELD}}</div>
-					<div class="activities-list-item-labels"><span class="lable">标签：</span>{{item.TECHNICAL_LABELS}}</div>
+					<div class="activities-list-item-field"><span class="lable">{{ i18n.activities.ACTIVETIES_LIST_LABLE_1 }}：</span>{{item.TECHNOLOGY_FIELD}}</div>
+					<div class="activities-list-item-labels"><span class="lable">{{ i18n.activities.ACTIVETIES_LIST_LABLE_2 }}：</span>{{item.TECHNICAL_LABELS}}</div>
 					<div class="activities-list-item-info">
-						<img src="/img/activities/high.png" v-if="item.DIFFICULTY === '高'" />
-						<img src="/img/activities/medium.png" v-if="item.DIFFICULTY === '中'" />
-						<img src="/img/activities/low.png" v-if="item.DIFFICULTY === '低'" />
+						<img src="/img/activities/low.png" v-if="item.DIFFICULTY === '进阶'" />
+						<img src="/img/activities/medium.png" v-if="item.DIFFICULTY === '基础'" />
 						<span>{{item.DIFFICULTY}}</span>
 					</div>
 				</a>
@@ -943,8 +942,9 @@ export default {
 				}
 				span {
 					position: absolute;
-					bottom: 10px;
-					right: 10px;
+					top: 6px;
+					right: 6px;
+					line-height: 18px;
 				}
 			}
 		}

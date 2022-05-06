@@ -134,7 +134,7 @@ module.exports = {
                         PATH: '/other/projects/atune'
                     },
                     {
-                        NAME: 'Bisheng JDK',
+                        NAME: 'BiSheng JDK',
                         PATH: '/other/projects/bishengjdk'
                     },
                     {
@@ -368,7 +368,7 @@ module.exports = {
                         PATH: '/other/projects/atune'
                     },
                     {
-                        NAME: 'Bisheng JDK',
+                        NAME: 'BiSheng JDK',
                         PATH: '/other/projects/bishengjdk'
                     },
                     {
@@ -584,7 +584,7 @@ module.exports = {
                         PATH: '/other/projects/atune'
                     },
                     {
-                        NAME: 'Bisheng JDK',
+                        NAME: 'BiSheng JDK',
                         PATH: '/other/projects/bishengjdk'
                     },
                     {
