@@ -155,7 +155,7 @@ export default {
                 font-size: 50px;
                 line-height: 60px;
                 margin: 34px 0 40px 0;
-                width: 312px;
+                width: 320px;
             }
         }
     }
