@@ -12,7 +12,7 @@
         "NAME": "HPC软件scanorama迁移至openEuler平台",
         "LINK" : "https://gitee.com/openeuler/open-source-summer-2022/issues/I53HG0?from=project-issue",
         "TECHNOLOGY_FIELD": "HPC",
-        "TECHNICAL_LABELS": "C语言,C++,phython,Shell",
+        "TECHNICAL_LABELS": "C语言,C++,python,Shell",
         "DIFFICULTY": "进阶"
     },
       {
@@ -22,5 +22,101 @@
         "TECHNOLOGY_FIELD": "云计算",
         "TECHNICAL_LABELS": "python",
         "DIFFICULTY": "进阶"
+    },
+       {
+        "ID": 4,
+        "NAME": "完善 libcareplus 的测试用例",
+        "LINK" : "https://gitee.com/openeuler/open-source-summer/issues/I546QH?from=project-issue",
+        "TECHNOLOGY_FIELD": "用户态",
+        "TECHNICAL_LABELS": "C语言",
+        "DIFFICULTY":"基础"
+    },
+    {
+        "ID": 5,
+        "NAME": "实现Gazelle 示例程序",
+        "LINK" : "https://gitee.com/openeuler/open-source-summer/issues/I54B78?from=project-issue",
+        "TECHNOLOGY_FIELD": "用户态",
+        "TECHNICAL_LABELS": "C语言,",
+        "DIFFICULTY": "进阶"
+    },
+      {
+        "ID": 6,
+        "NAME": "使用 Rust 编程语言实现基于 SAT 算法的软件包依赖分析库",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I54DG1?from=project-issue",
+        "TECHNOLOGY_FIELD": "软件包依赖",
+        "TECHNICAL_LABELS": "Rust",
+        "DIFFICULTY": "进阶"
+    },
+{
+        "ID": 7,
+        "NAME": "基于ebpf的高性能可视化存储IO栈监测分析工具",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I54ES8?from=project-issue",
+        "TECHNOLOGY_FIELD": "存储,内核",
+        "TECHNICAL_LABELS": "C语言",
+        "DIFFICULTY": "进阶"
+    },
+       {
+        "ID": 8,
+        "NAME": "HPC软件OpenLB迁移至openEuler平台",
+        "LINK" : "https://gitee.com/openeuler/open-source-summer/issues/I54KGB?from=project-issue",
+        "TECHNOLOGY_FIELD": "HPC",
+        "TECHNICAL_LABELS": "C语言,C++,Fortran,python,Shell",
+        "DIFFICULTY":"进阶"
+    },
+    {
+        "ID": 9,
+        "NAME": "基于openEuler构建大数据体验平台",
+        "LINK" : "https://gitee.com/openeuler/open-source-summer/issues/I54V5D?from=project-issue",
+        "TECHNOLOGY_FIELD": "大数据",
+        "TECHNICAL_LABELS": "java,scala",
+        "DIFFICULTY": "进阶"
+    },
+      {
+        "ID": 10,
+        "NAME": "实现镜像体积可视化脚本",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I54S1W?from=project-issue",
+        "TECHNOLOGY_FIELD": "内核",
+        "TECHNICAL_LABELS": "python,Shell",
+        "DIFFICULTY": "基础"
+    },
+{
+        "ID": 11,
+        "NAME": "迁移基于ROS的VIO算法至openEuler平台",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I551XE?from=project-issue",
+        "TECHNOLOGY_FIELD": "ROS",
+        "TECHNICAL_LABELS": "C++,CMake",
+        "DIFFICULTY": "进阶"
+    },
+       {
+        "ID": 12,
+        "NAME": "secGear集成UT测试框架，并开发测试用例",
+        "LINK" : "https://gitee.com/openeuler/open-source-summer/issues/I553LL?from=project-issue",
+        "TECHNOLOGY_FIELD": "机密计算",
+        "TECHNICAL_LABELS": "C语言,CMake",
+        "DIFFICULTY":"进阶"
+    },
+    {
+        "ID": 13,
+        "NAME": "开发secGear安全文件系统接口",
+        "LINK" : "https://gitee.com/openeuler/open-source-summer/issues/I553UC?from=project-issue",
+        "TECHNOLOGY_FIELD": "机密计算",
+        "TECHNICAL_LABELS": "C语言",
+        "DIFFICULTY": "基础"
+    },
+      {
+        "ID": 14,
+        "NAME": "迁移基于ROS2和深度学习的目标检测的算法至openEuler21.03平台",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I555LC?from=project-issue",
+        "TECHNOLOGY_FIELD": "ROS",
+        "TECHNICAL_LABELS": "C++,CMake",
+        "DIFFICULTY": "进阶"
+    },
+   {
+        "ID": 15,
+        "NAME": "overlayfs 添加sysfs文件显示载挂载信息",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I558NT?from=project-issue",
+        "TECHNOLOGY_FIELD": "内核",
+        "TECHNICAL_LABELS": "C语言",
+        "DIFFICULTY": "基础"
     }
 ]
