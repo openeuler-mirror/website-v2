@@ -33,8 +33,8 @@ module.exports = {
                 LINK: '/internship/'
             },
             {
-                IMG: '/img/activities/summit2021.png',
-                LINK: '/interaction/summit-list/summit2021/'
+                IMG: '/img/activities/devday2022.png',
+                LINK: '/interaction/summit-list/devday2022/'
             },
             {
                 IMG: '/img/activities/pc_home_bottom_banner.png',
@@ -42,7 +42,6 @@ module.exports = {
             }
         ],
         HOME_NEWRELEASE: [
-          
             {
                 MOBILE_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_mo.png')",
                 PC_IMG: "url('https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_pc.png')",
