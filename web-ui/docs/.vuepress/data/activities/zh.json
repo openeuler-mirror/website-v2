@@ -22,7 +22,7 @@
         "TECHNOLOGY_FIELD": "云计算",
         "TECHNICAL_LABELS": "python",
         "DIFFICULTY": "进阶"
-    }，
+    },
        {
         "ID": 4,
         "NAME": "完善 libcareplus 的测试用例",
@@ -46,7 +46,7 @@
         "TECHNOLOGY_FIELD": "软件包依赖",
         "TECHNICAL_LABELS": "Rust",
         "DIFFICULTY": "进阶"
-    }，
+    },
 {
         "ID": 7,
         "NAME": "基于ebpf的高性能可视化存储IO栈监测分析工具",
@@ -54,7 +54,7 @@
         "TECHNOLOGY_FIELD": "存储,内核",
         "TECHNICAL_LABELS": "C语言",
         "DIFFICULTY": "进阶"
-    }，
+    },
        {
         "ID": 8,
         "NAME": "HPC软件OpenLB迁移至openEuler平台",
@@ -78,7 +78,7 @@
         "TECHNOLOGY_FIELD": "内核",
         "TECHNICAL_LABELS": "python,Shell",
         "DIFFICULTY": "基础"
-    }，
+    },
 {
         "ID": 11,
         "NAME": "迁移基于ROS的VIO算法至openEuler平台",
@@ -86,7 +86,7 @@
         "TECHNOLOGY_FIELD": "ROS",
         "TECHNICAL_LABELS": "C++,CMake",
         "DIFFICULTY": "进阶"
-    }，
+    },
        {
         "ID": 12,
         "NAME": "secGear集成UT测试框架，并开发测试用例",
@@ -110,7 +110,7 @@
         "TECHNOLOGY_FIELD": "ROS",
         "TECHNICAL_LABELS": "C++,CMake",
         "DIFFICULTY": "进阶"
-    }，
+    },
    {
         "ID": 15,
         "NAME": "overlayfs 添加sysfs文件显示载挂载信息",
