@@ -12,11 +12,11 @@ summary: Porting openEuler to Windows Subsystem for Linux (WSL)
 # Open Source Internship Report—Porting openEuler to Windows WSL
 
 
-## Joining Huawei and Determining my Objective  
+## Joining Huawei and Determining My Objective  
 
 My name is Wang Haitao, a third-year student in computer science of Harbin Institute of Technology (Shenzhen).  
 
-To prepare for the Computer System Capability Challenge 202 1, my supervisor suggested I first participate in RISC-V contests to gain experience writing a kernel from scratch. So, during the 2020 winter vacation, I participated in the openEuler 2020 College Developer Competition with the topic "Add the Grub boot mode for openEuler-RISC-V". This task required me to install openEuler, register a Gitee account, use QEMU to emulate RISC-V, and understand the ins and outs of Grub, giving me invaluable knowledge of the OS boot process. More importable, I met contributors of the openEuler open source community, which helped me integrate myself with core members.  
+To prepare for the Computer System Capability Challenge 2021, my supervisor suggested I first participate in RISC-V contests to gain experience writing a kernel from scratch. So, during the 2020 winter vacation, I participated in the openEuler 2020 College Developer Competition with the topic "Add the Grub boot mode for openEuler-RISC-V". This task required me to install openEuler, register a Gitee account, use QEMU to emulate RISC-V, and understand the ins and outs of Grub, giving me invaluable knowledge of the OS boot process. More importantly, I met contributors of the openEuler open source community, which helped me integrate myself with core members.  
 
 With curiosity about the openEuler community and longing for an internship in Huawei, I sent my resume to Huawei's Open Source Development & Operations Dept., the branch responsible for running Huawei's four open source communities. After three months of waiting, I finally received an internship offer from Huawei with an opportunity to work on the back-end of the openEuler community.  
 

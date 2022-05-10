@@ -117,7 +117,7 @@ Currently, check_openlibing is implemented by calling the remote service (https:
 | Maintenance personnel of single-repository access control for software packages | [Wang Huan](https://e.gitee.com/open_euler/members/trend/wanghuan158), [Cheng Shaowei](https://e.gitee.com/open_euler/members/trend/MementoMoriCheng), [Zheng Yaohui](https://gitee.com/open_euler/dashboard/members/zhengyaohui) |
 | Infrastructure maintenance personnel (including OBS, Gitee, Jenkins basic services, hardware, and network) | [Cao Zhi](https://gitee.com/open_euler/dashboard/members/georgecao), [Liu Qi](https://gitee.com/open_euler/dashboard/members/liuqi469227928), [Zhao Chunjiang](https://e.gitee.com/open_euler/members/trend/dakang_siji) |
 | OBS project maintenance personnel                            | [Wang Chong](https://gitee.com/open_euler/dashboard/members/wangchong1995924), [Xia Senlin](https://e.gitee.com/open_euler/members/trend/small_leek), [Zhou Xiaxiang](https://e.gitee.com/open_euler/members/trend/zhouxiaxiang) |
-| Majun platform maintenance personnel                         | [Zhang Yaxiong](openlibing@163.com)                          |
+| Majun platform maintenance personnel                         | Zhang Yaxiong                          |
 
 Note:   
 1. The code snippet scan (check_sca) and coding specification check (check_code) in the software package single-repository access control check are implemented by calling the Majun platform service.  
