@@ -242,82 +242,82 @@
    {
         "ID": 31,
         "NAME": "在离线业务（容器）L3 Cache缓存带宽及MBA内存带宽动态隔离",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55RV6?from=project-issue",
+        "TECHNOLOGY_FIELD": "云原生，容器",
+        "TECHNICAL_LABELS": "Go,Rust",
+        "DIFFICULTY": "进阶"
     },
    {
         "ID": 32,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "多社区仓库代码备份并定期刷新代码",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55SDG?from=project-issue",
+        "TECHNOLOGY_FIELD": "k8s部署",
+        "TECHNICAL_LABELS": "golang",
+        "DIFFICULTY": "基础"
     },
    {
         "ID": 33,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "将vagrant及相关组件引入openEuler",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55T5H?from=project-issue",
+        "TECHNOLOGY_FIELD": "软件移植，虚拟化",
+        "TECHNICAL_LABELS": "C",
+        "DIFFICULTY": "基础"
     },
    {
         "ID": 34,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "StratoVirt trace点优化",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55TE5?from=project-issue",
+        "TECHNOLOGY_FIELD": "虚拟化",
+        "TECHNICAL_LABELS": "Rust",
+        "DIFFICULTY": "基础"
     },
    {
         "ID": 35,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "实现KubeOS支持物理机部署",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55UFN?from=project-issue",
+        "TECHNOLOGY_FIELD": "云原生，容器，kubernetes",
+        "TECHNICAL_LABELS": "Shell,Go",
+        "DIFFICULTY": "进阶"
     } ,
    {
         "ID": 36,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "实现一个类似开源ROW的IO调度器",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55UHJ?from=project-issue",
+        "TECHNOLOGY_FIELD": "内核",
+        "TECHNICAL_LABELS": "C",
+        "DIFFICULTY": "进阶"
     },
    {
         "ID": 37,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "为openEuler操作系统引入libvirt 8.2.0版本",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55ULJ?from=project-issue",
+        "TECHNOLOGY_FIELD": "软件移植，虚拟化",
+        "TECHNICAL_LABELS": "C",
+        "DIFFICULTY": "进阶"
     },
    {
         "ID": 38,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "实现direct-thread-switch轻量级线程切换",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55XHR?from=project-issue",
+        "TECHNOLOGY_FIELD": "内核",
+        "TECHNICAL_LABELS": "C",
+        "DIFFICULTY": "进阶"
     },
    {
         "ID": 39,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "基于openEuler gopher的openGauss场景SLI测量",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55YNO?from=project-issue",
+        "TECHNOLOGY_FIELD": "智能运维，eBPF",
+        "TECHNICAL_LABELS": "C",
+        "DIFFICULTY": "进阶"
     },
    {
         "ID": 40,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "在openEuler中支持Multi-Gen LRU",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55Z0L?from=project-issue",
+        "TECHNOLOGY_FIELD": "内核",
+        "TECHNICAL_LABELS": "C",
+        "DIFFICULTY": "进阶"
     } ,
    {
         "ID": 41,
@@ -681,6 +681,14 @@
     } ,
    {
         "ID": 86,
+        "NAME": "标题",
+        "LINK": "链接",
+        "TECHNOLOGY_FIELD": "技术领域",
+        "TECHNICAL_LABELS": "编程语言",
+        "DIFFICULTY": "基础、进阶"
+    },
+   {
+        "ID": 87,
         "NAME": "标题",
         "LINK": "链接",
         "TECHNOLOGY_FIELD": "技术领域",
