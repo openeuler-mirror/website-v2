@@ -468,7 +468,7 @@
         "NAME": "基于misc cgroup子系统实现对于cgroup级别的打开文件数的限制",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I569WP?from=project-issue",
         "TECHNOLOGY_FIELD": "内核",
-        "TECHNICAL_LABELS": "C,
+        "TECHNICAL_LABELS": "C",
         "DIFFICULTY": "基础"
     },
    {
