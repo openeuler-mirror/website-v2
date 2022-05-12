@@ -609,90 +609,90 @@
     },
    {
         "ID": 77,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "实现openEuler和OpenHarmony之间的设备认证",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I56I4V?from=project-issue",
+        "TECHNOLOGY_FIELD": "嵌入式",
+        "TECHNICAL_LABELS": "C",
+        "DIFFICULTY": "进阶"
     },
    {
         "ID": 78,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "构建/移植基于openEuler的一站式机器学习开发体验生产平台",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I56JJN?from=project-issue",
+        "TECHNOLOGY_FIELD": "软件移植，NLP",
+        "TECHNICAL_LABELS": "Python,Java,js",
+        "DIFFICULTY": "进阶"
     },
    {
         "ID": 79,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "openEuler-5.10 支持audit日志批量落盘",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I56K30?from=project-issue",
+        "TECHNOLOGY_FIELD": "内核",
+        "TECHNICAL_LABELS": "C",
+        "DIFFICULTY": "进阶"
     },
    {
         "ID": 80,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "openEuler 移植到 RK3588",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I56KG9?from=project-issue",
+        "TECHNOLOGY_FIELD": "软件移植",
+        "TECHNICAL_LABELS": "Python,Bash script",
+        "DIFFICULTY": "进阶"
     } ,
    {
         "ID": 81,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "为riscv的内核实现kprobe optimizer",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I56L2I?from=project-issue",
+        "TECHNOLOGY_FIELD": "内核",
+        "TECHNICAL_LABELS": "C",
+        "DIFFICULTY": "进阶"
     },
    {
         "ID": 82,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "为openEuler Embedded内核新增Rust语言支持",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I56L6F?from=project-issue",
+        "TECHNOLOGY_FIELD": "嵌入式，RISC-V",
+        "TECHNICAL_LABELS": "Rust",
+        "DIFFICULTY": "进阶"
     },
    {
         "ID": 83,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "利用bpf统计内核中alloc_page内存信息",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I56LAR?from=project-issue",
+        "TECHNOLOGY_FIELD": "内核",
+        "TECHNICAL_LABELS": "C",
+        "DIFFICULTY": "进阶"
     },
    {
         "ID": 84,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "为Rust for Linux增强函数式编程特性",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I56LOY?from=project-issue",
+        "TECHNOLOGY_FIELD": "内核",
+        "TECHNICAL_LABELS": "Rust",
+        "DIFFICULTY": "进阶"
     },
    {
         "ID": 85,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "将大数据常用组件impala引入到openEuler",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I56QDR?from=project-issue",
+        "TECHNOLOGY_FIELD": "大数据，软件移植",
+        "TECHNICAL_LABELS": "Shell",
+        "DIFFICULTY": "基础"
     } ,
    {
         "ID": 86,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "将大数据常用组件ambari引入到openEuler",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I56R1J?from=project-issue",
+        "TECHNOLOGY_FIELD": "大数据，软件移植",
+        "TECHNICAL_LABELS": "Java",
+        "DIFFICULTY": "基础"
     },
    {
         "ID": 87,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "支持EFI文件国密签名",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I572B7?from=project-issue",
+        "TECHNOLOGY_FIELD": "国密,SM2_SM3",
+        "TECHNICAL_LABELS": "C",
+        "DIFFICULTY": "进阶"
     }
 ]
