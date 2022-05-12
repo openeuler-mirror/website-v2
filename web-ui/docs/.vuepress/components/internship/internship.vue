@@ -208,7 +208,7 @@
               <el-tab-pane label="openEuler" name="openEuler"></el-tab-pane>
               <el-tab-pane label="openLooKeng" name="openLooKeng"></el-tab-pane>
               <el-tab-pane label="openGauss" name="openGauss"></el-tab-pane>
-              <el-tab-pane label="MindSpore" name="MindSpore"></el-tab-pane>
+              <el-tab-pane label="毕昇 MindSpore" name="MindSpore"></el-tab-pane>
             </el-tabs>
           </div>
           <div class="taks-body">
@@ -234,14 +234,10 @@
                 </a>
                 <div
                   class="item-intriduce"
-                  :class="{ mindspore: community === 'MindSpore' }"
                 >
                   {{ item.INTRODUCE }}
-                  <p class="waiting" v-if="community == 'MindSpore'">
-                    实习任务筹备中，敬请期待……
-                  </p>
                 </div>
-                <div class="button-box" v-if="community !== 'MindSpore'">
+                <div class="button-box">
                   <button @click="go(item.TASK)" class="button-left">
                     {{ TASK.INTERNSHIP_TASK }}
                   </button>
@@ -249,7 +245,7 @@
                     <span>{{
                       item.NAME == 'openLooKeng' ||
                       item.NAME == 'openGauss' ||
-                      item.NAME == 'MindSpore'
+                      item.NAME == '毕昇 MindSpore'
                         ? i18n.learn.OFFICAL_WEB
                         : TASK.SIG_DETAIL
                     }}</span>
@@ -969,6 +965,7 @@ a {
           .item-name {
             cursor: pointer;
             color: #002fa7;
+            line-height:20px;
             font-size: 20px;
             @media (max-width: 1000px) {
               font-size: 16px;
