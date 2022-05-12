@@ -201,47 +201,47 @@
     } ,
    {
         "ID": 26,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "利用cephfs提供k8s的数据存储能力",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55QQ9?from=project-issue",
+        "TECHNOLOGY_FIELD": "存储，kubernetes",
+        "TECHNICAL_LABELS": "Python,Go",
+        "DIFFICULTY": "基础"
     },
    {
         "ID": 27,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "密码策略编辑桌面应用",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55QTM?from=project-issue",
+        "TECHNOLOGY_FIELD": "桌面应用",
+        "TECHNICAL_LABELS": "Python,Go,C,C++",
+        "DIFFICULTY": "进阶"
     },
    {
         "ID": 28,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "基于anchore/syft开源项目生成openEuler SBOM",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55QV1?from=project-issue",
+        "TECHNOLOGY_FIELD": "软件安全，rpm",
+        "TECHNICAL_LABELS": "Python,golang",
+        "DIFFICULTY": "进阶"
     },
    {
         "ID": 29,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "openEuler会议预定小程序支持多种第三方会议接入",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55RIR?from=project-issue",
+        "TECHNOLOGY_FIELD": "小程序",
+        "TECHNICAL_LABELS": "python3",
+        "DIFFICULTY": "基础"
     },
    {
         "ID": 30,
-        "NAME": "标题",
-        "LINK": "链接",
-        "TECHNOLOGY_FIELD": "技术领域",
-        "TECHNICAL_LABELS": "编程语言",
-        "DIFFICULTY": "基础、进阶"
+        "NAME": "软件包安装器 优化",
+        "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55RK2?from=project-issue",
+        "TECHNOLOGY_FIELD": "桌面应用，rpm",
+        "TECHNICAL_LABELS": "Python,Qt",
+        "DIFFICULTY": "进阶"
     },
    {
         "ID": 31,
-        "NAME": "标题",
+        "NAME": "在离线业务（容器）L3 Cache缓存带宽及MBA内存带宽动态隔离",
         "LINK": "链接",
         "TECHNOLOGY_FIELD": "技术领域",
         "TECHNICAL_LABELS": "编程语言",
