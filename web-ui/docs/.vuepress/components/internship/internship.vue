@@ -208,7 +208,7 @@
               <el-tab-pane label="openEuler" name="openEuler"></el-tab-pane>
               <el-tab-pane label="openLooKeng" name="openLooKeng"></el-tab-pane>
               <el-tab-pane label="openGauss" name="openGauss"></el-tab-pane>
-              <el-tab-pane label="毕昇 MindSpore" name="MindSpore"></el-tab-pane>
+              <el-tab-pane label="昇思 MindSpore" name="MindSpore"></el-tab-pane>
             </el-tabs>
           </div>
           <div class="taks-body">
@@ -245,7 +245,7 @@
                     <span>{{
                       item.NAME == 'openLooKeng' ||
                       item.NAME == 'openGauss' ||
-                      item.NAME == '毕昇 MindSpore'
+                      item.NAME == '昇思 MindSpore'
                         ? i18n.learn.OFFICAL_WEB
                         : TASK.SIG_DETAIL
                     }}</span>

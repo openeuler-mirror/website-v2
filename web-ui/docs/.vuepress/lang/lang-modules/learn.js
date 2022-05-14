@@ -327,7 +327,7 @@ module.exports = {
                 {
                     NAME_LINK:
                         "https://www.mindspore.cn/",
-                    NAME: "毕昇 MindSpore",
+                    NAME: "昇思 MindSpore",
                     INTRODUCE: "全场景AI框架",
                     TASK: "https://gitee.com/mindspore/community/issues/I55QGD?from=project-issue&skip_mobile=true",
                     GITEE: "https://www.mindspore.cn/",
