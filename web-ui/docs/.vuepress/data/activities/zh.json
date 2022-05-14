@@ -139,7 +139,7 @@
         "ID": 18,
         "NAME": "用Rust实现RDMA的Linux内核驱动",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55EL7?from=project-issue",
-        "TECHNOLOGY_FIELD": "Rust、存储、Linux",
+        "TECHNOLOGY_FIELD": "Rust,存储",
         "TECHNICAL_LABELS": "Rust",
         "DIFFICULTY": "进阶"
     },
@@ -147,7 +147,7 @@
         "ID": 19,
         "NAME": "实现通过ebpf修改寄存器的接口并给出demo",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55FLX?from=project-issue",
-        "TECHNOLOGY_FIELD": "Linux、ebpf",
+        "TECHNOLOGY_FIELD": "ebpf",
         "TECHNICAL_LABELS": "C",
         "DIFFICULTY": "基础"
     },
@@ -155,7 +155,7 @@
         "ID": 20,
         "NAME": "迁移基于ROS2和激光导航的算法至openEuler21.03平台",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55G5F?from=project-issue",
-        "TECHNOLOGY_FIELD": "Linux、ROS",
+        "TECHNOLOGY_FIELD": "ROS",
         "TECHNICAL_LABELS": "C++,CMake",
         "DIFFICULTY": "进阶"
     },
@@ -163,7 +163,7 @@
         "ID": 21,
         "NAME": "为openEuler Embedded新增嵌入式图形栈",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55NIS?from=project-issue",
-        "TECHNOLOGY_FIELD": "Linux、嵌入式",
+        "TECHNOLOGY_FIELD": "嵌入式",
         "TECHNICAL_LABELS": "Qt",
         "DIFFICULTY": "进阶"
     },
@@ -171,7 +171,7 @@
         "ID": 22,
         "NAME": "为openEuler Embedded集成RISC-V架构支持",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55NQW?from=project-issue",
-        "TECHNOLOGY_FIELD": "Linux、嵌入式",
+        "TECHNOLOGY_FIELD": "嵌入式",
         "TECHNICAL_LABELS": "C",
         "DIFFICULTY": "进阶"
     },
@@ -179,7 +179,7 @@
         "ID": 23,
         "NAME": "用Rust实现高性能网络协议栈DPDK编程接口的封装",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55OX7?from=project-issue",
-        "TECHNOLOGY_FIELD": "Rust、存储、Linux",
+        "TECHNOLOGY_FIELD": "Rust,存储",
         "TECHNICAL_LABELS": "Rust",
         "DIFFICULTY": "进阶"
     },
@@ -187,7 +187,7 @@
         "ID": 24,
         "NAME": "在线业务QoS量化工具",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55Q90?from=project-issue",
-        "TECHNOLOGY_FIELD": "云原生，容器",
+        "TECHNOLOGY_FIELD": "云原生,容器",
         "TECHNICAL_LABELS": "Go,Rust",
         "DIFFICULTY": "进阶"
     },
@@ -195,7 +195,7 @@
         "ID": 25,
         "NAME": "容器事件管理机制重构",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55QBK?from=project-issue",
-        "TECHNOLOGY_FIELD": "云原生，容器",
+        "TECHNOLOGY_FIELD": "云原生,容器",
         "TECHNICAL_LABELS": "C",
         "DIFFICULTY": "基础"
     } ,
@@ -203,7 +203,7 @@
         "ID": 26,
         "NAME": "利用cephfs提供k8s的数据存储能力",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55QQ9?from=project-issue",
-        "TECHNOLOGY_FIELD": "存储，kubernetes",
+        "TECHNOLOGY_FIELD": "存储,kubernetes",
         "TECHNICAL_LABELS": "Python,Go",
         "DIFFICULTY": "基础"
     },
@@ -219,7 +219,7 @@
         "ID": 28,
         "NAME": "基于anchore/syft开源项目生成openEuler SBOM",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55QV1?from=project-issue",
-        "TECHNOLOGY_FIELD": "软件安全，rpm",
+        "TECHNOLOGY_FIELD": "软件安全,rpm",
         "TECHNICAL_LABELS": "Python,golang",
         "DIFFICULTY": "进阶"
     },
@@ -235,7 +235,7 @@
         "ID": 30,
         "NAME": "软件包安装器 优化",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55RK2?from=project-issue",
-        "TECHNOLOGY_FIELD": "桌面应用，rpm",
+        "TECHNOLOGY_FIELD": "桌面应用,rpm",
         "TECHNICAL_LABELS": "Python,Qt",
         "DIFFICULTY": "进阶"
     },
@@ -243,7 +243,7 @@
         "ID": 31,
         "NAME": "在离线业务（容器）L3 Cache缓存带宽及MBA内存带宽动态隔离",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55RV6?from=project-issue",
-        "TECHNOLOGY_FIELD": "云原生，容器",
+        "TECHNOLOGY_FIELD": "云原生,容器",
         "TECHNICAL_LABELS": "Go,Rust",
         "DIFFICULTY": "进阶"
     },
@@ -259,7 +259,7 @@
         "ID": 33,
         "NAME": "将vagrant及相关组件引入openEuler",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55T5H?from=project-issue",
-        "TECHNOLOGY_FIELD": "软件移植，虚拟化",
+        "TECHNOLOGY_FIELD": "软件移植,虚拟化",
         "TECHNICAL_LABELS": "C",
         "DIFFICULTY": "基础"
     },
@@ -275,7 +275,7 @@
         "ID": 35,
         "NAME": "实现KubeOS支持物理机部署",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55UFN?from=project-issue",
-        "TECHNOLOGY_FIELD": "云原生，容器，kubernetes",
+        "TECHNOLOGY_FIELD": "云原生,容器,kubernetes",
         "TECHNICAL_LABELS": "Shell,Go",
         "DIFFICULTY": "进阶"
     } ,
@@ -291,7 +291,7 @@
         "ID": 37,
         "NAME": "为openEuler操作系统引入libvirt 8.2.0版本",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55ULJ?from=project-issue",
-        "TECHNOLOGY_FIELD": "软件移植，虚拟化",
+        "TECHNOLOGY_FIELD": "软件移植,虚拟化",
         "TECHNICAL_LABELS": "C",
         "DIFFICULTY": "进阶"
     },
@@ -307,7 +307,7 @@
         "ID": 39,
         "NAME": "基于openEuler gopher的openGauss场景SLI测量",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55YNO?from=project-issue",
-        "TECHNOLOGY_FIELD": "智能运维，eBPF",
+        "TECHNOLOGY_FIELD": "智能运维,eBPF",
         "TECHNICAL_LABELS": "C",
         "DIFFICULTY": "进阶"
     },
@@ -331,7 +331,7 @@
         "ID": 42,
         "NAME": "arm64可靠推栈验证测试",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I561RH?from=project-issue",
-        "TECHNOLOGY_FIELD": "内核，测试",
+        "TECHNOLOGY_FIELD": "内核,测试",
         "TECHNICAL_LABELS": "C",
         "DIFFICULTY": "基础"
     },
@@ -339,7 +339,7 @@
         "ID": 43,
         "NAME": "构建SDK工具包采集openEuler官网的埋点数据",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I562PF?from=project-issue",
-        "TECHNOLOGY_FIELD": "数据埋点，SDK",
+        "TECHNOLOGY_FIELD": "数据埋点,SDK",
         "TECHNICAL_LABELS": "JavaScript,Go,Python",
         "DIFFICULTY": "基础"
     },
@@ -347,7 +347,7 @@
         "ID": 44,
         "NAME": "开发者技能提取",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I563MW?from=project-issue",
-        "TECHNOLOGY_FIELD": "数据分析，NLP",
+        "TECHNOLOGY_FIELD": "数据分析,NLP",
         "TECHNICAL_LABELS": "python3",
         "DIFFICULTY": "基础"
     },
@@ -355,7 +355,7 @@
         "ID": 45,
         "NAME": "实现A-Tune服务解耦",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I563WS?from=project-issue",
-        "TECHNOLOGY_FIELD": "AI，性能调优",
+        "TECHNOLOGY_FIELD": "AI,性能调优",
         "TECHNICAL_LABELS": "Go",
         "DIFFICULTY": "进阶"
     } ,
@@ -363,7 +363,7 @@
         "ID": 46,
         "NAME": "实现A-Tune集群调优",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I563X0?from=project-issue",
-        "TECHNOLOGY_FIELD": "AI，性能调优",
+        "TECHNOLOGY_FIELD": "AI,性能调优",
         "TECHNICAL_LABELS": "Go",
         "DIFFICULTY": "基础"
     },
@@ -371,7 +371,7 @@
         "ID": 47,
         "NAME": "A-Tune-UI后端功能开发",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I563XJ?from=project-issue",
-        "TECHNOLOGY_FIELD": "后端，AI，性能调优",
+        "TECHNOLOGY_FIELD": "后端,AI,性能调优",
         "TECHNICAL_LABELS": "Python,Go,js",
         "DIFFICULTY": "进阶"
     },
@@ -387,7 +387,7 @@
         "ID": 49,
         "NAME": "Preempt_RT的实时性瓶颈探针工具",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I564OW?from=project-issue",
-        "TECHNOLOGY_FIELD": "eBPF，Linux实时性优化",
+        "TECHNOLOGY_FIELD": "eBPF,Linux实时性优化",
         "TECHNICAL_LABELS": "C,Python",
         "DIFFICULTY": "进阶"
     },
@@ -427,7 +427,7 @@
         "ID": 54,
         "NAME": "云原生的ResearchOps/MLops流水线平台构建",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I566CL?from=project-issue",
-        "TECHNOLOGY_FIELD": "数据分析，kubernetes",
+        "TECHNOLOGY_FIELD": "数据分析,kubernetes",
         "TECHNICAL_LABELS": "Go,k8s",
         "DIFFICULTY": "进阶"
     },
@@ -451,7 +451,7 @@
         "ID": 57,
         "NAME": "tomcat性能调优",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I5674S?from=project-issue",
-        "TECHNOLOGY_FIELD": "AI，性能调优",
+        "TECHNOLOGY_FIELD": "AI,性能调优",
         "TECHNICAL_LABELS": "Python,Java",
         "DIFFICULTY": "进阶"
     },
@@ -459,7 +459,7 @@
         "ID": 58,
         "NAME": "基于ResearchOps平台建设社区问答&资源推荐机器人",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I568R4?from=project-issue",
-        "TECHNOLOGY_FIELD": "AI，NLP",
+        "TECHNOLOGY_FIELD": "AI,NLP",
         "TECHNICAL_LABELS": "C",
         "DIFFICULTY": "进阶"
     },
@@ -547,7 +547,7 @@
         "ID": 69,
         "NAME": "使用eBPF技术实现Linux内核FUSE模块并支持零拷贝",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I56DF5?from=project-issue",
-        "TECHNOLOGY_FIELD": "内核，eBPF",
+        "TECHNOLOGY_FIELD": "内核,eBPF",
         "TECHNICAL_LABELS": "C",
         "DIFFICULTY": "进阶"
     },
@@ -563,7 +563,7 @@
         "ID": 71,
         "NAME": "在BGMProvider中使用Java实现国密相关算法以及国密证书解析",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I56E8A?from=project-issue",
-        "TECHNOLOGY_FIELD": "编译器，机密计算",
+        "TECHNOLOGY_FIELD": "编译器,机密计算",
         "TECHNICAL_LABELS": "Java",
         "DIFFICULTY": "进阶"
     },
@@ -572,7 +572,7 @@
         "NAME": "openEuler官网搜索优化",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I56ERT?from=project-issue",
         "TECHNOLOGY_FIELD": "SEO",
-        "TECHNICAL_LABELS": "ava,springboot ,elasticsearch",
+        "TECHNICAL_LABELS": "ava,springboot,elasticsearch",
         "DIFFICULTY": "进阶"
     },
    {
@@ -619,7 +619,7 @@
         "ID": 78,
         "NAME": "构建/移植基于openEuler的一站式机器学习开发体验生产平台",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I56JJN?from=project-issue",
-        "TECHNOLOGY_FIELD": "软件移植，NLP",
+        "TECHNOLOGY_FIELD": "软件移植,NLP",
         "TECHNICAL_LABELS": "Python,Java,js",
         "DIFFICULTY": "进阶"
     },
@@ -651,7 +651,7 @@
         "ID": 82,
         "NAME": "为openEuler Embedded内核新增Rust语言支持",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I56L6F?from=project-issue",
-        "TECHNOLOGY_FIELD": "嵌入式，RISC-V",
+        "TECHNOLOGY_FIELD": "嵌入式,RISC-V",
         "TECHNICAL_LABELS": "Rust",
         "DIFFICULTY": "进阶"
     },
@@ -675,7 +675,7 @@
         "ID": 85,
         "NAME": "将大数据常用组件impala引入到openEuler",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I56QDR?from=project-issue",
-        "TECHNOLOGY_FIELD": "大数据，软件移植",
+        "TECHNOLOGY_FIELD": "大数据,软件移植",
         "TECHNICAL_LABELS": "Shell",
         "DIFFICULTY": "基础"
     } ,
@@ -683,7 +683,7 @@
         "ID": 86,
         "NAME": "将大数据常用组件ambari引入到openEuler",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I56R1J?from=project-issue",
-        "TECHNOLOGY_FIELD": "大数据，软件移植",
+        "TECHNOLOGY_FIELD": "大数据,软件移植",
         "TECHNICAL_LABELS": "Java",
         "DIFFICULTY": "基础"
     },
