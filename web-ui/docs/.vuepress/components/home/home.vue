@@ -4,12 +4,19 @@
           <div class="video-mask" @click="maskClicked"></div>
           <div class="video-box">
             <video width="100%" ref="centerVideo" controls autoplay>
-              <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/openEuler%E9%9D%A2%E5%90%91%E6%95%B0%E5%AD%97%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E7%9A%84%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F_Banner.mp4">
+              <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/MoocStudio/MoocStudio%E7%9A%84%E8%A7%86%E9%A2%911920X1080_small.mp4">
             </video>
           </div>
         </div>
         <div class="is-pc home-carousel" v-if="!isShowH5">
-             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" >
+            <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" >
+             <el-carousel-item >
+                <div class="video-banner carousel-banner" @click="go('https://moocstudio.openeuler.sh/')">
+                     <video  muted playsinline="true" autoplay="autoplay"  height="500" loop ref="bannerVideo" poster="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_pc.png"  preload=""  id="home-video" >
+                         <source type="video/mp4" src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/MoocStudio/MoocStudio%E7%9A%84%E8%A7%86%E9%A2%911920X500_small..mp4">
+                     </video>
+                </div>
+              </el-carousel-item>
                <el-carousel-item >
                     <div class="carousel-banner" style="backgroundImage: url('/img/activities/pc/summit.png')"   @click="go('/activities/')">
                     </div>
@@ -25,6 +32,12 @@
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
+               <swiper-slide class="carousel-item-index">
+                 <div class="video-banner">
+                    <img class="bg-banner" src="/img/home/banner/video_banner_mo.png" alt="">
+                    <img v-show="!isMasked" class="open-video" @click="videoClicked" src="/img/home/banner/open_video.png" alt="">
+                </div>
+              </swiper-slide>
                <swiper-slide class="carousel-item-index">
                  <div class="mobile-version"  style="backgroundImage: url('/img/activities/mobile/banner.png')"  @click="go('/activities/')">
                 </div>
@@ -2010,11 +2023,43 @@ let remoteMethods = {
             margin-bottom: 0;
         }
         .carousel-item-index .mobile-version{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             height: 300px;
             background-position: center center;
             background-repeat: no-repeat;
             background-size: contain;
+            video {
+                width: 375px;
+                height: 300px;
+            }
+        }
+        .carousel-item-index {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .video-banner {
+               position: relative;
+               text-align: center;
+               width: 375px;
+               height: 300px;
+               .bg-banner {
+                   width: 100% !important;
+                   height: 100%;
+               }
+               .open-video {
+                   position: absolute;
+                   overflow: hidden;
+                   border-radius: 50%;
+                   width: 56px;
+                   top:50%;
+                   left: 50%;
+                   animation: breathe 1200ms infinite alternate;
+                   transform: translate(-50%,-50%);
+               }
+           }
         }
         .home-carousel .el-carousel__item span {
             display: inline-block;
