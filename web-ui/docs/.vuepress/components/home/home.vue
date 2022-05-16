@@ -12,9 +12,13 @@
             <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" >
              <el-carousel-item >
                 <div class="video-banner carousel-banner" @click="go('https://moocstudio.openeuler.sh/')">
-                     <video  muted playsinline="true" autoplay="autoplay"  height="500" loop ref="bannerVideo" poster="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_pc.png"  preload=""  id="home-video" >
+                     <video  playsinline="true" muted autoplay="autoplay"  height="500" loop ref="bannerVideo"  preload=""  id="home-video" >
                          <source type="video/mp4" src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/MoocStudio/MoocStudio%E7%9A%84%E8%A7%86%E9%A2%911920X500_small..mp4">
                      </video>
+                     <div class="voice-box" @click.stop="voiceClick">
+                      <img class="voice" v-show="!isMuted" src="/img/home/openVoice.svg" alt="" >
+                      <img class="voice" v-show="isMuted" src="/img/home/closeVoice.svg" alt="" >
+                     </div>
                 </div>
               </el-carousel-item>
                <el-carousel-item >
@@ -23,7 +27,7 @@
               </el-carousel-item>
               <el-carousel-item >
                 <div class="video-banner carousel-banner" @click="go('/interaction/summit-list/devday2022/')">
-                     <video  muted playsinline="true" autoplay="autoplay"  height="500" loop ref="bannerVideo" poster="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_pc.png"  preload=""  id="home-video" >
+                     <video  muted playsinline="true" autoplay="autoplay"  loop  poster="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_pc.png"  preload=""  id="home-video" >
                          <source type="video/mp4" src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/OpenEuler Developer Day 2022（1920-500）.mp4">
                      </video>
                 </div>
@@ -320,7 +324,7 @@ let remoteMethods = {
                     '➜ / '
                 ],
                 textBlock:false,
-                isMuted:false,
+                isMuted:true,
                 flag: true,
                 height: "380px",
                 activeImg: "/img/home/homeActive.gif",
@@ -405,7 +409,13 @@ let remoteMethods = {
             voiceClick() {
                 if (!this.isShowH5) {
                     this.isMuted = !this.isMuted;
-                    this.isMuted ? this.$refs.bannerVideo.volume = 0 :  this.$refs.bannerVideo.volume = 1;
+                    if (this.isMuted) {
+                        this.$refs.bannerVideo.muted = true;
+                        this.autoPlay = true
+                    } else {
+                        this.$refs.bannerVideo.muted = false;
+                        this.autoPlay = false;
+                    }
                 }
             },
             videoClicked() {
@@ -1010,6 +1020,7 @@ let remoteMethods = {
 
     .el-carousel__item {
         display: flex;
+        align-items: center;
         justify-content: center;
     }
     .el-carousel__item h3 {
@@ -1027,9 +1038,20 @@ let remoteMethods = {
     }
 
     .video-banner {
+
+        position: relative;
+        height: fit-content !important;
         video {
             max-width: 1920px;
             width: 100%;
+            height: fit-content;
+        }
+        .voice-box {
+            position: absolute;
+            cursor: pointer;
+            right: 50px;
+            bottom: 50px;
+            z-index: 1;
         }
     }
     .home-banner .carousel-banner {
