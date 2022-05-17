@@ -307,7 +307,7 @@
         "ID": 39,
         "NAME": "基于openEuler gopher的openGauss场景SLI测量",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55YNO?from=project-issue",
-        "TECHNOLOGY_FIELD": "智能运维,eBPF",
+        "TECHNOLOGY_FIELD": "智能运维,ebpf",
         "TECHNICAL_LABELS": "C",
         "DIFFICULTY": "进阶"
     },
