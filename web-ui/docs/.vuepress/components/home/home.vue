@@ -9,10 +9,10 @@
           </div>
         </div>
         <div class="is-pc home-carousel" v-if="!isShowH5">
-            <el-carousel class="home-banner" trigger="click" :autoplay="autoPlay" :interval="5000" >
+            <el-carousel class="home-banner" trigger="click" @change="carouselChange" :autoplay="autoPlay" :interval="changeTime" >
              <el-carousel-item >
                 <div class="video-banner carousel-banner" @click="go('https://moocstudio.openeuler.sh/')">
-                     <video  playsinline="true" muted autoplay="autoplay"  height="500" loop ref="bannerVideo"  preload=""  id="home-video" >
+                     <video  playsinline="true" muted autoplay="autoplay" poster="/img/home/banner/video_banner_pc.png" loop ref="bannerVideo"  preload=""  id="home-video" >
                          <source type="video/mp4" src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/MoocStudio/MoocStudio%E7%9A%84%E8%A7%86%E9%A2%911920X500_small..mp4">
                      </video>
                      <div class="voice-box" @click.stop="voiceClick">
@@ -24,13 +24,6 @@
                <el-carousel-item >
                     <div class="carousel-banner" style="backgroundImage: url('/img/activities/pc/summit.png')"   @click="go('/activities/')">
                     </div>
-              </el-carousel-item>
-              <el-carousel-item >
-                <div class="video-banner carousel-banner" @click="go('/interaction/summit-list/devday2022/')">
-                     <video  muted playsinline="true" autoplay="autoplay"  loop  poster="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/openEuler-devday-2022/images/home_devday_pc.png"  preload=""  id="home-video" >
-                         <source type="video/mp4" src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/detail-banner/OpenEuler Developer Day 2022（1920-500）.mp4">
-                     </video>
-                </div>
               </el-carousel-item>
             </el-carousel>
         </div>
@@ -44,10 +37,6 @@
               </swiper-slide>
                <swiper-slide class="carousel-item-index">
                  <div class="mobile-version"  style="backgroundImage: url('/img/activities/mobile/banner.png')"  @click="go('/activities/')">
-                </div>
-              </swiper-slide>
-               <swiper-slide class="carousel-item-index">
-                <div class="mobile-version" v-for="item in i18n.home.HOME_NEWRELEASE" :key="item.IMG" :style="{backgroundImage: item.MOBILE_IMG}"  @click="go(item.LINK)">
                 </div>
               </swiper-slide>
             </swiper>
@@ -324,6 +313,7 @@ let remoteMethods = {
                     '➜ / '
                 ],
                 textBlock:false,
+                changeTime:30000,
                 isMuted:true,
                 flag: true,
                 height: "380px",
@@ -405,6 +395,9 @@ let remoteMethods = {
                 } else {
                     scrollTop > 130 && scrollTop < 970 ? this.textBlock=true :this.textBlock=false
                 }
+            },
+            carouselChange(index) {
+                index === 1 ? this.changeTime = 5000 : (this.changeTime = 30000);
             },
             voiceClick() {
                 if (!this.isShowH5) {
@@ -1038,13 +1031,11 @@ let remoteMethods = {
     }
 
     .video-banner {
-
         position: relative;
         height: fit-content !important;
         video {
             max-width: 1920px;
             width: 100%;
-            height: fit-content;
         }
         .voice-box {
             position: absolute;
