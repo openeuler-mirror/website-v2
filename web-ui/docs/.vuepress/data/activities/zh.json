@@ -4,7 +4,7 @@
         "NAME": "面向overlay文件系统的细粒度化写时拷贝机制",
         "LINK" : "https://gitee.com/openeuler/open-source-summer-2022/issues/I5317N?from=project-issue",
         "TECHNOLOGY_FIELD": "内核",
-        "TECHNICAL_LABELS": "C语言",
+        "TECHNICAL_LABELS": "C",
         "DIFFICULTY":"进阶"
     },
     {
@@ -12,7 +12,7 @@
         "NAME": "HPC软件scanorama迁移至openEuler平台",
         "LINK" : "https://gitee.com/openeuler/open-source-summer-2022/issues/I53HG0?from=project-issue",
         "TECHNOLOGY_FIELD": "HPC",
-        "TECHNICAL_LABELS": "C语言,C++,python,Shell",
+        "TECHNICAL_LABELS": "C,C++,python,Shell",
         "DIFFICULTY": "进阶"
     },
       {
@@ -28,7 +28,7 @@
         "NAME": "完善 libcareplus 的测试用例",
         "LINK" : "https://gitee.com/openeuler/open-source-summer/issues/I546QH?from=project-issue",
         "TECHNOLOGY_FIELD": "用户态",
-        "TECHNICAL_LABELS": "C语言",
+        "TECHNICAL_LABELS": "C",
         "DIFFICULTY":"基础"
     },
     {
@@ -36,14 +36,14 @@
         "NAME": "实现Gazelle 示例程序",
         "LINK" : "https://gitee.com/openeuler/open-source-summer/issues/I54B78?from=project-issue",
         "TECHNOLOGY_FIELD": "用户态",
-        "TECHNICAL_LABELS": "C语言,",
+        "TECHNICAL_LABELS": "C,",
         "DIFFICULTY": "进阶"
     },
       {
         "ID": 6,
         "NAME": "使用 Rust 编程语言实现基于 SAT 算法的软件包依赖分析库",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I54DG1?from=project-issue",
-        "TECHNOLOGY_FIELD": "软件包依赖",
+        "TECHNOLOGY_FIELD": "Rust,软件包依赖",
         "TECHNICAL_LABELS": "Rust",
         "DIFFICULTY": "进阶"
     },
@@ -52,7 +52,7 @@
         "NAME": "基于ebpf的高性能可视化存储IO栈监测分析工具",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I54ES8?from=project-issue",
         "TECHNOLOGY_FIELD": "存储,内核",
-        "TECHNICAL_LABELS": "C语言",
+        "TECHNICAL_LABELS": "C",
         "DIFFICULTY": "进阶"
     },
        {
@@ -60,7 +60,7 @@
         "NAME": "HPC软件OpenLB迁移至openEuler平台",
         "LINK" : "https://gitee.com/openeuler/open-source-summer/issues/I54KGB?from=project-issue",
         "TECHNOLOGY_FIELD": "HPC",
-        "TECHNICAL_LABELS": "C语言,C++,Fortran,python,Shell",
+        "TECHNICAL_LABELS": "C,C++,Fortran,python,Shell",
         "DIFFICULTY":"进阶"
     },
     {
@@ -92,7 +92,7 @@
         "NAME": "secGear集成UT测试框架，并开发测试用例",
         "LINK" : "https://gitee.com/openeuler/open-source-summer/issues/I553LL?from=project-issue",
         "TECHNOLOGY_FIELD": "机密计算",
-        "TECHNICAL_LABELS": "C语言,CMake",
+        "TECHNICAL_LABELS": "C,CMake",
         "DIFFICULTY":"进阶"
     },
       {
@@ -100,7 +100,7 @@
         "NAME": "开发secGear安全文件系统接口",
         "LINK" : "https://gitee.com/openeuler/open-source-summer/issues/I553UC?from=project-issue",
         "TECHNOLOGY_FIELD": "机密计算",
-        "TECHNICAL_LABELS": "C语言",
+        "TECHNICAL_LABELS": "C",
         "DIFFICULTY": "基础"
     },
       {
@@ -116,7 +116,7 @@
         "NAME": "overlayfs 添加sysfs文件显示载挂载信息",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I558NT?from=project-issue",
         "TECHNOLOGY_FIELD": "内核",
-        "TECHNICAL_LABELS": "C语言",
+        "TECHNICAL_LABELS": "C",
         "DIFFICULTY": "基础"
     },
       {
@@ -131,7 +131,7 @@
         "ID": 17,
         "NAME": "设计并实现PilotGo的插件方案",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55DPJ?from=project-issue",
-        "TECHNOLOGY_FIELD": "云原生",
+        "TECHNOLOGY_FIELD": "智能运维",
         "TECHNICAL_LABELS": "Vue,golang",
         "DIFFICULTY": "进阶"
     },
@@ -203,7 +203,7 @@
         "ID": 26,
         "NAME": "利用cephfs提供k8s的数据存储能力",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55QQ9?from=project-issue",
-        "TECHNOLOGY_FIELD": "存储,kubernetes",
+        "TECHNOLOGY_FIELD": "基础设施,存储,kubernetes",
         "TECHNICAL_LABELS": "Python,Go",
         "DIFFICULTY": "基础"
     },
@@ -219,7 +219,7 @@
         "ID": 28,
         "NAME": "基于anchore/syft开源项目生成openEuler SBOM",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55QV1?from=project-issue",
-        "TECHNOLOGY_FIELD": "软件安全,rpm",
+        "TECHNOLOGY_FIELD": "安全,rpm",
         "TECHNICAL_LABELS": "Python,golang",
         "DIFFICULTY": "进阶"
     },
@@ -227,7 +227,7 @@
         "ID": 29,
         "NAME": "openEuler会议预定小程序支持多种第三方会议接入",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55RIR?from=project-issue",
-        "TECHNOLOGY_FIELD": "小程序",
+        "TECHNOLOGY_FIELD": "基础设施,小程序",
         "TECHNICAL_LABELS": "python3",
         "DIFFICULTY": "基础"
     },
@@ -251,7 +251,7 @@
         "ID": 32,
         "NAME": "多社区仓库代码备份并定期刷新代码",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I55SDG?from=project-issue",
-        "TECHNOLOGY_FIELD": "k8s部署",
+        "TECHNOLOGY_FIELD": "基础设施,kubernetes",
         "TECHNICAL_LABELS": "golang",
         "DIFFICULTY": "基础"
     },
@@ -323,7 +323,7 @@
         "ID": 41,
         "NAME": "基于secGear实现部分国密算法",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I5606T?from=project-issue",
-        "TECHNOLOGY_FIELD": "机密计算",
+        "TECHNOLOGY_FIELD": "安全,机密计算",
         "TECHNICAL_LABELS": "C,C++",
         "DIFFICULTY": "基础"
     },
@@ -563,7 +563,7 @@
         "ID": 71,
         "NAME": "在BGMProvider中使用Java实现国密相关算法以及国密证书解析",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I56E8A?from=project-issue",
-        "TECHNOLOGY_FIELD": "编译器,机密计算",
+        "TECHNOLOGY_FIELD": "编译器",
         "TECHNICAL_LABELS": "Java",
         "DIFFICULTY": "进阶"
     },
@@ -571,7 +571,7 @@
         "ID": 72,
         "NAME": "openEuler官网搜索优化",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I56ERT?from=project-issue",
-        "TECHNOLOGY_FIELD": "SEO",
+        "TECHNOLOGY_FIELD": "基础设施,SEO",
         "TECHNICAL_LABELS": "ava,springboot,elasticsearch",
         "DIFFICULTY": "进阶"
     },
@@ -691,7 +691,7 @@
         "ID": 87,
         "NAME": "支持EFI文件国密签名",
         "LINK": "https://gitee.com/openeuler/open-source-summer/issues/I572B7?from=project-issue",
-        "TECHNOLOGY_FIELD": "国密,SM2_SM3",
+        "TECHNOLOGY_FIELD": "安全,基础设施",
         "TECHNICAL_LABELS": "C",
         "DIFFICULTY": "进阶"
     }
