@@ -2669,7 +2669,7 @@
     }
   },
   {
-    "hardwareFactory": "华为",
+    "hardwareFactory": "超聚变",
     "hardwareModel": "E9000 CH121 V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86_64",
@@ -2730,7 +2730,7 @@
     }
   },
   {
-    "hardwareFactory": "华为",
+    "hardwareFactory": "超聚变",
     "hardwareModel": "X6000 XH321L V5",
     "osVersion": "openEuler 20.03 LTS SP1",
     "architecture": "x86_64",
@@ -5105,5 +5105,89 @@
         "downloadLink": "inbox"
       }
     ]
+  },
+  {
+    "hardwareFactory": "华为",
+    "hardwareModel": "TaiShan 2280",
+    "osVersion": "openEuler 20.03 LTS SP3",
+    "architecture": "aarch64",
+    "date": "2022/05/09",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/taishan-server/taishan-2280",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "10fb",
+        "svID": "ffff",
+        "ssID": "ffff",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "ixgbe",
+        "version": "5.1.0-k",
+        "type": "NIC",
+        "driverDate": "2022/05/09",
+        "sha256": "64066426A83F0C368A42F921BAC5BC7E246BD938",
+        "driverSize": "630K",
+        "chipVendor": "Intel",
+        "boardModel": "SP310",
+        "chipModel": "82599",
+        "item": "03030WSQ",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://e.huawei.com/cn/products/servers/taishan-server/taishan-2280",
+      "certificationTime": "2022/05/09",
+      "commitID": "",
+      "motherBoardRevision": "BC11SPCD",
+      "biosUefi": "1.71",
+      "cpu": "Kunpeng-916",
+      "ram": "8*32G RDIMMs",
+      "portsBusTypes": "x8 PCI Express 3 x8",
+      "videoAdapter": "Huawei Technologies Co., Ltd. Hi1710",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "ATA-ST4000NM0035-1V4-TN03"
+    }
+  },
+  {
+    "hardwareFactory": "华为",
+    "hardwareModel": "TaiShan 2280",
+    "osVersion": "openEuler 22.03 LTS",
+    "architecture": "aarch64",
+    "date": "2022/05/09",
+    "friendlyLink": "https://e.huawei.com/cn/products/servers/taishan-server/taishan-2280",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "10fb",
+        "svID": "19e5",
+        "ssID": "d111",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03",
+        "driverName": "ixgbe",
+        "version": "",
+        "type": "NIC",
+        "driverDate": "2022/05/09",
+        "sha256": "5207352D392184F5F7FBE52CE0A5C064DA1687B2",
+        "driverSize": "630K",
+        "chipVendor": "Intel",
+        "boardModel": "SP310",
+        "chipModel": "82599",
+        "item": "03030WSQ",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://e.huawei.com/cn/products/servers/taishan-server/taishan-2280",
+      "certificationTime": "2022/05/09",
+      "commitID": "",
+      "motherBoardRevision": "BC11SPCD",
+      "biosUefi": "1.44",
+      "cpu": "Kunpeng-916",
+      "ram": "14*32G RDIMMs",
+      "portsBusTypes": "x8 PCI Express 3 x8",
+      "videoAdapter": "Huawei Technologies Co., Ltd. Hi171x",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "ATA-ST4000NM0035-1V4-TN03"
+    }
   }
 ]
