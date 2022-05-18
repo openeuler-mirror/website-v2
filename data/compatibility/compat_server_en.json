@@ -5804,5 +5804,169 @@
         "downloadLink": "inbox"
       }
     ]
+  },
+  {
+    "hardwareFactory": "xFusion",
+    "hardwareModel": "2288H V6",
+    "osVersion": "openEuler 20.03 LTS",
+    "architecture": "x86_64",
+    "date": "2022/5/10",
+    "friendlyLink": "https://www.xfusion.com/cn/product/rack-server/2288h-v6",
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.xfusion.com/cn/product/rack-server/2288h-v6",
+      "certificationTime": "2022/5/10",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "1.02",
+      "cpu": "Icelake",
+      "ram": "4*32G RDIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "1710",
+      "hostBusAdapter": "SAS 3408",
+      "hardDiskDrive": ""
+    },
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "1f24",
+        "ssID": "2000",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS",
+        "driverName": "igb",
+        "version": "5.4.0-k",
+        "type": "NIC",
+        "driverDate": "2022/5/10",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Intel",
+        "boardModel": "XP210",
+        "chipModel": "I350",
+        "downloadLink": "inbox"
+      }
+    ]
+  },
+  {
+    "hardwareFactory": "xFusion",
+    "hardwareModel": "5288 V6",
+    "osVersion": "openEuler 20.03 LTS",
+    "architecture": "x86_64",
+    "date": "2022/5/10",
+    "friendlyLink": "https://www.xfusion.com/cn/product/rack-server/5288-v6",
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.xfusion.com/cn/product/rack-server/5288-v6",
+      "certificationTime": "2022/5/10",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "1.02",
+      "cpu": "Icelake",
+      "ram": "4*32G RDIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "1710",
+      "hostBusAdapter": "SAS 3408",
+      "hardDiskDrive": ""
+    },
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "1f24",
+        "ssID": "2000",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS",
+        "driverName": "igb",
+        "version": "5.4.0-k",
+        "type": "NIC",
+        "driverDate": "2022/5/10",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Intel",
+        "boardModel": "XP210",
+        "chipModel": "I350",
+        "downloadLink": "inbox"
+      }
+    ]
+  },
+  {
+    "hardwareFactory": "xFusion",
+    "hardwareModel": "1288H V6",
+    "osVersion": "openEuler 20.03 LTS",
+    "architecture": "x86_64",
+    "date": "2022/5/10",
+    "friendlyLink": "https://www.xfusion.com/cn/product/rack-server/1288h-v6",
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.xfusion.com/cn/product/rack-server/1288h-v6",
+      "certificationTime": "2022/5/10",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "1.02",
+      "cpu": "Icelake",
+      "ram": "4*32G RDIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "1710",
+      "hostBusAdapter": "SAS 3408",
+      "hardDiskDrive": ""
+    },
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "1f24",
+        "ssID": "2000",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS",
+        "driverName": "igb",
+        "version": "5.4.0-k",
+        "type": "NIC",
+        "driverDate": "2022/5/10",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Intel",
+        "boardModel": "XP210",
+        "chipModel": "I350",
+        "downloadLink": "inbox"
+      }
+    ]
+  },
+  {
+    "hardwareFactory": "xFusion",
+    "hardwareModel": "FusionPoD 600 DH121C V6",
+    "osVersion": "openEuler 20.03 LTS",
+    "architecture": "x86_64",
+    "date": "2022/5/10",
+    "friendlyLink": "https://www.xfusion.com/cn/product/",
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.xfusion.com/cn/product/",
+      "certificationTime": "2022/5/10",
+      "commitID": "",
+      "motherBoardRevision": "",
+      "biosUefi": "1.02",
+      "cpu": "Icelake",
+      "ram": "4*32G RDIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "1710",
+      "hostBusAdapter": "SAS 3408",
+      "hardDiskDrive": ""
+    },
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1521",
+        "svID": "1f24",
+        "ssID": "2000",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS",
+        "driverName": "igb",
+        "version": "5.4.0-k",
+        "type": "NIC",
+        "driverDate": "2022/5/10",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Intel",
+        "boardModel": "XP210",
+        "chipModel": "I350",
+        "downloadLink": "inbox"
+      }
+    ]
   }
 ]
