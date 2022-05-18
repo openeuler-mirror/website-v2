@@ -5223,5 +5223,24 @@
     "chipModel": "I350",
     "item": "O3022PKQ",
     "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "10df",
+    "deviceID": "e300",
+    "svID": "10df",
+    "ssID": "e300",
+    "architecture": "aarch64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "lpfc",
+    "version": "0:12.0.0.6",
+    "type": "FC",
+    "date": "2022.05.18",
+    "sha256": "30D4762CAC0820BC75647F2178E8E25960C5CED8",
+    "driverSize": "1.7M",
+    "chipVendor": "Emulex",
+    "boardModel": "LPe32002-AP",
+    "chipModel": "XE201",
+    "item": "06030393",
+    "downloadLink": "inbox"
   }
 ]
