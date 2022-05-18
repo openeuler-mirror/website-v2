@@ -5204,5 +5204,24 @@
     "chipModel": "PM3152",
     "item": "02312USW",
     "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "8086",
+    "deviceID": "1521",
+    "svID": "19e5",
+    "ssID": "d112",
+    "architecture": "aarch64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "igb",
+    "version": "5.4.0-k",
+    "type": "NIC",
+    "date": "2022.04.29",
+    "sha256": "30D4762CAC0820BC75647F2178E8E25960C5CED8",
+    "driverSize": "429K",
+    "chipVendor": "Intel",
+    "boardModel": "Intel I350",
+    "chipModel": "I350",
+    "item": "O3022PKQ",
+    "downloadLink": "inbox"
   }
 ]
