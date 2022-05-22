@@ -122,6 +122,14 @@ module.exports = {
                     '^/api-certification/': ''
                 }
             },
+            '/api-approve/': {
+                target: 'https://cvesa.test.osinfra.cn/',
+                ws: true,
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api-approve/': ''
+                }
+            },
         }
 
     }
