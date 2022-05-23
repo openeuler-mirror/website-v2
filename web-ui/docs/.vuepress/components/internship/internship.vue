@@ -225,6 +225,7 @@
                       index + 1 == communityTask.length,
                   },
                   { 'other-community': community !== 'openEuler' },
+                  {'mindspore':community!=='mindSpore'}
                 ]"
                 v-for="(item, index) in communityTask"
                 :key="index"
@@ -1086,6 +1087,9 @@ a {
           .button-box {
             justify-content: center;
           }
+        }
+        .mindspore {
+
         }
         .item:hover {
           box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.3);
