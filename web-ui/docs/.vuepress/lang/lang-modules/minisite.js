@@ -651,6 +651,14 @@ module.exports = {
         ],
         STATUS: false,
       },
+      {
+        IMG: "/img/minisite/bisheng/TCK-affidavit.png",
+        TITLE:'TCK Affidavit of BiSheng JDK 8',
+        LINK_LIST: [
+          "/zh/other/projects/bishengjdk/tck-affidavit/",
+        ],
+        STATUS: false,
+      },
     ],
     BISHENG_MORE: "更多信息：",
     BISHENG_INFO: [
@@ -1240,6 +1248,14 @@ module.exports = {
         ],
         STATUS: false,
       },
+      {
+        IMG: "/img/minisite/bisheng/TCK-affidavit.png",
+        TITLE:'TCK Affidavit of BiSheng JDK 8',
+        LINK_LIST: [
+          "/en/other/projects/bishengjdk/tck-affidavit/",
+        ],
+        STATUS: false,
+      },
     ],
     BISHENG_MORE: "More information:",
     BISHENG_INFO: [
@@ -1253,7 +1269,7 @@ module.exports = {
       },
       {
         THEME: "Supported architectures:",
-        BODY: "Linux/AArch64 and Linux/x86_64",
+        BODY: "Linux/AArch64 and Linux/x86_64.",
       },
       {
         THEME: "Supported OSs: ",
@@ -1306,7 +1322,7 @@ module.exports = {
           LINK: [
             {
               TEXT: "Earlier Versions",
-              LINK: "https://www.hikunpeng.com/zh/developer/devkit/compiler/jdk",
+              LINK: "https://www.hikunpeng.com/en/developer/devkit/compiler/jdk",
             },
           ],
         },
@@ -1318,15 +1334,15 @@ module.exports = {
       LINK_LIST: [
         {
           TEXT: "BiSheng JDK (Kunpeng Community) ",
-          LINK: "https://www.hikunpeng.com/developer/devkit/compiler/jdk",
+          LINK: "https://www.hikunpeng.com/en/developer/devkit/compiler/jdk",
         },
         {
-          TEXT: "Bisheng Compiler (Kunpeng Community)",
-          LINK: "https://www.hikunpeng.com/developer/devkit/compiler/bisheng",
+          TEXT: "BiSheng Compiler (Kunpeng Community)",
+          LINK: "https://www.hikunpeng.com/en/developer/devkit/compiler/bisheng",
         },
         {
           TEXT: "GCC for openEuler (Kunpeng Community)",
-          LINK: "https://www.hikunpeng.com/developer/devkit/compiler/gcc",
+          LINK: "https://www.hikunpeng.com/en/developer/devkit/compiler/gcc",
         },
       ],
     },
@@ -1829,6 +1845,14 @@ module.exports = {
         ],
         STATUS: false,
       },
+      {
+        IMG: "/img/minisite/bisheng/TCK-affidavit.png",
+        TITLE:'TCK Affidavit of BiSheng JDK 8',
+        LINK_LIST: [
+          "/ru/other/projects/bishengjdk/tck-affidavit/",
+        ],
+        STATUS: false,
+      },
     ],
     BISHENG_MORE: "More information:",
     BISHENG_INFO: [
@@ -1842,7 +1866,7 @@ module.exports = {
       },
       {
         THEME: "Supported architectures:",
-        BODY: "Linux/AArch64 and Linux/x86_64",
+        BODY: "Linux/AArch64 and Linux/x86_64.",
       },
       {
         THEME: "Supported OSs: ",
@@ -1895,7 +1919,7 @@ module.exports = {
           LINK: [
             {
               TEXT: "Earlier Versions",
-              LINK: "https://www.hikunpeng.com/zh/developer/devkit/compiler/jdk",
+              LINK: "https://www.hikunpeng.com/en/developer/devkit/compiler/jdk",
             },
           ],
         },
@@ -1907,15 +1931,15 @@ module.exports = {
       LINK_LIST: [
         {
           TEXT: "BiSheng JDK (Kunpeng Community) ",
-          LINK: "https://www.hikunpeng.com/developer/devkit/compiler/jdk",
+          LINK: "https://www.hikunpeng.com/en/developer/devkit/compiler/jdk",
         },
         {
-          TEXT: "Bisheng Compiler (Kunpeng Community)",
-          LINK: "https://www.hikunpeng.com/developer/devkit/compiler/bisheng",
+          TEXT: "BiSheng Compiler (Kunpeng Community)",
+          LINK: "https://www.hikunpeng.com/en/developer/devkit/compiler/bisheng",
         },
         {
           TEXT: "GCC for openEuler (Kunpeng Community)",
-          LINK: "https://www.hikunpeng.com/developer/devkit/compiler/gcc",
+          LINK: "https://www.hikunpeng.com/en/developer/devkit/compiler/gcc",
         },
       ],
     },
