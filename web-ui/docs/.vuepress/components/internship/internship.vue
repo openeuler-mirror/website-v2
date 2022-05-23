@@ -225,7 +225,7 @@
                       index + 1 == communityTask.length,
                   },
                   { 'other-community': community !== 'openEuler' },
-                  {'mindspore':community!=='mindSpore'}
+                  {'mindspore':community==='MindSpore'}
                 ]"
                 v-for="(item, index) in communityTask"
                 :key="index"
@@ -235,8 +235,12 @@
                 </a>
                 <div
                   class="item-intriduce"
+                  v-if="item.INTRODUCE"
                 >
                   {{ item.INTRODUCE }}
+                </div>
+                <div v-else class="mindspore-require-box">
+                  <div v-for="item in item.TEXT_ARRAY" :key="item">{{item}}</div>
                 </div>
                 <div class="button-box">
                   <button @click="go(item.TASK)" class="button-left">
@@ -244,9 +248,7 @@
                   </button>
                   <button @click="go(item.GITEE)" class="button-right">
                     <span>{{
-                      item.NAME == 'openLooKeng' ||
-                      item.NAME == 'openGauss' ||
-                      item.NAME == '昇思 MindSpore'
+                          community!=='openEuler'
                         ? i18n.learn.OFFICAL_WEB
                         : TASK.SIG_DETAIL
                     }}</span>
@@ -495,7 +497,7 @@ export default {
       } else if (this.community == 'openLooKeng') {
         this.communityTask = this.TASK.LOOKENG_TASK_ITEM;
       } else if (this.community === 'MindSpore') {
-        this.communityTask = this.TASK.MindSpore_TASK_ITEM;
+        this.communityTask = this.TASK.MINDSPORE_TASK_ITEM;
       } else {
         this.communityTask = this.TASK.OPENGAUSS_TASK_ITEM;
       }
@@ -1054,11 +1056,16 @@ a {
         }
         .other-community {
           flex: 1;
+           display: flex;
+          flex-direction: column;
+          justify-content: space-between;
           margin: 0 0 25px 0;
-          height: 203px;
+          padding: 24px;
+          height: 302px;
           text-align: center;
           background-size: 120%;
           background-position: center;
+          background-repeat: no-repeat;
           background-image: url(/img/internship/other-community-bg.png);
           @media (max-width: 1000px) {
             background-image: none;
@@ -1089,7 +1096,17 @@ a {
           }
         }
         .mindspore {
-
+         
+          text-align: left;
+          .item-name {
+            display: block;
+            margin-bottom: 8px;
+            }
+          .mindspore-require-box {
+            margin-bottom: 24px;
+            font-size: 14px;
+            line-height: 22px;
+          }
         }
         .item:hover {
           box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.3);

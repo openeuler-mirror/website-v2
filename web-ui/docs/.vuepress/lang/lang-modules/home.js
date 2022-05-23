@@ -51,7 +51,7 @@ module.exports = {
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
             INTRO_HEAD: "开始openEuler之旅吧！",
-            INTRO_DESCRIPTION: "openEuler通过社区合作，打造创新平台，构建支持多处理架构、统一和开放的操作系统，推动软硬件应用生态繁荣发展。",
+            INTRO_DESCRIPTION: "openEuler通过开放的社区形式与全球开发者共同构建一个开放、多元和架构包容的软件生态体系，孵化支持多种处理器架构、覆盖数字设施全场景，推动企业数字基础设施软硬件、应用生态繁荣发展。",
             INTRO_IMG_URL: "",
             INTRO_MAP: [
                 {
@@ -645,7 +645,7 @@ module.exports = {
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
             INTRO_HEAD: "Start your journey in openEuler",
-            INTRO_DESCRIPTION: "openEuler is an innovative platform nurtured by community collaboration. It aims to build a unified and open OS that supports multiple processor architectures, and to advance the hardware/software application ecosystem.",
+            INTRO_DESCRIPTION: "As an open community, openEuler works with global developers to build an open, diverse, and architecture-inclusive software ecosystem that supports multiple processor architectures and covers a full range of digital facilities. openEuler is committed to supercharging enterprise digital infrastructure and boosting the application ecosystem.",
             INTRO_IMG_URL: "",
             INTRO_MAP: [
                 {
@@ -1222,7 +1222,7 @@ module.exports = {
         HOME_INTRODUCE: {
             INTRO_TITLE: "The Most Innovative Open Source Community",
             INTRO_HEAD: "Начните свой путь в openEuler",
-            INTRO_DESCRIPTION: "openEuler — это инновационная платформа, созданная совместными усилиями сообщества. Цель создания платформы заключается в разработке унифицированной операционной системы с открытым исходным кодом, поддерживающей несколько архитектур процессоров, а также развитии экосистемы аппаратного обеспечения и приложений.",
+            INTRO_DESCRIPTION: "Как открытое сообщество, openEuler работает с глобальными разработчиками, чтобы создать открытую, разнообразную и интегрированную с архитектурой экосистему программного обеспечения, которая поддерживает многопроцессорную архитектуру и охватывает весь спектр цифровых средств. openEuler стремится к эффективности корпоративной цифровой инфраструктуры и развитию экосистемы приложений.",
             INTRO_IMG_URL: "",
             INTRO_MAP: [
                 {
