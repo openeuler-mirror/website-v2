@@ -63,7 +63,7 @@ export default {
             window.open(url);
         },
         linkGo(link,index) {
-            if ( index > 3)
+            if ( index >= 3)
             window.open(link)
         }
     },
