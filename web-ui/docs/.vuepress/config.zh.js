@@ -105,7 +105,15 @@ module.exports = {
                 pathRewrite: {
                     '^/api/': ''
                 }
-            }
+            },
+            '/api-approve/': {
+                target: 'https://cvesa.test.osinfra.cn',
+                ws: true,
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api-approve/': ''
+                }
+            },
         }
 
     }

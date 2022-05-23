@@ -1,5 +1,5 @@
 <template>
-  <div class="approveInfo-box">
+  <div class="approveInfo-box" v-loading.fullscreen="loading">
     <div class="banner">
       <div class="breadcrumb" @click="toApprove">{{ i18n.approve.TITLE }} \</div>
       <div class="banner-title">
@@ -18,20 +18,20 @@
               <p>{{i18n.approve.ASSESS_LIST.OPENEULER_EDITION}}</p>
           </div>
           <div class="content-text">
-              <p>{{reportData.os_version}}</p>
+              <p>{{reportData.osVersion}}</p>
               <p>{{reportData.arch}}</p>
               <p>
-                  <a class="link-item" :href="reportData.os_download_link" target="_blank">
-                    {{reportData.os_download_link}}
+                  <a class="link-item" :href="reportData.osDownloadLink" target="_blank">
+                    {{reportData.osDownloadLink}}
                   </a>
               </p>
               <p>{{reportData.checksum}}</p>
-              <p>{{reportData.base_openeuler_version}}</p>
+              <p>{{reportData.baseOpeneulerVersion}}</p>
           </div>
         </div>
         <div class="claim-box">
-          <div class="top">
-            <div class="title-claim" v-if="reportData.total_result == 'pass'">
+          <div class="top" v-show="reportData.totalResult">
+            <div class="title-claim" v-if="reportData.totalResult == 'pass'">
               <img src="/img/approve/adopt.png" alt="" />
               <div class="claim-text">{{ i18n.approve.ADOPT }}</div>
             </div>
@@ -49,7 +49,7 @@
     <div class="tool-content">
       <div class="title">{{ i18n.approve.TOOL_LIST.TOOL_DETECT }}</div>
       <div class="table-pc">
-        <el-table :data="reportData.tools_result" stripe style="width: 100%">
+        <el-table :data="reportData.toolsResult" stripe style="width: 100%">
           <el-table-column
             prop="naskName"
             :label="i18n.approve.TOOL_LIST.TEST_ITEM"
@@ -95,7 +95,7 @@
     <div class="platform-content">
       <div class="title">{{ i18n.approve.PLATFORM_LIST.PLATFORM_VERIFY }}</div>
       <div class="table-pc">
-        <el-table :data="reportData.platform_result" stripe style="width: 100%">
+        <el-table :data="reportData.platformResult" stripe style="width: 100%">
           <el-table-column
             prop="naskName"
             :label="i18n.approve.TOOL_LIST.TEST_ITEM"
@@ -138,12 +138,42 @@ import { getApproveReport, osvData } from "../../api/approve";
 let that = null;
 const locationMethods = {
   getApproveInfo(id) {
-    getApproveReport({ id: id }).then((response) => {
-      if (response) {
-        that.tableLoading = false;
-        if (response) {
-          that.detailList = response;
-          console.log(response);
+    that.loading = true;
+    getApproveReport({ id }).then((res) => {
+      if (res) {
+        that.loading = false;
+        if (res) {
+          res.platformResult.map(ele=>{
+            switch(ele.name){
+              case 'repo': ele.describe = that.i18n.approve.PLATFORM_DESCRIBE.REPO;
+                           ele.naskName = that.i18n.approve.PLATFORM_NAME.REPO;break;
+              case 'base_test': ele.describe = that.i18n.approve.PLATFORM_DESCRIBE.BASE;
+                                ele.naskName = that.i18n.approve.PLATFORM_NAME.BASE;break;
+              case 'performance_test': ele.describe = that.i18n.approve.PLATFORM_DESCRIBE.PERFORMANCE;
+                                       ele.naskName = that.i18n.approve.PLATFORM_NAME.PERFORMANCE;break;
+              case 'running_config': ele.describe = that.i18n.approve.PLATFORM_DESCRIBE.RUNNING;
+                                     ele.naskName = that.i18n.approve.PLATFORM_NAME.RUNNING;break;
+            }
+        });
+          res.toolsResult.map(ele=>{
+            switch(ele.name){
+              case 'core_pkg': ele.describe = that.i18n.approve.TOOL_DESCRIBE.CORE_PKG;
+                               ele.naskName = that.i18n.approve.TOOL_NAME.CORE_PKG; break;
+              case 'soft_pkg': ele.describe = that.i18n.approve.TOOL_DESCRIBE.SOFT_PKG;
+                               ele.naskName = that.i18n.approve.TOOL_NAME.SOFT_PKG; break;
+              case 'KABI': ele.describe = that.i18n.approve.TOOL_DESCRIBE.KABI;
+                           ele.naskName = that.i18n.approve.TOOL_NAME.KABI; break;
+              case 'ABI': ele.describe = that.i18n.approve.TOOL_DESCRIBE.ABI;
+                          ele.naskName = that.i18n.approve.TOOL_NAME.ABI; break;
+              case 'service_config': ele.describe = that.i18n.approve.TOOL_DESCRIBE.SERVICE;
+                                     ele.naskName = that.i18n.approve.TOOL_NAME.SERVICE; break;
+              case 'soft_config': ele.describe = that.i18n.approve.TOOL_DESCRIBE.SOFT_CONFIG;
+                                  ele.naskName = that.i18n.approve.TOOL_NAME.SOFT_CONFIG; break;
+              case 'kernel_config': ele.describe = that.i18n.approve.TOOL_DESCRIBE.KARNEL_CONFIG;
+                                    ele.naskName = that.i18n.approve.TOOL_NAME.KARNEL_CONFIG; break;
+          }
+        });
+          that.reportData = {...res};
         }
       }
     });
@@ -154,10 +184,8 @@ export default {
     that = this;
     return {
       reportData: {},
-      tableData: [],
-      detailList: [],
+      loading: false,
       total: 1,
-      version: ''
     };
   },
   methods:{
@@ -169,46 +197,12 @@ export default {
     },
   },
   mounted() {
-    // locationMethods.getApproveInfo(10204);
-    this.reportData.platform_result.map(ele=>{
-          switch(ele.name){
-              case 'repo': ele.describe = this.i18n.approve.PLATFORM_DESCRIBE.REPO;
-                           ele.naskName = this.i18n.approve.PLATFORM_NAME.REPO;break;
-              case 'base_test': ele.describe = this.i18n.approve.PLATFORM_DESCRIBE.BASE;
-                                ele.naskName = this.i18n.approve.PLATFORM_NAME.BASE;break;
-              case 'performance_test': ele.describe = this.i18n.approve.PLATFORM_DESCRIBE.PERFORMANCE;
-                                       ele.naskName = this.i18n.approve.PLATFORM_NAME.PERFORMANCE;break;
-              case 'running_config': ele.describe = this.i18n.approve.PLATFORM_DESCRIBE.RUNNING;
-                                     ele.naskName = this.i18n.approve.PLATFORM_NAME.RUNNING;break;
-          }
-      });
-      this.reportData.tools_result.map(ele=>{
-          switch(ele.name){
-              case 'core_pkg': ele.describe = this.i18n.approve.TOOL_DESCRIBE.CORE_PKG;
-                               ele.naskName = this.i18n.approve.TOOL_NAME.CORE_PKG; break;
-              case 'soft_pkg': ele.describe = this.i18n.approve.TOOL_DESCRIBE.SOFT_PKG;
-                               ele.naskName = this.i18n.approve.TOOL_NAME.SOFT_PKG; break;
-              case 'KABI': ele.describe = this.i18n.approve.TOOL_DESCRIBE.KABI;
-                           ele.naskName = this.i18n.approve.TOOL_NAME.KABI; break;
-              case 'ABI': ele.describe = this.i18n.approve.TOOL_DESCRIBE.ABI;
-                          ele.naskName = this.i18n.approve.TOOL_NAME.ABI; break;
-              case 'service_config': ele.describe = this.i18n.approve.TOOL_DESCRIBE.SERVICE;
-                                     ele.naskName = this.i18n.approve.TOOL_NAME.SERVICE; break;
-              case 'soft_config': ele.describe = this.i18n.approve.TOOL_DESCRIBE.SOFT_CONFIG;
-                                  ele.naskName = this.i18n.approve.TOOL_NAME.SOFT_CONFIG; break;
-              case 'kernel_config': ele.describe = this.i18n.approve.TOOL_DESCRIBE.KARNEL_CONFIG;
-                                    ele.naskName = this.i18n.approve.TOOL_NAME.KARNEL_CONFIG; break;
-          }
-      });
+    if(this.$route.query.id) {
+        let id = this.$route.query.id;
+        this.id = id;
+        locationMethods.getApproveInfo(id)
+      }
   },
-  created() {
-      let version = this.$route.query.version;
-      osvData.forEach(item=>{
-        if(item.os_version == version) {
-          this.reportData = item;
-        }
-      })
-  }
 };
 </script>
 

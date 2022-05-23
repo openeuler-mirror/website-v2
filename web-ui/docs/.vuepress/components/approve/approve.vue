@@ -19,11 +19,10 @@
           <el-form-item :label="i18n.approve.SELECT_COMPANY">
             <el-select
               class="pc-select"
-              v-model="formData.osv_name"
+              v-model="formData.osvName"
               style="width: 150px"
-              @change="initData(1)"
+              @change="listChange"
               :placeholder="i18n.approve.SELECT_PLACEHOLDER"
-              :disabled=true
             >
               <el-option
                 :label="i18n.approve.SELECT_ALL"
@@ -37,10 +36,9 @@
             </el-select>
             <el-select
               class="mobile-select"
-              v-model="formData.osv_name"
-              @change="initData(1)"
+              v-model="formData.osvName"
+              @change="listChange"
               :placeholder="i18n.approve.SELECT_COMPANY"
-              :disabled=true
             >
               <el-option
                 :label="i18n.approve.SELECT_ALL"
@@ -58,9 +56,8 @@
               class="pc-select"
               style="width: 180px"
               v-model="formData.type"
-              @change="initData(1)"
+              @change="listChange"
               :placeholder="i18n.approve.SELECT_PLACEHOLDER"
-              :disabled=true
             >
               <el-option
                 :label="i18n.approve.SELECT_ALL"
@@ -75,9 +72,8 @@
             <el-select
               class="mobile-select"
               v-model="formData.type"
-              @change="initData(1)"
+              @change="listChange"
               :placeholder="i18n.approve.SELECT_TYPE"
-              :disabled=true
             >
               <el-option
                 :label="i18n.approve.SELECT_ALL"
@@ -94,20 +90,18 @@
             <el-input
               v-model="formData.keyword"
               class="pc-search"
-              @keyup.enter.native="initData(1)"
+              @keyup.enter.native="listChange"
               :placeholder="i18n.approve.SEARCH_PLACEHOLDER"
-              :disabled=true
             >
-              <i slot="suffix" class="icon-search" @click="initData(1)"></i>
+              <i slot="suffix" class="icon-search" @click="listChange"></i>
             </el-input>
             <el-input
               v-model="formData.keyword"
               class="mobile-search"
-              @keyup.enter.native="initData(1)"
+              @keyup.enter.native="listChange"
               :placeholder="i18n.approve.SEARCH_PLACEHOLDER"
-              :disabled=true
             >
-              <i slot="suffix" class="icon-search" @click="initData(1)"></i>
+              <i slot="suffix" class="icon-search" @click="listChange"></i>
             </el-input>
           </el-form-item>
         </el-form>
@@ -125,23 +119,23 @@
             width="90"
           ></el-table-column>
           <el-table-column
-            prop="osv_name"
+            prop="osvName"
             :label="i18n.approve.TABLE_COLUMN.COMPANY"
             width="110"
           ></el-table-column>
           <el-table-column
-            prop="os_version"
+            prop="osVersion"
             :label="i18n.approve.TABLE_COLUMN.VERSION"
             width="160"
           ></el-table-column>
           <el-table-column
-            prop="os_download_link"
+            prop="osDownloadLink"
             :label="i18n.approve.TABLE_COLUMN.DOWNLOAD"
             width="220"
           >
             <template slot-scope="scope">
-              <a class="table-link" :href="scope.row.os_download_link">{{
-                scope.row.os_download_link
+              <a class="table-link" :href="scope.row.osDownloadLink" target="_blank">{{
+                scope.row.osDownloadLink
               }}</a>
             </template>
           </el-table-column>
@@ -161,22 +155,22 @@
             width="120"
           >
             <template slot-scope="scope">
-              <a class="table-link" @click="go(scope.row.os_version)">{{
+              <a class="table-link" @click="go(scope.row.id)">{{
                 scope.row.details
               }}</a>
             </template>
           </el-table-column>
           <el-table-column
-            prop="friendly_link"
+            prop="friendlyLink"
             :label="i18n.approve.TABLE_COLUMN.LINK"
             width="200"
           >
             <template slot-scope="scope">
               <a
                 class="table-link"
-                :href="scope.row.friendly_link"
+                :href="scope.row.friendlyLink"
                 target="_blank"
-                >{{ scope.row.friendly_link }}</a
+                >{{ scope.row.friendlyLink }}</a
               >
             </template>
           </el-table-column>
@@ -190,16 +184,16 @@
               </li>
               <li>
                 <span>{{ i18n.approve.TABLE_COLUMN.COMPANY }}:</span>
-                {{ item.osv_name }}
+                {{ item.osvName }}
               </li>
               <li>
                 <span>{{ i18n.approve.TABLE_COLUMN.VERSION }}:</span>
-                {{ item.os_version }}
+                {{ item.osVersion }}
               </li>
               <li>
                 <span>{{ i18n.approve.TABLE_COLUMN.DOWNLOAD }}:</span>
-                <a :href="item.os_download_link" class="table-link">
-                  {{ item.os_download_link }}
+                <a :href="item.osDownloadLink" class="table-link">
+                  {{ item.osDownloadLink }}
                 </a>
               </li>
               <li>
@@ -212,14 +206,14 @@
               </li>
               <li>
                 <span>{{ i18n.approve.TABLE_COLUMN.DETAILS }}:</span>
-                <a class="table-link" @click="go(item.os_version)">{{
+                <a class="table-link" @click="go(item.id)">{{
                   item.details
                 }}</a>
               </li>
               <li>
                 <span>{{ i18n.approve.TABLE_COLUMN.LINK }}:</span>
-                <a :href="item.friendly_link" class="table-link" target="_blank">
-                  {{ item.friendly_link }}
+                <a :href="item.friendlyLink" class="table-link" target="_blank">
+                  {{ item.friendlyLink }}
                 </a>
               </li>
             </ul>
@@ -229,7 +223,7 @@
         <el-pagination
           class="approve_pagination"
           background
-          @current-change="initData"
+          @current-change="pageChange"
           :page-size="formData.pageSize"
           :current-page="formData.page"
           :layout="paginationLayout"
@@ -250,14 +244,13 @@
 
 <script>
 import commonBanner from "./../common/banner.vue";
-import { osvList, getOsName, getType, osvData } from "../../api/approve";
+import { osvList, getOsName, getType } from "../../api/approve";
 let that = null;
 
 const locationMethods = {
-  getOsvList(flag) {
+  getOsvList(param) {
     that.tableLoading = true;
-    that.formData.page = flag;
-    osvList(that.formData)
+    osvList(param)
       .then((data) => {
         that.tableLoading = false;
         if (data.totalRecords) {
@@ -281,7 +274,7 @@ export default {
       osNameOptions: [],
       typeOptions: [],
       formData: {
-        osv_name: "",
+        osvName: "",
         type: "",
         keyword: "",
         page: 1,
@@ -289,27 +282,32 @@ export default {
       },
       tableLoading: false,
       tableData: [],
+      total:0
     };
   },
   components: {
     commonBanner,
   },
   computed: {
-    total() {
-      return this.tableData.length;
-    },
+    
   },
   methods: {
     //选择分页
-    initData(flag) {
-      // locationMethods.getOsvList(flag);
+    pageChange(value) {
+      this.formData.page = value;
+      locationMethods.getOsvList(this.formData);
+    },
+    //评测结果筛选
+    listChange() {
+      this.formData.page = 1;
+      locationMethods.getOsvList(this.formData)
     },
 
     //跳转至报告页
-    go(version) {
+    go(id) {
       this.$router.push({
         path: this.resolvePath("/approve/approve-info/"),
-        query:{version},
+        query:{id},
       });
     },
 
@@ -320,15 +318,14 @@ export default {
       });
     },
   },
-  created() {
-    // getOsName().then(res=>{
-    //   this.osNameOptions = [...res]
-    // });
-    // getType().then(res=>{
-    //   this.typeOptions = [...res]
-    // });
-    // this.initData(1);
-    this.tableData = osvData;
+  mounted() {
+    getOsName().then(res=>{
+      this.osNameOptions = res;
+    });
+    getType().then(res=>{
+      this.typeOptions = res;
+    });
+    locationMethods.getOsvList(this.formData);
   },
 };
 </script>
