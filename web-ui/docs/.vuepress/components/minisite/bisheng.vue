@@ -63,7 +63,7 @@ export default {
             window.open(url);
         },
         linkGo(link,index) {
-            if ( index ==3)
+            if ( index >= 3)
             window.open(link)
         }
     },
@@ -240,12 +240,16 @@ export default {
     width: 1120px;
     margin: 50px auto;
     .box-text {
+        display: flex;
         position: absolute;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         width: 100%;
+        height: 40px;
         line-height: 20px;
         color: #002FA7;
-        bottom: 25px;
+        top: 105px;
         font-size: 16px;
     }
     &>div {
@@ -258,6 +262,7 @@ export default {
     }
     &>div:hover .tip {
         display: block;
+        z-index: 2;
     }
     img {
         width: 196px;

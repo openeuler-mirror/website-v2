@@ -1,5 +1,5 @@
 ---
-title: musl Source Code Analysis: Introduction to fopen Series Interfaces
+title: 'musl Source Code Analysis: Introduction to fopen Series Interfaces'
 date: 2021-05-19
 tags: 
     - musl
