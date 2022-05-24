@@ -13,7 +13,8 @@
              <el-carousel-item >
                 <div class="video-banner carousel-banner" @click="go('https://moocstudio.openeuler.sh/')">
                      <video  playsinline="true" muted autoplay="autoplay" poster="/img/home/banner/video_banner_pc.png" loop ref="bannerVideo"  preload=""  id="home-video" >
-                         <source type="video/mp4" src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/MoocStudio/MoocStudio%E7%9A%84%E8%A7%86%E9%A2%911920X500_small..mp4">
+                         <source type="video/mp4" 
+                         src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/MoocStudio/MoocStudio%E7%9A%84%E8%A7%86%E9%A2%911920X500_small..mp4">
                      </video>
                      <div class="voice-box" @click.stop="voiceClick">
                       <img class="voice" v-show="!isMuted" src="/img/home/openVoice.svg" alt="" >
@@ -46,6 +47,9 @@
         </div>
         <div class="home-introduce">
             <h1></h1>
+            <div class="home-introduce-description" 
+            :class="$lang == 'en'?'home-introduce-description-en':''"
+            >{{ i18n.home.HOME_INTRODUCE.INTRO_DESCRIPTION }}</div>
             <h3 class="open-begin" :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_INTRODUCE.INTRO_HEAD }}</h3>
             <div class="playground" >
                   <div class="right-text" v-if="isShowH5">
@@ -57,9 +61,13 @@
                     </div>
                 </div>
                 <div class="left-code">
-                    <div class="first">➜ /<span v-if="textBlock" class="first-span" :class="{'typing':textBlock}">sudo yum -y update</span></div>
+                    <div class="first">➜ /
+                        <span v-if="textBlock" class="first-span" :class="{'typing':textBlock}">sudo yum -y update</span>
+                    </div>
                     <div v-show="textBlock">
-                        <div :class="[`block${index+1}`,{'fast-hide':textBlock},{'typing last':index == codingData.length-1}]" v-for="(item,index) in codingData" :key="item">{{item}}</div>
+                        <div :class="[`block${index+1}`,{'fast-hide':textBlock},{'typing last':index == codingData.length-1}]"
+                         v-for="(item,index) in codingData"
+                         :key="item">{{item}}</div>
                     </div>
                 </div>
                 <div class="right-text" v-if="!isShowH5">
@@ -1260,6 +1268,22 @@ let remoteMethods = {
             50% {
                 background: #FF9933;
                 }
+            }
+        }
+        .home-introduce-description {
+            margin-bottom: 40px;
+            font-size: 20px;
+            line-height: 28px;
+            @media screen and (max-width: 1000px) {
+                margin-bottom: 20px;
+                font-size: 16px;
+                line-height: 28px;
+            }
+        }
+        .home-introduce-description-en {
+            font-size: 24px;
+             @media screen and (max-width: 1000px) {
+                font-size: 18px;
             }
         }
     }

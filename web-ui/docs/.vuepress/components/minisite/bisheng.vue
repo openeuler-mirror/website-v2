@@ -251,6 +251,10 @@ export default {
         color: #002FA7;
         top: 105px;
         font-size: 16px;
+        @media screen and (max-width: 1120px) {
+            top: 90px;
+        }
+
     }
     &>div {
         position: relative;

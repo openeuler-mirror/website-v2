@@ -323,14 +323,20 @@ module.exports = {
                     GITEE: "https://opengauss.org/",
                 },
             ],
-            MindSpore_TASK_ITEM: [
+            MINDSPORE_TASK_ITEM: [
                 {
-                    NAME_LINK:
-                        "https://www.mindspore.cn/",
-                    NAME: "昇思 MindSpore",
-                    INTRODUCE: "全场景AI框架",
+                    NAME: "MindSpore开源实习招聘要求（公开）",
                     TASK: "https://gitee.com/mindspore/community/issues/I55QGD?from=project-issue&skip_mobile=true",
                     GITEE: "https://www.mindspore.cn/",
+                    TEXT_ARRAY:[
+                        '1、全日制大三大四本科生或在读研究生，计算机、软件、人工智能、电子信息、数学、计算物理、计算生物、计算化学等相关专业；',
+                        '2、熟悉C++/Python编程，编码能力优秀，具有扎实的计算机基础；',
+                        '3、至少熟悉一种主流深度学习框架，如MindSpore、Tensorflow、PyTorch等；',
+                        '4、优选条件',
+                        '（1）熟悉以下任一技术方向：分布式系统、并行计算、异构计算、深度学习编译优化、模型压缩、推理部署、算子开发、模型开发等；',
+                        '（2）在高水平国际会议和学术期刊发表过相关论文或有高水平竞赛获奖经历；',
+                        '（3）MindSpore社区优秀开发者、资深开发者、优秀布道师、资深布道师。'
+                    ]
                 },
             ],
             INTERNSHIP_TASK: "实习任务",
