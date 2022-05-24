@@ -42,6 +42,7 @@ Working in openEuler's open source community is about trust and sharing. It's a 
 
 So if you believe in collaboration and sharing, then we hope to see you soon in the openEuler community.
 
-<video width="320" height="240" controls>
-    <source src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/Blog_video/Get%2BStarted%2Bwith%2Bthe%2BopenEuler%2BCommunity.mp4" type="video/mp4">
+<video width="100%" controls>
+    <source type="video/mp4"  
+    src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/Blog_video/Get%2BStarted%2Bwith%2Bthe%2BopenEuler%2BCommunity.mp4">
 </video>
