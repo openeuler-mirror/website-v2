@@ -86,19 +86,19 @@ module.exports = {
             TEXT:'关于硬件兼容性测试，openEuler提供了完整的测试流程和工具，详见',
             TITLE: 'openEuler 硬件兼容性测试整体介绍',
             DISCRIPTION_TITLE: '简介',
-            DISCRIPTION_CONTENT: 'openEuler提供了一系列的工具、文档和操作流程帮助用户测试openEuler与硬件的兼容性。如果您需要对服务器等硬件展开兼容性测试，可参考下文进行。',
+            DISCRIPTION_CONTENT: 'openEuler提供了一系列的工具、文档和操作流程帮助用户测试openEuler与硬件的兼容性。如果您需要对服务器等硬件展开兼容性测试，下文提供了兼容性测试流程，并且每个阶段提供了预计需要的时间供参考。',
             PROCESS_TITLE:'兼容性测试流程',
             ITEM_ARR: [
             {
                 ID:'01',
-                TITLE:'申请加入openEuler社区',
+                TITLE:'申请加入openEuler社区（0.5天）',
                 DESCRIPTION_1:'您需要在Gitee平台申请加入openEuler社区，成为组织成员。申请地址：',
                 A_TEXT:'https://github.com/GeorgeCao-hw/georgedoc/blob/master/openEuler-Infra-FAQ.md',
                 DESCRIPTION_2:'。'
             },
             {
                 ID:'02',
-                TITLE:'申请兼容性测试',
+                TITLE:'申请兼容性测试（0.5天）',
                 DESCRIPTION_1:'您需要向公共邮箱（',
                 A_TEXT:'oecompatibility@openeuler.org',
                 DESCRIPTION_2:'）发送兼容性申请，邮件标题需要注明“申请硬件兼容性测试”。收到邮件后，openEuler团队中sig组会与您沟通进行协议签署（敬请期待）。',
@@ -107,25 +107,25 @@ module.exports = {
             },
             {
                 ID:'03',
-                TITLE:'了解兼容性策略',
+                TITLE:'了解兼容性策略（0.5天）',
                 DESCRIPTION_1:'在开展兼容性测试前，您需要了解openEuler硬件兼容性策略，',
                 A_TEXT:'点击此处获取文档。',
             },{
                 ID:'04',
-                TITLE:'创建issue',
+                TITLE:'创建issue（0.5天）',
                 DESCRIPTION_1:'完成协议签署后，您需要在openEuler社区（',
                 A_TEXT:'https://gitee.com/openeuler/oec-hardware',
                 DESCRIPTION_2:'）的oec-hardware项目下创建issue，将所需要认证的硬件信息在issue中明确。openEuler团队会及时了解issue的信息，并提出建议。'
             },{
                 ID:'05',
-                TITLE:'测试兼容性',
+                TITLE:'测试兼容性（10天）',
                 DESCRIPTION_1:'完成issue创建后，即可开展兼容性测试。openEuler团队提供了兼容性测试框架以及使用指南，您可以根据使用指南自助完成兼容性测试。点击下载',
                 A_TEXT:'兼容性测试工具套件',
                 A_TEXT_2:'使用指南',
                 DESCRIPTION_2:'|'
             }, {
                 ID:'06',
-                TITLE:'提交结果审核',
+                TITLE:'提交结果审核（2天）',
                 DESCRIPTION_1:'完成兼容性测试并通过后，需要您把测试结果更新到issue中。并且按照使用指南将对应测试结果发送给公共邮箱：您需要向公共邮箱（',
                 A_TEXT2:'',
                 DESCRIPTION_3: '',
@@ -133,10 +133,10 @@ module.exports = {
                 DESCRIPTION_2:'）发送兼容性结果审核申请，邮件标题需要注明“xxx硬件兼容性测试结果信息”（其中xxx为社区issue ID）。'
             }, {
                 ID:'07',
-                TITLE:'结果发布',
+                TITLE:'结果发布（2天）',
                 DESCRIPTION_1:'openEuler团队会针对提交结果进行审核，如果通过，会将硬件添加到',
                 A_TEXT:'兼容性列表',
-                DESCRIPTION_2:'中'
+                DESCRIPTION_2:'中。'
             }]
         },
         SOFTWARE_OEC_DETAIL: {
