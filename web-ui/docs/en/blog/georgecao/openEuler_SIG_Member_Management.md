@@ -1,12 +1,12 @@
 ---
-Title: SIG Member Management Solution for the OpenEuler Community
+title: SIG Member Management Solution for the openEuler Community
 date: 2022-04-26
 tags:
     - openEuler
     - SIG Member Management
 archives: 2022-04
 author: georgecao
-Summary: Details about the SIG member management solution for the openEuler community.
+summary: Details about the SIG member management solution for the openEuler community.
 ---
 
 # SIG Member Management Solution for the openEuler Community
