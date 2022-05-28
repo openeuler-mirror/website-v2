@@ -140,15 +140,15 @@ The gitee_id of the maintainer comes from the OWNER file, and the repository inf
 #### Using Commands to Submit the sig_info.yaml Template  
  - Obtain the community repository code.
 
-   **git clone https://gitee.com/openeuler/community.git**.
+**git clone https://gitee.com/openeuler/community.git**
 
  - Go to the SIG management directory.
    
-**cd community/sig/**.
+**cd community/sig/**
    
  - Create a **sig_info.yaml** file template in the corresponding SIG folder.
    
-**python3 create_sig_info_template.py** *xxx* (*xxx* indicates the SIG name, such as Infrastructure or A-Tune).  
+**python3 create_sig_info_template.py** *xxx* (*xxx* indicates the SIG name, such as Infrastructure or A-Tune)
    
  - Go to the corresponding SIG folder and modify the **sig_info.yaml** template.  
 
