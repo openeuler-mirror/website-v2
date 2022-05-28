@@ -187,6 +187,11 @@ module.exports = {
                         PATH: '/approve/'
                     },
                     {
+                        NAME: '兼容性技术测评',
+                        PATH: 'https://certification.openeuler.org/',
+                        IS_OPEN_MINISITE_WINDOW: 1
+                    },
+                    {
                         NAME: '兼容性列表',
                         PATH: '/compatibility/'
                     },

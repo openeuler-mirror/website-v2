@@ -312,7 +312,7 @@
                         </li>
                     </ul>
                 </el-tab-pane>
-                <!-- 软件 -->
+                <!-- 开源软件 -->
                 <el-tab-pane :label="i18n.compatibility.SOFTWARE" name="software">
                     <el-form :inline="true" :model="formData" class="compatibility-filter">
                         <el-form-item :label="i18n.compatibility.ARCHITECTURE">
@@ -477,6 +477,131 @@
                         </li>
                     </ul>
                 </el-tab-pane>
+
+                <!-- 商业软件 -->
+                <el-tab-pane :label="i18n.compatibility.BUSINESS_SOFTWARE" name="businessSoftware">
+                    <el-form :inline="true" :model="formData" class="compatibility-filter">
+                        <el-form-item :label="i18n.compatibility.ADAPTIVE" >
+                            <el-select class="pc-select"
+                                style="width:180px;"
+                                v-model="formData.osName"
+                                @change="businessSoftwareChange"
+                                :placeholder="i18n.compatibility.SELECT_PLACEHOLDER">
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value=""></el-option>
+                                <el-option
+                                    v-for="(item, index) in businessSoftwareOptionsOs"
+                                    :key="index"
+                                    :value="item"
+                                ></el-option>
+                            </el-select>
+                            <el-select class="mobile-select"
+                                v-model="formData.os"
+                                @change="businessSoftwareChange"
+                                :placeholder="i18n.compatibility.ADAPTIVE">
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value=""></el-option>
+                                <el-option
+                                    v-for="(item, index) in businessSoftwareOptionsOs"
+                                    :key="index"
+                                    :value="item"
+                                ></el-option>
+                            </el-select>
+                        </el-form-item>
+                        <el-form-item :label="i18n.compatibility.BUSINESS_TESTING_ORGANIZATION" >
+                            <el-select class="pc-select"
+                                style="width:180px;"
+                                v-model="formData.testBy"
+                                @change="businessSoftwareChange"
+                                :placeholder="i18n.compatibility.SELECT_PLACEHOLDER">
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value=""></el-option>
+                                <el-option
+                                    v-for="(item, index) in businessSoftwareOptionsTestBy"
+                                    :key="index"
+                                    :value="item"
+                                ></el-option>
+                            </el-select>
+                            <el-select class="mobile-select"
+                                v-model="formData.testBy"
+                                @change="businessSoftwareChange"
+                                :placeholder="i18n.compatibility.BUSINESS_TESTING_ORGANIZATION">
+                                <el-option :label="i18n.compatibility.SEARCH_ALL" value=""></el-option>
+                                <el-option
+                                    v-for="(item, index) in businessSoftwareOptionsTestBy"
+                                    :key="index"
+                                    :value="item"
+                                ></el-option>
+                            </el-select>
+                        </el-form-item>
+                        <el-form-item :label="i18n.compatibility.SEARCH_LABEL" class="search-box">
+                            <el-input
+                                v-model="formData.keyword"
+                                class="pc-search"
+                                @keyup.enter.native='businessSoftwareChange()'
+                                :placeholder="i18n.compatibility.BUSINESS_SOFTWARE_SEARCH_PLACEHOLDER"
+                            >
+                                <i slot="suffix" class="icon-search" @click="businessSoftwareChange()"></i>
+                            </el-input>
+                            <el-input
+                                v-model="formData.keyword"
+                                class="mobile-search"
+                                @keyup.enter.native='businessSoftwareChange()'
+                                :placeholder="i18n.compatibility.SEARCH_LABEL"
+                            >
+                                <i slot="suffix" class="icon-search" @click="businessSoftwareChange()"></i>
+                            </el-input>
+                        </el-form-item>
+                    </el-form>
+                    <!-- PC端 -->
+                   <el-table
+                        v-loading.fullscreen="tableLoading"
+                        class="table-pc"
+                        :data="businessSoftwareTableData"
+                        stripe
+                        style="width: 100%"
+                    >
+                        <el-table-column prop="productName" :label="i18n.compatibility.BUSINESS_SOFTWARE_TABLE_COLUMN.SOFTWARENAME" width="200"></el-table-column>
+                        <el-table-column prop="productVersion" :label="i18n.compatibility.BUSINESS_SOFTWARE_TABLE_COLUMN.VERSION" width="110"></el-table-column>
+                        <el-table-column prop="companyName" :label="i18n.compatibility.BUSINESS_SOFTWARE_TABLE_COLUMN.VENDOR" width="220"></el-table-column>
+                        <el-table-column prop="osName" :label="i18n.compatibility.BUSINESS_SOFTWARE_TABLE_COLUMN.SYSTEM" width="240"></el-table-column>
+                        <el-table-column prop="serverTypesList" :label="i18n.compatibility.BUSINESS_SOFTWARE_TABLE_COLUMN.SERVER_NAME" width="150">
+                            <template slot-scope="scope">
+                                <p v-for="(it,idx) in scope.row.serverTypesList" :key="idx">{{it}}</p>
+                            </template>
+                        </el-table-column>
+                        <el-table-column prop="testOrganization" :label="i18n.compatibility.BUSINESS_SOFTWARE_TABLE_COLUMN.TESTING_ORGANIZATION" width="200"></el-table-column>
+                    </el-table>
+                    <!-- 移动端 -->
+                    <ul class="table-mobile" v-loading.fullscreen="tableLoading">
+                        <div class="wait" v-if="!businessSoftwareTableData">暂无数据</div>
+                        <li class="item" v-for="(item, index) in businessSoftwareTableData" :key="index">
+                            <ul>
+                                <li>
+                                    <span>{{i18n.compatibility.BUSINESS_SOFTWARE_TABLE_COLUMN.SOFTWARE_NAME}}:</span>
+                                    {{item.softwareName}}
+                                </li>
+                                <li>
+                                    <span>{{i18n.compatibility.BUSINESS_SOFTWARE_TABLE_COLUMN.VERSION}}:</span>
+                                    {{item.version}}
+                                </li>
+                                <li>
+                                    <span>{{i18n.compatibility.BUSINESS_SOFTWARE_TABLE_COLUMN.VENDOR}}:</span>
+                                    {{item.vendor}}
+                                </li>
+                                <li>
+                                    <span>{{i18n.compatibility.BUSINESS_SOFTWARE_TABLE_COLUMN.SYSTEM}}:</span>
+                                    {{item.osName}}
+                                </li>
+                                <li>
+                                    <span>{{i18n.compatibility.BUSINESS_SOFTWARE_TABLE_COLUMN.SERVER_NAME}}:</span>
+                                    <p v-for="(it,idx) in item.serverTypesList" :key="idx">{{it}}</p>
+                                </li>
+                                <li>
+                                    <span>{{i18n.compatibility.BUSINESS_SOFTWARE_TABLE_COLUMN.TESTING_ORGANIZATION}}:</span>
+                                    {{item.testingOrganization}}
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </el-tab-pane>
             </el-tabs>
             <!-- 分页 -->
             <el-pagination
@@ -489,7 +614,7 @@
                 :total="total"
                 :hide-on-single-page="pageValue"
             ></el-pagination>
-            <div class="bottomBanner" v-show="tabActiveName!=='software'">
+            <div class="bottomBanner" v-show="tabActiveName==='hardware' || tabActiveName==='drive'">
                 <div class="bottomBanner-content">
                     {{i18n.compatibility.HARDWARE_OEC_DETAIL.TEXT}}
                     <a @click="goToHareware()" class="bottom-link">
@@ -502,6 +627,14 @@
                     {{i18n.compatibility.SOFTWARE_OEC_DETAIL.TEXT}}
                     <a @click="goToSoftware()" class="bottom-link">
                         {{i18n.compatibility.SOFTWARE_OEC_DETAIL.TITLE}}.
+                    </a>
+                </div>
+            </div>
+            <div class="bottomBanner" v-show="tabActiveName==='businessSoftware'">
+                <div class="bottomBanner-content">
+                    {{i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT}}
+                    <a @click="goToBusinessSoftware()" class="bottom-link">
+                        {{i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TITLE}}.
                     </a>
                 </div>
             </div>
@@ -520,7 +653,9 @@ import {
     driverOSOptions, 
     driverArchitectureOptions,
     softwareOptions,
-    softwareList
+    businessSoftwareOptions,
+    softwareList,
+    businessSoftwareList
     } from "../../api/compatibility";
 
 let that = null;
@@ -568,7 +703,7 @@ const locationMethods = {
              that.tableLoading = false;
         })
     },
-    // 软件列表
+    // 开源软件列表
     getSoftwareList(params) {
         that.tableLoading = true;
         softwareList(params)
@@ -595,6 +730,37 @@ const locationMethods = {
             that.$message.error(err);
              that.tableLoading = false;
         })
+    },
+
+    // 商业软件列表
+    getBusinessSoftwareList(params) {
+        that.tableLoading = true;
+        businessSoftwareList(params)
+        .then(data => {
+            that.tableLoading = false;
+            if(data.code == '200') {
+                that.businessSoftwareTableData = data.result.map(e=>{
+                    e.osName = e.osName + ' ' + e.osVersion;
+                    e.serverTypes = e.platformTypeAndServerModel.map(item=>{
+                        return item.serverTypes
+                    })
+                    return e
+                })
+                that.businessSoftwareTableData.forEach(e=>{
+                     e.serverTypesList = [];
+                   e.serverTypesList = e.serverTypes.reduce(function (a, b) {
+                        return a.concat(b)
+                    })
+                })
+            } else {
+                that.total = 0;
+                that.businessSoftwareTableData = [];
+            }
+        })
+        .catch(err => {
+            that.$message.error(err);
+             that.tableLoading = false;
+        })
     }
 }
 
@@ -612,11 +778,15 @@ export default {
             softwareOptionsOs:[],
             softwareOptionsArch:[],
             softwareOptionsType:[],
+            businessSoftwareOptionsOs:[],
+            businessSoftwareOptionsArch:[],
+            businessSoftwareOptionsTestBy:[],
             formData: {
                 keyword: '',
                 os: '',
                 cpu:'',
                 architecture: '',
+                testOrganization:'',
                 page: 1,
                 pageSize: 10,
                 type:'',
@@ -624,6 +794,7 @@ export default {
             },
             hardwareTableData: [],
             softwareTableData:[],
+            businessSoftwareTableData:[],
             driverTableData: [],
             tableLoading: false,
             total: 0,
@@ -649,6 +820,7 @@ export default {
         }
         this.formData.lang = lang;
         this.initData(this.formData);
+
         // 下拉选项
         hardwareOSOptions({lang: lang})
         .then(data => {
@@ -689,6 +861,11 @@ export default {
                 return value!==""
             });
         })
+        businessSoftwareOptions({})
+        .then(data => {
+            this.businessSoftwareOptionsOs = data.result.osNames;
+            this.businessSoftwareOptionsTestBy = data.result.testOrganizations;
+        })
         this.sortList()
     },
     methods: {
@@ -709,6 +886,8 @@ export default {
                 locationMethods.getDriverList(params);
             } else if(this.tabActiveName=== 'software') {
                 locationMethods.getSoftwareList(params)
+            } else if(this.tabActiveName=== 'businessSoftware') {
+                locationMethods.getBusinessSoftwareList(params)
             }
         },
         handleTabClick(tab, event) {
@@ -718,12 +897,13 @@ export default {
             } else if (window.location.pathname.indexOf('/ru/') !== -1) {
                 lang = 'en';
             } else {
-                 lang = 'zh';
+                lang = 'zh';
             }
             this.formData = {
                 type:'',
                 keyword: '',
                 os: '',
+                osName: '',
                 architecture: '',
                 page: 1,
                 pageSize: 10,
@@ -740,10 +920,15 @@ export default {
             this.formData.page = 1;
             locationMethods.getHardwareList(this.formData);
         },
-        // 软件筛选
+        // 开源软件筛选
         softwareChange() {
             this.formData.page = 1;
             locationMethods.getSoftwareList(this.formData);
+        },
+        // 商业软件筛选
+        businessSoftwareChange() {
+            this.formData.page = 1;
+            locationMethods.getBusinessSoftwareList(this.formData);
         },
         // 驱动筛选
         driverChange() {
@@ -765,6 +950,9 @@ export default {
             this.$router.push({
                 path: this.resolvePath('/compatibility/software/')
             })
+        },
+        goToBusinessSoftware () {
+            window.open("https://gitee.com/openeuler/technical-certification", "_blank")
         },
          goInstall(path) {
              if (path.includes('http') || path.includes('https')) {
