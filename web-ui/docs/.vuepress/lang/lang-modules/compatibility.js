@@ -7,7 +7,8 @@ module.exports = {
         COMPATIBILITY: '兼容性列表',
         HARDWARE: '整机',
         DRIVE: '板卡',
-        SOFTWARE:'软件',
+        SOFTWARE:'开源软件',
+        BUSINESS_SOFTWARE:'商业软件',
         SOFTWARETYPE:'软件类型',
         ADAPTIVE:'操作系统',
         OS: '操作系统',
@@ -19,6 +20,7 @@ module.exports = {
         SOFTWARE_SEARCH_PLACEHOLDER: "软件名称",
         DRIVE_SEARCH_PLACEHOLDER:'驱动名称、板卡型号、芯片厂家',
         LINK: 'link',
+        BUSINESS_TESTING_ORGANIZATION: '测试机构',
         HARDWARE_TABLE_COLUMN: {
             VENDOR: '硬件厂家',
             MODEL: '硬件型号',
@@ -50,6 +52,16 @@ module.exports = {
             DOWNLOADLINK: '下载地址',
             SYSTEM: '操作系统',
             PUBLICKLICENSE: '开源协议'
+        },
+        BUSINESS_SOFTWARE_TABLE_COLUMN: {
+            ARCHITECTURE: '架构',
+            SOFTWARENAME: '软件名称',
+            VERSION: '版本',
+            VENDOR: '厂家名称',
+            SYSTEM: '操作系统',
+            SERVER_NAME: '服务器型号',
+            TESTING_ORGANIZATION: '测试机构',
+            CERTIFICATE: '证书'
         },
         HARDWARE_DETAIL: {
             TITLE_1: 'Product Information',
@@ -169,6 +181,13 @@ module.exports = {
                 A_TEXT:'兼容性列表',
                 DESCRIPTION_2:'中。'
             }]
+        },
+        USINESS_SOFTWARE_OEC_DETAIL: {
+            TEXT:'关于商业软件兼容性技术测评，openEuler提供了完整的测试流程和工具，详见',
+            TITLE: 'openEuler兼容性技术测评整体介绍',
+            DISCRIPTION_TITLE: '简介',
+            DISCRIPTION_CONTENT: 'openEuler提供了一系列的工具、文档和操作流程帮助用户进行软件的兼容性技术测评。如果您需要对某款软件展开兼容性测评，可参考下文进行。',
+            PROCESS_TITLE:'兼容性技术测评流程'
         },
     },
     en: {

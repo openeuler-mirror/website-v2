@@ -346,3 +346,58 @@ export const hardwareCpuOptions = ({
 
     });
 };
+//12. 商业软件列表
+export const businessSoftwareList = ({
+    keyword,
+    osName,
+    page,
+    testOrganization,
+    lang
+}) => {
+    return new Promise((resolve, reject) => {
+        osName = osName ? `&osName=${osName}` : "";
+        testOrganization = testOrganization ? `&testOrganization=${testOrganization}` : "";
+        keyword = keyword ? `&keyword=${keyword}` :"";
+        appAjax.postJson({
+            url: `https://shanhaitujian.cn/certification/software/communityChecklist?pageSize=10&pageNo=${page}${testOrganization}${osName}${keyword}`,
+            type: 'get',
+            timeout: 3000,
+            notAuthorization:true,
+            success(result) {
+                if (result) {
+                    resolve(result);
+                    return;
+                }
+                reject(result);
+            },
+            error(msg) {
+                reject(msg);
+            }
+
+        });
+
+    });
+};
+//13. 商业软件--筛选框下拉列表
+export const businessSoftwareOptions = () => {
+    return new Promise((resolve, reject) => {
+        appAjax.postJson({
+            url: 'https://shanhaitujian.cn/certification/software/filterCriteria',
+            type: 'get',
+            timeout: 3000,
+            notAuthorization:true,
+            success(result) {
+                if (result) {
+                    resolve(result);
+                    return;
+                }
+                reject(result);
+            },
+            error(msg) {
+                reject(msg);
+            }
+
+        });
+
+    });
+}
