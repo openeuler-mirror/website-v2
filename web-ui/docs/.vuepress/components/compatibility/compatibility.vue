@@ -863,8 +863,10 @@ export default {
         })
         businessSoftwareOptions({})
         .then(data => {
-            this.businessSoftwareOptionsOs = data.result.osNames;
-            this.businessSoftwareOptionsTestBy = data.result.testOrganizations;
+            if (data && data.length > 0) {
+                this.businessSoftwareOptionsOs = data.result.osNames;
+                this.businessSoftwareOptionsTestBy = data.result.testOrganizations;
+            }
         })
         this.sortList()
     },
