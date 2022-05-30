@@ -182,7 +182,7 @@ module.exports = {
                 DESCRIPTION_2:'中。'
             }]
         },
-        USINESS_SOFTWARE_OEC_DETAIL: {
+        BUSINESS_SOFTWARE_OEC_DETAIL: {
             TEXT:'关于商业软件兼容性技术测评，openEuler提供了完整的测试流程和工具，详见',
             TITLE: 'openEuler兼容性技术测评整体介绍',
             DISCRIPTION_TITLE: '简介',
