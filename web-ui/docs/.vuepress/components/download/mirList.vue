@@ -12,7 +12,7 @@
         </p>
         <div class="mirror-list" v-if="tableData.length">
             <ul class="mobile-list" v-if="isShowH5">
-                <li v-for="(item,index) in tableData" :key="index">
+                <li v-for="(item,index) in moTableData" :key="index">
                     <ul>
                         <li>
                             <span>{{ i18n.download.MIRROR_ALL.NAME }}</span>
@@ -47,6 +47,7 @@
             </ul>
             <el-table
                 :data="tableData"
+                :row-class-name="tableRowClassName"
                 stripe
                 class="pc-list"
                 style="width: 100%"
@@ -73,7 +74,7 @@
                 label="RSYNC">
                     <template slot-scope="scope">
                        <span v-if="scope.row.rsnc === '-'">{{ scope.row.rsnc }}</span>
-                       <span @click="copyText(scope.row.rsnc)" class="rsnc" v-else></span>
+                       <span @click="copyText(scope.row.rsnc)" class="rsnc" v-else-if="scope.row.rsnc!=''"></span>
                     </template>
                 </el-table-column>
                 <el-table-column
@@ -109,7 +110,8 @@ export default {
             tableData: [],
             mapData: [],
             rsncValue: '',
-            inputDom: ''
+            inputDom: '',
+            moTableData:[],
         }
     },
     components: {
@@ -129,7 +131,6 @@ export default {
             }).catch((err)=>{
                 console.log(err);
             });
-	   		
 		}).catch((err)=>{
             console.log(err);
         });
@@ -144,8 +145,10 @@ export default {
                     sponsorLogo: '',
                     http: '',
                     rsnc: '',
-                    ftp: ''
+                    ftp: '',
+                    ContinentCode:''
                 };
+                itemObj.ContinentCode = item.ContinentCode;
                 itemObj.name = item.Name;
                 itemObj.location = item.Country?item.Country:'-';
                 itemObj.sponsor = item.SponsorURL?item.SponsorURL:'-';
@@ -156,6 +159,29 @@ export default {
                 itemObj.netband = item.NetworkBandwidth?item.NetworkBandwidth:'-';
                 this.tableData.push(itemObj);
             });
+            this.tableData.sort((a,b) => {
+                return a.netband - b.netband
+            })
+            this.moTableData = this.tableData;
+            let asData = this.tableData.filter(item => {
+                return item.ContinentCode === 'AS'
+            })
+            asData.unshift({name:'Asia:',area:true});
+            let euData = this.tableData.filter(item => {
+                return item.ContinentCode === 'EU'
+            })
+            euData.unshift({name:'Europe:',area:true})
+            this.tableData = [...asData,...euData]
+        },
+        tableRowClassName({row, rowIndex}) {
+            console.log(row.area);
+            console.log(rowIndex);
+        if (row.area) {
+          return 'title-area';
+        } else if (row.ContinentCode === 'EU') {
+            return 'europe'
+        }
+        return '';
         },
         copyText(value) {
             this.inputDom.value = value;
@@ -189,6 +215,7 @@ export default {
     .mirror-list {
         margin-top: 50px;
     }
+
     /deep/ .mirror-list .el-table__header tr,
     /deep/ .mirror-list .el-table__header th {
         background: rgba(0, 0, 0, 0.05);
@@ -218,9 +245,8 @@ export default {
         line-height: 16px;
     }
     /deep/ .mirror-list .el-table__body .cell img {
-        width: 21px;
+        max-width: 110px;
         height: 21px;
-        
     }
     /deep/ .el-table::before {
         background-color: #fff;
@@ -245,6 +271,25 @@ export default {
     /deep/ .mirror-list .el-table__body tbody>tr>td,
     /deep/ .mirror-list .el-table__header thead>tr>th {
         border-bottom: 0;
+    }
+    /deep/ .title-area  {
+        height: 68px;
+        td {
+            background-color: #fff !important;
+            a {
+                font-size: 18px !important;
+                color: #000000 !important;
+            }
+        }
+        .rsnc {
+            display: none !important;
+        }
+    }
+    /deep/ .europe:nth-child(2n + 1) td{
+        background: rgba(0, 0, 0, 0.03) !important;
+    }
+    /deep/ .europe:nth-child(2n) td{
+        background: #fff !important;
     }
     .mirror-list .input-box {
         position: relative;
