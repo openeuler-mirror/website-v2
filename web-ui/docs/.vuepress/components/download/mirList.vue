@@ -146,9 +146,9 @@ export default {
                     http: '',
                     rsnc: '',
                     ftp: '',
-                    ContinentCode:''
+                    continentCode:''
                 };
-                itemObj.ContinentCode = item.ContinentCode;
+                itemObj.continentCode = item.ContinentCode;
                 itemObj.name = item.Name;
                 itemObj.location = item.Country?item.Country:'-';
                 itemObj.sponsor = item.SponsorURL?item.SponsorURL:'-';
@@ -160,15 +160,15 @@ export default {
                 this.tableData.push(itemObj);
             });
             this.tableData.sort((a,b) => {
-                return a.netband - b.netband
+                return (a.name + '').localeCompare(b.name + '')
             })
             this.moTableData = this.tableData;
             let asData = this.tableData.filter(item => {
-                return item.ContinentCode === 'AS'
+                return item.continentCode === 'AS'
             })
             asData.unshift({name:'Asia:',area:true});
             let euData = this.tableData.filter(item => {
-                return item.ContinentCode === 'EU'
+                return item.continentCode === 'EU'
             })
             euData.unshift({name:'Europe:',area:true})
             this.tableData = [...asData,...euData]
@@ -178,7 +178,7 @@ export default {
             console.log(rowIndex);
         if (row.area) {
           return 'title-area';
-        } else if (row.ContinentCode === 'EU') {
+        } else if (row.continentCode === 'EU') {
             return 'europe'
         }
         return '';
