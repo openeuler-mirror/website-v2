@@ -1103,7 +1103,7 @@ a {
             margin-bottom: 8px;
             }
           .mindspore-require-box {
-            margin-bottom: 24px;
+            margin-bottom: 8px;
             font-size: 14px;
             line-height: 22px;
           }

@@ -88,7 +88,7 @@ module.exports = {
                 DRIVE_NAME: 'Driver Name',
                 VERSION: 'Version',
                 TYPE: 'Type',
-                DRIVE_DATE: 'Driver Date',
+                DRIVE_DATE: 'Date',
                 DRIVE_CHIP_VENDOR: 'Chip Vendor',
                 DRIVE_BOARD_MODEL: 'Board Model',
                 DRIVE_CHIP_MODEL: 'Chip Model'
@@ -260,7 +260,7 @@ module.exports = {
                 DRIVE_NAME: 'Driver Name',
                 VERSION: 'Version',
                 TYPE: 'Type',
-                DRIVE_DATE: 'Driver Date',
+                DRIVE_DATE: 'Date',
                 DRIVE_CHIP_VENDOR: 'Chip Vendor',
                 DRIVE_BOARD_MODEL: 'Board Model',
                 DRIVE_CHIP_MODEL: 'Chip Model'
@@ -412,7 +412,7 @@ module.exports = {
                 DRIVE_NAME: 'Driver Name',
                 VERSION: 'Version',
                 TYPE: 'Type',
-                DRIVE_DATE: 'Driver Date',
+                DRIVE_DATE: 'Date',
                 DRIVE_CHIP_VENDOR: 'Chip Vendor',
                 DRIVE_BOARD_MODEL: 'Board Model',
                 DRIVE_CHIP_MODEL: 'Chip Model'
