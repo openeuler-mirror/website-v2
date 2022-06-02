@@ -2762,7 +2762,7 @@
         "svID": "19e5",
         "ssID": "04cc",
         "architecture": "aarch64",
-        "os": "openEuler-20.03-LTS-SP2-x86_64-dvd.iso",
+        "os": "openEuler 20.03 LTS SP1",
         "driverName": "hns3",
         "version": "1.9.38.8",
         "type": "NIC",
@@ -5965,6 +5965,67 @@
         "chipVendor": "Intel",
         "boardModel": "XP210",
         "chipModel": "I350",
+        "downloadLink": "inbox"
+      }
+    ]
+  },
+  {
+    "hardwareFactory": "百信",
+    "hardwareModel": "Hengshan TS02F-F30",
+    "osVersion": "openEuler 22.03 LTS",
+    "architecture": "aarch64",
+    "date": "2022/5/20",
+    "friendlyLink": "https://www.100trust.cn/product/33.html",
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.100trust.cn/product/33.html",
+      "certificationTime": "2022/5/20",
+      "commitID": "I55D13",
+      "motherBoardRevision": "",
+      "biosUefi": "1.79",
+      "cpu": "Kunpeng-920",
+      "ram": "8*32G DIMMs",
+      "portsBusTypes": "TM210",
+      "videoAdapter": "1710",
+      "hostBusAdapter": "Avago 3508",
+      "hardDiskDrive": ""
+    },
+    "boardCards": [
+      {
+        "vendorID": "19e5",
+        "deviceID": "a222",
+        "svID": "19e5",
+        "ssID": "04cc",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "hns3",
+        "version": "",
+        "type": "NIC",
+        "driverDate": "2022.5.20",
+        "sha256": "",
+        "driverSize": "198K",
+        "chipVendor": "huawei",
+        "boardModel": "TM210",
+        "chipModel": "hisi",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "0016",
+        "svID": "19e5",
+        "ssID": "a215",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "megaraid_sas",
+        "version": "07.714.04.00-rc1",
+        "type": "raid",
+        "driverDate": "2022.5.20",
+        "sha256": "4C5D1B8BFF927AAADF5D6AFC162F91CE0445A417",
+        "driverSize": "282K",
+        "chipVendor": "Avago",
+        "boardModel": "SR450C-M",
+        "chipModel": "3508",
+        "item": "03033EFT",
         "downloadLink": "inbox"
       }
     ]
