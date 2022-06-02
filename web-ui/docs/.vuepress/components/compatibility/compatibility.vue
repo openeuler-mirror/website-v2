@@ -479,7 +479,7 @@
                 </el-tab-pane>
 
                 <!-- 商业软件 -->
-                <el-tab-pane :label="i18n.compatibility.BUSINESS_SOFTWARE" name="businessSoftware">
+                <el-tab-pane :label="i18n.compatibility.BUSINESS_SOFTWARE" v-if="$lang=='zh'" name="businessSoftware">
                     <el-form :inline="true" :model="formData" class="compatibility-filter">
                         <el-form-item :label="i18n.compatibility.ADAPTIVE" >
                             <el-select class="pc-select"
@@ -630,7 +630,7 @@
                     </a>
                 </div>
             </div>
-            <div class="bottomBanner" v-show="tabActiveName==='businessSoftware'">
+            <div class="bottomBanner" v-if="tabActiveName==='businessSoftware' &&$lang==='zh'">
                 <div class="bottomBanner-content">
                     {{i18n.compatibility.BUSINESS_SOFTWARE_OEC_DETAIL.TEXT}}
                     <a @click="goToBusinessSoftware()" class="bottom-link">
