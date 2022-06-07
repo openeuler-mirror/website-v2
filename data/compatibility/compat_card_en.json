@@ -2733,7 +2733,7 @@
     "boardModel": "MCX512A-ACUT",
     "chipModel": "CX5",
     "item": "06310169",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/drivers/source/Packages/MLNX_OFED_LINUX-5.1-2.5.2.0-openeuler20.03-x86_64-ext.tgz"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/drivers/source/Packages/MLNX_OFED_LINUX-5.1-2.5.2.0-openeuler20.03-aarch64-ext.tgz"
   },
   {
     "vendorID": "19e5",
@@ -3569,7 +3569,7 @@
     "boardModel": "SP350",
     "chipModel": "MT27804A0-FCCF-EV",
     "item": "03024QAX",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/MLNX_OFED_LINUX-5.1-2.5.2.0-openeuler20.03-x86_64-ext.tgz"
+    "downloadLink": "inbox"
   },
   {
     "vendorID": "8086",
@@ -3740,7 +3740,7 @@
     "boardModel": "SP150IT-M",
     "chipModel": "3408IT",
     "item": "02312HFD",
-    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/qla2xxx-10.02.06.02_k-1dkms.zip"
+    "downloadLink": "inbox"
   },
   {
     "vendorID": "10df",
@@ -6325,5 +6325,24 @@
     "chipModel": "FPGA",
     "item": "",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-22.03-LTS/contrib/drivers/source/Packages/swsm_driver_3.0.3.zip"
+  },
+  {
+    "vendorID": "10df",
+    "deviceID": "f100",
+    "svID": "10df",
+    "ssID": "f100",
+    "architecture": "aarch64",
+    "os": "openEuler 20.03 LTS SP1",
+    "driverName": "lpfc",
+    "version": "0:12.8.340.17",
+    "type": "FC",
+    "date": "2021.05.18",
+    "sha256": "",
+    "driverSize": "912KB",
+    "chipVendor": "Emulex",
+    "boardModel": "LPe12000",
+    "chipModel": "LPE12000-AP/LPE12002-AP",
+    "item": "06030216",
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/drivers/source/Packages/elx-lpfc-dd-openEuler20-12.8.340.17-ds-1.aarch64.tgz"
   }
 ]
