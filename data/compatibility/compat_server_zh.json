@@ -6029,5 +6029,100 @@
         "downloadLink": "inbox"
       }
     ]
+  },
+  {
+    "hardwareFactory": "中兴",
+    "hardwareModel": "R5300 G4X",
+    "osVersion": "openEuler 20.03 LTS SP3",
+    "architecture": "x86_64",
+    "date": "2022/6/7",
+    "friendlyLink": "https://server.zte.com.cn/index.php?example=means&method=show&aid=775",
+    "compatibilityConfiguration": {
+      "productInformation": "https://server.zte.com.cn/index.php?example=means&method=show&aid=775",
+      "certificationTime": "2022/6/7",
+      "commitID": "I5AD8A",
+      "mainboardModel": "19010100",
+      "biosUefi": "03.05.0106",
+      "cpu": "icelake",
+      "ram": "16*32G DIMMs",
+      "portsBusTypes": "UPI",
+      "videoAdapter": "ASPEED AST2500",
+      "hostBusAdapter": "ZTE RM243B-18i",
+      "hardDiskDrive": "SSDSC2KB019T8"
+    },
+    "boardCards": [
+      {
+        "vendorID": "9005",
+        "deviceID": "028F",
+        "svID": "1CF2",
+        "ssID": "544F",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "smartpqi",
+        "version": "Linux 1.1.4-130",
+        "type": "RAID",
+        "date": "2022.6.7",
+        "sha256": "",
+        "driverSize": "150011",
+        "chipVendor": "Microchip",
+        "boardModel": "RM243B-18i",
+        "chipModel": "PM8238",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "15b3",
+        "deviceID": "1017",
+        "svID": "15b3",
+        "ssID": "0020",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "mlx5_core",
+        "version": "5.0-0",
+        "type": "NIC",
+        "date": "2022.6.7",
+        "sha256": "",
+        "driverSize": "1431675",
+        "chipVendor": "Mellanox",
+        "boardModel": "MCX512A-ACAT",
+        "chipModel": "ConnectX-5",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "15b3",
+        "deviceID": "1015",
+        "svID": "15b3",
+        "ssID": "0b44",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "mlx5_core",
+        "version": "5.0-0",
+        "type": "NIC",
+        "date": "2022.6.7",
+        "sha256": "",
+        "driverSize": "1431675",
+        "chipVendor": "Mellanox",
+        "boardModel": "NS212",
+        "chipModel": "ConnectX-4 Lx",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "8086",
+        "deviceID": "1533",
+        "svID": "ffff",
+        "ssID": "0000",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "igb",
+        "version": "5.4.0-k",
+        "type": "NIC",
+        "date": "2022.6.7",
+        "sha256": "",
+        "driverSize": "497891",
+        "chipVendor": "Intel",
+        "boardModel": "",
+        "chipModel": "I210",
+        "downloadLink": "inbox"
+      }
+    ]
   }
 ]
