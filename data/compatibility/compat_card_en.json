@@ -6344,5 +6344,24 @@
     "chipModel": "LPE12000-AP/LPE12002-AP",
     "item": "06030216",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/drivers/source/Packages/elx-lpfc-dd-openEuler20-12.8.340.17-ds-1.aarch64.tgz"
+  },
+  {
+    "vendorID": "19e5",
+    "deviceID": "0206",
+    "svID": "19e5",
+    "ssID": "d138",
+    "architecture": "x86_64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "hinic",
+    "version": "2.3.2.18",
+    "type": "NIC",
+    "date": "2022.06.07",
+    "sha256": "799B0EE19AC63A0F4A60F165D1EBEAA95E75C497",
+    "driverSize": "947KB",
+    "chipVendor": "Huawei",
+    "boardModel": "SP582",
+    "chipModel": "Hi1822",
+    "item": "03026PWB",
+    "downloadLink": "inbox"
   }
 ]
