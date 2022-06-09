@@ -291,7 +291,7 @@ module.exports = {
                     NAME_LINK:
                         "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=95&name=sig-HPC",
                     INTRODUCE: "建立HPC领域的高校、企业与工程师的交流圈，打造HPC快速部署调优平台，让HPC流行起来！",
-                    TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=125219718&single_label_text=&state=&target_project&skip_mobile=true",
+                    TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=151994810&single_label_text=&sort=&state=open&target_project&skip_mobile=true",
                     GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-HPC",
                 },
                 {
