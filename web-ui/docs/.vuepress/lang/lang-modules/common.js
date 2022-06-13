@@ -97,6 +97,11 @@ module.exports = {
                         PATH: '/community/certification-services/'
                     },
                     {
+                        NAME: '能力评定',
+                        PATH: 'https://training-assessment.osinfra.cn/',
+                        IS_OPEN_MINISITE_WINDOW: 1
+                    },
+                    {
                         NAME: '贡献看板',
                         PATH: 'https://datastat.openeuler.org/zh/overview',
                         IS_OPEN_MINISITE_WINDOW: 1
