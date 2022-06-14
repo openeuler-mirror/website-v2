@@ -188,7 +188,7 @@
                       {{ item }}
                     </p>
                     <a
-                      href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/03%20%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E5%92%8C%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF.rar"
+                      href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/03%20%E8%AF%81%E6%98%8E%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E5%92%8C%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF.rar"
                       download
                       class="download"
                       >{{ STEP.STEP_FOUR.DONWLOAD }}</a
@@ -502,6 +502,7 @@ export default {
         this.communityTask = this.TASK.OPENGAUSS_TASK_ITEM;
       }
     },
+    // 积分排名是否展开
     extend() {
       if (this.isExent) {
         this.renderData = this.rankInfo.slice(3, 10);
