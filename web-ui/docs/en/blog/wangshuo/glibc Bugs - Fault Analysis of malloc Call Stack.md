@@ -361,23 +361,23 @@ That way, the rules for the instructions after label will be the same as before 
 This problem is unprecedented as the bugs are found in the code submitted to the community. With this cause, we were able to solve problems by referring to the logic of the normal code and related materials. This method is also applicable to other uncommon problems.
 
 # References
-binutils official description: https://sourceware.org/binutils/docs/as/CFI-directives.html
-ARMv8-AArch64 registers and instruction sets: https://winddoing.github.io/post/7190.html
-Analysis and implementation of backtrace on ARM: https://cloud.tencent.com/developer/article/1599605
-Unwinding stack trace: https://blog.csdn.net/pwl999/article/details/107569603
+binutils official description: [https://sourceware.org/binutils/docs/as/CFI-directives.html](https://sourceware.org/binutils/docs/as/CFI-directives.html)
+ARMv8-AArch64 registers and instruction sets: [https://winddoing.github.io/post/7190.html]https://winddoing.github.io/post/7190.html)
+Analysis and implementation of backtrace on ARM: [https://cloud.tencent.com/developer/article/1599605](https://cloud.tencent.com/developer/article/1599605)
+Unwinding stack trace: [https://blog.csdn.net/pwl999/article/details/107569603](https://blog.csdn.net/pwl999/article/details/107569603)
 <br>
 
 # Recommended Articles Related to glibc
 **glibc malloc series articles**:
-&nbsp;&nbsp;&nbsp;&nbsp; Principle Description: https://cutt.ly/NzcDUEd
-&nbsp;&nbsp;&nbsp;&nbsp;Data Structure: https://cutt.ly/JzcSBfB.
-&nbsp;&nbsp;&nbsp;&nbsp;malloc: https://cutt.ly/TzcSjUX
-&nbsp;&nbsp;&nbsp;&nbsp;free: https://cutt.ly/QzcSy5G
+Principle Description: [https://cutt.ly/NzcDUEd](https://cutt.ly/NzcDUEd)
+Data Structure: [https://cutt.ly/JzcSBfB](https://cutt.ly/JzcSBfB)
+malloc: [https://cutt.ly/TzcSjUX](https://cutt.ly/TzcSjUX)
+free: [https://cutt.ly/QzcSy5G](https://cutt.ly/QzcSy5G)
 <br>
 
 **Articles about glibc fault locating and analysis**:
-&nbsp;&nbsp;&nbsp;&nbsp;Analysis of the VM performance deterioration when running memcpy to copy 1,000 bytes in the x86_64 environment: https://cutt.ly/8zcDyPi
+Analysis of the VM performance deterioration when running memcpy to copy 1,000 bytes in the x86_64 environment: [https://cutt.ly/8zcDyPi](https://cutt.ly/8zcDyPi)
 <br>
 
-Usage of glibc locale: https://cutt.ly/wxoH9OG
+Usage of glibc locale: [https://cutt.ly/wxoH9OG](https://cutt.ly/wxoH9OG)
 <br>
