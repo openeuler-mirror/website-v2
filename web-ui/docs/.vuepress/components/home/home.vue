@@ -10,7 +10,11 @@
         </div>
         <div class="is-pc home-carousel" v-if="!isShowH5">
             <el-carousel class="home-banner" trigger="click" @change="carouselChange" :autoplay="autoPlay" :interval="changeTime" >
-             <el-carousel-item >
+            <el-carousel-item >
+                    <div class="carousel-banner" style="backgroundImage: url('/img/minisite/migration/migration-banner-pc.png')"   @click="go('/other/migration/')">
+                    </div>
+              </el-carousel-item>
+            <el-carousel-item >
                 <div class="video-banner carousel-banner" @click="go('https://moocstudio.openeuler.sh/')">
                      <video  playsinline="true" muted autoplay="autoplay" poster="/img/home/banner/video_banner_pc.png" loop ref="bannerVideo"  preload=""  id="home-video" >
                          <source type="video/mp4" 
@@ -31,6 +35,10 @@
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
                <swiper-slide class="carousel-item-index">
+                  <div class="mobile-version"  style="backgroundImage: url('/img/minisite/migration/migration-banner-mo.png')"  @click="go('/other/migration/')">
+                </div>
+              </swiper-slide>
+               <swiper-slide class="carousel-item-index">
                  <div class="video-banner">
                     <img class="bg-banner" src="/img/home/banner/video_banner_mo.png" alt="">
                     <img v-show="!isMasked" class="open-video" @click="videoClicked" src="/img/home/banner/open_video.png" alt="">
@@ -41,6 +49,10 @@
                 </div>
               </swiper-slide>
             </swiper>
+             <a href="/zh/other/migration" v-if="$lang === 'zh'" class="nav-migration">
+                    <img src="/img/minisite/migration/migration-tip.png"
+                 alt="">
+            </a>
             <ul class="mobile-pagination">
                 <li v-for="item in bannerAmount" :class="{'mobile-pagination-active': mobilePagenationIndex===item}"></li>
             </ul>
@@ -2051,7 +2063,18 @@ let remoteMethods = {
             vertical-align: middle;
         }
         .home-carousel {
+            position: relative;
             margin: 0 -15px;
+            .nav-migration {
+                position: absolute;
+                bottom: 22px;
+                right: 12px;
+                width: 108px;
+                z-index: 10;
+                img {
+                    width: 100%;
+                }
+            }
         }
         .home-carousel .el-carousel__item h3 {
             font-size: 18px;
