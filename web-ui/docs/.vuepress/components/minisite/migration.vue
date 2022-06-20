@@ -7,11 +7,12 @@
         :currentSubIndex="currentSubIndex"
         :dataList="i18n.minisite.NAV_TEXT"
       ></titlenav>
-      <minibanner
-        :themeArr="i18n.minisite.MIGRATION_BANNER_TEXT"
-        :mobileImg="i18n.minisite.ATUNE_BANNER_IMG"
-        :isShowH5="true"
-      ></minibanner>
+      <div class="activities-banner">
+        <a >
+          <img class="web" src="/img/minisite/migration/migration-banner-detail-pc.png" alt="" />
+          <img class="mobile" src="/img/minisite/migration/migration-banner-detail-mo.png" alt="" />
+        </a>
+      </div>
       <div class="atune-center">
         <div class="other-desc">
           <div>
@@ -105,14 +106,14 @@
   </div>
 </template>
 <script>
-import titlenav from "./../summit/titleNav.vue";
-import minibanner from "./banner.vue";
-import miniimg from "./imglink.vue";
-import minidesc from "./description.vue";
-import miniframe from "./framework.vue";
-import contentlist from "./content.vue";
-import scheme from "./scheme.vue";
-import SourceDownload from "./SourceDownload.vue";
+import titlenav from './../summit/titleNav.vue';
+// import minibanner from "./banner.vue";
+import miniimg from './imglink.vue';
+import minidesc from './description.vue';
+import miniframe from './framework.vue';
+import contentlist from './content.vue';
+import scheme from './scheme.vue';
+import SourceDownload from './SourceDownload.vue';
 
 export default {
   data() {
@@ -125,7 +126,7 @@ export default {
   },
   mounted() {
     if (!this.isShowH5) {
-      window.addEventListener("scroll", this.atuneScroll);
+      window.addEventListener('scroll', this.atuneScroll);
     }
   },
   methods: {
@@ -142,10 +143,10 @@ export default {
       } else {
         this.isShowNav = true;
       }
-      const sd = document.getElementById("sourceDownload").offsetTop - 200;
-      const fw = document.getElementById("framework").offsetTop - 200;
-      const dt = document.getElementById("document").offsetTop - 200;
-      const cd = document.getElementById("caseGuidance").offsetTop - 200;
+      const sd = document.getElementById('sourceDownload').offsetTop - 200;
+      const fw = document.getElementById('framework').offsetTop - 200;
+      const dt = document.getElementById('document').offsetTop - 200;
+      const cd = document.getElementById('caseGuidance').offsetTop - 200;
       // console.log(scrollTop, sd, fw, dt);
 
       if (scrollTop > sd && scrollTop < fw) {
@@ -156,7 +157,7 @@ export default {
         this.currentSubIndex = -1;
       } else if (scrollTop > dt && scrollTop < cd) {
         this.activeIndex = 2;
-        const arr = ["one", "two", "three", "four", "five", "six", "seven"];
+        const arr = ['one', 'two', 'three', 'four', 'five', 'six', 'seven'];
         arr.forEach((i, index) => {
           const one = document.getElementById(`h2-title-${i}`).offsetTop - 100;
           let two = 0;
@@ -186,11 +187,10 @@ export default {
     },
   },
   destroyed() {
-    window.removeEventListener("scroll", this.atuneScroll);
+    window.removeEventListener('scroll', this.atuneScroll);
   },
   components: {
     titlenav,
-    minibanner,
     miniimg,
     minidesc,
     miniframe,
@@ -212,10 +212,55 @@ export default {
     width: 315px;
   }
 }
+
 </style>
 <style lang="less" scoped>
+.web {
+  @media screen and (max-width: 1120px) {
+    display: none;
+  }
+}
+.mobile {
+  display: none;
+  @media screen and (max-width: 1120px) {
+    display: inline-block;
+  }
+}
 .A-Tune {
   width: 100%;
+  .activities-banner {
+    display: flex;
+    justify-content: center;
+    height: 380px;
+    margin-bottom: 60px;
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 20px;
+    }
+    a {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 1920px;
+      overflow: hidden;
+      width: 100%;
+      text-align: center;
+      img {
+        width: 100%;
+      }
+      @media screen and (max-width: 1120px) {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 20px;
+        text-align: center;
+        img {
+          max-width: 375px;
+        }
+      }
+    }
+  }
 }
 .A-Tune .title {
   width: 1120px;
@@ -238,7 +283,7 @@ export default {
 .A-Tune .atune-center {
   width: 100%;
 }
-html[lang="ru"] .A-Tune .atune-center .tune-desc {
+html[lang='ru'] .A-Tune .atune-center .tune-desc {
   height: unset;
 }
 .A-Tune .document {
@@ -390,7 +435,7 @@ html[lang="ru"] .A-Tune .atune-center .tune-desc {
 }
 .other-desc {
   width: 100%;
-  background-image: url("/img/minisite/atune/desc-bg.png");
+  background-image: url('/img/minisite/atune/desc-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -421,15 +466,15 @@ html[lang="ru"] .A-Tune .atune-center .tune-desc {
         line-height: 30px;
       }
     }
-    img {
-      width: 100px;
-      height: 100px;
-      margin: 0 auto 20px auto;
-    }
+    // img {
+    //   width: 100px;
+    //   height: 100px;
+    //   margin: 0 auto 20px auto;
+    // }
   }
   .other-desc {
     height: 370px;
-    background-image: url("/img/minisite/atune/desc-mobile.png");
+    background-image: url('/img/minisite/atune/desc-mobile.png');
     p {
       width: 315px;
       margin: 0 auto;
@@ -501,7 +546,7 @@ html[lang="ru"] .A-Tune .atune-center .tune-desc {
   color: #000000;
   line-height: 48px;
   width: 100%;
-  background-image: url("/img/minisite/svirt/svirt-bg.png");
+  background-image: url('/img/minisite/svirt/svirt-bg.png');
   background-repeat: no-repeat;
   background-size: 100%;
   .desc-list,
