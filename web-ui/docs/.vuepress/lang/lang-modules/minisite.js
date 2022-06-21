@@ -821,6 +821,211 @@ module.exports = {
     },
   },
   en: {
+    MIGRATION_BANNER_TEXT: ["迁移指南"],
+    MIGRATION_DESC: [
+      "随着数字化转型深入，操作系统正在向支持多样性计算、支持全场景的方向发展，在进行操作系统升级时，企业面临以下挑战：硬件兼容性、软件兼容性、升级后系统环境如何快速恢复？升级后如何能够更好发挥系统性能？openEuler 作为一款面向数字基础设施的开源操作系统，最优支持多样性计算，满足服务器、云、边缘和嵌入式全场景。针对企业在升级操作系统时的需求，推出这份升级指南，助力企业简单、平稳、高效进行操作系统升级。",
+    ],
+    MIGRATION_SOURCE_DOWNLOAD: {
+      TITLE: "资源下载",
+      SOURCES: [
+        {
+          NAME: "oec-hardware",
+          DESCRIBE: "openEuler硬件兼容性验证测试框架",
+          DESCRIBE_DETAIL:
+            "oec-hardware是保证 openEuler 与硬件平台的兼容性，验证仅限于基本功能验证，不包括性能测试等其它测试",
+          VERSION: "1.0.0",
+          LINK_TITLE: "软件下载",
+          DOCUMENT_LINK:
+            "https://gitee.com/openeuler/oec-hardware/blob/master/README.md",
+          LINKS: [
+            {
+              NAME: "获取源码",
+              LINK: "https://gitee.com/openeuler/oec-hardware",
+            },
+          ],
+        },
+        {
+          NAME: "Compass-CI",
+          DESCRIBE: "一个可持续集成的开源开放式测试服务平台",
+          DESCRIBE_DETAIL:
+            "集构建&测试系统、登录调测、测试分析比较、辅助定位于一体，旨在给社区开发者提供友好的开发体验，与社区开发者一起繁荣开源软件生态及提升开源软件质量。",
+          VERSION: "1.0.0",
+          LINK_TITLE: "开始使用",
+          DOCUMENT_LINK:
+            "https://gitee.com/openeuler/compass-ci/blob/master/README.zh.md",
+          LINKS: [
+            {
+              NAME: "获取源码",
+              LINK: "https://gitee.com/openeuler/compass-ci",
+            },
+            // {
+            //   NAME: "平台使用指导",
+            //   LINK: "https://gitee.com/openeuler/compass-ci/blob/master/README.zh.md",
+            // },
+          ],
+        },
+        {
+          NAME: "x2openEuler",
+          DESCRIBE: "从其他系统迁移到openEuler硬件和软件、配置兼容性评估",
+          DESCRIBE_DETAIL:
+            "软件评估，支持扫描并分析软件包、源码包，评估软件的兼容性及可移植性。配置评估，支持扫描并收集环境的操作系统配置信息，评估用户操作系统的配置兼容性。硬件评估，支持扫描并分析用户环境硬件信息，评估硬件兼容性。",
+          VERSION: "2.0.0",
+          LINK_TITLE: "软件下载",
+          DOCUMENT_LINK:
+            "https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/thirdparty_migration/x2openEuleruseguide.html",
+          LINKS: [
+            {
+              NAME: "软件获取",
+              LINK: "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/",
+            },
+          ],
+        },
+        {
+          NAME: "oecp",
+          DESCRIBE: "操作系统之间的差异比较及兼容性分析工具",
+          DESCRIBE_DETAIL:
+            "1.检测2个ISO（基于RPM）的软件包，软件包内文件，库文件接口（C/C++）,内核KABI的变化差异，根据这些差异可以分析2个OS之间的兼容性，为软件移植提供了重要参考\n2.OECP还可以检测同一个软件（RPM包）在不同版本下的变化以及差异，判断软件包的文件，接口等变化，可以分析得出软件不同版本之间的兼容性",
+          VERSION: "1.0.0",
+          LINK_TITLE: "软件下载",
+          DOCUMENT_LINK:
+            "https://toscode.gitee.com/openeuler/oecp/blob/master/README.md",
+          LINKS: [
+            {
+              ID: 1,
+              NAME: "获取源码",
+              LINK: "https://toscode.gitee.com/openeuler/oecp/tree/master",
+            },
+          ],
+        },
+      ],
+    },
+    MIGRATION_LISTCONTENT: [
+      {
+        SUBTITLE: "数字化转型带来的操作系统变化及迁移诉求",
+        CONTENT: [
+          "数字技术日益融入经济社会发展的各个领域和全过程，数字基础设施要面向 IT、CT 及 OT 等多种场景，要实现工业互联乃至万物智联，只有建立起强大的技术软件体系，才能够满足数字经济发展的需要；万物互联驱动多样性算力( CPU/GPU/XPU 等)发展,促使操作系统进行架构创新；同时随着企业产品持续创新、硬件算力的更新换代、操作系统版本生命周期演进，操作系统迁移的工作将成为常态；由于操作系统本身的差异带来软件、硬件、配置兼容性问题，影响了操作系统迁移进程。\n\n",
+          "面向数字化转型过程中，企业一方面需要做好操作系统选型(如：持续演进、全场景支持、可靠、稳定等)，支撑企业持续发展、产品创新、数字化转型；另一方面需要有系统性的迁移方案及工具，保障迁移无忧。",
+        ],
+      },
+      {
+        SUBTITLE: "openEuler 面向数字基础设施的开源操作系统",
+        LISTTITLE: "openEuler 面向数字基础设施的开源操作系统",
+        CONTENT: [
+          "openEuler 开源操作系统是面向数字基础设施的开源操作系统，支持服务器、云计算、边缘计算、嵌入式等应用场景，支持多样性计算，致力于提供安全、稳定、易用的操作系统。",
+          "2021年11月9日在工信部的指导及产业力量的协同下，openEuler 社区捐赠给开放原子开源基金会，是当前唯一捐赠到开放原子开源基金会的数字基础设施开源操作系统项目。",
+          "当前国内外 14 家主流 OSV（麒麟、统信、麒麟信安、SUSE、普华等）均已发布了基于 openEuler 的操作系统商业发行版；且发行产品已经广泛进入了政府、运营商、金融、电力等多个行业的核心系统，实现了规模商用 100+万套，成为企业应用持续创新、稳定运行的首选。",
+          "社区当前已有超过 300+ 企业加入，汇聚了从处理器、整机、基础软件、应用软件、行业客户等全产业链伙伴，100% 兼容主流芯片，100% 支持主流场景，当前已经有近万名开源贡献者，100 多个 SIG 组，社区维护的软件包达到 8000+，是最具活力的开源社区。",
+        ],
+      },
+      {
+        LISTTITLE: "openEuler 聚焦内核能力，释放多样性算力，引领操作系统创新",
+        CONTENT: [
+          "openEuler 原生开源，独立演进，从三个层次实现持续发展，助力企业数字化转型。内核创新：在多核调度、多样性算力，以内存为中心新架构的支持等方面进行创新，自 2012 年以来向 Linux Kernel 社区持续贡献，在 Linux Kernel 5.10/5.14 版本中，内核代码贡献排名第一。核心模块：为用户提供“双平面”运行选择，通过原创 StratoVirt 提供类 QEMU 虚拟化能力，通过原创 iSulad 提供类 Docker 容器能力。全功能级：做到独立软件包选型，CVE 漏洞管理，Bug 快速修复 ,主要特性介绍如下：",
+          "1. 性能最优：通过千核调度、内核热升级、NUMA aware、免锁优化、PB级内存扩展等独特内核创新技术，软硬协同优化，最佳支持多样性算力，性能相比于主流 OS 提升 5%~20%。",
+          "2. 云原生“双平面”选择：iSula 和 StatioVirt 虚拟化技术及容器技术，提供从云，到边缘的安全、灵活业务部署，编排能力，应对复杂的业务场景。",
+          "3. 稳定可靠：A-tune 动态智能识別操作系业务场景，匹配场景参数模型，使系统都处在最佳的运行状态，从而提升业务性能。A-ops，从智能定位、配置溯源、架构感知，进行故障定界定位、配置管理、网络拓扑绘制，快速定位问题。",
+        ],
+      },
+      {
+        LISTTITLE: "openEuler 产品架构介绍",
+        CONTENT: [
+          "openEuler 创新架构，全栈优化，释放多样性算力，打造全场景协同的数字基础设施操作系统，包括基础加速库、虚拟化、内核、驱动、编译器、OS工具、OpenJDK等组件。\n\n",
+          "* 应用中间层 - 提供多种类型的中间件，提供数据库、桌面、机密计算等系统软件，支持其上的应用软件共享资源",
+          "* 运行时及加速库层 - 提供程序运行时库和加速库",
+          "* 虚拟化及容器层 - 提供虚拟化和容器能力，可以根据用户需求选择使用",
+          "* 内核层 - 提供多种为应用程序对计算机硬件进行安全访问的软件，负责管理系统的进程、内存、设备驱动程序、文件和网络系统等",
+          "* 芯片层 - 提供多种类型的驱动，提供硬件设备的访问和管理，支持硬件设备的访问和管理",
+          "* 工具链 - 提供开源项目中开发使用到的多种效率提升的工具",
+        ],
+        FRAMEWORK_IMG: "/img/minisite/migration/framework.png",
+      },
+    ],
+    MIGRATION_REFERENCE: {
+      TITLE_OUTSIDE: "迁移文档",
+      TITLE_INSIDE: "DOCUMENTATION",
+      MENU_LIST: ["移植案例", "用户案例", "搬迁实施指导"],
+      LINK_LIST: [
+        {
+          TEXT: "MySQL 5.7.21 移植案例",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/MySQL%205-7-21-migrate-guide.html",
+        },
+        {
+          TEXT: "Apache 2.4.39 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Apache%202-4-39-porting-guide.html",
+        },
+        {
+          TEXT: "Dubbo 2.6.8 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Dubbo%202-6-8-porting-guide.html",
+        },
+        {
+          TEXT: "Dubbo 2.7.5 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Dubbo%202-7-5-porting-guide.html",
+        },
+        {
+          TEXT: "HAProxy 1.9.0 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/HAProxy%201-9-0-porting-guide.html",
+        },
+        {
+          TEXT: "Lighttpd 1.4.53 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Lighttpd%201-4-53-porting-guide.html",
+        },
+        {
+          TEXT: "Iok 2.1.3 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Iok%202.1.3-porting-guide.html",
+        },
+        {
+          TEXT: "Memcached 1.5.12 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Memcached%201-5-12-porting-guide%EF%BC%89.html",
+        },
+        {
+          TEXT: "Nginx 1.14.2 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Nginx%201-14-2-porting-guide.html",
+        },
+        {
+          TEXT: "Tengine 2.2.2 移植案例",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Tengine%202.2.2-porting-guide.html",
+        },
+        {
+          TEXT: "Squid 4.8 移植案例",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Squid%204.8-porting-guide.html",
+        },
+        {
+          TEXT: "Varnish 6.2.0 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Varnish%206-2-0-porting-guide.html",
+        },
+        {
+          TEXT: "X86硬件兼容性移迁指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/X86%20hardware%20compatibility%20assessment%20migration%20guide.html",
+        },
+        {
+          TEXT: "flask 1.1.2 移植案例",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/flask%201-1-2-porting-guide.html",
+        },
+        {
+          TEXT: "enca1.19 移植案例",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/enca1-19-porting-guide.html",
+        },
+        {
+          TEXT: "tornado 4.2.1 移植案例",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/tornado%204-2-1-porting-guide.html",
+        },
+        {
+          TEXT: "pkgship 2.1.0 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/pkgship%202-1-0-porting-guide.html",
+        },
+      ],
+    },
+    MOVE_CONTENT: {
+      DESCRIBE:
+        "为了减少操作系统迁移对业务的感知，浙江移动还在容器云底层增加了麒麟欧拉版操作系统的容器集群，并将应用重新发布至创新操作系统集群，实现应用在双平面的统一构建、统一编排、统一调度和统一运行。同时，浙江移动还集成了欧拉容器引擎iSulad，把容器应用的启动速度相比Docker提升了50%以上。",
+      IMG: "/img/minisite/migration/move.png",
+      SUBTITLE: "相关新闻：",
+      LINK_LIST: [
+        "http://www.cnii.com.cn/rmydb/202109/t20210923_311404.html",
+        "https://www.ithome.com/0/573/057.html",
+      ],
+    },
+    DIRECT_CONTENT: "https://gitee.com/openeuler/oec-application/issues",
     ATUNE_BANNER_TEXT: ["A-Tune", "AI-based Tuning Engine"],
     ATUNE_BANNER_IMG: "/img/minisite/atune/mobile-banner.png",
     ATUNE_DESC: [
@@ -1418,6 +1623,211 @@ module.exports = {
     },
   },
   ru: {
+    MIGRATION_BANNER_TEXT: ["迁移指南"],
+    MIGRATION_DESC: [
+      "随着数字化转型深入，操作系统正在向支持多样性计算、支持全场景的方向发展，在进行操作系统升级时，企业面临以下挑战：硬件兼容性、软件兼容性、升级后系统环境如何快速恢复？升级后如何能够更好发挥系统性能？openEuler 作为一款面向数字基础设施的开源操作系统，最优支持多样性计算，满足服务器、云、边缘和嵌入式全场景。针对企业在升级操作系统时的需求，推出这份升级指南，助力企业简单、平稳、高效进行操作系统升级。",
+    ],
+    MIGRATION_SOURCE_DOWNLOAD: {
+      TITLE: "资源下载",
+      SOURCES: [
+        {
+          NAME: "oec-hardware",
+          DESCRIBE: "openEuler硬件兼容性验证测试框架",
+          DESCRIBE_DETAIL:
+            "oec-hardware是保证 openEuler 与硬件平台的兼容性，验证仅限于基本功能验证，不包括性能测试等其它测试",
+          VERSION: "1.0.0",
+          LINK_TITLE: "软件下载",
+          DOCUMENT_LINK:
+            "https://gitee.com/openeuler/oec-hardware/blob/master/README.md",
+          LINKS: [
+            {
+              NAME: "获取源码",
+              LINK: "https://gitee.com/openeuler/oec-hardware",
+            },
+          ],
+        },
+        {
+          NAME: "Compass-CI",
+          DESCRIBE: "一个可持续集成的开源开放式测试服务平台",
+          DESCRIBE_DETAIL:
+            "集构建&测试系统、登录调测、测试分析比较、辅助定位于一体，旨在给社区开发者提供友好的开发体验，与社区开发者一起繁荣开源软件生态及提升开源软件质量。",
+          VERSION: "1.0.0",
+          LINK_TITLE: "开始使用",
+          DOCUMENT_LINK:
+            "https://gitee.com/openeuler/compass-ci/blob/master/README.zh.md",
+          LINKS: [
+            {
+              NAME: "获取源码",
+              LINK: "https://gitee.com/openeuler/compass-ci",
+            },
+            // {
+            //   NAME: "平台使用指导",
+            //   LINK: "https://gitee.com/openeuler/compass-ci/blob/master/README.zh.md",
+            // },
+          ],
+        },
+        {
+          NAME: "x2openEuler",
+          DESCRIBE: "从其他系统迁移到openEuler硬件和软件、配置兼容性评估",
+          DESCRIBE_DETAIL:
+            "软件评估，支持扫描并分析软件包、源码包，评估软件的兼容性及可移植性。配置评估，支持扫描并收集环境的操作系统配置信息，评估用户操作系统的配置兼容性。硬件评估，支持扫描并分析用户环境硬件信息，评估硬件兼容性。",
+          VERSION: "2.0.0",
+          LINK_TITLE: "软件下载",
+          DOCUMENT_LINK:
+            "https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/thirdparty_migration/x2openEuleruseguide.html",
+          LINKS: [
+            {
+              NAME: "软件获取",
+              LINK: "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/x2openEuler/",
+            },
+          ],
+        },
+        {
+          NAME: "oecp",
+          DESCRIBE: "操作系统之间的差异比较及兼容性分析工具",
+          DESCRIBE_DETAIL:
+            "1.检测2个ISO（基于RPM）的软件包，软件包内文件，库文件接口（C/C++）,内核KABI的变化差异，根据这些差异可以分析2个OS之间的兼容性，为软件移植提供了重要参考\n2.OECP还可以检测同一个软件（RPM包）在不同版本下的变化以及差异，判断软件包的文件，接口等变化，可以分析得出软件不同版本之间的兼容性",
+          VERSION: "1.0.0",
+          LINK_TITLE: "软件下载",
+          DOCUMENT_LINK:
+            "https://toscode.gitee.com/openeuler/oecp/blob/master/README.md",
+          LINKS: [
+            {
+              ID: 1,
+              NAME: "获取源码",
+              LINK: "https://toscode.gitee.com/openeuler/oecp/tree/master",
+            },
+          ],
+        },
+      ],
+    },
+    MIGRATION_LISTCONTENT: [
+      {
+        SUBTITLE: "数字化转型带来的操作系统变化及迁移诉求",
+        CONTENT: [
+          "数字技术日益融入经济社会发展的各个领域和全过程，数字基础设施要面向 IT、CT 及 OT 等多种场景，要实现工业互联乃至万物智联，只有建立起强大的技术软件体系，才能够满足数字经济发展的需要；万物互联驱动多样性算力( CPU/GPU/XPU 等)发展,促使操作系统进行架构创新；同时随着企业产品持续创新、硬件算力的更新换代、操作系统版本生命周期演进，操作系统迁移的工作将成为常态；由于操作系统本身的差异带来软件、硬件、配置兼容性问题，影响了操作系统迁移进程。\n\n",
+          "面向数字化转型过程中，企业一方面需要做好操作系统选型(如：持续演进、全场景支持、可靠、稳定等)，支撑企业持续发展、产品创新、数字化转型；另一方面需要有系统性的迁移方案及工具，保障迁移无忧。",
+        ],
+      },
+      {
+        SUBTITLE: "openEuler 面向数字基础设施的开源操作系统",
+        LISTTITLE: "openEuler 面向数字基础设施的开源操作系统",
+        CONTENT: [
+          "openEuler 开源操作系统是面向数字基础设施的开源操作系统，支持服务器、云计算、边缘计算、嵌入式等应用场景，支持多样性计算，致力于提供安全、稳定、易用的操作系统。",
+          "2021年11月9日在工信部的指导及产业力量的协同下，openEuler 社区捐赠给开放原子开源基金会，是当前唯一捐赠到开放原子开源基金会的数字基础设施开源操作系统项目。",
+          "当前国内外 14 家主流 OSV（麒麟、统信、麒麟信安、SUSE、普华等）均已发布了基于 openEuler 的操作系统商业发行版；且发行产品已经广泛进入了政府、运营商、金融、电力等多个行业的核心系统，实现了规模商用 100+万套，成为企业应用持续创新、稳定运行的首选。",
+          "社区当前已有超过 300+ 企业加入，汇聚了从处理器、整机、基础软件、应用软件、行业客户等全产业链伙伴，100% 兼容主流芯片，100% 支持主流场景，当前已经有近万名开源贡献者，100 多个 SIG 组，社区维护的软件包达到 8000+，是最具活力的开源社区。",
+        ],
+      },
+      {
+        LISTTITLE: "openEuler 聚焦内核能力，释放多样性算力，引领操作系统创新",
+        CONTENT: [
+          "openEuler 原生开源，独立演进，从三个层次实现持续发展，助力企业数字化转型。内核创新：在多核调度、多样性算力，以内存为中心新架构的支持等方面进行创新，自 2012 年以来向 Linux Kernel 社区持续贡献，在 Linux Kernel 5.10/5.14 版本中，内核代码贡献排名第一。核心模块：为用户提供“双平面”运行选择，通过原创 StratoVirt 提供类 QEMU 虚拟化能力，通过原创 iSulad 提供类 Docker 容器能力。全功能级：做到独立软件包选型，CVE 漏洞管理，Bug 快速修复 ,主要特性介绍如下：",
+          "1. 性能最优：通过千核调度、内核热升级、NUMA aware、免锁优化、PB级内存扩展等独特内核创新技术，软硬协同优化，最佳支持多样性算力，性能相比于主流 OS 提升 5%~20%。",
+          "2. 云原生“双平面”选择：iSula 和 StatioVirt 虚拟化技术及容器技术，提供从云，到边缘的安全、灵活业务部署，编排能力，应对复杂的业务场景。",
+          "3. 稳定可靠：A-tune 动态智能识別操作系业务场景，匹配场景参数模型，使系统都处在最佳的运行状态，从而提升业务性能。A-ops，从智能定位、配置溯源、架构感知，进行故障定界定位、配置管理、网络拓扑绘制，快速定位问题。",
+        ],
+      },
+      {
+        LISTTITLE: "openEuler 产品架构介绍",
+        CONTENT: [
+          "openEuler 创新架构，全栈优化，释放多样性算力，打造全场景协同的数字基础设施操作系统，包括基础加速库、虚拟化、内核、驱动、编译器、OS工具、OpenJDK等组件。\n\n",
+          "* 应用中间层 - 提供多种类型的中间件，提供数据库、桌面、机密计算等系统软件，支持其上的应用软件共享资源",
+          "* 运行时及加速库层 - 提供程序运行时库和加速库",
+          "* 虚拟化及容器层 - 提供虚拟化和容器能力，可以根据用户需求选择使用",
+          "* 内核层 - 提供多种为应用程序对计算机硬件进行安全访问的软件，负责管理系统的进程、内存、设备驱动程序、文件和网络系统等",
+          "* 芯片层 - 提供多种类型的驱动，提供硬件设备的访问和管理，支持硬件设备的访问和管理",
+          "* 工具链 - 提供开源项目中开发使用到的多种效率提升的工具",
+        ],
+        FRAMEWORK_IMG: "/img/minisite/migration/framework.png",
+      },
+    ],
+    MIGRATION_REFERENCE: {
+      TITLE_OUTSIDE: "迁移文档",
+      TITLE_INSIDE: "DOCUMENTATION",
+      MENU_LIST: ["移植案例", "用户案例", "搬迁实施指导"],
+      LINK_LIST: [
+        {
+          TEXT: "MySQL 5.7.21 移植案例",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/MySQL%205-7-21-migrate-guide.html",
+        },
+        {
+          TEXT: "Apache 2.4.39 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Apache%202-4-39-porting-guide.html",
+        },
+        {
+          TEXT: "Dubbo 2.6.8 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Dubbo%202-6-8-porting-guide.html",
+        },
+        {
+          TEXT: "Dubbo 2.7.5 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Dubbo%202-7-5-porting-guide.html",
+        },
+        {
+          TEXT: "HAProxy 1.9.0 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/HAProxy%201-9-0-porting-guide.html",
+        },
+        {
+          TEXT: "Lighttpd 1.4.53 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Lighttpd%201-4-53-porting-guide.html",
+        },
+        {
+          TEXT: "Iok 2.1.3 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Iok%202.1.3-porting-guide.html",
+        },
+        {
+          TEXT: "Memcached 1.5.12 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Memcached%201-5-12-porting-guide%EF%BC%89.html",
+        },
+        {
+          TEXT: "Nginx 1.14.2 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Nginx%201-14-2-porting-guide.html",
+        },
+        {
+          TEXT: "Tengine 2.2.2 移植案例",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Tengine%202.2.2-porting-guide.html",
+        },
+        {
+          TEXT: "Squid 4.8 移植案例",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Squid%204.8-porting-guide.html",
+        },
+        {
+          TEXT: "Varnish 6.2.0 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Varnish%206-2-0-porting-guide.html",
+        },
+        {
+          TEXT: "X86硬件兼容性移迁指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/X86%20hardware%20compatibility%20assessment%20migration%20guide.html",
+        },
+        {
+          TEXT: "flask 1.1.2 移植案例",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/flask%201-1-2-porting-guide.html",
+        },
+        {
+          TEXT: "enca1.19 移植案例",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/enca1-19-porting-guide.html",
+        },
+        {
+          TEXT: "tornado 4.2.1 移植案例",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/tornado%204-2-1-porting-guide.html",
+        },
+        {
+          TEXT: "pkgship 2.1.0 移植指南",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/pkgship%202-1-0-porting-guide.html",
+        },
+      ],
+    },
+    MOVE_CONTENT: {
+      DESCRIBE:
+        "为了减少操作系统迁移对业务的感知，浙江移动还在容器云底层增加了麒麟欧拉版操作系统的容器集群，并将应用重新发布至创新操作系统集群，实现应用在双平面的统一构建、统一编排、统一调度和统一运行。同时，浙江移动还集成了欧拉容器引擎iSulad，把容器应用的启动速度相比Docker提升了50%以上。",
+      IMG: "/img/minisite/migration/move.png",
+      SUBTITLE: "相关新闻：",
+      LINK_LIST: [
+        "http://www.cnii.com.cn/rmydb/202109/t20210923_311404.html",
+        "https://www.ithome.com/0/573/057.html",
+      ],
+    },
+    DIRECT_CONTENT: "https://gitee.com/openeuler/oec-application/issues",
     ATUNE_BANNER_TEXT: ["A-Tune", "инструмент настройки на базе ИИ"],
     ATUNE_BANNER_IMG: "/img/minisite/atune/mobile-banner.png",
     ATUNE_DESC: [
