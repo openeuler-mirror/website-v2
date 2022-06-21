@@ -3339,7 +3339,7 @@
       "driverSize": "630k",
       "chipVendor": "intel",
       "boardModel": "SP331",
-      "chipModel": "X550",
+      "chipModel": "X550T",
       "item": "06310198",
       "downloadLink": "inbox"
   },
@@ -3358,7 +3358,7 @@
       "driverSize": "290K",
       "chipVendor": "Broadcom",
       "boardModel": "SP460C-M",
-      "chipModel": 3516,
+      "chipModel": "SAS3516",
       "item": "03024JNE",
       "downloadLink": "inbox"
   },
@@ -3396,7 +3396,7 @@
       "driverSize": "293K",
       "chipVendor": "Broadcom",
       "boardModel": "SR450C-M",
-      "chipModel": "3408iMR",
+      "chipModel": "SAS3408",
       "item": "03033FAT",
       "downloadLink": "inbox"
   },
@@ -3415,7 +3415,7 @@
       "driverSize": "171K",
       "chipVendor": "Huawei",
       "boardModel": "TM210",
-      "chipModel": "RTL8211",
+      "chipModel": "HNS GE/10GE/25GE",
       "item": "",
       "downloadLink": "inbox"
   },
@@ -3434,7 +3434,7 @@
       "driverSize": "171K",
       "chipVendor": "Huawei",
       "boardModel": "TM280",
-      "chipModel": "hisi_eth",
+      "chipModel": "HNS GE/10GE/25GE",
       "item": "",
       "downloadLink": "inbox"
   },
@@ -3472,7 +3472,7 @@
       "driverSize": "237K",
       "chipVendor": "Mellanox",
       "boardModel": "MCX314A-BCCT",
-      "chipModel": "CX3-PRO",
+      "chipModel": "ConnectX-3 Pro",
       "item": "02313BTV",
       "downloadLink": "inbox"
   },
@@ -3489,7 +3489,7 @@
       "date": "2021.12.08",
       "sha256": "57F3EFE5A93685896FB50E8AA9EC0EFC39A2A3A5",
       "driverSize": "1.3M",
-      "chipVendor": "QLogic",
+      "chipVendor": "Broadcom",
       "boardModel": "QLE3442-RJ-SP",
       "chipModel": "BCM57840",
       "item": "O6310110",
@@ -3497,7 +3497,7 @@
   },
   {
       "vendorID": "1000",
-      "deviceID": "97",
+      "deviceID": "0097",
       "svID": "1000",
       "ssID": "3090",
       "architecture": "x86_64",
@@ -3509,8 +3509,8 @@
       "sha256": "67CB2F34DC66D76DE0C84BBF64688B91CE243549",
       "driverSize": "538KB",
       "chipVendor": "Avago",
-      "boardModel": "SR130",
-      "chipModel": "LSI SAS3008",
+      "boardModel": "SAS9311-8i",
+      "chipModel": "SAS3008",
       "item": "03022CDE",
       "downloadLink": "inbox"
   },
@@ -3529,7 +3529,7 @@
       "driverSize": "290KB",
       "chipVendor": "Avago",
       "boardModel": "SR430C-M",
-      "chipModel": "3108",
+      "chipModel": "SAS-3 3108",
       "item": "02311PCJ",
       "downloadLink": "inbox"
   },
@@ -3548,7 +3548,7 @@
       "driverSize": "290KB",
       "chipVendor": "Avago",
       "boardModel": "SR450C-M",
-      "chipModel": "3508",
+      "chipModel": "SAS3508",
       "item": "03024JMY",
       "downloadLink": "inbox"
   },
@@ -3567,7 +3567,7 @@
       "driverSize": "307MB",
       "chipVendor": "Mellanox",
       "boardModel": "SP350",
-      "chipModel": "CX5",
+      "chipModel": "ConnectX-5",
       "item": "03024QAX",
       "downloadLink": "inbox"
   },
@@ -3605,7 +3605,7 @@
       "driverSize": "969KB",
       "chipVendor": "Mellanox",
       "boardModel": "MCX4121A-XCAT",
-      "chipModel": "CX4",
+      "chipModel": "ConnectX-4 Lx",
       "item": "06310161",
       "downloadLink": "inbox"
   },
@@ -3624,7 +3624,7 @@
       "driverSize": "969KB",
       "chipVendor": "Mellanox",
       "boardModel": "MCX4121A-XCAT",
-      "chipModel": "CX4",
+      "chipModel": "ConnectX-4 Lx",
       "item": "06310161",
       "downloadLink": "inbox"
   },
@@ -3643,7 +3643,7 @@
       "driverSize": "969KB",
       "chipVendor": "Mellanox",
       "boardModel": "SP380",
-      "chipModel": "CX-4 LX",
+      "chipModel": "ConnectX-4 Lx",
       "item": "03026PWB",
       "downloadLink": "inbox"
   },
@@ -3662,7 +3662,7 @@
       "driverSize": "969KB",
       "chipVendor": "Mellanox",
       "boardModel": "SP380",
-      "chipModel": "CX-4 LX",
+      "chipModel": "ConnectX-4 Lx",
       "item": "03026PWB",
       "downloadLink": "inbox"
   },
@@ -3699,7 +3699,7 @@
       "sha256": "217AC5B1197B6BBCDBFE73C5BCCFC375408CECEF",
       "driverSize": "350K",
       "chipVendor": "Broadcom",
-      "boardModel": "BCM957414A4142CC_08",
+      "boardModel": "BCM957414A4142CC",
       "chipModel": "BCM57414",
       "item": "06310148",
       "downloadLink": "inbox"
@@ -3738,7 +3738,7 @@
       "driverSize": "538KB",
       "chipVendor": "Avago",
       "boardModel": "SP150IT-M",
-      "chipModel": "3408IT",
+      "chipModel": "SAS3408",
       "item": "02312HFD",
       "downloadLink": "inbox"
   },
@@ -3757,7 +3757,7 @@
       "driverSize": "15M",
       "chipVendor": "Emulex",
       "boardModel": "LPe12000",
-      "chipModel": "LPE12000-AP/LPE12002-AP",
+      "chipModel": "LPe12000",
       "item": "06030216",
       "downloadLink": "inbox"
   },
@@ -3776,7 +3776,7 @@
       "driverSize": "15M",
       "chipVendor": "Emulex",
       "boardModel": "LPe16002B-M6",
-      "chipModel": "XE201",
+      "chipModel": "LPe15000/LPe16000",
       "item": "02311CYX",
       "downloadLink": "inbox"
   },
@@ -4402,8 +4402,8 @@
     "sha256": "255B66EA9B8B8A85E2567C436D0706F2B2D1EAF9",
     "driverSize": "1.7M",
     "chipVendor": "Emulex",
-    "boardModel": "LPe31002",
-    "chipModel": "XE501",
+    "boardModel": "LPe31002-M6",
+    "chipModel": "LPe31000/LPe32000",
     "item": "06030463",
     "downloadLink": "inbox"
   },
@@ -4934,8 +4934,8 @@
     "sha256": "30D4762CAC0820BC75647F2178E8E25960C5CED8",
     "driverSize": "1.7MB",
     "chipVendor": "Emulex",
-    "boardModel": "LPe31002",
-    "chipModel": "XE501",
+    "boardModel": "LPe31002-M6",
+    "chipModel": "LPe31000/LPe32000",
     "item": "06030463",
     "downloadLink": "inbox"
   },
@@ -4953,8 +4953,8 @@
     "sha256": "30D4762CAC0820BC75647F2178E8E25960C5CED8",
     "driverSize": "1.7MB",
     "chipVendor": "Emulex",
-    "boardModel": "LPe16002",
-    "chipModel": "XE201",
+    "boardModel": "LPe16002B-M6",
+    "chipModel": "LPe15000/LPe16000",
     "item": "06030276",
     "downloadLink": "inbox"
   },
@@ -4971,7 +4971,7 @@
     "date": "2022.04.14",
     "sha256": "255B66EA9B8B8A85E2567C436D0706F2B2D1EAF9",
     "driverSize": "1.3M",
-    "chipVendor": "QLogic",
+    "chipVendor": "Broadcom",
     "boardModel": "QLE3442-RJ-SP",
     "chipModel": "BCM57840",
     "item": "06310110",
@@ -4992,7 +4992,7 @@
     "driverSize": "1.7MB",
     "chipVendor": "Emulex",
     "boardModel": "LPe12000",
-    "chipModel": "LPE12000-AP/LPE12002-AP",
+    "chipModel": "LPe12000",
     "item": "06030216",
     "downloadLink": "inbox"
   },
@@ -5011,7 +5011,7 @@
     "driverSize": "1.7M",
     "chipVendor": "Emulex",
     "boardModel": "LPe16002B-M6",
-    "chipModel": "XE201",
+    "chipModel": "LPe15000/LPe16000",
     "item": "02311CYX",
     "downloadLink": "inbox"
   },
@@ -5047,7 +5047,7 @@
     "date": "2022.04.21",
     "sha256": "255B66EA9B8B8A85E2567C436D0706F2B2D1EAF9",
     "driverSize": "1.7M",
-    "chipVendor": "QLogic",
+    "chipVendor": "Marvell/Qlogic",
     "boardModel": "QLE2560",
     "chipModel": "ISP2532",
     "item": "06030221",
@@ -5067,8 +5067,8 @@
     "sha256": "255B66EA9B8B8A85E2567C436D0706F2B2D1EAF9",
     "driverSize": "1.7M",
     "chipVendor": "Emulex",
-    "boardModel": "LPe16002",
-    "chipModel": "XE201",
+    "boardModel": "LPe16002B-M6",
+    "chipModel": "LPe15000/LPe16000",
     "item": "06030276",
     "downloadLink": "inbox"
   },
@@ -5105,8 +5105,8 @@
     "sha256": "30D4762CAC0820BC75647F2178E8E25960C5CED8",
     "driverSize": "552KB",
     "chipVendor": "Avago",
-    "boardModel": "SR130IT",
-    "chipModel": "LSI SAS3008",
+    "boardModel": "SAS9300-8i",
+    "chipModel": "SAS3008",
     "item": "03023QGH",
     "downloadLink": "inbox"
   }, 
@@ -5124,8 +5124,8 @@
     "sha256": "255B66EA9B8B8A85E2567C436D0706F2B2D1EAF9",
     "driverSize": "538KB",
     "chipVendor": "Avago",
-    "boardModel": "SR130IT",
-    "chipModel": "LSI SAS3008",
+    "boardModel": "SAS9300-8i",
+    "chipModel": "SAS3008",
     "item": "03023QGH",
     "downloadLink": "inbox"
   }, 
@@ -5143,8 +5143,8 @@
     "sha256": "255B66EA9B8B8A85E2567C436D0706F2B2D1EAF9",
     "driverSize": "1.7M",
     "chipVendor": "Emulex",
-    "boardModel": "LPe32002-AP",
-    "chipModel": "XE201",
+    "boardModel": "LPe32002-M2",
+    "chipModel": "LPe31000/LPe32000",
     "item": "06030393",
     "downloadLink": "inbox"
   },
@@ -5162,8 +5162,8 @@
     "sha256": "",
     "driverSize": "552KB",
     "chipVendor": "Huawei",
-    "boardModel": "SR130",
-    "chipModel": "LSI SAS3008",
+    "boardModel": "SAS9311-8i",
+    "chipModel": "SAS3008",
     "item": "03022CDE",
     "downloadLink": "inbox"
   },
@@ -5180,9 +5180,9 @@
     "date": "2022.04.26",
     "sha256": "255B66EA9B8B8A85E2567C436D0706F2B2D1EAF9",
     "driverSize": "147KB",
-    "chipVendor": "PMC-sierra",
-    "boardModel": "SAS3152",
-    "chipModel": "PM3152",
+    "chipVendor": "PMC",
+    "boardModel": "PMC3152",
+    "chipModel": "PM8204",
     "item": "02312USW",
     "downloadLink": "inbox"
   },
@@ -5199,9 +5199,9 @@
     "date": "2022.04.26",
     "sha256": "",
     "driverSize": "143KB",
-    "chipVendor": "PMC-sierra",
-    "boardModel": "SAS3152",
-    "chipModel": "PM3152",
+    "chipVendor": "PMC",
+    "boardModel": "PMC3152",
+    "chipModel": "PM8204",
     "item": "02312USW",
     "downloadLink": "inbox"
   },
@@ -5238,8 +5238,8 @@
     "sha256": "30D4762CAC0820BC75647F2178E8E25960C5CED8",
     "driverSize": "1.7M",
     "chipVendor": "Emulex",
-    "boardModel": "LPe32002-AP",
-    "chipModel": "XE201",
+    "boardModel": "LPe32002-M2",
+    "chipModel": "LPe31000/LPe32000",
     "item": "06030393",
     "downloadLink": "inbox"
   },
@@ -6359,7 +6359,7 @@
     "sha256": "67CB2F34DC66D76DE0C84BBF64688B91CE243549",
     "driverSize": "694K",
     "chipVendor": "Intel",
-    "boardModel": "XL710QSR1G1P5 950495",
+    "boardModel": "XL710-Q1",
     "chipModel": "XL710",
     "item": "06310102",
     "downloadLink": "inbox"
@@ -6417,7 +6417,7 @@
     "driverSize": "552K",
     "chipVendor": "Avago",
     "boardModel": "SP150IT-M",
-    "chipModel": "Avago3408",
+    "chipModel": "SAS3408",
     "item": "02312HFD",
     "downloadLink": "inbox"
   },
@@ -6647,6 +6647,25 @@
     "boardModel": "QLE2772",
     "chipModel": "ISP2812",
     "item": "",
+    "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "8086",
+    "deviceID": "1583",
+    "svID": "8086",
+    "ssID": "0002",
+    "architecture": "aarch64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "i40e",
+    "version": "2.3.2-k",
+    "type": "NIC",
+    "date": "2021.12.25",
+    "sha256": "33BD5FB6C92F8EAD78666F3EEF3D7FBC6116CEC1",
+    "driverSize": "640K",
+    "chipVendor": "intel",
+    "boardModel": "XL710-Q2",
+    "chipModel": "XL710",
+    "item": "06310146",
     "downloadLink": "inbox"
   }
 ]
