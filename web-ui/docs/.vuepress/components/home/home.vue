@@ -10,7 +10,7 @@
         </div>
         <div class="is-pc home-carousel" v-if="!isShowH5">
             <el-carousel class="home-banner" trigger="click" @change="carouselChange" :autoplay="autoPlay" :interval="changeTime" >
-            <el-carousel-item >
+            <el-carousel-item v-if="$lang === 'zh'" >
                     <div class="carousel-banner" style="backgroundImage: url('/img/minisite/migration/migration-banner-pc.png')"   @click="go('/other/migration/')">
                     </div>
               </el-carousel-item>
@@ -34,7 +34,7 @@
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
-               <swiper-slide class="carousel-item-index">
+               <swiper-slide v-if="$lang === 'zh'" class="carousel-item-index">
                   <div class="mobile-version"  style="backgroundImage: url('/img/minisite/migration/migration-banner-mo.png')"  @click="go('/other/migration/')">
                 </div>
               </swiper-slide>
@@ -333,7 +333,7 @@ let remoteMethods = {
                     '➜ / '
                 ],
                 textBlock:false,
-                changeTime:30000,
+                changeTime:5000,
                 isMuted:true,
                 flag: true,
                 height: "380px",
@@ -417,7 +417,8 @@ let remoteMethods = {
                 }
             },
             carouselChange(index) {
-                index === 1 ? this.changeTime = 5000 : (this.changeTime = 30000);
+                console.log(index);
+                index !== 1 ? this.changeTime = 5000 : (this.changeTime = 30000);
             },
             voiceClick() {
                 if (!this.isShowH5) {
