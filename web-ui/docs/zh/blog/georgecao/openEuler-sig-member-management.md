@@ -22,9 +22,9 @@ summary: openEuler 社区SIG组成员管理方案细节。
 
 ## SIG组成员权责划分
 根据不同角色，在社区（特别是在gitee代码托管平台）承担不同的权责：
-|SIG成员角色|sig_info.yaml记录| 代码提交 |评论/approve合入|git push合入 |
+|SIG成员角色|sig_info.yaml记录| 代码提交 |通过评论approve合入|直接git push合入 |
 |--|--|--|--|--|
-| Maintainer | ✔️ | ✔️ [全部仓库] | ✔️ |❌|
+| Maintainer | ✔️ | ✔️ | ✔️[全部仓库] |❌|
 | Committer| ✔️ |✔️  | ✔️ [部分仓库] | ❌ |
 | Contributor| ✔️ |✔️ |❌ |❌  |
 | Developer| ❌ | ✔️ | ❌ |  ❌|
