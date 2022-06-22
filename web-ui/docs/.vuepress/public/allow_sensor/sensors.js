@@ -445,10 +445,10 @@ window['setSensorsCustomBuriedData'] = (key, value) => {
 var sensors = window['sensorsDataAnalytic201505'];
 function initSensor() {
   sensors.init({
-    server_url: 'https://omapi.osinfra.cn/query/track',
+    server_url: 'https://omapi.osinfra.cn/query/track?community=openEuler',
     use_client_time:true,
     // 调试时开启
-    show_log: true,
+    // show_log: true,
     send_type:'image',
     is_track_single_page: function(){
       return window['sensorsCustomBuriedData'];
