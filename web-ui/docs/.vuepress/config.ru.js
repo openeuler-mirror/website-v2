@@ -14,6 +14,15 @@ module.exports = {
         ['script', {
             src: '/js/analytics-ru.js'
         }],
+        ['script', {
+            src: 'http://pv.sohu.com/cityjson?ie=utf-8'
+        }],
+        ['script', {
+            src: '/allow_sensor/sensorsdata.min.js'
+        }],
+        ['script', {
+            src: '/allow_sensor/sensors.js'
+        }],
         ['meta', { name: 'keywords', content: 'openEuler, 操作系统, 开放, 生态, 开源, Linux 开源, OS, open, ecosystem, open source, Linux open source'}],
         ['meta', { name: 'baidu-site-verification', content: 'code-EWzbQRssNU'}]
     ],

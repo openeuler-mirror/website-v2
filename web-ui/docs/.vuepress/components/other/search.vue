@@ -30,8 +30,8 @@
             </div>
             <div class="tag-content">
                 <div class="tag-left">
-                    <div class="tags-info" v-for="item in allDatas">
-                        <h3 v-html="item.title" @click="goDetail(item)"></h3>
+                    <div class="tags-info" v-for="(item, index) in allDatas">
+                        <h3 v-html="item.title" @click="goDetail(item, index)"></h3>
                         <p v-html="item.textContent"></p>
                         <p class="articla-from"><span>{{ i18n.search.TAG_NAME.FROM }}：</span><span class="artical-tag">{{i18n.search.TAG_NAME[item.type.toUpperCase()]}} <span v-if="item.type === 'docs'">{{item.version}}</span></span></p>
                     </div>
@@ -66,11 +66,12 @@
     import { search, repoSearch } from "../../api/search";
     let that = null;
     const locationMethods = {
-        
+
         getSearchPage (flag) {
             that.formData.page = flag;
             if(that.formData.keyword){
                 that.loading = true;
+
                 search(that.formData)
                     .then(response => {
                         that.loading = false;
@@ -85,7 +86,7 @@
                         that.loading = false;
                     });
             }
-            
+
         },
         repoSearch (flag) {
             if(that.formData.keyword){
@@ -97,7 +98,7 @@
                         that.$message.error(response);
                     });
             }
-            
+
         }
     }
     export default {
@@ -138,15 +139,46 @@
                 this.initData(val);
                 scrollTo(0,0);
             },
+            // 搜索埋点
+            addSearchBuriedData(search_key) {
+                const search_event_id = `${search_key}${new Date().getTime()}${window['sensorsCustomBuriedData']?.ip || ''}`;
+                const obj = {
+                    search_key,
+                    search_event_id
+                };
+                window['addSearchBuriedData'] = obj;
+            },
             search (){
                 if(this.formData.keyword) {
+                    // search埋点
+                    this.addSearchBuriedData(this.formData.keyword);
+                    let sensors = window['sensorsDataAnalytic201505'];
+                    sensors?.setProfile({
+                        profileType: 'searchValue',
+                        ...(window['sensorsCustomBuriedData'] || {}),
+                        ...(window['addSearchBuriedData'] || {})
+                    });
+
                     this.tagTitle = [];
                     this.curKey = 'all';
-                    this.initData(1);  
-                    locationMethods.repoSearch();  
+                    this.initData(1);
+                    locationMethods.repoSearch();
                 }
             },
-            goDetail ({type, version, path, articleName}){
+            goDetail (data, index){
+                let {type, version, path, articleName} = data;
+                const searchKeyObj = {
+                    search_tag: this.i18n.search.TAG_NAME[this.curKey.toUpperCase()],
+                    search_rank_num: 10 * (this.formData.page - 1) + (index + 1),
+                    search_result_total_num: this.total
+                };
+                sensors.setProfile({
+                    profileType: 'selectSearchResult',
+                    ...(data || {}),
+                    ...(window['sensorsCustomBuriedData'] || {}),
+                    ...(window['addSearchBuriedData'] || {}),
+                    ...searchKeyObj
+                });
                 let dealPath = null;
                 const docsPath = path;
                 path = path.split('/');
@@ -191,7 +223,7 @@
         height: 62px;
         line-height: 62px;
         font-size: 20px;
-        
+
         color: #000;
         border: 1px solid #7f7f7f;
         border-radius: 8px;
@@ -258,7 +290,7 @@
                 text-align: center;
                 font-size: 24px;
                 color: #000;
-                
+
                 line-height: 34px;
                 margin-top: 40px;
             }
@@ -302,7 +334,7 @@
             margin-bottom: 80px;
             .tag-title ul li {
                 width: 72px;
-                
+
                 padding-bottom: 18px;
                 cursor: pointer;
                 span {
@@ -342,7 +374,7 @@
     }
     .tag-title span {
         font-size: 16px;
-        
+
         cursor: pointer;
     }
     .tag-title li {
@@ -360,7 +392,7 @@
     }
     .tag-left a {
         font-size: 20px;
-        
+
         text-decoration: none;
         color: #000;
     }
@@ -369,7 +401,7 @@
     }
     .tag-left p {
         font-size: 14px;
-        
+
         color: rgba(0, 0, 0, 0.5);
         line-height: 24px;
     }
@@ -394,12 +426,12 @@
     }
     h4 {
         font-size: 20px;
-        
+
         margin-bottom: 15px;
     }
     p {
         font-size: 14px;
-        
+
         color: rgba(0, 0, 0, 0.5);
         line-height: 24px;
         margin: 10px 0 20px;
@@ -407,7 +439,7 @@
     .pkg-title {
         cursor: pointer;
         font-size: 14px;
-        
+
         font-weight: normal;
         color: #002FA7;
         margin: 0;
