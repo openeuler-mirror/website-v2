@@ -279,7 +279,7 @@ export const softwareList = ({
         type = type ? `&type=${type}` : "";
         keyword = keyword ? `&keyword=${keyword}` :"";
         appAjax.postJson({
-            url: `https://api.compass-ci.openeuler.org/web_backend/compat_software_info?page_size=10&page_num=${page}${type}${architecture}${os}${keyword}`,
+            url: `http://121.196.199.87/web_backend/compat_software_info?page_size=10&page_num=${page}${type}${architecture}${os}${keyword}`,
             type: 'get',
             notAuthorization:true,
             success(result) {
@@ -301,7 +301,7 @@ export const softwareList = ({
 export const softwareOptions = () => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            url: 'https://api.compass-ci.openeuler.org/web_backend/query_compat_software',
+            url: 'http://121.196.199.87/web_backend/query_compat_software',
             type: 'get',
             notAuthorization:true,
             success(result) {
