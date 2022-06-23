@@ -74,8 +74,9 @@ The **__free_hook** function is called (if available) together with **malloc_hoo
 ```
 #define mem2chunk(mem) ((mchunkptr)((char*)(mem) - 2*SIZE_SZ))
 ```
-<br>
+
 **chunk_is_mmapped** is used to check the flag of the lowest three bits of size to determine whether the chunk is allocated by mmap. If allocated, **munmap_chunk** is called to release the chunk and return. Before **munmap_chunk** is called, the global mmap threshold and shrinking threshold are updated. The **MAYBE_INIT_TCACHE** macro defined below is used to preferentially store memory in tcache. If tcache is enabled, the code will not be executed.
+<br>
 
 ```
 # define MAYBE_INIT_TCACHE() \
@@ -241,7 +242,7 @@ _int_free (mstate av, mchunkptr p, int have_lock)
 ```
 <br>
 
-**_int_free** first checks the validity of the **size** variable, and then **get_max_fast()** is compared to confirm the size is within the range of **fastbin**. **set_fastchunks** is used to set the flag bit of the arena to indicate that **fastbin** has free chunks. The index **idx** of the chunk to be added in **fastbin** is obtained based on the size, while the head pointer **fb** is then obtained based on the index. Then, the chunk is added to **fastbin** by performing the CAS operation. Note that the chunks are stored in **fastbin** in the form of one-way linked list. The content of the tcache macro is as follows. The logic is placing the required memory into the tcache.
+**_int_free** first checks the validity of the **size** variable, and then **get_max_fast()** is compared to confirm the size is within the range of **fastbin**. **set_fastchunks** is used to set the flag bit of the arena to indicate that **fastbin** has free chunks. The index **idx** of the chunk to be added in **fastbin** is obtained based on the size, while the head pointer **fb** is then obtained based on the index. Then, the chunk is added to **fastbin** by performing the CAS operation. Note that the chunks are stored in **fastbin** in the form of singly-way linked list. The content of the tcache macro is as follows. The logic is placing the required memory into the tcache.
 
 ```
 #if USE_TCACHE
