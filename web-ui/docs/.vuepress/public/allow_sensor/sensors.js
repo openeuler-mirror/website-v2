@@ -429,21 +429,41 @@ var root = typeof self !== 'undefined' ? self : this;
     OSVersion: MethodLibrary.getOSVersion(), // 操作系统版本
     browserInfo: MethodLibrary.getBrowserInfo() // 浏览器信息
   };
-window['sensorsCustomBuriedData'] = {
-  ip: window['returnCitySN']?.cip || '',
-  city: window['returnCitySN']?.cname || '',
-  os: info.OS,
-  osVersion: info.OSVersion,
-  browser: info.browserInfo.browser,
-  browserVersion: info.browserInfo.browserVersion
-};
-
-window['setSensorsCustomBuriedData'] = (key, value) => {
-  window['sensorsCustomBuriedData'][key] = value;
-};
+var xhr = new XMLHttpRequest();
+xhr.responseType = "json";
+xhr.open('get', '/ip-api/', true)
+xhr.onload = function(e) {
+  if (xhr.status === 200) {
+    window['returnCitySN'] = xhr.response;
+  } else {
+    window['returnCitySN'] = {
+      query: '',
+      city: '',
+    }
+  }
+}
+xhr.onerror = () => {
+  window['returnCitySN'] = {
+    query: '',
+    city: '',
+  }
+}
+xhr.send();
 
 var sensors = window['sensorsDataAnalytic201505'];
 function initSensor() {
+  window['sensorsCustomBuriedData'] = {
+    ip: window['returnCitySN'] && window['returnCitySN'].query || '',
+    city: window['returnCitySN'] && window['returnCitySN'].city || '',
+    os: info.OS,
+    osVersion: info.OSVersion,
+    browser: info.browserInfo.browser,
+    browserVersion: info.browserInfo.browserVersion
+  };
+
+  window['setSensorsCustomBuriedData'] = (key, value) => {
+    window['sensorsCustomBuriedData'][key] = value;
+  };
   sensors.init({
     server_url: 'https://omapi.osinfra.cn/query/track?community=openEuler',
     use_client_time:true,
@@ -460,7 +480,7 @@ function initSensor() {
         return window['sensorsCustomBuriedData'];
       },
        //是否开启触达图，not_collect 表示关闭，不会自动采集 $WebStay 事件，可以设置 'default' 表示开启。
-       scroll_notice_map:'default'
+       scroll_notice_map:'not_collect'
     }
   });
   sensors.quick('isReady', function() {
@@ -478,7 +498,7 @@ function startSensor(num) {
     // 重试最大次数
     return;
   }
-  if (sensors) {
+  if (sensors && window['returnCitySN']) {
     initSensor();
   } else {
     setTimeout(() => {
