@@ -15,9 +15,6 @@ module.exports = {
             src: '/js/analytics.js'
         }],
         ['script', {
-            src: 'http://pv.sohu.com/cityjson?ie=utf-8'
-        }],
-        ['script', {
             src: '/allow_sensor/sensorsdata.min.js'
         }],
         ['script', {
@@ -89,6 +86,13 @@ module.exports = {
                 changeOrigin: true,
                 pathRewrite: {
                     '^/api-sig/': ''
+                }
+            },
+            '/ip-api/': {
+                target: 'http://ip-api.com/json/',
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/ip-api/': ''
                 }
             },
             '/api-cve/': {
