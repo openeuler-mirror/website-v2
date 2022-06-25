@@ -6648,5 +6648,24 @@
     "chipModel": "ISP2812",
     "item": "",
     "downloadLink": "inbox"
+  }, 
+  {
+    "vendorID": "1e3e",
+    "deviceID": "0001",
+    "svID": "0000",
+    "ssID": "0000",
+    "architecture": "x86_64",
+    "os": "openEuler 22.03 LTS",
+    "driverName": "bi_driver",
+    "version": "2.2",
+    "type": "GPU",
+    "date": "2022.06.21",
+    "sha256": "1cd1fe6796b4df2ca062aac9496e3f5b201032d26f788c0cdfe202156a0ddf5e",
+    "driverSize": "6.7M",
+    "chipVendor": "iluvatar",
+    "boardModel": "BI-V100",
+    "chipModel": "BI-V100",
+    "item": "",
+    "downloadLink": "commercial driver"
   }
 ]
