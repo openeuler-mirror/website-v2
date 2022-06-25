@@ -4434,6 +4434,25 @@
         "chipModel": "82599ES",
         "item": "",
         "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "005d",
+        "svID": "1000",
+        "ssID": "9361",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS",
+        "driverName": "megaraid_sas",
+        "version": "07.706.03.00-rc1",
+        "type": "RAID",
+        "date": "2022/03/22",
+        "sha256": "799B0EE19AC63A0F4A60F165D1EBEAA95E75C497",
+        "driverSize": "290KB",
+        "chipVendor": "Avago",
+        "boardModel": "SR430C-M",
+        "chipModel": "SAS-3 3108",
+        "item": "",
+        "downloadLink": "inbox"
       }
     ],
     "compatibilityConfiguration": {
@@ -6141,5 +6160,66 @@
         "downloadLink": "inbox"
       }    
     ]
+  },
+  {
+    "hardwareFactory": "Suma",
+    "hardwareModel": "R6230HA",
+    "osVersion": "openEuler 20.03 LTS SP3",
+    "architecture": "x86_64",
+    "date": "2022/06/22",
+    "friendlyLink": "http://www.cancon.com.cn",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "10fb",
+        "svID": "19e5",
+        "ssID": "d111",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "ixgbe",
+        "version": "5.1.0-k",
+        "type": "NIC",
+        "date": "2022/06/22",
+        "sha256": "799B0EE19AC63A0F4A60F165D1EBEAA95E75C497",
+        "driverSize": "719KB",
+        "chipVendor": "intel",
+        "boardModel": "SP310",
+        "chipModel": "82599",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "005d",
+        "svID": "1000",
+        "ssID": "9361",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "megaraid_sas",
+        "version": "07.706.03.00-rc1",
+        "type": "RAID",
+        "date": "2022/06/22",
+        "sha256": "799B0EE19AC63A0F4A60F165D1EBEAA95E75C497",
+        "driverSize": "290KB",
+        "chipVendor": "Avago",
+        "boardModel": "SR430C-M",
+        "chipModel": "SAS-3 3108",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "R6230HA",
+      "certificationTime": "2022/06/22",
+      "commitID": "https://gitee.com/openeuler/oec-hardware/issues/I5DPD1?from=project-issue",
+      "mainboardModel": "",
+      "biosUefi": "CQL1051207",
+      "cpu": "Hygon 2",
+      "ram": "16*32G RDIMMs",
+      "portsBusTypes": "x16 PCI Express",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "AVAGO MR9361-8i 4.68"
+    }
   }
 ]
