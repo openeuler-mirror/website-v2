@@ -172,13 +172,14 @@
                     search_rank_num: 10 * (this.formData.page - 1) + (index + 1),
                     search_result_total_num: this.total
                 };
-                sensors.setProfile({
+                let sensors = window['sensorsDataAnalytic201505'];
+                const sensorObj = {
                     profileType: 'selectSearchResult',
                     ...(data || {}),
                     ...(window['sensorsCustomBuriedData'] || {}),
                     ...(window['addSearchBuriedData'] || {}),
                     ...searchKeyObj
-                });
+                }
                 let dealPath = null;
                 const docsPath = path;
                 path = path.split('/');
@@ -188,7 +189,9 @@
                     const flagLang = '/' + this.$lang + '/';
                     const resPath = docsPath.split('/server/')[1].split(flagLang)[0] + '/' + docsPath.split('/server/')[1].split(flagLang)[1] + '/';
                     const tempPath = this.$site.themeConfig.docsUrl + '/' + this.$lang + '/' + resPath + articleName.split('.')[0] + '.html';
+                    sensorObj['search_result_url']=tempPath;
                     window.open(tempPath);
+                    sensors.setProfile(sensorObj);
                     return;
                 }else{
                     sitePagesArr = this.$sitePages;
@@ -200,10 +203,12 @@
                 })
                 if(dealPath){
                     const routeUrl = this.$router.resolve(dealPath);
+                    sensorObj['search_result_url']=routeUrl;
                     window.open(routeUrl.href);
                 }else {
                     this.$message.error('找不到此路径');
                 }
+                sensors.setProfile(sensorObj);
             }
         },
         watch: {
