@@ -203,7 +203,7 @@
                 })
                 if(dealPath){
                     const routeUrl = this.$router.resolve(dealPath);
-                    sensorObj['search_result_url']=routeUrl;
+                    sensorObj['search_result_url']=this.$site.themeConfig.docsUrl + routeUrl.href;
                     window.open(routeUrl.href);
                 }else {
                     this.$message.error('找不到此路径');
