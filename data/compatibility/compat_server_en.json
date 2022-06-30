@@ -6502,5 +6502,64 @@
       "hostBusAdapter": "",
       "hardDiskDrive": "AVAGO MR9361-8i 4.68"
     }
+  },
+  {
+    "hardwareFactory": "supercloud",
+    "hardwareModel": "R2211 F11",
+    "osVersion": "openEuler 20.03 LTS SP3",
+    "architecture": "aarch64",
+    "date": "2022/06/28",
+    "friendlyLink": "http://www.chinasupercloud.com/serverdetails.html?id=3065",
+    "compatibilityConfiguration": {
+      "productInformation": "http://www.chinasupercloud.com/serverdetails.html?id=3065",
+      "certificationTime": "2022/06/28",
+      "commitID": "I5EMZ8",
+      "mainboardModel": "",
+      "biosUefi": "4.24",
+      "cpu": "FT-2000+/64",
+      "ram": "8*32G DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family",
+      "hostBusAdapter": "AVAGO SMC3108",
+      "hardDiskDrive": "INTEL SSDSC2KG019T8"
+    },
+    "boardCards": [
+      {
+        "vendorID": "1000",
+        "deviceID": "005d",
+        "svID": "15d9",
+        "ssID": "0809",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "megaraid_sas",
+        "version": "07.706.03.00-rc1",
+        "type": "RAID",
+        "date": "2022/06/28",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Broadcom",
+        "boardModel": "",
+        "chipModel": "SAS-3 3108",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "8086",
+        "deviceID": "10fb",
+        "svID": "8086",
+        "ssID": "000c",
+        "architecture": "aarch64",
+        "os": "openEuler 20.03 LTS SP3",
+        "driverName": "ixgbe",
+        "version": "5.1.0-k",
+        "type": "NIC",
+        "date": "2022/06/28",
+        "sha256": "",
+        "driverSize": "",
+        "chipVendor": "Intel",
+        "boardModel": "X520-2",
+        "chipModel": "82599ES",
+        "downloadLink": "inbox"
+      }    
+    ]
   }
 ]
