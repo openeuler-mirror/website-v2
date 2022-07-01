@@ -1,16 +1,16 @@
 [
 	{
-		"os_version":"uniontechos-server-20-1050e-amd64",
-		"osv_name": "统信软件技术有限公司",
+		"os_version":"KylinSec-Server-3.5.1-2206-052233-x86_64",
+		"osv_name": "湖南麒麟信安科技股份有限公司",
 		"total_result": "pass",
 		"type": "服务器",
-		"date": "2022/06/08",
+		"date": "2022/06/30",
 		"arch": "x86_64",
 		"details": "详细信息",
-		"friendly_link": "https://www.uniontech.com/",
-		"os_download_link": "https://www.uniontech.com/",
-		"checksum": "0689c16b40c59c25cc318fef22a0ce28",
-		"base_openeuler_version": "openEuler 20.03 LTS SP3",
+		"friendly_link": "http://www.kylinsec.com.cn/",
+		"os_download_link": "http://www.kylinsec.com.cn/",
+		"checksum": "adad0fbb5e1fadd012c5881abc1d349d",
+		"base_openeuler_version": "openEuler-22.03-LTS",
 		"tools_result": [
 			{
 				"name": "core_pkg",
@@ -72,17 +72,17 @@
 		]
 	},
 	{
-		"os_version":"uniontechos-server-20-1050e-arm64",
-		"osv_name": "统信软件技术有限公司",
+		"os_version":"KylinSec-Server-3.5.1-2206-052234-aarch64",
+		"osv_name": "湖南麒麟信安科技股份有限公司",
 		"total_result": "pass",
 		"type": "服务器",
-		"date": "2022/06/08",
+		"date": "2022/06/30",
 		"arch": "aarch64",
 		"details": "详细信息",
-		"friendly_link": "https://www.uniontech.com/",
-		"os_download_link": "https://www.uniontech.com/",
-		"checksum": "a949b0a687b40bc5a4399403241f431c",
-		"base_openeuler_version": "openEuler 20.03 LTS SP3",
+		"friendly_link": "http://www.kylinsec.com.cn/",
+		"os_download_link": "http://www.kylinsec.com.cn/",
+		"checksum": "6758ab71f5c8cb3dfede6dc9b074cd12",
+		"base_openeuler_version": "openEuler-22.03-LTS",
 		"tools_result": [
 			{
 				"name": "core_pkg",
