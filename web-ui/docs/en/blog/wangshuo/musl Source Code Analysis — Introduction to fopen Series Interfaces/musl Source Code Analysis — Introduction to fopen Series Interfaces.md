@@ -373,7 +373,7 @@ free:
 
 **Articles about glibc fault locating and analysis**  
 Analysis of the VM performance deterioration when running memcpy to copy 1,000 bytes in the x86_64 environment:  
-[https://www.openeuler.org/zh/blog/wangshuo/memcpy_1k%E5%AD%97%E8%8A%82x86_64%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%80%A7%E8%83%BD%E4%B8%8B%E9%99%8D%E5%88%86%E6%9E%90.html](https://www.openeuler.org/zh/blog/wangshuo/memcpy_1k%E5%AD%97%E8%8A%82x86_64%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%80%A7%E8%83%BD%E4%B8%8B%E9%99%8D%E5%88%86%E6%9E%90.html)  
+[https://www.openeuler.org/en/blog/wangshuo/Analysis%20of%20the%20VM%20Performance%20Deterioration%20When%20Running%20memcpy%20to%20Copy%201,000%20Bytes%20in%20the%20x86_64%20Environment.html](https://www.openeuler.org/en/blog/wangshuo/Analysis%20of%20the%20VM%20Performance%20Deterioration%20When%20Running%20memcpy%20to%20Copy%201,000%20Bytes%20in%20the%20x86_64%20Environment.html)  
 Call stack fault analysis:  
 [https://www.openeuler.org/zh/blog/wangshuo/glibc%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D--%E6%8E%A8%E6%A0%88%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90.html](https://www.openeuler.org/zh/blog/wangshuo/glibc%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D--%E6%8E%A8%E6%A0%88%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90.html)  
 glibc locale usage:  
