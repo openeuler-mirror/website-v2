@@ -593,10 +593,12 @@ button {
     background: blue;
 }
 .calenderListSinge {
+    cursor: pointer;
     width: 100%;
     box-shadow: 0px 4px 10px #ececec;
     margin-bottom: 20px;
     overflow: hidden;
+    background-color: #fff;
 }
 .calenderListSinge .record-img {
     width: 32px;

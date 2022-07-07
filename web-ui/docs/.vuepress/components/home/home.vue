@@ -17,7 +17,7 @@
             <el-carousel-item >
                 <div class="video-banner carousel-banner" @click="go('https://moocstudio.openeuler.sh/')">
                      <video  playsinline="true" muted autoplay="autoplay" poster="/img/home/banner/video_banner_pc.png" loop ref="bannerVideo"  preload=""  id="home-video" >
-                         <source type="video/mp4" 
+                         <source type="video/mp4"
                          src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/MoocStudio/MoocStudio%E7%9A%84%E8%A7%86%E9%A2%911920X500_small..mp4">
                      </video>
                      <div class="voice-box" @click.stop="voiceClick">
@@ -71,7 +71,7 @@
                     <div class="letsPlay" @click="go('https://moocstudio.openeuler.sh/')" >
                         <img src="/img/home/letsPlay.png" alt="">
                     </div>
-                </div>
+                  </div>
                 <div class="left-code">
                     <div class="first">➜ /
                         <span v-if="textBlock" class="first-span" :class="{'typing':textBlock}">sudo yum -y update</span>
@@ -221,10 +221,13 @@
             <h3>{{ i18n.home.HOME_ROUND.ROUND_TITLE }}</h3>
             <div class="round-box">
                 <round class="round-item" :image="item.ROUND_IMG" :value="item.ROUND_VALUE" :description="item.ROUND_TEXT"
-                    :styleParams="item.ROUND_STYLE" v-for="(item,index) in roundList"></round>
+                    :styleParams="item.ROUND_STYLE" v-for="(item) in roundList" :key="item.ROUND_VALUE"></round>
             </div>
             <div class="statistics">
-                <a target="_blank" :href="i18n.home.HOME_ROUND.VIEW_DETAIL_LINK">{{ i18n.home.HOME_ROUND.VIEW_DETAIL }}</a> <img src="/img/common/right.svg" alt="">
+                <a target="_blank" :href="i18n.home.HOME_ROUND.VIEW_DETAIL_LINK">
+                    {{ i18n.home.HOME_ROUND.VIEW_DETAIL }}
+                    <img src="/img/home/icon-right.png" alt="">
+                </a>
             </div>
         </div>
 
@@ -257,29 +260,20 @@
                 </div>
             </div>
             <div class="source-publish-link publish diff-pc-mobile">
-                <h5 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_SOURCE.SOURCE_PUBLISH_TITLE }}</h5>
-              <p class="publish-rank" v-if="$lang === 'zh'">（以商业发行版首次发布时间排序）</p>
-                <div class="publish-edition" v-for="(item,index) in i18n.home.HOME_SOURCE_EDITION">
-                    <a :href="item.LEFT_IMG_LINK" target="_blank">
-                        <img class="pc-img" v-lazy="item.LEFT_IMG_PC" alt="">
-                        <img class="mobile-img" v-lazy="item.LEFT_IMG_MOBILE" alt="">
-                    </a>
-                    <a :href="item.RIGHT_IMG_LINK" target="_blank" :class="item.RIGHT_IMG_LINK?'':'empty-a'">
-                        <img class="pc-img" v-lazy="item.RIGHT_IMG_PC" alt="">
-                        <img class="mobile-img" v-lazy="item.RIGHT_IMG_MOBILE" alt="">
+                <h3 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_SOURCE.SOURCE_PUBLISH_TITLE }}</h3>
+                <div class="publish-edition">
+                    <a :href="item.LINK" v-for="(item) in i18n.home.HOME_SOURCE_EDITION" :key="item.LINK" target="_blank">
+                        <img class="pc-img" v-lazy="item.PC" alt="">
+                        <img class="mobile-img" v-lazy="item.MOBILE" alt="">
                     </a>
                 </div>
             </div>
             <div class="source-publish-link diff-pc-mobile">
-                <h5 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_SOURCE.SOURCE_LINK_TITLE }}</h5>
-                <div class="publish-edition" v-for="(item,index) in i18n.home.FRIENDSHIP_LINK_LIST">
-                    <a :href="item.LEFT_IMG_LINK" target="_blank">
-                        <img class="pc-img" v-lazy="item.LEFT_IMG_PC" alt="">
-                        <img class="mobile-img" v-lazy="item.LEFT_IMG_MOBILE" alt="">
-                    </a>
-                    <a :href="item.RIGHT_IMG_LINK" target="_blank" :class="item.RIGHT_IMG_LINK?'':'empty-a'">
-                        <img class="pc-img" v-lazy="item.RIGHT_IMG_PC" alt="">
-                        <img class="mobile-img" v-lazy="item.RIGHT_IMG_MOBILE" alt="">
+                <h3 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_SOURCE.SOURCE_LINK_TITLE }}</h3>
+                <div class="publish-edition" >
+                    <a :href="item.LINK" v-for="(item) in i18n.home.FRIENDSHIP_LINK_LIST" :key="item.LINK" target="_blank">
+                        <img class="pc-img" v-lazy="item.PC" alt="">
+                        <img class="mobile-img" v-lazy="item.MOBILE" alt="">
                     </a>
                 </div>
             </div>
@@ -417,7 +411,6 @@ let remoteMethods = {
                 }
             },
             carouselChange(index) {
-                console.log(index);
                 index !== 1 ? this.changeTime = 5000 : (this.changeTime = 30000);
             },
             voiceClick() {
@@ -601,18 +594,7 @@ let remoteMethods = {
         },
     }
 </script>
-<style>
-.dot {
-  position: absolute;
-  top: 0;
-  width: 13px;
-  height: 12px;
-  background-size: 100% 100%;
-}
-#container {
-    overflow: hidden;
-}
-</style>
+
 <style lang="less">
     .home-banner .el-carousel__button {
         height: 10px;
@@ -645,6 +627,7 @@ let remoteMethods = {
 
 <style lang="less" scoped>
   .home{
+    background-color: #f5f6f8;
     .banner-video {
       position: fixed;
       top: 0px;
@@ -742,7 +725,7 @@ let remoteMethods = {
         }
     }
     .card-hover:hover {
-        box-shadow: 0px 6px 30px 0px rgba(0, 47, 167, 0.2);
+        box-shadow: 0px 6px 15px 0px rgba(0, 47, 167, 0.2);
     }
     .home p {
         font-size:14px;
@@ -768,58 +751,75 @@ let remoteMethods = {
     }
     .home .data-round {
         width: 1120px;
-        margin: 120px auto;
-        height: 713px;
+        margin: 64px auto;
          .statistics {
             display: flex;
-            padding: 50px 0;
+            padding-top: 42px;
             justify-content: center;
             align-items: center;
              @media screen and (max-width: 1000px){
                 padding: 20px 0;
                 font-size: 12px;
             }
+            img {
+                margin-left: 8px;
+                width: 16px;
+                transition: all 0.3s;
+            }
             a {
                 cursor: pointer;
-                padding-right: 5px;
+                display: flex;
+                align-items: center;
                 text-decoration: none;
-                color: #002FA7;
+                color: #000;
+                transition: all 0.3s;
+                &:hover {
+                    color: #002FA7;
+                    img {
+                    transform: translateX(3px);
+                }
+                }
             }
         }
         .round-box{
-            width: 1033px;
-            margin: 90px auto 0 auto;
             position: relative;
             display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            .round-item {
-                margin-left: 170px;
-                &:first-of-type {
-                    margin-left: 0;
-                }
-                &:nth-of-type(4),&:last-of-type {
-                    margin-top: 80px;
-                }
-            }
+            justify-content: space-between;
+            align-items: center;
+            // justify-content: center;
+            margin-top: 42px;
+            padding: 40px  100px;
+            background: #fff;
+            // .round-item {
+            //     margin-left: 170px;
+            //     &:first-of-type {
+            //         margin-left: 0;
+            //     }
+            //     &:nth-of-type(4),&:last-of-type {
+            //         margin-top: 80px;
+            //     }
+            // }
         }
         @media screen and (max-width: 1000px){
-            width: 336px;
-            height: 300px;
+            width: 100%;
             margin: 61px auto 58px auto;
             .round-box{
-                width: 100%;
+                max-width: 375px;
                 margin: 32px auto 0 auto;
+                padding: 24px;
+                flex-wrap: wrap;
+                justify-content: center;
                 .round-item {
-                    margin-left: 18px;
+                    width: 80px;
+                    margin-left: 28px;
                     &:first-of-type {
                         margin-left: 0;
                     }
                     &:nth-of-type(4) {
-                        margin: 30px 0 0 60px;
+                        margin: 30px 0 0 0;
                     }
                     &:last-of-type {
-                        margin: 30px 0 0 24px;
+                        margin: 30px 0 0 18px;
                     }
                 }
             }
@@ -1077,7 +1077,7 @@ let remoteMethods = {
         justify-content: center;
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: top center;
         .extend {
             display: none;
             background-repeat: repeat-x;
@@ -1135,7 +1135,7 @@ let remoteMethods = {
         }
     }
     .home-introduce {
-        padding-top: 70px;
+        padding-top: 40px;
         text-align: center;
         width: 1080px;
         margin: 0 auto;
@@ -1607,7 +1607,7 @@ let remoteMethods = {
     }
     .home-calendar {
         width: 1080px;
-        margin: 90px auto 0;
+        margin: 64px auto 0;
         @media screen and (max-width: 1000px) {
             margin-top: 30px;
         }
@@ -1694,7 +1694,7 @@ let remoteMethods = {
     }
     .home-newsroom {
         width: 1080px;
-        margin: 123px auto 0;
+        margin: 84px auto 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1768,11 +1768,12 @@ let remoteMethods = {
         position: absolute;
         z-index: -1;
         cursor: pointer;
+        transition: all 0.3s;
         box-shadow: 0 6px 30px 0px rgba(0, 0, 0, .1);
 
     }
     .room-img img {
-        display: block;
+       display: block;
        width: 100%;
     }
     .room-box a {
@@ -1863,7 +1864,8 @@ let remoteMethods = {
     }
     .home-source {
         width: 1080px;
-        margin: 60px auto 200px;
+        margin: 60px auto 0;
+        padding-bottom: 135px;
     }
     .source-contain {
         width: 90%;
@@ -1905,14 +1907,23 @@ let remoteMethods = {
     }
     .apply-img,
     .mail-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 120px;
         height: 120px;
         margin-right: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        text-align: center;
     }
     .apply-img img,
     .mail-img img{
-        width: 120px;
-        height: 120px;
+        display: block;
+        flex-basis: 125px;
+        flex-shrink: 0;
+        width: 125px;
+        height: 125px;
     }
     .apply-des p,
     .mail-des p {
@@ -1933,11 +1944,11 @@ let remoteMethods = {
         margin-top: 10px;
     }
     .source-publish-link {
-        margin-top: 100px;
+        margin-top: 64px;
         font-size: 30px;
     }
     .source-publish-link.publish {
-        margin-top: 100px;
+        margin-top: 64px;
     }
     .diff-pc-mobile{
         .mobile-img{
@@ -1960,31 +1971,25 @@ let remoteMethods = {
       margin-bottom: 50px;
     }
     .publish-edition {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-    }
-    .publish .publish-edition img {
-        width: 280px;
-        height: 80px;
-        margin-right: 70px;
-    }
-    .publish .publish-edition .empty-a{
-        img{
-            opacity:0;
-            @media screen and (max-width: 1000px){
-                display: none;
+        display: grid;
+        margin-top: 42px;
+        grid-template-columns: repeat(4, minmax(82px, 1fr));
+        column-gap: 0;
+        row-gap: 0;
+        a {
+            display: block;
+            margin: 0px -1px -1px 0px ;
+            padding: 24px;
+            border: 1px solid #e5e5e5;
+            background-color: #fff;
+            img {
+            display: block;
+            width: 100%;
             }
         }
-    }
-    .publish-edition img {
-        width: 280px;
-        height: 80px;
-        margin-right: 180px;
-    }
-    .publish-edition a:last-child img {
-        margin-right: 0;
+        @media screen  and (max-width: 1000px) {
+            margin-top: 16px;
+        }
     }
     @media screen and (max-width: 1000px){
         .is-pc {
@@ -2027,7 +2032,7 @@ let remoteMethods = {
             display: none;
         }
         .home {
-            margin: 0 15px;
+            padding: 0 15px;
         }
         .home-introduce .is-h5.mapArea {
             display: block;
@@ -2290,27 +2295,10 @@ let remoteMethods = {
             position: relative;
             top: 0px;
         }
-        .publish-edition {
-            display: block;
-        }
-        .publish .publish-edition img {
-            width: 280px;
-            height: 60px;
-            margin: 5px auto;
-        }
-        .publish-edition img {
-            width: 280px;
-            height: 60px;
-            margin: 0 auto;
-            display: block;
-        }
-        .publish-edition a:last-child img {
-            margin: 0 auto;
-        }
         .home-source {
             width: 100%;
             margin-top: 60px;
-            margin-bottom: 90px;
+            padding-bottom: 90px;
         }
         .home-source .source-title {
             font-size: 18px;
@@ -2345,10 +2333,10 @@ let remoteMethods = {
             }
         }
       html[lang="zh"] .source-publish-link h5 {
-            font-size: 18px;
-            font-weight: 600;
-            line-height: 18px;
-            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 24px;
+            margin-bottom: 0px;
         }
       .source-publish-link h5 {
         font-size: 18px;
@@ -2371,12 +2359,4 @@ let remoteMethods = {
             text-align: center;
         }
     }
-    @keyframes breathe {
-    0% {
-        box-shadow: 0 1px 1px #fff, 0 1px 1px #fff inset;
-    }
-    100% {
-        box-shadow: 0 1px 40px #fff, 0 1px 20px #fff inset;
-    }
-}
 </style>
