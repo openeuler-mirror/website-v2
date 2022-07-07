@@ -359,7 +359,7 @@ export const businessSoftwareList = ({
         testOrganization = testOrganization ? `&testOrganization=${testOrganization}` : "";
         keyword = keyword ? `&keyword=${keyword}` :"";
         appAjax.postJson({
-            url: `https://shanhaitujian.cn/certification/software/communityChecklist?pageSize=10&pageNo=${page}${testOrganization}${osName}${keyword}`,
+            url: `https://openeuler.shanhaitujian.cn/certification/software/communityChecklist?pageSize=10&pageNo=${page}${testOrganization}${osName}${keyword}`,
             type: 'get',
             timeout: 3000,
             notAuthorization:true,
@@ -373,16 +373,14 @@ export const businessSoftwareList = ({
             error(msg) {
                 reject(msg);
             }
-
         });
-
     });
 };
 //13. 商业软件--筛选框下拉列表
 export const businessSoftwareOptions = () => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            url: 'https://shanhaitujian.cn/certification/software/filterCriteria',
+            url: 'https://openeuler.shanhaitujian.cn/certification/software/filterCriteria',
             type: 'get',
             timeout: 3000,
             notAuthorization:true,
@@ -396,8 +394,6 @@ export const businessSoftwareOptions = () => {
             error(msg) {
                 reject(msg);
             }
-
         });
-
     });
 }
