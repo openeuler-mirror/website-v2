@@ -57,7 +57,7 @@
       </div>
     </div>
     <div class="main-body" ref="activeBoxs">
-      <el-calendar v-if="!isShowH5"  class="calender calender-pc">
+      <el-calendar v-if="!isShowH5" class="calender calender-pc">
         <template slot="dateCell" slot-scope="{ data }">
           <div
             class="out-box"
@@ -87,45 +87,43 @@
                     d="M25.333 5.333h-1.333v-2c0-0.368-0.298-0.667-0.667-0.667h-1.333c-0.368 0-0.667 0.298-0.667 0.667v2h-10.667v-2c0-0.368-0.298-0.667-0.667-0.667h-1.333c-0.368 0-0.667 0.298-0.667 0.667v2h-1.333c-1.473 0-2.667 1.194-2.667 2.667v17.333c0 1.473 1.194 2.667 2.667 2.667h18.667c1.473 0 2.667-1.194 2.667-2.667v-17.333c0-1.473-1.194-2.667-2.667-2.667zM25.333 25.333h-18.667v-14.667h18.667v14.667zM15.333 16h1.333c0.368 0 0.667-0.298 0.667-0.667v-1.333c0-0.368-0.298-0.667-0.667-0.667h-1.333c-0.368 0-0.667 0.298-0.667 0.667v1.333c0 0.368 0.298 0.667 0.667 0.667zM20.667 16h1.333c0.368 0 0.667-0.298 0.667-0.667v-1.333c0-0.368-0.298-0.667-0.667-0.667h-1.333c-0.368 0-0.667 0.298-0.667 0.667v1.333c0 0.368 0.298 0.667 0.667 0.667zM10 16h1.333c0.368 0 0.667-0.298 0.667-0.667v-1.333c0-0.368-0.298-0.667-0.667-0.667h-1.333c-0.368 0-0.667 0.298-0.667 0.667v1.333c0 0.368 0.298 0.667 0.667 0.667zM15.333 21.333h1.333c0.368 0 0.667-0.298 0.667-0.667v-1.333c0-0.368-0.298-0.667-0.667-0.667h-1.333c-0.368 0-0.667 0.298-0.667 0.667v1.333c0 0.368 0.298 0.667 0.667 0.667zM10 21.333h1.333c0.368 0 0.667-0.298 0.667-0.667v-1.333c0-0.368-0.298-0.667-0.667-0.667h-1.333c-0.368 0-0.667 0.298-0.667 0.667v1.333c0 0.368 0.298 0.667 0.667 0.667z"
                   ></path>
                 </svg>
-                <span class="month-date">{{ currentDay }}</span>
+                <span class="month-date">{{ getNowFormatDate() }}</span>
               </div>
             </template>
             <div class="meet-detail">
               <template>
                 <div class="left-title">
-                  <span @click="changeMonth(0)">
-                    <svg
-                      version="1.1"
-                      class="o-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M10.96 16.96c-0.188-0.187-0.293-0.442-0.293-0.707v-0.507c0.003-0.265 0.108-0.518 0.293-0.707l6.853-6.84c0.125-0.126 0.296-0.197 0.473-0.197s0.348 0.071 0.473 0.197l0.947 0.947c0.125 0.123 0.196 0.291 0.196 0.467s-0.071 0.344-0.196 0.467l-5.933 5.92 5.933 5.92c0.126 0.125 0.197 0.296 0.197 0.473s-0.071 0.348-0.197 0.473l-0.947 0.933c-0.125 0.126-0.296 0.197-0.473 0.197s-0.348-0.071-0.473-0.197l-6.853-6.84z"
-                      ></path>
-                    </svg>
-                  </span>
+                  <svg
+                    version="1.1"
+                    class="o-icon"
+                    @click="changeMonth(0)"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M10.96 16.96c-0.188-0.187-0.293-0.442-0.293-0.707v-0.507c0.003-0.265 0.108-0.518 0.293-0.707l6.853-6.84c0.125-0.126 0.296-0.197 0.473-0.197s0.348 0.071 0.473 0.197l0.947 0.947c0.125 0.123 0.196 0.291 0.196 0.467s-0.071 0.344-0.196 0.467l-5.933 5.92 5.933 5.92c0.126 0.125 0.197 0.296 0.197 0.473s-0.071 0.348-0.197 0.473l-0.947 0.933c-0.125 0.126-0.296 0.197-0.473 0.197s-0.348-0.071-0.473-0.197l-6.853-6.84z"
+                    ></path>
+                  </svg>
                   <span class="month-date">{{ monthDate }}</span>
-                  <span @click="changeMonth(2)">
-                    <svg
-                      version="1.1"
-                      class="o-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                      data-v-4cf11efe=""
-                    >
-                      <title></title>
-                      <path
-                        fill="currentColor"
-                        d="M21.040 15.040c0.188 0.187 0.293 0.442 0.293 0.707v0.507c-0.003 0.265-0.108 0.518-0.293 0.707l-6.853 6.84c-0.125 0.126-0.296 0.197-0.473 0.197s-0.348-0.071-0.473-0.197l-0.947-0.947c-0.125-0.123-0.196-0.291-0.196-0.467s0.071-0.344 0.196-0.467l5.933-5.92-5.933-5.92c-0.126-0.125-0.197-0.296-0.197-0.473s0.071-0.348 0.197-0.473l0.947-0.933c0.125-0.126 0.296-0.197 0.473-0.197s0.348 0.071 0.473 0.197l6.853 6.84z"
-                      ></path>
-                    </svg>
-                  </span>
+                  <svg
+                    version="1.1"
+                    class="o-icon"
+                    @click="changeMonth(2)"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    data-v-4cf11efe=""
+                  >
+                    <title></title>
+                    <path
+                      fill="currentColor"
+                      d="M21.040 15.040c0.188 0.187 0.293 0.442 0.293 0.707v0.507c-0.003 0.265-0.108 0.518-0.293 0.707l-6.853 6.84c-0.125 0.126-0.296 0.197-0.473 0.197s-0.348-0.071-0.473-0.197l-0.947-0.947c-0.125-0.123-0.196-0.291-0.196-0.467s0.071-0.344 0.196-0.467l5.933-5.92-5.933-5.92c-0.126-0.125-0.197-0.296-0.197-0.473s0.071-0.348 0.197-0.473l0.947-0.933c0.125-0.126 0.296-0.197 0.473-0.197s0.348 0.071 0.473 0.197l6.853 6.84z"
+                    ></path>
+                  </svg>
                 </div>
                 <el-calendar class="calender">
                   <template slot="dateCell" slot-scope="{ data }">
@@ -203,6 +201,7 @@
                           <span class="start-time">{{
                             item.startTime || item.start_date
                           }}</span>
+                          <span v-if="isShowH5">-</span>
                           <span class="end-time">{{
                             item.endTime || item.end_date
                           }}</span>
@@ -263,7 +262,10 @@
               </div>
             </el-collapse>
           </div>
-          <div v-else class="empty">今日暂无日程安排</div>
+          <div v-else class="empty">
+            <img src="/img/home/404.png" alt="" />
+            <p>当前暂无日程安排</p>
+          </div>
         </div>
       </div>
     </div>
@@ -279,8 +281,8 @@ export default {
         { text: '发起人', key: 'creator', isLink: false },
         { text: '会议日期', key: 'date', isLink: false },
         { text: '会议时间', key: 'duration_time', isLink: false },
-        { text: '腾讯会议ID', key: 'meeting_id', isLink: false },
-        { text: '腾讯会议链接', key: 'join_url', isLink: true },
+        { text: '会议ID', key: 'meeting_id', isLink: false },
+        { text: '会议链接', key: 'join_url', isLink: true },
         { text: 'Etherpad链接', key: 'etherpad', isLink: true },
         { text: '活动介绍', key: 'synopsis', isLink: false },
         { text: '起始日期', key: 'start_date', isLink: false },
@@ -292,11 +294,11 @@ export default {
       ],
       isMeeting: false,
       currentDay: '',
-      currentMeet: '',
+      currentMeet: [],
       renderData: [],
       activeName: '',
       monthDate: '',
-      toDay:'',
+      toDay: '',
       activeIndex: 0,
       isCollapse: false,
       activityType: ['线下', '线上', '线上 + 线下'],
@@ -305,8 +307,7 @@ export default {
     };
   },
   props: ['tableData'],
-  mounted() {
-  },
+  mounted() {},
   methods: {
     changeTab(item) {
       let index = item.index - 0;
@@ -331,6 +332,11 @@ export default {
       } catch (error) {
         console.error(error);
       }
+      if (!this.renderData.timeData.length) {
+        this.isMeeting = false;
+      } else {
+        this.isMeeting = true;
+      }
     },
     meetClick(day) {
       this.currentDay = day;
@@ -342,7 +348,7 @@ export default {
             this.isMeeting = true;
             // 深拷贝
             this.currentMeet = JSON.parse(JSON.stringify(item));
-            this.renderData = JSON.parse(JSON.stringify(item));
+            this.renderData = item;
             // 只有一个会议默认展开
             if (item.timeData.length === 1) {
               this.activeName = '0';
@@ -350,7 +356,7 @@ export default {
                 document.querySelector('.meet-item').click();
               });
             } else {
-              // 会议时间排序
+              // 多个会议按时间排序
               this.activeName = '';
               item.timeData.sort((a, b) => {
                 return (
@@ -367,6 +373,21 @@ export default {
       } catch (error) {
         console.error();
       }
+    },
+    getNowFormatDate() {
+      let date = new Date();
+      let seperator1 = '-';
+      let year = date.getFullYear();
+      let month = date.getMonth() + 1;
+      let strDate = date.getDate();
+      if (month >= 1 && month <= 9) {
+        month = '0' + month;
+      }
+      if (strDate >= 0 && strDate <= 9) {
+        strDate = '0' + strDate;
+      }
+      let currentdate = year + seperator1 + month + seperator1 + strDate;
+      return currentdate;
     },
     getMeetTimes(day) {
       let times = 0;
@@ -397,18 +418,18 @@ export default {
     },
   },
   mounted() {
-    document.querySelector('.is-today .day-box').click();
+    // document.querySelector('.is-today .day-box').click();
     // dom加载完成展开最近的活动
-    // setTimeout(() => {
-    //   let activeBoxs =
-    //     document.querySelectorAll('.be-active')[
-    //       document.querySelectorAll('.be-active').length - 1
-    //     ];
-    //   if (activeBoxs) {
-    //     activeBoxs.click();
-    //   }
-    // }, 300);
-    this.toDay = document.querySelector('is')
+    setTimeout(() => {
+      let activeBoxs =
+        document.querySelectorAll('.be-active')[
+          document.querySelectorAll('.be-active').length - 1
+        ];
+      if (activeBoxs) {
+        activeBoxs.click();
+      }
+    }, 100);
+    this.toDay = document.querySelector('is');
     const element = document.querySelector('.el-calendar__title');
     this.monthDate = element.innerHTML;
     this.watchChange(element);
@@ -427,6 +448,10 @@ h4 {
 a {
   text-decoration: none;
   color: @themeColor;
+}
+p::before,
+p::after {
+  display: none;
 }
 .wrapper {
   margin: 0 auto;
@@ -521,6 +546,9 @@ a {
         .el-collapse-item {
           padding: 0 8px;
           width: 345px;
+          /deep/ .el-collapse-item__content {
+            padding: 0;
+          }
           .meet-detail {
             display: flex;
             flex-direction: column;
@@ -552,8 +580,15 @@ a {
           }
         }
       }
-      /deep/.el-collapse-item__arrow {
+      /deep/.el-icon-arrow-right {
         font-weight: 700;
+        transform: rotate(90deg);
+        &::before {
+          color: #000;
+        }
+      }
+      /deep/.el-icon-arrow-right.is-active {
+        transform: rotate(270deg);
       }
     }
     /deep/ .calender {
@@ -649,7 +684,7 @@ a {
           @media screen and (max-width: 1000px) {
             .el-calendar-day {
               // width: 32px;
-              height: 32px;
+              height: 47px;
               .day-box {
                 .date-calender {
                   font-size: 12px;
@@ -724,6 +759,9 @@ a {
           border: none;
           padding: 0 24px;
           background-color: #eef0f4;
+          @media screen and (max-width: 1000px) {
+            background-color: #f5f6f8;
+          }
         }
       }
       .meetList {
@@ -737,6 +775,7 @@ a {
           padding: 8px;
           height: fit-content;
           overflow: auto;
+          // max-height: 250px;
         }
         &::-webkit-scrollbar-track {
           border-radius: 4px;
@@ -849,14 +888,14 @@ a {
               span {
                 line-height: 15px;
               }
-              .start-time {
-                color: #6189ff;
-              }
+              // .start-time {
+              //   color: #6189ff;
+              // }
             }
             .extend {
               display: flex;
               align-items: center;
-              min-width: 17px;
+              width: 24px;
               .o-icon {
                 font-size: 28px;
                 color: #555;
@@ -868,7 +907,9 @@ a {
             }
           }
           @media screen and (max-width: 1000px) {
+            background-color: #fff;
             padding: 12px;
+            border-left-width: 2px;
             .meet-left {
               max-width: 230px;
               .left-top {
@@ -887,8 +928,13 @@ a {
             }
             .item-right {
               .detail-time {
+                flex-direction: row;
+                align-items: flex-end;
                 padding: 0 7px;
                 font-size: 12px;
+              }
+              .extend {
+                align-items: flex-end;
               }
               .o-icon {
                 width: 16px;
@@ -929,9 +975,17 @@ a {
       }
       .empty {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         height: 100%;
+        img {
+          width: 300px;
+          min-height: 300px;
+        }
+        p {
+          transform: translateY(-200%);
+        }
       }
     }
   }
