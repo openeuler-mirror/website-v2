@@ -1,8 +1,8 @@
 <!--数据球-->
 <template>
   <div :class="['round', styleParams.backcolor]">
-    <img :class="isOsv ? 'osv' : ''" :src="image" alt="" />
-    <p class="num-data">{{ value }}</p>
+    <img :src="image" alt="" />
+    <p class="num-data">{{ value || '--' }}</p>
     <p class="description">{{ description }}</p>
   </div>
 </template>

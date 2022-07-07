@@ -221,7 +221,7 @@
             <h3>{{ i18n.home.HOME_ROUND.ROUND_TITLE }}</h3>
             <div class="round-box">
                 <round class="round-item" :image="item.ROUND_IMG" :value="item.ROUND_VALUE" :description="item.ROUND_TEXT"
-                    :styleParams="item.ROUND_STYLE" v-for="(item) in roundList" :key="item.ROUND_VALUE"></round>
+                    :styleParams="item.ROUND_STYLE" v-for="item in roundList" :key="item.ROUND_VALUE"></round>
             </div>
             <div class="statistics">
                 <a target="_blank" :href="i18n.home.HOME_ROUND.VIEW_DETAIL_LINK">
@@ -309,6 +309,7 @@ let remoteMethods = {
                 }
             })
             .catch(data => {
+                that.roundList = that.addValue(that.i18n.home.HOME_ROUND.ROUND_LIST);
                 that.$message.error(data);
             })
         }
@@ -1977,18 +1978,23 @@ let remoteMethods = {
         column-gap: 0;
         row-gap: 0;
         a {
-            display: block;
+            display: flex;
+            align-items: center;
             margin: 0px -1px -1px 0px ;
             padding: 24px;
             border: 1px solid #e5e5e5;
             background-color: #fff;
             img {
-            display: block;
-            width: 100%;
+                display: block;
+                width: 100%;
             }
         }
         @media screen  and (max-width: 1000px) {
             margin-top: 16px;
+            a {
+                padding:  10px 0;
+                min-height: 40px;
+            }
         }
     }
     @media screen and (max-width: 1000px){
