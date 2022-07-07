@@ -85,6 +85,7 @@ export default {
     z-index: 1;
 }
 .cadenderSinge{
+    background-color: #fff;
     @media screen and (max-width: 1000px) {
         width: 90%;
     }
