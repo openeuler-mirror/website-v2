@@ -295,12 +295,28 @@ module.exports = {
                     GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-HPC",
                 },
                 {
-                    NAME: "Sig-Virt",
+                    NAME: "sig-Virt",
                     NAME_LINK:
                         "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=95&name=Sig-Virt",
                     INTRODUCE: "致力于打造面向全场景、支撑多样性算力的虚拟化解决方案，提供高性能、高可靠和高安全的虚拟化组件。",
                     TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=162794355&single_label_text=&sort=&state=&target_project&skip_mobile=true",
                     GITEE: "https://gitee.com/openeuler/community/tree/master/sig/Virt",
+                },
+                {
+                    NAME: "sig-Compatibility-Infra",
+                    NAME_LINK:
+                        "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=95&name=Sig-Compatibility-Infra",
+                    INTRODUCE: "探索操作系统与服务器、应用程序等方面的兼容性。",
+                    TASK: "https://gitee.com/organizations/openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=163702716&single_label_text=&sort=&state=&target_project&skip_mobile=true",
+                    GITEE: "https://gitee.com/openeuler/community/tree/master/sig/sig-Compatibility-Infra",
+                },
+                {
+                    NAME: "Compiler",
+                    NAME_LINK:
+                        "https://www.openeuler.org/zh/sig/sig-list/sig-detail.html?id=95&name=Compiler",
+                    INTRODUCE: "致力于打造编译器根技术，为用户提供高性能、高可靠编译器工具链。",
+                    TASK: "https://gitee.com/organizations/src-openeuler/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=&project_type=&scope=&single_label_id=164549691&single_label_text=&sort=&state=&target_project&skip_mobile=true",
+                    GITEE: "https://gitee.com/openeuler/community/tree/master/sig/Compiler",
                 },
                 {
                     NAME: "其他",
