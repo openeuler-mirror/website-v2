@@ -7237,5 +7237,43 @@
     "chipModel": "SAS3508",
     "item": "03024JMY",
     "downloadLink": "inbox"
-  }
+  },
+  {
+    "vendorID": "19e5",
+    "deviceID": "1822",
+    "svID": "19e5",
+    "ssID": "d136",
+    "architecture": "x86_64",
+    "os": "openEuler 22.03 LTS",
+    "driverName": "hinic",
+    "version": "2.3.2.17",
+    "type": "NIC",
+    "date": "2022.07.06",
+    "sha256": "62644AAA895DFFDF2FD25190B0BD8648E0209C0E",
+    "driverSize": "186K",
+    "chipVendor": "Huawei",
+    "boardModel": "SP580",
+    "chipModel": "Hi1822",
+    "item": "02312QRP",
+    "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "19e5",
+    "deviceID": "1822",
+    "svID": "19e5",
+    "ssID": "d136",
+    "architecture": "aarch64",
+    "os": "openEuler 22.03 LTS",
+    "driverName": "hinic",
+    "version": "2.3.2.17",
+    "type": "NIC",
+    "date": "2022.07.06",
+    "sha256": "5207352D392184F5F7FBE52CE0A5C064DA1687B2",
+    "driverSize": "758K",
+    "chipVendor": "Huawei",
+    "boardModel": "SP580",
+    "chipModel": "Hi1822",
+    "item": "02312QRP",
+    "downloadLink": "inbox"
+  } 
 ]
