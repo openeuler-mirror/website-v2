@@ -97,6 +97,7 @@
             <p :class="$lang == 'en'?'en-weight-family':''">{{ i18n.home.HOME_ACTIVE.ACTIVE_DESCRIPTION }}</p>
         </div>
         <div class="home-calendar" v-if="calenderData.length">
+            <h3>社区会议</h3>
             <calender :table-data="calenderData" />
         </div>
 
@@ -1609,8 +1610,14 @@ let remoteMethods = {
     .home-calendar {
         width: 1080px;
         margin: 64px auto 0;
+        h3 {
+            margin-bottom: 40px;
+        }
         @media screen and (max-width: 1000px) {
             margin-top: 30px;
+            h3 {
+                margin-bottom: 0 !important;
+            }
         }
     }
     .time-tab {
@@ -1695,7 +1702,7 @@ let remoteMethods = {
     }
     .home-newsroom {
         width: 1080px;
-        margin: 84px auto 0;
+        margin: 64px auto 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -2053,9 +2060,10 @@ let remoteMethods = {
         }
         .home h3 {
             margin-top: 35px;
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 32px;
+            font-size: 16px;
+            line-height: 24px;
+            // font-weight: 600;
+            margin-bottom: 16px;
         }
         .home p {
             font-size: 16px;

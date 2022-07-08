@@ -1,716 +1,952 @@
 <template>
-    <div class="calender" ref="calender" v-loading="!tableData">
-        <div class="calendar-top" :style="{'width': ((w == 245)? 970 : w) + 'px'}">
-            <button
-                class="left"
-                @click="handleBtn('left')"
-                :style="{ background: 'url(' + prev + ') no-repeat center' }"
-            ></button>
-            <button
-                class="right"
-                @click="handleBtn('right')"
-                :style="{ background: 'url(' + prev + ') no-repeat center' }"
-            ></button>
-            <div class="calenderSliderTopMain" :style="{'width': ((w == 245)? 985 : w) + 'px'}">
-                <div
-                    class="calenderSliderTopMainswiper"
-                    :style="'width:' + (tableData.length * w) + 'px;transform:translateX(' + l + 'px)'"
-                >
-                    <span
-                        :style="{'width': w + 'px'}"
-                        v-for="(item,key) in dealData"
-                        :key="key"
-                        :class="{ active: item.date == currentDate }"
-                    >{{ item.date }}</span>
-                </div>
-            </div>
+  <div class="wrapper">
+    <div class="head-title">
+      <div class="left-title">
+        <svg
+          version="1.1"
+          class="o-icon"
+          @click="changeMonth(0)"
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+        >
+          <path
+            fill="currentColor"
+            d="M10.96 16.96c-0.188-0.187-0.293-0.442-0.293-0.707v-0.507c0.003-0.265 0.108-0.518 0.293-0.707l6.853-6.84c0.125-0.126 0.296-0.197 0.473-0.197s0.348 0.071 0.473 0.197l0.947 0.947c0.125 0.123 0.196 0.291 0.196 0.467s-0.071 0.344-0.196 0.467l-5.933 5.92 5.933 5.92c0.126 0.125 0.197 0.296 0.197 0.473s-0.071 0.348-0.197 0.473l-0.947 0.933c-0.125 0.126-0.296 0.197-0.473 0.197s-0.348-0.071-0.473-0.197l-6.853-6.84z"
+          ></path>
+        </svg>
+        <span class="month-date">{{ monthDate }}</span>
+        <svg
+          version="1.1"
+          class="o-icon"
+          @click="changeMonth(2)"
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          data-v-4cf11efe=""
+        >
+          <title></title>
+          <path
+            fill="currentColor"
+            d="M21.040 15.040c0.188 0.187 0.293 0.442 0.293 0.707v0.507c-0.003 0.265-0.108 0.518-0.293 0.707l-6.853 6.84c-0.125 0.126-0.296 0.197-0.473 0.197s-0.348-0.071-0.473-0.197l-0.947-0.947c-0.125-0.123-0.196-0.291-0.196-0.467s0.071-0.344 0.196-0.467l5.933-5.92-5.933-5.92c-0.126-0.125-0.197-0.296-0.197-0.473s0.071-0.348 0.197-0.473l0.947-0.933c0.125-0.126 0.296-0.197 0.473-0.197s0.348 0.071 0.473 0.197l6.853 6.84z"
+          ></path>
+        </svg>
+      </div>
+      <div class="right-title">
+        <div class="title-list">
+          <!-- <div
+            v-for="(item, index) in titleList"
+            :key="item"
+            :class="{ active: index === activeIndex }"
+            class="title-item"
+            @click="changeTab(index)"
+          >
+            {{ item }}
+          </div> -->
+          <el-tabs v-model="tabType" @tab-click="changeTab">
+            <el-tab-pane
+              v-for="item in titleList"
+              :key="item"
+              :label="item"
+              :name="item"
+            ></el-tab-pane>
+          </el-tabs>
         </div>
-        <div class="calenderMain">
-            <calenderDetail :item3="saveItem" @close-detail="close" v-if="isShowDetail" />
-            <div class="calenderLeft">
-                <button
-                    class="top"
-                    @click="handleBtn('top')"
-                    :style="{ background: 'url(' + prev + ') no-repeat center' }"
-                ></button>
-                <button
-                    class="bottom"
-                    @click="handleBtn('bottom')"
-                    :style="{ background: 'url(' + prev + ') no-repeat center' }"
-                ></button>
-                <div class="calenderLeftTime">
-                    <div
-                        class="calendarLeftTimeSwiper"
-                        :style="'width: ' + (tableData.length * w) + 'px;transform: translateY(' + t + 'px)'"
-                    >
-                        <span
-                            v-for="(item, key) in timeData"
-                            :key="key"
-                            :class="{ active: item == currentTime }"
-                        >{{ item }}</span>
-                    </div>
-                </div>
-            </div>
-            <div class="calendarSlide" :style="{'width': ((w == 245)? 985 : w) + 'px'}">
-                
-                <div class="calendarSlideItem" :style="'transform: translateX(' + l + 'px)'">
-                    <template v-for="(item, key) in dealData">
-                        <div
-                            class="calenderslideItemInside"
-                            :key="key"
-                            :style="{'transform': 'translateY(' + (item.timeDate.length == 1 && item.timeDate[0].duration >= 16 ? 0: t) + 'px)','width': w + 'px'}"
-                        >
-                            <template v-for="(item1, index1) in item.timeDate">
-                                <div
-                                    :class="'calenderslideItemInsideItem' + (item1.duration >= 16 ? ' all' : '')"
-                                    :key="index1"
-                                    :style="returnHeight(item1)"
-                                >
-                                    <template v-for="(item2, index2) in item1.dealDate">
-                                        <div
-                                            :key="index2"
-                                            class="calenderListSinge"
-                                            :style="returnInsideH(item2)"
-                                            v-if="item1.duration < 16"
-                                        >
-                                            <img v-if="item2.data.length && item2.data[item2.index-1].video_url" class="record-img" src="/img/common/record.png">
-                                            <button
-                                                class="left btnMy"
-                                                v-if="item2.data.length > 1"
-                                                @click="handleBtnMysef('left', key, index1, index2, dealData)"
-                                                :style="{ background: 'url(' + prevDetail + ') no-repeat center' }"
-                                            ></button>
-                                            <button
-                                                class="right btnMy"
-                                                v-if="item2.data.length > 1"
-                                                @click="handleBtnMysef('right', key, index1, index2, dealData)"
-                                                :style="{ background: 'url(' + prevDetail + ') no-repeat center' }"
-                                            ></button>
-                                            <span
-                                                v-if="item2.data.length > 1"
-                                                class="calenderCurrentIndex"
-                                            >{{ item2.index }} / {{ item2.data.length }}</span>
-                                            <div
-                                                class="calenderInsideAll"
-                                                :style="'transform: translateX(' + (-230 * (item2.index - 1)) + 'px)'"
-                                            >
-                                                <div
-                                                    v-for="(item3, index3) in item2.data"
-                                                    :key="index3"
-                                                    :class="'cadenderSinge' + (item1.duration > 1 && item3.duration == item1.duration ? ' active': '')"
-                                                    @click="handleShowDetail(item1, item3)"
-                                                >
-                                                    <h1 class="calenderH1">{{ item3.name }}</h1>
-                                                    <div
-                                                        class="meetDetail"
-                                                        v-if="item1.duration > 1 && item3.duration == item1.duration"
-                                                    >
-                                                        <span
-                                                            class="meetingTime"
-                                                        >会议时间：{{ item3.startTime + "-" + item3.endTime }}</span>
-                                                        <img :src="item3.url" :alt="item3.creator" />
-                                                        <div class="meetDetailDe">
-                                                            <h2>{{ item3.creator }}</h2>
-                                                            <p>{{ item3.detail }}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </template>
-                                </div>
-                            </template>
-                        </div>
-                    </template>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="main-body" ref="activeBoxs">
+      <el-calendar v-if="!isShowH5"  class="calender calender-pc">
+        <template slot="dateCell" slot-scope="{ data }">
+          <div
+            class="out-box"
+            :class="{ 'be-active': getMeetTimes(data.day) }"
+            @click="meetClick(data.day)"
+          >
+            <div class="day-box">
+              <p
+                :class="data.isSelected ? 'is-selected' : ''"
+                class="date-calender"
+              >
+                {{ data.day.split('-').slice(2)[0] }}
+              </p>
+            </div>
+          </div>
+        </template>
+      </el-calendar>
+      <el-collapse v-else class="calender-mo">
+        <div class="collapse-box-mo">
+          <el-collapse-item>
+            <template #title>
+              <div class="mo-collapse">
+                <svg id="icon-icon-calendar" viewBox="0 0 32 32">
+                  <path
+                    fill="currentColor"
+                    style="fill: var(--color1, #555)"
+                    d="M25.333 5.333h-1.333v-2c0-0.368-0.298-0.667-0.667-0.667h-1.333c-0.368 0-0.667 0.298-0.667 0.667v2h-10.667v-2c0-0.368-0.298-0.667-0.667-0.667h-1.333c-0.368 0-0.667 0.298-0.667 0.667v2h-1.333c-1.473 0-2.667 1.194-2.667 2.667v17.333c0 1.473 1.194 2.667 2.667 2.667h18.667c1.473 0 2.667-1.194 2.667-2.667v-17.333c0-1.473-1.194-2.667-2.667-2.667zM25.333 25.333h-18.667v-14.667h18.667v14.667zM15.333 16h1.333c0.368 0 0.667-0.298 0.667-0.667v-1.333c0-0.368-0.298-0.667-0.667-0.667h-1.333c-0.368 0-0.667 0.298-0.667 0.667v1.333c0 0.368 0.298 0.667 0.667 0.667zM20.667 16h1.333c0.368 0 0.667-0.298 0.667-0.667v-1.333c0-0.368-0.298-0.667-0.667-0.667h-1.333c-0.368 0-0.667 0.298-0.667 0.667v1.333c0 0.368 0.298 0.667 0.667 0.667zM10 16h1.333c0.368 0 0.667-0.298 0.667-0.667v-1.333c0-0.368-0.298-0.667-0.667-0.667h-1.333c-0.368 0-0.667 0.298-0.667 0.667v1.333c0 0.368 0.298 0.667 0.667 0.667zM15.333 21.333h1.333c0.368 0 0.667-0.298 0.667-0.667v-1.333c0-0.368-0.298-0.667-0.667-0.667h-1.333c-0.368 0-0.667 0.298-0.667 0.667v1.333c0 0.368 0.298 0.667 0.667 0.667zM10 21.333h1.333c0.368 0 0.667-0.298 0.667-0.667v-1.333c0-0.368-0.298-0.667-0.667-0.667h-1.333c-0.368 0-0.667 0.298-0.667 0.667v1.333c0 0.368 0.298 0.667 0.667 0.667z"
+                  ></path>
+                </svg>
+                <span class="month-date">{{ currentDay }}</span>
+              </div>
+            </template>
+            <div class="meet-detail">
+              <template>
+                <div class="left-title">
+                  <span @click="changeMonth(0)">
+                    <svg
+                      version="1.1"
+                      class="o-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M10.96 16.96c-0.188-0.187-0.293-0.442-0.293-0.707v-0.507c0.003-0.265 0.108-0.518 0.293-0.707l6.853-6.84c0.125-0.126 0.296-0.197 0.473-0.197s0.348 0.071 0.473 0.197l0.947 0.947c0.125 0.123 0.196 0.291 0.196 0.467s-0.071 0.344-0.196 0.467l-5.933 5.92 5.933 5.92c0.126 0.125 0.197 0.296 0.197 0.473s-0.071 0.348-0.197 0.473l-0.947 0.933c-0.125 0.126-0.296 0.197-0.473 0.197s-0.348-0.071-0.473-0.197l-6.853-6.84z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span class="month-date">{{ monthDate }}</span>
+                  <span @click="changeMonth(2)">
+                    <svg
+                      version="1.1"
+                      class="o-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      data-v-4cf11efe=""
+                    >
+                      <title></title>
+                      <path
+                        fill="currentColor"
+                        d="M21.040 15.040c0.188 0.187 0.293 0.442 0.293 0.707v0.507c-0.003 0.265-0.108 0.518-0.293 0.707l-6.853 6.84c-0.125 0.126-0.296 0.197-0.473 0.197s-0.348-0.071-0.473-0.197l-0.947-0.947c-0.125-0.123-0.196-0.291-0.196-0.467s0.071-0.344 0.196-0.467l5.933-5.92-5.933-5.92c-0.126-0.125-0.197-0.296-0.197-0.473s0.071-0.348 0.197-0.473l0.947-0.933c0.125-0.126 0.296-0.197 0.473-0.197s0.348 0.071 0.473 0.197l6.853 6.84z"
+                      ></path>
+                    </svg>
+                  </span>
+                </div>
+                <el-calendar class="calender">
+                  <template slot="dateCell" slot-scope="{ data }">
+                    <div
+                      class="out-box"
+                      :class="{ 'be-active': getMeetTimes(data.day) }"
+                      @click="meetClick(data.day)"
+                    >
+                      <div class="day-box">
+                        <p
+                          :class="data.isSelected ? 'is-selected' : ''"
+                          class="date-calender"
+                        >
+                          {{ data.day.split('-').slice(2)[0] }}
+                        </p>
+                      </div>
+                    </div>
+                  </template>
+                </el-calendar>
+              </template>
+            </div>
+          </el-collapse-item>
+        </div>
+      </el-collapse>
+      <div class="detailList">
+        <div class="detailHead">
+          最新日程：
+          <span>{{ currentDay }}</span>
+        </div>
+        <div class="meetList">
+          <div v-if="isMeeting" class="demo-collapse">
+            <el-collapse
+              v-model="activeName"
+              accordion
+              @change="changeCollapse()"
+            >
+              <div
+                v-for="(item, index) in renderData.timeData"
+                :key="item.id"
+                class="collapse-box"
+              >
+                <el-collapse-item :name="index">
+                  <template #title>
+                    <div class="meet-item">
+                      <div class="meet-left">
+                        <div class="left-top">
+                          <p class="meet-name">{{ item.name || item.title }}</p>
+                          <!-- <p v-if="item.schedules" class="introduce">
+                            {{ titleList[item.activity_category + 1] }}
+                          </p>
+                          <p v-else class="introduce">会议</p> -->
+                        </div>
+                        <div
+                          v-if="item.schedules"
+                          class="more-detail"
+                          @click.stop="goDetail(index)"
+                        >
+                          了解更多
+                          <img
+                            class="o-icon"
+                            @click="changeMonth(2)"
+                            src="/img/home/icon-right.svg"
+                            alt=""
+                          />
+                        </div>
+                        <div
+                          v-if="item.group_name"
+                          class="group-name more-detail"
+                        >
+                          SIG组: {{ item.group_name }}
+                        </div>
+                      </div>
+                      <div class="item-right">
+                        <div class="detail-time">
+                          <span class="start-time">{{
+                            item.startTime || item.start_date
+                          }}</span>
+                          <span class="end-time">{{
+                            item.endTime || item.end_date
+                          }}</span>
+                        </div>
+                        <div class="extend">
+                          <img
+                            class="o-icon"
+                            :class="{
+                              reversal: isCollapse && activeName === index,
+                            }"
+                            src="/img/home/chevron-down.svg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </template>
+                  <div class="meet-detail">
+                    <template v-for="keys in detailItem">
+                      <div
+                        v-if="item[keys.key]"
+                        class="meeting-item"
+                        :key="keys.key"
+                      >
+                        <div class="item-title">{{ keys.text }}:</div>
+                        <p
+                          v-if="
+                            !keys.isLink &&
+                            keys.key !== 'activity_type' &&
+                            keys.key !== 'date'
+                          "
+                        >
+                          {{ item[keys.key] }}
+                        </p>
+                        <p
+                          v-else-if="
+                            keys.isLink &&
+                            item[keys.key] &&
+                            !item[keys.key].includes('http')
+                          "
+                        >
+                          {{ item[keys.key] }}
+                        </p>
+                        <a
+                          v-else-if="keys.isLink"
+                          :href="item[keys.key]"
+                          target="_blank"
+                          >{{ item[keys.key] }}</a
+                        >
+                        <p v-else-if="keys.key === 'activity_type'">
+                          {{ activityType[item.activity_type - 1] }}
+                        </p>
+                        <p v-else>{{ currentDay }}</p>
+                      </div>
+                    </template>
+                  </div>
+                </el-collapse-item>
+              </div>
+            </el-collapse>
+          </div>
+          <div v-else class="empty">今日暂无日程安排</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
-import calenderDetail from "./calenderDetail.vue";
-import commonUtils from "./../../libs/common-methods";
 export default {
-    name: "HelloWorld",
-    data() {
-        return {
-            w: 245,
-            t: 0,
-            l: 0,
-            Ml: 0,
-            indexX: 0,
-            indexY: 2,
-            currentDate: "",
-            currentTime: "",
-            dealData: [],
-            timeData: [
-                "6:00-7:00",
-                "7:00-8:00",
-                "8:00-9:00",
-                "9:00-10:00",
-                "10:00-11:00",
-                "11:00-12:00",
-                "12:00-13:00",
-                "13:00-14:00",
-                "14:00-15:00",
-                "15:00-16:00",
-                "16:00-17:00",
-                "17:00-18:00",
-                "18:00-19:00",
-                "19:00-20:00",
-                "20:00-21:00",
-                "21:00-22:00"
-            ],
-            saveItem: {},
-            isShowDetail: false,
-            prev: "/img/home/prev.svg",
-            prevDetail: "/img/home/prev-detail.svg",
-            flag: false
-        };
-    },
-    components: {
-        calenderDetail
-    },
-    props: ["tableData"],
-    watch: {
-        tableData: {
-            handler: function() {
-                if (!this.flag) {
-                    commonUtils.calenderSortData(this.tableData);
-                    this.getOriginData(this.tableData);
-                }
-                this.flag = true;
-            },
-            immediate: true
+  name: 'HelloWorld',
+  data() {
+    return {
+      detailItem: [
+        { text: '会议详情', key: 'detail', isLink: false },
+        { text: '发起人', key: 'creator', isLink: false },
+        { text: '会议日期', key: 'date', isLink: false },
+        { text: '会议时间', key: 'duration_time', isLink: false },
+        { text: '腾讯会议ID', key: 'meeting_id', isLink: false },
+        { text: '腾讯会议链接', key: 'join_url', isLink: true },
+        { text: 'Etherpad链接', key: 'etherpad', isLink: true },
+        { text: '活动介绍', key: 'synopsis', isLink: false },
+        { text: '起始日期', key: 'start_date', isLink: false },
+        { text: '结束日期', key: 'end_date', isLink: false },
+        { text: '活动形式', key: 'activity_type', isLink: false },
+        { text: '线上链接', key: 'online_url', isLink: true },
+        { text: '报名链接', key: 'register_url', isLink: true },
+        { text: '回放链接', key: 'replay_url', isLink: true },
+      ],
+      isMeeting: false,
+      currentDay: '',
+      currentMeet: '',
+      renderData: [],
+      activeName: '',
+      monthDate: '',
+      toDay:'',
+      activeIndex: 0,
+      isCollapse: false,
+      activityType: ['线下', '线上', '线上 + 线下'],
+      titleList: ['全部', '会议', '活动', '峰会'],
+      tabType: '全部',
+    };
+  },
+  props: ['tableData'],
+  mounted() {
+  },
+  methods: {
+    changeTab(item) {
+      let index = item.index - 0;
+      this.activeIndex = index;
+      try {
+        // 0、全部 1、会议 其他活动
+        if (index === 0) {
+          this.renderData.timeData = this.currentMeet.timeData;
+        } else if (index === 1) {
+          this.renderData.timeData = this.currentMeet.timeData.filter(
+            (item) => {
+              return item.etherpad;
+            }
+          );
+        } else {
+          this.renderData.timeData = this.currentMeet.timeData.filter(
+            (item) => {
+              return item.activity_category === index - 1;
+            }
+          );
         }
+      } catch (error) {
+        console.error(error);
+      }
     },
-    mounted () {
-        if(document.body.getBoundingClientRect().width < 1000){
-            this.w = (this.$refs.calender.getBoundingClientRect().width - 120);
+    meetClick(day) {
+      this.currentDay = day;
+      this.activeIndex = 0;
+      try {
+        this.tableData.forEach((item) => {
+          this.isCollapse = false;
+          if (item.date === day || item.start_date === day) {
+            this.isMeeting = true;
+            // 深拷贝
+            this.currentMeet = JSON.parse(JSON.stringify(item));
+            this.renderData = JSON.parse(JSON.stringify(item));
+            // 只有一个会议默认展开
+            if (item.timeData.length === 1) {
+              this.activeName = '0';
+              this.$nextTick(() => {
+                document.querySelector('.meet-item').click();
+              });
+            } else {
+              // 会议时间排序
+              this.activeName = '';
+              item.timeData.sort((a, b) => {
+                return (
+                  parseInt(a.startTime.replace(':', '')) -
+                  parseInt(b.startTime.replace(':', ''))
+                );
+              });
+            }
+            throw new Error();
+          } else {
+            this.isMeeting = false;
+          }
+        });
+      } catch (error) {
+        console.error();
+      }
+    },
+    getMeetTimes(day) {
+      let times = 0;
+      this.tableData.forEach((item) => {
+        if (item.date === day || item.start_date === day) {
+          times = item.timeData.length;
+          return;
         }
+      });
+      return times;
     },
-    methods: {
-        handleBtn(val) {
-            let mobileIndex = null;
-            if(this.w == 245){
-                mobileIndex = 4;
-            } else {
-                mobileIndex = 1;
-            }
-            if (val === "left" || val === "right") {
-                let len = this.tableData.length;
-                if (val === "left") {
-                    if (this.indexX <= 0) {
-                        this.indexX = 0;
-                    } else {
-                        this.indexX--;
-                    }
-                } else {
-                    if (this.indexX >= len - mobileIndex) {
-                        this.indexX = len - mobileIndex;
-                    } else {
-                        this.indexX++;
-                    }
-                }
-                this.l = -this.w * this.indexX;
-            }
-            if (val === "top" || val === "bottom") {
-                let len = this.timeData.length;
-                if (val === "top") {
-                    if (this.indexY <= 0) {
-                        this.indexY = 0;
-                    } else {
-                        this.indexY--;
-                    }
-                } else {
-                    if (this.indexY >= len - 10) {
-                        this.indexY = len - 10;
-                    } else {
-                        this.indexY++;
-                    }
-                }
-                this.t = -76 * this.indexY;
-            }
-        },
-        //数组去重
-        unique(arr) {
-            return Array.from(new Set(arr));
-        },
-        toTwo(n) {
-            return n < 10 ? "0" + n : n;
-        },
-        returnDate(string) {
-            let times = new Date();
-            let y = times.getFullYear();
-            let M = times.getMonth() + 1;
-            let d = times.getDate();
-            let h = times.getHours();
-            let m = times.getMinutes();
-            let s = times.getSeconds();
-            let currentDate = M + "-" + d + "-";
-            let currentTime = h + ":00" + "-" + (h + 1) + ":00";
-            let nowTime =
-                y +
-                "-" +
-                this.toTwo(M) +
-                "-" +
-                this.toTwo(d) +
-                " " +
-                this.toTwo(h) +
-                ":" +
-                this.toTwo(m) +
-                ":" +
-                this.toTwo(s);
-            let nowDate = y + "-" + this.toTwo(M) + "-" + this.toTwo(d);
-            if (string === "dateTime") {
-                return currentDate;
-            } else if (string === "currentTime") {
-                return currentTime;
-            } else if (string === "nowTime") {
-                return nowTime;
-            } else {
-                return nowDate;
-            }
-        },
-        returnHeight(item) {
-            let str = "";
-            let h = 0;
-            let t = 0;
-            if (item.duration >= 16) {
-                str = false;
-            } else {
-                let currentIndex = 0;
-                this.timeData.forEach((items, i) => {
-                    let times = items.split("-")[0];
-                    let itemTime =
-                        parseInt(item.duration_time.split("-")[0]) + ":00";
-                    if (times === itemTime) {
-                        currentIndex = i;
-                    }
-                });
-                h = 76 * parseInt(item.duration) - 20;
-                if (item.duration < 16) {
-                    t = 76 * parseInt(currentIndex);
-                } else {
-                    t = 0;
-                }
-                str = `height: ${h}px;top: ${t}px;`;
-            }
-            return str;
-        },
-        returnInsideH(item) {
-            let str = "";
-            let h = 0;
-
-            let index = 0;
-
-            item.data.forEach(items => {
-                index = items.duration;
-            });
-            h = 76 * parseInt(index) - 20;
-
-            str = `height: ${h}px;`;
-            return str;
-        },
-        handleShowDetail(item1, item3) {
-            this.saveItem = item3;
-            this.isShowDetail = true;
-        },
-        close() {
-            this.isShowDetail = false;
-        },
-        handleBtnMysef(str, key, index1, index2, datas) {
-            let { index, data } = datas[key].timeDate[index1].dealDate[index2];
-            let len = data.length;
-            if (str === "left") {
-                if (index <= 1) {
-                    index = 1;
-                } else {
-                    datas[key].timeDate[index1].dealDate[index2].index--;
-                }
-            } else {
-                if (index >= len) {
-                    index = len;
-                } else {
-                    datas[key].timeDate[index1].dealDate[index2].index++;
-                }
-            }
-            this.dealData = [];
-
-            this.dealData = datas;
-        },
-        getOriginData(data) {
-            let timestamp = Date.now();
-            let min;
-            let index = 0;
-            data.forEach((item, dateIndex) => {
-                let itemStamp = new Date(item.date).getTime();
-                let interVal = Math.abs(timestamp - itemStamp);
-                if (min === void 0) { min = interVal } else {
-                    if (min > interVal) {
-                        min = interVal;
-                        index = dateIndex;
-                    }
-                }
-                item.timeDate.forEach(item1 => {
-                    item1.dealDate = {};
-                    let flags = true;
-                    item1.meetingData.forEach(meetItem => {
-                        if (
-                            meetItem.duration !== item1.duration &&
-                            meetItem.startTime !== item1.startTime
-                        ) {
-                            flags = false;
-                        }
-                    });
-                    if (!flags) {
-                        for (let i = 0; i < item1.duration; i++) {
-                            let times = parseInt(item1.startTime) + i + ":00";
-                            item1.dealDate[times] = [];
-                        }
-                        item1.meetingData.forEach(item2 => {
-                            if (item2.startTime === item1.startTime) {
-                                for (const key in item1.dealDate) {
-                                    if (key === item2.startTime) {
-                                        item1.dealDate[key].push(item2);
-                                    }
-                                }
-                            }
-                            for (
-                                let i = parseInt(item2.startTime);
-                                i < parseInt(item2.endTime);
-                                i++
-                            ) {
-                                let times = i + ":00";
-                                for (const key in item1.dealDate) {
-                                    if (key === times) {
-                                        item1.dealDate[key].push(item2);
-                                    }
-                                }
-                            }
-                        });
-                        //去重
-                        for (const key in item1.dealDate) {
-                            let datas = this.unique(item1.dealDate[key]);
-                            item1.dealDate[key] = datas;
-                        }
-                    } else {
-                        let times = parseInt(item1.startTime) + ":00";
-                        item1.dealDate[times] = item1.meetingData;
-                    }
-                    let flag = true;
-                    item1.meetingData.forEach(items => {
-                        if (items.duration !== item1.duration) {
-                            flag = false;
-                        }
-                    });
-                    if (flag) {
-                        for (const key in item1.dealDate) {
-                            if (key !== item1.startTime && !flags) {
-                                delete item1.dealDate[key];
-                            }
-                        }
-                    } else {
-                        for (const key in item1.dealDate) {
-                            item1.dealDate[key].forEach(items => {
-                                items.duration = 1;
-                            });
-                        }
-                    }
-                    for (const key in item1.dealDate) {
-                        let datas = item1.dealDate[key];
-                        item1.dealDate[key] = {};
-                        item1.dealDate[key].index = 1;
-                        item1.dealDate[key].data = datas;
-                    }
-                    this.dealData = data;
-                });
-            });
-            this.$nextTick(() => {
-                this.indexX = ((this.w == 245) ? (index - 3) : index);
-                this.l = -this.w * this.indexX;    
-            })
-            
-        }
+    changeMonth(index) {
+      document.querySelectorAll('.el-button-group button')[index].click();
     },
-    created() {
-        this.t = -76 * this.indexY;
-        this.currentDate = this.returnDate("nowDate");
-        this.currentTime = this.returnDate("currentTime");
-    }
+    watchChange(element) {
+      let that = this;
+      let observe = new MutationObserver(function () {
+        that.monthDate = element.innerHTML;
+      });
+      observe.observe(element, {
+        childList: true,
+        subtree: true,
+        characterData: true,
+      });
+    },
+    changeCollapse() {
+      this.isCollapse = !this.isCollapse;
+    },
+  },
+  mounted() {
+    document.querySelector('.is-today .day-box').click();
+    // dom加载完成展开最近的活动
+    // setTimeout(() => {
+    //   let activeBoxs =
+    //     document.querySelectorAll('.be-active')[
+    //       document.querySelectorAll('.be-active').length - 1
+    //     ];
+    //   if (activeBoxs) {
+    //     activeBoxs.click();
+    //   }
+    // }, 300);
+    this.toDay = document.querySelector('is')
+    const element = document.querySelector('.el-calendar__title');
+    this.monthDate = element.innerHTML;
+    this.watchChange(element);
+  },
 };
 </script>
-<style scoped lang="less">
-div::after {
-    content: "";
-    display: block;
-    clear: both;
+
+<style lang="less" scoped>
+@themeColor: #002fa7;
+@backgroundColor: #e5e8f0;
+@orange: #406fe7;
+
+h4 {
+  margin: 5px 0;
 }
-.is-pc {
-    display: block;
+a {
+  text-decoration: none;
+  color: @themeColor;
 }
-.calender {
-    width: 1100px;
-    position: relative;
-    top: 0;
-    left: 0;
+.wrapper {
+  margin: 0 auto;
+  // padding: 0 16px;
+  max-width: 1448px;
+  .calendar-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 400;
+  }
+  .head-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 23px 0;
+    .left-title {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      .o-icon {
+        font-size: 24px;
+        color: rgb(206, 206, 206);
+      }
+    }
+    .month-date {
+      padding: 0 8px;
+    }
     @media screen and (max-width: 1000px) {
-        width: 100%;
-    }
-}
-.calendar-top {
-    position: relative;
-    top: 0;
-    left: 100px;
-}
-button {
-    width: 20px;
-    height: 40px;
-    z-index: 10;
-    background: none;
-    display: block;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-    position: absolute;
-    transition: transform 0.5s ease-in-out;
-}
-.calenderSliderTopMainswiper {
-    transition: transform 0.5s ease-in-out;
-}
-.calendarLeftTimeSwiper {
-    transition: transform 0.5s ease-in-out;
-}
-.left {
-    top: 0;
-    left: -20px;
-}
-.right {
-    top: 0;
-    right: -20px;
-    transform: rotateZ(-180deg);
-}
-.top {
-    top: -20px;
-    height: 20px;
-
-    left: 50%;
-    margin-left: -10px;
-    transform: rotateZ(90deg);
-}
-.bottom {
-    bottom: -20px;
-    height: 20px;
-    left: 50%;
-    margin-left: -10px;
-    transform: rotateZ(-90deg);
-}
-.calenderSliderTopMain {
-    position: relative;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-}
-.calenderSliderTopMain span {
-    height: 40px;
-    line-height: 40px;
-    font-size: 16px;
-    text-align: center;
-    display: block;
-    float: left;
-    
-}
-.calenderMain {
-    position: relative;
-    top: 20px;
-    height: 740px;
-    left: 0;
-}
-.calenderLeft {
-    height: 740px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.calenderLeftTime {
-    width: 90px;
-    height: 740px;
-    overflow: hidden;
-}
-.calenderLeftTime span {
-    width: 90px;
-    margin-bottom: 20px;
-    height: 56px;
-    line-height: 56px;
-    display: block;
-    font-size: 14px;
-    text-align: center;
-    
-}
-.calenderLeftTime span.active {
-    color: #002FA7;
-}
-.calenderSliderTopMain span.active {
-    color: #002FA7;
-}
-.calendarSlide {
-    padding: 10px 0 0 10px;
-    height: 760px;
-    overflow: hidden;
-    position: absolute;
-    top: -10px;
-    left: 100px;
-}
-.calenderslideItemInside {
-    float: left;
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 100%;
-    transition: transform 0.5s ease-in-out;
-}
-.calendarSlideItem {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 1000000px;
-    height: 1000000px;
-    transition: transform 0.5s ease-in-out;
-}
-.calenderslideItemInsideItem {
-    width: calc(100% - 15px);
-    margin-right: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    text-align: left;
-    padding-bottom: 20px;
-}
-.calenderslideItemInsideItem.all {
-    width: calc(100% - 15px);
-    height: 740px;
-    transition: transform 0.5s ease-in-out;
-    background: blue;
-}
-.calenderListSinge {
-    cursor: pointer;
-    width: 100%;
-    box-shadow: 0px 4px 10px #ececec;
-    margin-bottom: 20px;
-    overflow: hidden;
-    background-color: #fff;
-}
-.calenderListSinge .record-img {
-    width: 32px;
-    height: 16px;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-.calenderInsideAll {
-    width: 10000000px;
-    position: relative;
-    top: 0;
-    left: 0;
-    transition: transform 0.5s ease-in-out;
-}
-.cadenderSinge {
-    min-height: 56px;
-    border-radius: 4px;
-    padding: 12px 20px 15px;
-    position: relative;
-    top: 0;
-    cursor: pointer;
-    float: left;
-}
-.meetDetail img {
-    overflow: hidden;
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    float: left;
-}
-.meetDetailDe {
-    padding-left: 60px;
-}
-.meetDetail .meetingTime {
-    position: absolute;
-    top: 52px;
-    left: 20px;
-    line-height: 14px;
-    font-size: 12px;
-}
-h1 {
-    margin: 0;
-    font-size: 16px;
-}
-
-.meetDetailDe h2 {
-    line-height: 20px;
-}
-.meetDetailDe p {
-    line-height: 18px;
-    font-size: 12px;
-    margin: 0;
-    width: 140px;
-}
-.calenderH1 {
-    width: 200px;
-    overflow: hidden;    
- 	text-overflow: ellipsis;
- 	white-space: nowrap;
-    line-height: 30px;
-    cursor: pointer;
-}
-.cadenderSinge.active {
-    padding: 15px 20px;
-    cursor: auto;
-}
-.cadenderSinge.active .calenderH1 {
-    width: 200px;
-    overflow: hidden;    
- 	text-overflow: ellipsis;
- 	white-space: nowrap;
-    padding-bottom: 30px;
-}
-h2 {
-    margin: 0;
-    font-size: 14px;
-}
-.btnMy {
-    top: 50%;
-    margin-top: -20px;
-    opacity: 0.5;
-    background-size: 12px 12px !important;
-}
-.left.btnMy {
-    left: 0;
-}
-.right.btnMy {
-    right: 0;
-}
-.calenderListSinge {
-    position: relative;
-    top: 0;
-    left: 0;
-}
-.calenderListSinge:hover .btnMy {
-    opacity: 1;
-}
-.calenderCurrentIndex {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 80px;
-    display: block;
-    text-align: center;
-    margin-left: -40px;
-    font-size: 12px;
-    color: #999;
-}
-@media screen and (max-width: 1000px) {
-    .is-pc {
+      .left-title {
         display: none;
+      }
     }
+    /deep/ .title-list {
+      display: flex;
+      .el-tabs__nav-scroll {
+        @media screen and (max-width: 1000px) {
+          display: flex;
+          justify-content: center;
+        }
+      }
+      .el-tabs__item {
+        font-size: 16px;
+        @media screen and (max-width: 1000px) {
+          font-size: 14px;
+        }
+      }
+      .el-tabs__nav-wrap::after {
+        display: none;
+      }
+      .title-item {
+        cursor: pointer;
+        padding: 12px;
+        &:hover {
+          color: @themeColor;
+        }
+      }
+      .active {
+        background-color: @themeColor;
+        color: #fff !important;
+      }
+    }
+    .o-icon {
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 700;
+      color: #000;
+      transition: color 0.2s;
+      &:hover {
+        color: @themeColor;
+        svg {
+          color: #002fa7;
+          fill: #002fa7;
+        }
+      }
+    }
+  }
+  .main-body {
+    display: flex;
+    .el-collapse-item__content {
+      padding: 0;
+    }
+    .collapse-box-mo {
+      //  /deep/ .el-collapse-item__header {
+      //     display: none;
+      //   }
+      .left-title {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 1000px) {
+      .collapse-box-mo {
+        .el-collapse-item {
+          padding: 0 8px;
+          width: 345px;
+          .meet-detail {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .left-title {
+              display: flex;
+              padding: 8px 64px;
+              align-items: center;
+              justify-content: space-between;
+              svg {
+                cursor: pointer;
+                width: 16px;
+              }
+            }
+          }
+        }
+        .mo-collapse {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          svg {
+            width: 16px;
+          }
+          .month-date {
+            padding-left: 8px;
+            font-size: 12px;
+            color: #000;
+            line-height: 16px;
+          }
+        }
+      }
+      /deep/.el-collapse-item__arrow {
+        font-weight: 700;
+      }
+    }
+    /deep/ .calender {
+      max-width: 500px;
+      text-align: center;
+      .el-calendar__header {
+        display: none;
+        .el-button-group {
+          display: none;
+        }
+      }
+      thead {
+        th {
+          text-align: center;
+        }
+        background-color: @backgroundColor;
+      }
+      @media screen and (max-width: 1000px) {
+        display: none;
+      }
+
+      .is-today {
+        .el-calendar-day {
+          .day-box {
+            color: #555555;
+            background-color: @backgroundColor;
+          }
+        }
+      }
+      .is-selected {
+        color: white;
+        .el-calendar-day {
+          .day-box {
+            background-color: @themeColor;
+          }
+        }
+      }
+      .el-calendar__body {
+        padding: 0;
+        .el-calendar-table__row {
+          -moz-user-select: none; /*火狐*/
+          -webkit-user-select: none; /*webkit浏览器*/
+          -ms-user-select: none; /*IE10*/
+          -khtml-user-select: none; /*早期浏览器*/
+          user-select: none;
+          font-size: 12px;
+          .el-calendar-day {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            height: 66px;
+            .out-box {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+            }
+            .be-active {
+              position: relative;
+              overflow: hidden;
+            }
+            .be-active::after {
+              position: absolute;
+              top: -6px;
+              right: -6px;
+              content: '';
+              width: 20px;
+              height: 20px;
+              border-radius: 0 0 0 20px;
+              background-color: @orange;
+              @media screen and (max-width: 1000px) {
+                width: 12px;
+                height: 12px;
+                top: -4px;
+                right: -4px;
+                border-radius: 0 0 0 12px;
+              }
+            }
+            .day-box {
+              display: flex;
+              box-sizing: border-box;
+              justify-content: center;
+              width: 32px;
+              height: 32px;
+              border-radius: 50%;
+              align-items: center;
+              .date-calender {
+                line-height: 21px;
+                font-size: 16px;
+              }
+            }
+          }
+          @media screen and (max-width: 1000px) {
+            .el-calendar-day {
+              // width: 32px;
+              height: 32px;
+              .day-box {
+                .date-calender {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    /deep/ .calender-mo {
+      display: none;
+      @media screen and (max-width: 1000px) {
+        display: flex;
+        // width: 300px;
+        .calender {
+          display: block;
+        }
+        thead {
+          th {
+            padding: 7px 0;
+            font-size: 12px;
+          }
+        }
+        tbody {
+          width: 300px;
+        }
+        tr {
+          td {
+            border: none;
+            // display: flex;
+            justify-content: center;
+          }
+        }
+        .current {
+          // display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+    }
+    /deep/ .detailList {
+      width: 100%;
+      .detailHead {
+        padding: 12px 0 13px;
+        text-align: center;
+        color: #555555;
+        background-color: @backgroundColor;
+        font-family: FZLTZHJW--GB1-0, FZLTZHJW--GB1;
+        @media screen and (max-width: 1000px) {
+          padding: 8px 0;
+          font-size: 12px;
+        }
+      }
+      .el-collapse {
+        border: none;
+        --el-collapse-header-height: 96px;
+        .collapse-box:last-child {
+          .el-collapse-item {
+            margin-bottom: 0;
+          }
+        }
+        .el-collapse-item {
+          margin-bottom: 8px;
+          .el-collapse-item__header {
+            display: block;
+            border: none;
+            height: 100%;
+          }
+        }
+        .el-collapse-item__wrap {
+          border: none;
+          padding: 0 24px;
+          background-color: #eef0f4;
+        }
+      }
+      .meetList {
+        padding: 8px 0 0 8px;
+        height: 402px;
+        background-color: #fff;
+        border-right: 1px solid #e5e8f0;
+        border-bottom: 1px solid #e5e8f0;
+        overflow-y: scroll;
+        @media screen and (max-width: 1000px) {
+          padding: 8px;
+          height: fit-content;
+          overflow: auto;
+        }
+        &::-webkit-scrollbar-track {
+          border-radius: 4px;
+          background-color: #fff;
+        }
+
+        &::-webkit-scrollbar {
+          width: 6px;
+          background-color: #fff;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 4px;
+          background: #ccc;
+        }
+        .el-collapse-item__arrow {
+          display: none;
+        }
+        .el-collapse-item__content {
+          padding-bottom: 0;
+          @media screen and (max-width: 1000px) {
+            font-size: 12px;
+          }
+        }
+        .meet-item {
+          display: flex;
+          justify-content: space-between;
+          padding: 16px 24px;
+          width: 100%;
+          height: 100%;
+          background-color: #f5f6f8ff;
+          border: 1px solid #e5e8f0;
+          border-left: 1px solid #406fe7ff;
+          .meet-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+            .left-top {
+              display: flex;
+              align-items: center;
+              .meet-name {
+                margin-right: 16px;
+                max-width: 400px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 18px;
+                color: #000;
+                line-height: 24px;
+              }
+              .el-collapse-item__content {
+                padding: 0 20px;
+              }
+              p {
+                margin: 0;
+                height: fit-content;
+                justify-content: center;
+                align-items: center;
+                line-height: normal;
+              }
+              // .introduce {
+              //   padding: 1px 7px;
+              //   display: -webkit-box;
+              //   -webkit-box-orient: vertical;
+              //   -webkit-line-clamp: 1;
+              //   overflow: hidden;
+              //   color: #fff;
+              //   background: linear-gradient(225deg, #feb32a 0%, #f6d365 100%);
+              // }
+            }
+            .more-detail {
+              display: flex;
+              flex-shrink: 0;
+              align-items: center;
+              width: fit-content;
+              height: 24px;
+              font-size: 16px;
+              font-family: FZLTHJW--GB1-0, FZLTHJW--GB1;
+              line-height: 24px;
+              .o-icon {
+                margin: 0 5px;
+                color: @themeColor;
+                font-size: 24px;
+                transition: all 0.3s;
+                svg {
+                  color: #0d8dff;
+                }
+              }
+              &:hover {
+                .o-icon {
+                  transform: translateX(5px);
+                }
+              }
+            }
+          }
+          .item-right {
+            display: flex;
+            font-size: 14px;
+
+            .detail-time {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              padding: 0 24px;
+              font-family: FZLTHJW--GB1-0, FZLTHJW--GB1;
+              font-weight: normal;
+              text-align: center;
+              font-size: 16px;
+              span {
+                line-height: 15px;
+              }
+              .start-time {
+                color: #6189ff;
+              }
+            }
+            .extend {
+              display: flex;
+              align-items: center;
+              min-width: 17px;
+              .o-icon {
+                font-size: 28px;
+                color: #555;
+                transition: all 0.3s;
+              }
+              .reversal {
+                transform: rotate(180deg);
+              }
+            }
+          }
+          @media screen and (max-width: 1000px) {
+            padding: 12px;
+            .meet-left {
+              max-width: 230px;
+              .left-top {
+                .meet-name {
+                  font-size: 14px;
+                  font-weight: 700;
+                }
+              }
+              .group-name {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 12px;
+                color: #555;
+              }
+            }
+            .item-right {
+              .detail-time {
+                padding: 0 7px;
+                font-size: 12px;
+              }
+              .o-icon {
+                width: 16px;
+              }
+            }
+          }
+        }
+        .meet-detail {
+          color: #555555;
+          padding-top: 10px;
+          .meeting-item {
+            display: flex;
+            padding-bottom: 8px;
+            line-height: 18px;
+            word-break: break-all;
+            .item-title {
+              flex-shrink: 0;
+              width: 90px;
+            }
+            // .meet-title {
+            //   width: 90px;
+            // }
+            .creator {
+              display: flex;
+              align-items: center;
+              .head-logo {
+                width: 60px;
+                border-radius: 50%;
+                overflow: hidden;
+              }
+              .creator-name {
+                padding-left: 15px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+      .empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .head-title {
+      flex-direction: column;
+      padding: 0;
+    }
+    .main-body {
+      margin: 0 auto;
+      width: 345px;
+      align-items: center;
+      flex-direction: column;
+      background-color: #fff;
+    }
+  }
 }
 </style>
