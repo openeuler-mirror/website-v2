@@ -499,7 +499,7 @@ module.exports = {
                 TITLE: "测试资源申请",
                 DES: "如果缺乏测试设备，可以尝试",
                 APPLY: "在此申请。",
-                SPONSOR: "感谢鹏城实验室赞助",
+                SPONSOR: "感谢鹏城实验室赞助!",
                 SPONSORLINK: 'https://dw.pcl.ac.cn/'
             },
             SOURCE_MAIL: {

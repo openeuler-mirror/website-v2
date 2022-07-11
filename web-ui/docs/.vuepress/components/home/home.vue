@@ -10,22 +10,6 @@
         </div>
         <div class="is-pc home-carousel" v-if="!isShowH5">
             <el-carousel class="home-banner" trigger="click" @change="carouselChange" :autoplay="autoPlay" :interval="changeTime" >
-            <el-carousel-item >
-                    <div class="carousel-banner" style="backgroundImage: url('/img/minisite/migration/migration-banner-pc.png')"   @click="go('/other/migration/')">
-                    </div>
-              </el-carousel-item>
-            <el-carousel-item >
-                <div class="video-banner carousel-banner" @click="go('https://moocstudio.openeuler.sh/')">
-                     <video  playsinline="true" muted autoplay="autoplay" poster="/img/home/banner/video_banner_pc.png" loop ref="bannerVideo"  preload=""  id="home-video" >
-                         <source type="video/mp4"
-                         src="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/MoocStudio/MoocStudio%E7%9A%84%E8%A7%86%E9%A2%911920X500_small..mp4">
-                     </video>
-                     <div class="voice-box" @click.stop="voiceClick">
-                      <img class="voice" v-show="!isMuted" src="/img/home/openVoice.svg" alt="" >
-                      <img class="voice" v-show="isMuted" src="/img/home/closeVoice.svg" alt="" >
-                     </div>
-                </div>
-              </el-carousel-item>
                <el-carousel-item >
                     <div class="carousel-banner" style="backgroundImage: url('/img/activities/pc/summit.png')"   @click="go('/activities/')">
                     </div>
@@ -34,16 +18,6 @@
         </div>
         <div class="is-h5 home-carousel mobile-home-carousel" v-if="isShowH5">
             <swiper ref="mySwiper" class="home-banner mobile-swiper" :options="swiperOption" @slideChange="slideChange">
-               <swiper-slide  class="carousel-item-index">
-                  <div class="mobile-version"  style="backgroundImage: url('/img/minisite/migration/migration-banner-mo.png')"  @click="go('/other/migration/')">
-                </div>
-              </swiper-slide>
-               <swiper-slide class="carousel-item-index">
-                 <div class="video-banner">
-                    <img class="bg-banner" src="/img/home/banner/video_banner_mo.png" alt="">
-                    <img v-show="!isMasked" class="open-video" @click="videoClicked" src="/img/home/banner/open_video.png" alt="">
-                </div>
-              </swiper-slide>
                <swiper-slide class="carousel-item-index">
                  <div class="mobile-version"  style="backgroundImage: url('/img/activities/mobile/banner.png')"  @click="go('/activities/')">
                 </div>
@@ -53,13 +27,10 @@
                     <img src="/img/minisite/migration/migration-tip.png"
                  alt="">
             </a>
-            <ul class="mobile-pagination">
-                <li v-for="item in bannerAmount" :class="{'mobile-pagination-active': mobilePagenationIndex===item}"></li>
-            </ul>
         </div>
         <div class="home-introduce">
             <h1></h1>
-            <div class="home-introduce-description" 
+            <div class="home-introduce-description"
             :class="$lang == 'en'?'home-introduce-description-en':''"
             >{{ i18n.home.HOME_INTRODUCE.INTRO_DESCRIPTION }}</div>
             <h3 class="open-begin" :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_INTRODUCE.INTRO_HEAD }}</h3>
@@ -234,7 +205,7 @@
 
         <div class="home-source">
             <h3 :class="$lang == 'en'?'en-h3':''">{{ i18n.home.HOME_SOURCE.SOURCE_TITLE }}</h3>
-            <div class="source-contain">
+            <!-- <div class="source-contain">
                 <div class="source-apply">
                     <div class="apply-img">
                         <img v-lazy="'/img/home/sourceApply.gif'" alt="">
@@ -258,6 +229,43 @@
                         <p :class="$lang == 'en'?'en-p':''">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.DES }}</p>
                         <p :class="$lang == 'en'?'en-p':''">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.SUBSCRIBE }}<a :class="$lang == 'en'?'en-p':''" @click="go('/community/mailing-list/')">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.LINK }}</a></p>
                     </div>
+                </div>
+            </div> -->
+            <div class="source-more">
+                <div class="source-card-left">
+                    <h5 class="card-title">{{ i18n.home.HOME_SOURCE.SOURCE_APPLY.TITLE }}</h5>
+                    <p class="card-body">
+                        {{ i18n.home.HOME_SOURCE.SOURCE_APPLY.DES }}
+                        {{ i18n.home.HOME_SOURCE.SOURCE_APPLY.APPLY }} <br>
+                        {{ i18n.home.HOME_SOURCE.SOURCE_APPLY.SPONSOR }}
+                    </p>
+                     <div class="button-box">
+                        <button @click="go('/blog/fred_li/2020-03-25-apply-for-vm-from-pcl.html')" class="button-left">
+                            立即申请
+                          <img src="/img/home/icon-right-w.png" alt />
+                        </button>
+                        <button @click="go(i18n.home.HOME_SOURCE.SOURCE_APPLY.SPONSORLINK)" class="button-right">
+                          <span>了解详情</span>
+                          <img src="/img/internship/arrow.png" alt />
+                        </button>
+                </div>
+                </div>
+                <div class="source-card-right">
+                    <h5 class="card-title">{{ i18n.home.HOME_SOURCE.SOURCE_MAIL.TITLE }}</h5>
+                    <p class="card-body">
+                        {{ i18n.home.HOME_SOURCE.SOURCE_MAIL.MAIL }} <br>
+                        {{ i18n.home.HOME_SOURCE.SOURCE_MAIL.DES }}
+                    </p>
+                     <div class="button-box">
+                        <a href="mailto:community@openeuler.org" class="button-left">
+                            <span>立即申请</span>
+                          <img src="/img/home/icon-right-w.png" alt />
+                        </a>
+                        <button @click="go('/community/mailing-list/')" class="button-right">
+                          <span>了解详情</span>
+                          <img src="/img/internship/arrow.png" alt />
+                        </button>
+                </div>
                 </div>
             </div>
             <div class="source-publish-link publish diff-pc-mobile">
@@ -792,6 +800,7 @@ let remoteMethods = {
             margin-top: 42px;
             padding: 40px  100px;
             background: #fff;
+            box-shadow: 0px 1px 5px 0px rgba(45,47,51,0.1000);
             // .round-item {
             //     margin-left: 170px;
             //     &:first-of-type {
@@ -1978,6 +1987,127 @@ let remoteMethods = {
     .source-publish-link .publish-rank {
       margin-bottom: 50px;
     }
+    .source-more {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        column-gap: 16px;
+        row-gap: 0;
+        .source-card-left,
+        .source-card-right {
+            background-image: url(/img/home/source-bg.png);
+            background-repeat: no-repeat;
+            background-position: bottom right;
+            background-color: #fff;
+            padding: 40px;
+            transition: all 0.3s;
+            box-shadow: 0px 1px 5px 0px rgba(45,47,51,0.1000);
+            &:hover {
+                box-shadow: 0px 6px 18px 0px rgba(0, 47, 167, 0.14);
+            }
+            .card-title {
+                margin-bottom: 16px;
+                font-size: 24px;
+                font-weight: 500;
+            }
+            .card-body {
+                margin: 0;
+                min-height: 48px;
+                color: #000;
+                text-align: left;
+                font-size: 14px;
+                line-height: 22px;
+                overflow: hidden;
+                word-wrap: break-word;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+            .button-box {
+                margin-top: 50px;
+                display: flex;
+                .button-left,
+                .button-right {
+                  cursor: pointer;
+                  display: flex;
+                  align-content: center;
+                  margin: 0;
+                  padding: 8px 12px;
+                  line-height: 24px;
+                  color: #fff;
+                  font-size: 14px;
+                  outline: none;
+                  border: none;
+                  transition: all 0.2s;
+                  background-color: #002fa7;
+                   img {
+                    margin-left: 6px;
+                    width: 24px;
+                    transition: all 0.3s;
+                  }
+                }
+                .button-left {
+                    text-align: center;
+                    img {
+                        display: block;
+                        margin-top: 3px;
+                        line-height: 24px;
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+                .button-left:hover {
+                  background-color: #0c41c9;
+                  img {
+                      transform: translateX(5px);
+                  }
+                }
+                .button-right {
+                  margin-left: 24px;
+                  color: #000;
+                  background-color: inherit;
+                  transition: all 0.2s;
+                  &:hover {
+                    img {
+                      transform: translateX(5px);
+                    }
+                  }
+                }
+          }
+        }
+        @media screen and (max-width:1000px) {
+          grid-template-columns: repeat(1, minmax(300px, 1fr));
+          column-gap: 0;
+          row-gap: 16px;
+          .source-card-left,
+          .source-card-right  {
+            background-size: 170px 107px;
+            padding: 16px 12px;
+            .card-title {
+                margin-bottom: 8px;
+                font-size: 14px;
+            }
+            .card-body {
+                min-height: 44px;
+                font-size: 12px;
+                color: #555;
+            }
+            .button-box {
+                width: fit-content;
+                flex-direction: column;
+                margin-top: 24px;
+                .button-right,
+                .button-left {
+                    padding: 4px 12px;
+                }
+                .button-right {
+                    margin: 0;
+                    margin-top: 8px;
+                }
+            }
+          }
+        }
+    }
     .publish-edition {
         display: grid;
         margin-top: 42px;
@@ -1998,6 +2128,8 @@ let remoteMethods = {
         }
         @media screen  and (max-width: 1000px) {
             margin-top: 16px;
+            grid-template-columns: repeat(2, minmax(82px, 270px));
+            justify-content: center;
             a {
                 padding:  10px 0;
                 min-height: 40px;
@@ -2313,6 +2445,9 @@ let remoteMethods = {
             width: 100%;
             margin-top: 60px;
             padding-bottom: 90px;
+            @media screen and (max-width:1000px) {
+                margin-top: 40px;
+            }
         }
         .home-source .source-title {
             font-size: 18px;

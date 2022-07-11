@@ -98,7 +98,6 @@ export default {
     /*margin: -96px 0 0 -35px;*/
     z-index: 10;
     background: #fff;
-    
   }
   .meetDetail {
     margin-top: 10px;
