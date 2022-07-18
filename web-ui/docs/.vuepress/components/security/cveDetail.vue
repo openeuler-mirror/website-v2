@@ -103,7 +103,7 @@
             </li>
             <li class="text-align-center">
               <span>{{i18n.security.SECURITY_ADVISORIES}}:</span>
-              <a @click="toDetail(item.securityNoticeNo)" >{{item.securityNoticeNo || '-' }}</a>
+              <a @click="toDetail(item.securityNoticeNo)" >{{ item.securityNoticeNo }}</a>
             </li>
             <li>
               <span>{{i18n.security.STATUS}}:</span>
