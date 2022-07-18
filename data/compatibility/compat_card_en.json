@@ -1289,7 +1289,7 @@
     "boardModel": "I350-F2",
     "chipModel": "I350",
     "item": "06310058",
-    "downloadLink": "inbox"
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/drivers/x86_64/Packages/igb-5.5.2-1.x86_64.rpm"
   },
   {
     "vendorID": "15b3",
