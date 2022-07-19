@@ -81,13 +81,44 @@
           </ul>
         </li>
       </ul>
+            <h2>{{i18n.security.SECURITY_ADVISORIES}}</h2>
+      <ul class="security-list">
+        <li class="item">
+          <ul>
+            <li>{{i18n.security.SECURITY_ADVISORIES_NAME}}</li>
+            <li>{{i18n.security.SYNOPSIS}}</li>
+            <li>{{i18n.security.RELEASE_DATE}}</li>
+            <li>{{i18n.security.OPERATION}}</li>
+          </ul>
+        </li>
+        <li class="item" v-for="(item, index) in packageList" :key="index">
+          <ul>
+            <li>
+              <span>{{i18n.security.SECURITY_ADVISORIES_NAME}}:</span>
+              {{item.securityNoticeNo}}
+            </li>
+            <li>
+              <span>{{i18n.security.SYNOPSIS}}:</span>
+              {{item.summary}}
+            </li>
+            <li>
+              <span>{{i18n.security.RELEASE_DATE}}:</span>
+              {{item.announcementTime}}
+            </li>
+            <li>
+              <span>{{i18n.security.OPERATION}}:</span>
+              <a @click="toDetail(item.securityNoticeNo)">{{i18n.security.DETAIL}}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
       <h2>{{i18n.security.AFFECTED_PRODUCTS}}</h2>
       <ul class="affect-list">
         <li class="item">
           <ul>
             <li>{{i18n.security.PRODUCT}}</li>
             <li>{{i18n.security.PACKAGE}}</li>
-            <li class="text-align-center">{{i18n.security.SECURITY_ADVISORIES}}</li>
+            <!-- <li class="text-align-center">{{i18n.security.SECURITY_ADVISORIES}}</li> -->
             <li>{{i18n.security.STATUS}}</li>
           </ul>
         </li>
@@ -101,10 +132,10 @@
               <span>{{i18n.security.PACKAGE}}:</span>
               {{item.packageName}}
             </li>
-            <li class="text-align-center">
+            <!-- <li class="text-align-center">
               <span>{{i18n.security.SECURITY_ADVISORIES}}:</span>
               <a @click="toDetail(item.securityNoticeNo)" >{{ item.securityNoticeNo }}</a>
-            </li>
+            </li> -->
             <li>
               <span>{{i18n.security.STATUS}}:</span>
               {{item.status}}
@@ -304,7 +335,7 @@ export default {
           text-align:center;
         }
         li {
-          flex: 0 0 25%;
+          flex: 0 0 33.333%;
           span {
             display: none;
           }
@@ -331,14 +362,14 @@ export default {
           }
         }
       }
-      .item > ul {
-        li:nth-child(3) {
-          text-align: center;
-        }
-        li:nth-child(4) {
-          text-align: center;
-        }
-      }
+      // .item > ul {
+      //   li:nth-child(3) {
+      //     text-align: center;
+      //   }
+      //   li:nth-child(4) {
+      //     text-align: center;
+      //   }
+      // }
     }
     .metrics-list {
       @media (max-width: 1000px) {
