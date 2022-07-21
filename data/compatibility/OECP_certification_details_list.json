@@ -1,15 +1,15 @@
 [
 	{
-		"os_version":"KylinSec-Server-3.5.1-2206-052233-x86_64",
-		"osv_name": "湖南麒麟信安科技股份有限公司",
+		"os_version":"SUSE-Euler-Linux-2.0-x86_64-dvd.iso",
+		"osv_name": "SUSE",
 		"total_result": "pass",
 		"type": "服务器",
-		"date": "2022/06/30",
+		"date": "2022/07/20",
 		"arch": "x86_64",
 		"details": "详细信息",
-		"friendly_link": "http://www.kylinsec.com.cn/",
-		"os_download_link": "http://www.kylinsec.com.cn/",
-		"checksum": "adad0fbb5e1fadd012c5881abc1d349d",
+		"friendly_link": "https://www.suse.com",
+		"os_download_link": "https://www.suse.com",
+		"checksum": "ff7b2257b4eda6d035e299e2fffcc1eb",
 		"base_openeuler_version": "openEuler-22.03-LTS",
 		"tools_result": [
 			{
@@ -72,16 +72,16 @@
 		]
 	},
 	{
-		"os_version":"KylinSec-Server-3.5.1-2206-052234-aarch64",
-		"osv_name": "湖南麒麟信安科技股份有限公司",
+		"os_version":"SUSE-Euler-Linux-2.0-aarch64-dvd.iso",
+		"osv_name": "SUSE",
 		"total_result": "pass",
 		"type": "服务器",
-		"date": "2022/06/30",
+		"date": "2022/07/20",
 		"arch": "aarch64",
 		"details": "详细信息",
-		"friendly_link": "http://www.kylinsec.com.cn/",
-		"os_download_link": "http://www.kylinsec.com.cn/",
-		"checksum": "6758ab71f5c8cb3dfede6dc9b074cd12",
+		"friendly_link": "https://www.suse.com",
+		"os_download_link": "https://www.suse.com",
+		"checksum": "e8bcf5dbb986bd0d1cf984766527bcdf",
 		"base_openeuler_version": "openEuler-22.03-LTS",
 		"tools_result": [
 			{
