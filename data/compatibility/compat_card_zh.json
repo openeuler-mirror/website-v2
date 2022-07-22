@@ -8396,5 +8396,24 @@
     "chipModel": "I350",
     "item": "06310058",
     "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "1000",
+    "deviceID": "0017",
+    "svID": "19e5",
+    "ssID": "d213",
+    "architecture": "aarch64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "megaraid_sas",
+    "version": "07.706.03.00-rc1",
+    "type": "RAID",
+    "date": "2022.07.22",
+    "sha256": "64066426A83F0C368A42F921BAC5BC7E246BD938",
+    "driverSize": "293K",
+    "chipVendor": "Avago",
+    "boardModel": "SR150-M",
+    "chipModel": "SAS3408",
+    "item": "03033FAT",
+    "downloadLink": "inbox"
   }
 ]
