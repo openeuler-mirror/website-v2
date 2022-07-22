@@ -8358,5 +8358,43 @@
     "chipModel": "Hi1822",
     "item": "02312BWF",
     "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "8086",
+    "deviceID": "1522",
+    "svID": "8086",
+    "ssID": "00a4",
+    "architecture": "aarch64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "igb",
+    "version": "5.4.0-k",
+    "type": "NIC",
+    "date": "2022.07.21",
+    "sha256": "64066426A83F0C368A42F921BAC5BC7E246BD938",
+    "driverSize": "429K",
+    "chipVendor": "Intel",
+    "boardModel": "I350-F2",
+    "chipModel": "I350",
+    "item": "06310058",
+    "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "8086",
+    "deviceID": "1522",
+    "svID": "8086",
+    "ssID": "00a4",
+    "architecture": "x86_64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "igb",
+    "version": "5.4.0-k",
+    "type": "NIC",
+    "date": "2022.07.21",
+    "sha256": "732E63F6F22919CA78C3C6D4BBF04F83F0A60957",
+    "driverSize": "487K",
+    "chipVendor": "Intel",
+    "boardModel": "I350-F2",
+    "chipModel": "I350",
+    "item": "06310058",
+    "downloadLink": "inbox"
   }
 ]
