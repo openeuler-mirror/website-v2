@@ -14,7 +14,7 @@ summary: 本博客介绍了openEuler小程序的会议流程
 
 openEuler小程序是一款为参与openEuler社区贡献的维护者、开发者所熟知的微信小程序。
 
-<div align="center"><img src="2022-07-15-openeuler-miniprogram-guide-01.png" alt=""/></div>
+<div align="center"><img src="./2022-07-15-openeuler-miniprogram-guide-01.png" alt=""/></div>
 
 <div align="center"><font color=red>openEuler小程序主页</font></div><br/>
 
@@ -25,7 +25,7 @@ openEuler小程序是一款为参与openEuler社区贡献的维护者、开发�
 
 如果您是openEuler社区某个SIG的maintainer，并且有预定SIG会议的需求，在联系小助手添加权限后您可以预定该SIG的会议。在预定会议时，您可以选择是否自动录制会议，选择要通知的邮箱或邮件列表，也可以选择使用不同的第三方会议平台（目前支持Zoom和蓝版WeLink）。预定会议后系统会自动为该会议生成一个便于会前交流和记录会议纪要etherpad（一款支持多人同时在线编辑文本的应用）地址。
  
-<div align="center"><img src="2022-07-15-openeuler-miniprogram-guide-02.png" alt=""/></div>
+<div align="center"><img src="./2022-07-15-openeuler-miniprogram-guide-02.png" alt=""/></div>
 
 <div align="center"><span>选择第三方会议平台</span></div>
 
@@ -38,7 +38,7 @@ openEuler小程序是一款为参与openEuler社区贡献的维护者、开发�
 
 **tips: 如果您在加入Zoom会议时无法进会，可以选择点击启动页面的 `使用浏览器加入` 加入会议。**
 
-<div align="center"><img src="2022-07-15-openeuler-miniprogram-guide-03.png" alt=""/></div>
+<div align="center"><img src="./2022-07-15-openeuler-miniprogram-guide-03.png" alt=""/></div>
 
 <div align="center"><span>Zoom会议使用浏览器加入</span></div>
 
@@ -49,7 +49,7 @@ openEuler小程序是一款为参与openEuler社区贡献的维护者、开发�
 
 如果您错过了一场自动录制的会议，您可以通过官网日历找到该会议视频链接观众回放。
 
-<div align="center"><img src="2022-07-15-openeuler-miniprogram-guide-04.png" alt=""/></div>
+<div align="center"><img src="./2022-07-15-openeuler-miniprogram-guide-04.png" alt=""/></div>
 
 <div align="center"><span>官网查询回放链接</span></div>
 
