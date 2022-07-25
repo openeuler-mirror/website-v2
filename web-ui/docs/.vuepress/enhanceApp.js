@@ -1,6 +1,6 @@
 import ElementUI from 'element-ui';
 import './public/style/theme/index.css';
-import './public/style/base.css';
+import './public/style/base.less';
 import enlocale from 'element-ui/lib/locale/lang/en';
 import rulocale from 'element-ui/lib/locale/lang/ru-RU';
 import locale from 'element-ui/lib/locale';

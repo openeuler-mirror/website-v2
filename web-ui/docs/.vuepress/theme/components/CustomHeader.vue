@@ -1,7 +1,7 @@
 <template>
     <div :class="'nav-fill '+(cookiesShow?'cookies-show':'')">
         <div class="nav-wrapper">
-            <div class="nav-bar">
+            <div class="nav-bar" :class="{'is-home':$route.path.length === 4}">
                 <img
                     src="/openeuler-logo.png"
                     alt=""
@@ -502,7 +502,7 @@ export default {
             height: 70px;
         }
         .nav-bar {
-            width: 1120px;
+            max-width: 1120px;
             height: 100%;
             margin: 0 auto;
             display: flex;
@@ -862,6 +862,10 @@ export default {
                     }
                 }
             }
+        }
+        .is-home {
+            max-width: 1448px;
+            padding: 0 16px;
         }
     }
 }

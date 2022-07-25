@@ -1,0 +1,277 @@
+@charset "UTF-8";
+:root {
+  // 基础颜色
+  --o-color-base: #ffffff; // 基础色
+  --o-color-base_inverse: #000000; // 基础色
+  --o-color-transparent: transparent; // 透明色
+
+  --o-color-brand: #002fa7; // 品牌色
+  --o-color-brand_hover: #406fe7; // 品牌色 hover态
+  --o-color-brand_active: #00195a; // 品牌色 active态
+  --o-color-brand_disabled: rgba(0, 25, 90, 0.2); // 品牌色 disabeld态
+
+  --o-color-secondary: #e5e5e5; // 次要颜色
+  --o-color-secondary_hover: #cccccc; // 次要颜色 hover态
+  --o-color-secondary_active: #999999; // 次要颜色 active态
+  --o-color-secondary_disabled: rgba(229, 229, 229, 0.2); // 次要颜色 disabled态
+
+  --o-color-auxiliary: #feb32a; // 辅助色
+
+  --o-color-success: #63bb2e; // 成功色
+  --o-color-warning: #ff832f; // 告警色
+  --o-color-error: #f14844; // 错误色
+  --o-color-disabled: #cccccc; //禁用色
+
+  --o-color-text: #ffffff; // 文字颜色
+  --o-color-text_disabled: rgba(255, 255, 255, 1); // 文字颜色 disabled态
+  --o-color-text2: #000000; // 文字颜色2
+  --o-color-text2_disabled: rgba(0, 0, 0, 0.2); // 文字颜色2 disabled态
+  --o-color-text3: #555555; // 文字颜色3
+
+  --o-color-bg: #ffffff; // 背景颜色
+  --o-color-bg2: #f5f6f8; // 背景颜色2
+  --o-color-bg3: #e5e8f0; // 背景颜色3
+  --o-color-bg4: #d8d8d8; // 背景颜色4
+  --o-color-bg5: #000000ff; // li 标签圆点
+
+  --o-color-link: #002a9d; // 链接颜色
+  --o-color-division: #e5e5e5; // 分割线颜色
+  --o-color-table: #dfe1e8; // 表格边框颜色
+  --o-color-border: #d8d8d8; // 边框颜色
+
+  // 字体font-size
+  --o-font-size-h1: 64px;
+  --o-font-size-h2: 54px;
+  --o-font-size-h3: 36px;
+  --o-font-size-h4: 28px;
+  --o-font-size-h5: 24px;
+  --o-font-size-h6: 20px;
+  --o-font-size-h7: 18px;
+  --o-font-size-h8: 16px;
+  --o-font-size-text: 14px;
+  --o-font-size-tip: 12px;
+
+  // 字体line-height
+  --o-line-height-h1: 84px;
+  --o-line-height-h2: 76px;
+  --o-line-height-h3: 48px;
+  --o-line-height-h4: 36px;
+  --o-line-height-h5: 32px;
+  --o-line-height-h6: 28px;
+  --o-line-height-h7: 26px;
+  --o-line-height-h8: 24px;
+  --o-line-height-text: 20px;
+  --o-line-height-tip: 18px;
+
+  // 间距
+  --o-spacing-h1: 64px;
+  --o-spacing-h2: 40px;
+  --o-spacing-h3: 32px;
+  --o-spacing-h4: 24px;
+  --o-spacing-h5: 16px;
+  --o-spacing-h6: 12px;
+  --o-spacing-h7: 10px;
+  --o-spacing-h8: 8px;
+  --o-spacing-h9: 6px;
+  --o-spacing-h10: 4px;
+
+  // 阴影
+  --o-shadow-base: 0px 1px 5px 0px rgba(45, 47, 51, 0.1); // 一级投影，应用场景：默认状态卡片、楼层、导航栏等
+  --o-shadow-base_hover: 0px 6px 18px 0px rgba(0, 47, 167, 0.14); // 一级投影hover态
+  --o-shadow-secondary: 0px 6px 18px 0px rgba(45, 47, 51, 0.14); // 二级投影
+  --o-shadow-secondary_hover: 0px 6px 18px 0px rgba(0, 47, 167, 0.14); // 二级投影hover态
+  --o-shadow-overlay: 0px 10px 32px rgba(45, 47, 31, 0.18); // 覆盖投影，应用场景：信息提示（tips，活动进入按钮等）
+  --o-shadow-overlay_hover: 0px 10px 32px rgba(0, 47, 167, 0.18); // 覆盖投影hover态
+  --o-shadow-pop: 0px 12px 42px rgba(45, 47, 31, 0.24); // 弹出层投影：应用场景：模态框弹窗
+}
+/* CSS Document */
+/*css reset*/
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldest,
+img {
+    border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+p:before,
+q:after {
+    content: "";
+}
+
+abbr,
+acronym {
+    border: 0;
+}
+
+/*定位*/
+.tl {
+    text-align: left;
+}
+
+.tc {
+    text-align: center;
+}
+
+.tr {
+    text-align: right;
+}
+
+.bc {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.cb {
+    clear: both;
+}
+
+.cl {
+    clear: left;
+}
+
+.cr {
+    clear: right;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: 0.8s all ease-out;
+    transform: scale(0.8);
+}
+#hm_t_undefined {
+    display: none;
+}
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?4mtq8t');
+    src:  url('../fonts/icomoon.eot?4mtq8t#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?4mtq8t') format('truetype'),
+      url('../fonts/icomoon.woff?4mtq8t') format('woff'),
+      url('../fonts/icomoon.svg?4mtq8t#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-menu:before {
+    content: "\e900";
+  }
+
+  .icon-arrow:before {
+    content: "\e901";
+  }
+
+  .icon-search:before {
+    content: "\e902";
+  }
+
+  body {
+    font-family: Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,STHeiti,Microsoft YaHei,Microsoft JhengHei,SimSun,sans-serif;
+  }

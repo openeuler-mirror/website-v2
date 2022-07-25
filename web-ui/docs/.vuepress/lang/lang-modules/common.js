@@ -244,7 +244,8 @@ module.exports = {
                     URL: 'https://status.openeuler.org/'
                 },
             ],
-            QR_CODE: '扫码关注公众号'
+            QR_CODE: 'openEuler公众号',
+            QR_ASSISTANT: 'openEuler小助手',
         },
         BUILDING:{
             BUILDING:'建设中',
@@ -470,7 +471,8 @@ module.exports = {
                     URL: 'https://status.openeuler.org/'
                 }
             ],
-            QR_CODE: 'WeChat Subscription'
+            QR_CODE: 'WeChat Subscription',
+            QR_ASSISTANT: 'WeChat Assistant',
         },
         BUILDING:{
             BUILDING:'Building',
