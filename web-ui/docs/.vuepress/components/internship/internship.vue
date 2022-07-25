@@ -547,17 +547,9 @@ export default {
       }
     },
     showRank() {
-      getToken()
-        .then((data) => {
-          return getRank({
-            token: data.loginData.token,
+        getRank({
             currentPage: 1,
             pageSize: 100,
-            userId: data.loginData.userId,
-          });
-        })
-        .catch((err) => {
-          console.log(err);
         })
         .then((res) => {
           if (res.UserPoints) {
@@ -584,9 +576,9 @@ export default {
           }
         })
         .catch((err) => {
-          console.log(err);
+          console.error(err);
         });
-    },
+    }
   },
   created() {
     this.STEP = this.i18n.learn.STEP;
