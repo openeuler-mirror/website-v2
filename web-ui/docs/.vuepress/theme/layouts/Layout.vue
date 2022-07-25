@@ -39,7 +39,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .content {
-    min-height: calc(100vh - 60px - 330px);
+    min-height: calc(100vh - 178px);
     @media (max-width: 1000px) {
         min-height: calc(100vh - 70px - 328px);
     }

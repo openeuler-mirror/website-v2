@@ -20,7 +20,10 @@ const props = defineProps({
         <div class="community-word">
           {{ i18n.home.COMMUNITY_ACTIVITY.CARD.CONTENT }}
         </div>
-        <a  :href="i18n.home.COMMUNITY_ACTIVITY.CARD.LINK" class="community-detail">
+        <a
+          :href="i18n.home.COMMUNITY_ACTIVITY.CARD.LINK"
+          class="community-detail"
+        >
           {{ i18n.home.COMMUNITY_ACTIVITY.CARD.VIEW_DETAILS }}
           <img
             class="community-detail-icon"
@@ -94,7 +97,7 @@ a {
 
   &-value {
     font-size: var(--o-font-size-h5);
-    font-family: 'PingFangSC-Medium, PingFang SC';
+    font-family: "PingFangSC-Medium, PingFang SC";
     font-weight: 500;
     color: var(--o-color-text2);
     line-height: var(--o-line-height-h5);
@@ -108,7 +111,7 @@ a {
 
   &-title {
     font-size: var(--o-font-size-h7);
-    font-family: 'PingFangSC-Medium, PingFang SC';
+    font-family: "PingFangSC-Medium, PingFang SC";
     font-weight: 400;
     color: var(--o-color-text2);
     line-height: var(--o-line-height-h7);
@@ -122,10 +125,8 @@ a {
 
   &-img {
     width: 48px;
-    height: 48px;
     @media (max-width: 768px) {
       width: 40px;
-      height: 40px;
     }
   }
 }
@@ -136,7 +137,7 @@ a {
   }
   h3 {
     font-size: var(--o-font-size-h3);
-    font-family: 'PingFangSC-Light, PingFang SC';
+    font-family: "PingFangSC-Light, PingFang SC";
     font-weight: 300;
     color: var(--o-color-text2);
     line-height: var(--o-line-height-h3);
@@ -150,7 +151,7 @@ a {
 
   &-title {
     font-size: var(--o-font-size-h7);
-    font-family: 'PingFangSC-Medium, PingFang SC';
+    font-family: "PingFangSC-Medium, PingFang SC";
     font-weight: 500;
     color: var(--o-color-text2);
     line-height: var(--o-line-height-h7);
@@ -162,7 +163,7 @@ a {
 
   &-word {
     font-size: var(--o-font-size-text);
-    font-family: 'PingFangSC-Regular, PingFang SC';
+    font-family: "PingFangSC-Regular, PingFang SC";
     font-weight: 400;
     color: var(--o-color-text3);
     line-height: var(--o-line-height-text);
@@ -224,7 +225,7 @@ a {
 
   &-card {
     width: 100%;
-    background-image: url('/img/home/round-bg.png');
+    background-image: url("/img/home/round-bg.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -234,6 +235,9 @@ a {
       @media (max-width: 768px) {
         padding: var(--o-spacing-h5) var(--o-spacing-h8);
       }
+    }
+    &:hover {
+      box-shadow: var(--o-shadow-base_hover);
     }
   }
 }

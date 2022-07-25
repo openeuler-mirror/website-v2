@@ -1,8 +1,9 @@
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue';
 
-import LogoFooter from '../../public../../public/img/footer/footer-logo2.png';
+import LogoFooter from '../../public/img/footer/footer-logo2.png';
 import LogoAtom from '../../public/img/footer/atom-logo.svg';
+// 中文友情链接
 import LogoBilibili from '../../public/img/footer/bilibili.png';
 import LogoInfoq from '../../public/img/footer/infoq.png';
 import LogoJuejin from '../../public/img/footer/juejin.png';
@@ -10,11 +11,19 @@ import LogoOschina from '../../public/img/footer/oschina.png';
 import LogoCsdn from '../../public/img/footer/csdn.png';
 import Logo51cto from '../../public/img/footer/51cto.png';
 
+// 英文、俄文友情链接
+import LogoRedditSquare from '../../public/img/footer/reddit-square@2x.png';
+import LogoBilibili2 from '../../public/img/footer/bilibili@2x.png';
+import LogoLinkedin from '../../public/img/footer/linkedin@2x.png';
+import LogoYoutube from '../../public/img/footer/youtube@2x.png';
+import LogoTwitter from '../../public/img/footer/twitter@2x.png';
+
 // 公众号、小助手
 import CodeTitleXzs from '../../public/img/footer/img-xzs.png';
 import CodeTitleGzh from '../../public/img/footer/img-gzh.png';
 import CodeImgXzs from '../../public/img/footer/code-xzs.png';
 import CodeImgZgz from '../../public/img/footer/code-zgz.png';
+
 
 const isHomePage = ref(false);
 // 友情链接
@@ -53,26 +62,56 @@ const linksData = {
   ],
   en: [
     {
-      path: 'https://my.oschina.net/openeuler',
-      logo: LogoOschina,
-      id: 'oschina',
+      path: 'https://www.reddit.com/r/openEuler/',
+      logo: LogoRedditSquare,
+      id: 'reddit-square',
     },
     {
-      path: 'https://blog.csdn.net/openEuler_?spm=1000.2115.3001.5343',
-      logo: LogoCsdn,
-      id: 'csdn',
+      path: 'https://www.linkedin.com/company/openeuler',
+      logo: LogoLinkedin,
+      id: 'linkedin',
+    },
+    {
+      path: 'https://twitter.com/openEuler',
+      logo: LogoTwitter,
+      id: 'twitter',
+    },
+    {
+      path: 'https://space.bilibili.com/527064077/channel/series',
+      logo: LogoBilibili2,
+      id: 'bilibili',
+    },
+    {
+      path: 'https://www.youtube.com/channel/UCPzSqXqCgmJmdIicbY7GAeA',
+      logo: LogoYoutube,
+      id: 'youtube',
     },
   ],
   ru: [
     {
-      path: 'https://my.oschina.net/openeuler',
-      logo: LogoOschina,
-      id: 'oschina',
+      path: 'https://www.reddit.com/r/openEuler/',
+      logo: LogoRedditSquare,
+      id: 'reddit-square',
     },
     {
-      path: 'https://blog.csdn.net/openEuler_?spm=1000.2115.3001.5343',
-      logo: LogoCsdn,
-      id: 'csdn',
+      path: 'https://www.linkedin.com/company/openeuler',
+      logo: LogoLinkedin,
+      id: 'linkedin',
+    },
+    {
+      path: 'https://twitter.com/openEuler',
+      logo: LogoTwitter,
+      id: 'twitter',
+    },
+    {
+      path: 'https://space.bilibili.com/527064077/channel/series',
+      logo: LogoBilibili2,
+      id: 'bilibili',
+    },
+    {
+      path: 'https://www.youtube.com/channel/UCPzSqXqCgmJmdIicbY7GAeA',
+      logo: LogoYoutube,
+      id: 'youtube',
     },
   ],
 };

@@ -53,29 +53,33 @@ module.exports = {
         LINK: "/interaction/summit-list/devday2022/",
       },
     ],
-    HOME_CALENDAR:'openEuler 开发者日历',
+    HOME_CALENDAR: "openEuler 开发者日历",
     HOME_NAV: [
       {
         TITLE: "案例中心",
-        IMG: "/img/home/new-home/use-case.png",
+        IMG: "/img/home/new-home/use-case.svg",
+        IMG_HOVER: "/img/home/new-home/use-case-hover.svg",
         DSSCRIPTIVE: "汇聚各大行业用户案例",
         LINK: "",
       },
       {
         TITLE: "迁移专区",
-        IMG: "/img/home/new-home/migrate.png",
+        IMG: "/img/home/new-home/migrate.svg",
         DSSCRIPTIVE: "教你替换操作系统成openEuler",
+        IMG_HOVER: "/img/home/new-home/migrate-hover.svg",
         LINK: "/other/migration/",
       },
       {
         TITLE: "开源之夏",
-        IMG: "/img/home/new-home/internship-summit.png",
+        IMG: "/img/home/new-home/internship-summit.svg",
+        IMG_HOVER: "/img/home/new-home/internship-summit-hover.svg",
         DSSCRIPTIVE: "和小伙伴儿一起畅享开源的夏天",
         LINK: "/activities/",
       },
       {
         TITLE: "峰会专区",
-        IMG: "/img/home/new-home/summit.png",
+        IMG: "/img/home/new-home/summit.svg",
+        IMG_HOVER: "/img/home/new-home/summit-hover.svg",
         DSSCRIPTIVE: "2022 开放原子开源峰会",
         LINK: "/interaction/summit-list/devday2022/",
       },
@@ -83,29 +87,30 @@ module.exports = {
     IMG_CAROUSE: {
       TITLE: "面向数字基础设施的开源操作系统",
       BUTTON: "立即体验",
-      TRY_URL: "community/contribution/",
+      TRY_URL: "community/contribution/detail.html",
       LIST: [
-        {
-          TITLE: "覆盖全场景应用",
-          IMG_URL: "/img/home/carouse/img-list2.png",
-        },
         {
           TITLE: "支持多样性计算",
           IMG_URL: "/img/home/carouse/img-list1.png",
         },
         {
-          TITLE: "全产业生态共建",
+          TITLE: "覆盖全场景应用",
+          IMG_URL: "/img/home/carouse/img-list2.png",
+        },
+        {
+          TITLE: "完整开发工具链",
           IMG_URL: "/img/home/carouse/img-list3.png",
-        }
+        },
       ],
     },
     COMMUNITY_ACTIVITY: {
       TITLE: "社区动态",
       CARD: {
         TITLE: "openEuler社区活力",
-        CONTENT: "openEuler也是一个开源的操作系统技术平台，鼓励社区贡献、合作。",
+        CONTENT:
+          "openEuler也是一个开源的操作系统技术平台，鼓励社区贡献、合作。",
         VIEW_DETAILS: "查看贡献详情",
-        LINK:'https://datastat.openeuler.org/en/overview'
+        LINK: "https://datastat.openeuler.org/en/overview",
       },
     },
     HOME_INTRODUCE: {
@@ -295,224 +300,37 @@ module.exports = {
         },
       ],
     },
-    COMMUNITY_ACTIVITY: {
-        TITLE: '社区动态',
-        CARD: {
-          TITLE: 'openEuler社区活力',
-          CONTENT: 'openEuler也是一个开源的操作系统技术平台，鼓励社区贡献、合作',
-          VIEW_DETAILS: '查看贡献详情',
-          LINK:'https://datastat.openeuler.org/zh/overview'
-        },
-        ROUND_LIST: [
-          {
-            ROUND_VALUE: '1',
-            ROUND_KEY: 'contributors',
-            ROUND_IMG: '/img/home/round/contributer.svg',
-            ROUND_IMG_DARK: '/img/home/dark/round/contributer.svg',
-            ROUND_TEXT: '社区贡献者',
-          },
-          {
-            ROUND_VALUE: '1',
-            ROUND_KEY: 'repos',
-            ROUND_IMG: '/img/home/round/software.svg',
-            ROUND_IMG_DARK: '/img/home/dark/round/software.svg',
-            ROUND_TEXT: '社区软件',
-          },
-          {
-            ROUND_VALUE: '12',
-            ROUND_KEY: 'sigs',
-            ROUND_IMG: '/img/home/round/sig.svg',
-            ROUND_IMG_DARK: '/img/home/dark/round/sig.svg',
-            ROUND_TEXT: 'SIG组',
-          },
-          {
-            ROUND_VALUE: '111',
-            ROUND_KEY: 'users',
-            ROUND_IMG: '/img/home/round/user.svg',
-            ROUND_IMG_DARK: '/img/home/dark/round/user.svg',
-            ROUND_TEXT: '社区用户',
-          },
-          {
-            ROUND_VALUE: '222',
-            ROUND_KEY: 'businessosv',
-            ROUND_IMG: '/img/home/round/osv.svg',
-            ROUND_IMG_DARK: '/img/home/dark/round/osv.svg',
-            ROUND_TEXT: '商用OSV',
-          },
-        ],
-      },
     USER_CASE: {
       TITLE: "用户案例",
       VIEW_MORE: "查看更多",
+      VIEW_MORE_LINK: "https://new.openeuler.org/zh/showcase/",
       CASE_LIST: [
         {
           TYPE: "金融",
           URL: "/img/home/case/finance.svg",
           ACTIVE_URL: "/img/home/case/finance-active.svg",
-          CONTENT: [
-            {
-              NAME: "中国建设银行",
-              WORD: "分布式信用卡核心业务系统单日交易量超过 1 亿笔，峰值 TPS 超过 6000",
-              URL: "",
-            },
-            {
-              NAME: "兴业银行",
-              WORD: "兴业银行某核心业务系统国产化改造项目",
-              URL: "",
-            },
-          ],
         },
         {
           TYPE: "运营商",
           URL: "/img/home/case/operator.svg",
           ACTIVE_URL: "/img/home/case/operator-active.svg",
-          CONTENT: [
-            {
-              NAME: "中国建设银行11",
-              WORD: "分布式信用卡核心业务系统单日交易量超过 1 亿笔，峰值 TPS 超过 6000",
-              URL: "",
-            },
-            {
-              NAME: "兴业银行",
-              WORD: "兴业银行某核心业务系统国产化改造项目",
-              URL: "",
-            },
-            {
-              NAME: "证券公司",
-              WORD: "证券公司全栈云管平台",
-              URL: "",
-            },
-          ],
         },
-        {
-          TYPE: "政府",
-          URL: "/img/home/case/government.svg",
-          ACTIVE_URL: "/img/home/case/government-active.svg",
-          CONTENT: [
-            {
-              NAME: "中国建设银行",
-              WORD: "分布式信用卡核心业务系统单日交易量超过 1 亿笔，峰值 TPS 超过 6000",
-              URL: "",
-            },
-            {
-              NAME: "兴业银行",
-              WORD: "兴业银行某核心业务系统国产化改造项目",
-              URL: "",
-            },
-            {
-              NAME: "证券公司",
-              WORD: "证券公司全栈云管平台",
-              URL: "",
-            },
-            {
-              NAME: "保险公司",
-              WORD: "某保险公司分布式备份平台两地三中心实时同步高可用灾备系统",
-              URL: "",
-            },
-          ],
-        },
+
         {
           TYPE: "能源",
           URL: "/img/home/case/energy.svg",
           ACTIVE_URL: "/img/home/case/energy-active.svg",
-          CONTENT: [
-            {
-              NAME: "中国建设银行",
-              WORD: "分布式信用卡核心业务系统单日交易量超过 1 亿笔，峰值 TPS 超过 6000",
-              URL: "",
-            },
-            {
-              NAME: "兴业银行",
-              WORD: "兴业银行某核心业务系统国产化改造项目",
-              URL: "",
-            },
-            {
-              NAME: "证券公司",
-              WORD: "证券公司全栈云管平台",
-              URL: "",
-            },
-            {
-              NAME: "保险公司",
-              WORD: "某保险公司分布式备份平台两地三中心实时同步高可用灾备系统",
-              URL: "",
-            },
-          ],
         },
-        {
-          TYPE: "航天",
-          URL: "/img/home/case/spaceflight.svg",
-          ACTIVE_URL: "/img/home/case/spaceflight-active.svg",
-          CONTENT: [
-            {
-              NAME: "中国建设银行",
-              WORD: "分布式信用卡核心业务系统单日交易量超过 1 亿笔，峰值 TPS 超过 6000",
-              URL: "",
-            },
-            {
-              NAME: "兴业银行",
-              WORD: "兴业银行某核心业务系统国产化改造项目",
-              URL: "",
-            },
-            {
-              NAME: "证券公司",
-              WORD: "证券公司全栈云管平台",
-              URL: "",
-            },
-          ],
-        },
+
         {
           TYPE: "物流",
           URL: "/img/home/case/logistics.svg",
           ACTIVE_URL: "/img/home/case/logistics-active.svg",
-          CONTENT: [
-            {
-              NAME: "中国建设银行",
-              WORD: "分布式信用卡核心业务系统单日交易量超过 1 亿笔，峰值 TPS 超过 6000",
-              URL: "",
-            },
-            {
-              NAME: "兴业银行",
-              WORD: "兴业银行某核心业务系统国产化改造项目",
-              URL: "",
-            },
-            {
-              NAME: "证券公司",
-              WORD: "证券公司全栈云管平台",
-              URL: "",
-            },
-            {
-              NAME: "保险公司",
-              WORD: "某保险公司分布式备份平台两地三中心实时同步高可用灾备系统",
-              URL: "",
-            },
-          ],
         },
         {
-          TYPE: "教育",
+          TYPE: "其他",
           URL: "/img/home/case/education.svg",
           ACTIVE_URL: "/img/home/case/education-active.svg",
-          CONTENT: [
-            {
-              NAME: "中国建设银行",
-              WORD: "分布式信用卡核心业务系统单日交易量超过 1 亿笔，峰值 TPS 超过 6000",
-              URL: "",
-            },
-            {
-              NAME: "兴业银行",
-              WORD: "兴业银行某核心业务系统国产化改造项目",
-              URL: "",
-            },
-            {
-              NAME: "证券公司",
-              WORD: "证券公司全栈云管平台",
-              URL: "",
-            },
-            {
-              NAME: "保险公司",
-              WORD: "某保险公司分布式备份平台两地三中心实时同步高可用灾备系统",
-              URL: "",
-            },
-          ],
         },
       ],
     },
@@ -814,6 +632,40 @@ module.exports = {
           ROUND_STYLE: {
             backcolor: "blue",
           },
+        },
+      ],
+    },
+    USER_CASE: {
+      TITLE: "用户案例",
+      VIEW_MORE: "查看更多",
+      VIEW_MORE_LINK: "https://new.openeuler.org/zh/showcase/",
+      CASE_LIST: [
+        {
+          TYPE: "金融",
+          URL: "/img/home/case/finance.svg",
+          ACTIVE_URL: "/img/home/case/finance-active.svg",
+        },
+        {
+          TYPE: "运营商",
+          URL: "/img/home/case/operator.svg",
+          ACTIVE_URL: "/img/home/case/operator-active.svg",
+        },
+
+        {
+          TYPE: "能源",
+          URL: "/img/home/case/energy.svg",
+          ACTIVE_URL: "/img/home/case/energy-active.svg",
+        },
+
+        {
+          TYPE: "物流",
+          URL: "/img/home/case/logistics.svg",
+          ACTIVE_URL: "/img/home/case/logistics-active.svg",
+        },
+        {
+          TYPE: "其他",
+          URL: "/img/home/case/education.svg",
+          ACTIVE_URL: "/img/home/case/education-active.svg",
         },
       ],
     },
@@ -1147,6 +999,8 @@ module.exports = {
         LINK: "http://www.kylinsec.com.cn/",
         PC: "/img/home/link/xinan.png",
         MOBILE: "/img/home/link/mobile-xinan.png",
+      },
+      {
         LINK: "https://www.uniontech.com/",
         PC: "/img/home/link/tongxin.png",
         MOBILE: "/img/home/link/mobile-tongxin.png",
@@ -1155,6 +1009,8 @@ module.exports = {
         LINK: "https://www.kylinos.cn/",
         PC: "/img/home/link/qiling.png",
         MOBILE: "/img/home/link/mobile-qiling.png",
+      },
+      {
         LINK: "http://www.iscas.ac.cn/",
         PC: "/img/home/link/iscas.png",
         MOBILE: "/img/home/link/mobile-iscas.png",
@@ -1163,6 +1019,8 @@ module.exports = {
         LINK: "http://www.i-soft.com.cn/",
         PC: "/img/home/link/cetc.png",
         MOBILE: "/img/home/link/mobile-cetc.png",
+      },
+      {
         LINK: "https://www.turbolinux.com.cn/",
         PC: "/img/home/link/turbo.png",
         MOBILE: "/img/home/link/mobile-turbo.png",
@@ -1171,6 +1029,8 @@ module.exports = {
         LINK: "http://www.hoperun.com/",
         PC: "/img/home/link/hopeRun.png",
         MOBILE: "/img/home/link/mobile-hopeRun.png",
+      },
+      {
         LINK: "http://www.tongyuanos.com/",
         PC: "/img/home/link/tongYuan.png",
         MOBILE: "/img/home/link/mobile-tongYuan.png",
@@ -1179,6 +1039,8 @@ module.exports = {
         LINK: "http://www.chinaredflag.cn/",
         PC: "/img/home/link/zhongkehongqi.png",
         MOBILE: "/img/home/link/mobile-zhongkehongqi.png",
+      },
+      {
         LINK: "https://www.suse.com/",
         PC: "/img/home/link/suse.png",
         MOBILE: "/img/home/link/mobile-suse.png",
@@ -1187,6 +1049,8 @@ module.exports = {
         LINK: "http://www.nfs-china.com/index.html",
         PC: "/img/home/link/zhongkefangde.png",
         MOBILE: "/img/home/link/mobile-zhongkefangde.png",
+      },
+      {
         LINK: "https://www.xfusion.com/en/",
         PC: "/img/home/link/xfusion.png",
         MOBILE: "/img/home/link/xfusion_mobile.png",
@@ -1197,6 +1061,8 @@ module.exports = {
         LINK: "http://www.mulanos.cn/",
         PC: "/img/home/link/mulan.png",
         MOBILE: "/img/home/link/mobile-mulan.png",
+      },
+      {
         LINK: "https://kunpeng.huawei.com/",
         PC: "/img/home/link/kunpeng.png",
         MOBILE: "/img/home/link/mobile-kunpeng.png",
@@ -1205,6 +1071,8 @@ module.exports = {
         LINK: "http://ic-openlabs.huawei.com/chat/#/",
         PC: "/img/home/link/xiaozhi.png",
         MOBILE: "/img/home/link/mobile-xiaozhi.png",
+      },
+      {
         LINK: "https://dw.pcl.ac.cn/",
         PC: "/img/home/link/pengcheng.png",
         MOBILE: "/img/home/link/mobile-pengcheng.png",
@@ -1213,6 +1081,8 @@ module.exports = {
         LINK: "https://www.infoq.cn/?utm_source=openeuler&utm_medium=youlian",
         PC: "/img/home/link/infoQ.png",
         MOBILE: "/img/home/link/mobile-infoQ.png",
+      },
+      {
         LINK: "https://kaiyuanshe.cn/",
         PC: "/img/home/link/kaiyuanshe-logo.png",
         MOBILE: "/img/home/link/kaiyuanshe-logo-mobile.png",
@@ -1221,6 +1091,8 @@ module.exports = {
         LINK: "http://www.vulab.com.cn/",
         PC: "/img/home/link/zhongke_pc.png",
         MOBILE: "/img/home/link/zhongke_mo.png",
+      },
+      {
         LINK: "https://www.authing.cn/",
         PC: "/img/home/link/Authing_pc.png",
         MOBILE: "/img/home/link/Authing_mo.png",
@@ -1229,7 +1101,66 @@ module.exports = {
     MORE: "Read More",
     EXPAND: "Expand All",
     RETRACT: "Collapse All",
-    HOME_CALENDAR:'openEuler developer calendar',
+    HOME_CALENDAR: "openEuler developer calendar",
+    HOME_NAV: [
+      {
+        TITLE: "Success Stories",
+        IMG: "/img/home/new-home/use-case.svg",
+        IMG_HOVER: "/img/home/new-home/use-case-hover.svg",
+        DSSCRIPTIVE: "Learn success stories in various industries.",
+        LINK: "",
+      },
+      {
+        TITLE: "Porting Guide",
+        IMG: "/img/home/new-home/migrate.svg",
+        IMG_HOVER: "/img/home/new-home/migrate-hover.svg",
+        DSSCRIPTIVE: "Learn how to port to openEuler.",
+        LINK: "/other/migration/",
+      },
+      {
+        TITLE: "Open Source Promotion Plan",
+        IMG: "/img/home/new-home/internship-summit.svg",
+        IMG_HOVER: "/img/home/new-home/internship-summit-hover.svg",
+        DSSCRIPTIVE: "Participate in open source projects of OSPP.",
+        LINK: "/activities/",
+      },
+      {
+        TITLE: "Summits",
+        IMG: "/img/home/new-home/summit.svg",
+        IMG_HOVER: "/img/home/new-home/summit-hover.svg",
+        DSSCRIPTIVE: "2022 OpenAtom Global Open Source Summit",
+        LINK: "/interaction/summit-list/devday2022/",
+      },
+    ],
+    IMG_CAROUSE: {
+      TITLE: "面向数字基础设施的开源操作系统",
+      BUTTON: "Try Now",
+      TRY_URL: "community/contribution/detail.html",
+      LIST: [
+        {
+          TITLE: "All-Scenario Applications",
+          IMG_URL: "/img/home/carouse/img-list1.png",
+        },
+        {
+          TITLE: "Various Devices",
+          IMG_URL: "/img/home/carouse/img-list2.png",
+        },
+        {
+          TITLE: "Development Tool Chain",
+          IMG_URL: "/img/home/carouse/img-list3.png",
+        },
+      ],
+    },
+    COMMUNITY_ACTIVITY: {
+      TITLE: "community activity",
+      CARD: {
+        TITLE: "openEuler社区活力",
+        CONTENT:
+          "openEuler也是一个开源的操作系统技术平台，鼓励社区贡献、合作。",
+        VIEW_DETAILS: "查看贡献详情",
+        LINK: "https://datastat.openeuler.org/en/overview",
+      },
+    },
   },
   ru: {
     HOME_CAROUSEL_DATA: [
@@ -1406,7 +1337,100 @@ module.exports = {
         },
       ],
     },
-    HOME_CALENDAR:'openEuler developer calendar',
+    HOME_CALENDAR: "openEuler developer calendar",
+    HOME_NAV: [
+      {
+        TITLE: "Success Stories",
+        IMG: "/img/home/new-home/use-case.svg",
+        IMG_HOVER: "/img/home/new-home/use-case-hover.svg",
+        DSSCRIPTIVE: "Learn success stories in various industries.",
+        LINK: "",
+      },
+      {
+        TITLE: "Porting Guide",
+        IMG: "/img/home/new-home/migrate.svg",
+        IMG_HOVER: "/img/home/new-home/migrate-hover.svg",
+        DSSCRIPTIVE: "Learn how to port to openEuler.",
+        LINK: "/other/migration/",
+      },
+      {
+        TITLE: "Open Source Promotion Plan",
+        IMG: "/img/home/new-home/internship-summit.svg",
+        IMG_HOVER: "/img/home/new-home/internship-summit-hover.svg",
+        DSSCRIPTIVE: "Participate in open source projects of OSPP.",
+        LINK: "/activities/",
+      },
+      {
+        TITLE: "Summits",
+        IMG: "/img/home/new-home/summit.svg",
+        IMG_HOVER: "/img/home/new-home/summit-hover.svg",
+        DSSCRIPTIVE: "2022 OpenAtom Global Open Source Summit",
+        LINK: "/interaction/summit-list/devday2022/",
+      },
+    ],
+    IMG_CAROUSE: {
+      TITLE: "面向数字基础设施的开源操作系统",
+      BUTTON: "Try Now",
+      TRY_URL: "community/contribution/detail.html",
+      LIST: [
+        {
+          TITLE: "All-Scenario Applications",
+          IMG_URL: "/img/home/carouse/img-list1.png",
+        },
+        {
+          TITLE: "Various Devices",
+          IMG_URL: "/img/home/carouse/img-list2.png",
+        },
+        {
+          TITLE: "Development Tool Chain",
+          IMG_URL: "/img/home/carouse/img-list3.png",
+        },
+      ],
+    },
+    USER_CASE: {
+      TITLE: "用户案例",
+      VIEW_MORE: "查看更多",
+      VIEW_MORE_LINK: "https://new.openeuler.org/zh/showcase/",
+      CASE_LIST: [
+        {
+          TYPE: "金融",
+          URL: "/img/home/case/finance.svg",
+          ACTIVE_URL: "/img/home/case/finance-active.svg",
+        },
+        {
+          TYPE: "运营商",
+          URL: "/img/home/case/operator.svg",
+          ACTIVE_URL: "/img/home/case/operator-active.svg",
+        },
+
+        {
+          TYPE: "能源",
+          URL: "/img/home/case/energy.svg",
+          ACTIVE_URL: "/img/home/case/energy-active.svg",
+        },
+
+        {
+          TYPE: "物流",
+          URL: "/img/home/case/logistics.svg",
+          ACTIVE_URL: "/img/home/case/logistics-active.svg",
+        },
+        {
+          TYPE: "其他",
+          URL: "/img/home/case/education.svg",
+          ACTIVE_URL: "/img/home/case/education-active.svg",
+        },
+      ],
+    },
+    COMMUNITY_ACTIVITY: {
+      TITLE: "community activity",
+      CARD: {
+        TITLE: "openEuler社区活力",
+        CONTENT:
+          "openEuler也是一个开源的操作系统技术平台，鼓励社区贡献、合作。",
+        VIEW_DETAILS: "查看贡献详情",
+        LINK: "https://datastat.openeuler.org/en/overview",
+      },
+    },
     HOME_ROOMS: {
       ROOM_NAME: [
         { NAME: "Блог", ID: "blog" },
@@ -1739,6 +1763,8 @@ module.exports = {
         LINK: "http://www.kylinsec.com.cn/",
         PC: "/img/home/link/xinan.png",
         MOBILE: "/img/home/link/mobile-xinan.png",
+      },
+      {
         LINK: "https://www.uniontech.com/",
         PC: "/img/home/link/tongxin.png",
         MOBILE: "/img/home/link/mobile-tongxin.png",
@@ -1747,6 +1773,8 @@ module.exports = {
         LINK: "https://www.kylinos.cn/",
         PC: "/img/home/link/qiling.png",
         MOBILE: "/img/home/link/mobile-qiling.png",
+      },
+      {
         LINK: "http://www.iscas.ac.cn/",
         PC: "/img/home/link/iscas.png",
         MOBILE: "/img/home/link/mobile-iscas.png",
@@ -1755,6 +1783,8 @@ module.exports = {
         LINK: "http://www.i-soft.com.cn/",
         PC: "/img/home/link/cetc.png",
         MOBILE: "/img/home/link/mobile-cetc.png",
+      },
+      {
         LINK: "https://www.turbolinux.com.cn/",
         PC: "/img/home/link/turbo.png",
         MOBILE: "/img/home/link/mobile-turbo.png",
@@ -1763,6 +1793,8 @@ module.exports = {
         LINK: "http://www.hoperun.com/",
         PC: "/img/home/link/hopeRun.png",
         MOBILE: "/img/home/link/mobile-hopeRun.png",
+      },
+      {
         LINK: "http://www.tongyuanos.com/",
         PC: "/img/home/link/tongYuan.png",
         MOBILE: "/img/home/link/mobile-tongYuan.png",
@@ -1771,6 +1803,8 @@ module.exports = {
         LINK: "http://www.chinaredflag.cn/",
         PC: "/img/home/link/zhongkehongqi.png",
         MOBILE: "/img/home/link/mobile-zhongkehongqi.png",
+      },
+      {
         LINK: "https://www.suse.com/",
         PC: "/img/home/link/suse.png",
         MOBILE: "/img/home/link/mobile-suse.png",
@@ -1779,6 +1813,8 @@ module.exports = {
         LINK: "http://www.nfs-china.com/index.html",
         PC: "/img/home/link/zhongkefangde.png",
         MOBILE: "/img/home/link/mobile-zhongkefangde.png",
+      },
+      {
         LINK: "https://www.xfusion.com/en/",
         PC: "/img/home/link/xfusion.png",
         MOBILE: "/img/home/link/xfusion_mobile.png",
@@ -1789,6 +1825,8 @@ module.exports = {
         LINK: "http://www.mulanos.cn/",
         PC: "/img/home/link/mulan.png",
         MOBILE: "/img/home/link/mobile-mulan.png",
+      },
+      {
         LINK: "https://kunpeng.huawei.com/",
         PC: "/img/home/link/kunpeng.png",
         MOBILE: "/img/home/link/mobile-kunpeng.png",
@@ -1797,6 +1835,8 @@ module.exports = {
         LINK: "http://ic-openlabs.huawei.com/chat/#/",
         PC: "/img/home/link/xiaozhi.png",
         MOBILE: "/img/home/link/mobile-xiaozhi.png",
+      },
+      {
         LINK: "https://dw.pcl.ac.cn/",
         PC: "/img/home/link/pengcheng.png",
         MOBILE: "/img/home/link/mobile-pengcheng.png",
@@ -1805,6 +1845,8 @@ module.exports = {
         LINK: "https://www.infoq.cn/?utm_source=openeuler&utm_medium=youlian",
         PC: "/img/home/link/infoQ.png",
         MOBILE: "/img/home/link/mobile-infoQ.png",
+      },
+      {
         LINK: "https://kaiyuanshe.cn/",
         PC: "/img/home/link/kaiyuanshe-logo.png",
         MOBILE: "/img/home/link/kaiyuanshe-logo-mobile.png",
@@ -1813,6 +1855,8 @@ module.exports = {
         LINK: "http://www.vulab.com.cn/",
         PC: "/img/home/link/zhongke_pc.png",
         MOBILE: "/img/home/link/zhongke_mo.png",
+      },
+      {
         LINK: "https://www.authing.cn/",
         PC: "/img/home/link/Authing_pc.png",
         MOBILE: "/img/home/link/Authing_mo.png",

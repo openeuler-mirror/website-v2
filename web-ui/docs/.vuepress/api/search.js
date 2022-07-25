@@ -5,19 +5,20 @@
 import appAjax from './../libs/ajax-utils';
 export const search = ({
    keyword,
-   model,
-   indexEs,
+   type,
+   lang,
    version,
    page,
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            url: '/search/keyword',
+            otherBaseUrl: '-showcase',
+            url: '/docs',
             type: 'post',
             data: {
                 keyword,
-                model: model == 'all' ? '' : model,
-                indexEs,
+                type: type == 'all' ? '' : type,
+                lang,
                 version,
                 page,
             },
