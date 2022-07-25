@@ -1,17 +1,45 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted } from "vue";
 
-import { getShowCaseData } from '../../api/home';
+import { getShowCaseData } from "../../api/home";
 
-getShowCaseData().then((res) => {
-  console.log(res);
-})
+const caseData = ref({});
 
 const active = ref(0);
 
 const changeActive = (index) => {
   active.value = index;
 };
+
+onMounted(() => {
+  getShowCaseData().then((res) => {
+    let result = {
+      zh: {},
+      en: {},
+      ru: {},
+    };
+    res.obj.records.forEach((item) => {
+      if (item.lang === "zh") {
+        if (typeof result["zh"][item.industry] === "undefined") {
+          result["zh"][item.industry] = [];
+        }
+        result["zh"][item.industry].push(item);
+      } else if (item.lang === "en") {
+        if (typeof result["en"][item.industry] === "undefined") {
+          result["en"][item.industry] = [];
+        }
+        result["en"][item.industry].push(item);
+      } else {
+        if (typeof result["ru"][item.industry] === "undefined") {
+          result["ru"][item.industry] = [];
+        }
+        result["ru"][item.industry].push(item);
+      }
+    });
+
+    caseData.value = result;
+  });
+});
 </script>
 
 <template>
@@ -34,15 +62,16 @@ const changeActive = (index) => {
             </div>
           </div>
         </template>
-        <div class="user-mobile">
+        <div class="user-mobile" v-if="caseData">
           <div
-            v-for="(user, index2) in i18n.home.USER_CASE.CASE_LIST[index]
-              .CONTENT"
+            v-for="(user, index2) in caseData[$lang][
+              i18n.home.USER_CASE.CASE_LIST[active].TYPE
+            ]"
             :key="index2"
             class="user-card"
           >
-            <div class="user-title">{{ user.NAME }}</div>
-            <div class="user-word">{{ user.WORD }}</div>
+            <div class="user-title">{{ user.company }}</div>
+            <div class="user-word">{{ user.summary }}</div>
           </div>
         </div>
       </el-collapse-item>
@@ -68,22 +97,33 @@ const changeActive = (index) => {
             </div>
           </div>
         </div>
-        <div class="case-user">
+        <div class="case-user" v-if="caseData">
           <a
-            v-for="(item, index) in i18n.home.USER_CASE.CASE_LIST[active]
-              .CONTENT"
+            v-for="(item2, index) in caseData[$lang][
+              i18n.home.USER_CASE.CASE_LIST[active].TYPE
+            ]"
             :key="index"
             class="user-card"
             target="_blank"
-            :href="item.URL"
+            :href="
+              'https://new.openeuler.org/' +
+              $lang +
+              '/' +
+              item2.path.replace('/index', '')
+            "
           >
-            <div class="user-title">{{ item.NAME }}</div>
-            <div class="user-word">{{ item.WORD }}</div>
+            <div class="user-title">{{ item2.company }}</div>
+            <div class="user-word">{{ item2.summary }}</div>
           </a>
         </div>
         <div class="statistics">
           <!-- // TODO: -->
-          <a target="_blank" :href="i18n.home.HOME_ROUND.VIEW_DETAIL_LINK">
+          <a
+            target="_blank"
+            :href="
+              i18n.home.USER_CASE.VIEW_MORE_LINK
+            "
+          >
             {{ i18n.home.USER_CASE.VIEW_MORE }}
             <img src="/img/home/icon-right.png" alt="" />
           </a>
@@ -99,7 +139,7 @@ a {
 }
 h3 {
   font-size: var(--o-font-size-h3);
-  font-family: 'PingFangSC-Light, PingFang SC';
+  font-family: "PingFangSC-Light, PingFang SC";
   font-weight: 300;
   color: var(--o-color-text2);
   line-height: var(--o-line-height-h3);
@@ -257,7 +297,7 @@ h3 {
 
   &-word {
     font-size: var(--o-font-size-text);
-    font-family: 'PingFangSC-Regular, PingFang SC';
+    font-family: "PingFangSC-Regular, PingFang SC";
     font-weight: 400;
     color: var(--o-color-text3);
     line-height: var(--o-line-height-text);
@@ -310,7 +350,7 @@ h3 {
 
   &-word {
     font-size: var(--o-font-size-h5);
-    font-family: 'PingFangSC-Regular, PingFang SC';
+    font-family: "PingFangSC-Regular, PingFang SC";
     font-weight: 400;
     color: var(--o-color-text2);
     line-height: var(--o-line-height-h5);
@@ -346,3 +386,11 @@ h3 {
   color: var(--o-color-brand);
 }
 </style>
+
+  function onMounted(arg0: () => void) {
+    throw new Error("Function not implemented.");
+  }
+
+function onMounted(arg0: () => void) {
+  throw new Error("Function not implemented.");
+}

@@ -11,7 +11,6 @@ const codingData = [
 ];
 const textBlock = ref(false);
 let observe = new IntersectionObserver((res) => {
-  console.log(res);
   if (res.intersectionRatio <= 0) return;
   textBlock.value = false;
   nextTick(() => {
@@ -19,7 +18,6 @@ let observe = new IntersectionObserver((res) => {
   });
 });
 onMounted(() => {
-  console.log(playground);
   observe.observe(playground.value);
 });
 </script>

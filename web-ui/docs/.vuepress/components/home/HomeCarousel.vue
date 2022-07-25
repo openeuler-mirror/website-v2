@@ -107,8 +107,8 @@ const changeActive = (index) => {
     &-content {
       display: flex;
       flex-flow: row;
-      justify-content: space-between;
-      align-items: center;
+      // justify-content: space-between;
+      // align-items: center;
     }
 
     &-img {
@@ -153,8 +153,8 @@ const changeActive = (index) => {
     &-content {
       display: flex;
       flex-flow: row;
-      justify-content: space-between;
-      align-items: center;
+      // justify-content: space-between;
+      // align-items: center;
       padding-bottom: var(--o-spacing-h2);
       border-bottom: 1px solid var(--o-color-division);
     }
@@ -163,8 +163,8 @@ const changeActive = (index) => {
       display: flex;
       flex-flow: column;
       margin-right: var(--o-spacing-h1);
-      justify-content: space-between;
-      height: 400px;
+      // justify-content: space-between;
+      height: 300px;
       align-items: center;
       @media (max-width: 1280px) {
         height: 320px;
@@ -192,12 +192,14 @@ const changeActive = (index) => {
       line-height: var(--o-line-height-h4);
       text-align: start;
       border-bottom: 1px solid var(--o-color-division);
-      padding-bottom: var(--o-spacing-h1);
+      padding: var(--o-spacing-h3) 0;
       @media (max-width: 1280px) {
         padding-bottom: var(--o-spacing-h2);
       }
     }
-
+    &-title:first-child {
+      padding-top: 0;
+    }
     &-button {
       display: flex;
       padding-top: 42px;

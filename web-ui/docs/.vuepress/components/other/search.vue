@@ -75,11 +75,12 @@
                 search(that.formData)
                     .then(response => {
                         that.loading = false;
-                        that.total = response.data.totalNum;
+                        console.log(response);
+                        that.total = response.obj.total[0].doc_count;
                         if(!that.tagTitle.length){
-                            that.tagTitle = response.data.total;
+                            that.tagTitle = response.obj.total;
                         }
-                        that.allDatas = response.data.records;
+                        that.allDatas = response.obj.records;
                     })
                     .catch(response => {
                         that.$message.error(response);
@@ -107,13 +108,12 @@
             that = this;
             return {
                 loading: false,
-                curKey: 'all',
+                curKey: '',
                 searchInput: "",
                 formData: {
                     keyword: "",
-                    model: "",
-                    indexEs: "",
-                    version: "",
+                    type: "",
+                    lang: "",
                     page: 1,
                 },
                 total: 0,
@@ -124,8 +124,8 @@
         },
         mounted() {
             this.formData.keyword = decodeURI(this.$route.query.keyword|| '') || '';
-            this.formData.indexEs = this.$lang == 'en' ? 'openeuler_articles_en' : (this.$lang == 'ru' ? 'openeuler_articles_ru' : 'openeuler_articles');
-            this.formData.model = '';
+            this.formData.lang = this.$lang;
+            this.formData.type = '';
             this.search();
         },
         methods: {
@@ -160,7 +160,7 @@
                     });
 
                     this.tagTitle = [];
-                    this.curKey = 'all';
+                    this.curKey = '';
                     this.initData(1);
                     locationMethods.repoSearch();
                 }
@@ -182,45 +182,54 @@
                 }
                 let dealPath = null;
                 const docsPath = path;
+                console.log(docsPath);
                 path = path.split('/');
                 path = path[path.length - 1] + '/' + articleName.split('.')[0];
                 let sitePagesArr = [];
                 if(type === 'docs'){
-                    const flagLang = '/' + this.$lang + '/';
-                    const resPath = docsPath.split('/server/')[1].split(flagLang)[0] + '/' + docsPath.split('/server/')[1].split(flagLang)[1] + '/';
-                    const tempPath = this.$site.themeConfig.docsUrl + '/' + this.$lang + '/' + resPath + articleName.split('.')[0] + '.html';
+                    const tempPath = this.$site.themeConfig.docsUrl + '/' + this.$lang + '/' + docsPath + '.html';
                     sensorObj['search_result_url']=tempPath;
                     window.open(tempPath);
                     sensors.setProfile(sensorObj);
                     return;
-                }else{
-                    sitePagesArr = this.$sitePages;
+                }else if (type === 'showcase'){
+                    window.open(`https://new.openeuler.org/${this.$lang}/${docsPath.replace('index','')}`)
+                } else if (type === 'other') {
+                    
+                    window.open(`/${this.$lang}/${docsPath.replace('README','')}`)
+                    // sitePagesArr = this.$sitePages;
+                } else {
+                    window.open(`/${this.$lang}/${docsPath}.html`)
                 }
-                sitePagesArr.forEach(item => {
-                    if(item.path.includes(encodeURI(path))){
-                        dealPath = item.path;
-                    }
-                })
+                // console.log(sitePagesArr);
+                // console.log(path);
+                // sitePagesArr.forEach(item => {
+                //     console.log(item.path);
+                //     if(item.path.includes(encodeURI(path))){
+                //         dealPath = item.path;
+                //     }
+                // })
+                // console.log(dealPath);
                 if(dealPath){
                     const routeUrl = this.$router.resolve(dealPath);
                     sensorObj['search_result_url']=this.$site.themeConfig.docsUrl + routeUrl.href;
                     window.open(routeUrl.href);
                 }else {
-                    this.$message.error('找不到此路径');
+                    // this.$message.error('找不到此路径');
                 }
                 sensors.setProfile(sensorObj);
             }
         },
         watch: {
             curKey: function (val) {
-                this.formData.model = this.curKey;
+                this.formData.type = this.curKey;
                 this.initData(1);
             }
         }
     }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
     em {
         color: #002FA7;
     }
@@ -406,12 +415,14 @@
     }
     .tag-left p {
         font-size: 14px;
-
         color: rgba(0, 0, 0, 0.5);
         line-height: 24px;
     }
     .tags-info {
         margin-top: 40px;
+        span {
+            color: #002FA7;
+        }
     }
     .tags-info h3{
         cursor: pointer;

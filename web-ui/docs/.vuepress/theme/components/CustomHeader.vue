@@ -52,10 +52,6 @@
                         </div>
                     </li>
                 </ul>
-                <a href="/zh/other/migration" v-if="$lang === 'zh'" class="nav-migration">
-                    <img src="/img/minisite/migration/migration-tip.png"
-                 alt="">
-                </a>
                 <el-collapse-transition>
                     <ul
                         class="nav-menu-mobile"
@@ -435,17 +431,6 @@ export default {
 }
 </style>
 <style lang="less" scoped>
-.nav-migration {
-    margin-left: 30px;
-    display: flex;
-    align-items: center;
-    img {
-        height: 40px;
-    }
-    @media screen and (max-width: 1100px) {
-        display: none;
-    }
-}
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -739,9 +724,9 @@ export default {
                 @media screen and (max-width: 1000px) {
                     display: none;
                 }
-                @media screen and (max-width: 1280px) {
-                    justify-content: flex-start;
-                }
+                // @media screen and (max-width: 1280px) {
+                //     justify-content: flex-start;
+                // }
                 & > li {
                     position: relative;
                     width: 22px;

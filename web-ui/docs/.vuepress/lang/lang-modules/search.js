@@ -9,6 +9,8 @@ module.exports = {
             BLOG: '博客',
             NEWS: '新闻',
             DOCS: '文档',
+            SHOWCASE:'案例',
+            OTHER:'其他',
             FROM: '来源'
         },
         REPO: '相关软件包',
@@ -20,6 +22,8 @@ module.exports = {
             BLOG: 'Blog',
             NEWS: 'News',
             DOCS: 'Docs',
+            SHOWCASE:'Showcase',
+            OTHER:'other',
             FROM: 'from'
         },
         REPO: 'Related software package',
