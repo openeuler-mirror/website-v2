@@ -3,7 +3,7 @@ import { ref, onMounted } from "vue";
 
 import { getShowCaseData } from "../../api/home";
 
-const caseData = ref({});
+const caseData = ref(null);
 
 const active = ref(0);
 

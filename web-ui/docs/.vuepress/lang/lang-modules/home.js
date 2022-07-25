@@ -60,7 +60,7 @@ module.exports = {
         IMG: "/img/home/new-home/use-case.svg",
         IMG_HOVER: "/img/home/new-home/use-case-hover.svg",
         DSSCRIPTIVE: "汇聚各大行业用户案例",
-        LINK: "",
+        LINK: "https://new.openeuler.org/zh/showcase/",
       },
       {
         TITLE: "迁移专区",
@@ -1108,7 +1108,7 @@ module.exports = {
         IMG: "/img/home/new-home/use-case.svg",
         IMG_HOVER: "/img/home/new-home/use-case-hover.svg",
         DSSCRIPTIVE: "Learn success stories in various industries.",
-        LINK: "",
+        LINK: "https://new.openeuler.org/zh/showcase/",
       },
       {
         TITLE: "Porting Guide",
@@ -1344,7 +1344,7 @@ module.exports = {
         IMG: "/img/home/new-home/use-case.svg",
         IMG_HOVER: "/img/home/new-home/use-case-hover.svg",
         DSSCRIPTIVE: "Learn success stories in various industries.",
-        LINK: "",
+        LINK: "https://new.openeuler.org/zh/showcase/",
       },
       {
         TITLE: "Porting Guide",
