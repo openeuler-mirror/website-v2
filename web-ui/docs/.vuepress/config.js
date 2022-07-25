@@ -144,6 +144,14 @@ module.exports = {
                     '^/api-approve/': ''
                 }
             },
+            '/api-showcase/': {
+                target: 'https://doc-search.test.osinfra.cn/',
+                ws: true,
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api-showcase/': ''
+                }
+            },
         }
 
     }

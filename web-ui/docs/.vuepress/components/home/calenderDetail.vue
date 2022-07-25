@@ -85,6 +85,7 @@ export default {
     z-index: 1;
 }
 .cadenderSinge{
+    background-color: #fff;
     @media screen and (max-width: 1000px) {
         width: 90%;
     }
@@ -97,7 +98,6 @@ export default {
     /*margin: -96px 0 0 -35px;*/
     z-index: 10;
     background: #fff;
-    
   }
   .meetDetail {
     margin-top: 10px;
