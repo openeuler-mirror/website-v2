@@ -574,13 +574,14 @@ export default {
         border: 0;
       }
       .nav-item:nth-child(-n + 2) {
+        padding-top:  0;
         padding-bottom: var(--o-spacing-h6);
         border-bottom: 1px solid var(--o-color-division);
       }
       .nav-item:nth-child(2) {
         position: relative;
       }
-      .nav-item:nth-child(n + 2) {
+      .nav-item:nth-child(n + 3) {
         padding-top: var(--o-spacing-h6);
       }
     }
@@ -1446,7 +1447,7 @@ export default {
 
   cursor: pointer;
 }
-/deep/ .title-list {
+ /deep/.title-list {
   display: flex;
   padding-bottom: 40px;
   justify-content: flex-end;

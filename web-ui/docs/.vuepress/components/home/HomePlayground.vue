@@ -55,9 +55,9 @@ onMounted(() => {
           <p>coding experience</p>
           <p>in openEuler</p>
         </div>
-        <div class="lets-play" @click="go('https://moocstudio.openeuler.sh/')">
+        <a class="lets-play" href="https://moocstudio.openeuler.sh/" target="_blank">
           <img src="/img/home/letsPlay.png" alt="" />
-        </div>
+        </a>
       </div>
     </div>
   </div>

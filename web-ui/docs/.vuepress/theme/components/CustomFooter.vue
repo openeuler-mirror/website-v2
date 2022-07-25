@@ -201,9 +201,10 @@ const handleNavClick = (path) => {
           </div>
           <div class="footer-links">
             <a
-              v-for="item in linksData[$lang]"
+              v-for="(item,index) in linksData[$lang]"
               :key="item.id"
               :href="item.path"
+              :class="{'first-icon':index===0 && $lang ==='zh'}"
               class="img"
               target="_blank"
             >
@@ -412,6 +413,9 @@ const handleNavClick = (path) => {
           height: 100%;
           object-fit: cover;
         }
+      }
+      .first-icon {
+        height: 20px;
       }
       @media (max-width: 1439px) {
         justify-content: center;

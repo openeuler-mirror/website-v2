@@ -195,7 +195,6 @@
                 }else if (type === 'showcase'){
                     window.open(`https://new.openeuler.org/${this.$lang}/${docsPath.replace('index','')}`)
                 } else if (type === 'other') {
-                    
                     window.open(`/${this.$lang}/${docsPath.replace('README','')}`)
                     // sitePagesArr = this.$sitePages;
                 } else {
@@ -230,7 +229,7 @@
 </script>
 
 <style lang="less" scoped>
-    em {
+    span {
         color: #002FA7;
     }
     .search-area .el-input__inner {
@@ -410,7 +409,7 @@
         text-decoration: none;
         color: #000;
     }
-    .tag-left em {
+    .tag-left span {
         color: #002FA7;
     }
     .tag-left p {

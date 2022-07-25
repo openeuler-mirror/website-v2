@@ -4,7 +4,7 @@
       <a class="banner-panel" :href="item.link" target="_blank">
         <div
           class="banner-panel-cover isPCshow"
-          :style="{ backgroundImage: 'url(' + item.pcBanner + ')' }"
+          :style="{ backgroundImage: `url(${isShowH5?item.moBanner:item.pcBanner})` }"
         >
           <div
             class="banner-panel-content flex-column"
