@@ -636,8 +636,8 @@ module.exports = {
       ],
     },
     USER_CASE: {
-      TITLE: "用户案例",
-      VIEW_MORE: "查看更多",
+      TITLE: "User Case",
+      VIEW_MORE: "View More",
       VIEW_MORE_LINK: "https://new.openeuler.org/zh/showcase/",
       CASE_LIST: [
         {
@@ -1101,7 +1101,7 @@ module.exports = {
     MORE: "Read More",
     EXPAND: "Expand All",
     RETRACT: "Collapse All",
-    HOME_CALENDAR: "openEuler developer calendar",
+    HOME_CALENDAR: "开发者日历",
     HOME_NAV: [
       {
         TITLE: "Success Stories",
@@ -1337,7 +1337,7 @@ module.exports = {
         },
       ],
     },
-    HOME_CALENDAR: "openEuler developer calendar",
+    HOME_CALENDAR: "开发者日历",
     HOME_NAV: [
       {
         TITLE: "Success Stories",
@@ -1388,8 +1388,8 @@ module.exports = {
       ],
     },
     USER_CASE: {
-      TITLE: "用户案例",
-      VIEW_MORE: "查看更多",
+      TITLE: "User Case",
+      VIEW_MORE: "View More",
       VIEW_MORE_LINK: "https://new.openeuler.org/zh/showcase/",
       CASE_LIST: [
         {

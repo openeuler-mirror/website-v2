@@ -234,15 +234,15 @@ module.exports = {
             COPY_RIGHT: '版权所有 © 2022 openEuler 保留一切权利',
             RIGHT_LIST: [{
                     NAME: '品牌',
-                    URL: '/other/brand/'
+                    URL: '/zh/other/brand/'
                 },
                 {
                     NAME: '隐私政策',
-                    URL: '/other/privacy/'
+                    URL: '/zh/other/privacy/'
                 },
                 {
                     NAME: '法律声明',
-                    URL: '/other/legal/'
+                    URL: '/zh/other/legal/'
                 },
                 {
                     NAME: '服务状态',
@@ -466,15 +466,15 @@ module.exports = {
             COPY_RIGHT: 'Copyright © 2022 openEuler. All rights reserved.',
             RIGHT_LIST: [{
                     NAME: 'Trademark',
-                    URL: '/other/brand/'
+                    URL: '/en/other/brand/'
                 },
                 {
                     NAME: 'Privacy Policy',
-                    URL: '/other/privacy/'
+                    URL: '/en/other/privacy/'
                 },
                 {
                     NAME: 'Legal Notice',
-                    URL: '/other/legal/'
+                    URL: '/en/other/legal/'
                 },
                 {
                     NAME: 'Service Status',
@@ -688,15 +688,15 @@ module.exports = {
             COPY_RIGHT: 'Авторские права © openEuler 2022. Все права защищены.',
             RIGHT_LIST: [{
                     NAME: 'Товарный знак',
-                    URL: '/other/brand/'
+                    URL: '/ru/other/brand/'
                 },
                 {
                     NAME: 'Политика конфиденциальности',
-                    URL: '/other/privacy/'
+                    URL: '/ru/other/privacy/'
                 },
                 {
                     NAME: 'Правовое уведомление',
-                    URL: '/other/legal/'
+                    URL: '/ru/other/legal/'
                 },
                 {
                     NAME: 'Статус сервиса',

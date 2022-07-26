@@ -97,7 +97,6 @@ a {
 
   &-value {
     font-size: var(--o-font-size-h5);
-    font-family: "PingFangSC-Medium, PingFang SC";
     font-weight: 500;
     color: var(--o-color-text2);
     line-height: var(--o-line-height-h5);
@@ -111,7 +110,6 @@ a {
 
   &-title {
     font-size: var(--o-font-size-h7);
-    font-family: "PingFangSC-Medium, PingFang SC";
     font-weight: 400;
     color: var(--o-color-text2);
     line-height: var(--o-line-height-h7);
@@ -137,7 +135,6 @@ a {
   }
   h3 {
     font-size: var(--o-font-size-h3);
-    font-family: "PingFangSC-Light, PingFang SC";
     font-weight: 300;
     color: var(--o-color-text2);
     line-height: var(--o-line-height-h3);
@@ -151,7 +148,6 @@ a {
 
   &-title {
     font-size: var(--o-font-size-h7);
-    font-family: "PingFangSC-Medium, PingFang SC";
     font-weight: 500;
     color: var(--o-color-text2);
     line-height: var(--o-line-height-h7);
@@ -163,7 +159,6 @@ a {
 
   &-word {
     font-size: var(--o-font-size-text);
-    font-family: "PingFangSC-Regular, PingFang SC";
     font-weight: 400;
     color: var(--o-color-text3);
     line-height: var(--o-line-height-text);
@@ -196,6 +191,7 @@ a {
 
   &-detail {
     cursor: pointer;
+    width: fit-content;
     font-size: var(--o-font-size-text);
     font-weight: 400;
     color: var(--o-color-text2);

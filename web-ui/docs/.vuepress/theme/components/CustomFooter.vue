@@ -177,7 +177,8 @@ const handleNavClick = (path) => {
             <a
               v-for="link in i18n.common.FOOTER.RIGHT_LIST"
               :key="link.URL"
-              :href="`/${$lang}${link.URL}`"
+              :href="`${link.URL}`"
+              target="_blank"
               class="link"
               >{{ link.NAME }}</a
             >
@@ -404,8 +405,10 @@ const handleNavClick = (path) => {
     }
     .footer-links {
       display: flex;
+      // flex-wrap: wrap;
       justify-content: right;
       align-items: center;
+      padding-left: 20px;
       gap: 12px;
       .img {
         height: 14px;

@@ -75,12 +75,21 @@
                 search(that.formData)
                     .then(response => {
                         that.loading = false;
-                        console.log(response);
-                        that.total = response.obj.total[0].doc_count;
-                        if(!that.tagTitle.length){
-                            that.tagTitle = response.obj.total;
+                        if (response.obj) {
+                            that.total = response.obj.total[0].doc_count;
+                            if(!that.tagTitle.length){
+                                that.tagTitle = response.obj.total;
                         }
-                        that.allDatas = response.obj.records;
+                            that.allDatas = response.obj.records;
+                        } else {
+                            that.allDatas = [];
+                            that.tagTitle = [
+                                {
+                                    key:'all',
+                                    doc_count:0
+                                }
+                            ];
+                        }
                     })
                     .catch(response => {
                         that.$message.error(response);
@@ -108,7 +117,7 @@
             that = this;
             return {
                 loading: false,
-                curKey: '',
+                curKey: 'all',
                 searchInput: "",
                 formData: {
                     keyword: "",
@@ -125,7 +134,7 @@
         mounted() {
             this.formData.keyword = decodeURI(this.$route.query.keyword|| '') || '';
             this.formData.lang = this.$lang;
-            this.formData.type = '';
+            this.formData.type = 'all';
             this.search();
         },
         methods: {
@@ -158,9 +167,8 @@
                         ...(window['sensorsCustomBuriedData'] || {}),
                         ...(window['addSearchBuriedData'] || {})
                     });
-
                     this.tagTitle = [];
-                    this.curKey = '';
+                    this.curKey = 'all';
                     this.initData(1);
                     locationMethods.repoSearch();
                 }
@@ -182,10 +190,8 @@
                 }
                 let dealPath = null;
                 const docsPath = path;
-                console.log(docsPath);
                 path = path.split('/');
                 path = path[path.length - 1] + '/' + articleName.split('.')[0];
-                let sitePagesArr = [];
                 if(type === 'docs'){
                     const tempPath = this.$site.themeConfig.docsUrl + '/' + this.$lang + '/' + docsPath + '.html';
                     sensorObj['search_result_url']=tempPath;
@@ -196,26 +202,16 @@
                     window.open(`https://new.openeuler.org/${this.$lang}/${docsPath.replace('index','')}`)
                 } else if (type === 'other') {
                     window.open(`/${this.$lang}/${docsPath.replace('README','')}`)
-                    // sitePagesArr = this.$sitePages;
                 } else {
                     window.open(`/${this.$lang}/${docsPath}.html`)
                 }
-                // console.log(sitePagesArr);
-                // console.log(path);
-                // sitePagesArr.forEach(item => {
-                //     console.log(item.path);
-                //     if(item.path.includes(encodeURI(path))){
-                //         dealPath = item.path;
-                //     }
-                // })
-                // console.log(dealPath);
-                if(dealPath){
-                    const routeUrl = this.$router.resolve(dealPath);
-                    sensorObj['search_result_url']=this.$site.themeConfig.docsUrl + routeUrl.href;
-                    window.open(routeUrl.href);
-                }else {
-                    // this.$message.error('找不到此路径');
-                }
+                // if(dealPath){
+                //     const routeUrl = this.$router.resolve(dealPath);
+                //     sensorObj['search_result_url']=this.$site.themeConfig.docsUrl + routeUrl.href;
+                //     window.open(routeUrl.href);
+                // }else {
+                //     this.$message.error('找不到此路径');
+                // }
                 sensors.setProfile(sensorObj);
             }
         },
@@ -228,21 +224,22 @@
     }
 </script>
 
-<style lang="less" scoped>
-    span {
-        color: #002FA7;
-    }
+<style lang="less">
     .search-area .el-input__inner {
         height: 62px;
         line-height: 62px;
         font-size: 20px;
-
         color: #000;
         border: 1px solid #7f7f7f;
         border-radius: 8px;
     }
+    .tags-info {
+        span {
+            color: #002FA7;
+        }
+    }
     .search-area .el-input__inner:hover,
-    .search-area .el-input__inner:focus {
+    .search-area :deep(.el-input__inner):focus {
         border: 2px solid #002FA7;
         box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
     }
@@ -430,10 +427,13 @@
         margin-top: 20px;
     }
     .articla-from {
+        span {
+            color: rgba(0, 0, 0, 0.5);
+        }
+        .artical-tag {
+            color: #000;
+        }
         font-size: 12px;
-    }
-    .artical-tag {
-        color: #000;
     }
     .tag-right {
         flex: 1;

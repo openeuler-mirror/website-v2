@@ -139,7 +139,6 @@ a {
 }
 h3 {
   font-size: var(--o-font-size-h3);
-  font-family: "PingFangSC-Light, PingFang SC";
   font-weight: 300;
   color: var(--o-color-text2);
   line-height: var(--o-line-height-h3);
@@ -297,7 +296,6 @@ h3 {
 
   &-word {
     font-size: var(--o-font-size-text);
-    font-family: "PingFangSC-Regular, PingFang SC";
     font-weight: 400;
     color: var(--o-color-text3);
     line-height: var(--o-line-height-text);
@@ -350,7 +348,6 @@ h3 {
 
   &-word {
     font-size: var(--o-font-size-h5);
-    font-family: "PingFangSC-Regular, PingFang SC";
     font-weight: 400;
     color: var(--o-color-text2);
     line-height: var(--o-line-height-h5);
