@@ -487,7 +487,7 @@ p::after {
     /deep/ .title-list {
       padding: 0;
       display: flex;
-      .el-tabs__header  {
+      .el-tabs__header {
         margin-bottom: 0;
       }
       .el-tabs__nav-scroll {
@@ -639,6 +639,10 @@ p::after {
           -khtml-user-select: none; /*早期浏览器*/
           user-select: none;
           font-size: 12px;
+          td.prev,
+          td.next {
+            color: #999;
+          }
           .el-calendar-day {
             display: flex;
             justify-content: center;
@@ -991,7 +995,7 @@ p::after {
         p {
           margin-top: 16px;
         }
-        @media screen and (max-width:1000px) {
+        @media screen and (max-width: 1000px) {
           img {
             width: 100%;
           }
