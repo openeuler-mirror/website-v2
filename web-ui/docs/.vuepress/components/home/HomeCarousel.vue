@@ -2,9 +2,17 @@
 import { ref } from "vue";
 
 const active = ref(0);
+const activeMobile = ref(0);
 
 const changeActive = (index) => {
   active.value = index;
+  activeMobile.value = index;
+};
+
+const changeActiveMobile = (activeNames) => {
+  if (activeNames !== "") {
+    active.value = activeNames;
+  }
 };
 </script>
 
@@ -36,7 +44,12 @@ const changeActive = (index) => {
         </div>
       </el-card>
     </div>
-    <el-collapse class="carousel-mobile" v-model="active" accordion>
+    <el-collapse
+      class="carousel-mobile"
+      v-model="activeMobile"
+      @change="changeActiveMobile"
+      accordion
+    >
       <el-collapse-item
         v-for="(item, index) in i18n.home.IMG_CAROUSE.LIST"
         :key="index"
@@ -51,7 +64,7 @@ const changeActive = (index) => {
           </div>
         </template>
         <div class="carousel-mobile-img">
-          <img :src="i18n.home.IMG_CAROUSE.LIST[active].IMG_URL" />
+          <img :src="i18n.home.IMG_CAROUSE.LIST[index].IMG_URL" />
         </div>
       </el-collapse-item>
     </el-collapse>

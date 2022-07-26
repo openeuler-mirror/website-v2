@@ -1,14 +1,22 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted } from "vue";
 
-import { getShowCaseData } from '../../api/home';
+import { getShowCaseData } from "../../api/home";
 
 const caseData = ref(null);
 
 const active = ref(0);
+const activeMobile = ref(0);
 
 const changeActive = (index) => {
   active.value = index;
+  activeMobile.value = index;
+};
+
+const changeActiveMobile = (activeNames) => {
+  if (activeNames !== "") {
+    active.value = activeNames;
+  }
 };
 
 onMounted(() => {
@@ -19,21 +27,21 @@ onMounted(() => {
       ru: {},
     };
     res.obj.records.forEach((item) => {
-      if (item.lang === 'zh') {
-        if (typeof result['zh'][item.industry] === 'undefined') {
-          result['zh'][item.industry] = [];
+      if (item.lang === "zh") {
+        if (typeof result["zh"][item.industry] === "undefined") {
+          result["zh"][item.industry] = [];
         }
-        result['zh'][item.industry].push(item);
-      } else if (item.lang === 'en') {
-        if (typeof result['en'][item.industry] === 'undefined') {
-          result['en'][item.industry] = [];
+        result["zh"][item.industry].push(item);
+      } else if (item.lang === "en") {
+        if (typeof result["en"][item.industry] === "undefined") {
+          result["en"][item.industry] = [];
         }
-        result['en'][item.industry].push(item);
+        result["en"][item.industry].push(item);
       } else {
-        if (typeof result['ru'][item.industry] === 'undefined') {
-          result['ru'][item.industry] = [];
+        if (typeof result["ru"][item.industry] === "undefined") {
+          result["ru"][item.industry] = [];
         }
-        result['ru'][item.industry].push(item);
+        result["ru"][item.industry].push(item);
       }
     });
 
@@ -45,7 +53,12 @@ onMounted(() => {
 <template>
   <div>
     <h3>{{ i18n.home.USER_CASE.TITLE }}</h3>
-    <el-collapse v-model="active" accordion class="case-mobile">
+    <el-collapse
+      v-model="activeMobile"
+      accordion
+      class="case-mobile"
+      @change="changeActiveMobile"
+    >
       <el-collapse-item
         v-for="(item, index) in i18n.home.USER_CASE.CASE_LIST"
         :key="index"
@@ -65,7 +78,7 @@ onMounted(() => {
         <div class="user-mobile" v-if="caseData">
           <a
             v-for="(user, index2) in caseData[$lang][
-              i18n.home.USER_CASE.CASE_LIST[active].TYPE
+              i18n.home.USER_CASE.CASE_LIST[index].TYPE
             ]"
             :key="index2"
             class="user-card"
@@ -350,6 +363,7 @@ h3 {
   }
 
   &-word {
+    min-height: 36px;
     font-size: var(--o-font-size-h5);
     font-weight: 400;
     color: var(--o-color-text2);

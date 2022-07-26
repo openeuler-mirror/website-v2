@@ -1139,15 +1139,15 @@ module.exports = {
       LIST: [
         {
           TITLE: "All-Scenario Applications",
-          IMG_URL: "/img/home/carouse/img-list1.jpg",
+          IMG_URL: "/img/home/carouse/img-list1-en.png",
         },
         {
           TITLE: "Various Devices",
-          IMG_URL: "/img/home/carouse/img-list2.jpg",
+          IMG_URL: "/img/home/carouse/img-list2-en.png",
         },
         {
           TITLE: "Development Tool Chain",
-          IMG_URL: "/img/home/carouse/img-list3.jpg",
+          IMG_URL: "/img/home/carouse/img-list3-en.png",
         },
       ],
     },
