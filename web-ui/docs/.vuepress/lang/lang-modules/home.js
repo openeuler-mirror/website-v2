@@ -91,15 +91,15 @@ module.exports = {
       LIST: [
         {
           TITLE: "支持多样性计算",
-          IMG_URL: "/img/home/carouse/img-list1.png",
+          IMG_URL: "/img/home/carouse/img-list1.jpg",
         },
         {
           TITLE: "覆盖全场景应用",
-          IMG_URL: "/img/home/carouse/img-list2.png",
+          IMG_URL: "/img/home/carouse/img-list2.jpg",
         },
         {
           TITLE: "完整开发工具链",
-          IMG_URL: "/img/home/carouse/img-list3.png",
+          IMG_URL: "/img/home/carouse/img-list3.jpg",
         },
       ],
     },
@@ -1139,15 +1139,15 @@ module.exports = {
       LIST: [
         {
           TITLE: "All-Scenario Applications",
-          IMG_URL: "/img/home/carouse/img-list1.png",
+          IMG_URL: "/img/home/carouse/img-list1.jpg",
         },
         {
           TITLE: "Various Devices",
-          IMG_URL: "/img/home/carouse/img-list2.png",
+          IMG_URL: "/img/home/carouse/img-list2.jpg",
         },
         {
           TITLE: "Development Tool Chain",
-          IMG_URL: "/img/home/carouse/img-list3.png",
+          IMG_URL: "/img/home/carouse/img-list3.jpg",
         },
       ],
     },
@@ -1375,15 +1375,15 @@ module.exports = {
       LIST: [
         {
           TITLE: "All-Scenario Applications",
-          IMG_URL: "/img/home/carouse/img-list1.png",
+          IMG_URL: "/img/home/carouse/img-list1.jpg",
         },
         {
           TITLE: "Various Devices",
-          IMG_URL: "/img/home/carouse/img-list2.png",
+          IMG_URL: "/img/home/carouse/img-list2.jpg",
         },
         {
           TITLE: "Development Tool Chain",
-          IMG_URL: "/img/home/carouse/img-list3.png",
+          IMG_URL: "/img/home/carouse/img-list3.jpg",
         },
       ],
     },

@@ -189,6 +189,7 @@ a {
       max-width: 1416px;
       color: #fff;
       margin: 0 auto;
+      margin-top: -10px;
       display: flex;
       flex-direction: column;
       justify-content: center;
