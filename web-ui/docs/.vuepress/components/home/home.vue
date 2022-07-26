@@ -21,10 +21,7 @@
       </div>
       <HomeCarousel />
       <UserCase v-if="$lang === 'zh'" />
-      <div class="home-calendar" v-if="calenderData.length">
-        <h3>{{ i18n.home.HOME_CALENDAR }}</h3>
-        <calender :table-data="calenderData" />
-      </div>
+      <CommunityActivity v-if="roundList.length" :round-list="roundList" />
       <div class="home-newsroom">
         <div class="title-list">
           <el-tabs v-model="tabType">
@@ -139,7 +136,10 @@
           </div>
         </div>
       </div>
-      <CommunityActivity v-if="roundList.length" :round-list="roundList" />
+      <div class="home-calendar" v-if="calenderData.length">
+        <h3>{{ i18n.home.HOME_CALENDAR }}</h3>
+        <calender :table-data="calenderData" />
+      </div>
       <HomePlayground />
       <div class="home-source">
         <div class="source-publish-link publish diff-pc-mobile">
