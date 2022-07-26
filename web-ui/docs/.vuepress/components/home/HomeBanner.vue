@@ -1,10 +1,12 @@
 <template>
   <swiper ref="mySwiper" :options="swiperOption" class="home-banner">
-    <swiper-slide v-for="item in homeBanner" :key="item.link">
+    <swiper-slide v-for="item in homeBanner[$lang]" :key="item.link">
       <a class="banner-panel" :href="item.link" target="_blank">
         <div
           class="banner-panel-cover isPCshow"
-          :style="{ backgroundImage: `url(${isShowH5?item.moBanner:item.pcBanner})` }"
+          :style="{
+            backgroundImage: `url(${isShowH5 ? item.moBanner : item.pcBanner})`,
+          }"
         >
           <div
             class="banner-panel-content flex-column"
@@ -47,26 +49,68 @@ export default {
   },
   data() {
     return {
-      homeBanner: [
-        {
-          pcBanner: '/img/home/banner/atom-pc.png',
-          moBanner: '/img/home/banner/atom-mo.png',
-          link: `https://openatom.cn/summit`,
-          targetTap: 0,
-          title: '',
-          desc: '',
-          btn: '',
-        },
-        {
-          pcBanner: '/img/home/banner/migration-pc.png',
-          moBanner: '/img/home/banner/migration-mo.png',
-          link: `other/migration/`,
-          targetTap: 0,
-          title: '一起迁移吧',
-          desc: '手把手教你把操作系统替换成openEuler',
-          btn: '了解更多',
-        },
-      ],
+      homeBanner: {
+        zh: [
+          {
+            pcBanner: '/img/home/banner/atom-pc.png',
+            moBanner: '/img/home/banner/atom-mo.png',
+            link: `https://openatom.cn/summit`,
+            targetTap: 0,
+            title: '',
+            desc: '',
+            btn: '',
+          },
+          {
+            pcBanner: '/img/home/banner/migration-pc.png',
+            moBanner: '/img/home/banner/migration-mo.png',
+            link: `other/migration/`,
+            targetTap: 0,
+            title: '一起迁移吧',
+            desc: '手把手教你把操作系统替换成openEuler',
+            btn: '了解更多',
+          },
+        ],
+        en: [
+          {
+            pcBanner: '/img/home/banner/atom-pc.png',
+            moBanner: '/img/home/banner/atom-mo.png',
+            link: `https://openatom.cn/summit`,
+            targetTap: 0,
+            title: '',
+            desc: '',
+            btn: '',
+          },
+          {
+            pcBanner: '/img/home/banner/migration-pc.png',
+            moBanner: '/img/home/banner/migration-mo.png',
+            link: `other/migration/`,
+            targetTap: 0,
+            title: 'Start Porting Now!',
+            desc: 'Learn how to port to openEuler.',
+            btn: 'Learn More',
+          },
+        ],
+        ru: [
+          {
+            pcBanner: '/img/home/banner/atom-pc.png',
+            moBanner: '/img/home/banner/atom-mo.png',
+            link: `https://openatom.cn/summit`,
+            targetTap: 0,
+            title: '',
+            desc: '',
+            btn: '',
+          },
+          {
+            pcBanner: '/img/home/banner/migration-pc.png',
+            moBanner: '/img/home/banner/migration-mo.png',
+            link: `other/migration/`,
+            targetTap: 0,
+            title: '一起迁移吧',
+            desc: '手把手教你把操作系统替换成openEuler',
+            btn: '了解更多',
+          },
+        ],
+      },
       swiperOption: {
         loop: true,
         autoplay: {
