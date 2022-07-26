@@ -14,7 +14,9 @@
             <img :src="item.IMG_HOVER" alt="" class="nav-item-icon-hover" />
           </div>
           <div class="nav-text">
-            <h4 :class="$lang === 'zh'?'nav-title':'nav-title-en'">{{ item.TITLE }}</h4>
+            <h4 :class="$lang === 'zh' ? 'nav-title' : 'nav-title-en'">
+              {{ item.TITLE }}
+            </h4>
             <p class="nav-descriptive">{{ item.DSSCRIPTIVE }}</p>
           </div>
         </div>
@@ -182,16 +184,16 @@
 <script>
 // import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
 // import 'swiper/css/swiper.css';
-import { meetingList, statisticsList } from "../../api/home";
-import dayjs from "dayjs";
-import calender from "./calender.vue";
-import UserCase from "./UserCase.vue";
-import HomePlayground from "./HomePlayground.vue";
-import CommunityActivity from "./CommunityActivity.vue";
-import HomeBanner from "./HomeBanner.vue";
-import HomeCarousel from "./HomeCarousel.vue";
-import OButton from "./OButton.vue";
-import round from "./../round/round";
+import { meetingList, statisticsList } from '../../api/home';
+import dayjs from 'dayjs';
+import calender from './calender.vue';
+import UserCase from './UserCase.vue';
+import HomePlayground from './HomePlayground.vue';
+import CommunityActivity from './CommunityActivity.vue';
+import HomeBanner from './HomeBanner.vue';
+import HomeCarousel from './HomeCarousel.vue';
+import OButton from './OButton.vue';
+import round from './../round/round';
 let that = null;
 let remoteMethods = {
   meetingList() {
@@ -219,7 +221,7 @@ let remoteMethods = {
   },
 };
 export default {
-  name: "home",
+  name: 'home',
   components: {
     calender,
     UserCase,
@@ -234,20 +236,20 @@ export default {
     that = this;
     return {
       codingData: [
-        "Last metadata expiration check: 0:02:16 ago ",
-        "on Wed Dec 22 09:00:02 2021.",
-        "Dependencies resolved.",
-        "Nothing to do.",
-        "Complete!",
-        "➜ / ",
+        'Last metadata expiration check: 0:02:16 ago ',
+        'on Wed Dec 22 09:00:02 2021.',
+        'Dependencies resolved.',
+        'Nothing to do.',
+        'Complete!',
+        '➜ / ',
       ],
-      tabType: "blog",
+      tabType: 'blog',
       textBlock: false,
       changeTime: 5000,
       isMuted: true,
       flag: true,
-      height: "380px",
-      activeImg: "/img/home/homeActive.gif",
+      height: '380px',
+      activeImg: '/img/home/homeActive.gif',
       startIndex: 0,
       endIndex: 4,
       blogList: null,
@@ -260,7 +262,7 @@ export default {
       calenderData: [],
       autoPlay: true,
       videoCtrlParams: {
-        element: "",
+        element: '',
         isShow: true, //是否使用大控件
         barWidth: null,
       },
@@ -275,7 +277,7 @@ export default {
       developerList: [],
       bannerAmount: 1,
       statisticParams: {
-        type: "openEuler",
+        type: 'openEuler',
       },
       roundValueObj: {},
       roundList: [],
@@ -283,14 +285,14 @@ export default {
     };
   },
   mounted() {
-    window.addEventListener("scroll", this.scroTop);
-    this.videoCtrlParams.element = document.getElementById("home-video");
+    window.addEventListener('scroll', this.scroTop);
+    this.videoCtrlParams.element = document.getElementById('home-video');
     remoteMethods.meetingList();
     remoteMethods.statisticsList();
     this.roomName = this.i18n.home.HOME_ROOMS.ROOM_NAME;
     this.getRoomsData();
     let lang = this.$lang;
-    this.bannerAmount = lang === "zh" ? 1 : 1;
+    this.bannerAmount = lang === 'zh' ? 1 : 1;
   },
   methods: {
     carouselChange(index) {
@@ -300,11 +302,11 @@ export default {
       this.mobilePagenationIndex = this.$refs.mySwiper.$swiper.realIndex + 1;
     },
     go(path) {
-      if (path && !path.includes("http")) {
+      if (path && !path.includes('http')) {
         this.$router.push({
           path: this.resolvePath(path),
         });
-      } else if (path.includes("http")) {
+      } else if (path.includes('http')) {
         window.open(path);
       } else {
         this.isShowCard = !this.isShowCard;
@@ -314,22 +316,22 @@ export default {
       window.open(this.resolvePath(url));
     },
     goInstall(path) {
-      if (path.includes("http") || path.includes("https")) {
+      if (path.includes('http') || path.includes('https')) {
         window.open(path);
       } else {
         this.$router.push(path);
       }
     },
     addClassAll(className) {
-      let selector = "." + className;
+      let selector = '.' + className;
       let elements = document.querySelectorAll(selector);
       for (let i = 0; i < elements.length; i++) {
         let e = elements[i];
-        e.classList.add("hidden");
+        e.classList.add('hidden');
       }
     },
     removeClassAll(className) {
-      let selector = "." + className;
+      let selector = '.' + className;
       let elements = this.es(selector);
       for (let i = 0; i < elements.length; i++) {
         let e = elements[i];
@@ -341,26 +343,26 @@ export default {
     },
     showAll() {
       if (this.flag) {
-        this.removeClassAll("hidden");
-        let text = this.e(".show-all");
-        let p = text.querySelector("p");
+        this.removeClassAll('hidden');
+        let text = this.e('.show-all');
+        let p = text.querySelector('p');
         p.innerHTML = this.i18n.home.RETRACT;
         this.flag = !this.flag;
       } else {
-        this.addClassAll("dev-dever");
-        let text = this.e(".show-all");
-        let p = text.querySelector("p");
+        this.addClassAll('dev-dever');
+        let text = this.e('.show-all');
+        let p = text.querySelector('p');
         p.innerHTML = this.i18n.home.EXPAND;
         this.flag = !this.flag;
       }
     },
     clickDownload() {
-      let box = this.e(".snd-guidance");
+      let box = this.e('.snd-guidance');
       if (this.flag) {
-        box.classList.add("is-show");
+        box.classList.add('is-show');
         this.flag = !this.flag;
       } else {
-        box.classList.remove("is-show");
+        box.classList.remove('is-show');
         this.flag = !this.flag;
       }
     },
@@ -369,36 +371,36 @@ export default {
       let lang = this.$lang;
       let blogData = [];
       let newsData = [];
-      if (lang === "zh") {
-        blogData = this.filterSiteData(datas, "/zh/blog/");
-        newsData = this.filterSiteData(datas, "/zh/news/");
+      if (lang === 'zh') {
+        blogData = this.filterSiteData(datas, '/zh/blog/');
+        newsData = this.filterSiteData(datas, '/zh/news/');
       } else {
-        blogData = this.filterSiteData(datas, "/en/blog/");
-        newsData = this.filterSiteData(datas, "/en/news/");
+        blogData = this.filterSiteData(datas, '/en/blog/');
+        newsData = this.filterSiteData(datas, '/en/news/');
       }
       this.blogList = blogData;
       this.newsList = newsData;
     },
     resolvePostDate(date) {
       return dayjs(date).format(
-        this.$themeConfig.dateFormat || "ddd MMM DD YYYY"
+        this.$themeConfig.dateFormat || 'ddd MMM DD YYYY'
       );
     },
     filterSiteData(datas, string) {
       let newData = datas.filter((data) => data.path.includes(string));
       let englishMonth = [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Spt",
-        "Oct",
-        "Nov",
-        "Dec",
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Spt',
+        'Oct',
+        'Nov',
+        'Dec',
       ];
       newData.sort(function (date1, date2) {
         let origin1 = date1.frontmatter.date;
@@ -412,9 +414,9 @@ export default {
       newData = newData.slice(0, 4);
       newData.forEach((item) => {
         let date = item.frontmatter.date;
-        date = this.resolvePostDate(date).split("-");
+        date = this.resolvePostDate(date).split('-');
         date.forEach((arrItem, index) => {
-          if (arrItem[0] === "0") {
+          if (arrItem[0] === '0') {
             date[index] = arrItem.substring(1);
           }
         });
@@ -474,7 +476,7 @@ export default {
   background-color: #f5f6f8;
   .home-nav {
     position: relative;
-    padding: var(--o-spacing-h4);
+    padding: 26px;
     display: grid;
     margin-top: -57px;
     grid-template-columns: repeat(4, minmax(82px, 1fr));
@@ -496,7 +498,7 @@ export default {
         display: block !important;
       }
       .nav-icon {
-        width: 50px;
+        width: 48px;
         img {
           display: block;
           width: 100%;
@@ -505,13 +507,14 @@ export default {
       .nav-text {
         margin-left: var(--o-spacing-h5);
         .nav-title {
-          font-size: var(--o-font-size-h5);
+          line-height: var(--o-line-height-text);
+          font-weight: 500;
+          font-size: var(--o-font-size-h7);
         }
         .nav-title-en {
           font-size: var(--o-font-size-h7);
         }
         .nav-descriptive {
-          margin-top: var(--o-spacing-h5);
           line-height: var(--o-line-height-text);
           font-size: var(--o-font-size-text);
           color: var(--o-color-text3);
@@ -547,7 +550,7 @@ export default {
         top: 50%;
         transform: translateY(-50%);
         left: 50%;
-        content: "";
+        content: '';
         width: 1px;
         height: calc(100% - 48px);
         background-color: var(--o-color-division);
@@ -564,6 +567,9 @@ export default {
           .nav-title {
             font-size: var(--o-font-size-text);
           }
+          .nav-title-en {
+            text-align: center;
+          }
           .nav-descriptive {
             display: none;
             text-align: left;
@@ -574,7 +580,7 @@ export default {
         border: 0;
       }
       .nav-item:nth-child(-n + 2) {
-        padding-top:  0;
+        padding-top: 0;
         padding-bottom: var(--o-spacing-h6);
         border-bottom: 1px solid var(--o-color-division);
       }
@@ -1447,7 +1453,7 @@ export default {
 
   cursor: pointer;
 }
- /deep/.title-list {
+/deep/.title-list {
   display: flex;
   padding-bottom: 40px;
   justify-content: flex-end;
@@ -1670,7 +1676,7 @@ export default {
     display: none;
   }
 }
-html[lang="zh"] .source-publish-link h5 {
+html[lang='zh'] .source-publish-link h5 {
   text-align: center;
   line-height: 30px;
   margin-bottom: 20px;
@@ -1809,6 +1815,7 @@ html[lang="zh"] .source-publish-link h5 {
   row-gap: 0;
   a {
     display: flex;
+    justify-content: center;
     align-items: center;
     margin: 0px -1px -1px 0px;
     padding: 24px;
@@ -1817,7 +1824,8 @@ html[lang="zh"] .source-publish-link h5 {
     max-height: 120px;
     img {
       display: block;
-      width: 100%;
+      height: 100%;
+      object-fit: fill;
     }
   }
   @media screen and (max-width: 1416px) {
@@ -1827,6 +1835,9 @@ html[lang="zh"] .source-publish-link h5 {
     a {
       padding: 10px 0;
       min-height: 40px;
+      img {
+       width: 100%;
+      }
     }
   }
 }
@@ -1845,7 +1856,7 @@ html[lang="zh"] .source-publish-link h5 {
         bottom: 50%;
         left: 50%;
         margin: 0 0 -50px -50px;
-        background-image: url("/img/home/play-btn.gif");
+        background-image: url('/img/home/play-btn.gif');
         background-size: contain;
         opacity: 0.6;
       }
@@ -1976,7 +1987,7 @@ html[lang="zh"] .source-publish-link h5 {
   .home-introduce h1 {
     width: 228px;
     height: 60px;
-    background-image: url("/img/home/mobile-h1.png");
+    background-image: url('/img/home/mobile-h1.png');
   }
   .area-box .box-icon {
     display: inline-block;
@@ -2014,10 +2025,10 @@ html[lang="zh"] .source-publish-link h5 {
     margin-bottom: 20px;
     padding: 40px 0 20px;
   }
-  html[lang="ru"] .home-active {
+  html[lang='ru'] .home-active {
     height: 250px;
   }
-  html[lang="ru"] .home-active p {
+  html[lang='ru'] .home-active p {
     margin-top: -10px;
   }
   .home-active p {
@@ -2153,7 +2164,7 @@ html[lang="zh"] .source-publish-link h5 {
       display: none;
     }
   }
-  html[lang="zh"] .source-publish-link h5 {
+  html[lang='zh'] .source-publish-link h5 {
     font-size: 16px;
     font-weight: normal;
     line-height: 24px;
@@ -2168,7 +2179,7 @@ html[lang="zh"] .source-publish-link h5 {
   .source-publish-link .publish-rank {
     margin-bottom: 30px;
   }
-  html[lang="ru"] .source-publish-link h5 {
+  html[lang='ru'] .source-publish-link h5 {
     line-height: 34px;
   }
   .apply-img,

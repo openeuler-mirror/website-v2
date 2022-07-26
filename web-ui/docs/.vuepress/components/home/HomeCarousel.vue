@@ -199,13 +199,13 @@ const changeActiveMobile = (activeNames) => {
 
     &-title {
       cursor: pointer;
-      font-size: var(--o-font-size-h4);
+      font-size: var(--o-font-size-h5);
       font-weight: 400;
       color: var(--o-color-text2);
       line-height: var(--o-line-height-h4);
       text-align: start;
       border-bottom: 1px solid var(--o-color-division);
-      padding: var(--o-spacing-h3) 0;
+      padding: var(--o-spacing-h4) 0;
       @media (max-width: 1280px) {
         padding-bottom: var(--o-spacing-h2);
       }

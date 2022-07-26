@@ -1,7 +1,7 @@
 <template>
   <div id="euler-app">
     <CustomHeader />
-    <Content v-if="!isPost()" class="content" />
+    <Content v-if="!isPost()" class="content" :class="{ 'is-home': $route.path.length === 4 }"/>
     <Post v-if="isPost()" class="content" />
     <CustomFooter />
   </div>
@@ -43,6 +43,9 @@ export default {
     @media (max-width: 1000px) {
         min-height: calc(100vh - 70px - 328px);
     }
+}
+.is-home {
+  background-color:#f5f6f8;
 }
 
 </style>
