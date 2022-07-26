@@ -1,7 +1,7 @@
-<script setup lang="ts">
-import { ref, onMounted } from "vue";
+<script setup>
+import { ref, onMounted } from 'vue';
 
-import { getShowCaseData } from "../../api/home";
+import { getShowCaseData } from '../../api/home';
 
 const caseData = ref(null);
 
@@ -19,21 +19,21 @@ onMounted(() => {
       ru: {},
     };
     res.obj.records.forEach((item) => {
-      if (item.lang === "zh") {
-        if (typeof result["zh"][item.industry] === "undefined") {
-          result["zh"][item.industry] = [];
+      if (item.lang === 'zh') {
+        if (typeof result['zh'][item.industry] === 'undefined') {
+          result['zh'][item.industry] = [];
         }
-        result["zh"][item.industry].push(item);
-      } else if (item.lang === "en") {
-        if (typeof result["en"][item.industry] === "undefined") {
-          result["en"][item.industry] = [];
+        result['zh'][item.industry].push(item);
+      } else if (item.lang === 'en') {
+        if (typeof result['en'][item.industry] === 'undefined') {
+          result['en'][item.industry] = [];
         }
-        result["en"][item.industry].push(item);
+        result['en'][item.industry].push(item);
       } else {
-        if (typeof result["ru"][item.industry] === "undefined") {
-          result["ru"][item.industry] = [];
+        if (typeof result['ru'][item.industry] === 'undefined') {
+          result['ru'][item.industry] = [];
         }
-        result["ru"][item.industry].push(item);
+        result['ru'][item.industry].push(item);
       }
     });
 
@@ -63,16 +63,23 @@ onMounted(() => {
           </div>
         </template>
         <div class="user-mobile" v-if="caseData">
-          <div
+          <a
             v-for="(user, index2) in caseData[$lang][
               i18n.home.USER_CASE.CASE_LIST[active].TYPE
             ]"
             :key="index2"
             class="user-card"
+            target="_blank"
+            :href="
+              'https://new.openeuler.org/' +
+              $lang +
+              '/' +
+              user.path.replace('/index', '')
+            "
           >
             <div class="user-title">{{ user.company }}</div>
             <div class="user-word">{{ user.summary }}</div>
-          </div>
+          </a>
         </div>
       </el-collapse-item>
     </el-collapse>
@@ -118,12 +125,7 @@ onMounted(() => {
         </div>
         <div class="statistics">
           <!-- // TODO: -->
-          <a
-            target="_blank"
-            :href="
-              i18n.home.USER_CASE.VIEW_MORE_LINK
-            "
-          >
+          <a target="_blank" :href="i18n.home.USER_CASE.VIEW_MORE_LINK">
             {{ i18n.home.USER_CASE.VIEW_MORE }}
             <img src="/img/home/icon-right.png" alt="" />
           </a>
@@ -257,6 +259,7 @@ h3 {
     }
   }
   &-card {
+    display: inline-block;
     cursor: pointer;
     padding: var(--o-spacing-h5);
     width: 100%;
@@ -384,10 +387,6 @@ h3 {
 }
 </style>
 
-  function onMounted(arg0: () => void) {
-    throw new Error("Function not implemented.");
-  }
-
-function onMounted(arg0: () => void) {
-  throw new Error("Function not implemented.");
-}
+function onMounted(arg0: () => void) { throw new Error("Function not
+implemented."); } function onMounted(arg0: () => void) { throw new
+Error("Function not implemented."); }
