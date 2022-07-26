@@ -8871,5 +8871,24 @@
     "chipModel": "Hi1822",
     "item": "02312BWF",
     "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "1000",
+    "deviceID": "0097",
+    "svID": "1000",
+    "ssID": "30e0",
+    "architecture": "x86_64",
+    "os": "openEuler 22.03 LTS",
+    "driverName": "mpt3sas",
+    "version": "35.100.00.00",
+    "type": "RAID",
+    "date": "2022.07.22",
+    "sha256": "621DB64CCD82A93E3B558A80AE2FA5A040940EF5",
+    "driverSize": "673K",
+    "chipVendor": "Avago",
+    "boardModel": "SAS9300-8i",
+    "chipModel": "SAS3008",
+    "item": "03023QGH",
+    "downloadLink": "inbox"
   }
 ]
