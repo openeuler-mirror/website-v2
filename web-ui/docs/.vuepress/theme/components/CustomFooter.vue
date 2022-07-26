@@ -405,7 +405,6 @@ const handleNavClick = (path) => {
     }
     .footer-links {
       display: flex;
-      // flex-wrap: wrap;
       justify-content: right;
       align-items: center;
       padding-left: 20px;
@@ -421,6 +420,7 @@ const handleNavClick = (path) => {
         height: 20px;
       }
       @media (max-width: 1439px) {
+        padding: 0;
         justify-content: center;
       }
       @media (max-width: 800px) {

@@ -150,7 +150,7 @@
       </el-collapse>
       <div class="detailList">
         <div class="detailHead">
-          最新日程：
+          <span>最新日程：</span>
           <span>{{ currentDay }}</span>
         </div>
         <div class="meetList">
@@ -472,8 +472,8 @@ p::after {
       align-items: center;
       font-size: 16px;
       .o-icon {
-        font-size: 24px;
-        color: rgb(206, 206, 206);
+        width: 24px;
+        color: #000;
       }
     }
     .month-date {
@@ -741,7 +741,6 @@ p::after {
         text-align: center;
         color: #555555;
         background-color: @backgroundColor;
-        font-family: FZLTZHJW--GB1-0, FZLTZHJW--GB1;
         @media screen and (max-width: 1000px) {
           padding: 8px 0;
           font-size: 12px;
@@ -816,7 +815,7 @@ p::after {
           height: 100%;
           background-color: #f5f6f8ff;
           border: 1px solid #e5e8f0;
-          border-left: 1px solid #406fe7ff;
+          border-left: 2px solid #406fe7ff;
           .meet-left {
             display: flex;
             flex-direction: column;
@@ -862,7 +861,6 @@ p::after {
               width: fit-content;
               height: 24px;
               font-size: 16px;
-              font-family: FZLTHJW--GB1-0, FZLTHJW--GB1;
               line-height: 24px;
               .o-icon {
                 margin: 0 5px;
@@ -889,7 +887,6 @@ p::after {
               flex-direction: column;
               justify-content: space-around;
               padding: 0 24px;
-              font-family: FZLTHJW--GB1-0, FZLTHJW--GB1;
               font-weight: normal;
               text-align: center;
               font-size: 16px;
@@ -905,8 +902,7 @@ p::after {
               align-items: center;
               width: 24px;
               .o-icon {
-                font-size: 28px;
-                color: #555;
+                color: #000;
                 transition: all 0.3s;
               }
               .reversal {
