@@ -214,7 +214,6 @@ export default {
 #tab-ten {
   font-size: 22px;
   font-weight: 700;
-  font-family: FZLTCHJW--GB1-0, FZLTCHJW--GB1;
   color: rgba(0, 0, 0, 0.5);
   line-height: 28px;
   @media screen and (max-width: 1000px) {
