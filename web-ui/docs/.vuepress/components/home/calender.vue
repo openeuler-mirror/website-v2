@@ -422,9 +422,7 @@ export default {
     // dom加载完成展开最近的活动
     setTimeout(() => {
       let activeBoxs =
-        document.querySelectorAll('.be-active')[
-          document.querySelectorAll('.be-active').length - 1
-        ];
+        document.querySelector('.is-today .be-active');
       if (activeBoxs) {
         activeBoxs.click();
       }
@@ -737,7 +735,7 @@ p::after {
     /deep/ .detailList {
       width: 100%;
       .detailHead {
-        padding: 12px 0 13px;
+        padding: 12px 0 12.5px;
         text-align: center;
         color: #555555;
         background-color: @backgroundColor;
