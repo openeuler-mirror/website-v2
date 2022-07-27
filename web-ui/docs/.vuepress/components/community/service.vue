@@ -77,7 +77,6 @@ export default {
         margin-top: 70px;
         margin-bottom: 214px;
         font-size: 16px;
-        font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
         font-weight: normal;
         color: rgba(0, 0, 0, 0.5);
         line-height: 32px;
@@ -156,7 +155,6 @@ export default {
                     border-radius: 7px;
                 }
                 &-disc{
-                    font-family: Roboto-Regular, Roboto;
                     text-align: center;
                     font-size: 16px;
                     color: #333333;

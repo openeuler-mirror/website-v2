@@ -968,7 +968,6 @@ export default {
             padding: 6px 0;
             font-size: 24px;
             font-weight: 100;
-            font-family: HuaweiSansLight;
             line-height: 24px;
           }
           @media screen and (max-width: 1120px) {
@@ -1080,7 +1079,6 @@ export default {
           }
           .el-tabs__item {
             font-size: 20px;
-            font-family: FZLTCHJW--GB1-0, FZLTCHJW--GB1;
             color: rgba(0, 0, 0, 0.5);
             line-height: 24px;
             @media screen and (max-width: 1120px) {
@@ -1426,7 +1424,6 @@ export default {
                 text-align: center;
                 font-weight: 700;
                 font-size: 14px;
-                font-family: FZLTCHJW--GB1-0, FZLTCHJW--GB1;
                 color: #000000;
                 line-height: 24px;
               }
@@ -1698,7 +1695,6 @@ export default {
     .text-title {
       margin-bottom: 10px;
       font-size: 20px;
-      font-family: FZLTHJW--GB1-0, FZLTHJW--GB1;
       color: #000000;
       line-height: 46px;
     }

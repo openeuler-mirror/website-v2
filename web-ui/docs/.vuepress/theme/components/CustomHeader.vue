@@ -716,7 +716,6 @@ export default {
                         background-image: url('/lang.png');
                         background-size: contain;
                     }
-                    font-family: Roboto !important;
                     &>ul .lang-list {
                         color: #0041bd;
                     }
@@ -824,7 +823,6 @@ export default {
                 .nav-other-mobile {
                     display: flex !important;
                     flex: 0;
-                    font-family: Roboto !important;
                     .lang>ul {
                         border-bottom-right-radius:0;
                         border-bottom-left-radius:0;
@@ -836,7 +834,6 @@ export default {
                             height: 16px;
                             line-height: 16px;
                             font-size: 16px;
-                            font-family: Roboto !important;
                             &:first-of-type {
                                 margin: 0;
                             }

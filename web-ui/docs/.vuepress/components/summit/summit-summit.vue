@@ -746,7 +746,6 @@ export default {
     .text-title {
       margin-bottom: 10px;
       font-size: 20px;
-      font-family: FZLTHJW--GB1-0, FZLTHJW--GB1;
       color: #000000;
       line-height: 46px;
     }
@@ -886,7 +885,6 @@ export default {
     .el-tabs__item {
       font-size: 22px;
       font-weight: 700;
-      font-family: FZLTCHJW--GB1-0, FZLTCHJW--GB1;
       color: rgba(0, 0, 0, 0.5);
       line-height: 28px;
       @media screen and (max-width: 1000px) {
@@ -954,7 +952,6 @@ export default {
   .tenDay,
   .nineDay {
     margin-top: 20px;
-    font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
     .item {
       width: 100%;
       display: flex;

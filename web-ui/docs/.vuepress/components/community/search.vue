@@ -218,7 +218,6 @@ export default {
     width: 1120px;
     margin: 0 auto;
     font-size: 16px;
-    font-family: FZLTXIHJW--GB1-0, FZLTXIHJW--GB1;
     font-weight: normal;
     color: rgba(0, 0, 0, 0.5);
     .invalid-url{
