@@ -167,6 +167,7 @@ h3 {
     .first-code {
       color: #fff;
       p {
+        word-wrap:nowrap;
         font-size: 36px;
       }
     }

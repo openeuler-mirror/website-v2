@@ -1,6 +1,6 @@
 <template>
   <swiper ref="mySwiper" :options="swiperOption" class="home-banner">
-    <swiper-slide v-for="item in homeBanner[$lang]" :key="item.link">
+    <swiper-slide v-for="(item, index) in homeBanner[$lang]" :key="item.link">
       <a class="banner-panel" :href="item.link" target="_blank">
         <div
           class="banner-panel-cover isPCshow"
@@ -10,11 +10,16 @@
         >
           <div
             class="banner-panel-content flex-column"
+            :class="{ 'flex-start': index === 0 }"
             v-if="item.title !== ''"
           >
-            <p class="title">{{ item.title }}</p>
-            <p class="desc">{{ item.desc }}</p>
-            <div class="action">
+            <p class="title" :class="{ experts: index === 0 }">
+              {{ item.title }}
+            </p>
+            <p class="desc" :class="{ experts: index === 0 }">
+              {{ item.desc }}
+            </p>
+            <div class="action" v-if="item.btn">
               <OButton class="home-banner-btn" placement="right" ghost>
                 {{ item.btn }}
                 <template #suffix>
@@ -52,6 +57,15 @@ export default {
       homeBanner: {
         zh: [
           {
+            pcBanner: '/img/home/banner/expert-pc.png',
+            moBanner: '/img/home/banner/expert-mo.png',
+            link: `https://new.openeuler.org/zh/experts/`,
+            targetTap: 0,
+            title: '欧拉开源社区',
+            desc: '聘任首批顾问专家',
+            btn: '',
+          },
+          {
             pcBanner: '/img/home/banner/atom-pc.png',
             moBanner: '/img/home/banner/atom-mo.png',
             link: `https://openatom.cn/summit`,
@@ -71,6 +85,15 @@ export default {
           },
         ],
         en: [
+          {
+            pcBanner: '/img/home/banner/expert-pc.png',
+            moBanner: '/img/home/banner/expert-mo.png',
+            link: `https://new.openeuler.org/zh/experts/`,
+            targetTap: 0,
+            title: '欧拉开源社区',
+            desc: '聘任首批顾问专家',
+            btn: '',
+          },
           {
             pcBanner: '/img/home/banner/atom-pc.png',
             moBanner: '/img/home/banner/atom-mo.png',
@@ -92,6 +115,15 @@ export default {
         ],
         ru: [
           {
+            pcBanner: '/img/home/banner/expert-pc.png',
+            moBanner: '/img/home/banner/expert-mo.png',
+            link: `https://new.openeuler.org/zh/experts/`,
+            targetTap: 0,
+            title: '欧拉开源社区',
+            desc: '聘任首批顾问专家',
+            btn: '',
+          },
+          {
             pcBanner: '/img/home/banner/atom-pc.png',
             moBanner: '/img/home/banner/atom-mo.png',
             link: `https://openatom.cn/summit`,
@@ -105,9 +137,9 @@ export default {
             moBanner: '/img/home/banner/migration-mo.png',
             link: `other/migration/`,
             targetTap: 0,
-            title: '一起迁移吧',
-            desc: '手把手教你把操作系统替换成openEuler',
-            btn: '了解更多',
+            title: 'Start Porting Now!',
+            desc: 'Learn how to port to openEuler.',
+            btn: 'Learn More',
           },
         ],
       },
@@ -224,10 +256,26 @@ a {
           line-height: var(--o-line-height-text);
         }
       }
+      .experts {
+        line-height: 84px;
+        font-weight: 400;
+        font-size: 56px;
+        @media screen and (max-width: 1416px) {
+          line-height: var(--o-line-height-h3);
+          font-size: var(--o-font-size-h3);
+        }
+        @media screen and (max-width: 824px) {
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
       .action {
         margin-top: var(--o-spacing-h3);
         .o-icon {
           color: var(--o-color-text);
+          @media screen and (max-width: 824px) {
+            color: var(--o-color-auxiliary);
+          }
         }
         @media screen and (max-width: 824px) {
           margin-top: 0;
@@ -241,6 +289,14 @@ a {
         justify-content: space-between;
         box-sizing: border-box;
         text-align: center;
+      }
+    }
+    .flex-start {
+      margin-top: 120px;
+      justify-content: flex-start;
+      @media screen and (max-width: 824px) {
+        padding: 0;
+        margin-top: 32px;
       }
     }
     &-cover {
