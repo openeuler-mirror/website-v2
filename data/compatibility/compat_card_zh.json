@@ -8905,9 +8905,28 @@
     "sha256": "621DB64CCD82A93E3B558A80AE2FA5A040940EF5",
     "driverSize": "673K",
     "chipVendor": "Avago",
-    "boardModel": "SAS9300-8i",
+    "boardModel": "SR130",
     "chipModel": "SAS3008",
     "item": "03023QGH",
+    "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "1000",
+    "deviceID": "0097",
+    "svID": "1000",
+    "ssID": "3090",
+    "architecture": "aarch64",
+    "os": "openEuler 22.03 LTS",
+    "driverName": "mpt3sas",
+    "version": "35.100.00.00",
+    "type": "RAID",
+    "date": "2022.07.26",
+    "sha256": "5207352D392184F5F7FBE52CE0A5C064DA1687B2",
+    "driverSize": "623K",
+    "chipVendor": "Avago",
+    "boardModel": "SR130",
+    "chipModel": "SAS3008",
+    "item": "03022CDE",
     "downloadLink": "inbox"
   }
 ]
