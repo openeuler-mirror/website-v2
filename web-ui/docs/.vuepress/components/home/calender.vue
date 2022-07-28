@@ -291,6 +291,7 @@ export default {
         { text: '线上链接', key: 'online_url', isLink: true },
         { text: '报名链接', key: 'register_url', isLink: true },
         { text: '回放链接', key: 'replay_url', isLink: true },
+        { text: '回放链接', key: 'video_url', isLink: true },
       ],
       isMeeting: false,
       currentDay: '',
