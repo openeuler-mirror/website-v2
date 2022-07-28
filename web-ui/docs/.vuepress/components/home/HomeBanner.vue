@@ -4,13 +4,14 @@
       <a class="banner-panel" :href="item.link" target="_blank">
         <div
           class="banner-panel-cover isPCshow"
+          :class="{ 'max-width': index === 1 }"
           :style="{
             backgroundImage: `url(${isShowH5 ? item.moBanner : item.pcBanner})`,
           }"
         >
           <div
             class="banner-panel-content flex-column"
-            :class="{ 'flex-start': index === 0 }"
+            :class="[{ 'flex-start': index === 0 }]"
             v-if="item.title !== ''"
           >
             <p class="title" :class="{ experts: index === 0 }">
@@ -207,8 +208,9 @@ a {
 
   .banner-panel {
     position: absolute;
-    background-color: var(--o-color-bg);
+    background-color: rgba(0,8,92);
     display: flex;
+    justify-content: center;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -319,6 +321,9 @@ a {
     @media screen and (max-width: 767px) {
       position: static !important;
     }
+  }
+  .max-width {
+    max-width: 1920px;
   }
   @media screen and (max-width: 1100px) {
     height: 400px;
