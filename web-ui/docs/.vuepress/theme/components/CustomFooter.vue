@@ -154,7 +154,7 @@ const handleNavClick = (path) => {
 
 <template>
   <div class="footer">
-    <div class="atom" v-show="$route.path.length === 4">
+    <div class="atom">
       <p class="atom-text">{{ i18n.common.FOOTER.ATOM_TEXT }}</p>
       <img :src="LogoAtom" class="atom-logo" alt="" />
     </div>

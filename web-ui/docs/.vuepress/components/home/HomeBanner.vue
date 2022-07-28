@@ -91,8 +91,8 @@ export default {
             moBanner: '/img/home/banner/expert-mo.png',
             link: `https://new.openeuler.org/zh/experts/`,
             targetTap: 0,
-            title: '欧拉开源社区',
-            desc: '聘任首批顾问专家',
+            title: 'openEuler Community',
+            desc: 'Appointed the First Group of Expert Consultants',
             btn: '',
           },
           {
@@ -120,8 +120,8 @@ export default {
             moBanner: '/img/home/banner/expert-mo.png',
             link: `https://new.openeuler.org/zh/experts/`,
             targetTap: 0,
-            title: '欧拉开源社区',
-            desc: '聘任首批顾问专家',
+            title: 'openEuler Community',
+            desc: 'Appointed the First Group of Expert Consultants',
             btn: '',
           },
           {
@@ -182,6 +182,29 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+html[lang='en'],
+html[lang='ru'] {
+  .home-banner {
+    .flex-start {
+      margin-top: 120px;
+      justify-content: flex-start;
+      p {
+        margin: 0;
+        max-width: 600px;
+        line-height: var(--o-line-height-h2);
+        font-size: var(--o-spacing-h3);
+        @media screen and (max-width: 824px) {
+          line-height: 28px;
+          font-size: 20px;
+        }
+      }
+      @media screen and (max-width: 824px) {
+        padding: 0;
+        margin-top: 32px;
+      }
+    }
+  }
+}
 .home-banner-btn {
   border-color: #fff;
   color: #fff;
@@ -199,6 +222,7 @@ export default {
     }
   }
 }
+
 a {
   text-decoration: none;
 }
@@ -208,7 +232,7 @@ a {
 
   .banner-panel {
     position: absolute;
-    background-color: rgba(0,8,92);
+    background-color: rgba(0, 8, 92);
     display: flex;
     justify-content: center;
     background-position: 50%;
