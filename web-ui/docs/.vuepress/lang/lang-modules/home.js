@@ -196,7 +196,7 @@ module.exports = {
         {
           ROUND_VALUE: "",
           ROUND_KEY: "contributors",
-          ROUND_IMG: "/img/round/contributer.png",
+          ROUND_IMG: "/img/round/contributer1.png",
           ROUND_TEXT: "贡献者",
           ROUND_STYLE: {
             backcolor: "blue",
@@ -205,7 +205,7 @@ module.exports = {
         {
           ROUND_VALUE: "",
           ROUND_KEY: "repos",
-          ROUND_IMG: "/img/round/software.png",
+          ROUND_IMG: "/img/round/software1.png",
           ROUND_TEXT: "代码仓库",
           ROUND_STYLE: {
             backcolor: "pink",
@@ -214,7 +214,7 @@ module.exports = {
         {
           ROUND_VALUE: "",
           ROUND_KEY: "sigs",
-          ROUND_IMG: "/img/round/sig.png",
+          ROUND_IMG: "/img/round/sig1.png",
           ROUND_TEXT: "特别兴趣小组",
           ROUND_STYLE: {
             backcolor: "yellow",
@@ -223,7 +223,7 @@ module.exports = {
         {
           ROUND_VALUE: "",
           ROUND_KEY: "users",
-          ROUND_IMG: "/img/round/user.png",
+          ROUND_IMG: "/img/round/user1.png",
           ROUND_TEXT: "社区用户",
           ROUND_STYLE: {
             backcolor: "yellow",
@@ -232,7 +232,7 @@ module.exports = {
         {
           ROUND_VALUE: "",
           ROUND_KEY: "businessosv",
-          ROUND_IMG: "/img/round/osv.png",
+          ROUND_IMG: "/img/round/osv1.png",
           ROUND_TEXT: "商用OSV",
           ROUND_STYLE: {
             backcolor: "blue",
@@ -591,7 +591,7 @@ module.exports = {
         {
           ROUND_VALUE: "",
           ROUND_KEY: "contributors",
-          ROUND_IMG: "/img/round/contributer.png",
+          ROUND_IMG: "/img/round/contributer1.png",
           ROUND_TEXT: "Contributor",
           ROUND_STYLE: {
             backcolor: "blue",
@@ -600,7 +600,7 @@ module.exports = {
         {
           ROUND_VALUE: "",
           ROUND_KEY: "repos",
-          ROUND_IMG: "/img/round/software.png",
+          ROUND_IMG: "/img/round/software1.png",
           ROUND_TEXT: "Repository",
           ROUND_STYLE: {
             backcolor: "pink",
@@ -609,7 +609,7 @@ module.exports = {
         {
           ROUND_VALUE: "",
           ROUND_KEY: "sigs",
-          ROUND_IMG: "/img/round/sig.png",
+          ROUND_IMG: "/img/round/sig1.png",
           ROUND_TEXT: "SIG",
           ROUND_STYLE: {
             backcolor: "yellow",
@@ -618,7 +618,7 @@ module.exports = {
         {
           ROUND_VALUE: "",
           ROUND_KEY: "users",
-          ROUND_IMG: "/img/round/user.png",
+          ROUND_IMG: "/img/round/user1.png",
           ROUND_TEXT: "User",
           ROUND_STYLE: {
             backcolor: "yellow",
@@ -627,7 +627,7 @@ module.exports = {
         {
           ROUND_VALUE: "",
           ROUND_KEY: "businessosv",
-          ROUND_IMG: "/img/round/osv.png",
+          ROUND_IMG: "/img/round/osv1.png",
           ROUND_TEXT: "OS Vendor",
           ROUND_STYLE: {
             backcolor: "blue",
@@ -636,8 +636,8 @@ module.exports = {
       ],
     },
     USER_CASE: {
-      TITLE: "User Case",
-      VIEW_MORE: "View More",
+      TITLE: "Success Stories",
+      VIEW_MORE: "Learn More",
       VIEW_MORE_LINK: "https://new.openeuler.org/zh/showcase/",
       CASE_LIST: [
         {
@@ -1133,7 +1133,7 @@ module.exports = {
       },
     ],
     IMG_CAROUSE: {
-      TITLE: "面向数字基础设施的开源操作系统",
+      TITLE: "Open Source Operating System for Digital Infrastructure",
       BUTTON: "Try Now",
       TRY_URL: "community/contribution/detail.html",
       LIST: [
@@ -1152,12 +1152,12 @@ module.exports = {
       ],
     },
     COMMUNITY_ACTIVITY: {
-      TITLE: "community activity",
+      TITLE: "We Are Thriving",
       CARD: {
-        TITLE: "openEuler社区活力",
+        TITLE: "openEuler Community Vitality",
         CONTENT:
-          "openEuler也是一个开源的操作系统技术平台，鼓励社区贡献、合作。",
-        VIEW_DETAILS: "查看贡献详情",
+          "openEuler is an open platform for operating system technologies that encourages contributions and cooperation.",
+        VIEW_DETAILS: "Learn More",
         LINK: "https://datastat.openeuler.org/en/overview",
       },
     },
@@ -1293,7 +1293,7 @@ module.exports = {
         {
           ROUND_VALUE: "",
           ROUND_KEY: "contributors",
-          ROUND_IMG: "/img/round/contributer.png",
+          ROUND_IMG: "/img/round/contributer1.png",
           ROUND_TEXT: "участников",
           ROUND_STYLE: {
             backcolor: "blue",
@@ -1302,7 +1302,7 @@ module.exports = {
         {
           ROUND_VALUE: "",
           ROUND_KEY: "repos",
-          ROUND_IMG: "/img/round/software.png",
+          ROUND_IMG: "/img/round/software1.png",
           ROUND_TEXT: "программных продуктов",
           ROUND_STYLE: {
             backcolor: "pink",
@@ -1311,7 +1311,7 @@ module.exports = {
         {
           ROUND_VALUE: "",
           ROUND_KEY: "sigs",
-          ROUND_IMG: "/img/round/sig.png",
+          ROUND_IMG: "/img/round/sig1.png",
           ROUND_TEXT: "групп SIG",
           ROUND_STYLE: {
             backcolor: "yellow",
@@ -1320,7 +1320,7 @@ module.exports = {
         {
           ROUND_VALUE: "",
           ROUND_KEY: "users",
-          ROUND_IMG: "/img/round/user.png",
+          ROUND_IMG: "/img/round/user1.png",
           ROUND_TEXT: "пользователей",
           ROUND_STYLE: {
             backcolor: "yellow",
@@ -1329,7 +1329,7 @@ module.exports = {
         {
           ROUND_VALUE: "",
           ROUND_KEY: "businessosv",
-          ROUND_IMG: "/img/round/osv.png",
+          ROUND_IMG: "/img/round/osv1.png",
           ROUND_TEXT: "поставщиков ОС",
           ROUND_STYLE: {
             backcolor: "blue",
@@ -1369,27 +1369,37 @@ module.exports = {
       },
     ],
     IMG_CAROUSE: {
-      TITLE: "面向数字基础设施的开源操作系统",
+      TITLE: "Open Source Operating System for Digital Infrastructure",
       BUTTON: "Try Now",
       TRY_URL: "community/contribution/detail.html",
       LIST: [
         {
           TITLE: "All-Scenario Applications",
-          IMG_URL: "/img/home/carouse/img-list1.jpg",
+          IMG_URL: "/img/home/carouse/img-list1-en.png",
         },
         {
           TITLE: "Various Devices",
-          IMG_URL: "/img/home/carouse/img-list2.jpg",
+          IMG_URL: "/img/home/carouse/img-list2-en.png",
         },
         {
           TITLE: "Development Tool Chain",
-          IMG_URL: "/img/home/carouse/img-list3.jpg",
+          IMG_URL: "/img/home/carouse/img-list3-en.png",
         },
       ],
     },
+    COMMUNITY_ACTIVITY: {
+      TITLE: "We Are Thriving",
+      CARD: {
+        TITLE: "openEuler Community Vitality",
+        CONTENT:
+          "openEuler is an open platform for operating system technologies that encourages contributions and cooperation.",
+        VIEW_DETAILS: "Learn More",
+        LINK: "https://datastat.openeuler.org/en/overview",
+      },
+    },
     USER_CASE: {
-      TITLE: "User Case",
-      VIEW_MORE: "View More",
+      TITLE: "Success Stories",
+      VIEW_MORE: "Learn More",
       VIEW_MORE_LINK: "https://new.openeuler.org/zh/showcase/",
       CASE_LIST: [
         {
@@ -1420,16 +1430,6 @@ module.exports = {
           ACTIVE_URL: "/img/home/case/education-active.svg",
         },
       ],
-    },
-    COMMUNITY_ACTIVITY: {
-      TITLE: "community activity",
-      CARD: {
-        TITLE: "openEuler社区活力",
-        CONTENT:
-          "openEuler也是一个开源的操作系统技术平台，鼓励社区贡献、合作。",
-        VIEW_DETAILS: "查看贡献详情",
-        LINK: "https://datastat.openeuler.org/en/overview",
-      },
     },
     HOME_ROOMS: {
       ROOM_NAME: [
