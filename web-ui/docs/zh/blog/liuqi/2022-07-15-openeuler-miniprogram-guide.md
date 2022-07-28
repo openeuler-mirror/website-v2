@@ -16,7 +16,7 @@ openEuler小程序是一款为参与openEuler社区贡献的维护者、开发�
 
 <div align="center"><img src="./2022-07-15-openeuler-miniprogram-guide-01.png" alt=""/></div>
 
-<div align="center"><font color=red>openEuler小程序主页</font></div><br/>
+<div align="center"><font size=2>openEuler小程序主页</font></div><br/>
 
 下面是会议模块的流程指引。
 
@@ -27,7 +27,7 @@ openEuler小程序是一款为参与openEuler社区贡献的维护者、开发�
  
 <div align="center"><img src="./2022-07-15-openeuler-miniprogram-guide-02.png" alt=""/></div>
 
-<div align="center"><span>选择第三方会议平台</span></div>
+<div align="center"><font size=2>选择第三方会议平台</font></div>
 
 
 ### 加入会议
@@ -38,9 +38,9 @@ openEuler小程序是一款为参与openEuler社区贡献的维护者、开发�
 
 **tips: 如果您在加入Zoom会议时无法进会，可以选择点击启动页面的 `使用浏览器加入` 加入会议。**
 
-<div align="center"><img src="./2022-07-15-openeuler-miniprogram-guide-03.png" alt=""/></div>
+<div align="center"><img src="./2022-07-15-openeuler-miniprogram-guide-03.png" width=600 alt=""/></div>
 
-<div align="center"><span>Zoom会议使用浏览器加入</span></div>
+<div align="center"><font size=2>Zoom会议使用浏览器加入</font></div>
 
 
 ### 会议回溯
@@ -49,8 +49,8 @@ openEuler小程序是一款为参与openEuler社区贡献的维护者、开发�
 
 如果您错过了一场自动录制的会议，您可以通过官网日历找到该会议视频链接观众回放。
 
-<div align="center"><img src="./2022-07-15-openeuler-miniprogram-guide-04.png" alt=""/></div>
+<div align="center"><img src="./2022-07-15-openeuler-miniprogram-guide-04.png" width=600 alt=""/></div>
 
-<div align="center"><span>官网查询回放链接</span></div>
+<div align="center"><font size=2>官网查询回放链接</font></div>
 
 
