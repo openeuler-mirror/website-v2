@@ -70,10 +70,10 @@ module.exports = {
         LINK: "/other/migration/",
       },
       {
-        TITLE: "开源之夏",
+        TITLE: "开源实习",
         IMG: "/img/home/new-home/internship-summit.svg",
         IMG_HOVER: "/img/home/new-home/internship-summit-hover.svg",
-        DSSCRIPTIVE: "和小伙伴儿一起畅享开源的夏天",
+        DSSCRIPTIVE: "帮助高校开发者在社区成长",
         LINK: "/activities/",
       },
       {
@@ -1118,10 +1118,10 @@ module.exports = {
         LINK: "/other/migration/",
       },
       {
-        TITLE: "Open Source Promotion Plan",
+        TITLE: "Opensource Internship",
         IMG: "/img/home/new-home/internship-summit.svg",
         IMG_HOVER: "/img/home/new-home/internship-summit-hover.svg",
-        DSSCRIPTIVE: "Participate in open source projects of OSPP.",
+        DSSCRIPTIVE: "Helping University Developers Grow in the Community",
         LINK: "/activities/",
       },
       {
@@ -1354,10 +1354,10 @@ module.exports = {
         LINK: "/other/migration/",
       },
       {
-        TITLE: "Open Source Promotion Plan",
+        TITLE: "Opensource Internship",
         IMG: "/img/home/new-home/internship-summit.svg",
         IMG_HOVER: "/img/home/new-home/internship-summit-hover.svg",
-        DSSCRIPTIVE: "Participate in open source projects of OSPP.",
+        DSSCRIPTIVE: "Helping University Developers Grow in the Community",
         LINK: "/activities/",
       },
       {
