@@ -97,7 +97,6 @@ module.exports = {
             },
             '/api-cve/': {
                 target: 'https://www.openeuler.org/api-cve/',
-                // target: 'https://cvesa.test.osinfra.cn/', // cve测试
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {
