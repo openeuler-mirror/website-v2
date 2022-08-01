@@ -81,7 +81,7 @@ module.exports = {
         IMG: "/img/home/new-home/summit.svg",
         IMG_HOVER: "/img/home/new-home/summit-hover.svg",
         DSSCRIPTIVE: "2022 开放原子开源峰会",
-        LINK: "/interaction/summit-list/devday2022/",
+        LINK: "https://openatom.cn/summit",
       },
     ],
     IMG_CAROUSE: {
@@ -405,7 +405,7 @@ module.exports = {
         MOBILE: "/img/home/link/mobile-suse.png",
       },
       {
-        LINK: "http://www.nfs-china.com/index.html",
+        LINK: "http://www.nfschina.com/",
         PC: "/img/home/link/zhongkefangde.png",
         MOBILE: "/img/home/link/mobile-zhongkefangde.png",
       },
@@ -1046,7 +1046,7 @@ module.exports = {
         MOBILE: "/img/home/link/mobile-suse.png",
       },
       {
-        LINK: "http://www.nfs-china.com/index.html",
+        LINK: "http://www.nfschina.com/",
         PC: "/img/home/link/zhongkefangde.png",
         MOBILE: "/img/home/link/mobile-zhongkefangde.png",
       },
@@ -1129,7 +1129,7 @@ module.exports = {
         IMG: "/img/home/new-home/summit.svg",
         IMG_HOVER: "/img/home/new-home/summit-hover.svg",
         DSSCRIPTIVE: "2022 OpenAtom Global Open Source Summit",
-        LINK: "/interaction/summit-list/devday2022/",
+        LINK: "https://openatom.cn/summit",
       },
     ],
     IMG_CAROUSE: {
@@ -1365,7 +1365,7 @@ module.exports = {
         IMG: "/img/home/new-home/summit.svg",
         IMG_HOVER: "/img/home/new-home/summit-hover.svg",
         DSSCRIPTIVE: "2022 OpenAtom Global Open Source Summit",
-        LINK: "/interaction/summit-list/devday2022/",
+        LINK: "https://openatom.cn/summit",
       },
     ],
     IMG_CAROUSE: {
@@ -1810,7 +1810,7 @@ module.exports = {
         MOBILE: "/img/home/link/mobile-suse.png",
       },
       {
-        LINK: "http://www.nfs-china.com/index.html",
+        LINK: "http://www.nfschina.com/",
         PC: "/img/home/link/zhongkefangde.png",
         MOBILE: "/img/home/link/mobile-zhongkefangde.png",
       },
