@@ -1,15 +1,15 @@
 [
 	{
-		"os_version":"SUSE-Euler-Linux-2.0-x86_64-dvd.iso",
-		"osv_name": "SUSE",
+		"os_version":"H3Linux-2.0.2-x86_64-dvd.iso",
+		"osv_name": "新华三技术有限公司",
 		"total_result": "pass",
 		"type": "服务器",
-		"date": "2022/07/20",
+		"date": "2022/07/30",
 		"arch": "x86_64",
 		"details": "详细信息",
-		"friendly_link": "https://www.suse.com",
-		"os_download_link": "https://www.suse.com",
-		"checksum": "ff7b2257b4eda6d035e299e2fffcc1eb",
+		"friendly_link": "https://www.h3c.com/",
+		"os_download_link": "https://www.h3c.com/",
+		"checksum": "3578eee23045d98d86955ca895f79098",
 		"base_openeuler_version": "openEuler-22.03-LTS",
 		"tools_result": [
 			{
@@ -69,78 +69,6 @@
 				"percent": "NA",
 				"result": "pass"
 			}
-		]
-	},
-	{
-		"os_version":"SUSE-Euler-Linux-2.0-aarch64-dvd.iso",
-		"osv_name": "SUSE",
-		"total_result": "pass",
-		"type": "服务器",
-		"date": "2022/07/20",
-		"arch": "aarch64",
-		"details": "详细信息",
-		"friendly_link": "https://www.suse.com",
-		"os_download_link": "https://www.suse.com",
-		"checksum": "e8bcf5dbb986bd0d1cf984766527bcdf",
-		"base_openeuler_version": "openEuler-22.03-LTS",
-		"tools_result": [
-			{
-				"name": "core_pkg",
-				"percent": "NA",
-				"result": "pass"
-			},
-			{
-				"name": "soft_pkg",
-				"percent": "NA",
-				"result": "pass"
-			},
-			{
-				"name": "KABI",
-				"percent": "NA",
-				"result": "pass"
-			},
-			{
-				"name": "ABI",
-				"percent": "NA",
-				"result": "pass"
-			},
-			{
-				"name": "service_config",
-				"percent": "NA",
-				"result": "pass"
-			},
-			{
-				"name": "soft_config",
-				"percent": "NA",
-				"result": "pass"
-			},
-			{
-				"name": "kernel_config",
-				"percent": "NA",
-				"result": "pass"
-			}		
-		],
-		"platform_result":[
-			{
-				"name": "repo",
-				"percent": "NA",
-				"result": "pass"
-			},
-			{
-				"name": "base_test",
-				"percent": "NA",
-				"result": "pass"
-			},
-			{
-				"name": "performance_test",
-				"percent": "NA",
-				"result": "pass"
-			},
-			{
-				"name": "running_config",
-				"percent": "NA",
-				"result": "pass"
-			}		
 		]
 	}
 ]
