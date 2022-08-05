@@ -74,7 +74,7 @@ module.exports = {
         IMG: "/img/home/new-home/internship-summit.svg",
         IMG_HOVER: "/img/home/new-home/internship-summit-hover.svg",
         DSSCRIPTIVE: "帮助高校开发者在社区成长",
-        LINK: "/activities/",
+        LINK: "/internship/",
       },
       {
         TITLE: "峰会专区",
@@ -355,66 +355,71 @@ module.exports = {
     },
     HOME_SOURCE_EDITION: [
       {
-        LINK: "http://www.kylinsec.com.cn/",
-        PC: "/img/home/link/xinan.png",
-        MOBILE: "/img/home/link/mobile-xinan.png",
-      },
-      {
-        LINK: "https://www.uniontech.com/",
-        PC: "/img/home/link/tongxin.png",
-        MOBILE: "/img/home/link/mobile-tongxin.png",
-      },
-      {
-        LINK: "https://www.kylinos.cn/",
-        PC: "/img/home/link/qiling.png",
-        MOBILE: "/img/home/link/mobile-qiling.png",
-      },
-      {
-        LINK: "http://www.iscas.ac.cn/",
-        PC: "/img/home/link/iscas.png",
-        MOBILE: "/img/home/link/mobile-iscas.png",
-      },
-      {
-        LINK: "http://www.i-soft.com.cn/",
-        PC: "/img/home/link/cetc.png",
-        MOBILE: "/img/home/link/mobile-cetc.png",
-      },
-      {
-        LINK: "https://www.turbolinux.com.cn/",
-        PC: "/img/home/link/turbo.png",
-        MOBILE: "/img/home/link/mobile-turbo.png",
-      },
-      {
-        LINK: "http://www.hoperun.com/",
-        PC: "/img/home/link/hopeRun.png",
-        MOBILE: "/img/home/link/mobile-hopeRun.png",
-      },
-      {
-        LINK: "http://www.tongyuanos.com/",
-        PC: "/img/home/link/tongYuan.png",
-        MOBILE: "/img/home/link/mobile-tongYuan.png",
+        LINK: "https://www.xfusion.com/cn/",
+        PC: "/img/home/link/xfusion.png",
       },
       {
         LINK: "http://www.chinaredflag.cn/",
         PC: "/img/home/link/zhongkehongqi.png",
-        MOBILE: "/img/home/link/mobile-zhongkehongqi.png",
+      },
+      {
+        LINK: "https://www.kyland.com.cn/",
+        PC: "/img/home/link/intewell.png",
+      },
+      {
+        LINK: "http://www.linx-info.com/#/",
+        PC: "/img/home/link/linx-tech.png",
+      },
+      {
+        LINK: "http://www.i-soft.com.cn/",
+        PC: "/img/home/link/cetc.png",
+      },
+      {
+        LINK: "https://www.kylinos.cn/",
+        PC: "/img/home/link/qiling.png",
+      },
+      {
+        LINK: "http://www.kylinsec.com.cn/",
+        PC: "/img/home/link/xinan.png",
+      },
+      {
+        LINK: "http://www.hoperun.com/",
+        PC: "/img/home/link/hopeRun.png",
       },
       {
         LINK: "https://www.suse.com/",
         PC: "/img/home/link/suse.png",
-        MOBILE: "/img/home/link/mobile-suse.png",
+      },
+      {
+        LINK: "https://www.turbolinux.com.cn/",
+        PC: "/img/home/link/turbo.png",
+      },
+      {
+        LINK: "http://www.tongyuanos.com/",
+        PC: "/img/home/link/tongYuan.png",
+      },
+      {
+        LINK: "https://www.uniontech.com/",
+        PC: "/img/home/link/tongxin.png",
+      },
+      {
+        LINK: "https://www.h3c.com/cn/",
+        PC: "/img/home/link/hbc.png",
+      },
+      {
+        LINK: "http://www.iscas.ac.cn/",
+        PC: "/img/home/link/iscas.png",
+      },
+      {
+        LINK: "https://www.thundersoft.com/",
+        PC: "/img/home/link/zhongkechuangda.png",
       },
       {
         LINK: "http://www.nfschina.com/",
         PC: "/img/home/link/zhongkefangde.png",
-        MOBILE: "/img/home/link/mobile-zhongkefangde.png",
-      },
-      {
-        LINK: "https://www.xfusion.com/cn/",
-        PC: "/img/home/link/xfusion.png",
-        MOBILE: "/img/home/link/xfusion_mobile.png",
       },
     ],
+    RANK_TIP:'注：按公司名拼音首字母顺序排序',
     FRIENDSHIP_LINK_LIST: [
       {
         LINK: "http://www.mulanos.cn/",
@@ -994,66 +999,71 @@ module.exports = {
       SOURCE_PUBLISH_TITLE: "Vendors with openEuler-based Commercial Editions",
       SOURCE_LINK_TITLE: "Reference Links",
     },
+    RANK_TIP:'',
     HOME_SOURCE_EDITION: [
       {
-        LINK: "http://www.kylinsec.com.cn/",
-        PC: "/img/home/link/xinan.png",
-        MOBILE: "/img/home/link/mobile-xinan.png",
-      },
-      {
-        LINK: "https://www.uniontech.com/",
-        PC: "/img/home/link/tongxin.png",
-        MOBILE: "/img/home/link/mobile-tongxin.png",
-      },
-      {
-        LINK: "https://www.kylinos.cn/",
-        PC: "/img/home/link/qiling.png",
-        MOBILE: "/img/home/link/mobile-qiling.png",
-      },
-      {
-        LINK: "http://www.iscas.ac.cn/",
-        PC: "/img/home/link/iscas.png",
-        MOBILE: "/img/home/link/mobile-iscas.png",
-      },
-      {
-        LINK: "http://www.i-soft.com.cn/",
-        PC: "/img/home/link/cetc.png",
-        MOBILE: "/img/home/link/mobile-cetc.png",
-      },
-      {
-        LINK: "https://www.turbolinux.com.cn/",
-        PC: "/img/home/link/turbo.png",
-        MOBILE: "/img/home/link/mobile-turbo.png",
-      },
-      {
-        LINK: "http://www.hoperun.com/",
-        PC: "/img/home/link/hopeRun.png",
-        MOBILE: "/img/home/link/mobile-hopeRun.png",
-      },
-      {
-        LINK: "http://www.tongyuanos.com/",
-        PC: "/img/home/link/tongYuan.png",
-        MOBILE: "/img/home/link/mobile-tongYuan.png",
+        LINK: "https://www.xfusion.com/en/",
+        PC: "/img/home/link/xfusion.png",
       },
       {
         LINK: "http://www.chinaredflag.cn/",
         PC: "/img/home/link/zhongkehongqi.png",
-        MOBILE: "/img/home/link/mobile-zhongkehongqi.png",
+      },
+      {
+        LINK: "https://www.kyland.com.cn/",
+        PC: "/img/home/link/intewell.png",
+      },
+      {
+        LINK: "http://www.linx-info.com/#/",
+        PC: "/img/home/link/linx-tech.png",
+      },
+      {
+        LINK: "http://www.i-soft.com.cn/",
+        PC: "/img/home/link/cetc.png",
+      },
+      {
+        LINK: "https://www.kylinos.cn/",
+        PC: "/img/home/link/qiling.png",
+      },
+      {
+        LINK: "http://www.kylinsec.com.cn/",
+        PC: "/img/home/link/xinan.png",
+      },
+      {
+        LINK: "http://www.hoperun.com/",
+        PC: "/img/home/link/hopeRun.png",
       },
       {
         LINK: "https://www.suse.com/",
         PC: "/img/home/link/suse.png",
-        MOBILE: "/img/home/link/mobile-suse.png",
+      },
+      {
+        LINK: "https://www.turbolinux.com.cn/",
+        PC: "/img/home/link/turbo.png",
+      },
+      {
+        LINK: "http://www.tongyuanos.com/",
+        PC: "/img/home/link/tongYuan.png",
+      },
+      {
+        LINK: "https://www.uniontech.com/",
+        PC: "/img/home/link/tongxin.png",
+      },
+      {
+        LINK: "https://www.h3c.com/cn/",
+        PC: "/img/home/link/hbc.png",
+      },
+      {
+        LINK: "http://www.iscas.ac.cn/",
+        PC: "/img/home/link/iscas.png",
+      },
+      {
+        LINK: "https://www.thundersoft.com/",
+        PC: "/img/home/link/zhongkechuangda.png",
       },
       {
         LINK: "http://www.nfschina.com/",
         PC: "/img/home/link/zhongkefangde.png",
-        MOBILE: "/img/home/link/mobile-zhongkefangde.png",
-      },
-      {
-        LINK: "https://www.xfusion.com/en/",
-        PC: "/img/home/link/xfusion.png",
-        MOBILE: "/img/home/link/xfusion_mobile.png",
       },
     ],
     FRIENDSHIP_LINK_LIST: [
@@ -1063,7 +1073,7 @@ module.exports = {
         MOBILE: "/img/home/link/mobile-mulan.png",
       },
       {
-        LINK: "https://kunpeng.huawei.com/",
+        LINK: "https://kunpeng.huawei.com/en/",
         PC: "/img/home/link/kunpeng.png",
         MOBILE: "/img/home/link/mobile-kunpeng.png",
       },
@@ -1122,7 +1132,7 @@ module.exports = {
         IMG: "/img/home/new-home/internship-summit.svg",
         IMG_HOVER: "/img/home/new-home/internship-summit-hover.svg",
         DSSCRIPTIVE: "Helping University Developers Grow in the Community",
-        LINK: "/activities/",
+        LINK: "https://www.openeuler.org/zh/internship/",
       },
       {
         TITLE: "Summits",
@@ -1358,7 +1368,7 @@ module.exports = {
         IMG: "/img/home/new-home/internship-summit.svg",
         IMG_HOVER: "/img/home/new-home/internship-summit-hover.svg",
         DSSCRIPTIVE: "Helping University Developers Grow in the Community",
-        LINK: "/activities/",
+        LINK: "https://www.openeuler.org/zh/internship/",
       },
       {
         TITLE: "Summits",
@@ -1758,66 +1768,71 @@ module.exports = {
         "Поставщики с коммерческими версиями на базе openEuler",
       SOURCE_LINK_TITLE: "Ссылки",
     },
+    RANK_TIP:'',
     HOME_SOURCE_EDITION: [
       {
-        LINK: "http://www.kylinsec.com.cn/",
-        PC: "/img/home/link/xinan.png",
-        MOBILE: "/img/home/link/mobile-xinan.png",
-      },
-      {
-        LINK: "https://www.uniontech.com/",
-        PC: "/img/home/link/tongxin.png",
-        MOBILE: "/img/home/link/mobile-tongxin.png",
-      },
-      {
-        LINK: "https://www.kylinos.cn/",
-        PC: "/img/home/link/qiling.png",
-        MOBILE: "/img/home/link/mobile-qiling.png",
-      },
-      {
-        LINK: "http://www.iscas.ac.cn/",
-        PC: "/img/home/link/iscas.png",
-        MOBILE: "/img/home/link/mobile-iscas.png",
-      },
-      {
-        LINK: "http://www.i-soft.com.cn/",
-        PC: "/img/home/link/cetc.png",
-        MOBILE: "/img/home/link/mobile-cetc.png",
-      },
-      {
-        LINK: "https://www.turbolinux.com.cn/",
-        PC: "/img/home/link/turbo.png",
-        MOBILE: "/img/home/link/mobile-turbo.png",
-      },
-      {
-        LINK: "http://www.hoperun.com/",
-        PC: "/img/home/link/hopeRun.png",
-        MOBILE: "/img/home/link/mobile-hopeRun.png",
-      },
-      {
-        LINK: "http://www.tongyuanos.com/",
-        PC: "/img/home/link/tongYuan.png",
-        MOBILE: "/img/home/link/mobile-tongYuan.png",
+        LINK: "https://www.xfusion.com/en/",
+        PC: "/img/home/link/xfusion.png",
       },
       {
         LINK: "http://www.chinaredflag.cn/",
         PC: "/img/home/link/zhongkehongqi.png",
-        MOBILE: "/img/home/link/mobile-zhongkehongqi.png",
+      },
+      {
+        LINK: "https://www.kyland.com.cn/",
+        PC: "/img/home/link/intewell.png",
+      },
+      {
+        LINK: "http://www.linx-info.com/#/",
+        PC: "/img/home/link/linx-tech.png",
+      },
+      {
+        LINK: "http://www.i-soft.com.cn/",
+        PC: "/img/home/link/cetc.png",
+      },
+      {
+        LINK: "https://www.kylinos.cn/",
+        PC: "/img/home/link/qiling.png",
+      },
+      {
+        LINK: "http://www.kylinsec.com.cn/",
+        PC: "/img/home/link/xinan.png",
+      },
+      {
+        LINK: "http://www.hoperun.com/",
+        PC: "/img/home/link/hopeRun.png",
       },
       {
         LINK: "https://www.suse.com/",
         PC: "/img/home/link/suse.png",
-        MOBILE: "/img/home/link/mobile-suse.png",
+      },
+      {
+        LINK: "https://www.turbolinux.com.cn/",
+        PC: "/img/home/link/turbo.png",
+      },
+      {
+        LINK: "http://www.tongyuanos.com/",
+        PC: "/img/home/link/tongYuan.png",
+      },
+      {
+        LINK: "https://www.uniontech.com/",
+        PC: "/img/home/link/tongxin.png",
+      },
+      {
+        LINK: "https://www.h3c.com/cn/",
+        PC: "/img/home/link/hbc.png",
+      },
+      {
+        LINK: "http://www.iscas.ac.cn/",
+        PC: "/img/home/link/iscas.png",
+      },
+      {
+        LINK: "https://www.thundersoft.com/",
+        PC: "/img/home/link/zhongkechuangda.png",
       },
       {
         LINK: "http://www.nfschina.com/",
         PC: "/img/home/link/zhongkefangde.png",
-        MOBILE: "/img/home/link/mobile-zhongkefangde.png",
-      },
-      {
-        LINK: "https://www.xfusion.com/en/",
-        PC: "/img/home/link/xfusion.png",
-        MOBILE: "/img/home/link/xfusion_mobile.png",
       },
     ],
     FRIENDSHIP_LINK_LIST: [
@@ -1827,7 +1842,7 @@ module.exports = {
         MOBILE: "/img/home/link/mobile-mulan.png",
       },
       {
-        LINK: "https://kunpeng.huawei.com/",
+        LINK: "https://kunpeng.huawei.com/en/",
         PC: "/img/home/link/kunpeng.png",
         MOBILE: "/img/home/link/mobile-kunpeng.png",
       },

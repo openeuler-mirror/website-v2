@@ -234,7 +234,7 @@ module.exports = {
             COPY_RIGHT: '版权所有 © 2022 openEuler 保留一切权利',
             RIGHT_LIST: [{
                     NAME: '品牌',
-                    URL: '/zh/other/brand/'
+                    URL: 'https://new.openeuler.org/zh/other/brand/'
                 },
                 {
                     NAME: '隐私政策',
@@ -466,7 +466,7 @@ module.exports = {
             COPY_RIGHT: 'Copyright © 2022 openEuler. All rights reserved.',
             RIGHT_LIST: [{
                     NAME: 'Trademark',
-                    URL: '/en/other/brand/'
+                    URL: 'https://new.openeuler.org/zh/other/brand/'
                 },
                 {
                     NAME: 'Privacy Policy',
@@ -688,7 +688,7 @@ module.exports = {
             COPY_RIGHT: 'Авторские права © openEuler 2022. Все права защищены.',
             RIGHT_LIST: [{
                     NAME: 'Товарный знак',
-                    URL: '/ru/other/brand/'
+                    URL: 'https://new.openeuler.org/zh/other/brand/'
                 },
                 {
                     NAME: 'Политика конфиденциальности',

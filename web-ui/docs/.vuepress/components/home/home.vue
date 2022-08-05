@@ -138,16 +138,17 @@
           </div>
         </div>
       </div>
-      <div class="home-calendar" v-if="calenderData.length">
+      <div class="home-calendar" v-if="calenderData.length && $lang === 'zh'">
         <h3>{{ i18n.home.HOME_CALENDAR }}</h3>
         <calender :table-data="calenderData" />
       </div>
       <HomePlayground />
       <div class="home-source">
         <div class="source-publish-link publish diff-pc-mobile">
-          <h3 :class="$lang == 'en' ? 'en-h3' : ''">
+          <h3 :class="$lang == 'en' || $lang ==='ru' ? 'en-h3' : ''">
             {{ i18n.home.HOME_SOURCE.SOURCE_PUBLISH_TITLE }}
           </h3>
+          <p class="rank-tip">{{ i18n.home.RANK_TIP }}</p>
           <div class="publish-edition">
             <a
               :href="item.LINK"
@@ -156,7 +157,6 @@
               target="_blank"
             >
               <img class="pc-img" v-lazy="item.PC" alt="" />
-              <img class="mobile-img" v-lazy="item.MOBILE" alt="" />
             </a>
           </div>
         </div>
@@ -164,7 +164,7 @@
           <h3 :class="$lang == 'en' ? 'en-h3' : ''">
             {{ i18n.home.HOME_SOURCE.SOURCE_LINK_TITLE }}
           </h3>
-          <div class="publish-edition">
+          <div class="publish-edition friendly-link">
             <a
               :href="item.LINK"
               v-for="item in i18n.home.FRIENDSHIP_LINK_LIST"
@@ -172,7 +172,7 @@
               target="_blank"
             >
               <img class="pc-img" v-lazy="item.PC" alt="" />
-              <img class="mobile-img" v-lazy="item.MOBILE" alt="" />
+              <!-- <img class="mobile-img" v-lazy="item.MOBILE" alt="" /> -->
             </a>
           </div>
         </div>
@@ -184,6 +184,7 @@
 <script>
 // import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
 // import 'swiper/css/swiper.css';
+// import gsap from 'gsap';
 import { meetingList, statisticsList } from '../../api/home';
 import dayjs from 'dayjs';
 import calender from './calender.vue';
@@ -295,6 +296,29 @@ export default {
     this.bannerAmount = lang === 'zh' ? 1 : 1;
   },
   methods: {
+    countF() {
+      let el = document.querySelector('.home-nav');
+      let tl = gsap.timeline();
+      let end = 1000;
+      tl.fromTo(
+        el,
+        {
+          innerText: 0,
+          scale: 0.8,
+        },
+        {
+          innerText: 10000,
+          sanp: {
+            innerText: 1,
+          },
+          duration: 3,
+          ease: 'linear',
+          onUpdate: () => {
+            el.innerText = 10000;
+          },
+        }
+      );
+    },
     carouselChange(index) {
       index !== 1 ? (this.changeTime = 5000) : (this.changeTime = 30000);
     },
@@ -646,6 +670,7 @@ export default {
   font-weight: 400 !important;
 }
 .en-h3 {
+  margin-bottom: var(--o-spacing-h2) !important;
   line-height: 34px !important;
 
   font-weight: 400 !important;
@@ -1671,6 +1696,9 @@ export default {
   margin-top: 64px;
   font-size: 30px;
 }
+.source-publish-link.publish h3 {
+  margin-bottom: var(--o-spacing-h5);
+}
 .diff-pc-mobile {
   .mobile-img {
     display: none;
@@ -1807,25 +1835,35 @@ html[lang='zh'] .source-publish-link h5 {
     }
   }
 }
+.home {
+  .rank-tip {
+    color: #000;
+    font-size: 12px;
+    @media screen and (max-width: 1260px) {
+      font-size: 12px;
+    }
+  }
+}
 .publish-edition {
   display: grid;
   margin-top: var(--o-spacing-h2);
+  margin-top: 21px;
   grid-template-columns: repeat(4, minmax(82px, 1fr));
   column-gap: 0;
   row-gap: 0;
   a {
     display: flex;
+    margin: 0px -1px -1px 0px;
     justify-content: center;
     align-items: center;
-    margin: 0px -1px -1px 0px;
-    padding: 24px;
     border: 1px solid #e5e5e5;
     background-color: #fff;
     max-height: 120px;
+    overflow: hidden;
     img {
       display: block;
       height: 100%;
-      object-fit: fill;
+      // object-fit: fill;
     }
   }
   @media screen and (max-width: 1416px) {
@@ -1833,14 +1871,15 @@ html[lang='zh'] .source-publish-link h5 {
     grid-template-columns: repeat(2, minmax(82px, 270px));
     justify-content: center;
     a {
-      padding: 10px 0;
+      // padding: 10px 0;
       min-height: 40px;
       img {
-       width: 100%;
+        width: 100%;
       }
     }
   }
 }
+
 @media screen and (max-width: 1416px) {
   .is-pc {
     display: none;
@@ -2160,9 +2199,9 @@ html[lang='zh'] .source-publish-link h5 {
     .mobile-img {
       display: block;
     }
-    .pc-img {
-      display: none;
-    }
+    // .pc-img {
+    //   display: none;
+    // }
   }
   html[lang='zh'] .source-publish-link h5 {
     font-size: 16px;
