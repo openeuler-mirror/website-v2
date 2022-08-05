@@ -9308,5 +9308,24 @@
     "chipModel": "SAS3508",
     "item": "",
     "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "10df",
+    "deviceID": "e200",
+    "svID": "10df",
+    "ssID": "e280",
+    "architecture": "aarch64",
+    "os": "openEuler 20.03 LTS SP1",
+    "driverName": "lpfc",
+    "version": "0:12.0.0.6",
+    "type": "FC",
+    "date": "2022.08.03",
+    "sha256": "321D708292D09ADE403D8286E482427AD3384FEB",
+    "driverSize": "1.7MB",
+    "chipVendor": "Emulex",
+    "boardModel": "LPe16002B-M6",
+    "chipModel": "LPe15000/LPe16000",
+    "item": "06030276",
+    "downloadLink": "inbox"
   }
 ]
