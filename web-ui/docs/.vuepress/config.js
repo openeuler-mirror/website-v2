@@ -144,7 +144,7 @@ module.exports = {
                 }
             },
             '/api-showcase/': {
-                target: 'https://doc-search.test.osinfra.cn/',
+                target: 'https://doc-search.openeuler.org/',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {
