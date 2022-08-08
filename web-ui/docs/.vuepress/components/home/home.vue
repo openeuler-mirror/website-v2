@@ -494,6 +494,7 @@ export default {
 
 <style lang="less" scoped>
 :deep(.el-card) {
+  border-radius: 0;
   box-shadow: var(--o-shadow-base);
 }
 .home {
