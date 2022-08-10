@@ -25,6 +25,8 @@ We generally do not require your personal data if you only browse the general co
 
 (c) Contributor License Agreement ("CLA") Signing. When signing the CLA ([<u>learn more</u>](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=)) before contribution, you need to submit required personal data to the CLA signing system. We will acquire such personal data to verify whether you have signed the CLA, and to conduct relevant statistical analysis about operations of the Community.
 
+(d) Talent Assessment. After you pass the openEuler Community talent assessment test, we will collect your name, email address, test partner, test score, and certification level from our test partners to generate the openEuler Community talent certificate for you. In addition, we acquire such data to conduct relevant statistical analysis about talent development of the Community.
+
 We may also supplement the personal data we collect from you with additional personal data we receive from third parties, including other platforms, communities, or legal and public channels within the scope of your authorization and consent. We promise to process your personal data in strict accordance with applicable laws and regulations. Please read the privacy statements and user agreements of the third parties carefully. If your personal data provided by a third party is required for using related services of the Community, but you refuse to allow the third party to collect, use, transfer, or share your personal data when the third party provides services, you may not be able to use related services of the Community. For example, when you use an authorized third-party account to log in to the Community, we will obtain your personal data from the third party with your consent.
 
  
@@ -125,6 +127,6 @@ If you want to contact us or exercise your rights, please contact us at <contact
 
 
 
-Last updated: May, 2022
+Last updated: Aug, 2022
 
 </div>
