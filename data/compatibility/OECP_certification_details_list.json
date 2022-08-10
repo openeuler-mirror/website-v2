@@ -1,16 +1,88 @@
 [
 	{
-		"os_version":"H3Linux-2.0.2-x86_64-dvd.iso",
-		"osv_name": "新华三技术有限公司",
+		"os_version":"HopeStage-V1.0-x86_64-dvd.iso",
+		"osv_name": "江苏润和软件股份有限公司",
 		"total_result": "pass",
 		"type": "服务器",
-		"date": "2022/07/30",
+		"date": "2022/08/09",
 		"arch": "x86_64",
 		"details": "详细信息",
-		"friendly_link": "https://www.h3c.com/",
-		"os_download_link": "https://www.h3c.com/",
-		"checksum": "3578eee23045d98d86955ca895f79098",
-		"base_openeuler_version": "openEuler-22.03-LTS",
+		"friendly_link": "http://www.hoperun.com/",
+		"os_download_link": "http://www.hoperun.com/",
+		"checksum": "108e171ee60156e6eba78fa80934743e",
+		"base_openeuler_version": "openEuler-20.03-LTS-SP1",
+		"tools_result": [
+			{
+				"name": "core_pkg",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "soft_pkg",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "KABI",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "ABI",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "service_config",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "soft_config",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "kernel_config",
+				"percent": "NA",
+				"result": "pass"
+			}
+		],
+		"platform_result":[
+			{
+				"name": "repo",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "base_test",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "performance_test",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "running_config",
+				"percent": "NA",
+				"result": "pass"
+			}
+		]
+	},
+		{
+		"os_version":"HopeStage-V1.0-aarch64-dvd.iso",
+		"osv_name": "江苏润和软件股份有限公司",
+		"total_result": "pass",
+		"type": "服务器",
+		"date": "2022/08/09",
+		"arch": "aarch64",
+		"details": "详细信息",
+		"friendly_link": "http://www.hoperun.com/",
+		"os_download_link": "http://www.hoperun.com/",
+		"checksum": "0af00a896cf8ccbc4cd39c4879274bb9",
+		"base_openeuler_version": "openEuler-20.03-LTS-SP1",
 		"tools_result": [
 			{
 				"name": "core_pkg",
