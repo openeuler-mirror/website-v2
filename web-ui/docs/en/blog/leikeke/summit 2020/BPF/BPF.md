@@ -195,16 +195,16 @@ The key points for ensuring container running security are as follows:
 
 ❏ Use the eBPF tracing technology to automatically generate container access control permissions, including suspicious access of containers to files, suspicious invoking of containers to the system, suspicious mutual access between containers, detection of abnormal processes of containers, and evidence collection for suspicious behavior. For example:
 
-- [ ] Check whether other processes are created when the container is running.
+- Check whether other processes are created when the container is running.
 
 
-- [ ] Check whether abnormal file system reads and writes occur during container running, for example, whether a new software package is installed or configurations are updated in the running container.
+- Check whether abnormal file system reads and writes occur during container running, for example, whether a new software package is installed or configurations are updated in the running container.
 
 
-- [ ] Check whether a new listening port is enabled or an unexpected connection is established when the container is running.
+- Check whether a new listening port is enabled or an unexpected connection is established when the container is running.
 
 
-- [ ] Detect user operations in containers and execution of suspicious shell scripts.  
+- Detect user operations in containers and execution of suspicious shell scripts.  
 
 <img src="./BPF-13.png">  
 

@@ -162,7 +162,7 @@ In addition, to ensure the performance of applying for and releasing small memor
 
 ## 3.2 Small Bin
 Small bins are used to manage small chunks. For example, on a 64-bit platform, a chunk managed by a small bin is less than 1,024 bytes. Small bins have the following features:
-<br>&nbsp;&nbsp;&nbsp;&nbsp; 1. There are 62 small bins. Each bin maintains a cyclic doubly-linked list and uses the first in first out (FIFO) algorithm. The memory release operation adds the newly released chunk to the front of the linked list, and the allocation operation obtains the chunk from the tail of the linked list.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;1. There are 62 small bins. Each bin maintains a cyclic doubly-linked list and uses the first in first out (FIFO) algorithm. The memory release operation adds the newly released chunk to the front of the linked list, and the allocation operation obtains the chunk from the tail of the linked list.
 <br>&nbsp;&nbsp;&nbsp;&nbsp;2. Each small bin has chunks of the same size. 
 <br>&nbsp;&nbsp;&nbsp;&nbsp;3. Adjacent free chunks can be merged into a large free chunk.
 
