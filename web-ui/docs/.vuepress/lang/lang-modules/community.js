@@ -187,9 +187,9 @@ module.exports = {
             TITLE: "行为守则"
         },
         SERVICE: {
-            TITLE:"openEuler 证书",
+            TITLE:"openEuler-HCIx 证书",
             DOWN:{
-                DPSCRIPT_ONE:"openEuler 认证是面向对 openEuler 操作系统感兴趣的IT专业人员或学生 ，证明其对 openEuler 开发、技术支持、运维能力的一种认证。",
+                DPSCRIPT_ONE:"openEuler-HCIx 认证是面向对 openEuler 操作系统感兴趣的IT专业人员或学生 ，证明其对 openEuler 开发、技术支持、运维能力的一种认证。",
                 GET_CARD:"证书获取",
                 GET_CARD_DISC:"openEuler-HCIA /openEuler-HCIP/openEuler-HCIE 认证是 openEuler 社区承认的不同等级的能力认证，如果您有兴趣获取相应证书，可点击下列项目进行报名培训与认证考试，通过考试后，您即可同步获得对应等级的证书。",
                 NOT_CARDURL:"敬请期待",
@@ -426,9 +426,9 @@ module.exports = {
             TITLE: "Code of Covenant"
         },
         SERVICE: {
-            TITLE:"openEuler Certification",
+            TITLE:"openEuler-HCIx Certification",
             DOWN:{
-                DPSCRIPT_ONE:"openEuler certification is intended for IT professionals or students interested in the openEuler OS to prove their capabilities in openEuler development, technical support, and O&M.",
+                DPSCRIPT_ONE:"openEuler-HCIx certification is intended for IT professionals or students interested in the openEuler OS to prove their capabilities in openEuler development, technical support, and O&M.",
                 GET_CARD:"Take Exams",
                 GET_CARD_DISC:"openEuler-HCIA, openEuler-HCIP and openEuler-HCIE are the capability certifications at different levels recognized by the openEuler community. If you are interested in obtaining any of these certificates, click the following items to sign up for the trainings and tests.",
                 NOT_CARDURL:"Coming soon",
@@ -665,9 +665,9 @@ module.exports = {
             TITLE: "Кодекс поведения"
         },
         SERVICE: {
-            TITLE:"сертификаты openEuler",
+            TITLE:"сертификаты openEuler-HCIx",
             DOWN:{
-                DPSCRIPT_ONE:"Сертификация openEuler предназначена для ИТ-профессионалов или студентов, интересующихся ОС openEuler, чтобы они могли подтвердить свои способности в разработке, технической поддержке и эксплуатации openEuler.",
+                DPSCRIPT_ONE:"Сертификация openEuler-HCIx предназначена для ИТ-профессионалов или студентов, интересующихся ОС openEuler, чтобы они могли подтвердить свои способности в разработке, технической поддержке и эксплуатации openEuler.",
                 GET_CARD:"Сдавать экзамены",
                 GET_CARD_DISC:"openEuler-HCIA, openEuler-HCIP и openEuler-HCIE являются сертификатами, доказывающими возможности различных уровней, признанными сообществом openEuler. Если вы заинтересованы в получении сертификата, щелкните по следующим пунктам, чтобы зарегистрироваться для прохождения обучения и сертификационного экзамена.",
                 NOT_CARDURL:"Скоро",
