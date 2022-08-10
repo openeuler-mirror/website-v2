@@ -39,7 +39,12 @@ module.exports = {
                     {
                         NAME: '实习',
                         PATH: '/internship/'
-                    }
+                    },
+                    {
+                        NAME: '学习培训',
+                        PATH: 'https://training-assessment.osinfra.cn/',
+                        IS_OPEN_MINISITE_WINDOW: 1
+                    },
                 ],
                 CLASS: []
             },
@@ -93,13 +98,13 @@ module.exports = {
                         PATH: '/community/mailing-list/'
                     },
                     {
-                        NAME: '个人认证',
-                        PATH: '/community/certification-services/'
+                        NAME: '人才评定',
+                        PATH: 'https://training-assessment.openeuler.org/',
+                        IS_OPEN_MINISITE_WINDOW: 1
                     },
                     {
-                        NAME: '人才评测',
-                        PATH: 'https://training-assessment.osinfra.cn/',
-                        IS_OPEN_MINISITE_WINDOW: 1
+                        NAME: 'HCIX认证',
+                        PATH: '/community/certification-services/'
                     },
                     {
                         NAME: '贡献看板',
