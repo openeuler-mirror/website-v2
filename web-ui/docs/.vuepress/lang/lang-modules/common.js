@@ -99,7 +99,7 @@ module.exports = {
                     },
                     {
                         NAME: '人才评定',
-                        PATH: 'https://training-assessment.openeuler.org/',
+                        PATH: 'https://talent-assessment.openeuler.org/',
                         IS_OPEN_MINISITE_WINDOW: 1
                     },
                     {
