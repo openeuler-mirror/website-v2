@@ -143,12 +143,12 @@ module.exports = {
                     '^/api-approve/': ''
                 }
             },
-            '/api-showcase/': {
-                target: 'https://doc-search.openeuler.org/',
+            '/api-search/': {
+                target: 'https://doc-search.test.osinfra.cn', // 本地测试环境
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {
-                    '^/api-showcase/': ''
+                    '^/api-search/': ''
                 }
             },
         }

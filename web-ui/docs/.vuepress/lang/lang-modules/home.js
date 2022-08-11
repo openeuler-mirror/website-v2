@@ -643,32 +643,32 @@ module.exports = {
     USER_CASE: {
       TITLE: "Success Stories",
       VIEW_MORE: "Learn More",
-      VIEW_MORE_LINK: "https://new.openeuler.org/zh/showcase/",
+      VIEW_MORE_LINK: "https://new.openeuler.org/en/showcase/",
       CASE_LIST: [
         {
-          TYPE: "金融",
+          TYPE: "Finance",
           URL: "/img/home/case/finance.svg",
           ACTIVE_URL: "/img/home/case/finance-active.svg",
         },
         {
-          TYPE: "运营商",
+          TYPE: "Carrier",
           URL: "/img/home/case/operator.svg",
           ACTIVE_URL: "/img/home/case/operator-active.svg",
         },
 
         {
-          TYPE: "能源",
+          TYPE: "Energy",
           URL: "/img/home/case/energy.svg",
           ACTIVE_URL: "/img/home/case/energy-active.svg",
         },
 
         {
-          TYPE: "物流",
+          TYPE: "Logistics",
           URL: "/img/home/case/logistics.svg",
           ACTIVE_URL: "/img/home/case/logistics-active.svg",
         },
         {
-          TYPE: "其他",
+          TYPE: "Others",
           URL: "/img/home/case/education.svg",
           ACTIVE_URL: "/img/home/case/education-active.svg",
         },
@@ -1410,32 +1410,32 @@ module.exports = {
     USER_CASE: {
       TITLE: "Success Stories",
       VIEW_MORE: "Learn More",
-      VIEW_MORE_LINK: "https://new.openeuler.org/zh/showcase/",
+      VIEW_MORE_LINK: "https://new.openeuler.org/ru/showcase/",
       CASE_LIST: [
         {
-          TYPE: "金融",
+          TYPE: "Финансы",
           URL: "/img/home/case/finance.svg",
           ACTIVE_URL: "/img/home/case/finance-active.svg",
         },
         {
-          TYPE: "运营商",
+          TYPE: "Оператор",
           URL: "/img/home/case/operator.svg",
           ACTIVE_URL: "/img/home/case/operator-active.svg",
         },
 
         {
-          TYPE: "能源",
+          TYPE: "Энергетика",
           URL: "/img/home/case/energy.svg",
           ACTIVE_URL: "/img/home/case/energy-active.svg",
         },
 
         {
-          TYPE: "物流",
+          TYPE: "Логистика",
           URL: "/img/home/case/logistics.svg",
           ACTIVE_URL: "/img/home/case/logistics-active.svg",
         },
         {
-          TYPE: "其他",
+          TYPE: "Другие сферы",
           URL: "/img/home/case/education.svg",
           ACTIVE_URL: "/img/home/case/education-active.svg",
         },
