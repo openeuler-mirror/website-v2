@@ -1,10 +1,8 @@
 <script setup>
 import { ref, onMounted } from "vue";
-
 import { getShowCaseData } from "../../api/home";
 
 const caseData = ref(null);
-
 const active = ref(0);
 const activeMobile = ref(0);
 
@@ -20,7 +18,7 @@ const changeActiveMobile = (activeNames) => {
 };
 
 onMounted(() => {
-  getShowCaseData().then((res) => {
+  getShowCaseData({lang:window.location.pathname.replaceAll('/','')}).then((res) => {
     let result = {
       zh: {},
       en: {},
@@ -44,7 +42,6 @@ onMounted(() => {
         result["ru"][item.industry].push(item);
       }
     });
-
     caseData.value = result;
   });
 });

@@ -22,7 +22,7 @@
         </div>
       </div>
       <HomeCarousel />
-      <UserCase v-if="$lang === 'zh'" />
+      <UserCase />
       <CommunityActivity v-if="roundList.length" :round-list="roundList" />
       <div class="home-newsroom">
         <div class="title-list">
@@ -145,7 +145,7 @@
       <HomePlayground />
       <div class="home-source">
         <div class="source-publish-link publish diff-pc-mobile">
-          <h3 :class="$lang == 'en' || $lang ==='ru' ? 'en-h3' : ''">
+          <h3 :class="$lang == 'en' || $lang === 'ru' ? 'en-h3' : ''">
             {{ i18n.home.HOME_SOURCE.SOURCE_PUBLISH_TITLE }}
           </h3>
           <p class="rank-tip">{{ i18n.home.RANK_TIP }}</p>
@@ -398,9 +398,12 @@ export default {
       if (lang === 'zh') {
         blogData = this.filterSiteData(datas, '/zh/blog/');
         newsData = this.filterSiteData(datas, '/zh/news/');
-      } else {
+      } else if (lang === 'en') {
         blogData = this.filterSiteData(datas, '/en/blog/');
         newsData = this.filterSiteData(datas, '/en/news/');
+      } else {
+        blogData = this.filterSiteData(datas, '/ru/blog/');
+        newsData = this.filterSiteData(datas, '/ru/news/');
       }
       this.blogList = blogData;
       this.newsList = newsData;

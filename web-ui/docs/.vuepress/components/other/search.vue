@@ -63,7 +63,7 @@
 
 <script>
 
-    import { search, repoSearch } from "../../api/search";
+    import { search, searchTags, repoSearch } from "../../api/search";
     let that = null;
     const locationMethods = {
 
@@ -71,14 +71,16 @@
             that.formData.page = flag;
             if(that.formData.keyword){
                 that.loading = true;
-
                 search(that.formData)
                     .then(response => {
                         that.loading = false;
                         if (response.obj) {
-                            that.total = response.obj.total[0].doc_count;
                             if(!that.tagTitle.length){
-                                that.tagTitle = response.obj.total;
+                                searchTags(that.formData)
+                                .then(res => {
+                                    that.total = res.obj.total[0].doc_count;
+                                    that.tagTitle = res.obj.total;
+                                })
                         }
                             that.allDatas = response.obj.records;
                         } else {
@@ -338,10 +340,11 @@
     }
     .search-tag {
         width: 1120px;
-        margin: 0 auto 180px;
+        margin: 0 auto;
+        padding-bottom: 180px;
         @media (max-width: 1000px) {
             width: 100%;
-            margin-bottom: 80px;
+            padding-bottom: 80px;
             .tag-title ul li {
                 width: 72px;
 

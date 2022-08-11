@@ -12,8 +12,8 @@ export const search = ({
 }) => {
     return new Promise((resolve, reject) => {
         appAjax.postJson({
-            otherBaseUrl: '-showcase',
-            url: '/docs',
+            otherBaseUrl: '-search',
+            url: '/search/docs',
             type: 'post',
             data: {
                 keyword,
@@ -21,6 +21,35 @@ export const search = ({
                 lang,
                 version,
                 page,
+            },
+            success(result) {
+                if (result) {
+                    resolve(result);
+                    return;
+                }
+                reject(result);
+            },
+            error(msg) {
+                reject(msg);
+            }
+
+        });
+
+    });
+};
+
+export const searchTags = ({
+   lang,
+   keyword,
+}) => {
+    return new Promise((resolve, reject) => {
+        appAjax.postJson({
+            otherBaseUrl: '-search',
+            url: '/search/count',
+            type: 'post',
+            data: {
+                keyword,
+                lang,
             },
             success(result) {
                 if (result) {

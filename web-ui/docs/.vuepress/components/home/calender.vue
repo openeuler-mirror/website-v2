@@ -365,6 +365,9 @@ export default {
                   parseInt(b.startTime.replace(':', ''))
                 );
               });
+              item.timeData.map((item2) => {
+                item2['duration_time'] = `${item2.startTime}-${item2.endTime}`
+              })
             }
             throw new Error();
           } else {

@@ -44,16 +44,17 @@ export const statisticsList = ({ type }) => {
     });
   });
 };
-export const getShowCaseData = () => {
+export const getShowCaseData = ({ lang }) => {
   return new Promise((resolve, reject) => {
     appAjax.postJson({
-      otherBaseUrl: '-showcase',
-      url: '/showcase',
+      otherBaseUrl: '-search',
+      url: '/search/sort',
       type: 'post',
       data: {
-        keyword: '',
-        type: '',
-        pageSize:100
+        page: 1,
+        pageSize: 100,
+        lang: lang,
+        category: 'showcase',
       },
       success(result) {
         if (result) {
