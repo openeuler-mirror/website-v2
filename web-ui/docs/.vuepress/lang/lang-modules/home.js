@@ -642,7 +642,7 @@ module.exports = {
     },
     USER_CASE: {
       TITLE: "Success Stories",
-      VIEW_MORE: "Learn More",
+      VIEW_MORE: "View More",
       VIEW_MORE_LINK: "https://new.openeuler.org/en/showcase/",
       CASE_LIST: [
         {
@@ -1118,7 +1118,7 @@ module.exports = {
         IMG: "/img/home/new-home/use-case.svg",
         IMG_HOVER: "/img/home/new-home/use-case-hover.svg",
         DSSCRIPTIVE: "Learn success stories in various industries.",
-        LINK: "https://new.openeuler.org/zh/showcase/",
+        LINK: "https://new.openeuler.org/en/showcase/",
       },
       {
         TITLE: "Porting Guide",
@@ -1354,7 +1354,7 @@ module.exports = {
         IMG: "/img/home/new-home/use-case.svg",
         IMG_HOVER: "/img/home/new-home/use-case-hover.svg",
         DSSCRIPTIVE: "Learn success stories in various industries.",
-        LINK: "https://new.openeuler.org/zh/showcase/",
+        LINK: "https://new.openeuler.org/ru/showcase/",
       },
       {
         TITLE: "Porting Guide",
@@ -1409,7 +1409,7 @@ module.exports = {
     },
     USER_CASE: {
       TITLE: "Success Stories",
-      VIEW_MORE: "Learn More",
+      VIEW_MORE: "View More",
       VIEW_MORE_LINK: "https://new.openeuler.org/ru/showcase/",
       CASE_LIST: [
         {
