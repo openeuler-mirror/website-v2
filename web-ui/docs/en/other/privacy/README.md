@@ -23,7 +23,7 @@ We generally do not require your personal data if you only browse the general co
 
 (b) Service Optimization. For the purpose of operating the Community and providing better services, we will deploy a trusted third-party plugin to collect information from your browser, computer, and mobile device, including but not limited to your <u>**IP address, access source, number of visits to the Community, stay duration, access timestamp, browser type, and server type and version**</u>, etc. We do this to help us improve the overall accuracy of information and better tailor our interactions with you.
 
-(c) Contributor License Agreement ("CLA") Signing. When signing the CLA ([<u>learn more</u>](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=)) before contribution, you need to submit required personal data to the CLA signing system. We will acquire such personal data to verify whether you have signed the CLA, and to conduct relevant statistical analysis about operations of the Community.
+(c) Contributor License Agreement ("CLA") Signing. When signing the CLA ([<u>learn more</u>](https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=)) before contribution, you need to submit required personal data to the CLA signing system. We will acquire such personal data to verify whether you have signed the CLA, and to conduct relevant statistical analysis about operations of the Community.After receiving your signed CLA in PDF format sent to **<contact@openeuler.io>** through the CLA signing system, we will archive the CLA containing your personal data as a proof of your grants of rights over your contributions to the Community. If you sign an individual or employee CLA, we will collect your Gitee ID, name, and email address from the CLA to verify your Gitee account and contact you. If you sign a corporation CLA, we will collect your name, position, corporation name, and email address from the CLA to verify your identity with the corporation and contact you.
 
 (d) Talent Assessment. After you pass the openEuler Community talent assessment test, we will collect your name, email address, test partner, test score, and certification level from our test partners to generate the openEuler Community talent certificate for you. In addition, we acquire such data to conduct relevant statistical analysis about talent development of the Community.
 
@@ -33,7 +33,7 @@ We may also supplement the personal data we collect from you with additional per
 
 ## 2. How We Use Cookies and Similar Technologies
 
-(a) To ensure our website works properly, we may at times place cookies on your computer or mobile device. A cookie is a small data file placed on your computer or mobile device used to access a website. The content of a cookie can be retrieved or read only by the server that creates the cookie. We use cookies and similar technologies for understanding how you interact with our websites, helping you efficiently browse pages, storing and honoring your preferences, improving your browsing experience, and fulfilling other legitimate purposes.
+(a) To ensure our website works properly, we may at times place cookies on your computer or mobile device. A cookie is a small data file placed on your computer or mobile device that facilitates your access to a website. The content of a cookie can be retrieved or read only by the server that creates the cookie. We use cookies and similar technologies for understanding how you interact with our websites, helping you efficiently browse pages, storing and honoring your preferences, improving your browsing experience, and fulfilling other legitimate purposes.
 
 (b) We categorize cookies on our websites into two categories:
 
@@ -79,9 +79,8 @@ Generally, we will store or retain your personal data within the retention perio
 
 ## 5. How We Protect Your Personal Data
 
-We take the security of your personal data seriously. We take appropriate physical, organizational, and technical measures to protect your personal data. For example, we use encryption technologies to ensure the confidentiality of data; we implement protection mechanisms to protect data from attacks; we deploy access control mechanisms to ensure that only authorized personnel can access your personal data; and we hold security and privacy protection training. <u>**In a word, we are committed to protecting your personal data. Nevertheless, no security measure is perfect and no product, service, website, data transfer, computing system, or network connection is absolutely secure.**</u>
+We take the security of your personal data seriously. We take appropriate physical, organizational, and technical measures to protect your personal data. For example, we take reasonable and feasible measures to ensure that only personal data relevant to the mentioned purposes is collected and processed; we use encryption technologies to ensure the confidentiality of data; we implement protection mechanisms to protect data from attacks; we deploy access control mechanisms to ensure that only authorized personnel can access your personal data; and we hold security and privacy protection training. <u>**In a word, we are committed to protecting your personal data. Nevertheless, no security measure is perfect and no product, service, website, data transfer, computing system, or network connection is absolutely secure.**</u>
 
- 
 
 ##  6. How We Access or Control Your Personal Data
 
@@ -99,7 +98,7 @@ In accordance with applicable laws and regulations, you may have the following r
 
 (f) Lodge a complaint with the competent data protection authority.
 
-Please note that these rights are not absolute and may be restricted in accordance with applicable laws. If you need our assistance in exercising the requests or rights above, please contact us as set out in the "How to Contact Us" section below.
+Please note that these rights are not absolute and may be restricted in accordance with applicable laws. If you need our assistance in exercising the requests or rights above, or if you have any further requirements or questions, comments, or suggestions on your rights of the data subject, please contact us as set out in the "How to Contact Us" section below.
 
 <u>**Generally, we will respond to you within one month, unless otherwise required by applicable laws. Depending on the complexity of your requests, we may extend the period by two further months. In this case, we will inform you of the extension and its reasons within one month of receiving your request.**</u> Please note that under some circumstances, for example where we cannot verify your identity, or your claim exceeds your rights under applicable laws, we may refuse your request. In this case, we will inform you in written form that your request is refused together with the reasons for our refusal.
 
@@ -119,12 +118,13 @@ Jurisdictions where such personal data is stored may have laws that protect pers
 
 We may update this Statement from time to time according to changes of our services or data processing. If we update this Statement, we will publish the latest version of the Statement on the website, and it will take effect immediately upon its release. You are advised to review this Statement periodically for any changes. If we make any substantial changes to this Statement (any change of personal data we collect or we use for), we will notify you through appropriate channels and obtain your consent.
 
- 
+## 9. How We Protect Children's Online Privacy
 
-## 9. How to Contact Us
+Our services are open only to enterprises and individuals over the age of 14.
 
-If you want to contact us or exercise your rights, please contact us at <contact@openeuler.io>.
+## 10. How to Contact Us
 
+If you want to contact us or exercise your rights, please contact us at **<contact@openeuler.io>**.
 
 
 Last updated: Aug, 2022
