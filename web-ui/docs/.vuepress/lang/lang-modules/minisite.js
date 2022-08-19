@@ -158,7 +158,7 @@ module.exports = {
         },
         {
           TEXT: "Memcached 1.5.12 移植指南",
-          LINK: "https://www.openeuler.org/zh/blog/randy1568/Memcached%201-5-12-porting-guide%EF%BC%89.html",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Memcached%201-5-12-porting-guide.html",
         },
         {
           TEXT: "Nginx 1.14.2 移植指南",
@@ -178,7 +178,7 @@ module.exports = {
         },
         {
           TEXT: "X86硬件兼容性移迁指南",
-          LINK: "https://www.openeuler.org/zh/blog/randy1568/X86%20hardware%20compatibility%20assessment%20migration%20guide.html",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/x86-Hardware-Compatibility-Assessment-and-Porting-Guide.html",
         },
         {
           TEXT: "flask 1.1.2 移植案例",
@@ -975,7 +975,7 @@ module.exports = {
         },
         {
           TEXT: "Memcached 1.5.12 移植指南",
-          LINK: "https://www.openeuler.org/zh/blog/randy1568/Memcached%201-5-12-porting-guide%EF%BC%89.html",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Memcached%201-5-12-porting-guide.html",
         },
         {
           TEXT: "Nginx 1.14.2 移植指南",
@@ -1777,7 +1777,7 @@ module.exports = {
         },
         {
           TEXT: "Memcached 1.5.12 移植指南",
-          LINK: "https://www.openeuler.org/zh/blog/randy1568/Memcached%201-5-12-porting-guide%EF%BC%89.html",
+          LINK: "https://www.openeuler.org/zh/blog/randy1568/Memcached%201-5-12-porting-guide.html",
         },
         {
           TEXT: "Nginx 1.14.2 移植指南",
