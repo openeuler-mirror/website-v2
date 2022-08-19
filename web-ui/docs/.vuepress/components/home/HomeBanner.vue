@@ -67,15 +67,6 @@ export default {
             btn: '',
           },
           {
-            pcBanner: '/img/home/banner/atom-pc.png',
-            moBanner: '/img/home/banner/atom-mo.png',
-            link: `https://openatom.cn/summit`,
-            targetTap: 0,
-            title: '',
-            desc: '',
-            btn: '',
-          },
-          {
             pcBanner: '/img/home/banner/migration-pc.png',
             moBanner: '/img/home/banner/migration-mo.png',
             link: `other/migration/`,
@@ -96,15 +87,6 @@ export default {
             btn: '',
           },
           {
-            pcBanner: '/img/home/banner/atom-pc.png',
-            moBanner: '/img/home/banner/atom-mo.png',
-            link: `https://openatom.cn/summit`,
-            targetTap: 0,
-            title: '',
-            desc: '',
-            btn: '',
-          },
-          {
             pcBanner: '/img/home/banner/migration-pc.png',
             moBanner: '/img/home/banner/migration-mo.png',
             link: `other/migration/`,
@@ -122,15 +104,6 @@ export default {
             targetTap: 0,
             title: 'openEuler Community',
             desc: 'Appointed the First Group of Expert Consultants',
-            btn: '',
-          },
-          {
-            pcBanner: '/img/home/banner/atom-pc.png',
-            moBanner: '/img/home/banner/atom-mo.png',
-            link: `https://openatom.cn/summit`,
-            targetTap: 0,
-            title: '',
-            desc: '',
             btn: '',
           },
           {
