@@ -1,5 +1,150 @@
 [
-	{
+    {
+		"os_version":"fitstarryskyos-22.06-aarch64.iso",
+		"osv_name": "南京烽火星空通信发展有限公司",
+		"total_result": "pass",
+		"type": "服务器",
+		"date": "2022/08/22",
+		"arch": "aarch64",
+		"details": "详细信息",
+		"friendly_link": "https://www.fhss.com.cn",
+		"os_download_link": "https://www.fhss.com.cn",
+		"checksum": "4f61000831c6bd174368a52c92625066",
+		"base_openeuler_version": "openEuler-20.03-LTS-SP1",
+		"tools_result": [
+			{
+				"name": "core_pkg",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "soft_pkg",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "KABI",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "ABI",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "service_config",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "soft_config",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "kernel_config",
+				"percent": "NA",
+				"result": "pass"
+			}
+		],
+		"platform_result":[
+			{
+				"name": "repo",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "base_test",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "performance_test",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "running_config",
+				"percent": "NA",
+				"result": "pass"
+			}
+		]
+	},
+		{
+		"os_version":"fitstarryskyos-22.06-x86_64.iso",
+		"osv_name": "南京烽火星空通信发展有限公司",
+		"total_result": "pass",
+		"type": "服务器",
+		"date": "2022/08/22",
+		"arch": "x86_64",
+		"details": "详细信息",
+		"friendly_link": "https://www.fhss.com.cn",
+		"os_download_link": "https://www.fhss.com.cn",
+		"checksum": "36a47f2d5bd384cb29dfc2c07d16dac8",
+		"base_openeuler_version": "openEuler-20.03-LTS-SP1",
+		"tools_result": [
+			{
+				"name": "core_pkg",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "soft_pkg",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "KABI",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "ABI",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "service_config",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "soft_config",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "kernel_config",
+				"percent": "NA",
+				"result": "pass"
+			}
+		],
+		"platform_result":[
+			{
+				"name": "repo",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "base_test",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "performance_test",
+				"percent": "NA",
+				"result": "pass"
+			},
+			{
+				"name": "running_config",
+				"percent": "NA",
+				"result": "pass"
+			}
+		]
+	},
+    
+    {
 		"os_version":"HopeStage-V1.0-x86_64-dvd.iso",
 		"osv_name": "江苏润和软件股份有限公司",
 		"total_result": "pass",
