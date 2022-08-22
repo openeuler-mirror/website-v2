@@ -10,7 +10,7 @@
 		"friendly_link": "https://www.fhss.com.cn",
 		"os_download_link": "https://www.fhss.com.cn",
 		"checksum": "4f61000831c6bd174368a52c92625066",
-		"base_openeuler_version": "openEuler-20.03-LTS-SP1",
+		"base_openeuler_version": "openEuler-22.03-LTS",
 		"tools_result": [
 			{
 				"name": "core_pkg",
@@ -82,7 +82,7 @@
 		"friendly_link": "https://www.fhss.com.cn",
 		"os_download_link": "https://www.fhss.com.cn",
 		"checksum": "36a47f2d5bd384cb29dfc2c07d16dac8",
-		"base_openeuler_version": "openEuler-20.03-LTS-SP1",
+		"base_openeuler_version": "openEuler-22.03-LTS",
 		"tools_result": [
 			{
 				"name": "core_pkg",
