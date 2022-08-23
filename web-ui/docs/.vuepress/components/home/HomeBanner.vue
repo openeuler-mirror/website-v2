@@ -4,7 +4,6 @@
       <a class="banner-panel" :href="item.link" target="_blank">
         <div
           class="banner-panel-cover isPCshow"
-          :class="{ 'max-width': index === 1 }"
           :style="{
             backgroundImage: `url(${isShowH5 ? item.moBanner : item.pcBanner})`,
           }"

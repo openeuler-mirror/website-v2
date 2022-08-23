@@ -210,6 +210,10 @@ module.exports = {
                         NAME: '兼容性列表',
                         PATH: '/compatibility/'
                     },
+                    {
+                        NAME: '迁移专区',
+                        PATH: '/other/migration/'
+                    },
                 ],
                 CLASS: []
             }
