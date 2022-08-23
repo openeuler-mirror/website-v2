@@ -72,20 +72,20 @@ Note: The BPF community is still developing rapidly. For details about more adva
 
 ### Networking
 
-In network acceleration scenarios, DPDK used to be the only choice in some scenarios. With the development of the kernel eBPF community, the emergence of XDP provides a new choice for vendors. The following lists their differences:
+In network acceleration scenarios, DPDK used to be the only choice in some scenarios. With the development of the kernel eBPF community, the emergence of XDP provides a new choice for vendors. The following lists their differences:  
 
-- DPDK advantages/values: advantages (performance and ecosystem) and values (driving hardware sales)
-  **Performance**: Generally, the performance of XDP is slightly weaker than that of DPDK. Note that only the performance of DPDK/XDP is compared.
-  **Ecosystem**: After years of development, DPDK supports various drivers, base libraries (lock-free queues, huge page memory, multi-core scheduling, and performance analysis tools), and various protocols (for example, ARP/VLAN/IP/MPLS supported by VPP).
-  **Value**: The work of network dedicated hardware is transferred to software for implementation, expanding the market of hardware vendors.
-- XDP advantages: programmability and kernel collaboration
-  **Programmability**: In the trend of intelligent network hardware, programmability can be applied to multiple scenarios.
-  **Kernel collaboration**: The XDP does not completely bypass the kernel. It can work with the kernel when necessary to facilitate unified network management and deployment.
-- Inherent defects of DPDK:
-  **Exclusive device**: The device usage is low.
-  **Complex deployment**: Because devices are exclusively occupied, network deployment requires OS protocol stacks.
-  **Difficult development**: DPDK is positioned as a network data plane development package. Therefore, users must have professional network and hardware knowledge.
-  **Low end-to-end performance**: DPDK only provides zero-copy of data packets from the NIC to user-mode software. However, the user-mode transmission protocol still requires the participation of the CPU.
+- DPDK advantages/values: advantages (performance and ecosystem) and values (driving hardware sales)  
+  **Performance**: Generally, the performance of XDP is slightly weaker than that of DPDK. Note that only the performance of DPDK/XDP is compared.  
+  **Ecosystem**: After years of development, DPDK supports various drivers, base libraries (lock-free queues, huge page memory, multi-core scheduling, and performance analysis tools), and various protocols (for example, ARP/VLAN/IP/MPLS supported by VPP).  
+  **Value**: The work of network dedicated hardware is transferred to software for implementation, expanding the market of hardware vendors.  
+- XDP advantages: programmability and kernel collaboration  
+  **Programmability**: In the trend of intelligent network hardware, programmability can be applied to multiple scenarios.  
+  **Kernel collaboration**: The XDP does not completely bypass the kernel. It can work with the kernel when necessary to facilitate unified network management and deployment.  
+- Inherent defects of DPDK:  
+  **Exclusive device**: The device usage is low.  
+  **Complex deployment**: Because devices are exclusively occupied, network deployment requires OS protocol stacks.  
+  **Difficult development**: DPDK is positioned as a network data plane development package. Therefore, users must have professional network and hardware knowledge.  
+  **Low end-to-end performance**: DPDK only provides zero-copy of data packets from the NIC to user-mode software. However, the user-mode transmission protocol still requires the participation of the CPU.  
 
 <img src = "./2021-01-04-openEuler eBPF introduce-03.png">
 
@@ -95,8 +95,7 @@ In network acceleration scenarios, DPDK used to be the only choice in some scena
   Reconstructing the network data plane and using the XDP technology to bypass the network data plane of the kernel.
   Providing northbound programmable interfaces to implement de facto standards for network programmability and be integrated by different solutions (including network security scenarios, container scenarios, and virtual network scenarios).
   Implementing southbound hardware offload to adapt to various iNICs.
-- Polycube application scenarios include VNF, container network data plane, and general network infrastructure (including iptables, LVS, and NAT).
-  …
+- Polycube application scenarios include VNF, container network data plane, and general network infrastructure (including iptables, LVS, and NAT).   
 
 <img src = "./2021-01-04-openEuler eBPF introduce-04.png">
 
@@ -110,13 +109,13 @@ VNF scenario example:
 
 In cloud native scenarios, containers have advantages such as low overhead, light weight, and easy management compared with virtualization technologies. Containers have become the de facto standard for cloud native applications. The network requirements come from actually the applications, that is, application-oriented network services.
 
-- Characteristics of cloud-native applications and network requirements:
-  **Short lifecycle**: Network security policies must be implemented based on static pod identity information (cannot be based on IP addresses or ports).
-  **Tenant isolation**: requires API-level network isolation policies.
-  **ServiceMesh topology management**: requires sidecar acceleration.
-  **Transparent service entry**: requires the cross-cluster ingress service capability.
-  **Cross-cluster security policies**: Network security policies must be shared and inherited among clusters.
-  **Redundant service instances for high availability**: requires layer 3/4 LB capabilities.
+- Characteristics of cloud-native applications and network requirements:  
+  **Short lifecycle**: Network security policies must be implemented based on static pod identity information (cannot be based on IP addresses or ports).  
+  **Tenant isolation**: requires API-level network isolation policies.  
+  **ServiceMesh topology management**: requires sidecar acceleration.  
+  **Transparent service entry**: requires the cross-cluster ingress service capability.  
+  **Cross-cluster security policies**: Network security policies must be shared and inherited among clusters.  
+  **Redundant service instances for high availability**: requires layer 3/4 LB capabilities.  
 
 #### Cilium
 
@@ -220,9 +219,9 @@ The solution to this is eBPF. It introduces a set of eBPF helpers that provide a
 
 ### Summary
 
-This article can be concluded in two sentences.
+This article can be concluded in two sentences.  
 
-"BPF is eating the world."-- Marek Majkowski
+"BPF is eating the world."-- Marek Majkowski  
 "Let's change the world!"-- openEuler and all Geeks
 
 ## Implementation of openEuler eBPF
