@@ -453,6 +453,7 @@ xhr.send();
 var sensors = window['sensorsDataAnalytic201505'];
 function initSensor() {
   window['sensorsCustomBuriedData'] = {
+    language: location.pathname.split('/')[1] || 'en',
     ip: window['returnCitySN'] && window['returnCitySN'].query || '',
     city: window['returnCitySN'] && window['returnCitySN'].city || '',
     os: info.OS,
