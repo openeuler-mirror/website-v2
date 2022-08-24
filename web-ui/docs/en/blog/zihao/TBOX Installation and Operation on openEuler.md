@@ -1,3 +1,16 @@
+---
+title: 'TBOX Installation and Operation on openEuler'
+category: blog
+date: 2022-08-10
+tags:
+    - openEuler
+    - TBOX
+archives: 2020-08
+author:
+    - zihao
+summary: TBOX installation and operation on openEuler.
+---
+
 # TBOX Installation and Operation on openEuler
 
 This blog describes how to install TBOX on openEuler and test and use its modules.
