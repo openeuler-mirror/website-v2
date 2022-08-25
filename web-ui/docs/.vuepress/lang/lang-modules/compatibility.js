@@ -131,10 +131,8 @@ module.exports = {
             },{
                 ID:'05',
                 TITLE:'测试兼容性（10天）',
-                DESCRIPTION_1:'完成issue创建后，即可开展兼容性测试。openEuler团队提供了兼容性测试框架以及使用指南，您可以根据使用指南自助完成兼容性测试。点击下载',
-                A_TEXT:'兼容性测试工具套件',
-                A_TEXT_2:'使用指南',
-                DESCRIPTION_2:'|'
+                DESCRIPTION_1:'完成issue创建后，即可开展兼容性测试。openEuler团队提供了兼容性测试框架以及使用指南，您可以根据使用指南自助完成兼容性测试，',
+                A_TEXT:'点击此处获取使用指南。'
             }, {
                 ID:'06',
                 TITLE:'提交结果审核（2天）',
@@ -301,41 +299,44 @@ module.exports = {
             TEXT:'openEuler provides a complete process and tools for hardware compatibility test. For details, see the ',
             TITLE: 'Overall Introduction to the openEuler Hardware Compatibility Test',
             DISCRIPTION_TITLE: 'Introduction',
-            DISCRIPTION_CONTENT: 'Openeuler provides a series of tools, documents and operation procedures to help you test the compatibility between openEuler and hardware. If you need to perform compatibility tests on hardware such as servers, perform the following process:',
+            DISCRIPTION_CONTENT: 'Openeuler provides a series of tools, documents and operation procedures to help you test the compatibility between openEuler and hardware. If you need to perform compatibility tests on hardware such as servers, perform the following process, and each process has referenceable time:',
             PROCESS_TITLE:'Compatibility Test Process',
             ITEM_ARR: [{
                 ID:'01',
-                TITLE:'Apply for a compatibility test.',
+                TITLE:'Apply for a compatibility test (0.5d).',
                 DESCRIPTION_1:'Send a compatibility test application to the public mailbox (',
                 A_TEXT:'oecompatibility@openeuler.org',
                 DESCRIPTION_2:'). The email subject must contain "Apply for a Hardware Compatibility Test". After receiving the email, the sig team of openEuler will contact you and sign an agreement with you offline.'
             },{
                 ID:'02',
-                TITLE:'Learn about the compatibility test policies.',
+                TITLE:'Learn about the compatibility test policies (0.5d).',
                 DESCRIPTION_1:'Before performing the compatibility test, learn about the openEuler hardware compatibility policies.',
-                A_TEXT:'Click here to obtain the document.',
+                A_TEXT:'Click here to obtain the document.'
             },{
                 ID:'03',
-                TITLE:'Create an issue.',
+                TITLE:'Get compatibility policy (0.5d).',
+                DESCRIPTION_1:'Before starting a hardware compatibility test, maybe you want to get the compatibility policy.',
+                A_TEXT:'Click here to obtain the document.'
+            },{
+                ID:'04',
+                TITLE:'Create an issue (0.5d).',
                 DESCRIPTION_1:'After signing the agreement, create an issue under the oec-hardware project in the openEuler community (',
                 A_TEXT:'https://gitee.com/openeuler/oec-hardware',
                 DESCRIPTION_2:') and specify the hardware information in the issue. The openEuler team will give feedback on the issue in a timely manner.'
             },{
-                ID:'04',
-                TITLE:'Perform the compatibility test.',
-                DESCRIPTION_1:'After the issue is created, you can perform the compatibility test. The openEuler team provides the compatibility test framework and user guide that help you complete the test. Click here to download:',
-                A_TEXT:'Compatibility test tool suite',
-                A_TEXT_2:'User guide.',
-                DESCRIPTION_2:' | '
-            }, {
                 ID:'05',
-                TITLE:'Submit the result for review.',
+                TITLE:'Perform the compatibility test (0.5d).',
+                DESCRIPTION_1:'After the issue is created, you can perform the compatibility test. The openEuler team provides the compatibility test framework and user guide that help you complete the test.',
+                A_TEXT:'Click here to obtain the user guide.'
+            }, {
+                ID:'06',
+                TITLE:'Submit the result for review (10d).',
                 DESCRIPTION_1:'After the compatibility test is completed and passed, update the test result to the issue. Send the test result to the public mailbox as instructed by the user guide. Send the application for reviewing the compatibility result to ',
                 A_TEXT:'oecompatibility@openeuler.org.',
                 DESCRIPTION_2:' The email subject must contain "xxx Hardware Compatibility Test Result", where xxx indicates the community issue ID.'
             }, {
-                ID:'06',
-                TITLE:'Release the result.',
+                ID:'07',
+                TITLE:'Release the result (2d).',
                 DESCRIPTION_1:'The openEuler team will review the submitted result and add the hardware to the ',
                 A_TEXT:'Compatibility List',
                 DESCRIPTION_2:' after it is approved.'
@@ -453,41 +454,44 @@ module.exports = {
             TEXT:'openEuler provides a complete process and tools for hardware compatibility test. For details, see the ',
             TITLE: 'Overall Introduction to the openEuler Hardware Compatibility Test',
             DISCRIPTION_TITLE: 'Introduction',
-            DISCRIPTION_CONTENT: 'Openeuler provides a series of tools, documents and operation procedures to help you test the compatibility between openEuler and hardware. If you need to perform compatibility tests on hardware such as servers, perform the following process:',
+            DISCRIPTION_CONTENT: 'Openeuler provides a series of tools, documents and operation procedures to help you test the compatibility between openEuler and hardware. If you need to perform compatibility tests on hardware such as servers, perform the following process, and each process has referenceable time:',
             PROCESS_TITLE:'Compatibility Test Process',
             ITEM_ARR: [{
                 ID:'01',
-                TITLE:'Apply for a compatibility test.',
+                TITLE:'Apply for a compatibility test (0.5d).',
                 DESCRIPTION_1:'Send a compatibility test application to the public mailbox (',
                 A_TEXT:'oecompatibility@openeuler.org',
                 DESCRIPTION_2:'). The email subject must contain "Apply for a Hardware Compatibility Test". After receiving the email, the sig team of openEuler will contact you and sign an agreement with you offline.'
             },{
                 ID:'02',
-                TITLE:'Learn about the compatibility test policies.',
+                TITLE:'Learn about the compatibility test policies (0.5d).',
                 DESCRIPTION_1:'Before performing the compatibility test, learn about the openEuler hardware compatibility policies.',
-                A_TEXT:'Click here to obtain the document.',
+                A_TEXT:'Click here to obtain the document.'
             },{
                 ID:'03',
-                TITLE:'Create an issue.',
+                TITLE:'Get compatibility policy (0.5d).',
+                DESCRIPTION_1:'Before starting a hardware compatibility test, maybe you want to get the compatibility policy.',
+                A_TEXT:'Click here to obtain the document.'
+            },{
+                ID:'04',
+                TITLE:'Create an issue (0.5d).',
                 DESCRIPTION_1:'After signing the agreement, create an issue under the oec-hardware project in the openEuler community (',
                 A_TEXT:'https://gitee.com/openeuler/oec-hardware',
                 DESCRIPTION_2:') and specify the hardware information in the issue. The openEuler team will give feedback on the issue in a timely manner.'
             },{
-                ID:'04',
-                TITLE:'Perform the compatibility test.',
-                DESCRIPTION_1:'After the issue is created, you can perform the compatibility test. The openEuler team provides the compatibility test framework and user guide that help you complete the test. Click here to download:',
-                A_TEXT:'Compatibility test tool suite',
-                A_TEXT_2:'User guide.',
-                DESCRIPTION_2:' | '
-            }, {
                 ID:'05',
-                TITLE:'Submit the result for review.',
+                TITLE:'Perform the compatibility test (0.5d).',
+                DESCRIPTION_1:'After the issue is created, you can perform the compatibility test. The openEuler team provides the compatibility test framework and user guide that help you complete the test.',
+                A_TEXT:'Click here to obtain the user guide.'
+            }, {
+                ID:'06',
+                TITLE:'Submit the result for review (10d).',
                 DESCRIPTION_1:'After the compatibility test is completed and passed, update the test result to the issue. Send the test result to the public mailbox as instructed by the user guide. Send the application for reviewing the compatibility result to ',
                 A_TEXT:'oecompatibility@openeuler.org.',
                 DESCRIPTION_2:' The email subject must contain "xxx Hardware Compatibility Test Result", where xxx indicates the community issue ID.'
             }, {
-                ID:'06',
-                TITLE:'Release the result.',
+                ID:'07',
+                TITLE:'Release the result (2d).',
                 DESCRIPTION_1:'The openEuler team will review the submitted result and add the hardware to the ',
                 A_TEXT:'Compatibility List',
                 DESCRIPTION_2:' after it is approved.'
