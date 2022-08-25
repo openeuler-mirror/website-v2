@@ -1,3 +1,16 @@
+---
+title: 'Introduction to the openEuler Network Subsystem'
+category: blog
+date: 2022-08-10
+tags:
+    - openEuler
+    - network subsystem
+archives: 2020-08
+author:
+    - zihao
+summary: Introduction to the openEuler network subsystem.
+---
+
 # Introduction to the openEuler Network Subsystem
 
 Interconnection between computers is key to the computer network for ensuring information transmission and sharing. As bottom-layer software, the OS plays an important role in communication.

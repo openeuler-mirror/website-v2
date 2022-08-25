@@ -1,3 +1,15 @@
+---
+title: 'Brief Introduction to Edge Computing'
+category: blog
+date: 2022-08-10
+tags:
+    - edge computing
+archives: 2020-08
+author:
+    - zihao
+summary: Brief introduction to edge computing.
+---
+
 # Brief Introduction to Edge Computing
 
 Edge computing is a new computing mode that works at the network edge. It processes data through downstream cloud services and upstream device applications. Edge computing allocates computing and storage resources to edge nodes, which are closer to users. The nodes analyze data from nearby users and upload only important information such as computing results to the cloud, greatly releasing server pressure.
