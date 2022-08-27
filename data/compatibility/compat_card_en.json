@@ -1990,13 +1990,13 @@
     "driverSize": "85KB",
     "chipVendor": "Avago",
     "boardModel": "9440-8i",
-    "chipModel": "9440-8i",
+    "chipModel": "SAS3408",
     "item": "02312QWY",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS/contrib/drivers/x86_64/Packages/RAID-3004iMR_3108_3408iMR_3416iMR_3508_3516-openEuler20.03-megaraid_sas-07.714.04.00-1-x86_64.rpm"
   },
   {
     "vendorID": "1000",
-    "deviceID": "1600",
+    "deviceID": "0016",
     "svID": "19e5",
     "ssID": "d215",
     "architecture": "x86_64",
@@ -2009,13 +2009,13 @@
     "driverSize": "85KB",
     "chipVendor": "Avago",
     "boardModel": "RU450C-M",
-    "chipModel": "Avago3508",
+    "chipModel": "SAS3508",
     "item": "03024MCK",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS/contrib/drivers/x86_64/Packages/RAID-3004iMR_3108_3408iMR_3416iMR_3508_3516-openEuler20.03-megaraid_sas-07.714.04.00-1-x86_64.rpm"
   },
   {
     "vendorID": "1000",
-    "deviceID": "1600",
+    "deviceID": "0016",
     "svID": "19e5",
     "ssID": "d215",
     "architecture": "x86_64",
@@ -2028,7 +2028,7 @@
     "driverSize": "85KB",
     "chipVendor": "Avago",
     "boardModel": "SR450C-M",
-    "chipModel": "Avago3508",
+    "chipModel": "SAS3508",
     "item": "03033EFT",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS/contrib/drivers/x86_64/Packages/RAID-3004iMR_3108_3408iMR_3416iMR_3508_3516-openEuler20.03-megaraid_sas-07.714.04.00-1-x86_64.rpm"
   },
@@ -2047,7 +2047,7 @@
     "driverSize": "85KB",
     "chipVendor": "Avago",
     "boardModel": "SP460C-M",
-    "chipModel": "Avago3516",
+    "chipModel": "SAS3516",
     "item": "03024JNE",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS/contrib/drivers/x86_64/Packages/RAID-3004iMR_3108_3408iMR_3416iMR_3508_3516-openEuler20.03-megaraid_sas-07.714.04.00-1-x86_64.rpm"
   },
@@ -2302,7 +2302,7 @@
     "vendorID": "15b3",
     "deviceID": "101b",
     "svID": "15b3",
-    "ssID": "0006",
+    "ssID": "0029",
     "architecture": "x86_64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "mlx5_core",
@@ -2314,7 +2314,7 @@
     "chipVendor": "Mellanox",
     "boardModel": "MCX653105A-EFAT",
     "chipModel": "ConnectX-6",
-    "item": "06030516",
+    "item": "06030438",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/drivers/source/Packages/MLNX_OFED_LINUX-5.1-2.5.2.0-openeuler20.03-x86_64-ext.tgz"
   },
   {
@@ -2492,7 +2492,7 @@
     "vendorID": "15b3",
     "deviceID": "101b",
     "svID": "15b3",
-    "ssID": "0006",
+    "ssID": "0029",
     "architecture": "aarch64",
     "os": "openEuler 20.03 LTS SP1",
     "driverName": "mlx5_core",
@@ -2504,7 +2504,7 @@
     "chipVendor": "Mellanox",
     "boardModel": "MCX653105A-EFAT",
     "chipModel": "ConnectX-6",
-    "item": "06030516",
+    "item": "06030438",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/drivers/source/Packages/MLNX_OFED_LINUX-5.1-2.5.2.0-openeuler20.03-aarch64-ext.tgz"
   },
   {
@@ -2788,7 +2788,7 @@
     "driverSize": "93KB",
     "chipVendor": "Avago",
     "boardModel": "9440-8i",
-    "chipModel": "9440-8i",
+    "chipModel": "SAS3408",
     "item": "02312QWY",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/drivers/aarch64/Packages/RAID-3408iMR_3416iMR_3508_3516-openEuler20.03-megaraid_sas-07.714.04.00-aarch64.rpm"
   },
@@ -2807,7 +2807,7 @@
     "driverSize": "85KB",
     "chipVendor": "Avago",
     "boardModel": "9440-8i",
-    "chipModel": "9440-8i",
+    "chipModel": "SAS3408",
     "item": "02312QWY",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/drivers/x86_64/Packages/RAID-3004iMR_3108_3408iMR_3416iMR_3508_3516-openEuler20.03-megaraid_sas-07.714.04.00-1-x86_64.rpm"
   },
@@ -2864,7 +2864,7 @@
     "driverSize": "85KB",
     "chipVendor": "Avago",
     "boardModel": "SP460C-M",
-    "chipModel": "Avago3516",
+    "chipModel": "SAS3516",
     "item": "03024JNE",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP1/contrib/drivers/x86_64/Packages/RAID-3004iMR_3108_3408iMR_3416iMR_3508_3516-openEuler20.03-megaraid_sas-07.714.04.00-1-x86_64.rpm"
   },
@@ -4860,7 +4860,7 @@
     "chipVendor": "Mellanox",
     "boardModel": "MCX653105A-EFAT",
     "chipModel": "ConnectX-6",
-    "item": "06030516",
+    "item": "06030438",
     "downloadLink": "inbox"
   },
   {
@@ -10125,5 +10125,62 @@
     "chipModel": "I350",
     "item": "06310058",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/igb-5.11.4.tar.gz"
+  },
+  {
+    "vendorID": "15b3",
+    "deviceID": "101b",
+    "svID": "15b3",
+    "ssID": "0006",
+    "architecture": "aarch64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "mlx5_core",
+    "version": "5.7-1.0.2",
+    "type": "IB",
+    "date": "2022.08.08",
+    "sha256": "",
+    "driverSize": "247MB",
+    "chipVendor": "Mellanox",
+    "boardModel": "MCX653105A-ECAT",
+    "chipModel": "ConnectX-6",
+    "item": "06030516",
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/MLNX_OFED_LINUX-5.7-1.0.2.0-openeuler20.03sp3-aarch64.tgz"
+  },
+  {
+    "vendorID": "15b3",
+    "deviceID": "101b",
+    "svID": "15b3",
+    "ssID": "0006",
+    "architecture": "x86_64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "mlx5_core",
+    "version": "5.7-1.0.2",
+    "type": "IB",
+    "date": "2022.08.08",
+    "sha256": "",
+    "driverSize": "308MB",
+    "chipVendor": "Mellanox",
+    "boardModel": "MCX653105A-ECAT",
+    "chipModel": "ConnectX-6",
+    "item": "06030516",
+    "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-20.03-LTS-SP3/contrib/drivers/source/Packages/MLNX_OFED_LINUX-5.7-1.0.2.0-openeuler20.03sp3-x86_64.tgz"
+  },
+  {
+    "vendorID": "",
+    "deviceID": "",
+    "svID": "",
+    "ssID": "",
+    "architecture": "aarch64",
+    "os": "openEuler 22.03 LTS",
+    "driverName": "",
+    "version": "",
+    "type": "SSD",
+    "date": "2022.08.24",
+    "sha256": "",
+    "driverSize": "",
+    "chipVendor": "Dera",
+    "boardModel": "DERAS32TGR03T8WT",
+    "chipModel": "S5239",
+    "item": "",
+    "downloadLink": ""
   }
 ]
