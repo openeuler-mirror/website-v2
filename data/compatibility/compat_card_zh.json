@@ -10714,5 +10714,43 @@
     "chipModel": "ConnectX-4 Lx",
     "item": "06310183",
     "downloadLink": "https://repo.oepkgs.net/openEuler/rpm/openEuler-22.03-LTS/contrib/drivers/source/Packages/MLNX_OFED_SRC-5.7-1.0.2.0.tgz"
+  },
+  {
+    "vendorID": "9005",
+    "deviceID": "028f",
+    "svID": "1cf2",
+    "ssID": "544f",
+    "architecture": "x86_64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "smartpqi",
+    "version": "1.1.4-130",
+    "type": "RAID",
+    "date": "2022.09.10",
+    "sha256": "",
+    "driverSize": "150011",
+    "chipVendor": "Adaptec",
+    "boardModel": "RM243B-18i",
+    "chipModel": "PM8238",
+    "item": "",
+    "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "15b3",
+    "deviceID": "1015",
+    "svID": "15b3",
+    "ssID": "0b44",
+    "architecture": "x86_64",
+    "os": "openEuler 20.03 LTS SP3",
+    "driverName": "mlx5_core",
+    "version": "5.0.0",
+    "type": "NIC",
+    "date": "2022.09.09",
+    "sha256": "",
+    "driverSize": "1431675",
+    "chipVendor": "Mellanox",
+    "boardModel": "NS212",
+    "chipModel": "ConnectX-4 Lx",
+    "item": "",
+    "downloadLink": "inbox"
   }
 ]
