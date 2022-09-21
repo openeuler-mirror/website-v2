@@ -1,42 +1,16 @@
 <template>
-  <div :class="'nav-fill ' + (cookiesShow ? 'cookies-show' : '')">
+  <div class="nav-fill">
     <div class="nav-wrapper">
       <div class="nav-bar" :class="{ 'is-home': $route.path.length === 4 }">
-        <img
-          src="/openeuler-logo.png"
-          alt=""
-          class="nav-logo"
-          @click="goHome()"
-        />
-        <img
-          src="/openeuler-logo.png"
-          alt=""
-          class="nav-logo nav-logo-mobile"
-          @click="goHome()"
-        />
+        <a :href="`https://www.openeuler.org/${$lang}/`" target="_blank">
+          <img src="/openeuler-logo.png" alt="" class="nav-logo" />
+          <img
+            src="/openeuler-logo.png"
+            alt=""
+            class="nav-logo nav-logo-mobile"
+          />
+        </a>
       </div>
-    </div>
-    <div
-      :class="'cookie-legal ' + ($lang === 'ru' ? 'cookie-legal-ru' : '')"
-      v-if="cookiesShow"
-    >
-      <template v-if="$lang !== 'ru'">
-        {{ i18n.common.COOKIE_LEGAL_TEXT }}
-        <a :href="'/' + $lang + '/other/privacy/'">{{
-          i18n.common.COOKIE_LEGAL_LINK_TEXT
-        }}</a>
-      </template>
-      <template v-else>
-        {{ i18n.common.COOKIE_LEGAL_TEXT }}
-        <a :href="'/' + $lang + '/other/privacy/'">{{
-          i18n.common.COOKIE_LEGAL_LINK_TEXT
-        }}</a>
-        {{ i18n.common.COOKIE_LEGAL_TEXT_OTHER }}
-        <a :href="'/' + $lang + '/other/privacy/'">{{
-          i18n.common.COOKIE_LEGAL_LINK_TEXT_OTHER
-        }}</a>
-      </template>
-      <img @click="close" src="/img/common/icon-close.png" />
     </div>
   </div>
 </template>
@@ -88,9 +62,7 @@ export default {
       window.open(url);
     },
     goHome() {
-      const targetLocale = '/' + this.$lang + '/';
-      this.$router.push(targetLocale);
-      this.menuMobileFlag = false;
+      window.open();
     },
     go(item) {
       if (item.IS_OPEN_WINDOW) {
