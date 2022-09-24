@@ -1,6 +1,9 @@
 # website-v2
 简体中文 | [English](./README.en.md)
 
+#### 注意
+本仓库将于2022年10月起停止维护，新的pr与issue请提交至[https://gitee.com/openeuler/openEuler-portal](https://gitee.com/openeuler/openEuler-portal)
+
 #### 介绍
 自2020年10月起，website-v2替代原website仓库，作为[openEuler社区官网](https://openeuler.org/zh/)的源码仓库。
 
@@ -12,7 +15,7 @@
 website-v2
     ├─ data    //此目录存放由特定责任人独立维护的模块数据，例如目前存放的是兼容性查询所需的数据。
     ├─ script  //此目录存放文档、博客、新闻导入ES(elasticsearch)所需的脚本。
-    ├─ server  //此目录存放后端部署和运行所需代码，详细介绍请参考此目录下的README.md文件。
+    ├─ server  //此目录存放后端部署和运行所需代码，详细介绍请参考此目录下的README.md文件。y
     ├─ web-ui  //此目录存放前端部署和运行所需代码，详细介绍请参考此目录下的README.md文件。
 ```
 
