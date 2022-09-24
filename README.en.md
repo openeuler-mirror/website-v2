@@ -1,6 +1,9 @@
 # website-v2
 English | [简体中文](./README.md)
 
+#### Attention
+This repo will no longer be maintained from October 2022. Please submit new PRs and issues to Link.[https://gitee.com/openeuler/openEuler-portal](https://gitee.com/openeuler/openEuler-portal)
+
 #### Description
 Website-v2 is the source code repository of the [openEuler community official website](https://openeuler.org/en/).
 #### Software Architecture
