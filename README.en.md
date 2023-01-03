@@ -1,4 +1,5 @@
 # website-v2
+Reason why the repository's state is set to be closed: https://gitee.com/openeuler/community/pulls/4124
 English | [简体中文](./README.md)
 
 #### Attention
@@ -30,3 +31,4 @@ website-v2
 2.  Create Feat_xxx branch
 3.  Commit your code
 4.  Create Pull Request
+
