@@ -1,4 +1,5 @@
 # website-v2
+仓库状态设置为关闭的原因: https://gitee.com/openeuler/community/pulls/4124
 简体中文 | [English](./README.en.md)
 
 #### 注意
@@ -31,3 +32,4 @@ website-v2
 3.  新建 Feat_xxx 分支进行开发
 3.  开发完成后，提交代码到个人Fork仓
 4.  新建pull request,把修改以PR形式提交到本仓库
+
